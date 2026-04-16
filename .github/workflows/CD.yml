@@ -1,0 +1,61 @@
+# Automatically build and deploy the docs site on push to release/develop.
+
+name: 'CD'
+env:
+    CURRENT_BRANCH: ${{ github.ref_name }}
+
+on:
+    push:
+        branches:
+            - 'release'
+            - 'develop'
+    workflow_dispatch:
+
+jobs:
+    CD:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+              with:
+                  ref: ${{ env.CURRENT_BRANCH }}
+
+            - uses: docker/login-action@v3
+              with:
+                  username: ${{ secrets.DOCKER_USERNAME }}
+                  password: ${{ secrets.DOCKER_PASSWORD }}
+
+            # Build & push for RELEASE (production)
+            - name: Build & push docker RELEASE images
+              if: env.CURRENT_BRANCH == 'release'
+              run: make docker VERSION=latest
+
+            - name: Deploy to RELEASE environment
+              uses: appleboy/ssh-action@master
+              if: env.CURRENT_BRANCH == 'release'
+              with:
+                  host: ${{ secrets.SSH_HOST_RELEASE }}
+                  port: ${{ secrets.SSH_PORT }}
+                  username: ${{ secrets.SSH_USERNAME }}
+                  key: ${{ secrets.SSH_PRIVATE_KEY }}
+                  passphrase: ${{ secrets.SSH_PASSPHRASE }}
+                  script: |
+                      cd /root
+                      /bin/bash redeploy-docs.sh
+
+            # Build & push for DEV
+            - name: Build & push docker DEV images
+              if: env.CURRENT_BRANCH == 'develop'
+              run: make docker VERSION=dev
+
+            - name: Deploy to DEV environment
+              uses: appleboy/ssh-action@master
+              if: env.CURRENT_BRANCH == 'develop'
+              with:
+                  host: ${{ secrets.SSH_HOST_DEV }}
+                  port: ${{ secrets.SSH_PORT }}
+                  username: ${{ secrets.SSH_USERNAME }}
+                  key: ${{ secrets.SSH_PRIVATE_KEY }}
+                  passphrase: ${{ secrets.SSH_PASSPHRASE }}
+                  script: |
+                      cd /root
+                      /bin/bash redeploy-docs.sh

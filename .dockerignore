@@ -1,0 +1,15 @@
+node_modules
+docs/.vitepress/dist
+docs/.vitepress/cache
+.git
+.github
+.gitignore
+.dockerignore
+README.md
+Makefile
+*.log
+.DS_Store
+.env
+.env.*
+.vscode
+.idea

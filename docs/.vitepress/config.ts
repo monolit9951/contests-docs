@@ -3,15 +3,23 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   base: '/docs/',
   cleanUrls: true,
+  appearance: 'dark',
 
   title: 'DareBay Docs',
   description: 'The DareBay Manifesto — how we run contests, pick winners, and keep it real.',
 
   head: [
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/docs/favicon.svg' }],
-    ['meta', { name: 'theme-color', content: '#111111' }],
+    ['meta', { name: 'theme-color', content: '#02140E' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:site_name', content: 'DareBay Docs' }],
+    // Manrope — matches the darebay.com frontend
+    ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
+    ['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }],
+    ['link', {
+      rel: 'stylesheet',
+      href: 'https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap',
+    }],
   ],
 
   locales: {

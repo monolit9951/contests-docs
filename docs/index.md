@@ -3,6 +3,12 @@ title: The DareBay Manifesto
 description: How we run contests, pick winners, and keep it real.
 ---
 
+<div class="docs-cover">
+  <div class="docs-cover-eyebrow">DareBay · Manifesto</div>
+  <h1 class="docs-cover-title">Proof,<br>not performance.</h1>
+  <p class="docs-cover-lede">How we run contests, pick winners, and keep it real.</p>
+</div>
+
 # The DareBay Manifesto
 
 The internet is loud. It's full of empty views, farmed likes, and engagement

@@ -3,6 +3,12 @@ title: Манифест DareBay
 description: Как мы проводим конкурсы, выбираем победителей и держим всё по-честному.
 ---
 
+<div class="docs-cover">
+  <div class="docs-cover-eyebrow">DareBay · Манифест</div>
+  <h1 class="docs-cover-title">Результат,<br>а не шум.</h1>
+  <p class="docs-cover-lede">Как мы проводим конкурсы, выбираем победителей и держим всё по-честному.</p>
+</div>
+
 # Манифест DareBay
 
 Интернет шумный. В нём полно пустых просмотров, накрученных лайков и

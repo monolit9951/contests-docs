@@ -73,7 +73,6 @@ export default defineConfig({
         sidebarMenuLabel: 'Menu',
         returnToTopLabel: 'Back to top',
         outline: { label: 'On this page', level: [2, 3] },
-        docFooter: { prev: true, next: true },
       },
     },
     ru: {
@@ -129,7 +128,7 @@ export default defineConfig({
         sidebarMenuLabel: 'Меню',
         returnToTopLabel: 'Наверх',
         outline: { label: 'На этой странице', level: [2, 3] },
-        docFooter: { prev: true, next: true },
+        docFooter: { prev: 'Предыдущая страница', next: 'Следующая страница' },
       },
     },
   },

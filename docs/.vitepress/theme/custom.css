@@ -279,3 +279,40 @@
 .VPNavBarSearch .DocSearch-Button {
   border-radius: 10px;
 }
+
+/* ---------- Social links in the navbar ----------
+   Give them visible weight — the user treats them as a "join us" section,
+   so make them feel like a cluster, not stray glyphs. */
+.VPSocialLinks {
+  gap: 4px;
+  padding: 4px 6px;
+  border-radius: 999px;
+  background: var(--vp-c-default-soft);
+  border: 1px solid var(--vp-c-divider);
+  margin-left: 6px;
+}
+.dark .VPSocialLinks {
+  background: rgba(255, 255, 255, 0.03);
+}
+.VPSocialLink {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  color: var(--vp-c-text-2);
+  transition: color 0.15s ease, background-color 0.15s ease, transform 0.15s ease;
+}
+.VPSocialLink:hover {
+  color: #fff;
+  background: var(--db-gradient);
+  transform: translateY(-1px);
+}
+.VPSocialLink svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* On mobile the social strip is inside the hamburger menu; keep it readable */
+.VPNavScreenSocialLinks {
+  justify-content: flex-start;
+  gap: 8px;
+}

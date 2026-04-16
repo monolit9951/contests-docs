@@ -30,21 +30,12 @@ export default defineConfig({
       description: 'The DareBay Manifesto.',
       themeConfig: {
         nav: [
-          { text: 'Manifesto', link: '/' },
           { text: '← darebay.com', link: 'https://darebay.com' },
-        ],
-        sidebar: [
-          {
-            text: 'DareBay',
-            items: [
-              { text: 'Manifesto', link: '/' },
-            ],
-          },
         ],
         darkModeSwitchLabel: 'Theme',
         sidebarMenuLabel: 'Menu',
         returnToTopLabel: 'Back to top',
-        outline: { label: 'On this page' },
+        outline: { label: 'On this page', level: [2, 3] },
         docFooter: { prev: false, next: false },
       },
     },
@@ -56,23 +47,12 @@ export default defineConfig({
       link: '/ru/',
       themeConfig: {
         nav: [
-          { text: 'Манифест', link: '/ru/' },
           { text: '← darebay.com', link: 'https://darebay.com' },
         ],
-        sidebar: {
-          '/ru/': [
-            {
-              text: 'DareBay',
-              items: [
-                { text: 'Манифест', link: '/ru/' },
-              ],
-            },
-          ],
-        },
         darkModeSwitchLabel: 'Тема',
         sidebarMenuLabel: 'Меню',
         returnToTopLabel: 'Наверх',
-        outline: { label: 'На этой странице' },
+        outline: { label: 'На этой странице', level: [2, 3] },
         docFooter: { prev: false, next: false },
       },
     },
@@ -80,7 +60,9 @@ export default defineConfig({
 
   themeConfig: {
     logo: { src: '/logo.svg', alt: 'DareBay' },
-    siteTitle: 'DareBay Docs',
+    // No site title text — just the logo, which links to darebay.com
+    // (href is rewritten at runtime in theme/index.ts).
+    siteTitle: false,
     search: {
       provider: 'local',
     },

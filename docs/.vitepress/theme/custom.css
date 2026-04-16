@@ -64,34 +64,264 @@
   --vp-c-divider: rgba(2, 20, 14, 0.08);
 }
 
-/* ---------- Nav bar: subtle gradient underline on hover, brand wordmark ---------- */
+/* ---------- Unified, glassy header ----------
+   VitePress ships a two-row header stack: .VPNav (the main bar) and
+   .VPLocalNav (the mobile "Menu" bar under it, shown on pages with a
+   sidebar). On desktop the second row is empty but still takes space
+   and draws a divider line — that's the "two headers" look.
+   We collapse the stack into a single glass bar and push the local-nav
+   "Menu" trigger inside the main bar on mobile. */
+
+.VPNav,
+.VPNavBar {
+  background: transparent;
+}
+
+.VPNav {
+  position: sticky;
+  top: 0;
+  z-index: 60;
+  backdrop-filter: saturate(180%) blur(16px);
+  -webkit-backdrop-filter: saturate(180%) blur(16px);
+  background: color-mix(in oklab, var(--vp-c-bg) 72%, transparent);
+  border-bottom: 1px solid var(--vp-c-divider);
+}
+
+/* Kill the default lower divider line — we own the border now */
+.VPNav .divider,
+.VPNavBar .divider {
+  display: none !important;
+}
+.VPNavBar {
+  border-bottom: 0 !important;
+}
+
+/* The secondary "LocalNav" row on desktop: hide it completely */
+@media (min-width: 960px) {
+  .VPLocalNav {
+    display: none !important;
+  }
+}
+
+/* On mobile we keep LocalNav but flatten it so it reads as part of the
+   same header surface — no second background, no extra divider. */
+.VPLocalNav {
+  background: transparent !important;
+  border-top: 1px solid var(--vp-c-divider) !important;
+  border-bottom: 0 !important;
+}
+.dark .VPLocalNav {
+  background: transparent !important;
+}
+
+/* Navbar height: a touch taller for breathing room */
+.VPNavBar .container,
+.VPNavBar .wrapper {
+  min-height: 64px;
+}
+
+/* Logo: subtle hover lift */
 .VPNavBarTitle .title {
   font-weight: 700;
   letter-spacing: -0.01em;
+  transition: opacity 0.15s ease;
+}
+.VPNavBarTitle .title:hover {
+  opacity: 0.75;
+}
+.VPNavBarTitle .logo {
+  transition: transform 0.2s ease;
+}
+.VPNavBarTitle .title:hover .logo {
+  transform: scale(1.05);
 }
 
-.VPNavBar {
-  backdrop-filter: saturate(180%) blur(12px);
-}
-
-/* ---------- Sidebar: pill-style active item (mirrors GitBook "sidebar-list-pill") ---------- */
-.VPSidebarItem.level-1 > .item > .text,
-.VPSidebarItem.level-2 .item .text {
+/* Nav menu links: animated underline, brand on hover */
+.VPNavBarMenuLink {
+  position: relative;
   font-weight: 500;
+  color: var(--vp-c-text-2);
+  transition: color 0.15s ease;
+}
+.VPNavBarMenuLink::after {
+  content: "";
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 14px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--db-gradient);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.2s ease;
+}
+.VPNavBarMenuLink:hover {
+  color: var(--vp-c-text-1);
+}
+.VPNavBarMenuLink:hover::after,
+.VPNavBarMenuLink.active::after {
+  transform: scaleX(1);
+}
+.VPNavBarMenuLink.active {
+  color: var(--vp-c-text-1);
+  font-weight: 600;
 }
 
+/* ---------- Sidebar ----------
+   Section headers (level-0) read as section titles, not links.
+   Items (level-1+) are pill-style rows that light up on hover and
+   fill with brand-soft on the current page. */
+
+.VPSidebar {
+  background: transparent !important;
+  padding-top: 16px !important;
+}
+
+.VPSidebarGroup {
+  margin-bottom: 4px;
+}
+
+/* Section header ("Getting Started", "FAQ", "About") */
+.VPSidebarItem.level-0 > .item > .text {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--vp-c-text-3);
+}
+
+/* Regular items */
+.VPSidebarItem.level-1 > .item,
+.VPSidebarItem.level-2 > .item {
+  border-radius: 10px;
+  padding: 8px 12px;
+  margin: 2px -12px;
+  transition: background-color 0.15s ease, color 0.15s ease, transform 0.15s ease;
+}
+
+.VPSidebarItem.level-1 > .item > .link,
+.VPSidebarItem.level-2 > .item > .link {
+  display: block;
+  width: 100%;
+}
+
+.VPSidebarItem.level-1 > .item .text,
+.VPSidebarItem.level-2 > .item .text {
+  font-weight: 500;
+  font-size: 0.92rem;
+  line-height: 1.4;
+  color: var(--vp-c-text-2);
+  transition: color 0.15s ease;
+}
+
+/* Hover: subtle lift + brand-soft fill */
+.VPSidebarItem.level-1:not(.is-active) > .item:hover,
+.VPSidebarItem.level-2:not(.is-active) > .item:hover {
+  background: var(--vp-c-default-soft);
+  transform: translateX(2px);
+}
+.VPSidebarItem.level-1:not(.is-active) > .item:hover .text,
+.VPSidebarItem.level-2:not(.is-active) > .item:hover .text {
+  color: var(--vp-c-text-1);
+}
+
+/* Active: brand-soft fill, brand text, gradient accent bar on the left */
+.VPSidebarItem.is-active > .item {
+  background: var(--vp-c-brand-soft);
+  position: relative;
+}
+.VPSidebarItem.is-active > .item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  bottom: 8px;
+  width: 3px;
+  border-radius: 0 3px 3px 0;
+  background: var(--db-gradient);
+}
 .VPSidebarItem.is-active > .item > .link > .text,
 .VPSidebarItem.is-active > .item .text {
   color: var(--vp-c-brand-1);
   font-weight: 600;
 }
 
-.VPSidebarItem.is-active > .item {
-  background: var(--vp-c-brand-soft);
-  border-radius: 10px;
-  padding: 6px 12px;
-  margin-left: -12px;
-  margin-right: -12px;
+/* ---------- Prev / Next pager: card with arrow and hover lift ---------- */
+.VPDocFooter {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--vp-c-divider);
+}
+.prev-next {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+@media (max-width: 768px) {
+  .prev-next {
+    grid-template-columns: 1fr;
+  }
+}
+.prev-next .pager {
+  display: flex;
+}
+.prev-next .pager-link {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 16px 20px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 14px;
+  background: var(--vp-c-bg-soft);
+  color: var(--vp-c-text-1);
+  text-decoration: none !important;
+  border-bottom-width: 1px !important;
+  transition: border-color 0.15s ease, transform 0.15s ease, background-color 0.15s ease;
+}
+.prev-next .pager-link:hover {
+  border-color: var(--vp-c-brand-1);
+  background: var(--vp-c-bg-elv);
+  transform: translateY(-2px);
+}
+.prev-next .pager-link.prev {
+  align-items: flex-start;
+  text-align: left;
+}
+.prev-next .pager-link.next {
+  align-items: flex-end;
+  text-align: right;
+}
+.prev-next .pager-link .desc {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--vp-c-text-3);
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.prev-next .pager-link.prev .desc::before {
+  content: "←";
+  transition: transform 0.2s ease;
+}
+.prev-next .pager-link.next .desc::after {
+  content: "→";
+  transition: transform 0.2s ease;
+}
+.prev-next .pager-link.prev:hover .desc::before {
+  transform: translateX(-3px);
+}
+.prev-next .pager-link.next:hover .desc::after {
+  transform: translateX(3px);
+}
+.prev-next .pager-link .title {
+  font-size: 1.02rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--vp-c-brand-1);
 }
 
 /* ---------- Typography polish ---------- */

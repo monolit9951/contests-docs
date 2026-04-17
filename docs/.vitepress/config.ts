@@ -33,7 +33,9 @@ export default defineConfig({
         nav: [
           { text: 'Getting Started', link: '/getting-started/' },
           { text: 'FAQ', link: '/faq/' },
-          { text: '← darebay.com', link: 'https://darebay.com' },
+          // The CTA link is styled separately via CSS (data attribute on
+          // the text) — see .VPNavBarMenuLink.cta in custom.css.
+          { text: 'darebay.com  →', link: 'https://darebay.com' },
         ],
         sidebar: [
           {
@@ -86,7 +88,7 @@ export default defineConfig({
         nav: [
           { text: 'Быстрый старт', link: '/ru/getting-started/' },
           { text: 'FAQ', link: '/ru/faq/' },
-          { text: '← darebay.com', link: 'https://darebay.com' },
+          { text: 'darebay.com  →', link: 'https://darebay.com' },
         ],
         sidebar: {
           '/ru/': [

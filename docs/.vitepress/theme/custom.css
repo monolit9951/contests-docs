@@ -65,14 +65,25 @@
 }
 
 /* ============================================================================
-   HEADER — single row, logo left, nav + socials right
+   HEADER v2 — editorial layout
    ============================================================================
-   Structure after our edits:
    ┌──────────────────────────────────────────────────────────────────────┐
-   │ [logo]            [Getting Started] [FAQ] [← darebay.com]  [socials] │
-   └──────────────────────────────────────────────────────────────────────┘
-   Removed: search box, theme toggle, language switcher — see "Kill" block
-   below. A thin brand-gradient accent sits above the bar as a signature. */
+   │ [logo]DAREBAY          ⟨  Getting Started   FAQ  ⟩       ◎ ◎ ◎  [ → ]│
+   │                        └── floating capsule ──┘                      │
+   └────────────── green→blue gradient hairline underneath ───────────────┘
+
+   Design choices, deliberately different from v1:
+   - Solid surface, no glass/blur: a confident, flat header.
+   - Logo is paired with a letter-spaced DAREBAY wordmark (CSS ::after).
+   - Primary nav (Getting Started, FAQ) lives in a capsule that floats
+     above-center, visually separate from the logo and the right cluster.
+   - "darebay.com →" is no longer a text link — it's a gradient CTA pill
+     on the far right.
+   - Social icons are monochrome ghost-style (no background pill); they
+     color-pop on hover with brand green.
+   - A 1px brand-gradient hairline sits at the bottom of the header as
+     the only accent.
+*/
 
 /* ---------- Kill unused VitePress chrome ---------- */
 .VPNavBarSearch,
@@ -83,43 +94,35 @@
 .VPFlyout.VPNavBarTranslations,
 .VPNavScreenTranslations,
 .VPNavScreenAppearance,
-/* "More" flyout (hamburger dots) becomes empty once translations+appearance
-   are removed — hide it on desktop too */
 .VPNavBarExtra {
   display: none !important;
 }
 
-/* ---------- Header shell ---------- */
-
-/* Top accent: 2px brand gradient strip that lives above everything */
-.VPNav::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: var(--db-gradient);
-  z-index: 70;
-  pointer-events: none;
-}
-
+/* ---------- Header shell: solid, with a gradient hairline ---------- */
 .VPNav,
 .VPNavBar {
   background: transparent;
 }
-
 .VPNav {
   position: sticky;
   top: 0;
   z-index: 60;
-  backdrop-filter: saturate(180%) blur(16px);
-  -webkit-backdrop-filter: saturate(180%) blur(16px);
-  background: color-mix(in oklab, var(--vp-c-bg) 70%, transparent);
-  border-bottom: 1px solid var(--vp-c-divider);
+  background: var(--vp-c-bg) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border-bottom: 0 !important;
 }
-
-/* Nuke the default inner divider — we own the bottom border */
+.VPNav::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: var(--db-gradient);
+  opacity: 0.55;
+  pointer-events: none;
+}
 .VPNav .divider,
 .VPNavBar .divider,
 .VPNavBar .divider-line {
@@ -127,10 +130,10 @@
 }
 .VPNavBar {
   border-bottom: 0 !important;
-  padding-top: 2px; /* make room for the gradient strip */
+  padding-top: 0;
 }
 
-/* Secondary LocalNav row: hidden on desktop, flat on mobile */
+/* Secondary LocalNav row: hidden on desktop */
 @media (min-width: 960px) {
   .VPLocalNav {
     display: none !important;
@@ -142,85 +145,171 @@
   border-bottom: 0 !important;
 }
 
-/* Header height: a touch taller for breathing room */
+/* Header footprint: a touch taller, consistent rhythm */
 .VPNavBar .container,
 .VPNavBar .wrapper {
-  min-height: 68px;
+  min-height: 70px;
 }
 
-/* ---------- Logo (left) ---------- */
+/* Reference frame for absolutely-positioned center nav */
+@media (min-width: 960px) {
+  .VPNavBar .container {
+    position: relative;
+  }
+}
+
+/* ---------- Logo + DAREBAY wordmark (left) ---------- */
 .VPNavBarTitle .title {
+  display: flex !important;
+  align-items: center;
+  gap: 10px;
   font-weight: 700;
   letter-spacing: -0.01em;
-  transition: opacity 0.15s ease;
   padding-inline: 0 !important;
+  transition: opacity 0.15s ease;
 }
 .VPNavBarTitle .title:hover {
   opacity: 0.78;
 }
 .VPNavBarTitle .logo {
-  width: 32px;
-  height: 32px;
-  transition: transform 0.25s ease, filter 0.25s ease;
-  filter: drop-shadow(0 4px 12px rgba(11, 164, 134, 0.35));
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s cubic-bezier(.2,.8,.2,1);
 }
 .VPNavBarTitle .title:hover .logo {
-  transform: scale(1.08) rotate(-2deg);
+  transform: rotate(-8deg) scale(1.05);
+}
+.VPNavBarTitle a.title::after {
+  content: "DAREBAY";
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.28em;
+  color: var(--vp-c-text-1);
+  padding-top: 2px; /* optical alignment with the logo */
 }
 
-/* ---------- Nav menu (right-cluster, before socials) ---------- */
-.VPNavBarMenu {
-  gap: 4px;
+/* ---------- Center-floating nav capsule (desktop) ---------- */
+@media (min-width: 960px) {
+  .VPNavBar .content-body > .VPNavBarMenu {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    gap: 0;
+    padding: 4px;
+    border-radius: 999px;
+    background: var(--db-ink-soft);
+    border: 1px solid var(--vp-c-divider);
+  }
 }
+.VPNavBarMenu {
+  display: flex;
+  align-items: center;
+}
+
+/* Nav items inside the capsule — regular text links with a soft pill on
+   hover / active. No underline animation this time; the pill itself is
+   the state indicator. */
 .VPNavBarMenuLink {
   position: relative;
+  display: inline-flex !important;
+  align-items: center;
+  height: auto !important;
   font-weight: 500;
-  font-size: 0.92rem;
+  font-size: 0.9rem;
   color: var(--vp-c-text-2);
-  padding: 8px 14px !important;
-  border-radius: 10px;
+  padding: 7px 16px !important;
+  border-radius: 999px;
   transition: color 0.15s ease, background-color 0.15s ease;
 }
-/* Animated gradient underline — the current-section indicator */
-.VPNavBarMenuLink::after {
-  content: "";
-  position: absolute;
-  left: 14px;
-  right: 14px;
-  bottom: 4px;
-  height: 2px;
-  border-radius: 2px;
-  background: var(--db-gradient);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.25s ease;
+.VPNavBarMenuLink::after,
+.VPNavBarMenuLink::before {
+  display: none !important; /* no underline from v1 */
 }
 .VPNavBarMenuLink:hover {
   color: var(--vp-c-text-1);
-  background: var(--vp-c-default-soft);
-}
-.VPNavBarMenuLink:hover::after,
-.VPNavBarMenuLink.active::after {
-  transform: scaleX(1);
+  background: rgba(255, 255, 255, 0.05);
 }
 .VPNavBarMenuLink.active {
   color: var(--vp-c-text-1);
+  background: var(--vp-c-brand-soft);
   font-weight: 600;
 }
 
-/* Subtle divider between nav menu and socials cluster (desktop only) */
+/* ---------- The CTA: last nav link gets a gradient pill ---------- */
+.VPNavBarMenu > .VPNavBarMenuLink:last-child,
+.VPNavScreenMenuLink:last-child {
+  background: var(--db-gradient) !important;
+  color: #fff !important;
+  font-weight: 600;
+  padding: 8px 18px !important;
+  margin-left: 6px;
+  box-shadow: 0 4px 14px rgba(11, 164, 134, 0.28);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+}
+.VPNavBarMenu > .VPNavBarMenuLink:last-child:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(11, 164, 134, 0.38);
+  filter: brightness(1.08);
+  background: var(--db-gradient) !important;
+}
+/* Pull the CTA out of the capsule so it reads as "distinct call-to-action" */
 @media (min-width: 960px) {
-  .VPNavBar .content-body > .VPNavBarMenu + .VPSocialLinks {
-    position: relative;
+  .VPNavBar .content-body > .VPNavBarMenu {
+    /* Let the CTA break out of the pill padding */
+    padding-right: 0;
   }
-  .VPNavBar .content-body > .VPNavBarMenu + .VPSocialLinks::before {
-    content: "";
-    position: absolute;
-    left: -14px;
-    top: 20%;
-    bottom: 20%;
-    width: 1px;
-    background: var(--vp-c-divider);
+  .VPNavBarMenu > .VPNavBarMenuLink:last-child {
+    margin-left: 8px;
+    /* The capsule's internal border ends before the CTA */
+    box-shadow:
+      0 0 0 1px var(--vp-c-bg),
+      0 4px 14px rgba(11, 164, 134, 0.28);
+  }
+}
+
+/* ---------- Socials: ghost icons, no background pill ---------- */
+.VPSocialLinks {
+  gap: 2px !important;
+  padding: 0 !important;
+  margin-left: 6px !important;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+}
+.VPSocialLink {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  color: var(--vp-c-text-3) !important;
+  background: transparent !important;
+  transition: color 0.15s ease, background-color 0.15s ease, transform 0.2s ease;
+}
+.VPSocialLink:hover {
+  color: var(--db-green) !important;
+  background: rgba(11, 164, 134, 0.12) !important;
+  transform: none;
+}
+.VPSocialLink svg {
+  width: 17px;
+  height: 17px;
+}
+
+/* ---------- Mobile header (<960px) ---------- */
+@media (max-width: 959px) {
+  .VPNavBarTitle a.title::after {
+    /* Keep the wordmark on phones, slightly smaller */
+    font-size: 0.72rem;
+    letter-spacing: 0.24em;
+  }
+  /* In the mobile hamburger screen, the CTA + socials live inside
+     VPNavScreen. Make the CTA item full-width gradient there too. */
+  .VPNavScreenMenuLink:last-child {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    margin-top: 16px;
+    border-radius: 999px;
   }
 }
 

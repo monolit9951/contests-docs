@@ -3,7 +3,8 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   base: '/docs/',
   cleanUrls: true,
-  appearance: 'dark',
+  // force-dark: always dark, no theme toggle in the UI at all
+  appearance: 'force-dark',
 
   title: 'DareBay Docs',
   description: 'The DareBay Manifesto — how we run contests, pick winners, and keep it real.',
@@ -138,9 +139,8 @@ export default defineConfig({
     // No site title text — just the logo, which links to darebay.com
     // (href is rewritten at runtime in theme/index.ts).
     siteTitle: false,
-    search: {
-      provider: 'local',
-    },
+    // Search disabled — the content volume doesn't warrant it yet, and a
+    // quiet header reads better than one with a half-empty search box.
     socialLinks: [
       {
         icon: {

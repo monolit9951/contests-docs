@@ -71,6 +71,15 @@ export default defineConfig({
               { text: 'Manifesto', link: '/' },
             ],
           },
+          {
+            text: 'Legal',
+            collapsed: false,
+            items: [
+              { text: 'Overview', link: '/legal/' },
+              { text: 'Privacy Policy', link: '/legal/privacy' },
+              { text: 'Terms of Service', link: '/legal/terms' },
+            ],
+          },
         ],
         darkModeSwitchLabel: 'Theme',
         sidebarMenuLabel: 'Menu',
@@ -123,6 +132,15 @@ export default defineConfig({
               collapsed: false,
               items: [
                 { text: 'Манифест', link: '/ru/' },
+              ],
+            },
+            {
+              text: 'Юридические документы',
+              collapsed: false,
+              items: [
+                { text: 'Обзор', link: '/ru/legal/' },
+                { text: 'Политика конфиденциальности', link: '/ru/legal/privacy' },
+                { text: 'Условия использования', link: '/ru/legal/terms' },
               ],
             },
           ],

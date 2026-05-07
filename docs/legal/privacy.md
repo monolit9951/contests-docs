@@ -9,39 +9,53 @@ description: What data DareBay collects, why, how long we keep it, and how to co
 **Last updated:** 7 May 2026
 
 This policy describes how **DareBay** ("DareBay", "we", "us", "the
-platform") collects, uses, and protects your personal data when you use
-**darebay.com**, the DareBay web app, our APIs, and related services
-(collectively, the "Service").
+Service") collects, uses, and protects your personal data when you use
+**darebay.com**, the DareBay web app, our APIs, and related services.
 
 We treat your data the way we'd want ours treated: collect only what we
 need, keep it only as long as we need it, and never sell it. This policy
 explains the specifics.
 
-We follow the **UK General Data Protection Regulation (UK GDPR)**, the
-**Data Protection Act 2018**, and the data protection laws of the
-jurisdictions where our users reside, applying the strictest standard
-where they overlap.
+The **data controller** for the purposes of the EU and UK General Data
+Protection Regulation is **Ruslan Bei**, the individual operator
+described in [Section 1](#_1-who-we-are). We apply the standards of the
+**EU GDPR**, **UK GDPR**, the **UK Data Protection Act 2018**, and the
+data protection laws of the jurisdictions where our users reside,
+applying the strictest standard where they overlap.
 
-If you only read one section, read [Your rights](#your-rights). The rest is
-the detail behind it.
+If you only read one section, read [Your rights](#_7-your-rights). The
+rest is the detail behind it.
 
 ---
 
 ## 1. Who we are
 
+DareBay is operated by **Ruslan Bei**, an individual based in Europe,
+acting as the sole proprietor of the Service. A UK private limited
+company is planned; once it's registered, this section will be updated
+with the company name, registration number, and registered office
+address, and the operator role will transfer to that entity.
+
 | | |
 |---|---|
-| **Operator** | DareBay |
-| **Country of operation** | United Kingdom *(business registration in progress; final entity name and address will be added here once registration completes)* |
+| **Operator (data controller)** | Ruslan Bei — individual, doing business as **DareBay** |
+| **Operating region** | Europe |
+| **Future entity** | UK private limited company (registration in progress) |
 | **General contact** | hello@darebay.com |
 | **Privacy contact** | privacy@darebay.com |
+| **Postal address** | Available on written request to **privacy@darebay.com**. We provide a current correspondence address to data subjects and supervisory authorities on request, and to law-enforcement bodies as required by law. |
 
-If you're in the UK and feel we've mishandled your data, you can lodge a
-complaint with the [Information Commissioner's Office (ICO)](https://ico.org.uk/).
-If you're in the EU, you can complain to your national supervisory
-authority. If you're elsewhere, you can use whatever consumer-protection
-or data-protection authority your country provides. We'd rather you talk
-to us first — but it's your right either way.
+You can lodge a complaint with the data protection authority of your
+country of residence:
+
+- **EU/EEA users** — your national supervisory authority. A list is at
+  [edpb.europa.eu/about-edpb/about-edpb/members](https://www.edpb.europa.eu/about-edpb/about-edpb/members_en).
+- **UK users** — the [Information Commissioner's Office (ICO)](https://ico.org.uk/).
+- **Ukraine** — the Ukrainian Parliament Commissioner for Human Rights.
+- **Other countries** — whatever data-protection or consumer-protection
+  authority your country provides.
+
+We'd rather you talk to us first — but it's your right either way.
 
 ---
 
@@ -82,7 +96,7 @@ Concretely:
 
 When you connect a TikTok, Instagram, or YouTube account to verify
 ownership of imported videos, we receive and store a small set of
-identifiers from that platform — see [Section 3](#tiktok-instagram-and-youtube-data).
+identifiers from that platform — see [Section 3](#_3-tiktok-instagram-and-youtube-data).
 
 ### 2.5 Technical & device data
 
@@ -113,6 +127,35 @@ channels, replies we send back.
 ## 3. TikTok, Instagram, and YouTube data
 
 This section is specific because these platforms require it (and so do we).
+
+### 3.0 Data flow at a glance
+
+Step-by-step, when you connect a TikTok account to verify ownership of an
+imported video:
+
+1. You click **Connect TikTok** on your DareBay verification page.
+2. We redirect you to TikTok's official OAuth screen at
+   `tiktok.com/v2/auth/authorize/`. You are now in TikTok's environment,
+   not ours; we never see your TikTok password.
+3. TikTok shows you the permissions we request — `user.info.basic` and
+   `user.info.profile` (see [3.1](#_3-1-what-we-receive)) — and asks you
+   to approve.
+4. You approve (or cancel — cancel ends the flow with no data leaving
+   TikTok).
+5. TikTok redirects you back to DareBay with a temporary authorization
+   code in the URL.
+6. Our server exchanges the code for a short-lived access token, calls
+   TikTok's `/v2/user/info/` endpoint **once**, reads the fields listed
+   in [3.1](#_3-1-what-we-receive), and immediately discards the access
+   token.
+7. We compare the returned `username` against the public author handle
+   parsed from the imported video URL. On match, we record the
+   verification (see [3.3](#_3-3-what-we-store)) and return you to
+   DareBay.
+
+The flow is one-shot: we make exactly one read call to TikTok per
+verification. We never request a refresh token, never store an access
+token, and never call any other TikTok API.
 
 ### 3.1 What we receive
 
@@ -369,7 +412,11 @@ of a change means you accept it.
 |---|---|
 | General privacy questions | privacy@darebay.com |
 | Data Protection contact | dpo@darebay.com |
-| Postal address | *(to be added once UK business registration completes)* |
+| Operator | Ruslan Bei (sole operator), trading as DareBay |
+| Postal address | Available on written request to **privacy@darebay.com** |
+
+Email is the fastest way to reach us; we respond to all privacy-related
+requests within 30 days, usually within 5 business days.
 
 ---
 

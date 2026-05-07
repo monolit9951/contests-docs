@@ -10,9 +10,11 @@ description: The rules of DareBay. What we promise, what we expect, and what get
 
 These Terms govern your use of **darebay.com**, the DareBay web app, our
 APIs, and related services (together, the **"Service"**). The Service is
-operated by **DareBay** (the **"Operator"**, "we", "us"), with operations
-based in the United Kingdom *(business registration in progress; final
-entity name and address will be added here once registration completes)*.
+operated by **Ruslan Bei**, an individual based in Europe, doing business
+as **DareBay** (the **"Operator"**, "we", "us"). A UK private limited
+company is planned; once it is registered, the operator role will
+transfer to that entity and these Terms will be updated to reflect the
+new entity and its registered office.
 
 By creating an account or using the Service, you agree to these Terms.
 If you don't agree, don't use the Service.
@@ -115,7 +117,7 @@ When you publish a contest, you commit to:
 You cannot cancel a contest after it has started accepting submissions
 without our review and the consent of any affected Participants. Cancels
 before submissions begin return funds to your wallet (minus commission
-already taken — see [Section 7](#7-commission)).
+already taken — see [Section 7](#_7-commission)).
 
 ### 4.3 Participant commitments
 
@@ -280,7 +282,7 @@ the source video.
 
 We won't post on your behalf, message anyone from your account, read
 your private messages, or use your platform data for anything other than
-ownership verification. Details are in our [Privacy Policy, Section 3](./privacy#tiktok-instagram-and-youtube-data).
+ownership verification. Details are in our [Privacy Policy, Section 3](./privacy#_3-tiktok-instagram-and-youtube-data).
 
 ### 8.3 Disconnecting
 
@@ -298,7 +300,7 @@ but no further verification flows from that link.
 You can delete your account at any time in **Settings → Account →
 Delete account**. Deletion:
 
-- Removes your profile and personal data per our [Privacy Policy, Section 6](./privacy#how-long-we-keep-it).
+- Removes your profile and personal data per our [Privacy Policy, Section 6](./privacy#_6-how-long-we-keep-it).
 - Pays out any winnings or unlocked balance through the methods you have
   configured, if available, or holds them under standard
   unclaimed-property rules.
@@ -404,7 +406,8 @@ of a change means you accept it.
 | General | hello@darebay.com |
 | Legal & disputes | legal@darebay.com |
 | Privacy | privacy@darebay.com |
-| Postal address | *(to be added once UK business registration completes)* |
+| Operator | Ruslan Bei (sole operator), trading as DareBay |
+| Postal address | Available on written request to **legal@darebay.com** |
 
 ---
 

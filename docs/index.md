@@ -1,12 +1,12 @@
 ---
 title: The DareBay Manifesto
-description: How we run contests, pick winners, and keep it real.
+description: How we run activities, pick winners, and keep it real.
 ---
 
 <div class="docs-cover">
   <div class="docs-cover-eyebrow">DareBay · Manifesto</div>
   <h1 class="docs-cover-title">Proof,<br>not performance.</h1>
-  <p class="docs-cover-lede">How we run contests, pick winners, and keep it real.</p>
+  <p class="docs-cover-lede">How we run activities, pick winners, and keep it real.</p>
 </div>
 
 # The DareBay Manifesto
@@ -18,13 +18,14 @@ proof, and the community (or the person who put up the prize) said *yes, that's 
 
 ## What DareBay is
 
-DareBay is a contest platform. Someone — a creator, a brand, a curious person
-with a budget — puts up a prize and sets a challenge. Participants submit real
-work: a text, an image, a video. Viewers watch, comment, and vote. Winners
-get paid. That's the whole loop.
+DareBay is a platform where people and brands launch activities — tasks,
+battles, challenges, contests, creative briefs. Someone — a creator, a brand,
+a curious person with a budget — sets the activity and puts up the reward.
+Participants make their own version of the content: a text, an image, a video.
+Viewers watch, comment, and vote. Winners get paid. That's the whole loop.
 
-No infinite scroll of nothing. No algorithm deciding who matters. A **contest**
-has a beginning, a middle, and an end — and at the end, *someone gets the prize.*
+No infinite scroll of nothing. No algorithm deciding who matters. An **activity**
+has a beginning, a middle, and an end — and at the end, *someone gets the reward.*
 
 ## What we believe
 
@@ -56,8 +57,8 @@ Break these and you're out. We don't do three strikes.
 
 ## Our promise
 
-1. **Transparent commission.** You see the exact fee before you confirm, in
-   your currency. Fiat or crypto, it's the same math.
+1. **Transparent commission.** You see the exact fee before you confirm.
+   Locked in the smart contract, visible on-chain, no surprise fees.
 2. **Winners always get paid.** Prize funds are locked at contest creation.
    We don't hold them hostage and we don't disappear.
 3. **Disputes get a human.** If something looks wrong — a rigged vote, a

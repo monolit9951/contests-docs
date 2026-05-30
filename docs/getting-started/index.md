@@ -1,6 +1,6 @@
 ---
 title: Getting Started with DareBay
-description: Run your first contest, submit your first work, or just watch and vote. The whole loop in a few minutes.
+description: Run your first activity, submit your first work, or just watch and vote. The whole loop in a few minutes.
 ---
 
 <div class="docs-cover">
@@ -12,9 +12,9 @@ description: Run your first contest, submit your first work, or just watch and v
 # Getting Started
 
 DareBay works three ways at once. You can be an **organizer** (you set the
-challenge and put up the prize), a **participant** (you submit work and try to
-win), or a **viewer** (you watch, vote, comment — and sometimes that decides
-who wins). Most accounts end up doing all three.
+activity and put up the reward), a **participant** (you make your version of
+the content and try to win), or a **viewer** (you watch, vote, comment — and
+sometimes that decides who wins). Most accounts end up doing all three.
 
 ## If you want to run a contest
 

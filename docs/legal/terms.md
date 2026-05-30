@@ -23,9 +23,10 @@ If you don't agree, don't use the Service.
 
 ## 1. What DareBay does
 
-DareBay is a contest platform. Someone (an **Organizer**) puts up a prize
-and sets a challenge. Other people (**Participants**) submit work.
-Viewers watch, vote, comment. Winners get paid. The end.
+DareBay is a platform where people and brands launch activities — tasks,
+battles, challenges, contests, and creative briefs. Someone (an **Organizer**)
+puts up a prize and sets the activity. Other people (**Participants**) submit
+work. Viewers watch, vote, comment. Winners get paid. The end.
 
 We provide the platform and the wallet that moves value between
 Organizers and Participants. We are **not** a Participant in any contest,

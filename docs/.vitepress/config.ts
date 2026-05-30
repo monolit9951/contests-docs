@@ -7,7 +7,7 @@ export default defineConfig({
   appearance: 'force-dark',
 
   title: 'DareBay Docs',
-  description: 'The DareBay Manifesto — how we run contests, pick winners, and keep it real.',
+  description: 'The DareBay Manifesto — how we run activities, pick winners, and keep it real.',
 
   head: [
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/docs/favicon.svg' }],
@@ -28,7 +28,7 @@ export default defineConfig({
       label: 'English',
       lang: 'en',
       title: 'DareBay Docs',
-      description: 'Run contests, submit work, win prizes on DareBay.',
+      description: 'Run activities, submit work, earn rewards on DareBay.',
       themeConfig: {
         nav: [
           { text: 'Getting Started', link: '/getting-started/' },
@@ -91,7 +91,7 @@ export default defineConfig({
       label: 'Русский',
       lang: 'ru',
       title: 'Документация DareBay',
-      description: 'Запускайте конкурсы, отправляйте работы, выигрывайте призы на DareBay.',
+      description: 'Запускайте активности, отправляйте работы, получайте награды на DareBay.',
       link: '/ru/',
       themeConfig: {
         nav: [

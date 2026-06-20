@@ -16,6 +16,11 @@ activity and put up the reward), a **participant** (you make your version of
 the content and try to win), or a **viewer** (you watch, vote, comment — and
 sometimes that decides who wins). Most accounts end up doing all three.
 
+DareBay has two equal front doors and one account behind them: the web at
+[**darebay.com**](https://darebay.com) and inside Telegram (app, bot, group).
+Sign in either way and you land in the same place — your activities, works, and
+wallet follow you across both.
+
 ## If you want to run a contest
 
 Put up a prize, define what people have to do to win, and publish. Submissions
@@ -41,7 +46,8 @@ vote. Viewers shape outcomes without ever submitting a thing.
 
 ## Before you go further
 
-- **[Prizes & payouts](./prizes-and-payouts)** — how money (and items) actually
-  move on DareBay. Fiat, crypto, both.
+- **[Prizes & payouts](./prizes-and-payouts)** — what you can put up (money, an
+  item, Telegram Stars, or a gift) and how the reward reaches winners. Money pays
+  out by card or bank transfer, by wallet, or by Stars — your pick.
 - **[Verification & trust](./verification-and-trust)** — why some accounts have
   a badge, and what it means for the people they run contests for.

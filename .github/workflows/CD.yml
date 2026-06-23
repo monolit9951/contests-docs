@@ -45,7 +45,7 @@ jobs:
             # Build & push for DEV
             - name: Build & push docker DEV images
               if: env.CURRENT_BRANCH == 'develop'
-              run: make docker VERSION=dev
+              run: make docker VERSION=dev DOCS_ENV=dev
 
             - name: Deploy to DEV environment
               uses: appleboy/ssh-action@master

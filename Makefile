@@ -1,5 +1,6 @@
 # Variables
 VERSION ?= latest
+DOCS_ENV ?= prod
 HOST_FOR_DOCKER_IMAGE ?= contestvibe
 PROJECT_NAME ?= contests-docs
 
@@ -12,7 +13,7 @@ docker_login: ## login to docker registry.
 	docker login
 
 build_app: ## Build Application docker image.
-	docker build -f Dockerfile -t $(HOST_FOR_DOCKER_IMAGE)/$(PROJECT_NAME):$(VERSION) .
+	docker build -f Dockerfile --build-arg DOCS_ENV=$(DOCS_ENV) -t $(HOST_FOR_DOCKER_IMAGE)/$(PROJECT_NAME):$(VERSION) .
 
 push_app: ## Push Application docker image.
 	docker push $(HOST_FOR_DOCKER_IMAGE)/$(PROJECT_NAME):$(VERSION)

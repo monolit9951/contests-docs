@@ -1,9 +1,7 @@
 ---
 title: DareBay - отзывы, механика выплат и комиссия
 description: Что такое DareBay, как устроены выплаты через посредника-гаранта и какая комиссия. Реальные факты вместо догадок.
-provenance:
-  snapshot_date: "2026-07-09"
-  source: darebay-prod
+provenance: { snapshot_date: "2026-07-09", source: "darebay-prod" }
 numbers_used: [commission_fiat, commission_crypto, commission_coins]
 seo: true
 head:

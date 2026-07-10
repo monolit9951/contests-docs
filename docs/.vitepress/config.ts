@@ -1,7 +1,38 @@
 import { defineConfig } from 'vitepress'
+import { readdirSync, readFileSync, existsSync } from 'node:fs'
+import { join, dirname } from 'node:path'
+import { fileURLToPath } from 'node:url'
+
+// Branch-aware host for the sitemap + a dev-only noindex (the develop preview must not be indexed;
+// only the release/prod build is indexable). CD passes DOCS_ENV=prod on the release branch.
+const DOCS_ENV = process.env.DOCS_ENV || 'dev'
+// hostname MUST include the /docs/ base — VitePress sitemap joins hostname + base-stripped path,
+// so without it the sitemap emits .../ru/... (404) instead of .../docs/ru/... .
+const HOSTNAME = DOCS_ENV === 'prod' ? 'https://darebay.com/docs/' : 'https://dev.darebay.com/docs/'
+
+const DOCS_DIR = join(dirname(fileURLToPath(import.meta.url)), '..')
+
+// Auto-list pages in a RU content zone so the fleet never has to edit this config file
+// (producers are forbidden to touch config.ts; new pages self-register in the sidebar on build).
+function ruZone(zone: string, text: string) {
+  const dir = join(DOCS_DIR, 'ru', zone)
+  const items: { text: string; link: string }[] = []
+  if (existsSync(join(dir, 'index.md'))) items.push({ text: 'Обзор', link: `/ru/${zone}/` })
+  if (existsSync(dir)) {
+    for (const f of readdirSync(dir).sort()) {
+      if (!f.endsWith('.md') || f === 'index.md') continue
+      const slug = f.slice(0, -3)
+      const m = readFileSync(join(dir, f), 'utf8').match(/^---\n[\s\S]*?\btitle:\s*(.+)\n[\s\S]*?\n---/)
+      const title = m ? m[1].trim().replace(/^["']|["']$/g, '') : slug
+      items.push({ text: title, link: `/ru/${zone}/${slug}` })
+    }
+  }
+  return { text, collapsed: false, items }
+}
 
 export default defineConfig({
   base: '/docs/',
+  sitemap: { hostname: HOSTNAME },
   cleanUrls: true,
   // force-dark: always dark, no theme toggle in the UI at all
   appearance: 'force-dark',
@@ -10,6 +41,8 @@ export default defineConfig({
   description: 'The DareBay Manifesto — how we run activities, pick winners, and keep it real.',
 
   head: [
+    // dev/preview builds are noindex; only the prod (release) build is indexable.
+    ...(DOCS_ENV !== 'prod' ? [['meta', { name: 'robots', content: 'noindex' }] as [string, Record<string, string>]] : []),
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/docs/favicon.svg' }],
     ['meta', { name: 'theme-color', content: '#02140E' }],
     ['meta', { property: 'og:type', content: 'website' }],
@@ -127,6 +160,10 @@ export default defineConfig({
                 { text: 'Запрещённый контент?', link: '/ru/faq/illegal-content' },
               ],
             },
+            ruZone('zarabotok', 'Заработок'),
+            ruZone('platformy', 'Платформы и комиссии'),
+            ruZone('kak-rabotaet', 'Как это работает'),
+            ruZone('blog', 'Блог'),
             {
               text: 'О платформе',
               collapsed: false,

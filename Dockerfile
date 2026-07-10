@@ -8,7 +8,10 @@ RUN npm ci
 
 COPY . .
 
-RUN npm run docs:build
+# DOCS_ENV controls sitemap host + dev-noindex (config.ts). Release build = prod (indexable);
+# the develop/DEV build passes DOCS_ENV=dev (noindex preview). Default prod so release is safe.
+ARG DOCS_ENV=prod
+RUN DOCS_ENV=$DOCS_ENV npm run docs:build
 
 FROM nginx:alpine
 

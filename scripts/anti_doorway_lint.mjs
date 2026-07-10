@@ -126,27 +126,29 @@ export function runLint({ corpusDir, changedFiles, root = process.cwd() }) {
   for (const cf of changedFiles) {
     const info = pathInfo(cf);
     if (!info.isPage) continue; // only docs/ru/<zone>/<slug>.md pages are gated
+    if (!info.validZone) continue; // human/legacy zones (getting-started, legal, …) are NOT fleet-gated
     const abs = resolve(root, cf);
     if (!existsSync(abs)) continue; // deletion — skip
     const text = readFileSync(abs, "utf8");
     const parsed = parseFront(text);
+    const selfAbs = resolve(root, cf);
 
     // 1. redirect
     for (const re of REDIRECT_PATTERNS) {
       if (re.test(text)) { fail("redirect", cf, `doorway redirect pattern matched: ${re}`); break; }
     }
-    // 3a. path/slug validity
-    if (!info.validZone) fail("path", cf, `zone "${info.zone}" not in ${ZONES.join("|")}`);
+    // 3a. slug validity (zone already validated above; non-content zones are skipped, not failed)
     if (!info.validSlug) fail("path", cf, `slug "${info.slug}" must match ^[a-z0-9-]+$`);
-    // 3b. URL uniqueness across whole corpus (excluding self)
-    const others = (urlMap.get(info.url) || []).filter((p) => p !== info.norm && p !== cf);
+    // 3b. URL uniqueness across whole corpus (self excluded by ABSOLUTE path, not string form)
+    const others = (urlMap.get(info.url) || []).filter((p) => resolve(root, p) !== selfAbs);
     if (others.length) fail("uniqueness", cf, `URL ${info.url} collides with ${others.join(", ")}`);
     // 2. provenance (index pages exempt; real pages must carry it)
     if (info.slug !== "index" && !parsed.hasProvenance) {
       fail("provenance", cf, `missing frontmatter provenance.snapshot_date (every content page needs it)`);
     }
-    // 4. count new seo pages
-    if (parsed.seo) newSeo++;
+    // 4. count new seo pages — an EDIT to an already-existing corpus page is NOT "new"
+    const preexisting = (urlMap.get(info.url) || []).some((p) => resolve(root, p) !== selfAbs);
+    if (parsed.seo && !preexisting) newSeo++;
     // 5. near-duplication vs corpus
     const sh = shingles(parsed.body);
     let worst = { url: null, sim: 0 };
@@ -179,11 +181,21 @@ function parseArgs(argv) {
   }
   return a;
 }
+const GATED_RE = /docs\/ru\/(faq|zarabotok|platformy|kak-rabotaet|blog)\/.*\.md$/;
 function resolveChanged(a, root) {
   if (a.changed != null) return a.changed.split(",").map((s) => s.trim()).filter(Boolean);
-  const base = a.base || "origin/develop";
+  let base = a.base || "origin/develop";
+  const reachable = (ref) => {
+    try { execSync(`git cat-file -e ${ref}^{commit}`, { cwd: root, stdio: "ignore" }); return true; }
+    catch { return false; }
+  };
+  if (!reachable(base)) {
+    if (reachable("origin/develop")) base = "origin/develop";
+    else throw new Error(`base ref unreachable: ${a.base || "origin/develop"} (and origin/develop). Fetch the base or pass --base <sha>.`);
+  }
   const out = execSync(`git diff --name-only ${base}...HEAD`, { cwd: root, encoding: "utf8" });
-  return out.split("\n").map((s) => s.trim()).filter((p) => /docs\/ru\/.*\.md$/.test(p));
+  // CLI/CI mode gates ONLY the 5 content zones; human zones (legal, getting-started) pass untouched.
+  return out.split("\n").map((s) => s.trim()).filter((p) => GATED_RE.test(p));
 }
 
 function main() {

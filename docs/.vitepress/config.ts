@@ -142,9 +142,9 @@ export default defineConfig({
               collapsed: false,
               items: [
                 { text: 'Все вопросы', link: '/ru/faq/' },
-                { text: 'Какая комиссия на DareBay?', link: '/ru/faq/fees' },
+                { text: 'Какая комиссия на DareBay?', link: '/ru/faq/kakaya-komissiya' },
                 { text: 'Можно платить криптой?', link: '/ru/faq/crypto' },
-                { text: 'Как вывести выигрыш?', link: '/ru/faq/withdraw' },
+                { text: 'Как вывести выигрыш?', link: '/ru/faq/darebay-vyvod-deneg' },
                 { text: 'Если никто не участвует?', link: '/ru/faq/no-submissions' },
                 { text: 'Как выбирают победителя?', link: '/ru/faq/choosing-winners' },
                 { text: 'Защита от подделок?', link: '/ru/faq/fake-submissions' },

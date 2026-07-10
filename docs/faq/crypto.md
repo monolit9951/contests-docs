@@ -1,11 +1,29 @@
 ---
-title: Can I pay with crypto?
-description: Yes. DareBay supports both fiat and crypto through the same wallet, for top-ups and payouts.
+title: What can I pay and get paid in?
+description: The reward is money or a thing. You can pay and get paid in money (crypto or fiat), an item, Telegram Stars, or a Telegram gift.
 ---
 
-# Can I pay with crypto?
+# What can I pay and get paid in?
 
-Yes. The DareBay wallet accepts both fiat and crypto. You can:
+A DareBay reward is **money or a thing**. When you launch an activity you
+choose how the reward is paid, and winners and creators receive it the same
+way. The available options are:
+
+- **Money** — crypto or fiat, both work today.
+- **An item** — a physical or described prize the organizer hands over.
+- **Telegram Stars** — pay and reward directly in Stars.
+- **A Telegram gift** — send a gift as the reward.
+
+DareBay locks the reward up front and pays it out automatically by
+independently-counted results, so neither side gets scammed: the organizer
+can't disappear with the prize, and creators get exactly what was promised.
+
+DareBay runs on the web at [darebay.com](https://darebay.com) and in
+Telegram (app, bot, group) — same account, same wallet, either front door.
+
+## Paying with money: crypto
+
+The DareBay wallet accepts crypto for the money option. You can:
 
 - **Top up** in crypto (supported stablecoins and chains — shown in your
   wallet's deposit screen).
@@ -19,11 +37,19 @@ The supported list is maintained in the wallet UI and updated as we add
 chains. As of launch, DareBay supports the major stablecoins on the
 widely-adopted EVM chains, plus a few non-EVM options.
 
-## Do I *have* to use crypto?
+## Paying with money: fiat
 
-No. Fiat (card, bank transfer, supported regional methods) works the same
-way. The wallet is currency-agnostic — what goes in stays in that currency
-until you explicitly convert.
+You don't have to use crypto. Fiat (card, bank transfer, supported regional
+methods) works the same way. The wallet is currency-agnostic — what goes in
+stays in that currency until you explicitly convert.
+
+## Under the hood
+
+For the money option, DareBay holds the locked reward in a TON smart
+contract and settles payouts in USDT-Jetton. That's the rail that makes the
+"locked up front, paid out automatically by results" guarantee work — it's
+one of several ways to be paid (alongside fiat, items, Stars, and gifts),
+not something you have to think about as a user.
 
 ## Conversion
 

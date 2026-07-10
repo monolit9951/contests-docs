@@ -38,7 +38,7 @@ export default defineConfig({
   appearance: 'force-dark',
 
   title: 'DareBay Docs',
-  description: 'The DareBay Manifesto — how we run contests, pick winners, and keep it real.',
+  description: 'The DareBay Manifesto — how we run activities, pick winners, and keep it real.',
 
   head: [
     // dev/preview builds are noindex; only the prod (release) build is indexable.
@@ -61,7 +61,7 @@ export default defineConfig({
       label: 'English',
       lang: 'en',
       title: 'DareBay Docs',
-      description: 'Run contests, submit work, win prizes on DareBay.',
+      description: 'Run activities, submit work, earn rewards on DareBay.',
       themeConfig: {
         nav: [
           { text: 'Getting Started', link: '/getting-started/' },
@@ -104,6 +104,15 @@ export default defineConfig({
               { text: 'Manifesto', link: '/' },
             ],
           },
+          {
+            text: 'Legal',
+            collapsed: false,
+            items: [
+              { text: 'Overview', link: '/legal/' },
+              { text: 'Privacy Policy', link: '/legal/privacy' },
+              { text: 'Terms of Service', link: '/legal/terms' },
+            ],
+          },
         ],
         darkModeSwitchLabel: 'Theme',
         sidebarMenuLabel: 'Menu',
@@ -115,7 +124,7 @@ export default defineConfig({
       label: 'Русский',
       lang: 'ru',
       title: 'Документация DareBay',
-      description: 'Запускайте конкурсы, отправляйте работы, выигрывайте призы на DareBay.',
+      description: 'Запускайте активности, отправляйте работы, получайте награды на DareBay.',
       link: '/ru/',
       themeConfig: {
         nav: [
@@ -160,6 +169,15 @@ export default defineConfig({
               collapsed: false,
               items: [
                 { text: 'Манифест', link: '/ru/' },
+              ],
+            },
+            {
+              text: 'Юридические документы',
+              collapsed: false,
+              items: [
+                { text: 'Обзор', link: '/ru/legal/' },
+                { text: 'Политика конфиденциальности', link: '/ru/legal/privacy' },
+                { text: 'Условия использования', link: '/ru/legal/terms' },
               ],
             },
           ],

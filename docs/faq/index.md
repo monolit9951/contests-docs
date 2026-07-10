@@ -14,7 +14,7 @@ description: Short answers to the questions people actually ask before creating 
 ## Money & fees
 
 - [What fees does DareBay charge?](./fees)
-- [Can I pay with crypto?](./crypto)
+- [What can I pay and get paid in?](./crypto)
 - [Can I withdraw my winnings?](./withdraw)
 
 ## Running a contest

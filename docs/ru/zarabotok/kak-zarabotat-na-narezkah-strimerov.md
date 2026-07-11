@@ -91,5 +91,6 @@ head:
 - [Как работает оплата за просмотры](/ru/kak-rabotaet/kak-rabotaet-oplata-za-prosmotry) - полная механика PPV-конкурсов от блокировки бюджета до выплаты
 - [Сколько можно заработать на нарезках](/ru/zarabotok/skolko-mozhno-zarabotat-na-narezkah) - формула расчёта и примеры на разных ставках
 - [Сколько платят за 1000 просмотров](/ru/zarabotok/skolko-platyat-za-1000-prosmotrov) - детальный разбор ставок
+- [Работа нарезчиком](/ru/zarabotok/rabota-narezchikom) - обзор работы и оплаты нарезчика
 - [Заработок на DareBay](/ru/zarabotok/) - обзор всех способов заработка
 - [DareBay реально платит?](/ru/faq/darebay-realno-platit) - как обеспечена выплата

@@ -24,6 +24,11 @@ description: Короткие ответы на то, что на самом д�
 
 ## Доверие и безопасность
 
+- [DareBay - скам или нет?](./darebay-eto-skam)
+- [DareBay - развод или нет?](./darebay-razvod-ili-net)
+- [DareBay реально платит?](./darebay-realno-platit)
+- [DareBay - отзывы и факты](./darebay-otzyvy)
+- [Гарантия выплат на DareBay](./garantiya-vyplat)
 - [Что мешает подделывать работы?](./fake-submissions)
 - [Что делать с запрещённым контентом?](./illegal-content)
 

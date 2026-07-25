@@ -151,6 +151,16 @@ export default defineConfig({
         ],
       },
     ],
+    // VitePress builds a 404.html but nothing serves it — nginx.conf now points `error_page`
+    // at it, so these strings are what a reader actually sees on a broken link (the default
+    // ones are English, which is the whole thing we just removed from this site).
+    notFound: {
+      code: '404',
+      title: 'Страница не найдена',
+      quote: 'Ссылка ведёт в никуда: страницу переименовали или её никогда не было.',
+      linkLabel: 'на главную документации',
+      linkText: 'Вернуться в документацию',
+    },
     darkModeSwitchLabel: 'Тема',
     sidebarMenuLabel: 'Меню',
     returnToTopLabel: 'Наверх',

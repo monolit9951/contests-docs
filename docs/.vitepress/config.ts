@@ -30,6 +30,14 @@ function ruZone(zone: string, text: string) {
   return { text, collapsed: false, items }
 }
 
+// Self-referencing canonical. VitePress emits none, and with cleanUrls the same page answers on
+// both /foo and /foo.html — two URLs, one page. `relativePath` is docs-relative ('ru/faq/crypto.md');
+// index.md maps to the directory URL.
+function canonical(relativePath: string) {
+  const path = relativePath.replace(/(^|\/)index\.md$/, '$1').replace(/\.md$/, '')
+  return HOSTNAME + path
+}
+
 export default defineConfig({
   base: '/docs/',
   sitemap: { hostname: HOSTNAME },
@@ -37,8 +45,27 @@ export default defineConfig({
   // force-dark: always dark, no theme toggle in the UI at all
   appearance: 'force-dark',
 
-  title: 'DareBay Docs',
-  description: 'The DareBay Manifesto — how we run activities, pick winners, and keep it real.',
+  // Single-language site (RU). The EN tree was removed 2026-07-25 (seo-fleet DECISIONS B5): the
+  // market is RU/СНГ, and the EN pages sat on the SHORT urls (/docs/, /docs/faq/...) while RU sat
+  // a level deeper, so Google indexed the English ones and served English sitelinks under a
+  // Russian brand result. Old EN urls 301 to their RU counterparts in nginx.conf — never
+  // reintroduce an EN tree at the root without redirects.
+  lang: 'ru',
+  title: 'Документация DareBay',
+  description: 'Запускайте активности, отправляйте работы, получайте награды на DareBay.',
+
+  // The manifesto moved from /ru/ to the root so that /docs/ — the url Google already has
+  // indexed and shows as a sitelink — stays a live page and simply turns Russian, instead of
+  // becoming a redirect. `ru/faq/illegal-content.md` still links to the old `/ru/`, which
+  // nginx.conf 301s onto `/`: correct for a reader, invisible to this build-time checker.
+  // Deliberately anchored — it must not mute anything else under /ru/. VitePress resolves a
+  // directory link to its `index`, so the pattern matches `/ru/index`, not `/ru/`.
+  ignoreDeadLinks: [/^\/ru\/index$/],
+
+  transformPageData(pageData) {
+    pageData.frontmatter.head ??= []
+    pageData.frontmatter.head.push(['link', { rel: 'canonical', href: canonical(pageData.relativePath) }])
+  },
 
   head: [
     // dev/preview builds are noindex; only the prod (release) build is indexable.
@@ -46,7 +73,8 @@ export default defineConfig({
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/docs/favicon.svg' }],
     ['meta', { name: 'theme-color', content: '#02140E' }],
     ['meta', { property: 'og:type', content: 'website' }],
-    ['meta', { property: 'og:site_name', content: 'DareBay Docs' }],
+    ['meta', { property: 'og:site_name', content: 'Документация DareBay' }],
+    ['meta', { property: 'og:locale', content: 'ru_RU' }],
     // Manrope — matches the darebay.com frontend
     ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
     ['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }],
@@ -56,146 +84,6 @@ export default defineConfig({
     }],
   ],
 
-  locales: {
-    root: {
-      label: 'English',
-      lang: 'en',
-      title: 'DareBay Docs',
-      description: 'Run activities, submit work, earn rewards on DareBay.',
-      themeConfig: {
-        nav: [
-          { text: 'Getting Started', link: '/getting-started/' },
-          { text: 'FAQ', link: '/faq/' },
-          // The CTA link is styled separately via CSS (data attribute on
-          // the text) — see .VPNavBarMenuLink.cta in custom.css.
-          { text: 'darebay.com  →', link: 'https://darebay.com' },
-        ],
-        sidebar: [
-          {
-            text: 'Getting Started',
-            collapsed: false,
-            items: [
-              { text: 'Overview', link: '/getting-started/' },
-              { text: 'Create your first contest', link: '/getting-started/create-your-first-contest' },
-              { text: 'Submit a work', link: '/getting-started/submit-a-work' },
-              { text: 'Watch, vote & win', link: '/getting-started/watch-vote-win' },
-              { text: 'Prizes & payouts', link: '/getting-started/prizes-and-payouts' },
-              { text: 'Verification & trust', link: '/getting-started/verification-and-trust' },
-            ],
-          },
-          {
-            text: 'FAQ',
-            collapsed: false,
-            items: [
-              { text: 'All questions', link: '/faq/' },
-              { text: 'What fees does DareBay charge?', link: '/faq/fees' },
-              { text: 'Can I pay with crypto?', link: '/faq/crypto' },
-              { text: 'Can I withdraw my winnings?', link: '/faq/withdraw' },
-              { text: 'What happens if no one submits?', link: '/faq/no-submissions' },
-              { text: 'How are winners chosen?', link: '/faq/choosing-winners' },
-              { text: "What's stopping fake submissions?", link: '/faq/fake-submissions' },
-              { text: 'Illegal or harmful content?', link: '/faq/illegal-content' },
-            ],
-          },
-          {
-            text: 'About',
-            collapsed: false,
-            items: [
-              { text: 'Manifesto', link: '/' },
-            ],
-          },
-          {
-            text: 'Legal',
-            collapsed: false,
-            items: [
-              { text: 'Overview', link: '/legal/' },
-              { text: 'Privacy Policy', link: '/legal/privacy' },
-              { text: 'Terms of Service', link: '/legal/terms' },
-            ],
-          },
-        ],
-        darkModeSwitchLabel: 'Theme',
-        sidebarMenuLabel: 'Menu',
-        returnToTopLabel: 'Back to top',
-        outline: { label: 'On this page', level: [2, 3] },
-      },
-    },
-    ru: {
-      label: 'Русский',
-      lang: 'ru',
-      title: 'Документация DareBay',
-      description: 'Запускайте активности, отправляйте работы, получайте награды на DareBay.',
-      link: '/ru/',
-      themeConfig: {
-        nav: [
-          { text: 'Быстрый старт', link: '/ru/getting-started/' },
-          { text: 'FAQ', link: '/ru/faq/' },
-          { text: 'darebay.com  →', link: 'https://darebay.com' },
-        ],
-        sidebar: {
-          '/ru/': [
-            {
-              text: 'Быстрый старт',
-              collapsed: false,
-              items: [
-                { text: 'Обзор', link: '/ru/getting-started/' },
-                { text: 'Создать первый конкурс', link: '/ru/getting-started/create-your-first-contest' },
-                { text: 'Отправить работу', link: '/ru/getting-started/submit-a-work' },
-                { text: 'Смотреть, голосовать, выиграть', link: '/ru/getting-started/watch-vote-win' },
-                { text: 'Призы и выплаты', link: '/ru/getting-started/prizes-and-payouts' },
-                { text: 'Верификация и доверие', link: '/ru/getting-started/verification-and-trust' },
-              ],
-            },
-            {
-              text: 'FAQ',
-              collapsed: false,
-              items: [
-                { text: 'Все вопросы', link: '/ru/faq/' },
-                { text: 'Какая комиссия на DareBay?', link: '/ru/faq/kakaya-komissiya' },
-                { text: 'Можно платить криптой?', link: '/ru/faq/crypto' },
-                { text: 'Как вывести выигрыш?', link: '/ru/faq/darebay-vyvod-deneg' },
-                { text: 'DareBay - скам или нет?', link: '/ru/faq/darebay-eto-skam' },
-                { text: 'DareBay - развод или нет?', link: '/ru/faq/darebay-razvod-ili-net' },
-                { text: 'DareBay реально платит?', link: '/ru/faq/darebay-realno-platit' },
-                { text: 'DareBay - отзывы и факты', link: '/ru/faq/darebay-otzyvy' },
-                { text: 'Гарантия выплат', link: '/ru/faq/garantiya-vyplat' },
-                { text: 'Если никто не участвует?', link: '/ru/faq/no-submissions' },
-                { text: 'Как выбирают победителя?', link: '/ru/faq/choosing-winners' },
-                { text: 'Защита от подделок?', link: '/ru/faq/fake-submissions' },
-                { text: 'Запрещённый контент?', link: '/ru/faq/illegal-content' },
-              ],
-            },
-            ruZone('zarabotok', 'Заработок'),
-            ruZone('platformy', 'Платформы и комиссии'),
-            ruZone('kak-rabotaet', 'Как это работает'),
-            ruZone('blog', 'Блог'),
-            {
-              text: 'О платформе',
-              collapsed: false,
-              items: [
-                { text: 'Манифест', link: '/ru/' },
-              ],
-            },
-            {
-              text: 'Юридические документы',
-              collapsed: false,
-              items: [
-                { text: 'Обзор', link: '/ru/legal/' },
-                { text: 'Политика конфиденциальности', link: '/ru/legal/privacy' },
-                { text: 'Условия использования', link: '/ru/legal/terms' },
-              ],
-            },
-          ],
-        },
-        darkModeSwitchLabel: 'Тема',
-        sidebarMenuLabel: 'Меню',
-        returnToTopLabel: 'Наверх',
-        outline: { label: 'На этой странице', level: [2, 3] },
-        docFooter: { prev: 'Предыдущая страница', next: 'Следующая страница' },
-      },
-    },
-  },
-
   themeConfig: {
     logo: { src: '/logo.svg', alt: 'DareBay' },
     // No site title text — just the logo, which links to darebay.com
@@ -203,6 +91,71 @@ export default defineConfig({
     siteTitle: false,
     // Search disabled — the content volume doesn't warrant it yet, and a
     // quiet header reads better than one with a half-empty search box.
+    nav: [
+      { text: 'Быстрый старт', link: '/ru/getting-started/' },
+      { text: 'FAQ', link: '/ru/faq/' },
+      // The CTA link is styled separately via CSS (data attribute on
+      // the text) — see .VPNavBarMenuLink.cta in custom.css.
+      { text: 'darebay.com  →', link: 'https://darebay.com' },
+    ],
+    sidebar: [
+      {
+        text: 'Быстрый старт',
+        collapsed: false,
+        items: [
+          { text: 'Обзор', link: '/ru/getting-started/' },
+          { text: 'Создать первый конкурс', link: '/ru/getting-started/create-your-first-contest' },
+          { text: 'Отправить работу', link: '/ru/getting-started/submit-a-work' },
+          { text: 'Смотреть, голосовать, выиграть', link: '/ru/getting-started/watch-vote-win' },
+          { text: 'Призы и выплаты', link: '/ru/getting-started/prizes-and-payouts' },
+          { text: 'Верификация и доверие', link: '/ru/getting-started/verification-and-trust' },
+        ],
+      },
+      {
+        text: 'FAQ',
+        collapsed: false,
+        items: [
+          { text: 'Все вопросы', link: '/ru/faq/' },
+          { text: 'Какая комиссия на DareBay?', link: '/ru/faq/kakaya-komissiya' },
+          { text: 'Можно платить криптой?', link: '/ru/faq/crypto' },
+          { text: 'Как вывести выигрыш?', link: '/ru/faq/darebay-vyvod-deneg' },
+          { text: 'DareBay - скам или нет?', link: '/ru/faq/darebay-eto-skam' },
+          { text: 'DareBay - развод или нет?', link: '/ru/faq/darebay-razvod-ili-net' },
+          { text: 'DareBay реально платит?', link: '/ru/faq/darebay-realno-platit' },
+          { text: 'DareBay - отзывы и факты', link: '/ru/faq/darebay-otzyvy' },
+          { text: 'Гарантия выплат', link: '/ru/faq/garantiya-vyplat' },
+          { text: 'Если никто не участвует?', link: '/ru/faq/no-submissions' },
+          { text: 'Как выбирают победителя?', link: '/ru/faq/choosing-winners' },
+          { text: 'Защита от подделок?', link: '/ru/faq/fake-submissions' },
+          { text: 'Запрещённый контент?', link: '/ru/faq/illegal-content' },
+        ],
+      },
+      ruZone('zarabotok', 'Заработок'),
+      ruZone('platformy', 'Платформы и комиссии'),
+      ruZone('kak-rabotaet', 'Как это работает'),
+      ruZone('blog', 'Блог'),
+      {
+        text: 'О платформе',
+        collapsed: false,
+        items: [
+          { text: 'Манифест', link: '/' },
+        ],
+      },
+      {
+        text: 'Юридические документы',
+        collapsed: false,
+        items: [
+          { text: 'Обзор', link: '/ru/legal/' },
+          { text: 'Политика конфиденциальности', link: '/ru/legal/privacy' },
+          { text: 'Условия использования', link: '/ru/legal/terms' },
+        ],
+      },
+    ],
+    darkModeSwitchLabel: 'Тема',
+    sidebarMenuLabel: 'Меню',
+    returnToTopLabel: 'Наверх',
+    outline: { label: 'На этой странице', level: [2, 3] },
+    docFooter: { prev: 'Предыдущая страница', next: 'Следующая страница' },
     socialLinks: [
       {
         icon: {

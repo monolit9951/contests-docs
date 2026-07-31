@@ -94,7 +94,7 @@ function jaccard(a, b) {
 }
 
 // ---- core (pure, testable) ----
-export function runLint({ corpusDir, changedFiles, root = process.cwd() }) {
+export function runLint({ corpusDir, changedFiles, root = process.cwd(), addedFiles = null }) {
   const violations = [];
   const fail = (rule, file, msg) => violations.push({ rule, file, msg });
 
@@ -122,13 +122,33 @@ export function runLint({ corpusDir, changedFiles, root = process.cwd() }) {
   }
 
   // per-changed-file rules
+  //
+  // Учёт осмотренного (2026-07-29): раньше строка OK печатала длину СПИСКА ПУТЕЙ, а не число
+  // страниц, к которым реально применились правила. Путь мог сматчить зонную регулярку и при этом
+  // тихо выпасть из цикла (`continue`) — гейт отчитывался «OK (1 changed page checked)», проверив
+  // ноль правил. Теперь считаем отдельно: inspected (правила применены) и skipped по причинам.
   let newSeo = 0;
+  let inspected = 0;
+  const skipped = { deleted: 0, nonpage: 0, otherzone: 0 };
   for (const cf of changedFiles) {
     const info = pathInfo(cf);
-    if (!info.isPage) continue; // only docs/ru/<zone>/<slug>.md pages are gated
-    if (!info.validZone) continue; // human/legacy zones (getting-started, legal, …) are NOT fleet-gated
+    // GATED_RE содержит `.*` и перескакивает слеш, а pathInfo требует РОВНО один сегмент зоны.
+    // Путь вида docs/ru/blog/2026/x.md проходил первую проверку и проваливался во вторую — молча.
+    // Если путь ЗАЯВЛЕН как гейтируемый, но не разбирается как страница, это нарушение, а не skip:
+    // иначе дорвей во вложенном каталоге уезжает в прод, посчитанный как «проверенный».
+    const gated = GATED_RE.test(cf);
+    if (!info.isPage) {
+      if (gated) fail("path", cf, `gated path does not parse as docs/ru/<zone>/<slug>.md — every rule would silently skip it`);
+      else skipped.nonpage++;
+      continue;
+    }
+    if (!info.validZone) {
+      if (gated) fail("path", cf, `zone "${info.zone}" matches the gated pattern but is not a valid content zone`);
+      else skipped.otherzone++; // human/legacy зоны (getting-started, legal, …) — НЕ флотские, законно
+      continue;
+    }
     const abs = resolve(root, cf);
-    if (!existsSync(abs)) continue; // deletion — skip
+    if (!existsSync(abs)) { skipped.deleted++; continue; } // удаление — правила применять не к чему
     const text = readFileSync(abs, "utf8");
     const parsed = parseFront(text);
     const selfAbs = resolve(root, cf);
@@ -146,9 +166,16 @@ export function runLint({ corpusDir, changedFiles, root = process.cwd() }) {
     if (info.slug !== "index" && !parsed.hasProvenance) {
       fail("provenance", cf, `missing frontmatter provenance.snapshot_date (every content page needs it)`);
     }
-    // 4. count new seo pages — an EDIT to an already-existing corpus page is NOT "new"
-    const preexisting = (urlMap.get(info.url) || []).some((p) => resolve(root, p) !== selfAbs);
-    if (parsed.seo && !preexisting) newSeo++;
+    // 4. count new seo pages — an EDIT to an already-existing corpus page is NOT "new".
+    // Раньше «новизна» выводилась из urlMap: искали ДРУГОЙ путь с тем же URL. Но корпус строится
+    // из рабочего дерева, где страница лежит ровно по своему пути, поэтому others всегда пуст и
+    // preexisting всегда false — ЛЮБАЯ правка считалась новой страницей и жгла квоту волны
+    // (проверено: 9 правок существующих страниц → «9 new seo pages > 8 per wave»).
+    // Истина о новизне живёт в git, а не в корпусе: новая = добавленная относительно базы.
+    // addedFiles === null (режим --changed без базы) — фолбэк на прежнее поведение, там вызывающий
+    // сам задаёт набор (продюсер пишет одну страницу, тесты передают явный список).
+    const isNew = addedFiles ? addedFiles.has(cf) : true;
+    if (parsed.seo && isNew) newSeo++;
     // 5. near-duplication vs corpus
     const sh = shingles(parsed.body);
     let worst = { url: null, sim: 0 };
@@ -160,6 +187,7 @@ export function runLint({ corpusDir, changedFiles, root = process.cwd() }) {
     if (worst.sim > DUP_THRESHOLD) {
       fail("duplicate", cf, `near-duplicate of ${worst.url} (jaccard=${worst.sim.toFixed(2)} > ${DUP_THRESHOLD})`);
     }
+    inspected++; // все правила применены к этой странице — только теперь она «проверена»
   }
 
   // 4. caps
@@ -167,7 +195,7 @@ export function runLint({ corpusDir, changedFiles, root = process.cwd() }) {
   // totalSeo already counts existing corpus; new pages under corpusDir are included if corpus==changed root.
   if (totalSeo > CAP_TOTAL) fail("cap", "(corpus)", `${totalSeo} total seo pages > ${CAP_TOTAL}`);
 
-  return { fatal: null, violations };
+  return { fatal: null, violations, inspected, skipped };
 }
 
 // ---- CLI ----
@@ -182,8 +210,10 @@ function parseArgs(argv) {
   return a;
 }
 const GATED_RE = /docs\/ru\/(faq|zarabotok|platformy|kak-rabotaet|blog)\/.*\.md$/;
-function resolveChanged(a, root) {
-  if (a.changed != null) return a.changed.split(",").map((s) => s.trim()).filter(Boolean);
+// База разрешается ОДИН раз и возвращается наружу: набор изменённых и набор ДОБАВЛЕННЫХ обязаны
+// считаться от одной и той же базы, иначе «новизна» страницы поедет относительно её же диффа.
+function resolveBase(a, root) {
+  if (a.changed != null) return null; // явный список — базы нет по построению
   let base = a.base || "origin/develop";
   const reachable = (ref) => {
     try { execSync(`git cat-file -e ${ref}^{commit}`, { cwd: root, stdio: "ignore" }); return true; }
@@ -193,22 +223,41 @@ function resolveChanged(a, root) {
     if (reachable("origin/develop")) base = "origin/develop";
     else throw new Error(`base ref unreachable: ${a.base || "origin/develop"} (and origin/develop). Fetch the base or pass --base <sha>.`);
   }
+  return base;
+}
+function resolveChanged(a, root, base) {
+  if (a.changed != null) return a.changed.split(",").map((s) => s.trim()).filter(Boolean);
   const out = execSync(`git diff --name-only ${base}...HEAD`, { cwd: root, encoding: "utf8" });
   // CLI/CI mode gates ONLY the 5 content zones; human zones (legal, getting-started) pass untouched.
   return out.split("\n").map((s) => s.trim()).filter((p) => GATED_RE.test(p));
+}
+// Добавленные относительно базы — единственный честный источник «новизны» страницы (см. правило 4).
+function resolveAdded(root, base) {
+  if (!base) return null;
+  const out = execSync(`git diff --name-only --diff-filter=A ${base}...HEAD`, { cwd: root, encoding: "utf8" });
+  return new Set(out.split("\n").map((s) => s.trim()).filter(Boolean));
 }
 
 function main() {
   const a = parseArgs(process.argv.slice(2));
   const root = a.root ? resolve(a.root) : process.cwd();
   if (!a.corpus) { console.error("FATAL: --corpus <dir> is required (fail-loud)"); process.exit(2); }
-  let changed;
-  try { changed = resolveChanged(a, root); }
+  let changed, added;
+  try {
+    const base = resolveBase(a, root);
+    changed = resolveChanged(a, root, base);
+    added = resolveAdded(root, base);
+  }
   catch (e) { console.error(`FATAL: cannot resolve changed files: ${e.message}`); process.exit(2); }
-  const res = runLint({ corpusDir: a.corpus, changedFiles: changed, root });
+  const res = runLint({ corpusDir: a.corpus, changedFiles: changed, root, addedFiles: added });
   if (res.fatal) { console.error(`FATAL: ${res.fatal}`); process.exit(2); }
   if (res.violations.length === 0) {
-    console.log(`anti-doorway-lint: OK (${changed.length} changed page(s) checked)`);
+    // inspected = страницы, к которым РЕАЛЬНО применились правила; skipped — с причинами.
+    // Потребитель (промоут) сверяет inspected+skipped со своим независимым счётом путей: без этого
+    // «OK (N changed page(s) checked)» означало лишь «N путей сматчили регулярку».
+    const sk = res.skipped;
+    const skTotal = sk.deleted + sk.nonpage + sk.otherzone;
+    console.log(`anti-doorway-lint: OK (${changed.length} changed page(s) checked; inspected=${res.inspected} skipped=${skTotal} [deleted=${sk.deleted} nonpage=${sk.nonpage} otherzone=${sk.otherzone}])`);
     process.exit(0);
   }
   console.error(`anti-doorway-lint: ${res.violations.length} violation(s):`);

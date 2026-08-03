@@ -12,7 +12,8 @@
     "check:registry": "node --experimental-strip-types --no-warnings scripts/check-registry.mjs --post",
     "gen:llms": "node --experimental-strip-types --no-warnings scripts/gen-llms.mjs",
     "gen:redirects": "node --experimental-strip-types --no-warnings scripts/gen-nginx-redirects.mjs",
-    "gen:addresses": "node --experimental-strip-types --no-warnings scripts/print-addresses.mjs > ADDRESSES.md"
+    "gen:addresses": "node --experimental-strip-types --no-warnings scripts/print-addresses.mjs > ADDRESSES.md",
+    "gates": "node --experimental-strip-types --no-warnings scripts/url-gates.mjs"
   },
   "devDependencies": {
     "vitepress": "^1.6.3"

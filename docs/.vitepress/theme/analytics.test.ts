@@ -1,6 +1,12 @@
 import { describe, expect, it } from 'vitest'
 
-import { classifyExitFrom, DocsEvent, normalizeDocsPath, PASSIVE_DOCS_EVENTS } from './analytics'
+import {
+    classifyExitFrom,
+    DocsEvent,
+    normalizeDocsPath,
+    PASSIVE_DOCS_EVENTS,
+    throttleKeyFor,
+} from './analytics'
 
 const ARTICLE = 'https://darebay.com/docs/ru/zarabotok/kak-zarabotat-na-narezkah-s-nulya'
 
@@ -74,6 +80,46 @@ describe('normalizeDocsPath', () => {
 
     it('maps the docs root to a single key', () => {
         expect(normalizeDocsPath('/')).toBe('/')
+    })
+})
+
+describe('throttleKeyFor', () => {
+    const A = '/docs/ru/faq/crypto'
+    const B = '/docs/ru/faq/no-submissions'
+
+    it('separates the same event on different pages', () => {
+        // The regression: the key had no page in it, so `docs_page_view` had ONE
+        // key for the whole site and the 1s throttle silently dropped every view
+        // a reader reached faster than that. Five pages at 500ms apart were
+        // recorded as three.
+        expect(throttleKeyFor('docs_page_view', undefined, undefined, A)).not.toBe(
+            throttleKeyFor('docs_page_view', undefined, undefined, B),
+        )
+    })
+
+    it('separates the same read-depth milestone on different pages', () => {
+        expect(throttleKeyFor('docs_read_depth', '25', undefined, A)).not.toBe(
+            throttleKeyFor('docs_read_depth', '25', undefined, B),
+        )
+    })
+
+    it('still collapses a genuine repeat — same event, same page', () => {
+        // This is what the throttle is FOR: a double click, or a listener that
+        // got registered twice, must not become two rows.
+        expect(throttleKeyFor('docs_page_view', undefined, undefined, A)).toBe(
+            throttleKeyFor('docs_page_view', undefined, undefined, A),
+        )
+    })
+
+    it('keeps milestones and metrics apart within one page', () => {
+        const keys = ['25', '50', '75', '100'].map((d) => throttleKeyFor('docs_read_depth', d, undefined, A))
+        expect(new Set(keys).size).toBe(4)
+    })
+
+    it('keeps two different outbound links on one page apart', () => {
+        expect(throttleKeyFor('docs_exit_external', undefined, 'https://a.example/', A)).not.toBe(
+            throttleKeyFor('docs_exit_external', undefined, 'https://b.example/', A),
+        )
     })
 })
 

@@ -79,6 +79,27 @@ const readSession = (): SessionContext | null => {
     }
 }
 
+/**
+ * Where the reader came from, or nothing when they came from us.
+ *
+ * The same-origin filter is not cosmetic. A session rotates after 30 minutes
+ * idle, and the rotation can land on a page opened FROM another page of ours
+ * (a docs link in a new tab, a return from the product). Without the filter
+ * that fresh session records `https://darebay.com/docs/...` as its acquisition
+ * source, and the dashboard's `initialReferrers` breakdown — the one answer to
+ * "did search bring them" — fills up with our own urls. `session.ts` in the
+ * frontend has always filtered this; the docs copy did not.
+ */
+const captureInitialReferrer = (): string | undefined => {
+    const ref = document.referrer
+    if (!ref) return undefined
+    try {
+        return new URL(ref).hostname === window.location.hostname ? undefined : ref
+    } catch {
+        return undefined
+    }
+}
+
 const captureUtm = (): SessionContext['utm'] => {
     const params = new URLSearchParams(window.location.search)
     const utm = {
@@ -106,7 +127,7 @@ const getSession = (): SessionContext => {
                   id: randomId(),
                   firstSeenAt: now,
                   lastSeenAt: now,
-                  initialReferrer: document.referrer || undefined,
+                  initialReferrer: captureInitialReferrer(),
                   utm: captureUtm(),
               }
     try {
@@ -142,6 +163,29 @@ interface TrackOptions {
     dedupeKey?: string
 }
 
+/**
+ * Throttle identity of one event.
+ *
+ * The pathname is part of it, and that is the whole point. The throttle exists
+ * to swallow an accidental repeat — a double click, a listener registered
+ * twice — which is always the SAME event on the SAME page. Without the path in
+ * the key, `docs_page_view` had one constant key for the entire site and a
+ * reader moving through the sidebar faster than once a second simply stopped
+ * being counted: measured on the built bundle, five pages visited at 500 ms
+ * apart produced three page views, while the same five at 1400 ms produced
+ * five. Read-depth collided the same way, milestone against milestone.
+ *
+ * Deliberately the RAW pathname, not the normalized one: two articles in the
+ * same zone both normalize to `/docs/ru/zarabotok/:slug` and would still
+ * collide with each other.
+ */
+export const throttleKeyFor = (
+    eventId: string,
+    dedupeKey: string | undefined,
+    targetUrl: string | undefined,
+    pathname: string,
+): string => `${eventId}:${dedupeKey ?? targetUrl ?? ''}:${pathname}`
+
 export const trackDocsEvent = (
     eventId: DocsEventId,
     meta: Record<string, string> = {},
@@ -150,9 +194,17 @@ export const trackDocsEvent = (
     if (typeof window === 'undefined') return
 
     const now = Date.now()
-    const key = `${eventId}:${options.dedupeKey ?? meta.targetUrl ?? ''}`
+    const key = throttleKeyFor(eventId, options.dedupeKey, meta.targetUrl, window.location.pathname)
     if (now - (recentSends.get(key) ?? 0) < THROTTLE_MS) return
     recentSends.set(key, now)
+    // The key now varies per page, so the map grows with the session instead of
+    // being bounded by the event vocabulary. Drop entries that are past the
+    // window and can no longer suppress anything.
+    if (recentSends.size > 500) {
+        for (const [k, ts] of recentSends) {
+            if (now - ts >= THROTTLE_MS) recentSends.delete(k)
+        }
+    }
 
     const session = getSession()
     const { targetUrl, ...rest } = meta

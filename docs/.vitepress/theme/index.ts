@@ -2,6 +2,7 @@ import DefaultTheme from 'vitepress/theme'
 import type { Theme } from 'vitepress'
 import { h } from 'vue'
 import { HOMEPAGE, TELEGRAM } from '../links'
+import { DocsEvent, installDocsAnalytics, trackDocsEvent } from './analytics'
 import './custom.css'
 
 // The logo anchor in VitePress's NavBarTitle always points at the locale root.
@@ -54,11 +55,17 @@ export default {
     if (typeof window === 'undefined') return
     // First paint
     queueMicrotask(rewriteLogoLink)
+    // Docs traffic used to reach the nginx log and nothing else — 3758 visits
+    // against zero analytics rows. One delegated listener covers every exit
+    // link, including the ones the content fleet ships next.
+    installDocsAnalytics()
+    trackDocsEvent(DocsEvent.PageView)
     // VitePress replaces DOM on route changes; re-apply
     const original = router.onAfterRouteChange
     router.onAfterRouteChange = (to) => {
       original?.(to)
       queueMicrotask(rewriteLogoLink)
+      trackDocsEvent(DocsEvent.PageView)
     }
   },
 } satisfies Theme

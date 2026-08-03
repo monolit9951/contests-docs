@@ -13,6 +13,10 @@ const HOSTNAME = DOCS_ENV === 'prod' ? 'https://darebay.com/docs/' : 'https://de
 
 const DOCS_DIR = join(dirname(fileURLToPath(import.meta.url)), '..')
 
+const SITE_DESCRIPTION = 'Запускайте активности, отправляйте работы, получайте награды на DareBay.'
+// Shared with the app so a docs link and a site link preview identically.
+const OG_IMAGE = 'https://darebay.com/og-default.jpg'
+
 // Auto-list pages in a RU content zone so the fleet never has to edit this config file
 // (producers are forbidden to touch config.ts; new pages self-register in the sidebar on build).
 function ruZone(zone: string, text: string) {
@@ -53,7 +57,7 @@ export default defineConfig({
   // reintroduce an EN tree at the root without redirects.
   lang: 'ru',
   title: 'Документация DareBay',
-  description: 'Запускайте активности, отправляйте работы, получайте награды на DareBay.',
+  description: SITE_DESCRIPTION,
 
   // The manifesto moved from /ru/ to the root so that /docs/ — the url Google already has
   // indexed and shows as a sitelink — stays a live page and simply turns Russian, instead of
@@ -63,9 +67,33 @@ export default defineConfig({
   // directory link to its `index`, so the pattern matches `/ru/index`, not `/ru/`.
   ignoreDeadLinks: [/^\/ru\/index$/],
 
+  // No " | Документация DareBay" after every title. Two reasons: it spent ~25 of the ~60
+  // characters Google shows on a suffix that says nothing a reader was searching for, and it
+  // labelled commercial pages ("Сколько платят за 1000 просмотров") as documentation, which is
+  // not what they are. Page titles already carry the brand where it belongs.
+  titleTemplate: false,
+
   transformPageData(pageData) {
+    const url = canonical(pageData.relativePath)
+    // frontmatter.description wins; the site description is the floor, so a page never ships
+    // with an empty share card.
+    const description = pageData.frontmatter.description || pageData.description || SITE_DESCRIPTION
+    const title = pageData.frontmatter.title || pageData.title || 'DareBay'
+
     pageData.frontmatter.head ??= []
-    pageData.frontmatter.head.push(['link', { rel: 'canonical', href: canonical(pageData.relativePath) }])
+    pageData.frontmatter.head.push(
+      ['link', { rel: 'canonical', href: url }],
+      // Per-page Open Graph. Only site-level og:type/og:site_name/og:locale existed before, so
+      // every share of an article — the only pages of ours that rank — rendered as a bare link.
+      ['meta', { property: 'og:title', content: title }],
+      ['meta', { property: 'og:description', content: description }],
+      ['meta', { property: 'og:url', content: url }],
+      ['meta', { property: 'og:image', content: OG_IMAGE }],
+      ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
+      ['meta', { name: 'twitter:title', content: title }],
+      ['meta', { name: 'twitter:description', content: description }],
+      ['meta', { name: 'twitter:image', content: OG_IMAGE }],
+    )
   },
 
   head: [
@@ -76,13 +104,12 @@ export default defineConfig({
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:site_name', content: 'Документация DareBay' }],
     ['meta', { property: 'og:locale', content: 'ru_RU' }],
-    // Manrope — matches the darebay.com frontend
-    ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
-    ['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }],
-    ['link', {
-      rel: 'stylesheet',
-      href: 'https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap',
-    }],
+    // Manrope, self-hosted — same files the frontend serves from public/fonts. The app moved off
+    // Google Fonts on purpose: it is unreachable for part of the RU audience, who were left on
+    // fallback fonts. These docs kept requesting fonts.googleapis.com, so on the only pages of
+    // ours that actually rank, part of the readers paid for a render-blocking request to nowhere.
+    ['link', { rel: 'preload', href: '/docs/fonts/manrope-400-cyrillic.woff2', as: 'font', type: 'font/woff2', crossorigin: '' }],
+    ['link', { rel: 'stylesheet', href: '/docs/fonts/manrope.css' }],
   ],
 
   themeConfig: {

@@ -157,7 +157,36 @@ function hubSection(hubId: HubId, lang: Locale) {
 // Google penalises.
 // ---------------------------------------------------------------------------
 
-const PUBLISHER = { '@type': 'Organization', name: 'DareBay' }
+// One Organization node with a stable @id, referenced by every page instead of
+// being repeated inline. That is what lets a crawler treat 129 pages as one
+// publisher rather than 129 unrelated mentions of the same name — the difference
+// between a brand entity and a string.
+const ORG_ID = `${HOSTNAME}/#organization`
+const AUTHOR_ID = `${HOSTNAME}/#founder`
+
+const ORGANIZATION = {
+  '@type': 'Organization',
+  '@id': ORG_ID,
+  name: 'DareBay',
+  url: `${HOSTNAME}/`,
+  logo: `${HOSTNAME}/content-assets/logo.svg`,
+  sameAs: ['https://t.me/darebay_app', 'https://www.tiktok.com/@darebay.com'],
+}
+
+// A named human author, not the company.
+//
+// Earnings is a YMYL-adjacent subject: Google weighs who is behind the page, and
+// "author: Organization" answers that with nobody. The founder is already named
+// on the about page for exactly this reason, and the markup should say the same
+// thing the page says.
+const AUTHOR = {
+  '@type': 'Person',
+  '@id': AUTHOR_ID,
+  name: 'Руслан Бей',
+  jobTitle: 'Основатель DareBay',
+  url: 'https://t.me/ruslanbwork',
+  worksFor: { '@id': ORG_ID },
+}
 
 const FAQ_HEADING = /вопрос|питання|question/i
 
@@ -203,24 +232,57 @@ function faqPairs(body: string) {
   return out
 }
 
-function structuredData(relativePath: string, title: string, description: string, url: string, iso?: string) {
+function structuredData(
+  relativePath: string,
+  title: string,
+  description: string,
+  url: string,
+  language: Locale,
+  crumbs: { name: string; path: string }[],
+  hubPages: { title: string; path: string }[],
+  iso?: string
+) {
   const file = join(DOCS_DIR, relativePath)
   const raw = existsSync(file) ? readFileSync(file, 'utf8') : ''
   const body = raw.replace(/^---\n[\s\S]*?\n---/, '')
 
   const date = (iso ?? '').slice(0, 10)
   const blocks: Record<string, unknown>[] = [
+    ORGANIZATION,
+    AUTHOR,
     {
       '@context': 'https://schema.org',
-      '@type': 'Article',
+      // A hub index is a list of pages, not a piece of writing. Calling it an
+      // Article would claim a body it does not have; CollectionPage is what it
+      // actually is, and it pairs with the ItemList emitted below.
+      '@type': hubPages.length ? 'CollectionPage' : 'Article',
       headline: title,
       description,
       url,
+      inLanguage: language,
       ...(date ? { datePublished: date, dateModified: date } : {}),
-      author: PUBLISHER,
-      publisher: PUBLISHER,
+      author: { '@id': AUTHOR_ID },
+      publisher: { '@id': ORG_ID },
+      isPartOf: { '@id': ORG_ID },
     },
   ]
+
+  // BreadcrumbList is the one of these that still CHANGES THE SERP: Google
+  // replaces the raw URL under the title with the trail. Two levels is what the
+  // site actually has (hub, then page) and inventing a third would be a lie the
+  // navigation does not back up.
+  if (crumbs.length > 1) {
+    blocks.push({
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: crumbs.map((c, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        name: c.name,
+        item: `${HOSTNAME}${c.path}`,
+      })),
+    })
+  }
 
   const faq = faqPairs(body)
   if (faq.length) {
@@ -248,6 +310,23 @@ function structuredData(relativePath: string, title: string, description: string
   // FAQPage stays: Google restricts its rich result too, but the assistant
   // crawlers read it, and they hit this domain 7826 times against Yandex's 598.
   // Structured question-and-answer is exactly what an answer engine ingests.
+
+  // A hub page is a list. Saying so gives a crawler the section's shape in one
+  // read instead of making it infer the relationship from anchor tags.
+  if (hubPages.length) {
+    blocks.push({
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: title,
+      numberOfItems: hubPages.length,
+      itemListElement: hubPages.map((page, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        name: page.title,
+        url: `${HOSTNAME}${page.path}`,
+      })),
+    })
+  }
 
   return blocks
 }
@@ -388,7 +467,39 @@ export default defineConfig({
         !(tag[0] === 'script' && tag[1]?.type === 'application/ld+json')
     )
 
-    for (const block of structuredData(pageData.relativePath, title, description, url, updated)) {
+    // Breadcrumb trail: hub, then page. The hub index is its own root, so it
+    // gets a single crumb and no list.
+    const hubSegment = HUBS[found.entry.hub][found.lang]
+    const hubEntry = PAGES.find((e) => e.hub === found.entry.hub && e.slugs[found.lang] === '')
+    const crumbs = hubEntry
+      ? [
+          { name: HUB_TITLES[found.lang][found.entry.hub], path: pagePath(hubEntry, found.lang)! },
+          ...(found.entry.id === hubEntry.id ? [] : [{ name: title, path: pagePath(found.entry, found.lang)! }]),
+        ]
+      : []
+    void hubSegment
+
+    // A hub page lists its section; an article lists nothing.
+    const hubPages =
+      found.entry.slugs[found.lang] === ''
+        ? PAGES.filter(
+            (e) =>
+              e.hub === found.entry.hub &&
+              e.slugs[found.lang] !== undefined &&
+              e.slugs[found.lang] !== ''
+          ).map((e) => ({ title: pageTitle(sourceFile(e, found.lang)!, e.id), path: pagePath(e, found.lang)! }))
+        : []
+
+    for (const block of structuredData(
+      pageData.relativePath,
+      title,
+      description,
+      url,
+      found.lang,
+      crumbs,
+      hubPages,
+      updated
+    )) {
       pageData.frontmatter.head.push(['script', { type: 'application/ld+json' }, JSON.stringify(block)])
     }
 
@@ -415,6 +526,15 @@ export default defineConfig({
   },
 
   head: [
+    // Snippet and preview limits. Without this Google truncates the description
+    // to its own default and shows no image thumbnail; with it a result can take
+    // the full snippet and a large preview, which is more of the page visible in
+    // the SERP for the same ranking position. The application has carried these
+    // since July; the content site, which is the half that actually ranks, did
+    // not carry them at all.
+    //
+    // Dev builds override this to `noindex` below, and the later tag wins.
+    ['meta', { name: 'robots', content: 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' }],
     // dev/preview builds are noindex; only the prod (release) build is indexable.
     ...(DOCS_ENV !== 'prod' ? [['meta', { name: 'robots', content: 'noindex' }] as [string, Record<string, string>]] : []),
     ...VERIFICATION_TAGS,

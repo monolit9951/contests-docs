@@ -117,7 +117,7 @@ export const PAGES: readonly RegistryEntry[] = [
     {
         id: 'earnings-from-zero',
         hub: 'earnings',
-        slugs: { ru: 'kak-zarabotat-na-narezkah-s-nulya' },
+        slugs: { ru: 'kak-zarabotat-na-narezkah-s-nulya', uk: 'yak-zarobyty-na-narizkakh-z-nulia', en: 'start-clipping-from-zero' },
         retired: ['/docs/ru/zarabotok/kak-zarabotat-na-narezkah-s-nulya'],
     },
     {

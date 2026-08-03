@@ -168,7 +168,7 @@ export const PAGES: readonly RegistryEntry[] = [
     {
         id: 'earnings-without-followers',
         hub: 'earnings',
-        slugs: { ru: 'zarabotok-bez-podpischikov' },
+        slugs: { ru: 'zarabotok-bez-podpischikov', uk: 'zarobitok-bez-pidpysnykiv', en: 'earn-without-followers' },
         retired: ['/docs/ru/zarabotok/zarabotok-bez-podpischikov'],
     },
     {

@@ -123,25 +123,25 @@ export const PAGES: readonly RegistryEntry[] = [
     {
         id: 'earnings-streamer-clips',
         hub: 'earnings',
-        slugs: { ru: 'kak-zarabotat-na-narezkah-strimerov' },
+        slugs: { ru: 'kak-zarabotat-na-narezkah-strimerov', uk: 'yak-zarobyty-na-narizkakh-strymeriv', en: 'earn-from-streamer-clips' },
         retired: ['/docs/ru/zarabotok/kak-zarabotat-na-narezkah-strimerov'],
     },
     {
         id: 'earnings-clipper-job',
         hub: 'earnings',
-        slugs: { ru: 'rabota-narezchikom' },
+        slugs: { ru: 'rabota-narezchikom', uk: 'robota-narizalnykom', en: 'clipping-as-a-job' },
         retired: ['/docs/ru/zarabotok/rabota-narezchikom'],
     },
     {
         id: 'earnings-how-much-total',
         hub: 'earnings',
-        slugs: { ru: 'skolko-mozhno-zarabotat-na-narezkah' },
+        slugs: { ru: 'skolko-mozhno-zarabotat-na-narezkah', uk: 'skilky-mozhna-zarobyty-na-narizkakh', en: 'how-much-clipping-pays' },
         retired: ['/docs/ru/zarabotok/skolko-mozhno-zarabotat-na-narezkah'],
     },
     {
         id: 'earnings-beginner-rate',
         hub: 'earnings',
-        slugs: { ru: 'skolko-platyat-novichku' },
+        slugs: { ru: 'skolko-platyat-novichku', uk: 'skilky-platiat-novachku', en: 'beginner-rates' },
         retired: ['/docs/ru/zarabotok/skolko-platyat-novichku'],
     },
     {
@@ -156,13 +156,13 @@ export const PAGES: readonly RegistryEntry[] = [
         // purpose — the redirect carries it, but there is no reason to reword.
         id: 'earnings-streamer-clip-rate',
         hub: 'earnings',
-        slugs: { ru: 'skolko-platyat-za-narezki-strimerov' },
+        slugs: { ru: 'skolko-platyat-za-narezki-strimerov', uk: 'skilky-platiat-za-narizky-strymeriv', en: 'streamer-clip-rates' },
         retired: ['/docs/ru/zarabotok/skolko-platyat-za-narezki-strimerov'],
     },
     {
         id: 'earnings-tiktok-views',
         hub: 'earnings',
-        slugs: { ru: 'skolko-platyat-za-prosmotry-v-tiktok' },
+        slugs: { ru: 'skolko-platyat-za-prosmotry-v-tiktok', uk: 'skilky-platiat-za-perehliady-v-tiktok', en: 'tiktok-view-payouts' },
         retired: ['/docs/ru/zarabotok/skolko-platyat-za-prosmotry-v-tiktok'],
     },
     {
@@ -182,7 +182,7 @@ export const PAGES: readonly RegistryEntry[] = [
     {
         id: 'earnings-view-counting',
         hub: 'earnings',
-        slugs: { ru: 'kak-schitayutsya-prosmotry-dlya-vyplaty' },
+        slugs: { ru: 'kak-schitayutsya-prosmotry-dlya-vyplaty', uk: 'yak-rakhuiutsia-perehliady-dlia-vyplaty', en: 'how-views-are-counted' },
         retired: ['/docs/ru/kak-rabotaet/kak-schitayutsya-prosmotry-dlya-vyplaty'],
     },
     {
@@ -194,7 +194,7 @@ export const PAGES: readonly RegistryEntry[] = [
     {
         id: 'earnings-where-to-find-work',
         hub: 'earnings',
-        slugs: { ru: 'gde-brat-zakazy-na-narezki' },
+        slugs: { ru: 'gde-brat-zakazy-na-narezki', uk: 'de-braty-zamovlennia-na-narizky', en: 'where-to-find-clipping-work' },
         retired: ['/docs/ru/platformy/gde-brat-zakazy-na-narezki'],
     },
     {
@@ -202,7 +202,7 @@ export const PAGES: readonly RegistryEntry[] = [
         // their fees is an article, not a section: it has one subject.
         id: 'earnings-platforms-and-fees',
         hub: 'earnings',
-        slugs: { ru: 'ploshchadki-i-komissii' },
+        slugs: { ru: 'ploshchadki-i-komissii', uk: 'maidanchyky-i-komisii', en: 'platforms-and-fees' },
         retired: ['/docs/ru/platformy/'],
     },
 
@@ -243,49 +243,49 @@ export const PAGES: readonly RegistryEntry[] = [
     {
         id: 'help-quick-start',
         hub: 'help',
-        slugs: { ru: 'bystryy-start' },
+        slugs: { ru: 'bystryy-start', uk: 'shvydkyi-start', en: 'quick-start' },
         retired: ['/docs/ru/getting-started/', '/docs/getting-started/'],
     },
     {
         id: 'help-first-contest',
         hub: 'help',
-        slugs: { ru: 'pervyy-konkurs' },
+        slugs: { ru: 'pervyy-konkurs', uk: 'pershyi-konkurs', en: 'your-first-contest' },
         retired: ['/docs/ru/getting-started/create-your-first-contest', '/docs/getting-started/create-your-first-contest'],
     },
     {
         id: 'help-prizes-and-payouts',
         hub: 'help',
-        slugs: { ru: 'prizy-i-vyplaty' },
+        slugs: { ru: 'prizy-i-vyplaty', uk: 'pryzy-i-vyplaty', en: 'prizes-and-payouts' },
         retired: ['/docs/ru/getting-started/prizes-and-payouts', '/docs/getting-started/prizes-and-payouts'],
     },
     {
         id: 'help-submit-work',
         hub: 'help',
-        slugs: { ru: 'kak-otpravit-rabotu' },
+        slugs: { ru: 'kak-otpravit-rabotu', uk: 'yak-nadislaty-robotu', en: 'submit-your-work' },
         retired: ['/docs/ru/getting-started/submit-a-work', '/docs/getting-started/submit-a-work'],
     },
     {
         id: 'help-verification',
         hub: 'help',
-        slugs: { ru: 'verifikatsiya' },
+        slugs: { ru: 'verifikatsiya', uk: 'veryfikatsiia', en: 'verification' },
         retired: ['/docs/ru/getting-started/verification-and-trust', '/docs/getting-started/verification-and-trust'],
     },
     {
         id: 'help-watch-vote-win',
         hub: 'help',
-        slugs: { ru: 'smotret-golosovat-vyigrat' },
+        slugs: { ru: 'smotret-golosovat-vyigrat', uk: 'dyvytys-holosuvaty-vyhravaty', en: 'watch-vote-win' },
         retired: ['/docs/ru/getting-started/watch-vote-win', '/docs/getting-started/watch-vote-win'],
     },
     {
         id: 'help-choosing-winners',
         hub: 'help',
-        slugs: { ru: 'kak-vybirayut-pobeditelya' },
+        slugs: { ru: 'kak-vybirayut-pobeditelya', uk: 'yak-obyraiut-peremozhtsia', en: 'how-winners-are-chosen' },
         retired: ['/docs/ru/faq/choosing-winners', '/docs/faq/choosing-winners'],
     },
     {
         id: 'help-crypto-payment',
         hub: 'help',
-        slugs: { ru: 'oplata-kriptoy' },
+        slugs: { ru: 'oplata-kriptoy', uk: 'oplata-kryptoiu', en: 'paying-with-crypto' },
         retired: ['/docs/ru/faq/crypto', '/docs/faq/crypto'],
     },
     {
@@ -293,31 +293,31 @@ export const PAGES: readonly RegistryEntry[] = [
         // the slug even though the page itself is product help.
         id: 'help-withdraw',
         hub: 'help',
-        slugs: { ru: 'darebay-vyvod-deneg' },
+        slugs: { ru: 'darebay-vyvod-deneg', uk: 'darebay-vyvedennia-hroshei', en: 'darebay-withdrawals' },
         retired: ['/docs/ru/faq/darebay-vyvod-deneg', '/docs/faq/withdraw'],
     },
     {
         id: 'help-fake-submissions',
         hub: 'help',
-        slugs: { ru: 'zashchita-ot-nakrutki' },
+        slugs: { ru: 'zashchita-ot-nakrutki', uk: 'zakhyst-vid-nakrutky', en: 'protection-from-view-fraud' },
         retired: ['/docs/ru/faq/fake-submissions', '/docs/faq/fake-submissions'],
     },
     {
         id: 'help-illegal-content',
         hub: 'help',
-        slugs: { ru: 'zapreshchennyy-kontent' },
+        slugs: { ru: 'zapreshchennyy-kontent', uk: 'zaboronenyi-kontent', en: 'prohibited-content' },
         retired: ['/docs/ru/faq/illegal-content', '/docs/faq/illegal-content'],
     },
     {
         id: 'help-commission',
         hub: 'help',
-        slugs: { ru: 'kakaya-komissiya' },
+        slugs: { ru: 'kakaya-komissiya', uk: 'yaka-komisiia', en: 'what-commission' },
         retired: ['/docs/ru/faq/kakaya-komissiya', '/docs/faq/fees'],
     },
     {
         id: 'help-no-submissions',
         hub: 'help',
-        slugs: { ru: 'esli-nikto-ne-uchastvuet' },
+        slugs: { ru: 'esli-nikto-ne-uchastvuet', uk: 'yakshcho-nikhto-ne-bere-uchast', en: 'if-nobody-enters' },
         retired: ['/docs/ru/faq/no-submissions', '/docs/faq/no-submissions'],
     },
 
@@ -341,37 +341,37 @@ export const PAGES: readonly RegistryEntry[] = [
         // re-derives the sitelink from there.
         id: 'about-manifesto',
         hub: 'about',
-        slugs: { ru: 'manifest' },
+        slugs: { ru: 'manifest', uk: 'manifest', en: 'manifesto' },
         retired: ['/docs/', '/docs/ru/'],
     },
     {
         id: 'about-is-it-a-scam',
         hub: 'about',
-        slugs: { ru: 'darebay-eto-skam' },
+        slugs: { ru: 'darebay-eto-skam', uk: 'darebay-tse-skam', en: 'is-darebay-a-scam' },
         retired: ['/docs/ru/faq/darebay-eto-skam'],
     },
     {
         id: 'about-reviews',
         hub: 'about',
-        slugs: { ru: 'darebay-otzyvy' },
+        slugs: { ru: 'darebay-otzyvy', uk: 'darebay-vidhuky', en: 'darebay-reviews' },
         retired: ['/docs/ru/faq/darebay-otzyvy'],
     },
     {
         id: 'about-is-it-a-fraud',
         hub: 'about',
-        slugs: { ru: 'darebay-razvod-ili-net' },
+        slugs: { ru: 'darebay-razvod-ili-net', uk: 'darebay-rozvod-chy-ni', en: 'is-darebay-legit' },
         retired: ['/docs/ru/faq/darebay-razvod-ili-net'],
     },
     {
         id: 'about-really-pays',
         hub: 'about',
-        slugs: { ru: 'darebay-realno-platit' },
+        slugs: { ru: 'darebay-realno-platit', uk: 'darebay-spravdi-platyt', en: 'does-darebay-really-pay' },
         retired: ['/docs/ru/faq/darebay-realno-platit'],
     },
     {
         id: 'about-payout-guarantee',
         hub: 'about',
-        slugs: { ru: 'garantiya-vyplat' },
+        slugs: { ru: 'garantiya-vyplat', uk: 'harantiia-vyplat' },
         retired: ['/docs/ru/faq/garantiya-vyplat'],
     },
 
@@ -379,7 +379,7 @@ export const PAGES: readonly RegistryEntry[] = [
     {
         id: 'legal-hub',
         hub: 'legal',
-        slugs: { ru: '' },
+        slugs: { ru: '', uk: '', en: '' },
         retired: ['/docs/ru/legal/', '/docs/legal/'],
     },
     {
@@ -391,7 +391,7 @@ export const PAGES: readonly RegistryEntry[] = [
     {
         id: 'legal-terms',
         hub: 'legal',
-        slugs: { ru: 'terms' },
+        slugs: { ru: 'terms', uk: 'terms', en: 'terms' },
         retired: ['/docs/ru/legal/terms', '/docs/legal/terms'],
     },
 ]

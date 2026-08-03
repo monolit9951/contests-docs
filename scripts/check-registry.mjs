@@ -19,7 +19,7 @@
 //           i.e. the `docs/ru/<zone>/<slug>.md` layout.
 //   --post  expect files at the paths the registry declares.
 
-import { existsSync, readdirSync, statSync } from 'node:fs'
+import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs'
 import { join, dirname, relative } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
@@ -191,6 +191,54 @@ for (const entry of PAGES) {
         }
         for (const file of onDisk) {
             if (!covered.has(file)) fail('page-would-be-dropped', `docs/${file} has no retired address in the registry`)
+        }
+    }
+}
+
+// ---------------------------------------------------------------------------
+// 6b. Frontmatter actually parses.
+//
+// The JSON-LD in `head` lives inside a SINGLE-QUOTED YAML scalar, and the only
+// escape YAML offers there is doubling the quote. One apostrophe in an English
+// sentence ("the streamer's source material") therefore breaks the whole
+// document — and because the scalar is a single 2000-character line, it is
+// invisible on review. It cost a full build outage during the 2026-08
+// translation pass, which is why it is a gate and not a note.
+//
+// A narrow parser rather than a YAML dependency: the failure mode is unbalanced
+// quoting inside a single-quoted scalar, and that is exactly what this counts.
+// ---------------------------------------------------------------------------
+{
+    const walk = (dir, acc = []) => {
+        if (!existsSync(dir)) return acc
+        for (const name of readdirSync(dir)) {
+            if (name.startsWith('.') || name === 'public') continue
+            const full = join(dir, name)
+            if (statSync(full).isDirectory()) walk(full, acc)
+            else if (name.endsWith('.md')) acc.push(full)
+        }
+        return acc
+    }
+
+    for (const file of walk(DOCS)) {
+        const raw = readFileSync(file, 'utf8')
+        const front = raw.match(/^---\n([\s\S]*?)\n---/)
+        if (!front) continue
+
+        for (const [i, line] of front[1].split('\n').entries()) {
+            const trimmed = line.trim()
+            // A value that opens with a single quote must close with one, and
+            // every apostrophe between them must be doubled. Counting quotes is
+            // enough to catch the real mistake: an odd number means one of them
+            // was meant as an apostrophe.
+            if (!/^-?\s*'/.test(trimmed)) continue
+            const quotes = (trimmed.match(/'/g) ?? []).length
+            if (quotes % 2 !== 0) {
+                fail(
+                    'unquoted-apostrophe',
+                    `docs/${relative(DOCS, file)}:${i + 2} — апостроф внутри одинарных кавычек YAML, удвой его ('')`
+                )
+            }
         }
     }
 }

@@ -129,6 +129,17 @@ export default defineConfig({
       { text: 'Перейти на сайт →', link: HOMEPAGE },
     ],
     sidebar: [
+      // First, on purpose. "Заработок" is a subject where a reader's first question is
+      // whether the site can be trusted at all, and Google treats it the same way: who is
+      // behind the page, and where the numbers come from. That answer has to be one click
+      // from every article, not buried under the FAQ.
+      {
+        text: 'О проекте',
+        collapsed: false,
+        items: [
+          { text: 'Кто мы и откуда цифры', link: '/ru/o-proekte' },
+        ],
+      },
       {
         text: 'Быстрый старт',
         collapsed: false,

@@ -5,7 +5,7 @@ seo: true
 head:
   - - script
     - type: application/ld+json
-    - '{"@context":"https://schema.org","@type":"AboutPage","name":"О проекте DareBay","url":"https://darebay.com/docs/ru/o-proekte","publisher":{"@type":"Organization","name":"DareBay","url":"https://darebay.com/","sameAs":["https://t.me/darebay_app","https://www.tiktok.com/@darebay.com"]}}'
+    - '{"@context":"https://schema.org","@type":"AboutPage","name":"О проекте DareBay","url":"https://darebay.com/docs/ru/o-proekte","publisher":{"@type":"Organization","name":"DareBay","url":"https://darebay.com/","sameAs":["https://t.me/darebay_app","https://www.tiktok.com/@darebay.com"],"founder":{"@type":"Person","name":"Руслан Бей","jobTitle":"Основатель DareBay","url":"https://t.me/ruslanbwork"}}}'
 ---
 
 # О проекте DareBay
@@ -16,6 +16,14 @@ DareBay это площадка, где бренды и обычные люди 
 
 Площадка открыта в двух местах сразу: на сайте darebay.com и в Telegram. Это одна и та же
 платформа, а не сайт и отдельное приложение.
+
+## Кто за этим стоит
+
+Проект основал **Руслан Бей**. Он же делает продукт и разработку, и с ним можно поговорить
+напрямую: [@ruslanbwork](https://t.me/ruslanbwork) в Telegram.
+
+Это важно назвать вслух, потому что тема заработка полна площадок без лиц и без адреса, у которых
+некому задать вопрос. Здесь есть у кого.
 
 ## Как устроены деньги
 

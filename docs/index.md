@@ -3,10 +3,19 @@ title: Манифест DareBay
 description: Как мы проводим активности, выбираем победителей и держим всё по-честному.
 ---
 
+<script setup>
+// Same constants the nav, footer and per-page CTA use — see .vitepress/links.ts.
+import { HOMEPAGE, TELEGRAM } from './.vitepress/links'
+</script>
+
 <div class="docs-cover">
   <div class="docs-cover-eyebrow">DareBay · Манифест</div>
   <h1 class="docs-cover-title">Результат,<br>а не шум.</h1>
   <p class="docs-cover-lede">Как мы проводим активности, выбираем победителей и держим всё по-честному.</p>
+  <div class="docs-cover-actions">
+    <a class="db-cta-btn db-cta-btn-primary" :href="HOMEPAGE">Перейти на darebay.com →</a>
+    <a class="db-cta-btn db-cta-btn-ghost" :href="TELEGRAM" target="_blank" rel="noreferrer">Telegram-канал</a>
+  </div>
 </div>
 
 # Манифест DareBay

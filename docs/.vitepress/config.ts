@@ -2,6 +2,7 @@ import { defineConfig } from 'vitepress'
 import { readdirSync, readFileSync, existsSync } from 'node:fs'
 import { join, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { HOMEPAGE, TELEGRAM } from './links'
 
 // Branch-aware host for the sitemap + a dev-only noindex (the develop preview must not be indexed;
 // only the release/prod build is indexable). CD passes DOCS_ENV=prod on the release branch.
@@ -94,9 +95,11 @@ export default defineConfig({
     nav: [
       { text: 'Быстрый старт', link: '/ru/getting-started/' },
       { text: 'FAQ', link: '/ru/faq/' },
-      // The CTA link is styled separately via CSS (data attribute on
-      // the text) — see .VPNavBarMenuLink.cta in custom.css.
-      { text: 'darebay.com  →', link: 'https://darebay.com' },
+      // The CTA link is styled separately via CSS — see the `:last-child` rules under
+      // "The CTA" in custom.css. It must stay LAST in this array: the gradient-pill
+      // styling keys off `:last-child`, and so does the rule that keeps it visible on
+      // phones while the other nav items collapse into the hamburger.
+      { text: 'darebay.com  →', link: HOMEPAGE },
     ],
     sidebar: [
       {
@@ -166,34 +169,25 @@ export default defineConfig({
     returnToTopLabel: 'Наверх',
     outline: { label: 'На этой странице', level: [2, 3] },
     docFooter: { prev: 'Предыдущая страница', next: 'Следующая страница' },
+    // Only surfaces DareBay actually runs. The previous list was aspirational and every
+    // entry but Telegram pointed at an account we don't own — `t.me/darebay` is a private
+    // person (Dare Adebayo), and x/youtube/instagram/discord `darebay` are squatted or
+    // empty. Sending readers to a stranger's DM is worse than showing no icon at all.
+    // Add a network here only once the account exists and we control it.
     socialLinks: [
       {
         icon: {
           // Telegram isn't a built-in VitePress icon; inline SVG.
           svg: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg>',
         },
-        link: 'https://t.me/darebay',
-        ariaLabel: 'Telegram',
-      },
-      {
-        icon: 'discord',
-        link: 'https://discord.gg/darebay',
-      },
-      {
-        icon: 'x',
-        link: 'https://x.com/darebay',
-      },
-      {
-        icon: 'youtube',
-        link: 'https://youtube.com/@darebay',
-      },
-      {
-        icon: 'instagram',
-        link: 'https://instagram.com/darebay',
+        link: TELEGRAM,
+        ariaLabel: 'Telegram-канал DareBay',
       },
     ],
+    // `message` is rendered with v-html, so these are real links. Plain text "darebay.com"
+    // sat here before and looked clickable without being clickable.
     footer: {
-      message: 'darebay.com',
+      message: `<a href="${HOMEPAGE}">darebay.com</a> · <a href="${TELEGRAM}" target="_blank" rel="noreferrer">Telegram</a>`,
       copyright: '© DareBay',
     },
   },

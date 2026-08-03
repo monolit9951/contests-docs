@@ -145,15 +145,18 @@
   border-bottom: 0 !important;
 }
 
-/* Header footprint: a touch taller, consistent rhythm */
-.VPNavBar .container,
-.VPNavBar .wrapper {
+/* Header footprint: a touch taller, consistent rhythm.
+   Direct-child selectors on purpose: the hamburger button wraps its three bars in a span
+   that is ALSO called `.container`, so the loose `.VPNavBar .container` this used to be
+   stretched that 14px box to 70px and pinned the burger icon to the top-right corner. */
+.VPNavBar > .wrapper,
+.VPNavBar > .wrapper > .container {
   min-height: 70px;
 }
 
 /* Reference frame for absolutely-positioned center nav */
 @media (min-width: 960px) {
-  .VPNavBar .container {
+  .VPNavBar > .wrapper > .container {
     position: relative;
   }
 }
@@ -215,6 +218,11 @@
   display: inline-flex !important;
   align-items: center;
   height: auto !important;
+  /* VitePress sets `line-height: var(--vp-nav-height)` (64px) on these links — fine for a
+     bare text link, but here it becomes the pill's content height, so the CTA rendered
+     78px tall inside a 64px header and bled past it top and bottom. Padding owns the
+     height now. */
+  line-height: 1.35 !important;
   font-weight: 500;
   font-size: 0.9rem;
   color: var(--vp-c-text-2);
@@ -310,6 +318,35 @@
     justify-content: center;
     margin-top: 16px;
     border-radius: 999px;
+  }
+}
+
+/* Below 768px VitePress hides the whole nav menu behind the hamburger — which buried the
+   one link out to the product, on exactly the devices most readers arrive from. Bring the
+   menu back and show only its last item: the CTA. "Быстрый старт" / "FAQ" stay in the
+   hamburger, where a docs reader expects navigation to be. */
+@media (max-width: 767px) {
+  .VPNavBarMenu {
+    display: flex !important;
+    align-items: center;
+  }
+  .VPNavBarMenu > .VPNavBarMenuLink:not(:last-child) {
+    display: none !important;
+  }
+  .VPNavBarMenu > .VPNavBarMenuLink:last-child {
+    font-size: 0.8rem;
+    padding: 7px 13px !important;
+    margin-left: 0;
+    white-space: nowrap;
+  }
+}
+
+/* Narrow phones: the wordmark is the first thing to go — the logo still identifies the
+   site, and the CTA is the element that has to survive. Measured, not guessed: at 360px
+   the logo + wordmark + CTA + burger still clear each other; below that they collide. */
+@media (max-width: 359px) {
+  .VPNavBarTitle a.title::after {
+    display: none;
   }
 }
 
@@ -627,6 +664,25 @@
   margin: 0;
 }
 
+/* Buttons inside the cover. The cover is always dark regardless of theme, so the ghost
+   variant can't inherit the page palette — it gets its own light-on-dark treatment. */
+.docs-cover-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 1.75rem;
+}
+.docs-cover-actions .db-cta-btn-ghost {
+  color: #EDF6F2 !important;
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.18);
+}
+.docs-cover-actions .db-cta-btn-ghost:hover {
+  color: #fff !important;
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(22, 179, 145, 0.6);
+}
+
 /* Don't double-render the markdown h1 when we have a cover block */
 .docs-cover + h1 {
   display: none;
@@ -639,9 +695,118 @@
   }
 }
 
+/* ---------- End-of-page CTA into the product ----------
+   Rendered by theme/index.ts into the `doc-footer-before` slot, so it lands on every page
+   without any Markdown carrying it. Deliberately loud: a search visitor who has just read
+   a whole page about payouts should not have to hunt the header for the way in. */
+.db-cta {
+  position: relative;
+  overflow: hidden;
+  /* It renders inside VPDocFooter, which already contributes its own top border and
+     2rem of padding — a margin here on top of that just opens a hole in the page. */
+  margin: 0 0 2rem 0;
+  padding: 1.75rem 1.75rem;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 18px;
+  background:
+    radial-gradient(700px 200px at 0% 0%, rgba(11, 164, 134, 0.16), transparent 65%),
+    radial-gradient(700px 240px at 100% 100%, rgba(31, 78, 187, 0.16), transparent 65%),
+    var(--vp-c-bg-soft);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem 2rem;
+}
+.db-cta-copy {
+  min-width: 0;
+  flex: 1 1 22rem;
+}
+.db-cta-title {
+  margin: 0 0 0.35rem 0;
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  color: var(--vp-c-text-1);
+}
+.db-cta-lede {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--vp-c-text-2);
+  max-width: 46ch;
+}
+.db-cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.db-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 11px 20px;
+  border-radius: 999px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  white-space: nowrap;
+  text-decoration: none !important;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease,
+    border-color 0.15s ease, background-color 0.15s ease;
+}
+.db-cta-btn-primary {
+  color: #fff !important;
+  background: var(--db-gradient);
+  box-shadow: 0 4px 14px rgba(11, 164, 134, 0.28);
+}
+.db-cta-btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(11, 164, 134, 0.38);
+  filter: brightness(1.08);
+}
+.db-cta-btn-ghost {
+  color: var(--vp-c-text-1) !important;
+  background: var(--vp-c-bg);
+  border: 1px solid var(--vp-c-divider);
+}
+.db-cta-btn-ghost:hover {
+  border-color: var(--vp-c-brand-1);
+  color: var(--vp-c-brand-1) !important;
+}
+/* VitePress marks off-site links with a trailing glyph; inside a button it reads as a
+   rendering bug rather than a hint. */
+.db-cta-btn.vp-external-link-icon::after {
+  display: none;
+}
+@media (max-width: 640px) {
+  .db-cta {
+    padding: 1.5rem 1.25rem;
+  }
+  .db-cta-actions {
+    width: 100%;
+  }
+  .db-cta-btn {
+    flex: 1 1 100%;
+  }
+}
+
 /* ---------- Footer ---------- */
 .VPFooter {
   border-top: 1px solid var(--vp-c-divider);
+}
+/* The footer used to print "darebay.com" as plain text — it looked like a link, so
+   readers clicked it and nothing happened. It is a real anchor now; style it like one. */
+.VPFooter .message a {
+  color: var(--vp-c-text-1);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid var(--vp-c-divider);
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+.VPFooter .message a:hover {
+  color: var(--vp-c-brand-1);
+  border-color: var(--vp-c-brand-1);
 }
 
 /* ---------- Code blocks: softer bg in dark mode ---------- */

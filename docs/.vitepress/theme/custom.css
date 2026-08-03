@@ -244,20 +244,25 @@
   font-weight: 600;
 }
 
-/* ---------- The CTA: last nav link gets a gradient pill ---------- */
-.VPNavBarMenu > .VPNavBarMenuLink:last-child,
-.VPNavScreenMenuLink:last-child {
+/* ---------- The CTA: last nav link is a full-size button ----------
+   Sized to read as the primary action in the header, not as one more nav item: it is the
+   only route from a search-landed docs page to the product, so it outweighs everything
+   else in the bar. ~48px tall inside a 64px header. */
+.VPNavBarMenu > .VPNavBarMenuLink:last-child {
   background: var(--db-gradient) !important;
   color: #fff !important;
-  font-weight: 600;
-  padding: 8px 18px !important;
-  margin-left: 6px;
-  box-shadow: 0 4px 14px rgba(11, 164, 134, 0.28);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.005em;
+  padding: 13px 26px !important;
+  margin-left: 10px;
+  white-space: nowrap;
+  box-shadow: 0 6px 18px rgba(11, 164, 134, 0.32);
   transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
 }
 .VPNavBarMenu > .VPNavBarMenuLink:last-child:hover {
   transform: translateY(-1px);
-  box-shadow: 0 6px 18px rgba(11, 164, 134, 0.38);
+  box-shadow: 0 8px 22px rgba(11, 164, 134, 0.45);
   filter: brightness(1.08);
   background: var(--db-gradient) !important;
 }
@@ -268,11 +273,11 @@
     padding-right: 0;
   }
   .VPNavBarMenu > .VPNavBarMenuLink:last-child {
-    margin-left: 8px;
+    margin-left: 12px;
     /* The capsule's internal border ends before the CTA */
     box-shadow:
       0 0 0 1px var(--vp-c-bg),
-      0 4px 14px rgba(11, 164, 134, 0.28);
+      0 6px 18px rgba(11, 164, 134, 0.32);
   }
 }
 
@@ -310,14 +315,11 @@
     font-size: 0.72rem;
     letter-spacing: 0.24em;
   }
-  /* In the mobile hamburger screen, the CTA + socials live inside
-     VPNavScreen. Make the CTA item full-width gradient there too. */
+  /* The CTA stays in the bar at every width now, and the bar is still on screen while the
+     hamburger panel is open — so the copy of it inside VPNavScreen is a duplicate button
+     three centimetres below the real one. Drop it; the panel is for navigation. */
   .VPNavScreenMenuLink:last-child {
-    display: inline-flex !important;
-    align-items: center;
-    justify-content: center;
-    margin-top: 16px;
-    border-radius: 999px;
+    display: none !important;
   }
 }
 
@@ -334,17 +336,17 @@
     display: none !important;
   }
   .VPNavBarMenu > .VPNavBarMenuLink:last-child {
-    font-size: 0.8rem;
-    padding: 7px 13px !important;
+    font-size: 0.9rem;
+    padding: 11px 18px !important;
     margin-left: 0;
-    white-space: nowrap;
   }
 }
 
 /* Narrow phones: the wordmark is the first thing to go — the logo still identifies the
-   site, and the CTA is the element that has to survive. Measured, not guessed: at 360px
-   the logo + wordmark + CTA + burger still clear each other; below that they collide. */
-@media (max-width: 359px) {
+   site, and the CTA is the element that has to survive. Measured, not guessed: with the
+   full-size CTA button, logo + wordmark + CTA + burger stop fitting below 400px (at 360px
+   the bar overflowed horizontally), so the wordmark steps aside there. */
+@media (max-width: 399px) {
   .VPNavBarTitle a.title::after {
     display: none;
   }

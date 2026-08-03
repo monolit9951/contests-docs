@@ -99,7 +99,7 @@ export default defineConfig({
       // "The CTA" in custom.css. It must stay LAST in this array: the gradient-pill
       // styling keys off `:last-child`, and so does the rule that keeps it visible on
       // phones while the other nav items collapse into the hamburger.
-      { text: 'darebay.com  →', link: HOMEPAGE },
+      { text: 'Перейти на сайт →', link: HOMEPAGE },
     ],
     sidebar: [
       {

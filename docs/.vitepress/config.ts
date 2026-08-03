@@ -39,6 +39,20 @@ const HOSTNAME = DOCS_ENV === 'prod' ? 'https://darebay.com' : 'https://dev.dare
 const DOCS_DIR = join(dirname(fileURLToPath(import.meta.url)), '..')
 
 /**
+ * The name each language calls itself, in that language.
+ *
+ * One table, read by the `locales` block AND by the per-page switcher links in
+ * transformPageData — VitePress matches the current locale by comparing LABELS,
+ * so two copies of these strings would silently stop the menu from hiding the
+ * page you are already on.
+ */
+const LOCALE_LABELS: Record<Locale, string> = {
+  ru: 'Русский',
+  uk: 'Українська',
+  en: 'English',
+}
+
+/**
  * Search-console ownership tags, read from the build environment — the same
  * two variables the frontend build takes (see `scripts/seo-routes.mjs` there),
  * so one pair of repo secrets verifies both containers.
@@ -415,9 +429,25 @@ export default defineConfig({
   description: SITE_DESCRIPTION,
 
   locales: {
-    root: { label: 'Русский', lang: 'ru', themeConfig: themeForLocale('ru') },
-    ua: { label: 'Українська', lang: 'uk', title: 'DareBay', description: 'Запускайте активності, надсилайте роботи, отримуйте винагороди на DareBay.', themeConfig: themeForLocale('uk') },
-    en: { label: 'English', lang: 'en', title: 'DareBay', description: 'Launch activities, submit work, get rewarded on DareBay.', themeConfig: themeForLocale('en') },
+    root: { label: LOCALE_LABELS.ru, lang: 'ru', themeConfig: themeForLocale('ru') },
+    ua: { label: LOCALE_LABELS.uk, lang: 'uk', title: 'DareBay', description: 'Запускайте активності, надсилайте роботи, отримуйте винагороди на DareBay.', themeConfig: themeForLocale('uk') },
+    en: { label: LOCALE_LABELS.en, lang: 'en', title: 'DareBay', description: 'Launch activities, submit work, get rewarded on DareBay.', themeConfig: themeForLocale('en') },
+  },
+
+  // The stock language switcher builds the other locale's address by swapping
+  // the prefix on the current path, which is wrong the moment a slug is
+  // translated — and ours are, on purpose: a docs slug IS the query it answers.
+  // Replacing the composable rather than the two components that call it keeps
+  // VitePress's markup, styling and mobile variant exactly as they are.
+  vite: {
+    resolve: {
+      alias: [
+        {
+          find: /^.*\/composables\/langs$/,
+          replacement: fileURLToPath(new URL('./theme/langs.ts', import.meta.url)),
+        },
+      ],
+    },
   },
 
   // No " | Документация DareBay" after every title. Two reasons: it spent ~25 of the ~60
@@ -455,6 +485,21 @@ export default defineConfig({
     // with an empty share card.
     const description = pageData.frontmatter.description || pageData.description || SITE_DESCRIPTION
     const title = pageData.frontmatter.title || pageData.title || 'DareBay'
+
+    // What the language switcher offers, resolved through the registry rather
+    // than by swapping the prefix on the current path. VitePress's own version
+    // does the swap, and our slugs are translated — so on 2026-08-03 the menu
+    // offered 86 addresses across the Russian tree and 79 of them were 404.
+    // Read by theme/langs.ts, which replaces the stock composable.
+    //
+    // Only the locales this page HAS, so the menu can never offer a translation
+    // that does not exist — the same promise `hreflangCluster` above makes.
+    pageData.frontmatter.localeLinks = LOCALES.filter(
+      (locale) => locale.language !== found.lang && localesOf(found.entry).includes(locale.language)
+    ).map((locale) => ({
+      text: LOCALE_LABELS[locale.language],
+      link: pagePath(found.entry, locale.language)!,
+    }))
 
     pageData.frontmatter.head ??= []
 

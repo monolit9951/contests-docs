@@ -84,7 +84,7 @@ seo: true
 
 ## Куди далі
 
-- [Як це працює](/ua/yak-tse-pratsiuie) - огляд механіки DareBay
+- [Як це працює](/ua/how-it-works) - огляд механіки DareBay
 - [Як працює оплата за перегляди](/ua/zarobitok/yak-pratsiuie-oplata-za-perehliady) - механіка PPV з боку учасника
 - [Як рахуються перегляди для виплати](/ua/zarobitok/yak-rakhuiutsia-perehliady-dlia-vyplaty) - деталі роботи оракула і валідації
 - [Яка комісія на DareBay?](/ua/dopomoha/yaka-komisiia) - докладніше про комісію за способами оплати

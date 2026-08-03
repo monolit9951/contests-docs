@@ -81,6 +81,6 @@ seo: true
 ## Куди далі
 
 - [Як працює оплата за перегляди](/ua/zarobitok/yak-pratsiuie-oplata-za-perehliady) - повна механіка PPV-конкурсів від бюджету до виплати
-- [Як це працює](/ua/yak-tse-pratsiuie) - огляд механіки DareBay
+- [Як це працює](/ua/how-it-works) - огляд механіки DareBay
 - [Скільки платять за 1000 переглядів](/ua/zarobitok/skilky-platiat-za-1000-perehliadiv) - ставки оплати в PPV-конкурсах
 - [Скільки можна заробити на нарізках](/ua/zarobitok/skilky-mozhna-zarobyty-na-narizkakh) - реальні орієнтири заробітку

@@ -404,7 +404,10 @@ export const PAGES: readonly RegistryEntry[] = [
 export const ORPHAN_REDIRECTS: Readonly<Record<string, string>> = {
     // The old `kak-rabotaet` index duplicated the app's own "how it works"
     // landing, which is translated into three languages and stays in the SPA.
-    '/docs/ru/kak-rabotaet/': '/kak-eto-rabotaet',
+    // Points at the app's CURRENT address: `/kak-eto-rabotaet` was live for one
+    // afternoon on 2026-08-03 and now 301s itself, so naming it here would have
+    // made this a two-hop chain — caught by gate 1 of scripts/url-gates.mjs.
+    '/docs/ru/kak-rabotaet/': '/how-it-works',
 }
 
 /**
@@ -517,27 +520,15 @@ export const sourceFile = (entry: RegistryEntry, language: Locale): string | nul
  * is the failure this whole registry exists to make impossible. Adding a link
  * to a new app route means adding a line here, and that is the point.
  */
-export const APP_ROUTES: readonly string[] = [
-    '/kak-eto-rabotaet',
-    '/dlya-biznesa',
-    '/magazin',
-    '/lenta',
-    '/reyting',
-    // Same routes on the other locale trees. The application serves each under
-    // its own slug — the Ukrainian "how it works" is /ua/yak-tse-pratsiuie, not
-    // /ua/kak-eto-rabotaet — so they are listed per locale rather than derived
-    // by gluing a prefix onto the Russian list.
-    '/ua/yak-tse-pratsiuie',
-    '/ua/dlia-biznesu',
-    '/ua/kramnytsia',
-    '/ua/strichka',
-    '/ua/reitynh',
-    '/en/how-it-works',
-    '/en/for-business',
-    '/en/store',
-    '/en/feed',
-    '/en/top',
-]
+const APP_SECTIONS = ['how-it-works', 'for-business', 'store', 'feed', 'top'] as const
+
+// The application serves ONE slug per section under every locale prefix (its
+// slugs were translated for one afternoon on 2026-08-03 and reverted), so the
+// list is derived rather than written out three times. If that ever changes
+// again, this is where it breaks — loudly, via VitePress's dead-link check.
+export const APP_ROUTES: readonly string[] = LOCALES.flatMap((locale) =>
+    APP_SECTIONS.map((slug) => `${locale.prefix}/${slug}`)
+)
 
 /**
  * Every URL prefix the content container answers on — and ONLY the ones that

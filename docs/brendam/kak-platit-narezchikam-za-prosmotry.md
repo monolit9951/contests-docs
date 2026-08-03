@@ -84,7 +84,7 @@ seo: true
 
 ## Куда дальше
 
-- [Как это работает](/kak-eto-rabotaet) - обзор механики DareBay
+- [Как это работает](/how-it-works) - обзор механики DareBay
 - [Как работает оплата за просмотры](/zarabotok/kak-rabotaet-oplata-za-prosmotry) - механика PPV со стороны участника
 - [Как считаются просмотры для выплаты](/zarabotok/kak-schitayutsya-prosmotry-dlya-vyplaty) - детали работы оракула и валидации
 - [Какая комиссия на DareBay?](/pomoshch/kakaya-komissiya) - подробнее о комиссии по способам оплаты

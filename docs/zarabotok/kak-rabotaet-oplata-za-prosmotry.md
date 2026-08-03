@@ -92,7 +92,7 @@ seo: true
 
 ## Куда дальше
 
-- [Как это работает](/kak-eto-rabotaet) - обзор механики DareBay
+- [Как это работает](/how-it-works) - обзор механики DareBay
 - [Как считаются просмотры для выплаты](/zarabotok/kak-schitayutsya-prosmotry-dlya-vyplaty) - оракул, валидация и защита от накрутки
 - [Порог просмотров для выплаты](/zarabotok/porog-prosmotrov-dlya-vyplaty) - дефолт, медиана и настройка организатором
 - [Какая комиссия на DareBay?](/pomoshch/kakaya-komissiya) - сколько берёт платформа с организатора

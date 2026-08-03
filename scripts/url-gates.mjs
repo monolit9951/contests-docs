@@ -1,6 +1,6 @@
 #!/usr/bin/env node --experimental-strip-types
 //
-// The nine migration gates, as real HTTP probes.
+// The ten migration gates, as real HTTP probes.
 //
 // WHY THIS EXISTS. Everything else that guards these URLs checks STRINGS: the
 // registry against the file tree, one generated table against another, XML
@@ -15,7 +15,7 @@
 // asks for every address the shipped artifacts claim.
 //
 //   node --experimental-strip-types scripts/url-gates.mjs \
-//        --app /root/code/contests-frontend/.worktrees/url-migration
+//        --app /root/code/contests-frontend
 //
 // ⚠️ ONE THING THIS DOES NOT COVER, and it cost a production outage. The probes
 // compose their OWN nginx config out of both containers' `server` blocks. The
@@ -44,7 +44,7 @@ const argOf = (name, fallback) => {
     return i === -1 ? fallback : process.argv[i + 1]
 }
 
-const APP_ROOT = resolve(argOf('app', '/root/code/contests-frontend/.worktrees/url-migration'))
+const APP_ROOT = resolve(argOf('app', '/root/code/contests-frontend'))
 const PORT_HOST = Number(argOf('port', '18099'))
 const PORT_APP = PORT_HOST + 1
 const PORT_CONTENT = PORT_HOST + 2
@@ -241,7 +241,7 @@ for (const url of allUrls) {
         const expected = `https://darebay.com${url}`
         // A UGC page under a locale prefix canonicalises to the unprefixed one
         // on purpose — that is the rule, not a mismatch.
-        const isUgc = /\/(zadaniya|zavdannya|tasks|magazin|kramnytsia|store)\/[^/]+$/.test(url)
+        const isUgc = /\/(tasks|store)\/[^/]+$/.test(url)
         if (canonicals[0] !== expected && !isUgc) fail('3-canonical', `${url}: canonical ${canonicals[0]}`)
     }
 
@@ -317,13 +317,44 @@ for (const junk of ['/nope-nothing-here', '/zarabotok/nope-nothing-here', '/ua/n
         // unprefixed address as canonical — otherwise every contest exists three
         // times in the index.
         for (const prefix of ['/ua', '/en']) {
-            const localized = contest.replace(/^\/(zadaniya)/, `${prefix}/$1`)
-            const res = await body(
-                prefix === '/ua' ? localized.replace('/zadaniya/', '/zavdannya/') : localized.replace('/zadaniya/', '/tasks/')
-            )
+            // The slug is the same in every tree since the 2026-08-03 revert,
+            // so crossing trees is a prefix swap and nothing else.
+            const res = await body(`${prefix}${contest}`)
             if (res.status !== 200) fail('9-ugc', `${prefix}: карточка конкурса -> ${res.status}`)
+            const localCanonical = tag(res.text, /<link[^>]+rel="canonical"[^>]+href="([^"]+)"/g)[0]
+            if (localCanonical !== `https://darebay.com${contest}`) {
+                fail('9-ugc', `${prefix}${contest}: canonical ${localCanonical}, ожидался беспрефиксный`)
+            }
         }
     }
+}
+
+// ---- 10. every language-switcher link is a live address --------------------
+//
+// The defect this exists for: VitePress builds the other locale's address by
+// swapping the PREFIX on the current path, and our docs slugs are translated on
+// purpose. On 2026-08-03 the menu offered 86 addresses across the Russian tree
+// and 79 of them answered 404 — while the hreflang tags on the very same pages
+// were correct. Nothing string-level could see it: the tags were right, the
+// registry was right, only the rendered menu was wrong.
+//
+// Read out of the SHIPPED html, so it covers the prerendered markup a crawler
+// reads and not just what the client would compute.
+{
+    let checked = 0
+    for (const url of contentUrls) {
+        const res = await body(url)
+        if (res.status !== 200) continue
+        const links = [
+            ...res.text.matchAll(/class="VPMenuLink"[^>]*>\s*<a class="VPLink link" href="([^"]+)"/g),
+        ].map((m) => m[1])
+        for (const href of new Set(links)) {
+            checked += 1
+            const probe = await head(href)
+            if (probe.status !== 200) fail('10-switcher', `${url}: язык -> ${href} -> ${probe.status}`)
+        }
+    }
+    if (!checked) fail('10-switcher', 'ни одной ссылки переключателя не найдено — селектор устарел?')
 }
 
 // ---------------------------------------------------------------------------
@@ -337,6 +368,6 @@ if (failures.length) {
     process.exit(1)
 }
 console.log(
-    `✓ девять гейтов пройдены: ${allUrls.length} адресов, ` +
+    `✓ десять гейтов пройдены: ${allUrls.length} адресов, ` +
         `${Object.keys(redirectMap()).length + Object.keys(appRedirects).length} редиректов, 0 замечаний`
 )

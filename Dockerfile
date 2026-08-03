@@ -1,4 +1,8 @@
-FROM node:20-alpine AS build
+# Node 22, not 20: the build runs the registry gate and the generators, and they
+# import registry.ts directly via --experimental-strip-types, which does not
+# exist before 22.6. On node:20 the build died with exit code 9 and no message
+# about the flag at all.
+FROM node:22-alpine AS build
 
 WORKDIR /app
 

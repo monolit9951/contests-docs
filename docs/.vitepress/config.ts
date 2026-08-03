@@ -3,6 +3,16 @@ import { readFileSync, existsSync } from 'node:fs'
 import { join, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { HOMEPAGE, TELEGRAM } from './links'
+import LASTMOD from './lastmod.json'
+
+// Source file -> commit date, rekeyed to the URL VitePress hands `transformItems`
+// (docs-relative, no leading slash, `.md` dropped, `index` collapsed away).
+const LASTMOD_BY_URL: Record<string, string> = Object.fromEntries(
+  Object.entries(LASTMOD as Record<string, string>).map(([file, iso]) => [
+    file.replace(/(^|\/)index\.md$/, '$1').replace(/\.md$/, ''),
+    iso,
+  ])
+)
 import {
   HUBS,
   LOCALES,
@@ -159,7 +169,18 @@ export default defineConfig({
   // ⚠️ Renamed to sitemap-content.xml after the build — see scripts/finalize-dist.mjs.
   // VitePress always writes `sitemap.xml`, and with base '/' that is the address the
   // APPLICATION's sitemap already owns.
-  sitemap: { hostname: HOSTNAME },
+  sitemap: {
+    hostname: HOSTNAME,
+    // `lastmod` is set HERE and not through `lastUpdated`: that option makes
+    // VitePress shell out to git during the build, which fails inside the image
+    // (no `.git` in the context, no git binary). The dates come from
+    // lastmod.json, generated where git exists.
+    transformItems: (items) =>
+      items.map((item) => {
+        const iso = LASTMOD_BY_URL[item.url.replace(/^\//, '')]
+        return iso ? { ...item, lastmod: new Date(iso) } : item
+      }),
+  },
   cleanUrls: true,
 
   markdown: {
@@ -177,12 +198,12 @@ export default defineConfig({
       }
     },
   },
-  // Real per-page dates from git, and the reason they matter: VitePress only
-  // emits `<lastmod>` when it has one, and 43 sitemap entries with no date at
-  // all is a sitemap Google has no reason to recrawl. A date that LIES is worse
-  // than none — taking it from the commit that last touched the file is the one
-  // version that cannot drift.
-  lastUpdated: true,
+  // ⚠️ NOT `lastUpdated: true`. That shells out to git during the build, and the
+  // build runs inside an image where `.git` is excluded from the context and git
+  // is not installed — it died with `spawn git ENOENT` on the first page, a
+  // failure invisible locally because every dev machine has both. The dates come
+  // from `lastmod.json`, generated where git exists (see scripts/gen-lastmod.mjs)
+  // and read below in `transformPageData`.
   // force-dark: always dark, no theme toggle in the UI at all
   appearance: 'force-dark',
 
@@ -230,6 +251,12 @@ export default defineConfig({
       )
     }
     const url = HOSTNAME + pagePath(found.entry, found.lang)
+
+    // The real date of the commit that last touched this file. VitePress only
+    // emits `<lastmod>` when it has one, and a sitemap of 129 URLs with no dates
+    // gives Google no reason to recrawl any of them.
+    const updated = LASTMOD[pageData.relativePath.split(/[\\/]/).join('/')]
+    if (updated) pageData.lastUpdated = new Date(updated).getTime()
     // frontmatter.description wins; the site description is the floor, so a page never ships
     // with an empty share card.
     const description = pageData.frontmatter.description || pageData.description || SITE_DESCRIPTION

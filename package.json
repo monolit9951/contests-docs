@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "docs:dev": "vitepress dev docs",
-    "prebuild": "npm run check:registry && npm run gen:llms && npm run gen:redirects",
+    "prebuild": "npm run check:registry && npm run gen:lastmod && npm run gen:llms && npm run gen:redirects",
     "docs:build": "npm run prebuild && vitepress build docs && node scripts/finalize-dist.mjs",
     "docs:preview": "vitepress preview docs",
     "test": "vitest run && node scripts/anti_doorway_lint.test.mjs",
@@ -14,7 +14,8 @@
     "gen:llms": "node --experimental-strip-types --no-warnings scripts/gen-llms.mjs",
     "gen:redirects": "node --experimental-strip-types --no-warnings scripts/gen-nginx-redirects.mjs",
     "gen:addresses": "node --experimental-strip-types --no-warnings scripts/print-addresses.mjs > ADDRESSES.md",
-    "gates": "node --experimental-strip-types --no-warnings scripts/url-gates.mjs"
+    "gates": "node --experimental-strip-types --no-warnings scripts/url-gates.mjs",
+    "gen:lastmod": "node scripts/gen-lastmod.mjs"
   },
   "devDependencies": {
     "vitepress": "^1.6.3",

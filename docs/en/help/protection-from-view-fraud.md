@@ -1,59 +1,67 @@
 ---
-title: What stops people from faking submissions?
-description: Automated checks, human moderation, a dual rating that follows the account, and the fact that fakes usually do not win anyway.
+title: Protection from view fraud and fake submissions
+description: Views are counted independently of the organizer and the participant, fakes are rejected before they reach a prize, and the participant rating makes cheating a bad trade.
 ---
 
-# What stops people from faking submissions?
+# Protection from view fraud and fake submissions
 
-Short answer: a layered system, plus the fact that fakes rarely win.
+On DareBay the money follows the real result. Inflated views and other
+people's work never reach a payout: the count runs independently of both
+the participant and the organizer, and suspicious submissions are rejected
+before they can compete for a prize.
 
-## Automated checks
+## Views are counted independently
 
-- **Duplicate detection and reverse image search** across images and video
-  frames: catches re-uploads and lightly edited copies.
-- **Metadata analysis**: flags files whose metadata does not match the
-  claimed origin.
-- **AI detection**: looks for generated content in contests that call for
-  original authored work.
-- **Account pattern analysis**: freshly created accounts with no history
-  entering every contest at once, accounts from a single IP range, and so
-  on.
+- **The numbers come from the platform itself.** Screenshots and a
+  participant's word count for nothing: what counts is the counter on the
+  platform where the video is published.
+- **Inflated views the platform strips out are not paid for.** What counts
+  is what is left on the counter.
+- **Neither side can nudge the result.** Neither the organizer nor the
+  participant influences the number the payout is calculated from.
+- **The view threshold cuts out empty submissions.** A submission that
+  falls short of its contest threshold earns no payout.
 
-None of these is perfect on its own. Combined, they catch most of the
-obvious attempts.
+## Fakes do not reach a prize
 
-## Human moderation
+- **Duplicates and re-uploads.** Image search across stills and video
+  frames catches re-uploads and lightly edited copies.
+- **Someone else's authorship.** Metadata that does not match the claimed
+  origin of a file sends the submission to review.
+- **Generated instead of filmed.** In contests that call for original
+  authored work, generated content is filtered out.
+- **Account farms.** Freshly created accounts with no history entering
+  every contest at once, and clusters from a single IP range, stand out a
+  mile.
 
-Submissions flagged by automated moderation reach a human before they can
-compete for a prize. In contests with large prizes, winners get an extra
-check from a second moderator.
+Each check catches its own class of fake, and together they cover the
+ground. A flagged submission wins nothing until it has been checked, and
+the bigger the prize, the tighter the check on the winner.
 
 ## The organizer can dispute
 
-If you are running a contest and spot a fake the system let through, you
-can report it. Reports are reviewed before the winner is confirmed.
-Abusing reports (filing them against everyone) hurts the organizer rating.
+Spotted a fake the filters let through? The report is settled before the
+winner is confirmed, which means before any money moves. Abusing reports
+(filing them against everyone) hurts the organizer rating.
 
-## Participants lose more than organizers
+## Cheating is a bad trade
 
-The people who lose most to fakes are the other *honest* participants, and
-DareBay understands that. Cheaters:
+The people who lose most to fakes are the other honest participants, and
+the rules are written in their favour. A cheater:
 
-- Lose their submissions.
-- Lose access to the prize even if they "won".
-- Take a hit to their **participant rating**, and that rating is visible on
-  the profile to every future organizer.
-- A repeat violation costs the account.
+- Loses their submissions.
+- Loses access to the prize even after "winning".
+- Takes a hit to their **participant rating**, and that rating is visible
+  on the profile to every future organizer.
+- Loses the account on a second violation.
 
 The participant rating is a real creator's main asset. Anyone who builds it
 honestly is not going to burn it for a single contest.
 
-## Perfect is not on the menu
+## If something does slip through
 
-We will be straight about it: motivated, careful cheaters do get through
-sometimes. That is exactly why there is a dispute process (the [Our promise
-section of the manifesto](/en/about/manifesto)), and exactly why some outcomes are revisited after
-the fact.
+Then the dispute process takes over and the outcome of the contest is
+revisited after the fact. What we commit to there is set out in the [Our promise section of the manifesto](/en/about/manifesto).
 
 ---
 

@@ -1,16 +1,18 @@
 ---
 title: Platforms and fees
-description: Comparisons of UGC and contest platforms - the fees, the terms, and where DareBay differs.
+description: Comparisons of UGC and contest platforms - what they charge, who holds the money until payout, and where DareBay differs.
 ---
 
 # Platforms and fees
 
-Comparisons of UGC and contest platforms: what they charge, what the payout terms are, what to
-look at when choosing. And where DareBay sits in all of it - honestly, on the numbers.
+Comparisons of UGC and contest platforms: what they charge, what the payout terms are, who holds
+the money until the split. And where DareBay sits in all of it - honestly, on the numbers.
 
-How payouts work on DareBay is in [how it works](/en/how-it-works).
+What sets DareBay apart: the buyer's budget is locked on the platform before the contest opens,
+views are counted independently, and the payout follows a formula fixed before anyone starts
+filming. The whole mechanic is in [how it works](/en/how-it-works).
 
 ## Pages in this section
 
-- [Where to find clipping work](/en/earnings/where-to-find-clipping-work) - a survey of the boards with briefs and what it takes for a clipper to get in.
-- [How to order clips for promotion](/en/for-brands/commission-clips-for-a-campaign) - the buyer's path: from brief to an automatic payout against results.
+- [Where to find clipping work](/en/earnings/where-to-find-clipping-work) - the open board of briefs and what it takes for a clipper to get in.
+- [How to order clips for promotion](/en/for-brands/commission-clips-for-a-campaign) - the buyer's path: from brief to a payout against results.

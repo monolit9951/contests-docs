@@ -137,6 +137,121 @@ function hubSection(hubId: HubId, lang: Locale) {
   return { text: HUB_TITLES[lang][hubId], collapsed: false, items }
 }
 
+
+// ---------------------------------------------------------------------------
+// Structured data, DERIVED from the page.
+//
+// WHY. It used to be hand-written JSON-LD inside each page's frontmatter: an
+// Article block repeating the title and description, a FAQPage repeating the
+// visible Q&A, a HowTo repeating the visible numbered steps. Three copies of the
+// same words, and the copy pass of 2026-08-03 proved what that costs — the
+// visible text was rewritten across 129 pages while the markup kept the old
+// wording, so a page said one thing to a reader and another to Google. Two of
+// them still advertised regional copy that had just been removed from the page.
+//
+// Nothing here is authored any more. The markup is read off the page itself, so
+// the two cannot disagree: edit the text and the structured data follows.
+//
+// A block is emitted only when the page actually HAS that shape — no FAQ
+// section, no FAQPage. Claiming structure a page does not have is exactly what
+// Google penalises.
+// ---------------------------------------------------------------------------
+
+const PUBLISHER = { '@type': 'Organization', name: 'DareBay' }
+
+const FAQ_HEADING = /вопрос|питання|question/i
+
+const stripMarkdown = (text: string) =>
+  text
+    .replace(/\[([^\]]+)\]\([^)]*\)/g, '$1')
+    .replace(/\*\*([^*]+)\*\*/g, '$1')
+    .replace(/`([^`]+)`/g, '$1')
+    .replace(/<!--[\s\S]*?-->/g, '')
+    .replace(/\s+/g, ' ')
+    .trim()
+
+/** Q&A pairs under the FAQ section: `### question` then the prose beneath it. */
+function faqPairs(body: string) {
+  const lines = body.split('\n')
+  const out: { q: string; a: string }[] = []
+  let inFaq = false
+  let question: string | null = null
+  let answer: string[] = []
+
+  const flush = () => {
+    const text = stripMarkdown(answer.join(' '))
+    if (question && text) out.push({ q: question, a: text })
+    question = null
+    answer = []
+  }
+
+  for (const line of lines) {
+    if (line.startsWith('## ')) {
+      flush()
+      inFaq = FAQ_HEADING.test(line)
+      continue
+    }
+    if (!inFaq) continue
+    if (line.startsWith('### ')) {
+      flush()
+      question = stripMarkdown(line.slice(4))
+      continue
+    }
+    if (question && line.trim()) answer.push(line)
+  }
+  flush()
+  return out
+}
+
+function structuredData(relativePath: string, title: string, description: string, url: string, iso?: string) {
+  const file = join(DOCS_DIR, relativePath)
+  const raw = existsSync(file) ? readFileSync(file, 'utf8') : ''
+  const body = raw.replace(/^---\n[\s\S]*?\n---/, '')
+
+  const date = (iso ?? '').slice(0, 10)
+  const blocks: Record<string, unknown>[] = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      headline: title,
+      description,
+      url,
+      ...(date ? { datePublished: date, dateModified: date } : {}),
+      author: PUBLISHER,
+      publisher: PUBLISHER,
+    },
+  ]
+
+  const faq = faqPairs(body)
+  if (faq.length) {
+    blocks.push({
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faq.map(({ q, a }) => ({
+        '@type': 'Question',
+        name: q,
+        acceptedAnswer: { '@type': 'Answer', text: a },
+      })),
+    })
+  }
+
+  // NO HowTo, deliberately. Two reasons, and the second is the decisive one:
+  //
+  //  1. Google retired HowTo rich results in 2023 — the markup buys nothing in
+  //     the surface it was written for.
+  //  2. A numbered list is not a procedure. The commission page explains what
+  //     the PLATFORM does in three numbered points, and the detector happily
+  //     announced it as a how-to for the reader. Structure a page does not have
+  //     is exactly what earns a manual action, and no heuristic here can tell
+  //     "steps you take" from "what happens next" reliably enough to risk it.
+  //
+  // FAQPage stays: Google restricts its rich result too, but the assistant
+  // crawlers read it, and they hit this domain 7826 times against Yandex's 598.
+  // Structured question-and-answer is exactly what an answer engine ingests.
+
+  return blocks
+}
+
 // Self-referencing canonical, and the page's hreflang cluster — both from the REGISTRY,
 // not from the file path.
 //
@@ -263,6 +378,20 @@ export default defineConfig({
     const title = pageData.frontmatter.title || pageData.title || 'DareBay'
 
     pageData.frontmatter.head ??= []
+
+    // ⚠️ Any hand-written JSON-LD left in a page's frontmatter is DROPPED here,
+    // and that is the point: it was a second copy of the page's own words, and
+    // it went stale the moment the page was edited. The blocks below are read
+    // off the page itself.
+    pageData.frontmatter.head = pageData.frontmatter.head.filter(
+      (tag: [string, Record<string, string>, string?]) =>
+        !(tag[0] === 'script' && tag[1]?.type === 'application/ld+json')
+    )
+
+    for (const block of structuredData(pageData.relativePath, title, description, url, updated)) {
+      pageData.frontmatter.head.push(['script', { type: 'application/ld+json' }, JSON.stringify(block)])
+    }
+
     pageData.frontmatter.head.push(
       ['link', { rel: 'canonical', href: url }],
       // The page's translations, itself included. Today every page is Russian, so a

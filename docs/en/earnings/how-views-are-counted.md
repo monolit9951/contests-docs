@@ -1,37 +1,33 @@
 ---
 title: How views are counted for the payout
-description: The DareBay view oracle - which views count towards a payout, how validation and fraud protection work, and the rate cap and threshold.
+description: The DareBay view oracle - an independent counter that reads figures straight from the platform API. Which views drive a payout, how inflated views are cut out, and the rate cap and threshold.
 provenance: { snapshot_date: "2026-07-10", source: "darebay-prod" }
 numbers_used: [ppv_max_cpm_rate, ppv_min_views_threshold_live]
 seo: true
-head:
-  - - script
-    - type: application/ld+json
-    - '{"@context":"https://schema.org","@type":"Article","headline":"How views are counted for the payout","datePublished":"2026-07-10","dateModified":"2026-07-10","author":{"@type":"Organization","name":"DareBay"},"publisher":{"@type":"Organization","name":"DareBay"},"description":"The DareBay view oracle - which views count towards a payout, how validation and fraud protection work, and the rate cap and threshold."}'
 ---
 
 # How views are counted for the payout
 
-On DareBay the views that drive a payout are counted neither by the organizer nor by the author, but by the oracle - an automated system that pulls the data straight from the platform's API (today that is TikTok). The oracle watches for signs of inflated views: a submission with suspicious dynamics goes to manual review, where it is either confirmed or rejected outright. Inflating views adds nothing to the payout and puts the whole submission at risk.
+The views behind a payout are counted neither by the organizer nor by the author, but by the oracle: an independent counter that reads the figures straight from the platform's API (today that is TikTok). Neither side can nudge it, and both see the same number. Inflated views do not get through it, because a submission with bot dynamics is pulled from the contest outright. Buying views adds nothing to the payout and costs you the whole submission.
 
 ## What the view oracle is
 
 The oracle is the platform component that acts as an independent counter. It:
 
 1. Connects to the platform's API (today that is TikTok) and pulls the real view figures for each submission.
-2. Checks how the views accumulate and compares that against typical patterns.
-3. Flags suspicious anomalies (a sharp spike within minutes, views without engagement) - such a submission goes to manual review.
-4. Passes the figures into the system: for confirmed submissions the payout is computed from the platform's counter.
+2. Reads how the views accumulate and compares that against organic patterns.
+3. Catches anomalies, such as a sharp spike within minutes or views without engagement, and sends that submission for review.
+4. Feeds the figures into the maths: for confirmed submissions the payout is computed from the platform's counter.
 
-Neither the organizer nor the participant can influence the figure the oracle records. The platform acts as intermediary and guarantor: the money is frozen in advance and the payout follows the oracle's data strictly.
+Neither the organizer nor the participant influences the figure the oracle records. The platform acts as intermediary and guarantor: the money is frozen in advance and the payout follows the oracle's data strictly.
 
 ## Counted and uncounted views
 
 "Counted views" are the views of a submission that the oracle and moderation have confirmed. These are what go into the payout formula.
 
-"Uncounted views" are the views of a submission that failed review: if inflation is confirmed, the submission is rejected outright and nothing is credited for it.
+"Uncounted views" are the views of a submission that failed review: inflation was confirmed, the submission was pulled outright, and nothing is credited for it.
 
-Put simply: if a clip has 50,000 views but the oracle sees signs of inflation, the submission goes to manual review. The moderator either confirms it - in which case every view on the counter goes into the maths - or rejects it outright. Inflating views adds nothing to the payout and puts the whole submission at risk.
+Put simply: a clip has 50,000 views but the oracle sees signs of inflation, so the submission goes for review. Two outcomes exist and no others. Either the submission is confirmed and every view on the counter goes into the maths, or it is pulled outright. There is no "we will pay for part of the views", which is exactly why buying views never adds up.
 
 ## What counts and what does not
 
@@ -40,57 +36,57 @@ Put simply: if a clip has 50,000 views but the oracle sees signs of inflation, t
 | Organic views from real users | Yes | The basis of the payout |
 | Views from the platform's recommendations | Yes | The platform's algorithm confirmed the interest |
 | Views from the author's own followers | Yes | The author's real audience |
-| Bot inflation | No | The oracle records the anomalous pattern: the submission goes to review and can be rejected outright |
-| Purchased views (view-selling services) | No | The pattern differs from organic: the submission goes to review |
-| A suspicious spike with no engagement | No | No likes alongside a jump in views is a marker of inflation |
+| Bot inflation | No | The oracle records the anomalous pattern, the submission goes for review and is pulled outright |
+| Purchased views (view-selling services) | No | The pattern differs from organic, so the submission goes for review |
+| A suspicious spike with no engagement | No | A jump in views with no likes is a marker of inflation |
 
 ## The rate cap and the view threshold
 
-Two key limits protect both the organizer and the clippers:
+Two limits protect the organizer and the clippers alike:
 
-**The rate cap (CPM limit).** The validator does not allow a rate above **$100 per 1000 views**. This is a technical system limit: if an organizer tries to set a higher rate, the contest is not created. The limit guards against mistakes and abuse.
+**The rate cap (CPM limit).** The validator refuses any rate above **$100 per 1000 views**. It is a hard system limit: set a higher rate and the contest simply is not created. That closes off both a misplaced zero and a deliberate abuse.
 
-**The view threshold.** The threshold is set by the organizer in each contest. Across live contests the typical (median) threshold right now is **2000 views**. Submissions below their contest's threshold are not paid. The threshold rewards content people actually watch and keeps the budget from being spread across dozens of clips with a handful of views each. More in [the view threshold](/en/earnings/view-threshold).
+**The view threshold.** The organizer sets the threshold in each contest. Across live contests the typical (median) threshold right now is **2000 views**. Submissions below their contest's threshold are not paid. The threshold sends the budget to content people actually watch and stops it being spread across dozens of clips with a handful of views each. More in [the view threshold](/en/earnings/view-threshold).
 
-## How fraud protection works
+## How inflated views are cut out
 
-The oracle does not just read a view count, it analyses how the count grows:
+The oracle does not just read a view count, it reads how that count grew:
 
 1. **Speed of accumulation.** A clip that gains 100,000 views in 5 minutes after no activity at all is an anomaly.
-2. **Engagement.** The system compares views against engagement (likes above all). Views climbing with no engagement is a marker of inflation.
-3. **A dropping or unavailable counter.** If the platform suddenly reports noticeably fewer views than before, or the video becomes unavailable, crediting is paused until manual review.
+2. **Engagement.** The system checks views against engagement, likes above all. Views climbing while likes stay flat is a marker of inflation.
+3. **A dropping or unavailable counter.** If the platform suddenly reports noticeably fewer views than before, or the video goes unavailable, crediting for that submission stops until it is reviewed.
 
-Suspicious submissions are reviewed by hand. If inflation is confirmed, the submission is rejected outright and takes no part in the split.
+Suspicious submissions get reviewed separately. Once inflation is confirmed, the submission is pulled outright and takes no part in the split, and its share of the budget stays with the honest authors.
 
 ## Frequently asked questions
 
 ### How does the platform verify views?
 
-The oracle connects to the platform's API (today TikTok) and pulls the data directly. No figures are typed in by hand, by the organizer or by the participant. It is an independent, automated count.
+The oracle connects to the platform's API (today TikTok) and pulls the data directly. Nobody types figures in by hand, not the organizer and not the participant. The count is independent and automated.
 
 ### What happens if I inflate my views?
 
-A submission showing signs of inflation is flagged and sent to manual review. If the inflation is confirmed, the submission is rejected outright and nothing is paid for it. You will have spent money on the inflation and put the whole submission at risk.
+A submission showing signs of inflation is flagged and sent for review. Once the inflation is confirmed, the submission is pulled outright and nothing is paid for it. You lose both the money you spent on the inflation and the whole submission.
 
 ### Can I dispute the count?
 
-Yes. If you believe the oracle got it wrong, you can contact support. The platform will check the data manually and correct the result if the error is confirmed.
+Yes. Contact support if you believe the oracle got it wrong. The platform pulls the data up and corrects the result if the error checks out.
 
 ### How quickly are views counted?
 
-The oracle pulls the data automatically while the contest runs. The final count happens when the contest ends. After entries close there is a selection and confirmation window, and then the payout runs automatically.
+The oracle pulls data automatically for as long as the contest runs. The final count happens when the contest closes. After entries close there is a selection and confirmation window, and then the payout goes out by your chosen method.
 
 ### Do views from other platforms count?
 
-Views count from the platform named in the contest (currently TikTok). If the contest is for TikTok, views of a copy of the same clip on another platform are not counted.
+Views count from the platform named in the contest, currently TikTok. If the contest is for TikTok, views of a copy of the same clip elsewhere stay out of the maths.
 
 ### What if the clip is deleted before the contest ends?
 
-If the submission is removed from the platform, the oracle cannot confirm its views. Such a submission takes no part in the split.
+The oracle cannot confirm a submission that has been removed from the platform, so it takes no part in the split. Keep the clip published until the contest closes.
 
 ### Is there a limit on the maximum rate?
 
-Yes. The validator does not allow a rate above $100 per 1000 views. It is a technical limit that guards against mistakes when a contest is created.
+Yes. The validator refuses any rate above $100 per 1000 views. It is a technical limit that catches mistakes at contest creation.
 
 ## Where to next
 

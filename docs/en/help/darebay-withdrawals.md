@@ -1,45 +1,51 @@
 ---
 title: DareBay withdrawals - how to withdraw, how long it takes, free of charge
-description: How to withdraw money from DareBay. Withdrawals are free; the platform charges nothing for them. The steps, the timing, and the thresholds in pay-per-view contests.
+description: How to withdraw money from DareBay. Withdrawals are free; the platform charges nothing for them. Wallet, card, bank transfer, Telegram Stars and gifts. Steps, timing, thresholds.
 provenance: { snapshot_date: "2026-07-09", source: "darebay-prod" }
 numbers_used: [ppv_min_views_threshold_live, winner_confirmation_min]
 seo: true
-head:
-  - - script
-    - type: application/ld+json
-    - '{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does DareBay charge for withdrawals?","acceptedAnswer":{"@type":"Answer","text":"No. DareBay charges nothing for a withdrawal. The organizer pays the commission when creating a contest, and the winner receives the full prize amount. We never charge money for a withdrawal."}},{"@type":"Question","name":"How long does a DareBay withdrawal take?","acceptedAnswer":{"@type":"Answer","text":"Once the contest ends, the prize lands on your balance. In random-draw and voting contests there is a winner confirmation window first, up to 2 days (48 hours). A withdrawal to the wallet (USDT on TON) usually takes minutes once the network confirms it."}},{"@type":"Question","name":"Is there a minimum withdrawal amount?","acceptedAnswer":{"@type":"Answer","text":"The minimum depends on the withdrawal method: for the wallet it is driven by the network fee. The conditions are shown when you submit a withdrawal request in the wallet."}},{"@type":"Question","name":"Where can money from DareBay be withdrawn to?","acceptedAnswer":{"@type":"Answer","text":"Self-service withdrawal is available to the wallet (USDT on TON) and in Telegram Stars. A contest reward can also be received in other ways: card, bank transfer, an item, Telegram gifts. The exact set depends on the contest."}},{"@type":"Question","name":"What is the view threshold for a pay-per-view payout?","acceptedAnswer":{"@type":"Answer","text":"The organizer of the contest sets it. The typical value today (the live median across active contests) is 2000 views. If a submission does not reach the threshold of its contest, no payout is calculated for it."}},{"@type":"Question","name":"Why does the money not arrive right after the contest?","acceptedAnswer":{"@type":"Answer","text":"In random-draw and voting contests there is a winner confirmation window after the end, up to 2 days (48 hours). In pay-per-view contests the prize is credited once the view count is finalized."}},{"@type":"Question","name":"What if the withdrawal does not arrive?","acceptedAnswer":{"@type":"Answer","text":"Check the balance status in your wallet: if the funds are marked frozen, the contest has not finished yet. If the balance is available but the withdrawal has not landed, write to support@darebay.com."}}]}'
 ---
 
 # DareBay withdrawals - how to withdraw, how long it takes, free of charge
 
-Withdrawing money from DareBay is free: we charge nothing for it. Only the organizer pays a commission, and only when creating a contest; the winner receives the full prize amount. You can withdraw to a wallet (USDT on TON) or take the reward in Telegram Stars. Other ways to receive a reward (card, bank transfer, gifts) depend on the terms of the contest. Below are the withdrawal steps, the timing, and the thresholds that apply in pay-per-view contests.
+Withdrawing money from DareBay is free: we charge nothing for it. The organizer pays the commission, and only when creating a contest; the winner receives the full prize amount. You can take your money out to a wallet (USDT on TON), to a bank card, by bank transfer, in Telegram Stars or as Telegram gifts. The wallet is one option out of five here, not a requirement. Below are the withdrawal steps, the timing, and the thresholds that apply in pay-per-view contests.
 
 ## The withdrawal steps
 
 A withdrawal takes three steps:
 
-1. **The contest ends and the results are confirmed.** In random-draw and voting contests there is a winner confirmation window after the end, up to 2 days (48 hours). In pay-per-view contests the prize is credited once the view count is finalized.
-2. **The prize is credited to your balance.** After confirmation the prize appears in the wallet automatically with the status "available". The organizer plays no part in this: the money has been frozen on the platform since the contest was created.
-3. **Withdrawal to your chosen method.** From the available balance you can withdraw to a wallet (USDT on TON), which usually takes minutes once the network confirms the transfer, or take the reward in Telegram Stars, which are credited to your Telegram account.
+1. **The contest ends and the results are confirmed.** In random-draw and voting contests there is a winner confirmation window after the end, up to 2 days (48 hours). In pay-per-view contests the prize is credited once the view count closes.
+2. **The prize is credited to your balance.** After confirmation the prize appears in your wallet with the status "available". The organizer plays no part in this: the money has been frozen on the platform since the contest was created, and they cannot change their mind about it.
+3. **The money goes out by the method you pick.** A withdrawal to a wallet (USDT on TON) takes minutes. Telegram Stars are credited to your Telegram account. Card, bank transfer and Telegram gifts follow the method stated in the contest.
 
-DareBay acts as intermediary and guarantor: the money is frozen before the start, the payout is automatic, and the participant pays neither to enter nor to withdraw.
+DareBay acts as intermediary and guarantor: the budget is locked until the task is over, the platform guarantees the payout, and the participant pays neither to enter nor to withdraw.
+
+## Where you can withdraw to
+
+- **Wallet** (USDT on TON)
+- **Bank card**
+- **Bank transfer**
+- **Telegram Stars**
+- **Telegram gifts**
+
+All five work, Telegram Stars included. Fiat (card, bank transfer) works on equal terms with the wallet: crypto is not required, and nothing is quietly converted in the background. A contest reward can also be a physical item, which the organizer ships to you directly.
 
 ## The view threshold in pay-per-view
 
-Pay-per-view contests have a minimum view threshold for a payout. The current live threshold is **2000 views**. A submission that does not reach that minimum earns no payout.
+Pay-per-view contests have a minimum view threshold for a payout. The current live threshold is **2000 views**. A submission that falls short of that minimum earns no payout.
 
-This is protection against view inflation and empty submissions: the platform pays only for real reach, confirmed through the APIs of the publishing platforms. Views are counted by the system automatically, and neither the organizer nor the participant can nudge the numbers.
+This is what protects the pool against view fraud and empty submissions: the platform pays for real reach. Views come from the counter on the publishing platform itself, not from screenshots and not from anyone's word, and neither the organizer nor the participant can nudge the numbers.
 
-The organizer sets the threshold when creating the contest. The figure of 2000 views is the live median across active contests on the platform.
+The organizer sets the threshold when creating the contest, and it is stated in the terms. The figure of 2000 views is the live median across active contests on the platform.
 
 ## The contrast with scam schemes
 
 A typical scam site asks for money to release a withdrawal: "pay the fee to receive your winnings". That is a classic fraud marker. On DareBay it works the other way round:
 
-- **We never charge money for a withdrawal.** Under no scenario.
+- **We never charge money for a withdrawal.** Never, under any circumstances.
 - **The organizer pays the commission**, not the participant. And they pay it at contest creation, not at withdrawal.
-- **The prize is frozen in advance.** The money sits on the platform from the moment the contest is published. It cannot vanish.
-- **The payout is automatic.** The system distributes the prize by results itself. No organizer presses a "pay" button.
+- **The budget is locked until the task is over.** The money sits on the platform from the moment the contest is published. The organizer cannot take it back, redirect it or spend it on anything else.
+- **The platform guarantees the payout.** The prize goes to the winners by the results of the contest. No organizer gets to change their mind and not pay.
 
 If a site asks you for money to withdraw, it is not DareBay.
 
@@ -51,28 +57,28 @@ No. DareBay charges nothing for a withdrawal. The organizer pays the commission 
 
 ### How long does a DareBay withdrawal take?
 
-In random-draw and voting contests there is a winner confirmation window after the end, up to 2 days (48 hours). In pay-per-view contests the prize is credited once the view count is finalized. A withdrawal to the wallet (USDT on TON) usually takes minutes once the network confirms it.
+In random-draw and voting contests there is a winner confirmation window after the end, up to 2 days (48 hours). In pay-per-view contests the prize is credited once the view count closes. A withdrawal to the wallet (USDT on TON) takes minutes.
 
 ### Is there a minimum withdrawal amount?
 
-The minimum depends on the withdrawal method: for the wallet it is driven by the network fee. The conditions are shown when you submit a withdrawal request in the wallet.
+The platform sets no minimum of its own. For the wallet, the floor is the network fee and nothing else. The exact conditions are shown in the withdrawal form before you confirm.
 
 ### Where can money from DareBay be withdrawn to?
 
-Self-service withdrawal is available to the wallet (USDT on TON) and in Telegram Stars. A contest reward can also be received in other ways: card, bank transfer, an item, Telegram gifts. The exact set depends on the contest. The wallet is one option among several.
+To a wallet (USDT on TON), to a bank card, by bank transfer, in Telegram Stars and as Telegram gifts. All five work; the wallet is one of them, not a requirement. A contest reward can also be a physical item.
 
 ### What is the view threshold for a pay-per-view payout?
 
-The organizer of the contest sets it. The typical value today (the live median across active contests) is 2000 views. If a submission does not reach the threshold of its contest, no payout is calculated for it. Views are counted by the system automatically through the APIs of the publishing platforms.
+The contest organizer sets it, and it is stated in the terms. The median across live contests is 2000 views. A submission that falls short of the threshold of its contest earns no payout. Views are counted independently, from the counter on the publishing platform itself.
 
 ### Why does the money not arrive right after the contest?
 
-In random-draw and voting contests there is a winner confirmation window after the end, up to 2 days (48 hours). In pay-per-view contests the prize is credited once the view count is finalized. After confirmation the prize appears on your balance automatically.
+In random-draw and voting contests there is a winner confirmation window after the end, up to 2 days (48 hours). In pay-per-view contests the prize is credited once the view count closes. After confirmation the prize appears on your balance.
 
 ### What if the withdrawal does not arrive?
 
-Check the balance status in your wallet: if the funds are marked "frozen", the contest has not finished yet or the confirmation stage is still running. If the balance is "available" but the withdrawal has not landed, write to support@darebay.com.
+Check the balance status in your wallet: if the funds are marked "frozen", the contest has not finished yet or the confirmation stage is still running. If the balance is "available" but the withdrawal has not landed, write to support@darebay.com and we will see it through.
 
 ## In short
 
-DareBay charges nothing for withdrawals. The prize is frozen at contest creation, the results are counted by the system, and the payout is automatic. Pay-per-view contests apply a view threshold (typically 2000), and contests with a chosen winner add a confirmation window of up to 2 days. If you are after the details of how payouts work, read [does DareBay really pay](/en/about/does-darebay-really-pay) and [is DareBay a scam](/en/about/is-darebay-a-scam), or browse the [FAQ section](/en/help/).
+DareBay charges nothing for withdrawals. The budget is locked from the moment the contest is created, the results are counted independently, and the platform guarantees the payout. You can take the money out to a wallet, a card, by bank transfer, in Telegram Stars or as gifts. Pay-per-view contests apply a view threshold (the median is 2000), and contests with a chosen winner add a confirmation window of up to 2 days. If you are after the details of how payouts work, read [does DareBay really pay](/en/about/does-darebay-really-pay) and [is DareBay a scam](/en/about/is-darebay-a-scam), or browse the [FAQ section](/en/help/).

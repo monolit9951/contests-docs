@@ -1,25 +1,25 @@
 ---
 title: What if nobody enters?
-description: The prize is unfrozen and returns to your wallet. Part of the commission comes back; the part that paid for feed placement does not.
+description: The prize returns to your balance in full. Part of the commission comes back too; the part that paid for feed placement does not.
 ---
 
 # What if nobody enters?
 
 If the submission deadline has passed and there are zero valid entries:
 
-## The prize is unfrozen
+## The prize comes back in full
 
-Cash prizes go back to the available balance of your wallet. There is
-nothing to do by hand: it happens automatically when the contest moves to
-its final state.
+Cash prizes return to the available balance of your wallet, the whole
+amount. There is nothing to do by hand: it happens when the contest moves
+to its final state.
 
 Item prizes were never physically held by DareBay, so there is nothing to
 return; you simply keep the item.
 
-## The commission comes back *in part*
+## The commission comes back in part
 
 The share of the commission that covered processing the prize pool is
-returned. The share that covered feed placement and promotion is not: that
+returned. The share that paid for feed placement and promotion is not: that
 resource was spent whether or not any submissions arrived.
 
 The exact amounts are shown in the final contest report.
@@ -34,8 +34,8 @@ mid-contest, and so on).
 
 ## How to avoid it
 
-- **Give people time.** Under 24 hours for anything non-trivial is usually
-  too little.
+- **Give people time.** Under 24 hours for anything non-trivial is too
+  little.
 - **Match the prize to the effort.** A 5-minute selfie for $500 will draw a
   crowd; a 10-hour video for $20 will not.
 - **Be specific in the terms.** "Best content" gets you spam; "a

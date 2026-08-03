@@ -4,18 +4,11 @@ description: A step-by-step guide to setting up a pay-per-view contest - how to 
 provenance: { snapshot_date: "2026-07-10", source: "darebay-prod" }
 numbers_used: [ppv_default_min_views_threshold, ppv_min_views_threshold_live, ppv_max_per_work_typical]
 seo: true
-head:
-  - - script
-    - type: application/ld+json
-    - '{"@context":"https://schema.org","@type":"Article","headline":"How to set up a clipping contest on DareBay","datePublished":"2026-07-10","dateModified":"2026-07-11","author":{"@type":"Organization","name":"DareBay"},"publisher":{"@type":"Organization","name":"DareBay"},"description":"A step-by-step guide to setting up a pay-per-view contest - how to choose the rate, the threshold and the cap, lock the budget and get the remainder back."}'
-  - - script
-    - type: application/ld+json
-    - '{"@context":"https://schema.org","@type":"HowTo","name":"How to set up a contest for clippers","step":[{"@type":"HowToStep","position":1,"name":"Set the rate per 1000 views","text":"State what you pay for every thousand counted views of a clipper submission."},{"@type":"HowToStep","position":2,"name":"Set the minimum view threshold","text":"Set the minimum number of views at which a submission takes part in the budget split. Leave the field empty and the default of 1000 views applies; the median across live contests is 2000 views."},{"@type":"HowToStep","position":3,"name":"Set the cap per submission","text":"Limit the maximum payout for a single submission so that one clipper cannot take the whole budget. The typical value is $50. The cap can be adjusted after launch."},{"@type":"HowToStep","position":4,"name":"Lock the budget","text":"The full budget is locked on the platform when the contest is created. It cannot be taken back before the contest ends."},{"@type":"HowToStep","position":5,"name":"Clippers upload their work","text":"Creators take the brief, film the content and post it on TikTok with the required hashtag."},{"@type":"HowToStep","position":6,"name":"The oracle counts the views","text":"The platform pulls view data automatically through the TikTok API and checks it for view fraud."},{"@type":"HowToStep","position":7,"name":"The split runs automatically","text":"The system distributes the budget by the formula: views / 1000 * rate. Each clipper receives their share automatically."},{"@type":"HowToStep","position":8,"name":"The remainder comes back","text":"Whatever part of the budget was not spent returns to the organizer balance automatically."}]}'
 ---
 
 # How to set up a clipping contest on DareBay
 
-A clipping contest on DareBay is a way to promote something through content that creators film for a reward. You set the budget and three parameters (the rate, the threshold and the cap), the platform locks the money, clippers upload their videos, and the system counts the views and pays each creator automatically. You pay only for a counted result, and the budget is protected: the platform works as an intermediary and guarantor, the money is locked and paid out by formula with no human in the loop. If the views do not come, the remainder returns to you.
+A clipping contest is promotion you pay for by results. You fund the budget and set three parameters: the rate per 1000 views, the threshold and the cap per submission. The platform locks the money, clippers upload their videos and send in the links, and every payout is worked out by formula from views counted independently of you and of them. The budget is protected the whole time: DareBay holds it as an intermediary and guarantor, and whatever does not reach the creators comes back to you.
 
 Every figure on this page comes from the platform's own data (snapshot: 2026-07-10).
 
@@ -23,35 +16,35 @@ Every figure on this page comes from the platform's own data (snapshot: 2026-07-
 
 ### 1. Set the rate per 1000 views
 
-The rate defines what you pay for every thousand counted views of a clipper submission. You state it when creating the contest, and it cannot be changed after launch. The higher the rate, the more attractive the brief is to creators and the faster the budget burns. For more on how the calculation works, see [how pay-per-view works](/en/earnings/how-pay-per-view-works).
+The rate defines what you pay for every thousand counted views of a clipper submission. You state it when creating the contest, and it does not change after launch - creators work on the terms they saw. The higher the rate, the more readily creators take the task and the faster the budget burns. For more on how the calculation works, see [how pay-per-view works](/en/earnings/how-pay-per-view-works).
 
 ### 2. Set the minimum view threshold
 
-The threshold filters out submissions with minimal reach: if a video does not hit the required number of views, it does not take part in the budget split. You enter the value in the "minimum views" field. Leave it empty and the system applies its default minimum of 1000 views. The median threshold across live contests is **2000 views**. For more on choosing a threshold, see [the view threshold for a payout](/en/earnings/view-threshold).
+The threshold filters out submissions with a handful of views: a video that does not hit the required number takes no part in the budget split and costs you nothing. You enter the value in the "minimum views" field. Leave it empty and the system applies its default minimum of 1000 views. The median threshold across live contests is **2000 views**. For more on choosing a threshold, see [the view threshold for a payout](/en/earnings/view-threshold).
 
 ### 3. Set the cap per submission
 
-The cap limits the maximum a single submission can receive. The typical value across live contests is **$50**. The cap exists so that one clipper cannot drain the whole pool: if a video goes viral and pulls a million views, without a limit it takes the entire budget. With a cap, that submission gets its maximum and the rest of the budget comes back to you once the contest ends. The cap is the only parameter you can adjust after launch.
+The cap limits the maximum a single submission can receive. The typical value across live contests is **$50**. The cap keeps the budget in your hands: if a video goes viral and pulls a million views, without a limit it takes everything. With a cap, that submission gets its maximum and the rest is spread across other creators or comes back to you. The cap is the only parameter you can adjust after launch.
 
 ### 4. Lock the budget
 
-The full budget is locked on the platform when the contest is created. The platform works as an intermediary and guarantor: the money is tied to that specific contest, the organizer cannot take it back before the end, and the clippers know the payout is coming.
+The full budget is locked on the platform when the contest is created. DareBay holds it as an intermediary and guarantor: the money is tied to that one contest, it cannot be taken back before the end, and the clippers can see the payout is covered. That is why a funded task gets picked up faster than a promise to pay after posting.
 
 ### 5. Clippers upload their work
 
-Once the contest is live, creators take the brief, film the content and post it on TikTok with the required hashtag. Every submission is registered in the system.
+Once the contest is live, creators take the task, film the content and post it on TikTok with the required hashtag, then send DareBay the link to the published video. A submission enters the contest only after that link arrives.
 
 ### 6. The oracle counts the views
 
-The platform pulls view data automatically through the TikTok API and checks it for view fraud. More on that: [how views are counted for the payout](/en/earnings/how-views-are-counted).
+The views come from the platform the video was published on and are checked for view fraud: bot views are not counted, and a submission with bought views loses its payout entirely. Neither you nor the creator types the number in. More on that: [how views are counted for the payout](/en/earnings/how-views-are-counted).
 
 ### 7. The split runs automatically
 
-The system distributes the budget by the formula: `views / 1000 * rate`. Submissions below the threshold do not take part. Submissions above the cap receive the cap. Each clipper gets their share to a wallet, a card or another method.
+The budget is split by the formula: `views / 1000 * rate`. Submissions below the threshold take no part, submissions above the cap receive the cap. Each clipper gets their share to a wallet, a card or another method, and you never wire anything creator by creator.
 
 ### 8. The remainder comes back
 
-If the budget is not spent in full, the unused part returns to the organizer balance automatically.
+Whatever does not reach the creators returns to the organizer balance.
 
 ## Contest setup parameters
 
@@ -65,42 +58,42 @@ You set the rate, the threshold and the cap yourself when creating the contest. 
 
 ## Cost and commission
 
-There is no separate charge for creating a contest. The platform takes a commission: it is calculated on the prize amount and paid on top of the budget, so the prize pool goes to the clippers in full. The exact commission is shown during contest creation, before you pay. For the rates by payment method, see [what commission DareBay takes](/en/help/what-commission); for the full pay-per-view model, see [how to pay clippers per view](https://darebay.com/en/for-brands/paying-clippers-per-view).
+There is no separate charge for creating a contest. The platform takes a commission: it is calculated on the prize amount and paid on top of the budget, so the prize pool goes to the clippers in full. The exact amount is on screen during contest creation, before you pay, and nothing is charged behind your back. For the rates by payment method, see [what commission DareBay takes](/en/help/what-commission); for the full pay-per-view model, see [how to pay clippers per view](https://darebay.com/en/for-brands/paying-clippers-per-view).
 
 ## Frequently asked questions
 
 ### Can the rate be changed after the contest starts?
 
-No. The rate, the threshold and the budget are fixed when the contest is created and do not change: that is part of the guarantee for clippers. The one exception is the cap per submission, which can be adjusted after launch.
+No. The rate, the threshold and the budget are fixed when the contest is created and do not change: that is part of the guarantee for clippers. The one exception is the cap per submission, which you can adjust after launch.
 
 ### Why is there a cap per submission?
 
-The cap protects the budget from a situation where one video takes everything. If a video goes viral and pulls hundreds of thousands of views, without a cap one creator gets the whole budget and everyone else gets nothing. With a cap, the budget spreads more fairly.
+The cap protects the budget from a situation where one video takes everything. If a video goes viral and pulls hundreds of thousands of views, without a cap one creator gets the whole budget and everyone else gets nothing. With a cap, the same money buys you more videos and more points of reach.
 
 ### What if nobody enters?
 
-If no submission was made, or no submission cleared the view threshold, the whole budget goes back to the organizer. A locked budget is never lost.
+If no submission was made, or none cleared the view threshold, the whole budget goes back to the organizer. Locked money is never burned and never stays with the platform.
 
 ### When does the remaining budget come back?
 
-The remainder returns automatically once the contest ends and the selection and confirmation windows have passed. That usually happens within a few days of submissions closing.
+Once the contest ends and the selection and confirmation windows close. That takes a few days after submissions close, and it needs no claim from you.
 
 ### Which platforms are supported?
 
-Right now views are pulled automatically from TikTok through its API. The platform for publishing is stated in the terms of each contest.
+Views are counted on TikTok. The platform to post on is stated in the terms of each contest.
 
 ### Does a clipper need a minimum audience?
 
-No. Entry is free, with no deposits and no follower requirements. To get paid, a creator only has to meet the terms of the brief (post the video with the required hashtag) and clear the view threshold.
+No. Entry is free, with no deposits and no follower requirements. To get paid, a creator only has to meet the terms of the task (post the video with the required hashtag) and clear the view threshold. That is why work also comes from creators without an audience, and you still pay only for views.
 
 ### How do clippers find out about the contest?
 
-Once created, the contest appears in the public catalogue on [DareBay](https://darebay.com). Creators pick the briefs that suit their topic and format themselves.
+The contest goes straight into the public catalogue on [DareBay](https://darebay.com), where creators look for tasks in their own topic and format. You do not have to find anyone or message them one by one.
 
 ## Where to next
 
 - [How it works](/en/how-it-works) - an overview of the DareBay mechanic
-- [How to pay clippers per view](https://darebay.com/en/for-brands/paying-clippers-per-view) - the payment model: formula, commission, automatic split
+- [How to pay clippers per view](https://darebay.com/en/for-brands/paying-clippers-per-view) - the payment model: formula, commission, split without you
 - [How pay-per-view works](/en/earnings/how-pay-per-view-works) - the full chain from budget to payout
 - [The view threshold for a payout](/en/earnings/view-threshold) - how the threshold works and why it exists
 - [What commission does DareBay take?](/en/help/what-commission) - commissions across every payment method

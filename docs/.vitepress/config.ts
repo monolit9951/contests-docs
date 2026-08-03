@@ -10,6 +10,7 @@ import {
   APP_ROUTES,
   hreflangCluster,
   localesOf,
+  resolveLocalizedLink,
   pagePath,
   sourceFile,
   type HubId,
@@ -108,6 +109,22 @@ export default defineConfig({
   // APPLICATION's sitemap already owns.
   sitemap: { hostname: HOSTNAME },
   cleanUrls: true,
+
+  markdown: {
+    config(md) {
+      // Rewrites in-page links onto addresses that exist — see
+      // `resolveLocalizedLink` in registry.ts. Content is translated page by
+      // page, so a translated article links to siblings that may still be
+      // Russian only; without this every such link is a dead-link build failure
+      // or, worse, a shipped 404.
+      const link = md.renderer.rules.link_open ?? ((tokens, i, opts, _env, self) => self.renderToken(tokens, i, opts))
+      md.renderer.rules.link_open = (tokens, i, opts, env, self) => {
+        const href = tokens[i].attrGet('href')
+        if (href) tokens[i].attrSet('href', resolveLocalizedLink(href))
+        return link(tokens, i, opts, env, self)
+      }
+    },
+  },
   // Real per-page dates from git, and the reason they matter: VitePress only
   // emits `<lastmod>` when it has one, and 43 sitemap entries with no date at
   // all is a sitemap Google has no reason to recrawl. A date that LIES is worse

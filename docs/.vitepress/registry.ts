@@ -147,7 +147,7 @@ export const PAGES: readonly RegistryEntry[] = [
     {
         id: 'earnings-per-1000-views',
         hub: 'earnings',
-        slugs: { ru: 'skolko-platyat-za-1000-prosmotrov' },
+        slugs: { ru: 'skolko-platyat-za-1000-prosmotrov', uk: 'skilky-platiat-za-1000-perehliadiv', en: 'pay-per-1000-views' },
         retired: ['/docs/ru/zarabotok/skolko-platyat-za-1000-prosmotrov'],
     },
     {
@@ -176,7 +176,7 @@ export const PAGES: readonly RegistryEntry[] = [
         // paid are a creator subject, not a separate section.
         id: 'earnings-ppv-mechanics',
         hub: 'earnings',
-        slugs: { ru: 'kak-rabotaet-oplata-za-prosmotry' },
+        slugs: { ru: 'kak-rabotaet-oplata-za-prosmotry', uk: 'yak-pratsiuie-oplata-za-perehliady', en: 'how-pay-per-view-works' },
         retired: ['/docs/ru/kak-rabotaet/kak-rabotaet-oplata-za-prosmotry'],
     },
     {
@@ -593,4 +593,43 @@ export const redirectMap = (): Record<string, string> => {
         for (const old of entry.retired ?? []) map[old] = target
     }
     return map
+}
+
+/**
+ * Resolves a link written for a locale onto an address that EXISTS.
+ *
+ * Content is translated page by page, so a Ukrainian article legitimately links
+ * to siblings that are still Russian only. Three ways to handle that, and two of
+ * them are wrong: leave the link to 404, or drop it and leave the reader with no
+ * way onward. The third is to send them to the HUB of that section in their own
+ * language — a live page, in their language, listing everything that section has
+ * so far. They land one click from where they were going instead of nowhere.
+ *
+ * The fallback disappears by itself the moment the translation is registered:
+ * once the address resolves, this returns it untouched.
+ *
+ * A link that matches no live page AND no known hub is left exactly as written,
+ * so VitePress's dead-link check still fails on a genuine typo. That is the line
+ * between "not translated yet" and "wrong".
+ */
+export const resolveLocalizedLink = (href: string): string => {
+    if (!href.startsWith('/')) return href
+
+    const clean = href.replace(/#.*$/, '')
+    const anchor = href.slice(clean.length)
+
+    const live = PAGES.some((entry) =>
+        LOCALES.some((locale) => entry.slugs[locale.language] !== undefined && pagePath(entry, locale.language) === clean)
+    )
+    if (live) return href
+
+    const locale = LOCALES.find((l) => l.prefix && clean.startsWith(`${l.prefix}/`))
+    if (!locale) return href
+
+    const hubSegment = clean.slice(locale.prefix.length + 1).split('/')[0]
+    const hubId = (Object.keys(HUBS) as HubId[]).find((id) => HUBS[id][locale.language] === hubSegment)
+    if (!hubId) return href
+
+    const hubEntry = PAGES.find((e) => e.hub === hubId && e.slugs[locale.language] === '')
+    return hubEntry ? `${pagePath(hubEntry, locale.language)}${anchor}` : href
 }

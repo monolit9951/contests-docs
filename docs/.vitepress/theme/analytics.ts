@@ -23,7 +23,32 @@ export const DocsEvent = {
     PageView: 'docs_page_view',
     ExitToSite: 'docs_exit_to_site',
     ExitToTelegram: 'docs_exit_to_telegram',
+    /** Any other outbound host — a source we cite, a platform we compare against. */
+    ExitExternal: 'docs_exit_external',
+    /** Reader crossed 25 / 50 / 75 / 100% of the article body. `meta.depth`. */
+    ReadDepth: 'docs_read_depth',
+    /** Additive chunk of engaged (tab-visible) time. `meta.dwellMs`, `meta.maxDepth`. */
+    ReadTime: 'docs_read_time',
+    /** A url the fleet or an external link pointed at that no longer exists. */
+    NotFound: 'docs_not_found',
+    /** Core Web Vitals — LCP / CLS / INP / TTFB. Google ranks on these. */
+    WebVitals: 'docs_web_vitals',
 } as const
+
+/**
+ * Automatic telemetry, as opposed to a click a reader chose to make. The
+ * backend excludes these from the CTA dashboards the same way it excludes the
+ * SPA's `page_view` — see `ClickEventService.PASSIVE_EVENT_IDS`. Keep the two
+ * lists in sync: an id that is passive here and unknown there silently becomes
+ * the top "click" on the admin dashboard, because these fire on their own and
+ * outnumber real clicks by orders of magnitude.
+ */
+export const PASSIVE_DOCS_EVENTS: readonly string[] = [
+    DocsEvent.PageView,
+    DocsEvent.ReadDepth,
+    DocsEvent.ReadTime,
+    DocsEvent.WebVitals,
+]
 
 export type DocsEventId = (typeof DocsEvent)[keyof typeof DocsEvent]
 
@@ -106,11 +131,26 @@ export const normalizeDocsPath = (pathname: string): string => {
 
 const recentSends = new Map<string, number>()
 
-export const trackDocsEvent = (eventId: DocsEventId, meta: Record<string, string> = {}): void => {
+interface TrackOptions {
+    /**
+     * Extra discriminator for the 1s throttle. Without it a burst of distinct
+     * events sharing one id collapses to the first: a reader who jumps to the
+     * end of an article crosses 25/50/75/100% inside the same second, and only
+     * the 25 would survive. Pass the varying part (the milestone, the metric
+     * name) so each is throttled against its own kind.
+     */
+    dedupeKey?: string
+}
+
+export const trackDocsEvent = (
+    eventId: DocsEventId,
+    meta: Record<string, string> = {},
+    options: TrackOptions = {},
+): void => {
     if (typeof window === 'undefined') return
 
     const now = Date.now()
-    const key = `${eventId}:${meta.targetUrl ?? ''}`
+    const key = `${eventId}:${options.dedupeKey ?? meta.targetUrl ?? ''}`
     if (now - (recentSends.get(key) ?? 0) < THROTTLE_MS) return
     recentSends.set(key, now)
 
@@ -154,19 +194,46 @@ export const trackDocsEvent = (eventId: DocsEventId, meta: Record<string, string
     }
 }
 
-/** Which exit a click is taking, or null when it is internal navigation. */
-export const classifyExit = (href: string | null): DocsEventId | null => {
+const isDocsPath = (pathname: string): boolean =>
+    pathname === '/docs' || pathname.startsWith('/docs/')
+
+/**
+ * Which exit a click is taking, or null when it is internal navigation.
+ *
+ * Pure — `currentUrl` is passed in rather than read off `window` — so the
+ * classification is unit-testable without a DOM. {@link classifyExit} is the
+ * browser-bound wrapper the click listener actually calls.
+ */
+export const classifyExitFrom = (href: string | null, currentUrl: string): DocsEventId | null => {
     if (!href) return null
-    if (href.startsWith('https://t.me/') || href.startsWith('tg://')) return DocsEvent.ExitToTelegram
+    // In-page anchors first. Every heading carries a `.header-anchor` and the
+    // whole "На этой странице" outline is `#…` links — resolved against the
+    // ORIGIN (as this did) they came out with pathname `/`, which is not under
+    // /docs, so each one was logged as an exit INTO the product. The docs' main
+    // conversion metric was counting its own table of contents.
+    if (href.startsWith('#')) return null
+    if (href.startsWith('tg://')) return DocsEvent.ExitToTelegram
     try {
-        const url = new URL(href, window.location.origin)
-        if (url.hostname !== 'darebay.com' && url.hostname !== window.location.hostname) return null
-        // A link back into the product, not deeper into the docs.
-        return url.pathname.startsWith('/docs') ? null : DocsEvent.ExitToSite
+        // Base is the current URL, not the origin: a relative href ('../faq/')
+        // has to resolve against the page it sits on to get a real pathname.
+        const url = new URL(href, currentUrl)
+        // mailto:, tel:, javascript: — not navigation we can attribute.
+        if (url.protocol !== 'http:' && url.protocol !== 'https:') return null
+        if (url.hostname === 't.me' || url.hostname === 'telegram.me') return DocsEvent.ExitToTelegram
+        if (url.hostname !== 'darebay.com' && url.hostname !== new URL(currentUrl).hostname) {
+            // Sources we cite and platforms we compare against. Worth knowing:
+            // an article that leaks readers to a competitor is a content bug.
+            return DocsEvent.ExitExternal
+        }
+        // Same host: deeper into the docs is navigation, anywhere else is the product.
+        return isDocsPath(url.pathname) ? null : DocsEvent.ExitToSite
     } catch {
         return null
     }
 }
+
+export const classifyExit = (href: string | null): DocsEventId | null =>
+    classifyExitFrom(href, window.location.href)
 
 export const installDocsAnalytics = (): void => {
     if (typeof window === 'undefined') return

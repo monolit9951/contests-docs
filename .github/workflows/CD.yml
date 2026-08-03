@@ -27,7 +27,14 @@ jobs:
             # Build & push for RELEASE (production)
             - name: Build & push docker RELEASE images
               if: env.CURRENT_BRANCH == 'release'
-              run: make docker VERSION=latest
+              # The two verification secrets are optional: an unset secret expands to
+              # an empty string and the ownership <meta> is omitted. Same pair of
+              # secrets as the frontend repo — set them there and here to verify a
+              # /docs/-scoped Search Console property alongside the site one.
+              run: |
+                  make docker VERSION=latest \
+                    GOOGLE_SITE_VERIFICATION="${{ secrets.GOOGLE_SITE_VERIFICATION }}" \
+                    YANDEX_VERIFICATION="${{ secrets.YANDEX_VERIFICATION }}"
 
             - name: Deploy to RELEASE environment
               uses: appleboy/ssh-action@master

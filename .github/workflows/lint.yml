@@ -19,6 +19,8 @@ jobs:
         with:
           node-version: "20"
       - run: npm ci
+      - name: unit tests (analytics beacon + linter self-check)
+        run: npm test
       - name: anti-doorway lint (redirect / provenance / path+uniqueness / cap / near-dup)
         run: node scripts/anti_doorway_lint.mjs --corpus docs/ru --base ${{ github.event.pull_request.base.sha }}
       - name: build (dead links + frontmatter)

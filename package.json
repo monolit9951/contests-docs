@@ -7,9 +7,14 @@
   "scripts": {
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs"
+    "docs:preview": "vitepress preview docs",
+    "test": "vitest run && node scripts/anti_doorway_lint.test.mjs"
   },
   "devDependencies": {
-    "vitepress": "^1.6.3"
+    "vitepress": "^1.6.3",
+    "vitest": "^4.1.10"
+  },
+  "dependencies": {
+    "web-vitals": "^6.0.1"
   }
 }

@@ -13,6 +13,29 @@ const HOSTNAME = DOCS_ENV === 'prod' ? 'https://darebay.com/docs/' : 'https://de
 
 const DOCS_DIR = join(dirname(fileURLToPath(import.meta.url)), '..')
 
+/**
+ * Search-console ownership tags, read from the build environment — the same
+ * two variables the frontend build takes (see `scripts/seo-routes.mjs` there),
+ * so one pair of repo secrets verifies both containers.
+ *
+ * A `https://darebay.com/` URL-prefix property already covers /docs, since the
+ * docs are a path on the main domain and not a subdomain. These tags exist for
+ * the case worth having: a separate property scoped to `/docs/`, which is the
+ * only way to read impressions, average position and — the point — the actual
+ * QUERIES for the content pages apart from the product's. Google verifies a
+ * path-scoped property by fetching a url under that path, and the frontend's
+ * tag does not exist there.
+ *
+ * Empty by default: the token comes from an account only the founder has, so
+ * the plumbing ships and the value is a repo secret away.
+ */
+const VERIFICATION_TAGS: [string, Record<string, string>][] = [
+    ['google-site-verification', process.env.GOOGLE_SITE_VERIFICATION],
+    ['yandex-verification', process.env.YANDEX_VERIFICATION],
+]
+    .filter((entry): entry is [string, string] => typeof entry[1] === 'string' && entry[1].trim() !== '')
+    .map(([name, content]) => ['meta', { name, content: content.trim() }])
+
 const SITE_DESCRIPTION = 'Запускайте активности, отправляйте работы, получайте награды на DareBay.'
 // Shared with the app so a docs link and a site link preview identically.
 const OG_IMAGE = 'https://darebay.com/og-default.jpg'
@@ -99,6 +122,7 @@ export default defineConfig({
   head: [
     // dev/preview builds are noindex; only the prod (release) build is indexable.
     ...(DOCS_ENV !== 'prod' ? [['meta', { name: 'robots', content: 'noindex' }] as [string, Record<string, string>]] : []),
+    ...VERIFICATION_TAGS,
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/docs/favicon.svg' }],
     ['meta', { name: 'theme-color', content: '#02140E' }],
     ['meta', { property: 'og:type', content: 'website' }],

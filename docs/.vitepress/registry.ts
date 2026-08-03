@@ -238,55 +238,55 @@ export const PAGES: readonly RegistryEntry[] = [
         id: 'help-hub',
         hub: 'help',
         slugs: { ru: '' },
-        retired: ['/docs/ru/faq/'],
+        retired: ['/docs/ru/faq/', '/docs/faq/'],
     },
     {
         id: 'help-quick-start',
         hub: 'help',
         slugs: { ru: 'bystryy-start' },
-        retired: ['/docs/ru/getting-started/'],
+        retired: ['/docs/ru/getting-started/', '/docs/getting-started/'],
     },
     {
         id: 'help-first-contest',
         hub: 'help',
         slugs: { ru: 'pervyy-konkurs' },
-        retired: ['/docs/ru/getting-started/create-your-first-contest'],
+        retired: ['/docs/ru/getting-started/create-your-first-contest', '/docs/getting-started/create-your-first-contest'],
     },
     {
         id: 'help-prizes-and-payouts',
         hub: 'help',
         slugs: { ru: 'prizy-i-vyplaty' },
-        retired: ['/docs/ru/getting-started/prizes-and-payouts'],
+        retired: ['/docs/ru/getting-started/prizes-and-payouts', '/docs/getting-started/prizes-and-payouts'],
     },
     {
         id: 'help-submit-work',
         hub: 'help',
         slugs: { ru: 'kak-otpravit-rabotu' },
-        retired: ['/docs/ru/getting-started/submit-a-work'],
+        retired: ['/docs/ru/getting-started/submit-a-work', '/docs/getting-started/submit-a-work'],
     },
     {
         id: 'help-verification',
         hub: 'help',
         slugs: { ru: 'verifikatsiya' },
-        retired: ['/docs/ru/getting-started/verification-and-trust'],
+        retired: ['/docs/ru/getting-started/verification-and-trust', '/docs/getting-started/verification-and-trust'],
     },
     {
         id: 'help-watch-vote-win',
         hub: 'help',
         slugs: { ru: 'smotret-golosovat-vyigrat' },
-        retired: ['/docs/ru/getting-started/watch-vote-win'],
+        retired: ['/docs/ru/getting-started/watch-vote-win', '/docs/getting-started/watch-vote-win'],
     },
     {
         id: 'help-choosing-winners',
         hub: 'help',
         slugs: { ru: 'kak-vybirayut-pobeditelya' },
-        retired: ['/docs/ru/faq/choosing-winners'],
+        retired: ['/docs/ru/faq/choosing-winners', '/docs/faq/choosing-winners'],
     },
     {
         id: 'help-crypto-payment',
         hub: 'help',
         slugs: { ru: 'oplata-kriptoy' },
-        retired: ['/docs/ru/faq/crypto'],
+        retired: ['/docs/ru/faq/crypto', '/docs/faq/crypto'],
     },
     {
         // Brand-prefixed query ("darebay вывод денег"), so the brand stays in
@@ -300,13 +300,13 @@ export const PAGES: readonly RegistryEntry[] = [
         id: 'help-fake-submissions',
         hub: 'help',
         slugs: { ru: 'zashchita-ot-nakrutki' },
-        retired: ['/docs/ru/faq/fake-submissions'],
+        retired: ['/docs/ru/faq/fake-submissions', '/docs/faq/fake-submissions'],
     },
     {
         id: 'help-illegal-content',
         hub: 'help',
         slugs: { ru: 'zapreshchennyy-kontent' },
-        retired: ['/docs/ru/faq/illegal-content'],
+        retired: ['/docs/ru/faq/illegal-content', '/docs/faq/illegal-content'],
     },
     {
         id: 'help-commission',
@@ -318,7 +318,7 @@ export const PAGES: readonly RegistryEntry[] = [
         id: 'help-no-submissions',
         hub: 'help',
         slugs: { ru: 'esli-nikto-ne-uchastvuet' },
-        retired: ['/docs/ru/faq/no-submissions'],
+        retired: ['/docs/ru/faq/no-submissions', '/docs/faq/no-submissions'],
     },
 
     // ── О проекте ───────────────────────────────────────────────/o-proekte/
@@ -380,19 +380,19 @@ export const PAGES: readonly RegistryEntry[] = [
         id: 'legal-hub',
         hub: 'legal',
         slugs: { ru: '' },
-        retired: ['/docs/ru/legal/'],
+        retired: ['/docs/ru/legal/', '/docs/legal/'],
     },
     {
         id: 'legal-privacy',
         hub: 'legal',
         slugs: { ru: 'privacy' },
-        retired: ['/docs/ru/legal/privacy'],
+        retired: ['/docs/ru/legal/privacy', '/docs/legal/privacy'],
     },
     {
         id: 'legal-terms',
         hub: 'legal',
         slugs: { ru: 'terms' },
-        retired: ['/docs/ru/legal/terms'],
+        retired: ['/docs/ru/legal/terms', '/docs/legal/terms'],
     },
 ]
 
@@ -418,8 +418,30 @@ export const ORPHAN_REDIRECTS: Readonly<Record<string, string>> = {
  * existing redirect.
  */
 export const ALREADY_REDIRECTING: readonly string[] = [
+    // The seventeen English addresses removed on 2026-07-25. They were answered
+    // by one prefix rule (`/docs/(getting-started|faq|legal)(/.*)?` -> the RU
+    // counterpart), so none of them has a file — and each is now listed on the
+    // page that actually replaced it rather than swept into a section index.
+    // Sending seventeen indexed addresses to a hub is one hop, but it is one hop
+    // to the wrong page, and Google treats that as a soft-404 more often than as
+    // a move.
+    '/docs/faq/',
+    '/docs/faq/choosing-winners',
+    '/docs/faq/crypto',
+    '/docs/faq/fake-submissions',
     '/docs/faq/fees',
+    '/docs/faq/illegal-content',
+    '/docs/faq/no-submissions',
     '/docs/faq/withdraw',
+    '/docs/getting-started/',
+    '/docs/getting-started/create-your-first-contest',
+    '/docs/getting-started/prizes-and-payouts',
+    '/docs/getting-started/submit-a-work',
+    '/docs/getting-started/verification-and-trust',
+    '/docs/getting-started/watch-vote-win',
+    '/docs/legal/',
+    '/docs/legal/privacy',
+    '/docs/legal/terms',
     '/docs/ru/',
 ]
 
@@ -498,16 +520,46 @@ export const sourceFile = (entry: RegistryEntry, language: Locale): string | nul
 export const APP_ROUTES: readonly string[] = [
     '/kak-eto-rabotaet',
     '/dlya-biznesa',
-    '/zadaniya/',
-    '/magazin/',
+    '/magazin',
     '/lenta',
     '/reyting',
 ]
 
-/** Every top-level URL segment the content container answers on. */
-export const CONTENT_SEGMENTS: readonly string[] = Object.values(HUBS).flatMap((hub) =>
-    LOCALES.map((l) => (l.prefix ? `${l.prefix.slice(1)}/${hub[l.language]}` : hub[l.language]))
-)
+/**
+ * Every URL prefix the content container answers on — and ONLY the ones that
+ * have pages.
+ *
+ * A locale is routed here when at least one page declares it. Routing
+ * `/ua/zarobitok/` before a single Ukrainian page exists would hand the reader
+ * a 404 from the content container instead of the application's own 404 page,
+ * and would put an empty branch in front of the crawler. Same rule as
+ * `hreflangCluster`: what does not exist is not announced.
+ */
+/**
+ * Files the content build writes to the ROOT of its output, which therefore
+ * need their own route on the host: with routing by hub prefix, anything not
+ * under a hub falls through to the application and 404s.
+ *
+ * `vp-icons.css` and `hashmap.json` are VitePress's own — the first is loaded by
+ * every page, the second by its client router — and both are easy to forget
+ * precisely because nothing links to them in the markup a human reads.
+ */
+export const CONTENT_ROOT_FILES: readonly string[] = [
+    '/sitemap-content.xml',
+    '/llms.txt',
+    '/vp-icons.css',
+    '/hashmap.json',
+]
+
+export const CONTENT_SEGMENTS: readonly string[] = LOCALES.flatMap((locale) => {
+    const hubsWithPages = new Set(
+        PAGES.filter((page) => page.slugs[locale.language] !== undefined).map((page) => page.hub)
+    )
+    return [...hubsWithPages].map((hubId) => {
+        const segment = HUBS[hubId][locale.language]
+        return locale.prefix ? `${locale.prefix.slice(1)}/${segment}` : segment
+    })
+})
 
 /**
  * Old address → new address, one hop each.

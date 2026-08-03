@@ -108,6 +108,12 @@ export default defineConfig({
   // APPLICATION's sitemap already owns.
   sitemap: { hostname: HOSTNAME },
   cleanUrls: true,
+  // Real per-page dates from git, and the reason they matter: VitePress only
+  // emits `<lastmod>` when it has one, and 43 sitemap entries with no date at
+  // all is a sitemap Google has no reason to recrawl. A date that LIES is worse
+  // than none — taking it from the commit that last touched the file is the one
+  // version that cannot drift.
+  lastUpdated: true,
   // force-dark: always dark, no theme toggle in the UI at all
   appearance: 'force-dark',
 
@@ -194,7 +200,7 @@ export default defineConfig({
   ],
 
   themeConfig: {
-    logo: { src: '/logo.svg', alt: 'DareBay' },
+    logo: { src: '/content-assets/logo.svg', alt: 'DareBay' },
     // No site title text — just the logo, which links to darebay.com
     // (href is rewritten at runtime in theme/index.ts).
     siteTitle: false,

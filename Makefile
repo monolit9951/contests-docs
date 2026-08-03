@@ -13,7 +13,10 @@ docker_login: ## login to docker registry.
 	docker login
 
 build_app: ## Build Application docker image.
-	docker build -f Dockerfile --build-arg DOCS_ENV=$(DOCS_ENV) -t $(HOST_FOR_DOCKER_IMAGE)/$(PROJECT_NAME):$(VERSION) .
+	docker build -f Dockerfile --build-arg DOCS_ENV=$(DOCS_ENV) \
+		--build-arg GOOGLE_SITE_VERIFICATION=$(GOOGLE_SITE_VERIFICATION) \
+		--build-arg YANDEX_VERIFICATION=$(YANDEX_VERIFICATION) \
+		-t $(HOST_FOR_DOCKER_IMAGE)/$(PROJECT_NAME):$(VERSION) .
 
 push_app: ## Push Application docker image.
 	docker push $(HOST_FOR_DOCKER_IMAGE)/$(PROJECT_NAME):$(VERSION)

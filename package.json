@@ -9,6 +9,7 @@
     "prebuild": "npm run check:registry && npm run gen:llms && npm run gen:redirects",
     "docs:build": "npm run prebuild && vitepress build docs && node scripts/finalize-dist.mjs",
     "docs:preview": "vitepress preview docs",
+    "test": "vitest run && node scripts/anti_doorway_lint.test.mjs",
     "check:registry": "node --experimental-strip-types --no-warnings scripts/check-registry.mjs --post",
     "gen:llms": "node --experimental-strip-types --no-warnings scripts/gen-llms.mjs",
     "gen:redirects": "node --experimental-strip-types --no-warnings scripts/gen-nginx-redirects.mjs",
@@ -16,6 +17,10 @@
     "gates": "node --experimental-strip-types --no-warnings scripts/url-gates.mjs"
   },
   "devDependencies": {
-    "vitepress": "^1.6.3"
+    "vitepress": "^1.6.3",
+    "vitest": "^4.1.10"
+  },
+  "dependencies": {
+    "web-vitals": "^6.0.1"
   }
 }

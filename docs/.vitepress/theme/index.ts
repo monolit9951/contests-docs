@@ -1,9 +1,12 @@
 import DefaultTheme from 'vitepress/theme'
 import type { Theme } from 'vitepress'
-import { h } from 'vue'
+import { useData, useRouter } from 'vitepress'
+import { defineComponent, h, onMounted, watch } from 'vue'
 import { HOMEPAGE, TELEGRAM } from '../links'
 import { DocsEvent, installDocsAnalytics, trackDocsEvent } from './analytics'
+import { flushEngagement, startPageEngagement } from './engagement'
 import HubIndex from './HubIndex.vue'
+import { installWebVitals } from './vitals'
 import './custom.css'
 
 // The logo anchor in VitePress's NavBarTitle always points at the locale root.
@@ -47,31 +50,78 @@ function PlatformCta() {
   ])
 }
 
+/**
+ * The layout is where the per-page instrumentation lives, because it is the
+ * first place the page data is real.
+ *
+ * `enhanceApp` runs while the app is being created, BEFORE the router resolves
+ * the first route — and VitePress seeds `router.route.data` with
+ * `notFoundPageData` as its placeholder (client/app/router.js). Reading
+ * `isNotFound` there therefore reports "404" on every page including the ones
+ * that exist, so the 404 signal was pure noise. `useData()` inside a component
+ * is the documented place, and it is resolved by the time it renders.
+ */
+const DocsLayout = defineComponent({
+  name: 'DareBayDocsLayout',
+  setup() {
+    const { page } = useData()
+    const router = useRouter()
+
+    const onPageReady = () => {
+      rewriteLogoLink()
+      trackDocsEvent(DocsEvent.PageView)
+      // A url that 404s is either a link the content fleet shipped broken or an
+      // inbound link (or an indexed url) we retired without a redirect. Both are
+      // fixable and neither is visible from the sitemap.
+      if (page.value.isNotFound) {
+        trackDocsEvent(DocsEvent.NotFound, { referrer: document.referrer.slice(0, 512) })
+      }
+      startPageEngagement()
+    }
+
+    // Client-only by construction: `onMounted` never runs during the SSR build.
+    onMounted(() => {
+      // Docs traffic used to reach the nginx log and nothing else — 3758 visits
+      // against zero analytics rows. One delegated listener covers every exit
+      // link, including the ones the content fleet ships next.
+      installDocsAnalytics()
+      // Once per document, never per route: see the note in vitals.ts.
+      installWebVitals()
+      onPageReady()
+    })
+
+    // VitePress swaps the DOM on route changes rather than reloading, so the
+    // next article needs the same treatment as the one we landed on.
+    watch(
+      () => router.route.path,
+      () => queueMicrotask(onPageReady),
+    )
+
+    // `doc-footer-before` sits between the article and the prev/next pager, so the last
+    // thing a reader meets is the product — not another sideways link deeper into the docs.
+    return () => h(DefaultTheme.Layout, null, { 'doc-footer-before': () => h(PlatformCta) })
+  },
+})
+
 export default {
   extends: DefaultTheme,
-  // `doc-footer-before` sits between the article and the prev/next pager, so the last
-  // thing a reader meets is the product — not another sideways link deeper into the docs.
-  Layout: () => h(DefaultTheme.Layout, null, { 'doc-footer-before': () => h(PlatformCta) }),
+  Layout: DocsLayout,
   enhanceApp({ app, router }) {
     // Registered globally so a hub index is one tag in Markdown. Must happen on
-    // the server too — the list is prerendered, see the note in HubIndex.vue —
-    // so this runs BEFORE the browser-only bail-out below.
+    // the SERVER too — the list is prerendered (see the note in HubIndex.vue),
+    // and the crawlers that read this site do not run JavaScript — so this sits
+    // BEFORE the browser-only bail-out below.
     app.component('HubIndex', HubIndex)
 
     if (typeof window === 'undefined') return
-    // First paint
-    queueMicrotask(rewriteLogoLink)
-    // Docs traffic used to reach the nginx log and nothing else — 3758 visits
-    // against zero analytics rows. One delegated listener covers every exit
-    // link, including the ones the content fleet ships next.
-    installDocsAnalytics()
-    trackDocsEvent(DocsEvent.PageView)
-    // VitePress replaces DOM on route changes; re-apply
-    const original = router.onAfterRouteChange
-    router.onAfterRouteChange = (to) => {
-      original?.(to)
-      queueMicrotask(rewriteLogoLink)
-      trackDocsEvent(DocsEvent.PageView)
+
+    const originalBefore = router.onBeforeRouteChange
+    router.onBeforeRouteChange = (to) => {
+      // BEFORE, so the reading time is still attributed to the page it was
+      // spent on — by `onAfterRouteChange` the url has already changed and
+      // every article would credit its dwell to whichever page came next.
+      flushEngagement('route')
+      return originalBefore?.(to)
     }
   },
 } satisfies Theme

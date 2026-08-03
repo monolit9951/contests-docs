@@ -111,7 +111,7 @@ export const PAGES: readonly RegistryEntry[] = [
     {
         id: 'earnings-hub',
         hub: 'earnings',
-        slugs: { ru: '' },
+        slugs: { ru: '', uk: '', en: '' },
         retired: ['/docs/ru/zarabotok/', '/docs/ru/blog/'],
     },
     {
@@ -212,7 +212,7 @@ export const PAGES: readonly RegistryEntry[] = [
         // `kak-rabotaet` and `platformy` with nothing tying them together.
         id: 'brands-hub',
         hub: 'brands',
-        slugs: { ru: '' },
+        slugs: { ru: '', uk: '', en: '' },
     },
     {
         id: 'brands-pay-clippers',
@@ -237,7 +237,7 @@ export const PAGES: readonly RegistryEntry[] = [
     {
         id: 'help-hub',
         hub: 'help',
-        slugs: { ru: '' },
+        slugs: { ru: '', uk: '', en: '' },
         retired: ['/docs/ru/faq/', '/docs/faq/'],
     },
     {
@@ -329,7 +329,7 @@ export const PAGES: readonly RegistryEntry[] = [
     {
         id: 'about-hub',
         hub: 'about',
-        slugs: { ru: '' },
+        slugs: { ru: '', uk: '', en: '' },
         retired: ['/docs/ru/o-proekte'],
     },
     {
@@ -523,6 +523,20 @@ export const APP_ROUTES: readonly string[] = [
     '/magazin',
     '/lenta',
     '/reyting',
+    // Same routes on the other locale trees. The application serves each under
+    // its own slug — the Ukrainian "how it works" is /ua/yak-tse-pratsiuie, not
+    // /ua/kak-eto-rabotaet — so they are listed per locale rather than derived
+    // by gluing a prefix onto the Russian list.
+    '/ua/yak-tse-pratsiuie',
+    '/ua/dlia-biznesu',
+    '/ua/kramnytsia',
+    '/ua/strichka',
+    '/ua/reitynh',
+    '/en/how-it-works',
+    '/en/for-business',
+    '/en/store',
+    '/en/feed',
+    '/en/top',
 ]
 
 /**

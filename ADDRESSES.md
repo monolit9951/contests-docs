@@ -3,7 +3,7 @@
 > ⚙️ **Сгенерировано** из `docs/.vitepress/registry.ts`. Руками не править —
 > `node --experimental-strip-types scripts/print-addresses.mjs > ADDRESSES.md`.
 
-Страниц: **43** · адресов: **43** · редиректов со старых адресов: **47**
+Страниц: **43** · адресов: **51** · редиректов со старых адресов: **62**
 
 Контент сегодня русский, поэтому у страниц объявлена только локаль `ru`: страница,
 которой нет на языке, в сайтмап этой локали и в hreflang не попадает вообще. Украинские
@@ -42,20 +42,20 @@
 
 | Было | Стало | id |
 |---|---|---|
-| `/docs/ru/faq/` | `/pomoshch/` | `help-hub` |
-| `/docs/ru/getting-started/` | `/pomoshch/bystryy-start` | `help-quick-start` |
-| `/docs/ru/getting-started/create-your-first-contest` | `/pomoshch/pervyy-konkurs` | `help-first-contest` |
-| `/docs/ru/getting-started/prizes-and-payouts` | `/pomoshch/prizy-i-vyplaty` | `help-prizes-and-payouts` |
-| `/docs/ru/getting-started/submit-a-work` | `/pomoshch/kak-otpravit-rabotu` | `help-submit-work` |
-| `/docs/ru/getting-started/verification-and-trust` | `/pomoshch/verifikatsiya` | `help-verification` |
-| `/docs/ru/getting-started/watch-vote-win` | `/pomoshch/smotret-golosovat-vyigrat` | `help-watch-vote-win` |
-| `/docs/ru/faq/choosing-winners` | `/pomoshch/kak-vybirayut-pobeditelya` | `help-choosing-winners` |
-| `/docs/ru/faq/crypto` | `/pomoshch/oplata-kriptoy` | `help-crypto-payment` |
+| `/docs/ru/faq/`<br>`/docs/faq/` | `/pomoshch/` | `help-hub` |
+| `/docs/ru/getting-started/`<br>`/docs/getting-started/` | `/pomoshch/bystryy-start` | `help-quick-start` |
+| `/docs/ru/getting-started/create-your-first-contest`<br>`/docs/getting-started/create-your-first-contest` | `/pomoshch/pervyy-konkurs` | `help-first-contest` |
+| `/docs/ru/getting-started/prizes-and-payouts`<br>`/docs/getting-started/prizes-and-payouts` | `/pomoshch/prizy-i-vyplaty` | `help-prizes-and-payouts` |
+| `/docs/ru/getting-started/submit-a-work`<br>`/docs/getting-started/submit-a-work` | `/pomoshch/kak-otpravit-rabotu` | `help-submit-work` |
+| `/docs/ru/getting-started/verification-and-trust`<br>`/docs/getting-started/verification-and-trust` | `/pomoshch/verifikatsiya` | `help-verification` |
+| `/docs/ru/getting-started/watch-vote-win`<br>`/docs/getting-started/watch-vote-win` | `/pomoshch/smotret-golosovat-vyigrat` | `help-watch-vote-win` |
+| `/docs/ru/faq/choosing-winners`<br>`/docs/faq/choosing-winners` | `/pomoshch/kak-vybirayut-pobeditelya` | `help-choosing-winners` |
+| `/docs/ru/faq/crypto`<br>`/docs/faq/crypto` | `/pomoshch/oplata-kriptoy` | `help-crypto-payment` |
 | `/docs/ru/faq/darebay-vyvod-deneg`<br>`/docs/faq/withdraw` | `/pomoshch/darebay-vyvod-deneg` | `help-withdraw` |
-| `/docs/ru/faq/fake-submissions` | `/pomoshch/zashchita-ot-nakrutki` | `help-fake-submissions` |
-| `/docs/ru/faq/illegal-content` | `/pomoshch/zapreshchennyy-kontent` | `help-illegal-content` |
+| `/docs/ru/faq/fake-submissions`<br>`/docs/faq/fake-submissions` | `/pomoshch/zashchita-ot-nakrutki` | `help-fake-submissions` |
+| `/docs/ru/faq/illegal-content`<br>`/docs/faq/illegal-content` | `/pomoshch/zapreshchennyy-kontent` | `help-illegal-content` |
 | `/docs/ru/faq/kakaya-komissiya`<br>`/docs/faq/fees` | `/pomoshch/kakaya-komissiya` | `help-commission` |
-| `/docs/ru/faq/no-submissions` | `/pomoshch/esli-nikto-ne-uchastvuet` | `help-no-submissions` |
+| `/docs/ru/faq/no-submissions`<br>`/docs/faq/no-submissions` | `/pomoshch/esli-nikto-ne-uchastvuet` | `help-no-submissions` |
 
 ## О проекте — `/o-proekte/`
 
@@ -73,9 +73,9 @@
 
 | Было | Стало | id |
 |---|---|---|
-| `/docs/ru/legal/` | `/legal/` | `legal-hub` |
-| `/docs/ru/legal/privacy` | `/legal/privacy` | `legal-privacy` |
-| `/docs/ru/legal/terms` | `/legal/terms` | `legal-terms` |
+| `/docs/ru/legal/`<br>`/docs/legal/` | `/legal/` | `legal-hub` |
+| `/docs/ru/legal/privacy`<br>`/docs/legal/privacy` | `/legal/privacy` | `legal-privacy` |
+| `/docs/ru/legal/terms`<br>`/docs/legal/terms` | `/legal/terms` | `legal-terms` |
 
 ## Страницы, которые не переезжают
 

@@ -117,18 +117,24 @@ export default defineConfig({
   // force-dark: always dark, no theme toggle in the UI at all
   appearance: 'force-dark',
 
-  // Single-language for now. The registry is locale-aware and the URL axis exists
-  // (`/ua`, `/en` are real trees in the app), but every content page is Russian today:
-  // adding VitePress locales here would generate empty trees, which is exactly the
-  // failure the registry's per-page locale declaration exists to prevent. Locales get
-  // added with the first translated page, not before.
+  // RUSSIAN STAYS AT THE ROOT — `root` is the unprefixed locale and it is `ru`.
+  // In July an EN tree sat on the short urls while RU sat a level deeper, Google
+  // indexed the English pages and served English sitelinks under a Russian brand
+  // query, and the whole tree had to be removed. Never put another language above RU.
   //
-  // Whatever happens, RUSSIAN STAYS AT THE ROOT. In July an EN tree sat on the short
-  // urls while RU sat a level deeper, Google indexed the English pages and served
-  // English sitelinks under a Russian brand query, and the tree had to be removed.
+  // A locale appears here only once it HAS pages. The registry declares translations
+  // per page, so a partially translated section is normal: what exists is served and
+  // announced in hreflang, what does not exist simply is not there. That is what keeps
+  // a second language from becoming an empty branch.
   lang: 'ru',
   title: 'DareBay',
   description: SITE_DESCRIPTION,
+
+  locales: {
+    root: { label: 'Русский', lang: 'ru' },
+    ua: { label: 'Українська', lang: 'uk', title: 'DareBay', description: 'Запускайте активності, надсилайте роботи, отримуйте винагороди на DareBay.' },
+    en: { label: 'English', lang: 'en', title: 'DareBay', description: 'Launch activities, submit work, get rewarded on DareBay.' },
+  },
 
   // No " | Документация DareBay" after every title. Two reasons: it spent ~25 of the ~60
   // characters Google shows on a suffix that says nothing a reader was searching for, and it

@@ -17,6 +17,17 @@
 //   node --experimental-strip-types scripts/url-gates.mjs \
 //        --app /root/code/contests-frontend/.worktrees/url-migration
 //
+// ⚠️ ONE THING THIS DOES NOT COVER, and it cost a production outage. The probes
+// compose their OWN nginx config out of both containers' `server` blocks. The
+// real images do not: the base nginx image auto-includes every
+// `/etc/nginx/conf.d/*.conf` at the HTTP level, so a file meant for a `server`
+// block gets parsed a second time where its directives are illegal. That killed
+// the content container on boot while every gate here was green.
+//
+// `scripts/image-boot-check.mjs` covers it by building and running the actual
+// image. Keep both: this file is fast and checks addresses, that one is slow and
+// checks that the thing even starts.
+//
 // Nothing here talks to production. It binds loopback ports and tears them down.
 
 import { execFileSync, spawn } from 'node:child_process'

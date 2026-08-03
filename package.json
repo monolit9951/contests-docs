@@ -15,7 +15,8 @@
     "gen:redirects": "node --experimental-strip-types --no-warnings scripts/gen-nginx-redirects.mjs",
     "gen:addresses": "node --experimental-strip-types --no-warnings scripts/print-addresses.mjs > ADDRESSES.md",
     "gates": "node --experimental-strip-types --no-warnings scripts/url-gates.mjs",
-    "gen:lastmod": "node scripts/gen-lastmod.mjs"
+    "gen:lastmod": "node scripts/gen-lastmod.mjs",
+    "check:image": "node scripts/image-boot-check.mjs"
   },
   "devDependencies": {
     "vitepress": "^1.6.3",

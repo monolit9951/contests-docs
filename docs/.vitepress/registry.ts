@@ -188,7 +188,7 @@ export const PAGES: readonly RegistryEntry[] = [
     {
         id: 'earnings-view-threshold',
         hub: 'earnings',
-        slugs: { ru: 'porog-prosmotrov-dlya-vyplaty' },
+        slugs: { ru: 'porog-prosmotrov-dlya-vyplaty', uk: 'porih-perehliadiv-dlia-vyplaty', en: 'view-threshold' },
         retired: ['/docs/ru/kak-rabotaet/porog-prosmotrov-dlya-vyplaty'],
     },
     {

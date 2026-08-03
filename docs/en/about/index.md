@@ -55,3 +55,8 @@ channel is read by the same people who edit these pages.
 Direct answers to what people ask about the platform before they trust it with money.
 
 <HubIndex hub="about" />
+
+## Where to next
+
+- [How pay-per-view works](/en/earnings/how-pay-per-view-works)
+- [DareBay help](/en/help/)

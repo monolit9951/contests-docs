@@ -217,19 +217,19 @@ export const PAGES: readonly RegistryEntry[] = [
     {
         id: 'brands-pay-clippers',
         hub: 'brands',
-        slugs: { ru: 'kak-platit-narezchikam-za-prosmotry' },
+        slugs: { ru: 'kak-platit-narezchikam-za-prosmotry', uk: 'yak-platyty-narizalnykam-za-perehliady', en: 'paying-clippers-per-view' },
         retired: ['/docs/ru/kak-rabotaet/kak-platit-narezchikam-za-prosmotry'],
     },
     {
         id: 'brands-create-contest',
         hub: 'brands',
-        slugs: { ru: 'kak-sozdat-konkurs-dlya-narezchikov' },
+        slugs: { ru: 'kak-sozdat-konkurs-dlya-narezchikov', uk: 'yak-stvoryty-konkurs-dlia-narizalnykiv', en: 'set-up-a-clipping-contest' },
         retired: ['/docs/ru/kak-rabotaet/kak-sozdat-konkurs-dlya-narezchikov'],
     },
     {
         id: 'brands-order-clips',
         hub: 'brands',
-        slugs: { ru: 'kak-zakazat-narezki-dlya-prodvizheniya' },
+        slugs: { ru: 'kak-zakazat-narezki-dlya-prodvizheniya', uk: 'yak-zamovyty-narizky-dlia-prosuvannia', en: 'commission-clips-for-a-campaign' },
         retired: ['/docs/ru/platformy/kak-zakazat-narezki-dlya-prodvizheniya'],
     },
 
@@ -371,7 +371,7 @@ export const PAGES: readonly RegistryEntry[] = [
     {
         id: 'about-payout-guarantee',
         hub: 'about',
-        slugs: { ru: 'garantiya-vyplat', uk: 'harantiia-vyplat' },
+        slugs: { ru: 'garantiya-vyplat', uk: 'harantiia-vyplat', en: 'payout-guarantee' },
         retired: ['/docs/ru/faq/garantiya-vyplat'],
     },
 
@@ -385,7 +385,7 @@ export const PAGES: readonly RegistryEntry[] = [
     {
         id: 'legal-privacy',
         hub: 'legal',
-        slugs: { ru: 'privacy' },
+        slugs: { ru: 'privacy', uk: 'privacy', en: 'privacy' },
         retired: ['/docs/ru/legal/privacy', '/docs/legal/privacy'],
     },
     {

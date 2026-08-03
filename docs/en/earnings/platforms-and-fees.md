@@ -13,4 +13,4 @@ How payouts work on DareBay is in [how it works](/en/how-it-works).
 ## Pages in this section
 
 - [Where to find clipping work](/en/earnings/where-to-find-clipping-work) - a survey of the boards with briefs and what it takes for a clipper to get in.
-- [How to order clips for promotion](/en/for-brands/kak-zakazat-narezki-dlya-prodvizheniya) - the buyer's path: from brief to an automatic payout against results.
+- [How to order clips for promotion](/en/for-brands/commission-clips-for-a-campaign) - the buyer's path: from brief to an automatic payout against results.

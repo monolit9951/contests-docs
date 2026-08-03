@@ -33,6 +33,7 @@ const {
     ROOT_LOCALE,
     ORPHAN_REDIRECTS,
     ALREADY_REDIRECTING,
+    APP_ROUTES,
     pagePath,
     sourceFile,
     localesOf,
@@ -239,6 +240,56 @@ for (const entry of PAGES) {
                     `docs/${relative(DOCS, file)}:${i + 2} — апостроф внутри одинарных кавычек YAML, удвой его ('')`
                 )
             }
+        }
+    }
+}
+
+// ---------------------------------------------------------------------------
+// 6c. Every internal link resolves to a page that exists in that locale.
+//
+// `resolveLocalizedLink` rescues a link to an untranslated sibling by sending it
+// to the hub — deliberately, so an incremental translation never ships a 404.
+// But that same rescue hides a TYPO: a misspelled slug also lands on the hub and
+// looks fine. The 2026-08 translation pass produced exactly that — a Ukrainian
+// page linking to `/ua/brendam/kak-sozdat-konkurs-…`, the Russian slug under a
+// Ukrainian prefix, which resolved to the brands hub and looked correct.
+//
+// So the rescue stays, and this gate draws the line it cannot: a link whose
+// SECTION exists in that locale but whose SLUG matches no page there is a
+// mistake, not a missing translation.
+// ---------------------------------------------------------------------------
+{
+    const walk = (dir, acc = []) => {
+        if (!existsSync(dir)) return acc
+        for (const name of readdirSync(dir)) {
+            if (name.startsWith('.') || name === 'public') continue
+            const full = join(dir, name)
+            if (statSync(full).isDirectory()) walk(full, acc)
+            else if (name.endsWith('.md')) acc.push(full)
+        }
+        return acc
+    }
+
+    const live = new Set()
+    for (const entry of PAGES) {
+        for (const lang of localesOf(entry)) live.add(pagePath(entry, lang))
+    }
+    const appRoutes = new Set(APP_ROUTES)
+
+    // The hub root of every locale — a link there is the legitimate fallback.
+    const hubRoots = new Set(
+        PAGES.filter((e) => localesOf(e).some((l) => e.slugs[l] === '')).flatMap((e) =>
+            localesOf(e).filter((l) => e.slugs[l] === '').map((l) => pagePath(e, l))
+        )
+    )
+
+    for (const file of walk(DOCS)) {
+        const raw = readFileSync(file, 'utf8')
+        for (const [, href] of raw.matchAll(/\]\((\/[^)#\s]*)/g)) {
+            if (live.has(href) || hubRoots.has(href) || appRoutes.has(href)) continue
+            // `/legal/*` is shared across locales by design.
+            if (href.startsWith('/legal/')) continue
+            fail('dead-internal-link', `docs/${relative(DOCS, file)} -> ${href}`)
         }
     }
 }

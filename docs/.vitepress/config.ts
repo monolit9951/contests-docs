@@ -5,6 +5,7 @@ import { fileURLToPath } from 'node:url'
 import { HOMEPAGE, TELEGRAM } from './links'
 import {
   HUBS,
+  LOCALES,
   PAGES,
   ROOT_LOCALE,
   APP_ROUTES,
@@ -14,6 +15,7 @@ import {
   pagePath,
   sourceFile,
   type HubId,
+  type Locale,
 } from './registry'
 
 // Branch-aware host for the sitemap + a dev-only noindex (the develop preview must not be indexed;
@@ -37,13 +39,16 @@ const OG_IMAGE = 'https://darebay.com/og-default.jpg'
 // stale: it named five earnings articles when ten had shipped. Deriving them means a page
 // that exists is a page that is linked — the cheapest ranking asset we have, and the one
 // that rots fastest when a human owns it.
-const HUB_TITLES: Record<HubId, string> = {
-  about: 'О проекте',
-  earnings: 'Заработок',
-  brands: 'Брендам',
-  help: 'Помощь',
-  legal: 'Юридические документы',
+const HUB_TITLES: Record<Locale, Record<HubId, string>> = {
+  ru: { about: 'О проекте', earnings: 'Заработок', brands: 'Брендам', help: 'Помощь', legal: 'Юридические документы' },
+  uk: { about: 'Про проєкт', earnings: 'Заробіток', brands: 'Брендам', help: 'Допомога', legal: 'Юридичні документи' },
+  en: { about: 'About', earnings: 'Earning', brands: 'For brands', help: 'Help', legal: 'Legal' },
 }
+
+const OVERVIEW: Record<Locale, string> = { ru: 'Обзор', uk: 'Огляд', en: 'Overview' }
+const NAV_CTA: Record<Locale, string> = { ru: 'Перейти на сайт →', uk: 'Перейти на сайт →', en: 'Go to the site →' }
+
+const localePrefix = (lang: Locale) => LOCALES.find((l) => l.language === lang)?.prefix ?? ''
 
 // Order in the sidebar. "О проекте" is first on purpose: earnings is a subject where the
 // reader's first question — and Google's — is who is behind the page and where the
@@ -57,14 +62,38 @@ const pageTitle = (file: string, fallback: string) => {
   return m ? m[1].trim().replace(/^["']|["']$/g, '') : fallback
 }
 
-function hubSection(hubId: HubId) {
-  const lang = ROOT_LOCALE.language
+/**
+ * Nav and sidebar for ONE locale.
+ *
+ * They used to be built once from the root locale and reused on every tree, so
+ * the header on `/ua/` carried Russian labels pointing at Russian addresses:
+ a * reader who switched language was thrown straight back out of it by the very
+ * first thing they clicked.
+ *
+ * A section with no pages in this language is dropped entirely rather than shown
+ * empty — the same rule as everywhere else here.
+ */
+export const themeForLocale = (lang: Locale) => ({
+  nav: [
+    { text: HUB_TITLES[lang].earnings, link: `${localePrefix(lang)}/${HUBS.earnings[lang]}/` },
+    { text: HUB_TITLES[lang].brands, link: `${localePrefix(lang)}/${HUBS.brands[lang]}/` },
+    { text: HUB_TITLES[lang].help, link: `${localePrefix(lang)}/${HUBS.help[lang]}/` },
+    // The CTA link is styled separately via CSS — see the `:last-child` rules under
+    // "The CTA" in custom.css. It must stay LAST in this array: the gradient-pill
+    // styling keys off `:last-child`, and so does the rule that keeps it visible on
+    // phones while the other nav items collapse into the hamburger.
+    { text: NAV_CTA[lang], link: HOMEPAGE },
+  ],
+  sidebar: SIDEBAR_ORDER.map((hubId) => hubSection(hubId, lang)).filter((section) => section.items.length),
+})
+
+function hubSection(hubId: HubId, lang: Locale) {
   const entries = PAGES.filter((e) => e.hub === hubId && localesOf(e).includes(lang))
   const items = entries
     .map((entry) => ({
       text:
         entry.slugs[lang] === ''
-          ? 'Обзор'
+          ? OVERVIEW[lang]
           : pageTitle(sourceFile(entry, lang)!, entry.id),
       link: pagePath(entry, lang)!,
       isIndex: entry.slugs[lang] === '',
@@ -72,7 +101,7 @@ function hubSection(hubId: HubId) {
     // Index first, then alphabetical — the same order the hub page itself renders.
     .sort((a, b) => (a.isIndex ? -1 : b.isIndex ? 1 : a.text.localeCompare(b.text, 'ru')))
     .map(({ text, link }) => ({ text, link }))
-  return { text: HUB_TITLES[hubId], collapsed: false, items }
+  return { text: HUB_TITLES[lang][hubId], collapsed: false, items }
 }
 
 // Self-referencing canonical, and the page's hreflang cluster — both from the REGISTRY,
@@ -148,9 +177,9 @@ export default defineConfig({
   description: SITE_DESCRIPTION,
 
   locales: {
-    root: { label: 'Русский', lang: 'ru' },
-    ua: { label: 'Українська', lang: 'uk', title: 'DareBay', description: 'Запускайте активності, надсилайте роботи, отримуйте винагороди на DareBay.' },
-    en: { label: 'English', lang: 'en', title: 'DareBay', description: 'Launch activities, submit work, get rewarded on DareBay.' },
+    root: { label: 'Русский', lang: 'ru', themeConfig: themeForLocale('ru') },
+    ua: { label: 'Українська', lang: 'uk', title: 'DareBay', description: 'Запускайте активності, надсилайте роботи, отримуйте винагороди на DareBay.', themeConfig: themeForLocale('uk') },
+    en: { label: 'English', lang: 'en', title: 'DareBay', description: 'Launch activities, submit work, get rewarded on DareBay.', themeConfig: themeForLocale('en') },
   },
 
   // No " | Документация DareBay" after every title. Two reasons: it spent ~25 of the ~60
@@ -229,17 +258,7 @@ export default defineConfig({
     siteTitle: false,
     // Search disabled — the content volume doesn't warrant it yet, and a
     // quiet header reads better than one with a half-empty search box.
-    nav: [
-      { text: 'Заработок', link: `/${HUBS.earnings.ru}/` },
-      { text: 'Брендам', link: `/${HUBS.brands.ru}/` },
-      { text: 'Помощь', link: `/${HUBS.help.ru}/` },
-      // The CTA link is styled separately via CSS — see the `:last-child` rules under
-      // "The CTA" in custom.css. It must stay LAST in this array: the gradient-pill
-      // styling keys off `:last-child`, and so does the rule that keeps it visible on
-      // phones while the other nav items collapse into the hamburger.
-      { text: 'Перейти на сайт →', link: HOMEPAGE },
-    ],
-    sidebar: SIDEBAR_ORDER.map(hubSection),
+    // nav and sidebar live in `locales[*].themeConfig` — see themeForLocale.
 
     // VitePress builds a 404.html but nothing serves it — nginx.conf now points `error_page`
     // at it, so these strings are what a reader actually sees on a broken link (the default

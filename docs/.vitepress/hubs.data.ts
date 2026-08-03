@@ -17,7 +17,7 @@ import { readFileSync, existsSync } from 'node:fs'
 import { join, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
-import { PAGES, HUBS, ROOT_LOCALE, pagePath, sourceFile, localesOf, type HubId, type Locale } from './registry'
+import { PAGES, HUBS, LOCALES, pagePath, sourceFile, localesOf, type HubId, type Locale } from './registry'
 
 const DOCS = join(dirname(fileURLToPath(import.meta.url)), '..')
 
@@ -28,7 +28,11 @@ export interface HubPage {
     readonly description: string
 }
 
-export type HubData = Record<string, HubPage[]>
+/** hub id -> language -> pages. Keyed by language because a hub lists what
+ *  exists IN THAT language: the Ukrainian earnings hub listing Russian articles
+ *  is how a reader gets thrown out of their own tree by the page that was
+ *  supposed to keep them in it. */
+export type HubData = Record<string, Record<string, HubPage[]>>
 
 // Frontmatter is read with a narrow regex rather than a YAML parser: these are
 // files the content fleet writes to a fixed template (`content-conventions`
@@ -49,32 +53,35 @@ export default {
     watch: ['../**/*.md'],
     load(): HubData {
         const out: HubData = {}
-        const lang: Locale = ROOT_LOCALE.language
 
         for (const hubId of Object.keys(HUBS) as HubId[]) {
-            const pages: HubPage[] = []
-            for (const entry of PAGES) {
-                if (entry.hub !== hubId) continue
-                if (!localesOf(entry).includes(lang)) continue
-                // The hub index is not an item of its own list.
-                if (entry.slugs[lang] === '') continue
+            out[hubId] = {}
+            for (const locale of LOCALES) {
+                const lang = locale.language
+                const pages: HubPage[] = []
+                for (const entry of PAGES) {
+                    if (entry.hub !== hubId) continue
+                    if (!localesOf(entry).includes(lang)) continue
+                    // The hub index is not an item of its own list.
+                    if (entry.slugs[lang] === '') continue
 
-                const file = join(DOCS, sourceFile(entry, lang)!)
-                if (!existsSync(file)) {
-                    throw new Error(`hubs.data: ${entry.id} declares ${sourceFile(entry, lang)}, which does not exist`)
+                    const file = join(DOCS, sourceFile(entry, lang)!)
+                    if (!existsSync(file)) {
+                        throw new Error(`hubs.data: ${entry.id} declares ${sourceFile(entry, lang)}, which does not exist`)
+                    }
+                    const raw = readFileSync(file, 'utf8')
+                    pages.push({
+                        id: entry.id,
+                        path: pagePath(entry, lang)!,
+                        title: field(raw, 'title') || entry.id,
+                        description: field(raw, 'description'),
+                    })
                 }
-                const raw = readFileSync(file, 'utf8')
-                pages.push({
-                    id: entry.id,
-                    path: pagePath(entry, lang)!,
-                    title: field(raw, 'title') || entry.id,
-                    description: field(raw, 'description'),
-                })
+                // Alphabetical by title: any order beats none, and an explicit
+                // ordering field would be one more thing to keep in sync for a
+                // list whose whole point is that nobody maintains it.
+                out[hubId][lang] = pages.sort((a, b) => a.title.localeCompare(b.title, lang))
             }
-            // Alphabetical by title: any order beats none, and an explicit
-            // ordering field would be one more thing to keep in sync for a list
-            // whose whole point is that nobody maintains it.
-            out[hubId] = pages.sort((a, b) => a.title.localeCompare(b.title, 'ru'))
         }
         return out
     },

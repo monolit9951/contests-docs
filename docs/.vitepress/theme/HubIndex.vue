@@ -8,10 +8,18 @@
 // not run JavaScript, and a hub whose links only appeared after hydration would
 // be a hub with no links at all as far as they are concerned.
 
+import { useData } from 'vitepress'
+import { computed } from 'vue'
 import { data as hubs } from '../hubs.data'
 
 const props = defineProps<{ hub: string }>()
-const pages = hubs[props.hub] ?? []
+
+// The language of the page being rendered, not a fixed one: a hub lists what
+// exists in ITS OWN tree. Before this the Ukrainian hub listed the Russian
+// articles, so the page whose job is to keep a reader inside their language was
+// the one that threw them out of it.
+const { lang } = useData()
+const pages = computed(() => hubs[props.hub]?.[lang.value] ?? [])
 </script>
 
 <template>

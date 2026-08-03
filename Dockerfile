@@ -16,12 +16,16 @@ RUN DOCS_ENV=$DOCS_ENV npm run docs:build
 FROM nginx:alpine
 
 COPY nginx.conf /etc/nginx/conf.d/default.conf
+# The 301 map for every retired address, generated from the page registry.
+# `include`d by nginx.conf — regenerate with scripts/gen-nginx-redirects.mjs,
+# never edit by hand.
+COPY redirects.conf /etc/nginx/conf.d/redirects.conf
 
-# VitePress builds with base: '/docs/', so URLs inside the HTML point to /docs/*.
-# We place the dist at /usr/share/nginx/html/docs so the filesystem layout
-# matches the URL layout — both when the host nginx proxies /docs/ to us and
-# when the container is hit directly on localhost:3002 for debugging.
-COPY --from=build /app/docs/.vitepress/dist /usr/share/nginx/html/docs
+# Base is '/' since the 2026-08 URL migration: content answers on root-level topic hubs
+# (/zarabotok/, /pomoshch/, ...) and the host nginx routes exactly those prefixes here.
+# So the dist goes at the document root, and the filesystem layout matches the URL layout
+# both behind the host and when the container is hit directly on localhost:3002.
+COPY --from=build /app/docs/.vitepress/dist /usr/share/nginx/html
 
 # Nginx runs as the `nginx` user inside this image; make sure it can read
 # everything regardless of any umask/ACL quirks in the build context.

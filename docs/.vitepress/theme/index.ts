@@ -3,6 +3,7 @@ import type { Theme } from 'vitepress'
 import { h } from 'vue'
 import { HOMEPAGE, TELEGRAM } from '../links'
 import { DocsEvent, installDocsAnalytics, trackDocsEvent } from './analytics'
+import HubIndex from './HubIndex.vue'
 import './custom.css'
 
 // The logo anchor in VitePress's NavBarTitle always points at the locale root.
@@ -51,7 +52,12 @@ export default {
   // `doc-footer-before` sits between the article and the prev/next pager, so the last
   // thing a reader meets is the product — not another sideways link deeper into the docs.
   Layout: () => h(DefaultTheme.Layout, null, { 'doc-footer-before': () => h(PlatformCta) }),
-  enhanceApp({ router }) {
+  enhanceApp({ app, router }) {
+    // Registered globally so a hub index is one tag in Markdown. Must happen on
+    // the server too — the list is prerendered, see the note in HubIndex.vue —
+    // so this runs BEFORE the browser-only bail-out below.
+    app.component('HubIndex', HubIndex)
+
     if (typeof window === 'undefined') return
     // First paint
     queueMicrotask(rewriteLogoLink)

@@ -485,6 +485,25 @@ export const sourceFile = (entry: RegistryEntry, language: Locale): string | nul
     return slug === '' ? `${dir}${hub}/index.md` : `${dir}${hub}/${slug}.md`
 }
 
+/**
+ * Addresses on darebay.com that the APPLICATION serves, which content pages
+ * link to. They are real URLs and dead only from this container's point of
+ * view, so VitePress's dead-link check has to be told about them.
+ *
+ * Listed one by one rather than muted with a pattern: a blanket
+ * `ignoreDeadLinks` would also swallow a genuine typo in a content link, which
+ * is the failure this whole registry exists to make impossible. Adding a link
+ * to a new app route means adding a line here, and that is the point.
+ */
+export const APP_ROUTES: readonly string[] = [
+    '/kak-eto-rabotaet',
+    '/dlya-biznesa',
+    '/zadaniya/',
+    '/magazin/',
+    '/lenta',
+    '/reyting',
+]
+
 /** Every top-level URL segment the content container answers on. */
 export const CONTENT_SEGMENTS: readonly string[] = Object.values(HUBS).flatMap((hub) =>
     LOCALES.map((l) => (l.prefix ? `${l.prefix.slice(1)}/${hub[l.language]}` : hub[l.language]))

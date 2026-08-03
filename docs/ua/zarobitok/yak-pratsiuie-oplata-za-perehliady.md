@@ -92,7 +92,7 @@ seo: true
 
 ## Куди далі
 
-- [Як це працює](/ua/yak-tse-pratsiuie) - огляд механіки DareBay
+- [Як це працює](/ua/how-it-works) - огляд механіки DareBay
 - [Як рахуються перегляди для виплати](/ua/zarobitok/yak-rakhuiutsia-perehliady-dlia-vyplaty) - оракул, валідація і захист від накрутки
 - [Поріг переглядів для виплати](/ua/zarobitok/porih-perehliadiv-dlia-vyplaty) - дефолт, медіана і налаштування організатором
 - [Яка комісія на DareBay?](/ua/dopomoha/yaka-komisiia) - скільки бере платформа з організатора

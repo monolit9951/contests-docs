@@ -92,7 +92,7 @@ seo: true
 
 ## Куда дальше
 
-- [Как это работает](/kak-eto-rabotaet) - обзор механики DareBay
+- [Как это работает](/how-it-works) - обзор механики DareBay
 - [Как платить нарезчикам за просмотры](https://darebay.com/brendam/kak-platit-narezchikam-za-prosmotry) - модель оплаты: формула, комиссия, раздача без вашего участия
 - [Как работает оплата за просмотры](/zarabotok/kak-rabotaet-oplata-za-prosmotry) - полная цепочка от бюджета до выплаты
 - [Порог просмотров для выплаты](/zarabotok/porog-prosmotrov-dlya-vyplaty) - как работает порог и зачем он нужен

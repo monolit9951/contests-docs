@@ -92,6 +92,6 @@ seo: true
 
 - [Як працює оплата за перегляди](/ua/zarobitok/yak-pratsiuie-oplata-za-perehliady) - повний ланцюжок від бюджету до виплати
 - [Поріг переглядів для виплати](/ua/zarobitok/porih-perehliadiv-dlia-vyplaty) - дефолт, медіана і налаштування організатором
-- [Як це працює](/ua/yak-tse-pratsiuie) - огляд механіки DareBay
+- [Як це працює](/ua/how-it-works) - огляд механіки DareBay
 - [DareBay справді платить?](/ua/pro-proekt/darebay-spravdi-platyt) - як забезпечена гарантія виплат
 - [Гарантія виплат](/ua/pro-proekt/harantiia-vyplat) - докладніше про механізм блокування бюджету

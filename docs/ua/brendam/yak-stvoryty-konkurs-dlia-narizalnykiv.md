@@ -92,7 +92,7 @@ seo: true
 
 ## Куди далі
 
-- [Як це працює](/ua/yak-tse-pratsiuie) - огляд механіки DareBay
+- [Як це працює](/ua/how-it-works) - огляд механіки DareBay
 - [Як платити нарізальникам за перегляди](https://darebay.com/ua/brendam/yak-platyty-narizalnykam-za-perehliady) - модель оплати: формула, комісія, роздача без вашої участі
 - [Як працює оплата за перегляди](/ua/zarobitok/yak-pratsiuie-oplata-za-perehliady) - повний ланцюжок від бюджету до виплати
 - [Поріг переглядів для виплати](/ua/zarobitok/porih-perehliadiv-dlia-vyplaty) - як працює поріг і навіщо він потрібен

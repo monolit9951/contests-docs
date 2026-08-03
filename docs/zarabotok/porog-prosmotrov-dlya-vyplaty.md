@@ -81,6 +81,6 @@ seo: true
 ## Куда дальше
 
 - [Как работает оплата за просмотры](/zarabotok/kak-rabotaet-oplata-za-prosmotry) - полная механика PPV-конкурсов от бюджета до выплаты
-- [Как это работает](/kak-eto-rabotaet) - обзор механики DareBay
+- [Как это работает](/how-it-works) - обзор механики DareBay
 - [Сколько платят за 1000 просмотров](/zarabotok/skolko-platyat-za-1000-prosmotrov) - ставки оплаты в PPV-конкурсах
 - [Сколько можно заработать на нарезках](/zarabotok/skolko-mozhno-zarabotat-na-narezkah) - реальные ориентиры заработка

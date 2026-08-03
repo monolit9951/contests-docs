@@ -31,7 +31,15 @@ COPY nginx.conf /etc/nginx/conf.d/default.conf
 # The 301 map for every retired address, generated from the page registry.
 # `include`d by nginx.conf — regenerate with scripts/gen-nginx-redirects.mjs,
 # never edit by hand.
-COPY redirects.conf /etc/nginx/conf.d/redirects.conf
+# ⚠️ snippets/, NOT conf.d/. The base image auto-includes every
+# `/etc/nginx/conf.d/*.conf` at the HTTP level, where a bare `location` is
+# illegal — so a file meant to be included inside a `server` block is parsed
+# twice and the second parse kills nginx on boot with
+# `"location" directive is not allowed here`. The container restart-looped in
+# production for exactly this. A directory nginx does not auto-include removes
+# the whole class.
+RUN mkdir -p /etc/nginx/snippets
+COPY redirects.conf /etc/nginx/snippets/redirects.conf
 
 # Base is '/' since the 2026-08 URL migration: content answers on root-level topic hubs
 # (/zarabotok/, /pomoshch/, ...) and the host nginx routes exactly those prefixes here.

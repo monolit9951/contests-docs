@@ -66,7 +66,7 @@ const containerServer = (confPath, root, port) =>
     readFileSync(confPath, 'utf8')
         .replace(/listen\s+80;/, `listen ${port};`)
         .replace(/root\s+\/usr\/share\/nginx\/html;/, `root ${root};`)
-        .replace(/include\s+\/etc\/nginx\/conf\.d\/redirects\.conf;/, `include ${join(CONTENT_ROOT, 'redirects.conf')};`)
+        .replace(/include\s+\/etc\/nginx\/snippets\/redirects\.conf;/, `include ${join(CONTENT_ROOT, 'redirects.conf')};`)
 
 const hostSnippet = execFileSync(
     'node',

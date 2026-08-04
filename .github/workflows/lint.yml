@@ -14,11 +14,49 @@ jobs:
   lint:
     runs-on: ubuntu-24.04
     timeout-minutes: 35
+    env:
+      PRODUCT_TRUTH_BACKEND_REPO: ${{ github.workspace }}/.product-truth-sources/backend
+      PRODUCT_TRUTH_PACK_REPO: ${{ github.workspace }}/.product-truth-sources/truth-pack
+      PRODUCT_TRUTH_REQUIRE_LOCAL_SOURCES: '1'
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
           fetch-depth: 0                                   # linter diffs the PR against its base
           ref: ${{ github.event.pull_request.head.sha }}   # the PR head, not the synthetic merge ref
+      - name: Resolve reviewed product-truth revisions
+        id: product_truth_refs
+        run: node scripts/export-product-truth-source-refs.mjs
+      # These are private repositories with distinct read-only deploy keys.
+      # The reviewed SHAs come only from the versioned product-truth snapshot.
+      - name: Checkout reviewed backend truth source
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          repository: monolit9951/Contests
+          ref: ${{ steps.product_truth_refs.outputs.backend_sha }}
+          path: .product-truth-sources/backend
+          fetch-depth: 0
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            src/main/resources/application.properties
+            docs/MANUAL_PAYOUTS_ADMIN.md
+            src/main/java/com/neptune/core/contest/domain/service/ContestLifecycleManager.java
+            src/main/java/com/neptune/core/withdrawal/service/WithdrawalService.java
+            src/main/java/com/neptune/core/winners/domain/service/RandomWinnerSelector.java
+          ssh-key: ${{ secrets.PRODUCT_TRUTH_BACKEND_DEPLOY_KEY }}
+          ssh-strict: true
+          persist-credentials: false
+      - name: Checkout reviewed truth-pack source
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          repository: monolit9951/darebay-seo-fleet
+          ref: ${{ steps.product_truth_refs.outputs.truth_pack_sha }}
+          path: .product-truth-sources/truth-pack
+          fetch-depth: 0
+          sparse-checkout-cone-mode: false
+          sparse-checkout: data/product-facts.md
+          ssh-key: ${{ secrets.PRODUCT_TRUTH_PACK_DEPLOY_KEY }}
+          ssh-strict: true
+          persist-credentials: false
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
         with:
           node-version: "22.18.0"

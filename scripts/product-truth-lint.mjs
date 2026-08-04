@@ -401,6 +401,10 @@ export function validateTruthSnapshot(truth) {
       errors.push(`source.${source}.verifiedCommit must be a full git SHA`);
     }
   }
+  check("source.backend.repository", truth.source?.backend?.repository, "monolit9951/Contests");
+  check("source.backend.branch", truth.source?.backend?.branch, "release");
+  check("source.truthPack.repository", truth.source?.truthPack?.repository, "monolit9951/darebay-seo-fleet");
+  check("source.truthPack.branch", truth.source?.truthPack?.branch, "master");
   check("contest.creationCommissionPercent", truth.contest?.creationCommissionPercent, REVIEWED_BASELINE.contestCreationCommissionPercent);
   check("contest.topUpCommissionPercent", truth.contest?.topUpCommissionPercent, REVIEWED_BASELINE.contestTopUpCommissionPercent);
   check("store.commissionPercent", truth.store?.commissionPercent, REVIEWED_BASELINE.storeCommissionPercent);
@@ -501,6 +505,12 @@ function git(repo, args) {
   return { ok: result.status === 0, stdout: result.stdout || "", stderr: result.stderr || "" };
 }
 
+function githubRepositorySlug(remoteUrl) {
+  const normalized = (remoteUrl || "").trim().replace(/\.git\/?$/i, "").replace(/\/$/, "");
+  const match = normalized.match(/^(?:https:\/\/github\.com\/|ssh:\/\/git@github\.com\/|git@github\.com:)([a-z0-9_.-]+\/[a-z0-9_.-]+)$/i);
+  return match ? match[1] : null;
+}
+
 function propertyMap(text) {
   const properties = new Map();
   for (const line of text.split("\n")) {
@@ -525,15 +535,24 @@ export function verifySourceProvenance(truth, {
       }
       return null;
     }
+    const origin = git(repo, ["remote", "get-url", "origin"]);
+    const originSlug = origin.ok ? githubRepositorySlug(origin.stdout) : null;
+    if (!originSlug || originSlug.toLowerCase() !== source.repository.toLowerCase()) {
+      errors.push(`${label} origin must be ${source.repository}, got ${originSlug || "<unverifiable>"}`);
+      return null;
+    }
     checked++;
     const object = git(repo, ["cat-file", "-e", `${source.verifiedCommit}^{commit}`]);
     if (!object.ok) {
       errors.push(`${label} verified commit ${source.verifiedCommit} does not exist in ${repo}`);
       return null;
     }
-    const branch = git(repo, ["rev-parse", source.branch]);
-    if (!branch.ok || !git(repo, ["merge-base", "--is-ancestor", source.verifiedCommit, source.branch]).ok) {
-      errors.push(`${label} verified commit ${source.verifiedCommit} is not on ${source.branch}`);
+    const remoteBranch = `refs/remotes/origin/${source.branch}`;
+    const remote = git(repo, ["rev-parse", "--verify", remoteBranch]);
+    if (!remote.ok) {
+      errors.push(`${label} remote branch ${remoteBranch} is unavailable`);
+    } else if (!git(repo, ["merge-base", "--is-ancestor", source.verifiedCommit, remoteBranch]).ok) {
+      errors.push(`${label} verified commit ${source.verifiedCommit} is not on ${remoteBranch}`);
     }
     return (file) => {
       const shown = git(repo, ["show", `${source.verifiedCommit}:${file}`]);

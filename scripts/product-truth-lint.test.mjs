@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 import assert from "node:assert/strict";
+import { execFileSync } from "node:child_process";
 import { mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { dirname, join, resolve } from "node:path";
@@ -31,6 +32,10 @@ function rules(value) {
   return new Set(lintText(value, "fixture.md", truth).map((item) => item.rule));
 }
 
+function git(repo, ...args) {
+  return execFileSync("git", ["-C", repo, ...args], { encoding: "utf8", stdio: ["ignore", "pipe", "pipe"] }).trim();
+}
+
 console.log("product_truth_lint: reviewed snapshot and provenance");
 test("the committed snapshot matches the reviewed baseline", () => {
   assert.deepEqual(validateTruthSnapshot(truth), []);
@@ -40,6 +45,16 @@ test("changing a reviewed rate in JSON alone fails", () => {
   const changed = structuredClone(truth);
   changed.withdrawal.defaultCommissionPercent = 0;
   assert.match(validateTruthSnapshot(changed).join("\n"), /withdrawal\.defaultCommissionPercent/);
+});
+
+test("changing a source repository or branch in JSON alone fails", () => {
+  const changedRepository = structuredClone(truth);
+  changedRepository.source.backend.repository = "attacker/Contests";
+  assert.match(validateTruthSnapshot(changedRepository).join("\n"), /source\.backend\.repository/);
+
+  const changedBranch = structuredClone(truth);
+  changedBranch.source.truthPack.branch = "release";
+  assert.match(validateTruthSnapshot(changedBranch).join("\n"), /source\.truthPack\.branch/);
 });
 
 test("the pinned local backend and truth-pack are verified", () => {
@@ -52,6 +67,48 @@ test("a fabricated backend SHA fails provenance", () => {
   const changed = structuredClone(truth);
   changed.source.backend.verifiedCommit = "0".repeat(40);
   assert.match(verifySourceProvenance(changed, { requireLocal: true }).errors.join("\n"), /does not exist/);
+});
+
+test("a GitHub-looking but non-GitHub origin fails before counting the source", () => {
+  const fixture = mkdtempSync(join(tmpdir(), "product-truth-origin-"));
+  try {
+    git(fixture, "init", "--initial-branch=release");
+    git(fixture, "remote", "add", "origin", "https://evilgithub.com/monolit9951/Contests.git");
+    const result = verifySourceProvenance(truth, {
+      backendRepo: fixture,
+      truthPackRepo: "",
+      requireLocal: false,
+    });
+    assert.equal(result.checked, 0);
+    assert.match(result.errors.join("\n"), /backend origin must be monolit9951\/Contests, got <unverifiable>/);
+  } finally {
+    rmSync(fixture, { recursive: true, force: true });
+  }
+});
+
+test("a local shadow branch cannot replace the remote-tracking source branch", () => {
+  const fixture = mkdtempSync(join(tmpdir(), "product-truth-shadow-"));
+  try {
+    git(fixture, "init", "--initial-branch=release");
+    git(fixture, "config", "user.name", "Product Truth Test");
+    git(fixture, "config", "user.email", "product-truth-test@invalid.example");
+    writeFileSync(join(fixture, "README.md"), "shadow branch fixture\n");
+    git(fixture, "add", "README.md");
+    git(fixture, "commit", "-m", "fixture");
+    git(fixture, "remote", "add", "origin", "git@github.com:monolit9951/Contests.git");
+
+    const changed = structuredClone(truth);
+    changed.source.backend.verifiedCommit = git(fixture, "rev-parse", "HEAD");
+    const result = verifySourceProvenance(changed, {
+      backendRepo: fixture,
+      truthPackRepo: "",
+      requireLocal: false,
+    });
+    assert.equal(result.checked, 1);
+    assert.match(result.errors.join("\n"), /remote branch refs\/remotes\/origin\/release is unavailable/);
+  } finally {
+    rmSync(fixture, { recursive: true, force: true });
+  }
 });
 
 console.log("product_truth_lint: contradictory claims");

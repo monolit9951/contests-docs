@@ -3,7 +3,7 @@
   "verifiedAt": "2026-08-04",
   "source": {
     "backend": {
-      "repository": "Contests",
+      "repository": "monolit9951/Contests",
       "branch": "release",
       "localPath": "/root/code/Contests",
       "verifiedCommit": "9fa45592116560c6afa7009b503fdb4550f3de9c",
@@ -11,7 +11,7 @@
       "manualPayoutRunbook": "docs/MANUAL_PAYOUTS_ADMIN.md"
     },
     "truthPack": {
-      "repository": "darebay-seo-fleet",
+      "repository": "monolit9951/darebay-seo-fleet",
       "branch": "master",
       "localPath": "/root/code/darebay-seo-fleet",
       "verifiedCommit": "3ac522e807b482aff68c12cdd664947f22ffaf8b",

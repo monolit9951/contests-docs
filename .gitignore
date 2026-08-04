@@ -6,3 +6,4 @@ docs/.vitepress/cache
 .env
 .env.local
 .worktrees/
+docs/public/.well-known/darebay-content-release.txt

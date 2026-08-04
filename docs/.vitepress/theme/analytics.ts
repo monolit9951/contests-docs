@@ -1,7 +1,7 @@
 // Click beacon for the docs site.
 //
 // Until this existed the content pages were invisible: 3 758 non-bot visits sat
-// in the nginx log against ZERO rows in `click_event`, because /docs is a
+// in the nginx log against ZERO rows in `click_event`, because the content
 // separate static container with none of the SPA's instrumentation. The one page
 // that actually earns search traffic could not be seen in the admin dashboard at
 // all, so the content fleet's effect was unmeasurable.
@@ -11,6 +11,8 @@
 // from search on an article and then opens the product is ONE session, and the
 // article → app path is finally attributable. Anything this file writes has to
 // stay shape-compatible with `shared/lib/analytics/session.ts` in the frontend.
+
+import { HUBS, LOCALES } from '../registry'
 
 const STORAGE_KEY = 'darebay_analytics_session'
 const IDLE_ROTATE_MS = 30 * 60 * 1000
@@ -85,7 +87,7 @@ const readSession = (): SessionContext | null => {
  * The same-origin filter is not cosmetic. A session rotates after 30 minutes
  * idle, and the rotation can land on a page opened FROM another page of ours
  * (a docs link in a new tab, a return from the product). Without the filter
- * that fresh session records `https://darebay.com/docs/...` as its acquisition
+ * that fresh session records another DareBay content URL as its acquisition
  * source, and the dashboard's `initialReferrers` breakdown — the one answer to
  * "did search bring them" — fills up with our own urls. `session.ts` in the
  * frontend has always filtered this; the docs copy did not.
@@ -139,15 +141,24 @@ const getSession = (): SessionContext => {
 }
 
 /**
- * Collapses the concrete path into a shape the dashboard can aggregate:
- * /ru/zarabotok/skolko-platyat -> /docs/ru/zarabotok/:slug
+ * Every content root is derived from the same manifest that owns routing. The
+ * analytics layer used to hardcode `/docs/`; after the root-hub migration that
+ * silently classified every sidebar click as an exit into the product.
  */
+const CONTENT_ROOTS = LOCALES.flatMap((locale) =>
+    Object.values(HUBS).map((segments) => `${locale.prefix}/${segments[locale.language]}`),
+).sort((a, b) => b.length - a.length)
+
+const contentRootFor = (pathname: string): string | undefined => {
+    const clean = pathname.replace(/\/+$/, '') || '/'
+    return CONTENT_ROOTS.find((root) => clean === root || clean.startsWith(`${root}/`))
+}
+
 export const normalizeDocsPath = (pathname: string): string => {
     const clean = pathname.replace(/\/+$/, '') || '/'
-    const parts = clean.split('/').filter(Boolean)
-    // ['docs','ru','zarabotok','slug'] — the zone stays, the article collapses.
-    if (parts.length >= 4) return `/${parts.slice(0, 3).join('/')}/:slug`
-    return `/${parts.join('/')}` || '/'
+    const root = contentRootFor(clean)
+    if (!root) return clean
+    return clean === root ? root : `${root}/:slug`
 }
 
 const recentSends = new Map<string, number>()
@@ -176,7 +187,7 @@ interface TrackOptions {
  * five. Read-depth collided the same way, milestone against milestone.
  *
  * Deliberately the RAW pathname, not the normalized one: two articles in the
- * same zone both normalize to `/docs/ru/zarabotok/:slug` and would still
+ * same zone both normalize to `/zarabotok/:slug` and would still
  * collide with each other.
  */
 export const throttleKeyFor = (
@@ -247,7 +258,7 @@ export const trackDocsEvent = (
 }
 
 const isDocsPath = (pathname: string): boolean =>
-    pathname === '/docs' || pathname.startsWith('/docs/')
+    Boolean(contentRootFor(pathname)) || pathname === '/docs' || pathname.startsWith('/docs/')
 
 /**
  * Which exit a click is taking, or null when it is internal navigation.
@@ -261,7 +272,7 @@ export const classifyExitFrom = (href: string | null, currentUrl: string): DocsE
     // In-page anchors first. Every heading carries a `.header-anchor` and the
     // whole "На этой странице" outline is `#…` links — resolved against the
     // ORIGIN (as this did) they came out with pathname `/`, which is not under
-    // /docs, so each one was logged as an exit INTO the product. The docs' main
+    // a content root, so each one was logged as an exit INTO the product. The docs' main
     // conversion metric was counting its own table of contents.
     if (href.startsWith('#')) return null
     if (href.startsWith('tg://')) return DocsEvent.ExitToTelegram

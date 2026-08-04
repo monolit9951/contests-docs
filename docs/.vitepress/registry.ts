@@ -1,3 +1,5 @@
+import contentManifest from '../content-pages.json' with { type: 'json' }
+
 // The content registry — the single source of truth for every content URL.
 //
 // WHY THIS EXISTS. Until the 2026-08 migration a page's identity WAS its file
@@ -8,12 +10,15 @@
 // document any more. An hreflang cluster derived from a shared path then goes
 // silently asymmetric, and Google discards an asymmetric cluster whole.
 //
-// So identity moves here. A page is an `id`; its address in each locale is data.
+// So identity moves into `docs/content-pages.json`. A page is an `id`; its
+// address in each locale is data. Keeping the manifest outside `.vitepress`
+// lets the content producer add a page without receiving permission to edit
+// build configuration.
 // Everything else is DERIVED from this file and never hand-written:
 //
 //   * the public URL of a page in any locale        (pageUrl)
 //   * the hreflang cluster                          (hreflangCluster)
-//   * the per-locale sitemaps
+//   * the content sitemap and canonical HTML hreflang
 //   * the nginx `location` list (which prefixes the content container serves)
 //   * the 301 map from every retired address        (redirectMap)
 //
@@ -24,11 +29,11 @@
 //     indexed the English pages and served English sitelinks under a Russian
 //     brand query, and the tree had to be removed on 2026-07-25. Never again.
 //  2. A PAGE DECLARES ONLY THE LOCALES IT ACTUALLY HAS. `hreflangCluster`
-//     lists exactly those. This is what makes partial translation safe: content
-//     is RU-only today, so no empty Ukrainian tree and no Russian text sitting
-//     under a Ukrainian address can come into existence by accident.
+//     lists exactly those. This is what makes partial translation safe: no empty
+//     locale tree and no fallback-language text under a translated address.
 
 export type Locale = 'ru' | 'uk' | 'en'
+export type HubId = 'earnings' | 'brands' | 'help' | 'about' | 'legal'
 
 export interface LocaleAxis {
     /** i18next / hreflang / <html lang> code. */
@@ -38,42 +43,6 @@ export interface LocaleAxis {
     /** VitePress locale key: 'root' for the unprefixed one, else the dir name. */
     readonly vitepressKey: string
 }
-
-// `/ua` and not `/uk`: `uk` is the LANGUAGE code (ISO 639-1) and the only value
-// hreflang accepts, but a Ukrainian reader parses `/uk/` as United Kingdom. The
-// URL segment talks to a human, the hreflang value talks to a crawler, and they
-// are allowed to disagree. This is deliberate — do not "fix" it.
-export const LOCALES: readonly LocaleAxis[] = [
-    { language: 'ru', prefix: '', vitepressKey: 'root' },
-    { language: 'uk', prefix: '/ua', vitepressKey: 'ua' },
-    { language: 'en', prefix: '/en', vitepressKey: 'en' },
-]
-
-export const ROOT_LOCALE = LOCALES[0]
-
-export const ORIGIN = 'https://darebay.com'
-
-/**
- * Top-level sections. The KEY is the stable id; the values are the localized
- * URL segment. A section exists only when its index page is a page that can
- * rank on its own — a directory that exists to tidy files is a level that
- * costs authority and returns nothing.
- *
- * `narezki` is deliberately ABSENT. The architecture reserves it, but shipping
- * a hub with no articles under it is the same "empty tree" mistake rule 2
- * above exists to prevent. It gets added with its first article.
- */
-export const HUBS = {
-    earnings: { ru: 'zarabotok', uk: 'zarobitok', en: 'earnings' },
-    brands: { ru: 'brendam', uk: 'brendam', en: 'for-brands' },
-    help: { ru: 'pomoshch', uk: 'dopomoha', en: 'help' },
-    about: { ru: 'o-proekte', uk: 'pro-proekt', en: 'about' },
-    // Legal slugs are NOT translated: these addresses are pasted into contracts
-    // and email footers, and stability beats a query nobody types.
-    legal: { ru: 'legal', uk: 'legal', en: 'legal' },
-} as const
-
-export type HubId = keyof typeof HUBS
 
 export interface RegistryEntry {
     /** Stable identity. Never changes, never appears in a URL. */
@@ -94,6 +63,118 @@ export interface RegistryEntry {
     readonly retired?: readonly string[]
 }
 
+interface ContentManifest {
+    readonly schemaVersion: 1
+    readonly origin: string
+    readonly locales: Readonly<Record<Locale, Omit<LocaleAxis, 'language'>>>
+    readonly hubs: Readonly<Record<HubId, Readonly<Record<Locale, string>>>>
+    readonly pages: readonly RegistryEntry[]
+}
+
+const LOCALE_ORDER: readonly Locale[] = ['ru', 'uk', 'en']
+const HUB_ORDER: readonly HubId[] = ['earnings', 'brands', 'help', 'about', 'legal']
+const isRecord = (value: unknown): value is Record<string, unknown> =>
+    typeof value === 'object' && value !== null && !Array.isArray(value)
+const assertKeys = (value: Record<string, unknown>, required: readonly string[], optional: readonly string[], label: string) => {
+    const allowed = new Set([...required, ...optional])
+    for (const key of required) if (!(key in value)) throw new Error(`registry: ${label} is missing "${key}"`)
+    for (const key of Object.keys(value)) if (!allowed.has(key)) throw new Error(`registry: ${label} has unknown key "${key}"`)
+}
+const assertString = (value: unknown, label: string): asserts value is string => {
+    if (typeof value !== 'string') throw new Error(`registry: ${label} must be a string`)
+}
+
+/** Fail closed before any sitemap, redirect or public manifest is derived. */
+const parseManifest = (input: unknown): ContentManifest => {
+    if (!isRecord(input)) throw new Error('registry: docs/content-pages.json must be an object')
+    assertKeys(input, ['schemaVersion', 'origin', 'locales', 'hubs', 'pages'], [], 'manifest')
+    if (input.schemaVersion !== 1) {
+        throw new Error(`registry: unsupported docs/content-pages.json schemaVersion ${String(input.schemaVersion)}`)
+    }
+    if (input.origin !== 'https://darebay.com') throw new Error('registry: manifest origin must be https://darebay.com')
+
+    if (!isRecord(input.locales)) throw new Error('registry: manifest.locales must be an object')
+    assertKeys(input.locales, LOCALE_ORDER, [], 'manifest.locales')
+    const expectedAxes = {
+        ru: { prefix: '', vitepressKey: 'root' },
+        uk: { prefix: '/ua', vitepressKey: 'ua' },
+        en: { prefix: '/en', vitepressKey: 'en' },
+    } as const
+    for (const locale of LOCALE_ORDER) {
+        const axis = input.locales[locale]
+        if (!isRecord(axis)) throw new Error(`registry: manifest.locales.${locale} must be an object`)
+        assertKeys(axis, ['prefix', 'vitepressKey'], [], `manifest.locales.${locale}`)
+        if (axis.prefix !== expectedAxes[locale].prefix || axis.vitepressKey !== expectedAxes[locale].vitepressKey) {
+            throw new Error(`registry: manifest.locales.${locale} violates the stable locale axis`)
+        }
+    }
+
+    if (!isRecord(input.hubs)) throw new Error('registry: manifest.hubs must be an object')
+    assertKeys(input.hubs, HUB_ORDER, [], 'manifest.hubs')
+    for (const hub of HUB_ORDER) {
+        const localized = input.hubs[hub]
+        if (!isRecord(localized)) throw new Error(`registry: manifest.hubs.${hub} must be an object`)
+        assertKeys(localized, LOCALE_ORDER, [], `manifest.hubs.${hub}`)
+        for (const locale of LOCALE_ORDER) {
+            assertString(localized[locale], `manifest.hubs.${hub}.${locale}`)
+            if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(localized[locale])) {
+                throw new Error(`registry: invalid hub slug manifest.hubs.${hub}.${locale}`)
+            }
+        }
+    }
+
+    if (!Array.isArray(input.pages) || input.pages.length === 0) {
+        throw new Error('registry: manifest.pages must be a non-empty array')
+    }
+    for (const [index, page] of input.pages.entries()) {
+        const label = `manifest.pages[${index}]`
+        if (!isRecord(page)) throw new Error(`registry: ${label} must be an object`)
+        assertKeys(page, ['id', 'hub', 'slugs'], ['retired'], label)
+        assertString(page.id, `${label}.id`)
+        assertString(page.hub, `${label}.hub`)
+        if (!HUB_ORDER.includes(page.hub as HubId)) throw new Error(`registry: ${label}.hub is unknown`)
+        if (!isRecord(page.slugs)) throw new Error(`registry: ${label}.slugs must be an object`)
+        assertKeys(page.slugs, [], LOCALE_ORDER, `${label}.slugs`)
+        if (!Object.keys(page.slugs).length) throw new Error(`registry: ${label}.slugs must not be empty`)
+        for (const [locale, slug] of Object.entries(page.slugs)) {
+            assertString(slug, `${label}.slugs.${locale}`)
+            if (slug !== '' && !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug)) {
+                throw new Error(`registry: invalid page slug ${label}.slugs.${locale}`)
+            }
+        }
+        if (page.retired !== undefined) {
+            if (!Array.isArray(page.retired)) throw new Error(`registry: ${label}.retired must be an array`)
+            for (const [retiredIndex, path] of page.retired.entries()) {
+                assertString(path, `${label}.retired[${retiredIndex}]`)
+                // This value is emitted as an nginx exact-location argument.
+                // Limit it to unreserved URL characters, slashes and valid
+                // percent escapes; nginx-significant `$`, `;`, quotes and
+                // parentheses must never enter generated configuration.
+                if (!/^\/(?:[-A-Za-z0-9._~/]|%[0-9A-Fa-f]{2})*$/.test(path) || path.includes('//')) {
+                    throw new Error(`registry: invalid retired path ${label}.retired[${retiredIndex}]`)
+                }
+            }
+        }
+    }
+    return input as unknown as ContentManifest
+}
+
+const manifest = parseManifest(contentManifest)
+
+// `/ua` and not `/uk`: `uk` is the LANGUAGE code (ISO 639-1) and the only value
+// hreflang accepts, but a Ukrainian reader parses `/uk/` as United Kingdom. The
+// URL segment talks to a human, the hreflang value talks to a crawler.
+export const LOCALES: readonly LocaleAxis[] = LOCALE_ORDER.map((language) => ({
+    language,
+    ...manifest.locales[language],
+}))
+
+export const ROOT_LOCALE = LOCALES[0]
+export const ORIGIN = manifest.origin
+
+/** Top-level sections, including every locale segment needed to resolve URLs. */
+export const HUBS: Readonly<Record<HubId, Readonly<Record<Locale, string>>>> = manifest.hubs
+
 // ---------------------------------------------------------------------------
 // The pages.
 //
@@ -106,295 +187,8 @@ export interface RegistryEntry {
 // addresses. They are translated here, which is the whole point of the rule.
 // ---------------------------------------------------------------------------
 
-export const PAGES: readonly RegistryEntry[] = [
-    // ── Заработок ─────────────────────────────────────────────── /zarabotok/
-    {
-        id: 'earnings-hub',
-        hub: 'earnings',
-        slugs: { ru: '', uk: '', en: '' },
-        retired: ['/docs/ru/zarabotok/', '/docs/ru/blog/'],
-    },
-    {
-        id: 'earnings-from-zero',
-        hub: 'earnings',
-        slugs: { ru: 'kak-zarabotat-na-narezkah-s-nulya', uk: 'yak-zarobyty-na-narizkakh-z-nulia', en: 'start-clipping-from-zero' },
-        retired: ['/docs/ru/zarabotok/kak-zarabotat-na-narezkah-s-nulya'],
-    },
-    {
-        id: 'earnings-streamer-clips',
-        hub: 'earnings',
-        slugs: { ru: 'kak-zarabotat-na-narezkah-strimerov', uk: 'yak-zarobyty-na-narizkakh-strymeriv', en: 'earn-from-streamer-clips' },
-        retired: ['/docs/ru/zarabotok/kak-zarabotat-na-narezkah-strimerov'],
-    },
-    {
-        id: 'earnings-clipper-job',
-        hub: 'earnings',
-        slugs: { ru: 'rabota-narezchikom', uk: 'robota-narizalnykom', en: 'clipping-as-a-job' },
-        retired: ['/docs/ru/zarabotok/rabota-narezchikom'],
-    },
-    {
-        id: 'earnings-how-much-total',
-        hub: 'earnings',
-        slugs: { ru: 'skolko-mozhno-zarabotat-na-narezkah', uk: 'skilky-mozhna-zarobyty-na-narizkakh', en: 'how-much-clipping-pays' },
-        retired: ['/docs/ru/zarabotok/skolko-mozhno-zarabotat-na-narezkah'],
-    },
-    {
-        id: 'earnings-beginner-rate',
-        hub: 'earnings',
-        slugs: { ru: 'skolko-platyat-novichku', uk: 'skilky-platiat-novachku', en: 'beginner-rates' },
-        retired: ['/docs/ru/zarabotok/skolko-platyat-novichku'],
-    },
-    {
-        id: 'earnings-per-1000-views',
-        hub: 'earnings',
-        slugs: { ru: 'skolko-platyat-za-1000-prosmotrov', uk: 'skilky-platiat-za-1000-perehliadiv', en: 'pay-per-1000-views' },
-        retired: ['/docs/ru/zarabotok/skolko-platyat-za-1000-prosmotrov'],
-    },
-    {
-        // The one page that demonstrably ranks (yandex.ru + yandex.kz, 4 of the
-        // 12 external search entries in 4.5 months). Its slug is unchanged on
-        // purpose — the redirect carries it, but there is no reason to reword.
-        id: 'earnings-streamer-clip-rate',
-        hub: 'earnings',
-        slugs: { ru: 'skolko-platyat-za-narezki-strimerov', uk: 'skilky-platiat-za-narizky-strymeriv', en: 'streamer-clip-rates' },
-        retired: ['/docs/ru/zarabotok/skolko-platyat-za-narezki-strimerov'],
-    },
-    {
-        id: 'earnings-tiktok-views',
-        hub: 'earnings',
-        slugs: { ru: 'skolko-platyat-za-prosmotry-v-tiktok', uk: 'skilky-platiat-za-perehliady-v-tiktok', en: 'tiktok-view-payouts' },
-        retired: ['/docs/ru/zarabotok/skolko-platyat-za-prosmotry-v-tiktok'],
-    },
-    {
-        id: 'earnings-without-followers',
-        hub: 'earnings',
-        slugs: { ru: 'zarabotok-bez-podpischikov', uk: 'zarobitok-bez-pidpysnykiv', en: 'earn-without-followers' },
-        retired: ['/docs/ru/zarabotok/zarabotok-bez-podpischikov'],
-    },
-    {
-        // Moved out of the old `kak-rabotaet` zone: the mechanics of getting
-        // paid are a creator subject, not a separate section.
-        id: 'earnings-ppv-mechanics',
-        hub: 'earnings',
-        slugs: { ru: 'kak-rabotaet-oplata-za-prosmotry', uk: 'yak-pratsiuie-oplata-za-perehliady', en: 'how-pay-per-view-works' },
-        retired: ['/docs/ru/kak-rabotaet/kak-rabotaet-oplata-za-prosmotry'],
-    },
-    {
-        id: 'earnings-view-counting',
-        hub: 'earnings',
-        slugs: { ru: 'kak-schitayutsya-prosmotry-dlya-vyplaty', uk: 'yak-rakhuiutsia-perehliady-dlia-vyplaty', en: 'how-views-are-counted' },
-        retired: ['/docs/ru/kak-rabotaet/kak-schitayutsya-prosmotry-dlya-vyplaty'],
-    },
-    {
-        id: 'earnings-view-threshold',
-        hub: 'earnings',
-        slugs: { ru: 'porog-prosmotrov-dlya-vyplaty', uk: 'porih-perehliadiv-dlia-vyplaty', en: 'view-threshold' },
-        retired: ['/docs/ru/kak-rabotaet/porog-prosmotrov-dlya-vyplaty'],
-    },
-    {
-        id: 'earnings-where-to-find-work',
-        hub: 'earnings',
-        slugs: { ru: 'gde-brat-zakazy-na-narezki', uk: 'de-braty-zamovlennia-na-narizky', en: 'where-to-find-clipping-work' },
-        retired: ['/docs/ru/platformy/gde-brat-zakazy-na-narezki'],
-    },
-    {
-        // Was the index of the `platformy` zone. A comparison of platforms and
-        // their fees is an article, not a section: it has one subject.
-        id: 'earnings-platforms-and-fees',
-        hub: 'earnings',
-        slugs: { ru: 'ploshchadki-i-komissii', uk: 'maidanchyky-i-komisii', en: 'platforms-and-fees' },
-        retired: ['/docs/ru/platformy/'],
-    },
-
-    // ── Брендам ───────────────────────────────────────────────────/brendam/
-    {
-        // New page. The zone had no index — brand articles sat scattered across
-        // `kak-rabotaet` and `platformy` with nothing tying them together.
-        id: 'brands-hub',
-        hub: 'brands',
-        slugs: { ru: '', uk: '', en: '' },
-    },
-    {
-        id: 'brands-pay-clippers',
-        hub: 'brands',
-        slugs: { ru: 'kak-platit-narezchikam-za-prosmotry', uk: 'yak-platyty-narizalnykam-za-perehliady', en: 'paying-clippers-per-view' },
-        retired: ['/docs/ru/kak-rabotaet/kak-platit-narezchikam-za-prosmotry'],
-    },
-    {
-        id: 'brands-create-contest',
-        hub: 'brands',
-        slugs: { ru: 'kak-sozdat-konkurs-dlya-narezchikov', uk: 'yak-stvoryty-konkurs-dlia-narizalnykiv', en: 'set-up-a-clipping-contest' },
-        retired: ['/docs/ru/kak-rabotaet/kak-sozdat-konkurs-dlya-narezchikov'],
-    },
-    {
-        id: 'brands-order-clips',
-        hub: 'brands',
-        slugs: { ru: 'kak-zakazat-narezki-dlya-prodvizheniya', uk: 'yak-zamovyty-narizky-dlia-prosuvannia', en: 'commission-clips-for-a-campaign' },
-        retired: ['/docs/ru/platformy/kak-zakazat-narezki-dlya-prodvizheniya'],
-    },
-
-    // ── Помощь ───────────────────────────────────────────────────/pomoshch/
-    {
-        id: 'help-hub',
-        hub: 'help',
-        slugs: { ru: '', uk: '', en: '' },
-        retired: ['/docs/ru/faq/', '/docs/faq/'],
-    },
-    {
-        id: 'help-quick-start',
-        hub: 'help',
-        slugs: { ru: 'bystryy-start', uk: 'shvydkyi-start', en: 'quick-start' },
-        retired: ['/docs/ru/getting-started/', '/docs/getting-started/'],
-    },
-    {
-        id: 'help-first-contest',
-        hub: 'help',
-        slugs: { ru: 'pervyy-konkurs', uk: 'pershyi-konkurs', en: 'your-first-contest' },
-        retired: ['/docs/ru/getting-started/create-your-first-contest', '/docs/getting-started/create-your-first-contest'],
-    },
-    {
-        id: 'help-prizes-and-payouts',
-        hub: 'help',
-        slugs: { ru: 'prizy-i-vyplaty', uk: 'pryzy-i-vyplaty', en: 'prizes-and-payouts' },
-        retired: ['/docs/ru/getting-started/prizes-and-payouts', '/docs/getting-started/prizes-and-payouts'],
-    },
-    {
-        id: 'help-submit-work',
-        hub: 'help',
-        slugs: { ru: 'kak-otpravit-rabotu', uk: 'yak-nadislaty-robotu', en: 'submit-your-work' },
-        retired: ['/docs/ru/getting-started/submit-a-work', '/docs/getting-started/submit-a-work'],
-    },
-    {
-        id: 'help-verification',
-        hub: 'help',
-        slugs: { ru: 'verifikatsiya', uk: 'veryfikatsiia', en: 'verification' },
-        retired: ['/docs/ru/getting-started/verification-and-trust', '/docs/getting-started/verification-and-trust'],
-    },
-    {
-        id: 'help-watch-vote-win',
-        hub: 'help',
-        slugs: { ru: 'smotret-golosovat-vyigrat', uk: 'dyvytys-holosuvaty-vyhravaty', en: 'watch-vote-win' },
-        retired: ['/docs/ru/getting-started/watch-vote-win', '/docs/getting-started/watch-vote-win'],
-    },
-    {
-        id: 'help-choosing-winners',
-        hub: 'help',
-        slugs: { ru: 'kak-vybirayut-pobeditelya', uk: 'yak-obyraiut-peremozhtsia', en: 'how-winners-are-chosen' },
-        retired: ['/docs/ru/faq/choosing-winners', '/docs/faq/choosing-winners'],
-    },
-    {
-        id: 'help-crypto-payment',
-        hub: 'help',
-        slugs: { ru: 'oplata-kriptoy', uk: 'oplata-kryptoiu', en: 'paying-with-crypto' },
-        retired: ['/docs/ru/faq/crypto', '/docs/faq/crypto'],
-    },
-    {
-        // Brand-prefixed query ("darebay вывод денег"), so the brand stays in
-        // the slug even though the page itself is product help.
-        id: 'help-withdraw',
-        hub: 'help',
-        slugs: { ru: 'darebay-vyvod-deneg', uk: 'darebay-vyvedennia-hroshei', en: 'darebay-withdrawals' },
-        retired: ['/docs/ru/faq/darebay-vyvod-deneg', '/docs/faq/withdraw'],
-    },
-    {
-        id: 'help-fake-submissions',
-        hub: 'help',
-        slugs: { ru: 'zashchita-ot-nakrutki', uk: 'zakhyst-vid-nakrutky', en: 'protection-from-view-fraud' },
-        retired: ['/docs/ru/faq/fake-submissions', '/docs/faq/fake-submissions'],
-    },
-    {
-        id: 'help-illegal-content',
-        hub: 'help',
-        slugs: { ru: 'zapreshchennyy-kontent', uk: 'zaboronenyi-kontent', en: 'prohibited-content' },
-        retired: ['/docs/ru/faq/illegal-content', '/docs/faq/illegal-content'],
-    },
-    {
-        id: 'help-commission',
-        hub: 'help',
-        slugs: { ru: 'kakaya-komissiya', uk: 'yaka-komisiia', en: 'what-commission' },
-        retired: ['/docs/ru/faq/kakaya-komissiya', '/docs/faq/fees'],
-    },
-    {
-        id: 'help-no-submissions',
-        hub: 'help',
-        slugs: { ru: 'esli-nikto-ne-uchastvuet', uk: 'yakshcho-nikhto-ne-bere-uchast', en: 'if-nobody-enters' },
-        retired: ['/docs/ru/faq/no-submissions', '/docs/faq/no-submissions'],
-    },
-
-    // ── О проекте ───────────────────────────────────────────────/o-proekte/
-    //
-    // Not an "about" page with FAQ bolted on: this is the TRUST cluster. The
-    // "развод / скам / реально ли платит" queries are the highest-intent ones
-    // we answer, and they belong next to who we are, not filed under help.
-    {
-        id: 'about-hub',
-        hub: 'about',
-        slugs: { ru: '', uk: '', en: '' },
-        retired: ['/docs/ru/o-proekte'],
-    },
-    {
-        // `/docs/` was NOT the "about" page — it served the Manifesto, a
-        // separate 114-line brand page with its own cover. Folding the two into
-        // one address would have quietly deleted one of them, so the manifesto
-        // keeps a page and `/docs/` redirects to it rather than to the hub:
-        // a 301 belongs on the page carrying equivalent content, and Google
-        // re-derives the sitelink from there.
-        id: 'about-manifesto',
-        hub: 'about',
-        slugs: { ru: 'manifest', uk: 'manifest', en: 'manifesto' },
-        retired: ['/docs/', '/docs/ru/'],
-    },
-    {
-        id: 'about-is-it-a-scam',
-        hub: 'about',
-        slugs: { ru: 'darebay-eto-skam', uk: 'darebay-tse-skam', en: 'is-darebay-a-scam' },
-        retired: ['/docs/ru/faq/darebay-eto-skam'],
-    },
-    {
-        id: 'about-reviews',
-        hub: 'about',
-        slugs: { ru: 'darebay-otzyvy', uk: 'darebay-vidhuky', en: 'darebay-reviews' },
-        retired: ['/docs/ru/faq/darebay-otzyvy'],
-    },
-    {
-        id: 'about-is-it-a-fraud',
-        hub: 'about',
-        slugs: { ru: 'darebay-razvod-ili-net', uk: 'darebay-rozvod-chy-ni', en: 'is-darebay-legit' },
-        retired: ['/docs/ru/faq/darebay-razvod-ili-net'],
-    },
-    {
-        id: 'about-really-pays',
-        hub: 'about',
-        slugs: { ru: 'darebay-realno-platit', uk: 'darebay-spravdi-platyt', en: 'does-darebay-really-pay' },
-        retired: ['/docs/ru/faq/darebay-realno-platit'],
-    },
-    {
-        id: 'about-payout-guarantee',
-        hub: 'about',
-        slugs: { ru: 'garantiya-vyplat', uk: 'harantiia-vyplat', en: 'payout-guarantee' },
-        retired: ['/docs/ru/faq/garantiya-vyplat'],
-    },
-
-    // ── Правовое ─────────────────────────────────────────────────── /legal/
-    {
-        id: 'legal-hub',
-        hub: 'legal',
-        slugs: { ru: '', uk: '', en: '' },
-        retired: ['/docs/ru/legal/', '/docs/legal/'],
-    },
-    {
-        id: 'legal-privacy',
-        hub: 'legal',
-        slugs: { ru: 'privacy', uk: 'privacy', en: 'privacy' },
-        retired: ['/docs/ru/legal/privacy', '/docs/legal/privacy'],
-    },
-    {
-        id: 'legal-terms',
-        hub: 'legal',
-        slugs: { ru: 'terms', uk: 'terms', en: 'terms' },
-        retired: ['/docs/ru/legal/terms', '/docs/legal/terms'],
-    },
-]
+export const CONTENT_MANIFEST_SCHEMA_VERSION = manifest.schemaVersion
+export const PAGES = manifest.pages
 
 /**
  * Retired addresses whose page did not survive the migration, mapped onto the
@@ -552,6 +346,8 @@ export const APP_ROUTES: readonly string[] = LOCALES.flatMap((locale) =>
 export const CONTENT_ROOT_FILES: readonly string[] = [
     '/sitemap-content.xml',
     '/llms.txt',
+    '/.well-known/darebay-content-pages.json',
+    '/.well-known/darebay-content-release.txt',
     '/vp-icons.css',
     '/hashmap.json',
 ]

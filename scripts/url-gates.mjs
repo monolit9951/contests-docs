@@ -1,6 +1,6 @@
 #!/usr/bin/env node --experimental-strip-types
 //
-// The ten migration gates, as real HTTP probes.
+// The migration gates, as real HTTP probes.
 //
 // WHY THIS EXISTS. Everything else that guards these URLs checks STRINGS: the
 // registry against the file tree, one generated table against another, XML
@@ -35,6 +35,8 @@ import { existsSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'no
 import { tmpdir } from 'node:os'
 import { join, dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { parseHreflangCluster, sameHreflangMap } from './hreflang-cluster.mjs'
+import { readLocalSitemapTree } from './sitemap-tree.mjs'
 
 const HERE = dirname(fileURLToPath(import.meta.url))
 const CONTENT_ROOT = resolve(HERE, '..')
@@ -52,6 +54,9 @@ const ORIGIN = `http://127.0.0.1:${PORT_HOST}`
 
 const { PAGES, ROOT_LOCALE, pagePath, localesOf, redirectMap, CONTENT_ROOT_FILES } = await import(
     join(CONTENT_ROOT, 'docs', '.vitepress', 'registry.ts')
+)
+const { contestCanonicalForLocale } = await import(
+    join(APP_ROOT, 'scripts', 'contest-seo-locales.mjs')
 )
 
 const APP_DIST = join(APP_ROOT, 'dist')
@@ -71,12 +76,15 @@ for (const [what, path] of [['app dist', APP_DIST], ['content dist', CONTENT_DIS
 const work = mkdtempSync(join(tmpdir(), 'url-gates-'))
 
 // Each container config is used AS SHIPPED — rewriting it here would be testing
-// a config that does not exist anywhere. Only `listen` and `root` are patched,
-// because those are what the container runtime supplies.
+// a config that does not exist anywhere. Only runtime wiring is patched:
+// listen/root, Docker's `backend` service DNS, and the cache directory. The
+// directives and routing logic under test remain byte-for-byte shipped.
 const containerServer = (confPath, root, port) =>
     readFileSync(confPath, 'utf8')
         .replace(/listen\s+80;/, `listen ${port};`)
         .replace(/root\s+\/usr\/share\/nginx\/html;/, `root ${root};`)
+        .replaceAll('http://backend:8080', 'http://127.0.0.1:65534')
+        .replaceAll('/var/cache/nginx/seo-validation', join(work, 'seo-validation'))
         .replace(/include\s+\/etc\/nginx\/snippets\/redirects\.conf;/, `include ${join(CONTENT_ROOT, 'redirects.conf')};`)
 
 const hostSnippet = execFileSync(
@@ -174,22 +182,50 @@ const fail = (gate, detail) => failures.push(`[${gate}] ${detail}`)
 // `absolute_redirect`; the probe compares paths, so it normalises to one form.
 const asPath = (location) => (location ?? '').replace(ORIGIN, '').replace('https://darebay.com', '') || null
 
+const headCache = new Map()
+const bodyCache = new Map()
 const head = async (path) => {
+    if (headCache.has(path)) return headCache.get(path)
     const res = await fetch(`${ORIGIN}${path}`, { redirect: 'manual' })
-    return { status: res.status, location: asPath(res.headers.get('location')) }
+    const value = { status: res.status, location: asPath(res.headers.get('location')), headers: res.headers }
+    headCache.set(path, value)
+    return value
 }
 const body = async (path) => {
+    if (bodyCache.has(path)) return bodyCache.get(path)
     const res = await fetch(`${ORIGIN}${path}`, { redirect: 'manual' })
-    return { status: res.status, text: res.status === 200 ? await res.text() : '' }
+    const value = { status: res.status, text: await res.text(), headers: res.headers }
+    bodyCache.set(path, value)
+    return value
 }
 
 const tag = (html, re) => [...html.matchAll(re)].map((m) => m[1])
+const jsonLdNodes = (html) => {
+    const nodes = []
+    for (const match of html.matchAll(/<script\b[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/gi)) {
+        try {
+            const value = JSON.parse(match[1])
+            if (Array.isArray(value?.['@graph'])) nodes.push(...value['@graph'])
+            else nodes.push(value)
+        } catch {
+            // Page-specific JSON-LD validity belongs to each container's own
+            // artifact gate. Entity parity below reports the stable nodes as
+            // missing instead of duplicating that parser error here.
+        }
+    }
+    return nodes
+}
 
 /** Every address the shipped artifacts claim, from the sitemaps themselves. */
 const sitemapUrls = (file) => {
-    const path = join(APP_DIST, file)
-    const src = existsSync(path) ? readFileSync(path, 'utf8') : ''
-    return [...src.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1].replace('https://darebay.com', ''))
+    try {
+        return readLocalSitemapTree(APP_DIST, file).map((value) => {
+            const url = new URL(value)
+            return `${url.pathname}${url.search}`
+        })
+    } catch (error) {
+        throw new Error(`cannot read local sitemap tree ${file}: ${error.message}`)
+    }
 }
 
 const contentUrls = PAGES.flatMap((page) => localesOf(page).map((lang) => pagePath(page, lang)))
@@ -204,10 +240,17 @@ const allUrls = [...new Set([...contentUrls, ...appUrls])]
 // rules. Read from the SHIPPED config rather than imported from the source: the
 // gate must fail when the config is stale, which is exactly the failure a
 // source-level import would hide.
+const appNginx = readFileSync(join(APP_ROOT, 'nginx.conf'), 'utf8')
+const generatedBlock = (name) => {
+    const match = appNginx.match(new RegExp(`# ${name}:start([\\s\\S]*?)# ${name}:end`))
+    if (!match) throw new Error(`app nginx generated block ${name} is missing`)
+    return match[1]
+}
+const appRedirectSource = `${generatedBlock('routes:redirects')}\n${generatedBlock('seo:aliases')}`
 const appRedirects = Object.fromEntries(
-    [...readFileSync(join(APP_ROOT, 'nginx.conf'), 'utf8').matchAll(
+    [...appRedirectSource.matchAll(
         /location = (\S+)\s*\{\s*return 301 (\S+);/g
-    )].map(([, from, to]) => [from, to])
+    )].map(([, from, to]) => [from, to.replace(/\$is_args\$args$/, '')])
 )
 
 // ---- 1. every retired address: exactly one hop, onto a 200 -----------------
@@ -221,6 +264,20 @@ for (const [from, to] of Object.entries({ ...redirectMap(), ...appRedirects })) 
     const second = await head(first.location ?? to)
     if (second.status === 301) fail('1-redirect', `цепочка: ${from} -> ${first.location} -> ${second.location}`)
     else if (second.status !== 200) fail('1-redirect', `${from} -> ${first.location} -> ${second.status}`)
+}
+
+// Redirects preserve attribution parameters without multiplying public HTML
+// forms. Probe one content migration through the actual generated nginx file.
+{
+    const [from, to] = Object.entries(redirectMap())[0] ?? []
+    if (!from || !to) fail('1-redirect-query', 'content redirect map is empty')
+    else {
+        const query = '?utm_source=seo-gate'
+        const response = await head(`${from}${query}`)
+        if (response.status !== 301 || response.location !== `${to}${query}`) {
+            fail('1-redirect-query', `${from}${query} -> ${response.status} ${response.location}`)
+        }
+    }
 }
 
 // ---- 2. every claimed address answers 200 ----------------------------------
@@ -250,20 +307,33 @@ for (const url of allUrls) {
     if (langs[0] !== expectedLang) fail('6-html-lang', `${url}: lang="${langs[0]}", ожидался "${expectedLang}"`)
 }
 
-// ---- 4. hreflang symmetric, no member 404s ---------------------------------
+// ---- 4. hreflang clusters are unique, same-origin and fully reciprocal -----
 for (const url of allUrls) {
     const res = await body(url)
     if (res.status !== 200) continue
-    const alternates = [...res.text.matchAll(/<link[^>]+rel="alternate"[^>]+hreflang="([^"]+)"[^>]+href="([^"]+)"/g)]
-    if (!alternates.length) continue
+    const sourceCluster = parseHreflangCluster(res.text)
+    if (!sourceCluster.entries.length) continue
+    for (const error of sourceCluster.errors) fail('4-hreflang', `${url}: ${error}`)
+    if (!sourceCluster.map.has('x-default')) fail('4-hreflang', `${url}: нет x-default`)
 
-    const hasXDefault = alternates.some(([, hl]) => hl === 'x-default')
-    if (!hasXDefault) fail('4-hreflang', `${url}: нет x-default`)
-
-    for (const [, hreflang, href] of alternates) {
-        const target = href.replace('https://darebay.com', '')
+    const sourceAbsolute = new URL(url, 'https://darebay.com').href
+    for (const href of new Set(sourceCluster.map.values())) {
+        const targetUrl = new URL(href)
+        const target = `${targetUrl.pathname}${targetUrl.search}`
         const probe = await head(target)
-        if (probe.status !== 200) fail('4-hreflang', `${url}: ${hreflang} -> ${target} -> ${probe.status}`)
+        if (probe.status !== 200) {
+            fail('4-hreflang', `${url}: ${href} -> ${probe.status}`)
+            continue
+        }
+        const targetDocument = await body(target)
+        const reciprocal = parseHreflangCluster(targetDocument.text)
+        for (const error of reciprocal.errors) fail('4-hreflang', `${target}: ${error}`)
+        if (!sameHreflangMap(sourceCluster.map, reciprocal.map)) {
+            fail('4-hreflang', `${url}: cluster differs on reciprocal target ${target}`)
+        }
+        if (![...reciprocal.map.values()].includes(sourceAbsolute)) {
+            fail('4-hreflang', `${target}: reciprocal cluster does not reference source ${url}`)
+        }
     }
 }
 
@@ -277,10 +347,104 @@ for (const file of CONTENT_ROOT_FILES) {
     if (res.status !== 200) fail('5-sitemap', `${file} -> ${res.status}`)
 }
 
-// ---- 7. an unknown address is a real 404 -----------------------------------
-for (const junk of ['/nope-nothing-here', '/zarabotok/nope-nothing-here', '/ua/nope']) {
-    const res = await head(junk)
+// The host must route the public semantic manifest to this container before
+// its SPA fallback. A file that exists only inside the image is still a public
+// 404 and cannot protect the frontend footer from stale translated slugs.
+{
+    const path = '/.well-known/darebay-content-pages.json'
+    const res = await body(path)
+    if (res.status !== 200) fail('5-manifest', `${path} -> ${res.status}`)
+    const contentType = res.headers.get('content-type') ?? ''
+    const cacheControl = res.headers.get('cache-control') ?? ''
+    if (!/^application\/json\b/i.test(contentType)) fail('5-manifest', `content-type: ${contentType}`)
+    if (!/no-cache/i.test(cacheControl) || !/must-revalidate/i.test(cacheControl)) {
+        fail('5-manifest', `cache-control: ${cacheControl}`)
+    }
+    if (!/nosniff/i.test(res.headers.get('x-content-type-options') ?? '')) fail('5-manifest', 'нет nosniff')
+    try {
+        const actual = JSON.parse(res.text)
+        const expected = JSON.parse(readFileSync(join(CONTENT_ROOT, 'docs', 'content-pages.json'), 'utf8'))
+        if (JSON.stringify(actual) !== JSON.stringify(expected)) fail('5-manifest', 'public JSON отличается от канона')
+    } catch (error) {
+        fail('5-manifest', `невалидный JSON: ${error.message}`)
+    }
+}
+
+{
+    const key = 'f54f4783c3e2566c84087cd19b829ddc'
+    const res = await body(`/${key}.txt`)
+    if (res.status !== 200 || res.text.trim() !== key) {
+        fail('5-indexnow-key', `root key -> ${res.status} ${JSON.stringify(res.text.trim())}`)
+    }
+}
+
+// ---- 7. unknown content is a localized, non-indexable real 404 -------------
+for (const [junk, language] of [
+    ['/zarabotok/nope-nothing-here', 'ru'],
+    ['/ua/zarobitok/nope-nothing-here', 'uk'],
+    ['/en/earnings/nope-nothing-here', 'en'],
+    ['/docs/nope-nothing-here', 'ru'],
+]) {
+    const res = await body(junk)
     if (res.status !== 404) fail('7-404', `${junk} -> ${res.status}, ожидался 404`)
+    if (!new RegExp(`<html\\b[^>]*lang="${language}"`).test(res.text)) {
+        fail('7-404', `${junk}: нет локализованного lang="${language}"`)
+    }
+    if (!/<meta name="robots" content="noindex, follow">/.test(res.text)) {
+        fail('7-404', `${junk}: нет meta robots noindex`)
+    }
+    if (!/noindex/i.test(res.headers.get('x-robots-tag') ?? '')) fail('7-404', `${junk}: нет X-Robots-Tag`)
+    if (!/no-store/i.test(res.headers.get('cache-control') ?? '')) fail('7-404', `${junk}: 404 можно закешировать`)
+}
+
+// Clean URLs are the only 200 form. VitePress writes .html files, but exposing
+// both forms splits links and crawl signals across duplicate addresses.
+for (const page of PAGES.slice(0, 1).concat(PAGES.filter((entry) => entry.slugs.ru).slice(0, 1))) {
+    for (const language of localesOf(page)) {
+        const clean = pagePath(page, language)
+        const nonCanonical = clean.endsWith('/') ? `${clean}index.html` : `${clean}.html`
+        const res = await head(nonCanonical)
+        if (res.status !== 301 || res.location !== clean) {
+            fail('7-clean-url', `${nonCanonical} -> ${res.status} ${res.location}, ожидался 301 ${clean}`)
+        }
+        const canonical = await head(clean)
+        if (!/no-cache/i.test(canonical.headers.get('cache-control') ?? '')) {
+            fail('7-cache', `${clean}: HTML cache-control не требует revalidate`)
+        }
+    }
+}
+
+// A hub has one canonical spelling too. The host needs an exact bare-segment
+// route so nginx can add the slash; otherwise `/zarabotok` falls into the SPA
+// while `/zarabotok/` reaches content, splitting links across two renderers.
+for (const page of PAGES.filter((entry) => localesOf(entry).some((language) => entry.slugs[language] === ''))) {
+    for (const language of localesOf(page)) {
+        if (page.slugs[language] !== '') continue
+        const canonical = pagePath(page, language)
+        const bare = canonical.slice(0, -1)
+        const res = await head(bare)
+        if (res.status !== 301 || res.location !== canonical) {
+            fail('7-hub-slash', `${bare} -> ${res.status} ${res.location}, ожидался 301 ${canonical}`)
+        }
+    }
+}
+
+// Every prerendered app artifact has one public spelling. Keep this separate
+// from the retired-route parser: `/index.html` uses nginx variables for query
+// preservation and is not a retired route with a literal target.
+for (const canonical of new Set(appUrls)) {
+    const raw = canonical === '/'
+        ? '/index.html'
+        : canonical === '/ua' || canonical === '/en'
+          ? `${canonical}/index.html`
+          : `${canonical}.html`
+    const first = await head(raw)
+    if (first.status !== 301 || first.location !== canonical) {
+        fail('7-app-html', `${raw} -> ${first.status} ${first.location}, ожидался 301 ${canonical}`)
+        continue
+    }
+    const second = await head(first.location)
+    if (second.status !== 200) fail('7-app-html', `${raw} -> ${first.location} -> ${second.status}`)
 }
 
 // ---- 8. content assets and app assets do not collide -----------------------
@@ -302,28 +466,64 @@ for (const junk of ['/nope-nothing-here', '/zarabotok/nope-nothing-here', '/ua/n
             if (probe.status !== 200) fail('8-assets', `${label}: ${page} грузит ${href} -> ${probe.status}`)
         }
     }
+
+    const contentPage = await body(pagePath(PAGES[0], ROOT_LOCALE.language))
+    const hashed = contentPage.text.match(
+        /(?:href|src)="(\/content-assets\/[^"?]+\.[A-Za-z0-9_-]{8}(?:\.lean)?\.(?:js|mjs|css|woff2?|png|jpe?g|svg|webp))"/
+    )?.[1]
+    if (!hashed) fail('8-cache', 'не найден content-addressed asset для проверки cache policy')
+    else {
+        const response = await head(hashed)
+        const cache = response.headers.get('cache-control') ?? ''
+        if (response.status !== 200 || !/max-age=31536000/i.test(cache) || !/immutable/i.test(cache)) {
+            fail('8-cache', `${hashed}: status=${response.status}, cache-control=${cache}`)
+        }
+    }
+    for (const stable of [
+        '/content-assets/logo.svg',
+        '/content-assets/fonts/manrope-400-cyrillic.woff2',
+    ]) {
+        const response = await head(stable)
+        const cache = response.headers.get('cache-control') ?? ''
+        if (
+            response.status !== 200 ||
+            !/max-age=3600/i.test(cache) ||
+            !/must-revalidate/i.test(cache) ||
+            /immutable/i.test(cache)
+        ) {
+            fail('8-cache', `${stable}: status=${response.status}, cache-control=${cache}`)
+        }
+    }
 }
 
-// ---- 9. UGC: one canonical address, reachable under every prefix -----------
+// ---- 9. UGC: translated documents self-canonicalize; UI copies consolidate -
 {
-    const contest = sitemapUrls('sitemap-contests.xml')[0]
+    const contest = sitemapUrls('sitemap-contests.xml').find((url) => url.startsWith('/tasks/'))
     if (contest) {
+        const slug = contest.split('/').at(-1)
         const canonical = (await body(contest)).text
         const declared = tag(canonical, /<link[^>]+rel="canonical"[^>]+href="([^"]+)"/g)[0]
         if (declared !== `https://darebay.com${contest}`) {
             fail('9-ugc', `${contest}: canonical ${declared}`)
         }
-        // Under a prefix the SAME page must answer, and must still name the
-        // unprefixed address as canonical — otherwise every contest exists three
-        // times in the index.
-        for (const prefix of ['/ua', '/en']) {
-            // The slug is the same in every tree since the 2026-08-03 revert,
-            // so crossing trees is a prefix swap and nothing else.
+        // A prefixed page is either an approved translated document (self
+        // canonical, indexable) or an interface-only copy (root canonical,
+        // noindex). The frontend's strict locale registry is the shared policy.
+        for (const [language, prefix] of [['uk', '/ua'], ['en', '/en']]) {
             const res = await body(`${prefix}${contest}`)
             if (res.status !== 200) fail('9-ugc', `${prefix}: карточка конкурса -> ${res.status}`)
             const localCanonical = tag(res.text, /<link[^>]+rel="canonical"[^>]+href="([^"]+)"/g)[0]
-            if (localCanonical !== `https://darebay.com${contest}`) {
-                fail('9-ugc', `${prefix}${contest}: canonical ${localCanonical}, ожидался беспрефиксный`)
+            const expected = contestCanonicalForLocale(slug, language)
+            if (localCanonical !== expected) {
+                fail('9-ugc', `${prefix}${contest}: canonical ${localCanonical}, ожидался ${expected}`)
+            }
+            const robots = tag(res.text, /<meta[^>]+name="robots"[^>]+content="([^"]+)"/g)[0] ?? ''
+            const selfCanonical = expected === `https://darebay.com${prefix}${contest}`
+            if (selfCanonical && /noindex/i.test(robots)) {
+                fail('9-ugc', `${prefix}${contest}: одобренный перевод помечен noindex`)
+            }
+            if (!selfCanonical && !/noindex/i.test(robots)) {
+                fail('9-ugc', `${prefix}${contest}: интерфейсная копия не помечена noindex`)
             }
         }
     }
@@ -357,6 +557,66 @@ for (const junk of ['/nope-nothing-here', '/zarabotok/nope-nothing-here', '/ua/n
     if (!checked) fail('10-switcher', 'ни одной ссылки переключателя не найдено — селектор устарел?')
 }
 
+// ---- 11. the app and content pages describe one stable brand entity --------
+//
+// Two independently deployed renderers publish schema on one origin. Matching
+// names are not enough: if their ids/logo/founder relationships drift, answer
+// engines see two conflicting DareBay entities. Compare the actually served
+// graphs, not the source constants that generated them.
+{
+    const stableIds = [
+        'https://darebay.com/#logo',
+        'https://darebay.com/#organization',
+        'https://darebay.com/#founder',
+        'https://darebay.com/#website',
+    ]
+    const contract = (html, surface) => {
+        const nodes = jsonLdNodes(html)
+        const selected = stableIds.map((id) => nodes.find((node) => node?.['@id'] === id))
+        for (let index = 0; index < selected.length; index += 1) {
+            if (!selected[index]) fail('11-entity', `${surface}: нет ${stableIds[index]}`)
+        }
+        if (selected.some((node) => !node)) return null
+        const [logo, organization, founder, website] = selected
+        return {
+            logo: {
+                type: logo['@type'],
+                url: logo.url,
+                contentUrl: logo.contentUrl,
+                width: logo.width,
+                height: logo.height,
+            },
+            organization: {
+                type: organization['@type'],
+                name: organization.name,
+                url: organization.url,
+                logo: organization.logo?.['@id'],
+                sameAs: [...(organization.sameAs ?? [])].sort(),
+            },
+            founder: {
+                type: founder['@type'],
+                name: founder.name,
+                url: founder.url,
+                sameAs: [...(founder.sameAs ?? [])].sort(),
+                worksFor: founder.worksFor?.['@id'],
+            },
+            website: {
+                type: website['@type'],
+                name: website.name,
+                url: website.url,
+                inLanguage: [...(website.inLanguage ?? [])].sort(),
+                publisher: website.publisher?.['@id'],
+            },
+        }
+    }
+    const app = contract((await body('/')).text, 'app /')
+    const contentPath = pagePath(PAGES[0], ROOT_LOCALE.language)
+    const content = contract((await body(contentPath)).text, `content ${contentPath}`)
+    if (app && content && JSON.stringify(app) !== JSON.stringify(content)) {
+        fail('11-entity', `app/content stable entity contracts differ:\napp=${JSON.stringify(app)}\ncontent=${JSON.stringify(content)}`)
+    }
+}
+
 // ---------------------------------------------------------------------------
 
 stop()
@@ -368,6 +628,6 @@ if (failures.length) {
     process.exit(1)
 }
 console.log(
-    `✓ десять гейтов пройдены: ${allUrls.length} адресов, ` +
+    `✓ HTTP SEO-гейты пройдены: ${allUrls.length} адресов, ` +
         `${Object.keys(redirectMap()).length + Object.keys(appRedirects).length} редиректов, 0 замечаний`
 )

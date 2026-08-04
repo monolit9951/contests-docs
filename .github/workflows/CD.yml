@@ -1,68 +1,284 @@
-# Automatically build and deploy the docs site on push to release/develop.
-
-name: 'CD'
-env:
-    CURRENT_BRANCH: ${{ github.ref_name }}
+# Production-only delivery. Dev is the guarded, on-box develop sync described
+# in /root/AGENTS.md; GitHub must never address it with SSH_HOST_DEV.
+name: CD
 
 on:
-    push:
-        branches:
-            - 'release'
-            - 'develop'
-    workflow_dispatch:
+  push:
+    branches: [release]
+  workflow_dispatch:
+
+# Do not overlap release jobs. The host transaction also uses the global stack
+# lock because backend/full-stack delivery is serialized independently.
+concurrency:
+  group: contests-docs-release
+  cancel-in-progress: false
+
+env:
+  IMAGE_REPOSITORY: contestvibe/contests-docs
 
 jobs:
-    CD:
-        runs-on: ubuntu-latest
-        steps:
-            - uses: actions/checkout@v4
-              with:
-                  ref: ${{ env.CURRENT_BRANCH }}
+  CD:
+    if: github.ref_name == 'release'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          # Pin the event source. A movable branch checkout could make a queued
+          # run test/build different bytes from GITHUB_SHA.
+          ref: ${{ github.sha }}
 
-            - uses: docker/login-action@v3
-              with:
-                  username: ${{ secrets.DOCKER_USERNAME }}
-                  password: ${{ secrets.DOCKER_PASSWORD }}
+      - name: Refuse a queued stale release before build
+        run: |
+          git fetch --no-tags origin +refs/heads/release:refs/remotes/origin/release
+          tip="$(git rev-parse refs/remotes/origin/release)"
+          if [[ "$tip" != "$GITHUB_SHA" ]]; then
+            echo "stale release run: event=$GITHUB_SHA, current=$tip" >&2
+            exit 1
+          fi
 
-            # Build & push for RELEASE (production)
-            - name: Build & push docker RELEASE images
-              if: env.CURRENT_BRANCH == 'release'
-              # The two verification secrets are optional: an unset secret expands to
-              # an empty string and the ownership <meta> is omitted. Same pair of
-              # secrets as the frontend repo — set them there and here to verify a
-              # /docs/-scoped Search Console property alongside the site one.
-              run: |
-                  make docker VERSION=latest \
-                    GOOGLE_SITE_VERIFICATION="${{ secrets.GOOGLE_SITE_VERIFICATION }}" \
-                    YANDEX_VERIFICATION="${{ secrets.YANDEX_VERIFICATION }}"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
 
-            - name: Deploy to RELEASE environment
-              uses: appleboy/ssh-action@master
-              if: env.CURRENT_BRANCH == 'release'
-              with:
-                  host: ${{ secrets.SSH_HOST_RELEASE }}
-                  port: ${{ secrets.SSH_PORT }}
-                  username: ${{ secrets.SSH_USERNAME }}
-                  key: ${{ secrets.SSH_PRIVATE_KEY }}
-                  passphrase: ${{ secrets.SSH_PASSPHRASE }}
-                  script: |
-                      cd /root
-                      /bin/bash redeploy-docs.sh
+      - run: npm ci
 
-            # Build & push for DEV
-            - name: Build & push docker DEV images
-              if: env.CURRENT_BRANCH == 'develop'
-              run: make docker VERSION=dev DOCS_ENV=dev
+      # Direct pushes to release do not pass through the pull-request workflow.
+      # Test the exact event commit before producing any registry artifact.
+      - name: Run publication contract tests
+        run: npm test
 
-            - name: Deploy to DEV environment
-              uses: appleboy/ssh-action@master
-              if: env.CURRENT_BRANCH == 'develop'
-              with:
-                  host: ${{ secrets.SSH_HOST_DEV }}
-                  port: ${{ secrets.SSH_PORT }}
-                  username: ${{ secrets.SSH_USERNAME }}
-                  key: ${{ secrets.SSH_PRIVATE_KEY }}
-                  passphrase: ${{ secrets.SSH_PASSPHRASE }}
-                  script: |
-                      cd /root
-                      /bin/bash redeploy-docs.sh
+      # The image intentionally has no .git directory. Generate the versioned
+      # page-date snapshot while full history is available.
+      - name: Generate deterministic page dates
+        run: npm run gen:dates
+
+      - uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
+      - name: Build immutable release candidate
+        run: |
+          make build_app VERSION="${GITHUB_SHA}" RELEASE_SHA="${GITHUB_SHA}" \
+            GOOGLE_SITE_VERIFICATION="${{ secrets.GOOGLE_SITE_VERIFICATION }}" \
+            YANDEX_VERIFICATION="${{ secrets.YANDEX_VERIFICATION }}"
+
+      - name: Generate host routing artifacts
+        run: |
+          set -Eeuo pipefail
+          mkdir -p .deploy-artifacts
+          node --experimental-strip-types --no-warnings scripts/gen-host-nginx.mjs > .deploy-artifacts/darebay-content.conf
+          cp deploy/install-host-nginx-snippet.sh .deploy-artifacts/install-host-nginx-snippet.sh
+          cp deploy/deploy-content-transaction.sh .deploy-artifacts/deploy-content-transaction.sh
+
+      # Building can take long enough for release to advance. Publishing the
+      # immutable SHA tag is safe, but a superseded run should leave no orphan
+      # candidate and must never enter the production transaction.
+      - name: Refuse a stale release before candidate publication
+        run: |
+          git fetch --no-tags origin +refs/heads/release:refs/remotes/origin/release
+          tip="$(git rev-parse refs/remotes/origin/release)"
+          if [[ "$tip" != "$GITHUB_SHA" ]]; then
+            echo "release advanced during build: event=$GITHUB_SHA, current=$tip" >&2
+            exit 1
+          fi
+
+      # Never publish `latest` from the runner. A failed candidate therefore
+      # cannot be selected by /root/redeploy.sh. The host transaction promotes
+      # the exact digest to latest only after container + route validation.
+      - name: Publish immutable candidate and resolve its digest
+        id: candidate
+        run: |
+          set -Eeuo pipefail
+          candidate_ref="${IMAGE_REPOSITORY}:${GITHUB_SHA}"
+          built_id="$(docker image inspect --format '{{.Id}}' "$candidate_ref")"
+          make push_app VERSION="${GITHUB_SHA}"
+          docker pull "$candidate_ref"
+          published_id="$(docker image inspect --format '{{.Id}}' "$candidate_ref")"
+          if [[ "$published_id" != "$built_id" ]]; then
+            echo "published candidate changed during upload: built=$built_id, registry=$published_id" >&2
+            exit 1
+          fi
+          mapfile -t repo_digests < <(
+            docker image inspect --format '{{range .RepoDigests}}{{println .}}{{end}}' "$candidate_ref" |
+              awk -F@ -v repository="$IMAGE_REPOSITORY" '$1 == repository { print $2 }'
+          )
+          if [[ ${#repo_digests[@]} -ne 1 || ! ${repo_digests[0]} =~ ^sha256:[a-f0-9]{64}$ ]]; then
+            echo "could not resolve one immutable manifest digest for $candidate_ref" >&2
+            exit 1
+          fi
+          printf 'manifest_digest=%s\n' "${repo_digests[0]}" >> "$GITHUB_OUTPUT"
+
+      # Transfer through the one SSH transaction instead of SCP into a public,
+      # predictable /tmp path. Each payload is authenticated before execution.
+      - name: Package authenticated deployment artifacts
+        id: artifacts
+        run: |
+          set -Eeuo pipefail
+          emit_artifact() {
+            local key="$1" file="$2" digest encoded
+            [[ -f "$file" && ! -L "$file" ]]
+            digest="$(sha256sum -- "$file")"
+            digest="${digest%% *}"
+            encoded="$(base64 --wrap=0 -- "$file")"
+            printf '%s_sha=%s\n' "$key" "$digest" >> "$GITHUB_OUTPUT"
+            printf '%s_b64=%s\n' "$key" "$encoded" >> "$GITHUB_OUTPUT"
+          }
+          emit_artifact snippet .deploy-artifacts/darebay-content.conf
+          emit_artifact installer .deploy-artifacts/install-host-nginx-snippet.sh
+          emit_artifact transaction .deploy-artifacts/deploy-content-transaction.sh
+
+      - name: Refuse a stale release after candidate publication
+        run: |
+          git fetch --no-tags origin +refs/heads/release:refs/remotes/origin/release
+          tip="$(git rev-parse refs/remotes/origin/release)"
+          if [[ "$tip" != "$GITHUB_SHA" ]]; then
+            echo "release advanced during candidate publication: event=$GITHUB_SHA, current=$tip" >&2
+            exit 1
+          fi
+
+      - name: Atomically commit container, routes and registry latest
+        uses: appleboy/ssh-action@v1.2.5
+        env:
+          EXPECTED_RELEASE_SHA: ${{ github.sha }}
+          EXPECTED_MANIFEST_DIGEST: ${{ steps.candidate.outputs.manifest_digest }}
+          CONTENT_SNIPPET_B64: ${{ steps.artifacts.outputs.snippet_b64 }}
+          CONTENT_SNIPPET_SHA: ${{ steps.artifacts.outputs.snippet_sha }}
+          CONTENT_INSTALLER_B64: ${{ steps.artifacts.outputs.installer_b64 }}
+          CONTENT_INSTALLER_SHA: ${{ steps.artifacts.outputs.installer_sha }}
+          CONTENT_TRANSACTION_B64: ${{ steps.artifacts.outputs.transaction_b64 }}
+          CONTENT_TRANSACTION_SHA: ${{ steps.artifacts.outputs.transaction_sha }}
+          DOCKER_DEPLOY_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+          DOCKER_DEPLOY_TOKEN: ${{ secrets.DOCKER_PASSWORD }}
+        with:
+          host: ${{ secrets.SSH_HOST_RELEASE }}
+          port: ${{ secrets.SSH_PORT }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          passphrase: ${{ secrets.SSH_PASSPHRASE }}
+          command_timeout: 20m
+          envs: EXPECTED_RELEASE_SHA,EXPECTED_MANIFEST_DIGEST,CONTENT_SNIPPET_B64,CONTENT_SNIPPET_SHA,CONTENT_INSTALLER_B64,CONTENT_INSTALLER_SHA,CONTENT_TRANSACTION_B64,CONTENT_TRANSACTION_SHA,DOCKER_DEPLOY_USERNAME,DOCKER_DEPLOY_TOKEN
+          script: |
+            set -Eeuo pipefail
+            umask 077
+
+            if [[ ${EUID} -ne 0 ]]; then
+              echo 'content deploy wrapper: root is required' >&2
+              exit 1
+            fi
+            for command in base64 sha256sum stat mktemp mkdir chown chmod mv git rm; do
+              command -v "$command" >/dev/null || {
+                echo "content deploy wrapper: missing command: $command" >&2
+                exit 1
+              }
+            done
+            [[ ${EXPECTED_RELEASE_SHA:-} =~ ^[a-f0-9]{40}$ ]]
+            [[ ${EXPECTED_MANIFEST_DIGEST:-} =~ ^sha256:[a-f0-9]{64}$ ]]
+            [[ -n ${DOCKER_DEPLOY_USERNAME:-} && -n ${DOCKER_DEPLOY_TOKEN:-} ]]
+
+            artifact_dir=''
+            cleanup() {
+              local status=$?
+              local metadata=''
+              trap - EXIT
+              trap '' HUP INT TERM PIPE
+              set +e
+              unset CONTENT_SNIPPET_B64 CONTENT_INSTALLER_B64 CONTENT_TRANSACTION_B64
+              unset DOCKER_DEPLOY_USERNAME DOCKER_DEPLOY_TOKEN
+              if [[ -z "$artifact_dir" ]]; then
+                exit "$status"
+              fi
+              if [[ "$artifact_dir" =~ ^/var/lib/darebay-content-deploy/transaction\.[A-Za-z0-9]+$ && -d "$artifact_dir" && ! -L "$artifact_dir" ]]; then
+                metadata="$(stat -c '%u:%g:%a' -- "$artifact_dir" 2>/dev/null)"
+                if [[ "$metadata" == '0:0:700' ]]; then
+                  rm -rf --one-file-system -- "$artifact_dir" || status=1
+                else
+                  echo "content deploy wrapper: refusing unsafe cleanup metadata: ${metadata:-unknown}" >&2
+                  status=1
+                fi
+              else
+                echo 'content deploy wrapper: refusing unsafe cleanup path' >&2
+                status=1
+              fi
+              exit "$status"
+            }
+            trap cleanup EXIT
+            trap 'exit 129' HUP
+            trap 'exit 130' INT
+            trap 'exit 143' TERM
+            trap 'exit 141' PIPE
+
+            readonly staging_parent=/var/lib/darebay-content-deploy
+            if [[ -e "$staging_parent" || -L "$staging_parent" ]]; then
+              [[ -d "$staging_parent" && ! -L "$staging_parent" ]]
+              [[ $(stat -c '%u:%g' -- "$staging_parent") == '0:0' ]]
+            else
+              mkdir -m 0700 -- "$staging_parent"
+            fi
+            chmod 0700 "$staging_parent"
+            [[ $(stat -c '%u:%g:%a' -- "$staging_parent") == '0:0:700' ]]
+
+            artifact_dir="$(mktemp -d "${staging_parent}/transaction.XXXXXX")"
+            readonly artifact_dir
+
+            chmod 0700 "$artifact_dir"
+            [[ $(stat -c '%u:%g:%a' -- "$artifact_dir") == '0:0:700' ]]
+            [[ ! -L "$artifact_dir" ]]
+
+            decode_artifact() {
+              local name="$1" payload="$2" expected_digest="$3" mode="$4"
+              local temporary target actual_digest metadata
+              [[ "$name" =~ ^(darebay-content\.conf|install-host-nginx-snippet\.sh|deploy-content-transaction\.sh)$ ]]
+              [[ "$expected_digest" =~ ^[a-f0-9]{64}$ ]]
+              [[ "$mode" == 600 || "$mode" == 700 ]]
+              target="${artifact_dir}/${name}"
+              [[ ! -e "$target" && ! -L "$target" ]]
+              temporary="$(mktemp "${artifact_dir}/.${name}.XXXXXX")"
+              printf '%s' "$payload" | base64 --decode > "$temporary"
+              [[ -s "$temporary" && -f "$temporary" && ! -L "$temporary" ]]
+              actual_digest="$(sha256sum -- "$temporary")"
+              actual_digest="${actual_digest%% *}"
+              [[ "$actual_digest" == "$expected_digest" ]]
+              chown root:root "$temporary"
+              chmod "0${mode}" "$temporary"
+              mv -fT -- "$temporary" "$target"
+              metadata="$(stat -c '%u:%g:%a' -- "$target")"
+              [[ -f "$target" && ! -L "$target" && "$metadata" == "0:0:${mode}" ]]
+              actual_digest="$(sha256sum -- "$target")"
+              actual_digest="${actual_digest%% *}"
+              [[ "$actual_digest" == "$expected_digest" ]]
+            }
+
+            decode_artifact darebay-content.conf "$CONTENT_SNIPPET_B64" "$CONTENT_SNIPPET_SHA" 600
+            decode_artifact install-host-nginx-snippet.sh "$CONTENT_INSTALLER_B64" "$CONTENT_INSTALLER_SHA" 600
+            decode_artifact deploy-content-transaction.sh "$CONTENT_TRANSACTION_B64" "$CONTENT_TRANSACTION_SHA" 700
+            unset CONTENT_SNIPPET_B64 CONTENT_INSTALLER_B64 CONTENT_TRANSACTION_B64
+
+            # This check is after the transfer/verification boundary. The child
+            # repeats it after taking the shared deploy lock and immediately
+            # before production mutations.
+            release_output="$(git ls-remote --exit-code https://github.com/monolit9951/contests-docs.git refs/heads/release)"
+            [[ "$release_output" == "${EXPECTED_RELEASE_SHA}"$'\trefs/heads/release' ]]
+
+            /bin/bash "$artifact_dir/deploy-content-transaction.sh" \
+              "$EXPECTED_RELEASE_SHA" \
+              "$EXPECTED_MANIFEST_DIGEST" \
+              "$artifact_dir/darebay-content.conf" \
+              "$CONTENT_SNIPPET_SHA" \
+              "$artifact_dir/install-host-nginx-snippet.sh" \
+              "$CONTENT_INSTALLER_SHA" \
+              "$CONTENT_TRANSACTION_SHA"
+
+      - name: Wait for the exact release and submit changed URLs
+        env:
+          BEFORE_SHA: ${{ github.event.before }}
+        run: |
+          node scripts/wait-live-release.mjs "${GITHUB_SHA}"
+          node --experimental-strip-types --no-warnings scripts/probe-live-routing.mjs "${GITHUB_SHA}"
+          base="${BEFORE_SHA}"
+          if [[ -z "${base}" || "${base}" =~ ^0+$ ]]; then
+            base="$(git rev-parse HEAD^)"
+          fi
+          node scripts/changed-content-urls.mjs --base "${base}" --head "${GITHUB_SHA}" > /tmp/darebay-indexnow-urls.txt
+          node scripts/indexnow-submit.mjs --file /tmp/darebay-indexnow-urls.txt

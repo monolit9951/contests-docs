@@ -2,8 +2,9 @@
 //
 // Registry integrity gate.
 //
-// The registry (docs/.vitepress/registry.ts) is the single source of truth for
-// every content URL, so a mistake in it is a mistake in every derived artifact
+// The versioned manifest (docs/content-pages.json), interpreted by registry.ts,
+// is the single source of truth for every content URL. A mistake in it is a
+// mistake in every derived artifact
 // at once: the sitemap, the hreflang cluster, the nginx location list and the
 // 301 map. This script is what makes that safe to rely on. It runs in CI and
 // before the migration cutover.
@@ -12,12 +13,7 @@
 // itself: a registry that is internally consistent but has drifted from the
 // pages on disk is exactly the failure that produces sitemaps full of 404s.
 //
-// Usage:
-//   node --experimental-strip-types scripts/check-registry.mjs [--pre|--post]
-//
-//   --pre   (default before the move) expect files at their RETIRED paths,
-//           i.e. the `docs/ru/<zone>/<slug>.md` layout.
-//   --post  expect files at the paths the registry declares.
+// Usage: node --experimental-strip-types scripts/check-registry.mjs
 
 import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs'
 import { join, dirname, relative } from 'node:path'
@@ -28,22 +24,25 @@ const DOCS = join(HERE, '..', 'docs')
 
 const {
     PAGES,
+    CONTENT_MANIFEST_SCHEMA_VERSION,
     HUBS,
     LOCALES,
     ROOT_LOCALE,
     ORPHAN_REDIRECTS,
-    ALREADY_REDIRECTING,
     APP_ROUTES,
     pagePath,
     sourceFile,
     localesOf,
+    hreflangCluster,
     redirectMap,
 } = await import(join(DOCS, '.vitepress', 'registry.ts'))
 
-const mode = process.argv.includes('--post') ? 'post' : 'pre'
-
 const failures = []
 const fail = (check, detail) => failures.push(`${check}: ${detail}`)
+
+if (CONTENT_MANIFEST_SCHEMA_VERSION !== 1) {
+    fail('manifest-schema', `expected 1, got ${CONTENT_MANIFEST_SCHEMA_VERSION}`)
+}
 
 // ---------------------------------------------------------------------------
 // 1. Identity is unique.
@@ -51,6 +50,12 @@ const fail = (check, detail) => failures.push(`${check}: ${detail}`)
 {
     const seen = new Map()
     for (const entry of PAGES) {
+        if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(entry.id)) fail('bad-id', entry.id)
+        if (!(entry.hub in HUBS)) fail('bad-hub', `${entry.id}: ${entry.hub}`)
+        if (!('ru' in entry.slugs)) fail('missing-root-locale', `${entry.id}: every semantic page needs a RU root canonical`)
+        for (const locale of Object.keys(entry.slugs)) {
+            if (!LOCALES.some((axis) => axis.language === locale)) fail('unknown-locale', `${entry.id}: ${locale}`)
+        }
         if (seen.has(entry.id)) fail('duplicate-id', entry.id)
         seen.set(entry.id, entry)
     }
@@ -78,7 +83,21 @@ const fail = (check, detail) => failures.push(`${check}: ${detail}`)
 // ---------------------------------------------------------------------------
 for (const entry of PAGES) {
     for (const [lang, slug] of Object.entries(entry.slugs)) {
-        if (slug !== '' && !/^[a-z0-9-]+$/.test(slug)) fail('bad-slug', `${entry.id} [${lang}] "${slug}"`)
+        if (slug !== '' && !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug)) fail('bad-slug', `${entry.id} [${lang}] "${slug}"`)
+    }
+}
+
+// Every HTML hreflang cluster is generated from this function. Validate the
+// full contract here so a future refactor cannot silently drop reciprocity.
+for (const entry of PAGES) {
+    const cluster = hreflangCluster(entry)
+    const expected = new Map(localesOf(entry).map((lang) => [lang, `https://darebay.com${pagePath(entry, lang)}`]))
+    expected.set('x-default', `https://darebay.com${pagePath(entry, ROOT_LOCALE.language)}`)
+    const actual = new Map(cluster.map(({ hreflang, href }) => [hreflang, href]))
+    if (actual.size !== cluster.length) fail('hreflang-duplicate', entry.id)
+    if (actual.size !== expected.size) fail('hreflang-size', `${entry.id}: ${actual.size}, expected ${expected.size}`)
+    for (const [language, href] of expected) {
+        if (actual.get(language) !== href) fail('hreflang-target', `${entry.id} [${language}]: ${actual.get(language)} != ${href}`)
     }
 }
 
@@ -88,13 +107,20 @@ for (const entry of PAGES) {
 // ---------------------------------------------------------------------------
 {
     const seen = new Map()
+    const live = new Map()
+    for (const entry of PAGES) {
+        for (const lang of localesOf(entry)) live.set(pagePath(entry, lang), `${entry.id} [${lang}]`)
+    }
     for (const entry of PAGES) {
         for (const old of entry.retired ?? []) {
+            if (!old.startsWith('/') || /[?#]/.test(old)) fail('bad-retired', `${entry.id}: ${old}`)
+            if (live.has(old)) fail('retired-shadows-live', `${old}: retired by ${entry.id}, live as ${live.get(old)}`)
             if (seen.has(old)) fail('duplicate-retired', `${old} claimed by ${seen.get(old)} and ${entry.id}`)
             seen.set(old, entry.id)
         }
     }
     for (const old of Object.keys(ORPHAN_REDIRECTS)) {
+        if (live.has(old)) fail('retired-shadows-live', `${old}: orphan redirect shadows ${live.get(old)}`)
         if (seen.has(old)) fail('duplicate-retired', `${old} is both an orphan redirect and retired by ${seen.get(old)}`)
     }
 }
@@ -114,7 +140,7 @@ for (const entry of PAGES) {
 }
 
 // ---------------------------------------------------------------------------
-// 6. Coverage against the file tree — nothing lost, nothing invented.
+// 6. Coverage against the current file tree — nothing lost, nothing invented.
 // ---------------------------------------------------------------------------
 {
     const walk = (dir, acc = []) => {
@@ -129,69 +155,99 @@ for (const entry of PAGES) {
     }
 
     const onDisk = new Set(walk(DOCS))
+    const declared = new Set()
+    for (const entry of PAGES) {
+        for (const lang of localesOf(entry)) {
+            const file = sourceFile(entry, lang)
+            declared.add(file)
+            if (!onDisk.has(file)) fail('missing-file', `${entry.id} [${lang}] expects docs/${file}`)
+        }
+    }
+    for (const file of onDisk) {
+        if (!declared.has(file)) fail('unregistered-file', `docs/${file} is absent from docs/content-pages.json`)
+    }
+}
 
-    if (mode === 'post') {
-        // Every declared page has its file, and every file is declared.
-        const declared = new Set()
-        for (const entry of PAGES) {
-            for (const lang of localesOf(entry)) {
-                const file = sourceFile(entry, lang)
-                declared.add(file)
-                if (!onDisk.has(file)) fail('missing-file', `${entry.id} [${lang}] expects docs/${file}`)
+// ---------------------------------------------------------------------------
+// 6a. Search-surface metadata: dates, unique intent snippets, and a hard floor
+//     against accidentally publishing a thin generated leaf.
+// ---------------------------------------------------------------------------
+{
+    const datesFile = join(DOCS, 'page-dates.json')
+    let pageDates = {}
+    try {
+        pageDates = JSON.parse(readFileSync(datesFile, 'utf8'))
+    } catch (error) {
+        fail('page-dates-invalid', error.message)
+    }
+
+    const expectedFiles = new Set()
+    const snippets = new Map(LOCALES.map((locale) => [locale.language, []]))
+    const normalize = (text) => text.toLowerCase().replace(/[^\p{L}\p{N}]+/gu, ' ').trim()
+    const tokens = (text) => new Set(normalize(text).split(/\s+/).filter((word) => word.length > 2))
+    const similarity = (left, right) => {
+        let intersection = 0
+        for (const word of left) if (right.has(word)) intersection += 1
+        return intersection / (left.size + right.size - intersection || 1)
+    }
+    const field = (raw, name) => {
+        const match = raw.match(new RegExp(`^${name}:\\s*(.+)$`, 'm'))
+        return match ? match[1].trim().replace(/^["']|["']$/g, '') : ''
+    }
+
+    for (const entry of PAGES) {
+        for (const lang of localesOf(entry)) {
+            const file = sourceFile(entry, lang)
+            expectedFiles.add(file)
+            const absolute = join(DOCS, file)
+            if (!existsSync(absolute)) continue
+            const raw = readFileSync(absolute, 'utf8')
+            const title = field(raw, 'title')
+            const description = field(raw, 'description')
+            if (!title) fail('missing-title', `${entry.id} [${lang}]`)
+            if (!description) fail('missing-description', `${entry.id} [${lang}]`)
+            snippets.get(lang).push({ entry, title, description, words: tokens(`${title} ${description}`) })
+
+            const bodyWords = raw
+                .replace(/^---\n[\s\S]*?\n---/, '')
+                .replace(/<!--[\s\S]*?-->/g, '')
+                .replace(/[^\p{L}\p{N}]+/gu, ' ')
+                .trim()
+                .split(/\s+/)
+                .filter(Boolean).length
+            const isSeoLeaf = /^seo:\s*true\b/m.test(raw) && entry.slugs[lang] !== ''
+            if (isSeoLeaf && bodyWords < 120) fail('thin-page', `${entry.id} [${lang}]: ${bodyWords} words < 120`)
+
+            const dates = pageDates[file]
+            if (!dates) {
+                if (process.env.DOCS_ENV === 'prod') fail('page-dates-missing', file)
+                continue
             }
+            const published = Date.parse(dates.published)
+            const modified = Date.parse(dates.modified)
+            if (!Number.isFinite(published) || !Number.isFinite(modified)) fail('page-dates-format', file)
+            else if (published > modified) fail('page-dates-order', `${file}: published > modified`)
         }
-        for (const file of onDisk) {
-            if (!declared.has(file)) fail('unregistered-file', `docs/${file} is in no registry entry`)
+    }
+
+    for (const file of Object.keys(pageDates)) {
+        if (!expectedFiles.has(file)) fail('page-dates-orphan', file)
+    }
+
+    for (const [lang, rows] of snippets) {
+        const exact = new Map()
+        for (const row of rows) {
+            const key = normalize(`${row.title} ${row.description}`)
+            if (exact.has(key)) fail('duplicate-snippet', `${lang}: ${exact.get(key)} and ${row.entry.id}`)
+            exact.set(key, row.entry.id)
         }
-    } else {
-        // Before the move: every retired address must correspond to a file that
-        // exists today. A typo here becomes a 404 the moment nginx starts
-        // trusting the map.
-        // `/docs/` itself strips to the empty string, so the index candidate is
-        // bare `index.md` and there is no `.md` sibling to try. Building the
-        // paths by joining segments instead of by concatenation keeps that case
-        // from producing a leading slash and silently matching nothing.
-        const asFile = (publicPath) => {
-            const bare = publicPath.replace(/^\/docs\/?/, '').replace(/\/$/, '')
-            const index = bare ? `${bare}/index.md` : 'index.md'
-            return bare ? [index, `${bare}.md`] : [index]
-        }
-        const alreadyRedirecting = new Set(ALREADY_REDIRECTING)
-        for (const entry of PAGES) {
-            for (const old of entry.retired ?? []) {
-                if (!old.startsWith('/docs')) continue
-                // An address that already answers with a 301 has no file by
-                // definition — that is not drift, it is the July EN removal.
-                if (alreadyRedirecting.has(old)) continue
-                const candidates = asFile(old)
-                if (!candidates.some((c) => onDisk.has(c))) {
-                    fail('retired-not-on-disk', `${entry.id}: ${old} matches no file (tried ${candidates.join(', ')})`)
+        for (let i = 0; i < rows.length; i += 1) {
+            for (let j = i + 1; j < rows.length; j += 1) {
+                const score = similarity(rows[i].words, rows[j].words)
+                if (score > 0.65) {
+                    fail('cannibalizing-snippet', `${lang}: ${rows[i].entry.id} / ${rows[j].entry.id} (${score.toFixed(2)})`)
                 }
             }
-        }
-        // Every already-redirecting address must be claimed by some page, or
-        // the migration would drop an existing 301 on the floor.
-        {
-            const claimed = new Set(PAGES.flatMap((e) => e.retired ?? []))
-            for (const old of ALREADY_REDIRECTING) {
-                if (!claimed.has(old) && !(old in ORPHAN_REDIRECTS)) {
-                    fail('existing-redirect-dropped', `${old} redirects today but no page claims it`)
-                }
-            }
-        }
-        // And every file on disk must be reachable from some retired address,
-        // or it is a page the migration would silently drop.
-        const covered = new Set()
-        for (const entry of PAGES) {
-            for (const old of entry.retired ?? []) {
-                for (const c of asFile(old)) if (onDisk.has(c)) covered.add(c)
-            }
-        }
-        for (const old of Object.keys(ORPHAN_REDIRECTS)) {
-            for (const c of asFile(old)) if (onDisk.has(c)) covered.add(c)
-        }
-        for (const file of onDisk) {
-            if (!covered.has(file)) fail('page-would-be-dropped', `docs/${file} has no retired address in the registry`)
         }
     }
 }
@@ -355,9 +411,9 @@ const urls = PAGES.reduce((n, e) => n + localesOf(e).length, 0)
 const redirects = Object.keys(redirectMap()).length
 
 if (failures.length) {
-    console.error(`\n✗ реестр не прошёл проверку (${mode}): ${failures.length}\n`)
+    console.error(`\n✗ реестр не прошёл проверку: ${failures.length}\n`)
     for (const f of failures) console.error(`  ${f}`)
     process.exit(1)
 }
 
-console.log(`✓ реестр цел (${mode}): ${pages} страниц, ${urls} URL, ${redirects} редиректов, 0 замечаний`)
+console.log(`✓ реестр цел: ${pages} semantic pages, ${urls} URLs, ${redirects} redirects, 0 findings`)

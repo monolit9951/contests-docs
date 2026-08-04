@@ -2,53 +2,50 @@ import DefaultTheme from 'vitepress/theme'
 import type { Theme } from 'vitepress'
 import { useData, useRouter } from 'vitepress'
 import { defineComponent, h, onMounted, watch } from 'vue'
-import { HOMEPAGE, TELEGRAM } from '../links'
+import type { DareBayThemeConfig } from '../chrome'
 import { DocsEvent, installDocsAnalytics, trackDocsEvent } from './analytics'
 import { flushEngagement, startPageEngagement } from './engagement'
 import HubIndex from './HubIndex.vue'
 import { installWebVitals } from './vitals'
 import './custom.css'
 
-// The logo anchor in VitePress's NavBarTitle always points at the locale root.
-// We want it to point to the main site instead — cheaper and more correct than
-// replacing the whole component. Rewrite it on mount and on every route change.
-
-function rewriteLogoLink() {
-  if (typeof document === 'undefined') return
-  document.querySelectorAll<HTMLAnchorElement>('.VPNavBarTitle a.title').forEach((a) => {
-    if (a.getAttribute('href') !== HOMEPAGE) {
-      a.setAttribute('href', HOMEPAGE)
-      a.removeAttribute('target')
-    }
-  })
-}
-
 // Every page ends with a way out of the docs and into the product. Readers arrive on a
 // content page straight from search, read to the bottom, and used to find nothing there
 // but links to more docs pages — the only exit was the header CTA they had already
 // scrolled past (and which phones hid inside the hamburger entirely). Injected from the
 // theme rather than written into Markdown so it also covers every page the content fleet
-// ships next, without producers having to remember it.
-function PlatformCta() {
-  return h('aside', { class: 'db-cta' }, [
-    h('div', { class: 'db-cta-copy' }, [
-      h('p', { class: 'db-cta-title' }, 'Открыть DareBay'),
-      h(
-        'p',
-        { class: 'db-cta-lede' },
-        'Задания и конкурсы живут на сайте и в Telegram — это две равные двери в один продукт.',
-      ),
-    ]),
-    h('div', { class: 'db-cta-actions' }, [
-      h('a', { class: 'db-cta-btn db-cta-btn-primary', href: HOMEPAGE }, 'Перейти на darebay.com →'),
-      h(
-        'a',
-        { class: 'db-cta-btn db-cta-btn-ghost', href: TELEGRAM, target: '_blank', rel: 'noreferrer' },
-        'Telegram-канал',
-      ),
-    ]),
-  ])
-}
+// ships next, without producers having to remember it. Copy and links come from the same
+// locale themeConfig as the nav/footer, so SSR and client-side locale changes cannot drift.
+const PlatformCta = defineComponent({
+  name: 'DareBayPlatformCta',
+  setup() {
+    const { theme } = useData<DareBayThemeConfig>()
+
+    return () => {
+      const cta = theme.value.darebayCta
+
+      return h('aside', { class: 'db-cta' }, [
+        h('div', { class: 'db-cta-copy' }, [
+          h('p', { class: 'db-cta-title' }, cta.title),
+          h('p', { class: 'db-cta-lede' }, cta.lede),
+        ]),
+        h('div', { class: 'db-cta-actions' }, [
+          h('a', { class: 'db-cta-btn db-cta-btn-primary', href: cta.productUrl }, cta.productLabel),
+          h(
+            'a',
+            {
+              class: 'db-cta-btn db-cta-btn-ghost',
+              href: cta.telegramUrl,
+              target: '_blank',
+              rel: 'noreferrer',
+            },
+            cta.telegramLabel,
+          ),
+        ]),
+      ])
+    }
+  },
+})
 
 /**
  * The layout is where the per-page instrumentation lives, because it is the
@@ -68,7 +65,6 @@ const DocsLayout = defineComponent({
     const router = useRouter()
 
     const onPageReady = () => {
-      rewriteLogoLink()
       trackDocsEvent(DocsEvent.PageView)
       // A url that 404s is either a link the content fleet shipped broken or an
       // inbound link (or an indexed url) we retired without a redirect. Both are

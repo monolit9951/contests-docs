@@ -17,13 +17,13 @@ requirement.
 
 Check:
 
-- Is it still **ACTIVE**? (Closed contests do not accept entries.)
+- Is it still **ACTIVE**? ([How winners are chosen](/en/help/how-winners-are-chosen).) (Closed contests do not accept entries.)
 - Which format does it want? (Text, image or video, always just one.)
 - The hard limits: language, originality, length.
 
 ## 2. Make the work
 
-Actually make it. Stolen content, AI slop passed off as your own, other
+Actually make it. [Stolen content, AI slop passed off as your own](/en/help/prohibited-content), other
 shortcuts: all of it gets removed and the accounts get flagged. Your
 **participant rating** follows you across the whole platform, and it is worth
 more than any single prize.
@@ -36,6 +36,7 @@ them up is the most common way to end up unpaid.
 ### Pay-per-view contests (PPV)
 
 The work lives on a platform rather than with us: TikTok, YouTube Shorts,
+[how pay-per-view works](/en/earnings/how-pay-per-view-works) if the mechanic is new to you.
 Instagram Reels. The order is:
 
 1. Post the video on the platform named in the task and **put the contest hashtag

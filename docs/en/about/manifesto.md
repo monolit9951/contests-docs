@@ -51,9 +51,10 @@ and the same product. Come in whichever way suits you, the cycle is the same.
   price too. The reward is yours to pick: money (by card, bank transfer or to
   a wallet), an item, Telegram Stars or a gift. Every one of them works.
 - **Winners are chosen fairly.** Three transparent ways: a community vote, the
-  buyer's own call, or an independent count of the views. Pick the one that
+  buyer's own call, or an [independent count of the views](/en/earnings/how-views-are-counted).
+  [How winners are chosen](/en/help/how-winners-are-chosen). Pick the one that
   fits your contest and lock it in before the start.
-- **The commission is small, visible and predictable.** You see it before you
+- **[The commission](/en/help/what-commission) is small, visible and predictable.** You see it before you
   publish. No surprises.
 - **A locked budget beats a promise.** The prize is locked the moment a contest
   goes live and it sits with the platform. The winner has nothing to wonder
@@ -63,9 +64,9 @@ and the same product. Come in whichever way suits you, the cycle is the same.
 
 - **Cheating.** Fake contests, fake prizes, "we forgot to hand the prize out".
   You put up a prize, you pay it out.
-- **Fake work.** Stolen content, AI slop passed off as your own, bots stuffing
+- **Fake work.** Stolen content, AI slop passed off as your own, [bots stuffing](/en/help/protection-from-view-fraud)
   the vote.
-- **Illegal, violent or hateful content.** We are not a stage for that. There
+- **[Illegal, violent or hateful content](/en/help/prohibited-content).** We are not a stage for that. There
   are places that will ban you far faster.
 - **Harassing participants.** You lost, say "nice one" and enter the next
   contest. No need to send bile in DMs.
@@ -76,7 +77,7 @@ Break the rules and you are out. No warnings.
 
 1. **A transparent commission.** The exact amount before you confirm, in your
    currency. Card, transfer or wallet, the math is the same.
-2. **Winners always get the prize.** The money is locked when the contest is
+2. **[Winners always get the prize](/en/about/payout-guarantee).** The money is locked when the contest is
    created and sits with the platform until it ends. The organizer cannot take
    it back, and we spend it on nothing except payouts for that contest.
 3. **Disputes are handled by a human.** A stuffed vote, a set-up contest: we
@@ -98,15 +99,15 @@ in text, and you can put up Telegram Stars or a gift instead. All of these work
 today, and each one gets the reward to the person who earned it. As a user, one
 thing matters: you put up a prize, and it reaches the winner.
 
-Money sent to a wallet arrives as USDT on TON. That is one way to receive a
+Money sent to a [wallet](/en/help/paying-with-crypto) arrives as USDT on TON. That is one way to receive a
 reward, not the whole product: card and bank transfer work just as well, and
 you never need a wallet to get paid.
 
 ## Join in
 
-- **Launch a contest.** Put up a prize, write the terms. The hardest part is
+- **[Launch a contest](/en/help/your-first-contest).** Put up a prize, write the terms. The hardest part is
   thinking up what to dare someone to do.
-- **Take part.** Send in something real. Worst case, you do not win.
+- **Take part.** [Send in something real](/en/help/submit-your-work). Worst case, you do not win.
   Best case, you do.
 - **Watch, vote, comment.** Most of the internet asks nothing of you. A contest
   asks for five minutes on something you actually care about.

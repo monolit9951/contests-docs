@@ -21,6 +21,9 @@ These categories are not up for discussion:
 - **Harassment** of specific participants, organizers or viewers.
 - **Doxxing**: publishing private personal data without consent.
 
+View fraud is not on this list - a [separate system](/en/help/protection-from-view-fraud) catches it,
+and the rules for entering work are in [Submit your work](/en/help/submit-your-work).
+
 ## How to report
 
 - On a submission or a comment: the **⋯** menu has **Report**.
@@ -34,7 +37,7 @@ These categories are not up for discussion:
 - **The report goes into the queue straight away.** We settle it in hours,
   not days; for zero-tolerance categories, faster still.
 - **Violation confirmed:** the content is removed and the account banned,
-  with no "three strikes" here. Money in the linked contests goes back to
+  with no "three strikes" here. [Money](/en/about/payout-guarantee) in the linked contests goes back to
   the organizer, and is withheld if the organizer was the one in
   violation.
 - **Not confirmed:** the reporter gets a short explanation. Anyone who

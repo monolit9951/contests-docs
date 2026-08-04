@@ -427,8 +427,14 @@ export const readDocsOutbox = (): AnalyticsPayload[] => {
 }
 
 const pruneOutbox = (): void => {
+    // Only prune keys that existed before the retained snapshot was built.
+    // Another tab may enqueue after readDocsOutbox() enumerates storage; a
+    // second, fresh enumeration would otherwise mistake that new event for an
+    // overflow entry and delete it before either tab can send it.
+    const candidateKeys = safeKeys()
+        .filter((candidate) => candidate.startsWith(OUTBOX_STORAGE_PREFIX))
     const retained = new Set(readDocsOutbox().map((event) => event.eventKey))
-    for (const key of safeKeys().filter((candidate) => candidate.startsWith(OUTBOX_STORAGE_PREFIX))) {
+    for (const key of candidateKeys) {
         try {
             const eventKey = decodeURIComponent(key.slice(OUTBOX_STORAGE_PREFIX.length))
             if (!retained.has(eventKey)) safeRemove(key)

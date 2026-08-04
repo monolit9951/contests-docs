@@ -15,14 +15,26 @@ import {
 
 class MemoryStorage {
     private readonly values = new Map<string, string>()
+    private readonly afterGet = new Map<string, () => void>()
 
     get length(): number { return this.values.size }
     clear(): void { this.values.clear() }
-    getItem(key: string): string | null { return this.values.get(key) ?? null }
+    getItem(key: string): string | null {
+        const value = this.values.get(key) ?? null
+        const callback = this.afterGet.get(key)
+        if (callback) {
+            this.afterGet.delete(key)
+            callback()
+        }
+        return value
+    }
     key(index: number): string | null { return [...this.values.keys()][index] ?? null }
     removeItem(key: string): void { this.values.delete(key) }
     setItem(key: string, value: string): void { this.values.set(key, value) }
     keys(): string[] { return [...this.values.keys()] }
+    runAfterNextGet(key: string, callback: () => void): void {
+        this.afterGet.set(key, callback)
+    }
 }
 
 const tokenFor = (userId: string): string => [
@@ -242,6 +254,38 @@ describe('docs analytics persistence boundaries', () => {
             key.startsWith('darebay_docs_analytics_outbox_v2:'))
         expect(eventKeys).toHaveLength(2)
         expect(readDocsOutbox().every((event) => event.isImpersonated)).toBe(true)
+    })
+
+    it('does not prune an event another tab adds after the outbox snapshot', () => {
+        trackDocsEvent(DocsEvent.PageView, {}, {
+            dedupeKey: 'snapshot-anchor',
+            deferFlush: true,
+        })
+        const prefix = 'darebay_docs_analytics_outbox_v2:'
+        const anchorKey = storage.keys().find((key) => key.startsWith(prefix))
+        expect(anchorKey).toBeDefined()
+        const anchor = JSON.parse(storage.getItem(anchorKey ?? '') ?? '{}') as Record<string, unknown>
+        const concurrentEventKey = 'concurrent-tab-event'
+        const concurrentStorageKey = `${prefix}${encodeURIComponent(concurrentEventKey)}`
+
+        // The callback runs while prune is reading its storage snapshot. It
+        // deterministically models a second tab enqueueing before the old
+        // implementation's second key enumeration.
+        storage.runAfterNextGet(anchorKey ?? '', () => {
+            storage.setItem(concurrentStorageKey, JSON.stringify({
+                ...anchor,
+                eventKey: concurrentEventKey,
+                occurredAt: new Date().toISOString(),
+            }))
+        })
+
+        trackDocsEvent(DocsEvent.ExitToSite, {}, {
+            dedupeKey: 'trigger-prune',
+            deferFlush: true,
+        })
+
+        expect(storage.getItem(concurrentStorageKey)).not.toBeNull()
+        expect(readDocsOutbox().map((event) => event.eventKey)).toContain(concurrentEventKey)
     })
 
     it('reattaches signed credentials only at send time', async () => {

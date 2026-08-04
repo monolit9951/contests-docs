@@ -1,6 +1,6 @@
 ---
 title: How to pay clippers per view
-description: The pay-per-view model for buyers - the budget is locked on DareBay, payouts follow an independent view count, and what is left comes back to you.
+description: "The pay-per-view model for buyers: wallet-backed funding locks the budget on DareBay, while manual payout leaves direct payment to the organizer."
 provenance: { snapshot_date: "2026-08-04", source: "darebay-prod" }
 seo: true
 ---
@@ -11,7 +11,7 @@ Pay-per-view on DareBay works like this: you fund the budget and set the rate pe
 
 ## How the payment model works
 
-1. **You create the contest and lock the budget.** Open [contest creation on DareBay](https://darebay.com), choose pay-per-view, write the task for the clippers and pay in the budget. The amount is locked and tied to that contest: you cannot take it back before it ends. That is the guarantee for the clippers - the money is already on the platform, and the organizer cannot change their mind.
+1. **You create the contest and lock the wallet-backed budget.** Open [contest creation on DareBay](https://darebay.com), choose pay-per-view, write the task for the clippers and pay in the wallet-backed budget. The amount is locked and tied to that contest: you cannot take it back before it ends. That is the guarantee for the clippers - the wallet-backed money is already on the platform, and the organizer cannot change their mind.
 2. **Clippers publish their work and send the links.** Creators see your contest in the public feed, take the task, film the content and post the videos with the required hashtag. Each of them then sends DareBay the link to their video, and only then does the work enter the contest.
 3. **Neither you nor the creator counts the views.** The number comes from the platform the video was published on (TikTok today). Inflated views do not get through: bot views are not counted, and a submission with bought views loses its payout entirely. For more on the count, see [the dedicated page](/en/earnings/how-views-are-counted).
 4. **Amounts are calculated by formula.** The platform records the obligations to creators and returns the unused remainder to the organizer balance. Payout fulfilment is handled manually through payout details and statuses; it is not an automatic transfer immediately after counting.
@@ -63,7 +63,7 @@ Creating a contest and topping up its budget currently carry no fee. The organiz
 
 ### What if the clippers do not get the views?
 
-Then you pay nothing. If no submission clears the view threshold, or nobody entered at all, the whole budget goes back to your balance. Locked money is never burned and never stays with the platform.
+Then you pay nothing. If no submission clears the view threshold, or nobody entered at all, the whole budget goes back to your balance. Locked wallet-backed money is never burned and never stays with the platform.
 
 ### How does the remainder come back?
 

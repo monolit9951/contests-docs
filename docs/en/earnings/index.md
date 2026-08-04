@@ -1,6 +1,6 @@
 ---
 title: Earning on DareBay
-description: What DareBay pays for views and how creators get the money. Rates, the payout formula and the locked budget, on the platform's own figures.
+description: What DareBay pays for views and how creators get the money. Rates, formula, wallet-backed funding and manual payout, on the platform's own figures.
 ---
 
 # Earning on DareBay

@@ -1,26 +1,26 @@
 ---
 title: How to start earning from clips with nothing
-description: A beginner's path into clipping on DareBay, with no followers and no portfolio. Rates from $0.30 to $1.00 per 1000 views, a 1000-view threshold.
-provenance: { snapshot_date: "2026-07-10", source: "darebay-prod" }
+description: A beginner's path into clipping on DareBay, with no followers and no portfolio. Rates from $0.08 to $1.00 per 1000 views, a 1000-view threshold.
+provenance: { snapshot_date: "2026-08-04", source: "darebay-prod" }
 numbers_used: [ppv_cpm_min, ppv_cpm_median, ppv_cpm_max, ppv_default_min_views_threshold, ppv_max_per_work_typical]
 seo: true
 ---
 
 # How to start earning from clips with nothing
 
-You can start today: no followers, no portfolio, no editing experience. You film a short video to the contest task, publish it with the hashtag and send in the link, and the platform counts the views and pays by formula. Rates across live contests run from **$0.30 to $1.00 per 1000 views** (median **$0.50**). A submission joins the split once it reaches **1000 views**, the default threshold. The cap per submission is **$50**. The contest budget was locked before you started: the buyer cannot pull the money back, and the views you earn get paid for.
+You can start today: no followers, no portfolio, no editing experience. You film a short video to the contest task, publish it with the hashtag and send in the link, and the platform counts the views and pays by formula. Rates across live contests run from **$0.08 to $1.00 per 1000 views** (median **$0.50**). A submission joins the split once it reaches **1000 views**, the default threshold. The cap per submission is **$100**. In a wallet-backed contest, the budget was locked before you started; in a manual-payout contest, the organizer pays creators directly.
 
-Every figure on this page comes from the platform's own data (snapshot: 2026-07-10).
+Every figure on this page comes from the platform's own data (snapshot: 2026-08-04).
 
 ## A worked example
 
-At the median rate of **$0.50 per 1000 views** with a **$50** cap per submission:
+At the median rate of **$0.50 per 1000 views** with a **$100** cap per submission:
 
 - The clip reaches **5,000 views**: $0.50 * 5,000 / 1000 = **$2.50**
 - The clip reaches **20,000 views**: $0.50 * 20,000 / 1000 = **$10.00**
-- The clip reaches **100,000 views**: the formula gives $50, and the cap holds it at **$50**
+- The clip reaches **100,000 views**: the formula gives **$50**, below the **$100** cap
 
-The cap applies to each submission separately. Enter several contests, or several submissions where that is allowed, and each is counted on its own with its own cap. Two clips at the cap is $100.
+The cap applies to each submission separately. Enter several contests, or several submissions where that is allowed, and each is counted on its own with its own cap. Two clips at the cap is $200.
 
 This is arithmetic on the inputs. The rate, threshold and cap are set by the buyer when the contest is created, and all three are open on the card before you submit.
 
@@ -29,7 +29,7 @@ This is arithmetic on the inputs. The rate, threshold and cap are set by the buy
 | What you need | What for |
 |---------------|----------|
 | A DareBay account | Signing up, choosing contests, submitting work |
-| An account on the platform (TikTok, YouTube) | Publishing the video; views are counted through its API |
+| An account on the platform (TikTok, YouTube) | Publishing the video; views are counted from its published counter through the configured tikwm oracle |
 | A phone or a camera | Filming to the task |
 | **1000 views** on the submission (the threshold) | The minimum to join the budget split |
 
@@ -45,17 +45,17 @@ Not needed: followers, channel verification, a partner programme, a portfolio, a
 6. **Get past the threshold.** The default is **1000 views**. Below it, the submission takes no part in the split.
 7. **Receive a credit or obligation.** At contest close, the platform counts views and records the amount. Fulfilment can be manual.
 
-The platform acts as intermediary and guarantor: the budget is locked until results are settled and the view count is independent. The buyer cannot change the terms after launch.
+The platform acts as intermediary and guarantor: the wallet-backed budget is locked until results are settled and the view count is independent. The buyer cannot change the terms after launch.
 
 ## Rate, threshold and cap
 
 | Parameter | Value | What it means |
 |-----------|-------|---------------|
-| Minimum rate | $0.30 per 1000 views | The low end across live contests |
+| Minimum rate | $0.08 per 1000 views | The low end across live contests |
 | Median rate | $0.50 per 1000 views | Typical: half of contests pay this or more |
 | Maximum rate | $1.00 per 1000 views | The high end across live contests |
 | View threshold (default) | 1000 views | The minimum to join the split |
-| Cap per submission (typical) | $50 | The most one submission can earn |
+| Cap per submission (typical) | $100 | The most one submission can earn |
 
 Every parameter is on the contest card before you submit: you sign up to known terms, not to promises.
 
@@ -67,7 +67,7 @@ No. Followers affect neither eligibility nor the payout. An account with zero co
 
 ### What will I actually make?
 
-Run the formula: `rate * views / 1000`, capped at the per-submission limit. At the median $0.50 per 1000 with 20,000 views, the payout is $10. The cap per submission in typical contests is $50, and several clips mean several payouts of up to $50. Two numbers decide it: the contest rate and the reach of your video.
+Run the formula: `rate * views / 1000`, capped at the per-submission limit. At the median $0.50 per 1000 with 20,000 views, the payout is $10. The cap per submission in typical contests is $100, and several clips mean several payouts of up to $100. Two numbers decide it: the contest rate and the reach of your video.
 
 ### How high is the view threshold?
 
@@ -87,7 +87,7 @@ The contest defines its reward method. The balance-withdrawal wizard offers USDT
 
 ### How are views counted?
 
-Automatically through the platforms' APIs (TikTok, YouTube). It is an independent count: neither the buyer nor the participant types a figure in by hand or can nudge it. More in [how pay-per-view works](/en/earnings/how-pay-per-view-works).
+Automatically from the published TikTok counter through the configured tikwm oracle. It is an independent count: neither the buyer nor the participant types a figure in by hand or can nudge it. More in [how pay-per-view works](/en/earnings/how-pay-per-view-works).
 
 ## Where to next
 

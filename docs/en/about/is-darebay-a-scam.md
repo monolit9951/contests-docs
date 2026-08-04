@@ -14,8 +14,8 @@ DareBay is not an easy-money scheme or a con. Brands and individuals fund activi
 
 The intermediary and guarantor mechanic is built like this:
 
-1. **The organizer locks the prize before publishing.** The money is charged when the contest is created and held on the platform. The organizer cannot get it back or spend it after launch.
-2. **An independent party counts the results.** The platform pulls views straight from the API of the site the video was posted on (today that is TikTok). Votes and the winner selection also run through the platform. Neither the organizer nor the participant can adjust the numbers, and inflated views are written off by the site itself, so they never reach the payout.
+1. **The funding mode is recorded before publishing.** Wallet-backed funds are charged and locked on the platform. In a manual-payout contest, no money enters the DareBay wallet and the organizer pays creators directly.
+2. **An independent party counts the results.** The configured tikwm oracle reads the published TikTok counter; votes and winner selection run through DareBay. tikwm is not the official TikTok API and the counter alone does not prove that every manipulation was detected. Moderation can reject invalid work.
 3. **The amount is recorded from the result.** When a contest closes, the platform calculates a credit or creates a payout obligation. Fulfilment then follows payout details and statuses.
 
 The participant pays no deposit or entry fee. Withdrawing an available balance has a fee, minimum and manual processing.

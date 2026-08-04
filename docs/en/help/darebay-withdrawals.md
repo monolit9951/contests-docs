@@ -8,7 +8,7 @@ seo: true
 
 # DareBay withdrawals - fee, minimum and timing
 
-An available DareBay balance is withdrawn by submitting a request. The minimum request is **10 USDT**, and the platform fee is **10% of the requested amount**. Requests are processed manually, so there is no fixed promise of settlement “within minutes”.
+An available DareBay balance is withdrawn by submitting a request. The minimum request is **10 USDT**, and the default platform fee is **10% of the requested amount**. A personal fee override may apply; the form shows the exact rate before confirmation. Requests are processed manually, so there is no fixed promise of settlement “within minutes”.
 
 Entering a contest is free. The current fee to create or top up a contest is 0%; the withdrawal fee is a separate operation after a reward has been credited.
 

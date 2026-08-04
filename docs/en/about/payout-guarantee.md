@@ -14,8 +14,8 @@ DareBay secures payout obligations through the intermediary and guarantor mechan
 
 The payout guarantee on DareBay rests on four steps:
 
-1. **The organizer locks the budget.** When creating a contest, the organizer funds the prize amount. The money is tied to that specific contest. Creating and topping up a contest currently carry a 0% fee.
-2. **An independent oracle counts the views.** DareBay pulls the data straight through platform APIs (TikTok today). No screenshots, nobody taken at their word, only the platform's own numbers. Inflated views do not survive that count: whatever the platform writes off as bots never reaches the payout.
+1. **The funding mode is recorded.** A wallet-backed contest locks its money prize. A manual-payout contest has no platform lock or wallet involvement: the organizer pays creators directly. Creating and topping up a contest currently carry a 0% fee.
+2. **An independent oracle counts the views.** DareBay reads the published counter through the configured tikwm provider. tikwm is not the official TikTok API, and DareBay does not claim that this counter alone detects every kind of manipulation.
 3. **The amount is recorded from the result.** When a contest ends, the platform calculates a credit or creates a payout obligation in proportion to validated views. Fulfilment follows payout details and statuses.
 4. **The remainder comes back.** If the budget is not spent in full (few participants or few views), the unused part goes back to the organizer.
 
@@ -23,7 +23,7 @@ The participant pays no deposit or entry fee. Withdrawing an available balance h
 
 ## Why the money cannot disappear
 
-The prize is not held in the organizer's account. Once the contest is created, the funds sit on the platform and are tied to that specific contest. The organizer cannot spend them on something else, cannot delete the account and walk off with the money, and cannot cancel the contest after the start. The platform will not let that budget go anywhere either, except to payouts for that contest.
+In a wallet-backed contest, the prize sits in the platform wallet and is tied to that contest. In a manual-payout contest, the funds remain outside DareBay and the organizer must fulfil the recorded obligation directly. The product shows which mode applies.
 
 The platform acts as intermediary and guarantor by recording the budget, result and obligation history. Manual fulfilment and withdrawal remain separate status-driven stages.
 
@@ -35,7 +35,7 @@ Creating and topping up a contest currently carry a 0% fee. Withdrawing an avail
 
 ### Who holds the money while a contest runs?
 
-The platform. Once the contest is created, the budget is locked on DareBay and tied to that specific contest. The organizer cannot take it back or redirect it before the contest ends. The platform works as an intermediary and guarantor.
+For a wallet-backed contest, the platform wallet holds the locked budget. For a manual-payout contest, nobody deposits the wallet-backed prize with DareBay: the organizer remains the direct payer and DareBay records the obligation and status.
 
 ### What if there are few views?
 
@@ -43,7 +43,7 @@ If a submission clears the view threshold, it is paid for every validated view b
 
 ### Can views be faked?
 
-No. Views are pulled through platform APIs (TikTok today). DareBay does not accept screenshots and does not take anyone at their word. Fake views that the platform itself removed never reach the payout. More on fraud protection: [fake submissions](/en/help/protection-from-view-fraud).
+The configured tikwm oracle reads the published TikTok counter; it is not the official TikTok API and is not a promise to identify every manipulated view. Moderation can still reject invalid work. More on fraud protection: [fake submissions](/en/help/protection-from-view-fraud).
 
 ### Does DareBay take a commission from the winner?
 

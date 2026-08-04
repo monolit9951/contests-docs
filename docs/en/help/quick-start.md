@@ -32,8 +32,9 @@ or payout obligation. Fulfilment through payout details and statuses can be manu
 ## If you want to take part
 
 Browse the active contests, read the terms, send in your work (text, image or
-video) and wait for the selection stage. The prize was locked on the platform
-before you even showed up. After a win, the platform records the amount and status;
+video) and wait for the selection stage. A wallet-backed prize was locked on the
+platform before you even showed up; a manual-payout prize remains the organizer's
+direct payment obligation. After a win, the platform records the amount and status;
 transfer or withdrawal is a separate stage.
 
 → [**Submit your work**](/en/help/submit-your-work)

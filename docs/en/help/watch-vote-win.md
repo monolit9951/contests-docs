@@ -17,9 +17,9 @@ entered into.
 
 ## Like (or dislike)
 
-Reactions matter. In **RANDOM** contests the system picks winners from the
-most-liked submissions. A like is not just "nice one": it is a vote that narrows
-the pool.
+Reactions matter in **VIEWER_VOTING** contests, where they determine the tally.
+In **RANDOM** contests, likes neither filter nor weight the seeded draw among
+prize-eligible ACTIVE works.
 
 ## Comment
 
@@ -31,7 +31,7 @@ fastest way to lose an account.
 
 If a contest runs on **VIEWER_VOTING**, every submission gets a vote button
 during the selection stage. One vote per account per contest. Vote totals decide
-the winner, and the money for their payout is already locked on the platform.
+the winner, and the wallet-backed money for their payout is already locked on the platform.
 
 Inflated voting, sockpuppets, coordinated inauthentic campaigns: submissions get
 removed and accounts get banned for it. Your viewer rating goes down with them.

@@ -1,28 +1,28 @@
 ---
 title: What beginners are paid for clips on DareBay
-description: Beginners on DareBay earn the same rate per 1000 views as everyone else - from $0.30, median $0.50. No followers required, a 2000-view threshold.
-provenance: { snapshot_date: "2026-07-10", source: "darebay-prod" }
+description: Beginners on DareBay earn the same rate per 1000 views as everyone else - from $0.08, median $0.50. No followers required, a 2000-view threshold.
+provenance: { snapshot_date: "2026-08-04", source: "darebay-prod" }
 numbers_used: [ppv_min_views_threshold_live, ppv_cpm_min, ppv_cpm_median, ppv_max_per_work_typical]
 seo: true
 ---
 
 # What beginners are paid for clips on DareBay
 
-A beginner earns the same rate as everyone else: a rate per 1000 views. Across live contests that rate is **$0.50 per 1000 views**. Followers are not required, so you can enter with an empty account and your very first clip. One condition applies to the payout: your submission has to reach **2000 views**. The buyer freezes the prize money on the platform before the contest opens and the rate is fixed, so you see the terms before you pick up a camera and nobody rewrites them afterwards.
+A beginner earns the same rate as everyone else: a rate per 1000 views. Across live contests that rate is **$0.50 per 1000 views**. Followers are not required, so you can enter with an empty account and your very first clip. One condition applies to the payout: your submission has to reach **2000 views**. In wallet-backed mode, the buyer freezes the prize money on the platform before the contest opens; in manual-payout mode, the organizer pays creators directly. The rate is fixed, so you see the terms before you pick up a camera.
 
-Every figure on this page comes from the platform's own data (snapshot: 2026-07-10).
+Every figure on this page comes from the platform's own data (snapshot: 2026-08-04).
 
 ## A worked example for a beginner
 
-You submit a clip to a contest paying $0.50 per 1000 views with a $50 cap per submission.
+You submit a clip to a contest paying $0.50 per 1000 views with a $100 cap per submission.
 
 The formula: `(views / 1000) * the contest rate`, capped at the limit.
 
 - The clip gets 5,000 views: 5,000 / 1000 * $0.50 = **$2.50**
 - The clip gets 20,000 views: 20,000 / 1000 * $0.50 = **$10.00**
-- The clip gets 100,000 views: 100,000 / 1000 * $0.50 = $50.00, and with a **$50** cap the payout is **$50.00**
+- The clip gets 100,000 views: 100,000 / 1000 * $0.50 = **$50.00**, below the **$100** cap
 
-The cap per submission in typical contests is **$50**. You can send several clips to several contests, and each one is counted on its own. The rate and the cap are locked before the contest opens; from there, reach decides the amount.
+The cap per submission in typical contests is **$100**. You can send several clips to several contests, and each one is counted on its own. The rate and the cap are locked before the contest opens; from there, reach decides the amount.
 
 ## What a beginner needs to start
 
@@ -30,9 +30,9 @@ The cap per submission in typical contests is **$50**. You can send several clip
 |------|-------------|
 | Followers | Not needed. Zero followers is not a problem |
 | View threshold | **2000 views** on a specific submission, the minimum before anything is paid |
-| Minimum rate | From **$0.30** per 1000 views (the low end across live contests) |
+| Minimum rate | From **$0.08** per 1000 views (the low end across live contests) |
 | Typical rate | **$0.50** per 1000 views (the median across live contests) |
-| Cap per submission | Up to **$50** per submission (the typical figure) |
+| Cap per submission | Up to **$100** per submission (the typical figure) |
 | A social account | TikTok, YouTube or wherever you publish the clip |
 | A DareBay account | Signing up is free |
 
@@ -44,10 +44,10 @@ The cap per submission in typical contests is **$50**. You can send several clip
 2. Open the contest catalogue and pick a subject that suits you; the rate, the threshold and the cap are all on the card
 3. Film your video (a clip, a review, a reaction) to the terms of the brief and publish it with the required hashtag
 4. Send DareBay the link to the published video, which is how the work enters the contest
-5. Views are pulled automatically from the social platform's API, so neither you nor the buyer types figures in by hand
+5. Views are pulled automatically from the published TikTok counter through the configured tikwm oracle, so neither you nor the buyer types figures in by hand
 6. The contest closes, your submission has cleared the threshold (**2000 views**), and the platform records a credit or payout obligation
 
-The platform acts as intermediary and guarantor: the budget is frozen before the contest opens and the terms are fixed. The organizer cannot change the rate or take the money back after launch.
+The platform acts as intermediary and guarantor: the wallet-backed budget is frozen before the contest opens and the terms are fixed. The organizer cannot change the rate or take the wallet-backed money back after launch.
 
 ## Why this suits a beginner
 
@@ -69,7 +69,7 @@ No. There is no minimum follower count anywhere in the rules. You can start from
 
 ### What will a beginner actually make?
 
-Run the formula. At the typical $0.50 per 1000 views, a clip with 10,000 views brings $5 and one with 50,000 brings $25. The cap per submission in typical contests is **$50**, and you can enter several contests in parallel, each paying out on its own.
+Run the formula. At the typical $0.50 per 1000 views, a clip with 10,000 views brings $5 and one with 50,000 brings $25. The cap per submission in typical contests is **$100**, and you can enter several contests in parallel, each paying out on its own.
 
 ### How do I start with no experience?
 
@@ -87,7 +87,7 @@ obligation; fulfilment can be processed manually.
 
 ### Is the minimum rate too low?
 
-The minimum rate is **$0.30** per 1000 views and the typical (median) one is **$0.50**. The organizer sets it, it is on the card before you submit, and which contest you enter is your call.
+The minimum rate is **$0.08** per 1000 views and the typical (median) one is **$0.50**. The organizer sets it, it is on the card before you submit, and which contest you enter is your call.
 
 ## Where to next
 

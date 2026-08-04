@@ -1,16 +1,16 @@
 ---
 title: How to set up a clipping contest on DareBay
 description: A step-by-step guide to setting up a pay-per-view contest - how to choose the rate, the threshold and the cap, lock the budget and get the remainder back.
-provenance: { snapshot_date: "2026-07-10", source: "darebay-prod" }
+provenance: { snapshot_date: "2026-08-04", source: "darebay-prod" }
 numbers_used: [ppv_default_min_views_threshold, ppv_min_views_threshold_live, ppv_max_per_work_typical]
 seo: true
 ---
 
 # How to set up a clipping contest on DareBay
 
-A clipping contest is promotion you pay for by results. You fund the budget and set three parameters: the rate per 1000 views, the threshold and the cap per submission. The platform locks the money, clippers upload their videos and send in the links, and every payout is worked out by formula from views counted independently of you and of them. The budget is protected the whole time: DareBay holds it as an intermediary and guarantor, and whatever does not reach the creators comes back to you.
+A clipping contest is promotion you pay for by results. You fund the budget and set three parameters: the rate per 1000 views, the threshold and the cap per submission. In the wallet-backed mode, the platform locks the money and returns what is unused; in the manual-payout mode, no money enters the DareBay wallet and you pay creators directly. Clippers upload their videos and send in the links, and every amount due is worked out by formula from independently counted views.
 
-Every figure on this page comes from the platform's own data (snapshot: 2026-07-10).
+Every figure on this page comes from the platform's own data (snapshot: 2026-08-04).
 
 ## Step by step
 
@@ -24,11 +24,11 @@ The threshold filters out submissions with a handful of views: a video that does
 
 ### 3. Set the cap per submission
 
-The cap limits the maximum a single submission can receive. The typical value across live contests is **$50**. The cap keeps the budget in your hands: if a video goes viral and pulls a million views, without a limit it takes everything. With a cap, that submission gets its maximum and the rest is spread across other creators or comes back to you. The cap is the only parameter you can adjust after launch.
+The cap limits the maximum a single submission can receive. The typical value across live contests is **$100**. The cap keeps the budget in your hands: if a video goes viral and pulls a million views, without a limit it takes everything. With a cap, that submission gets its maximum and the rest is spread across other creators or comes back to you. The cap is the only parameter you can adjust after launch.
 
 ### 4. Lock the budget
 
-The full budget is locked on the platform when the contest is created. DareBay holds it as an intermediary and guarantor: the money is tied to that one contest, it cannot be taken back before the end, and the clippers can see the payout is covered. That is why a funded task gets picked up faster than a promise to pay after posting.
+In the wallet-backed mode, the full budget is locked on the platform when the contest is created. DareBay holds it as an intermediary and guarantor: the wallet-backed money is tied to that one contest, it cannot be taken back before the end, and the clippers can see the payout is covered. The manual-payout mode works differently: no money enters the DareBay wallet, and the organizer pays creators directly.
 
 ### 5. Clippers upload their work
 
@@ -52,7 +52,7 @@ Whatever does not reach the creators returns to the organizer balance.
 |-----------|--------------------------------|---------------|
 | Rate per 1000 views | set by the organizer | What you pay for every thousand counted views |
 | View threshold | 2000 (system default is 1000) | The minimum views for a submission to take part in the split |
-| Cap per submission | $50 | The maximum payout for a single submission |
+| Cap per submission | $100 | The maximum payout for a single submission |
 
 You set the rate, the threshold and the cap yourself when creating the contest. The exact set of fields is shown on the contest creation screen.
 
@@ -72,7 +72,7 @@ The cap protects the budget from a situation where one video takes everything. I
 
 ### What if nobody enters?
 
-If no submission was made, or none cleared the view threshold, the whole budget goes back to the organizer. Locked money is never burned and never stays with the platform.
+If no submission was made, or none cleared the view threshold, the whole budget goes back to the organizer. Locked wallet-backed money is never burned and never stays with the platform.
 
 ### When does the remaining budget come back?
 

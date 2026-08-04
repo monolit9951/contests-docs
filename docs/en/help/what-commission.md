@@ -8,7 +8,7 @@ seo: true
 
 # What fees DareBay charges
 
-DareBay applies different terms to different operations. Creating a contest and topping up its budget currently carry a **0% fee** for fiat, USDT and COINS. The platform fee applies when an available balance is withdrawn: **10% of the requested amount**, with a **10 USDT minimum** request. Store purchases are a separate flow with an **8% fee**.
+DareBay applies different terms to different operations. Creating a contest and topping up its budget currently carry a **0% fee** for fiat, USDT and COINS. The default platform fee when an available balance is withdrawn is **10% of the requested amount**, with a **10 USDT minimum** request. A personal fee override may apply; the form shows the exact rate before confirmation. Store purchases are a separate flow with an **8% fee**.
 
 Entering a contest remains free. There is no charge to register, submit work or be included in the results.
 

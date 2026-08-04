@@ -47,15 +47,17 @@ The balance is shown in whichever currency you picked for display, and it is hel
 in the one you put in. Conversion happens only where it is genuinely needed, with
 no hidden operations.
 
-## The prize pool gets locked
+## Wallet-backed and manual-payout contests
 
-When you publish a contest, the reward leaves your available balance for a locked
-state tied to that contest. Locked money cannot be spent on anything else, pulled
-back or recalled: it already belongs to the result. That is why participants can
-see the reward is really there and get to work.
+In a **wallet-backed contest**, the reward leaves the organizer's available balance
+for a locked state tied to that contest. That locked money cannot be spent elsewhere.
+In a **manual-payout contest**, no money enters DareBay and the platform wallet is not
+involved: the organizer pays creators directly using the payout details and statuses
+recorded by DareBay. Check the funding mode on the contest before participating.
 
-Cancel the contest before it starts and the lock comes off: the funds return to
-your available balance. Contest creation and budget top-ups currently carry no fee.
+For a wallet-backed contest cancelled before it starts, the lock comes off and the
+funds return to the available balance. Contest creation and budget top-ups currently
+carry no fee.
 
 ## Commission
 

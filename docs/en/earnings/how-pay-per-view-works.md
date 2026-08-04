@@ -8,7 +8,7 @@ seo: true
 
 # How pay-per-view works on DareBay
 
-Pay-per-view works like this: the organizer records a funded budget, clippers publish content, and the platform counts views through source APIs and calculates each amount by formula. After checks, the creator receives a credit or payout obligation with a status. Fulfilment can be manual: calculating the result and transferring money are different stages.
+Pay-per-view works like this: the organizer records a funded budget, clippers publish content, and the platform counts views from the published TikTok counter through the configured tikwm oracle and calculates each amount by formula. After checks, the creator receives a credit or payout obligation with a status. Fulfilment can be manual: calculating the result and transferring money are different stages.
 
 Every figure on this page comes from the platform's own data (snapshot: 2026-07-11).
 
@@ -16,11 +16,11 @@ Every figure on this page comes from the platform's own data (snapshot: 2026-07-
 
 Here is everything that happens between the contest being created and the money arriving:
 
-1. **The organizer locks the budget.** When creating a PPV contest they set the parameters (rate, threshold, cap) and freeze the whole budget on the platform. The money leaves the organizer's balance and is tied to that contest. It cannot be withdrawn before the contest ends.
+1. **The organizer locks the budget in wallet-backed mode.** When creating a PPV contest they set the parameters (rate, threshold, cap) and freeze the whole budget on the platform. The money leaves the organizer's balance and is tied to that contest. It cannot be withdrawn before the contest ends.
 
 2. **Clippers publish their work and send the link.** Creators take the task, film, and publish on TikTok with the required hashtag (the task names the platform). Then each one sends DareBay the link to their video: only then does the submission enter the contest.
 
-3. **The oracle counts views.** The platform pulls view data through the platforms' APIs and checks it for inflation. More on this in [how views are counted](/en/earnings/how-views-are-counted).
+3. **The oracle counts views.** The platform pulls view data from the published TikTok counter through the configured tikwm oracle and checks it for inflation. More on this in [how views are counted](/en/earnings/how-views-are-counted).
 
 4. **A deterministic split by formula.** When the contest ends, the system computes each submission's payout: `views / 1000 * rate`. Submissions below the minimum view threshold take no part in the split. The per-submission cap limits the maximum.
 
@@ -34,7 +34,7 @@ Here is everything that happens between the contest being created and the money 
 |-----------|-------|---------------|
 | Median rate | $0.50 per 1000 views | The typical rate across live contests |
 | View threshold | 2000 views | Typical in live contests; the exact figure is the organizer's |
-| Cap per submission | $50 | Typical in live contests; the maximum one submission can earn |
+| Cap per submission | $100 | Typical in live contests; the maximum one submission can earn |
 | Selection window | 24 hours | Time for the organizer to review submissions after entries close |
 | Confirmation window | 48 hours (2 days) | Time to confirm results before the payout |
 
@@ -42,13 +42,13 @@ The organizer sets the rate, threshold and cap when creating the contest and can
 
 ## A worked example
 
-Say an organizer creates a contest with a $200 budget, a rate of $0.50 per 1000 views, a threshold of 2000 views and a $50 cap per submission. Three clippers enter:
+Say an organizer creates a contest with a $200 budget, a rate of $0.50 per 1000 views, a threshold of 2000 views and a $100 cap per submission. Three clippers enter:
 
-- **Creator A:** at 120,000 views the maths is 120,000 / 1000 * $0.50 = $60. The cap is $50, so they receive **$50**.
+- **Creator A:** at 120,000 views the maths is 120,000 / 1000 * $0.50 = **$60**, below the $100 cap.
 - **Creator B:** at 40,000 views, 40,000 / 1000 * $0.50 = $20. Below the cap, so they receive **$20**.
 - **Creator C:** at 1500 views the 2000 threshold is not met, so the submission **takes no part** in the split.
 
-Paid out: $50 + $20 = $70. The remaining $130 returns to the organizer.
+Paid out: $60 + $20 = $80. The remaining $120 returns to the organizer.
 
 The cap applies per submission: several different videos can be entered, and each is counted on its own.
 
@@ -56,7 +56,7 @@ The cap applies per submission: several different videos can be entered, and eac
 
 The **threshold** (2000 views) filters out submissions with minimal reach. Without it the budget would spread across hundreds of entries that got 10 to 50 views each. With it, the money goes to content people actually watch.
 
-The **cap** ($50 per submission) stops one creator taking the whole budget. If a single clip goes viral to a million views, without a cap it would eat the entire pool. With one, everything above the limit returns to the organizer.
+The **cap** ($100 per submission) stops one creator taking the whole budget. If a single clip goes viral to a million views, without a cap it would eat the entire pool. With one, everything above the limit returns to the organizer.
 
 More on this in [the view threshold](/en/earnings/view-threshold).
 
@@ -64,7 +64,7 @@ More on this in [the view threshold](/en/earnings/view-threshold).
 
 ### Who counts the views?
 
-The platform pulls them through the source platform's API, which today is TikTok. Neither the organizer nor the participant types a number in by hand. It is an independent count that neither side can adjust.
+The platform pulls them from the published TikTok counter through the configured tikwm oracle. Neither the organizer nor the participant types a number in by hand. It is an independent count that neither side can adjust.
 
 ### What if someone inflates their views?
 

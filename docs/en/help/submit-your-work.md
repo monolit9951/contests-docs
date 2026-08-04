@@ -6,7 +6,7 @@ description: How to submit work on DareBay. In pay-per-view contests post the vi
 # Submit your work
 
 Submitting work on DareBay is faster than reading the instructions for it. By the
-time you get there the prize is already locked on the platform, so you are
+time you get there the wallet-backed prize is already locked on the platform, so you are
 working for money that is definitely there.
 
 ## 1. Find a contest that fits
@@ -50,9 +50,9 @@ hashtag alone is not enough: the platform does not scan social networks looking
 for videos and will not find your work on its own. Posting and waiting means
 getting nothing.
 
-Views are then counted by the oracle: the platform pulls them through the social
-network's API. Neither the organizer nor you type any numbers in by hand, and
-nobody can inflate them in their own favor.
+Views are then counted by the configured tikwm oracle, which reads the published
+TikTok counter. tikwm is not the official TikTok API; neither party types the
+number in by hand, and moderation can reject an invalid submission.
 
 ### Contests where you upload the work
 
@@ -79,7 +79,7 @@ happens next is decided by the selection type:
 
 ## 5. If you win
 
-You get a notification. The money for a **MONEY** prize is already locked in the
+You get a notification. Money for a wallet-backed **MONEY** prize is already locked in the
 contest; it moves onto your balance. Entry is free, while [withdrawal](/en/help/darebay-withdrawals)
 is a separate request with a minimum, fee and manual processing. The form shows
 the available method. For an **ITEM** prize the organizer gets in touch to arrange

@@ -1,6 +1,6 @@
 ---
 title: For brands - commission UGC and pay only for views
-description: How a brand runs a clipping contest on DareBay. The budget is locked up front, you pay only for real views, and whatever is left comes back.
+description: How a brand runs a clipping contest on DareBay using wallet-backed funding or direct organizer-paid manual payout.
 ---
 
 # For brands

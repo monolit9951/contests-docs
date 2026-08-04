@@ -1,25 +1,25 @@
 ---
 title: How views are counted for the payout
-description: The DareBay view oracle reads figures straight from the platform API. Which views drive a payout, how inflated views are cut out, cap and threshold.
-provenance: { snapshot_date: "2026-07-10", source: "darebay-prod" }
+description: The DareBay view oracle reads figures from the published TikTok counter through the configured tikwm oracle. Which views drive a payout, how inflated views are cut out, cap and threshold.
+provenance: { snapshot_date: "2026-08-04", source: "darebay-prod" }
 numbers_used: [ppv_max_cpm_rate, ppv_min_views_threshold_live]
 seo: true
 ---
 
 # How views are counted for the payout
 
-The views behind a payout are counted neither by the organizer nor by the author, but by the oracle: an independent counter that reads the figures straight from the platform's API (today that is TikTok). Neither side can nudge it, and both see the same number. Inflated views do not get through it, because a submission with bot dynamics is pulled from the contest outright. Buying views adds nothing to the payout and costs you the whole submission.
+The views behind a payout are counted neither by the organizer nor by the author. The configured tikwm oracle reads the published TikTok counter, so both sides see the same source figure and neither types it in by hand. tikwm is not the official TikTok API, and the counter alone is not proof that every manipulation has been detected. Moderation can reject a submission whose activity or content is invalid.
 
 ## What the view oracle is
 
 The oracle is the platform component that acts as an independent counter. It:
 
-1. Connects to the platform's API (today that is TikTok) and pulls the real view figures for each submission.
+1. Reads the published TikTok counter through the configured tikwm oracle for each submission.
 2. Reads how the views accumulate and compares that against organic patterns.
 3. Catches anomalies, such as a sharp spike within minutes or views without engagement, and sends that submission for review.
 4. Feeds the figures into the maths: for confirmed submissions the payout is computed from the platform's counter.
 
-Neither the organizer nor the participant influences the figure the oracle records. The platform acts as intermediary and guarantor: the money is frozen in advance and the payout follows the oracle's data strictly.
+Neither the organizer nor the participant influences the figure the oracle records. The platform acts as intermediary and guarantor: the wallet-backed money is frozen in advance and the payout follows the oracle's data strictly.
 
 ## Counted and uncounted views
 
@@ -62,7 +62,7 @@ Suspicious submissions get reviewed separately. Once inflation is confirmed, the
 
 ### How does the platform verify views?
 
-The oracle connects to the platform's API (today TikTok) and pulls the data directly. Nobody types figures in by hand, not the organizer and not the participant. The count is independent and automated.
+The configured tikwm oracle reads the published TikTok counter. Nobody types figures in by hand, not the organizer and not the participant. The count is independent and automated.
 
 ### What happens if I inflate my views?
 
@@ -94,4 +94,4 @@ Yes. The validator refuses any rate above $100 per 1000 views. It is a technical
 - [The view threshold](/en/earnings/view-threshold) - default, median, and how organizers set it
 - [How it works](/en/how-it-works) - an overview of the DareBay mechanic
 - [Does DareBay really pay?](/en/about/does-darebay-really-pay) - how the payout guarantee works
-- [The payout guarantee](/en/about/payout-guarantee) - more on how the budget is locked
+- [The payout guarantee](/en/about/payout-guarantee) - more on how the wallet-backed budget is locked

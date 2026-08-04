@@ -43,14 +43,15 @@ One format per contest, no mixing.
 
 ## 6. How the winner is picked
 
-One of three selection types:
+One of four selection types:
 
-- **RANDOM**: a random pick among the most liked entries at the end. Good for
-  light giveaway campaigns.
+- **RANDOM**: a seeded draw among prize-eligible ACTIVE works. Likes do not
+  filter or weight the draw. Good for light giveaway campaigns.
 - **CREATOR_DECISION**: you pick the winner yourself after the deadline. Good
   when quality is subjective and you trust your own taste.
 - **VIEWER_VOTING**: the community votes and the top of the tally wins. Good if
   you want the contest to be about the community.
+- **ORACLE_ATTESTED_POOL**: validated views feed the pay-per-view formula.
 
 The selection type is locked in at creation: once published, it cannot be
 changed.
@@ -65,7 +66,7 @@ The contest defines the reward method. This does not mean that a credited balanc
 withdrawn automatically through every method in that list: fulfilment can be manual, and the
 balance-withdrawal wizard shows its available rails separately.
 
-A money prize is locked the moment you publish: it leaves your balance and
+A wallet-backed money prize is locked the moment you publish: it leaves your balance and
 belongs to the result until the contest ends. You cannot pull it back, which is
 exactly why participants get to work.
 

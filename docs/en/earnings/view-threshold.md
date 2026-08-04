@@ -1,16 +1,16 @@
 ---
 title: The view threshold for a DareBay payout
 description: How many views a submission needs to join the budget split in a PPV contest. The live median is 2000 views and the system default is 1000.
-provenance: { snapshot_date: "2026-07-10", source: "darebay-prod" }
+provenance: { snapshot_date: "2026-08-04", source: "darebay-prod" }
 numbers_used: [ppv_min_views_threshold_live, ppv_default_min_views_threshold, ppv_cpm_median]
 seo: true
 ---
 
 # The view threshold for a DareBay payout
 
-To join the budget split of a DareBay PPV contest, a submission has to reach a minimum number of views: the threshold. Across live contests the median threshold is **2000 views**. Below that, nothing is paid for the submission. The organizer sets the threshold when creating the contest, and leaving the field blank puts the system default of **1000 views** in place. The exact figure sits on the contest card and does not move after launch: the budget is frozen and the split rules are fixed before the contest opens.
+To join the wallet-backed budget split of a DareBay PPV contest, a submission has to reach a minimum number of views: the threshold. Across live contests the median threshold is **2000 views**. Below that, nothing is paid for the submission. The organizer sets the threshold when creating the contest, and leaving the field blank puts the system default of **1000 views** in place. The exact figure sits on the contest card and does not move after launch: the wallet-backed budget is frozen and the split rules are fixed before the contest opens.
 
-Every figure on this page comes from the platform's own data (snapshot: 2026-07-10).
+Every figure on this page comes from the platform's own data (snapshot: 2026-08-04).
 
 ## Why a threshold exists
 
@@ -60,7 +60,7 @@ The submission takes no part in the split and earns nothing. Your account is unt
 
 ### Are all views counted, or only unique ones?
 
-The system reads the counter of the platform the work was published on, today TikTok, through its API. Inflated views do not get through that counter: a submission with bot dynamics is pulled from the contest outright rather than paid in part.
+The system reads the counter of the platform the work was published on, today TikTok, from its published counter through the configured tikwm oracle. Inflated views do not get through that counter: a submission with bot dynamics is pulled from the contest outright rather than paid in part.
 
 ### Can an organizer set a very high threshold?
 
@@ -76,7 +76,7 @@ It is expressed in views and does not depend on the platform. Which platforms ar
 
 ### Is the budget refunded if nobody reaches it?
 
-Yes. If no submission clears the threshold, the whole budget returns to the organizer. The platform works as intermediary and guarantor: the money is frozen, not lost.
+Yes. If no submission clears the threshold, the whole budget returns to the organizer. The platform works as intermediary and guarantor: the wallet-backed money is frozen, not lost.
 
 ## Where to next
 

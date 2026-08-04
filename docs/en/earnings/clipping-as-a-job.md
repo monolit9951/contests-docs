@@ -1,18 +1,18 @@
 ---
 title: Clipping as a job - how to earn from video clips
-description: How to become a clipper and get paid for clips. Rates from $0.30 to $1.00 per 1000 views, no follower requirement. The terms and the workflow on DareBay.
-provenance: { snapshot_date: "2026-07-10", source: "darebay-prod" }
+description: How to become a clipper and get paid for clips. Rates from $0.08 to $1.00 per 1000 views, no follower requirement. The terms and the workflow on DareBay.
+provenance: { snapshot_date: "2026-08-04", source: "darebay-prod" }
 numbers_used: [ppv_cpm_min, ppv_cpm_max, ppv_cpm_median, ppv_default_min_views_threshold, ppv_min_views_threshold_live, ppv_max_per_work_typical]
 seo: true
 ---
 
 # Clipping as a job - how to earn from video clips
 
-A clipper takes a task on the platform, films a short video (a stream clip, a review, a challenge), publishes it on TikTok, YouTube Shorts or Instagram Reels with the required hashtag and sends in the link. The pay is for real views: from **$0.30**<!-- baseline: ppv_cpm_min --> to **$1.00 per 1000 views**<!-- baseline: ppv_cpm_max -->. Followers and experience are not needed, because the money follows the reach of one specific clip. The budget is frozen on the platform before the work starts, so the buyer cannot walk away without paying.
+A clipper takes a task on the platform, films a short video (a stream clip, a review, a challenge), publishes it on TikTok, YouTube Shorts or Instagram Reels with the required hashtag and sends in the link. The pay is for real views: from **$0.08**<!-- baseline: ppv_cpm_min --> to **$1.00 per 1000 views**<!-- baseline: ppv_cpm_max -->. Followers and experience are not needed, because the wallet-backed money follows the reach of one specific clip. In a wallet-backed contest, the budget is frozen on the platform before the work starts; a manual-payout contest instead leaves the organizer responsible for paying creators directly.
 
 ## A worked example
 
-Say you take a task at $0.50<!-- baseline: ppv_cpm_median --> per 1000 views and cut a stream clip. The clip reaches 30,000 counted views, above the threshold. The maths: 30,000 / 1000 * $0.50<!-- baseline: ppv_cpm_median --> = **$15** for one submission. The cap per submission in current contests is $50<!-- baseline: ppv_max_per_work_typical -->, well above this example, so the whole amount is paid out. Plenty of contests allow several submissions: three clips at the same reach is already $45.
+Say you take a task at $0.50<!-- baseline: ppv_cpm_median --> per 1000 views and cut a stream clip. The clip reaches 30,000 counted views, above the threshold. The maths: 30,000 / 1000 * $0.50<!-- baseline: ppv_cpm_median --> = **$15** for one submission. The cap per submission in current contests is $100<!-- baseline: ppv_max_per_work_typical -->, well above this example, so the whole amount is paid out. Plenty of contests allow several submissions: three clips at the same reach is already $45.
 
 You know the rate before you open the editor, because it is always on the contest card. After that the reach of the clip decides the figure.
 
@@ -29,18 +29,18 @@ You know the rate before you open the editor, because it is always on the contes
 
 | Parameter | Value | What it means |
 |-----------|-------|---------------|
-| Rate (range) | $0.30<!-- baseline: ppv_cpm_min --> - $1.00<!-- baseline: ppv_cpm_max --> per 1000 views | The buyer sets the rate when creating the task. You see it before you submit |
+| Rate (range) | $0.08<!-- baseline: ppv_cpm_min --> - $1.00<!-- baseline: ppv_cpm_max --> per 1000 views | The buyer sets the rate when creating the task. You see it before you submit |
 | View threshold (default) | 1000 views<!-- baseline: ppv_default_min_views_threshold --> | The minimum for a submission to join the budget split |
 | Live threshold on the platform | 2000 views<!-- baseline: ppv_min_views_threshold_live --> | The actual threshold in current DareBay contests |
 | Audience requirement | None | No follower minimum, account age does not matter |
 | Cost of taking part | Free | There is no entry charge; withdrawing a credited balance has separate terms |
 
-Every figure on this page comes from the platform's own data (snapshot: 2026-07-10).
+Every figure on this page comes from the platform's own data (snapshot: 2026-08-04).
 
 ## Why this is safe
 
 The platform works as intermediary and guarantor. The buyer records the budget against the task
-and cannot pull it back before the contest ends. Views are counted through source-platform APIs,
+and cannot pull it back before the contest ends. Views are counted from the published TikTok counter through the configured tikwm oracle,
 not entered by the buyer. The result creates a stored credit or payout obligation; fulfilment
 through payout details and statuses can be manual.
 
@@ -52,7 +52,7 @@ No. Followers do not affect the payment. You are paid for the views of one speci
 
 ### How much can I earn?
 
-Run the formula `rate * views / 1000`, capped at the per-submission limit. Rates across live contests run from $0.30<!-- baseline: ppv_cpm_min --> to $1.00<!-- baseline: ppv_cpm_max --> per 1000 views, and you see the rate up front. After that the figure follows the reach of your clips and the number of tasks you take.
+Run the formula `rate * views / 1000`, capped at the per-submission limit. Rates across live contests run from $0.08<!-- baseline: ppv_cpm_min --> to $1.00<!-- baseline: ppv_cpm_max --> per 1000 views, and you see the rate up front. After that the figure follows the reach of your clips and the number of tasks you take.
 
 ### How do I get the money?
 

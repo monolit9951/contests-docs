@@ -14,21 +14,21 @@ Yes, DareBay fulfils payouts. The platform acts as intermediary and guarantor: i
 
 The intermediary and guarantor mechanic works in three steps:
 
-1. **The organizer locks the budget when creating the contest.** The money is charged to the organizer balance and held on the platform. After publishing, the organizer cannot get it back or redirect it.
-2. **An independent party counts the results.** The platform pulls views straight through platform APIs (TikTok today). Votes and the winner selection also run through the platform. Neither the organizer nor the participant can adjust the numbers, and inflated views are written off at the source, so they never reach the payout.
+1. **The funding mode is recorded when the contest is created.** Wallet-backed funds are charged and locked on the platform. A manual-payout contest has no platform lock or wallet transfer: the organizer pays creators directly.
+2. **An independent party counts the results.** The configured tikwm oracle reads the published TikTok counter; votes and winner selection run through DareBay. tikwm is not the official TikTok API and the counter alone does not prove that every manipulation was detected. Moderation can reject invalid work.
 3. **The winner's amount is recorded.** When a contest ends, the platform calculates a credit or creates a payout obligation from validated results. Fulfilment then runs manually through payout details and statuses.
 
 The participant pays no deposit or entry fee. Withdrawing an available balance is a separate paid operation.
 
 ## Why the money cannot disappear
 
-The prize is not held in the organizer's account. Once the contest is created, the money sits on the platform and is tied to that specific contest. Neither the organizer nor the platform spends those funds on anything else: the budget stays attached to the contest until it ends and goes only to payouts for it.
+In a wallet-backed contest, the prize is charged from the organizer balance, held by the platform and tied to that contest. A manual-payout contest works differently: no money enters the DareBay wallet and the organizer remains responsible for paying creators directly.
 
-From there the prize is split by the rule the organizer locked in before the start:
+From there the wallet-backed prize is split by the rule the organizer locked in before the start:
 
-- **Pay-per-view contests.** The views of each submission are counted through platform APIs and the budget is split in proportion to validated views.
+- **Pay-per-view contests.** The views of each submission are counted from the published TikTok counter through the configured tikwm oracle and the budget is split in proportion to validated views.
 - **Contests with a vote or a jury pick.** Once the results are in, the platform records the winner's amount; fulfilment can be manual.
-- **Random selection.** A fair draw among all the participants decides.
+- **Random selection.** A seeded draw selects from prize-eligible ACTIVE works; likes neither filter nor weight the draw.
 
 If a contest ends with no participants or with an unspent remainder, that money goes back to the organizer. No balance is ever left hanging between the two sides.
 
@@ -61,7 +61,7 @@ A contest can define USDT, fiat, a physical item, Telegram Stars or a gift. For 
 
 ### What if the organizer changes their mind about paying?
 
-The budget is already recorded and the result determines the amount. In a manual flow, the platform keeps the obligation and status; a delayed fulfilment can be escalated to support.
+In a wallet-backed contest, the budget is already locked. In a manual-payout contest, the platform records the obligation and status but the organizer remains responsible for direct payment; a delay can be escalated to support.
 
 ### Do I have to pay to withdraw my winnings?
 
@@ -69,7 +69,7 @@ Yes. Withdrawing an available balance has a 10% fee, a 10 USDT minimum request a
 
 ### How are the results counted for the payout?
 
-Views are pulled through platform APIs (TikTok today), straight from the source with nobody in between. Votes and the winner selection also run through the platform. Neither side can adjust the numbers. More on that: [is DareBay legit](/en/about/is-darebay-legit).
+The configured tikwm oracle reads the published TikTok counter, so neither side types it in by hand. tikwm is not the official TikTok API and the counter alone is not a guarantee against every manipulation; moderation can reject invalid work. More on that: [is DareBay legit](/en/about/is-darebay-legit).
 
 ## The bottom line
 

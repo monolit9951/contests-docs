@@ -1,12 +1,22 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "verifiedAt": "2026-08-04",
   "source": {
-    "repository": "Contests",
-    "branch": "release",
-    "verifiedCommit": "9fa45592116560c6afa7009b503fdb4550f3de9c",
-    "configFile": "src/main/resources/application.properties",
-    "manualPayoutRunbook": "docs/MANUAL_PAYOUTS_ADMIN.md",
+    "backend": {
+      "repository": "Contests",
+      "branch": "release",
+      "localPath": "/root/code/Contests",
+      "verifiedCommit": "9fa45592116560c6afa7009b503fdb4550f3de9c",
+      "configFile": "src/main/resources/application.properties",
+      "manualPayoutRunbook": "docs/MANUAL_PAYOUTS_ADMIN.md"
+    },
+    "truthPack": {
+      "repository": "darebay-seo-fleet",
+      "branch": "master",
+      "localPath": "/root/code/darebay-seo-fleet",
+      "verifiedCommit": "3ac522e807b482aff68c12cdd664947f22ffaf8b",
+      "file": "data/product-facts.md"
+    },
     "properties": {
       "contestCreationFiatPercent": "app.config.contest.commission.fiat.percentage",
       "contestCreationCryptoPercent": "app.config.contest.commission.crypto.percentage",
@@ -14,16 +24,26 @@
       "storeCommissionPercent": "app.config.store.commission.percentage",
       "withdrawalMinimum": "neptune.wallet.withdrawal.min-amount",
       "withdrawalCommissionPercent": "neptune.wallet.withdrawal.commission-percentage",
-      "manualPayoutsEnabled": "neptune.manual-payouts.enabled"
-    },
-    "notes": {
-      "topUpCommission": "Verified against the active funding flow and the zero contest-commission configuration.",
-      "processing": "The release runbook states that payout fulfilment can be manual; result calculation and money transfer are separate stages."
+      "manualPayoutsEnabled": "neptune.manual-payouts.enabled",
+      "tiktokTikwmEnabled": "tiktok.api.tikwm.enabled"
     }
   },
   "contest": {
     "creationCommissionPercent": 0,
-    "topUpCommissionPercent": 0
+    "topUpCommissionPercent": 0,
+    "fundingModes": {
+      "walletBacked": {
+        "prizeFundsLocked": true,
+        "platformWalletInvolved": true
+      },
+      "manualPayout": {
+        "enabled": true,
+        "prizeFundsLocked": false,
+        "platformWalletInvolved": false,
+        "payer": "ORGANIZER_DIRECT",
+        "processing": "manual"
+      }
+    }
   },
   "store": {
     "commissionPercent": 8
@@ -31,7 +51,8 @@
   "withdrawal": {
     "minimumGrossAmount": 10,
     "minimumCurrency": "USDT",
-    "commissionPercent": 10,
+    "defaultCommissionPercent": 10,
+    "perUserOverrideSupported": true,
     "processing": "manual",
     "fixedSettlementSla": null,
     "wizardMethods": [
@@ -49,6 +70,42 @@
       "ITEM"
     ],
     "automaticBalanceWithdrawalRails": false
+  },
+  "balances": {
+    "withdrawableCurrency": "USDT",
+    "coinsPurpose": "OFF_CHAIN_GAMIFICATION"
+  },
+  "ppv": {
+    "liveCpm": {
+      "minimum": 0.08,
+      "median": 0.5,
+      "maximum": 1
+    },
+    "defaultMinimumViews": 1000,
+    "liveMedianMinimumViews": 2000,
+    "typicalMaxPerWork": 100
+  },
+  "selection": {
+    "types": [
+      "RANDOM",
+      "VIEWER_VOTING",
+      "CREATOR_DECISION",
+      "ORACLE_ATTESTED_POOL"
+    ],
+    "random": {
+      "seeded": true,
+      "eligibleVisibility": "ACTIVE",
+      "likesFilter": false
+    }
+  },
+  "submissionAttribution": {
+    "channel": "URL_SUBMIT_ONLY",
+    "hashtagAutoImport": false,
+    "accountConnectionRequired": false
+  },
+  "tiktokOracle": {
+    "provider": "tikwm",
+    "officialTikTokApi": false
   },
   "onChainEscrow": {
     "live": false

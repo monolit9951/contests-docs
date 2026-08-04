@@ -112,13 +112,16 @@ laundering, child safety) mean an instant ban with no warning.
 
 By publishing a contest, you undertake to:
 
-- Fund the **full prize amount** at the moment of publication. The prize
-  is locked in the wallet and cannot be spent on anything else.
+- Choose the funding mode shown at publication. In a **wallet-backed** contest,
+  the full wallet-backed money prize is locked in the wallet and cannot be spent elsewhere.
+  In a **manual-payout** contest, no money enters the platform and no wallet lock
+  exists: the Organizer pays the winner directly using the recorded payout details.
 - Honour the **selection method you chose**:
-  - **RANDOM** - the works with the most likes are picked automatically;
+  - **RANDOM** - a seeded random draw runs over all prize-eligible **ACTIVE** works;
   - **CREATOR_DECISION** - you pick the winners manually within the
     selection window;
-  - **VIEWER_VOTING** - community votes decide the result.
+  - **VIEWER_VOTING** - community votes decide the result;
+  - **ORACLE_ATTESTED_POOL** - validated view counts determine formula payouts.
 - Honour the **rules** you wrote into the contest terms.
 - Deliver any **ITEM** prize within the agreed timeframe after
   the winner is confirmed.
@@ -135,10 +138,9 @@ By sending in a work, you confirm that:
 
 - The work is **yours** or you have permission to submit it.
 - It matches the contest brief and these Terms.
-- For **imported works** from TikTok, Instagram or YouTube you
-  are the author of the source video or you have the author's
-  permission. Ownership must be confirmed through the account connection
-  flow before the work counts.
+- For a social-video submission, you submit its **URL** through the contest flow.
+  Hashtag discovery does not import a work, and connecting a social account is not
+  an attribution channel. You must still be the author or have the author's permission.
 - One work per Participant per contest, unless the brief allows
   more.
 
@@ -188,8 +190,9 @@ the available methods are shown in the app at the moment of purchase.
 
 Every DareBay account has a wallet that tracks:
 
-- The **available** balance - Coins you can spend or withdraw.
-- The **locked** balance - Coins tied to active contests.
+- The **USDT available balance** used for wallet-backed money operations and withdrawals.
+- The **USDT locked balance** tied to wallet-backed active contests.
+- **COINS**, an off-chain gamification unit; it is not a withdrawable USDT balance.
 - The history of all top-ups, contest funding, prizes
   received, commissions and withdrawals.
 
@@ -199,7 +202,7 @@ An available balance is withdrawn by submitting a separate request. At the
 last-updated date:
 
 - The minimum request is **10 USDT**.
-- The fee is **10% of the requested amount**; the calculation is shown before confirmation.
+- The default fee is **10% of the requested amount**; a personal fee override may apply, and the exact calculation is shown before confirmation.
 - The withdrawal wizard offers USDT to an external wallet on TON and Telegram Stars.
 - Requests are processed manually; no fixed or instant settlement time is guaranteed.
 - Identity verification applies where the law requires it.
@@ -274,7 +277,7 @@ At the last-updated date, different operations have different terms:
 
 - Creating a contest and topping up its budget: **0%**.
 - A store purchase: **8%**.
-- Withdrawing an available balance: **10%**, with a **10 USDT** minimum request.
+- Withdrawing an available balance: default **10%**, with a **10 USDT** minimum request; a personal fee override may apply.
 
 The applicable fee and resulting amount are shown before an operation is confirmed.
 Verification level does not by itself change these rates. Current terms are published under

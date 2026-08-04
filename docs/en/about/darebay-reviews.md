@@ -1,6 +1,6 @@
 ---
 title: DareBay reviews, payout mechanics and commission
-description: What DareBay is, why the prize is locked before the start, how payouts work through an intermediary and guarantor, and what the commission is.
+description: What DareBay is, how wallet-backed and manual-payout contests differ, how obligations are recorded, and what the current fees are.
 provenance: { snapshot_date: "2026-08-04", source: "darebay-prod" }
 seo: true
 ---
@@ -14,18 +14,18 @@ DareBay is a platform where brands and ordinary people launch activities (tasks,
 Three groups of users:
 
 - **Clippers and content creators.** You take a task from the feed, film a video in your own style, post it with the required hashtag and send in the link. Clear the view threshold and you get paid. No agency, no follower minimum.
-- **Brands and buyers.** You write the task, put up the budget, the platform locks it. You pay only for a real result (views, votes, a jury pick). Whatever is left comes back.
+- **Brands and buyers.** You write the task and choose its funding mode. A wallet-backed budget is locked; in a manual-payout contest you remain responsible for paying creators directly.
 - **Experimenters.** Anyone with a budget can commission content for themselves: a challenge among friends, a personal contest. Same mechanic, personal use.
 
 ## How the money is protected
 
 The first question in any review of any platform is "will I get burned?". Here is how that is settled:
 
-1. **The prize is locked before publishing.** The organizer sees the budget amount and confirms the charge. The money moves to the platform account, and from that point the organizer cannot spend it elsewhere.
-2. **An independent party counts the results.** The platform pulls views straight through the TikTok API, votes are counted on the platform. Neither the organizer nor the participant can adjust the numbers, and inflated views are written off by TikTok itself, so they never reach the payout.
+1. **The funding mode is visible before publishing.** A wallet-backed prize is charged and locked on the platform. A manual-payout contest has no platform lock: the organizer pays creators directly.
+2. **An independent party counts the results.** The configured tikwm oracle reads the published TikTok counter; votes are counted on DareBay. tikwm is not the official TikTok API and the counter alone does not prove that every manipulation was detected. Moderation can reject invalid work.
 3. **The platform records the obligations.** When a contest closes, the result determines each creator's amount. Payout fulfilment then runs manually through payout details and statuses.
 
-The platform is the intermediary and guarantor between buyer and creator. It holds the budget during the contest, counts the result independently and records the payout obligations.
+The platform records the funding mode, counts the result independently and keeps payout obligations. It holds funds only in wallet-backed contests; manual-payout funds never enter the platform wallet.
 
 ## Commission
 
@@ -35,11 +35,11 @@ Creating a contest and topping up its budget currently carry no fee. Once the re
 
 ### Is DareBay a scam?
 
-No. The prize is locked before the contest starts. The organizer cannot take the money back after publishing. The payout follows the counted results. The platform works as an intermediary and guarantor, not as a "wallet full of promises".
+The product records the funding mode and obligation. A wallet-backed prize is locked before the contest starts; a manual-payout prize remains a direct organizer obligation and is not held by DareBay.
 
 ### What if the organizer refuses to pay?
 
-They already paid. The money was locked on the platform the moment the contest was created, and there is no route back for it. The organizer takes no part in the payout: it follows the results without them.
+In a wallet-backed contest, the prize was already locked. In a manual-payout contest, the organizer has not prefunded DareBay and must fulfil the recorded obligation directly; delays can be disputed and escalated through the payout status.
 
 ### How do I withdraw my winnings?
 
@@ -51,7 +51,7 @@ Not always. A contest may define fiat, Telegram Stars, a gift or another reward 
 
 ### Who counts the views?
 
-The platform pulls the data through platform APIs (TikTok today). Neither the organizer nor the participant can influence the count. More on that: [what stops fake submissions](/en/help/protection-from-view-fraud).
+The configured tikwm oracle reads the published TikTok counter, so neither side types the number in by hand. tikwm is not the official TikTok API, and moderation can reject invalid work. More on that: [what stops fake submissions](/en/help/protection-from-view-fraud).
 
 ### What is the minimum prize amount?
 
@@ -63,4 +63,4 @@ Yes. There is no minimum audience. What counts is the result (views, the quality
 
 ## The bottom line
 
-DareBay is not a freelance marketplace and not a lottery. It is a platform with a mechanic you can follow: the budget is locked, an independent party counts the results, and obligations are recorded by the contest rules. The operation terms are transparent and listed under [current DareBay fees](/en/help/what-commission). If you still have questions, look through the [FAQ section](/en/help/).
+DareBay is not a freelance marketplace and not a lottery. It is a platform with a mechanic you can follow: wallet-backed funds are locked, manual-payout obligations stay with the organizer, an independent party counts the results, and the contest rules record the obligations. The operation terms are listed under [current DareBay fees](/en/help/what-commission).

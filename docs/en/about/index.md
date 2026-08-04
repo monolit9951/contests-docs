@@ -1,6 +1,6 @@
 ---
 title: About DareBay
-description: The project was founded by Ruslan Bey. How tasks and payouts work, why the prize stays locked until the task ends, and where the numbers come from.
+description: The project was founded by Ruslan Bey. How wallet-backed and manual-payout tasks work, and where the numbers in this section come from.
 ---
 
 # About DareBay
@@ -27,8 +27,7 @@ The buyer cannot take it back or spend it elsewhere after launch. The platform c
 result and stores a credit or payout obligation with a status; fulfilment through payout details
 can be manual.
 
-Nobody counts the views by hand. DareBay pulls the numbers straight from the API of the
-platform the video was posted on, and inflated views do not survive that count: whatever the
+Nobody counts the views by hand. DareBay pulls the numbers from the published TikTok counter through the configured tikwm oracleplatform the video was posted on, and inflated views do not survive that count: whatever the
 platform itself writes off as bots never reaches the reward.
 
 The rate, the view threshold and the per-submission cap are stated in the task itself, before

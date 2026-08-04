@@ -1,6 +1,6 @@
 ---
 title: Quick start on DareBay
-description: Launch your first activity, send in your first entry, or just watch and vote. The whole loop takes minutes.
+description: "Pick a role and start in minutes: launch an activity, submit work, or watch and vote. Payout fulfilment follows later statuses."
 ---
 
 <div class="docs-cover">
@@ -23,9 +23,9 @@ work and your wallet stay with you in both.
 
 ## If you want to launch a contest
 
-Put up the prize, write the terms, publish. The budget is locked on the platform
-straight away, entries come in, a winner is picked, and the money goes to them.
-The fastest way to get the content you need made to order.
+Put up the prize, write the terms, publish. The budget is recorded on the platform
+straight away, entries come in, a winner is picked, and the platform stores a credit
+or payout obligation. Fulfilment through payout details and statuses can be manual.
 
 → [**Create your first contest**](/en/help/your-first-contest)
 
@@ -33,7 +33,8 @@ The fastest way to get the content you need made to order.
 
 Browse the active contests, read the terms, send in your work (text, image or
 video) and wait for the selection stage. The prize was locked on the platform
-before you even showed up: win it and you get it.
+before you even showed up. After a win, the platform records the amount and status;
+transfer or withdrawal is a separate stage.
 
 → [**Submit your work**](/en/help/submit-your-work)
 
@@ -47,8 +48,8 @@ outcome without submitting a single entry.
 ## Read this before you start
 
 - **[Prizes and payouts](/en/help/prizes-and-payouts)**: what people put up as a
-  reward (money or an item) and how it reaches the winner. Money arrives to a
-  wallet (USDT on TON), to a bank card, by bank transfer, in Telegram Stars or
-  as a gift, whichever suits you.
+  reward (money or an item), how the result is recorded and how manual fulfilment
+  works. The contest defines its reward method; the balance-withdrawal wizard
+  separately shows available USDT and Telegram Stars options.
 - **[Verification and trust](/en/help/verification)**: what the badge on an
   account means and why it matters to everyone dealing with it.

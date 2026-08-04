@@ -1,35 +1,35 @@
 ---
 title: The DareBay payout guarantee - how a contest budget is protected
-description: How DareBay guarantees the payout for views. The budget is locked on the platform, an independent oracle counts the views, the prize goes to winners.
-provenance: { snapshot_date: "2026-07-09", source: "darebay-prod" }
-numbers_used: [commission_strategy]
+description: How DareBay records the budget and obligations, independently counts results, and manually fulfils payouts and withdrawals.
+provenance: { snapshot_date: "2026-08-04", source: "darebay-prod" }
+numbers_used: [withdrawal_min_amount, withdrawal_commission]
 seo: true
 ---
 
 # The DareBay payout guarantee - how a contest budget is protected
 
-DareBay guarantees the payout for views through the intermediary and guarantor mechanic. The prize is locked on the platform the moment a contest is created, and from then on the organizer cannot take the money back. An independent oracle counts the views straight through platform APIs, and the budget goes to the winners by those validated results. Neither the organizer nor the participant can adjust the numbers. Below we go through exactly how the mechanic works and what happens in each scenario.
+DareBay secures payout obligations through the intermediary and guarantor mechanic. The budget is recorded against the contest, an independent oracle counts the views, and validated results create a credit or payout obligation. Fulfilment can be manual; this is not a promise of an instant automatic transfer.
 
 ## How the budget is protected
 
 The payout guarantee on DareBay rests on four steps:
 
-1. **The organizer locks the budget.** When creating a contest, the organizer pays in the full prize amount. The money is locked on the platform and tied to that specific contest. The commission is withheld at the same moment: it is a percentage of the prize amount, charged when the contest is created. After publishing, the organizer cannot return or redirect the funds.
+1. **The organizer locks the budget.** When creating a contest, the organizer funds the prize amount. The money is tied to that specific contest. Creating and topping up a contest currently carry a 0% fee.
 2. **An independent oracle counts the views.** DareBay pulls the data straight through platform APIs (TikTok today). No screenshots, nobody taken at their word, only the platform's own numbers. Inflated views do not survive that count: whatever the platform writes off as bots never reaches the payout.
-3. **The prize goes to the winners by results.** When a contest ends, the platform splits the budget in proportion to validated views. The organizer's consent is not part of it: they take no part in the payout and cannot stop it.
+3. **The amount is recorded from the result.** When a contest ends, the platform calculates a credit or creates a payout obligation in proportion to validated views. Fulfilment follows payout details and statuses.
 4. **The remainder comes back.** If the budget is not spent in full (few participants or few views), the unused part goes back to the organizer.
 
-The participant risks nothing: no deposit, no entry fee, no withdrawal fee.
+The participant pays no deposit or entry fee. Withdrawing an available balance has a fee, minimum and manual processing.
 
 ## Why the money cannot disappear
 
 The prize is not held in the organizer's account. Once the contest is created, the funds sit on the platform and are tied to that specific contest. The organizer cannot spend them on something else, cannot delete the account and walk off with the money, and cannot cancel the contest after the start. The platform will not let that budget go anywhere either, except to payouts for that contest.
 
-The platform acts as an intermediary and guarantor: it holds the money and releases it strictly by the results of an independent count. That is not a promise on paper, it is a mechanic built into the system.
+The platform acts as intermediary and guarantor by recording the budget, result and obligation history. Manual fulfilment and withdrawal remain separate status-driven stages.
 
 ## Commission
 
-The commission is a percentage of the prize amount, charged when the contest is created. The organizer pays it. The winner receives the full prize amount with nothing withheld. DareBay charges nothing for withdrawals either. More on the rates: [what commission DareBay takes](/en/help/what-commission).
+Creating and topping up a contest currently carry a 0% fee. Withdrawing an available balance has a 10% fee and a 10 USDT minimum; requests are processed manually. See [current DareBay fees](/en/help/what-commission).
 
 ## Frequently asked questions
 
@@ -47,20 +47,20 @@ No. Views are pulled through platform APIs (TikTok today). DareBay does not acce
 
 ### Does DareBay take a commission from the winner?
 
-No. The commission is a percentage of the prize amount, charged when the contest is created, and it is paid by the organizer. The winner receives the full amount. More on that: [what commission DareBay takes](/en/help/what-commission).
+Entry is free. The contest result records the winner's amount, but a later balance withdrawal has a 10% fee. See [current DareBay fees](/en/help/what-commission).
 
 ### What if the organizer deletes their account?
 
-The budget is already locked on the platform and the organizer has no access to it. Deleting the account does not affect the payout: the contest ends on schedule and the prize goes to the winners.
+The platform stores the budget and obligations separately from organizer access. An account problem does not erase the status; manual fulfilment is tracked through the payout record.
 
 ### Where does the payout arrive?
 
-Wallet (USDT on TON), card, bank transfer, a physical item, Telegram Stars, Telegram gifts. Every one of them works and pays out, and you never need a wallet: card and bank transfer work just as well. More on withdrawals: [how to withdraw your winnings](/en/help/darebay-withdrawals).
+A contest can define USDT, fiat, a physical item, Telegram Stars or a gift. For an available-balance withdrawal, the form offers USDT to an external wallet or Telegram Stars; other rewards can be fulfilled manually. See [how withdrawals work](/en/help/darebay-withdrawals).
 
 ### How fast does the money arrive after a contest ends?
 
-The payout starts as soon as the results are finalized. The wallet is the fastest route, card and bank transfer arrive on standard banking timelines. Nobody "reviews" a request first: the prize is already on the platform with the winner's name on it.
+Finalization records a credit or obligation. Fulfilment and withdrawal are processed manually, so there is no guaranteed “instant” or “within minutes” timeline. The product shows the status.
 
 ## The bottom line
 
-The payout guarantee on DareBay is not a promise, it is a mechanic. The budget is locked when the contest is created, the views are counted by an independent oracle through platform APIs, and the prize goes to the winners by those results without the organizer touching it. The commission is a percentage of the prize amount, charged when the contest is created, and the organizer pays it, not the participant. The reward can reach you by wallet, card, bank transfer, Telegram Stars or gifts, and every one of those routes works. For more on the platform, see the [FAQ section](/en/help/), the breakdown of [does DareBay really pay](/en/about/does-darebay-really-pay), or the overview of [is DareBay a scam](/en/about/is-darebay-a-scam).
+The DareBay guarantee is a recorded budget, independent calculation and stored credit or obligation. Contest creation currently carries no fee; withdrawal has a minimum, fee and manual processing. See the [FAQ section](/en/help/), [does DareBay really pay](/en/about/does-darebay-really-pay), or [is DareBay a scam](/en/about/is-darebay-a-scam).

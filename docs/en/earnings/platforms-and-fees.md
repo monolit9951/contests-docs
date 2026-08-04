@@ -8,9 +8,9 @@ description: Comparisons of UGC and contest platforms - what they charge, who ho
 Comparisons of UGC and contest platforms: what they charge, what the payout terms are, who holds
 the money until the split. And where DareBay sits in all of it - honestly, on the numbers.
 
-What sets DareBay apart: the buyer's budget is locked on the platform before the contest opens,
-views are counted independently, and the payout follows a formula fixed before anyone starts
-filming. The whole mechanic is in [how it works](/en/how-it-works).
+What sets DareBay apart: the buyer's budget is recorded before the contest opens, views are
+counted independently, and the amount or obligation follows a formula fixed before filming.
+Fulfilment can be manual. The whole mechanic is in [how it works](/en/how-it-works).
 
 ## Pages in this section
 

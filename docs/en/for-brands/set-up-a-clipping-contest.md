@@ -38,9 +38,9 @@ Once the contest is live, creators take the task, film the content and post it o
 
 The views come from the platform the video was published on and are checked for view fraud: bot views are not counted, and a submission with bought views loses its payout entirely. Neither you nor the creator types the number in. More on that: [how views are counted for the payout](/en/earnings/how-views-are-counted).
 
-### 7. The split runs automatically
+### 7. The formula determines each amount
 
-The budget is split by the formula: `views / 1000 * rate`. Submissions below the threshold take no part, submissions above the cap receive the cap. Each clipper gets their share to a wallet, a card or another method, and you never wire anything creator by creator.
+The platform records each obligation using `views / 1000 * rate`. Submissions below the threshold take no part, and submissions above the cap receive the cap. Payout fulfilment then runs manually through payout details and statuses; an automatic transfer immediately after counting is not promised.
 
 ### 8. The remainder comes back
 
@@ -58,7 +58,7 @@ You set the rate, the threshold and the cap yourself when creating the contest. 
 
 ## Cost and commission
 
-There is no separate charge for creating a contest. The platform takes a commission: it is calculated on the prize amount and paid on top of the budget, so the prize pool goes to the clippers in full. The exact amount is on screen during contest creation, before you pay, and nothing is charged behind your back. For the rates by payment method, see [what commission DareBay takes](/en/help/what-commission); for the full pay-per-view model, see [how to pay clippers per view](https://darebay.com/en/for-brands/paying-clippers-per-view).
+Creating a contest and topping up its budget currently carry no fee: the organizer funds the prize budget. Store terms and a creator's later balance withdrawal are separate operations; see [current DareBay fees](/en/help/what-commission). For the full pay-per-view model, see [how to pay clippers per view](https://darebay.com/en/for-brands/paying-clippers-per-view).
 
 ## Frequently asked questions
 
@@ -93,8 +93,8 @@ The contest goes straight into the public catalogue on [DareBay](https://darebay
 ## Where to next
 
 - [How it works](/en/how-it-works) - an overview of the DareBay mechanic
-- [How to pay clippers per view](https://darebay.com/en/for-brands/paying-clippers-per-view) - the payment model: formula, commission, split without you
+- [How to pay clippers per view](https://darebay.com/en/for-brands/paying-clippers-per-view) - the payment model: formula, budget and manual payout fulfilment
 - [How pay-per-view works](/en/earnings/how-pay-per-view-works) - the full chain from budget to payout
 - [The view threshold for a payout](/en/earnings/view-threshold) - how the threshold works and why it exists
-- [What commission does DareBay take?](/en/help/what-commission) - commissions across every payment method
+- [What fees does DareBay charge?](/en/help/what-commission) - contest, store and withdrawal terms
 - [The payout guarantee](/en/about/payout-guarantee) - how the payout to clippers is secured

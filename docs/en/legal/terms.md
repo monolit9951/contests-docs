@@ -6,7 +6,7 @@ description: The DareBay rules. What we promise, what we expect from you, and wh
 # Terms of Use
 
 **Effective date:** 7 May 2026
-**Last updated:** 7 May 2026
+**Last updated:** 4 August 2026
 
 These Terms govern your use of **darebay.com**,
 the DareBay web app, our APIs and related services (together, the
@@ -63,8 +63,9 @@ the jury (except where the rules require us to step in), and
 Three optional levels - **BLOGGER**, **STORE**, **COMPANY** - give an
 account a verified badge once we (or our verification
 partner) have checked your identity or business documents.
-Verified accounts pay a lower commission and are more visible on the
-platform. Verification is not required in order to use the Service.
+Verified accounts receive the corresponding status and may be more visible on the
+platform. Verification does not by itself change the current fees and is not required
+in order to use the Service.
 
 ---
 
@@ -124,8 +125,9 @@ By publishing a contest, you undertake to:
 
 Once submissions have opened, a contest cannot be cancelled without our
 review and the consent of the Participants affected. Cancellations before
-submissions open return the money to the wallet (less the commission already
-taken - see [section 7](#_7-commission)).
+submissions open return the money to the wallet under the terms shown at
+confirmation. At the last-updated date, the contest-creation fee is 0% - see
+[section 7](#_7-fees).
 
 ### 4.3 Participant obligations
 
@@ -147,9 +149,9 @@ After a contest closes:
 1. The selection mechanism runs (or the Organizer picks,
    depending on the selection type).
 2. The winners are confirmed.
-3. The Coins prize moves out of the contest lock into the winners'
-   wallets.
-4. The commission is settled with the Operator.
+3. The platform records a credit or payout obligation for the winner.
+4. Fulfilment through the available payout details and statuses can be manual;
+   withdrawing an available balance is a separate operation.
 
 If the Organizer does not act within the selection window, fallback
 rules apply (usually an automatic win for the top of the rating, with possible
@@ -193,12 +195,14 @@ Every DareBay account has a wallet that tracks:
 
 ### 5.3 Withdrawals
 
-Withdrawing Coins (where the methods we provide are available) happens:
+An available balance is withdrawn by submitting a separate request. At the
+last-updated date:
 
-- Subject to a minimum withdrawal threshold (shown in the app).
-- With identity verification where the law requires it.
-- Within the timeframe of the chosen method.
-- With the fees disclosed before you confirm the withdrawal.
+- The minimum request is **10 USDT**.
+- The fee is **10% of the requested amount**; the calculation is shown before confirmation.
+- The withdrawal wizard offers USDT to an external wallet on TON and Telegram Stars.
+- Requests are processed manually; no fixed or instant settlement time is guaranteed.
+- Identity verification applies where the law requires it.
 
 We may suspend withdrawals to investigate suspicious
 activity or on a lawful demand. We will notify you and record the
@@ -264,17 +268,18 @@ who posted the content. Repeat infringers are banned.
 
 ---
 
-## 7. Commission
+## 7. Fees
 
-DareBay takes a commission on contests. It is:
+At the last-updated date, different operations have different terms:
 
-- **Deducted from the prize**, not added on top.
-- **Shown in your currency before you confirm**, no surprises.
-- **Lower for verified accounts**.
+- Creating a contest and topping up its budget: **0%**.
+- A store purchase: **8%**.
+- Withdrawing an available balance: **10%**, with a **10 USDT** minimum request.
 
-The exact rates and the discounts by verification level are set out in
-**[Quick start → What commission does DareBay take?](/en/help/what-commission)** and in the contest
-creation flow.
+The applicable fee and resulting amount are shown before an operation is confirmed.
+Verification level does not by itself change these rates. Current terms are published under
+**[Quick start → What commission does DareBay take?](/en/help/what-commission)** and in the
+relevant operation form.
 
 ---
 
@@ -335,8 +340,8 @@ to respond. In urgent cases (active fraud, illegal content)
 we act first and explain afterwards.
 
 On termination for cause we may withhold the un-withdrawn balance up to
-the amount of the fraud proceeds; on termination without cause the
-un-withdrawn balance is returned through your usual withdrawal methods.
+the amount of the fraud proceeds; on termination without cause, return
+follows the available payout details and statuses and can be processed manually.
 
 ---
 

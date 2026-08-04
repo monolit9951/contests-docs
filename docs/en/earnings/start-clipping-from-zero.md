@@ -43,7 +43,7 @@ Not needed: followers, channel verification, a partner programme, a portfolio, a
 4. **Publish it with the hashtag.** Upload to the platform (TikTok, YouTube Shorts) with the hashtag named in the contest.
 5. **Send the link.** Paste the link to the published video into the contest card on DareBay. Only then does the submission join the budget split: the hashtag alone will not get it picked up.
 6. **Get past the threshold.** The default is **1000 views**. Below it, the submission takes no part in the split.
-7. **Get paid.** When the contest ends the platform counts views through the platforms' APIs and splits the budget. The payout reaches you by wallet, card or another chosen method.
+7. **Receive a credit or obligation.** At contest close, the platform counts views and records the amount. Fulfilment can be manual.
 
 The platform acts as intermediary and guarantor: the budget is locked until results are settled and the view count is independent. The buyer cannot change the terms after launch.
 
@@ -79,11 +79,11 @@ Pick a contest with a simple, clearly stated task. Streamer clips need minimal e
 
 ### What does taking part cost?
 
-Nothing. The commission is paid by the buyer when the contest is created, never by the participant.
+Nothing. Entry is free, and contest creation currently carries no fee. A later withdrawal of a credited balance has separate terms.
 
 ### How does the money arrive?
 
-Wallet (USDT on TON), bank card, bank transfer, Telegram Stars and Telegram gifts. All five work, and you pick the one you want.
+The contest defines its reward method. The balance-withdrawal wizard offers USDT to an external wallet and Telegram Stars; the form shows the available option, and processing is manual.
 
 ### How are views counted?
 

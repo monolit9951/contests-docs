@@ -1,77 +1,60 @@
 ---
-title: DareBay commission - the exact rates by payment method
-description: DareBay's commission rates are known up front. Fiat 5%, wallet 8%, COINS 10%. The organizer pays it when creating a contest; the participant pays nothing.
-provenance: { snapshot_date: "2026-07-09", source: "darebay-prod" }
-numbers_used: [commission_fiat, commission_crypto, commission_coins, commission_strategy]
+title: DareBay fees - contests, store and withdrawals
+description: "Current DareBay fees: 0% to create or top up a contest, 8% for store purchases, and 10% to withdraw a balance with a 10 USDT minimum."
+provenance: { snapshot_date: "2026-08-04", source: "darebay-prod-config" }
+numbers_used: [contest_creation_commission, contest_topup_commission, store_commission, withdrawal_commission, withdrawal_min_amount]
 seo: true
 ---
 
-# What commission DareBay charges
+# What fees DareBay charges
 
-DareBay charges a commission once, to the organizer, at contest creation. The payment method sets the rate: fiat (card, bank transfer) is **5%**, the wallet (USDT on TON) is **8%**, and COINS, the in-app currency, is **10%**. The commission is a percentage of the prize amount, you see the exact figure before anything is charged, and it does not change afterwards. The participant, the clipper, pays nothing: not to enter, not to withdraw, not for anything else. The platform deducts nothing from the winner's payout.
+DareBay applies different terms to different operations. Creating a contest and topping up its budget currently carry a **0% fee** for fiat, USDT and COINS. The platform fee applies when an available balance is withdrawn: **10% of the requested amount**, with a **10 USDT minimum** request. Store purchases are a separate flow with an **8% fee**.
 
-> **Launch promo (since July 2026):** the first organizers pay no commission at all, 0% instead of the base rates. The base rates below stay on record and come back once the promo ends.
+Entering a contest remains free. There is no charge to register, submit work or be included in the results.
 
-## Commission rates by payment method
+## Current terms
 
-| Payment method | Rate | When it is charged |
-|---|---|---|
-| Fiat (card, bank transfer) | 5% of the prize amount | At contest creation |
-| Wallet (USDT on TON) | 8% of the prize amount | At contest creation |
-| COINS (internal currency) | 10% of the prize amount | At contest creation |
+| Operation | Fee | Important condition |
+|---|---:|---|
+| Create a contest | 0% | The organizer funds only the contest budget |
+| Top up a contest budget | 0% | No additional top-up fee |
+| Store purchase | 8% | Separate from contest fees |
+| Withdraw an available balance | 10% | Minimum request: 10 USDT |
 
-The commission is a one-off charge taken before the contest is published. After that the platform deducts nothing, neither at payout nor at withdrawal.
+Before confirmation, the form shows the requested amount, the fee and the amount to receive. The rate is recorded on the request, so an existing request is not repriced later if the public terms change.
 
-## How the commission works
+## How withdrawals are processed
 
-The commission is a percentage of the prize amount, and the organizer pays it when creating the contest. Here is how it works:
+A withdrawal is a separate step after a reward has been credited to the available balance. The user submits a request and the team processes it manually. DareBay therefore does not promise an automatic transfer or settlement “within minutes”. The product shows the request status; if it is delayed, contact support@darebay.com.
 
-1. **The organizer creates a contest and sets a budget.** The platform calculates the commission as a percentage of the prize amount and shows it before anything is confirmed.
-2. **The commission is charged immediately.** It comes off the organizer's balance together with the contest budget. Both amounts are frozen on the platform, and nobody can pull them back out until the contest ends.
-3. **Nothing is deducted from payouts.** When the contest ends, the prize goes out by results. The winner receives their amount with no deductions; in pay-per-view contests the payout follows the formula for counted views, and whatever budget is left over goes back to the organizer.
-
-The key point: the commission never comes out of the clipper's payout. If an organizer creates a 100 USDT contest through the wallet, they pay 8 USDT of commission on top of the budget. The winner receives all 100 USDT.
-
-## Why the rates differ
-
-The rates are fixed. The only variable is the payment method:
-
-- **Fiat (5%)** is the lowest rate.
-- **Wallet (8%)** sits in the middle.
-- **COINS (10%)** is the highest rate.
-
-You see the exact percentage at contest creation, before anything is charged. Want to pay less? Pay by fiat: it is the lowest of the three rates.
+Never send a separate payment to “unlock” a prize. The legitimate fee is calculated inside the withdrawal form and deducted from the requested amount; it is not an advance transfer to somebody else's address.
 
 ## Frequently asked questions
 
-### What commission does DareBay charge?
+### How much does it cost to create a contest?
 
-The payment method sets the rate: fiat (card, bank transfer) 5%, wallet (USDT on TON) 8%, COINS, the in-app currency, 10%. The organizer pays the commission when creating a contest. The participant pays nothing.
+The current contest-creation fee is 0% across supported payment methods. The organizer funds the prize budget that is assigned to that contest.
 
-### Why are the commission rates different for different methods?
+### Is there a fee to top up the budget?
 
-The rates are fixed, and the only variable is the payment method: fiat is the lowest (5%), COINS the highest (10%). The exact percentage is shown at contest creation, before anything is charged. If you want to pay less, choose fiat.
+No. Contest budget top-ups also carry a 0% fee.
 
-### Does DareBay charge a withdrawal commission?
+### Does DareBay charge participants?
 
-No. The commission is charged only to the organizer, only at contest creation. The winner receives the full prize amount with nothing deducted on withdrawal. More on withdrawals: [how to withdraw your winnings](/en/help/darebay-withdrawals).
+Entering is free. The 10% fee applies only when a user withdraws an available balance, and the minimum request is 10 USDT.
 
-### Are there hidden charges or surcharges?
+### Does the winner receive the whole credited reward?
 
-There are no hidden charges. The only commission is shown at contest creation and is charged immediately. Participants pay nothing to register, to enter, or to withdraw.
+Contest results determine what is credited to the balance. A separate 10% fee applies to a later withdrawal, so the credited reward and the amount received after withdrawal are not the same figure.
 
-### When is the commission charged?
+### Is the payout automatic?
 
-The commission is charged at the moment the contest is created, before it is published. It is calculated as a percentage of the prize amount and is charged together with the budget. More on how the freeze works: [does DareBay really pay](/en/about/does-darebay-really-pay).
+No. Withdrawal requests are processed manually. Do not rely on promises of instant settlement; the status in DareBay is the source for a specific request.
 
-### Is the commission deducted from the clipper payout?
+### Where do these terms come from?
 
-No. The organizer pays the commission at creation. The clipper (participant) receives the full prize amount that was frozen. The platform deducts nothing from the payout.
-
-### Can the commission be reduced?
-
-The base rates are 5% for fiat, 8% for the wallet, 10% for COINS. During the launch period the first organizers get a promo: 0% commission. The one permanent way to save is to pick a cheaper payment method.
+This page reflects the active product configuration on 4 August 2026. Operational terms are also shown before confirmation; if the public rates change, the form is authoritative for a new request.
 
 ## In short
 
-DareBay's commission is calculated before you pay and never changes after the fact: fiat 5%, wallet 8%, COINS 10% (with a 0% launch promo for the first organizers). It is charged once, to the organizer, at contest creation, and it is never deducted from the participant's payout. There are no hidden charges. The platform acts as intermediary and guarantor: the budget and the commission are frozen before the start, and the prize goes to the winners by the results of the contest. If you want to dig into other questions, browse the [FAQ section](/en/help/), read [is DareBay a scam](/en/about/is-darebay-a-scam), or find out [how to withdraw your winnings](/en/help/darebay-withdrawals).
+Contest creation and top-ups are currently free for organizers, and entering is free for creators. The store fee is 8%. Withdrawing an available balance has a 10 USDT minimum and a 10% fee, and requests are processed manually. See [how withdrawals work](/en/help/darebay-withdrawals), [prizes and payouts](/en/help/prizes-and-payouts), and [how DareBay secures payouts](/en/about/payout-guarantee).

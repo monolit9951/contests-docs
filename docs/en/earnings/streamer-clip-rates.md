@@ -74,11 +74,11 @@ They are pulled automatically from the TikTok API. The count is independent: nei
 
 ### How does the money arrive?
 
-You pick the method: wallet (USDT on TON), bank card, bank transfer, Telegram Stars or Telegram gifts. All of them pay out, and the wallet is one option among several rather than the only one.
+The contest defines its reward method. For balance withdrawal, the form offers USDT to an external wallet or Telegram Stars, and processing is manual.
 
 ### When does the payout arrive?
 
-Once the contest closes there is a results-confirmation window of a few days. Then the payout goes out by your chosen method. The money was locked in advance, and the platform holds it and guarantees the payout.
+After result confirmation, the platform records a credit or payout obligation. Fulfilment and withdrawal can be manual; the product shows the available method and status.
 
 ## Where to next
 

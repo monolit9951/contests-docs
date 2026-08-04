@@ -22,11 +22,10 @@ and nobody to ask. This one has a name, and someone who answers.
 
 ## How the money works
 
-The reward is funded by whoever posts the task, and it stays locked until the task ends. The
-buyer cannot take it back, spend it on something else or cancel the task once it is live: the
-prize sits with the platform, and the platform guarantees the payout. Neither side has to
-trust the other: a creator does not have to hope the buyer pays, and a buyer does not have to
-hope the creator really published.
+The reward is funded by whoever posts the task, and the budget is recorded against the contest.
+The buyer cannot take it back or spend it elsewhere after launch. The platform calculates the
+result and stores a credit or payout obligation with a status; fulfilment through payout details
+can be manual.
 
 Nobody counts the views by hand. DareBay pulls the numbers straight from the API of the
 platform the video was posted on, and inflated views do not survive that count: whatever the
@@ -36,8 +35,9 @@ The rate, the view threshold and the per-submission cap are stated in the task i
 a creator takes it on. There is no single platform-wide rate: it is set by whoever posts the
 task.
 
-Taking part is free for creators. The platform charges creators no fees, no deposits and
-nothing for access: it makes its money from the buyer.
+Taking part is free for creators: there is no entry fee, deposit or access charge.
+Withdrawing an already credited balance is a separate operation with a minimum, fee and manual
+processing; see the [current fee terms](/en/help/what-commission).
 
 ## Where the numbers come from
 

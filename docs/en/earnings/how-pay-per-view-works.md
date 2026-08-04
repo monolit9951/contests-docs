@@ -1,6 +1,6 @@
 ---
 title: How pay-per-view works on DareBay
-description: The mechanics of a DareBay PPV contest, from the locked budget to paying clippers by independently counted views. Formula, threshold, cap, timings.
+description: "The mechanics of DareBay pay-per-view: budget, independent counting, formula, credit or obligation, and manual fulfilment."
 provenance: { snapshot_date: "2026-07-11", source: "darebay-prod" }
 numbers_used: [ppv_cpm_median, ppv_min_views_threshold_live, ppv_max_per_work_typical, selection_creator_window_min, winner_confirmation_min]
 seo: true
@@ -8,7 +8,7 @@ seo: true
 
 # How pay-per-view works on DareBay
 
-Pay-per-view on DareBay works like this: the organizer locks a budget on the platform, clippers publish their content and send in the link, the platform counts the views through the platforms' APIs and splits the money by formula. Each creator gets a share proportional to their real views. The money is frozen until the results are settled: the organizer cannot take it back, there is nothing to negotiate, and the payout follows the counted views. The platform acts as intermediary and guarantor so neither side gets burned.
+Pay-per-view works like this: the organizer records a funded budget, clippers publish content, and the platform counts views through source APIs and calculates each amount by formula. After checks, the creator receives a credit or payout obligation with a status. Fulfilment can be manual: calculating the result and transferring money are different stages.
 
 Every figure on this page comes from the platform's own data (snapshot: 2026-07-11).
 
@@ -24,7 +24,7 @@ Here is everything that happens between the contest being created and the money 
 
 4. **A deterministic split by formula.** When the contest ends, the system computes each submission's payout: `views / 1000 * rate`. Submissions below the minimum view threshold take no part in the split. The per-submission cap limits the maximum.
 
-5. **The payout reaches the creators.** Each clipper receives their share via wallet, card or another chosen method. The organizer plays no part in it and cannot hold it up.
+5. **The creator amount is recorded.** The platform creates a credit or payout obligation. The available method and next status depend on the flow, and fulfilment can be manual.
 
 6. **The remainder goes back.** If the budget is not fully spent, because few people entered or submissions did not reach enough views, the unspent part returns to the organizer's balance.
 
@@ -72,11 +72,11 @@ The system checks views before the split. Suspicious spikes, whether bots or pur
 
 ### When does the money arrive?
 
-After the contest ends there is a selection window (up to 24 hours) and a confirmation window (up to 48 hours). Then the payout goes out. From entries closing to money in hand is no more than 3 days.
+After the contest ends, selection and confirmation windows run. The platform then records a credit or payout obligation. Fulfilment and withdrawal can be manual, so there is no guaranteed deadline from entries closing to money received.
 
 ### What payout methods are available?
 
-Wallet (USDT on TON), bank card, bank transfer, Telegram Stars and Telegram gifts. All five work, and you pick the one you want.
+The contest defines its reward method. For an available-balance withdrawal, the form offers USDT to an external wallet or Telegram Stars; other methods can be fulfilled manually.
 
 ### What if a contest gets no entries?
 
@@ -84,7 +84,9 @@ If no submission clears the view threshold, or there were no submissions at all,
 
 ### Can the organizer refuse to pay?
 
-No. The budget is frozen when the contest is created and the organizer takes no part in the payout. The platform works as intermediary and guarantor: the money is locked and the payout is guaranteed.
+The organizer cannot arbitrarily change the recorded formula or erase an existing obligation.
+The platform acts as intermediary and guarantor and stores the budget, result and payout status.
+Fulfilment through payout details can be manual and is not promised as an instant transfer.
 
 ### Is there a minimum to take part?
 
@@ -95,6 +97,6 @@ For a clipper there is none: taking part is free and there are no deposits. The 
 - [How it works](/en/how-it-works) - an overview of the DareBay mechanic
 - [How views are counted](/en/earnings/how-views-are-counted) - the oracle, validation and fraud protection
 - [The view threshold](/en/earnings/view-threshold) - default, median, and how organizers set it
-- [What commission does DareBay take?](/en/help/what-commission) - the platform's cut from the organizer
+- [What fees does DareBay charge?](/en/help/what-commission) - current terms by operation
 - [Does DareBay really pay?](/en/about/does-darebay-really-pay) - what backs the payout
 - [How winners are chosen](/en/help/how-winners-are-chosen) - selection types other than PPV

@@ -33,13 +33,16 @@ You know the rate before you open the editor, because it is always on the contes
 | View threshold (default) | 1000 views<!-- baseline: ppv_default_min_views_threshold --> | The minimum for a submission to join the budget split |
 | Live threshold on the platform | 2000 views<!-- baseline: ppv_min_views_threshold_live --> | The actual threshold in current DareBay contests |
 | Audience requirement | None | No follower minimum, account age does not matter |
-| Cost of taking part | Free | The commission is paid by the buyer, not the clipper |
+| Cost of taking part | Free | There is no entry charge; withdrawing a credited balance has separate terms |
 
 Every figure on this page comes from the platform's own data (snapshot: 2026-07-10).
 
 ## Why this is safe
 
-The platform works as intermediary and guarantor. The buyer freezes the budget when creating the task: the money sits on the platform and cannot be pulled back before the contest ends. Views are counted by the platform through the platforms' APIs, not by the buyer by hand. The payout goes around the organizer, who cannot hold it up. This is not "take our word for it", it is a mechanic in which the buyer physically cannot avoid paying for the views you earned.
+The platform works as intermediary and guarantor. The buyer records the budget against the task
+and cannot pull it back before the contest ends. Views are counted through source-platform APIs,
+not entered by the buyer. The result creates a stored credit or payout obligation; fulfilment
+through payout details and statuses can be manual.
 
 ## Frequently asked questions
 
@@ -53,11 +56,13 @@ Run the formula `rate * views / 1000`, capped at the per-submission limit. Rates
 
 ### How do I get the money?
 
-Wallet (USDT on TON), bank card, bank transfer, Telegram Stars and Telegram gifts. All five methods work, and you choose yours in settings.
+The contest defines its reward method. The balance-withdrawal wizard offers USDT to an external wallet and Telegram Stars; the form shows the available option, and processing is manual.
 
 ### Is it safe? Could I be scammed?
 
-The budget is frozen on the platform before the work starts. The buyer takes no part in the payout: the money is split by formula. The platform acts as intermediary and guarantor so that neither side gets scammed.
+The budget is recorded on the platform before the work starts. The result follows the formula,
+and the platform stores a credit or payout obligation. Fulfilment through payout details and
+statuses can be manual; it is not merely a promise from the buyer in a private chat.
 
 ### What is the view threshold?
 

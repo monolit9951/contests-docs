@@ -1,16 +1,14 @@
 ---
 title: Prizes and payouts
-description: How the reward works on DareBay. The budget is locked the moment a contest goes live, and the payout reaches the winner on a confirmed result.
+description: "How rewards work on DareBay: the budget is recorded at publication, the result is confirmed, and the credit or obligation gets a status."
 ---
 
 # Prizes and payouts
 
-DareBay is simple. You launch a task, people make their content, and the winners
-get their reward for it. The money is protected from minute one: the platform
-takes the prize pool into its own hands the moment the contest is published and
-releases it to the winner on a confirmed result. The organizer cannot change
-their mind, and the participant cannot be left unpaid. That is how it always
-works, and it cannot be switched off.
+DareBay is simple. You launch a task, people make their content, and the platform
+records the budget and confirmed result. The winner gets a credit or payout
+obligation with a status. Fulfilment through payout details and balance withdrawal
+are separate stages and can be processed manually.
 
 ## Where it works
 
@@ -25,8 +23,7 @@ Same DareBay, two equal doors.
 
 A reward is one of two things: **money** or **an item**.
 
-Money reaches the winner by any of these routes, and every one of them works
-today:
+A particular contest can define one of these reward methods:
 
 - **Wallet** (USDT on TON).
 - **Bank card.**
@@ -43,8 +40,8 @@ signed book for 2nd.
 
 ## Balance and topping up
 
-Every DareBay account has a balance. You top it up with a card, by bank transfer
-or from a wallet (USDT on TON). All of that works today.
+Every DareBay account has a balance. The funding screen shows its available options,
+which can include a card, bank transfer or USDT on TON.
 
 The balance is shown in whichever currency you picked for display, and it is held
 in the one you put in. Conversion happens only where it is genuinely needed, with
@@ -58,41 +55,37 @@ back or recalled: it already belongs to the result. That is why participants can
 see the reward is really there and get to work.
 
 Cancel the contest before it starts and the lock comes off: the funds return to
-your available balance (minus the commission already taken, see
-[commission](/en/help/what-commission)).
+your available balance. Contest creation and budget top-ups currently carry no fee.
 
 ## Commission
 
-The organizer pays the commission, once, when creating the contest. The rate is
-set by the payment method, and you see the exact amount in your currency before
-you confirm. Nothing is deducted from the winner's payout: they receive the full
-prize, and entering and withdrawing cost them nothing. Rates and the promo for
-early organizers: [commission](/en/help/what-commission).
+Creating a contest and topping up its budget currently carry no fee. Entry is
+free. After a reward is credited, withdrawing an available balance is a separate
+request with a fee, minimum and manual processing. See [current fees](/en/help/what-commission).
 
 ## Paying the winners
 
 The contest is over, the result is confirmed:
 
-- **Money** moves from the contest lock onto the winner's balance, and they take
-  it out the way they prefer: wallet, card, bank transfer, Telegram Stars, a
-  gift.
+- **Money** is calculated from the result. In wallet-backed flows the amount is
+  credited to the balance; in manual-payout contests the platform records the
+  obligation and payout details for fulfilment.
 - **Items and gifts**: both sides get a notification, and the organizer hands the
   reward over within the agreed time.
 
-Nobody has to ask, chase or wait on an organizer's goodwill. The money has been
-sitting on the platform since publication, and the payout follows an
-independently counted result.
+The amount follows an independently counted result. Fulfilment can be manual:
+follow the status and payout details in DareBay, and contact support@darebay.com
+if it is delayed.
 
-## Why the money gets there
+## How the obligation is protected
 
-DareBay acts as intermediary and guarantor. The reward sits on the platform from
-the moment the contest starts and goes to the winner on an independently counted
-result rather than on anyone's mood. There is nobody left to cheat: the organizer
-no longer holds that money, and the winner already does.
+DareBay acts as intermediary and guarantor: it records the funded budget, counts
+the result and keeps the payout obligation. This does not mean an instant
+automatic transfer; crediting, manual fulfilment and balance withdrawal are
+different stages.
 
-The wallet (USDT on TON) is simply one way of getting paid here, alongside a
-card, a bank transfer, Telegram Stars and gifts. You do not need to understand
-crypto to collect your winnings.
+The contest defines its reward method. The balance-withdrawal wizard offers USDT
+to an external wallet and Telegram Stars; the form shows the available option.
 
 ## Withdrawing
 

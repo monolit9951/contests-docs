@@ -6,10 +6,9 @@ description: Verified badges, dual ratings, and why trust is the main currency o
 # Verification and trust
 
 Half of what a participant weighs up is the prize itself. The other half: *is
-this organizer real, and will they actually pay?* The platform has already
-answered the second one for you: the prize is locked before the contest starts
-and goes to the winner either way. Verification and open ratings answer the
-first one, which is who exactly is behind the contest.
+this organizer real, and will they fulfil the obligation?* The platform records
+the budget, result and credit or payout status. Fulfilment itself can be manual.
+Verification and open ratings answer who exactly is behind the contest.
 
 ## Verification levels
 
@@ -22,13 +21,13 @@ There are three types of verified account:
 
 Verified accounts pass a document check (ID or incorporation papers). The badge
 then shows on the profile and on every contest that account runs, so a
-participant can see who they are dealing with straight from the feed. The
-commission rate is set by the payment method, not by the badge:
-[rates here](/en/help/what-commission).
+participant can see who they are dealing with straight from the feed. The badge
+does not by itself change a fee: current terms depend on the operation and are
+listed [here](/en/help/what-commission).
 
-A contest without a badge is just as honest: its prize is locked on the platform
-too, and the payout reaches the winner. The badge answers a different question,
-which is who wrote the task and what their track record looks like.
+A contest without a badge has its budget and obligation recorded in the same way.
+The badge answers a different question - who wrote the task and what their track
+record looks like - and does not promise an automatic payout.
 
 ## Dual ratings
 

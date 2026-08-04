@@ -46,7 +46,7 @@ The buyer sets the rate and the rest of the terms when creating the contest and 
 2. Read the terms on the card: rate, threshold, budget, deadlines
 3. Film the video to the task and publish it with the required hashtag
 4. Send DareBay the link to the video, without which the submission does not take part
-5. The contest ends, the platform counts the views, and the payout reaches you
+5. The contest ends, the platform counts the views and records a credit or obligation
 
 More on how counting and splitting work in [how pay-per-view works](/en/earnings/how-pay-per-view-works).
 
@@ -74,11 +74,11 @@ Automatically, through the platform's API (currently TikTok). It is an independe
 
 ### How is the money paid out?
 
-Wallet (USDT on TON), bank card, bank transfer, Telegram Stars and Telegram gifts. All five work, and you pick the one you want: the wallet is one option here, not a compulsory step.
+The contest defines its reward method. The balance-withdrawal wizard offers USDT to an external wallet and Telegram Stars; the form shows the available option, and processing is manual.
 
 ### Is there a fee to take part?
 
-No. Entering contests is free. The commission is paid by the buyer when creating the contest, never by the participant.
+No. Entering contests is free. Contest creation currently carries no fee; withdrawing a credited balance has separate terms.
 
 ## Where to next
 

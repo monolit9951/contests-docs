@@ -1,6 +1,6 @@
 ---
 title: What if nobody enters?
-description: The prize returns to your balance in full. Part of the commission comes back too; the part that paid for feed placement does not.
+description: If there are no valid entries, the unused prize budget returns to the balance. Contest creation and top-ups currently carry a 0% fee.
 ---
 
 # What if nobody enters?
@@ -16,13 +16,12 @@ to its final state.
 Item prizes were never physically held by DareBay, so there is nothing to
 return; you simply keep the item.
 
-## The commission comes back in part
+## What happens to fees
 
-The share of the commission that covered processing the prize pool is
-returned. The share that paid for feed placement and promotion is not: that
-resource was spent whether or not any submissions arrived.
-
-The exact amounts are shown in the final contest report.
+Creating a contest and topping up its budget currently carry a **0% fee**, so there is no
+separate “processing share” or “feed-placement share” to refund. The final report shows the
+unused budget returned. Store purchases and a later balance withdrawal are different operations
+with their own [current terms](/en/help/what-commission).
 
 ## Your rating does not drop
 

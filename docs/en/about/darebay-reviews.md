@@ -1,14 +1,13 @@
 ---
 title: DareBay reviews, payout mechanics and commission
 description: What DareBay is, why the prize is locked before the start, how payouts work through an intermediary and guarantor, and what the commission is.
-provenance: { snapshot_date: "2026-07-09", source: "darebay-prod" }
-numbers_used: [commission_fiat, commission_crypto, commission_coins]
+provenance: { snapshot_date: "2026-08-04", source: "darebay-prod" }
 seo: true
 ---
 
 # DareBay: reviews and facts
 
-DareBay is a platform where brands and ordinary people launch activities (tasks, battles, challenges, contests), and participants make their own content and get paid for it. The platform works as an intermediary and guarantor: the prize is locked before the start, and the payout follows independently counted results, so there is nobody left in a position to burn you. Commission: fiat 5%, wallet 8%, COINS 10% (data as of 2026-07-09). Instead of other people's reviews, here is how it actually works.
+DareBay is a platform where brands and ordinary people launch activities (tasks, battles, challenges, contests), and participants make their own content and earn rewards. The platform works as intermediary and guarantor: the budget is assigned to the contest and the result is counted independently of buyer and creator. Creating or topping up a contest currently carries no fee; credited-balance withdrawal terms are separate. Instead of other people's reviews, here is how it actually works.
 
 ## Who DareBay is for
 
@@ -22,25 +21,15 @@ Three groups of users:
 
 The first question in any review of any platform is "will I get burned?". Here is how that is settled:
 
-1. **The prize is locked before publishing.** The organizer sees the final amount (prize + commission) and confirms the charge. The money moves to the platform account, and from that point the organizer cannot spend it.
+1. **The prize is locked before publishing.** The organizer sees the budget amount and confirms the charge. The money moves to the platform account, and from that point the organizer cannot spend it elsewhere.
 2. **An independent party counts the results.** The platform pulls views straight through the TikTok API, votes are counted on the platform. Neither the organizer nor the participant can adjust the numbers, and inflated views are written off by TikTok itself, so they never reach the payout.
-3. **The prize goes to the winners.** When a contest closes, the money goes to whoever earned it by the rules. No approval from the organizer is needed.
+3. **The platform records the obligations.** When a contest closes, the result determines each creator's amount. Payout fulfilment then runs manually through payout details and statuses.
 
-The platform is the intermediary and guarantor between the buyer and the creator. It holds the money for the whole run of the contest and hands it out by the counted results.
+The platform is the intermediary and guarantor between buyer and creator. It holds the budget during the contest, counts the result independently and records the payout obligations.
 
 ## Commission
 
-The commission is charged once, when the contest is created, and it is charged to the organizer, not to the winner.
-
-| Payment method | Commission |
-|----------------|------------|
-| Fiat (card, bank) | 5% |
-| Wallet (crypto) | 8% |
-| COINS (internal points) | 10% |
-
-The data is current as of 2026-07-09. The exact percentage for your account is always shown in the contest creation form.
-
-The winner receives the full prize amount. The commission is not deducted from the payout.
+Creating a contest and topping up its budget currently carry no fee. Once the result is determined, an amount is credited to the creator; withdrawing an available balance is a separate operation with a fee, minimum and manual processing. See [current DareBay fees](/en/help/what-commission).
 
 ## Frequently asked questions
 
@@ -54,11 +43,11 @@ They already paid. The money was locked on the platform the moment the contest w
 
 ### How do I withdraw my winnings?
 
-Winnings land on your DareBay balance. From there the money goes out to a card, a bank account or a wallet (USDT on TON). All three work, and withdrawal is free. More on that: [how to withdraw your winnings](/en/help/darebay-withdrawals).
+Winnings are credited to the DareBay balance. A user then submits a separate withdrawal request: a minimum and fee apply, processing is manual, and the form shows the available method. More on that: [how to withdraw your winnings](/en/help/darebay-withdrawals).
 
 ### Is crypto required?
 
-No. Card and bank transfer work just as well as the wallet, and you never need to open a wallet to get your money. More on that: [can I pay with crypto](/en/help/paying-with-crypto).
+Not always. A contest may define fiat, Telegram Stars, a gift or another reward method. The balance-withdrawal wizard offers USDT and Telegram Stars; the form shows the method available to you. More on that: [can I pay with crypto](/en/help/paying-with-crypto).
 
 ### Who counts the views?
 
@@ -74,4 +63,4 @@ Yes. There is no minimum audience. What counts is the result (views, the quality
 
 ## The bottom line
 
-DareBay is not a freelance marketplace and not a lottery. It is a platform with a mechanic you can follow: the budget is locked, an independent party counts the results, and the prize reaches the winner without the organizer touching it. The commission is transparent: [5% fiat, 8% wallet, 10% COINS](/en/help/what-commission). If you still have questions, look through the [FAQ section](/en/help/).
+DareBay is not a freelance marketplace and not a lottery. It is a platform with a mechanic you can follow: the budget is locked, an independent party counts the results, and obligations are recorded by the contest rules. The operation terms are transparent and listed under [current DareBay fees](/en/help/what-commission). If you still have questions, look through the [FAQ section](/en/help/).

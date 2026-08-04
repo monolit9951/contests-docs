@@ -74,7 +74,7 @@ Yes. Contact support if you believe the oracle got it wrong. The platform pulls 
 
 ### How quickly are views counted?
 
-The oracle pulls data automatically for as long as the contest runs. The final count happens when the contest closes. After entries close there is a selection and confirmation window, and then the payout goes out by your chosen method.
+The oracle pulls data while the contest runs, and the final count happens at close. After selection and confirmation, the platform records a credit or obligation; fulfilment can then be manual.
 
 ### Do views from other platforms count?
 

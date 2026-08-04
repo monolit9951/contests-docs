@@ -50,7 +50,7 @@ The rate sits on the contest card, so you see the terms before you submit.
 | Rate | Opaque, floating | Fixed, visible on the card |
 | View threshold | A high monthly reach bar to get in | Typically 2000 on one submission |
 | Payout guarantee | Rests on the fund | The budget is locked up front |
-| Payout method | An internal TikTok balance | Wallet, card, bank, Stars, gifts |
+| Reward method | An internal TikTok balance | Defined by the contest; balance withdrawal is separate: USDT or Stars, processed manually |
 
 ## How the payout is worked out on DareBay
 
@@ -78,7 +78,7 @@ Whatever matches the brief of a specific contest. Every contest spells out the c
 
 ### When does the money arrive?
 
-Once the contest closes there is a selection and results-confirmation window of a few days. Then the payout goes out by your chosen method: wallet (USDT on TON), bank card, bank transfer, Telegram Stars or gifts. The money was locked up front, and the platform holds it and guarantees the payout.
+Once the contest closes, selection and result confirmation run. The platform then records a credit or payout obligation. Fulfilment and withdrawal can be manual; the product shows the available method and status.
 
 ### Can the buyer change the rate after launch?
 
@@ -88,9 +88,11 @@ No. The rate is fixed when the contest is created and the organizer cannot lower
 
 The threshold keeps the budget from being spread too thin. Without it, dozens of submissions with a handful of views each would take the budget apart penny by penny. The threshold sends the money to content that actually earns reach.
 
-### How does the platform guarantee the payout?
+### How does the platform protect the payout obligation?
 
-The buyer locks the budget when creating the contest. The money sits with the platform as intermediary until the contest closes and is then split by formula: it either goes to the participants or returns to the buyer as the remainder. There is no third destination for it.
+The buyer records the budget against the contest at creation. After checks, the platform calculates
+amounts by formula and stores credits or obligations, while the unused remainder returns to the
+buyer balance. Payout fulfilment can be manual and follows payout details and statuses.
 
 ### Is this an alternative to the TikTok programme?
 
@@ -102,4 +104,4 @@ It is an extra monetization channel. The TikTok programme and DareBay do not exc
 - [What DareBay pays per 1000 views](/en/earnings/pay-per-1000-views) - a detailed look at the rates
 - [Earning on DareBay](/en/earnings/) - an overview of the ways to earn
 - [Does DareBay really pay?](/en/about/does-darebay-really-pay) - how the payout is secured
-- [What commission does DareBay take?](/en/help/what-commission) - the platform's cut
+- [What fees does DareBay charge?](/en/help/what-commission) - contest, store and withdrawal terms

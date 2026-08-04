@@ -8,7 +8,7 @@ seo: true
 
 # How to earn from streamer clips on DareBay
 
-The loop is simple: take a contest, cut a clip out of the stream, upload it with the hashtag, send in the link and get paid for the views. Rates across live contests run from **$0.30 to $1.00 per 1000 views** (typically **$0.50**). A clip that reaches 100,000 counted views at the median rate pays $50, exactly the cap per submission in a typical contest (**$50**). The budget is locked on the platform before the start, so the money arrives. No followers are needed, and the entry threshold is **2000 views** per submission. A phone and basic editing skills are all it takes to start today.
+The loop is simple: take a contest, cut a clip out of the stream, upload it with the hashtag and send in the link. Rates across live contests run from **$0.30 to $1.00 per 1000 views** (typically **$0.50**). A clip that reaches 100,000 counted views at the median rate calculates to $50, exactly the cap per submission in a typical contest (**$50**). The budget is recorded before the start; after checks, the platform stores a credit or payout obligation. No followers are needed, and the entry threshold is **2000 views** per submission.
 
 Every figure on this page comes from the platform's own data (snapshot: 2026-07-10).
 
@@ -46,7 +46,9 @@ The rate, threshold and cap are set by the buyer when creating the contest and c
 
 5. **The oracle counts the views.** The platform pulls view data through the platform's API. Neither you nor the buyer types figures in by hand, and they cannot be nudged. More on the counting mechanics in [how pay-per-view works](/en/earnings/how-pay-per-view-works).
 
-6. **Get paid.** The contest ends, the platform computes the amount by formula, and the money reaches your wallet, card or another chosen method. The budget was locked in advance: the platform acts as intermediary and guarantor so that neither side gets scammed.
+6. **Get the result.** After the contest ends and checks run, the platform calculates the amount
+by formula and records a credit or payout obligation. The contest defines its reward method,
+fulfilment through payout details and statuses can be manual, and balance withdrawal has separate terms.
 
 ## Why there is a cap per submission
 
@@ -64,7 +66,7 @@ In typical contests the cap per submission is $50. Even if your clip reaches a m
 
 ### How do I get the money?
 
-After the contest ends the payout reaches you. There are five methods: wallet (USDT on TON), bank card, bank transfer, Telegram Stars and Telegram gifts. You choose yours in your profile settings.
+After the contest ends, the platform records a credit or payout obligation. The contest defines the reward method and the withdrawal form shows the available option; fulfilment can be manual.
 
 ### What if somebody inflates their views?
 
@@ -72,7 +74,7 @@ Views are pulled through the platforms' APIs (TikTok, YouTube), not typed in by 
 
 ### When does the payout arrive?
 
-After the contest ends there is a selection and results-confirmation window, a few days in all. Then the platform computes the amount and sends the money. The budget was locked in advance, so there is nothing for the payout to wait on.
+After selection and result confirmation, the platform computes the amount and records a credit or obligation. Fulfilment and withdrawal can be manual, so there is no guaranteed transfer deadline.
 
 ### Can I submit to several contests at once?
 

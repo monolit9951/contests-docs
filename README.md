@@ -64,3 +64,24 @@ URLs to IndexNow endpoints.
 
 Navigation, sitemap, canonical, hreflang, public host routes and the language
 switcher are derived from the manifest; do not maintain a second URL table.
+
+## Product truth gate
+
+Public claims about commissions, withdrawals, payout processing and escrow are checked against
+[`data/product-truth.json`](data/product-truth.json). The snapshot records the exact backend
+release commit, configuration property names and the manual-payout runbook used for verification.
+
+Run the gate directly with:
+
+```bash
+npm run check:truth
+```
+
+The gate scans every Markdown page, checks the canonical RU/EN/UA fee, withdrawal and Terms pages,
+and rejects known contradictions such as free or automatic withdrawal, minute-level settlement,
+the retired 5/8/10 contest-fee matrix, or claims that on-chain escrow is live. It also runs during
+`npm test` and before every documentation build.
+
+When the product policy genuinely changes, update the backend first, then update the reviewed
+snapshot, the double-entry baseline in `scripts/product-truth-lint.mjs`, all canonical pages and the
+mutation tests in one reviewed change. Do not change the snapshot alone.

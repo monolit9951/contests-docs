@@ -45,7 +45,7 @@ The cap per submission in typical contests is **$50**. You can send several clip
 3. Film your video (a clip, a review, a reaction) to the terms of the brief and publish it with the required hashtag
 4. Send DareBay the link to the published video, which is how the work enters the contest
 5. Views are pulled automatically from the social platform's API, so neither you nor the buyer types figures in by hand
-6. The contest closes, your submission has cleared the threshold (**2000 views**), and the payout goes out to your wallet, your card or whichever method you chose
+6. The contest closes, your submission has cleared the threshold (**2000 views**), and the platform records a credit or payout obligation
 
 The platform acts as intermediary and guarantor: the budget is frozen before the contest opens and the terms are fixed. The organizer cannot change the rate or take the money back after launch.
 
@@ -77,11 +77,13 @@ Sign up, open the contest catalogue and pick a subject you actually know. Film t
 
 ### When does the payout arrive?
 
-Once the contest closes there is a results-confirmation window, and then the payout goes out to your wallet, your card or whichever method you chose. The money was frozen in advance, and the platform holds it and guarantees the payout.
+Once the contest closes, result confirmation runs and the platform records a credit or payout obligation. Fulfilment can be manual; the product shows the available method and status.
 
 ### Can the organizer refuse to pay?
 
-No. The budget is frozen on the platform the moment the contest is created. The organizer cannot claw it back or change the terms after launch. The platform holds the money and distributes it against the results.
+No. The budget is recorded on the platform when the contest is created. The organizer cannot claw
+it back or change the terms after launch. The platform calculates the result and stores a credit or
+obligation; fulfilment can be processed manually.
 
 ### Is the minimum rate too low?
 

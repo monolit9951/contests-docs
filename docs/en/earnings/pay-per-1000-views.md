@@ -51,7 +51,7 @@ The contest organizer sets it, based on their budget, niche and goals. Live cont
 
 ### When does the money arrive?
 
-The contest closes, then comes the selection window and the results-confirmation window, a few days in all. After that the payout lands on your wallet, card or whichever method you chose. The money for it has been sitting on the platform since day one: the budget was locked in advance, and the platform stands behind the payout as intermediary.
+After the contest closes, selection and result confirmation run. The platform then records a credit or payout obligation. Fulfilment and withdrawal can be manual, so receipt timing depends on the status and payout details.
 
 ### How are views counted?
 
@@ -71,11 +71,11 @@ No. The rate is fixed when the contest is created. The organizer cannot lower it
 
 ### What payout methods are available?
 
-Wallet (USDT on TON), bank card, bank transfer, Telegram Stars and Telegram gifts. All five work, and you pick the one you want: the wallet is one option here, not a compulsory step.
+The contest defines its reward method. The balance-withdrawal wizard offers USDT to an external wallet and Telegram Stars; the form shows the available option, and processing is manual.
 
 ## Where to next
 
 - [How pay-per-view works](/en/earnings/how-pay-per-view-works) - the full mechanics of a PPV contest
 - [Earning on DareBay](/en/earnings/) - an overview of the ways to earn
-- [What commission does DareBay take?](/en/help/what-commission) - the platform's cut
+- [What fees does DareBay charge?](/en/help/what-commission) - contest, store and withdrawal terms
 - [Does DareBay really pay?](/en/about/does-darebay-really-pay) - what backs the payout

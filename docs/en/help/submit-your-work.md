@@ -80,10 +80,9 @@ happens next is decided by the selection type:
 ## 5. If you win
 
 You get a notification. The money for a **MONEY** prize is already locked in the
-contest; it moves onto your balance and you take it out however you like: to a
-wallet (USDT on TON), to a bank card, by bank transfer, in Telegram Stars or as a
-gift. Entering and withdrawing cost you nothing, and the platform takes nothing
-out of the prize. For an **ITEM** prize the organizer gets in touch to arrange
+contest; it moves onto your balance. Entry is free, while [withdrawal](/en/help/darebay-withdrawals)
+is a separate request with a minimum, fee and manual processing. The form shows
+the available method. For an **ITEM** prize the organizer gets in touch to arrange
 the handover.
 
 ## 6. If you do not win

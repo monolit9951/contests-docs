@@ -2,7 +2,7 @@
 title: How to commission clips for a campaign on DareBay
 description: How to buy promotion from clippers through DareBay. The budget is locked up front, you pay only for validated views, and clippers take the task themselves.
 provenance: { snapshot_date: "2026-07-10", source: "darebay-prod" }
-numbers_used: [commission_fiat, commission_crypto, commission_coins, ppv_cpm_min, ppv_cpm_max, ppv_min_views_threshold_live, ppv_default_min_views_threshold]
+numbers_used: [ppv_cpm_min, ppv_cpm_max, ppv_min_views_threshold_live, ppv_default_min_views_threshold]
 seo: true
 ---
 
@@ -12,7 +12,12 @@ Commissioning clips on DareBay takes no negotiation, no advance payment to a fre
 
 ## The model: the buyer creates a contest, clippers take the task
 
-On DareBay the buyer does not hunt for a contractor and does not haggle. You create a PPV contest (pay-per-view) with a task and terms, the budget is locked on the platform, and clippers find the contest in the feed, publish their videos and send in the links. The views come from the platform each video was published on, the budget is split by formula among the submissions that cleared the threshold, and whatever is left comes back to your balance. The full mechanic step by step: [how pay-per-view works](/en/earnings/how-pay-per-view-works).
+On DareBay the buyer does not hunt for a contractor and does not haggle. You create a PPV contest
+(pay-per-view) with a task and terms, the budget is locked on the platform, and clippers find the
+contest in the feed, publish their videos and send in the links. The views come from the platform
+where each video was published. Amounts for submissions above the threshold are calculated by
+formula and recorded as credits or obligations, while the remainder returns to your balance;
+fulfilment can be manual. The full mechanic step by step: [how pay-per-view works](/en/earnings/how-pay-per-view-works).
 
 ## The parameters the buyer sets
 
@@ -36,11 +41,11 @@ The rate of **$0.30 to $1.00 per 1000 views** reflects the range across live con
 4. **The task.** The more concrete the result you describe (format, style, key moments), the closer the work lands to what you wanted. Clippers pick the tasks they understand on the first read.
 5. **The platform.** Today pay-per-view contests run on TikTok: the views come from the same place the video does.
 6. **The budget.** Work out the total from the expected number of participants and the rate. Overshooting is safe, since anything unspent comes back.
-7. **The payment method.** It determines the commission (see below).
+7. **The payment method.** Pick an available funding method and review the total before confirmation.
 
-## Commission by payment method
+## Launch cost
 
-The commission follows the payment method: fiat (card, bank transfer) 5%, wallet (USDT on TON) 8%, COINS 10%. It is calculated on the prize amount and paid by the buyer on top of the budget, once, when the contest is created: the prize pool goes to the clippers in full and the clipper pays nothing. Exact rates and worked examples: [what commission DareBay takes](/en/help/what-commission).
+Creating a contest and topping up its budget currently carry no fee, regardless of payment method. The organizer funds the prize budget. A participant's later balance withdrawal is a separate operation with its own terms; see the [current DareBay fees](/en/help/what-commission).
 
 ## Budget protection: guarantor, independent count, split by results
 
@@ -50,11 +55,15 @@ DareBay works as an intermediary and guarantor between the buyer and the clipper
 - **Inflated views are not paid for.** The views come from the platform each video was published on and are validated. Bot views are not counted, and a submission with bought views loses its payout entirely.
 - **The split follows counted results.** The payout is worked out by formula, without the buyer touching it. Neither side can nudge the result.
 
-So that neither side gets burned: the buyer will not pay for bought views, and the clipper gets their money without depending on the buyer's goodwill.
+This means the buyer does not pay for inflated views, while the creator's amount is recorded as
+an auditable obligation. Fulfilment then follows payout details and statuses and can be manual.
 
 ## Reach and access
 
-Most Western UGC platforms cannot onboard creators from Russia and the CIS: registration is closed to them, sanctions cut the payment rails, and there is no working way to pay them out. DareBay can. Sign-up is open across the region, the platform runs in English, and every creator is paid the way that suits them - a wallet (USDT on TON), a bank card or a bank transfer. For you that is a creator pool the big marketplaces never reach, working on a task you wrote yourself, paid strictly per counted view.
+Many Western UGC platforms restrict registration or payment rails for creators in Russia and the
+CIS. DareBay is open across the region and runs in English. A contest defines its reward method:
+USDT on TON, a card, bank transfer, Telegram Stars, a gift or an item. Fulfilment follows the
+available payout details and statuses and can be manual.
 
 ## Frequently asked questions
 
@@ -64,7 +73,7 @@ The views come from the platform the video was published on (TikTok today) and a
 
 ### What is the commission?
 
-It follows the payment method: fiat 5%, wallet 8%, COINS 10%. It is calculated on the prize amount and paid by the buyer on top of the budget when the contest is created, so the prize pool goes to the clippers in full.
+Creating or topping up a contest budget currently carries no fee. Withdrawal terms for a credited balance are separate from launch cost and are listed under [current DareBay fees](/en/help/what-commission).
 
 ### How do I get the unspent budget back?
 
@@ -72,7 +81,9 @@ There is nothing to do. If the budget is not spent in full (few participants, su
 
 ### Where are the clippers?
 
-Across Russia and the CIS, a region most Western platforms cannot pay into at all. Sign-up there is open, the platform runs in English, and payouts go to a wallet (USDT on TON), a bank card or a bank transfer.
+Across Russia and the CIS. Sign-up is open and the platform runs in English. Each contest defines
+its reward method, while the product shows the available payout details and status; fulfilment can
+be manual.
 
 ### How many clippers will take the task?
 
@@ -90,5 +101,5 @@ You accept the work yourself: during the selection window you reject anything th
 
 - [Platforms and fees](/en/earnings/platforms-and-fees) - an overview of platforms and a comparison of terms
 - [How pay-per-view works](/en/earnings/how-pay-per-view-works) - the full mechanic of a PPV contest
-- [What commission DareBay takes](/en/help/what-commission) - exact rates by payment method
+- [What fees DareBay charges](/en/help/what-commission) - current terms by operation
 - [How much clipping pays](/en/earnings/how-much-clipping-pays) - the payout calculation from the clipper side

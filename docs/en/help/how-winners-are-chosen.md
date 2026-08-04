@@ -9,9 +9,9 @@ Every DareBay contest uses **one of three** selection types. The type is
 fixed before the start: the organizer picks it at creation and cannot
 change it mid-run.
 
-Whichever type a contest uses, the budget is locked on the platform from
-the moment it is published, and the platform guarantees the payout to the
-winner.
+Whichever type a contest uses, the budget is recorded against it from publication.
+After result confirmation, the platform stores a credit or obligation for the
+winner; fulfilment can be manual.
 
 ## Random draw among the most-liked (RANDOM)
 

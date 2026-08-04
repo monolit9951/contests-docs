@@ -81,7 +81,7 @@ They are pulled automatically through the platform's API (today that is TikTok).
 
 ### How does the money arrive?
 
-Wallet (USDT on TON), bank card, bank transfer, Telegram Stars and Telegram gifts. All five work, and you pick the one you want.
+The contest defines its reward method. The balance-withdrawal wizard offers USDT to an external wallet and Telegram Stars; the form shows the available option, and processing is manual.
 
 ### Is the budget locked in advance?
 

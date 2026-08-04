@@ -9,8 +9,8 @@ How much creators earn on DareBay and where it comes from: pay per view, contest
 worked examples for clippers. Every figure here comes from the platform's own data, not
 from somebody's estimate.
 
-The prize sits on the platform before you take the job, and it goes to creators against
-independently counted results. The buyer cannot change their mind: the money is protected.
+The budget is recorded against the contest before you take the job. Against independently
+counted results, the platform stores credits or obligations; fulfilment can be manual.
 The full mechanics are in [how it works](/en/how-it-works).
 
 ## Pages in this section

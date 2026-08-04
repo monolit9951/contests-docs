@@ -1,14 +1,14 @@
 ---
 title: Where to find clipping work - a marketplace for clips
 description: Where a clipper finds paid briefs. An open board paying $0.30 to $1.00 per 1000 views, no agency and no application, with the budget locked first.
-provenance: { snapshot_date: "2026-07-10", source: "darebay-prod" }
-numbers_used: [commission_fiat, commission_crypto, ppv_cpm_min, ppv_cpm_max, ppv_cpm_median, ppv_min_views_threshold_live, ppv_max_per_work_typical]
+provenance: { snapshot_date: "2026-08-04", source: "darebay-prod" }
+numbers_used: [ppv_cpm_min, ppv_cpm_max, ppv_cpm_median, ppv_min_views_threshold_live, ppv_max_per_work_typical]
 seo: true
 ---
 
 # Where to find clipping work - a marketplace for clips
 
-Paid clipping work sits on DareBay's open contest board, where a clipper picks their own briefs with no application, no interview and no portfolio review. Pay per view across live contests runs from **$0.30 to $1.00 per 1000 views**, with a payout threshold of **2000 views** per submission (set by the buyer; 2000 is the median across live contests). The buyer's money is locked on the platform before you film, views are counted independently, and the payout follows the formula: the platform works as intermediary and guarantor. You take the reward to a wallet (USDT on TON), a bank card, a bank transfer, Telegram Stars or Telegram gifts. The commission comes out of the buyer's side: **5%** on fiat payments (card, bank) and **8%** when paying from a wallet. Taking part costs a clipper nothing.
+Paid clipping work sits on DareBay's open contest board, where a clipper picks their own briefs with no application, no interview and no portfolio review. Pay per view across live contests runs from **$0.30 to $1.00 per 1000 views**, with a payout threshold of **2000 views** per submission (set by the buyer; 2000 is the median across live contests). The buyer's money is locked before you film, views are counted independently, and the creator amount follows the formula. Entry is free; withdrawing a credited balance is a separate operation with its own terms.
 
 Every figure on this page comes from the platform's own data (snapshot: 2026-07-10).
 
@@ -18,7 +18,7 @@ You find a contest paying $0.50 per 1000 views. You cut the clip, publish it on 
 
 `40,000 / 1000 * $0.50 = $20`
 
-The whole amount arrives once the contest closes. The budget was locked by the platform before you started and the buyer cannot pull it back.
+After result checks, the calculated amount is credited to the balance. A later withdrawal is a separate request with a fee, minimum and manual processing. The budget was locked by the platform before you started and the buyer cannot pull it back.
 
 If the same clip reaches 150,000 views:
 
@@ -44,15 +44,15 @@ More on how views are counted and the budget is split in [how pay-per-view works
 | Parameter | What it affects | DareBay |
 |-----------|-----------------|---------|
 | Barrier to entry | Whether you get in without a name or a portfolio | Briefs are taken straight from the board, no application, no followers required |
-| Commission | What the platform takes | 5% (fiat) / 8% (wallet), paid by the buyer |
+| Fees | What the platform takes | Entry is free; balance-withdrawal terms are listed separately |
 | Who holds the money | Protection against non-payment | Intermediary and guarantor; the budget is locked before the start |
-| How the reward arrives | How you get paid | Wallet (USDT on TON), card, bank, Stars, gifts |
+| How the reward arrives | How you get paid | Defined by the contest and the options shown in the request form |
 | Transparency of terms | Whether the rate and cap are visible before you work | Every parameter is open on the contest card |
 | Payout threshold | Whether followers or verification are required | Based on the submission's views only (2000, the median across live contests); no followers needed |
 
 ## Getting paid across borders
 
-You do not need an agency, a manager or an account with a local payment processor to collect. A wallet payout (USDT on TON) settles across borders in minutes, and a bank card, a bank transfer, Telegram Stars and Telegram gifts sit next to it as separate options you choose from. Nothing about the reward depends on where the buyer banks: the money is already on the platform when you start filming.
+You do not need an agency or manager to take a brief. The contest defines its reward method, while the balance-withdrawal form shows the options available to a specific user. Requests are processed manually, so there is no promise of cross-border settlement within minutes. The contest budget is already on the platform when you start filming.
 
 ## Why an intermediary and guarantor, not direct payment
 
@@ -70,11 +70,11 @@ No. There is no minimum follower requirement. An account with zero followers com
 
 ### What is the commission and who pays it?
 
-The buyer pays it when creating the contest: **5%** on fiat payments (card, bank) and **8%** when paying from a wallet (USDT on TON). The clipper pays no commission, and nothing is withheld from your payout.
+Creating and topping up a contest budget currently carry no fee. Entry is free for the clipper. Withdrawing a credited balance has a separate fee, minimum and manual processing; see the [current terms](/en/help/what-commission).
 
 ### How do I get the money?
 
-Five methods, and you choose: wallet (USDT on TON), bank card, bank transfer, Telegram Stars and Telegram gifts. All of them pay out.
+The reward method depends on the contest. The balance-withdrawal wizard offers USDT to an external wallet and Telegram Stars; the request form shows the available option, and processing is manual.
 
 ### Is it safe?
 

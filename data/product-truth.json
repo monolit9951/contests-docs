@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "verifiedAt": "2026-08-04",
+  "source": {
+    "repository": "Contests",
+    "branch": "release",
+    "verifiedCommit": "9fa45592116560c6afa7009b503fdb4550f3de9c",
+    "configFile": "src/main/resources/application.properties",
+    "manualPayoutRunbook": "docs/MANUAL_PAYOUTS_ADMIN.md",
+    "properties": {
+      "contestCreationFiatPercent": "app.config.contest.commission.fiat.percentage",
+      "contestCreationCryptoPercent": "app.config.contest.commission.crypto.percentage",
+      "contestCreationPlatformPercent": "app.config.contest.commission.platform.percentage",
+      "storeCommissionPercent": "app.config.store.commission.percentage",
+      "withdrawalMinimum": "neptune.wallet.withdrawal.min-amount",
+      "withdrawalCommissionPercent": "neptune.wallet.withdrawal.commission-percentage",
+      "manualPayoutsEnabled": "neptune.manual-payouts.enabled"
+    },
+    "notes": {
+      "topUpCommission": "Verified against the active funding flow and the zero contest-commission configuration.",
+      "processing": "The release runbook states that payout fulfilment can be manual; result calculation and money transfer are separate stages."
+    }
+  },
+  "contest": {
+    "creationCommissionPercent": 0,
+    "topUpCommissionPercent": 0
+  },
+  "store": {
+    "commissionPercent": 8
+  },
+  "withdrawal": {
+    "minimumGrossAmount": 10,
+    "minimumCurrency": "USDT",
+    "commissionPercent": 10,
+    "processing": "manual",
+    "fixedSettlementSla": null,
+    "wizardMethods": [
+      "USDT_TON_EXTERNAL_WALLET",
+      "TELEGRAM_STARS"
+    ]
+  },
+  "rewardMethods": {
+    "contestDefined": [
+      "USDT_TON",
+      "FIAT_CARD",
+      "FIAT_BANK_TRANSFER",
+      "TELEGRAM_STARS",
+      "TELEGRAM_GIFT",
+      "ITEM"
+    ],
+    "automaticBalanceWithdrawalRails": false
+  },
+  "onChainEscrow": {
+    "live": false
+  }
+}

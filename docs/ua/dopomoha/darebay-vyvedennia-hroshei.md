@@ -1,6 +1,6 @@
 ---
 title: DareBay виведення грошей - як вивести, строки, безкоштовно
-description: Як вивести гроші з DareBay. Виведення безкоштовне, платформа не бере за нього нічого. Гаманець, картка, банківський переказ, Telegram Stars і подарунки. Кроки, строки, пороги.
+description: Як вивести гроші з DareBay. Виведення безкоштовне. Гаманець, картка, банківський переказ, Telegram Stars і подарунки - кроки, строки і пороги.
 provenance: { snapshot_date: "2026-07-09", source: "darebay-prod" }
 numbers_used: [ppv_min_views_threshold_live, winner_confirmation_min]
 seo: true

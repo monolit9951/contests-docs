@@ -1,6 +1,6 @@
 ---
 title: Как заработать на нарезках стримеров на DareBay
-description: Пошаговая инструкция заработка на нарезках стримеров. Ставка $0.30-$1.00 за 1000 просмотров, порог 2000 просмотров, потолок $50 на работу. Бюджет заблокирован заранее.
+description: Пошаговая инструкция заработка на нарезках стримеров. Ставка $0.30-$1.00 за 1000 просмотров, порог 2000, потолок $50 на работу.
 provenance: { snapshot_date: "2026-07-10", source: "darebay-prod" }
 numbers_used: [ppv_cpm_min, ppv_cpm_median, ppv_cpm_max, ppv_min_views_threshold_live, ppv_max_per_work_typical]
 seo: true

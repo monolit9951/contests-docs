@@ -1,6 +1,6 @@
 ---
 title: Сколько платят за нарезки стримеров на DareBay
-description: Ставка за нарезки стримеров в PPV-конкурсах DareBay - от $0.30 до $1.00 за 1000 просмотров, потолок на работу $50. Бюджет заблокирован до старта, просмотры считает независимый счётчик.
+description: Ставка за нарезки стримеров в PPV-конкурсах DareBay - от $0.30 до $1.00 за 1000 просмотров, потолок $50 на работу. Бюджет заблокирован до старта.
 provenance: { snapshot_date: "2026-07-10", source: "darebay-prod" }
 numbers_used: [ppv_cpm_min, ppv_cpm_median, ppv_cpm_max, ppv_max_per_work_typical]
 seo: true

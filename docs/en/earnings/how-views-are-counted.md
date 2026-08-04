@@ -1,6 +1,6 @@
 ---
 title: How views are counted for the payout
-description: The DareBay view oracle - an independent counter that reads figures straight from the platform API. Which views drive a payout, how inflated views are cut out, and the rate cap and threshold.
+description: The DareBay view oracle reads figures straight from the platform API. Which views drive a payout, how inflated views are cut out, cap and threshold.
 provenance: { snapshot_date: "2026-07-10", source: "darebay-prod" }
 numbers_used: [ppv_max_cpm_rate, ppv_min_views_threshold_live]
 seo: true

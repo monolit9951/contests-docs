@@ -1,6 +1,6 @@
 ---
 title: Does DareBay really pay? How the payout is secured
-description: How DareBay guarantees the payout. The budget is locked before the start, an independent oracle counts the views, and the prize reaches the winner. Every way to receive it.
+description: How DareBay guarantees the payout. The budget is locked before the start, an independent oracle counts the views, and the prize reaches the winner.
 provenance: { snapshot_date: "2026-07-09", source: "darebay-prod" }
 numbers_used: []
 seo: true

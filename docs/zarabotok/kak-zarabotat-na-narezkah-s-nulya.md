@@ -1,6 +1,6 @@
 ---
 title: Как заработать на нарезках с нуля
-description: Путь новичка в нарезках на DareBay без подписчиков и портфолио. Ставка от $0.30 до $1.00 за 1000 просмотров, порог 1000, потолок $50 на работу. Что нужно для старта.
+description: Путь новичка в нарезках на DareBay без подписчиков и портфолио. Ставка от $0.30 до $1.00 за 1000 просмотров, порог 1000, потолок $50 на работу.
 provenance: { snapshot_date: "2026-07-10", source: "darebay-prod" }
 numbers_used: [ppv_default_min_views_threshold, ppv_cpm_min, ppv_cpm_median, ppv_cpm_max, ppv_max_per_work_typical]
 seo: true

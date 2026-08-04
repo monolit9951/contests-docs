@@ -1,6 +1,6 @@
 ---
 title: Where to find clipping work - a marketplace for clips
-description: Where a clipper finds paid briefs. An open board paying $0.30 to $1.00 per 1000 views, no agency and no application, with an intermediary and guarantor locking the budget before you film.
+description: Where a clipper finds paid briefs. An open board paying $0.30 to $1.00 per 1000 views, no agency and no application, with the budget locked first.
 provenance: { snapshot_date: "2026-07-10", source: "darebay-prod" }
 numbers_used: [commission_fiat, commission_crypto, ppv_cpm_min, ppv_cpm_max, ppv_cpm_median, ppv_min_views_threshold_live, ppv_max_per_work_typical]
 seo: true

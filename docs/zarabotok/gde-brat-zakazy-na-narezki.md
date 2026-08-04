@@ -1,6 +1,6 @@
 ---
 title: Где брать заказы на нарезки - биржа нарезок
-description: Где нарезчику найти оплачиваемые заказы. Открытая витрина заданий с оплатой от $0.30 до $1.00 за 1000 просмотров, доступ из РФ и СНГ, посредник-гарант блокирует бюджет до старта.
+description: Где нарезчику найти оплачиваемые заказы. Открытая витрина заданий с оплатой от $0.30 до $1.00 за 1000 просмотров, доступ из РФ и СНГ.
 provenance: { snapshot_date: "2026-07-10", source: "darebay-prod" }
 numbers_used: [commission_fiat, commission_crypto, ppv_cpm_min, ppv_cpm_max, ppv_cpm_median, ppv_min_views_threshold_live, ppv_max_per_work_typical]
 seo: true

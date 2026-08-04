@@ -1,6 +1,6 @@
 ---
 title: Скільки можна заробити на нарізках на DareBay
-description: Заробіток на нарізках рахується за формулою з трьох чисел - ставка, перегляди, стеля. Ставки від $0.30 до $1.00 за 1000 переглядів, поріг 2000, стеля $50 на роботу.
+description: Заробіток на нарізках рахується з трьох чисел - ставка, перегляди, стеля. Ставки від $0.30 до $1.00 за 1000 переглядів, поріг 2000, стеля $50.
 provenance: { snapshot_date: "2026-07-10", source: "darebay-prod" }
 numbers_used: [ppv_cpm_min, ppv_cpm_median, ppv_cpm_max, ppv_min_views_threshold_live, ppv_max_per_work_typical]
 seo: true

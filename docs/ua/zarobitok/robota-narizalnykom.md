@@ -1,6 +1,6 @@
 ---
 title: Робота нарізальником - як заробляти на нарізках відео
-description: Як стати нарізальником і отримувати гроші за нарізки. Ставка від $0.30 до $1.00 за 1000 переглядів, без вимог до підписників. Порядок роботи й оплати на DareBay.
+description: Як стати нарізальником і отримувати гроші за нарізки. Ставка від $0.30 до $1.00 за 1000 переглядів, без вимог до підписників. Порядок оплати.
 provenance: { snapshot_date: "2026-07-10", source: "darebay-prod" }
 numbers_used: [ppv_cpm_min, ppv_cpm_max, ppv_cpm_median, ppv_default_min_views_threshold, ppv_min_views_threshold_live, ppv_max_per_work_typical]
 seo: true

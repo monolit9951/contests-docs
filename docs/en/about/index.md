@@ -1,6 +1,6 @@
 ---
 title: About DareBay
-description: The project was founded by Ruslan Bey. How tasks and payouts work, why the prize stays locked until the task ends, where the numbers in this section come from, and how to report an error.
+description: The project was founded by Ruslan Bey. How tasks and payouts work, why the prize stays locked until the task ends, and where the numbers come from.
 ---
 
 # About DareBay

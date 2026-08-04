@@ -1,6 +1,6 @@
 ---
 title: How to pay clippers per view
-description: The pay-per-view model for buyers - the budget is locked on DareBay, payouts follow an independent view count, the commission sits on top of the budget, and what is left comes back.
+description: The pay-per-view model for buyers - the budget is locked on DareBay, payouts follow an independent view count, and what is left comes back to you.
 provenance: { snapshot_date: "2026-07-10", source: "darebay-prod" }
 numbers_used: [commission_fiat, commission_crypto, commission_coins]
 seo: true

@@ -1,6 +1,6 @@
 ---
 title: Порог просмотров для выплаты на DareBay
-description: Сколько просмотров нужно работе, чтобы участвовать в распределении бюджета PPV-конкурса. Медиана живых конкурсов - 2000 просмотров, дефолт системы - 1000, точное значение стоит в карточке.
+description: Сколько просмотров нужно работе, чтобы попасть в распределение бюджета PPV-конкурса. Медиана живых конкурсов - 2000, дефолт системы - 1000.
 provenance: { snapshot_date: "2026-07-10", source: "darebay-prod" }
 numbers_used: [ppv_min_views_threshold_live, ppv_default_min_views_threshold, ppv_cpm_median]
 seo: true

@@ -1,6 +1,6 @@
 ---
 title: How are winners chosen?
-description: Three selection types - random among the top, the creator's own call, or a community vote. The type is fixed before the contest starts and never changes mid-run.
+description: Three selection types - random among the top, the creator's own call, or a community vote. The type is fixed before the contest starts.
 ---
 
 # How are winners chosen?

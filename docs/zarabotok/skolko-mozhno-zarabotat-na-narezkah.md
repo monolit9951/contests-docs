@@ -1,6 +1,6 @@
 ---
 title: Сколько можно заработать на нарезках на DareBay
-description: Заработок на нарезках считается по формуле из трёх чисел - ставка, просмотры, потолок. Ставки от $0.30 до $1.00 за 1000 просмотров, порог 2000, потолок $50 на работу.
+description: Заработок на нарезках считается из трёх чисел - ставка, просмотры, потолок. Ставки от $0.30 до $1.00 за 1000 просмотров, порог 2000, потолок $50.
 provenance: { snapshot_date: "2026-07-10", source: "darebay-prod" }
 numbers_used: [ppv_cpm_min, ppv_cpm_median, ppv_cpm_max, ppv_min_views_threshold_live, ppv_max_per_work_typical]
 seo: true

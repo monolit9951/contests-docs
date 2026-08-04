@@ -1,6 +1,6 @@
 ---
 title: The DareBay payout guarantee - how a contest budget is protected
-description: How DareBay guarantees the payout for views. The budget is locked on the platform, an independent oracle counts the views, and the prize goes to the winners by those results.
+description: How DareBay guarantees the payout for views. The budget is locked on the platform, an independent oracle counts the views, the prize goes to winners.
 provenance: { snapshot_date: "2026-07-09", source: "darebay-prod" }
 numbers_used: [commission_strategy]
 seo: true

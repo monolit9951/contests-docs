@@ -1,6 +1,6 @@
 ---
 title: Скільки платять за нарізки стримерів на DareBay
-description: Ставка за нарізки стримерів у PPV-конкурсах DareBay - від $0.30 до $1.00 за 1000 переглядів, стеля на роботу $50. Бюджет заблоковано до старту, перегляди рахує незалежний лічильник.
+description: Ставка за нарізки стримерів у PPV-конкурсах DareBay - від $0.30 до $1.00 за 1000 переглядів, стеля $50 на роботу. Бюджет заблоковано до старту.
 provenance: { snapshot_date: "2026-07-10", source: "darebay-prod" }
 numbers_used: [ppv_cpm_min, ppv_cpm_median, ppv_cpm_max, ppv_max_per_work_typical]
 seo: true

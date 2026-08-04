@@ -1,6 +1,6 @@
 ---
 title: Як заробити на нарізках з нуля
-description: Шлях новачка в нарізках на DareBay без підписників і портфоліо. Ставка від $0.30 до $1.00 за 1000 переглядів, поріг 1000, стеля $50 на роботу. Що треба для старту.
+description: Шлях новачка в нарізках на DareBay без підписників і портфоліо. Ставка від $0.30 до $1.00 за 1000 переглядів, поріг 1000, стеля $50 на роботу.
 provenance: { snapshot_date: "2026-07-10", source: "darebay-prod" }
 numbers_used: [ppv_cpm_min, ppv_cpm_median, ppv_cpm_max, ppv_default_min_views_threshold, ppv_max_per_work_typical]
 seo: true

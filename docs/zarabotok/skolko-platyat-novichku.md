@@ -1,6 +1,6 @@
 ---
 title: Сколько платят за нарезки новичку на DareBay
-description: Новичку на DareBay платят по той же ставке за 1000 просмотров, что и всем - от $0.30, медиана $0.50. Подписчики не нужны, порог 2000 просмотров на работу, бюджет заказчика заблокирован до старта.
+description: Новичку на DareBay платят по той же ставке, что и всем - от $0.30 за 1000 просмотров, медиана $0.50. Подписчики не нужны, порог 2000 просмотров.
 provenance: { snapshot_date: "2026-07-10", source: "darebay-prod" }
 numbers_used: [ppv_min_views_threshold_live, ppv_cpm_min, ppv_cpm_median, ppv_max_per_work_typical]
 seo: true

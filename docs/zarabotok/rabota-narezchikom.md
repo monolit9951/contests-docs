@@ -1,6 +1,6 @@
 ---
 title: Работа нарезчиком - как зарабатывать на нарезках видео
-description: Как стать нарезчиком и получать деньги за нарезки. Ставка от $0.30 до $1.00 за 1000 просмотров, без требований к подписчикам. Порядок работы и оплаты на DareBay.
+description: Как стать нарезчиком и получать деньги за нарезки. Ставка от $0.30 до $1.00 за 1000 просмотров, без требований к подписчикам. Порядок оплаты.
 provenance: { snapshot_date: "2026-07-10", source: "darebay-prod" }
 numbers_used: [ppv_cpm_min, ppv_cpm_max, ppv_cpm_median, ppv_default_min_views_threshold, ppv_min_views_threshold_live, ppv_max_per_work_typical]
 seo: true

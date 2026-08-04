@@ -1,6 +1,6 @@
 ---
 title: What TikTok pays for views - two routes to monetization
-description: What views on TikTok are worth in 2026. TikTok's own creator programme versus an intermediary platform like DareBay - rates from $0.30 to $1.00 per 1000 views, no follower requirement, budget locked up front.
+description: What views on TikTok are worth in 2026. TikTok's own creator programme versus DareBay - rates from $0.30 to $1.00 per 1000 views, no followers needed.
 provenance: { snapshot_date: "2026-07-10", source: "darebay-prod" }
 numbers_used: [ppv_cpm_min, ppv_cpm_median, ppv_cpm_max, ppv_min_views_threshold_live, ppv_max_per_work_typical]
 seo: true

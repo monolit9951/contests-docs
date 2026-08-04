@@ -1,6 +1,6 @@
 ---
 title: Is DareBay a scam? A look at the guarantor mechanic
-description: Why DareBay is not a scam. The prize is locked before the contest starts, an independent oracle counts the views, and the platform guarantees the winner's payout.
+description: Why DareBay is not a scam. The prize is locked before the contest starts, an independent oracle counts the views, and the platform guarantees payout.
 provenance: { snapshot_date: "2026-07-09", source: "darebay-prod" }
 numbers_used: []
 seo: true

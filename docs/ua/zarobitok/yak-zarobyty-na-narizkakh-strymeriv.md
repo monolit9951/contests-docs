@@ -1,6 +1,6 @@
 ---
 title: Як заробити на нарізках стримерів на DareBay
-description: Покрокова інструкція заробітку на нарізках стримерів. Ставка $0.30-$1.00 за 1000 переглядів, поріг 2000 переглядів, стеля $50 на роботу. Бюджет заблоковано заздалегідь.
+description: Покрокова інструкція заробітку на нарізках стримерів. Ставка $0.30-$1.00 за 1000 переглядів, поріг 2000, стеля $50 на роботу.
 provenance: { snapshot_date: "2026-07-10", source: "darebay-prod" }
 numbers_used: [ppv_cpm_min, ppv_cpm_median, ppv_cpm_max, ppv_min_views_threshold_live, ppv_max_per_work_typical]
 seo: true

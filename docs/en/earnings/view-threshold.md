@@ -1,6 +1,6 @@
 ---
 title: The view threshold for a DareBay payout
-description: How many views a submission needs to join the budget split in a PPV contest. The live median is 2000 views, the system default is 1000, and the exact figure sits on the contest card.
+description: How many views a submission needs to join the budget split in a PPV contest. The live median is 2000 views and the system default is 1000.
 provenance: { snapshot_date: "2026-07-10", source: "darebay-prod" }
 numbers_used: [ppv_min_views_threshold_live, ppv_default_min_views_threshold, ppv_cpm_median]
 seo: true

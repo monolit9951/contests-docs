@@ -1,6 +1,6 @@
 ---
 title: How to start earning from clips with nothing
-description: A beginner's path into clipping on DareBay, with no followers and no portfolio. Rates from $0.30 to $1.00 per 1000 views, a 1000-view threshold, a $50 cap per submission.
+description: A beginner's path into clipping on DareBay, with no followers and no portfolio. Rates from $0.30 to $1.00 per 1000 views, a 1000-view threshold.
 provenance: { snapshot_date: "2026-07-10", source: "darebay-prod" }
 numbers_used: [ppv_cpm_min, ppv_cpm_median, ppv_cpm_max, ppv_default_min_views_threshold, ppv_max_per_work_typical]
 seo: true

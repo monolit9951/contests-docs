@@ -1,6 +1,6 @@
 ---
 title: How to earn from streamer clips on DareBay
-description: A step-by-step guide to earning from streamer clips. Rates of $0.30-$1.00 per 1000 views, a 2000-view threshold, a $50 cap per submission. The budget is locked in advance.
+description: A step-by-step guide to earning from streamer clips. Rates of $0.30-$1.00 per 1000 views, a 2000-view threshold, a $50 cap per submission.
 provenance: { snapshot_date: "2026-07-10", source: "darebay-prod" }
 numbers_used: [ppv_cpm_min, ppv_cpm_median, ppv_cpm_max, ppv_min_views_threshold_live, ppv_max_per_work_typical]
 seo: true

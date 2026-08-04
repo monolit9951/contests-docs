@@ -1,6 +1,6 @@
 ---
 title: What DareBay pays per 1000 views
-description: The rate per 1000 views in DareBay pay-per-view contests runs from $0.30 to $1.00, median $0.50. How the payout is worked out, why the threshold exists, when the money lands.
+description: The rate per 1000 views in DareBay pay-per-view contests runs from $0.30 to $1.00, median $0.50. How the payout works and when the money lands.
 provenance: { snapshot_date: "2026-07-10", source: "darebay-prod" }
 numbers_used: [ppv_cpm_min, ppv_cpm_median, ppv_cpm_max, ppv_min_views_threshold_live, ppv_max_per_work_typical]
 seo: true

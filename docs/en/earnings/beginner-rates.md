@@ -1,6 +1,6 @@
 ---
 title: What beginners are paid for clips on DareBay
-description: Beginners on DareBay earn the same rate per 1000 views as everyone else - from $0.30, median $0.50. No followers required, a 2000-view threshold per submission, and the budget is locked before you film.
+description: Beginners on DareBay earn the same rate per 1000 views as everyone else - from $0.30, median $0.50. No followers required, a 2000-view threshold.
 provenance: { snapshot_date: "2026-07-10", source: "darebay-prod" }
 numbers_used: [ppv_min_views_threshold_live, ppv_cpm_min, ppv_cpm_median, ppv_max_per_work_typical]
 seo: true

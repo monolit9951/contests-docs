@@ -1,6 +1,6 @@
 ---
 title: Protection from view fraud and fake submissions
-description: Views are counted independently of the organizer and the participant, fakes are rejected before they reach a prize, and the participant rating makes cheating a bad trade.
+description: Views are counted independently of the organizer and the participant, fakes are rejected before they reach a prize, and cheating costs your rating.
 ---
 
 # Protection from view fraud and fake submissions

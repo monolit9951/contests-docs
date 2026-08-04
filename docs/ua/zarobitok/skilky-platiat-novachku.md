@@ -1,6 +1,6 @@
 ---
 title: Скільки платять за нарізки новачку на DareBay
-description: Новачку на DareBay платять за тією самою ставкою за 1000 переглядів, що й усім - від $0.30, медіана $0.50. Підписники не потрібні, поріг 2000 переглядів на роботу, бюджет замовника заблоковано до старту.
+description: Новачку на DareBay платять за тією самою ставкою, що й усім - від $0.30 за 1000 переглядів, медіана $0.50. Підписники не потрібні, поріг 2000.
 provenance: { snapshot_date: "2026-07-10", source: "darebay-prod" }
 numbers_used: [ppv_min_views_threshold_live, ppv_cpm_min, ppv_cpm_median, ppv_max_per_work_typical]
 seo: true

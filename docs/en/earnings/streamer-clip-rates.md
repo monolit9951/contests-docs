@@ -1,6 +1,6 @@
 ---
 title: What streamer clips pay on DareBay
-description: The rate for streamer clips in DareBay PPV contests - $0.30 to $1.00 per 1000 views, with a $50 cap per submission. The budget is locked before you film and views are counted independently.
+description: The rate for streamer clips in DareBay PPV contests - $0.30 to $1.00 per 1000 views, with a $50 cap per submission. The budget is locked up front.
 provenance: { snapshot_date: "2026-07-10", source: "darebay-prod" }
 numbers_used: [ppv_cpm_min, ppv_cpm_median, ppv_cpm_max, ppv_max_per_work_typical]
 seo: true

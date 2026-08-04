@@ -1,6 +1,6 @@
 ---
 title: Скільки платять за перегляди в ТікТок - два шляхи монетизації
-description: Скільки платять за перегляди в TikTok у 2026 році. Партнерка TikTok проти майданчика-посередника DareBay - ставки від $0.30 до $1.00 за 1000 переглядів, без вимог до підписників, бюджет заблоковано заздалегідь.
+description: Скільки платять за перегляди в TikTok у 2026 році. Партнерка TikTok проти DareBay - ставки від $0.30 до $1.00 за 1000 переглядів, без підписників.
 provenance: { snapshot_date: "2026-07-10", source: "darebay-prod" }
 numbers_used: [ppv_cpm_min, ppv_cpm_median, ppv_cpm_max, ppv_min_views_threshold_live, ppv_max_per_work_typical]
 seo: true

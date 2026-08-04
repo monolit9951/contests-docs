@@ -1,6 +1,6 @@
 ---
 title: DareBay вывод денег - как вывести, сроки, бесплатно
-description: Как вывести деньги с DareBay. Вывод бесплатный, платформа не берёт за него ничего. Кошелёк, карта, банковский перевод, Telegram Stars и подарки. Шаги, сроки, пороги.
+description: Как вывести деньги с DareBay. Вывод бесплатный. Кошелёк, карта, банковский перевод, Telegram Stars и подарки - шаги, сроки и пороги.
 provenance: { snapshot_date: "2026-07-09", source: "darebay-prod" }
 numbers_used: [ppv_min_views_threshold_live, winner_confirmation_min]
 seo: true

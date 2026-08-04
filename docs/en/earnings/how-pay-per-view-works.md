@@ -1,6 +1,6 @@
 ---
 title: How pay-per-view works on DareBay
-description: The mechanics of a DareBay PPV contest, from the locked budget to paying clippers against independently counted views. The formula, the threshold, the cap and the timings.
+description: The mechanics of a DareBay PPV contest, from the locked budget to paying clippers by independently counted views. Formula, threshold, cap, timings.
 provenance: { snapshot_date: "2026-07-11", source: "darebay-prod" }
 numbers_used: [ppv_cpm_median, ppv_min_views_threshold_live, ppv_max_per_work_typical, selection_creator_window_min, winner_confirmation_min]
 seo: true

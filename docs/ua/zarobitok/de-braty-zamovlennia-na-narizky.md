@@ -1,6 +1,6 @@
 ---
 title: Де брати замовлення на нарізки - біржа нарізок
-description: Де нарізальнику знайти оплачувані замовлення. Відкрита вітрина завдань з оплатою від $0.30 до $1.00 за 1000 переглядів, реєстрація і виплати з України, посередник-гарант блокує бюджет до старту.
+description: Де нарізальнику знайти оплачувані замовлення. Відкрита вітрина завдань з оплатою від $0.30 до $1.00 за 1000 переглядів, виплати з України.
 provenance: { snapshot_date: "2026-07-10", source: "darebay-prod" }
 numbers_used: [commission_fiat, commission_crypto, ppv_cpm_min, ppv_cpm_max, ppv_cpm_median, ppv_min_views_threshold_live, ppv_max_per_work_typical]
 seo: true

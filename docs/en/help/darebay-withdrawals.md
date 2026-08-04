@@ -1,6 +1,6 @@
 ---
-title: DareBay withdrawals - how to withdraw, how long it takes, free of charge
-description: How to withdraw money from DareBay. Withdrawals are free; the platform charges nothing for them. Wallet, card, bank transfer, Telegram Stars and gifts. Steps, timing, thresholds.
+title: DareBay withdrawals - how it works and how long it takes
+description: How to withdraw money from DareBay. Withdrawals are free. Wallet, card, bank transfer, Telegram Stars and gifts - steps, timing and thresholds.
 provenance: { snapshot_date: "2026-07-09", source: "darebay-prod" }
 numbers_used: [ppv_min_views_threshold_live, winner_confirmation_min]
 seo: true

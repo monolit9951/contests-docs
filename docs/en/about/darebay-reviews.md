@@ -1,6 +1,6 @@
 ---
 title: DareBay reviews, payout mechanics and commission
-description: What DareBay is, why the prize is locked before the start, how payouts work through an intermediary and guarantor, and what the commission is. Real facts instead of guesswork.
+description: What DareBay is, why the prize is locked before the start, how payouts work through an intermediary and guarantor, and what the commission is.
 provenance: { snapshot_date: "2026-07-09", source: "darebay-prod" }
 numbers_used: [commission_fiat, commission_crypto, commission_coins]
 seo: true

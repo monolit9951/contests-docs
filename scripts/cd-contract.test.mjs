@@ -4,6 +4,7 @@ import { describe, expect, it } from 'vitest'
 const workflow = readFileSync(new URL('../.github/workflows/CD.yml', import.meta.url), 'utf8')
 const transaction = readFileSync(new URL('../deploy/deploy-content-transaction.sh', import.meta.url), 'utf8')
 const installer = readFileSync(new URL('../deploy/install-host-nginx-snippet.sh', import.meta.url), 'utf8')
+const pinnedSshAction = 'appleboy/ssh-action@0ff4204d59e8e51228ff73bce53f80d53301dee2'
 
 const functionBody = (source, name, nextName) => source.slice(
   source.indexOf(`${name}() {`),
@@ -43,7 +44,7 @@ describe('release delivery contract', () => {
     const beforePublish = workflow.indexOf('Refuse a stale release before candidate publication')
     const publish = workflow.indexOf('make push_app')
     const afterPublish = workflow.indexOf('Refuse a stale release after candidate publication')
-    const ssh = workflow.indexOf('uses: appleboy/ssh-action@v1.2.5')
+    const ssh = workflow.indexOf(`uses: ${pinnedSshAction}`)
     const decode = workflow.indexOf('decode_artifact deploy-content-transaction.sh')
     const remoteTip = workflow.indexOf('release_output="$(git ls-remote', decode)
     const invoke = workflow.indexOf('/bin/bash "$artifact_dir/deploy-content-transaction.sh"', remoteTip)
@@ -72,7 +73,7 @@ describe('release delivery contract', () => {
 
   it('uses one pinned SSH action and a server-created private staging directory', () => {
     expect(workflow).not.toContain('appleboy/scp-action@')
-    expect(workflow.match(/appleboy\/ssh-action@v1\.2\.5/g)).toHaveLength(1)
+    expect(workflow.split(pinnedSshAction)).toHaveLength(2)
     expect(workflow).not.toMatch(/appleboy\/(?:scp|ssh)-action@master/)
     expect(workflow).not.toContain('/tmp/darebay-content-')
     expect(workflow).not.toContain('Remove staged deployment artifacts')

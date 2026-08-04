@@ -16,6 +16,10 @@ Treat darebay.com and Telegram as co-equal product entrances. Consumer copy fram
 intermediary/guarantor; never present planned on-chain escrow as current behavior.
 
 - Runtime/build: Node.js + VitePress.
+- VitePress 1.x is intentionally paired with a scoped `vite@6.4.3` override: it keeps the stable
+  renderer while closing the vulnerable Vite 5 development-server chain. Keep full `npm audit`
+  and the 129-URL production build green; remove the override only when stable VitePress declares
+  compatibility with an equally patched Vite release (do not move this site to a VitePress alpha).
 - Tests: Vitest plus the repository-owned executable contract/self-tests in `npm test`.
 - Canonical semantic URL model: `docs/content-pages.json`. It owns stable page IDs, locale axes,
   localized hub segments and slugs. Do not create a second URL/locale registry.

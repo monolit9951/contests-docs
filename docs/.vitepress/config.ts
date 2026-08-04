@@ -79,6 +79,10 @@ const SITE_DESCRIPTION = 'Запускайте активности, отпра�
 // Shared with the app so a docs link and a site link preview identically.
 const OG_IMAGE = 'https://darebay.com/og-default.jpg'
 
+// Open Graph wants a locale, not a language: `ru_RU`, not `ru`. hreflang wants
+// the opposite. Two audiences, two formats, one table so they cannot drift.
+const OG_LOCALE: Record<Locale, string> = { ru: 'ru_RU', uk: 'uk_UA', en: 'en_US' }
+
 // Nav and sidebar, built from the registry.
 //
 // They used to be a hand-written list of `/ru/...` links plus a `ruZone()` helper that
@@ -563,6 +567,30 @@ export default defineConfig({
       ['meta', { property: 'og:description', content: description }],
       ['meta', { property: 'og:url', content: url }],
       ['meta', { property: 'og:image', content: OG_IMAGE }],
+      // `article` on an article, `website` on a hub index. The site-level tag said
+      // `website` for all 129 pages — the one value that tells a reader's client
+      // "this is a landing page", on the pages that are the opposite of that.
+      ['meta', { property: 'og:type', content: hubPages.length ? 'website' : 'article' }],
+      // Freshness in the format the social crawlers read, off the same lastmod.json
+      // the sitemap uses — one source, so the two cannot disagree.
+      ...(updated && !hubPages.length
+        ? ([['meta', { property: 'article:modified_time', content: new Date(updated).toISOString() }]] as [
+            string,
+            Record<string, string>,
+          ][])
+        : []),
+      // The page's own locale, plus the ones it is translated into — the same
+      // list hreflang gets, from the same registry call.
+      ['meta', { property: 'og:locale', content: OG_LOCALE[found.lang] }],
+      ...LOCALES.filter(
+        (locale) => locale.language !== found.lang && localesOf(found.entry).includes(locale.language)
+      ).map(
+        (locale) =>
+          ['meta', { property: 'og:locale:alternate', content: OG_LOCALE[locale.language] }] as [
+            string,
+            Record<string, string>,
+          ]
+      ),
       ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
       ['meta', { name: 'twitter:title', content: title }],
       ['meta', { name: 'twitter:description', content: description }],
@@ -585,9 +613,13 @@ export default defineConfig({
     ...VERIFICATION_TAGS,
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/content-assets/favicon.svg' }],
     ['meta', { name: 'theme-color', content: '#02140E' }],
-    ['meta', { property: 'og:type', content: 'website' }],
-    ['meta', { property: 'og:site_name', content: 'Документация DareBay' }],
-    ['meta', { property: 'og:locale', content: 'ru_RU' }],
+    // og:type and og:locale are per-page now (see transformPageData): a site-wide
+    // value would have to be wrong on two of the three trees.
+    //
+    // "Документация DareBay" is gone for the reason titleTemplate is gone — these
+    // pages answer commercial queries, and calling them documentation in every
+    // share card told the reader they had landed in a manual.
+    ['meta', { property: 'og:site_name', content: 'DareBay' }],
     // Manrope, self-hosted — same files the frontend serves from public/fonts. The app moved off
     // Google Fonts on purpose: it is unreachable for part of the RU audience, who were left on
     // fallback fonts. These docs kept requesting fonts.googleapis.com, so on the only pages of

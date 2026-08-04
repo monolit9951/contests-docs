@@ -3,6 +3,7 @@ import { beforeEach, describe, expect, it, vi } from 'vitest'
 import {
     classifyExitFrom,
     DocsEvent,
+    flushDocsOutbox,
     isContentPath,
     normalizeDocsPath,
     readDocsOutbox,
@@ -241,5 +242,41 @@ describe('docs analytics persistence boundaries', () => {
             key.startsWith('darebay_docs_analytics_outbox_v2:'))
         expect(eventKeys).toHaveLength(2)
         expect(readDocsOutbox().every((event) => event.isImpersonated)).toBe(true)
+    })
+
+    it('reattaches signed credentials only at send time', async () => {
+        const token = tokenFor('user-a')
+        storage.setItem('userToken', token)
+        const send = vi.fn().mockResolvedValue({ ok: true, status: 202 })
+        vi.stubGlobal('fetch', send)
+
+        trackDocsEvent(DocsEvent.PageView, {}, {
+            dedupeKey: 'credential-send',
+            deferFlush: true,
+        })
+        expect(readDocsOutbox()[0]).not.toHaveProperty('authToken')
+
+        await flushDocsOutbox()
+
+        const request = send.mock.calls[0]?.[1] as { body?: string }
+        expect(JSON.parse(request.body ?? '{}')).toEqual(expect.objectContaining({
+            authToken: token,
+        }))
+    })
+
+    it('does not attach the next account to an event queued by the previous actor', async () => {
+        storage.setItem('userToken', tokenFor('user-a'))
+        trackDocsEvent(DocsEvent.PageView, {}, {
+            dedupeKey: 'old-account',
+            deferFlush: true,
+        })
+        storage.setItem('userToken', tokenFor('user-b'))
+        const send = vi.fn().mockResolvedValue({ ok: true, status: 202 })
+        vi.stubGlobal('fetch', send)
+
+        await flushDocsOutbox()
+
+        const request = send.mock.calls[0]?.[1] as { body?: string }
+        expect(JSON.parse(request.body ?? '{}')).not.toHaveProperty('authToken')
     })
 })

@@ -136,6 +136,11 @@ interface AnalyticsPayload {
     meta?: Record<string, string>
 }
 
+interface AuthenticatedAnalyticsPayload extends AnalyticsPayload {
+    authToken?: string
+    initData?: string
+}
+
 let memoryIdentity: BrowserIdentity | undefined
 let memoryFirstTouch: StoredFirstTouch | undefined
 let memorySession: SessionContext | undefined
@@ -211,6 +216,13 @@ const telegramUserId = (): number | undefined => {
     return typeof value === 'number' && Number.isSafeInteger(value) && value > 0
         ? value
         : undefined
+}
+
+const telegramInitData = (): string | undefined => {
+    const value = (window as unknown as {
+        Telegram?: { WebApp?: { initData?: unknown } }
+    }).Telegram?.WebApp?.initData
+    return typeof value === 'string' ? bounded(value, 8192) : undefined
 }
 
 const actorContext = (): { boundary: string; impersonated: boolean } => {
@@ -440,6 +452,19 @@ const acknowledge = (eventKey: string): void => {
     safeRemove(outboxKey(eventKey))
 }
 
+const credentialsFor = (
+    payload: AnalyticsPayload,
+): Pick<AuthenticatedAnalyticsPayload, 'authToken' | 'initData'> => {
+    // Credentials are attached only in memory at send time. If a shared
+    // browser switched actor after enqueue, the old event remains anonymous
+    // instead of being attributed to the new account.
+    if (getSession().id !== payload.sessionId) return {}
+    return {
+        authToken: bounded(safeGet(TOKEN_STORAGE_KEY), 4096),
+        initData: telegramInitData(),
+    }
+}
+
 export const sanitizeDocsMeta = (
     eventId: DocsEventId,
     meta: Record<string, string>,
@@ -468,8 +493,12 @@ export const flushDocsOutbox = (useBeacon = false): Promise<void> => {
     if (useBeacon) {
         if (typeof navigator.sendBeacon === 'function') {
             for (const payload of readDocsOutbox()) {
+                const authenticated: AuthenticatedAnalyticsPayload = {
+                    ...payload,
+                    ...credentialsFor(payload),
+                }
                 navigator.sendBeacon(ENDPOINT, new Blob(
-                    [JSON.stringify(payload)],
+                    [JSON.stringify(authenticated)],
                     { type: 'application/json' },
                 ))
             }
@@ -481,7 +510,11 @@ export const flushDocsOutbox = (useBeacon = false): Promise<void> => {
     if (flushPromise) return flushPromise
     flushPromise = (async () => {
         for (const payload of readDocsOutbox()) {
-            const body = JSON.stringify(payload)
+            const authenticated: AuthenticatedAnalyticsPayload = {
+                ...payload,
+                ...credentialsFor(payload),
+            }
+            const body = JSON.stringify(authenticated)
             try {
                 const response = await fetch(ENDPOINT, {
                     method: 'POST',

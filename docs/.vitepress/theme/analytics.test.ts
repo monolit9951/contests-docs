@@ -8,14 +8,14 @@ import {
     throttleKeyFor,
 } from './analytics'
 
-const ARTICLE = 'https://darebay.com/docs/ru/zarabotok/kak-zarabotat-na-narezkah-s-nulya'
+const ARTICLE = 'https://darebay.com/zarabotok/kak-zarabotat-na-narezkah-s-nulya'
 
 describe('classifyExitFrom', () => {
     it('does not treat in-page anchors as leaving the docs', () => {
         // The regression this whole function was rewritten for. Every heading
         // renders a `.header-anchor` and the entire "На этой странице" outline
         // is `#…` links. Resolved against the ORIGIN they came out as pathname
-        // `/` — not under /docs — so reading the table of contents registered
+        // `/` — not under a content hub — so reading the table of contents registered
         // as converting into the product, and `docs_exit_to_site` measured the
         // docs' own navigation instead of its only success metric.
         expect(classifyExitFrom('#kak-eto-rabotaet', ARTICLE)).toBeNull()
@@ -23,9 +23,9 @@ describe('classifyExitFrom', () => {
     })
 
     it('ignores navigation deeper into the docs, absolute or relative', () => {
-        expect(classifyExitFrom('/docs/ru/faq/crypto', ARTICLE)).toBeNull()
-        expect(classifyExitFrom('../faq/crypto', ARTICLE)).toBeNull()
-        expect(classifyExitFrom('https://darebay.com/docs/', ARTICLE)).toBeNull()
+        expect(classifyExitFrom('/pomoshch/kakaya-komissiya', ARTICLE)).toBeNull()
+        expect(classifyExitFrom('../pomoshch/kakaya-komissiya', ARTICLE)).toBeNull()
+        expect(classifyExitFrom('https://darebay.com/o-proekte/', ARTICLE)).toBeNull()
         // Same page, explicit url plus a fragment.
         expect(classifyExitFrom(`${ARTICLE}#itogi`, ARTICLE)).toBeNull()
     })
@@ -33,8 +33,8 @@ describe('classifyExitFrom', () => {
     it('counts a link back into the product as the exit that matters', () => {
         expect(classifyExitFrom('https://darebay.com/', ARTICLE)).toBe(DocsEvent.ExitToSite)
         expect(classifyExitFrom('/contests', ARTICLE)).toBe(DocsEvent.ExitToSite)
-        // A path that merely starts with the letters "docs" is not the docs.
-        expect(classifyExitFrom('/docsomething', ARTICLE)).toBe(DocsEvent.ExitToSite)
+        // A path that merely starts with a hub's letters is not content.
+        expect(classifyExitFrom('/zarabotok-extra', ARTICLE)).toBe(DocsEvent.ExitToSite)
     })
 
     it('recognises Telegram in every form the docs link it', () => {
@@ -61,31 +61,32 @@ describe('classifyExitFrom', () => {
     })
 
     it('treats the dev host as our own, so a preview does not read as an exit', () => {
-        const preview = 'https://dev.darebay.com/docs/ru/faq/'
-        expect(classifyExitFrom('/docs/ru/faq/crypto', preview)).toBeNull()
+        const preview = 'https://dev.darebay.com/ua/dopomoha/'
+        expect(classifyExitFrom('/ua/dopomoha/yaka-komisiia', preview)).toBeNull()
         expect(classifyExitFrom('https://dev.darebay.com/contests', preview)).toBe(DocsEvent.ExitToSite)
     })
 })
 
 describe('normalizeDocsPath', () => {
     it('collapses the article slug so a zone can be aggregated', () => {
-        expect(normalizeDocsPath('/docs/ru/zarabotok/kak-zarabotat')).toBe('/docs/ru/zarabotok/:slug')
-        expect(normalizeDocsPath('/docs/ru/faq/crypto')).toBe('/docs/ru/faq/:slug')
+        expect(normalizeDocsPath('/zarabotok/kak-zarabotat')).toBe('/zarabotok/:slug')
+        expect(normalizeDocsPath('/ua/dopomoha/yaka-komisiia')).toBe('/ua/dopomoha/:slug')
+        expect(normalizeDocsPath('/en/legal/privacy')).toBe('/en/legal/:slug')
     })
 
     it('keeps the zone and section index pages distinct', () => {
-        expect(normalizeDocsPath('/docs/ru/faq/')).toBe('/docs/ru/faq')
-        expect(normalizeDocsPath('/docs/')).toBe('/docs')
+        expect(normalizeDocsPath('/pomoshch/')).toBe('/pomoshch')
+        expect(normalizeDocsPath('/ua/dopomoha/')).toBe('/ua/dopomoha')
     })
 
-    it('maps the docs root to a single key', () => {
+    it('leaves the site root as a single key', () => {
         expect(normalizeDocsPath('/')).toBe('/')
     })
 })
 
 describe('throttleKeyFor', () => {
-    const A = '/docs/ru/faq/crypto'
-    const B = '/docs/ru/faq/no-submissions'
+    const A = '/pomoshch/kripto'
+    const B = '/pomoshch/esli-nikto-ne-uchastvuet'
 
     it('separates the same event on different pages', () => {
         // The regression: the key had no page in it, so `docs_page_view` had ONE

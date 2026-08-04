@@ -2,15 +2,18 @@ import { defineConfig } from 'vitepress'
 import { readFileSync, existsSync } from 'node:fs'
 import { join, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { HOMEPAGE, TELEGRAM } from './links'
-import LASTMOD from './lastmod.json'
+import { productUrlForLocale, TELEGRAM } from './links'
+import { CHROME_COPY, type DareBayThemeConfig } from './chrome'
+import PAGE_DATES from '../page-dates.json'
 
 // Source file -> commit date, rekeyed to the URL VitePress hands `transformItems`
 // (docs-relative, no leading slash, `.md` dropped, `index` collapsed away).
-const LASTMOD_BY_URL: Record<string, string> = Object.fromEntries(
-  Object.entries(LASTMOD as Record<string, string>).map(([file, iso]) => [
+interface PageDates { readonly published: string; readonly modified: string }
+
+const PAGE_DATES_BY_URL: Record<string, PageDates> = Object.fromEntries(
+  Object.entries(PAGE_DATES as Record<string, PageDates>).map(([file, dates]) => [
     file.replace(/(^|\/)index\.md$/, '$1').replace(/\.md$/, ''),
-    iso,
+    dates,
   ])
 )
 import {
@@ -57,13 +60,10 @@ const LOCALE_LABELS: Record<Locale, string> = {
  * two variables the frontend build takes (see `scripts/seo-routes.mjs` there),
  * so one pair of repo secrets verifies both containers.
  *
- * A `https://darebay.com/` URL-prefix property already covers /docs, since the
- * docs are a path on the main domain and not a subdomain. These tags exist for
- * the case worth having: a separate property scoped to `/docs/`, which is the
- * only way to read impressions, average position and — the point — the actual
- * QUERIES for the content pages apart from the product's. Google verifies a
- * path-scoped property by fetching a url under that path, and the frontend's
- * tag does not exist there.
+ * A `https://darebay.com/` URL-prefix property covers both renderers: product
+ * routes and the root-level content hubs. Keeping the same verification tags
+ * in both builds avoids ownership depending on which container answers the
+ * particular URL Google chooses to fetch.
  *
  * Empty by default: the token comes from an account only the founder has, so
  * the plumbing ships and the value is a repo secret away.
@@ -97,9 +97,12 @@ const HUB_TITLES: Record<Locale, Record<HubId, string>> = {
 }
 
 const OVERVIEW: Record<Locale, string> = { ru: 'Обзор', uk: 'Огляд', en: 'Overview' }
-const NAV_CTA: Record<Locale, string> = { ru: 'Перейти на сайт →', uk: 'Перейти на сайт →', en: 'Go to the site →' }
-
 const localePrefix = (lang: Locale) => LOCALES.find((l) => l.language === lang)?.prefix ?? ''
+const contentHomeForLocale = (lang: Locale) => {
+  const home = PAGES.find((page) => page.id === 'earnings-hub')
+  if (!home) throw new Error('config: earnings-hub is missing from docs/content-pages.json')
+  return pagePath(home, lang)!
+}
 
 // Order in the sidebar. "О проекте" is first on purpose: earnings is a subject where the
 // reader's first question — and Google's — is who is behind the page and where the
@@ -118,25 +121,64 @@ const pageTitle = (file: string, fallback: string) => {
  *
  * They used to be built once from the root locale and reused on every tree, so
  * the header on `/ua/` carried Russian labels pointing at Russian addresses:
- a * reader who switched language was thrown straight back out of it by the very
+ * a reader who switched language was thrown straight back out of it by the very
  * first thing they clicked.
  *
  * A section with no pages in this language is dropped entirely rather than shown
  * empty — the same rule as everywhere else here.
  */
-export const themeForLocale = (lang: Locale) => ({
-  nav: [
-    { text: HUB_TITLES[lang].earnings, link: `${localePrefix(lang)}/${HUBS.earnings[lang]}/` },
-    { text: HUB_TITLES[lang].brands, link: `${localePrefix(lang)}/${HUBS.brands[lang]}/` },
-    { text: HUB_TITLES[lang].help, link: `${localePrefix(lang)}/${HUBS.help[lang]}/` },
-    // The CTA link is styled separately via CSS — see the `:last-child` rules under
-    // "The CTA" in custom.css. It must stay LAST in this array: the gradient-pill
-    // styling keys off `:last-child`, and so does the rule that keeps it visible on
-    // phones while the other nav items collapse into the hamburger.
-    { text: NAV_CTA[lang], link: HOMEPAGE },
-  ],
-  sidebar: SIDEBAR_ORDER.map((hubId) => hubSection(hubId, lang)).filter((section) => section.items.length),
-})
+export const themeForLocale = (lang: Locale): DareBayThemeConfig => {
+  const copy = CHROME_COPY[lang]
+  const productUrl = productUrlForLocale(lang)
+
+  return {
+    // Native VitePress config is reactive across client-side locale changes, so the
+    // server-rendered and hydrated logo always share this exact href. No DOM rewrite.
+    logoLink: contentHomeForLocale(lang),
+    nav: [
+      { text: HUB_TITLES[lang].earnings, link: `${localePrefix(lang)}/${HUBS.earnings[lang]}/` },
+      { text: HUB_TITLES[lang].brands, link: `${localePrefix(lang)}/${HUBS.brands[lang]}/` },
+      { text: HUB_TITLES[lang].help, link: `${localePrefix(lang)}/${HUBS.help[lang]}/` },
+      // The CTA link is styled separately via CSS — see the `:last-child` rules under
+      // "The CTA" in custom.css. It must stay LAST in this array: the gradient-pill
+      // styling keys off `:last-child`, and so does the rule that keeps it visible on
+      // phones while the other nav items collapse into the hamburger.
+      { text: copy.navCta, link: productUrl },
+    ],
+    sidebar: SIDEBAR_ORDER.map((hubId) => hubSection(hubId, lang)).filter((section) => section.items.length),
+    notFound: copy.notFound,
+    darkModeSwitchLabel: copy.darkModeSwitchLabel,
+    lightModeSwitchTitle: copy.lightModeSwitchTitle,
+    darkModeSwitchTitle: copy.darkModeSwitchTitle,
+    sidebarMenuLabel: copy.sidebarMenuLabel,
+    returnToTopLabel: copy.returnToTopLabel,
+    langMenuLabel: copy.langMenuLabel,
+    skipToContentLabel: copy.skipToContentLabel,
+    outline: { label: copy.outlineLabel, level: [2, 3] },
+    docFooter: { prev: copy.previousPage, next: copy.nextPage },
+    // Only surfaces DareBay actually runs. Add another network only once the
+    // account exists and is controlled by DareBay.
+    socialLinks: [
+      {
+        icon: {
+          // Telegram isn't a built-in VitePress icon; inline SVG.
+          svg: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg>',
+        },
+        link: TELEGRAM,
+        ariaLabel: copy.telegramAriaLabel,
+      },
+    ],
+    footer: {
+      message: `<a href="${productUrl}">darebay.com</a> · <a href="${TELEGRAM}" target="_blank" rel="noreferrer">Telegram</a>`,
+      copyright: '© DareBay',
+    },
+    darebayCta: {
+      ...copy.cta,
+      productUrl,
+      telegramUrl: TELEGRAM,
+    },
+  }
+}
 
 function hubSection(hubId: HubId, lang: Locale) {
   const entries = PAGES.filter((e) => e.hub === hubId && localesOf(e).includes(lang))
@@ -175,35 +217,39 @@ function hubSection(hubId: HubId, lang: Locale) {
 // Google penalises.
 // ---------------------------------------------------------------------------
 
-// One Organization node with a stable @id, referenced by every page instead of
-// being repeated inline. That is what lets a crawler treat 129 pages as one
-// publisher rather than 129 unrelated mentions of the same name — the difference
-// between a brand entity and a string.
-const ORG_ID = `${HOSTNAME}/#organization`
-const AUTHOR_ID = `${HOSTNAME}/#founder`
+// One entity graph per page. Every node has schema.org context through the
+// graph root and stable ids shared with the application.
+const ENTITY_ORIGIN = 'https://darebay.com'
+const ORG_ID = `${ENTITY_ORIGIN}/#organization`
+const AUTHOR_ID = `${ENTITY_ORIGIN}/#founder`
+const WEBSITE_ID = `${ENTITY_ORIGIN}/#website`
+const LOGO_ID = `${ENTITY_ORIGIN}/#logo`
 
 const ORGANIZATION = {
   '@type': 'Organization',
   '@id': ORG_ID,
   name: 'DareBay',
-  url: `${HOSTNAME}/`,
-  logo: `${HOSTNAME}/content-assets/logo.svg`,
+  url: `${ENTITY_ORIGIN}/`,
+  logo: { '@id': LOGO_ID },
   sameAs: ['https://t.me/darebay_app', 'https://www.tiktok.com/@darebay.com'],
 }
 
-// A named human author, not the company.
-//
-// Earnings is a YMYL-adjacent subject: Google weighs who is behind the page, and
-// "author: Organization" answers that with nobody. The founder is already named
-// on the about page for exactly this reason, and the markup should say the same
-// thing the page says.
 const AUTHOR = {
   '@type': 'Person',
   '@id': AUTHOR_ID,
   name: 'Руслан Бей',
-  jobTitle: 'Основатель DareBay',
-  url: 'https://t.me/ruslanbwork',
+  url: `${ENTITY_ORIGIN}/o-proekte/`,
+  sameAs: ['https://t.me/ruslanbwork'],
   worksFor: { '@id': ORG_ID },
+}
+
+const WEBSITE = {
+  '@type': 'WebSite',
+  '@id': WEBSITE_ID,
+  name: 'DareBay',
+  url: `${ENTITY_ORIGIN}/`,
+  inLanguage: LOCALES.map((locale) => locale.language),
+  publisher: { '@id': ORG_ID },
 }
 
 const FAQ_HEADING = /вопрос|питання|question/i
@@ -217,7 +263,6 @@ const stripMarkdown = (text: string) =>
     .replace(/\s+/g, ' ')
     .trim()
 
-/** Q&A pairs under the FAQ section: `### question` then the prose beneath it. */
 function faqPairs(body: string) {
   const lines = body.split('\n')
   const out: { q: string; a: string }[] = []
@@ -258,55 +303,102 @@ function structuredData(
   language: Locale,
   crumbs: { name: string; path: string }[],
   hubPages: { title: string; path: string }[],
-  iso?: string
+  isHub: boolean,
+  hub: HubId,
+  dates?: PageDates
 ) {
   const file = join(DOCS_DIR, relativePath)
   const raw = existsSync(file) ? readFileSync(file, 'utf8') : ''
   const body = raw.replace(/^---\n[\s\S]*?\n---/, '')
+  const published = dates?.published?.slice(0, 10)
+  const modified = dates?.modified?.slice(0, 10)
 
-  const date = (iso ?? '').slice(0, 10)
-  const blocks: Record<string, unknown>[] = [
+  const graph: Record<string, unknown>[] = [
+    {
+      '@type': 'ImageObject',
+      '@id': LOGO_ID,
+      url: `${ENTITY_ORIGIN}/android-chrome-512x512.png`,
+      contentUrl: `${ENTITY_ORIGIN}/android-chrome-512x512.png`,
+      width: 512,
+      height: 512,
+    },
     ORGANIZATION,
     AUTHOR,
-    {
-      '@context': 'https://schema.org',
-      // A hub index is a list of pages, not a piece of writing. Calling it an
-      // Article would claim a body it does not have; CollectionPage is what it
-      // actually is, and it pairs with the ItemList emitted below.
-      '@type': hubPages.length ? 'CollectionPage' : 'Article',
-      headline: title,
+    WEBSITE,
+  ]
+
+  if (isHub) {
+    graph.push({
+      '@type': 'CollectionPage',
+      '@id': url,
+      name: title,
       description,
       url,
       inLanguage: language,
-      ...(date ? { datePublished: date, dateModified: date } : {}),
-      author: { '@id': AUTHOR_ID },
+      isPartOf: { '@id': WEBSITE_ID },
+      ...(modified ? { dateModified: modified } : {}),
+    })
+  } else if (hub === 'legal') {
+    graph.push({
+      '@type': 'WebPage',
+      '@id': url,
+      name: title,
+      description,
+      url,
+      inLanguage: language,
+      isPartOf: { '@id': WEBSITE_ID },
       publisher: { '@id': ORG_ID },
-      isPartOf: { '@id': ORG_ID },
-    },
-  ]
+      ...(modified ? { dateModified: modified } : {}),
+    })
+  } else {
+    const imageId = `${url}#primaryimage`
+    graph.push(
+      {
+        '@type': 'ImageObject',
+        '@id': imageId,
+        url: OG_IMAGE,
+        contentUrl: OG_IMAGE,
+        width: 1200,
+        height: 630,
+        caption: title,
+      },
+      {
+        '@type': 'Article',
+        '@id': `${url}#article`,
+        headline: title,
+        description,
+        url,
+        mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+        inLanguage: language,
+        image: { '@id': imageId },
+        author: { '@id': AUTHOR_ID },
+        publisher: { '@id': ORG_ID },
+        isPartOf: { '@id': WEBSITE_ID },
+        ...(published ? { datePublished: published } : {}),
+        ...(modified ? { dateModified: modified } : {}),
+      }
+    )
+  }
 
-  // BreadcrumbList is the one of these that still CHANGES THE SERP: Google
-  // replaces the raw URL under the title with the trail. Two levels is what the
-  // site actually has (hub, then page) and inventing a third would be a lie the
-  // navigation does not back up.
   if (crumbs.length > 1) {
-    blocks.push({
-      '@context': 'https://schema.org',
+    graph.push({
       '@type': 'BreadcrumbList',
-      itemListElement: crumbs.map((c, i) => ({
+      '@id': `${url}#breadcrumb`,
+      itemListElement: crumbs.map((crumb, index) => ({
         '@type': 'ListItem',
-        position: i + 1,
-        name: c.name,
-        item: `${HOSTNAME}${c.path}`,
+        position: index + 1,
+        name: crumb.name,
+        item: `${HOSTNAME}${crumb.path}`,
       })),
     })
   }
 
   const faq = faqPairs(body)
   if (faq.length) {
-    blocks.push({
-      '@context': 'https://schema.org',
+    graph.push({
       '@type': 'FAQPage',
+      '@id': `${url}#faq`,
+      isPartOf: { '@id': WEBSITE_ID },
       mainEntity: faq.map(({ q, a }) => ({
         '@type': 'Question',
         name: q,
@@ -315,38 +407,22 @@ function structuredData(
     })
   }
 
-  // NO HowTo, deliberately. Two reasons, and the second is the decisive one:
-  //
-  //  1. Google retired HowTo rich results in 2023 — the markup buys nothing in
-  //     the surface it was written for.
-  //  2. A numbered list is not a procedure. The commission page explains what
-  //     the PLATFORM does in three numbered points, and the detector happily
-  //     announced it as a how-to for the reader. Structure a page does not have
-  //     is exactly what earns a manual action, and no heuristic here can tell
-  //     "steps you take" from "what happens next" reliably enough to risk it.
-  //
-  // FAQPage stays: Google restricts its rich result too, but the assistant
-  // crawlers read it, and they hit this domain 7826 times against Yandex's 598.
-  // Structured question-and-answer is exactly what an answer engine ingests.
-
-  // A hub page is a list. Saying so gives a crawler the section's shape in one
-  // read instead of making it infer the relationship from anchor tags.
-  if (hubPages.length) {
-    blocks.push({
-      '@context': 'https://schema.org',
+  if (isHub) {
+    graph.push({
       '@type': 'ItemList',
+      '@id': `${url}#items`,
       name: title,
       numberOfItems: hubPages.length,
-      itemListElement: hubPages.map((page, i) => ({
+      itemListElement: hubPages.map((page, index) => ({
         '@type': 'ListItem',
-        position: i + 1,
+        position: index + 1,
         name: page.title,
         url: `${HOSTNAME}${page.path}`,
       })),
     })
   }
 
-  return blocks
+  return { '@context': 'https://schema.org', '@graph': graph }
 }
 
 // Self-referencing canonical, and the page's hreflang cluster — both from the REGISTRY,
@@ -386,11 +462,11 @@ export default defineConfig({
     // `lastmod` is set HERE and not through `lastUpdated`: that option makes
     // VitePress shell out to git during the build, which fails inside the image
     // (no `.git` in the context, no git binary). The dates come from
-    // lastmod.json, generated where git exists.
+    // page-dates.json, generated from the full git history before Docker build.
     transformItems: (items) =>
       items.map((item) => {
-        const iso = LASTMOD_BY_URL[item.url.replace(/^\//, '')]
-        return iso ? { ...item, lastmod: new Date(iso) } : item
+        const dates = PAGE_DATES_BY_URL[item.url.replace(/^\//, '')]
+        return dates?.modified ? { ...item, lastmod: new Date(dates.modified) } : item
       }),
   },
   cleanUrls: true,
@@ -414,7 +490,7 @@ export default defineConfig({
   // build runs inside an image where `.git` is excluded from the context and git
   // is not installed — it died with `spawn git ENOENT` on the first page, a
   // failure invisible locally because every dev machine has both. The dates come
-  // from `lastmod.json`, generated where git exists (see scripts/gen-lastmod.mjs)
+  // from `page-dates.json`, generated where git exists (see scripts/gen-page-dates.mjs)
   // and read below in `transformPageData`.
   // force-dark: always dark, no theme toggle in the UI at all
   appearance: 'force-dark',
@@ -475,7 +551,7 @@ export default defineConfig({
     if (!found) {
       throw new Error(
         `config: docs/${pageData.relativePath} is in no registry entry. ` +
-          `Add it to docs/.vitepress/registry.ts (see scripts/check-registry.mjs).`
+          `Add its semantic id and localized slug to docs/content-pages.json.`
       )
     }
     const url = HOSTNAME + pagePath(found.entry, found.lang)
@@ -483,8 +559,8 @@ export default defineConfig({
     // The real date of the commit that last touched this file. VitePress only
     // emits `<lastmod>` when it has one, and a sitemap of 129 URLs with no dates
     // gives Google no reason to recrawl any of them.
-    const updated = LASTMOD[pageData.relativePath.split(/[\\/]/).join('/')]
-    if (updated) pageData.lastUpdated = new Date(updated).getTime()
+    const dates = (PAGE_DATES as Record<string, PageDates>)[pageData.relativePath.split(/[\\/]/).join('/')]
+    if (dates?.modified) pageData.lastUpdated = new Date(dates.modified).getTime()
     // frontmatter.description wins; the site description is the floor, so a page never ships
     // with an empty share card.
     const description = pageData.frontmatter.description || pageData.description || SITE_DESCRIPTION
@@ -529,8 +605,9 @@ export default defineConfig({
     void hubSegment
 
     // A hub page lists its section; an article lists nothing.
+    const isHub = found.entry.slugs[found.lang] === ''
     const hubPages =
-      found.entry.slugs[found.lang] === ''
+      isHub
         ? PAGES.filter(
             (e) =>
               e.hub === found.entry.hub &&
@@ -538,8 +615,9 @@ export default defineConfig({
               e.slugs[found.lang] !== ''
           ).map((e) => ({ title: pageTitle(sourceFile(e, found.lang)!, e.id), path: pagePath(e, found.lang)! }))
         : []
+    const isArticle = !isHub && found.entry.hub !== 'legal'
 
-    for (const block of structuredData(
+    const schema = structuredData(
       pageData.relativePath,
       title,
       description,
@@ -547,10 +625,11 @@ export default defineConfig({
       found.lang,
       crumbs,
       hubPages,
-      updated
-    )) {
-      pageData.frontmatter.head.push(['script', { type: 'application/ld+json' }, JSON.stringify(block)])
-    }
+      isHub,
+      found.entry.hub,
+      dates
+    )
+    pageData.frontmatter.head.push(['script', { type: 'application/ld+json' }, JSON.stringify(schema)])
 
     pageData.frontmatter.head.push(
       ['link', { rel: 'canonical', href: url }],
@@ -559,7 +638,10 @@ export default defineConfig({
       // what keeps the set symmetric the moment a translation is added. A cluster
       // Google considers asymmetric is a cluster Google throws away entirely.
       ...hreflangCluster(found.entry).map(
-        ({ hreflang, href }) => ['link', { rel: 'alternate', hreflang, href }] as [string, Record<string, string>]
+        ({ hreflang, href }) => [
+          'link',
+          { rel: 'alternate', hreflang, href: href.replace(ENTITY_ORIGIN, HOSTNAME) },
+        ] as [string, Record<string, string>]
       ),
       // Per-page Open Graph. Only site-level og:type/og:site_name/og:locale existed before, so
       // every share of an article — the only pages of ours that rank — rendered as a bare link.
@@ -567,14 +649,21 @@ export default defineConfig({
       ['meta', { property: 'og:description', content: description }],
       ['meta', { property: 'og:url', content: url }],
       ['meta', { property: 'og:image', content: OG_IMAGE }],
+      ['meta', { property: 'og:image:alt', content: title }],
       // `article` on an article, `website` on a hub index. The site-level tag said
       // `website` for all 129 pages — the one value that tells a reader's client
       // "this is a landing page", on the pages that are the opposite of that.
-      ['meta', { property: 'og:type', content: hubPages.length ? 'website' : 'article' }],
-      // Freshness in the format the social crawlers read, off the same lastmod.json
+      ['meta', { property: 'og:type', content: isArticle ? 'article' : 'website' }],
+      // Freshness in the format social crawlers read, off the same page-dates.json
       // the sitemap uses — one source, so the two cannot disagree.
-      ...(updated && !hubPages.length
-        ? ([['meta', { property: 'article:modified_time', content: new Date(updated).toISOString() }]] as [
+      ...(dates?.published && isArticle
+        ? ([['meta', { property: 'article:published_time', content: new Date(dates.published).toISOString() }]] as [
+            string,
+            Record<string, string>,
+          ][])
+        : []),
+      ...(dates?.modified && isArticle
+        ? ([['meta', { property: 'article:modified_time', content: new Date(dates.modified).toISOString() }]] as [
             string,
             Record<string, string>,
           ][])
@@ -595,6 +684,7 @@ export default defineConfig({
       ['meta', { name: 'twitter:title', content: title }],
       ['meta', { name: 'twitter:description', content: description }],
       ['meta', { name: 'twitter:image', content: OG_IMAGE }],
+      ['meta', { name: 'twitter:image:alt', content: title }],
     )
   },
 
@@ -606,10 +696,14 @@ export default defineConfig({
     // since July; the content site, which is the half that actually ranks, did
     // not carry them at all.
     //
-    // Dev builds override this to `noindex` below, and the later tag wins.
-    ['meta', { name: 'robots', content: 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' }],
-    // dev/preview builds are noindex; only the prod (release) build is indexable.
-    ...(DOCS_ENV !== 'prod' ? [['meta', { name: 'robots', content: 'noindex' }] as [string, Record<string, string>]] : []),
+    // Exactly one robots directive. Multiple contradictory tags rely on a
+    // crawler-specific "most restrictive wins" merge and are needlessly fragile.
+    ['meta', {
+      name: 'robots',
+      content: DOCS_ENV === 'prod'
+        ? 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1'
+        : 'noindex, follow',
+    }],
     ...VERIFICATION_TAGS,
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/content-assets/favicon.svg' }],
     ['meta', { name: 'theme-color', content: '#02140E' }],
@@ -630,48 +724,11 @@ export default defineConfig({
 
   themeConfig: {
     logo: { src: '/content-assets/logo.svg', alt: 'DareBay' },
-    // No site title text — just the logo, which links to darebay.com
-    // (href is rewritten at runtime in theme/index.ts).
+    // No site title text — just the logo. Its locale-aware docs-home href and
+    // every visible chrome label live in `themeForLocale` above.
     siteTitle: false,
     // Search disabled — the content volume doesn't warrant it yet, and a
     // quiet header reads better than one with a half-empty search box.
-    // nav and sidebar live in `locales[*].themeConfig` — see themeForLocale.
-
-    // VitePress builds a 404.html but nothing serves it — nginx.conf now points `error_page`
-    // at it, so these strings are what a reader actually sees on a broken link (the default
-    // ones are English, which is the whole thing we just removed from this site).
-    notFound: {
-      code: '404',
-      title: 'Страница не найдена',
-      quote: 'Ссылка ведёт в никуда: страницу переименовали или её никогда не было.',
-      linkLabel: 'на главную документации',
-      linkText: 'Вернуться в документацию',
-    },
-    darkModeSwitchLabel: 'Тема',
-    sidebarMenuLabel: 'Меню',
-    returnToTopLabel: 'Наверх',
-    outline: { label: 'На этой странице', level: [2, 3] },
-    docFooter: { prev: 'Предыдущая страница', next: 'Следующая страница' },
-    // Only surfaces DareBay actually runs. The previous list was aspirational and every
-    // entry but Telegram pointed at an account we don't own — `t.me/darebay` is a private
-    // person (Dare Adebayo), and x/youtube/instagram/discord `darebay` are squatted or
-    // empty. Sending readers to a stranger's DM is worse than showing no icon at all.
-    // Add a network here only once the account exists and we control it.
-    socialLinks: [
-      {
-        icon: {
-          // Telegram isn't a built-in VitePress icon; inline SVG.
-          svg: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg>',
-        },
-        link: TELEGRAM,
-        ariaLabel: 'Telegram-канал DareBay',
-      },
-    ],
-    // `message` is rendered with v-html, so these are real links. Plain text "darebay.com"
-    // sat here before and looked clickable without being clickable.
-    footer: {
-      message: `<a href="${HOMEPAGE}">darebay.com</a> · <a href="${TELEGRAM}" target="_blank" rel="noreferrer">Telegram</a>`,
-      copyright: '© DareBay',
-    },
+    // All remaining fields live in `locales[*].themeConfig` — see themeForLocale.
   },
 })

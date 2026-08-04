@@ -1,6 +1,6 @@
 # Required PR gate for the content fleet. Hard checks: anti-doorway linter + docs:build (dead links,
 # valid frontmatter). Spell is advisory. Add `lint` as a required status check in branch protection
-# on develop + release (see .github/BRANCH_PROTECTION.md). CD.yml (deploy) is untouched.
+# on develop + release (see .github/BRANCH_PROTECTION.md).
 name: lint
 
 on:
@@ -17,12 +17,12 @@ jobs:
           ref: ${{ github.event.pull_request.head.sha }}   # the PR head, not the synthetic merge ref
       - uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "22"
       - run: npm ci
       - name: unit tests (analytics beacon + linter self-check)
         run: npm test
       - name: anti-doorway lint (redirect / provenance / path+uniqueness / cap / near-dup)
-        run: node scripts/anti_doorway_lint.mjs --corpus docs/ru --base ${{ github.event.pull_request.base.sha }}
+        run: node --experimental-strip-types --no-warnings scripts/anti_doorway_lint.mjs --corpus docs --base ${{ github.event.pull_request.base.sha }}
       - name: build (dead links + frontmatter)
         run: npm run docs:build
         env:

@@ -1,6 +1,7 @@
 # Variables
 VERSION ?= latest
 DOCS_ENV ?= prod
+RELEASE_SHA ?= development
 HOST_FOR_DOCKER_IMAGE ?= contestvibe
 PROJECT_NAME ?= contests-docs
 
@@ -13,7 +14,9 @@ docker_login: ## login to docker registry.
 	docker login
 
 build_app: ## Build Application docker image.
+	npm run gen:dates
 	docker build -f Dockerfile --build-arg DOCS_ENV=$(DOCS_ENV) \
+		--build-arg RELEASE_SHA=$(RELEASE_SHA) \
 		--build-arg GOOGLE_SITE_VERIFICATION=$(GOOGLE_SITE_VERIFICATION) \
 		--build-arg YANDEX_VERIFICATION=$(YANDEX_VERIFICATION) \
 		-t $(HOST_FOR_DOCKER_IMAGE)/$(PROJECT_NAME):$(VERSION) .

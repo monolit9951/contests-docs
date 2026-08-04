@@ -39,27 +39,25 @@ lines.push('')
 // of these is, which removes the ordering question entirely.
 for (const from of Object.keys(map).sort((a, b) => b.length - a.length)) {
     const to = map[from]
-    lines.push(`location = ${from} { return 301 ${to}; }`)
+    lines.push(`location = ${from} { return 301 ${to}$is_args$args; }`)
     // VitePress with cleanUrls answered on both `/foo` and `/foo.html`, and the
     // old EN tree was linked with the extension in places, so both forms are
     // live addresses that must land somewhere.
-    if (!from.endsWith('/')) lines.push(`location = ${from}.html { return 301 ${to}; }`)
+    if (!from.endsWith('/')) lines.push(`location = ${from}.html { return 301 ${to}$is_args$args; }`)
     // A trailing-slash variant of a leaf address was reachable too (nginx's
     // try_files `$uri/` would have found the directory), so it redirects rather
     // than 404s.
-    else if (from !== '/docs/') lines.push(`location = ${from.slice(0, -1)} { return 301 ${to}; }`)
+    else if (from !== '/docs/') lines.push(`location = ${from.slice(0, -1)} { return 301 ${to}$is_args$args; }`)
 }
 
-// Anything else under the retired prefix has no specific rule and would 404.
-// Sending it to the content root keeps a stray old link useful instead of dead,
-// and this is a prefix match so it only ever fires when nothing exact did.
+// Unknown addresses under the retired prefix intentionally fall through to a
+// real 404. Redirecting arbitrary `/docs/*` garbage to a section index is a
+// soft-404 signal: it wastes crawl budget and makes the target look unrelated.
+// Only addresses with a known one-to-one replacement earn a permanent move.
 lines.push('')
-lines.push('# Catch-all for retired addresses with no specific rule: better the section')
-lines.push('# index than a 404. Prefix match, so it only fires when no exact rule above did.')
-lines.push('location ^~ /docs/ { return 301 /o-proekte/; }')
 // Bare `/docs` used to 301 onto `/docs/`, which served the manifesto — so it
 // lands where `/docs/` lands, in ONE hop rather than two.
-lines.push(`location = /docs { return 301 ${map['/docs/'] ?? '/o-proekte/'}; }`)
+lines.push(`location = /docs { return 301 ${map['/docs/'] ?? '/o-proekte/'}$is_args$args; }`)
 lines.push('')
 
 const target = join(HERE, '..', 'redirects.conf')

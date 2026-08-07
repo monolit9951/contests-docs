@@ -11,7 +11,7 @@ from somebody's estimate.
 
 The budget is recorded against the contest before you take the job. Against independently
 counted results, the platform stores credits or obligations; fulfilment can be manual.
-The full mechanics are in [how it works](/en/how-it-works).
+The full mechanics are in [how clip payouts work](/en/earn/clips).
 
 ## Pages in this section
 

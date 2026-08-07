@@ -83,7 +83,7 @@ seo: true
 
 ## Куди далі
 
-- [Як це працює](/ua/how-it-works) - огляд механіки DareBay
+- [Умови для бізнесу](/ua/for-business) - формати, ціни та гарантії
 - [Як працює оплата за перегляди](/ua/zarobitok/yak-pratsiuie-oplata-za-perehliady) - механіка PPV з боку учасника
 - [Як рахуються перегляди для виплати](/ua/zarobitok/yak-rakhuiutsia-perehliady-dlia-vyplaty) - деталі роботи оракула і валідації
 - [Які комісії на DareBay?](/ua/dopomoha/yaka-komisiia) - актуальні умови за операціями

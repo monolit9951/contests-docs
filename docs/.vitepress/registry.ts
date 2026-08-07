@@ -196,12 +196,11 @@ export const PAGES = manifest.pages
  * they belong to — but they must still single-hop, not 404.
  */
 export const ORPHAN_REDIRECTS: Readonly<Record<string, string>> = {
-    // The old `kak-rabotaet` index duplicated the app's own "how it works"
-    // landing, which is translated into three languages and stays in the SPA.
-    // Points at the app's CURRENT address: `/kak-eto-rabotaet` was live for one
-    // afternoon on 2026-08-03 and now 301s itself, so naming it here would have
-    // made this a two-hop chain — caught by gate 1 of scripts/url-gates.mjs.
-    '/docs/ru/kak-rabotaet/': '/how-it-works',
+    // The old `kak-rabotaet` index duplicated the app's own explainer, which
+    // has since been split by audience: `/how-it-works` retired into `/earn` on
+    // 2026-08-07. Points at the app's CURRENT address — naming a retired one
+    // would make this a two-hop chain, caught by gate 1 of scripts/url-gates.mjs.
+    '/docs/ru/kak-rabotaet/': '/earn',
 }
 
 /**
@@ -314,7 +313,22 @@ export const sourceFile = (entry: RegistryEntry, language: Locale): string | nul
  * is the failure this whole registry exists to make impossible. Adding a link
  * to a new app route means adding a line here, and that is the point.
  */
-const APP_SECTIONS = ['how-it-works', 'for-business', 'store', 'feed', 'top'] as const
+const APP_SECTIONS = [
+    'for-business',
+    'for-business/courses',
+    'for-business/telegram',
+    'for-business/apps',
+    'for-business/saas',
+    'earn',
+    'earn/clips',
+    'earn/ugc',
+    'earn/traffic',
+    'earn/teams',
+    'store',
+    'feed',
+    'top',
+    'tasks',
+] as const
 
 // The application serves ONE slug per section under every locale prefix (its
 // slugs were translated for one afternoon on 2026-08-03 and reverted), so the

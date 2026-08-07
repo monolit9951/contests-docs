@@ -94,7 +94,7 @@ seo: true
 
 ## Куди далі
 
-- [Як це працює](/ua/how-it-works) - огляд механіки DareBay
+- [Заробіток на нарізках](/ua/earn/clips) - ставки, виплати та умови
 - [Як рахуються перегляди для виплати](/ua/zarobitok/yak-rakhuiutsia-perehliady-dlia-vyplaty) - оракул, валідація і захист від накрутки
 - [Поріг переглядів для виплати](/ua/zarobitok/porih-perehliadiv-dlia-vyplaty) - дефолт, медіана і налаштування організатором
 - [Яка комісія на DareBay?](/ua/dopomoha/yaka-komisiia) - актуальні умови за операціями

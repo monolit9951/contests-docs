@@ -94,7 +94,7 @@ For a clipper there is none: taking part is free and there are no deposits. The 
 
 ## Where to next
 
-- [How it works](/en/how-it-works) - an overview of the DareBay mechanic
+- [Earning from clips](/en/earn/clips) - rates, payouts and terms
 - [How views are counted](/en/earnings/how-views-are-counted) - the oracle, validation and fraud protection
 - [The view threshold](/en/earnings/view-threshold) - default, median, and how organizers set it
 - [What fees does DareBay charge?](/en/help/what-commission) - current terms by operation

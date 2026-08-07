@@ -10,7 +10,7 @@ the money until the split. And where DareBay sits in all of it - honestly, on th
 
 What sets DareBay apart: the buyer's budget is recorded before the contest opens, views are
 counted independently, and the amount or obligation follows a formula fixed before filming.
-Fulfilment can be manual. The whole mechanic is in [how it works](/en/how-it-works).
+Fulfilment can be manual. The whole mechanic is in [how clip payouts work](/en/earn/clips).
 
 ## Pages in this section
 

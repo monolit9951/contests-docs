@@ -81,6 +81,6 @@ Yes. If no submission clears the threshold, the whole budget returns to the orga
 ## Where to next
 
 - [How pay-per-view works](/en/earnings/how-pay-per-view-works) - the full mechanics, budget to payout
-- [How it works](/en/how-it-works) - an overview of the DareBay mechanic
+- [Earning from clips](/en/earn/clips) - rates, payouts and terms
 - [What DareBay pays per 1000 views](/en/earnings/pay-per-1000-views) - the rates in PPV contests
 - [How much clipping pays](/en/earnings/how-much-clipping-pays) - realistic earning ranges

@@ -92,7 +92,7 @@ The contest goes straight into the public catalogue on [DareBay](https://darebay
 
 ## Where to next
 
-- [How it works](/en/how-it-works) - an overview of the DareBay mechanic
+- [Terms for business](/en/for-business) - formats, pricing and guarantees
 - [How to pay clippers per view](https://darebay.com/en/for-brands/paying-clippers-per-view) - the payment model: formula, budget and manual payout fulfilment
 - [How pay-per-view works](/en/earnings/how-pay-per-view-works) - the full chain from budget to payout
 - [The view threshold for a payout](/en/earnings/view-threshold) - how the threshold works and why it exists

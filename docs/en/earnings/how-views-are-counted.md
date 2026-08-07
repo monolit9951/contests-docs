@@ -92,6 +92,6 @@ Yes. The validator refuses any rate above $100 per 1000 views. It is a technical
 
 - [How pay-per-view works](/en/earnings/how-pay-per-view-works) - the full chain from budget to payout
 - [The view threshold](/en/earnings/view-threshold) - default, median, and how organizers set it
-- [How it works](/en/how-it-works) - an overview of the DareBay mechanic
+- [Earning from clips](/en/earn/clips) - rates, payouts and terms
 - [Does DareBay really pay?](/en/about/does-darebay-really-pay) - how the payout guarantee works
 - [The payout guarantee](/en/about/payout-guarantee) - more on how the wallet-backed budget is locked

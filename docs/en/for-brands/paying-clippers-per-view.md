@@ -83,7 +83,7 @@ No. The views come from the platform the video is published on and land in the c
 
 ## Where to next
 
-- [How it works](/en/how-it-works) - an overview of the DareBay mechanic
+- [Terms for business](/en/for-business) - formats, pricing and guarantees
 - [How pay-per-view works](/en/earnings/how-pay-per-view-works) - the PPV mechanic from the participant side
 - [How views are counted for the payout](/en/earnings/how-views-are-counted) - the details of the oracle and validation
 - [What fees does DareBay charge?](/en/help/what-commission) - current terms by operation

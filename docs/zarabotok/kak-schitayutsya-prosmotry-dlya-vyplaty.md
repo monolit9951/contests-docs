@@ -92,6 +92,6 @@ seo: true
 
 - [Как работает оплата за просмотры](/zarabotok/kak-rabotaet-oplata-za-prosmotry) - полная цепочка от бюджета до выплаты
 - [Порог просмотров для выплаты](/zarabotok/porog-prosmotrov-dlya-vyplaty) - дефолт, медиана и настройка организатором
-- [Как это работает](/how-it-works) - обзор механики DareBay
+- [Заработок на нарезках](/earn/clips) - ставки, выплаты и условия
 - [DareBay реально платит?](/o-proekte/darebay-realno-platit) - как обеспечена гарантия выплат
 - [Гарантия выплат](/o-proekte/garantiya-vyplat) - подробнее о механизме блокировки бюджета

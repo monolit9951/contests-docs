@@ -9,6 +9,13 @@
 // translated file. Adding EN and UK versions of one article must not spend three
 // slots or trip the total cap. Body similarity is compared within one locale and
 // never against another translation of the same semantic page.
+//
+// Правила против смыслового дублирования (paraphrase, faq-echo, heading-echo) судят страницу
+// целиком, а не диффом: у дублирования нет «изменённых строк», оно свойство всего текста рядом с
+// соседями. Поэтому правка одной цифры на легаси-странице отдавала бы под гейт весь её старый
+// текст. Для этих трёх правил включён храповик (см. runLint): нарушение сверяется с тем, что то же
+// правило находило на базовой ревизии, и валит сборку, только если изменение его внесло или
+// расширило. Унаследованное печатается отдельной секцией долга — глотать его молча нельзя.
 
 import { readFileSync, readdirSync, statSync, existsSync } from 'node:fs'
 import { join, relative, resolve } from 'node:path'
@@ -366,6 +373,10 @@ function pageEchoes(index, page, field) {
       // делает текст нарушения воспроизводимым, иначе один и тот же корпус даёт разные логи.
       rows.push({
         text: own[i],
+        // Ключ храповика: по нему формулировка сопоставляется со своей же версией на базе тем
+        // самым сравнением «почти одинаковых», которым работает правило. Иначе исправленная
+        // на странице опечатка в вопросе превращала бы старый долг в новое нарушение.
+        key: ownKeys[i],
         echo: best.length + 1,
         others: best.map((member) => member.rel).sort(),
       })
@@ -381,41 +392,14 @@ function listFiles(files) {
   return `${files.slice(0, 4).join(', ')} and ${files.length - 4} more`
 }
 
-export function runLint({
-  corpusDir,
-  changedFiles,
-  root = process.cwd(),
-  addedFiles = null,
-  enforceWaveCap = true,
-}) {
-  const violations = []
-  const fail = (rule, file, message) => violations.push({ rule, file, msg: message })
-
-  if (!corpusDir) return { fatal: 'missing --corpus', violations }
-  const corpusRoot = resolve(root, corpusDir)
-  if (!existsSync(corpusRoot)) return { fatal: `--corpus not found: ${corpusDir}`, violations }
-  const corpusFiles = listMarkdown(corpusRoot)
-  if (!corpusFiles.length) return { fatal: `--corpus empty: ${corpusDir}`, violations }
-
-  const urlMap = new Map()
-  const corpusPages = []
-  const semanticSeoIds = new Set()
-  const semanticFiles = new Map()
-
-  for (const file of corpusFiles) {
-    const rel = normalPath(relative(root, file))
+/** Снимок корпуса: страницы с посчитанными шинглами/заголовками и индексы эха по хабам.
+ * Строится и для рабочего дерева, и для базовой ревизии одним кодом — иначе храповик сравнивал
+ * бы результаты двух разных реализаций правила и врал бы в обе стороны. */
+function buildCorpus(entries) {
+  const pages = entries.map(({ rel, text }) => {
     const info = pathInfo(rel)
-    const parsed = parseFront(readFileSync(file, 'utf8'))
-    if (info.isPage) {
-      const paths = urlMap.get(info.url) ?? []
-      paths.push(rel)
-      urlMap.set(info.url, paths)
-      const semanticPaths = semanticFiles.get(info.semanticId) ?? []
-      semanticPaths.push(rel)
-      semanticFiles.set(info.semanticId, semanticPaths)
-      if (parsed.seo) semanticSeoIds.add(info.semanticId)
-    }
-    corpusPages.push({
+    const parsed = parseFront(text)
+    return {
       rel,
       info,
       parsed,
@@ -423,14 +407,147 @@ export function runLint({
       shingles: shingles(parsed.body),
       shingles3: shingles(parsed.body, 3),
       headings: headingProfile(parsed.body),
-    })
+    }
+  })
+  // Индексы эха строятся один раз на корпус: правило хабовое, и пересчитывать его на каждый
+  // изменённый файл значит платить квадратом за один и тот же ответ.
+  const contentPages = pages.filter((page) => page.info.isPage)
+  return {
+    pages,
+    contentPages,
+    faqIndex: buildEchoIndex(contentPages, 'faq'),
+    h2Index: buildEchoIndex(contentPages, 'h2'),
+  }
+}
+
+const NO_FINDINGS = { duplicate: { file: null, similarity: 0 }, paraphrase: [], faq: [], h2: [] }
+
+/** Все зацепки дублирования для одной страницы внутри данного корпуса.
+ *
+ * paraphrase возвращается списком партнёров, а не худшим: храповику нужна личность пары. Худший
+ * партнёр — величина неустойчивая (правка одной цифры меняет порядок соседей на третьем знаке), и
+ * храповик по нему объявлял бы новым нарушением перестановку в хвосте. По списку пар вопрос ставится
+ * ровно так, как надо: появилась ли у страницы пара, которой на базе не было. */
+function pageFindings(corpus, page) {
+  const currentShingles = shingles(page.body)
+  const currentShingles3 = shingles(page.body, 3)
+  let duplicate = { file: null, similarity: 0 }
+  const paraphrase = []
+  for (const candidate of corpus.contentPages) {
+    // Другая страница той же локали. Переводы одного semantic id — не дубликаты друг друга.
+    if (candidate.rel === page.rel) continue
+    if (candidate.info.locale !== page.info.locale) continue
+    if (candidate.info.semanticId === page.info.semanticId) continue
+    const similarity = jaccard(currentShingles, candidate.shingles)
+    if (similarity > duplicate.similarity) duplicate = { file: candidate.rel, similarity }
+    const retell = jaccard(currentShingles3, candidate.shingles3)
+    if (retell > PARAPHRASE_THRESHOLD) paraphrase.push({ file: candidate.rel, similarity: retell })
+  }
+  paraphrase.sort((left, right) => right.similarity - left.similarity || left.file.localeCompare(right.file))
+
+  const current = { rel: page.rel, info: page.info, hub: page.hub, headings: headingProfile(page.body) }
+  return {
+    duplicate,
+    paraphrase,
+    faq: pageEchoes(corpus.faqIndex, current, 'faq').filter((row) => row.echo >= FAQ_ECHO_LIMIT),
+    h2: pageEchoes(corpus.h2Index, current, 'h2').filter((row) => row.echo >= HEADING_ECHO_LIMIT),
+  }
+}
+
+/** Та же зацепка была на базе? Для paraphrase тождество пары — путь партнёра; для эха — сама
+ * формулировка, сопоставленная тем же «почти одинаковым» сравнением, что и внутри правила. */
+function sameFinding(rule, finding, older) {
+  if (rule === 'paraphrase') return finding.file === older.file
+  return headingsSimilar(finding.key, older.key)
+}
+
+/** Разделить зацепки на внесённые этим изменением и унаследованные от базы.
+ * `baseline === null` — храповик выключен: строгий режим, всё считается новым. */
+function splitAgainstBaseline(rule, findings, baselineFindings) {
+  if (!baselineFindings) return { fresh: findings, known: [] }
+  const older =
+    rule === 'paraphrase' ? baselineFindings.paraphrase
+      : rule === 'faq-echo' ? baselineFindings.faq
+      : baselineFindings.h2
+  const fresh = []
+  const known = []
+  for (const finding of findings) {
+    if (older.some((candidate) => sameFinding(rule, finding, candidate))) known.push(finding)
+    else fresh.push(finding)
+  }
+  return { fresh, known }
+}
+
+const paraphraseMessage = (rows, locale) =>
+  `retells ${rows[0].file} in ${locale} (jaccard3=${rows[0].similarity.toFixed(3)} > ${PARAPHRASE_THRESHOLD})` +
+  (rows.length > 1 ? `; ${rows.length} pages of this locale are retold by this page` : '')
+
+const faqEchoMessage = (rows, hub) =>
+  `FAQ question "${rows[0].text}" is answered on ${rows[0].echo} pages of hub "${hub}" ` +
+  `(>= ${FAQ_ECHO_LIMIT}): ${listFiles(rows[0].others)}` +
+  (rows.length > 1 ? `; ${rows.length} questions of this page repeat the hub` : '')
+
+const headingEchoMessage = (rows, hub) =>
+  `H2 "${rows[0].text}" is repeated on ${rows[0].echo} pages of hub "${hub}" ` +
+  `(>= ${HEADING_ECHO_LIMIT}): ${listFiles(rows[0].others)}` +
+  (rows.length > 1 ? `; ${rows.length} sections of this page repeat the hub` : '')
+
+/**
+ * @param baseline Содержимое корпуса на базовой ревизии: Map<путь, текст файла>. Включает храповик
+ *   для правил paraphrase/faq-echo/heading-echo. `null` — базы нет, храповик выключен, правила
+ *   работают строго (fail-closed: недоступность базы не должна ослаблять гейт).
+ */
+export function runLint({
+  corpusDir,
+  changedFiles,
+  root = process.cwd(),
+  addedFiles = null,
+  enforceWaveCap = true,
+  baseline = null,
+}) {
+  const violations = []
+  const inherited = []
+  const fail = (rule, file, message) => violations.push({ rule, file, msg: message })
+  const debt = (rule, file, message) => inherited.push({ rule, file, msg: message })
+  const ratchet = { enabled: Boolean(baseline), basePages: baseline ? baseline.size : 0 }
+
+  if (!corpusDir) return { fatal: 'missing --corpus', violations, inherited, ratchet }
+  const corpusRoot = resolve(root, corpusDir)
+  if (!existsSync(corpusRoot)) return { fatal: `--corpus not found: ${corpusDir}`, violations, inherited, ratchet }
+  const corpusFiles = listMarkdown(corpusRoot)
+  if (!corpusFiles.length) return { fatal: `--corpus empty: ${corpusDir}`, violations, inherited, ratchet }
+
+  const corpus = buildCorpus(
+    corpusFiles.map((file) => ({ rel: normalPath(relative(root, file)), text: readFileSync(file, 'utf8') }))
+  )
+
+  const urlMap = new Map()
+  const semanticSeoIds = new Set()
+  const semanticFiles = new Map()
+  for (const page of corpus.pages) {
+    if (!page.info.isPage) continue
+    const paths = urlMap.get(page.info.url) ?? []
+    paths.push(page.rel)
+    urlMap.set(page.info.url, paths)
+    const semanticPaths = semanticFiles.get(page.info.semanticId) ?? []
+    semanticPaths.push(page.rel)
+    semanticFiles.set(page.info.semanticId, semanticPaths)
+    if (page.parsed.seo) semanticSeoIds.add(page.info.semanticId)
   }
 
-  // Индексы эха строятся один раз по корпусу: правило хабовое, и пересчитывать его на каждый
-  // изменённый файл значит платить квадратом за один и тот же ответ.
-  const contentPages = corpusPages.filter((page) => page.info.isPage)
-  const faqIndex = buildEchoIndex(contentPages, 'faq')
-  const h2Index = buildEchoIndex(contentPages, 'h2')
+  // Базовый корпус собирается лениво и один раз: он нужен, только если храповик включён и до него
+  // дошла хоть одна гейтируемая страница.
+  let baseCorpus = null
+  const baselineFindings = (rel, info, hub) => {
+    if (!baseline) return null
+    const text = baseline.get(rel)
+    // Страницы не было на базе — сравнивать не с чем, любое её нарушение внесено этим изменением.
+    if (text === undefined) return NO_FINDINGS
+    if (!baseCorpus) {
+      baseCorpus = buildCorpus([...baseline].map(([path, content]) => ({ rel: path, text: content })))
+    }
+    return pageFindings(baseCorpus, { rel, info, hub, body: parseFront(text).body })
+  }
 
   const inspectedSemanticIds = new Set()
   const newSemanticIds = new Set()
@@ -485,70 +602,31 @@ export function runLint({
       if (!existedBefore) newSemanticIds.add(info.semanticId)
     }
 
-    // Другая страница той же локали. Переводы одного semantic id — не дубликаты друг друга.
-    const peers = corpusPages.filter(
-      (candidate) =>
-        candidate.info.isPage &&
-        candidate.rel !== changed &&
-        candidate.info.locale === info.locale &&
-        candidate.info.semanticId !== info.semanticId
-    )
     const hub = hubOf(info)
-
-    const currentShingles = shingles(parsed.body)
-    const currentShingles3 = shingles(parsed.body, 3)
-    let worst = { file: null, similarity: 0 }
-    let worstParaphrase = { file: null, similarity: 0 }
-    for (const candidate of peers) {
-      const similarity = jaccard(currentShingles, candidate.shingles)
-      if (similarity > worst.similarity) worst = { file: candidate.rel, similarity }
-      const paraphrase = jaccard(currentShingles3, candidate.shingles3)
-      if (paraphrase > worstParaphrase.similarity) {
-        worstParaphrase = { file: candidate.rel, similarity: paraphrase }
-      }
-    }
-    if (worst.similarity > DUP_THRESHOLD) {
+    const findings = pageFindings(corpus, { rel: changed, info, hub, body: parsed.body })
+    // Дословная копипаста храповиком не покрывается: порог 0.30 недостижим для честной правки,
+    // и «оно и раньше было скопировано» — не оправдание для страницы, которую волна трогает.
+    if (findings.duplicate.similarity > DUP_THRESHOLD) {
       fail(
         'duplicate',
         changed,
-        `near-duplicate of ${worst.file} in ${info.locale} (jaccard=${worst.similarity.toFixed(2)} > ${DUP_THRESHOLD})`
-      )
-    }
-    if (worstParaphrase.similarity > PARAPHRASE_THRESHOLD) {
-      fail(
-        'paraphrase',
-        changed,
-        `retells ${worstParaphrase.file} in ${info.locale} ` +
-          `(jaccard3=${worstParaphrase.similarity.toFixed(3)} > ${PARAPHRASE_THRESHOLD})`
+        `near-duplicate of ${findings.duplicate.file} in ${info.locale} ` +
+          `(jaccard=${findings.duplicate.similarity.toFixed(2)} > ${DUP_THRESHOLD})`
       )
     }
 
-    const current = { rel: changed, info, hub, headings: headingProfile(parsed.body) }
-    const faqEchoes = pageEchoes(faqIndex, current, 'faq')
-      .filter((row) => row.echo >= FAQ_ECHO_LIMIT)
-    if (faqEchoes.length) {
-      const [top] = faqEchoes
-      fail(
-        'faq-echo',
-        changed,
-        `FAQ question "${top.text}" is answered on ${top.echo} pages of hub "${hub}" ` +
-          `(>= ${FAQ_ECHO_LIMIT}): ${listFiles(top.others)}` +
-          (faqEchoes.length > 1 ? `; ${faqEchoes.length} questions of this page repeat the hub` : '')
-      )
-    }
+    const older = baselineFindings(changed, info, hub)
+    const paraphrase = splitAgainstBaseline('paraphrase', findings.paraphrase, older)
+    if (paraphrase.fresh.length) fail('paraphrase', changed, paraphraseMessage(paraphrase.fresh, info.locale))
+    if (paraphrase.known.length) debt('paraphrase', changed, paraphraseMessage(paraphrase.known, info.locale))
 
-    const h2Echoes = pageEchoes(h2Index, current, 'h2')
-      .filter((row) => row.echo >= HEADING_ECHO_LIMIT)
-    if (h2Echoes.length) {
-      const [top] = h2Echoes
-      fail(
-        'heading-echo',
-        changed,
-        `H2 "${top.text}" is repeated on ${top.echo} pages of hub "${hub}" ` +
-          `(>= ${HEADING_ECHO_LIMIT}): ${listFiles(top.others)}` +
-          (h2Echoes.length > 1 ? `; ${h2Echoes.length} sections of this page repeat the hub` : '')
-      )
-    }
+    const faqEcho = splitAgainstBaseline('faq-echo', findings.faq, older)
+    if (faqEcho.fresh.length) fail('faq-echo', changed, faqEchoMessage(faqEcho.fresh, hub))
+    if (faqEcho.known.length) debt('faq-echo', changed, faqEchoMessage(faqEcho.known, hub))
+
+    const headingEcho = splitAgainstBaseline('heading-echo', findings.h2, older)
+    if (headingEcho.fresh.length) fail('heading-echo', changed, headingEchoMessage(headingEcho.fresh, hub))
+    if (headingEcho.known.length) debt('heading-echo', changed, headingEchoMessage(headingEcho.known, hub))
 
     inspected += 1
     inspectedSemanticIds.add(info.semanticId)
@@ -564,6 +642,8 @@ export function runLint({
   return {
     fatal: null,
     violations,
+    inherited,
+    ratchet: { ...ratchet, fresh: violations.length, known: inherited.length },
     inspected,
     skipped,
     stats: {
@@ -626,6 +706,50 @@ function resolveAdded(root, base) {
   return new Set(gitDiffPaths(root, base, 'A'))
 }
 
+/** Корпус базовой ревизии целиком (не только изменённые файлы): правила эха и пересказа хабовые,
+ * и «было ли это нарушение раньше» отвечается только против всех соседей той же ревизии. */
+const GIT_BUFFER = 512 * 1024 * 1024
+
+function readBaseBlobs(root, base, paths) {
+  const input = `${paths.map((path) => `${base}:${path}`).join('\n')}\n`
+  // Один процесс на весь корпус вместо `git show` на файл. Ответ разбирается по байтам: размер в
+  // заголовке батча байтовый, а корпус — кириллица, и посимвольная нарезка рассинхронизировала бы
+  // поток на первой же странице.
+  const out = execFileSync('git', ['cat-file', '--batch'], { cwd: root, input, maxBuffer: GIT_BUFFER })
+  const files = new Map()
+  let offset = 0
+  for (const path of paths) {
+    const eol = out.indexOf(0x0a, offset)
+    if (eol < 0) break
+    const header = out.toString('utf8', offset, eol)
+    offset = eol + 1
+    // «<oid> missing» — тела за строкой нет, поток остаётся синхронным.
+    const match = header.match(/^\S+ blob (\d+)$/)
+    if (!match) continue
+    const size = Number(match[1])
+    files.set(path, out.toString('utf8', offset, offset + size))
+    offset += size + 1
+  }
+  return files
+}
+
+/** Слепок корпуса на базовой ревизии для храповика. Недоступность базы — не повод ослабить гейт:
+ * возвращается `map: null` с причиной, вызывающая сторона обязана сказать это вслух и судить строго. */
+function loadBaseline(root, base, corpusDir) {
+  if (!base) return { map: null, ref: null, reason: 'no base revision (--changed given explicitly)' }
+  try {
+    const listing = execFileSync('git', ['ls-tree', '-r', '-z', '--name-only', base, '--', corpusDir], {
+      cwd: root,
+      encoding: 'utf8',
+      maxBuffer: GIT_BUFFER,
+    })
+    const paths = listing.split('\0').map((path) => path.trim()).filter((path) => path.endsWith('.md'))
+    return { map: paths.length ? readBaseBlobs(root, base, paths) : new Map(), ref: base, reason: null }
+  } catch (error) {
+    return { map: null, ref: base, reason: `baseline unreadable at ${base}: ${error.message}` }
+  }
+}
+
 function main() {
   const args = parseArgs(process.argv.slice(2))
   const root = args.root ? resolve(args.root) : process.cwd()
@@ -636,10 +760,12 @@ function main() {
 
   let changed
   let added
+  let baseline
   try {
     const base = resolveBase(args, root)
     changed = resolveChanged(args, root, base)
     added = resolveAdded(root, base)
+    baseline = loadBaseline(root, base, args.corpus)
   } catch (error) {
     console.error(`FATAL: cannot resolve changed files: ${error.message}`)
     process.exit(2)
@@ -651,16 +777,42 @@ function main() {
     root,
     addedFiles: added,
     enforceWaveCap: !args.skipWaveCap,
+    baseline: baseline.map,
   })
   if (result.fatal) {
     console.error(`FATAL: ${result.fatal}`)
     process.exit(2)
   }
+
+  const ratchet = result.ratchet.enabled
+    ? `ratchet=on base=${baseline.ref} base_pages=${result.ratchet.basePages} ` +
+      `new=${result.ratchet.fresh} inherited=${result.ratchet.known}`
+    : `ratchet=off strict=on new=${result.ratchet.fresh}`
+
+  if (!result.ratchet.enabled) {
+    console.error(
+      `anti-doorway-lint: RATCHET OFF — ${baseline.reason}. ` +
+        'paraphrase/faq-echo/heading-echo judge the full text of every changed page, ' +
+        'including duplication that predates this change.'
+    )
+  }
+  // Долг печатается всегда, в том числе на зелёной сборке: гейт, который молчит об известном
+  // дублировании, ничего не гейтит — он просто переносит его в невидимую часть корпуса.
+  if (result.inherited.length) {
+    console.error(
+      `anti-doorway-lint: ${result.inherited.length} KNOWN DEBT item(s) — ` +
+        `this duplication already existed at ${baseline.ref} and does NOT fail the build:`
+    )
+    for (const item of result.inherited) {
+      console.error(`  [debt:${item.rule}] ${item.file}: ${item.msg}`)
+    }
+  }
   if (result.violations.length) {
-    console.error(`anti-doorway-lint: ${result.violations.length} violation(s):`)
+    console.error(`anti-doorway-lint: ${result.violations.length} violation(s) introduced by this change:`)
     for (const violation of result.violations) {
       console.error(`  [${violation.rule}] ${violation.file}: ${violation.msg}`)
     }
+    console.error(`anti-doorway-lint: ${ratchet}`)
     process.exit(1)
   }
 
@@ -670,7 +822,7 @@ function main() {
       `(changed=${result.stats.changed} inspected=${result.inspected} ` +
       `deleted=${skipped.deleted} nonpage=${skipped.nonpage} otherzone=${skipped.otherzone} ` +
       `semantic_inspected=${result.stats.semanticInspected} semantic_new=${result.stats.semanticNew} ` +
-      `semantic_total=${result.stats.semanticTotal})`
+      `semantic_total=${result.stats.semanticTotal} ${ratchet})`
   )
 }
 

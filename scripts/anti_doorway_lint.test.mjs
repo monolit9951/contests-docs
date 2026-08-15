@@ -17,7 +17,12 @@
 // интент разными словами при j5 <= 0.133. Ниже к калибровке и к каждому новому правилу приложен
 // тест-мутант: он обязан покраснеть, если порог вернуть наверх или правило снять.
 
-import { mkdtempSync, mkdirSync, writeFileSync, rmSync } from "node:fs";
+// Зачем (2026-08-15, ратчет): три правила против смыслового дублирования судят страницу целиком,
+// поэтому правка одной цифры на легаси-странице отдавала под гейт весь её старый текст. Тесты ниже
+// фиксируют храповик: нарушение валит сборку, только если его внесло это изменение; то, что уже
+// было на базе, печатается долгом и сборку не валит; без базы храповик выключен и правила строги.
+
+import { mkdtempSync, mkdirSync, writeFileSync, rmSync, readFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import {
@@ -352,6 +357,173 @@ console.log("anti_doorway_lint: контракт вывода нарушений
   check("новые правила приходят под собственными значениями rule",
     ["faq-echo", "heading-echo"].every((rule) => res.violations.some((v) => v.rule === rule)),
     `правила: ${JSON.stringify([...new Set(res.violations.map((v) => v.rule))])}`);
+  f.cleanup();
+}
+
+// ---------------------------------------------------------------------------------------------
+// Ратчет: три правила против смыслового дублирования судят только то, что внесло изменение.
+// ---------------------------------------------------------------------------------------------
+
+/** Слепок «базовой ревизии»: содержимое файлов ДО правки. Тест пишет базовую версию страницы,
+ * снимает слепок и переписывает файл — ровно то, что в CI даёт `git cat-file` по base sha. */
+const snapshot = (f, rels) => new Map(rels.map((rel) => [rel, readFileSync(join(f.root, rel), "utf8")]));
+
+const filesOf = (list, rule) => list.filter((v) => v.rule === rule).map((v) => v.file).sort();
+
+console.log("anti_doorway_lint: дублирование, которое было на базе, не валит сборку - но видно");
+{
+  const f = fixture();
+  const pages = [
+    faqPage(f, "docs/zarabotok/legacy-a.md", ["Нужны ли подписчики?"]),
+    faqPage(f, "docs/zarabotok/legacy-b.md", ["Нужны ли подписчики?"]),
+    faqPage(f, "docs/zarabotok/legacy-c.md", ["Нужны ли подписчики?"]),
+  ];
+  const base = snapshot(f, pages);
+  // Волна правит цифры и ссылки, а не интент: у страницы переписан лид, вопрос переформулирован.
+  faqPage(f, "docs/zarabotok/legacy-c.md", ["Нужны ли подписчики, чтобы начать?"], { lead: seq("novyetsifry", 140) });
+
+  const res = runLint({ corpusDir: "docs", changedFiles: pages, root: f.root, addedFiles: new Set(), baseline: base });
+  check("унаследованное эхо не попадает в нарушения",
+    rulesOf(res, "faq-echo").length === 0,
+    `ратчет пропустил старый долг в нарушения: ${JSON.stringify(rulesOf(res, "faq-echo"))}`);
+  check("унаследованное эхо печатается долгом по каждой странице, а не глотается молча",
+    filesOf(res.inherited, "faq-echo").join() === pages.slice().sort().join(),
+    `долг: ${JSON.stringify(res.inherited)}`);
+  const ratcheted = (list) => list.filter((v) => ["paraphrase", "faq-echo", "heading-echo"].includes(v.rule));
+  check("переформулированный вопрос остаётся тем же долгом, а не становится новым нарушением",
+    !ratcheted(res.violations).some((v) => v.file === "docs/zarabotok/legacy-c.md") &&
+      ratcheted(res.inherited).some((v) => v.file === "docs/zarabotok/legacy-c.md"),
+    `правка формулировки засчитана новым дублированием: ${JSON.stringify(ratcheted(res.violations))}`);
+  check("счётчики ратчета сходятся с массивами",
+    res.ratchet.enabled === true && res.ratchet.fresh === res.violations.length &&
+      res.ratchet.known === res.inherited.length && res.ratchet.basePages === base.size,
+    `ratchet=${JSON.stringify(res.ratchet)}`);
+
+  // Тот же корпус без базы: ратчет выключен, правило судит полный текст.
+  const strict = runLint({ corpusDir: "docs", changedFiles: pages, root: f.root, addedFiles: new Set() });
+  check("без базовой ревизии ратчет выключен и правило работает строго",
+    strict.ratchet.enabled === false && rulesOf(strict, "faq-echo").length === 3 && strict.inherited.length === 0,
+    `strict: ratchet=${JSON.stringify(strict.ratchet)}, нарушения=${JSON.stringify(strict.violations)}`);
+  f.cleanup();
+}
+
+console.log("anti_doorway_lint: дублирование, внесённое волной, валит сборку");
+{
+  const f = fixture();
+  // На базе вопрос делят две страницы - это разрешено. Третью добавляет эта волна: эхо создано ею.
+  const pair = [
+    faqPage(f, "docs/zarabotok/wave-a.md", ["Нужны ли подписчики?"]),
+    faqPage(f, "docs/zarabotok/wave-b.md", ["Нужны ли подписчики?"]),
+  ];
+  const base = snapshot(f, pair);
+  const added = faqPage(f, "docs/zarabotok/wave-c.md", ["Нужны ли подписчики?"]);
+
+  const res = runLint({
+    corpusDir: "docs", changedFiles: [...pair, added], root: f.root,
+    addedFiles: new Set([added]), baseline: base,
+  });
+  check("эхо, которого на базе не было, красит все три страницы",
+    filesOf(res.violations, "faq-echo").join() === [...pair, added].sort().join(),
+    `нарушения: ${JSON.stringify(rulesOf(res, "faq-echo"))}`);
+  check("долга при этом нет: гейт не выдаёт новое нарушение за старое",
+    res.inherited.length === 0,
+    `долг: ${JSON.stringify(res.inherited)}`);
+  f.cleanup();
+}
+
+console.log("anti_doorway_lint: у новой страницы базы нет - её дублирование новое целиком");
+{
+  const f = fixture();
+  const legacy = [
+    faqPage(f, "docs/zarabotok/old-a.md", ["Нужны ли подписчики?"]),
+    faqPage(f, "docs/zarabotok/old-b.md", ["Нужны ли подписчики?"]),
+    faqPage(f, "docs/zarabotok/old-c.md", ["Нужны ли подписчики?"]),
+  ];
+  const base = snapshot(f, legacy);
+  const added = faqPage(f, "docs/zarabotok/old-d.md", ["Нужны ли подписчики?"]);
+
+  const res = runLint({
+    corpusDir: "docs", changedFiles: [...legacy, added], root: f.root,
+    addedFiles: new Set([added]), baseline: base,
+  });
+  check("новая страница отвечает за всё своё дублирование",
+    filesOf(res.violations, "faq-echo").join() === added,
+    `нарушения: ${JSON.stringify(rulesOf(res, "faq-echo"))}`);
+  check("старожилы, у которых то же эхо было и на базе, остаются долгом",
+    filesOf(res.inherited, "faq-echo").join() === legacy.slice().sort().join(),
+    `долг: ${JSON.stringify(res.inherited)}`);
+  f.cleanup();
+}
+
+console.log("anti_doorway_lint: новый вопрос на старой странице виден сквозь унаследованный долг");
+{
+  const f = fixture();
+  const before = ["mix-a", "mix-b", "mix-c"].map((name) =>
+    faqPage(f, `docs/zarabotok/${name}.md`, ["Нужны ли подписчики?"]));
+  const base = snapshot(f, before);
+  // Волна дописывает всем трём один и тот же второй вопрос.
+  const after = ["mix-a", "mix-b", "mix-c"].map((name) =>
+    faqPage(f, `docs/zarabotok/${name}.md`, ["Нужны ли подписчики?", "Когда приходят деньги?"]));
+
+  const res = runLint({ corpusDir: "docs", changedFiles: after, root: f.root, addedFiles: new Set(), baseline: base });
+  check("дописанное эхо валит сборку на всех трёх страницах",
+    rulesOf(res, "faq-echo").length === 3 && rulesOf(res, "faq-echo").every((v) => /когда приходят деньги/.test(v.msg)),
+    `нарушения: ${JSON.stringify(rulesOf(res, "faq-echo"))}`);
+  check("старый вопрос той же страницы одновременно остаётся долгом",
+    res.inherited.filter((v) => v.rule === "faq-echo" && /нужны ли подписчики/.test(v.msg)).length === 3,
+    `долг: ${JSON.stringify(res.inherited)}`);
+  f.cleanup();
+}
+
+console.log("anti_doorway_lint: ратчет пересказа держится за партнёра, а не за худшее число");
+{
+  const f = fixture();
+  const blocks = Array.from({ length: 60 }, (_, i) => seq(`tezis${i}x`, 4));
+  const weave = (parts, glue) => parts.map((p, i) => (i ? `${glue}${i} ${p}` : p)).join(" ");
+  const pair = [
+    f.page("docs/zarabotok/ret-a.md", { body: weave(blocks, "svyazka") }),
+    f.page("docs/zarabotok/ret-b.md", { body: weave([...blocks].reverse(), "perehod") }),
+  ];
+  const base = snapshot(f, pair);
+  const added = f.page("docs/zarabotok/ret-c.md", { body: weave([...blocks].sort(), "sviaz") });
+
+  const res = runLint({
+    corpusDir: "docs", changedFiles: [...pair, added], root: f.root,
+    addedFiles: new Set([added]), baseline: base,
+  });
+  check("старая пара пересказа остаётся долгом",
+    res.inherited.some((v) => v.rule === "paraphrase" && v.file === "docs/zarabotok/ret-a.md" && /ret-b/.test(v.msg)),
+    `долг: ${JSON.stringify(res.inherited)}`);
+  check("новый партнёр по пересказу валит даже страницу, уже сидящую в долге",
+    rulesOf(res, "paraphrase").some((v) => v.file === "docs/zarabotok/ret-a.md" && /ret-c/.test(v.msg)),
+    `нарушения: ${JSON.stringify(rulesOf(res, "paraphrase"))}`);
+  f.cleanup();
+}
+
+console.log("anti_doorway_lint: ратчет не распространяется на старые правила");
+{
+  const f = fixture();
+  const shared = seq("obshchee", 300);
+  const copies = [
+    f.page("docs/zarabotok/keep-a.md", { body: `${shared} ${seq("levo", 100)}` }),
+    f.page("docs/zarabotok/keep-b.md", { body: `${shared} ${seq("pravo", 100)}` }),
+  ];
+  const red = f.page("docs/pomoshch/keep-redirect.md", { body: '<meta http-equiv="refresh" content="0;url=/app">' });
+  const noprov = f.page("docs/pomoshch/keep-noprov.md", { prov: false, body: seq("bezprovenansa", 200) });
+  const changed = [...copies, red, noprov];
+  // База идентична рабочему дереву: для ратчетуемых правил это максимальное «всё унаследовано».
+  const base = snapshot(f, changed);
+
+  const res = runLint({ corpusDir: "docs", changedFiles: changed, root: f.root, addedFiles: new Set(), baseline: base });
+  check("копипаста валит даже при полном совпадении с базой (duplicate не ратчетуется)",
+    rulesOf(res, "duplicate").length === 2,
+    `duplicate: ${JSON.stringify(res.violations)} / долг: ${JSON.stringify(res.inherited)}`);
+  check("redirect и provenance валят при полном совпадении с базой",
+    rulesOf(res, "redirect").length === 1 && rulesOf(res, "provenance").length === 1,
+    `нарушения: ${JSON.stringify(res.violations)}`);
+  check("старые правила не уезжают в долг",
+    !res.inherited.some((v) => ["duplicate", "redirect", "provenance", "path", "registry", "cap"].includes(v.rule)),
+    `долг: ${JSON.stringify(res.inherited)}`);
   f.cleanup();
 }
 

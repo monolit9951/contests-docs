@@ -33,7 +33,7 @@ At a rate of $0.50 per 1000 views:
 - 50,000 views: 50,000 / 1000 * $0.50 = **$25.00**
 - 100,000 views: 100,000 / 1000 * $0.50 = **$50.00**
 
-The organizer also sets a cap per submission, so the budget spreads across several creators instead of going to one viral clip. The typical cap in live contests is **$100** per submission; the example above remains below it. The cap applies per submission, not per creator: you can enter several different videos, and three at the cap is $300. The cap is shown on the contest card.
+The organizer also sets a cap per submission, so the budget spreads across several creators instead of going to one viral clip. The typical cap in live contests is **set by the buyer** per submission; the example above remains below it. The cap applies per submission, not per creator: you can enter several different videos, and three at the cap is $300. The cap is shown on the contest card.
 
 The full mechanics, from the locked budget to money in your account, are in [how pay-per-view works](/en/earnings/how-pay-per-view-works).
 

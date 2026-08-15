@@ -1,7 +1,7 @@
 ---
 title: How to set up a clipping contest on DareBay
 description: A step-by-step guide to setting up a pay-per-view contest - how to choose the rate, the threshold and the cap, lock the budget and get the remainder back.
-provenance: { snapshot_date: "2026-08-04", source: "darebay-prod" }
+provenance: { snapshot_date: "2026-08-14", source: "darebay-prod" }
 numbers_used: [ppv_default_min_views_threshold, ppv_min_views_threshold_live, ppv_max_per_work_typical]
 seo: true
 ---
@@ -10,7 +10,7 @@ seo: true
 
 A clipping contest is promotion you pay for by results. You fund the budget and set three parameters: the rate per 1000 views, the threshold and the cap per submission. In the wallet-backed mode, the platform locks the money and returns what is unused; in the manual-payout mode, no money enters the DareBay wallet and you pay creators directly. Clippers upload their videos and send in the links, and every amount due is worked out by formula from independently counted views.
 
-Every figure on this page comes from the platform's own data (snapshot: 2026-08-04).
+Every figure on this page comes from the platform's own data (snapshot: 2026-08-14).
 
 ## Step by step
 
@@ -20,7 +20,7 @@ The rate defines what you pay for every thousand counted views of a clipper subm
 
 ### 2. Set the minimum view threshold
 
-The threshold filters out submissions with a handful of views: a video that does not hit the required number takes no part in the budget split and costs you nothing. You enter the value in the "minimum views" field. Leave it empty and the system applies its default minimum of 1000 views. The median threshold across live contests is **2000 views**. For more on choosing a threshold, see [the view threshold for a payout](/en/earnings/view-threshold).
+The threshold filters out submissions with a handful of views: a video that does not hit the required number takes no part in the budget split and costs you nothing. You enter the value in the "minimum views" field. Leave it empty and the system applies its default minimum of 1000 views. The median threshold across live contests is **2000 views**. For more on choosing a threshold, see [how views are counted for a payout](/en/earnings/how-views-are-counted).
 
 ### 3. Set the cap per submission
 
@@ -52,7 +52,7 @@ Whatever does not reach the creators returns to the organizer balance.
 |-----------|--------------------------------|---------------|
 | Rate per 1000 views | set by the organizer | What you pay for every thousand counted views |
 | View threshold | 2000 (system default is 1000) | The minimum views for a submission to take part in the split |
-| Cap per submission | $100 | The maximum payout for a single submission |
+| Cap per submission | set by the buyer | The maximum payout for a single submission |
 
 You set the rate, the threshold and the cap yourself when creating the contest. The exact set of fields is shown on the contest creation screen.
 
@@ -95,6 +95,6 @@ The contest goes straight into the public catalogue on [DareBay](https://darebay
 - [Terms for business](/en/for-business) - formats, pricing and guarantees
 - [How to pay clippers per view](https://darebay.com/en/for-brands/paying-clippers-per-view) - the payment model: formula, budget and manual payout fulfilment
 - [How pay-per-view works](/en/earnings/how-pay-per-view-works) - the full chain from budget to payout
-- [The view threshold for a payout](/en/earnings/view-threshold) - how the threshold works and why it exists
+- [How views are counted for a payout](/en/earnings/how-views-are-counted) - how the threshold works and why it exists
 - [What fees does DareBay charge?](/en/help/what-commission) - contest, store and withdrawal terms
 - [The payout guarantee](/en/about/payout-guarantee) - how the payout to clippers is secured

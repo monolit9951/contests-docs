@@ -12,7 +12,7 @@ A clipper takes a task on the platform, films a short video (a stream clip, a re
 
 ## A worked example
 
-Say you take a task at $0.50<!-- baseline: ppv_cpm_median --> per 1000 views and cut a stream clip. The clip reaches 30,000 counted views, above the threshold. The maths: 30,000 / 1000 * $0.50<!-- baseline: ppv_cpm_median --> = **$15** for one submission. The cap per submission in current contests is $100<!-- baseline: ppv_max_per_work_typical -->, well above this example, so the whole amount is paid out. Plenty of contests allow several submissions: three clips at the same reach is already $45.
+Say you take a task at $0.50<!-- baseline: ppv_cpm_median --> per 1000 views and cut a stream clip. The clip reaches 30,000 counted views, above the threshold. The maths: 30,000 / 1000 * $0.50<!-- baseline: ppv_cpm_median --> = **$15** for one submission. The cap per submission in current contests is set by the buyer<!-- baseline: ppv_max_per_work_typical -->, well above this example, so the whole amount is paid out. Plenty of contests allow several submissions: three clips at the same reach is already $45.
 
 You know the rate before you open the editor, because it is always on the contest card. After that the reach of the clip decides the figure.
 
@@ -79,6 +79,6 @@ Plenty of contests allow several submissions from one author, and the cap applie
 ## Where to next
 
 - [How pay-per-view works](/en/earnings/how-pay-per-view-works) - the full mechanics of counting and splitting
-- [What beginners are paid](/en/earnings/beginner-rates) - a look at the rates for newcomers
-- [Earning from streamer clips](/en/earnings/earn-from-streamer-clips) - stream clips as a format
+- [How much clipping pays](/en/earnings/how-much-clipping-pays) - a look at the rates for newcomers
+- [Streamer clip rates](/en/earnings/streamer-clip-rates) - stream clips as a format
 - [Earning on DareBay](/en/earnings/) - every way to earn on the platform

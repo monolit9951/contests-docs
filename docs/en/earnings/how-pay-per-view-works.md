@@ -34,7 +34,7 @@ Here is everything that happens between the contest being created and the money 
 |-----------|-------|---------------|
 | Median rate | $0.50 per 1000 views | The typical rate across live contests |
 | View threshold | 2000 views | Typical in live contests; the exact figure is the organizer's |
-| Cap per submission | $100 | Typical in live contests; the maximum one submission can earn |
+| Cap per submission | set by the buyer | Typical in live contests; the maximum one submission can earn |
 | Selection window | 24 hours | Time for the organizer to review submissions after entries close |
 | Confirmation window | 48 hours (2 days) | Time to confirm results before the payout |
 
@@ -58,7 +58,7 @@ The **threshold** (2000 views) filters out submissions with minimal reach. Witho
 
 The **cap** ($100 per submission) stops one creator taking the whole budget. If a single clip goes viral to a million views, without a cap it would eat the entire pool. With one, everything above the limit returns to the organizer.
 
-More on this in [the view threshold](/en/earnings/view-threshold).
+More on this in [How views are counted for a payout](/en/earnings/how-views-are-counted).
 
 ## Frequently asked questions
 
@@ -96,7 +96,7 @@ For a clipper there is none: taking part is free and there are no deposits. The 
 
 - [Earning from clips](/en/earn/clips) - rates, payouts and terms
 - [How views are counted](/en/earnings/how-views-are-counted) - the oracle, validation and fraud protection
-- [The view threshold](/en/earnings/view-threshold) - default, median, and how organizers set it
+- [How views are counted for a payout](/en/earnings/how-views-are-counted) - default, median, and how organizers set it
 - [What fees does DareBay charge?](/en/help/what-commission) - current terms by operation
 - [Does DareBay really pay?](/en/about/does-darebay-really-pay) - what backs the payout
 - [How winners are chosen](/en/help/how-winners-are-chosen) - selection types other than PPV

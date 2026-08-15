@@ -1,7 +1,7 @@
 ---
 title: How to commission clips for a campaign on DareBay
 description: How to buy promotion from clippers through DareBay. A wallet-backed budget is locked up front; a manual-payout contest is paid directly by its organizer.
-provenance: { snapshot_date: "2026-08-04", source: "darebay-prod" }
+provenance: { snapshot_date: "2026-08-14", source: "darebay-prod" }
 numbers_used: [ppv_cpm_min, ppv_cpm_max, ppv_min_views_threshold_live, ppv_default_min_views_threshold]
 seo: true
 ---
@@ -25,17 +25,17 @@ You set the terms of the offer yourself when creating the contest. Clippers see 
 
 | Parameter | Who sets it and typical values | What it is for |
 |-----------|--------------------------------|----------------|
-| Rate per 1000 views | set by the buyer (across live contests $0.08 - $1.00 per 1000 views) | Defines what a clipper gets for every thousand counted views |
+| Rate per 1000 views | set by the buyer (across live contests $0.08 - $2.00 per 1000 views) | Defines what a clipper gets for every thousand counted views |
 | View threshold | set by the buyer (median across live contests 2000, system default 1000) | Submissions below the threshold take no part in the split and cost you nothing |
 | Cap per submission | set by the buyer | Limits the maximum payout to one creator so a single video cannot eat the whole budget |
 | Total budget | set by the buyer | The full amount locked on the platform |
 | Task and platforms | set by the buyer | The description, the hashtags, the platforms to post on |
 
-The rate of **$0.08 to $1.00 per 1000 views** reflects the range across live contests, and the threshold of **2000 views** is the typical (median) value in live contests, not a platform limit: the system default and floor is 1000 views, and above that the buyer sets whatever threshold they like (platform data, snapshot: 2026-08-04). More on the threshold: [the view threshold for a payout](/en/earnings/view-threshold).
+The rate of **$0.08 to $2.00 per 1000 views** reflects the range across live contests, and the threshold of **2000 views** is the typical (median) value in live contests, not a platform limit: the system default and floor is 1000 views, and above that the buyer sets whatever threshold they like (platform data, snapshot: 2026-08-14). More on the threshold: [how views are counted for a payout](/en/earnings/how-views-are-counted).
 
 ## What to weigh up: a checklist for the buyer
 
-1. **The rate.** A high rate brings in more clippers and burns the budget faster; a low rate saves budget but gets picked up slowly. The live range: $0.08 - $1.00 per 1000 views.
+1. **The rate.** A high rate brings in more clippers and burns the budget faster; a low rate saves budget but gets picked up slowly. The live range: $0.08 - $2.00 per 1000 views.
 2. **The threshold.** It protects the budget from submissions with a handful of views: anything below it costs you nothing. The typical threshold in live contests: 2000.
 3. **The cap.** It stops one video that went viral from taking the whole budget. Pick it so the same money buys videos from several creators.
 4. **The task.** The more concrete the result you describe (format, style, key moments), the closer the work lands to what you wanted. Clippers pick the tasks they understand on the first read.
@@ -99,7 +99,7 @@ You accept the work yourself: during the selection window you reject anything th
 
 ## Where to next
 
-- [Platforms and fees](/en/earnings/platforms-and-fees) - an overview of platforms and a comparison of terms
+- [Where to find clipping work](/en/earnings/where-to-find-clipping-work) - how the order market works and a comparison of terms
 - [How pay-per-view works](/en/earnings/how-pay-per-view-works) - the full mechanic of a PPV contest
 - [What fees DareBay charges](/en/help/what-commission) - current terms by operation
 - [How much clipping pays](/en/earnings/how-much-clipping-pays) - the payout calculation from the clipper side

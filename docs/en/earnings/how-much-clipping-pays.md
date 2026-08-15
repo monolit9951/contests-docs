@@ -8,7 +8,7 @@ seo: true
 
 # How much you can earn from clips on DareBay
 
-What a clipper earns comes out of one formula with three numbers in it: the rate per 1000 views, the views the clip gets, and the cap per submission. Rates across live contests run from **$0.08 to $1.00 per 1000 views** (median **$0.50**). The threshold in a typical live contest is **2000 views**: clear it and the submission joins the budget split. The cap per submission in typical contests is **$100**. The buyer sets all three when the contest is created and puts them on the card, so you can work out your figure before you open the editor.
+What a clipper earns comes out of one formula with three numbers in it: the rate per 1000 views, the views the clip gets, and the cap per submission. Rates across live contests run from **$0.08 to $2.00 per 1000 views** (median **$0.50**). The threshold in a typical live contest is **2000 views**: clear it and the submission joins the budget split. The cap per submission is **set by the buyer** and shown in the contest card. The buyer sets all three when the contest is created and puts them on the card, so you can work out your figure before you open the editor.
 
 Every figure on this page comes from the platform's own data (snapshot: 2026-08-04).
 
@@ -20,7 +20,7 @@ Every figure on this page comes from the platform's own data (snapshot: 2026-08-
 | Median rate | $0.50 per 1000 views | The typical rate: half of contests pay this or more |
 | Maximum rate | $1.00 per 1000 views | The high end of the rate across live contests |
 | View threshold | 2000 views | Typical across live contests; the exact figure is on the card |
-| Cap per submission | $100 | The most one submission can earn in a typical contest |
+| Cap per submission | set by the buyer | The most one submission can earn in a typical contest |
 
 Every parameter is open on the contest card before you submit. The buyer (a streamer or a brand) sets the rate, the threshold and the cap at creation; once the contest is live they are fixed and do not move.
 

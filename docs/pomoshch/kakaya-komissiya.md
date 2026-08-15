@@ -1,7 +1,7 @@
 ---
 title: Какая комиссия на DareBay - создание, магазин и вывод
 description: "Актуальные комиссии DareBay: создание и пополнение конкурса 0%, магазин 8%, вывод с баланса 10% при минимальной сумме 10 USDT."
-provenance: { snapshot_date: "2026-08-04", source: "darebay-prod-config" }
+provenance: { snapshot_date: "2026-08-15", source: "darebay-prod-config" }
 numbers_used: [contest_creation_commission, contest_topup_commission, store_commission, withdrawal_commission, withdrawal_min_amount]
 seo: true
 ---

@@ -24,7 +24,7 @@ If the same clip reaches 250,000 views:
 
 `250,000 / 1000 * $0.50 = $125, but the cap trims the payout to $100`
 
-The typical cap per submission is **$100**. The buyer sets the exact figure when creating the contest and it sits on the brief card before you submit.
+The typical cap per submission is **set by the buyer**. The buyer sets the exact figure when creating the contest and it sits on the brief card before you submit.
 
 You can enter several submissions in one contest and work several contests at once. Each submission is counted on its own and the cap applies to each separately, so two clips at the cap make $200.
 
@@ -96,6 +96,6 @@ The buyer sets the threshold in each contest, and across live contests the typic
 
 - [How pay-per-view works](/en/earnings/how-pay-per-view-works) - the full mechanics of a PPV contest
 - [What streamer clips pay](/en/earnings/streamer-clip-rates) - the rates and payment parameters
-- [Earning with no followers](/en/earnings/earn-without-followers) - more on the threshold and the terms
+- [How much clipping pays](/en/earnings/how-much-clipping-pays) - more on the threshold and the terms
 - [What commission does DareBay take](/en/help/what-commission) - the details of the commission
-- [Platforms and fees](/en/earnings/platforms-and-fees) - platform comparisons
+- [Where to find clipping work](/en/earnings/where-to-find-clipping-work) - platform comparisons

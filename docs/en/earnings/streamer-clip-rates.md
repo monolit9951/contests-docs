@@ -8,7 +8,7 @@ seo: true
 
 # What streamer clips pay on DareBay
 
-Clippers on DareBay are paid for the views their submissions get in PPV contests. Rates across live contests run from **$0.08 to $1.00 per 1000 views**, and the typical (median) rate is **$0.50 per 1000 views**. The cap per submission in typical contests is **$100**. The buyer, a streamer or a brand, sets the rate and the cap when creating the contest and freezes the budget in the same step: the prize money sits on the platform before you cut a single frame. Every term is on the contest card before you submit.
+Clippers on DareBay are paid for the views their submissions get in PPV contests. Rates across live contests run from **$0.08 to $2.00 per 1000 views**, and the typical (median) rate is **$0.50 per 1000 views**. The cap per submission in typical contests is **set by the buyer**. The buyer, a streamer or a brand, sets the rate and the cap when creating the contest and freezes the budget in the same step: the prize money sits on the platform before you cut a single frame. Every term is on the contest card before you submit.
 
 Every figure on this page comes from the platform's own data (snapshot: 2026-08-04).
 
@@ -19,7 +19,7 @@ Every figure on this page comes from the platform's own data (snapshot: 2026-08-
 | Minimum rate | $0.08 per 1000 views | The low end of the rate across live contests |
 | Median rate | $0.50 per 1000 views | The typical rate: half of contests pay this or more |
 | Maximum rate | $1.00 per 1000 views | The high end of the rate across live contests |
-| Cap per submission | $100 | The most one submission can earn in a typical contest |
+| Cap per submission | set by the buyer | The most one submission can earn in a typical contest |
 
 The organizer, a streamer or a brand, picks the rate and the cap when creating the contest. Both sit on the contest card, so you know the terms you are competing under before you submit a clip.
 

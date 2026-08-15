@@ -1,7 +1,7 @@
 ---
 title: DareBay виведення грошей - комісія, мінімум і строки
 description: "Як вивести доступний баланс DareBay: мінімум 10 USDT, комісія 10%, ручна обробка заявки й доступні способи отримання."
-provenance: { snapshot_date: "2026-08-04", source: "darebay-prod-config" }
+provenance: { snapshot_date: "2026-08-15", source: "darebay-prod-config" }
 numbers_used: [withdrawal_min_amount, withdrawal_commission, winner_confirmation_min]
 seo: true
 ---

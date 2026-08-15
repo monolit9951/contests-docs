@@ -8,7 +8,7 @@ seo: true
 
 # What TikTok pays for views
 
-Views on TikTok pay through two routes. The first is TikTok's own creator programme (the Creativity Program), where the platform pays you but only after you have built an audience and hold steady reach. The second is an intermediary platform like DareBay, where a named buyer pays for the views of your video out of a budget locked up front. DareBay asks for no audience at all: rates run from **$0.08 to $1.00 per 1000 views**, the median rate is **$0.50 per 1000 views**, and the typical threshold for joining the split is **2000 views** (the organizer sets the exact figure and it sits on the contest card).
+Views on TikTok pay through two routes. The first is TikTok's own creator programme (the Creativity Program), where the platform pays you but only after you have built an audience and hold steady reach. The second is an intermediary platform like DareBay, where a named buyer pays for the views of your video out of a budget locked up front. DareBay asks for no audience at all: rates run from **$0.08 to $2.00 per 1000 views**, the median rate is **$0.50 per 1000 views**, and the typical threshold for joining the split is **2000 views** (the organizer sets the exact figure and it sits on the contest card).
 
 Every figure on this page comes from the platform's own data (snapshot: 2026-08-04).
 
@@ -62,7 +62,7 @@ At the median rate of $0.50 per 1000 views:
 - 20,000 views: 20,000 / 1000 * $0.50 = **$10.00**
 - 100,000 views: 100,000 / 1000 * $0.50 = **$50.00**
 
-The typical cap per submission across live contests is **$100** (the median), and the example above remains below it. The cap applies to the submission, not to the author: enter several different clips and two of them at the cap add up to $200. The cap is on the contest card. View counts are read through the configured tikwm oracle, so neither the buyer nor the participant types figures in by hand; tikwm is not the official TikTok API.
+The typical cap per submission across live contests is **set by the buyer** (the median), and the example above remains below it. The cap applies to the submission, not to the author: enter several different clips and two of them at the cap add up to $200. The cap is on the contest card. View counts are read through the configured tikwm oracle, so neither the buyer nor the participant types figures in by hand; tikwm is not the official TikTok API.
 
 The full chain, from locked budget to payout, is in [how pay-per-view works](/en/earnings/how-pay-per-view-works).
 

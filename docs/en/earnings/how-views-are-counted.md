@@ -46,7 +46,7 @@ Two limits protect the organizer and the clippers alike:
 
 **The rate cap (CPM limit).** The validator refuses any rate above **$100 per 1000 views**. It is a hard system limit: set a higher rate and the contest simply is not created. That closes off both a misplaced zero and a deliberate abuse.
 
-**The view threshold.** The organizer sets the threshold in each contest. Across live contests the typical (median) threshold right now is **2000 views**. Submissions below their contest's threshold are not paid. The threshold sends the budget to content people actually watch and stops it being spread across dozens of clips with a handful of views each. More in [the view threshold](/en/earnings/view-threshold).
+**The view threshold.** The organizer sets the threshold in each contest. Across live contests the typical (median) threshold right now is **2000 views**. Submissions below their contest's threshold are not paid. The threshold sends the budget to content people actually watch and stops it being spread across dozens of clips with a handful of views each. More in [How views are counted for a payout](/en/earnings/how-views-are-counted).
 
 ## How inflated views are cut out
 
@@ -91,7 +91,7 @@ Yes. The validator refuses any rate above $100 per 1000 views. It is a technical
 ## Where to next
 
 - [How pay-per-view works](/en/earnings/how-pay-per-view-works) - the full chain from budget to payout
-- [The view threshold](/en/earnings/view-threshold) - default, median, and how organizers set it
+- [How views are counted for a payout](/en/earnings/how-views-are-counted) - default, median, and how organizers set it
 - [Earning from clips](/en/earn/clips) - rates, payouts and terms
 - [Does DareBay really pay?](/en/about/does-darebay-really-pay) - how the payout guarantee works
 - [The payout guarantee](/en/about/payout-guarantee) - more on how the wallet-backed budget is locked

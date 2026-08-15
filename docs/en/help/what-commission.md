@@ -1,7 +1,7 @@
 ---
 title: DareBay fees - contests, store and withdrawals
 description: "Current DareBay fees: 0% to create or top up a contest, 8% for store purchases, and 10% to withdraw a balance with a 10 USDT minimum."
-provenance: { snapshot_date: "2026-08-04", source: "darebay-prod-config" }
+provenance: { snapshot_date: "2026-08-15", source: "darebay-prod-config" }
 numbers_used: [contest_creation_commission, contest_topup_commission, store_commission, withdrawal_commission, withdrawal_min_amount]
 seo: true
 ---

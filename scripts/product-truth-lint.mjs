@@ -24,8 +24,8 @@ const REVIEWED_BASELINE = Object.freeze({
   manualPayoutPlatformWalletInvolved: false,
   ppvLiveCpmMinimum: 0.08,
   ppvLiveCpmMedian: 0.5,
-  ppvLiveCpmMaximum: 1,
-  ppvTypicalMaxPerWork: 100,
+  ppvLiveCpmMaximum: 2,
+  ppvTypicalMaxPerWork: 98.5,
   onChainEscrowLive: false,
   automaticBalanceWithdrawalRails: false,
 });

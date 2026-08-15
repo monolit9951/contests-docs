@@ -14,6 +14,7 @@ import { readFileSync, readdirSync, statSync, existsSync } from 'node:fs'
 import { join, relative, resolve } from 'node:path'
 import { execFileSync } from 'node:child_process'
 import {
+  HUBS,
   PAGES,
   pagePath,
   sourceFile,
@@ -22,7 +23,46 @@ import {
 
 export const CAP_NEW_PER_WAVE = 8
 export const CAP_TOTAL = 60
-export const DUP_THRESHOLD = 0.8
+
+// Пороги ниже откалиброваны по живому корпусу на origin/release (120 страниц, 669 пар внутри
+// «хаб + локаль»), а не выбраны априори. Замер (полная матрица — в PR):
+//
+//   метрика  pairs  med    p90    p95    p99    max
+//   j5        669   0.005  0.057  0.074  0.126  0.161   (earnings/en how-much-clipping-pays ↔ streamer-clip-rates)
+//   j3        669   0.016  0.104  0.125  0.188  0.222   (та же пара)
+//   j2        669   0.042  0.171  0.198  0.249  0.312   (та же пара)
+//
+// Прежний DUP_THRESHOLD = 0.8 стоял в пять раз выше потолка корпуса: ни одна пара из 669 не могла
+// его достичь ни при каком содержании раздела. Гейт выдавал разрешение, а не проверял.
+
+/** Копипаста: пятисловные шинглы. Потолок корпуса 0.161; порог ~2x потолка — достижим для
+ * страницы, дословно переиспользующей чужие абзацы, и недостижим для честной правки. */
+export const DUP_THRESHOLD = 0.3
+
+/** Пересказ: трёхсловные шинглы. Пять слов ловят только копипасту; на пересказе они слепы
+ * (весь дорвейный раздел /zarabotok/ жил при j5 <= 0.133). Триграммы дают лучшее разделение,
+ * чем биграммы: max/p90 = 2.1 против 1.8 у j2, потому что биграммы в тематическом корпусе
+ * забиты неизбежной доменной лексикой («за 1000», «1000 просмотров»). Порог 0.16 лежит между
+ * p95 (0.125) и p99 (0.188): выше всего, что производят здоровые хабы, ниже дорвейного кластера. */
+export const PARAPHRASE_THRESHOLD = 0.16
+
+/** «Почти одинаковый» заголовок: Жаккар по словам, обрезанным до 4 символов (грубый стеммер,
+ * одинаково работающий для ru/uk/en словоизменения). На живом корпусе при 0.6 склеиваются
+ * только настоящие парафразы («нужны ли подписчики» / «нужна ли аудитория или подписчики»);
+ * первое ложное склеивание появляется на 0.5. */
+export const QUESTION_SIMILARITY = 0.6
+
+/** Один и тот же вопрос FAQ на стольких страницах одного хаба = дублирование интента.
+ * Три — потому что при этом значении правило молчит на здоровой части корпуса (хаб help,
+ * 42 страницы в трёх локалях, и хаб about, 21 страница — ноль срабатываний) и загорается
+ * ровно на разделах, которые аудит признал дорвейными. Два было бы шумом: пара страниц
+ * вправе делить вопрос. */
+export const FAQ_ECHO_LIMIT = 3
+
+/** То же для H2. Считаются только содержательные секции: сквозные блоки вёрстки
+ * («Куда дальше», «Итог», «Страницы раздела») исключены — они есть почти на каждой странице
+ * по требованию домашнего стиля и ничего не говорят об интенте. */
+export const HEADING_ECHO_LIMIT = 3
 
 const FLEET_HUBS = new Set(['earnings', 'brands', 'help', 'about'])
 const CONTENT_PATHS = [
@@ -42,6 +82,14 @@ const REDIRECT_PATTERNS = [
 
 const normalPath = (path) => path.replace(/\\/g, '/').replace(/^\.\//, '')
 const isPotentialContentPath = (path) => CONTENT_PATHS.some((pattern) => pattern.test(normalPath(path)))
+
+/** Локализованный сегмент пути -> канонический хаб: `zarabotok`, `zarobitok` и `earnings` — один
+ * хаб, и сравнивать FAQ надо внутри него, а не внутри каталога. Выводится из манифеста, а не
+ * прописан руками, чтобы переименование сегмента не разошлось с гейтом. */
+const hubBySegment = new Map()
+for (const [hub, localized] of Object.entries(HUBS)) {
+  for (const segment of Object.values(localized)) hubBySegment.set(segment, hub)
+}
 
 const registryBySource = new Map()
 const sourcesBySemanticId = new Map()
@@ -136,14 +184,19 @@ export function pathInfo(path) {
   }
 }
 
-function shingles(body) {
-  const words = body
+function bodyWords(body) {
+  return body
     .toLowerCase()
     .replace(/[^\p{L}\p{N}\s]/gu, ' ')
     .split(/\s+/)
     .filter(Boolean)
+}
+
+/** Шинглы длиной `size`. Пять слов — детектор копипасты, три — детектор пересказа. */
+function shingles(body, size = 5) {
+  const words = bodyWords(body)
   const set = new Set()
-  for (let i = 0; i + 5 <= words.length; i += 1) set.add(words.slice(i, i + 5).join(' '))
+  for (let i = 0; i + size <= words.length; i += 1) set.add(words.slice(i, i + size).join(' '))
   return set
 }
 
@@ -152,6 +205,180 @@ function jaccard(left, right) {
   let intersection = 0
   for (const value of left) if (right.has(value)) intersection += 1
   return intersection / (left.size + right.size - intersection)
+}
+
+/** H2, которым домашний стиль обязывает закрывать почти каждую страницу. Это вёрстка, а не
+ * содержание: «Куда дальше» стоит на 13 из 15 страниц /zarabotok/ и на стольких же в /ua/ и /en/.
+ * Считать их дублированием — значит заливать гейт шумом ровно там, где всё здорово. */
+const BOILERPLATE_H2 = new Set([
+  'куда дальше', 'куди далі', 'where to next',
+  'страницы раздела', 'сторінки розділу', 'pages in this section',
+  'итог', 'підсумок', 'the bottom line', 'in short',
+])
+
+/** H2, открывающий блок FAQ. Вопросы внутри него разбираются отдельным правилом. */
+const FAQ_H2 = new Set([
+  'часто задаваемые вопросы', 'частые вопросы', 'вопросы и ответы',
+  'часті питання', 'часті запитання', 'питання і відповіді',
+  'frequently asked questions', 'common questions', 'faq',
+])
+
+/** Нижний регистр, снятая разметка, ё=е, без пунктуации и лишних пробелов. */
+export function normalizeHeading(text) {
+  return text
+    .replace(/\[([^\]]*)\]\([^)]*\)/g, '$1')
+    .replace(/\*\*|__|[*_`~]/g, ' ')
+    .toLowerCase()
+    .replace(/ё/g, 'е')
+    .replace(/[^\p{L}\p{N}\s]/gu, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+}
+
+/** Ключ для сравнения «почти одинаковых» заголовков: слова, обрезанные до 4 символов. Обрезка
+ * снимает словоизменение («нужны»/«нужна», «приходят»/«приходит», «counted»/«counting») без
+ * словаря и одинаково ведёт себя во всех трёх локалях. */
+function headingKey(normalized) {
+  return new Set(normalized.split(' ').filter(Boolean).map((word) => word.slice(0, 4)))
+}
+
+function headingsSimilar(left, right) {
+  return jaccard(left, right) >= QUESTION_SIMILARITY
+}
+
+/** Содержательные H2 страницы и вопросы её FAQ (H3 внутри секции FAQ).
+ * Блоки кода пропускаются: `#` в примере — не заголовок. */
+export function sectionHeadings(body) {
+  const h2 = []
+  const faq = []
+  let insideFaq = false
+  let insideFence = false
+  for (const line of body.split('\n')) {
+    if (/^\s*(```|~~~)/.test(line)) {
+      insideFence = !insideFence
+      continue
+    }
+    if (insideFence) continue
+    const level2 = line.match(/^##\s+(.+?)\s*$/)
+    if (level2) {
+      const normalized = normalizeHeading(level2[1])
+      insideFaq = FAQ_H2.has(normalized)
+      if (!insideFaq && normalized && !BOILERPLATE_H2.has(normalized)) h2.push(normalized)
+      continue
+    }
+    if (/^#\s+/.test(line)) {
+      insideFaq = false
+      continue
+    }
+    const level3 = line.match(/^###\s+(.+?)\s*$/)
+    if (level3 && insideFaq) {
+      const normalized = normalizeHeading(level3[1])
+      if (normalized) faq.push(normalized)
+    }
+  }
+  const unique = (list) => [...new Set(list)]
+  return { h2: unique(h2), faq: unique(faq) }
+}
+
+/** Канонический хаб страницы. Для зарегистрированной берётся из манифеста, для новой —
+ * из сегмента пути через тот же манифест, чтобы новая страница сравнивалась со своими
+ * соседями, а не оказалась одна в собственной группе. */
+export function hubOf(info) {
+  return hubBySegment.get(info.zone) ?? info.zone
+}
+
+function headingProfile(body) {
+  const { h2, faq } = sectionHeadings(body)
+  return {
+    h2,
+    faq,
+    h2Keys: h2.map(headingKey),
+    faqKeys: faq.map(headingKey),
+  }
+}
+
+/** Индекс эха по хабу: для каждой формулировки, реально написанной на какой-то странице хаба,
+ * список страниц, где есть похожая.
+ *
+ * Считается «звездой» вокруг настоящей формулировки, а не транзитивным замыканием. Замыкание
+ * склеивает далёкие тексты через цепочку посредников и выдаёт кластеры, которых никто не писал.
+ * Но и звезда только вокруг собственного заголовка страницы была бы хуже: из трёх страниц,
+ * где вопрос задан тремя способами, эхо из трёх увидела бы лишь та, чья формулировка оказалась
+ * посередине, а две крайние прошли бы гейт. Поэтому якорем служит любая формулировка хаба:
+ * страница попадает в звезду, если похожа на конкретный написанный кем-то заголовок. */
+function buildEchoIndex(pages, field) {
+  const byGroup = new Map()
+  for (const page of pages) {
+    const groupKey = `${page.hub} ${page.info.locale}`
+    const group = byGroup.get(groupKey) ?? []
+    group.push(page)
+    byGroup.set(groupKey, group)
+  }
+
+  const index = new Map()
+  for (const [groupKey, group] of byGroup) {
+    const anchors = []
+    for (const page of group) {
+      const texts = page.headings[field]
+      const keys = page.headings[`${field}Keys`]
+      for (let i = 0; i < texts.length; i += 1) {
+        const members = []
+        for (const other of group) {
+          if (other.headings[`${field}Keys`].some((candidate) => headingsSimilar(keys[i], candidate))) {
+            members.push(other)
+          }
+        }
+        anchors.push({ text: texts[i], key: keys[i], members })
+      }
+    }
+    index.set(groupKey, { anchors, group })
+  }
+  return index
+}
+
+/** Для каждого заголовка страницы — самая широкая звезда, в которую он попадает.
+ * Переводы того же semantic id эхом не считаются: это одна страница, а не две. */
+function pageEchoes(index, page, field) {
+  const { anchors = [], group = [] } = index.get(`${page.hub} ${page.info.locale}`) ?? {}
+  const own = page.headings[field]
+  const ownKeys = page.headings[`${field}Keys`]
+  const rows = []
+  for (let i = 0; i < own.length; i += 1) {
+    // Собственная формулировка страницы — тоже якорь: в индексе её может не быть, если
+    // проверяемый файл лежит вне каталога корпуса.
+    const self = {
+      text: own[i],
+      key: ownKeys[i],
+      members: group.filter((member) =>
+        member.headings[`${field}Keys`].some((candidate) => headingsSimilar(ownKeys[i], candidate))
+      ),
+    }
+    let best = null
+    for (const anchor of [self, ...anchors]) {
+      if (!headingsSimilar(ownKeys[i], anchor.key)) continue
+      const others = anchor.members.filter(
+        (member) => member.info.semanticId !== page.info.semanticId && member.rel !== page.rel
+      )
+      if (!best || others.length > best.length) best = others
+    }
+    if (best && best.length) {
+      // Порядок обхода корпуса задан readdirSync и по платформам не совпадает: сортировка
+      // делает текст нарушения воспроизводимым, иначе один и тот же корпус даёт разные логи.
+      rows.push({
+        text: own[i],
+        echo: best.length + 1,
+        others: best.map((member) => member.rel).sort(),
+      })
+    }
+  }
+  return rows.sort((left, right) => right.echo - left.echo || left.text.localeCompare(right.text))
+}
+
+/** Список файлов в сообщении о нарушении: полностью до четырёх, дальше — с хвостом-счётчиком,
+ * чтобы строка лога оставалась читаемой. */
+function listFiles(files) {
+  if (files.length <= 4) return files.join(', ')
+  return `${files.slice(0, 4).join(', ')} and ${files.length - 4} more`
 }
 
 export function runLint({
@@ -188,8 +415,22 @@ export function runLint({
       semanticFiles.set(info.semanticId, semanticPaths)
       if (parsed.seo) semanticSeoIds.add(info.semanticId)
     }
-    corpusPages.push({ rel, info, parsed, shingles: shingles(parsed.body) })
+    corpusPages.push({
+      rel,
+      info,
+      parsed,
+      hub: hubOf(info),
+      shingles: shingles(parsed.body),
+      shingles3: shingles(parsed.body, 3),
+      headings: headingProfile(parsed.body),
+    })
   }
+
+  // Индексы эха строятся один раз по корпусу: правило хабовое, и пересчитывать его на каждый
+  // изменённый файл значит платить квадратом за один и тот же ответ.
+  const contentPages = corpusPages.filter((page) => page.info.isPage)
+  const faqIndex = buildEchoIndex(contentPages, 'faq')
+  const h2Index = buildEchoIndex(contentPages, 'h2')
 
   const inspectedSemanticIds = new Set()
   const newSemanticIds = new Set()
@@ -244,20 +485,68 @@ export function runLint({
       if (!existedBefore) newSemanticIds.add(info.semanticId)
     }
 
+    // Другая страница той же локали. Переводы одного semantic id — не дубликаты друг друга.
+    const peers = corpusPages.filter(
+      (candidate) =>
+        candidate.info.isPage &&
+        candidate.rel !== changed &&
+        candidate.info.locale === info.locale &&
+        candidate.info.semanticId !== info.semanticId
+    )
+    const hub = hubOf(info)
+
     const currentShingles = shingles(parsed.body)
+    const currentShingles3 = shingles(parsed.body, 3)
     let worst = { file: null, similarity: 0 }
-    for (const candidate of corpusPages) {
-      if (!candidate.info.isPage || candidate.rel === changed) continue
-      if (candidate.info.locale !== info.locale) continue
-      if (candidate.info.semanticId === info.semanticId) continue
+    let worstParaphrase = { file: null, similarity: 0 }
+    for (const candidate of peers) {
       const similarity = jaccard(currentShingles, candidate.shingles)
       if (similarity > worst.similarity) worst = { file: candidate.rel, similarity }
+      const paraphrase = jaccard(currentShingles3, candidate.shingles3)
+      if (paraphrase > worstParaphrase.similarity) {
+        worstParaphrase = { file: candidate.rel, similarity: paraphrase }
+      }
     }
     if (worst.similarity > DUP_THRESHOLD) {
       fail(
         'duplicate',
         changed,
         `near-duplicate of ${worst.file} in ${info.locale} (jaccard=${worst.similarity.toFixed(2)} > ${DUP_THRESHOLD})`
+      )
+    }
+    if (worstParaphrase.similarity > PARAPHRASE_THRESHOLD) {
+      fail(
+        'paraphrase',
+        changed,
+        `retells ${worstParaphrase.file} in ${info.locale} ` +
+          `(jaccard3=${worstParaphrase.similarity.toFixed(3)} > ${PARAPHRASE_THRESHOLD})`
+      )
+    }
+
+    const current = { rel: changed, info, hub, headings: headingProfile(parsed.body) }
+    const faqEchoes = pageEchoes(faqIndex, current, 'faq')
+      .filter((row) => row.echo >= FAQ_ECHO_LIMIT)
+    if (faqEchoes.length) {
+      const [top] = faqEchoes
+      fail(
+        'faq-echo',
+        changed,
+        `FAQ question "${top.text}" is answered on ${top.echo} pages of hub "${hub}" ` +
+          `(>= ${FAQ_ECHO_LIMIT}): ${listFiles(top.others)}` +
+          (faqEchoes.length > 1 ? `; ${faqEchoes.length} questions of this page repeat the hub` : '')
+      )
+    }
+
+    const h2Echoes = pageEchoes(h2Index, current, 'h2')
+      .filter((row) => row.echo >= HEADING_ECHO_LIMIT)
+    if (h2Echoes.length) {
+      const [top] = h2Echoes
+      fail(
+        'heading-echo',
+        changed,
+        `H2 "${top.text}" is repeated on ${top.echo} pages of hub "${hub}" ` +
+          `(>= ${HEADING_ECHO_LIMIT}): ${listFiles(top.others)}` +
+          (h2Echoes.length > 1 ? `; ${h2Echoes.length} sections of this page repeat the hub` : '')
       )
     }
 

@@ -1,6 +1,8 @@
 ---
 title: Verification and trust
 description: Verified badges, dual ratings, and why trust is the main currency on DareBay.
+provenance: { snapshot_date: "2026-08-15", source: "darebay-prod" }
+numbers_used: []
 ---
 
 # Verification and trust

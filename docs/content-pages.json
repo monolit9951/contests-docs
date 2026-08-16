@@ -540,6 +540,20 @@
       "slugs": {
         "ru": "zarabotok-na-narezkah-filmov"
       }
+    },
+    {
+      "id": "earnings-youtube-clips",
+      "hub": "earnings",
+      "slugs": {
+        "ru": "zarabotok-na-narezkah-v-youtube"
+      }
+    },
+    {
+      "id": "earnings-instagram-reels",
+      "hub": "earnings",
+      "slugs": {
+        "ru": "zarabotok-na-reels-instagram"
+      }
     }
   ]
 }

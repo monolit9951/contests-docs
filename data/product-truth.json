@@ -76,14 +76,85 @@
     "coinsPurpose": "OFF_CHAIN_GAMIFICATION"
   },
   "ppv": {
-    "liveCpm": {
-      "minimum": 0.08,
-      "median": 0.5,
-      "maximum": 2
+    "stable": {
+      "defaultMinimumViews": {
+        "value": 1000,
+        "unit": "views",
+        "packKey": "ppv_default_min_views_threshold"
+      },
+      "validatorMaxCpmRate": {
+        "value": 100,
+        "unit": "usd_per_1000_views",
+        "packKey": "ppv_max_cpm_rate"
+      },
+      "bands": {
+        "cpm": {
+          "unit": "usd_per_1000_views",
+          "low": 0.05,
+          "high": 2,
+          "packKeys": {
+            "low": "ppv_cpm_band_low",
+            "high": "ppv_cpm_band_high"
+          }
+        },
+        "maxPerWork": {
+          "unit": "usd",
+          "low": 30,
+          "high": 100,
+          "packKeys": {
+            "low": "ppv_max_per_work_band_low",
+            "high": "ppv_max_per_work_band_high"
+          }
+        },
+        "minViewsThreshold": {
+          "unit": "views",
+          "low": 1000,
+          "high": 50000,
+          "packKeys": {
+            "low": "ppv_min_views_threshold_band_low",
+            "high": "ppv_min_views_threshold_band_high"
+          }
+        }
+      }
     },
-    "defaultMinimumViews": 1000,
-    "liveMedianMinimumViews": 2000,
-    "typicalMaxPerWork": 98.5
+    "volatile": {
+      "cpmMinimum": {
+        "value": 0.08,
+        "unit": "usd_per_1000_views",
+        "packKey": "ppv_cpm_min",
+        "band": "cpm"
+      },
+      "cpmMedian": {
+        "value": 0.5,
+        "unit": "usd_per_1000_views",
+        "packKey": "ppv_cpm_median",
+        "band": "cpm"
+      },
+      "cpmMaximum": {
+        "value": 2,
+        "unit": "usd_per_1000_views",
+        "packKey": "ppv_cpm_max",
+        "band": "cpm"
+      },
+      "maxPerWorkTypical": {
+        "value": 98.5,
+        "unit": "usd",
+        "packKey": "ppv_max_per_work_typical",
+        "band": "maxPerWork"
+      },
+      "minViewsThresholdMedian": {
+        "value": 2000,
+        "unit": "views",
+        "packKey": "ppv_min_views_threshold_live",
+        "band": "minViewsThreshold"
+      },
+      "contests": {
+        "value": 10,
+        "unit": "count",
+        "packKey": "ppv_contests",
+        "band": null
+      }
+    }
   },
   "selection": {
     "types": [

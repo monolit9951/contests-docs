@@ -9,9 +9,25 @@ const SCRIPT_DIR = dirname(fileURLToPath(import.meta.url));
 const DEFAULT_ROOT = resolve(SCRIPT_DIR, "..");
 const DEFAULT_TRUTH = join(DEFAULT_ROOT, "data/product-truth.json");
 
-// Deliberate double-entry control. A real product-policy change must update the backend,
-// the reviewed snapshot, this baseline and the public pages in one change. Editing only the
-// JSON cannot silently redefine what the documentation gate considers true.
+// Two classes of product number, and they need opposite handling.
+//
+// STABLE values are invariants: commissions and defaults read out of backend configuration or
+// code, system limits enforced by a validator, and ladder-rounded bands over the live
+// distribution. They only move when the product moves, so they are safe to print on a public
+// page and are checked for exact equality against the double-entry baseline below.
+//
+// VOLATILE values are live aggregates recomputed from production Mongo on every truth-pack run:
+// medians, live minima/maxima and counts. `ppv_max_per_work_typical` moved 97 -> 98.5 inside a
+// single day over ten PPV contests, which is what the median of a ten-item sample does. Pinning
+// such a value in this baseline would force a reviewed code edit on every cron run, and gating
+// public copy on exact equality with it forces the whole section to be rewritten daily. So
+// volatile values are NOT double-entered here: `validateTruthSnapshot` only checks their shape
+// and that they still fall inside the stable band that bounds them, and the content rules never
+// require a page to print them.
+//
+// A real product-policy change must update the backend, the reviewed snapshot, this baseline and
+// the public pages in one change. Editing only the JSON cannot silently redefine what the
+// documentation gate considers true for a stable value.
 const REVIEWED_BASELINE = Object.freeze({
   contestCreationCommissionPercent: 0,
   contestTopUpCommissionPercent: 0,
@@ -22,13 +38,25 @@ const REVIEWED_BASELINE = Object.freeze({
   withdrawalPerUserOverrideSupported: true,
   manualPayoutPrizeFundsLocked: false,
   manualPayoutPlatformWalletInvolved: false,
-  ppvLiveCpmMinimum: 0.08,
-  ppvLiveCpmMedian: 0.5,
-  ppvLiveCpmMaximum: 2,
-  ppvTypicalMaxPerWork: 98.5,
+  ppvDefaultMinimumViews: 1000,
+  ppvValidatorMaxCpmRate: 100,
+  ppvCpmBandLow: 0.05,
+  ppvCpmBandHigh: 2,
+  ppvMaxPerWorkBandLow: 30,
+  ppvMaxPerWorkBandHigh: 100,
+  ppvMinViewsThresholdBandLow: 1000,
+  ppvMinViewsThresholdBandHigh: 50000,
   onChainEscrowLive: false,
   automaticBalanceWithdrawalRails: false,
 });
+
+// A page that prints a volatile aggregate must say so in its own front matter: the fleet already
+// stamps `numbers_used:` with the truth-pack key and `provenance.snapshot_date` with the reading
+// date. That declaration is what turns "the typical cap is $98.50" from an undated product claim
+// into a dated observation, and it is the only thing the gate can honestly demand — the gate
+// cannot know today's median without becoming the very daily-churn machine this replaced.
+const VOLATILE_DECLARATION_HINT =
+  "declare its truth-pack key in `numbers_used` with a `provenance.snapshot_date`, print the stable band instead, or drop the number";
 
 const LANG = {
   en: {
@@ -337,42 +365,140 @@ function numericMinimumClaims(line, file, lineNumber, truth, out) {
   }
 }
 
-function numericPpvClaims(line, file, lineNumber, truth, out) {
-  // Marker presence is useful provenance, but the prose between a value and a marker can
-  // itself contain numbers ("$1 per 1000 views"). Semantic range/cap checks below are
-  // deliberately used instead of guessing which preceding number the marker annotates.
-  const rangePatterns = [
-    /(?:rates?[^.\n]{0,45}(?:run|range)|pay[^.\n]{0,20}from)\s*(?:from\s*)?\*?\*?\$?(\d+(?:[.,]\d+)?)\b[^.\n]{0,25}\bto\s*\*?\*?\$?(\d+(?:[.,]\d+)?)[^.\n]{0,35}(?:1000|1,000) views/ig,
-    /(?:ставк[аи]|платят)[^.\n]{0,45}(?:от|від)\s*\*?\*?\$?(\d+(?:[.,]\d+)?)[^.\n]{0,25}(?:до)\s*\*?\*?\$?(\d+(?:[.,]\d+)?)[^.\n]{0,35}(?:1000|1 000) (?:просмотров|переглядів)/ig,
-  ];
-  for (const pattern of rangePatterns) {
-    for (const match of line.matchAll(pattern)) {
-      const low = Number(match[1].replace(",", "."));
-      const high = Number(match[2].replace(",", "."));
-      if (low !== truth.ppv.liveCpm.minimum || high !== truth.ppv.liveCpm.maximum) {
-        addViolation(out, "ppv-live-rate-range", file, lineNumber,
-          `claims ${low}-${high}; truth-pack live range is ${truth.ppv.liveCpm.minimum}-${truth.ppv.liveCpm.maximum}`);
-      }
+export function pageDeclaration(text) {
+  const keys = new Set();
+  const matter = /^---\r?\n([\s\S]*?)\r?\n---/.exec(text);
+  if (!matter) return { keys, snapshotDate: null };
+  const used = /^numbers_used:\s*\[([^\]]*)\]/m.exec(matter[1]);
+  if (used) for (const raw of used[1].split(",")) {
+    const key = raw.trim();
+    if (key) keys.add(key);
+  }
+  const snapshot = /snapshot_date:\s*["']?(\d{4}-\d{2}-\d{2})["']?/.exec(matter[1]);
+  return { keys, snapshotDate: snapshot ? snapshot[1] : null };
+}
+
+export function corpusDeclaration(declarations) {
+  const keys = new Set();
+  let snapshotDate = null;
+  for (const declaration of declarations) {
+    for (const key of declaration.keys) keys.add(key);
+    if (declaration.snapshotDate && (!snapshotDate || declaration.snapshotDate > snapshotDate)) {
+      snapshotDate = declaration.snapshotDate;
     }
   }
+  return { keys, snapshotDate };
+}
 
-  const cap = /(?:(?:typical|current|типичн\w*|поточн\w*|типов\w*)[^.\n]{0,55}(?:cap|потолок|стеля)|(?:cap per (?:submission|work)|потолок на (?:одну )?работу|стеля на (?:одну )?роботу)[^.\n]{0,35}(?:typical|current|типичн\w*|поточн\w*|типов\w*)?)[^.\n]{0,55}\$\s*(\d+(?:[.,]\d+)?)/ig;
-  for (const match of line.matchAll(cap)) {
-    if (Number(match[1].replace(",", ".")) !== truth.ppv.typicalMaxPerWork) {
+function stableBand(truth, name) {
+  return truth.ppv.stable.bands[name];
+}
+
+function volatileFact(truth, name) {
+  return truth.ppv.volatile[name];
+}
+
+// A dated live reading is declared, not guessed: the page must name the truth-pack key it
+// published and carry the snapshot date it was read on.
+function declaresLiveReading(declaration, ...facts) {
+  return Boolean(declaration.snapshotDate) && facts.every((fact) => declaration.keys.has(fact.packKey));
+}
+
+const CPM_RANGE_PATTERNS = [
+  /(?:rates?[^.\n]{0,45}(?:run|range)|pay[^.\n]{0,20}from)\s*(?:from\s*)?\*?\*?\$?(\d+(?:[.,]\d+)?)\b[^.\n]{0,25}\bto\s*\*?\*?\$?(\d+(?:[.,]\d+)?)[^.\n]{0,35}(?:1000|1,000) views/ig,
+  /(?:ставк[аи]|платят)[^.\n]{0,45}(?:от|від)\s*\*?\*?\$?(\d+(?:[.,]\d+)?)[^.\n]{0,25}(?:до)\s*\*?\*?\$?(\d+(?:[.,]\d+)?)[^.\n]{0,35}(?:1000|1 000) (?:просмотров|переглядів)/ig,
+];
+
+// The subject phrase only. The old rule glued `[^.\n]{0,55}\$(\d+)` onto the subject and let it
+// run greedily, so a line was judged by the LAST amount the quantifier could reach: on
+// "Потолок на одну работу | $98.50 (живой разброс от $30 до $100)" it read the band edge $100 as
+// the claimed typical cap. Locating the subject and then scanning every amount in the window
+// removes the ordering dependency entirely.
+const CAP_SUBJECT = /(?:typical|current|типичн\w*|поточн\w*|типов\w*)[^.\n]{0,55}?(?:cap|потолок|стеля)|cap per (?:submission|work)|потолок на (?:одну )?работу|стеля на (?:одну )?роботу/ig;
+const CAP_WINDOW = 55;
+const AMOUNT = /\$\s*(\d+(?:[.,]\d+)?)/g;
+// "$2.00 per 1000 views" next to the word "cap" is a rate, not a per-submission ceiling.
+const PER_THOUSAND_VIEWS = /^\s*(?:\*\*)?\s*(?:per|за|\/)\s*(?:1000|1,000|1 000)\s*(?:views|просмотр|перегляд)/i;
+
+// `[^.\n]` cannot express "up to the end of the sentence": it also stops dead on the decimal
+// point of "$98.50". Cut the window on real sentence punctuation instead.
+function claimWindow(line, start, length) {
+  const window = line.slice(start, start + length);
+  const sentenceEnd = window.search(/[.!?;](?=\s|$)/);
+  return sentenceEnd === -1 ? window : window.slice(0, sentenceEnd);
+}
+
+function amountsIn(window, offset) {
+  const found = [];
+  for (const match of window.matchAll(AMOUNT)) {
+    if (PER_THOUSAND_VIEWS.test(window.slice(match.index + match[0].length))) continue;
+    found.push({ value: Number(match[1].replace(",", ".")), text: match[1], at: offset + match.index });
+  }
+  return found;
+}
+
+function ppvCapClaims(line, file, lineNumber, truth, declaration, out) {
+  const typical = volatileFact(truth, "maxPerWorkTypical");
+  const bounds = stableBand(truth, typical.band);
+  const amounts = new Map();
+  CAP_SUBJECT.lastIndex = 0;
+  for (const match of line.matchAll(CAP_SUBJECT)) {
+    const window = claimWindow(line, match.index, match[0].length + CAP_WINDOW);
+    for (const amount of amountsIn(window, match.index)) amounts.set(amount.at, amount);
+  }
+
+  for (const amount of [...amounts.values()].sort((first, second) => first.at - second.at)) {
+    // Ladder-rounded band edges are stable product facts and are always publishable, including
+    // the $100 ceiling that the previous rule rejected for not being today's median.
+    if (amount.value === bounds.low || amount.value === bounds.high) continue;
+    if (amount.value < bounds.low || amount.value > bounds.high) {
+      addViolation(out, "ppv-cap-outside-band", file, lineNumber,
+        `claims a $${amount.text} cap per submission, outside the reviewed stable band $${bounds.low}-$${bounds.high}`);
+      continue;
+    }
+    if (!declaresLiveReading(declaration, typical)) {
       addViolation(out, "ppv-typical-cap", file, lineNumber,
-        `claims $${match[1]} typical cap; truth-pack value is $${truth.ppv.typicalMaxPerWork}`);
+        `states the volatile live median $${amount.text} as an undated product fact; ${VOLATILE_DECLARATION_HINT} ($${bounds.low}-$${bounds.high})`);
     }
   }
 }
 
-export function lintText(text, file, truth) {
+function ppvRateRangeClaims(line, file, lineNumber, truth, declaration, out) {
+  const minimum = volatileFact(truth, "cpmMinimum");
+  const maximum = volatileFact(truth, "cpmMaximum");
+  const bounds = stableBand(truth, minimum.band);
+  for (const pattern of CPM_RANGE_PATTERNS) {
+    pattern.lastIndex = 0;
+    for (const match of line.matchAll(pattern)) {
+      const low = Number(match[1].replace(",", "."));
+      const high = Number(match[2].replace(",", "."));
+      if (low === bounds.low && high === bounds.high) continue;
+      if (low < bounds.low || high > bounds.high || low > high) {
+        addViolation(out, "ppv-live-rate-range", file, lineNumber,
+          `claims ${low}-${high} per 1000 views, outside the reviewed stable band ${bounds.low}-${bounds.high}`);
+        continue;
+      }
+      if (!declaresLiveReading(declaration, minimum, maximum)) {
+        addViolation(out, "ppv-live-rate-range", file, lineNumber,
+          `states the volatile live spread ${low}-${high} as an undated product fact; ${VOLATILE_DECLARATION_HINT} (${bounds.low}-${bounds.high})`);
+      }
+    }
+  }
+}
+
+function numericPpvClaims(line, file, lineNumber, truth, declaration, out) {
+  ppvRateRangeClaims(line, file, lineNumber, truth, declaration, out);
+  ppvCapClaims(line, file, lineNumber, truth, declaration, out);
+}
+
+export function lintText(text, file, truth, declaration = pageDeclaration(text)) {
   const violations = [];
   const lines = stripFencedCode(text).split("\n");
   lines.forEach((line, index) => {
     const lineNumber = index + 1;
     numericPercentClaims(line, file, lineNumber, truth, violations);
     numericMinimumClaims(line, file, lineNumber, truth, violations);
-    numericPpvClaims(line, file, lineNumber, truth, violations);
+    numericPpvClaims(line, file, lineNumber, truth, declaration, violations);
     for (const rule of CLAIM_RULES) {
       for (const pattern of rule.patterns) {
         const match = pattern.exec(line);
@@ -417,10 +543,45 @@ export function validateTruthSnapshot(truth) {
   check("rewardMethods.automaticBalanceWithdrawalRails", truth.rewardMethods?.automaticBalanceWithdrawalRails, REVIEWED_BASELINE.automaticBalanceWithdrawalRails);
   check("contest.fundingModes.manualPayout.prizeFundsLocked", truth.contest?.fundingModes?.manualPayout?.prizeFundsLocked, REVIEWED_BASELINE.manualPayoutPrizeFundsLocked);
   check("contest.fundingModes.manualPayout.platformWalletInvolved", truth.contest?.fundingModes?.manualPayout?.platformWalletInvolved, REVIEWED_BASELINE.manualPayoutPlatformWalletInvolved);
-  check("ppv.liveCpm.minimum", truth.ppv?.liveCpm?.minimum, REVIEWED_BASELINE.ppvLiveCpmMinimum);
-  check("ppv.liveCpm.median", truth.ppv?.liveCpm?.median, REVIEWED_BASELINE.ppvLiveCpmMedian);
-  check("ppv.liveCpm.maximum", truth.ppv?.liveCpm?.maximum, REVIEWED_BASELINE.ppvLiveCpmMaximum);
-  check("ppv.typicalMaxPerWork", truth.ppv?.typicalMaxPerWork, REVIEWED_BASELINE.ppvTypicalMaxPerWork);
+  // Stable PPV values are double-entered exactly, like every other reviewed invariant.
+  check("ppv.stable.defaultMinimumViews.value", truth.ppv?.stable?.defaultMinimumViews?.value, REVIEWED_BASELINE.ppvDefaultMinimumViews);
+  check("ppv.stable.validatorMaxCpmRate.value", truth.ppv?.stable?.validatorMaxCpmRate?.value, REVIEWED_BASELINE.ppvValidatorMaxCpmRate);
+  check("ppv.stable.bands.cpm.low", truth.ppv?.stable?.bands?.cpm?.low, REVIEWED_BASELINE.ppvCpmBandLow);
+  check("ppv.stable.bands.cpm.high", truth.ppv?.stable?.bands?.cpm?.high, REVIEWED_BASELINE.ppvCpmBandHigh);
+  check("ppv.stable.bands.maxPerWork.low", truth.ppv?.stable?.bands?.maxPerWork?.low, REVIEWED_BASELINE.ppvMaxPerWorkBandLow);
+  check("ppv.stable.bands.maxPerWork.high", truth.ppv?.stable?.bands?.maxPerWork?.high, REVIEWED_BASELINE.ppvMaxPerWorkBandHigh);
+  check("ppv.stable.bands.minViewsThreshold.low", truth.ppv?.stable?.bands?.minViewsThreshold?.low, REVIEWED_BASELINE.ppvMinViewsThresholdBandLow);
+  check("ppv.stable.bands.minViewsThreshold.high", truth.ppv?.stable?.bands?.minViewsThreshold?.high, REVIEWED_BASELINE.ppvMinViewsThresholdBandHigh);
+
+  // Volatile values are deliberately NOT pinned to a reviewed constant: a live median that moves
+  // every cron run would otherwise turn each refresh into a code review. What must hold is that
+  // they are still readings of the quantity they claim to be, so they are checked for shape,
+  // for a truth-pack key, and for containment in the stable band that bounds them.
+  const volatileFacts = truth.ppv?.volatile;
+  if (!volatileFacts || typeof volatileFacts !== "object") {
+    errors.push("ppv.volatile must list the live aggregates that pages may only publish as dated readings");
+  } else {
+    for (const [name, fact] of Object.entries(volatileFacts)) {
+      const label = `ppv.volatile.${name}`;
+      if (!Number.isFinite(fact?.value)) {
+        errors.push(`${label}.value must be a finite number, got ${JSON.stringify(fact?.value)}`);
+        continue;
+      }
+      if (!fact.packKey) {
+        errors.push(`${label}.packKey must name the truth-pack key a page has to declare in numbers_used`);
+      }
+      if (fact.band == null) continue;
+      const bounds = truth.ppv?.stable?.bands?.[fact.band];
+      if (!bounds) {
+        errors.push(`${label}.band refers to unknown stable band ${JSON.stringify(fact.band)}`);
+      } else if (fact.value < bounds.low || fact.value > bounds.high) {
+        errors.push(`${label}.value ${fact.value} escaped its stable band ${bounds.low}-${bounds.high}`);
+      }
+    }
+    for (const required of ["cpmMinimum", "cpmMaximum", "maxPerWorkTypical"]) {
+      if (!volatileFacts[required]) errors.push(`ppv.volatile.${required} is required by the PPV content rules`);
+    }
+  }
   check("selection.random.likesFilter", truth.selection?.random?.likesFilter, false);
   check("submissionAttribution.channel", truth.submissionAttribution?.channel, "URL_SUBMIT_ONLY");
   check("tiktokOracle.provider", truth.tiktokOracle?.provider, "tikwm");
@@ -605,16 +766,40 @@ export function verifySourceProvenance(truth, {
     const escapedDate = truth.verifiedAt.replaceAll("-", "\\-");
     const requirements = [
       [new RegExp(`snapshot ${escapedDate}`), "truth-pack snapshot date"],
-      [new RegExp(`живой диапазон: \\*\\*${truth.ppv.liveCpm.minimum} usd_per_1000_views – ${truth.ppv.liveCpm.maximum} usd_per_1000_views\\*\\* \\(медиана ${truth.ppv.liveCpm.median} usd_per_1000_views\\)`), "PPV live CPM range"],
-      [new RegExp(`Потолок на работу \\(maxPerWork\\), типичный: \\*\\*${truth.ppv.typicalMaxPerWork} usd\\*\\*`), "PPV typical cap"],
       [/SelectionType: RANDOM, VIEWER_VOTING, CREATOR_DECISION, ORACLE_ATTESTED_POOL/, "selection types"],
     ];
+    // Every PPV value is verified against the keyed provenance list rather than the prose
+    // summary, and the stable bands are verified too: the content rules now judge public copy
+    // against those bands, so an unverified band would be a gate with no floor under it.
+    for (const [key, value, unit] of packSourceKeys(truth)) {
+      requirements.push([packSourceLine(key, value, unit), `truth-pack key ${key} = ${value} ${unit}`]);
+    }
     for (const [pattern, label] of requirements) {
       if (!pattern.test(facts)) errors.push(`truth-pack no longer matches ${label}`);
     }
   }
 
   return { checked, errors };
+}
+
+export function packSourceKeys(truth) {
+  const keys = [];
+  for (const fact of Object.values(truth.ppv?.stable ?? {})) {
+    if (fact?.packKey) keys.push([fact.packKey, fact.value, fact.unit]);
+  }
+  for (const bounds of Object.values(truth.ppv?.stable?.bands ?? {})) {
+    keys.push([bounds.packKeys.low, bounds.low, bounds.unit]);
+    keys.push([bounds.packKeys.high, bounds.high, bounds.unit]);
+  }
+  for (const fact of Object.values(truth.ppv?.volatile ?? {})) {
+    if (fact?.packKey) keys.push([fact.packKey, fact.value, fact.unit]);
+  }
+  return keys;
+}
+
+function packSourceLine(key, value, unit) {
+  const escape = (text) => String(text).replaceAll(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  return new RegExp(`\`${escape(key)}\` = ${escape(value)} ${escape(unit)}`);
 }
 
 export function lintRepository({ root = DEFAULT_ROOT, truthPath = join(root, "data/product-truth.json") } = {}) {
@@ -626,13 +811,21 @@ export function lintRepository({ root = DEFAULT_ROOT, truthPath = join(root, "da
   const sourceValidation = provenance.errors.map((message) => ({
     rule: "source-provenance", file: relative(root, truthPath), line: 1, message,
   }));
-  const files = publicClaimFiles(root);
-  const content = files.flatMap((absolute) => {
-    const file = relative(root, absolute).replaceAll("\\", "/");
-    return lintText(readFileSync(absolute, "utf8"), file, truth);
-  });
+  const sources = publicClaimFiles(root).map((absolute) => ({
+    file: relative(root, absolute).replaceAll("\\", "/"),
+    text: readFileSync(absolute, "utf8"),
+  }));
+  const pages = sources.filter((source) => source.file.endsWith(".md"));
+  for (const page of pages) page.declaration = pageDeclaration(page.text);
+  // `docs/public/llms.txt` is generated by `gen:llms` from exactly the front matter above, so it
+  // carries the pages' declarations rather than its own; demanding a separate one would only ask
+  // the generator to restate what it copied. The stable-band bound still applies to it, and it
+  // cannot contain a number that no page description already published.
+  const generated = corpusDeclaration(pages.map((page) => page.declaration));
+  const content = sources.flatMap((source) =>
+    lintText(source.text, source.file, truth, source.declaration ?? generated));
   const canonical = checkCanonicalPages(root, truth);
-  return { truth, filesChecked: files.length, sourcesChecked: provenance.checked,
+  return { truth, filesChecked: sources.length, sourcesChecked: provenance.checked,
     violations: [...validation, ...sourceValidation, ...canonical, ...content] };
 }
 

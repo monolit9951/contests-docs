@@ -72,6 +72,22 @@ checked against [`data/product-truth.json`](data/product-truth.json). The snapsh
 backend release commit and the product truth-pack commit, together with the configuration,
 runbook and implementation files used for verification.
 
+PPV values come in two classes, and only one of them is double-entered against the reviewed
+baseline in `scripts/product-truth-lint.mjs`:
+
+- **`ppv.stable`** — ladder-rounded bands, the code default and the validator limit. These change
+  only when the product changes, so they are pinned in the reviewed baseline and a page may print
+  them freely.
+- **`ppv.volatile`** — live aggregates read from prod Mongo (rate minimum/median/maximum, the
+  typical per-work cap, the live threshold median, the contest count). These move on every cron
+  refresh: the typical cap went 97 → 98.5 in a single day. Pinning them in a frozen code constant
+  turned every refresh into a code review, so they are **not** in the reviewed baseline. They stay
+  pinned to the truth-pack commit, are checked for shape and for containment in their stable band,
+  and a page may print one only when it declares the matching key in `numbers_used` and carries
+  `provenance.snapshot_date`.
+
+A number outside its stable band fails regardless of declaration.
+
 Run the gate directly with:
 
 ```bash

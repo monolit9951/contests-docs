@@ -7,7 +7,9 @@ import { tmpdir } from "node:os";
 import { dirname, join, resolve } from "node:path";
 import {
   checkCanonicalPages,
+  corpusDeclaration,
   lintText,
+  pageDeclaration,
   validateTruthSnapshot,
   verifySourceProvenance,
 } from "./product-truth-lint.mjs";
@@ -174,6 +176,176 @@ test("stale live PPV range and cap fail", () => {
   const found = rules("Rates across live contests run from $0.30 to $1.00 per 1000 views. The typical cap per submission is $50.");
   assert(found.has("ppv-live-rate-range"));
   assert(found.has("ppv-typical-cap"));
+});
+
+console.log("product_truth_lint: stable and volatile value classes");
+
+// The front matter the fleet already stamps on a page that publishes a live aggregate.
+const DECLARED = [
+  "---",
+  "title: fixture",
+  'provenance: { snapshot_date: "2026-08-15", source: "darebay-prod" }',
+  "numbers_used: [ppv_cpm_min, ppv_cpm_median, ppv_cpm_max, ppv_max_per_work_typical]",
+  "---",
+  "",
+].join("\n");
+
+test("a stable band edit in JSON alone fails the double-entry baseline", () => {
+  const changed = structuredClone(truth);
+  changed.ppv.stable.bands.maxPerWork.high = 120;
+  assert.match(validateTruthSnapshot(changed).join("\n"), /ppv\.stable\.bands\.maxPerWork\.high/);
+
+  const rate = structuredClone(truth);
+  rate.ppv.stable.validatorMaxCpmRate.value = 90;
+  assert.match(validateTruthSnapshot(rate).join("\n"), /ppv\.stable\.validatorMaxCpmRate\.value/);
+});
+
+// The reported defect, stated as a contract: ppv_max_per_work_typical moved 97 -> 98.5 in one
+// day. A live aggregate that stays inside its band must never require a reviewed code edit.
+test("a live aggregate may move inside its band without a reviewed code edit", () => {
+  for (const median of [97, 98.5, 42, 100]) {
+    const changed = structuredClone(truth);
+    changed.ppv.volatile.maxPerWorkTypical.value = median;
+    assert.deepEqual(validateTruthSnapshot(changed), [], `median ${median} should need no baseline edit`);
+  }
+});
+
+test("a live aggregate that escapes its stable band fails", () => {
+  const changed = structuredClone(truth);
+  changed.ppv.volatile.maxPerWorkTypical.value = 140;
+  assert.match(validateTruthSnapshot(changed).join("\n"), /ppv\.volatile\.maxPerWorkTypical\.value 140 escaped its stable band/);
+});
+
+test("a live aggregate without a truth-pack key or with a bogus band fails", () => {
+  const missingKey = structuredClone(truth);
+  delete missingKey.ppv.volatile.cpmMedian.packKey;
+  assert.match(validateTruthSnapshot(missingKey).join("\n"), /ppv\.volatile\.cpmMedian\.packKey/);
+
+  const bogusBand = structuredClone(truth);
+  bogusBand.ppv.volatile.cpmMedian.band = "nonexistent";
+  assert.match(validateTruthSnapshot(bogusBand).join("\n"), /unknown stable band/);
+
+  const dropped = structuredClone(truth);
+  delete dropped.ppv.volatile.maxPerWorkTypical;
+  assert.match(validateTruthSnapshot(dropped).join("\n"), /ppv\.volatile\.maxPerWorkTypical is required/);
+});
+
+test("stable band values are verified against the pinned truth-pack", () => {
+  const changed = structuredClone(truth);
+  changed.ppv.stable.bands.maxPerWork.high = 120;
+  assert.match(verifySourceProvenance(changed, { requireLocal: true }).errors.join("\n"),
+    /ppv_max_per_work_band_high = 120 usd/);
+});
+
+// Volatile values are released from the code baseline, not from provenance: the JSON still has
+// to match the truth-pack commit it is pinned to, which is a data edit rather than a code review.
+test("live aggregates are still pinned to the reviewed truth-pack commit", () => {
+  const changed = structuredClone(truth);
+  changed.ppv.volatile.maxPerWorkTypical.value = 97;
+  assert.match(verifySourceProvenance(changed, { requireLocal: true }).errors.join("\n"),
+    /ppv_max_per_work_typical = 97 usd/);
+});
+
+console.log("product_truth_lint: publishable cap values");
+test("the stable cap band is publishable with no live declaration", () => {
+  assert.deepEqual(lintText("Типичный потолок на одну работу - **$100**.", "fixture.md", truth), []);
+  assert.deepEqual(lintText("The typical cap per submission is $30.", "fixture.md", truth), []);
+  assert.deepEqual(lintText("The typical cap per submission runs from $30 to $100.", "fixture.md", truth), []);
+});
+
+test("a cap explained without a number passes", () => {
+  assert.deepEqual(lintText(
+    "Потолок на одну работу задаёт заказчик, и он виден в карточке до подачи.", "fixture.md", truth), []);
+});
+
+test("the volatile median may be published only as a declared dated reading", () => {
+  assert(rules("The typical cap per submission is $98.50.").has("ppv-typical-cap"));
+  assert.deepEqual(lintText(`${DECLARED}The typical cap per submission is $98.50.`, "fixture.md", truth), []);
+});
+
+test("half a declaration does not license a volatile number", () => {
+  const noDate = "---\ntitle: fixture\nnumbers_used: [ppv_max_per_work_typical]\n---\n";
+  assert(rules(`${noDate}The typical cap per submission is $98.50.`).has("ppv-typical-cap"));
+
+  const noKey = "---\ntitle: fixture\nprovenance: { snapshot_date: \"2026-08-15\" }\nnumbers_used: [ppv_cpm_median]\n---\n";
+  assert(rules(`${noKey}The typical cap per submission is $98.50.`).has("ppv-typical-cap"));
+});
+
+test("a cap outside the stable band fails even on a declared page", () => {
+  assert(rules(`${DECLARED}The typical cap per submission is $250.`).has("ppv-cap-outside-band"));
+  assert(rules(`${DECLARED}The typical cap per submission is $5.`).has("ppv-cap-outside-band"));
+});
+
+// The greedy quantifier read the LAST amount it could reach after the trigger, so a line that
+// quoted the band alongside the median was judged on the band edge.
+test("every amount after a cap trigger is judged, not the last one a quantifier reaches", () => {
+  assert.deepEqual(lintText("| Потолок на одну работу | $30 до $100 |", "fixture.md", truth), []);
+
+  const mixed = lintText("| Потолок на одну работу | $98.50 (живой разброс от $30 до $100) |", "fixture.md", truth);
+  assert.equal(mixed.length, 1);
+  assert.equal(mixed[0].rule, "ppv-typical-cap");
+  assert.match(mixed[0].message, /volatile live median \$98\.50/);
+
+  const reversed = lintText("| Потолок на одну работу | от $30 до $100, сейчас $97 |", "fixture.md", truth);
+  assert.equal(reversed.length, 1);
+  assert.match(reversed[0].message, /volatile live median \$97/);
+});
+
+// The point of the whole change: the verdict must not depend on today's median.
+test("the cap rule no longer requires the current live median", () => {
+  for (const median of [97, 98.5, 42]) {
+    const changed = structuredClone(truth);
+    changed.ppv.volatile.maxPerWorkTypical.value = median;
+    assert.deepEqual(lintText("The typical cap per submission runs from $30 to $100.", "fixture.md", changed), []);
+    assert.deepEqual(lintText(`${DECLARED}The typical cap per submission is $98.50.`, "fixture.md", changed), []);
+  }
+});
+
+test("the cap window ends at the sentence, not at a decimal point", () => {
+  // An amount in the next sentence is not part of the cap claim...
+  assert.deepEqual(lintText(
+    "The typical cap per submission runs from $30 to $100. A budget of $500 buys several clips.",
+    "fixture.md", truth), []);
+
+  // ...while the decimal point inside an amount must not cut the window short and hide the rest.
+  const spread = lintText("| Потолок на одну работу | $98.50 (живой разброс от $30 до $100) |", "fixture.md", truth);
+  assert.equal(spread.length, 1);
+  assert.match(spread[0].message, /volatile live median \$98\.50/);
+});
+
+test("a per-1000-views rate beside the word cap is not read as a cap", () => {
+  assert.deepEqual(lintText(
+    "The cap per submission matters: the maximum rate is $2.00 per 1000 views.", "fixture.md", truth), []);
+});
+
+console.log("product_truth_lint: publishable rate spreads");
+test("the stable rate band is publishable while the live spread needs a declaration", () => {
+  assert.deepEqual(lintText("Rates across live contests run from $0.05 to $2.00 per 1000 views.", "fixture.md", truth), []);
+  assert(rules("Rates across live contests run from $0.08 to $2.00 per 1000 views.").has("ppv-live-rate-range"));
+  assert.deepEqual(lintText(
+    `${DECLARED}Rates across live contests run from $0.08 to $2.00 per 1000 views.`, "fixture.md", truth), []);
+});
+
+test("a rate spread outside the stable band fails even on a declared page", () => {
+  const found = lintText(
+    `${DECLARED}Rates across live contests run from $0.01 to $2.00 per 1000 views.`, "fixture.md", truth);
+  assert.equal(found.length, 1);
+  assert.match(found[0].message, /outside the reviewed stable band 0\.05-2/);
+});
+
+test("declarations are read from front matter and merged for generated aggregates", () => {
+  const declaration = pageDeclaration(DECLARED);
+  assert.equal(declaration.snapshotDate, "2026-08-15");
+  assert(declaration.keys.has("ppv_max_per_work_typical"));
+  assert.deepEqual(pageDeclaration("no front matter here"), { keys: new Set(), snapshotDate: null });
+
+  // `docs/public/llms.txt` has no front matter of its own; it inherits the corpus declarations.
+  const merged = corpusDeclaration([
+    pageDeclaration(DECLARED),
+    { keys: new Set(["ppv_contests"]), snapshotDate: "2026-08-14" },
+  ]);
+  assert.equal(merged.snapshotDate, "2026-08-15");
+  assert(merged.keys.has("ppv_max_per_work_typical") && merged.keys.has("ppv_contests"));
 });
 
 test("promising every creator their preferred rail fails", () => {

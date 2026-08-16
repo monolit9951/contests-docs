@@ -1,66 +1,70 @@
 ---
-title: The DareBay payout guarantee - how a contest budget is protected
-description: How DareBay records the budget and obligations, independently counts results, and manually fulfils payouts and withdrawals.
-provenance: { snapshot_date: "2026-08-04", source: "darebay-prod" }
-numbers_used: [withdrawal_min_amount, withdrawal_commission]
+title: The DareBay payout guarantee - what it covers and where it stops
+description: Exactly what DareBay guarantees a clipper - a locked wallet-backed budget, fixed terms and a recorded calculation - and the three things it deliberately does not guarantee.
+provenance: { snapshot_date: "2026-08-15", source: "darebay-prod" }
+numbers_used: []
 seo: true
 ---
 
-# The DareBay payout guarantee - how a contest budget is protected
+# The DareBay payout guarantee
 
-DareBay secures payout obligations through the intermediary and guarantor mechanic. The budget is recorded against the contest, an independent oracle counts the views, and validated results create a credit or payout obligation. Fulfilment can be manual; this is not a promise of an instant automatic transfer.
+A guarantee is only worth something if its edges are drawn. This page draws them: what DareBay actually stands behind, and what it deliberately does not.
 
-## How the budget is protected
+DareBay is an intermediary and guarantor. It holds money, records the arithmetic and keeps the obligation. It is not an escrow contract and it does not underwrite an organizer who never put money on the platform in the first place.
 
-The payout guarantee on DareBay rests on four steps:
+## What the guarantee covers
 
-1. **The funding mode is recorded.** A wallet-backed contest locks its money prize. A manual-payout contest has no platform lock or wallet involvement: the organizer pays creators directly. Creating and topping up a contest currently carry a 0% fee.
-2. **An independent oracle counts the views.** DareBay reads the published counter through the configured tikwm provider. tikwm is not the official TikTok API, and DareBay does not claim that this counter alone detects every kind of manipulation.
-3. **The amount is recorded from the result.** When a contest ends, the platform calculates a credit or creates a payout obligation in proportion to validated views. Fulfilment follows payout details and statuses.
-4. **The remainder comes back.** If the budget is not spent in full (few participants or few views), the unused part goes back to the organizer.
+**The wallet-backed budget is out of the buyer's reach.** In a wallet-backed contest the prize amount leaves the organizer's available balance the moment the contest is created and is tied to that contest. They cannot spend it elsewhere, cannot take it back mid-run and cannot cancel their way out of it once submissions exist.
 
-The participant pays no deposit or entry fee. Withdrawing an available balance has a fee, minimum and manual processing.
+**The terms cannot be rewritten around you.** The rate per 1000 views, the view threshold and the budget are recorded at creation. A buyer has no tool for lowering the rate retroactively or moving the threshold once your clip is up. Only the cap per submission can be adjusted after launch, and it is on the card.
 
-## Why the money cannot disappear
+**The figure comes from outside both parties.** The platform's independent counter reads the published view counter on the site the clip was posted on. Neither side supplies the number, so neither side can argue it downwards or upwards.
 
-In a wallet-backed contest, the prize sits in the platform wallet and is tied to that contest. In a manual-payout contest, the funds remain outside DareBay and the organizer must fulfil the recorded obligation directly. The product shows which mode applies.
+**The arithmetic is recorded, not negotiated.** Once the calculation is fixed, it cannot be re-run to favour anybody. What was earned stays recorded as earned, with a status you can follow.
 
-The platform acts as intermediary and guarantor by recording the budget, result and obligation history. Manual fulfilment and withdrawal remain separate status-driven stages.
+## Where the guarantee stops
 
-## Commission
+**It is not a deadline.** DareBay does not promise settlement within any window. Fulfilment of a recorded obligation can be processed by hand, and the honest version of this page says that instead of inventing a number.
 
-Creating and topping up a contest currently carry a 0% fee. Withdrawing an available balance has a 10% fee and a 10 USDT minimum; requests are processed manually. See [current DareBay fees](/en/help/what-commission).
+**It is not an anti-fraud warranty.** There is moderation and there are basic checks, and a clip with suspicious dynamics goes on hold pending review. That is a real safeguard, not a claim that every manipulated view on the internet gets caught.
+
+**It does not cover a contest that never funded a pool.** A contest without a locked budget is settled by its organizer directly. DareBay records the obligation and its status, which is useful evidence, but it never held the money and cannot release what it does not have.
+
+## Wallet-backed and direct-charge contests
+
+The funding mode changes what the platform can promise, so it is stated on the contest before anyone takes the task.
+
+| | Wallet-backed contest | Contest without a locked pool |
+|---|---|---|
+| Who holds the budget during the run | The platform, tied to that contest | Nobody. The organizer keeps it |
+| Can the buyer withdraw it mid-run | No | Not applicable - it was never deposited |
+| Who pays the creator | The platform, from the locked budget | The organizer, directly |
+| Unspent budget | Returns to the organizer's balance after the contest is finalized | Nothing was held, so no refund is queued |
+| What DareBay guarantees | The money is present and the calculation is fixed | The calculation and the recorded obligation |
+
+The leftover rule is worth reading twice, because it is often stated too broadly. A refund of the unspent remainder is a property of a **locked wallet-backed budget**: the platform is holding money and gives back what the clippers did not earn. Where the budget was never deposited, there is nothing to return and no refund is placed in a queue.
 
 ## Frequently asked questions
 
-### Who holds the money while a contest runs?
+### Who holds the money while a contest is running?
 
-For a wallet-backed contest, the platform wallet holds the locked budget. For a manual-payout contest, nobody deposits the wallet-backed prize with DareBay: the organizer remains the direct payer and DareBay records the obligation and status.
+In a wallet-backed contest, the platform does, against that one contest. In a contest without a locked pool, nobody deposits anything with DareBay and the organizer remains the payer. The contest says which it is before you commit an evening to it.
 
-### What if there are few views?
+### What happens to budget that nobody earned?
 
-If a submission clears the view threshold, it is paid for every validated view by the formula. If the budget is not spent in full, the remainder goes back to the organizer.
-
-### Can views be faked?
-
-The configured tikwm oracle reads the published TikTok counter; it is not the official TikTok API and is not a promise to identify every manipulated view. Moderation can still reject invalid work. More on fraud protection: [fake submissions](/en/help/protection-from-view-fraud).
-
-### Does DareBay take a commission from the winner?
-
-Entry is free. The contest result records the winner's amount, but a later balance withdrawal has a 10% fee. See [current DareBay fees](/en/help/what-commission).
+In the wallet-backed mode it goes back to the organizer's balance once the contest is finalized, with no claim to file. Budget that was never held by the platform is not part of this at all.
 
 ### What if the organizer deletes their account?
 
-The platform stores the budget and obligations separately from organizer access. An account problem does not erase the status; manual fulfilment is tracked through the payout record.
+The recorded budget, calculation and obligation do not live inside the organizer's account, so removing the account does not erase them. In the wallet-backed mode the money is already out of their hands, which is the whole reason that mode exists.
 
-### Where does the payout arrive?
+### Is any of this on-chain?
 
-A contest can define USDT, fiat, a physical item, Telegram Stars or a gift. For an available-balance withdrawal, the form offers USDT to an external wallet or Telegram Stars; other rewards can be fulfilled manually. See [how withdrawals work](/en/help/darebay-withdrawals).
+No. The wallet works with USDT on TON, but the guarantee described here is a platform holding money and keeping records, not a smart contract releasing funds. Anyone describing DareBay as trustless is describing something else.
 
-### How fast does the money arrive after a contest ends?
+## Where to next
 
-Finalization records a credit or obligation. Fulfilment and withdrawal are processed manually, so there is no guaranteed “instant” or “within minutes” timeline. The product shows the status.
-
-## The bottom line
-
-The DareBay guarantee is a recorded budget, independent calculation and stored credit or obligation. Contest creation currently carries no fee; withdrawal has a minimum, fee and manual processing. See the [FAQ section](/en/help/), [does DareBay really pay](/en/about/does-darebay-really-pay), or [is DareBay a scam](/en/about/is-darebay-a-scam).
+- [Does DareBay really pay?](/en/about/does-darebay-really-pay) - the chain from a published clip to money
+- [Is DareBay a scam?](/en/about/is-darebay-a-scam) - the platform against the standard fraud patterns
+- [Is DareBay legit?](/en/about/is-darebay-legit) - terms, fees and the operator
+- [What stops fake submissions](/en/help/protection-from-view-fraud) - what moderation and a hold actually do

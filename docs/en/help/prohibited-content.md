@@ -1,12 +1,16 @@
 ---
 title: What to do about prohibited or dangerous content?
-description: Report it. We check fast. A confirmed violation means the work is removed and the account banned. These categories get no "three strikes".
+description: Report it. A confirmed violation means the work is removed and the account banned. These categories get no "three strikes".
+provenance: { snapshot_date: "2026-08-15", source: "darebay-prod" }
+numbers_used: []
 ---
 
 # What to do about prohibited or dangerous content?
 
-DareBay is not a stage for illegal, violent or hateful content. We take
-reports seriously and we settle them fast.
+Report it, and use the right channel: anything urgent or illegal goes to
+**trust@darebay.com** rather than the in-app report menu. DareBay is not a stage
+for illegal, violent or hateful content, and the categories below are not
+negotiable.
 
 ## Zero tolerance
 
@@ -34,12 +38,13 @@ and the rules for entering work are in [Submit your work](/en/help/submit-your-w
 
 ## What happens next
 
-- **The report goes into the queue straight away.** We settle it in hours,
-  not days; for zero-tolerance categories, faster still.
+- **The report goes into the queue straight away.** Zero-tolerance categories
+  jump it. We do not publish a response time, but these are read by a person and
+  not by a ticket robot.
 - **Violation confirmed:** the content is removed and the account banned,
-  with no "three strikes" here. [Money](/en/about/payout-guarantee) in the linked contests goes back to
-  the organizer, and is withheld if the organizer was the one in
-  violation.
+  with no "three strikes" here. A [wallet-backed budget](/en/about/payout-guarantee) held for the
+  affected contest goes back to the organizer, and is withheld if the organizer
+  was the one in violation.
 - **Not confirmed:** the reporter gets a short explanation. Anyone who
   files reports in bad faith on a regular basis picks up restrictions of
   their own.

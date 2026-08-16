@@ -1,6 +1,8 @@
 ---
 title: How are winners chosen?
 description: Four selection types - seeded random among eligible active works, organizer choice, community voting, or oracle-attested pay per view.
+provenance: { snapshot_date: "2026-08-15", source: "darebay-prod" }
+numbers_used: []
 ---
 
 # How are winners chosen?
@@ -9,9 +11,10 @@ Every DareBay contest uses **one of four** selection types. The type is
 fixed before the start: the organizer picks it at creation and cannot
 change it mid-run.
 
-Whichever type a contest uses, the budget is recorded against it from publication.
-After result confirmation, the platform stores a credit or obligation for the
-winner; fulfilment can be manual.
+Whichever type a contest uses, the budget is recorded against it from publication, and in a
+wallet-backed contest it is charged from the organizer at that moment. After the result is
+confirmed, the platform stores a credit or obligation; fulfilment can be processed by hand and no
+settlement date is promised.
 
 ## Seeded draw among eligible active works (RANDOM)
 
@@ -51,28 +54,34 @@ like (one vote per account per contest). The top of the vote count wins.
 
 ## Oracle-attested pay per view (ORACLE_ATTESTED_POOL)
 
-The platform validates the published video's view count and applies the contest's
-rate, threshold and per-work cap. This is a formula pool, not a random or like-based draw.
+Nobody picks a winner. The platform's independent counter reads the published view counter on the site
+each video was posted on, then applies the contest's rate per 1000 views, its view threshold and
+its cap per submission. Every submission over the threshold is paid by formula, so several people
+can be "the winner" at once.
 
-## Protection against vote fraud
+- **Good for:** buying reach rather than one hero video.
+- **Feels like:** a rate card, not a competition.
+- **What the participant does:** publishes and sends the link. The link is what enters the clip
+  into the contest.
 
-It applies to all three types:
+## Rules around voting
 
-- Likes and votes from fake accounts are caught and do not count. A repeat
-  attempt costs the account.
+These apply where a vote or a like is part of the decision:
+
 - Organizers do not vote in their own contests.
 - Participants do not vote for their own submission.
-- Suspicious patterns (thousands of votes from one IP, coordinated timing,
-  freshly created accounts voting in unison) go to review, and the result
-  is recounted if the fraud is confirmed.
+- One vote per account per contest.
+- Suspicious patterns (a flood of votes from one address, coordinated timing, freshly created
+  accounts voting in unison) go to review.
 
-For an honest participant it comes down to one thing: inflated votes never
-reach the money.
+Review means a person looking at it, not an automatic reversal. In pay-per-view contests none of
+this applies at all: likes and votes have no effect on the money, because the formula only reads
+the view counter.
 
 ## What if the winner never responds
 
 If a named winner does not claim the prize in time, the prize passes to the
-  next in line for voting, a seeded replacement for RANDOM, or the organizer picks again
+next in line for voting, a seeded replacement for RANDOM, or the organizer picks again
 (the organizer's own call). The claim deadline is always stated in the
 notification the winner receives.
 

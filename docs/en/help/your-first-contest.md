@@ -1,6 +1,8 @@
 ---
 title: Create your first contest
 description: Step by step, from "I have a budget and an idea" to "the entries are flying in". Publishing takes under ten minutes.
+provenance: { snapshot_date: "2026-08-15", source: "darebay-prod" }
+numbers_used: []
 ---
 
 # Create your first contest
@@ -51,7 +53,9 @@ One of four selection types:
   when quality is subjective and you trust your own taste.
 - **VIEWER_VOTING**: the community votes and the top of the tally wins. Good if
   you want the contest to be about the community.
-- **ORACLE_ATTESTED_POOL**: validated views feed the pay-per-view formula.
+- **ORACLE_ATTESTED_POOL**: nobody picks. The counted views of every submission
+  that cleared the threshold feed the pay-per-view formula, and the budget is
+  split by the result.
 
 The selection type is locked in at creation: once published, it cannot be
 changed.
@@ -85,8 +89,10 @@ withdrawal is a separate operation with its own terms: [current fees](/en/help/w
 
 ## 10. Publish
 
-One click. The contest moves from **UPCOMING** to **ACTIVE**, the prize pool is
-locked, and participants start sending in work.
+One click. The contest moves from **UPCOMING** to **ACTIVE**, a wallet-backed
+prize pool leaves your balance for the contest, and participants start sending in
+work. In a pay-per-view contest they publish on the site you named - statistics
+are collected today for TikTok, YouTube and Instagram - and send you the link.
 
 ---
 

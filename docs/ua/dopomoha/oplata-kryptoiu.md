@@ -1,7 +1,8 @@
 ---
 title: Чи можна платити криптою на DareBay?
 description: Так. Гаманець DareBay працює з USDT у мережі TON. Інший спосіб нагороди може бути заданий умовами конкретного конкурсу.
-provenance: { snapshot_date: "2026-08-04", source: "darebay-prod-config" }
+provenance: { snapshot_date: "2026-08-15", source: "darebay-prod-config" }
+numbers_used: []
 seo: true
 ---
 

@@ -11,11 +11,11 @@ description: How contests, payouts, commission and withdrawals work. Short answe
 
 # DareBay help
 
-Everything worth knowing before your first contest: commission, withdrawals,
-submitting work, picking a winner, protection against inflated views. The short
-version first: the budget is recorded against the contest, the result is checked,
-and a credit or payout obligation receives a status. Fulfilment and withdrawal can
-be manual. If your question is whether we can be trusted at all, see
+Everything worth knowing before your first contest: fees, withdrawals, submitting work, picking a
+winner, and what moderation actually does. The short version first: a wallet-backed budget is
+charged against the contest at creation, the result is checked, and a credit or payout obligation
+receives a status you can follow. Fulfilment and withdrawal are separate stages, can be processed
+by hand, and carry no promised date. If your question is whether we can be trusted at all, see
 [about the project](/en/about/).
 
 ## Pages in this section

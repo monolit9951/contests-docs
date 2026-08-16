@@ -1,7 +1,8 @@
 ---
 title: Can you pay with crypto on DareBay?
 description: Yes. The DareBay wallet works with USDT on TON. A particular contest can define another reward method.
-provenance: { snapshot_date: "2026-08-04", source: "darebay-prod-config" }
+provenance: { snapshot_date: "2026-08-15", source: "darebay-prod-config" }
+numbers_used: []
 seo: true
 ---
 

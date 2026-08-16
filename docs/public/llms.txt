@@ -8,13 +8,13 @@
 
 ### О проекте
 
-- [О проекте DareBay](https://darebay.com/o-proekte/): Проект основал Руслан Бей. Как устроены кошельковые и ручные выплаты и откуда берутся цифры в этом разделе.
-- [Гарантия выплат на DareBay - как защищён бюджет конкурса](https://darebay.com/o-proekte/garantiya-vyplat): Как DareBay фиксирует бюджет и обязательства, независимо считает результат и вручную исполняет выплаты и вывод.
-- [Манифест DareBay](https://darebay.com/o-proekte/manifest): Как мы проводим активности, выбираем победителей и держим всё по-честному.
-- [DareBay - отзывы, механика выплат и комиссия](https://darebay.com/o-proekte/darebay-otzyvy): Что такое DareBay, чем отличаются кошельковые конкурсы и ручные выплаты, как фиксируются обязательства и какие комиссии действуют сейчас.
-- [DareBay - развод или нет? Как устроены деньги и вывод](https://darebay.com/o-proekte/darebay-razvod-ili-net): Чем DareBay отличается от мошеннических схем: бюджет конкурса, независимый результат, комиссия и минимум вывода, ручная обработка заявки.
-- [DareBay - скам или нет? Разбор механики посредника](https://darebay.com/o-proekte/darebay-eto-skam): Как DareBay защищает бюджет, независимо считает результат, фиксирует выплатное обязательство и вручную обрабатывает вывод.
-- [DareBay реально платит - как выплата обеспечена](https://darebay.com/o-proekte/darebay-realno-platit): Как DareBay фиксирует бюджет и выплатное обязательство, считает результат, вручную исполняет выплаты и обрабатывает вывод.
+- [О проекте DareBay](https://darebay.com/o-proekte/): Кто стоит за DareBay, как устроены деньги конкурса, откуда берутся цифры в этом разделе и куда написать, если цифра неверна.
+- [Гарантия выплат на DareBay - чем обеспечено обязательство](https://darebay.com/o-proekte/garantiya-vyplat): Два режима финансирования конкурса, где лежат деньги в каждом из них, что гарантия покрывает и чего не покрывает, куда уходит неизрасходованный бюджет.
+- [Манифест DareBay](https://darebay.com/o-proekte/manifest): Во что верит DareBay, чего не терпит и что обещает: результат вместо метрик, зафиксированные до старта условия и обязательство перед победителем.
+- [Отзывы о DareBay - и что проверить вместо них](https://darebay.com/o-proekte/darebay-otzyvy): Почему отзывов о молодой площадке почти нет и как за десять минут проверить DareBay самому: каталог конкурсов, карточка задания, форма вывода, лицо проекта.
+- [DareBay - развод или нет? Где здесь платишь ты](https://darebay.com/o-proekte/darebay-razvod-ili-net): Все операции DareBay, где с тебя берут деньги, в одном списке: участие 0, комиссия конкурса 0%, вывод баланса 10% внутри заявки. И красные флаги фальшивых менеджеров.
+- [DareBay - это скам? Разбор по признакам](https://darebay.com/o-proekte/darebay-eto-skam): Прогон DareBay по шести признакам скам-площадки: предоплата, доход без работы, плавающие условия, чужая цифра результата. Плюс честный список слабых мест.
+- [DareBay реально платит? Путь денег после закрытия конкурса](https://darebay.com/o-proekte/darebay-realno-platit): Что происходит от финального подсчёта просмотров до денег на руках, какой шаг делает код, какой человек, и что делать, если статус выплаты завис.
 
 ### Заработок
 
@@ -32,27 +32,27 @@
 
 ### Брендам
 
-- [Брендам - заказать UGC и платить только за просмотры](https://darebay.com/brendam/): Как бренду запустить конкурс для нарезчиков с кошельковым финансированием или прямой ручной выплатой организатора.
-- [Как заказать нарезки для продвижения на DareBay](https://darebay.com/brendam/kak-zakazat-narezki-dlya-prodvizheniya): Как заказать рекламу у нарезчиков через DareBay с кошельковым финансированием или прямой ручной выплатой организатора.
-- [Как платить нарезчикам за просмотры](https://darebay.com/brendam/kak-platit-narezchikam-za-prosmotry): Как платить нарезчикам за просмотры: кошельковый бюджет блокируется на DareBay, а в ручном режиме организатор платит авторам напрямую.
-- [Как создать конкурс для нарезчиков на DareBay](https://darebay.com/brendam/kak-sozdat-konkurs-dlya-narezchikov): Как выбрать ставку, порог, потолок и режим финансирования PPV-конкурса: кошельковый либо ручная выплата организатора.
+- [Брендам - заказать UGC и платить только за просмотры](https://darebay.com/brendam/): Сколько стоит запуск конкурса для нарезчиков, что заказчик меняет после старта, что будет, если работы не наберут просмотры, и какие площадки в зачёте.
+- [Как заказать нарезки для продвижения на DareBay](https://darebay.com/brendam/kak-zakazat-narezki-dlya-prodvizheniya): Как заказать нарезки через конкурс: что задаёт заказчик, чем это отличается от найма авторов в личке и где здесь риск покупателя.
+- [Как платить нарезчикам за просмотры](https://darebay.com/brendam/kak-platit-narezchikam-za-prosmotry): Сколько стоит конкурс для нарезчиков, как считается сумма каждого автора и куда уходит неизрасходованный кошельковый бюджет, если работы не набрали просмотров.
+- [Как создать конкурс для нарезчиков на DareBay](https://darebay.com/brendam/kak-sozdat-konkurs-dlya-narezchikov): Как выбрать ставку, порог, потолок и режим финансирования PPV-конкурса и что из этого ещё можно поменять после запуска, а что уже зафиксировано.
 
 ### Помощь
 
-- [Помощь по DareBay](https://darebay.com/pomoshch/): Как устроены конкурсы, выплаты, комиссия и вывод денег. Короткие ответы по делу.
-- [Быстрый старт на DareBay](https://darebay.com/pomoshch/bystryy-start): За несколько минут выбери роль и начни: запусти активность, отправь работу или смотри и голосуй. Выплата проходит позже по статусам.
-- [Верификация и доверие](https://darebay.com/pomoshch/verifikatsiya): Верифицированные бейджи, двойные рейтинги и почему доверие это главная валюта на DareBay.
-- [Защита от накрутки и подделок на DareBay](https://darebay.com/pomoshch/zashchita-ot-nakrutki): Просмотры считаются независимо от организатора и участника, подделки отклоняются до приза, а рейтинг участника делает накрутку невыгодной.
-- [Как выбирают победителя?](https://darebay.com/pomoshch/kak-vybirayut-pobeditelya): Четыре типа отбора - seeded-жеребьёвка среди допущенных ACTIVE-работ, решение организатора, голосование или PPV по данным оракула.
-- [Какая комиссия на DareBay - создание, магазин и вывод](https://darebay.com/pomoshch/kakaya-komissiya): Актуальные комиссии DareBay: создание и пополнение конкурса 0%, магазин 8%, вывод с баланса 10% при минимальной сумме 10 USDT.
-- [Можно платить криптой на DareBay?](https://darebay.com/pomoshch/oplata-kriptoy): Да. Кошелёк DareBay работает с USDT в сети TON. Другой способ награды может быть задан условиями конкретного конкурса.
+- [Помощь по DareBay](https://darebay.com/pomoshch/): Как устроены конкурсы, награды, комиссия и вывод денег на DareBay. Короткие ответы по делу, без маркетингового тумана.
+- [Быстрый старт на DareBay](https://darebay.com/pomoshch/bystryy-start): С чего начать на DareBay за пять минут: выбери роль - запусти конкурс, отправь работу или смотри и голосуй. Один аккаунт на сайт и Telegram.
+- [Верификация и доверие](https://darebay.com/pomoshch/verifikatsiya): Что даёт верифицированный бейдж на DareBay, как устроены два рейтинга аккаунта - организатора и участника - и что меняется, когда рейтинг падает.
+- [Защита от накрутки и подделок на DareBay](https://darebay.com/pomoshch/zashchita-ot-nakrutki): Что реально защищает результат конкурса: цифру просмотров не вводит ни одна из сторон, работа привязана присланной ссылкой, подозрительная динамика уходит в холд. И чего платформа не обещает.
+- [Как выбирают победителя?](https://darebay.com/pomoshch/kak-vybirayut-pobeditelya): Четыре типа отбора на DareBay: seeded-жеребьёвка среди допущенных ACTIVE-работ, решение организатора, голосование зрителей и распределение по просмотрам. Тип фиксируется до старта.
+- [Какая комиссия на DareBay - создание, магазин и вывод](https://darebay.com/pomoshch/kakaya-komissiya): Сколько стоит запуск конкурса на DareBay и какие комиссии берёт платформа. Создание конкурса - 10 USDT разово, комиссия конкурса 0%. Покупка в магазине 8%, вывод доступного баланса 10% при минимальной заявке 10 USDT.
+- [Можно платить криптой на DareBay?](https://darebay.com/pomoshch/oplata-kriptoy): Да: кошелёк DareBay работает с USDT в сети TON - пополнение, оплата призового бюджета и вывод. Крипта не обязательна, а COINS криптовалютой не являются.
 - [Отправить работу](https://darebay.com/pomoshch/kak-otpravit-rabotu): Как отправить работу на DareBay. В конкурсах за просмотры работа входит по присланной ссылке на опубликованный ролик, в обычных загрузи файл.
-- [Призы и выплаты](https://darebay.com/pomoshch/prizy-i-vyplaty): Как устроена награда на DareBay: бюджет фиксируется при публикации, результат подтверждается, а начисление или обязательство получает статус.
-- [Смотреть, голосовать, выиграть](https://darebay.com/pomoshch/smotret-golosovat-vyigrat): Взгляд зрителя. Листай, лайкай, голосуй, потому что часто именно это решает исход конкурса.
-- [Создать первый конкурс](https://darebay.com/pomoshch/pervyy-konkurs): Пошагово, от «есть бюджет и идея» до «работы уже летят». Публикация занимает меньше десяти минут.
-- [Что делать с запрещённым или опасным контентом?](https://darebay.com/pomoshch/zapreshchennyy-kontent): Жалуйся. Проверим быстро. Подтверждённое нарушение - работа удаляется, аккаунт банится. Для таких категорий «трёх попыток» не бывает.
-- [Что, если никто не участвует?](https://darebay.com/pomoshch/esli-nikto-ne-uchastvuet): Если валидных работ нет, неизрасходованный призовой фонд возвращается на баланс. Комиссия за создание и пополнение сейчас 0%.
-- [DareBay вывод денег - комиссия, минимум и сроки](https://darebay.com/pomoshch/darebay-vyvod-deneg): Как вывести доступный баланс DareBay: минимум 10 USDT, комиссия 10%, ручная обработка заявки и доступные способы получения.
+- [Призы и выплаты](https://darebay.com/pomoshch/prizy-i-vyplaty): Что можно поставить наградой на DareBay, чем кошельковый конкурс отличается от ручной выплаты и что происходит с деньгами после подтверждения результата.
+- [Смотреть, голосовать, выиграть](https://darebay.com/pomoshch/smotret-golosovat-vyigrat): Взгляд зрителя на DareBay: как устроена лента, где лайк влияет на результат, а где нет, как работает голосование и что даёт зрителю хорошая репутация.
+- [Создать первый конкурс](https://darebay.com/pomoshch/pervyy-konkurs): Пошагово от идеи до публикации: заголовок, условия, формат работ, тип отбора, награда и сроки. Форма на одном экране, публикация занимает меньше десяти минут.
+- [Что делать с запрещённым или опасным контентом?](https://darebay.com/pomoshch/zapreshchennyy-kontent): Куда жаловаться на запрещённый контент на DareBay, что попадает под нулевую терпимость и что происходит с работой, аккаунтом и деньгами после подтверждённого нарушения.
+- [Что, если никто не участвует?](https://darebay.com/pomoshch/esli-nikto-ne-uchastvuet): Дедлайн прошёл, валидных работ ноль: замороженный бюджет кошелькового конкурса возвращается на баланс, рейтинг организатора не падает. И почему работ не пришло.
+- [DareBay вывод денег - как подать заявку и что приходит на руки](https://darebay.com/pomoshch/darebay-vyvod-deneg): Как вывести доступный баланс DareBay: минимальная заявка 10 USDT, комиссия 10%, ручная обработка, маршруты USDT на TON и Telegram Stars.
 
 ### Юридические документы
 
@@ -67,24 +67,24 @@
 ### Про проєкт
 
 - [Про проєкт DareBay](https://darebay.com/ua/pro-proekt/): Проєкт заснував Руслан Бей. Як влаштовані гаманцеві й ручні виплати та звідки беруться цифри в цьому розділі.
-- [Гарантія виплат на DareBay - як захищений бюджет конкурсу](https://darebay.com/ua/pro-proekt/harantiia-vyplat): Як DareBay фіксує бюджет і зобов'язання, незалежно рахує результат і вручну виконує виплати та виведення.
+- [Гарантія виплат на DareBay - що вона покриває, а що ні](https://darebay.com/ua/pro-proekt/harantiia-vyplat): Межі гарантії DareBay: заморожений гаманцевий бюджет і зафіксовані умови конкурсу покриті, строк виконання переказу й результат розбору холду - ні.
 - [Маніфест DareBay](https://darebay.com/ua/pro-proekt/manifest): Як ми проводимо активності, обираємо переможців і тримаємо все чесно.
-- [DareBay - відгуки, механіка виплат і комісія](https://darebay.com/ua/pro-proekt/darebay-vidhuky): Що таке DareBay, чим різняться гаманцеві конкурси й ручні виплати, як фіксуються зобов'язання та які комісії діють зараз.
-- [DareBay - розвод чи ні? Як влаштовані гроші й виведення](https://darebay.com/ua/pro-proekt/darebay-rozvod-chy-ni): Чим DareBay відрізняється від шахрайських схем: бюджет конкурсу, незалежний результат, комісія і мінімум виведення, ручна обробка заявки.
-- [DareBay - скам чи ні? Розбір механіки посередника](https://darebay.com/ua/pro-proekt/darebay-tse-skam): Як DareBay захищає бюджет, незалежно рахує результат, фіксує виплатне зобов'язання і вручну обробляє виведення.
-- [DareBay справді платить - як забезпечена виплата](https://darebay.com/ua/pro-proekt/darebay-spravdi-platyt): Як DareBay фіксує бюджет і виплатне зобов'язання, рахує результат, вручну виконує виплати й обробляє виведення.
+- [DareBay - відгуки і те, що можна перевірити замість них](https://darebay.com/ua/pro-proekt/darebay-vidhuky): Чому ми не публікуємо відгуки про DareBay і що варто перевірити самому: кому підходить майданчик, які параметри видно наперед і які ролі на ньому є.
+- [DareBay - розвод чи ні? Комісії, платежі й червоні прапорці](https://darebay.com/ua/pro-proekt/darebay-rozvod-chy-ni): Де на DareBay штатна комісія, а де починається шахрайська схема: як виглядає справжня заявка, чому окремий переказ ніколи не потрібен і що робити, якщо гроші вже просять.
+- [DareBay - скам чи ні? Розбір механіки посередника](https://darebay.com/ua/pro-proekt/darebay-tse-skam): Чим DareBay відрізняється від шахрайського майданчика: що можна перевірити до подачі роботи, які ознаки скаму тут не працюють і де майданчик не дає гарантій.
+- [DareBay справді платить - шлях грошей від бюджету до балансу](https://darebay.com/ua/pro-proekt/darebay-spravdi-platyt): Звідки береться виплата на DareBay: гаманцевий бюджет заморожується до старту, результат рахується за формулою, а сума зараховується на баланс. Чим гаманцевий режим відрізняється від ручного.
 
 ### Заробіток
 
-- [Заробіток на DareBay](https://darebay.com/ua/zarobitok/): Скільки платять за перегляди і як отримати гроші на DareBay. Ставки, формула виплати та захист бюджету на реальних цифрах платформи.
-- [Де брати замовлення на нарізки - біржа нарізок](https://darebay.com/ua/zarobitok/de-braty-zamovlennia-na-narizky): Де нарізальнику знайти оплачувані замовлення. Відкрита вітрина завдань з оплатою від $0.08 до $1.00 за 1000 переглядів, виплати з України.
-- [Робота нарізальником - як заробляти на нарізках відео](https://darebay.com/ua/zarobitok/robota-narizalnykom): Як стати нарізальником і отримувати гроші за нарізки. Ставка від $0.08 до $2.00 за 1000 переглядів, без вимог до підписників. Порядок оплати.
-- [Скільки можна заробити на нарізках на DareBay](https://darebay.com/ua/zarobitok/skilky-mozhna-zarobyty-na-narizkakh): Заробіток на нарізках рахується з трьох чисел - ставка, перегляди, стеля. Ставки від $0.08 до $2.00 за 1000 переглядів, поріг 2000, стеля $100.
-- [Скільки платять за 1000 переглядів на DareBay](https://darebay.com/ua/zarobitok/skilky-platiat-za-1000-perehliadiv): Ставка за 1000 переглядів у PPV-конкурсах DareBay - від $0.08 до $1.00, медіана $0.50. Як рахується виплата, навіщо поріг і коли приходять гроші.
-- [Скільки платять за нарізки стримерів на DareBay](https://darebay.com/ua/zarobitok/skilky-platiat-za-narizky-strymeriv): Ставка за нарізки стримерів у PPV-конкурсах DareBay - від $0.08 до $1.00 за 1000 переглядів, типова стеля задає замовник, гаманцевий або ручний режим.
-- [Скільки платять за перегляди в ТікТок - два шляхи монетизації](https://darebay.com/ua/zarobitok/skilky-platiat-za-perehliady-v-tiktok): Скільки платять за перегляди в TikTok у 2026 році. Партнерка TikTok проти DareBay - ставки від $0.08 до $2.00 за 1000 переглядів, без підписників.
-- [Як працює оплата за перегляди на DareBay](https://darebay.com/ua/zarobitok/yak-pratsiuie-oplata-za-perehliady): Механіка PPV-конкурсів DareBay: бюджет, незалежний підрахунок, формула, зарахування або зобов'язання і ручне виконання.
-- [Як рахуються перегляди для виплати](https://darebay.com/ua/zarobitok/yak-rakhuiutsia-perehliady-dlia-vyplaty): Оракул переглядів DareBay бере цифри просто з опублікованого лічильника TikTok через налаштований оракул tikwm. Які перегляди йдуть у виплату, як відсікається накрутка, стеля ставки і поріг.
+- [Заробіток на DareBay](https://darebay.com/ua/zarobitok/): Заробіток нарізальника на DareBay: ставка від $0.08 до $2.00 за 1000 переглядів, медіана $0.50, поріг 2000 переглядів, типова стеля $98.50 на роботу. Навігація розділом.
+- [Де брати замовлення на нарізки - біржа нарізок](https://darebay.com/ua/zarobitok/de-braty-zamovlennia-na-narizky): Хто платить за нарізки, де брати замовлення і вихідники, чим пряме замовлення відрізняється від майданчика-посередника. Ставка від $0.08 до $2.00 за 1000 переглядів, робота з України.
+- [Робота нарізальником - як заробляти на нарізках відео](https://darebay.com/ua/zarobitok/robota-narizalnykom): Професія нарізальника без підписників і портфоліо - скільки часу йде на один ролик, від чого залежить виплата і як пройти шлях від першого конкурсу до перших грошей.
+- [Скільки можна заробити на нарізках на DareBay](https://darebay.com/ua/zarobitok/skilky-mozhna-zarobyty-na-narizkakh): Скільки вийде за одну нарізку: ставка $0.08-$2.00 за 1000 переглядів (медіана $0.50), поріг 2000 переглядів, типова стеля $98.50 на роботу. Без вимог до підписників.
+- [Скільки платять за 1000 переглядів на DareBay](https://darebay.com/ua/zarobitok/skilky-platiat-za-1000-perehliadiv): Ставка за 1000 переглядів у конкурсах DareBay - від $0.08 до $2.00, медіана $0.50. Звідки такий розкид, де системна межа ставки і що зафіксовано в картці.
+- [Скільки платять за нарізки стримерів і як почати](https://darebay.com/ua/zarobitok/skilky-platiat-za-narizky-strymeriv): Ставка за нарізки стримерів - від $0.08 до $2.00 за 1000 переглядів, медіана $0.50, стелю на роботу призначає замовник. Що ріжуть зі стриму, які права дає завдання, як подати роботу.
+- [Скільки платять за перегляди в ТікТок - два шляхи монетизації](https://darebay.com/ua/zarobitok/skilky-platiat-za-perehliady-v-tiktok): Скільки платять за перегляди в TikTok і на YouTube. Партнерка майданчика проти конкурсу в посередника - ставка від $0.08 до $2.00 за 1000 переглядів, без підписників.
+- [Як працює оплата за перегляди на DareBay](https://darebay.com/ua/zarobitok/yak-pratsiuie-oplata-za-perehliady): Ланцюжок грошей у PPV-конкурсі DareBay: заморожений бюджет, подача роботи посиланням, автоматичний розрахунок за формулою, нарахування, способи і строки отримання виплати.
+- [Як рахуються перегляди для виплати](https://darebay.com/ua/zarobitok/yak-rakhuiutsia-perehliady-dlia-vyplaty): Хто рахує перегляди в PPV-конкурсі DareBay і чому поріг не віднімається: робота взяла поріг - у розрахунок іде весь лічильник цілком. Поріг, стеля ставки, модерація і холд.
 
 ### Брендам
 
@@ -98,15 +98,15 @@
 - [Допомога по DareBay](https://darebay.com/ua/dopomoha/): Як влаштовані конкурси, виплати, комісія та виведення грошей. Короткі відповіді по суті.
 - [Верифікація і довіра](https://darebay.com/ua/dopomoha/veryfikatsiia): Верифіковані бейджі, подвійні рейтинги і чому довіра це головна валюта на DareBay.
 - [Дивитися, голосувати, вигравати](https://darebay.com/ua/dopomoha/dyvytys-holosuvaty-vyhravaty): Погляд глядача. Гортай, лайкай, голосуй, бо часто саме це вирішує підсумок конкурсу.
-- [Захист від накрутки й підробок на DareBay](https://darebay.com/ua/dopomoha/zakhyst-vid-nakrutky): Перегляди рахуються незалежно від організатора та учасника, підробки відхиляються до призу, а рейтинг учасника робить накрутку невигідною.
-- [Надіслати роботу](https://darebay.com/ua/dopomoha/yak-nadislaty-robotu): Як надіслати роботу на DareBay. У конкурсах за перегляди опублікуй ролик з хештегом і надішли посилання, у звичайних завантаж файл.
-- [Призи і виплати](https://darebay.com/ua/dopomoha/pryzy-i-vyplaty): Як влаштована нагорода на DareBay: бюджет фіксується при публікації, результат підтверджується, а зарахування або зобов'язання отримує статус.
+- [Надіслати роботу](https://darebay.com/ua/dopomoha/yak-nadislaty-robotu): Як надіслати роботу на DareBay. У конкурсах за перегляди робота входить у конкурс за надісланим посиланням, у звичайних - завантаженням файлу.
+- [Призи і виплати](https://darebay.com/ua/dopomoha/pryzy-i-vyplaty): Як влаштована нагорода на DareBay: що можна поставити призом, чим гаманцевий конкурс відрізняється від ручної виплати і як нагорода доходить до переможця.
 - [Створити перший конкурс](https://darebay.com/ua/dopomoha/pershyi-konkurs): Покроково, від «є бюджет і ідея» до «роботи вже летять». Публікація займає менше десяти хвилин.
 - [Чи можна платити криптою на DareBay?](https://darebay.com/ua/dopomoha/oplata-kryptoiu): Так. Гаманець DareBay працює з USDT у мережі TON. Інший спосіб нагороди може бути заданий умовами конкретного конкурсу.
 - [Швидкий старт на DareBay](https://darebay.com/ua/dopomoha/shvydkyi-start): За кілька хвилин обери роль і почни: запусти активність, надішли роботу або дивись і голосуй. Виконання виплати йде пізніше за статусами.
+- [Що заважає підробляти роботи на DareBay](https://darebay.com/ua/dopomoha/zakhyst-vid-nakrutky): Чому накрутка на DareBay - погана ставка: цифру не називає жодна сторона, підозріла робота йде в холд, а модерація може зняти її повністю.
 - [Що робити із забороненим або небезпечним контентом?](https://darebay.com/ua/dopomoha/zaboronenyi-kontent): Скаржся. Перевіримо швидко. Підтверджене порушення - роботу видаляють, акаунт банять. Для таких категорій «трьох спроб» не буває.
-- [Що, якщо ніхто не бере участі?](https://darebay.com/ua/dopomoha/yakshcho-nikhto-ne-bere-uchast): Якщо валідних робіт немає, невитрачений призовий фонд повертається на баланс. Комісія за створення і поповнення зараз 0%.
-- [Як обирають переможця?](https://darebay.com/ua/dopomoha/yak-obyraiut-peremozhtsia): Чотири типи відбору - seeded-жеребкування серед допущених ACTIVE-робіт, рішення організатора, голосування або PPV за даними оракула.
+- [Що, якщо ніхто не бере участі?](https://darebay.com/ua/dopomoha/yakshcho-nikhto-ne-bere-uchast): Якщо валідних робіт немає, невитрачений гаманцевий бюджет повертається на баланс. Комісія за створення і поповнення зараз 0%.
+- [Як обирають переможця?](https://darebay.com/ua/dopomoha/yak-obyraiut-peremozhtsia): Чотири типи відбору - seeded-жеребкування серед допущених ACTIVE-робіт, рішення організатора, голосування глядачів або розподіл за підрахованими переглядами.
 - [Яка комісія на DareBay - конкурси, магазин і виведення](https://darebay.com/ua/dopomoha/yaka-komisiia): Актуальні комісії DareBay: створення і поповнення конкурсу 0%, магазин 8%, виведення з балансу 10% за мінімальної суми 10 USDT.
 - [DareBay виведення грошей - комісія, мінімум і строки](https://darebay.com/ua/dopomoha/darebay-vyvedennia-hroshei): Як вивести доступний баланс DareBay: мінімум 10 USDT, комісія 10%, ручна обробка заявки й доступні способи отримання.
 
@@ -123,24 +123,24 @@ Guides to content tasks, participation, validated views and payouts on DareBay.
 ### About
 
 - [About DareBay](https://darebay.com/en/about/): The project was founded by Ruslan Bey. How wallet-backed and manual-payout tasks work, and where the numbers in this section come from.
-- [DareBay reviews, payout mechanics and commission](https://darebay.com/en/about/darebay-reviews): What DareBay is, how wallet-backed and manual-payout contests differ, how obligations are recorded, and what the current fees are.
-- [Does DareBay really pay? How the payout is secured](https://darebay.com/en/about/does-darebay-really-pay): How DareBay records budgets and payout obligations, counts results, fulfils payouts manually and processes balance withdrawals.
-- [Is DareBay a scam? A look at the guarantor mechanic](https://darebay.com/en/about/is-darebay-a-scam): How DareBay records funded budgets, independently counts results, keeps payout obligations and processes withdrawals manually.
-- [Is DareBay legit? How money and withdrawals work](https://darebay.com/en/about/is-darebay-legit): How DareBay differs from scams: funded contest budgets, independently counted results, the withdrawal minimum and fee, and manual processing.
+- [DareBay reviews - what to expect instead of testimonials](https://darebay.com/en/about/darebay-reviews): Who actually uses DareBay, what a contest looks like from each side, and what the platform can and cannot promise - written out instead of collected as reviews.
+- [Does DareBay really pay? The chain from clip to money](https://darebay.com/en/about/does-darebay-really-pay): The full DareBay payout chain step by step - what is automatic, what is manual, where a submission can be put on hold, and what to do when a status stops moving.
+- [Is DareBay a scam? Checking it against the fraud patterns](https://darebay.com/en/about/is-darebay-a-scam): DareBay checked against the standard tells of a fake earning platform - no entry fee, no unlock transfer, no income promises - plus the one part that really is weak.
+- [Is DareBay legit? The terms, the fees and who runs it](https://darebay.com/en/about/is-darebay-legit): What can be verified about DareBay before you work - contest terms fixed on the card, a 0% contest fee, a 10% withdrawal fee with a 10 USDT minimum, and a named operator.
 - [The DareBay manifesto](https://darebay.com/en/about/manifesto): How we run activities, pick winners and keep everything honest.
-- [The DareBay payout guarantee - how a contest budget is protected](https://darebay.com/en/about/payout-guarantee): How DareBay records the budget and obligations, independently counts results, and manually fulfils payouts and withdrawals.
+- [The DareBay payout guarantee - what it covers and where it stops](https://darebay.com/en/about/payout-guarantee): Exactly what DareBay guarantees a clipper - a locked wallet-backed budget, fixed terms and a recorded calculation - and the three things it deliberately does not guarantee.
 
 ### Earnings
 
-- [Earning on DareBay](https://darebay.com/en/earnings/): What DareBay pays for views and how creators get the money. Rates, formula, wallet-backed funding and manual payout, on the platform's own figures.
-- [Clipping as a job - how to earn from video clips](https://darebay.com/en/earnings/clipping-as-a-job): How to become a clipper and get paid for clips. Rates from $0.08 to $1.00 per 1000 views, no follower requirement. The terms and the workflow on DareBay.
-- [How much you can earn from clips on DareBay](https://darebay.com/en/earnings/how-much-clipping-pays): What clips pay comes down to three numbers - the rate, the views and the cap. Rates from $0.08 to $1.00 per 1000 views, a 2000-view threshold.
-- [How pay-per-view works on DareBay](https://darebay.com/en/earnings/how-pay-per-view-works): The mechanics of DareBay pay-per-view: budget, independent counting, formula, credit or obligation, and manual fulfilment.
-- [How views are counted for the payout](https://darebay.com/en/earnings/how-views-are-counted): The DareBay view oracle reads figures from the published TikTok counter through the configured tikwm oracle. Which views drive a payout, how inflated views are cut out, cap and threshold.
-- [What DareBay pays per 1000 views](https://darebay.com/en/earnings/pay-per-1000-views): The rate per 1000 views in DareBay pay-per-view contests runs from $0.08 to $1.00, median $0.50. How the payout works and when the money lands.
-- [What streamer clips pay on DareBay](https://darebay.com/en/earnings/streamer-clip-rates): Streamer-clip PPV rates: $0.08 to $1.00 per 1000 views and a typical $100 cap, with wallet-backed or manual-payout funding.
-- [What TikTok pays for views - two routes to monetization](https://darebay.com/en/earnings/tiktok-view-payouts): What views on TikTok are worth in 2026. TikTok's own creator programme versus DareBay - rates from $0.08 to $1.00 per 1000 views, no followers needed.
-- [Where to find clipping work - a marketplace for clips](https://darebay.com/en/earnings/where-to-find-clipping-work): Where a clipper finds paid briefs. An open board paying $0.08 to $1.00 per 1000 views, with wallet-backed and manual-payout funding modes.
+- [Earning on DareBay](https://darebay.com/en/earnings/): Clipper earnings on DareBay: rates from $0.08 to $2.00 per 1000 views, median $0.50, a 2000-view threshold and a typical cap of $98.50 per submission. A map of the section.
+- [Clipping as a job - how to earn from video clips](https://darebay.com/en/earnings/clipping-as-a-job): Clipping as a trade, with no followers and no portfolio - how long one clip takes, what the payout depends on, and the route from a first contest to first money.
+- [How much you can earn from clips on DareBay](https://darebay.com/en/earnings/how-much-clipping-pays): What one clip pays: rates of $0.08-$2.00 per 1000 views (median $0.50), a 2000-view threshold and a typical cap of $98.50 per submission. No follower requirement.
+- [How pay-per-view works on DareBay](https://darebay.com/en/earnings/how-pay-per-view-works): The money chain in a DareBay PPV contest: a frozen budget, a submission sent by link, an automatic calculation, the credit, and the ways and timing of getting paid.
+- [How views are counted for the payout](https://darebay.com/en/earnings/how-views-are-counted): Who counts views in a DareBay PPV contest and why the threshold is not subtracted: clear it and the whole counter goes into the maths. Threshold, rate ceiling, moderation and holds.
+- [What DareBay pays per 1000 views](https://darebay.com/en/earnings/pay-per-1000-views): The rate per 1000 views in DareBay contests runs from $0.08 to $2.00, median $0.50. Where the spread comes from, where the system ceiling sits, what the card fixes.
+- [What streamer clips pay and how to start](https://darebay.com/en/earnings/streamer-clip-rates): Streamer clips pay $0.08 to $2.00 per 1000 views, median $0.50, with a cap per submission set by the buyer. What to cut, what rights the brief grants, how to submit.
+- [What TikTok pays for views - two routes to monetization](https://darebay.com/en/earnings/tiktok-view-payouts): What views pay on TikTok and YouTube. A platform creator programme against a contest on an intermediary - $0.08 to $2.00 per 1000 views, with no followers needed.
+- [Where to find clipping work - a marketplace for clips](https://darebay.com/en/earnings/where-to-find-clipping-work): Who pays for clips, where the briefs and the source footage come from, how a direct deal differs from an intermediary. Rates of $0.08 to $2.00 per 1000 views.
 
 ### For brands
 
@@ -157,14 +157,14 @@ Guides to content tasks, participation, validated views and payouts on DareBay.
 - [DareBay fees - contests, store and withdrawals](https://darebay.com/en/help/what-commission): Current DareBay fees: 0% to create or top up a contest, 8% for store purchases, and 10% to withdraw a balance with a 10 USDT minimum.
 - [DareBay withdrawals - fee, minimum and timing](https://darebay.com/en/help/darebay-withdrawals): How to withdraw an available DareBay balance: a 10 USDT minimum, a 10% fee, manual request processing and available payout methods.
 - [How are winners chosen?](https://darebay.com/en/help/how-winners-are-chosen): Four selection types - seeded random among eligible active works, organizer choice, community voting, or oracle-attested pay per view.
-- [Prizes and payouts](https://darebay.com/en/help/prizes-and-payouts): How rewards work on DareBay: the budget is recorded at publication, the result is confirmed, and the credit or obligation gets a status.
-- [Protection from view fraud and fake submissions](https://darebay.com/en/help/protection-from-view-fraud): Views are counted independently of the organizer and the participant, fakes are rejected before they reach a prize, and cheating costs your rating.
+- [Prizes and payouts](https://darebay.com/en/help/prizes-and-payouts): What you can put up as a reward on DareBay, how balances work, and how a wallet-backed contest differs from one the organizer settles directly.
+- [Protection from view fraud and fake submissions](https://darebay.com/en/help/protection-from-view-fraud): What actually stands between a faked submission and a payout on DareBay - an independent count, a moderation hold and the three ways a flagged clip can end.
 - [Quick start on DareBay](https://darebay.com/en/help/quick-start): Pick a role and start in minutes: launch an activity, submit work, or watch and vote. Payout fulfilment follows later statuses.
-- [Submit your work](https://darebay.com/en/help/submit-your-work): How to submit work on DareBay. In pay-per-view contests post the video with the hashtag and send the link, in the rest upload the file.
+- [Submit your work](https://darebay.com/en/help/submit-your-work): How to submit work on DareBay. In pay-per-view contests you send the link to the published video, in the rest you upload the file.
 - [Verification and trust](https://darebay.com/en/help/verification): Verified badges, dual ratings, and why trust is the main currency on DareBay.
 - [Watch, vote, win](https://darebay.com/en/help/watch-vote-win): The viewer's side of DareBay. Scroll, like, vote, because often that is exactly what decides a contest.
-- [What if nobody enters?](https://darebay.com/en/help/if-nobody-enters): If there are no valid entries, the unused prize budget returns to the balance. Contest creation and top-ups currently carry a 0% fee.
-- [What to do about prohibited or dangerous content?](https://darebay.com/en/help/prohibited-content): Report it. We check fast. A confirmed violation means the work is removed and the account banned. These categories get no "three strikes".
+- [What if nobody enters?](https://darebay.com/en/help/if-nobody-enters): With no valid entries, a wallet-backed budget goes back to the organizer balance. Contest creation and top-ups currently carry a 0% fee.
+- [What to do about prohibited or dangerous content?](https://darebay.com/en/help/prohibited-content): Report it. A confirmed violation means the work is removed and the account banned. These categories get no "three strikes".
 
 ### Legal
 

@@ -1,8 +1,8 @@
 ---
 title: DareBay fees - contests, store and withdrawals
 description: "Current DareBay fees: 0% to create or top up a contest, 8% for store purchases, and 10% to withdraw a balance with a 10 USDT minimum."
-provenance: { snapshot_date: "2026-08-04", source: "darebay-prod-config" }
-numbers_used: [contest_creation_commission, contest_topup_commission, store_commission, withdrawal_commission, withdrawal_min_amount]
+provenance: { snapshot_date: "2026-08-15", source: "darebay-prod-config" }
+numbers_used: []
 seo: true
 ---
 
@@ -53,7 +53,7 @@ No. Withdrawal requests are processed manually. Do not rely on promises of insta
 
 ### Where do these terms come from?
 
-This page reflects the active product configuration on 4 August 2026. Operational terms are also shown before confirmation; if the public rates change, the form is authoritative for a new request.
+This page reflects the active product configuration on 15 August 2026. Operational terms are also shown before confirmation; if the public rates change, the form is authoritative for a new request.
 
 ## In short
 

@@ -20,19 +20,21 @@ talk to him directly: [@ruslanbwork](https://t.me/ruslanbwork) on Telegram.
 Worth saying out loud: the money-making space is full of faceless platforms with no address
 and nobody to ask. This one has a name, and someone who answers.
 
-## How the money works
+## What holds the money in place
 
-The reward is funded by whoever posts the task, and the budget is recorded against the contest.
-The buyer cannot take it back or spend it elsewhere after launch. The platform calculates the
-result and stores a credit or payout obligation with a status; fulfilment through payout details
-can be manual.
+The reward is funded by whoever posts the task. In a wallet-backed contest the budget is charged
+and locked against that contest before anyone picks the task up, and the buyer cannot pull it back
+or spend it elsewhere. The platform calculates the result and stores a credit or payout obligation
+with a status; fulfilment through payout details can be manual, and no settlement time is promised.
 
-Nobody counts the views by hand. DareBay pulls the numbers from the published TikTok counter through the configured tikwm oracleplatform the video was posted on, and inflated views do not survive that count: whatever the
-platform itself writes off as bots never reaches the reward.
+Nobody types the view count in by hand. The platform's independent counter reads the published
+view counter on the site the video was posted on, so the buyer and the creator look at the same
+figure and neither can nudge it. The contest sets the site: view statistics are collected today
+for TikTok, YouTube and Instagram.
 
-The rate, the view threshold and the per-submission cap are stated in the task itself, before
-a creator takes it on. There is no single platform-wide rate: it is set by whoever posts the
-task.
+The rate per 1000 views, the view threshold and the cap per submission are stated in the task
+itself, before a creator takes it on. There is no single platform-wide rate: it is set by whoever
+posts the task.
 
 Taking part is free for creators: there is no entry fee, deposit or access charge.
 Withdrawing an already credited balance is a separate operation with a minimum, fee and manual

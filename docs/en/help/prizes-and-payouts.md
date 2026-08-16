@@ -1,14 +1,17 @@
 ---
 title: Prizes and payouts
-description: "How rewards work on DareBay: the budget is recorded at publication, the result is confirmed, and the credit or obligation gets a status."
+description: "What you can put up as a reward on DareBay, how balances work, and how a wallet-backed contest differs from one the organizer settles directly."
+provenance: { snapshot_date: "2026-08-15", source: "darebay-prod" }
+numbers_used: []
 ---
 
 # Prizes and payouts
 
-DareBay is simple. You launch a task, people make their content, and the platform
-records the budget and confirmed result. The winner gets a credit or payout
-obligation with a status. Fulfilment through payout details and balance withdrawal
-are separate stages and can be processed manually.
+A reward on DareBay is one of two things - **money** or **an item** - and the contest decides which
+method it is delivered through. This page is the catalogue: what you can put up, how balances and
+funding modes work, and what happens at the end. The chain itself is short: the budget is recorded
+when the contest publishes, the result is confirmed, and a credit or payout obligation gets a
+status. Moving the money is a separate stage that can be processed by hand.
 
 ## Where it works
 
@@ -32,8 +35,9 @@ A particular contest can define one of these reward methods:
 - **Telegram gifts.**
 
 **An item** is described in text ("a signed vinyl", "a weekend in Krakow"). The
-handover is arranged between the organizer and the winner. DareBay does not hold
-the item itself, but it does make sure the promise is kept.
+handover is arranged between the organizer and the winner. DareBay never holds
+the item, so what it can offer here is the record: the obligation, its status and
+the organizer rating that a failure to deliver damages.
 
 You can mix methods across places. For example: $500 to a card for 1st place, a
 signed book for 2nd.
@@ -59,7 +63,7 @@ For a wallet-backed contest cancelled before it starts, the lock comes off and t
 funds return to the available balance. Contest creation and budget top-ups currently
 carry no fee.
 
-## Commission
+## What it costs to run one
 
 Creating a contest and topping up its budget currently carry no fee. Entry is
 free. After a reward is credited, withdrawing an available balance is a separate
@@ -75,19 +79,17 @@ The contest is over, the result is confirmed:
 - **Items and gifts**: both sides get a notification, and the organizer hands the
   reward over within the agreed time.
 
-The amount follows an independently counted result. Fulfilment can be manual:
-follow the status and payout details in DareBay, and contact support@darebay.com
-if it is delayed.
+The amount follows an independently counted result. Fulfilment can be processed by hand and no
+settlement date is promised: follow the status and payout details in DareBay, and contact
+support@darebay.com if it stops moving.
 
-## How the obligation is protected
+## Reward method is not a withdrawal rail
 
-DareBay acts as intermediary and guarantor: it records the funded budget, counts
-the result and keeps the payout obligation. This does not mean an instant
-automatic transfer; crediting, manual fulfilment and balance withdrawal are
-different stages.
-
-The contest defines its reward method. The balance-withdrawal wizard offers USDT
-to an external wallet and Telegram Stars; the form shows the available option.
+These two get confused, and the confusion costs people time. The list above is what a **contest**
+can define as its reward. Getting a credited **balance** out of the platform is a narrower door:
+the withdrawal wizard offers USDT to an external wallet and Telegram Stars, and the form shows the
+option available to you. A card, a bank transfer, a gift or an item can be the reward of a
+particular contest and is fulfilled separately, not by pressing withdraw.
 
 ## Withdrawing
 

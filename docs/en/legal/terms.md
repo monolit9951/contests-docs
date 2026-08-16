@@ -178,9 +178,11 @@ given to you by the consumer law of your country.
 
 ### 5.1 Coins
 
-The Service uses an internal unit - **DareBay Coins** - to
-fund contests and pay winners. Coins are **not** a currency,
-**not** a financial instrument and **have no value outside the Service**.
+The Service uses an internal unit - **DareBay Coins** - for in-platform
+gamification. Coins are **not** a currency, **not** a financial instrument
+and **have no value outside the Service**. Money prizes, wallet-backed
+contest budgets and withdrawals are denominated in USDT, not in Coins:
+see 5.2 below.
 
 You can get Coins through the methods we offer at any given time
 (for example, through supported payment methods). The rate, the fees and

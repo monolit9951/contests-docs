@@ -1,65 +1,67 @@
 ---
-title: Is DareBay legit? How money and withdrawals work
-description: "How DareBay differs from scams: funded contest budgets, independently counted results, the withdrawal minimum and fee, and manual processing."
-provenance: { snapshot_date: "2026-08-04", source: "darebay-prod-config" }
-numbers_used: [withdrawal_min_amount, withdrawal_commission]
+title: Is DareBay legit? The terms, the fees and who runs it
+description: What can be verified about DareBay before you work - contest terms fixed on the card, a 0% contest fee, a 10% withdrawal fee with a 10 USDT minimum, and a named operator.
+provenance: { snapshot_date: "2026-08-15", source: "darebay-prod-config" }
+numbers_used: []
 seo: true
 ---
 
 # Is DareBay legit?
 
-DareBay is not a sign-up-to-earn scheme or a financial pyramid. Brands and users fund real contests, participants create content, and the reward depends on the stated terms and a validated result. The platform acts as intermediary and guarantor by recording the funded budget and payout obligations.
+Yes, in the sense that matters: every term you are asked to work under is written down before you work, and none of them can be rewritten afterwards. DareBay is a marketplace where brands and individuals post content tasks and creators get paid for the reach their own clips get. It is not a sign-up-to-earn scheme and there is nothing to buy in order to start.
 
-The terms need to be stated precisely. Entry is free, but withdrawing a credited balance is not: the minimum request is **10 USDT**, the fee is **10%**, and processing is manual. Creating or topping up a contest budget currently carries a 0% fee.
+Legitimacy on a money platform is a list of specifics, so here is the list.
 
-## A legitimate fee versus a scam payment
+## What you can read before you touch the work
 
-A scam asks you to transfer money to somebody else's wallet for “activation”, “verification” or a “faster payout”, then asks for another payment. DareBay does not require a separate transfer to unlock a prize.
+Every pay-per-view contest card carries its own terms, and they are the whole deal:
 
-A legitimate withdrawal request is created inside the product:
+| On the card | Why it decides whether the task is worth taking |
+|---|---|
+| Rate per 1000 views | The price of your reach, set by the buyer, not by DareBay |
+| View threshold | The minimum a clip needs before it joins the budget split |
+| Cap per submission | The most any single clip can be paid |
+| Total budget | What the whole contest has to give away |
+| Funding mode | Whether this is a wallet-backed contest held by the platform, or one the organizer settles directly |
+| Platform and task terms | Where to publish and what the clip has to contain |
 
-- the form shows the amount, fee and amount to receive in advance;
-- the fee is deducted from the requested amount, not paid separately;
-- the rate is recorded on the request;
-- the request has a trackable status;
-- processing is manual, with no promise of instant settlement.
+The rate, the threshold and the budget are fixed at creation. The cap per submission is the one parameter a buyer can adjust after launch. Nothing else moves, which is the point: you agree to a price before you spend an evening editing.
 
-## How the money path works
+One detail worth knowing because it works in your favour: clearing the threshold does not cost you the first views. Once a clip is over the line, the whole counter goes into the calculation, not the remainder above the threshold.
 
-1. **The organizer funds a budget.** The money is assigned to a specific contest.
-2. **The participant completes the task.** DareBay does not promise money for registration or clicks with no result.
-3. **The result is checked.** In pay-per-view, views come from the publishing source and pass validation.
-4. **The amount is recorded.** Wallet-backed flows credit a balance; manual contests create a payout obligation and collect payout details.
-5. **Fulfilment follows statuses.** Balance withdrawal or a manual payout is a separate stage, not an automatic transfer at contest close.
+## What the platform charges
 
-## Reward and withdrawal methods
+Creating a contest and topping up its budget currently carry no fee, and entering a contest is free for creators. Money only meets a percentage at one point: withdrawing a credited balance has a **10% fee** and a **10 USDT minimum request**, and a personal rate override can apply, in which case the form shows the exact figure before you confirm.
 
-A contest may define USDT, fiat, Telegram Stars, a gift or a physical item. That is a reward menu, not a promise that every balance can be withdrawn automatically through every method.
+The fee is deducted from the amount you requested. It is never a separate transfer, and never something you send in advance. The full breakdown by operation is on the [DareBay fees page](/en/help/what-commission).
 
-The available-balance withdrawal wizard uses USDT to an external TON wallet and Telegram Stars. The form shows the option available to a specific user; other reward methods can be fulfilled manually under the contest terms.
+## Who answers when something breaks
+
+The product is built and run by **Ruslan Bey**, who writes the code and answers in public at [@ruslanbwork](https://t.me/ruslanbwork). Corrections to these pages go to the [DareBay Telegram channel](https://t.me/darebay_app) and reach the people who edit them.
+
+The same account works on darebay.com and inside Telegram. They are two doors into one product, not a website plus a lookalike app.
 
 ## Frequently asked questions
 
-### Does it cost money to enter?
+### Does it cost anything to take part?
 
-No. Registration and work submission are free, and no entry deposit is required.
+No. Registration, browsing tasks and submitting a clip are free, and no minimum audience is required. You are paid for the reach of one specific clip, not for the size of your channel.
 
-### Must I send money to unlock a prize?
+### Can the terms change after I have made the clip?
 
-No. Never make a separate transfer. The legitimate withdrawal fee is calculated and deducted inside the request.
+The rate, the threshold and the budget cannot. They are written into the contest at creation and the payout is always calculated from those recorded values. The cap per submission can be adjusted by the buyer after launch, so it is worth re-reading the card before you submit.
 
-### Is withdrawal free?
+### Which sites can a clip be published on?
 
-No. The current fee is 10%, and the minimum request is 10 USDT. See the [full withdrawal terms](/en/help/darebay-withdrawals).
+The contest names the site. View statistics are collected today for TikTok, YouTube and Instagram. For Instagram it has to be a video with a view count, because a photo post does not produce that metric.
 
-### Does the payout arrive automatically?
+### Do I need a crypto wallet to use DareBay?
 
-No. The platform calculates the result under the contest rules, but payout fulfilment and withdrawal requests are processed manually. There is no fixed promise of settlement “within minutes”.
+Not to take part. A contest defines its own reward method, which can be USDT on TON, a card, a bank transfer, Telegram Stars, a gift or a physical item. Withdrawing a credited balance is a narrower list: the wizard offers USDT to an external TON wallet and Telegram Stars. More on that: [paying with crypto](/en/help/paying-with-crypto).
 
-### What if a request is delayed?
+## Where to next
 
-Check its status and payout details, then contact support@darebay.com with the request identifier. Do not create duplicate payments or transfer the fee separately.
-
-## In short
-
-The verifiable DareBay signals are a real contest, funded budget, independently counted result, a visible obligation status and withdrawal terms shown in advance. Entry is free; withdrawal has a minimum, fee and manual processing. See [current DareBay fees](/en/help/what-commission), [does DareBay really pay](/en/about/does-darebay-really-pay), and [the payout guarantee](/en/about/payout-guarantee).
+- [Is DareBay a scam?](/en/about/is-darebay-a-scam) - the platform checked against the standard fraud patterns
+- [Does DareBay really pay?](/en/about/does-darebay-really-pay) - the payout chain and where it can stall
+- [The payout guarantee](/en/about/payout-guarantee) - what is actually guaranteed
+- [DareBay withdrawals](/en/help/darebay-withdrawals) - the request, the fee and the available methods

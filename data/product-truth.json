@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "verifiedAt": "2026-08-04",
+  "verifiedAt": "2026-08-15",
   "source": {
     "backend": {
       "repository": "monolit9951/Contests",
@@ -14,7 +14,7 @@
       "repository": "monolit9951/darebay-seo-fleet",
       "branch": "master",
       "localPath": "/root/code/darebay-seo-fleet",
-      "verifiedCommit": "3ac522e807b482aff68c12cdd664947f22ffaf8b",
+      "verifiedCommit": "bd06013a60553f2f3cf1ab4ccef469ce6f53508d",
       "file": "data/product-facts.md"
     },
     "properties": {
@@ -79,11 +79,11 @@
     "liveCpm": {
       "minimum": 0.08,
       "median": 0.5,
-      "maximum": 1
+      "maximum": 2
     },
     "defaultMinimumViews": 1000,
     "liveMedianMinimumViews": 2000,
-    "typicalMaxPerWork": 100
+    "typicalMaxPerWork": 98.5
   },
   "selection": {
     "types": [

@@ -386,12 +386,35 @@ export const CONTENT_SEGMENTS: readonly string[] = LOCALES.flatMap((locale) => {
  * their FINAL address here rather than layered on top — which is why entries
  * like `/docs/faq/fees` sit in the `retired` list of the page they now serve.
  */
+/**
+ * The locale a retired address was written in, read from its own prefix.
+ *
+ * Until the 2026-08 consolidation every `retired` entry was Russian (`/docs/ru/…`),
+ * so mapping them all onto the RU canonical was invisibly correct. Collapsing six
+ * pages across all three locales broke that assumption: a Ukrainian reader arriving
+ * on `/ua/zarobitok/skilky-platiat-novachku` was 301'd onto the RUSSIAN survivor.
+ * A cross-language redirect is worse than a 404 — it silently swaps the reader's
+ * language and puts the wrong page in the hreflang cluster.
+ */
+const retiredLocale = (old: string): Locale => {
+    for (const axis of LOCALES) {
+        if (axis.prefix && (old === axis.prefix || old.startsWith(`${axis.prefix}/`))) return axis.language
+    }
+    return ROOT_LOCALE.language
+}
+
 export const redirectMap = (): Record<string, string> => {
     const map: Record<string, string> = { ...ORPHAN_REDIRECTS }
     for (const entry of PAGES) {
-        const target = pagePath(entry, ROOT_LOCALE.language)
-        if (!target) continue
-        for (const old of entry.retired ?? []) map[old] = target
+        const rootTarget = pagePath(entry, ROOT_LOCALE.language)
+        if (!rootTarget) continue
+        for (const old of entry.retired ?? []) {
+            // Land in the reader's own language when the survivor has it. A page
+            // registered ru-only (a translation that does not exist yet) still falls
+            // back to the root canonical: a live page in the wrong language beats a
+            // dead address, and the fallback disappears once the locale is registered.
+            map[old] = pagePath(entry, retiredLocale(old)) ?? rootTarget
+        }
     }
     return map
 }

@@ -14,9 +14,9 @@
 
 import type { Metric } from 'web-vitals'
 
-import { DocsEvent, trackDocsEvent } from './analytics'
+import { DocsEvent, getDocsPageContext, trackDocsEvent } from './analytics'
 
-const report = (metric: Metric): void => {
+const report = (pageContext: ReturnType<typeof getDocsPageContext>, metric: Metric): void => {
     trackDocsEvent(
         DocsEvent.WebVitals,
         {
@@ -33,7 +33,7 @@ const report = (metric: Metric): void => {
             // load; mixing them silently flatters the average.
             navigationType: metric.navigationType,
         },
-        { dedupeKey: metric.name },
+        { dedupeKey: metric.name, pageContext },
     )
 }
 
@@ -45,16 +45,22 @@ const report = (metric: Metric): void => {
  */
 export const installWebVitals = (): void => {
     if (typeof window === 'undefined') return
+    const initialPageContext = getDocsPageContext()
     // Imported lazily so the library is never touched during the SSR build and
     // never sits in the critical path of a reader who is here for the article.
     void import('web-vitals')
         .then(({ onCLS, onINP, onLCP, onTTFB }) => {
-            onLCP(report)
-            onCLS(report)
-            onINP(report)
-            onTTFB(report)
+            const reportInitialPage = (metric: Metric) => report(initialPageContext, metric)
+            onLCP(reportInitialPage)
+            onCLS(reportInitialPage)
+            onINP(reportInitialPage)
+            onTTFB(reportInitialPage)
         })
         .catch(() => {
-            /* analytics must never break the page */
+            trackDocsEvent(
+                DocsEvent.ClientError,
+                { message: 'web_vitals_import_failed' },
+                { dedupeKey: 'web_vitals_import_failed' },
+            )
         })
 }

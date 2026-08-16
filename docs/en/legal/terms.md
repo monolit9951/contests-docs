@@ -6,7 +6,7 @@ description: The DareBay rules. What we promise, what we expect from you, and wh
 # Terms of Use
 
 **Effective date:** 7 May 2026
-**Last updated:** 7 May 2026
+**Last updated:** 4 August 2026
 
 These Terms govern your use of **darebay.com**,
 the DareBay web app, our APIs and related services (together, the
@@ -63,8 +63,9 @@ the jury (except where the rules require us to step in), and
 Three optional levels - **BLOGGER**, **STORE**, **COMPANY** - give an
 account a verified badge once we (or our verification
 partner) have checked your identity or business documents.
-Verified accounts pay a lower commission and are more visible on the
-platform. Verification is not required in order to use the Service.
+Verified accounts receive the corresponding status and may be more visible on the
+platform. Verification does not by itself change the current fees and is not required
+in order to use the Service.
 
 ---
 
@@ -111,21 +112,25 @@ laundering, child safety) mean an instant ban with no warning.
 
 By publishing a contest, you undertake to:
 
-- Fund the **full prize amount** at the moment of publication. The prize
-  is locked in the wallet and cannot be spent on anything else.
+- Choose the funding mode shown at publication. In a **wallet-backed** contest,
+  the full wallet-backed money prize is locked in the wallet and cannot be spent elsewhere.
+  In a **manual-payout** contest, no money enters the platform and no wallet lock
+  exists: the Organizer pays the winner directly using the recorded payout details.
 - Honour the **selection method you chose**:
-  - **RANDOM** - the works with the most likes are picked automatically;
+  - **RANDOM** - a seeded random draw runs over all prize-eligible **ACTIVE** works;
   - **CREATOR_DECISION** - you pick the winners manually within the
     selection window;
-  - **VIEWER_VOTING** - community votes decide the result.
+  - **VIEWER_VOTING** - community votes decide the result;
+  - **ORACLE_ATTESTED_POOL** - validated view counts determine formula payouts.
 - Honour the **rules** you wrote into the contest terms.
 - Deliver any **ITEM** prize within the agreed timeframe after
   the winner is confirmed.
 
 Once submissions have opened, a contest cannot be cancelled without our
 review and the consent of the Participants affected. Cancellations before
-submissions open return the money to the wallet (less the commission already
-taken - see [section 7](#_7-commission)).
+submissions open return the money to the wallet under the terms shown at
+confirmation. At the last-updated date, the contest-creation fee is 0% - see
+[section 7](#_7-fees).
 
 ### 4.3 Participant obligations
 
@@ -133,10 +138,9 @@ By sending in a work, you confirm that:
 
 - The work is **yours** or you have permission to submit it.
 - It matches the contest brief and these Terms.
-- For **imported works** from TikTok, Instagram or YouTube you
-  are the author of the source video or you have the author's
-  permission. Ownership must be confirmed through the account connection
-  flow before the work counts.
+- For a social-video submission, you submit its **URL** through the contest flow.
+  Hashtag discovery does not import a work, and connecting a social account is not
+  an attribution channel. You must still be the author or have the author's permission.
 - One work per Participant per contest, unless the brief allows
   more.
 
@@ -147,9 +151,9 @@ After a contest closes:
 1. The selection mechanism runs (or the Organizer picks,
    depending on the selection type).
 2. The winners are confirmed.
-3. The Coins prize moves out of the contest lock into the winners'
-   wallets.
-4. The commission is settled with the Operator.
+3. The platform records a credit or payout obligation for the winner.
+4. Fulfilment through the available payout details and statuses can be manual;
+   withdrawing an available balance is a separate operation.
 
 If the Organizer does not act within the selection window, fallback
 rules apply (usually an automatic win for the top of the rating, with possible
@@ -174,9 +178,11 @@ given to you by the consumer law of your country.
 
 ### 5.1 Coins
 
-The Service uses an internal unit - **DareBay Coins** - to
-fund contests and pay winners. Coins are **not** a currency,
-**not** a financial instrument and **have no value outside the Service**.
+The Service uses an internal unit - **DareBay Coins** - for in-platform
+gamification. Coins are **not** a currency, **not** a financial instrument
+and **have no value outside the Service**. Money prizes, wallet-backed
+contest budgets and withdrawals are denominated in USDT, not in Coins:
+see 5.2 below.
 
 You can get Coins through the methods we offer at any given time
 (for example, through supported payment methods). The rate, the fees and
@@ -186,19 +192,22 @@ the available methods are shown in the app at the moment of purchase.
 
 Every DareBay account has a wallet that tracks:
 
-- The **available** balance - Coins you can spend or withdraw.
-- The **locked** balance - Coins tied to active contests.
+- The **USDT available balance** used for wallet-backed money operations and withdrawals.
+- The **USDT locked balance** tied to wallet-backed active contests.
+- **COINS**, an off-chain gamification unit; it is not a withdrawable USDT balance.
 - The history of all top-ups, contest funding, prizes
   received, commissions and withdrawals.
 
 ### 5.3 Withdrawals
 
-Withdrawing Coins (where the methods we provide are available) happens:
+An available balance is withdrawn by submitting a separate request. At the
+last-updated date:
 
-- Subject to a minimum withdrawal threshold (shown in the app).
-- With identity verification where the law requires it.
-- Within the timeframe of the chosen method.
-- With the fees disclosed before you confirm the withdrawal.
+- The minimum request is **10 USDT**.
+- The default fee is **10% of the requested amount**; a personal fee override may apply, and the exact calculation is shown before confirmation.
+- The withdrawal wizard offers USDT to an external wallet on TON and Telegram Stars.
+- Requests are processed manually; no fixed or instant settlement time is guaranteed.
+- Identity verification applies where the law requires it.
 
 We may suspend withdrawals to investigate suspicious
 activity or on a lawful demand. We will notify you and record the
@@ -264,17 +273,18 @@ who posted the content. Repeat infringers are banned.
 
 ---
 
-## 7. Commission
+## 7. Fees
 
-DareBay takes a commission on contests. It is:
+At the last-updated date, different operations have different terms:
 
-- **Deducted from the prize**, not added on top.
-- **Shown in your currency before you confirm**, no surprises.
-- **Lower for verified accounts**.
+- Creating a contest and topping up its budget: **0%**.
+- A store purchase: **8%**.
+- Withdrawing an available balance: default **10%**, with a **10 USDT** minimum request; a personal fee override may apply.
 
-The exact rates and the discounts by verification level are set out in
-**[Quick start → What commission does DareBay take?](/en/help/what-commission)** and in the contest
-creation flow.
+The applicable fee and resulting amount are shown before an operation is confirmed.
+Verification level does not by itself change these rates. Current terms are published under
+**[Quick start → What commission does DareBay take?](/en/help/what-commission)** and in the
+relevant operation form.
 
 ---
 
@@ -335,8 +345,8 @@ to respond. In urgent cases (active fraud, illegal content)
 we act first and explain afterwards.
 
 On termination for cause we may withhold the un-withdrawn balance up to
-the amount of the fraud proceeds; on termination without cause the
-un-withdrawn balance is returned through your usual withdrawal methods.
+the amount of the fraud proceeds; on termination without cause, return
+follows the available payout details and statuses and can be processed manually.
 
 ---
 

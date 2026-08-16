@@ -685,11 +685,6 @@
   border-color: rgba(22, 179, 145, 0.6);
 }
 
-/* Don't double-render the markdown h1 when we have a cover block */
-.docs-cover + h1 {
-  display: none;
-}
-
 /* Tighter top spacing so the cover sits close to the nav */
 @media (min-width: 768px) {
   .docs-cover {

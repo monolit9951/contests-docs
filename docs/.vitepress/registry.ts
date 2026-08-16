@@ -196,12 +196,11 @@ export const PAGES = manifest.pages
  * they belong to — but they must still single-hop, not 404.
  */
 export const ORPHAN_REDIRECTS: Readonly<Record<string, string>> = {
-    // The old `kak-rabotaet` index duplicated the app's own "how it works"
-    // landing, which is translated into three languages and stays in the SPA.
-    // Points at the app's CURRENT address: `/kak-eto-rabotaet` was live for one
-    // afternoon on 2026-08-03 and now 301s itself, so naming it here would have
-    // made this a two-hop chain — caught by gate 1 of scripts/url-gates.mjs.
-    '/docs/ru/kak-rabotaet/': '/how-it-works',
+    // The old `kak-rabotaet` index duplicated the app's own explainer, which
+    // has since been split by audience: `/how-it-works` retired into `/earn` on
+    // 2026-08-07. Points at the app's CURRENT address — naming a retired one
+    // would make this a two-hop chain, caught by gate 1 of scripts/url-gates.mjs.
+    '/docs/ru/kak-rabotaet/': '/earn',
 }
 
 /**
@@ -314,7 +313,22 @@ export const sourceFile = (entry: RegistryEntry, language: Locale): string | nul
  * is the failure this whole registry exists to make impossible. Adding a link
  * to a new app route means adding a line here, and that is the point.
  */
-const APP_SECTIONS = ['how-it-works', 'for-business', 'store', 'feed', 'top'] as const
+const APP_SECTIONS = [
+    'for-business',
+    'for-business/courses',
+    'for-business/telegram',
+    'for-business/apps',
+    'for-business/saas',
+    'earn',
+    'earn/clips',
+    'earn/ugc',
+    'earn/traffic',
+    'earn/teams',
+    'store',
+    'feed',
+    'top',
+    'tasks',
+] as const
 
 // The application serves ONE slug per section under every locale prefix (its
 // slugs were translated for one afternoon on 2026-08-03 and reverted), so the
@@ -372,12 +386,35 @@ export const CONTENT_SEGMENTS: readonly string[] = LOCALES.flatMap((locale) => {
  * their FINAL address here rather than layered on top — which is why entries
  * like `/docs/faq/fees` sit in the `retired` list of the page they now serve.
  */
+/**
+ * The locale a retired address was written in, read from its own prefix.
+ *
+ * Until the 2026-08 consolidation every `retired` entry was Russian (`/docs/ru/…`),
+ * so mapping them all onto the RU canonical was invisibly correct. Collapsing six
+ * pages across all three locales broke that assumption: a Ukrainian reader arriving
+ * on `/ua/zarobitok/skilky-platiat-novachku` was 301'd onto the RUSSIAN survivor.
+ * A cross-language redirect is worse than a 404 — it silently swaps the reader's
+ * language and puts the wrong page in the hreflang cluster.
+ */
+const retiredLocale = (old: string): Locale => {
+    for (const axis of LOCALES) {
+        if (axis.prefix && (old === axis.prefix || old.startsWith(`${axis.prefix}/`))) return axis.language
+    }
+    return ROOT_LOCALE.language
+}
+
 export const redirectMap = (): Record<string, string> => {
     const map: Record<string, string> = { ...ORPHAN_REDIRECTS }
     for (const entry of PAGES) {
-        const target = pagePath(entry, ROOT_LOCALE.language)
-        if (!target) continue
-        for (const old of entry.retired ?? []) map[old] = target
+        const rootTarget = pagePath(entry, ROOT_LOCALE.language)
+        if (!rootTarget) continue
+        for (const old of entry.retired ?? []) {
+            // Land in the reader's own language when the survivor has it. A page
+            // registered ru-only (a translation that does not exist yet) still falls
+            // back to the root canonical: a live page in the wrong language beats a
+            // dead address, and the fallback disappears once the locale is registered.
+            map[old] = pagePath(entry, retiredLocale(old)) ?? rootTarget
+        }
     }
     return map
 }

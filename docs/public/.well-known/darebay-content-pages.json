@@ -57,30 +57,6 @@
       ]
     },
     {
-      "id": "earnings-from-zero",
-      "hub": "earnings",
-      "slugs": {
-        "ru": "kak-zarabotat-na-narezkah-s-nulya",
-        "uk": "yak-zarobyty-na-narizkakh-z-nulia",
-        "en": "start-clipping-from-zero"
-      },
-      "retired": [
-        "/docs/ru/zarabotok/kak-zarabotat-na-narezkah-s-nulya"
-      ]
-    },
-    {
-      "id": "earnings-streamer-clips",
-      "hub": "earnings",
-      "slugs": {
-        "ru": "kak-zarabotat-na-narezkah-strimerov",
-        "uk": "yak-zarobyty-na-narizkakh-strymeriv",
-        "en": "earn-from-streamer-clips"
-      },
-      "retired": [
-        "/docs/ru/zarabotok/kak-zarabotat-na-narezkah-strimerov"
-      ]
-    },
-    {
       "id": "earnings-clipper-job",
       "hub": "earnings",
       "slugs": {
@@ -89,7 +65,11 @@
         "en": "clipping-as-a-job"
       },
       "retired": [
-        "/docs/ru/zarabotok/rabota-narezchikom"
+        "/docs/ru/zarabotok/rabota-narezchikom",
+        "/zarabotok/kak-zarabotat-na-narezkah-s-nulya",
+        "/ua/zarobitok/yak-zarobyty-na-narizkakh-z-nulia",
+        "/en/earnings/start-clipping-from-zero",
+        "/docs/ru/zarabotok/kak-zarabotat-na-narezkah-s-nulya"
       ]
     },
     {
@@ -101,19 +81,15 @@
         "en": "how-much-clipping-pays"
       },
       "retired": [
-        "/docs/ru/zarabotok/skolko-mozhno-zarabotat-na-narezkah"
-      ]
-    },
-    {
-      "id": "earnings-beginner-rate",
-      "hub": "earnings",
-      "slugs": {
-        "ru": "skolko-platyat-novichku",
-        "uk": "skilky-platiat-novachku",
-        "en": "beginner-rates"
-      },
-      "retired": [
-        "/docs/ru/zarabotok/skolko-platyat-novichku"
+        "/docs/ru/zarabotok/skolko-mozhno-zarabotat-na-narezkah",
+        "/zarabotok/skolko-platyat-novichku",
+        "/ua/zarobitok/skilky-platiat-novachku",
+        "/en/earnings/beginner-rates",
+        "/docs/ru/zarabotok/skolko-platyat-novichku",
+        "/zarabotok/zarabotok-bez-podpischikov",
+        "/ua/zarobitok/zarobitok-bez-pidpysnykiv",
+        "/en/earnings/earn-without-followers",
+        "/docs/ru/zarabotok/zarabotok-bez-podpischikov"
       ]
     },
     {
@@ -137,7 +113,11 @@
         "en": "streamer-clip-rates"
       },
       "retired": [
-        "/docs/ru/zarabotok/skolko-platyat-za-narezki-strimerov"
+        "/docs/ru/zarabotok/skolko-platyat-za-narezki-strimerov",
+        "/zarabotok/kak-zarabotat-na-narezkah-strimerov",
+        "/ua/zarobitok/yak-zarobyty-na-narizkakh-strymeriv",
+        "/en/earnings/earn-from-streamer-clips",
+        "/docs/ru/zarabotok/kak-zarabotat-na-narezkah-strimerov"
       ]
     },
     {
@@ -150,18 +130,6 @@
       },
       "retired": [
         "/docs/ru/zarabotok/skolko-platyat-za-prosmotry-v-tiktok"
-      ]
-    },
-    {
-      "id": "earnings-without-followers",
-      "hub": "earnings",
-      "slugs": {
-        "ru": "zarabotok-bez-podpischikov",
-        "uk": "zarobitok-bez-pidpysnykiv",
-        "en": "earn-without-followers"
-      },
-      "retired": [
-        "/docs/ru/zarabotok/zarabotok-bez-podpischikov"
       ]
     },
     {
@@ -185,18 +153,10 @@
         "en": "how-views-are-counted"
       },
       "retired": [
-        "/docs/ru/kak-rabotaet/kak-schitayutsya-prosmotry-dlya-vyplaty"
-      ]
-    },
-    {
-      "id": "earnings-view-threshold",
-      "hub": "earnings",
-      "slugs": {
-        "ru": "porog-prosmotrov-dlya-vyplaty",
-        "uk": "porih-perehliadiv-dlia-vyplaty",
-        "en": "view-threshold"
-      },
-      "retired": [
+        "/docs/ru/kak-rabotaet/kak-schitayutsya-prosmotry-dlya-vyplaty",
+        "/zarabotok/porog-prosmotrov-dlya-vyplaty",
+        "/ua/zarobitok/porih-perehliadiv-dlia-vyplaty",
+        "/en/earnings/view-threshold",
         "/docs/ru/kak-rabotaet/porog-prosmotrov-dlya-vyplaty"
       ]
     },
@@ -209,18 +169,10 @@
         "en": "where-to-find-clipping-work"
       },
       "retired": [
-        "/docs/ru/platformy/gde-brat-zakazy-na-narezki"
-      ]
-    },
-    {
-      "id": "earnings-platforms-and-fees",
-      "hub": "earnings",
-      "slugs": {
-        "ru": "ploshchadki-i-komissii",
-        "uk": "maidanchyky-i-komisii",
-        "en": "platforms-and-fees"
-      },
-      "retired": [
+        "/docs/ru/platformy/gde-brat-zakazy-na-narezki",
+        "/zarabotok/ploshchadki-i-komissii",
+        "/ua/zarobitok/maidanchyky-i-komisii",
+        "/en/earnings/platforms-and-fees",
         "/docs/ru/platformy/"
       ]
     },
@@ -574,6 +526,20 @@
         "/docs/ru/legal/terms",
         "/docs/legal/terms"
       ]
+    },
+    {
+      "id": "earnings-how-to-clip",
+      "hub": "earnings",
+      "slugs": {
+        "ru": "kak-delat-narezki"
+      }
+    },
+    {
+      "id": "earnings-film-clips",
+      "hub": "earnings",
+      "slugs": {
+        "ru": "zarabotok-na-narezkah-filmov"
+      }
     }
   ]
 }

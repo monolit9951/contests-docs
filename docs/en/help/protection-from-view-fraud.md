@@ -1,68 +1,83 @@
 ---
 title: Protection from view fraud and fake submissions
-description: Views are counted independently of the organizer and the participant, fakes are rejected before they reach a prize, and cheating costs your rating.
+description: What actually stands between a faked submission and a payout on DareBay - an independent count, a moderation hold and the three ways a flagged clip can end.
+provenance: { snapshot_date: "2026-08-15", source: "darebay-prod" }
+numbers_used: []
 ---
 
 # Protection from view fraud and fake submissions
 
-On DareBay the money follows the real result. Inflated views and other
-people's work never reach a payout: the count runs independently of both
-the participant and the organizer, and suspicious submissions are rejected
-before they can compete for a prize.
+Two separate things protect a contest, and they are worth telling apart. The **count** is
+independent: neither the buyer nor the participant supplies the view figure, so nobody can argue
+it up or down. The **checks on top of it** are moderation and a hold, which is a real safeguard
+and not a claim that every manipulated view on the internet gets spotted.
 
-## Views are counted independently
+Anyone who tells you a platform detects all inflation is guessing. What DareBay can state is what
+it does.
 
-- **The numbers come from the platform itself.** Screenshots and a
-  participant's word count for nothing: what counts is the counter on the
-  platform where the video is published.
-- **Inflated views the platform strips out are not paid for.** What counts
-  is what is left on the counter.
-- **Neither side can nudge the result.** Neither the organizer nor the
-  participant influences the number the payout is calculated from.
-- **The view threshold cuts out empty submissions.** A submission that
-  falls short of its contest threshold earns no payout.
+## Where the view figure comes from
 
-## Fakes do not reach a prize
+The platform's independent counter reads the published view counter on the site the video was posted
+on, using the link you submitted. Both sides look at the same public number and neither types it
+in by hand.
 
-- **Duplicates and re-uploads.** Image search across stills and video
-  frames catches re-uploads and lightly edited copies.
-- **Someone else's authorship.** Metadata that does not match the claimed
-  origin of a file sends the submission to review.
-- **Generated instead of filmed.** In contests that call for original
-  authored work, generated content is filtered out.
-- **Account farms.** Freshly created accounts with no history entering
-  every contest at once, and clusters from a single IP range, stand out a
-  mile.
+What follows honestly from that, and what does not:
 
-Each check catches its own class of fake, and together they cover the
-ground. A flagged submission wins nothing until it has been checked, and
-the bigger the prize, the tighter the check on the winner.
+- **It follows** that the figure is public, checkable on the site itself, and out of reach of both
+  the buyer and the participant.
+- **It does not follow** that the platform re-derives its own estimate of "real" views on top of
+  the counter. It does not. Whatever the site counts is what enters the calculation once the
+  threshold is cleared.
 
-## The organizer can dispute
+Screenshots prove nothing here, and neither does anybody's word. Only the counter on the published
+video is read.
 
-Spotted a fake the filters let through? The report is settled before the
-winner is confirmed, which means before any money moves. Abusing reports
-(filing them against everyone) hurts the organizer rating.
+## What a flag and a hold actually do
 
-## Cheating is a bad trade
+A submission whose view dynamics look suspicious gets flagged and goes on hold. Accrual on it
+pauses until it has been looked at. That is a pause, not a verdict, and there are three ways out:
 
-The people who lose most to fakes are the other honest participants, and
-the rules are written in their favour. A cheater:
+1. **It clears.** The counter goes into the calculation under the normal rules.
+2. **It stays on hold.** Accrual is suspended pending review, and once the review window has run
+   out a payout on it is still possible.
+3. **Moderation rejects it.** It takes no part in the budget split and earns nothing.
 
-- Loses their submissions.
-- Loses access to the prize even after "winning".
-- Takes a hit to their **participant rating**, and that rating is visible
-  on the profile to every future organizer.
-- Loses the account on a second violation.
+So the argument against buying views is not that punishment is certain. It is the arithmetic of
+the bet: you pay for the views up front, out of your own pocket, and the payout on that submission
+is guaranteed by nothing and can sit frozen until a human has looked at it.
 
-The participant rating is a real creator's main asset. Anyone who builds it
-honestly is not going to burn it for a single contest.
+Swapping the link does not help either. A submission belongs to the contest through the URL you
+sent, and that is the video that gets read.
 
-## If something does slip through
+## What else gets a submission rejected
 
-Then the dispute process takes over and the outcome of the contest is
-revisited after the fact. What we commit to there is set out in the [Our promise section of the manifesto](/en/about/manifesto).
+- **Somebody else's work.** Re-uploads, lightly edited copies and content whose stated authorship
+  does not hold up go to review.
+- **Wrong format for the task.** A contest that asks for original authored footage can reject
+  generated content on those terms.
+- **Fresh account patterns.** Accounts created minutes ago entering every contest at once are an
+  ordinary moderation signal.
+- **The video is gone.** Deleted, hidden or blocked before the contest is finalized means there is
+  no counter left to read, so nothing can be confirmed - whatever caused the takedown.
+
+## The organizer can report
+
+Spotted something the checks did not catch? A report is settled before the winner is confirmed,
+which means before any money moves. Filing reports against everybody on principle damages the
+organizer rating, so it is not a free move.
+
+What is deliberately not promised: that a result already recorded will be reopened and rewritten
+on request. Reports are read and answered by a person, and the answer is not decided in advance.
+
+## Why cheating is a poor trade
+
+The people who lose most to faked entries are the other honest participants, and the rules are
+written in their favour. A participant caught at it loses the submission, loses access to the
+prize even after "winning", and takes a visible hit to their **participant rating** - the one
+thing on the profile that every future organizer reads. A second violation costs the account.
+
+For anyone building that rating honestly, no single contest is worth burning it.
 
 ---
 
-→ See also: **[how winners are chosen](/en/help/how-winners-are-chosen)**, **[prohibited content](/en/help/prohibited-content)**.
+→ See also: **[how winners are chosen](/en/help/how-winners-are-chosen)**, **[prohibited content](/en/help/prohibited-content)**, **[submit your work](/en/help/submit-your-work)**.

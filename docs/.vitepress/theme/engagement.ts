@@ -1,52 +1,28 @@
-// Reading engagement for the docs — the two numbers a content site is
-// actually judged on, and the two the beacon did not have.
-//
-// `docs_page_view` alone cannot tell a page that earns its search position
-// from a page that people bounce off in two seconds: both are one row. These
-// add how far down the article the reader got, and how long the tab was really
-// in front of them, so the fleet's output can be ranked by whether it is read
-// rather than by whether it was served.
-
-import { DocsEvent, trackDocsEvent } from './analytics'
+import { DocsEvent, flushDocsOutbox, trackDocsEvent } from './analytics'
 
 const DEPTH_MILESTONES = [25, 50, 75, 100] as const
-/** Under a second is a bounce or a mis-click, not a read worth a row. */
 const MIN_REPORTABLE_MS = 1000
-/**
- * A tab left open on an article for a working day would otherwise report the
- * working day. Visibility already excludes background tabs; this caps the
- * foreground-but-abandoned case (reader walks away, screen stays on).
- */
-const MAX_REPORTABLE_MS = 30 * 60 * 1000
+const IDLE_MS = 30_000
+const HEARTBEAT_MS = 15_000
 
 interface PageEngagement {
-    /** Engaged ms accumulated since the last flush. */
     activeMs: number
-    /** When the tab last became visible, or null while it is hidden. */
-    resumedAt: number | null
+    emittedMs: number
+    lastTick: number
+    lastInteraction: number
+    visible: boolean
+    focused: boolean
     maxDepth: number
     reached: Set<number>
+    sequence: number
 }
 
 let state: PageEngagement | null = null
 let listenersInstalled = false
 let scrollQueued = false
+let heartbeat: number | undefined
 
-/**
- * Share of the ARTICLE the reader has seen, 0..100.
- *
- * Deliberately not "share of the document": every VitePress page ends with the
- * outline, the platform CTA, the prev/next pager and the footer, so a reader
- * who stopped halfway through the text can still sit at 100% of the scroll
- * height. Measured as how far the BOTTOM of the viewport has travelled through
- * the article body — the standard reading-progress definition.
- *
- * @param articleTop  article's top edge relative to the viewport (rect.top)
- */
 export const computeDepth = (articleTop: number, articleHeight: number, viewportHeight: number): number => {
-    // A zero-height article (or a layout we could not measure) is not something
-    // a reader can be partway through. Treat it as fully seen rather than
-    // reporting a permanent 0 that would drag every average down.
     if (articleHeight <= 0) return 100
     const seen = viewportHeight - articleTop
     if (seen <= 0) return 0
@@ -54,17 +30,28 @@ export const computeDepth = (articleTop: number, articleHeight: number, viewport
     return Math.round((seen / articleHeight) * 100)
 }
 
-/** The rendered markdown, not the page chrome. */
 const articleElement = (): HTMLElement | null =>
-    document.querySelector<HTMLElement>('.vp-doc') ??
-    document.querySelector<HTMLElement>('.content-container') ??
-    document.querySelector<HTMLElement>('main')
+    document.querySelector<HTMLElement>('.vp-doc')
+    ?? document.querySelector<HTMLElement>('.content-container')
+    ?? document.querySelector<HTMLElement>('main')
 
-const accrue = (): void => {
-    if (!state || state.resumedAt === null) return
-    const now = Date.now()
-    state.activeMs += now - state.resumedAt
-    state.resumedAt = now
+const now = (): number => performance.now()
+
+const accrue = (at = now()): void => {
+    if (!state) return
+    const safeNow = Math.max(at, state.lastTick)
+    if (state.visible && state.focused) {
+        const activeEnd = Math.min(safeNow, state.lastInteraction + IDLE_MS)
+        if (activeEnd > state.lastTick) state.activeMs += activeEnd - state.lastTick
+    }
+    state.lastTick = safeNow
+}
+
+const interact = (): void => {
+    if (!state) return
+    const at = now()
+    accrue(at)
+    state.lastInteraction = at
 }
 
 const sampleDepth = (): void => {
@@ -73,59 +60,76 @@ const sampleDepth = (): void => {
     if (!el) return
     const rect = el.getBoundingClientRect()
     const depth = computeDepth(rect.top, rect.height, window.innerHeight)
-    if (depth > state.maxDepth) state.maxDepth = depth
+    state.maxDepth = Math.max(state.maxDepth, depth)
 
     for (const milestone of DEPTH_MILESTONES) {
         if (state.maxDepth < milestone || state.reached.has(milestone)) continue
         state.reached.add(milestone)
-        // A reader who hits End crosses all four inside the same second, and
-        // the 1s throttle is keyed by event id — without the milestone as the
-        // dedupe key only the 25 would ever be recorded.
         trackDocsEvent(DocsEvent.ReadDepth, { depth: String(milestone) }, { dedupeKey: String(milestone) })
     }
 }
 
-/**
- * Send the engaged time banked so far and reset the accumulator.
- *
- * Additive on purpose: one read can produce several rows (tab hidden, tab back,
- * page closed), because a beacon owed at the end of the session is a beacon
- * that often never gets sent — phones background a tab and never fire
- * `pagehide`. The dashboard sums `dwellMs` per page; `maxDepth` is a running
- * maximum, so the last row of a page carries the final answer.
- */
-export const flushEngagement = (reason: string): void => {
+export const flushEngagement = (reason: string, deferFlush = false): void => {
     if (!state) return
     accrue()
-    const dwellMs = Math.min(state.activeMs, MAX_REPORTABLE_MS)
-    state.activeMs = 0
-    if (dwellMs < MIN_REPORTABLE_MS) return
+    const engagedMs = Math.round(state.activeMs - state.emittedMs)
+    if (engagedMs < MIN_REPORTABLE_MS) return
+    state.emittedMs = state.activeMs
+    state.sequence += 1
     trackDocsEvent(
         DocsEvent.ReadTime,
-        { dwellMs: String(dwellMs), maxDepth: String(state.maxDepth), reason },
-        { dedupeKey: reason },
+        {
+            engagedMs: String(engagedMs),
+            maxDepth: String(state.maxDepth),
+            sequence: String(state.sequence),
+            reason,
+        },
+        { dedupeKey: String(state.sequence), deferFlush },
     )
 }
 
 const onVisibilityChange = (): void => {
     if (!state) return
-    if (document.visibilityState === 'hidden') {
-        accrue()
-        state.resumedAt = null
-        flushEngagement('hidden')
-    } else {
-        state.resumedAt = Date.now()
-    }
+    accrue()
+    state.visible = document.visibilityState === 'visible'
+    if (state.visible) state.lastInteraction = now()
+    else flushEngagement('visibility_hidden')
+}
+
+const onFocus = (): void => {
+    if (!state) return
+    accrue()
+    state.focused = true
+    state.lastInteraction = now()
+}
+
+const onBlur = (): void => {
+    if (!state) return
+    accrue()
+    state.focused = false
+    flushEngagement('blur')
 }
 
 const onPageHide = (): void => {
-    if (!state) return
-    accrue()
-    state.resumedAt = null
-    flushEngagement('unload')
+    if (state) {
+        accrue()
+        state.visible = false
+    }
+    flushEngagement('pagehide', true)
+    void flushDocsOutbox(true)
+}
+
+const onPageShow = (event: PageTransitionEvent): void => {
+    if (!state || !event.persisted) return
+    const at = now()
+    state.lastTick = at
+    state.lastInteraction = at
+    state.visible = document.visibilityState === 'visible'
+    state.focused = document.hasFocus()
 }
 
 const onScrollOrResize = (): void => {
+    interact()
     if (scrollQueued) return
     scrollQueued = true
     requestAnimationFrame(() => {
@@ -134,34 +138,37 @@ const onScrollOrResize = (): void => {
     })
 }
 
-/**
- * Listeners are global and read the mutable page state, so they are attached
- * once for the lifetime of the tab — a VitePress route change swaps the state,
- * not the listeners.
- */
 const installListeners = (): void => {
     if (listenersInstalled) return
     listenersInstalled = true
     window.addEventListener('scroll', onScrollOrResize, { passive: true })
     window.addEventListener('resize', onScrollOrResize, { passive: true })
+    for (const event of ['pointerdown', 'keydown', 'touchstart', 'wheel'] as const) {
+        window.addEventListener(event, interact, { passive: true, capture: true })
+    }
+    window.addEventListener('focus', onFocus)
+    window.addEventListener('blur', onBlur)
     document.addEventListener('visibilitychange', onVisibilityChange)
-    // `pagehide`, not `beforeunload`: it also fires when a phone backgrounds
-    // the tab, and it does not disqualify the page from the bfcache.
     window.addEventListener('pagehide', onPageHide)
+    window.addEventListener('pageshow', onPageShow)
 }
 
-/** Begin (or restart, on SPA navigation) measuring the current page. */
 export const startPageEngagement = (): void => {
     if (typeof window === 'undefined') return
+    const startedAt = now()
     state = {
         activeMs: 0,
-        resumedAt: document.visibilityState === 'visible' ? Date.now() : null,
+        emittedMs: 0,
+        lastTick: startedAt,
+        lastInteraction: startedAt,
+        visible: document.visibilityState === 'visible',
+        focused: document.hasFocus(),
         maxDepth: 0,
         reached: new Set(),
+        sequence: 0,
     }
     installListeners()
-    // A page shorter than the viewport is fully read on arrival and will never
-    // fire a scroll event. The new route's DOM is not laid out yet on the
-    // microtask after navigation, so measure on the next frame.
+    if (heartbeat !== undefined) window.clearInterval(heartbeat)
+    heartbeat = window.setInterval(() => flushEngagement('heartbeat'), HEARTBEAT_MS)
     requestAnimationFrame(sampleDepth)
 }

@@ -1,9 +1,9 @@
 import DefaultTheme from 'vitepress/theme'
 import type { Theme } from 'vitepress'
 import { useData, useRouter } from 'vitepress'
-import { defineComponent, h, onMounted, watch } from 'vue'
+import { defineComponent, h, nextTick, onMounted, watch } from 'vue'
 import type { DareBayThemeConfig } from '../chrome'
-import { DocsEvent, installDocsAnalytics, trackDocsEvent } from './analytics'
+import { DocsEvent, installDocsAnalytics, startDocsPage, trackDocsEvent } from './analytics'
 import { flushEngagement, startPageEngagement } from './engagement'
 import HubIndex from './HubIndex.vue'
 import { installWebVitals } from './vitals'
@@ -65,12 +65,15 @@ const DocsLayout = defineComponent({
     const router = useRouter()
 
     const onPageReady = () => {
+      startDocsPage()
       trackDocsEvent(DocsEvent.PageView)
       // A url that 404s is either a link the content fleet shipped broken or an
       // inbound link (or an indexed url) we retired without a redirect. Both are
       // fixable and neither is visible from the sitemap.
       if (page.value.isNotFound) {
-        trackDocsEvent(DocsEvent.NotFound, { referrer: document.referrer.slice(0, 512) })
+        let referrerHost = ''
+        try { referrerHost = document.referrer ? new URL(document.referrer).hostname : '' } catch { /* invalid referrer */ }
+        trackDocsEvent(DocsEvent.NotFound, { referrerHost })
       }
       startPageEngagement()
     }
@@ -81,16 +84,18 @@ const DocsLayout = defineComponent({
       // against zero analytics rows. One delegated listener covers every exit
       // link, including the ones the content fleet ships next.
       installDocsAnalytics()
-      // Once per document, never per route: see the note in vitals.ts.
-      installWebVitals()
       onPageReady()
+      // Once per document, never per route: see the note in vitals.ts. It is
+      // installed after the first page context exists so late CLS/INP reports
+      // cannot be attributed to whichever SPA route happens to be current.
+      installWebVitals()
     })
 
     // VitePress swaps the DOM on route changes rather than reloading, so the
     // next article needs the same treatment as the one we landed on.
     watch(
       () => router.route.path,
-      () => queueMicrotask(onPageReady),
+      () => void nextTick(onPageReady),
     )
 
     // `doc-footer-before` sits between the article and the prev/next pager, so the last

@@ -1,76 +1,64 @@
 ---
-title: Does DareBay really pay? How the payout is secured
-description: How DareBay guarantees the payout. The budget is locked before the start, an independent oracle counts the views, and the prize reaches the winner.
-provenance: { snapshot_date: "2026-07-09", source: "darebay-prod" }
+title: Does DareBay really pay? The chain from clip to money
+description: The full DareBay payout chain step by step - what is automatic, what is manual, where a submission can be put on hold, and what to do when a status stops moving.
+provenance: { snapshot_date: "2026-08-15", source: "darebay-prod" }
 numbers_used: []
 seo: true
 ---
 
-# Does DareBay really pay? How the payout is secured
+# Does DareBay really pay?
 
-Yes, DareBay really pays. The platform works as an intermediary and guarantor: the contest budget is locked at creation, an independent oracle counts the views through platform APIs, and the prize goes to the winners by those results. The organizer cannot take the money back after publishing the contest. The participant pays nothing to enter and nothing to withdraw. Below we go through exactly how that is built and how the reward reaches you.
+Yes. The useful answer is not the word but the chain, because that is what tells you which steps nobody can interfere with and which step is done by a person.
 
-## How the payout is secured
+Short version: the calculation is automatic and cannot be re-run in anyone's favour; moving the money is a separate stage that can be handled by hand, with no promised deadline attached to it.
 
-The intermediary and guarantor mechanic works in three steps:
+## The chain from a published clip to money
 
-1. **The organizer locks the budget when creating the contest.** The money is charged to the organizer balance and held on the platform. After publishing, the organizer cannot get it back or redirect it.
-2. **An independent party counts the results.** The platform pulls views straight through platform APIs (TikTok today). Votes and the winner selection also run through the platform. Neither the organizer nor the participant can adjust the numbers, and inflated views are written off at the source, so they never reach the payout.
-3. **The prize goes to the winners.** When a contest ends, the platform splits it by validated results. The organizer is not part of that: they can neither confirm the payout nor cancel it.
+1. **The contest is created with its terms.** The buyer sets the rate per 1000 views, the view threshold and the cap per submission. In a wallet-backed contest the budget is charged from their balance and locked against that contest at this point, before anybody sees the task.
+2. **A clipper takes the task and publishes.** The clip goes out on the site the contest names. Statistics are collected today for TikTok, YouTube and Instagram.
+3. **The clipper sends the link.** The submitted URL is what attaches a clip to a contest. Nothing is imported by hashtag, so a clip that was published but never submitted takes no part in anything.
+4. **The counter is read.** The platform's independent counter reads the published view counter on the site the clip was posted on. Neither the buyer nor the clipper types that figure in, and neither can adjust it.
+5. **The formula runs.** `views / 1000 * rate`, capped at the contest's cap per submission, for every clip that cleared the threshold. Clearing the threshold puts the whole counter into the calculation, not just the part above it.
+6. **The result becomes an obligation.** The platform records a credit or a payout obligation with a status attached to it. That record is what you follow from here.
+7. **The obligation is fulfilled.** This is the manual step. Money reaching your hands depends on payout details and processing, and DareBay does not publish a settlement time for it.
 
-The participant risks no money: no deposit, no entry fee, no withdrawal fee.
+Steps 1 to 6 leave no room for a change of mind: the terms were fixed at creation, the figure came from outside both parties, and the arithmetic is fixed. Step 7 is the one where you are relying on the operator rather than on the mechanism, and pretending otherwise would be dishonest.
 
-## Why the money cannot disappear
+## Where the chain can stall
 
-The prize is not held in the organizer's account. Once the contest is created, the money sits on the platform and is tied to that specific contest. Neither the organizer nor the platform spends those funds on anything else: the budget stays attached to the contest until it ends and goes only to payouts for it.
+**A submission gets flagged.** Suspicious view dynamics put a clip on hold and pause the accrual on it until it has been looked at. That is a pause and not a verdict, and there are three ways out of it: the clip passes and is counted normally, it stays on hold until the review window runs out and a payout on it is still possible afterwards, or moderation rejects it and it takes no part in the budget split.
 
-From there the prize is split by the rule the organizer locked in before the start:
+**The clip disappears.** A video deleted, hidden or blocked by the site before the contest is finalized has no counter left to read, so nothing can be confirmed for it. Keep it published until the contest closes.
 
-- **Pay-per-view contests.** The views of each submission are counted through platform APIs and the budget is split in proportion to validated views.
-- **Contests with a vote or a jury pick.** The prize goes to the winner as soon as the results are in.
-- **Random selection.** A fair draw among all the participants decides.
+**The organizer settles directly.** In a contest without a locked pool, DareBay records the obligation and its status but the organizer is the one who pays. A delay there is between you and them, with the recorded status as your evidence.
 
-If a contest ends with no participants or with an unspent remainder, that money goes back to the organizer. No balance is ever left hanging between the two sides.
+## What to do when a status stops moving
 
-## Ways to receive the reward
+Check the contest card first, then the request status, then the payout details you entered - a mistyped wallet address is a more common cause of silence than anything sinister. If the status has genuinely not moved for an unusual stretch, write to support@darebay.com and quote the request identifier.
 
-On DareBay the wallet is one method among several. Here is what you can receive the reward through:
-
-- **Wallet** (USDT on TON)
-- **Card** (bank card)
-- **Bank transfer**
-- **An item** (a physical prize from the organizer)
-- **Telegram Stars**
-- **Telegram gifts**
-
-All six work, and each one gets the reward to the person who earned it. Card and bank transfer work just as well as the wallet, so you never have to open one.
+Two things not to do: do not create a second request for the same money, and do not send anyone a "fee" to speed it up. The fee for a withdrawal is taken out of the amount you requested, inside the form, and never in advance.
 
 ## Frequently asked questions
 
-### Does DareBay really pay?
+### How long does a payout take?
 
-Yes. The contest budget is locked on the platform at creation. When the contest ends, the prize is split by validated results and goes to the winners. The organizer cannot take the money back after publishing.
+There is no published figure, because fulfilment can be processed by hand and DareBay would rather say so than invent an SLA. What does not depend on timing: the wallet-backed budget was locked before you started, and the recorded calculation cannot be revised in anyone's favour after the fact.
 
-### How is the payout secured on DareBay?
+### What happens to my clip if it is flagged?
 
-The platform works as an intermediary and guarantor: the money is locked before the start, an independent oracle counts the results through platform APIs, and the prize goes to the winners without the organizer. More on the mechanic: [is DareBay a scam](/en/about/is-darebay-a-scam).
+Accrual on it is paused while it is reviewed. It can be released and counted in full, remain on hold with a payout still possible once the review window closes, or be rejected by moderation and left out of the split. There is no automatic verdict in either direction.
 
-### How can the payout be received?
+### The contest has closed. Where is my money?
 
-Wallet (USDT on TON), card, bank transfer, a physical item, Telegram Stars, Telegram gifts. Every one of them works and pays out, and the wallet is only one route of the six. More on withdrawals: [how to withdraw your winnings](/en/help/darebay-withdrawals).
+Closing a contest produces a recorded credit or obligation, not a transfer. Follow the status in the product, and if it is stuck, contact support with the identifier. See also the [withdrawal terms](/en/help/darebay-withdrawals), which are a separate step with their own minimum and fee.
 
-### What if the organizer changes their mind about paying?
+### Can the organizer refuse to pay after my clip has done well?
 
-There is nothing left for them to change their mind about: they have already paid. The money has been locked on the platform since the contest was created, and the prize is split by results without them.
+In a wallet-backed contest they have nothing left to refuse with: the budget left their balance when the contest was created. In a contest without a locked pool they remain the direct payer, which is exactly why the funding mode is on the card before you take the task.
 
-### Do I have to pay to withdraw my winnings?
+## Where to next
 
-No. DareBay charges nothing for withdrawals. The commission is paid by the organizer when the contest is created. The winner receives the full prize amount.
-
-### How are the results counted for the payout?
-
-Views are pulled through platform APIs (TikTok today), straight from the source with nobody in between. Votes and the winner selection also run through the platform. Neither side can adjust the numbers. More on that: [is DareBay legit](/en/about/is-darebay-legit).
-
-## The bottom line
-
-DareBay really pays, and the payout is secured by the intermediary and guarantor mechanic: the budget is locked before the start, an independent party counts the results, and the prize reaches the winner. The participant pays nothing to enter and nothing to withdraw. The reward can reach you by card, bank transfer, wallet, Telegram Stars or gifts, and every one of those routes works. If you want to dig deeper, read [reviews of DareBay](/en/about/darebay-reviews), the breakdown of [is DareBay a scam](/en/about/is-darebay-a-scam), or look through the [FAQ section](/en/help/).
+- [The payout guarantee](/en/about/payout-guarantee) - what the guarantee covers and where it stops
+- [Is DareBay legit?](/en/about/is-darebay-legit) - the terms, the fees and who runs it
+- [Is DareBay a scam?](/en/about/is-darebay-a-scam) - the platform against the standard fraud patterns
+- [How pay-per-view works](/en/earnings/how-pay-per-view-works) - the same chain from the clipper's seat

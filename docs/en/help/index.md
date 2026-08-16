@@ -11,12 +11,12 @@ description: How contests, payouts, commission and withdrawals work. Short answe
 
 # DareBay help
 
-Everything worth knowing before your first contest: commission, withdrawals,
-submitting work, picking a winner, protection against inflated views. The short
-version first: money on DareBay is protected. The prize pool is locked on the
-platform the moment a contest goes live, and the payout goes to the winner on a
-confirmed result. If your question is whether we can be trusted at all, that is
-the next section over, [about the project](/en/about/).
+Everything worth knowing before your first contest: fees, withdrawals, submitting work, picking a
+winner, and what moderation actually does. The short version first: a wallet-backed budget is
+charged against the contest at creation, the result is checked, and a credit or payout obligation
+receives a status you can follow. Fulfilment and withdrawal are separate stages, can be processed
+by hand, and carry no promised date. If your question is whether we can be trusted at all, see
+[about the project](/en/about/).
 
 ## Pages in this section
 

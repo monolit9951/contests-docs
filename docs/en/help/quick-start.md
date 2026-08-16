@@ -1,6 +1,8 @@
 ---
 title: Quick start on DareBay
-description: Launch your first activity, send in your first entry, or just watch and vote. The whole loop takes minutes.
+description: "Pick a role and start in minutes: launch an activity, submit work, or watch and vote. Payout fulfilment follows later statuses."
+provenance: { snapshot_date: "2026-08-15", source: "darebay-prod" }
+numbers_used: []
 ---
 
 <div class="docs-cover">
@@ -23,17 +25,28 @@ work and your wallet stay with you in both.
 
 ## If you want to launch a contest
 
-Put up the prize, write the terms, publish. The budget is locked on the platform
-straight away, entries come in, a winner is picked, and the money goes to them.
-The fastest way to get the content you need made to order.
+Put up the prize, write the terms, publish. The budget is recorded on the platform
+straight away, entries come in, a winner is picked, and the platform stores a credit
+or payout obligation. Fulfilment through payout details and statuses can be manual.
 
 → [**Create your first contest**](/en/help/your-first-contest)
 
 ## If you want to take part
 
-Browse the active contests, read the terms, send in your work (text, image or
-video) and wait for the selection stage. The prize was locked on the platform
-before you even showed up: win it and you get it.
+Browse the active contests and read the terms. There are two shapes of task, and
+which one you are looking at changes everything about how you work:
+
+- **Pay per view.** You publish the video on the site the contest names, send back
+  the link, and the budget is split by counted views across everyone who cleared
+  the view threshold. Several people get paid, not one.
+- **Everything else.** You upload the work to DareBay (text, image or video) and
+  wait for the selection stage, where a vote, the organizer or a seeded draw
+  decides.
+
+A wallet-backed prize was locked on the platform before you even showed up; a
+manual-payout prize remains the organizer's direct payment obligation. Once a
+result is in, the platform records the amount and status; transfer or withdrawal
+is a separate stage that can be processed by hand.
 
 → [**Submit your work**](/en/help/submit-your-work)
 
@@ -47,8 +60,8 @@ outcome without submitting a single entry.
 ## Read this before you start
 
 - **[Prizes and payouts](/en/help/prizes-and-payouts)**: what people put up as a
-  reward (money or an item) and how it reaches the winner. Money arrives to a
-  wallet (USDT on TON), to a bank card, by bank transfer, in Telegram Stars or
-  as a gift, whichever suits you.
+  reward (money or an item), how the result is recorded and how manual fulfilment
+  works. The contest defines its reward method; the balance-withdrawal wizard
+  separately shows available USDT and Telegram Stars options.
 - **[Verification and trust](/en/help/verification)**: what the badge on an
   account means and why it matters to everyone dealing with it.

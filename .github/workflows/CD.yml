@@ -13,20 +13,66 @@ concurrency:
   group: contests-docs-release
   cancel-in-progress: false
 
+permissions:
+  contents: read
+
 env:
   IMAGE_REPOSITORY: contestvibe/contests-docs
+  PRODUCT_TRUTH_BACKEND_REPO: ${{ github.workspace }}/.product-truth-sources/backend
+  PRODUCT_TRUTH_PACK_REPO: ${{ github.workspace }}/.product-truth-sources/truth-pack
+  PRODUCT_TRUTH_REQUIRE_LOCAL_SOURCES: '1'
 
 jobs:
   CD:
     if: github.ref_name == 'release'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
           fetch-depth: 0
           # Pin the event source. A movable branch checkout could make a queued
           # run test/build different bytes from GITHUB_SHA.
           ref: ${{ github.sha }}
+
+      - name: Resolve reviewed product-truth revisions
+        id: product_truth_refs
+        run: node scripts/export-product-truth-source-refs.mjs
+
+      # Product claims are verified against the reviewed commits in two fixed,
+      # private source repositories. Each repository has its own read-only
+      # deploy key. Full history proves ancestry of the exact reviewed SHA;
+      # sparse checkout limits the working tree without changing fetch refs.
+      - name: Checkout reviewed backend truth source
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          repository: monolit9951/Contests
+          ref: ${{ steps.product_truth_refs.outputs.backend_sha }}
+          path: .product-truth-sources/backend
+          fetch-depth: 0
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            src/main/resources/application.properties
+            docs/MANUAL_PAYOUTS_ADMIN.md
+            src/main/java/com/neptune/core/contest/domain/service/ContestLifecycleManager.java
+            src/main/java/com/neptune/core/withdrawal/service/WithdrawalService.java
+            src/main/java/com/neptune/core/winners/domain/service/RandomWinnerSelector.java
+          ssh-key: ${{ secrets.PRODUCT_TRUTH_BACKEND_DEPLOY_KEY }}
+          ssh-strict: true
+          persist-credentials: false
+
+      - name: Checkout reviewed truth-pack source
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          repository: monolit9951/darebay-seo-fleet
+          ref: ${{ steps.product_truth_refs.outputs.truth_pack_sha }}
+          path: .product-truth-sources/truth-pack
+          fetch-depth: 0
+          sparse-checkout-cone-mode: false
+          sparse-checkout: data/product-facts.md
+          ssh-key: ${{ secrets.PRODUCT_TRUTH_PACK_DEPLOY_KEY }}
+          ssh-strict: true
+          persist-credentials: false
 
       - name: Refuse a queued stale release before build
         run: |
@@ -37,23 +83,38 @@ jobs:
             exit 1
           fi
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
         with:
-          node-version: "22"
+          node-version: "22.18.0"
+          cache: npm
 
       - run: npm ci
+
+      - name: Audit runtime dependencies
+        run: npm audit --omit=dev --audit-level=high
 
       # Direct pushes to release do not pass through the pull-request workflow.
       # Test the exact event commit before producing any registry artifact.
       - name: Run publication contract tests
         run: npm test
 
+      - name: Generate the runtime dependency SBOM
+        run: npm sbom --omit=dev --sbom-format cyclonedx > docs-runtime-sbom.cdx.json
+
+      - name: Preserve the runtime SBOM outside public assets
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: docs-runtime-sbom-${{ github.sha }}
+          path: docs-runtime-sbom.cdx.json
+          if-no-files-found: error
+          retention-days: 30
+
       # The image intentionally has no .git directory. Generate the versioned
       # page-date snapshot while full history is available.
       - name: Generate deterministic page dates
         run: npm run gen:dates
 
-      - uses: docker/login-action@v3
+      - uses: docker/login-action@74a5d142397b4f367a81961eba4e8cd7edddf772 # v3.4.0
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
@@ -139,7 +200,7 @@ jobs:
           fi
 
       - name: Atomically commit container, routes and registry latest
-        uses: appleboy/ssh-action@v1.2.5
+        uses: appleboy/ssh-action@0ff4204d59e8e51228ff73bce53f80d53301dee2 # v1.2.5
         env:
           EXPECTED_RELEASE_SHA: ${{ github.sha }}
           EXPECTED_MANIFEST_DIGEST: ${{ steps.candidate.outputs.manifest_digest }}

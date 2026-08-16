@@ -1,7 +1,8 @@
 ---
 title: Can you pay with crypto on DareBay?
-description: Yes. The DareBay wallet works with USDT on TON. Crypto is not required though, card and bank transfer work on equal terms.
-provenance: { snapshot_date: "2026-07-10", source: "darebay-prod" }
+description: Yes. The DareBay wallet works with USDT on TON. A particular contest can define another reward method.
+provenance: { snapshot_date: "2026-08-15", source: "darebay-prod-config" }
+numbers_used: []
 seo: true
 ---
 
@@ -10,10 +11,10 @@ seo: true
 Yes. The DareBay wallet works with USDT on the TON network. You can use it to:
 
 - **Top up** your wallet balance.
-- **Pay the prize pool and the commission** when creating a contest.
-- **Receive winnings** into your wallet.
+- **Fund the prize pool** when creating a contest; creation and top-ups currently carry no fee.
+- **Withdraw an available balance** as USDT to an external wallet by submitting a request in the withdrawal wizard.
 
-Crypto is not required at any step, though: it is one option out of five.
+Crypto is not required to enter or when a contest defines another reward method. The balance-withdrawal wizard offers USDT and Telegram Stars.
 
 ## What the wallet works with
 
@@ -21,7 +22,10 @@ The wallet works with USDT on the TON network. The available top-up and withdraw
 
 ## Do you have to pay with crypto?
 
-No. A reward can be paid out without crypto: to a bank card, by bank transfer, in Telegram Stars or as Telegram gifts. All of these work, fiat runs on equal terms with the wallet, and nothing is quietly converted in the background: your money does not turn into crypto behind your back.
+No. A contest can define a card, bank transfer, Telegram Stars, Telegram gift or an item as its
+reward method. Those are methods for a particular contest, not automatic withdrawal rails for
+one balance. The withdrawal wizard offers USDT to an external wallet and Telegram Stars; the
+request is processed manually through the payout details and statuses shown in the product.
 
 ---
 

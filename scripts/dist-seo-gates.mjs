@@ -46,6 +46,9 @@ for (const page of PAGES) {
     }
     const html = readFileSync(file, 'utf8')
 
+    const h1Tags = tags(html, 'h1')
+    if (h1Tags.length !== 1) fail('h1-count', `${path}: ${h1Tags.length}`)
+
     const documentLanguage = html.match(/<html\b[^>]*\blang="([^"]+)"/i)?.[1]
     if (documentLanguage !== locale) fail('html-lang', `${path}: ${documentLanguage ?? 'missing'} != ${locale}`)
 

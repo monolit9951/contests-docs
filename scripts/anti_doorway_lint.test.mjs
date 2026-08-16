@@ -11,10 +11,27 @@
 //      попадал в счётчик «checked» — дорвей во вложенном каталоге уезжал в прод «проверенным».
 // Каждый тест ниже — мутация: он обязан покраснеть, если соответствующую починку откатить.
 
-import { mkdtempSync, mkdirSync, writeFileSync, rmSync } from "node:fs";
+// Зачем (2026-08-15, issue #287): DUP_THRESHOLD стоял на 0.8 при потолке живого корпуса 0.161 -
+// гейт не мог сработать ни при каком содержании раздела и выдавал разрешение вместо проверки.
+// Пятисловные шинглы по построению слепы к пересказу: десять страниц /zarabotok/ отвечали на один
+// интент разными словами при j5 <= 0.133. Ниже к калибровке и к каждому новому правилу приложен
+// тест-мутант: он обязан покраснеть, если порог вернуть наверх или правило снять.
+
+// Зачем (2026-08-15, ратчет): три правила против смыслового дублирования судят страницу целиком,
+// поэтому правка одной цифры на легаси-странице отдавала под гейт весь её старый текст. Тесты ниже
+// фиксируют храповик: нарушение валит сборку, только если его внесло это изменение; то, что уже
+// было на базе, печатается долгом и сборку не валит; без базы храповик выключен и правила строги.
+
+import { mkdtempSync, mkdirSync, writeFileSync, rmSync, readFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
-import { runLint } from "./anti_doorway_lint.mjs";
+import {
+  runLint,
+  normalizeHeading,
+  sectionHeadings,
+  DUP_THRESHOLD,
+  PARAPHRASE_THRESHOLD,
+} from "./anti_doorway_lint.mjs";
 
 let failed = 0;
 const ok = (n) => console.log(`  ok   ${n}`);
@@ -121,6 +138,393 @@ console.log("anti_doorway_lint: переводы считаются одной s
     `stats=${JSON.stringify(result.stats)}`
   )
   f.cleanup()
+}
+
+// ---------------------------------------------------------------------------------------------
+// Калибровка порогов и правила против смыслового дублирования (issue #287).
+// ---------------------------------------------------------------------------------------------
+
+/** Последовательность различимых слов: шинглы получаются уникальными, и доля пересечения
+ * считается ровно тем, что задумано, а не схлопыванием повторов в один элемент. */
+const seq = (prefix, count, from = 0) =>
+  Array.from({ length: count }, (_, i) => `${prefix}${from + i}`).join(" ");
+
+const rulesOf = (res, rule) => res.violations.filter((v) => v.rule === rule);
+
+console.log("anti_doorway_lint: порог копипасты откалиброван по корпусу, а не задан априори");
+{
+  const f = fixture();
+  // Две страницы с общим блоком в 300 слов из 400: j5 ~ 0.60. При старом пороге 0.8 это
+  // проходило гейт, хотя три четверти текста дословно общие.
+  const shared = seq("obshchee", 300);
+  const a = f.page("docs/zarabotok/copy-a.md", { body: `${shared} ${seq("levo", 100)}` });
+  const b = f.page("docs/zarabotok/copy-b.md", { body: `${shared} ${seq("pravo", 100)}` });
+  const res = runLint({ corpusDir: "docs", changedFiles: [a, b], root: f.root, addedFiles: new Set() });
+  const dup = rulesOf(res, "duplicate");
+  check("дословное переиспользование 3/4 текста = duplicate",
+    dup.length === 2 && dup.every((v) => /jaccard=/.test(v.msg)),
+    `duplicate не сработал при j5~0.60: ${JSON.stringify(res.violations)}`);
+  check("порог копипасты опущен ниже трети (мутант: возврат к 0.8 красит тест)",
+    DUP_THRESHOLD <= 0.35,
+    `DUP_THRESHOLD=${DUP_THRESHOLD}; при потолке живого корпуса 0.161 порог 0.8 недостижим`);
+  f.cleanup();
+}
+
+console.log("anti_doorway_lint: пересказ виден трёхсловным шинглам и невидим пятисловным");
+{
+  const f = fixture();
+  // Обе страницы собраны из одних и тех же четырёхсловных блоков, переставленных и сшитых
+  // разными связками. Общих пятисловных шинглов нет вовсе (j5 = 0), общих трёхсловных - четверть.
+  // Это и есть дорвей раздела /zarabotok/: те же тезисы, другие слова вокруг них.
+  const blocks = Array.from({ length: 60 }, (_, i) => seq(`tezis${i}x`, 4));
+  const weave = (parts, glue) => parts.map((p, i) => (i ? `${glue}${i} ${p}` : p)).join(" ");
+  const a = f.page("docs/zarabotok/retell-a.md", { body: weave(blocks, "svyazka") });
+  const b = f.page("docs/zarabotok/retell-b.md", { body: weave([...blocks].reverse(), "perehod") });
+  const res = runLint({ corpusDir: "docs", changedFiles: [a, b], root: f.root, addedFiles: new Set() });
+  check("пересказ = paraphrase",
+    rulesOf(res, "paraphrase").length === 2,
+    `paraphrase не сработал: ${JSON.stringify(res.violations)}`);
+  check("пятисловные шинглы этого не видят - значит правило добавляет сигнал, а не дублирует старое",
+    rulesOf(res, "duplicate").length === 0,
+    `duplicate сработал там, где j5=0: ${JSON.stringify(rulesOf(res, "duplicate"))}`);
+  check("порог пересказа лежит ниже потолка дорвейного кластера корпуса (0.188)",
+    PARAPHRASE_THRESHOLD < 0.188,
+    `PARAPHRASE_THRESHOLD=${PARAPHRASE_THRESHOLD}`);
+  f.cleanup();
+}
+
+console.log("anti_doorway_lint: нормальные страницы одного хаба остаются зелёными");
+{
+  const f = fixture();
+  // 75 общих слов из 400 - это j5~0.098 и j3~0.101, то есть уровень p90 живого корпуса:
+  // две честные страницы одной темы. Гейт, который красит это, бесполезен.
+  const shared = seq("obshchee", 75);
+  const a = f.page("docs/zarabotok/norm-a.md", { body: `${shared} ${seq("levo", 325)}` });
+  const b = f.page("docs/zarabotok/norm-b.md", { body: `${shared} ${seq("pravo", 325)}` });
+  const res = runLint({ corpusDir: "docs", changedFiles: [a, b], root: f.root, addedFiles: new Set() });
+  check("общий словарь на уровне p90 корпуса не считается дублированием",
+    !res.violations.some((v) => v.rule === "duplicate" || v.rule === "paraphrase"),
+    `ложное срабатывание: ${JSON.stringify(res.violations)}`);
+  f.cleanup();
+}
+
+const faqPage = (f, path, questions, { h2 = [], lead = null } = {}) =>
+  f.page(path, {
+    body: [
+      lead ?? seq(path.replace(/[^a-z]/g, ""), 140),
+      ...h2.map((title) => `## ${title}\n\n${seq(`${title.replace(/[^a-zа-я]/gi, "")}tekst`, 40)}`),
+      "## Часто задаваемые вопросы",
+      ...questions.map((q) => `### ${q}\n\n${seq(`otvet${q.length}`, 30)}`),
+      "## Куда дальше",
+      "- [Заработок](/zarabotok/)",
+    ].join("\n\n"),
+  });
+
+console.log("anti_doorway_lint: один и тот же вопрос FAQ на N страницах хаба");
+{
+  const f = fixture();
+  const pages = [
+    faqPage(f, "docs/zarabotok/faq-a.md", ["Нужны ли подписчики?", "Сколько стоит участие?"]),
+    faqPage(f, "docs/zarabotok/faq-b.md", ["Нужна ли аудитория или подписчики?", "Какие видео подходят?"]),
+    faqPage(f, "docs/zarabotok/faq-c.md", ["Нужны ли подписчики, чтобы начать?", "Когда приходят деньги?"]),
+  ];
+  const res = runLint({ corpusDir: "docs", changedFiles: pages, root: f.root, addedFiles: new Set() });
+  check("вопрос, повторённый на трёх страницах хаба = faq-echo",
+    rulesOf(res, "faq-echo").length === 3,
+    `faq-echo: ${JSON.stringify(rulesOf(res, "faq-echo"))}`);
+  check("переформулировка считается тем же вопросом (иначе правило обходится синонимом)",
+    rulesOf(res, "faq-echo").every((v) => /3 pages/.test(v.msg)),
+    `эхо посчитано не по трём страницам: ${JSON.stringify(rulesOf(res, "faq-echo"))}`);
+  check("разные вопросы не склеиваются: «когда приходят деньги» не эхо для «какие видео подходят»",
+    !rulesOf(res, "faq-echo").some((v) => /какие видео|когда приходят/.test(v.msg)),
+    `склеены разные вопросы: ${JSON.stringify(rulesOf(res, "faq-echo"))}`);
+  f.cleanup();
+}
+
+console.log("anti_doorway_lint: две страницы вправе делить вопрос, а хаб-соседство обязательно");
+{
+  const f = fixture();
+  const pair = [
+    faqPage(f, "docs/zarabotok/pair-a.md", ["Нужны ли подписчики?"]),
+    faqPage(f, "docs/zarabotok/pair-b.md", ["Нужны ли подписчики?"]),
+  ];
+  const r1 = runLint({ corpusDir: "docs", changedFiles: pair, root: f.root, addedFiles: new Set() });
+  check("двух страниц с общим вопросом мало для нарушения",
+    rulesOf(r1, "faq-echo").length === 0,
+    `порог эха занижен: ${JSON.stringify(rulesOf(r1, "faq-echo"))}`);
+
+  const third = faqPage(f, "docs/pomoshch/other-hub.md", ["Нужны ли подписчики?"]);
+  const r2 = runLint({ corpusDir: "docs", changedFiles: [...pair, third], root: f.root, addedFiles: new Set() });
+  check("третья страница в ДРУГОМ хабе эхо не создаёт",
+    rulesOf(r2, "faq-echo").length === 0,
+    `эхо посчитано через границу хаба: ${JSON.stringify(rulesOf(r2, "faq-echo"))}`);
+  f.cleanup();
+}
+
+console.log("anti_doorway_lint: переводы одной страницы не эхо друг другу");
+{
+  const f = fixture();
+  const translations = [
+    faqPage(f, "docs/zarabotok/skolko-platyat-za-1000-prosmotrov.md", ["Как считаются просмотры?"]),
+    faqPage(f, "docs/ua/zarobitok/skilky-platiat-za-1000-perehliadiv.md", ["Как считаются просмотры?"]),
+    faqPage(f, "docs/en/earnings/pay-per-1000-views.md", ["Как считаются просмотры?"]),
+  ];
+  const res = runLint({ corpusDir: "docs", changedFiles: translations, root: f.root, addedFiles: new Set() });
+  check("RU/UK/EN одного semantic id не образуют эхо из трёх страниц",
+    rulesOf(res, "faq-echo").length === 0,
+    `перевод засчитан дублем: ${JSON.stringify(rulesOf(res, "faq-echo"))}`);
+  f.cleanup();
+}
+
+console.log("anti_doorway_lint: H2 - содержательные секции против сквозной вёрстки");
+{
+  const f = fixture();
+  // У всех трёх и «Пример расчёта», и «Куда дальше». Первое - повторённая секция, второе -
+  // обязательный блок домашнего стиля: он стоит на 13 из 15 страниц живого /zarabotok/.
+  const pages = ["h2-a", "h2-b", "h2-c"].map((name) =>
+    faqPage(f, `docs/zarabotok/${name}.md`, [`Вопрос страницы ${name}`], { h2: ["Пример расчёта"] })
+  );
+  const res = runLint({ corpusDir: "docs", changedFiles: pages, root: f.root, addedFiles: new Set() });
+  const echoes = rulesOf(res, "heading-echo");
+  check("одинаковая содержательная секция на трёх страницах хаба = heading-echo",
+    echoes.length === 3 && echoes.every((v) => /пример расчета/.test(v.msg)),
+    `heading-echo: ${JSON.stringify(echoes)}`);
+  check("сквозной навигационный блок нарушением не считается",
+    !res.violations.some((v) => /куда дальше/i.test(v.msg)),
+    `«Куда дальше» попал в нарушения - гейт зальёт шумом весь корпус: ${JSON.stringify(echoes)}`);
+  f.cleanup();
+}
+
+console.log("anti_doorway_lint: вопросом считается только H3 внутри секции FAQ");
+{
+  const f = fixture();
+  const outside = ["out-a", "out-b", "out-c"].map((name) =>
+    f.page(`docs/zarabotok/${name}.md`, {
+      body: [
+        seq(`telo${name.replace(/-/g, "")}`, 160),
+        "## Как всё устроено",
+        "### Нужны ли подписчики?",
+        seq(`podrobno${name.replace(/-/g, "")}`, 60),
+      ].join("\n\n"),
+    })
+  );
+  const res = runLint({ corpusDir: "docs", changedFiles: outside, root: f.root, addedFiles: new Set() });
+  check("H3 вне блока FAQ вопросом не считается",
+    rulesOf(res, "faq-echo").length === 0,
+    `подзаголовок текста учтён как вопрос FAQ: ${JSON.stringify(rulesOf(res, "faq-echo"))}`);
+  f.cleanup();
+}
+
+console.log("anti_doorway_lint: разбор заголовков");
+{
+  check("нормализация снимает регистр, пунктуацию, разметку и ё",
+    normalizeHeading("**Когда придёт   выплата?**") === "когда придет выплата",
+    `получено: "${normalizeHeading("**Когда придёт   выплата?**")}"`);
+  const parsed = sectionHeadings([
+    "# Заголовок страницы",
+    "## Пример расчёта",
+    "### Не вопрос",
+    "## Часто задаваемые вопросы",
+    "### Нужны ли подписчики?",
+    "```",
+    "## Не заголовок, а код",
+    "```",
+    "### Когда приходят деньги?",
+    "## Куда дальше",
+  ].join("\n"));
+  check("FAQ отделён от прочих секций, вёрстка отброшена, код не разбирается",
+    parsed.faq.length === 2 &&
+      parsed.faq[0] === "нужны ли подписчики" &&
+      parsed.h2.length === 1 &&
+      parsed.h2[0] === "пример расчета",
+    `разбор: ${JSON.stringify(parsed)}`);
+}
+
+console.log("anti_doorway_lint: контракт вывода нарушений не изменился");
+{
+  const f = fixture();
+  const pages = [
+    faqPage(f, "docs/zarabotok/shape-a.md", ["Нужны ли подписчики?"], { h2: ["Пример расчёта"] }),
+    faqPage(f, "docs/zarabotok/shape-b.md", ["Нужны ли подписчики?"], { h2: ["Пример расчёта"] }),
+    faqPage(f, "docs/zarabotok/shape-c.md", ["Нужны ли подписчики?"], { h2: ["Пример расчёта"] }),
+  ];
+  const res = runLint({ corpusDir: "docs", changedFiles: pages, root: f.root, addedFiles: new Set() });
+  check("каждое нарушение - это {rule, file, msg} со строковыми полями",
+    res.violations.length > 0 &&
+      res.violations.every((v) =>
+        typeof v.rule === "string" && typeof v.file === "string" && typeof v.msg === "string"),
+    `форма нарушений изменилась: ${JSON.stringify(res.violations)}`);
+  check("новые правила приходят под собственными значениями rule",
+    ["faq-echo", "heading-echo"].every((rule) => res.violations.some((v) => v.rule === rule)),
+    `правила: ${JSON.stringify([...new Set(res.violations.map((v) => v.rule))])}`);
+  f.cleanup();
+}
+
+// ---------------------------------------------------------------------------------------------
+// Ратчет: три правила против смыслового дублирования судят только то, что внесло изменение.
+// ---------------------------------------------------------------------------------------------
+
+/** Слепок «базовой ревизии»: содержимое файлов ДО правки. Тест пишет базовую версию страницы,
+ * снимает слепок и переписывает файл — ровно то, что в CI даёт `git cat-file` по base sha. */
+const snapshot = (f, rels) => new Map(rels.map((rel) => [rel, readFileSync(join(f.root, rel), "utf8")]));
+
+const filesOf = (list, rule) => list.filter((v) => v.rule === rule).map((v) => v.file).sort();
+
+console.log("anti_doorway_lint: дублирование, которое было на базе, не валит сборку - но видно");
+{
+  const f = fixture();
+  const pages = [
+    faqPage(f, "docs/zarabotok/legacy-a.md", ["Нужны ли подписчики?"]),
+    faqPage(f, "docs/zarabotok/legacy-b.md", ["Нужны ли подписчики?"]),
+    faqPage(f, "docs/zarabotok/legacy-c.md", ["Нужны ли подписчики?"]),
+  ];
+  const base = snapshot(f, pages);
+  // Волна правит цифры и ссылки, а не интент: у страницы переписан лид, вопрос переформулирован.
+  faqPage(f, "docs/zarabotok/legacy-c.md", ["Нужны ли подписчики, чтобы начать?"], { lead: seq("novyetsifry", 140) });
+
+  const res = runLint({ corpusDir: "docs", changedFiles: pages, root: f.root, addedFiles: new Set(), baseline: base });
+  check("унаследованное эхо не попадает в нарушения",
+    rulesOf(res, "faq-echo").length === 0,
+    `ратчет пропустил старый долг в нарушения: ${JSON.stringify(rulesOf(res, "faq-echo"))}`);
+  check("унаследованное эхо печатается долгом по каждой странице, а не глотается молча",
+    filesOf(res.inherited, "faq-echo").join() === pages.slice().sort().join(),
+    `долг: ${JSON.stringify(res.inherited)}`);
+  const ratcheted = (list) => list.filter((v) => ["paraphrase", "faq-echo", "heading-echo"].includes(v.rule));
+  check("переформулированный вопрос остаётся тем же долгом, а не становится новым нарушением",
+    !ratcheted(res.violations).some((v) => v.file === "docs/zarabotok/legacy-c.md") &&
+      ratcheted(res.inherited).some((v) => v.file === "docs/zarabotok/legacy-c.md"),
+    `правка формулировки засчитана новым дублированием: ${JSON.stringify(ratcheted(res.violations))}`);
+  check("счётчики ратчета сходятся с массивами",
+    res.ratchet.enabled === true && res.ratchet.fresh === res.violations.length &&
+      res.ratchet.known === res.inherited.length && res.ratchet.basePages === base.size,
+    `ratchet=${JSON.stringify(res.ratchet)}`);
+
+  // Тот же корпус без базы: ратчет выключен, правило судит полный текст.
+  const strict = runLint({ corpusDir: "docs", changedFiles: pages, root: f.root, addedFiles: new Set() });
+  check("без базовой ревизии ратчет выключен и правило работает строго",
+    strict.ratchet.enabled === false && rulesOf(strict, "faq-echo").length === 3 && strict.inherited.length === 0,
+    `strict: ratchet=${JSON.stringify(strict.ratchet)}, нарушения=${JSON.stringify(strict.violations)}`);
+  f.cleanup();
+}
+
+console.log("anti_doorway_lint: дублирование, внесённое волной, валит сборку");
+{
+  const f = fixture();
+  // На базе вопрос делят две страницы - это разрешено. Третью добавляет эта волна: эхо создано ею.
+  const pair = [
+    faqPage(f, "docs/zarabotok/wave-a.md", ["Нужны ли подписчики?"]),
+    faqPage(f, "docs/zarabotok/wave-b.md", ["Нужны ли подписчики?"]),
+  ];
+  const base = snapshot(f, pair);
+  const added = faqPage(f, "docs/zarabotok/wave-c.md", ["Нужны ли подписчики?"]);
+
+  const res = runLint({
+    corpusDir: "docs", changedFiles: [...pair, added], root: f.root,
+    addedFiles: new Set([added]), baseline: base,
+  });
+  check("эхо, которого на базе не было, красит все три страницы",
+    filesOf(res.violations, "faq-echo").join() === [...pair, added].sort().join(),
+    `нарушения: ${JSON.stringify(rulesOf(res, "faq-echo"))}`);
+  check("долга при этом нет: гейт не выдаёт новое нарушение за старое",
+    res.inherited.length === 0,
+    `долг: ${JSON.stringify(res.inherited)}`);
+  f.cleanup();
+}
+
+console.log("anti_doorway_lint: у новой страницы базы нет - её дублирование новое целиком");
+{
+  const f = fixture();
+  const legacy = [
+    faqPage(f, "docs/zarabotok/old-a.md", ["Нужны ли подписчики?"]),
+    faqPage(f, "docs/zarabotok/old-b.md", ["Нужны ли подписчики?"]),
+    faqPage(f, "docs/zarabotok/old-c.md", ["Нужны ли подписчики?"]),
+  ];
+  const base = snapshot(f, legacy);
+  const added = faqPage(f, "docs/zarabotok/old-d.md", ["Нужны ли подписчики?"]);
+
+  const res = runLint({
+    corpusDir: "docs", changedFiles: [...legacy, added], root: f.root,
+    addedFiles: new Set([added]), baseline: base,
+  });
+  check("новая страница отвечает за всё своё дублирование",
+    filesOf(res.violations, "faq-echo").join() === added,
+    `нарушения: ${JSON.stringify(rulesOf(res, "faq-echo"))}`);
+  check("старожилы, у которых то же эхо было и на базе, остаются долгом",
+    filesOf(res.inherited, "faq-echo").join() === legacy.slice().sort().join(),
+    `долг: ${JSON.stringify(res.inherited)}`);
+  f.cleanup();
+}
+
+console.log("anti_doorway_lint: новый вопрос на старой странице виден сквозь унаследованный долг");
+{
+  const f = fixture();
+  const before = ["mix-a", "mix-b", "mix-c"].map((name) =>
+    faqPage(f, `docs/zarabotok/${name}.md`, ["Нужны ли подписчики?"]));
+  const base = snapshot(f, before);
+  // Волна дописывает всем трём один и тот же второй вопрос.
+  const after = ["mix-a", "mix-b", "mix-c"].map((name) =>
+    faqPage(f, `docs/zarabotok/${name}.md`, ["Нужны ли подписчики?", "Когда приходят деньги?"]));
+
+  const res = runLint({ corpusDir: "docs", changedFiles: after, root: f.root, addedFiles: new Set(), baseline: base });
+  check("дописанное эхо валит сборку на всех трёх страницах",
+    rulesOf(res, "faq-echo").length === 3 && rulesOf(res, "faq-echo").every((v) => /когда приходят деньги/.test(v.msg)),
+    `нарушения: ${JSON.stringify(rulesOf(res, "faq-echo"))}`);
+  check("старый вопрос той же страницы одновременно остаётся долгом",
+    res.inherited.filter((v) => v.rule === "faq-echo" && /нужны ли подписчики/.test(v.msg)).length === 3,
+    `долг: ${JSON.stringify(res.inherited)}`);
+  f.cleanup();
+}
+
+console.log("anti_doorway_lint: ратчет пересказа держится за партнёра, а не за худшее число");
+{
+  const f = fixture();
+  const blocks = Array.from({ length: 60 }, (_, i) => seq(`tezis${i}x`, 4));
+  const weave = (parts, glue) => parts.map((p, i) => (i ? `${glue}${i} ${p}` : p)).join(" ");
+  const pair = [
+    f.page("docs/zarabotok/ret-a.md", { body: weave(blocks, "svyazka") }),
+    f.page("docs/zarabotok/ret-b.md", { body: weave([...blocks].reverse(), "perehod") }),
+  ];
+  const base = snapshot(f, pair);
+  const added = f.page("docs/zarabotok/ret-c.md", { body: weave([...blocks].sort(), "sviaz") });
+
+  const res = runLint({
+    corpusDir: "docs", changedFiles: [...pair, added], root: f.root,
+    addedFiles: new Set([added]), baseline: base,
+  });
+  check("старая пара пересказа остаётся долгом",
+    res.inherited.some((v) => v.rule === "paraphrase" && v.file === "docs/zarabotok/ret-a.md" && /ret-b/.test(v.msg)),
+    `долг: ${JSON.stringify(res.inherited)}`);
+  check("новый партнёр по пересказу валит даже страницу, уже сидящую в долге",
+    rulesOf(res, "paraphrase").some((v) => v.file === "docs/zarabotok/ret-a.md" && /ret-c/.test(v.msg)),
+    `нарушения: ${JSON.stringify(rulesOf(res, "paraphrase"))}`);
+  f.cleanup();
+}
+
+console.log("anti_doorway_lint: ратчет не распространяется на старые правила");
+{
+  const f = fixture();
+  const shared = seq("obshchee", 300);
+  const copies = [
+    f.page("docs/zarabotok/keep-a.md", { body: `${shared} ${seq("levo", 100)}` }),
+    f.page("docs/zarabotok/keep-b.md", { body: `${shared} ${seq("pravo", 100)}` }),
+  ];
+  const red = f.page("docs/pomoshch/keep-redirect.md", { body: '<meta http-equiv="refresh" content="0;url=/app">' });
+  const noprov = f.page("docs/pomoshch/keep-noprov.md", { prov: false, body: seq("bezprovenansa", 200) });
+  const changed = [...copies, red, noprov];
+  // База идентична рабочему дереву: для ратчетуемых правил это максимальное «всё унаследовано».
+  const base = snapshot(f, changed);
+
+  const res = runLint({ corpusDir: "docs", changedFiles: changed, root: f.root, addedFiles: new Set(), baseline: base });
+  check("копипаста валит даже при полном совпадении с базой (duplicate не ратчетуется)",
+    rulesOf(res, "duplicate").length === 2,
+    `duplicate: ${JSON.stringify(res.violations)} / долг: ${JSON.stringify(res.inherited)}`);
+  check("redirect и provenance валят при полном совпадении с базой",
+    rulesOf(res, "redirect").length === 1 && rulesOf(res, "provenance").length === 1,
+    `нарушения: ${JSON.stringify(res.violations)}`);
+  check("старые правила не уезжают в долг",
+    !res.inherited.some((v) => ["duplicate", "redirect", "provenance", "path", "registry", "cap"].includes(v.rule)),
+    `долг: ${JSON.stringify(res.inherited)}`);
+  f.cleanup();
 }
 
 console.log("");

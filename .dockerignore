@@ -2,6 +2,7 @@ node_modules
 docs/.vitepress/dist
 docs/.vitepress/cache
 .git
+.product-truth-sources
 .github
 .gitignore
 .dockerignore

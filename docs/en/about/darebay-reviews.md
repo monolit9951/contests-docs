@@ -1,77 +1,64 @@
 ---
-title: DareBay reviews, payout mechanics and commission
-description: What DareBay is, why the prize is locked before the start, how payouts work through an intermediary and guarantor, and what the commission is.
-provenance: { snapshot_date: "2026-07-09", source: "darebay-prod" }
-numbers_used: [commission_fiat, commission_crypto, commission_coins]
+title: DareBay reviews - what to expect instead of testimonials
+description: Who actually uses DareBay, what a contest looks like from each side, and what the platform can and cannot promise - written out instead of collected as reviews.
+provenance: { snapshot_date: "2026-08-15", source: "darebay-prod" }
+numbers_used: []
 seo: true
 ---
 
-# DareBay: reviews and facts
+# DareBay reviews
 
-DareBay is a platform where brands and ordinary people launch activities (tasks, battles, challenges, contests), and participants make their own content and get paid for it. The platform works as an intermediary and guarantor: the prize is locked before the start, and the payout follows independently counted results, so there is nobody left in a position to burn you. Commission: fiat 5%, wallet 8%, COINS 10% (data as of 2026-07-09). Instead of other people's reviews, here is how it actually works.
+Reviews of an earning platform are the least reliable thing about it. The winners write glowing ones, the people whose clip missed the threshold write furious ones, and both are describing their own luck rather than the product. So instead of collecting testimonials, this page sets out what you would be signing up for and lets you decide whether it suits you.
 
-## Who DareBay is for
+DareBay is a marketplace for content tasks. Someone posts a task with a budget, creators make their own clips, and the reward follows the reach those clips get. The platform stands in the middle as intermediary and guarantor.
 
-Three groups of users:
+## Who it actually suits
 
-- **Clippers and content creators.** You take a task from the feed, film a video in your own style, post it with the required hashtag and send in the link. Clear the view threshold and you get paid. No agency, no follower minimum.
-- **Brands and buyers.** You write the task, put up the budget, the platform locks it. You pay only for a real result (views, votes, a jury pick). Whatever is left comes back.
-- **Experimenters.** Anyone with a budget can commission content for themselves: a challenge among friends, a personal contest. Same mechanic, personal use.
+- **Clippers and video creators.** You take a task from the open feed, cut a clip in your own style, publish it on the site the contest names and send the link back. Clear the view threshold and you are in the budget split. No agency, no portfolio, no follower minimum - the payment follows the reach of one specific clip.
+- **Brands and buyers.** You write the task, choose the funding mode and let creators pick it up themselves. Instead of negotiating with ten freelancers you publish one set of terms and pay by result.
+- **People running something for themselves.** A challenge among friends, a personal contest, a small campaign for a project nobody has heard of yet. Same mechanic, no minimum budget to qualify.
 
-## How the money is protected
+## What the experience is honestly like
 
-The first question in any review of any platform is "will I get burned?". Here is how that is settled:
+**Nothing is guaranteed to be worth your evening.** Whether a clip earns depends on views it has not got yet. A clip below the threshold earns nothing at all, and there is no consolation payment. That is the deal in every pay-per-view contest anywhere, and it is stated on the card rather than discovered afterwards.
 
-1. **The prize is locked before publishing.** The organizer sees the final amount (prize + commission) and confirms the charge. The money moves to the platform account, and from that point the organizer cannot spend it.
-2. **An independent party counts the results.** The platform pulls views straight through the TikTok API, votes are counted on the platform. Neither the organizer nor the participant can adjust the numbers, and inflated views are written off by TikTok itself, so they never reach the payout.
-3. **The prize goes to the winners.** When a contest closes, the money goes to whoever earned it by the rules. No approval from the organizer is needed.
+**The upside is that the terms hold.** The rate, the threshold and the budget are recorded at creation and cannot be rewritten once your clip is up. In a wallet-backed contest the budget is charged from the organizer before you take the task.
 
-The platform is the intermediary and guarantor between the buyer and the creator. It holds the money for the whole run of the contest and hands it out by the counted results.
+**The friction is at the end.** Calculation is automatic; getting the money out is a request with a fee and a minimum, processed by hand. No settlement deadline is promised, so if a predictable payout date is a hard requirement for you, this is the part to weigh.
 
-## Commission
+**Support is a person, not a queue number.** The product is run by a named operator who answers on Telegram. That is a genuine advantage over faceless platforms and not a substitute for the mechanics above.
 
-The commission is charged once, when the contest is created, and it is charged to the organizer, not to the winner.
+## Reading the figures quoted here
 
-| Payment method | Commission |
-|----------------|------------|
-| Fiat (card, bank) | 5% |
-| Wallet (crypto) | 8% |
-| COINS (internal points) | 10% |
+Every figure in this section is read from the platform's own data and dated in the page source, not lifted from someone else's article. Rates and thresholds are live medians across running contests, so they move. When a snapshot goes stale the page is rewritten rather than patched one number at a time.
 
-The data is current as of 2026-07-09. The exact percentage for your account is always shown in the contest creation form.
-
-The winner receives the full prize amount. The commission is not deducted from the payout.
+What you will not find here is an income projection. Nobody can tell you what a clip will do before it is published, and a page that tries is selling something.
 
 ## Frequently asked questions
 
+### Why are there no user reviews on this page?
+
+Because a review of a pay-per-view platform mostly reports how the reviewer's own clip performed. The checkable things - funding mode, fixed terms, an independent count, the fee schedule - are written out above and can be verified without trusting a stranger.
+
+### What is the smallest budget a contest can run on?
+
+There is no floor to qualify. A contest can be launched on a modest budget, and a contest whose prize is a physical item or a gift needs no cash pool at all.
+
+### Can I take part with no followers?
+
+Yes. There is no audience requirement anywhere in the product. Payment follows the views a specific clip got, which is why accounts with no following regularly end up in the budget split.
+
+### Are the source materials provided with the task?
+
+Sometimes. A buyer can attach material to a task, and across the contests running today none of them have. Read the contest terms: if nothing is attached, you pick the source yourself.
+
 ### Is DareBay a scam?
 
-No. The prize is locked before the contest starts. The organizer cannot take the money back after publishing. The payout follows the counted results. The platform works as an intermediary and guarantor, not as a "wallet full of promises".
+Short answer, no, and it deserves a longer one than a FAQ line: [DareBay checked against the standard fraud patterns](/en/about/is-darebay-a-scam).
 
-### What if the organizer refuses to pay?
+## Where to next
 
-They already paid. The money was locked on the platform the moment the contest was created, and there is no route back for it. The organizer takes no part in the payout: it follows the results without them.
-
-### How do I withdraw my winnings?
-
-Winnings land on your DareBay balance. From there the money goes out to a card, a bank account or a wallet (USDT on TON). All three work, and withdrawal is free. More on that: [how to withdraw your winnings](/en/help/darebay-withdrawals).
-
-### Is crypto required?
-
-No. Card and bank transfer work just as well as the wallet, and you never need to open a wallet to get your money. More on that: [can I pay with crypto](/en/help/paying-with-crypto).
-
-### Who counts the views?
-
-The platform pulls the data through platform APIs (TikTok today). Neither the organizer nor the participant can influence the count. More on that: [what stops fake submissions](/en/help/protection-from-view-fraud).
-
-### What is the minimum prize amount?
-
-A contest can be launched on any budget. Contests with a physical prize (an item, a gift) need no cash pool at all.
-
-### Can I take part without followers?
-
-Yes. There is no minimum audience. What counts is the result (views, the quality of the work), not the size of your channel.
-
-## The bottom line
-
-DareBay is not a freelance marketplace and not a lottery. It is a platform with a mechanic you can follow: the budget is locked, an independent party counts the results, and the prize reaches the winner without the organizer touching it. The commission is transparent: [5% fiat, 8% wallet, 10% COINS](/en/help/what-commission). If you still have questions, look through the [FAQ section](/en/help/).
+- [Does DareBay really pay?](/en/about/does-darebay-really-pay) - the chain from a published clip to money
+- [Is DareBay legit?](/en/about/is-darebay-legit) - terms, fees and who runs it
+- [The payout guarantee](/en/about/payout-guarantee) - what it covers and where it stops
+- [DareBay fees](/en/help/what-commission) - current terms by operation

@@ -1,28 +1,34 @@
 ---
 title: What if nobody enters?
-description: The prize returns to your balance in full. Part of the commission comes back too; the part that paid for feed placement does not.
+description: With no valid entries, a wallet-backed budget goes back to the organizer balance. Contest creation and top-ups currently carry a 0% fee.
+provenance: { snapshot_date: "2026-08-15", source: "darebay-prod" }
+numbers_used: [commission_fiat, commission_crypto, commission_coins]
 ---
 
 # What if nobody enters?
 
-If the submission deadline has passed and there are zero valid entries:
+Nothing bad happens to you. A contest that closes with zero valid entries costs the organizer
+nothing beyond the time spent writing it, and it leaves no mark on the account. The detail worth
+reading is which budget comes back and which was never held in the first place.
 
-## The prize comes back in full
+## What happens to the budget
 
-Cash prizes return to the available balance of your wallet, the whole
-amount. There is nothing to do by hand: it happens when the contest moves
-to its final state.
+In a **wallet-backed contest** the money was charged from your available balance at creation and
+tied to that contest, so it returns to that balance in full when the contest reaches its final
+state. Nothing to file, nothing to chase.
 
-Item prizes were never physically held by DareBay, so there is nothing to
+A contest **without a locked pool** is different: the platform never held anything, so there is no
+refund to queue. You simply never paid.
+
+Item prizes were never physically held by DareBay either, so there is nothing to
 return; you simply keep the item.
 
-## The commission comes back in part
+## What happens to fees
 
-The share of the commission that covered processing the prize pool is
-returned. The share that paid for feed placement and promotion is not: that
-resource was spent whether or not any submissions arrived.
-
-The exact amounts are shown in the final contest report.
+Creating a contest and topping up its budget currently carry a **0% fee** across fiat, USDT and
+COINS, so there is no separate “processing share” or “feed-placement share” to refund. The final
+report shows the unused budget returned. Store purchases and a later balance withdrawal are
+different operations with their own [current terms](/en/help/what-commission).
 
 ## Your rating does not drop
 

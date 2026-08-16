@@ -1,6 +1,8 @@
 ---
 title: Create your first contest
 description: Step by step, from "I have a budget and an idea" to "the entries are flying in". Publishing takes under ten minutes.
+provenance: { snapshot_date: "2026-08-15", source: "darebay-prod" }
+numbers_used: []
 ---
 
 # Create your first contest
@@ -43,14 +45,17 @@ One format per contest, no mixing.
 
 ## 6. How the winner is picked
 
-One of three selection types:
+One of four selection types:
 
-- **RANDOM**: a random pick among the most liked entries at the end. Good for
-  light giveaway campaigns.
+- **RANDOM**: a seeded draw among prize-eligible ACTIVE works. Likes do not
+  filter or weight the draw. Good for light giveaway campaigns.
 - **CREATOR_DECISION**: you pick the winner yourself after the deadline. Good
   when quality is subjective and you trust your own taste.
 - **VIEWER_VOTING**: the community votes and the top of the tally wins. Good if
   you want the contest to be about the community.
+- **ORACLE_ATTESTED_POOL**: nobody picks. The counted views of every submission
+  that cleared the threshold feed the pay-per-view formula, and the budget is
+  split by the result.
 
 The selection type is locked in at creation: once published, it cannot be
 changed.
@@ -61,8 +66,11 @@ A prize is either **MONEY** (a wallet payout in USDT on TON, a bank card, a bank
 transfer, Telegram Stars, Telegram gifts) or **ITEM** (a thing, described in
 text: "a signed vinyl record", "concert tickets"). You can set several prize
 places (1st, 2nd, 3rd) and several winners in one place.
+The contest defines the reward method. This does not mean that a credited balance can be
+withdrawn automatically through every method in that list: fulfilment can be manual, and the
+balance-withdrawal wizard shows its available rails separately.
 
-A money prize is locked the moment you publish: it leaves your balance and
+A wallet-backed money prize is locked the moment you publish: it leaves your balance and
 belongs to the result until the contest ends. You cannot pull it back, which is
 exactly why participants get to work.
 
@@ -73,18 +81,18 @@ exactly why participants get to work.
 - **Selection deadline** (CREATOR_DECISION only): by when you commit to naming
   the winner.
 
-## 9. Check the commission
+## 9. Check the total
 
-The organizer pays the commission, once, when creating the contest. You see the
-exact amount in your currency before you confirm, and there are no hidden
-add-ons. Nothing is taken out of the winner's prize, they receive the full
-amount. Rates and the promo for early organizers:
-[commission](/en/help/what-commission).
+Creating and topping up a contest budget currently carry no fee. Before you
+confirm, check the budget amount and currency. A participant's later balance
+withdrawal is a separate operation with its own terms: [current fees](/en/help/what-commission).
 
 ## 10. Publish
 
-One click. The contest moves from **UPCOMING** to **ACTIVE**, the prize pool is
-locked, and participants start sending in work.
+One click. The contest moves from **UPCOMING** to **ACTIVE**, a wallet-backed
+prize pool leaves your balance for the contest, and participants start sending in
+work. In a pay-per-view contest they publish on the site you named - statistics
+are collected today for TikTok, YouTube and Instagram - and send you the link.
 
 ---
 

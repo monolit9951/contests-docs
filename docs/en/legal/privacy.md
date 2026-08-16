@@ -87,8 +87,9 @@ their prizes. Specifically:
 
 ### 2.3 Wallet and transactions
 
-- The balance of your DareBay wallet in **DareBay Coins** - the
-  platform's internal unit for funding contests and paying winners.
+- The balances of your DareBay wallet: the available and locked **USDT**
+  balance used for contests and payouts, plus **COINS**, the platform's
+  internal gamification unit.
 - Records of top-ups, prize freezes, commissions, payouts to
   winners and withdrawals (where the methods we
   provide at the time are available).
@@ -333,9 +334,9 @@ withdraw marketing consents, unlink social networks.
   audited.
 - Regular automated dependency scans for vulnerabilities and prompt
   patching.
-- The wallet and the prize logic are built so that commission and payouts
-  are deterministic - no single person is able to redirect
-  funds.
+- The wallet and the prize logic are built so that commission and payout
+  amounts are computed deterministically rather than set by hand. Payout
+  fulfilment through the recorded details can be manual.
 
 If a breach happens that could create a risk to your rights, we
 notify the supervisory authority within **72 hours**, and you, where

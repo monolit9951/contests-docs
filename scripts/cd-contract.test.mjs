@@ -2,13 +2,24 @@ import { readFileSync } from 'node:fs'
 import { describe, expect, it } from 'vitest'
 
 const workflow = readFileSync(new URL('../.github/workflows/CD.yml', import.meta.url), 'utf8')
+const lintWorkflow = readFileSync(new URL('../.github/workflows/lint.yml', import.meta.url), 'utf8')
+const gitignore = readFileSync(new URL('../.gitignore', import.meta.url), 'utf8')
+const dockerignore = readFileSync(new URL('../.dockerignore', import.meta.url), 'utf8')
 const transaction = readFileSync(new URL('../deploy/deploy-content-transaction.sh', import.meta.url), 'utf8')
 const installer = readFileSync(new URL('../deploy/install-host-nginx-snippet.sh', import.meta.url), 'utf8')
+const pinnedSshAction = 'appleboy/ssh-action@0ff4204d59e8e51228ff73bce53f80d53301dee2'
 
 const functionBody = (source, name, nextName) => source.slice(
   source.indexOf(`${name}() {`),
   source.indexOf(`${nextName}() {`),
 )
+
+const namedStep = (source, name) => {
+  const marker = `      - name: ${name}`
+  const start = source.indexOf(marker)
+  const next = source.indexOf('\n      - ', start + marker.length)
+  return source.slice(start, next >= 0 ? next : source.length)
+}
 
 describe('release delivery contract', () => {
   it('serializes release jobs without cancelling a transaction in flight', () => {
@@ -43,7 +54,7 @@ describe('release delivery contract', () => {
     const beforePublish = workflow.indexOf('Refuse a stale release before candidate publication')
     const publish = workflow.indexOf('make push_app')
     const afterPublish = workflow.indexOf('Refuse a stale release after candidate publication')
-    const ssh = workflow.indexOf('uses: appleboy/ssh-action@v1.2.5')
+    const ssh = workflow.indexOf(`uses: ${pinnedSshAction}`)
     const decode = workflow.indexOf('decode_artifact deploy-content-transaction.sh')
     const remoteTip = workflow.indexOf('release_output="$(git ls-remote', decode)
     const invoke = workflow.indexOf('/bin/bash "$artifact_dir/deploy-content-transaction.sh"', remoteTip)
@@ -72,7 +83,7 @@ describe('release delivery contract', () => {
 
   it('uses one pinned SSH action and a server-created private staging directory', () => {
     expect(workflow).not.toContain('appleboy/scp-action@')
-    expect(workflow.match(/appleboy\/ssh-action@v1\.2\.5/g)).toHaveLength(1)
+    expect(workflow.split(pinnedSshAction)).toHaveLength(2)
     expect(workflow).not.toMatch(/appleboy\/(?:scp|ssh)-action@master/)
     expect(workflow).not.toContain('/tmp/darebay-content-')
     expect(workflow).not.toContain('Remove staged deployment artifacts')
@@ -214,5 +225,51 @@ describe('release delivery contract', () => {
     expect(persist).toBeLessThan(containerPhase)
     expect(containerPhase).toBeLessThan(routesPhase)
     expect(routesPhase).toBeLessThan(registryPhase)
+  })
+})
+
+describe('product-truth CI provenance contract', () => {
+  it.each([
+    ['release', workflow],
+    ['pull request', lintWorkflow],
+  ])('%s workflow checks out exact reviewed SHAs from private sources', (_name, source) => {
+    const resolveRefs = namedStep(source, 'Resolve reviewed product-truth revisions')
+    const backend = namedStep(source, 'Checkout reviewed backend truth source')
+    const truthPack = namedStep(source, 'Checkout reviewed truth-pack source')
+
+    expect(resolveRefs).toContain('id: product_truth_refs')
+    expect(resolveRefs).toContain('run: node scripts/export-product-truth-source-refs.mjs')
+    expect(source.indexOf(resolveRefs)).toBeLessThan(source.indexOf(backend))
+    expect(source.indexOf(backend)).toBeLessThan(source.indexOf(truthPack))
+
+    expect(backend).toContain('repository: monolit9951/Contests')
+    expect(backend).toContain('ref: ${{ steps.product_truth_refs.outputs.backend_sha }}')
+    expect(backend).toContain('ssh-key: ${{ secrets.PRODUCT_TRUTH_BACKEND_DEPLOY_KEY }}')
+    expect(backend).not.toContain('PRODUCT_TRUTH_PACK_DEPLOY_KEY')
+
+    expect(truthPack).toContain('repository: monolit9951/darebay-seo-fleet')
+    expect(truthPack).toContain('ref: ${{ steps.product_truth_refs.outputs.truth_pack_sha }}')
+    expect(truthPack).toContain('ssh-key: ${{ secrets.PRODUCT_TRUTH_PACK_DEPLOY_KEY }}')
+    expect(truthPack).not.toContain('PRODUCT_TRUTH_BACKEND_DEPLOY_KEY')
+
+    for (const checkout of [backend, truthPack]) {
+      expect(checkout).toContain('fetch-depth: 0')
+      expect(checkout).toContain('sparse-checkout-cone-mode: false')
+      expect(checkout).toContain('sparse-checkout:')
+      expect(checkout).toContain('ssh-strict: true')
+      expect(checkout).toContain('persist-credentials: false')
+      expect(checkout).not.toMatch(/\n\s+filter:/)
+      expect(checkout).not.toMatch(/\n\s+token:/)
+      expect(checkout).not.toMatch(/\n\s+ref: (?:release|master)\s*$/m)
+    }
+
+    expect(source).toContain('PRODUCT_TRUTH_BACKEND_REPO: ${{ github.workspace }}/.product-truth-sources/backend')
+    expect(source).toContain('PRODUCT_TRUTH_PACK_REPO: ${{ github.workspace }}/.product-truth-sources/truth-pack')
+    expect(source).toContain("PRODUCT_TRUTH_REQUIRE_LOCAL_SOURCES: '1'")
+  })
+
+  it('keeps nested private source checkouts out of both Git and image contexts', () => {
+    expect(gitignore).toMatch(/^\.product-truth-sources\/$/m)
+    expect(dockerignore).toMatch(/^\.product-truth-sources$/m)
   })
 })

@@ -1,6 +1,8 @@
 ---
 title: The DareBay manifesto
 description: How we run activities, pick winners and keep everything honest.
+provenance: { snapshot_date: "2026-08-15", source: "darebay-prod" }
+numbers_used: []
 ---
 
 <script setup>
@@ -47,25 +49,29 @@ and the same product. Come in whichever way suits you, the cycle is the same.
 
 - **Proof beats metrics.** Likes are cheap. Finished work is not.
   Every contest ends with something you can point at.
-- **Bold creators deserve serious rewards.** You set the task, you set the
-  price too. The reward is yours to pick: money (by card, bank transfer or to
-  a wallet), an item, Telegram Stars or a gift. Every one of them works.
-- **Winners are chosen fairly.** Three transparent ways: a community vote, the
-  buyer's own call, or an [independent count of the views](/en/earnings/how-views-are-counted).
+- **Bold creators deserve serious rewards.** You set the task and the price.
+  A contest can define money (by card, bank transfer or wallet), an item,
+  Telegram Stars or a gift. The method is fixed in the contest, while fulfilment
+  through payout details and statuses can be manual.
+- **Winners are chosen by a rule fixed in advance.** Four ways: a community vote,
+  the buyer's own call, a seeded draw among eligible submissions, or an
+  [independent count of the views](/en/earnings/how-views-are-counted).
   [How winners are chosen](/en/help/how-winners-are-chosen). Pick the one that
   fits your contest and lock it in before the start.
-- **[The commission](/en/help/what-commission) is small, visible and predictable.** You see it before you
-  publish. No surprises.
-- **A locked budget beats a promise.** The prize is locked the moment a contest
-  goes live and it sits with the platform. The winner has nothing to wonder
-  about: the money is already here, and it is theirs.
+- **[Fees](/en/help/what-commission) are separated by operation.** Contest creation
+  and top-ups currently carry 0%, the store carries 8%, and balance withdrawal
+  carries 10% with a 10 USDT minimum. The calculation is shown before confirmation.
+- **A locked budget beats a promise.** A wallet-backed prize is locked the moment a contest
+  goes live and it sits with the platform for the whole run. The buyer cannot
+  change their mind about it, which is the only kind of reassurance worth
+  printing.
 
 ## What we will not tolerate
 
 - **Cheating.** Fake contests, fake prizes, "we forgot to hand the prize out".
   You put up a prize, you pay it out.
-- **Fake work.** Stolen content, AI slop passed off as your own, [bots stuffing](/en/help/protection-from-view-fraud)
-  the vote.
+- **Fake work.** Stolen content, AI slop passed off as your own, [inflated votes
+  and views](/en/help/protection-from-view-fraud).
 - **[Illegal, violent or hateful content](/en/help/prohibited-content).** We are not a stage for that. There
   are places that will ban you far faster.
 - **Harassing participants.** You lost, say "nice one" and enter the next
@@ -75,33 +81,35 @@ Break the rules and you are out. No warnings.
 
 ## Our promise
 
-1. **A transparent commission.** The exact amount before you confirm, in your
-   currency. Card, transfer or wallet, the math is the same.
-2. **[Winners always get the prize](/en/about/payout-guarantee).** The money is locked when the contest is
-   created and sits with the platform until it ends. The organizer cannot take
-   it back, and we spend it on nothing except payouts for that contest.
-3. **Disputes are handled by a human.** A stuffed vote, a set-up contest: we
-   look into every one of them ourselves and see it through to a decision. The
-   injured party gets what they are owed, the guilty party leaves.
+1. **Transparent operation terms.** The exact fee and resulting amount are shown
+   before confirmation; contest creation, store purchases and withdrawals are distinct.
+2. **[The winner's obligation stays recorded](/en/about/payout-guarantee).** The budget
+   is assigned to the contest, the result is confirmed, and a credit or payout
+   obligation receives a status. Fulfilment can be manual.
+3. **Disputes are read by a human.** A stuffed vote, a set-up contest: we look
+   into every report ourselves and answer it. We will not promise in advance
+   what the answer will be, because a promise to reverse any result on request
+   is worth nothing to the person who was actually wronged.
 4. **Your rating belongs to you.** Every account carries two ratings: as an
    organizer and as a participant. Neither is for sale.
 
 ## How payouts work
 
-The core of it is simple: the prize is locked the moment a contest goes live,
-and at the end it goes out to the winners by confirmed results. Whatever is
-left goes back to the organizer. Nobody drags a payout out "pending review"
-and nobody vanishes.
+The core is simple: the budget is recorded when a contest goes live. After checks,
+the platform calculates the result and stores a credit or payout obligation. In a
+wallet-backed contest the unspent remainder returns to the organizer, because the
+platform was holding it; where no pool was deposited there is nothing to return.
+Moving money is a separate stage that follows payout details and statuses, can be
+processed by hand, and carries no settlement deadline from us.
 
-First you choose what you are putting up: money or an item. Then you choose how
-to pay. Money goes by card, bank transfer or to a wallet, an item is described
-in text, and you can put up Telegram Stars or a gift instead. All of these work
-today, and each one gets the reward to the person who earned it. As a user, one
-thing matters: you put up a prize, and it reaches the winner.
+First you choose what you are putting up: money or an item. A contest can define
+a card, bank transfer, USDT on TON, Telegram Stars, a gift or an item. This is a
+reward menu, not a list of automatic withdrawal rails for one balance. The product
+shows the available method, payout details and status.
 
-Money sent to a [wallet](/en/help/paying-with-crypto) arrives as USDT on TON. That is one way to receive a
-reward, not the whole product: card and bank transfer work just as well, and
-you never need a wallet to get paid.
+The [withdrawal wizard](/en/help/darebay-withdrawals) offers USDT to an external
+wallet on TON and Telegram Stars. A card, bank transfer, gift or item can be the
+reward method of a particular contest and is fulfilled separately.
 
 ## Join in
 

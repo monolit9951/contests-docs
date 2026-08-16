@@ -1,81 +1,102 @@
 ---
 title: What DareBay pays per 1000 views
-description: The rate per 1000 views in DareBay pay-per-view contests runs from $0.30 to $1.00, median $0.50. How the payout works and when the money lands.
-provenance: { snapshot_date: "2026-07-10", source: "darebay-prod" }
-numbers_used: [ppv_cpm_min, ppv_cpm_median, ppv_cpm_max, ppv_min_views_threshold_live, ppv_max_per_work_typical]
+description: The rate per 1000 views in DareBay contests runs from $0.08 to $2.00, median $0.50. Where the spread comes from, where the system ceiling sits, what the card fixes.
+provenance: { snapshot_date: "2026-08-15", source: "darebay-prod" }
+numbers_used: [ppv_cpm_min, ppv_cpm_median, ppv_cpm_max, ppv_max_cpm_rate, ppv_min_views_threshold_live]
 seo: true
 ---
 
 # What DareBay pays per 1000 views
 
-DareBay pays **$0.30 to $1.00** per 1000 views. The median across live contests is **$0.50 per 1000 views**. The organizer sets the rate, and you see it on the contest card before you shoot a single frame: the price of a thousand views is known up front, and the rest is down to the reach of your clip. To join the budget split, a submission has to clear the view threshold: in live contests that is **2000 views**, and the exact figure is on the card. By then the budget is already locked on the platform, so the views you earn get paid for.
+A thousand views on DareBay pays **$0.08 to $2.00**, with a median of **$0.50 per 1000 views**: half of live contests pay that or more. The rate is named by the contest buyer and it stands on the card before you touch the editor, so you know the price of a thousand views in advance and everything after that comes down to the reach of your work. To join the budget split a submission has to clear the threshold - in live contests that is **2000 views**. In a wallet-backed contest the budget is frozen on the platform before you even take the task.
 
-Every figure on this page comes from the platform's own data (snapshot: 2026-07-10).
+Every figure on this page comes from the platform's own data (snapshot: 2026-08-15).
 
-## Pay-per-view parameters
+## The rate per 1000 views: minimum, median, maximum
 
 | Parameter | Value | What it means |
 |-----------|-------|---------------|
-| Minimum rate | $0.30 per 1000 views | The low end across live contests |
-| Median rate | $0.50 per 1000 views | The typical rate: half of contests pay this or more |
-| Maximum rate | $1.00 per 1000 views | The high end across live contests |
-| View threshold | 2000 views | Typical threshold in live contests (set by the organizer) |
+| Minimum rate | $0.08 per 1000 views | The lowest rate among live contests |
+| Median rate | $0.50 per 1000 views | Half of contests pay this or more |
+| Maximum rate | $2.00 per 1000 views | The highest rate among live contests |
+| System ceiling on the rate | $100 per 1000 views | A hard validator limit: above it the contest is not created |
+| View threshold | 2000 views | The median across live contests; the exact figure stands on the card |
+| Cap on one submission | Set by the buyer | The maximum for a single clip; it stands on the contest card before you submit |
 
-The organizer fixes the rate when the contest is created and cannot move it afterwards. It is stated on the card: you know the price of a thousand views before you take the job.
+The rate is the price of a thousand views, not the payout itself. The payout is worked out as `views / 1000 * rate` and stops at the cap on one submission.
 
-## How the payout is calculated
+## Same reach, different rate
 
-The formula: `(your submission's views / 1000) * the contest rate`.
+The gap between contests shows up best if you hold the reach steady and vary the rate. Take a submission with 20,000 views:
 
-At a rate of $0.50 per 1000 views:
+| Contest rate | Payout for 20,000 views |
+|--------------|-------------------------|
+| $0.08 per 1000 views | $1.60 |
+| $0.50 per 1000 views | $10.00 |
+| $2.00 per 1000 views | $40.00 |
 
-- 10,000 views: 10,000 / 1000 * $0.50 = **$5.00**
-- 50,000 views: 50,000 / 1000 * $0.50 = **$25.00**
-- 100,000 views: 100,000 / 1000 * $0.50 = **$50.00**
+Same reach, same edit, a result that differs by a factor of 25. That is why the rate on the card is the first thing to read when picking a contest, with the threshold and the cap right behind it. Fuller worked examples across different reach are in [how much you can earn from clips](/en/earnings/how-much-clipping-pays).
 
-The organizer also sets a cap per submission, so the budget spreads across several creators instead of going to one viral clip. The typical cap in live contests is **$50** per submission: in the example above, 100,000 views at $0.50 lands exactly on it. The cap applies per submission, not per creator: you can enter several different videos, and three at the cap is $150. The cap is shown on the contest card.
+## Where the 25-fold spread comes from
 
-The full mechanics, from the locked budget to money in your account, are in [how pay-per-view works](/en/earnings/how-pay-per-view-works).
+There is no single "price of a view" on the platform, and that is not disorder, it is how the model is built: the rate is named by the buyer, not by DareBay. Each contest is its own offer, and a buyer assembles their rate out of three things.
 
-## How this compares with other platforms
+- **The contest budget.** Rate and budget are directly linked: the dearer a thousand views, the faster the budget is spent across submissions. A buyer with a modest budget names a lower rate so the contest runs longer and collects more clips.
+- **The niche and the price of the audience.** Where a single sale pays back tens of thousands of views, paying well is worth it. A contest chasing raw reach costs less.
+- **Competition for clippers.** A rate is also an offer on a market. A buyer who needs work quickly and from strong authors has to go above the median: other contests are hanging right next to theirs, and clippers compare.
 
-The TikTok Creator Fund and the YouTube Shorts Fund pay creators out of their own pool, and they recalculate the rate by where the audience is, by niche and by whatever the algorithm is doing this month. The number moves, and you cannot know it in advance.
+The median of **$0.50 per 1000 views** is a convenient reference point: above it a rate is generous by the platform's standards, below it thrifty. How all this sits against the platforms' own creator programmes is covered separately in [what TikTok pays for views](/en/earnings/tiktok-view-payouts).
 
-DareBay works differently: a specific buyer sets the rate and it holds for the whole contest. You see it on the card before you submit and know exactly what you are entering. The budget is locked on the platform up front: the platform acts as intermediary and guarantor so neither side gets burned.
+## The system ceiling: $100 per 1000 views
+
+A buyer's freedom is bounded by more than their budget. When a contest is created the rate goes through the platform's validator, and the limit there is hard: **$100 per 1000 views**. A contest with a higher rate simply is not created - the form will not accept it.
+
+That limit closes off two scenarios at once: a misplaced zero at contest creation, and a knowingly unpayable rate posted just to collect submissions. For a clipper it means the upper bound on the rate exists and is a system rule rather than a matter of discretion.
+
+The live maximum - **$2.00 per 1000 views** - is 50 times below the system ceiling. In other words, the real ceiling on rates is set by the market, not by the technology: that is what buyers are willing to pay today.
+
+## What is fixed on the card before you submit
+
+The buyer sets three numbers when creating the contest, and all three are open before you submit: the rate per 1000 views, the view threshold and the cap on one submission. You take the brief already knowing what you are playing for.
+
+- **The rate stands on the card.** The buyer sets it at creation; there is no tool for moving a rate mid-flight.
+- **The card is the only source of truth on the rate.** The calculation runs on the rate recorded in the contest, so check the card before submitting rather than a screenshot from last week.
+- **The threshold is not subtracted.** Once a submission clears its contest's threshold, the whole counter goes into the maths, not the remainder above the bar.
+- **The cap counts per submission, not per author.** It limits what one clip earns so the budget is shared between several authors instead of going entirely to one viral video.
+- **A wallet-backed contest budget is frozen on the platform** before you take the task, and the buyer cannot pull it back. Whatever is left undistributed returns to them once results are settled. There are also contests without that freeze, where the buyer settles with authors directly.
+
+The whole chain from a frozen budget to money on your balance is in [how pay-per-view works](/en/earnings/how-pay-per-view-works).
 
 ## Frequently asked questions
 
 ### What determines the rate per 1000 views?
 
-The contest organizer sets it, based on their budget, niche and goals. Live contests currently sit between $0.30 and $1.00 per 1000 views. The rate is fixed for the whole contest and does not change after launch.
+The contest buyer names it to suit their budget, their niche and the competition for clippers. The platform sets no single price for a view; it only refuses a rate above the system ceiling of $100 per 1000 views. The live range right now is $0.08 to $2.00 per 1000 views.
 
-### When does the money arrive?
+### What counts as a normal rate?
 
-The contest closes, then comes the selection window and the results-confirmation window, a few days in all. After that the payout lands on your wallet, card or whichever method you chose. The money for it has been sitting on the platform since day one: the budget was locked in advance, and the platform stands behind the payout as intermediary.
-
-### How are views counted?
-
-Views are pulled automatically through the TikTok API. Neither the organizer nor the participant types a number in by hand. It is an independent count that neither side can adjust.
-
-### Why is there a view threshold?
-
-The threshold keeps the budget from being spread too thin. Without it, dozens of submissions with a handful of views each would take the budget apart a cent at a time. It hands the money to the clips that actually reached people. In live contests the threshold is 2000 views; the exact figure is the organizer's.
-
-### Can I take part without an audience?
-
-Yes. There is no minimum follower count. The only condition is clearing the contest's view threshold (2000 in live contests) on the individual submission. Beginners compete on equal terms.
+The reference point is the median across live contests, **$0.50 per 1000 views**: half of contests pay that or more. But a rate alone does not decide everything - read it together with the threshold (2000 views in live contests) and the cap on one submission, all three of which stand on the same card.
 
 ### Can the rate be changed after I submit?
 
-No. The rate is fixed when the contest is created. The organizer cannot lower it after launch. The budget is frozen and the terms are locked.
+The rate is fixed on the contest card, and the buyer has no tool for moving it mid-flight. The calculation always runs on the rate recorded in the contest, so it is worth opening the card and checking the figure before you submit. A wallet-backed contest budget has been frozen on the platform from the start.
 
-### What payout methods are available?
+### Does the rate depend on the site - TikTok, YouTube or Instagram?
 
-Wallet (USDT on TON), bank card, bank transfer, Telegram Stars and Telegram gifts. All five work, and you pick the one you want: the wallet is one option here, not a compulsory step.
+No. The rate is set by the contest, not by the site. The site is set by the contest too: view stats are currently counted for TikTok, YouTube and Instagram, and the price of a thousand views is the same everywhere - the one stated on the card.
+
+### How are the views the rate multiplies counted?
+
+An independent counter reads the published view counter on the site; the detailed account is in [how views are counted for the payout](/en/earnings/how-views-are-counted).
+
+### Do I need followers to get the rate?
+
+No, payment tracks the reach of one specific video; the details are in [how much you can earn from clips](/en/earnings/how-much-clipping-pays).
 
 ## Where to next
 
-- [How pay-per-view works](/en/earnings/how-pay-per-view-works) - the full mechanics of a PPV contest
-- [Earning on DareBay](/en/earnings/) - an overview of the ways to earn
-- [What commission does DareBay take?](/en/help/what-commission) - the platform's cut
-- [Does DareBay really pay?](/en/about/does-darebay-really-pay) - what backs the payout
+- [How much you can earn from clips](/en/earnings/how-much-clipping-pays) - the calculation for your own reach
+- [How pay-per-view works](/en/earnings/how-pay-per-view-works) - the chain from budget to payout
+- [How views are counted for the payout](/en/earnings/how-views-are-counted) - the counter, the threshold and inflated views
+- [What TikTok pays for views](/en/earnings/tiktok-view-payouts) - platform programmes against an intermediary
+- [Where to find clipping work](/en/earnings/where-to-find-clipping-work) - where to look for contests with a high rate

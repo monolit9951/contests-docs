@@ -4,13 +4,19 @@
   "description": "DareBay public documentation",
   "private": true,
   "type": "module",
+  "engines": {
+    "node": "22.18.x",
+    "npm": "10.9.x"
+  },
+  "packageManager": "npm@10.9.3",
   "scripts": {
     "docs:dev": "vitepress dev docs",
-    "prebuild": "npm run gen:dates && npm run check:registry && npm run gen:manifest && npm run gen:release-marker && npm run gen:llms && npm run gen:redirects",
+    "prebuild": "npm run gen:dates && npm run check:registry && npm run gen:manifest && npm run gen:release-marker && npm run check:truth && npm run gen:redirects",
     "docs:build": "npm run prebuild && vitepress build docs && node --experimental-strip-types --no-warnings scripts/finalize-dist.mjs && npm run check:dist",
     "docs:preview": "vitepress preview docs",
-    "test": "vitest run && node --experimental-strip-types --no-warnings scripts/anti_doorway_lint.test.mjs && bash deploy/install-host-nginx-snippet.sh --self-test && bash deploy/deploy-content-transaction.sh --self-test",
+    "test": "vitest run && node --experimental-strip-types --no-warnings scripts/anti_doorway_lint.test.mjs && node scripts/product-truth-lint.test.mjs && npm run check:truth && bash deploy/install-host-nginx-snippet.sh --self-test && bash deploy/deploy-content-transaction.sh --self-test",
     "check:registry": "node --experimental-strip-types --no-warnings scripts/check-registry.mjs",
+    "check:truth": "npm run gen:llms --silent && node scripts/product-truth-lint.mjs",
     "check:dist": "node --experimental-strip-types --no-warnings scripts/dist-seo-gates.mjs",
     "gen:manifest": "node --experimental-strip-types --no-warnings scripts/gen-public-content-manifest.mjs",
     "gen:release-marker": "node scripts/gen-release-marker.mjs",
@@ -27,5 +33,10 @@
   },
   "dependencies": {
     "web-vitals": "^6.0.1"
+  },
+  "overrides": {
+    "vitepress": {
+      "vite": "6.4.3"
+    }
   }
 }

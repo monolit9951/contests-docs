@@ -4,6 +4,7 @@ import { join, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { productUrlForLocale, TELEGRAM } from './links'
 import { CHROME_COPY, type DareBayThemeConfig } from './chrome'
+import { installCoveredHeadingRule } from './coveredHeading'
 import PAGE_DATES from '../page-dates.json'
 
 // Source file -> commit date, rekeyed to the URL VitePress hands `transformItems`
@@ -65,8 +66,7 @@ const LOCALE_LABELS: Record<Locale, string> = {
  * in both builds avoids ownership depending on which container answers the
  * particular URL Google chooses to fetch.
  *
- * Empty by default: the token comes from an account only the founder has, so
- * the plumbing ships and the value is a repo secret away.
+ * Empty values omit the corresponding tag; CI can inject ownership tokens at build time.
  */
 const VERIFICATION_TAGS: [string, Record<string, string>][] = [
     ['google-site-verification', process.env.GOOGLE_SITE_VERIFICATION],
@@ -473,6 +473,7 @@ export default defineConfig({
 
   markdown: {
     config(md) {
+      installCoveredHeadingRule(md)
       // Rewrites in-page links onto addresses that exist — see
       // `resolveLocalizedLink` in registry.ts. Content is translated page by
       // page, so a translated article links to siblings that may still be

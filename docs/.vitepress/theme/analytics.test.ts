@@ -1,12 +1,47 @@
-import { describe, expect, it } from 'vitest'
+import { beforeEach, describe, expect, it, vi } from 'vitest'
 
 import {
     classifyExitFrom,
     DocsEvent,
+    flushDocsOutbox,
+    isContentPath,
     normalizeDocsPath,
-    PASSIVE_DOCS_EVENTS,
+    readDocsOutbox,
+    resetDocsAnalyticsForTests,
+    sanitizeDocsMeta,
+    trackDocsEvent,
     throttleKeyFor,
 } from './analytics'
+
+class MemoryStorage {
+    private readonly values = new Map<string, string>()
+    private readonly afterGet = new Map<string, () => void>()
+
+    get length(): number { return this.values.size }
+    clear(): void { this.values.clear() }
+    getItem(key: string): string | null {
+        const value = this.values.get(key) ?? null
+        const callback = this.afterGet.get(key)
+        if (callback) {
+            this.afterGet.delete(key)
+            callback()
+        }
+        return value
+    }
+    key(index: number): string | null { return [...this.values.keys()][index] ?? null }
+    removeItem(key: string): void { this.values.delete(key) }
+    setItem(key: string, value: string): void { this.values.set(key, value) }
+    keys(): string[] { return [...this.values.keys()] }
+    runAfterNextGet(key: string, callback: () => void): void {
+        this.afterGet.set(key, callback)
+    }
+}
+
+const tokenFor = (userId: string): string => [
+    'header',
+    Buffer.from(JSON.stringify({ userId, sub: userId })).toString('base64url'),
+    'signature',
+].join('.')
 
 const ARTICLE = 'https://darebay.com/zarabotok/kak-zarabotat-na-narezkah-s-nulya'
 
@@ -15,7 +50,7 @@ describe('classifyExitFrom', () => {
         // The regression this whole function was rewritten for. Every heading
         // renders a `.header-anchor` and the entire "На этой странице" outline
         // is `#…` links. Resolved against the ORIGIN they came out as pathname
-        // `/` — not under a content hub — so reading the table of contents registered
+        // `/` — not under /docs — so reading the table of contents registered
         // as converting into the product, and `docs_exit_to_site` measured the
         // docs' own navigation instead of its only success metric.
         expect(classifyExitFrom('#kak-eto-rabotaet', ARTICLE)).toBeNull()
@@ -23,18 +58,18 @@ describe('classifyExitFrom', () => {
     })
 
     it('ignores navigation deeper into the docs, absolute or relative', () => {
-        expect(classifyExitFrom('/pomoshch/kakaya-komissiya', ARTICLE)).toBeNull()
-        expect(classifyExitFrom('../pomoshch/kakaya-komissiya', ARTICLE)).toBeNull()
-        expect(classifyExitFrom('https://darebay.com/o-proekte/', ARTICLE)).toBeNull()
+        expect(classifyExitFrom('/pomoshch/oplata-kriptovalyutoy', ARTICLE)).toBeNull()
+        expect(classifyExitFrom('../pomoshch/oplata-kriptovalyutoy', ARTICLE)).toBeNull()
+        expect(classifyExitFrom('https://darebay.com/zarabotok/', ARTICLE)).toBeNull()
+        expect(classifyExitFrom('/ua/zarobitok/yak-zarobyty-na-narizkakh-z-nulia', ARTICLE)).toBeNull()
         // Same page, explicit url plus a fragment.
         expect(classifyExitFrom(`${ARTICLE}#itogi`, ARTICLE)).toBeNull()
     })
 
     it('counts a link back into the product as the exit that matters', () => {
         expect(classifyExitFrom('https://darebay.com/', ARTICLE)).toBe(DocsEvent.ExitToSite)
-        expect(classifyExitFrom('/contests', ARTICLE)).toBe(DocsEvent.ExitToSite)
-        // A path that merely starts with a hub's letters is not content.
-        expect(classifyExitFrom('/zarabotok-extra', ARTICLE)).toBe(DocsEvent.ExitToSite)
+        expect(classifyExitFrom('/tasks', ARTICLE)).toBe(DocsEvent.ExitToSite)
+        expect(classifyExitFrom('/store', ARTICLE)).toBe(DocsEvent.ExitToSite)
     })
 
     it('recognises Telegram in every form the docs link it', () => {
@@ -61,32 +96,41 @@ describe('classifyExitFrom', () => {
     })
 
     it('treats the dev host as our own, so a preview does not read as an exit', () => {
-        const preview = 'https://dev.darebay.com/ua/dopomoha/'
-        expect(classifyExitFrom('/ua/dopomoha/yaka-komisiia', preview)).toBeNull()
-        expect(classifyExitFrom('https://dev.darebay.com/contests', preview)).toBe(DocsEvent.ExitToSite)
+        const preview = 'https://dev.darebay.com/pomoshch/'
+        expect(classifyExitFrom('/pomoshch/oplata-kriptovalyutoy', preview)).toBeNull()
+        expect(classifyExitFrom('https://dev.darebay.com/tasks', preview)).toBe(DocsEvent.ExitToSite)
     })
 })
 
 describe('normalizeDocsPath', () => {
-    it('collapses the article slug so a zone can be aggregated', () => {
-        expect(normalizeDocsPath('/zarabotok/kak-zarabotat')).toBe('/zarabotok/:slug')
-        expect(normalizeDocsPath('/ua/dopomoha/yaka-komisiia')).toBe('/ua/dopomoha/:slug')
-        expect(normalizeDocsPath('/en/legal/privacy')).toBe('/en/legal/:slug')
+    it('keeps the canonical article path so each landing page remains measurable', () => {
+        expect(normalizeDocsPath('/zarabotok/kak-zarabotat')).toBe('/zarabotok/kak-zarabotat')
+        expect(normalizeDocsPath('/ua/dopomoha/oplata-kryptoiu')).toBe('/ua/dopomoha/oplata-kryptoiu')
     })
 
     it('keeps the zone and section index pages distinct', () => {
         expect(normalizeDocsPath('/pomoshch/')).toBe('/pomoshch')
-        expect(normalizeDocsPath('/ua/dopomoha/')).toBe('/ua/dopomoha')
+        expect(normalizeDocsPath('/en/help/')).toBe('/en/help')
     })
 
-    it('leaves the site root as a single key', () => {
+    it('maps the docs root to a single key', () => {
         expect(normalizeDocsPath('/')).toBe('/')
     })
 })
 
+describe('isContentPath', () => {
+    it('derives RU, UA and EN content trees from the registry', () => {
+        expect(isContentPath('/zarabotok/skolko-platyat-novichku')).toBe(true)
+        expect(isContentPath('/ua/dopomoha/')).toBe(true)
+        expect(isContentPath('/en/about/darebay-reviews')).toBe(true)
+        expect(isContentPath('/tasks/example')).toBe(false)
+        expect(isContentPath('/store')).toBe(false)
+    })
+})
+
 describe('throttleKeyFor', () => {
-    const A = '/pomoshch/kripto'
-    const B = '/pomoshch/esli-nikto-ne-uchastvuet'
+    const A = '/pomoshch/oplata-kriptovalyutoy'
+    const B = '/pomoshch/esli-net-rabot'
 
     it('separates the same event on different pages', () => {
         // The regression: the key had no page in it, so `docs_page_view` had ONE
@@ -124,23 +168,159 @@ describe('throttleKeyFor', () => {
     })
 })
 
-describe('PASSIVE_DOCS_EVENTS', () => {
-    it('lists exactly the beacons the reader never chose to send', () => {
-        // Kept in sync by hand with ClickEventService.PASSIVE_EVENT_IDS in the
-        // backend. An id that is passive here and unknown there lands in the
-        // CTA aggregations and, because these fire on their own, immediately
-        // becomes the top "click" on the admin dashboard.
-        expect([...PASSIVE_DOCS_EVENTS].sort()).toEqual([
-            'docs_page_view',
-            'docs_read_depth',
-            'docs_read_time',
-            'docs_web_vitals',
-        ])
+describe('docs event meta contract', () => {
+    it('keeps only event-specific bounded properties', () => {
+        expect(sanitizeDocsMeta(DocsEvent.ReadTime, {
+            engagedMs: '15000',
+            maxDepth: '75',
+            sequence: '2',
+            reason: 'visibility_hidden',
+            targetUrl: 'https://example.com/?secret=yes',
+        })).toEqual({
+            engagedMs: '15000',
+            maxDepth: '75',
+            sequence: '2',
+            reason: 'visibility_hidden',
+        })
     })
 
-    it('does not swallow the exits, which are real clicks', () => {
-        expect(PASSIVE_DOCS_EVENTS).not.toContain(DocsEvent.ExitToSite)
-        expect(PASSIVE_DOCS_EVENTS).not.toContain(DocsEvent.ExitToTelegram)
-        expect(PASSIVE_DOCS_EVENTS).not.toContain(DocsEvent.ExitExternal)
+    it('rejects a referrer URL where a hostname is required', () => {
+        expect(sanitizeDocsMeta(DocsEvent.NotFound, {
+            referrerHost: 'https://example.com/private/path',
+        })).toBeUndefined()
+    })
+})
+
+describe('docs analytics persistence boundaries', () => {
+    let storage: MemoryStorage
+
+    beforeEach(() => {
+        storage = new MemoryStorage()
+        vi.stubGlobal('localStorage', storage)
+        vi.stubGlobal('window', {
+            location: {
+                href: 'https://darebay.com/zarabotok/article?utm_source=google',
+                origin: 'https://darebay.com',
+                pathname: '/zarabotok/article',
+                search: '?utm_source=google',
+                hash: '',
+                hostname: 'darebay.com',
+            },
+        })
+        vi.stubGlobal('document', {
+            referrer: '',
+            documentElement: { lang: 'ru' },
+        })
+        vi.stubGlobal('navigator', { language: 'ru' })
+        vi.stubGlobal('atob', (value: string) => Buffer.from(value, 'base64').toString('binary'))
+        resetDocsAnalyticsForTests()
+    })
+
+    it('reads the same identity-scoped first-touch format as the SPA', () => {
+        storage.setItem('darebay_analytics_identity_v2', JSON.stringify({ id: 'anon-shared' }))
+        storage.setItem('darebay_analytics_first_touch', JSON.stringify({
+            anonymousId: 'anon-shared',
+            attribution: { landingPage: '/first', utm: { source: 'telegram' } },
+        }))
+
+        trackDocsEvent(DocsEvent.PageView, {}, { dedupeKey: 'shared', deferFlush: true })
+        const [event] = readDocsOutbox()
+
+        expect(event.anonymousId).toBe('anon-shared')
+        expect(event.firstTouchLandingPage).toBe('/first')
+        expect(event.firstTouchUtmSource).toBe('telegram')
+    })
+
+    it('lets one account claim an anonymous visit and isolates the next account', () => {
+        trackDocsEvent(DocsEvent.PageView, {}, { dedupeKey: 'anonymous', deferFlush: true })
+        const anonymousId = readDocsOutbox().at(-1)?.anonymousId
+
+        storage.setItem('userToken', tokenFor('user-a'))
+        trackDocsEvent(DocsEvent.PageView, {}, { dedupeKey: 'user-a', deferFlush: true })
+        expect(readDocsOutbox().at(-1)?.anonymousId).toBe(anonymousId)
+
+        storage.setItem('userToken', tokenFor('user-b'))
+        trackDocsEvent(DocsEvent.PageView, {}, { dedupeKey: 'user-b', deferFlush: true })
+        expect(readDocsOutbox().at(-1)?.anonymousId).not.toBe(anonymousId)
+    })
+
+    it('uses one immutable storage key per event and marks impersonation', () => {
+        storage.setItem('userToken', tokenFor('target-user'))
+        storage.setItem('impersonatorToken', 'admin-token')
+        trackDocsEvent(DocsEvent.PageView, {}, { dedupeKey: 'one', deferFlush: true })
+        trackDocsEvent(DocsEvent.ExitToSite, {}, { dedupeKey: 'two', deferFlush: true })
+
+        const eventKeys = storage.keys().filter((key) =>
+            key.startsWith('darebay_docs_analytics_outbox_v2:'))
+        expect(eventKeys).toHaveLength(2)
+        expect(readDocsOutbox().every((event) => event.isImpersonated)).toBe(true)
+    })
+
+    it('does not prune an event another tab adds after the outbox snapshot', () => {
+        trackDocsEvent(DocsEvent.PageView, {}, {
+            dedupeKey: 'snapshot-anchor',
+            deferFlush: true,
+        })
+        const prefix = 'darebay_docs_analytics_outbox_v2:'
+        const anchorKey = storage.keys().find((key) => key.startsWith(prefix))
+        expect(anchorKey).toBeDefined()
+        const anchor = JSON.parse(storage.getItem(anchorKey ?? '') ?? '{}') as Record<string, unknown>
+        const concurrentEventKey = 'concurrent-tab-event'
+        const concurrentStorageKey = `${prefix}${encodeURIComponent(concurrentEventKey)}`
+
+        // The callback runs while prune is reading its storage snapshot. It
+        // deterministically models a second tab enqueueing before the old
+        // implementation's second key enumeration.
+        storage.runAfterNextGet(anchorKey ?? '', () => {
+            storage.setItem(concurrentStorageKey, JSON.stringify({
+                ...anchor,
+                eventKey: concurrentEventKey,
+                occurredAt: new Date().toISOString(),
+            }))
+        })
+
+        trackDocsEvent(DocsEvent.ExitToSite, {}, {
+            dedupeKey: 'trigger-prune',
+            deferFlush: true,
+        })
+
+        expect(storage.getItem(concurrentStorageKey)).not.toBeNull()
+        expect(readDocsOutbox().map((event) => event.eventKey)).toContain(concurrentEventKey)
+    })
+
+    it('reattaches signed credentials only at send time', async () => {
+        const token = tokenFor('user-a')
+        storage.setItem('userToken', token)
+        const send = vi.fn().mockResolvedValue({ ok: true, status: 202 })
+        vi.stubGlobal('fetch', send)
+
+        trackDocsEvent(DocsEvent.PageView, {}, {
+            dedupeKey: 'credential-send',
+            deferFlush: true,
+        })
+        expect(readDocsOutbox()[0]).not.toHaveProperty('authToken')
+
+        await flushDocsOutbox()
+
+        const request = send.mock.calls[0]?.[1] as { body?: string }
+        expect(JSON.parse(request.body ?? '{}')).toEqual(expect.objectContaining({
+            authToken: token,
+        }))
+    })
+
+    it('does not attach the next account to an event queued by the previous actor', async () => {
+        storage.setItem('userToken', tokenFor('user-a'))
+        trackDocsEvent(DocsEvent.PageView, {}, {
+            dedupeKey: 'old-account',
+            deferFlush: true,
+        })
+        storage.setItem('userToken', tokenFor('user-b'))
+        const send = vi.fn().mockResolvedValue({ ok: true, status: 202 })
+        vi.stubGlobal('fetch', send)
+
+        await flushDocsOutbox()
+
+        const request = send.mock.calls[0]?.[1] as { body?: string }
+        expect(JSON.parse(request.body ?? '{}')).not.toHaveProperty('authToken')
     })
 })

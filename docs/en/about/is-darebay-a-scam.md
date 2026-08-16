@@ -1,81 +1,62 @@
 ---
-title: Is DareBay a scam? A look at the guarantor mechanic
-description: Why DareBay is not a scam. The prize is locked before the contest starts, an independent oracle counts the views, and the platform guarantees payout.
-provenance: { snapshot_date: "2026-07-09", source: "darebay-prod" }
+title: Is DareBay a scam? Checking it against the fraud patterns
+description: DareBay checked against the standard tells of a fake earning platform - no entry fee, no unlock transfer, no income promises - plus the one part that really is weak.
+provenance: { snapshot_date: "2026-08-15", source: "darebay-prod" }
 numbers_used: []
 seo: true
 ---
 
 # Is DareBay a scam?
 
-DareBay is not a scam and not a con. It is a platform where brands and individuals launch activities (tasks, battles, challenges, contests), and participants make content and get paid for it. The platform works as an intermediary and guarantor: the prize is locked before the start, and the payout follows independently counted results. The organizer cannot take the locked money back: it sits with the platform and goes to the winners. Below we go through why this mechanic rules out the usual patterns of fraud.
+No. The short reason is mechanical rather than reassuring: in a wallet-backed contest the budget is charged from the organizer and locked against that contest **before** anyone picks the task up, the rate per 1000 views and the view threshold sit on the contest card before you edit a single frame, and the sum you are owed is worked out by formula from a counter neither side can type into.
 
-## How the money is protected
+The honest counterweight, said here rather than buried: **executing the payout can be manual, and DareBay promises no settlement deadline.** A platform that told you otherwise would be the one worth suspecting.
 
-The intermediary and guarantor mechanic is built like this:
+## The tells of a fake earning platform
 
-1. **The organizer locks the prize before publishing.** The money is charged when the contest is created and held on the platform. The organizer cannot get it back or spend it after launch.
-2. **An independent party counts the results.** The platform pulls views straight from the API of the site the video was posted on (today that is TikTok). Votes and the winner selection also run through the platform. Neither the organizer nor the participant can adjust the numbers, and inflated views are written off by the site itself, so they never reach the payout.
-3. **The prize goes to the winners.** When a contest closes, the platform splits the prize by results. No permission from the organizer is involved: they take no part in the payout and cannot stop it.
+Fraud in this niche is not creative. It reuses the same five moves, and they are easy to check against any platform, including this one.
 
-The participant risks no money. There is no deposit, no entry fee and no withdrawal fee.
+| The tell | What it looks like | DareBay |
+|---|---|---|
+| Pay to start | A deposit, an "activation", a paid access tier | Entry is free. No deposit, no access charge, no follower minimum |
+| Pay to get paid | A transfer to an outside wallet to "unlock" or "verify" a prize | Never. The withdrawal fee is calculated inside the request form and deducted from the amount you asked for |
+| Money for nothing | Income for signing up, clicking or inviting friends | Payment follows a result: counted views, votes, or a judged decision. No result, no money |
+| Terms that move | The rate or the rules change once the work is done | The rate, the threshold and the budget are fixed when the contest is created. The cap per submission is the only parameter the buyer can adjust afterwards |
+| Nobody to ask | No name, no address, no human | The platform is run by Ruslan Bey under his own name, reachable at [@ruslanbwork](https://t.me/ruslanbwork) |
 
-## How DareBay differs from scam platforms
+## Where the money actually sits
 
-Fraud schemes share a set of tells. Here is how they line up against DareBay:
+A wallet-backed contest charges the prize from the organizer's balance and ties it to that one contest, so it cannot be spent elsewhere or pulled back before the contest ends. That is the mode most clipping contests run in.
 
-| Scam tell | How DareBay works |
-|-----------|-------------------|
-| Money promised with no conditions and no work | Payout only for a real result (views, votes, a jury decision). No work, no prize |
-| Money demanded to withdraw or to "activate" | The participant pays nothing. The commission is paid by the organizer when the contest is created |
-| Money sits "on the balance" but cannot be withdrawn | Winnings land on the balance and go out to a card, a bank account or a wallet with no extra conditions |
-| No transparent mechanic, everything on trust | The prize is locked in advance, an independent oracle counts the results, the platform guarantees the payout |
+DareBay also supports contests without a locked pool, where the organizer settles with creators directly. Nothing is held on the platform there, and the contest says which mode it uses. Treating the two as the same thing is the most common way to be disappointed by an honest platform, which is why the funding mode is on the card and not in the small print.
 
-Not one of those tells applies to DareBay: it promises no easy money, it charges the participant nothing, and the prize is sitting on the platform before the first person even picks up the task.
+## What DareBay does not claim
 
-## Ways to receive the reward
-
-The reward on DareBay is not one method but a menu:
-
-- **Wallet** (USDT on TON)
-- **Card** (bank card)
-- **Bank transfer**
-- **An item** (a physical prize from the organizer)
-- **Telegram Stars**
-- **Telegram gifts**
-
-All six work. You never need a wallet: card and bank transfer work just as well.
+- **Not "guaranteed income".** What a clip earns is decided by the views it gets. Nobody knows that number in advance, and no page here will pretend otherwise.
+- **Not a perfect fraud detector.** There is moderation and there are basic checks. A submission with suspicious view dynamics is flagged and goes on hold until it is reviewed - that is a pause, not a verdict, and not a promise that every manipulated view is spotted.
+- **Not trustless.** DareBay is an intermediary and guarantor holding real money, not an on-chain contract. It is worth trusting for reasons you can check, not because a blockchain is involved.
 
 ## Frequently asked questions
 
-### Is DareBay a scam or a con?
+### Do I have to send money to unlock a prize?
 
-No. The prize is locked on the platform before the contest starts. The organizer cannot take that money back, and the platform holds it until payout. Winners are paid by counted results, with nobody's approval needed. DareBay works as an intermediary and guarantor.
+No, and nobody legitimate will ever ask you to. The DareBay withdrawal fee is shown inside the request form before you confirm and comes out of the amount you requested. A message asking you to transfer money to an unknown wallet first is not part of this product, whoever appears to be sending it.
 
-### Why can DareBay not steal the money?
+### Is there an entry fee or a deposit?
 
-Because the money is locked the moment the contest is created and tied to it. Neither the organizer nor the platform can cancel the payout after publishing: the prize goes to the winner as soon as the results are counted.
+No. Registering, browsing the contest feed and submitting work cost nothing, and there is no audience requirement to be allowed in. Creating a contest and topping up its budget also currently carry no fee for the organizer.
 
-### How do I tell DareBay apart from a fraudulent platform?
+### Can a platform this new be trusted?
 
-Scam platforms ask for money to withdraw or promise payouts with no conditions. DareBay takes no money from participants and promises no income without work. The prize is locked in advance and the payout is tied to real results. More on withdrawals: [how to withdraw your winnings](/en/help/darebay-withdrawals).
+Age is a weak signal in both directions: old scams exist and young honest projects exist. The checkable signals are better ones - a funding mode you can read before you work, terms that cannot move afterwards, a count neither side supplies, and a named operator who answers. Judge those.
 
-### Do I have to pay to withdraw my winnings?
+### Does the platform decide who wins by hand?
 
-No. DareBay charges nothing for withdrawals. The commission is paid by the organizer when the contest is created. The winner receives the full prize amount. More on the commission: [the DareBay commission](/en/help/what-commission).
+Only where the contest says so. Of the four selection types, one is an organizer decision, one is a community vote, one is a seeded draw among eligible active submissions, and one is the pay-per-view pool, where the formula decides and nobody picks a favourite. The type is fixed at creation and cannot change mid-run: [how winners are chosen](/en/help/how-winners-are-chosen).
 
-### How can the reward be paid out?
+## Where to next
 
-Wallet (USDT on TON), bank card, bank transfer, a physical item, Telegram Stars, Telegram gifts. Every one of them works and pays out. You never need a wallet: card and bank transfer work just as well.
-
-### What if the contest ends and nobody pays me?
-
-That scenario does not exist in the mechanic. The money is already on the platform rather than with the organizer, and it is split by the contest results. The organizer takes no part in the payout, so there is nothing for them to change their mind about.
-
-### Can a new platform be trusted?
-
-Trust here rests on the mechanic, not on age. The prize is locked before the start, an independent oracle counts the results through platform APIs, and the platform guarantees the payout. That scheme does not depend on reputation, it works at the level of the process. More on how results are counted: [what stops fake submissions](/en/help/protection-from-view-fraud).
-
-## The bottom line
-
-DareBay is not a lottery and not a pyramid scheme. It is a platform with a mechanic you can follow: the budget is locked before the start, an independent party counts the results, and the prize reaches the winner without the organizer touching it. If you want the details, read [reviews and facts about DareBay](/en/about/darebay-reviews) or look through the [FAQ section](/en/help/).
+- [Is DareBay legit?](/en/about/is-darebay-legit) - the terms, the fees and who runs the platform
+- [Does DareBay really pay?](/en/about/does-darebay-really-pay) - the chain from a published clip to money in hand
+- [The payout guarantee](/en/about/payout-guarantee) - what it covers and where it stops
+- [What stops fake submissions](/en/help/protection-from-view-fraud) - moderation, holds and what a flag actually means

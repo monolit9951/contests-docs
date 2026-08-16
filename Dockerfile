@@ -2,7 +2,9 @@
 # import registry.ts directly via --experimental-strip-types, which does not
 # exist before 22.6. On node:20 the build died with exit code 9 and no message
 # about the flag at all.
-FROM node:22-alpine AS build
+ARG RELEASE_SHA=development
+
+FROM node:22-alpine@sha256:c610fcdfb1d5b4740dd70c284ed3cb16bb857e0f7166196e36a5501df7a3aa32 AS build
 
 WORKDIR /app
 
@@ -15,7 +17,7 @@ COPY . .
 # DOCS_ENV controls sitemap host + preview noindex (config.ts). GitHub builds
 # release only; guarded on-box development builds may pass DOCS_ENV=dev.
 ARG DOCS_ENV=prod
-ARG RELEASE_SHA=development
+ARG RELEASE_SHA
 # Search-console ownership tokens. Optional: unset expands to an empty string and
 # config.ts omits the <meta> entirely. Not secrets in any real sense — Google and
 # Yandex verify by reading them off the public page.
@@ -27,7 +29,10 @@ RUN DOCS_ENV=$DOCS_ENV \
     YANDEX_VERIFICATION=$YANDEX_VERIFICATION \
     npm run docs:build
 
-FROM nginx:alpine
+FROM nginx:alpine@sha256:4a73073bd557c65b759505da037898b61f1be6cbcc3c2c3aeac22d2a470c1752
+
+ARG RELEASE_SHA
+LABEL org.opencontainers.image.revision=$RELEASE_SHA
 
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 # The 301 map for every retired address, generated from the page registry.

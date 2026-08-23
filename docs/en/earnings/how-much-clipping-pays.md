@@ -1,50 +1,49 @@
 ---
 title: How much you can earn from clips on DareBay
-description: "What one clip pays: rates of $0.08-$2.00 per 1000 views (median $0.50), a 2000-view threshold and a typical cap of $98.50 per submission. No follower requirement."
-provenance: { snapshot_date: "2026-08-15", source: "darebay-prod" }
-numbers_used: [ppv_cpm_min, ppv_cpm_median, ppv_cpm_max, ppv_min_views_threshold_live, ppv_max_per_work_typical, ppv_contests]
+description: "What one clip pays: rates of $1.00-$2.00 per 1000 views, a 2000-view threshold and a typical cap of $100 per submission. No follower requirement."
+provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
+numbers_used: [ppv_cpm_min, ppv_cpm_median, ppv_cpm_max, ppv_min_views_threshold_live, ppv_max_per_work_typical, ppv_max_per_work_band_high]
 seo: true
 ---
 
 # How much you can earn from clips on DareBay
 
-You work out your figure before you edit, not after. A clipper's earnings come from three numbers: the rate per 1000 views, the views your submission gets, and the cap on a single submission. All three are open on the contest card before you submit. Rates across live contests run from **$0.08 to $2.00 per 1000 views**, and the median is **$0.50**. A submission joins the budget split once it clears the threshold: in a typical live contest that is **2000 views**. The typical cap per submission is **$98.50**. The buyer sets these numbers when creating the contest and does not move them after launch, so you know in advance exactly what you are playing for.
+You work out your figure before you edit, not after. A clipper's earnings come from three numbers: the rate per 1000 views, the views your submission gets, and the cap on a single submission. All three are open on the contest card before you submit. Rates across open contests run from **$1.00 to $2.00 per 1000 views**, and nothing open right now pays below that floor. A submission joins the budget split once it clears the threshold: in a typical open contest that is **2000 views**. The typical cap per submission is **$100**, and the largest campaigns go up to **$500**. The buyer sets these numbers when creating the contest and does not move them after launch, so you know in advance exactly what you are playing for.
 
-Every figure on this page comes from the platform's own data (snapshot: 2026-08-15).
+Every figure on this page comes from the platform's own data (snapshot: 2026-08-23) and counts only open contests - the ones a clipper can take right now.
 
 ## The three inputs: rate, threshold, cap
 
 | Parameter | Value | What it means for your figure |
 |-----------|-------|-------------------------------|
-| Minimum rate | $0.08 per 1000 views | The low end of the rate across live contests |
-| Median rate | $0.50 per 1000 views | Half of live contests pay this or more |
+| Minimum rate | $1.00 per 1000 views | The floor across open contests; it is also the typical rate |
 | Maximum rate | $2.00 per 1000 views | The high end of the rate across live contests |
 | View threshold | 2000 views | Typical across live contests; the exact figure is on the card |
-| Cap per submission | $98.50 | The typical maximum payout for one submission |
+| Cap per submission | $100 | The typical maximum payout for one submission; up to $500 in the largest campaigns |
 
 The buyer - a streamer or a brand - sets the rate, the threshold and the cap when creating the contest. Once it is live they are fixed, they are not lowered after the fact, and you decide whether to take the contest already knowing every input to the formula.
 
-## The anchor scenario: one submission at the median rate
+## The anchor scenario: one submission at the floor rate
 
 The payout for a single submission:
 
 `payout = rate * views / 1000`, and never more than the cap on one submission.
 
-Take a median contest: a rate of **$0.50 per 1000 views**, a threshold of **2000 views** and a cap of **$98.50**. Your clip reaches 40,000 views.
+Take a contest at the floor: a rate of **$1.00 per 1000 views**, a threshold of **2000 views** and a cap of **$100**. Your clip reaches 40,000 views.
 
 - The threshold is cleared, so the submission takes part in the budget split.
-- The maths: $0.50 * 40,000 / 1000 = **$20.00**.
-- The cap never came into it: at the median rate it only bites at 197,000 views.
+- The maths: 40,000 / 1000 * $1.00 = **$40.00**.
+- The cap never came into it: at this rate it only bites at 100,000 views.
 
-The threshold is not subtracted. The moment a submission passes **2000 views**, the whole counter goes into the formula, not the remainder above the threshold. Put your own contest's rate, threshold and cap in place of the median ones and you have your figure before you open the editor.
+The threshold is not subtracted. The moment a submission passes **2000 views**, the whole counter goes into the formula, not the remainder above the threshold. Put your own contest's rate, threshold and cap in place of the example ones and you have your figure before you open the editor.
 
-That is the arithmetic of one specific brief, not a forecast of monthly income. There are **10 live PPV contests** on the platform right now: you pick the ones that suit your subject and your rate, and you know the terms of each one up front. The formula answers the question "what will this piece of work pay me" - and it answers it exactly.
+That is the arithmetic of one specific brief, not a forecast of monthly income. Open PPV contests sit on the board: you pick the ones that suit your subject and your rate, and you know the terms of each one up front. The formula answers the question "what will this piece of work pay me" - and it answers it exactly.
 
 ## What moves your figure
 
 A clipper does not move the rate or the cap. Two things are in your hands: which contest you take, and how much reach the clip earns.
 
-1. **The spread of rates.** Between the low and high ends of live contests there is a factor of 25: the same thousand views is worth $0.08 or $2.00. Even the step from the minimum to the median ($0.50) is more than sixfold. The rate is on the card before you submit, so that choice is made before any editing.
+1. **The spread of rates.** Between the low and high ends of open contests there is a factor of two: the same thousand views is worth $1.00 or $2.00. The rate is on the card before you submit, so that choice is made before any editing.
 2. **The reach of the individual clip.** Up to the cap the payout grows linearly: every further thousand views is worth exactly the contest rate.
 3. **Clearing the threshold.** A submission that falls short of **2000 views** takes no part in the split at all. The hook in the first seconds decides whether the clip clears the bar.
 4. **How many contests you submit to.** The cap limits what one submission earns, not how many contests you enter.
@@ -92,7 +91,7 @@ Three numbers: the rate per 1000 views, the views your submission gets, and the 
 
 ### What is the most one submission can earn?
 
-As much as the contest cap allows; the typical cap across live contests is **$98.50**. The cap exists so a budget is shared between several authors instead of going entirely to one viral clip. It applies to the submission, not to the author, and it is visible on the card before you submit.
+As much as the contest cap allows; the typical cap across open contests is **$100**. The cap exists so a budget is shared between several authors instead of going entirely to one viral clip. It applies to the submission, not to the author, and it is visible on the card before you submit.
 
 ### Are beginners paid a lower rate?
 
@@ -100,7 +99,7 @@ No. The rate belongs to the contest: everyone in it is calculated at the same pr
 
 ### Is the formula my monthly income?
 
-No, it is the exact amount for one specific submission in one specific contest. There are **10 live PPV contests** on the platform right now, and a month adds up from the ones you actually took. The strength of the formula is elsewhere: it can be computed in advance and does not depend on anyone's decision after the fact. The rate, the threshold and the cap were fixed before you opened the editor.
+No, it is the exact amount for one specific submission in one specific contest. A month adds up from the open contests you actually took. The strength of the formula is elsewhere: it can be computed in advance and does not depend on anyone's decision after the fact. The rate, the threshold and the cap were fixed before you opened the editor.
 
 ### Answers that live on other pages
 

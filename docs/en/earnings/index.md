@@ -1,13 +1,13 @@
 ---
 title: Earning on DareBay
-description: "Clipper earnings on DareBay: rates from $0.08 to $2.00 per 1000 views, median $0.50, a 2000-view threshold and a typical cap of $98.50 per submission. A map of the section."
-provenance: { snapshot_date: "2026-08-15", source: "darebay-prod" }
+description: "Clipper earnings on DareBay: rates from $1.00 to $2.00 per 1000 views, a 2000-view threshold and a typical cap of $100 per submission. A map of the section."
+provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_cpm_min, ppv_cpm_median, ppv_cpm_max, ppv_min_views_threshold_live, ppv_max_per_work_typical]
 ---
 
 # Earning on DareBay
 
-A clipper here is paid for the views of one specific video, and you know the price before you start editing. Rates across live contests run from **$0.08 to $2.00 per 1000 views**, and the median is **$0.50**. A submission joins the budget split once it clears the threshold: in a typical live contest that is **2000 views**. The typical cap per submission is **$98.50**. The buyer sets all three when the contest is created and does not move them after launch, so all three numbers sit on the contest card before you submit.
+A clipper here is paid for the views of one specific video, and you know the price before you start editing. Rates across open contests run from **$1.00 to $2.00 per 1000 views**, and nothing open right now pays below that floor. A submission joins the budget split once it clears the threshold: in a typical open contest that is **2000 views**. The typical cap per submission is **$100**. The buyer sets all three when the contest is created and does not move them after launch, so all three numbers sit on the contest card before you submit.
 
 The amount is worked out by the system: an independent counter reads the published view counter on the site where you posted, and the result is recorded against you. Paying that money out is a separate step and it can be handled by hand, so no deadline is promised. One thing does not depend on timing: in a wallet-backed contest the budget is frozen on the platform before you take the task, and a recorded calculation cannot be replayed after the fact.
 
@@ -15,8 +15,8 @@ Live tasks sit in the [clip earnings catalogue](/en/earn/clips): the rate, the t
 
 ## The money: what a clip is worth
 
-- [How much you can earn from clips](/en/earnings/how-much-clipping-pays) - the formula built from rate, views and cap, worked through on a median contest, and why followers are not part of it.
-- [What DareBay pays per 1000 views](/en/earnings/pay-per-1000-views) - the rate reference: minimum, median, maximum, where the 25-fold spread comes from and where the system ceiling sits.
+- [How much you can earn from clips](/en/earnings/how-much-clipping-pays) - the formula built from rate, views and cap, worked through on a floor-rate contest, and why followers are not part of it.
+- [What DareBay pays per 1000 views](/en/earnings/pay-per-1000-views) - the rate reference: what open contests pay from and to, where the spread comes from and where the system ceiling sits.
 
 ## The mechanics: counting and paying
 

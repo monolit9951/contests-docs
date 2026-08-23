@@ -1,7 +1,7 @@
 ---
 title: Какая комиссия на DareBay - создание, магазин и вывод
 description: "Сколько стоит запуск конкурса на DareBay и какие комиссии берёт платформа. Создание конкурса - 10 USDT разово, комиссия конкурса 0%. Покупка в магазине 8%, вывод доступного баланса 10% при минимальной заявке 10 USDT."
-provenance: { snapshot_date: "2026-08-15", source: "darebay-prod" }
+provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [contest_create_usdt_price, commission_fiat, commission_crypto, commission_coins]
 seo: true
 ---

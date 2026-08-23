@@ -1,16 +1,16 @@
 ---
 title: What streamer clips pay and how to start
-description: Streamer clips pay $0.08 to $2.00 per 1000 views, median $0.50, with a cap per submission set by the buyer. What to cut, what rights the brief grants, how to submit.
-provenance: { snapshot_date: "2026-08-15", source: "darebay-prod" }
+description: Streamer clips pay $1.00 to $2.00 per 1000 views, with a cap per submission set by the buyer. What to cut, what rights the brief grants, how to submit.
+provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_cpm_min, ppv_cpm_median, ppv_cpm_max, ppv_min_views_threshold_live]
 seo: true
 ---
 
 # What streamer clips pay and how to start
 
-A stream clip on DareBay is paid by the views of one specific video: live contest rates run from **$0.08 to $2.00 per 1000 views**, and the median rate is **$0.50 per 1000 views**. The cap on a single submission is named by the buyer at contest creation. Followers are not required, entry costs a clipper nothing, and the contest commission is 0%. In a wallet-backed contest the budget is frozen on the platform before you take the brief, and the rate and the cap stand on the card before you submit: you know in advance what you are playing for.
+A stream clip on DareBay is paid by the views of one specific video: open contest rates run from **$1.00 to $2.00 per 1000 views**, and nothing open right now pays below that floor. The cap on a single submission is named by the buyer at contest creation. Followers are not required, entry costs a clipper nothing, and the contest commission is 0%. In a wallet-backed contest the budget is frozen on the platform before you take the brief, and the rate and the cap stand on the card before you submit: you know in advance what you are playing for.
 
-Every figure on this page comes from the platform's own data (snapshot: 2026-08-15).
+Every figure on this page comes from the platform's own data (snapshot: 2026-08-23) and counts only open contests - the ones a clipper can take right now.
 
 ## What gets cut from a broadcast, and why it travels
 
@@ -30,23 +30,22 @@ Turning a moment into a finished video - the vertical frame, the hook, subtitles
 
 | Parameter | Value | What it means for you |
 |-----------|-------|-----------------------|
-| Rate, minimum | $0.08 per 1000 views | The low end of live contests |
-| Rate, median | $0.50 per 1000 views | Half of contests pay this or more |
+| Rate, minimum | $1.00 per 1000 views | The floor across open contests; it is also the typical rate |
 | Rate, maximum | $2.00 per 1000 views | The high end of live contests |
-| View threshold | 2000 | The median across live contests: from that mark a submission joins the budget split |
+| View threshold | 2000 | The typical figure across open contests: from that mark a submission joins the budget split |
 | Cap on one submission | Set by the buyer | The maximum payout for a single submission; it stands on the card before you submit |
 
-The spread of rates between contests is a factor of 25, so a contest is chosen by the numbers on the card, not by the streamer's name. The buyer fixes the rate, the threshold and the cap at contest creation and does not move them after launch.
+The spread of rates between contests is twofold, so a contest is chosen by the numbers on the card, not by the streamer's name. The buyer fixes the rate, the threshold and the cap at contest creation and does not move them after launch.
 
-The payout is worked out as `views / 1000 * the contest rate`, and never above the cap on one submission. The threshold is not subtracted: once a submission has its 2000 views, the whole counter goes into the maths, not the remainder above the bar.
+The payout is worked out as `views / 1000 * the contest rate`, and never above the cap on one submission. The threshold is not subtracted: once a submission clears the threshold of 2000 views, the whole counter goes into the maths, not the remainder above the bar.
 
-At the median rate of $0.50 per 1000 views:
+At the floor rate of $1.00 per 1000 views:
 
-- 20,000 views: 20,000 / 1000 * $0.50 = **$10.00**
-- 120,000 views: 120,000 / 1000 * $0.50 = **$60.00**
-- 300,000 views: 300,000 / 1000 * $0.50 = **$150.00**, but where the formula runs above the contest cap, the payout for that submission stops at the cap
+- 20,000 views: 20,000 / 1000 * $1.00 = **$20.00**
+- 120,000 views: 120,000 / 1000 * $1.00 = **$120.00**
+- 300,000 views: 300,000 / 1000 * $1.00 = **$300.00**, but where the formula runs above the contest cap, the payout for that submission stops at the cap
 
-A cap is a mechanic for sharing a budget, not a verdict on your work: without one, a single viral video would take the whole contest budget and leave the other clippers nothing. The buyer sets it at contest creation, and in live contests caps sit around the hundred-dollar mark. The higher the rate, the sooner a submission runs into it: in a contest at the maximum rate of $2.00 per 1000 views that happens four times earlier in views than at the median $0.50 per 1000. So the rate and the cap are read together.
+A cap is a mechanic for sharing a budget, not a verdict on your work: without one, a single viral video would take the whole contest budget and leave the other clippers nothing. The buyer sets it at contest creation: across open contests the typical cap is $100 per submission, and the largest campaigns go up to $500. The higher the rate, the sooner a submission runs into it: in a contest at $2.00 per 1000 views that happens twice as early in views as at $1.00 per 1000. So the rate and the cap are read together.
 
 ## Rights to the source: what a streamer's brief allows
 
@@ -84,7 +83,7 @@ The brief itself is the permission: a clip contest is created by a buyer who wan
 
 ### Do all streamers pay the same?
 
-No. Every buyer picks their own rate and cap at contest creation, which is why live contests sit anywhere between $0.08 and $2.00 per 1000 views. Both numbers are open on the card before you submit.
+No. Every buyer picks their own rate and cap at contest creation, which is why open contests sit anywhere between $1.00 and $2.00 per 1000 views. Both numbers are open on the card before you submit.
 
 ### Does the video description need a hashtag?
 

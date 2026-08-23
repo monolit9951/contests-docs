@@ -1,7 +1,7 @@
 ---
 title: DareBay withdrawals - fee, minimum and timing
 description: "How to withdraw an available DareBay balance: a 10 USDT minimum, a 10% fee, manual request processing and available payout methods."
-provenance: { snapshot_date: "2026-08-15", source: "darebay-prod-config" }
+provenance: { snapshot_date: "2026-08-23", source: "darebay-prod-config" }
 numbers_used: []
 seo: true
 ---

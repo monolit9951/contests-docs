@@ -1,7 +1,7 @@
 ---
 title: Яка комісія на DareBay - конкурси, магазин і виведення
 description: "Актуальні комісії DareBay: створення і поповнення конкурсу 0%, магазин 8%, виведення з балансу 10% за мінімальної суми 10 USDT."
-provenance: { snapshot_date: "2026-08-15", source: "darebay-prod-config" }
+provenance: { snapshot_date: "2026-08-23", source: "darebay-prod-config" }
 numbers_used: [commission_fiat, commission_crypto, commission_coins]
 seo: true
 ---

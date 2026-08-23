@@ -1,16 +1,16 @@
 ---
 title: Where to find clipping work - a marketplace for clips
-description: Who pays for clips, where the briefs and the source footage come from, how a direct deal differs from an intermediary. Rates of $0.08 to $2.00 per 1000 views.
-provenance: { snapshot_date: "2026-08-15", source: "darebay-prod" }
+description: Who pays for clips, where the briefs and the source footage come from, how a direct deal differs from an intermediary. Rates of $1.00 to $2.00 per 1000 views.
+provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_cpm_min, ppv_cpm_median, ppv_cpm_max, ppv_min_views_threshold_live]
 seo: true
 ---
 
 # Where to find clipping work - a marketplace for clips
 
-Paid clipping work sits on DareBay's open contest board: you take a brief yourself, with no application, no interview and no portfolio review. Live contests pay **$0.08 to $2.00 per 1000 views**, and the typical (median) rate is **$0.50 per 1000 views**. The threshold at which a submission enters the maths is most often **2000 views** in live contests, while the maximum payout for one submission is whatever the buyer named. They fix the rate, the threshold and the cap at contest creation and do not move them after launch, and all three numbers stand on the card before you submit - you know in advance what you are playing for, and for a clipper entry costs nothing.
+Paid clipping work sits on DareBay's open contest board: you take a brief yourself, with no application, no interview and no portfolio review. Open contests pay **$1.00 to $2.00 per 1000 views**, and nothing open right now pays below that floor. The typical threshold is **2000 views**: from that mark a submission enters the maths, while the maximum payout for one submission is whatever the buyer named. They fix the rate, the threshold and the cap at contest creation and do not move them after launch, and all three numbers stand on the card before you submit - you know in advance what you are playing for, and for a clipper entry costs nothing.
 
-Every figure on this page comes from the platform's own data (snapshot: 2026-08-15).
+Every figure on this page comes from the platform's own data (snapshot: 2026-08-23) and counts only open contests - the ones a clipper can take right now.
 
 ## Who pays for clips, and out of whose pocket
 

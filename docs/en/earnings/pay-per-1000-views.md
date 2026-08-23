@@ -1,26 +1,25 @@
 ---
 title: What DareBay pays per 1000 views
-description: The rate per 1000 views in DareBay contests runs from $0.08 to $2.00, median $0.50. Where the spread comes from, where the system ceiling sits, what the card fixes.
-provenance: { snapshot_date: "2026-08-15", source: "darebay-prod" }
+description: The rate per 1000 views in DareBay contests runs from $1.00 to $2.00. Where the spread comes from, where the system ceiling sits, what the card fixes.
+provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_cpm_min, ppv_cpm_median, ppv_cpm_max, ppv_max_cpm_rate, ppv_min_views_threshold_live]
 seo: true
 ---
 
 # What DareBay pays per 1000 views
 
-A thousand views on DareBay pays **$0.08 to $2.00**, with a median of **$0.50 per 1000 views**: half of live contests pay that or more. The rate is named by the contest buyer and it stands on the card before you touch the editor, so you know the price of a thousand views in advance and everything after that comes down to the reach of your work. To join the budget split a submission has to clear the threshold - in live contests that is **2000 views**. In a wallet-backed contest the budget is frozen on the platform before you even take the task.
+A thousand views on DareBay pays **$1.00 to $2.00**: nothing open right now pays below the floor, and the top of the spread is exactly twice it. The rate is named by the contest buyer and it stands on the card before you touch the editor, so you know the price of a thousand views in advance and everything after that comes down to the reach of your work. To join the budget split a submission has to clear the threshold - in open contests that is **2000 views**. In a wallet-backed contest the budget is frozen on the platform before you even take the task.
 
-Every figure on this page comes from the platform's own data (snapshot: 2026-08-15).
+Every figure on this page comes from the platform's own data (snapshot: 2026-08-23) and counts only open contests - the ones a clipper can take right now.
 
-## The rate per 1000 views: minimum, median, maximum
+## The rate per 1000 views: floor and ceiling
 
 | Parameter | Value | What it means |
 |-----------|-------|---------------|
-| Minimum rate | $0.08 per 1000 views | The lowest rate among live contests |
-| Median rate | $0.50 per 1000 views | Half of contests pay this or more |
-| Maximum rate | $2.00 per 1000 views | The highest rate among live contests |
+| Minimum rate | $1.00 per 1000 views | Nothing open pays below it; it is also the typical rate |
+| Maximum rate | $2.00 per 1000 views | The highest rate among open contests |
 | System ceiling on the rate | $100 per 1000 views | A hard validator limit: above it the contest is not created |
-| View threshold | 2000 views | The median across live contests; the exact figure stands on the card |
+| View threshold | 2000 views | The typical figure across open contests; the exact one stands on the card |
 | Cap on one submission | Set by the buyer | The maximum for a single clip; it stands on the contest card before you submit |
 
 The rate is the price of a thousand views, not the payout itself. The payout is worked out as `views / 1000 * rate` and stops at the cap on one submission.
@@ -31,21 +30,20 @@ The gap between contests shows up best if you hold the reach steady and vary the
 
 | Contest rate | Payout for 20,000 views |
 |--------------|-------------------------|
-| $0.08 per 1000 views | $1.60 |
-| $0.50 per 1000 views | $10.00 |
-| $2.00 per 1000 views | $40.00 |
+| $1.00 per 1000 views | 20,000 / 1000 * $1.00 = $20.00 |
+| $2.00 per 1000 views | 20,000 / 1000 * $2.00 = $40.00 |
 
-Same reach, same edit, a result that differs by a factor of 25. That is why the rate on the card is the first thing to read when picking a contest, with the threshold and the cap right behind it. Fuller worked examples across different reach are in [how much you can earn from clips](/en/earnings/how-much-clipping-pays).
+Same reach, same edit, a result that differs twofold. That is why the rate on the card is the first thing to read when picking a contest, with the threshold and the cap right behind it. Fuller worked examples across different reach are in [how much you can earn from clips](/en/earnings/how-much-clipping-pays).
 
-## Where the 25-fold spread comes from
+## Where the spread comes from
 
 There is no single "price of a view" on the platform, and that is not disorder, it is how the model is built: the rate is named by the buyer, not by DareBay. Each contest is its own offer, and a buyer assembles their rate out of three things.
 
 - **The contest budget.** Rate and budget are directly linked: the dearer a thousand views, the faster the budget is spent across submissions. A buyer with a modest budget names a lower rate so the contest runs longer and collects more clips.
 - **The niche and the price of the audience.** Where a single sale pays back tens of thousands of views, paying well is worth it. A contest chasing raw reach costs less.
-- **Competition for clippers.** A rate is also an offer on a market. A buyer who needs work quickly and from strong authors has to go above the median: other contests are hanging right next to theirs, and clippers compare.
+- **Competition for clippers.** A rate is also an offer on a market. A buyer who needs work quickly and from strong authors has to go towards the top of the spread: other contests are hanging right next to theirs, and clippers compare.
 
-The median of **$0.50 per 1000 views** is a convenient reference point: above it a rate is generous by the platform's standards, below it thrifty. How all this sits against the platforms' own creator programmes is covered separately in [what TikTok pays for views](/en/earnings/tiktok-view-payouts).
+The floor of **$1.00 per 1000 views** is the reference point: a rate close to **$2.00** is generous by the platform's standards, one at the floor is thrifty. How all this sits against the platforms' own creator programmes is covered separately in [what TikTok pays for views](/en/earnings/tiktok-view-payouts).
 
 ## The system ceiling: $100 per 1000 views
 
@@ -71,11 +69,11 @@ The whole chain from a frozen budget to money on your balance is in [how pay-per
 
 ### What determines the rate per 1000 views?
 
-The contest buyer names it to suit their budget, their niche and the competition for clippers. The platform sets no single price for a view; it only refuses a rate above the system ceiling of $100 per 1000 views. The live range right now is $0.08 to $2.00 per 1000 views.
+The contest buyer names it to suit their budget, their niche and the competition for clippers. The platform sets no single price for a view; it only refuses a rate above the system ceiling of $100 per 1000 views. The range across open contests right now is $1.00 to $2.00 per 1000 views.
 
 ### What counts as a normal rate?
 
-The reference point is the median across live contests, **$0.50 per 1000 views**: half of contests pay that or more. But a rate alone does not decide everything - read it together with the threshold (2000 views in live contests) and the cap on one submission, all three of which stand on the same card.
+The reference point is the floor across open contests, **$1.00 per 1000 views**: nothing pays below it right now, and the top of the spread is **$2.00**. But a rate alone does not decide everything - read it together with the threshold (2000 views in open contests) and the cap on one submission, all three of which stand on the same card.
 
 ### Can the rate be changed after I submit?
 

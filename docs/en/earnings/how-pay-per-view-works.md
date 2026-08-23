@@ -1,16 +1,16 @@
 ---
 title: How pay-per-view works on DareBay
 description: "The money chain in a DareBay PPV contest: a frozen budget, a submission sent by link, an automatic calculation, the credit, and the ways and timing of getting paid."
-provenance: { snapshot_date: "2026-08-15", source: "darebay-prod" }
+provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_cpm_median, ppv_min_views_threshold_live, ppv_max_per_work_typical]
 seo: true
 ---
 
 # How pay-per-view works on DareBay
 
-You cut a clip and you want to understand where the money comes from. On DareBay that is a closed chain: in a wallet-backed contest the budget is frozen on the platform before you take the task, the rate and the cap are fixed on the card, and the amount is worked out by a formula against the published view counter. The median rate across live contests is $0.50 per 1000 views, and the typical cap on one submission is $98.50. The system does the maths; moving the money is a separate stage and it can be handled by hand. Below is the whole chain step by step, and at the end the answers on timing, reward methods and submitting more than one clip.
+You cut a clip and you want to understand where the money comes from. On DareBay that is a closed chain: in a wallet-backed contest the budget is frozen on the platform before you take the task, the rate and the cap are fixed on the card, and the amount is worked out by a formula against the published view counter. Open contests pay from $1.00 per 1000 views, and the typical cap on one submission is $100. The system does the maths; moving the money is a separate stage and it can be handled by hand. Below is the whole chain step by step, and at the end the answers on timing, reward methods and submitting more than one clip.
 
-Every figure on this page comes from the platform's own data (snapshot: 2026-08-15).
+Every figure on this page comes from the platform's own data (snapshot: 2026-08-23) and counts only open contests - the ones a clipper can take right now.
 
 ## The full chain: budget to payout
 
@@ -32,9 +32,9 @@ Here is what happens between the contest being created and the money arriving:
 
 | Parameter | Value | What it means |
 |-----------|-------|---------------|
-| Median rate | $0.50 per 1000 views | The typical rate across live contests; the organizer names their own |
-| View threshold | 2000 views | The median across live contests; the organizer sets the exact value |
-| Cap on one submission | $98.50 | The typical value in live contests; the maximum for a single submission |
+| Typical rate | $1.00 per 1000 views | The floor across open contests; the organizer names their own |
+| View threshold | 2000 views | The typical figure across open contests; the organizer sets the exact value |
+| Cap on one submission | $100 | The typical value in open contests; the maximum for a single submission |
 | Site | Set by the contest | Live view counting works for TikTok, YouTube and Instagram |
 
 The organizer sets the rate, the threshold and the cap when creating the contest and does not move them after launch - all three numbers are visible on the card before you submit, so you know in advance what you are playing for. The view threshold keeps a budget from being smeared across dozens of submissions with a handful of views each.
@@ -61,7 +61,7 @@ A remainder appears in three situations:
 
 - **Fewer submissions arrived than the organizer expected.** Only the videos that were sent are paid for; the rest is not spent.
 - **Submissions missed the threshold.** A video with 1500 views against a 2000 threshold does not enter the split, and its share of the budget stays untouched.
-- **A submission hit the cap.** At $0.50 per 1000 views a video with 120,000 views comes to $60 by the formula - below the cap, so the author gets all of it. A video with 400,000 views would come to $200, but against a cap of $98.50 the calculation takes $98.50 and the difference stays in the contest budget.
+- **A submission hit the cap.** At $1.00 per 1000 views a video with 80,000 views comes to 80,000 / 1000 * $1.00 = **$80.00** by the formula - below the cap, so the author gets all of it. A video with 400,000 views would come to 400,000 / 1000 * $1.00 = **$400.00**, but against a cap of $100 the calculation takes $100 and the difference stays in the contest budget.
 
 What happens next depends on the contest type. In a contest with a frozen wallet-backed budget the unspent part returns to the organizer's balance: the money neither burns nor stays with the platform. In a contest with direct debit the budget was never held up front, so there is no remainder to return and no refund queue is created.
 

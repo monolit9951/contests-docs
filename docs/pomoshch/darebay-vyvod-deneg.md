@@ -1,7 +1,7 @@
 ---
 title: DareBay вывод денег - как подать заявку и что приходит на руки
 description: "Как вывести доступный баланс DareBay: минимальная заявка 10 USDT, комиссия 10%, ручная обработка, маршруты USDT на TON и Telegram Stars."
-provenance: { snapshot_date: "2026-08-15", source: "darebay-prod" }
+provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [contest_create_usdt_price]
 seo: true
 ---

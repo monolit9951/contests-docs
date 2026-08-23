@@ -1,12 +1,12 @@
 {
   "schemaVersion": 2,
-  "verifiedAt": "2026-08-15",
+  "verifiedAt": "2026-08-23",
   "source": {
     "backend": {
       "repository": "monolit9951/Contests",
       "branch": "release",
       "localPath": "/root/code/Contests",
-      "verifiedCommit": "9fa45592116560c6afa7009b503fdb4550f3de9c",
+      "verifiedCommit": "8a44e443d6e76a9679c3ca2391033de2971b32cb",
       "configFile": "src/main/resources/application.properties",
       "manualPayoutRunbook": "docs/MANUAL_PAYOUTS_ADMIN.md"
     },
@@ -14,7 +14,7 @@
       "repository": "monolit9951/darebay-seo-fleet",
       "branch": "master",
       "localPath": "/root/code/darebay-seo-fleet",
-      "verifiedCommit": "bd06013a60553f2f3cf1ab4ccef469ce6f53508d",
+      "verifiedCommit": "49db2410bb55d3cb5ad45aac1db87db2fe0ee7ba",
       "file": "data/product-facts.md"
     },
     "properties": {
@@ -90,7 +90,7 @@
       "bands": {
         "cpm": {
           "unit": "usd_per_1000_views",
-          "low": 0.05,
+          "low": 1,
           "high": 2,
           "packKeys": {
             "low": "ppv_cpm_band_low",
@@ -99,8 +99,8 @@
         },
         "maxPerWork": {
           "unit": "usd",
-          "low": 30,
-          "high": 100,
+          "low": 100,
+          "high": 500,
           "packKeys": {
             "low": "ppv_max_per_work_band_low",
             "high": "ppv_max_per_work_band_high"
@@ -108,8 +108,8 @@
         },
         "minViewsThreshold": {
           "unit": "views",
-          "low": 1000,
-          "high": 50000,
+          "low": 1,
+          "high": 2000,
           "packKeys": {
             "low": "ppv_min_views_threshold_band_low",
             "high": "ppv_min_views_threshold_band_high"
@@ -119,13 +119,13 @@
     },
     "volatile": {
       "cpmMinimum": {
-        "value": 0.08,
+        "value": 1,
         "unit": "usd_per_1000_views",
         "packKey": "ppv_cpm_min",
         "band": "cpm"
       },
       "cpmMedian": {
-        "value": 0.5,
+        "value": 1,
         "unit": "usd_per_1000_views",
         "packKey": "ppv_cpm_median",
         "band": "cpm"
@@ -137,7 +137,7 @@
         "band": "cpm"
       },
       "maxPerWorkTypical": {
-        "value": 98.5,
+        "value": 100,
         "unit": "usd",
         "packKey": "ppv_max_per_work_typical",
         "band": "maxPerWork"
@@ -149,9 +149,15 @@
         "band": "minViewsThreshold"
       },
       "contests": {
-        "value": 10,
+        "value": 9,
         "unit": "count",
         "packKey": "ppv_contests",
+        "band": null
+      },
+      "openContests": {
+        "value": 2,
+        "unit": "count",
+        "packKey": "ppv_open_contests",
         "band": null
       }
     }

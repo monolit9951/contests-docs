@@ -1,7 +1,7 @@
 ---
 title: How views are counted for the payout
 description: "Who counts views in a DareBay PPV contest and why the threshold is not subtracted: clear it and the whole counter goes into the maths. Threshold, rate ceiling, moderation and holds."
-provenance: { snapshot_date: "2026-08-15", source: "darebay-prod" }
+provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_max_cpm_rate, ppv_min_views_threshold_live, ppv_default_min_views_threshold, ppv_cpm_median]
 seo: true
 ---
@@ -25,12 +25,12 @@ What honestly follows from that, and what does not:
 
 The accounting mode on the platform is called `FULL_COUNTER_AFTER_THRESHOLD`. The wording is technical, the meaning is simple: **the threshold is an admission condition, not a deductible**. It does not cut the first thousands of views off your payout; it only decides whether the submission takes part in the budget split.
 
-An example. A contest with a threshold of 2000 views and a rate of $0.50 per 1000 views; the submission reached 6000 views.
+An example. A contest with a threshold of 2000 views and a rate of $1.00 per 1000 views; the submission reached 6000 views.
 
-- **How DareBay counts it:** $0.50 * 6000 / 1000 = **$3.00**. All 6000 views go into the maths.
-- **If the threshold were subtracted:** $0.50 * (6000 - 2000) / 1000 = $2.00.
+- **How DareBay counts it:** 6000 / 1000 * $1.00 = **$6.00**. All 6000 views go into the maths.
+- **If the threshold were subtracted:** only the remainder of the counter would count. That would be 4000 / 1000 * $1.00 = **$4.00** instead of six.
 
-On exactly the same views, the difference is half the payout again. A second example: a contest with the default threshold of 1000 views, and a submission that reached exactly 1000. The payout is worked out on the whole thousand: $0.50 * 1000 / 1000 = $0.50, not zero.
+On exactly the same views, the difference is half the payout again. A second example: a contest with the default threshold of 1000 views, and a submission that reached exactly 1000. The payout is worked out on the whole thousand: 1000 / 1000 * $1.00 = **$1.00**, not zero.
 
 | Views on the submission | Contest threshold | What goes into the maths |
 |---|---|---|
@@ -42,7 +42,7 @@ Hence a practical conclusion: the most valuable stretch in a contest is the last
 
 ## The view threshold: how much you have to reach
 
-The threshold is set by the buyer at contest creation, in the "minimum views" field. Leave it empty and the system fills in its own default, **1000 views**. In practice buyers set it higher: the median across live contests is **2000 views**. The exact value stands on the contest card and does not move after launch, so you see the bar before you take the work on.
+The threshold is set by the buyer at contest creation, in the "minimum views" field. Leave it empty and the system fills in its own default, **1000 views**. In practice buyers set it higher: the typical threshold across open contests is **2000 views**. The exact value stands on the contest card and does not move after launch, so you see the bar before you take the work on.
 
 | Parameter | Value | What it means |
 |---|---|---|

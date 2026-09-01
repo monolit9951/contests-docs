@@ -32,7 +32,7 @@
     "vitest": "^4.1.10"
   },
   "dependencies": {
-    "web-vitals": "^6.0.1"
+    "web-vitals": "^6.2.1"
   },
   "overrides": {
     "vitepress": {

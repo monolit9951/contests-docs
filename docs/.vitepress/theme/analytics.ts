@@ -545,6 +545,11 @@ export const trackDocsEvent = (
     options: TrackOptions = {},
 ): void => {
     if (typeof window === 'undefined') return
+    // A browser driven by Playwright, Puppeteer or Selenium announces itself
+    // through navigator.webdriver. It is a script reading the page, not a
+    // reader: such runs surfaced as fresh "visitors" per page in the admin
+    // History, and no network rule can catch them from an arbitrary address.
+    if (navigator.webdriver) return
     const now = Date.now()
     const key = throttleKeyFor(eventId, options.dedupeKey, meta.targetUrl, window.location.pathname)
     if (now - (recentSends.get(key) ?? 0) < THROTTLE_MS) return

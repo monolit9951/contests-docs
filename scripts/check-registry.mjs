@@ -34,6 +34,7 @@ const {
     sourceFile,
     localesOf,
     hreflangCluster,
+    xDefaultLocaleOf,
     redirectMap,
 } = await import(join(DOCS, '.vitepress', 'registry.ts'))
 
@@ -92,7 +93,7 @@ for (const entry of PAGES) {
 for (const entry of PAGES) {
     const cluster = hreflangCluster(entry)
     const expected = new Map(localesOf(entry).map((lang) => [lang, `https://darebay.com${pagePath(entry, lang)}`]))
-    expected.set('x-default', `https://darebay.com${pagePath(entry, ROOT_LOCALE.language)}`)
+    expected.set('x-default', `https://darebay.com${pagePath(entry, xDefaultLocaleOf(entry))}`)
     const actual = new Map(cluster.map(({ hreflang, href }) => [hreflang, href]))
     if (actual.size !== cluster.length) fail('hreflang-duplicate', entry.id)
     if (actual.size !== expected.size) fail('hreflang-size', `${entry.id}: ${actual.size}, expected ${expected.size}`)

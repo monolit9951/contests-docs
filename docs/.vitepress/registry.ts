@@ -274,8 +274,26 @@ export const pageUrl = (entry: RegistryEntry, language: Locale): string | null =
 }
 
 /**
+ * The language `x-default` stands for: the version shown to a reader none of the
+ * cluster's languages match. English, because English is what the site itself
+ * gives the rest of the world (founder, 2026-09-01: every country outside Ukraine
+ * and the Russian-speaking world reads English by default) — and the root locale
+ * when a page has no English version. The application makes the same choice in
+ * `contests-frontend/src/domain/i18n/localeRoute.ts` (`withXDefault`).
+ */
+export const X_DEFAULT_LANGUAGE: Locale = 'en'
+
+/** The locale a page's `x-default` points at, or undefined when it has neither candidate. */
+export const xDefaultLocaleOf = (entry: RegistryEntry): Locale | undefined => {
+    const langs = localesOf(entry)
+    if (langs.includes(X_DEFAULT_LANGUAGE)) return X_DEFAULT_LANGUAGE
+    return langs.includes(ROOT_LOCALE.language) ? ROOT_LOCALE.language : undefined
+}
+
+/**
  * The hreflang cluster of one page: every locale it EXISTS in, itself included,
- * plus x-default on the root locale when the root locale is one of them.
+ * plus x-default on the English version — or on the root one for a page that has
+ * no English (`xDefaultLocaleOf`).
  *
  * A single-locale page still gets a self-referencing entry — that is valid and
  * it is what keeps the set symmetric once a translation is added later.
@@ -283,8 +301,9 @@ export const pageUrl = (entry: RegistryEntry, language: Locale): string | null =
 export const hreflangCluster = (entry: RegistryEntry): { hreflang: string; href: string }[] => {
     const langs = localesOf(entry)
     const cluster = langs.map((lang) => ({ hreflang: lang, href: pageUrl(entry, lang)! }))
-    if (langs.includes(ROOT_LOCALE.language)) {
-        cluster.push({ hreflang: 'x-default', href: pageUrl(entry, ROOT_LOCALE.language)! })
+    const fallback = xDefaultLocaleOf(entry)
+    if (fallback) {
+        cluster.push({ hreflang: 'x-default', href: pageUrl(entry, fallback)! })
     }
     return cluster
 }

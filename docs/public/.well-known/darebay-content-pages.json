@@ -590,6 +590,32 @@
         "uk": "darebay-chy-whop",
         "en": "darebay-vs-whop"
       }
+    },
+    {
+      "id": "clipping-platforms-cis",
+      "hub": "earnings",
+      "slugs": {
+        "ru": "platformy-dlya-narezchikov-kotorye-platyat-v-sng",
+        "uk": "platformy-dlia-narizchykiv-shcho-platiat-v-ukrainu",
+        "en": "clipping-platforms-that-pay-in-russia-and-cis"
+      }
+    },
+    {
+      "id": "how-to-choose-clipping-platform",
+      "hub": "earnings",
+      "slugs": {
+        "ru": "kak-vybrat-platformu-dlya-narezok",
+        "uk": "yak-obraty-platformu-dlia-narizok",
+        "en": "how-to-choose-a-clipping-platform"
+      }
+    },
+    {
+      "id": "darebay-vs-klipni",
+      "hub": "earnings",
+      "slugs": {
+        "ru": "darebay-ili-klipni",
+        "en": "darebay-vs-klipni"
+      }
     }
   ]
 }

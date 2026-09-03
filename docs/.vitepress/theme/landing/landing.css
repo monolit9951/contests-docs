@@ -12,7 +12,7 @@
   --lp-panel-2: #151923;
   --lp-text: #f5f7fa;
   --lp-muted: rgba(245, 247, 250, 0.64);
-  --lp-faint: rgba(245, 247, 250, 0.42);
+  --lp-faint: rgba(245, 247, 250, 0.56);
   --lp-line: rgba(245, 247, 250, 0.08);
   --lp-line-2: rgba(245, 247, 250, 0.14);
   --lp-accent: #c8f542;
@@ -109,8 +109,10 @@
 .lp-content :is(ul, ol):not(.lp-bleed *) li { margin-bottom: 6px; }
 .lp-content a:not(.lp-btn):not(.lp-bleed *) { color: var(--lp-accent); text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--lp-accent) 40%, transparent); text-underline-offset: 3px; }
 .lp-content blockquote:not(.lp-bleed *) { border-left: 3px solid var(--lp-accent); margin-top: 8px; margin-bottom: 20px; padding: 6px 0 6px 18px; color: var(--lp-muted); }
-.lp-content table:not(.lp-bleed *) { border-collapse: collapse; font-size: 15px; display: table; }
-.lp-content table:not(.lp-bleed *) :is(th, td) { border-bottom: 1px solid var(--lp-line); padding: 10px 12px; text-align: left; vertical-align: top; }
+.lp-content table:not(.lp-bleed *) { border-collapse: collapse; font-size: 14.5px; display: block; overflow-x: auto; width: min(100% - 40px, var(--lp-container)); border: 1px solid var(--lp-line); border-radius: 14px; background: var(--lp-panel); margin-top: 8px; margin-bottom: 24px; }
+.lp-content table:not(.lp-bleed *) tbody, .lp-content table:not(.lp-bleed *) thead { display: table; width: 100%; min-width: 720px; }
+.lp-content table:not(.lp-bleed *) :is(th, td) { border-bottom: 1px solid var(--lp-line); padding: 10px 14px; text-align: left; vertical-align: top; }
+.lp-content table:not(.lp-bleed *) tr:last-child td { border-bottom: 0; }
 .lp-content table:not(.lp-bleed *) th { color: var(--lp-muted); font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; }
 /* FAQ: `## …questions` then `### question` + answer; questions read as an accordion-like list */
 .lp-content h2:not(.lp-bleed *) ~ h3:not(.lp-bleed *) { border-top: 1px solid var(--lp-line); padding-top: 18px; margin-top: 22px; font-family: var(--lp-display); font-weight: 500; font-size: 1.05rem; }
@@ -132,14 +134,14 @@
 .lp-table th.is-sorted.desc button::after { content: '↑'; }
 .lp-table td { padding: 14px 14px; border-bottom: 1px solid var(--lp-line); vertical-align: top; line-height: 1.45; color: rgba(245, 247, 250, 0.88); }
 .lp-table tr:last-child td { border-bottom: 0; }
-.lp-table td.lp-cell-name { font-weight: 700; white-space: nowrap; }
+.lp-table td.lp-cell-name { font-weight: 700; white-space: normal; min-width: 150px; max-width: 220px; }
 .lp-table td.lp-cell-name small { display: block; font-weight: 500; color: var(--lp-muted); font-size: 12px; margin-top: 2px; }
 .lp-table .lp-cell-name, .lp-table th:first-child { position: sticky; left: 0; background: var(--lp-panel); z-index: 1; box-shadow: 1px 0 0 var(--lp-line); }
 .lp-table th:first-child { background: var(--lp-panel-2); z-index: 3; }
 .lp-table tr.is-us td { background: color-mix(in srgb, var(--lp-accent) 7%, transparent); }
 .lp-table tr.is-us td.lp-cell-name { background: color-mix(in srgb, var(--lp-accent) 12%, var(--lp-panel)); }
 .lp-table td .lp-money { display: inline; }
-.lp-table td .lp-na { color: var(--lp-faint); }
+.lp-table td .lp-na { color: var(--lp-muted); }
 .lp-table td .lp-src { display: inline-block; margin-left: 4px; color: var(--lp-faint); font-size: 11px; text-decoration: none; vertical-align: super; }
 .lp-table td .lp-src:hover { color: var(--lp-accent); }
 .lp-chip { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 700; padding: 3px 9px; border-radius: 999px; border: 1px solid var(--lp-line-2); color: var(--lp-text); }

@@ -27,7 +27,7 @@ const title = computed(() => String(frontmatter.value.title ?? ''))
         <h1>{{ title }}</h1>
         <p v-if="hero.lede" class="lp-lede">{{ hero.lede }}</p>
         <div class="lp-hero-ctas">
-          <a class="lp-btn lp-btn-primary" :href="theme.darebayCta.productUrl">{{ hero.primary ?? copy.ctaPrimary }}</a>
+          <a class="lp-btn lp-btn-primary" :href="theme.darebayCta.productUrl" target="_self">{{ hero.primary ?? copy.ctaPrimary }}</a>
           <a v-if="hero.secondary" class="lp-btn lp-btn-ghost" href="#compare">{{ hero.secondary }}</a>
         </div>
       </div>

@@ -65,7 +65,7 @@ const stateClass = (s?: string) => (s === 'yes' ? 'lp-chip lp-chip-good' : s ===
           <tbody>
             <tr v-for="p in sorted" :key="p.id" :class="{ 'is-us': p.id === highlight }">
               <td class="lp-cell-name">
-                <a v-if="p.id === highlight" :href="p.home?.[loc] ?? p.url">{{ p.name }}</a>
+                <a v-if="p.id === highlight" :href="p.home?.[loc] ?? p.url" target="_self">{{ p.name }}</a>
                 <a v-else :href="p.url" target="_blank" rel="nofollow noopener">{{ p.name }}</a>
                 <small v-if="p.bestFor?.[loc]">{{ p.bestFor[loc] }}</small>
               </td>

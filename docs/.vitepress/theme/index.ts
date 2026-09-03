@@ -6,6 +6,7 @@ import type { DareBayThemeConfig } from '../chrome'
 import { DocsEvent, installDocsAnalytics, startDocsPage, trackDocsEvent } from './analytics'
 import { flushEngagement, startPageEngagement } from './engagement'
 import HubIndex from './HubIndex.vue'
+import { CONTENT_SEGMENTS } from '../registry'
 import LandingLayout from './landing/LandingLayout.vue'
 import LCompare from './landing/LCompare.vue'
 import LPlatforms from './landing/LPlatforms.vue'
@@ -37,7 +38,7 @@ const PlatformCta = defineComponent({
           h('p', { class: 'db-cta-lede' }, cta.lede),
         ]),
         h('div', { class: 'db-cta-actions' }, [
-          h('a', { class: 'db-cta-btn db-cta-btn-primary', href: cta.productUrl }, cta.productLabel),
+          h('a', { class: 'db-cta-btn db-cta-btn-primary', href: cta.productUrl, target: '_self' }, cta.productLabel),
           h(
             'a',
             {
@@ -135,8 +136,25 @@ export default {
 
     if (typeof window === 'undefined') return
 
+    // VitePress intercepts EVERY same-origin `<a>` click without a `target`
+    // attribute and routes it client-side. The product lives on the same
+    // origin (`/`, `/en`, `/tasks`, …) but is not a page of this site, so such a
+    // click used to render THIS site's 404 with the product's URL in the
+    // address bar (seen by the founder on 2026-09-03 after clicking a landing
+    // CTA to `/en`). Anything outside the hub prefixes the content container
+    // owns is the application: leave the SPA and load it for real.
+    const isContentPath = (to: string) => {
+      let pathname: string
+      try { pathname = new URL(to, window.location.origin).pathname } catch { return true }
+      return CONTENT_SEGMENTS.some((segment) => pathname === `/${segment}` || pathname.startsWith(`/${segment}/`))
+    }
+
     const originalBefore = router.onBeforeRouteChange
     router.onBeforeRouteChange = (to) => {
+      if (!isContentPath(to)) {
+        window.location.assign(to)
+        return false
+      }
       // BEFORE, so the reading time is still attributed to the page it was
       // spent on — by `onAfterRouteChange` the url has already changed and
       // every article would credit its dwell to whichever page came next.

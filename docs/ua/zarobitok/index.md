@@ -33,6 +33,15 @@ numbers_used: [ppv_cpm_min, ppv_cpm_median, ppv_cpm_max, ppv_min_views_threshold
 - [Скільки платять за нарізки стримерів](/ua/zarobitok/skilky-platiat-za-narizky-strymeriv) - що ріжуть з ефіру, скільки це коштує за ставкою конкурсу і які права на вихідник дає саме завдання.
 - [Скільки платять за перегляди в ТікТок](/ua/zarobitok/skilky-platiat-za-perehliady-v-tiktok) - партнерська програма майданчика проти конкурсу в посередника: вимоги TikTok і YouTube та шість осей порівняння.
 
+## Майданчики: порівняння з цифрами
+
+- [Найкращі платформи для заробітку на нарізках](/ua/zarobitok/naikrashchi-platformy-dlia-zarobitku-na-narizkakh) - дев'ять майданчиків в одній таблиці: ставка, поріг, стеля, комісія, виведення, країни.
+- [Альтернативи Whop в Україні](/ua/zarobitok/alternatyvy-whop-v-ukraini) - куди йти, якщо Whop не платить у твою країну.
+- [DareBay чи Whop](/ua/zarobitok/darebay-chy-whop) - два майданчики поле за полем.
+- [Хто платить в Україну](/ua/zarobitok/platformy-dlia-narizchykiv-shcho-platiat-v-ukrainu) - країна за країною, словами самих майданчиків.
+- [Як обрати платформу для нарізок](/ua/zarobitok/yak-obraty-platformu-dlia-narizok) - дев'ять питань до першого ролика.
+- [DareBay у цифрах](/ua/pro-proekt/darebay-u-tsyfrakh) - картка фактів: ставки, комісії, виплати, країни.
+
 ## З чого почати
 
 Якщо ти в розділі вперше, маршрут короткий. [Робота нарізальником](/ua/zarobitok/robota-narizalnykom) - що це за робота цілком і чого вона вимагає. [Скільки можна заробити на нарізках](/ua/zarobitok/skilky-mozhna-zarobyty-na-narizkakh) - як порахувати свою суму до того, як сядеш за монтаж. [Де брати замовлення на нарізки](/ua/zarobitok/de-braty-zamovlennia-na-narizky) - де взяти перше завдання і що читати в картці.

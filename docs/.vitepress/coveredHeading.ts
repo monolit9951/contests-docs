@@ -19,29 +19,27 @@ interface MarkdownRenderer {
 const COVER_CLASS = /\bclass=(['"])[^'"]*\bdocs-cover\b[^'"]*\1/
 
 /**
- * A cover already owns the page's visible and semantic H1. The Markdown H1 directly after it is
- * the accessible fallback in source, but rendering both leaves crawlers with two primary
- * headings. Remove only that exact duplicate token triplet and fail closed if the source shape
- * drifts; ordinary pages keep their Markdown H1 untouched.
+ * Every page is rendered by the landing shell, whose hero owns the page's visible and semantic H1
+ * (from the frontmatter title). The Markdown keeps its `# Title` as the source of truth for
+ * editors and for anything that reads the raw file, but rendering it too would leave crawlers with
+ * two primary headings (dist gate: exactly one h1). So the FIRST Markdown H1 is removed from the
+ * token stream, and any legacy `docs-cover` HTML block (the old hub-page cover that carried its
+ * own <h1>) is removed with it. A second Markdown H1 is left alone on purpose: that is an
+ * authoring mistake the dist gate must surface, not something to hide.
  */
 export function removeCoveredDuplicateH1(tokens: MarkdownToken[]): void {
-  const covers = tokens
-    .map((token, index) => ({ token, index }))
-    .filter(({ token }) => token.type === 'html_block' && COVER_CLASS.test(token.content))
-
-  for (const { index } of covers.reverse()) {
-    const opening = tokens[index + 1]
-    const content = tokens[index + 2]
-    const closing = tokens[index + 3]
-    if (
-      opening?.type !== 'heading_open' || opening.tag !== 'h1' ||
-      content?.type !== 'inline' ||
-      closing?.type !== 'heading_close' || closing.tag !== 'h1'
-    ) {
-      throw new Error('docs-cover must be followed immediately by one Markdown H1 fallback')
-    }
-    tokens.splice(index + 1, 3)
+  for (let index = tokens.length - 1; index >= 0; index--) {
+    const token = tokens[index]
+    if (token.type === 'html_block' && COVER_CLASS.test(token.content)) tokens.splice(index, 1)
   }
+  const open = tokens.findIndex((token) => token.type === 'heading_open' && token.tag === 'h1')
+  if (open === -1) return
+  const content = tokens[open + 1]
+  const close = tokens[open + 2]
+  if (content?.type !== 'inline' || close?.type !== 'heading_close' || close.tag !== 'h1') {
+    throw new Error('a Markdown H1 must be a plain heading: heading_open, inline, heading_close')
+  }
+  tokens.splice(open, 3)
 }
 
 export function installCoveredHeadingRule(md: MarkdownRenderer): void {

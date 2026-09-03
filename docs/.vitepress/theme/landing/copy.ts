@@ -29,6 +29,8 @@ export interface LandingCopy {
   cis: { yes: string; no: string; partial: string; unknown: string }
   footerHome: string
   footerTelegram: string
+  related: string
+  hubAll: string
 }
 
 const columns = {
@@ -101,6 +103,8 @@ export const LANDING_COPY: Record<Locale, LandingCopy> = {
     cis: { yes: 'yes', no: 'no', partial: 'partly', unknown: 'not stated' },
     footerHome: 'darebay.com',
     footerTelegram: 'Telegram',
+    related: 'More in this section',
+    hubAll: 'All pages',
   },
   ru: {
     updated: 'Обновлено',
@@ -129,6 +133,8 @@ export const LANDING_COPY: Record<Locale, LandingCopy> = {
     cis: { yes: 'да', no: 'нет', partial: 'частично', unknown: 'не указано' },
     footerHome: 'darebay.com',
     footerTelegram: 'Telegram',
+    related: 'Ещё в этом разделе',
+    hubAll: 'Все страницы',
   },
   uk: {
     updated: 'Оновлено',
@@ -157,6 +163,8 @@ export const LANDING_COPY: Record<Locale, LandingCopy> = {
     cis: { yes: 'так', no: 'ні', partial: 'частково', unknown: 'не вказано' },
     footerHome: 'darebay.com',
     footerTelegram: 'Telegram',
+    related: 'Ще в цьому розділі',
+    hubAll: 'Усі сторінки',
   },
 }
 

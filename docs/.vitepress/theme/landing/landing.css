@@ -218,3 +218,33 @@
 .lp-fact small { display: block; margin-top: 6px; font-size: 12px; color: var(--lp-faint); font-weight: 500; }
 
 @media (prefers-reduced-motion: reduce) { .lp * { transition: none !important; } }
+
+/* ---- compact hero (articles, hubs, legal) ------------------------------ */
+.lp-hero--compact { padding: 56px 0 24px; }
+.lp-hero--compact .lp-hero-in { grid-template-columns: minmax(0, 1fr); }
+.lp-hero--compact h1 { font-size: clamp(1.75rem, 3.4vw, 2.9rem); max-width: 24ch; }
+.lp-hero--compact .lp-lede { font-size: 1.08rem; margin-bottom: 22px; }
+.lp-hero--hub h1 { max-width: 20ch; }
+.lp-hero-meta a.lp-kicker:hover { text-decoration: underline; text-underline-offset: 3px; }
+@media (max-width: 900px) { .lp-hero--compact { padding: 36px 0 16px; } }
+
+/* ---- section cards: hub index + "more in this section" --------------------- */
+.lp-related { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+@media (max-width: 900px) { .lp-related { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .lp-related { grid-template-columns: 1fr; } }
+.lp-related--hub { margin: 12px auto 8px; }
+.lp .lp-card--link { display: flex; flex-direction: column; gap: 8px; padding: 20px 22px; color: var(--lp-text); text-decoration: none; }
+.lp .lp-card--link:hover { border-color: color-mix(in srgb, var(--lp-accent) 45%, transparent); }
+.lp .lp-card--link h3 { font-family: var(--lp-body); font-weight: 800; font-size: 1.05rem; line-height: 1.3; margin: 0; }
+.lp .lp-card--link p { margin: 0; color: var(--lp-muted); font-size: 14px; line-height: 1.45; }
+.lp-content .lp-related--hub { width: min(100% - 40px, var(--lp-container)); }
+
+/* ---- 404 inside the shell --------------------------------------------------- */
+.lp-notfound { padding: 96px 20px 72px; text-align: center; display: grid; justify-items: center; gap: 14px; }
+.lp-notfound h1 { font-family: var(--lp-display); font-weight: 700; font-size: clamp(2rem, 5vw, 3.2rem); margin: 0; }
+.lp-notfound .lp-lede { margin: 0; }
+
+/* ---- long-form prose extras (legal, help) ----------------------------------- */
+.lp-content hr:not(.lp-bleed *) { border: 0; border-top: 1px solid var(--lp-line); margin-top: 36px; margin-bottom: 36px; }
+.lp-content :is(ul, ol):not(.lp-bleed *) ul, .lp-content :is(ul, ol):not(.lp-bleed *) ol { margin-top: 6px; }
+.lp-content h4:not(.lp-bleed *) { font-weight: 800; margin-top: 24px; margin-bottom: 6px; }

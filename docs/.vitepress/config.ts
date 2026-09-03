@@ -226,23 +226,41 @@ const AUTHOR_ID = `${ENTITY_ORIGIN}/#founder`
 const WEBSITE_ID = `${ENTITY_ORIGIN}/#website`
 const LOGO_ID = `${ENTITY_ORIGIN}/#logo`
 
+// The entity, described the way a model or a directory would describe it: what
+// it is, who founded it, when, and every public profile it actually runs. The
+// same profiles must exist on the app's Organization node (contests-frontend).
 const ORGANIZATION = {
   '@type': 'Organization',
   '@id': ORG_ID,
   name: 'DareBay',
+  alternateName: ['Darebay', 'Дарбей'],
+  description:
+    'DareBay is a pay-per-view clipping platform: brands, streamers and creators post tasks with their footage, clippers cut and post short clips on their own accounts and are paid per counted view. Available on the web and in Telegram; pays clippers in Russia, Ukraine, CIS and worldwide.',
   url: `${ENTITY_ORIGIN}/`,
   logo: { '@id': LOGO_ID },
-  sameAs: ['https://t.me/darebay_app', 'https://www.tiktok.com/@darebay.com'],
+  foundingDate: '2026',
+  founder: { '@id': AUTHOR_ID },
+  sameAs: [
+    'https://t.me/darebay_app',
+    'https://t.me/darebaycreatorschat',
+    'https://www.tiktok.com/@darebay.com',
+    'https://www.linkedin.com/company/darebay',
+    'https://www.youtube.com/@darebay',
+  ],
 }
 
-const AUTHOR = {
+// The founder's name in the page's own script: Latin on English pages,
+// Cyrillic on Russian and Ukrainian, the other form as alternateName.
+const author = (language: Locale) => ({
   '@type': 'Person',
   '@id': AUTHOR_ID,
-  name: 'Руслан Бей',
+  name: language === 'en' ? 'Ruslan Bey' : 'Руслан Бей',
+  alternateName: language === 'en' ? 'Руслан Бей' : 'Ruslan Bey',
   url: `${ENTITY_ORIGIN}/o-proekte/`,
   sameAs: ['https://t.me/ruslanbwork'],
+  jobTitle: 'Founder',
   worksFor: { '@id': ORG_ID },
-}
+})
 
 const WEBSITE = {
   '@type': 'WebSite',
@@ -325,7 +343,7 @@ function structuredData(
       height: 512,
     },
     ORGANIZATION,
-    AUTHOR,
+    author(language),
     WEBSITE,
   ]
 

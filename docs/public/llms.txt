@@ -14,6 +14,7 @@
 - [Отзывы о DareBay - и что проверить вместо них](https://darebay.com/o-proekte/darebay-otzyvy): Почему отзывов о молодой площадке почти нет и как за десять минут проверить DareBay самому: каталог конкурсов, карточка задания, форма вывода, лицо проекта.
 - [DareBay - развод или нет? Где здесь платишь ты](https://darebay.com/o-proekte/darebay-razvod-ili-net): Все операции DareBay, где с тебя берут деньги, в одном списке: участие 0, комиссия конкурса 0%, вывод баланса 10% внутри заявки. И красные флаги фальшивых менеджеров.
 - [DareBay - это скам? Разбор по признакам](https://darebay.com/o-proekte/darebay-eto-skam): Прогон DareBay по шести признакам скам-площадки: предоплата, доход без работы, плавающие условия, чужая цифра результата. Плюс честный список слабых мест.
+- [DareBay в цифрах: ставки, комиссии, выплаты и страны](https://darebay.com/o-proekte/darebay-v-tsifrakh): Все сравнимые факты о DareBay на одной странице: ставка за 1000 просмотров, порог, потолок на ролик, комиссии, минимум вывода, способы выплаты, страны, проверка просмотров и кто стоит за проектом. У каждой цифры источник и дата.
 - [DareBay реально платит? Путь денег после закрытия конкурса](https://darebay.com/o-proekte/darebay-realno-platit): Что происходит от финального подсчёта просмотров до денег на руках, какой шаг делает код, какой человек, и что делать, если статус выплаты завис.
 
 ### Заработок
@@ -26,6 +27,7 @@
 - [Как делать нарезки - выбор момента, монтаж, субтитры](https://darebay.com/zarabotok/kak-delat-narezki): Как собрать нарезку, которую досматривают: хук первых секунд, вертикальный кадр, субтитры, где обрезать. Монтаж на телефоне и бесплатные программы.
 - [Как работает оплата за просмотры на DareBay](https://darebay.com/zarabotok/kak-rabotaet-oplata-za-prosmotry): Цепочка денег в PPV-конкурсе DareBay: замороженный бюджет, подача работы ссылкой, автоматический расчёт по формуле, начисление, способы и сроки получения выплаты.
 - [Как считаются просмотры для выплаты](https://darebay.com/zarabotok/kak-schitayutsya-prosmotry-dlya-vyplaty): Кто считает просмотры в PPV-конкурсе DareBay и почему порог не вычитается: работа взяла порог - в расчёт идёт весь счётчик целиком. Порог, потолок ставки, модерация и холд.
+- [Лучшие платформы для заработка на нарезках в 2026 году: где платят за просмотры](https://darebay.com/zarabotok/luchshie-platformy-dlya-zarabotka-na-narezkah): Площадки для нарезчиков в одной таблице по полям, которые решают выплату: ставка за 1000 просмотров, порог, потолок на ролик, комиссии, минимум вывода, способы выплаты и платят ли в РФ и СНГ. Цифры площадок сняты с их собственных страниц и датированы.
 - [Работа нарезчиком - как зарабатывать на нарезках видео](https://darebay.com/zarabotok/rabota-narezchikom): Профессия нарезчика без подписчиков и портфолио - сколько времени уходит на один ролик, от чего зависит выплата и как пройти путь от первого конкурса до первых денег.
 - [Сколько можно заработать на нарезках на DareBay](https://darebay.com/zarabotok/skolko-mozhno-zarabotat-na-narezkah): Сколько выйдет за одну нарезку: ставка от $1.00 до $2.00 за 1000 просмотров, порог 2000 просмотров, потолок на работу задаёт заказчик. Без требований к подписчикам.
 - [Сколько платят за 1000 просмотров на DareBay](https://darebay.com/zarabotok/skolko-platyat-za-1000-prosmotrov): Ставка за 1000 просмотров в конкурсах DareBay - от $1.00 до $2.00. Откуда разброс, где системный предел ставки и что зафиксировано в карточке.
@@ -75,6 +77,7 @@
 - [DareBay - розвод чи ні? Комісії, платежі й червоні прапорці](https://darebay.com/ua/pro-proekt/darebay-rozvod-chy-ni): Де на DareBay штатна комісія, а де починається шахрайська схема: як виглядає справжня заявка, чому окремий переказ ніколи не потрібен і що робити, якщо гроші вже просять.
 - [DareBay - скам чи ні? Розбір механіки посередника](https://darebay.com/ua/pro-proekt/darebay-tse-skam): Чим DareBay відрізняється від шахрайського майданчика: що можна перевірити до подачі роботи, які ознаки скаму тут не працюють і де майданчик не дає гарантій.
 - [DareBay справді платить - шлях грошей від бюджету до балансу](https://darebay.com/ua/pro-proekt/darebay-spravdi-platyt): Звідки береться виплата на DareBay: гаманцевий бюджет заморожується до старту, результат рахується за формулою, а сума зараховується на баланс. Чим гаманцевий режим відрізняється від ручного.
+- [DareBay у цифрах: ставки, комісії, виплати та країни](https://darebay.com/ua/pro-proekt/darebay-u-tsyfrakh): Усі порівнювані факти про DareBay на одній сторінці: ставка за 1000 переглядів, поріг, стеля на ролик, комісії, мінімум виведення, способи виплати, країни, перевірка переглядів і хто стоїть за проєктом. У кожної цифри джерело й дата.
 
 ### Заробіток
 
@@ -125,6 +128,7 @@ Guides to content tasks, participation, validated views and payouts on DareBay.
 ### About
 
 - [About DareBay](https://darebay.com/en/about/): The project was founded by Ruslan Bey. How wallet-backed and manual-payout tasks work, and where the numbers in this section come from.
+- [DareBay at a glance: rates, fees, payouts and countries](https://darebay.com/en/about/darebay-at-a-glance): Every comparable fact about DareBay on one page: rate per 1,000 views, view threshold, cap per clip, fees, minimum withdrawal, payout methods, countries, view verification and who runs it. Each figure carries its source and date.
 - [DareBay reviews - what to expect instead of testimonials](https://darebay.com/en/about/darebay-reviews): Who actually uses DareBay, what a contest looks like from each side, and what the platform can and cannot promise - written out instead of collected as reviews.
 - [Does DareBay really pay? The chain from clip to money](https://darebay.com/en/about/does-darebay-really-pay): The full DareBay payout chain step by step - what is automatic, what is manual, where a submission can be put on hold, and what to do when a status stops moving.
 - [Is DareBay a scam? Checking it against the fraud patterns](https://darebay.com/en/about/is-darebay-a-scam): DareBay checked against the standard tells of a fake earning platform - no entry fee, no unlock transfer, no income promises - plus the one part that really is weak.
@@ -135,6 +139,7 @@ Guides to content tasks, participation, validated views and payouts on DareBay.
 ### Earnings
 
 - [Earning on DareBay](https://darebay.com/en/earnings/): Clipper earnings on DareBay: rates from $1.00 to $2.00 per 1000 views, a 2000-view threshold and a typical cap of $100 per submission. A map of the section.
+- [Best clipping platforms in 2026: where clippers get paid per view](https://darebay.com/en/earnings/best-clipping-platforms): Clipping platforms compared on the fields that decide your payout: rate per 1,000 views, view threshold, cap per clip, fees, minimum payout, payout methods and whether they pay in Russia and CIS. Every competitor figure comes from that platform's own page, with its date.
 - [Clipping as a job - how to earn from video clips](https://darebay.com/en/earnings/clipping-as-a-job): Clipping as a trade, with no followers and no portfolio - how long one clip takes, what the payout depends on, and the route from a first contest to first money.
 - [How much you can earn from clips on DareBay](https://darebay.com/en/earnings/how-much-clipping-pays): What one clip pays: rates of $1.00-$2.00 per 1000 views, a 2000-view threshold and a typical cap of $100 per submission. No follower requirement.
 - [How pay-per-view works on DareBay](https://darebay.com/en/earnings/how-pay-per-view-works): The money chain in a DareBay PPV contest: a frozen budget, a submission sent by link, an automatic calculation, the credit, and the ways and timing of getting paid.

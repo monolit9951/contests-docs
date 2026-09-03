@@ -554,6 +554,68 @@
       "slugs": {
         "ru": "zarabotok-na-reels-instagram"
       }
+    },
+    {
+      "id": "darebay-at-a-glance",
+      "hub": "about",
+      "slugs": {
+        "ru": "darebay-v-tsifrakh",
+        "uk": "darebay-u-tsyfrakh",
+        "en": "darebay-at-a-glance"
+      }
+    },
+    {
+      "id": "best-clipping-platforms",
+      "hub": "earnings",
+      "slugs": {
+        "ru": "luchshie-platformy-dlya-zarabotka-na-narezkah",
+        "en": "best-clipping-platforms",
+        "uk": "naikrashchi-platformy-dlia-zarobitku-na-narizkakh"
+      }
+    },
+    {
+      "id": "whop-alternatives",
+      "hub": "earnings",
+      "slugs": {
+        "ru": "analogi-whop-v-rossii",
+        "uk": "alternatyvy-whop-v-ukraini",
+        "en": "whop-content-rewards-alternatives"
+      }
+    },
+    {
+      "id": "darebay-vs-whop",
+      "hub": "earnings",
+      "slugs": {
+        "ru": "darebay-ili-whop",
+        "uk": "darebay-chy-whop",
+        "en": "darebay-vs-whop"
+      }
+    },
+    {
+      "id": "clipping-platforms-cis",
+      "hub": "earnings",
+      "slugs": {
+        "ru": "platformy-dlya-narezchikov-kotorye-platyat-v-sng",
+        "uk": "platformy-dlia-narizchykiv-shcho-platiat-v-ukrainu",
+        "en": "clipping-platforms-that-pay-in-russia-and-cis"
+      }
+    },
+    {
+      "id": "how-to-choose-clipping-platform",
+      "hub": "earnings",
+      "slugs": {
+        "ru": "kak-vybrat-platformu-dlya-narezok",
+        "uk": "yak-obraty-platformu-dlia-narizok",
+        "en": "how-to-choose-a-clipping-platform"
+      }
+    },
+    {
+      "id": "darebay-vs-klipni",
+      "hub": "earnings",
+      "slugs": {
+        "ru": "darebay-ili-klipni",
+        "en": "darebay-vs-klipni"
+      }
     }
   ]
 }

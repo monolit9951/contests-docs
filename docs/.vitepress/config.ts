@@ -6,6 +6,7 @@ import { productUrlForLocale, TELEGRAM } from './links'
 import { CHROME_COPY, type DareBayThemeConfig } from './chrome'
 import { installCoveredHeadingRule } from './coveredHeading'
 import PAGE_DATES from '../page-dates.json'
+import PLATFORMS from './data/platforms.json'
 
 // Source file -> commit date, rekeyed to the URL VitePress hands `transformItems`
 // (docs-relative, no leading slash, `.md` dropped, `index` collapsed away).
@@ -225,23 +226,41 @@ const AUTHOR_ID = `${ENTITY_ORIGIN}/#founder`
 const WEBSITE_ID = `${ENTITY_ORIGIN}/#website`
 const LOGO_ID = `${ENTITY_ORIGIN}/#logo`
 
+// The entity, described the way a model or a directory would describe it: what
+// it is, who founded it, when, and every public profile it actually runs. The
+// same profiles must exist on the app's Organization node (contests-frontend).
 const ORGANIZATION = {
   '@type': 'Organization',
   '@id': ORG_ID,
   name: 'DareBay',
+  alternateName: ['Darebay', 'Дарбей'],
+  description:
+    'DareBay is a pay-per-view clipping platform: brands, streamers and creators post tasks with their footage, clippers cut and post short clips on their own accounts and are paid per counted view. Available on the web and in Telegram; pays clippers in Russia, Ukraine, CIS and worldwide.',
   url: `${ENTITY_ORIGIN}/`,
   logo: { '@id': LOGO_ID },
-  sameAs: ['https://t.me/darebay_app', 'https://www.tiktok.com/@darebay.com'],
+  foundingDate: '2026',
+  founder: { '@id': AUTHOR_ID },
+  sameAs: [
+    'https://t.me/darebay_app',
+    'https://t.me/darebaycreatorschat',
+    'https://www.tiktok.com/@darebay.com',
+    'https://www.linkedin.com/company/darebay',
+    'https://www.youtube.com/@darebay',
+  ],
 }
 
-const AUTHOR = {
+// The founder's name in the page's own script: Latin on English pages,
+// Cyrillic on Russian and Ukrainian, the other form as alternateName.
+const author = (language: Locale) => ({
   '@type': 'Person',
   '@id': AUTHOR_ID,
-  name: 'Руслан Бей',
+  name: language === 'en' ? 'Ruslan Bey' : 'Руслан Бей',
+  alternateName: language === 'en' ? 'Руслан Бей' : 'Ruslan Bey',
   url: `${ENTITY_ORIGIN}/o-proekte/`,
   sameAs: ['https://t.me/ruslanbwork'],
+  jobTitle: 'Founder',
   worksFor: { '@id': ORG_ID },
-}
+})
 
 const WEBSITE = {
   '@type': 'WebSite',
@@ -305,7 +324,8 @@ function structuredData(
   hubPages: { title: string; path: string }[],
   isHub: boolean,
   hub: HubId,
-  dates?: PageDates
+  dates?: PageDates,
+  compare?: { name: string; url: string }[]
 ) {
   const file = join(DOCS_DIR, relativePath)
   const raw = existsSync(file) ? readFileSync(file, 'utf8') : ''
@@ -323,7 +343,7 @@ function structuredData(
       height: 512,
     },
     ORGANIZATION,
-    AUTHOR,
+    author(language),
     WEBSITE,
   ]
 
@@ -418,6 +438,24 @@ function structuredData(
         position: index + 1,
         name: page.title,
         url: `${HOSTNAME}${page.path}`,
+      })),
+    })
+  }
+
+  // A comparison landing lists the platforms it compares, in page order — the
+  // same ItemList shape hub pages use, so a model reading the markup sees the
+  // ranking as a list of named entities, not only as prose.
+  if (compare?.length) {
+    graph.push({
+      '@type': 'ItemList',
+      '@id': `${url}#platforms`,
+      name: title,
+      numberOfItems: compare.length,
+      itemListElement: compare.map((item, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        name: item.name,
+        url: item.url,
       })),
     })
   }
@@ -618,6 +656,16 @@ export default defineConfig({
         : []
     const isArticle = !isHub && found.entry.hub !== 'legal'
 
+    // Comparison landings: the compared platforms, from the same data file the
+    // table renders, so markup and visible table cannot disagree.
+    const compareIds = (pageData.frontmatter.compare as { ids?: string[] } | undefined)?.ids
+    const compared = compareIds
+      ? compareIds
+          .map((id) => PLATFORMS.platforms.find((p) => p.id === id))
+          .filter((p): p is (typeof PLATFORMS.platforms)[number] => Boolean(p))
+          .map((p) => ({ name: p.name, url: p.id === 'darebay' ? (p.home?.[found.lang] ?? p.url) : p.url }))
+      : undefined
+
     const schema = structuredData(
       pageData.relativePath,
       title,
@@ -628,8 +676,17 @@ export default defineConfig({
       hubPages,
       isHub,
       found.entry.hub,
-      dates
+      dates,
+      compared
     )
+    if (pageData.frontmatter.landing) {
+      // Display face of the landing shell (self-hosted next to Manrope). Only
+      // landing pages pay for it; docs pages keep Manrope alone.
+      pageData.frontmatter.head.push(
+        ['link', { rel: 'preload', href: '/content-assets/fonts/unbounded-var-latin.woff2', as: 'font', type: 'font/woff2', crossorigin: '' }],
+        ['link', { rel: 'stylesheet', href: '/content-assets/fonts/unbounded.css' }]
+      )
+    }
     pageData.frontmatter.head.push(['script', { type: 'application/ld+json' }, JSON.stringify(schema)])
 
     pageData.frontmatter.head.push(

@@ -1,0 +1,1630 @@
+{
+ "snapshot": "2026-09-02",
+ "platforms": [
+  {
+   "id": "darebay",
+   "name": "DareBay",
+   "url": "https://darebay.com/en",
+   "home": {
+    "en": "https://darebay.com/en",
+    "ru": "https://darebay.com/",
+    "uk": "https://darebay.com/ua"
+   },
+   "kind": "pay-per-view contest marketplace",
+   "founded": "2026",
+   "operator": "DareBay, founder Ruslan Bey",
+   "bestFor": {
+    "en": "clippers in Russia, Ukraine and CIS",
+    "ru": "нарезчики из РФ, Украины и СНГ",
+    "uk": "нарізчики з України та СНД"
+   },
+   "summary": {
+    "en": "Brands and creators post clipping tasks; you take a brief with no application, post the clip on your own account and get paid for counted views. In wallet-backed contests the budget is locked on the platform before the start.",
+    "ru": "Бренды и авторы публикуют задания на нарезки; ты берёшь задание без заявки, публикуешь ролик у себя и получаешь оплату за засчитанные просмотры. В кошельковом конкурсе бюджет заблокирован на платформе до старта.",
+    "uk": "Бренди та автори публікують завдання на нарізки; ти береш завдання без заявки, публікуєш ролик у себе й отримуєш оплату за зараховані перегляди. У гаманцевому конкурсі бюджет заблоковано на платформі до старту."
+   },
+   "calc": {
+    "rateMin": 1,
+    "rateMax": 2,
+    "cap": 100
+   },
+   "fields": {
+    "rate": {
+     "text": {
+      "en": "$1.00–$2.00 per 1,000 views (open contests)",
+      "ru": "$1.00–$2.00 за 1000 просмотров (открытые конкурсы)",
+      "uk": "$1.00–$2.00 за 1000 переглядів (відкриті конкурси)"
+     },
+     "value": 1,
+     "source": {
+      "url": "https://darebay.com/en/earnings/pay-per-1000-views",
+      "date": "2026-08-23"
+     }
+    },
+    "threshold": {
+     "text": {
+      "en": "2,000 views per clip (typical)",
+      "ru": "2000 просмотров на ролик (типично)",
+      "uk": "2000 переглядів на ролик (типово)"
+     },
+     "value": 2000,
+     "source": {
+      "url": "https://darebay.com/en/earnings/how-views-are-counted",
+      "date": "2026-08-23"
+     }
+    },
+    "cap": {
+     "text": {
+      "en": "$100 per clip (typical), up to $500",
+      "ru": "$100 на ролик (типично), до $500",
+      "uk": "$100 на ролик (типово), до $500"
+     },
+     "value": 100,
+     "source": {
+      "url": "https://darebay.com/en/earnings/how-much-clipping-pays",
+      "date": "2026-08-23"
+     }
+    },
+    "fee": {
+     "text": {
+      "en": "0% on contest payouts; 10% on balance withdrawal",
+      "ru": "0% с выплат конкурса; 10% при выводе баланса",
+      "uk": "0% з виплат конкурсу; 10% при виведенні балансу"
+     },
+     "value": 10,
+     "source": {
+      "url": "https://darebay.com/en/help/what-commission",
+      "date": "2026-08-23"
+     }
+    },
+    "minPayout": {
+     "text": {
+      "en": "10 USDT per withdrawal request",
+      "ru": "10 USDT за заявку на вывод",
+      "uk": "10 USDT за заявку на виведення"
+     },
+     "value": 10,
+     "source": {
+      "url": "https://darebay.com/en/help/darebay-withdrawals",
+      "date": "2026-08-23"
+     }
+    },
+    "payoutMethods": {
+     "text": {
+      "en": "USDT on TON, Telegram Stars; per-contest alternatives (card, bank transfer, gift)",
+      "ru": "USDT в сети TON, Telegram Stars; по условиям конкурса карта, перевод, подарок",
+      "uk": "USDT у мережі TON, Telegram Stars; за умовами конкурсу картка, переказ, подарунок"
+     },
+     "source": {
+      "url": "https://darebay.com/en/help/prizes-and-payouts",
+      "date": "2026-08-23"
+     }
+    },
+    "cis": {
+     "text": {
+      "en": "Russia, Ukraine, Kazakhstan and the rest of CIS, plus worldwide",
+      "ru": "РФ, Украина, Казахстан и весь СНГ, плюс весь мир",
+      "uk": "Україна, Казахстан, весь СНД, плюс увесь світ"
+     },
+     "state": "yes",
+     "source": {
+      "url": "https://darebay.com/en/earnings/where-to-find-clipping-work",
+      "date": "2026-08-23"
+     }
+    },
+    "followers": {
+     "text": {
+      "en": "none; a new account works",
+      "ru": "не нужны; подойдёт новый аккаунт",
+      "uk": "не потрібні; підійде новий акаунт"
+     },
+     "state": "no",
+     "source": {
+      "url": "https://darebay.com/en/earnings/clipping-as-a-job",
+      "date": "2026-08-23"
+     }
+    },
+    "escrow": {
+     "text": {
+      "en": "wallet-backed contests: locked before start; manual-payout contests: organizer pays directly",
+      "ru": "кошельковый конкурс: заблокирован до старта; ручной конкурс: платит организатор",
+      "uk": "гаманцевий конкурс: заблоковано до старту; ручний конкурс: платить організатор"
+     },
+     "state": "partial",
+     "source": {
+      "url": "https://darebay.com/en/about/payout-guarantee",
+      "date": "2026-08-23"
+     }
+    },
+    "networks": {
+     "text": {
+      "en": "TikTok, YouTube Shorts, Instagram Reels (per contest terms)",
+      "ru": "TikTok, YouTube Shorts, Instagram Reels (по условиям конкурса)",
+      "uk": "TikTok, YouTube Shorts, Instagram Reels (за умовами конкурсу)"
+     },
+     "source": {
+      "url": "https://darebay.com/en/help/submit-your-work",
+      "date": "2026-08-23"
+     }
+    },
+    "verification": {
+     "text": {
+      "en": "independent reading of the public view counter, hold on suspicious dynamics",
+      "ru": "независимое чтение публичного счётчика, холд при подозрительной динамике",
+      "uk": "незалежне зчитування публічного лічильника, холд за підозрілої динаміки"
+     },
+     "source": {
+      "url": "https://darebay.com/en/help/protection-from-view-fraud",
+      "date": "2026-08-23"
+     }
+    }
+   },
+   "pros": {
+    "en": [
+     "Pays clippers in Russia, Ukraine and CIS",
+     "No followers, portfolio or application",
+     "Wallet-backed budgets are locked before the contest starts",
+     "Rate, threshold and cap are printed on the card before you submit"
+    ],
+    "ru": [
+     "Платит нарезчикам из РФ, Украины и СНГ",
+     "Не нужны подписчики, портфолио и заявка",
+     "Кошельковый бюджет заблокирован до старта конкурса",
+     "Ставка, порог и потолок видны на карточке до подачи"
+    ],
+    "uk": [
+     "Платить нарізчикам з України та СНД",
+     "Не потрібні підписники, портфоліо і заявка",
+     "Гаманцевий бюджет заблоковано до старту конкурсу",
+     "Ставка, поріг і стеля видні на картці до подачі"
+    ]
+   },
+   "cons": {
+    "en": [
+     "Young platform with a small number of open contests",
+     "Withdrawals are processed manually with a 10% fee",
+     "Manual-payout contests depend on the organizer paying"
+    ],
+    "ru": [
+     "Молодая площадка, открытых конкурсов пока немного",
+     "Вывод обрабатывается вручную, комиссия 10%",
+     "В ручном конкурсе выплата зависит от организатора"
+    ],
+    "uk": [
+     "Молодий майданчик, відкритих конкурсів поки небагато",
+     "Виведення обробляється вручну, комісія 10%",
+     "У ручному конкурсі виплата залежить від організатора"
+    ]
+   }
+  },
+  {
+   "id": "whop",
+   "name": "Whop Content Rewards",
+   "url": "https://contentrewards.com/",
+   "kind": "clipping and UGC campaign marketplace",
+   "operator": "Content Rewards Inc (Delaware, US), on Whop",
+   "bestFor": {
+    "en": "US/EU clippers who want the most campaigns",
+    "ru": "нарезчики из США и Европы, которым нужен максимум кампаний",
+    "uk": "нарізчики зі США та Європи, яким потрібен максимум кампаній"
+   },
+   "summary": {
+    "en": "The largest clipping marketplace: brands fund CPM campaigns, the budget is held against the campaign, and clippers are paid per verified view through the Whop wallet. Registration and payouts are blocked in Russia, Belarus and Ukraine.",
+    "ru": "Самая большая площадка для нарезчиков: бренды финансируют CPM-кампании, бюджет удерживается под кампанию, нарезчикам платят за проверенные просмотры через кошелёк Whop. Регистрация и выплаты закрыты для России, Беларуси и Украины.",
+    "uk": "Найбільший майданчик для нарізчиків: бренди фінансують CPM-кампанії, бюджет утримується під кампанію, нарізчикам платять за перевірені перегляди через гаманець Whop. Реєстрація та виплати закриті для Росії, Білорусі та України."
+   },
+   "fields": {
+    "rate": {
+     "text": {
+      "en": "$0.50–$5 per 1,000 views on live campaigns; set per campaign",
+      "ru": "$0.50–$5 за 1000 просмотров в живых кампаниях; ставку задаёт кампания",
+      "uk": "$0.50–$5 за 1000 переглядів у живих кампаніях; ставку задає кампанія"
+     },
+     "value": 0.5,
+     "source": {
+      "url": "https://contentrewards.com/discover",
+      "date": "2026-09-02"
+     }
+    },
+    "threshold": {
+     "text": {
+      "en": "no platform-wide threshold; the brand sets a minimum payout per video before review",
+      "ru": "единого порога нет; бренд задаёт минимальную выплату за видео до проверки",
+      "uk": "єдиного порогу немає; бренд задає мінімальну виплату за відео до перевірки"
+     },
+     "source": {
+      "url": "https://docs.whop.com/memberships-and-access/third-party-apps/content-rewards",
+      "date": "2026-09-02"
+     }
+    },
+    "cap": {
+     "text": {
+      "en": "per campaign; live examples $400–$600 per video",
+      "ru": "задаётся кампанией; живые примеры $400–$600 за видео",
+      "uk": "задається кампанією; живі приклади $400–$600 за відео"
+     },
+     "value": 400,
+     "source": {
+      "url": "https://contentrewards.com/creators",
+      "date": "2026-09-02"
+     }
+    },
+    "fee": {
+     "text": {
+      "en": "10% on CPM payouts per the terms; the creator FAQ shows tiers from 25% down to 7%",
+      "ru": "10% с CPM-выплат по условиям; FAQ для авторов показывает ступени от 25% до 7%",
+      "uk": "10% з CPM-виплат за умовами; FAQ для авторів показує сходинки від 25% до 7%"
+     },
+     "value": 10,
+     "source": {
+      "url": "https://contentrewards.com/creators",
+      "date": "2026-09-02"
+     }
+    },
+    "minPayout": {
+     "text": {
+      "en": "none; no withdrawal charge",
+      "ru": "нет; за вывод не берут",
+      "uk": "немає; за виведення не беруть"
+     },
+     "value": 0,
+     "source": {
+      "url": "https://contentrewards.com/creators",
+      "date": "2026-09-02"
+     }
+    },
+    "payoutMethods": {
+     "text": {
+      "en": "bank, PayPal, mobile wallet or crypto in 200+ countries; a clip earns 7 days after approval, then a 3-day hold",
+      "ru": "банк, PayPal, мобильный кошелёк или крипта в 200+ странах; ролик зарабатывает 7 дней после одобрения, затем холд 3 дня",
+      "uk": "банк, PayPal, мобільний гаманець або крипта у 200+ країнах; ролик заробляє 7 днів після схвалення, потім холд 3 дні"
+     },
+     "source": {
+      "url": "https://contentrewards.com/creators",
+      "date": "2026-09-02"
+     }
+    },
+    "cis": {
+     "text": {
+      "en": "no: Russia, Belarus and Ukraine are on Whop's sanctioned list; Kazakhstan is not listed",
+      "ru": "нет: Россия, Беларусь и Украина в санкционном списке Whop; Казахстан не указан",
+      "uk": "ні: Росія, Білорусь та Україна в санкційному списку Whop; Казахстан не вказано"
+     },
+     "state": "no",
+     "source": {
+      "url": "https://docs.whop.com/trust-and-safety/trust-safety-overview/sanctioned-countries",
+      "date": "2026-09-02"
+     }
+    },
+    "followers": {
+     "text": {
+      "en": "no minimum published; some campaigns require an application; 18+",
+      "ru": "минимума нет; часть кампаний требует заявку; 18+",
+      "uk": "мінімуму немає; частина кампаній вимагає заявку; 18+"
+     },
+     "state": "no",
+     "source": {
+      "url": "https://contentrewards.com/creators",
+      "date": "2026-09-02"
+     }
+    },
+    "escrow": {
+     "text": {
+      "en": "yes: the budget is held against the campaign until creators earn it",
+      "ru": "да: бюджет удерживается под кампанию, пока авторы его не заработают",
+      "uk": "так: бюджет утримується під кампанію, поки автори його не заробили"
+     },
+     "state": "yes",
+     "source": {
+      "url": "https://contentrewards.com/brand",
+      "date": "2026-09-02"
+     }
+    },
+    "networks": {
+     "text": {
+      "en": "TikTok, YouTube Shorts, Instagram Reels, X, Facebook",
+      "ru": "TikTok, YouTube Shorts, Instagram Reels, X, Facebook",
+      "uk": "TikTok, YouTube Shorts, Instagram Reels, X, Facebook"
+     },
+     "source": {
+      "url": "https://contentrewards.com/terms",
+      "date": "2026-09-02"
+     }
+    },
+    "verification": {
+     "text": {
+      "en": "platform APIs, a bot-likelihood score per submission, then approval by the brand",
+      "ru": "API площадок, оценка вероятности ботов по каждой заявке, затем одобрение брендом",
+      "uk": "API майданчиків, оцінка ймовірності ботів по кожній заявці, потім схвалення брендом"
+     },
+     "source": {
+      "url": "https://contentrewards.com/brand",
+      "date": "2026-09-02"
+     }
+    }
+   },
+   "pros": {
+    "en": [
+     "Largest choice of campaigns and budgets",
+     "Budget held against the campaign before clips are posted",
+     "No minimum withdrawal"
+    ],
+    "ru": [
+     "Самый большой выбор кампаний и бюджетов",
+     "Бюджет удерживается под кампанию до публикации роликов",
+     "Нет минимума на вывод"
+    ],
+    "uk": [
+     "Найбільший вибір кампаній і бюджетів",
+     "Бюджет утримується під кампанію до публікації роликів",
+     "Немає мінімуму на виведення"
+    ]
+   },
+   "cons": {
+    "en": [
+     "Does not register or pay clippers in Russia, Belarus or Ukraine",
+     "Creator fee is stated differently on its own pages (10% vs 25%→7% tiers)",
+     "Campaign minimum for brands is $1,000, so campaigns come and go"
+    ],
+    "ru": [
+     "Не регистрирует и не платит нарезчикам из России, Беларуси и Украины",
+     "Комиссия для авторов на своих же страницах указана по-разному (10% против ступеней 25%→7%)",
+     "Минимум кампании для бренда $1,000, кампании быстро заканчиваются"
+    ],
+    "uk": [
+     "Не реєструє і не платить нарізчикам з Росії, Білорусі та України",
+     "Комісія для авторів на власних сторінках указана по-різному (10% проти сходинок 25%→7%)",
+     "Мінімум кампанії для бренду $1,000, кампанії швидко закінчуються"
+    ]
+   }
+  },
+  {
+   "id": "vyro",
+   "name": "Vyro",
+   "url": "https://vyro.com/",
+   "kind": "clipping marketplace (Beast Industries)",
+   "operator": "Beast Industries (MrBeast)",
+   "bestFor": {
+    "en": "clippers of big US creators and studios",
+    "ru": "нарезчики крупных американских авторов и студий",
+    "uk": "нарізчики великих американських авторів і студій"
+   },
+   "summary": {
+    "en": "MrBeast's clipping marketplace: campaigns from large creators and studios at $1–$2 per 1,000 views, a 5,000-view minimum per post and payouts by PayPal or Stripe. Russia, Belarus, Ukraine, Uzbekistan, Armenia, Georgia and Moldova are unsupported.",
+    "ru": "Площадка нарезок от MrBeast: кампании крупных авторов и студий по $1–$2 за 1000 просмотров, минимум 5000 просмотров на пост, выплаты через PayPal или Stripe. Россия, Беларусь, Украина, Узбекистан, Армения, Грузия и Молдова не поддерживаются.",
+    "uk": "Майданчик нарізок від MrBeast: кампанії великих авторів і студій по $1–$2 за 1000 переглядів, мінімум 5000 переглядів на пост, виплати через PayPal або Stripe. Росія, Білорусь, Україна, Узбекистан, Вірменія, Грузія та Молдова не підтримуються."
+   },
+   "fields": {
+    "rate": {
+     "text": {
+      "en": "$1.00–$2.00 per 1,000 views on live campaigns (shown per 1M views)",
+      "ru": "$1.00–$2.00 за 1000 просмотров в живых кампаниях (показывают за 1 млн)",
+      "uk": "$1.00–$2.00 за 1000 переглядів у живих кампаніях (показують за 1 млн)"
+     },
+     "value": 1,
+     "source": {
+      "url": "https://vyro.com/campaigns",
+      "date": "2026-09-02"
+     }
+    },
+    "threshold": {
+     "text": {
+      "en": "5,000 views per approved post",
+      "ru": "5000 просмотров на одобренный пост",
+      "uk": "5000 переглядів на схвалений пост"
+     },
+     "value": 5000,
+     "source": {
+      "url": "https://vyro.com/help/earnings-and-payments/how-many-views-do-i-need-before-i-can-start-earning",
+      "date": "2026-09-02"
+     }
+    },
+    "cap": {
+     "text": {
+      "en": "1 million eligible views per clip, typically $500–$2,000",
+      "ru": "1 млн засчитанных просмотров на ролик, обычно $500–$2,000",
+      "uk": "1 млн зарахованих переглядів на ролик, зазвичай $500–$2,000"
+     },
+     "value": 500,
+     "source": {
+      "url": "https://vyro.com/help/earnings-and-payments/whats-the-most-i-can-earn-per-clip",
+      "date": "2026-09-02"
+     }
+    },
+    "fee": {
+     "text": {
+      "en": "not published; payment providers may deduct fees",
+      "ru": "не публикует; платёжные провайдеры могут удерживать комиссии",
+      "uk": "не публікує; платіжні провайдери можуть утримувати комісії"
+     },
+     "source": {
+      "url": "https://www.vyro.com/clipper-terms",
+      "date": "2026-09-02"
+     }
+    },
+    "minPayout": {
+     "text": {
+      "en": "$10, once every 7 days",
+      "ru": "$10, раз в 7 дней",
+      "uk": "$10, раз на 7 днів"
+     },
+     "value": 10,
+     "source": {
+      "url": "https://vyro.com/help/earnings-and-payments/how-can-i-withdraw-my-earnings",
+      "date": "2026-09-02"
+     }
+    },
+    "payoutMethods": {
+     "text": {
+      "en": "PayPal or Stripe by region; earnings become available 7–10 days after the campaign ends",
+      "ru": "PayPal или Stripe в зависимости от региона; деньги доступны через 7–10 дней после конца кампании",
+      "uk": "PayPal або Stripe залежно від регіону; гроші доступні через 7–10 днів після кінця кампанії"
+     },
+     "source": {
+      "url": "https://vyro.com/help/earnings-and-payments/how-can-i-withdraw-my-earnings",
+      "date": "2026-09-02"
+     }
+    },
+    "cis": {
+     "text": {
+      "en": "no: Russia, Belarus, Ukraine, Uzbekistan, Armenia, Georgia and Moldova are unsupported; Kazakhstan is not listed",
+      "ru": "нет: Россия, Беларусь, Украина, Узбекистан, Армения, Грузия и Молдова не поддерживаются; Казахстан не указан",
+      "uk": "ні: Росія, Білорусь, Україна, Узбекистан, Вірменія, Грузія та Молдова не підтримуються; Казахстан не вказано"
+     },
+     "state": "no",
+     "source": {
+      "url": "https://vyro.com/help/getting-started/what-countries-are-supported",
+      "date": "2026-09-02"
+     }
+    },
+    "followers": {
+     "text": {
+      "en": "none published; 18+, social accounts must be verified",
+      "ru": "минимума не публикует; 18+, соцаккаунты верифицируются",
+      "uk": "мінімуму не публікує; 18+, соцакаунти верифікуються"
+     },
+     "state": "no",
+     "source": {
+      "url": "https://vyro.com/help/getting-started/how-old-do-i-need-to-be-to-use-vyro",
+      "date": "2026-09-02"
+     }
+    },
+    "escrow": {
+     "text": {
+      "en": "partly: brands fund the budget upfront, but campaigns can go live before the funds settle",
+      "ru": "частично: бренд вносит бюджет заранее, но кампания может стартовать до зачисления денег",
+      "uk": "частково: бренд вносить бюджет заздалегідь, але кампанія може стартувати до зарахування грошей"
+     },
+     "state": "partial",
+     "source": {
+      "url": "https://vyro.com/for-brands",
+      "date": "2026-09-02"
+     }
+    },
+    "networks": {
+     "text": {
+      "en": "TikTok, Instagram Reels, YouTube Shorts, X",
+      "ru": "TikTok, Instagram Reels, YouTube Shorts, X",
+      "uk": "TikTok, Instagram Reels, YouTube Shorts, X"
+     },
+     "source": {
+      "url": "https://vyro.com/for-brands",
+      "date": "2026-09-02"
+     }
+    },
+    "verification": {
+     "text": {
+      "en": "automated fake-view detection plus human review; a final check when the campaign ends",
+      "ru": "автоматическое выявление накрутки плюс ручная проверка; финальная сверка по окончании кампании",
+      "uk": "автоматичне виявлення накрутки плюс ручна перевірка; фінальна звірка після завершення кампанії"
+     },
+     "source": {
+      "url": "https://vyro.com/help/account-and-security/what-prevents-clippers-from-botting-their-views",
+      "date": "2026-09-02"
+     }
+    }
+   },
+   "pros": {
+    "en": [
+     "Campaigns from the largest creators, terms are documented in a help center",
+     "Clear numbers: 5,000-view minimum, $10 payout, per-clip cap",
+     "Unused brand budget is refunded, so campaigns are real"
+    ],
+    "ru": [
+     "Кампании самых крупных авторов, условия описаны в справке",
+     "Понятные числа: порог 5000, вывод от $10, потолок на ролик",
+     "Неизрасходованный бюджет бренда возвращается, кампании настоящие"
+    ],
+    "uk": [
+     "Кампанії найбільших авторів, умови описані в довідці",
+     "Зрозумілі числа: поріг 5000, виведення від $10, стеля на ролик",
+     "Невитрачений бюджет бренду повертається, кампанії справжні"
+    ]
+   },
+   "cons": {
+    "en": [
+     "Unsupported in Russia, Belarus, Ukraine and several other CIS countries",
+     "5,000 views per post before anything is paid",
+     "Payouts only after the campaign ends, then 7–10 days"
+    ],
+    "ru": [
+     "Не работает в России, Беларуси, Украине и ещё нескольких странах СНГ",
+     "5000 просмотров на пост, прежде чем что-то заплатят",
+     "Выплаты только после конца кампании, затем 7–10 дней"
+    ],
+    "uk": [
+     "Не працює в Росії, Білорусі, Україні та ще кількох країнах СНД",
+     "5000 переглядів на пост, перш ніж щось заплатять",
+     "Виплати лише після кінця кампанії, потім 7–10 днів"
+    ]
+   }
+  },
+  {
+   "id": "clipping-net",
+   "name": "Clipping.net",
+   "url": "https://clipping.net/",
+   "kind": "clipping network",
+   "operator": "not published",
+   "bestFor": {
+    "en": "streamer and celebrity campaigns at volume",
+    "ru": "кампании стримеров и звёзд на объёме",
+    "uk": "кампанії стримерів і зірок на обсязі"
+   },
+   "summary": {
+    "en": "A large clipping network built around streamer and celebrity campaigns: rates are quoted per 100K views ($20–$75+, i.e. $0.20–$0.75+ per 1,000), each post needs 1,000 views and campaigns often 25,000, payouts by PayPal or USDC/USDT on Ethereum when a cycle closes.",
+    "ru": "Крупная сеть нарезчиков вокруг кампаний стримеров и звёзд: ставки указаны за 100 тысяч просмотров ($20–$75+, то есть $0.20–$0.75+ за 1000), каждому посту нужно 1000 просмотров, кампании обычно от 25 000, выплаты PayPal или USDC/USDT в Ethereum по закрытию цикла.",
+    "uk": "Велика мережа нарізчиків навколо кампаній стримерів і зірок: ставки вказані за 100 тисяч переглядів ($20–$75+, тобто $0.20–$0.75+ за 1000), кожному посту потрібно 1000 переглядів, кампанії зазвичай від 25 000, виплати PayPal або USDC/USDT в Ethereum по закриттю циклу."
+   },
+   "fields": {
+    "rate": {
+     "text": {
+      "en": "$0.20–$0.75+ per 1,000 views (quoted as $20–$75+ per 100K); set per campaign",
+      "ru": "$0.20–$0.75+ за 1000 просмотров (указано как $20–$75+ за 100 тыс.); ставку задаёт кампания",
+      "uk": "$0.20–$0.75+ за 1000 переглядів (вказано як $20–$75+ за 100 тис.); ставку задає кампанія"
+     },
+     "value": 0.2,
+     "source": {
+      "url": "https://clipping.net/clip",
+      "date": "2026-09-02"
+     }
+    },
+    "threshold": {
+     "text": {
+      "en": "1,000 views per post; campaigns typically require 25,000 in total",
+      "ru": "1000 просмотров на пост; кампании обычно требуют 25 000 в сумме",
+      "uk": "1000 переглядів на пост; кампанії зазвичай вимагають 25 000 у сумі"
+     },
+     "value": 1000,
+     "source": {
+      "url": "https://clipping.net/policies/clipper-terms-and-conditions",
+      "date": "2026-09-02"
+     }
+    },
+    "cap": {
+     "text": {
+      "en": "not published as a rule; bounties carry their own caps",
+      "ru": "общего правила нет; у баунти свои потолки",
+      "uk": "загального правила немає; у баунті свої стелі"
+     },
+     "source": {
+      "url": "https://clipping.net/policies/clipper-terms-and-conditions",
+      "date": "2026-09-02"
+     }
+    },
+    "fee": {
+     "text": {
+      "en": "not published; payment processor fees may apply",
+      "ru": "не публикует; возможны комиссии платёжного провайдера",
+      "uk": "не публікує; можливі комісії платіжного провайдера"
+     },
+     "source": {
+      "url": "https://clipping.net/policies/clipper-terms-and-conditions",
+      "date": "2026-09-02"
+     }
+    },
+    "minPayout": {
+     "text": {
+      "en": "no amount published; paid automatically when a campaign cycle closes",
+      "ru": "сумма не опубликована; платят автоматически по закрытию цикла кампании",
+      "uk": "суму не опубліковано; платять автоматично по закриттю циклу кампанії"
+     },
+     "source": {
+      "url": "https://clipping.net/docs/clippers/payments",
+      "date": "2026-09-02"
+     }
+    },
+    "payoutMethods": {
+     "text": {
+      "en": "PayPal, USDC and USDT on Ethereum, at cycle close after review",
+      "ru": "PayPal, USDC и USDT в сети Ethereum, по закрытию цикла после проверки",
+      "uk": "PayPal, USDC і USDT у мережі Ethereum, по закриттю циклу після перевірки"
+     },
+     "source": {
+      "url": "https://clipping.net/docs/clippers/payments",
+      "date": "2026-09-02"
+     }
+    },
+    "cis": {
+     "text": {
+      "en": "not published; the terms require residence in territories where the network operates, no country list",
+      "ru": "не публикует; условия требуют проживания там, где сеть работает, списка стран нет",
+      "uk": "не публікує; умови вимагають проживання там, де мережа працює, списку країн немає"
+     },
+     "state": "unknown",
+     "source": {
+      "url": "https://clipping.net/policies/clipper-terms-and-conditions",
+      "date": "2026-09-02"
+     }
+    },
+    "followers": {
+     "text": {
+      "en": "no following and no application; 18+; account ownership verified by a bio code",
+      "ru": "подписчики и заявка не нужны; 18+; владение аккаунтом подтверждается кодом в био",
+      "uk": "підписники та заявка не потрібні; 18+; володіння акаунтом підтверджується кодом у біо"
+     },
+     "state": "no",
+     "source": {
+      "url": "https://clipping.net/",
+      "date": "2026-09-02"
+     }
+    },
+    "escrow": {
+     "text": {
+      "en": "not published; budgets are shown as capped, no deposit wording",
+      "ru": "не публикует; бюджеты показаны с потолком, про депозит не сказано",
+      "uk": "не публікує; бюджети показані зі стелею, про депозит не сказано"
+     },
+     "state": "unknown",
+     "source": {
+      "url": "https://clipping.net/brands",
+      "date": "2026-09-02"
+     }
+    },
+    "networks": {
+     "text": {
+      "en": "TikTok, Instagram, YouTube, X; unlimited connected accounts",
+      "ru": "TikTok, Instagram, YouTube, X; число подключённых аккаунтов не ограничено",
+      "uk": "TikTok, Instagram, YouTube, X; кількість підключених акаунтів не обмежена"
+     },
+     "source": {
+      "url": "https://clipping.net/docs/clippers/accounts",
+      "date": "2026-09-02"
+     }
+    },
+    "verification": {
+     "text": {
+      "en": "platform APIs every ~12 hours, view-bot detection; YouTube counts engaged views",
+      "ru": "API площадок каждые ~12 часов, детект накрутки; на YouTube считают engaged views",
+      "uk": "API майданчиків кожні ~12 годин, детект накрутки; на YouTube рахують engaged views"
+     },
+     "source": {
+      "url": "https://clipping.net/clip",
+      "date": "2026-09-02"
+     }
+    }
+   },
+   "pros": {
+    "en": [
+     "Many streamer and celebrity campaigns",
+     "No following, no application",
+     "Views pulled from platform APIs, not screenshots"
+    ],
+    "ru": [
+     "Много кампаний стримеров и звёзд",
+     "Без подписчиков и заявки",
+     "Просмотры берутся из API площадок, не со скриншотов"
+    ],
+    "uk": [
+     "Багато кампаній стримерів і зірок",
+     "Без підписників і заявки",
+     "Перегляди беруться з API майданчиків, не зі скриншотів"
+    ]
+   },
+   "cons": {
+    "en": [
+     "Low rates per 1,000 compared with the field",
+     "No published fee, country list or budget custody",
+     "Crypto payouts only on Ethereum, and they are final"
+    ],
+    "ru": [
+     "Низкие ставки за 1000 на фоне остальных",
+     "Нет опубликованной комиссии, списка стран и правил хранения бюджета",
+     "Крипта только в Ethereum, и выплаты необратимы"
+    ],
+    "uk": [
+     "Низькі ставки за 1000 на тлі решти",
+     "Немає опублікованої комісії, списку країн і правил зберігання бюджету",
+     "Крипта лише в Ethereum, і виплати незворотні"
+    ]
+   }
+  },
+  {
+   "id": "vues",
+   "name": "Vues",
+   "url": "https://vues.app/",
+   "kind": "clipping marketplace",
+   "operator": "not published (Delaware law)",
+   "bestFor": {
+    "en": "clippers who want crypto or PayPal payouts without follower minimums",
+    "ru": "нарезчики, которым нужны выплаты криптой или PayPal без порога подписчиков",
+    "uk": "нарізчики, яким потрібні виплати криптою або PayPal без порогу підписників"
+   },
+   "summary": {
+    "en": "A CPM marketplace where brands set a rate and a budget cap and Vues takes its 10% from the brand; clippers withdraw to USDT, Solana, BTC, PayPal or bank. Funds are not held by Vues, and rates are shown only inside the app.",
+    "ru": "CPM-площадка, где бренд задаёт ставку и потолок бюджета, а свои 10% Vues берёт с бренда; нарезчики выводят в USDT, Solana, BTC, PayPal или на банк. Деньги Vues не держит, ставки видны только внутри приложения.",
+    "uk": "CPM-майданчик, де бренд задає ставку і стелю бюджету, а свої 10% Vues бере з бренду; нарізчики виводять у USDT, Solana, BTC, PayPal або на банк. Гроші Vues не тримає, ставки видно лише всередині застосунку."
+   },
+   "fields": {
+    "rate": {
+     "text": {
+      "en": "set per campaign and shown only in the app; site example $3.00 per 1,000",
+      "ru": "задаёт кампания, видно только в приложении; пример на сайте $3.00 за 1000",
+      "uk": "задає кампанія, видно лише в застосунку; приклад на сайті $3.00 за 1000"
+     },
+     "source": {
+      "url": "https://vues.app/campaigns/polymarket",
+      "date": "2026-09-02"
+     }
+    },
+    "threshold": {
+     "text": {
+      "en": "",
+      "ru": "",
+      "uk": ""
+     },
+     "source": {
+      "url": "https://vues.app/",
+      "date": "2026-09-02"
+     }
+    },
+    "cap": {
+     "text": {
+      "en": "campaign budget cap; per-clip cap not published",
+      "ru": "потолок бюджета кампании; потолок на ролик не опубликован",
+      "uk": "стеля бюджету кампанії; стелю на ролик не опубліковано"
+     },
+     "source": {
+      "url": "https://vues.app/terms",
+      "date": "2026-09-02"
+     }
+    },
+    "fee": {
+     "text": {
+      "en": "0% from the clipper; Vues takes 10% from the brand; a processing fee on withdrawal, amount not published",
+      "ru": "0% с нарезчика; 10% Vues берёт с бренда; комиссия за вывод есть, размер не опубликован",
+      "uk": "0% з нарізчика; 10% Vues бере з бренду; комісія за виведення є, розмір не опубліковано"
+     },
+     "value": 0,
+     "source": {
+      "url": "https://vues.app/affiliate",
+      "date": "2026-09-02"
+     }
+    },
+    "minPayout": {
+     "text": {
+      "en": "exists, amount not published",
+      "ru": "есть, сумма не опубликована",
+      "uk": "є, суму не опубліковано"
+     },
+     "source": {
+      "url": "https://vues.app/",
+      "date": "2026-09-02"
+     }
+    },
+    "payoutMethods": {
+     "text": {
+      "en": "USDT, Solana, BTC, PayPal, bank transfer",
+      "ru": "USDT, Solana, BTC, PayPal, банковский перевод",
+      "uk": "USDT, Solana, BTC, PayPal, банківський переказ"
+     },
+     "source": {
+      "url": "https://vues.app/",
+      "date": "2026-09-02"
+     }
+    },
+    "cis": {
+     "text": {
+      "en": "not published; no excluded-country list",
+      "ru": "не публикует; списка исключённых стран нет",
+      "uk": "не публікує; списку виключених країн немає"
+     },
+     "state": "unknown",
+     "source": {
+      "url": "https://vues.app/terms",
+      "date": "2026-09-02"
+     }
+    },
+    "followers": {
+     "text": {
+      "en": "no follower minimum; 18+; per-campaign approval",
+      "ru": "минимума подписчиков нет; 18+; одобрение по каждой кампании",
+      "uk": "мінімуму підписників немає; 18+; схвалення по кожній кампанії"
+     },
+     "state": "no",
+     "source": {
+      "url": "https://vues.app/",
+      "date": "2026-09-02"
+     }
+    },
+    "escrow": {
+     "text": {
+      "en": "no: the terms say campaign funds stay with the brand and are not custodied by Vues",
+      "ru": "нет: по условиям деньги кампании остаются у бренда, Vues их не хранит",
+      "uk": "ні: за умовами гроші кампанії лишаються у бренду, Vues їх не зберігає"
+     },
+     "state": "no",
+     "source": {
+      "url": "https://vues.app/terms",
+      "date": "2026-09-02"
+     }
+    },
+    "networks": {
+     "text": {
+      "en": "TikTok, Instagram, YouTube, X",
+      "ru": "TikTok, Instagram, YouTube, X",
+      "uk": "TikTok, Instagram, YouTube, X"
+     },
+     "source": {
+      "url": "https://vues.app/terms",
+      "date": "2026-09-02"
+     }
+    },
+    "verification": {
+     "text": {
+      "en": "counts read from platform APIs on a schedule; Vues decides which views are verified",
+      "ru": "счётчики читаются из API площадок по расписанию; Vues решает, какие просмотры засчитаны",
+      "uk": "лічильники читаються з API майданчиків за розкладом; Vues вирішує, які перегляди зараховані"
+     },
+     "source": {
+      "url": "https://vues.app/",
+      "date": "2026-09-02"
+     }
+    }
+   },
+   "pros": {
+    "en": [
+     "Brand pays the platform fee, not the clipper",
+     "Many payout rails including USDT and Solana",
+     "No follower minimum"
+    ],
+    "ru": [
+     "Комиссию платформе платит бренд, а не нарезчик",
+     "Много способов вывода, включая USDT и Solana",
+     "Нет минимума подписчиков"
+    ],
+    "uk": [
+     "Комісію платформі платить бренд, а не нарізчик",
+     "Багато способів виведення, включно з USDT і Solana",
+     "Немає мінімуму підписників"
+    ]
+   },
+   "cons": {
+    "en": [
+     "Funds are not held by the platform",
+     "Rates, threshold and minimum payout are not published outside the app",
+     "No country list"
+    ],
+    "ru": [
+     "Деньги не хранятся на платформе",
+     "Ставки, порог и минимум вывода не опубликованы вне приложения",
+     "Нет списка стран"
+    ],
+    "uk": [
+     "Гроші не зберігаються на платформі",
+     "Ставки, поріг і мінімум виведення не опубліковані поза застосунком",
+     "Немає списку країн"
+    ]
+   }
+  },
+  {
+   "id": "reach-cat",
+   "name": "Reach.cat",
+   "url": "https://reach.cat/",
+   "kind": "CPM campaign marketplace",
+   "operator": "not published",
+   "bestFor": {
+    "en": "weekly USDT payouts in many countries",
+    "ru": "еженедельные выплаты в USDT во многих странах",
+    "uk": "щотижневі виплати в USDT у багатьох країнах"
+   },
+   "summary": {
+    "en": "Brand-set CPM campaigns with weekly payouts in USDT and a bio-code account check; the site says 149+ countries and $1–$3 per 1,000 for new clippers, though its own pages give different CPM ranges and disagree on whether identity verification is required.",
+    "ru": "CPM-кампании со ставкой от бренда, еженедельные выплаты в USDT и проверка аккаунта кодом в био; сайт пишет про 149+ стран и $1–$3 за 1000 для новичков, хотя его же страницы дают разные диапазоны ставок и расходятся в том, нужна ли верификация личности.",
+    "uk": "CPM-кампанії зі ставкою від бренду, щотижневі виплати в USDT і перевірка акаунта кодом у біо; сайт пише про 149+ країн і $1–$3 за 1000 для новачків, хоча його ж сторінки дають різні діапазони ставок і розходяться в тому, чи потрібна верифікація особи."
+   },
+   "fields": {
+    "rate": {
+     "text": {
+      "en": "$1–$3 per 1,000 for new clippers per its clipper page; other pages quote other ranges",
+      "ru": "$1–$3 за 1000 для новичков по странице для нарезчиков; другие страницы называют другие диапазоны",
+      "uk": "$1–$3 за 1000 для новачків за сторінкою для нарізчиків; інші сторінки називають інші діапазони"
+     },
+     "value": 1,
+     "source": {
+      "url": "https://reach.cat/become-a-clipper/",
+      "date": "2026-09-02"
+     }
+    },
+    "threshold": {
+     "text": {
+      "en": "set per campaign, can be none; pays from 1,000 views per its creator page",
+      "ru": "задаётся кампанией, может отсутствовать; по странице для авторов платят от 1000 просмотров",
+      "uk": "задається кампанією, може бути відсутнім; за сторінкою для авторів платять від 1000 переглядів"
+     },
+     "value": 1000,
+     "source": {
+      "url": "https://reach.cat/creator",
+      "date": "2026-09-02"
+     }
+    },
+    "cap": {
+     "text": {
+      "en": "per-campaign daily cap and per-clip maximum, shown in the app",
+      "ru": "дневной потолок кампании и максимум на ролик, видны в приложении",
+      "uk": "денна стеля кампанії та максимум на ролик, видно в застосунку"
+     },
+     "source": {
+      "url": "https://reach.cat/agency",
+      "date": "2026-09-02"
+     }
+    },
+    "fee": {
+     "text": {
+      "en": "not published for clippers; brands pay a flat 10%",
+      "ru": "для нарезчиков не опубликована; бренд платит 10%",
+      "uk": "для нарізчиків не опублікована; бренд платить 10%"
+     },
+     "source": {
+      "url": "https://reach.cat/clipping-fee-calculator/",
+      "date": "2026-09-02"
+     }
+    },
+    "minPayout": {
+     "text": {
+      "en": "exists, amount not published; payouts weekly",
+      "ru": "есть, сумма не опубликована; выплаты еженедельно",
+      "uk": "є, суму не опубліковано; виплати щотижня"
+     },
+     "source": {
+      "url": "https://reach.cat/creator",
+      "date": "2026-09-02"
+     }
+    },
+    "payoutMethods": {
+     "text": {
+      "en": "USDT to a crypto wallet (some pages add SOL or bank transfer); weekly, 3–5 business days via a payment partner",
+      "ru": "USDT на криптокошелёк (на части страниц ещё SOL или банк); еженедельно, 3–5 рабочих дней через платёжного партнёра",
+      "uk": "USDT на криптогаманець (на частині сторінок ще SOL або банк); щотижня, 3–5 робочих днів через платіжного партнера"
+     },
+     "source": {
+      "url": "https://reach.cat/become-a-clipper/",
+      "date": "2026-09-02"
+     }
+    },
+    "cis": {
+     "text": {
+      "en": "149+ countries claimed; no excluded-country list published",
+      "ru": "заявлено 149+ стран; списка исключённых стран нет",
+      "uk": "заявлено 149+ країн; списку виключених країн немає"
+     },
+     "state": "unknown",
+     "source": {
+      "url": "https://reach.cat/become-a-clipper/",
+      "date": "2026-09-02"
+     }
+    },
+    "followers": {
+     "text": {
+      "en": "no followers required; bio-code verification; the app also asks for identity verification before withdrawal",
+      "ru": "подписчики не нужны; проверка кодом в био; приложение просит верификацию личности перед выводом",
+      "uk": "підписники не потрібні; перевірка кодом у біо; застосунок просить верифікацію особи перед виведенням"
+     },
+     "state": "no",
+     "source": {
+      "url": "https://reach.cat/become-a-clipper/",
+      "date": "2026-09-02"
+     }
+    },
+    "escrow": {
+     "text": {
+      "en": "not stated as escrow; a campaign is funded by one payment before it runs and the brand approves each post",
+      "ru": "эскроу не заявлено; кампания оплачивается одним платежом до запуска, бренд одобряет каждый пост",
+      "uk": "ескроу не заявлено; кампанія оплачується одним платежем до запуску, бренд схвалює кожен пост"
+     },
+     "state": "unknown",
+     "source": {
+      "url": "https://reach.cat/agency",
+      "date": "2026-09-02"
+     }
+    },
+    "networks": {
+     "text": {
+      "en": "TikTok, YouTube, X, Instagram",
+      "ru": "TikTok, YouTube, X, Instagram",
+      "uk": "TikTok, YouTube, X, Instagram"
+     },
+     "source": {
+      "url": "https://reach.cat/creator",
+      "date": "2026-09-02"
+     }
+    },
+    "verification": {
+     "text": {
+      "en": "platform analytics plus its own tracking; the brand approves every post before it earns",
+      "ru": "аналитика площадок плюс собственный трекинг; бренд одобряет каждый пост до начисления",
+      "uk": "аналітика майданчиків плюс власний трекінг; бренд схвалює кожен пост до нарахування"
+     },
+     "source": {
+      "url": "https://reach.cat/creator",
+      "date": "2026-09-02"
+     }
+    }
+   },
+   "pros": {
+    "en": [
+     "Weekly USDT payouts",
+     "No follower requirement",
+     "Brand fee is flat and published"
+    ],
+    "ru": [
+     "Еженедельные выплаты в USDT",
+     "Без требований к подписчикам",
+     "Комиссия бренда фиксированная и опубликована"
+    ],
+    "uk": [
+     "Щотижневі виплати в USDT",
+     "Без вимог до підписників",
+     "Комісія бренду фіксована й опублікована"
+    ]
+   },
+   "cons": {
+    "en": [
+     "Its own pages disagree on rates and on identity checks",
+     "No published clipper fee, minimum payout or country list",
+     "Budget custody is not stated"
+    ],
+    "ru": [
+     "Его же страницы расходятся по ставкам и по проверке личности",
+     "Нет опубликованной комиссии нарезчика, минимума вывода и списка стран",
+     "Хранение бюджета не описано"
+    ],
+    "uk": [
+     "Його ж сторінки розходяться щодо ставок і перевірки особи",
+     "Немає опублікованої комісії нарізчика, мінімуму виведення і списку країн",
+     "Зберігання бюджету не описано"
+    ]
+   }
+  },
+  {
+   "id": "klipni",
+   "name": "Klipni (Клипни)",
+   "url": "https://klipni.com/",
+   "kind": "Russian clipping platform",
+   "operator": "ИП Семенов Б. В., Russia",
+   "bestFor": {
+    "en": "Russian self-employed clippers paid in rubles",
+    "ru": "самозанятые нарезчики из России с выплатами в рублях",
+    "uk": "самозайняті нарізчики з Росії з виплатами в рублях"
+   },
+   "summary": {
+    "en": "A Russian platform: brands buy a subscription and fund CPM campaigns in rubles, clippers need Russian self-employed (НПД) tax status, pay a 5% fee on approved payouts and withdraw any amount to a bank card within five business days.",
+    "ru": "Российская платформа: бренды покупают подписку и финансируют CPM-кампании в рублях, нарезчику нужен статус самозанятого, комиссия 5% с одобренных выплат, вывод любой суммы на карту до пяти рабочих дней.",
+    "uk": "Російська платформа: бренди купують підписку та фінансують CPM-кампанії в рублях, нарізчику потрібен російський статус самозайнятого, комісія 5% зі схвалених виплат, виведення будь-якої суми на картку до п'яти робочих днів."
+   },
+   "fields": {
+    "rate": {
+     "text": {
+      "en": "set per campaign in rubles; site examples 50 ₽ per 1,000 views",
+      "ru": "задаёт кампания в рублях; примеры на сайте 50 ₽ за 1000 просмотров",
+      "uk": "задає кампанія в рублях; приклади на сайті 50 ₽ за 1000 переглядів"
+     },
+     "source": {
+      "url": "https://klipni.com/creators",
+      "date": "2026-09-02"
+     }
+    },
+    "threshold": {
+     "text": {
+      "en": "",
+      "ru": "",
+      "uk": ""
+     },
+     "source": {
+      "url": "https://klipni.com/creators",
+      "date": "2026-09-02"
+     }
+    },
+    "cap": {
+     "text": {
+      "en": "per-post limit set by each campaign",
+      "ru": "лимит на один пост задаёт кампания",
+      "uk": "ліміт на один пост задає кампанія"
+     },
+     "source": {
+      "url": "https://klipni.com/creators",
+      "date": "2026-09-02"
+     }
+    },
+    "fee": {
+     "text": {
+      "en": "5% of each approved payout",
+      "ru": "5% с каждой одобренной выплаты",
+      "uk": "5% з кожної схваленої виплати"
+     },
+     "value": 5,
+     "source": {
+      "url": "https://klipni.com/creators",
+      "date": "2026-09-02"
+     }
+    },
+    "minPayout": {
+     "text": {
+      "en": "none; any amount above zero",
+      "ru": "нет; любая сумма больше нуля",
+      "uk": "немає; будь-яка сума більша за нуль"
+     },
+     "value": 0,
+     "source": {
+      "url": "https://klipni.com/creators",
+      "date": "2026-09-02"
+     }
+    },
+    "payoutMethods": {
+     "text": {
+      "en": "bank card via self-employed status, within five business days after the bank accepts the payout",
+      "ru": "на карту через статус самозанятого, до пяти рабочих дней после принятия выплаты банком",
+      "uk": "на картку через статус самозайнятого, до п'яти робочих днів після прийняття виплати банком"
+     },
+     "source": {
+      "url": "https://klipni.com/legal/terms",
+      "date": "2026-09-02"
+     }
+    },
+    "cis": {
+     "text": {
+      "en": "Russia only in practice: payouts require Russian self-employed or sole-trader tax status",
+      "ru": "фактически только Россия: для выплат нужен статус самозанятого или ИП в РФ",
+      "uk": "фактично лише Росія: для виплат потрібен статус самозайнятого або ІП в РФ"
+     },
+     "state": "partial",
+     "source": {
+      "url": "https://klipni.com/legal/terms",
+      "date": "2026-09-02"
+     }
+    },
+    "followers": {
+     "text": {
+      "en": "no follower requirement; self-employed status registered in the app; every video moderated",
+      "ru": "подписчики не нужны; самозанятость оформляется в приложении; каждый ролик проходит модерацию",
+      "uk": "підписники не потрібні; самозайнятість оформлюється в застосунку; кожен ролик проходить модерацію"
+     },
+     "state": "no",
+     "source": {
+      "url": "https://klipni.com/creators",
+      "date": "2026-09-02"
+     }
+    },
+    "escrow": {
+     "text": {
+      "en": "yes: the budget is prepaid by invoice and stays the advertiser's property until spent; unused balance refundable",
+      "ru": "да: бюджет вносится заранее по счёту и остаётся деньгами рекламодателя до расходования; остаток возвращается",
+      "uk": "так: бюджет вноситься заздалегідь за рахунком і лишається грошима рекламодавця до витрачання; залишок повертається"
+     },
+     "state": "yes",
+     "source": {
+      "url": "https://klipni.com/legal/advertiser",
+      "date": "2026-09-02"
+     }
+    },
+    "networks": {
+     "text": {
+      "en": "YouTube Shorts, TikTok, Instagram Reels, VK Clips",
+      "ru": "YouTube Shorts, TikTok, Instagram Reels, VK Клипы",
+      "uk": "YouTube Shorts, TikTok, Instagram Reels, VK Кліпи"
+     },
+     "source": {
+      "url": "https://klipni.com/creators",
+      "date": "2026-09-02"
+     }
+    },
+    "verification": {
+     "text": {
+      "en": "platform APIs, every video moderated, account ownership verified, inflated views unpaid",
+      "ru": "API площадок, модерация каждого ролика, проверка владения аккаунтом, накрутка не оплачивается",
+      "uk": "API майданчиків, модерація кожного ролика, перевірка володіння акаунтом, накрутка не оплачується"
+     },
+     "source": {
+      "url": "https://klipni.com/",
+      "date": "2026-09-02"
+     }
+    }
+   },
+   "pros": {
+    "en": [
+     "Low 5% fee and no minimum withdrawal",
+     "Prepaid budgets, campaigns are funded before they run",
+     "Counts VK Clips as well as the global networks"
+    ],
+    "ru": [
+     "Низкая комиссия 5% и нет минимума на вывод",
+     "Бюджеты предоплачены, кампания оплачена до запуска",
+     "Считает VK Клипы вместе с мировыми площадками"
+    ],
+    "uk": [
+     "Низька комісія 5% і немає мінімуму на виведення",
+     "Бюджети передплачені, кампанія оплачена до запуску",
+     "Рахує VK Кліпи разом зі світовими майданчиками"
+    ]
+   },
+   "cons": {
+    "en": [
+     "Requires Russian self-employed tax status, so it is effectively Russia-only",
+     "Rates in rubles and set per campaign; no view threshold published",
+     "No public social channels"
+    ],
+    "ru": [
+     "Нужен статус самозанятого в РФ, фактически только для России",
+     "Ставки в рублях и по кампаниям; порог просмотров не опубликован",
+     "Нет публичных соцканалов"
+    ],
+    "uk": [
+     "Потрібен російський статус самозайнятого, фактично лише для Росії",
+     "Ставки в рублях і за кампаніями; поріг переглядів не опубліковано",
+     "Немає публічних соцканалів"
+    ]
+   }
+  },
+  {
+   "id": "prime-oracles",
+   "name": "Prime Oracles",
+   "url": "https://www.primeoracles.com/",
+   "kind": "Russian-language content marketplace with reward campaigns",
+   "operator": "ИП Aliaksey Maysak, Georgia",
+   "bestFor": {
+    "en": "Russian-speaking clippers who want crypto payouts from $5",
+    "ru": "русскоязычные нарезчики, которым нужны крипто-выплаты от $5",
+    "uk": "російськомовні нарізчики, яким потрібні криптовиплати від $5"
+   },
+   "summary": {
+    "en": "A Russian-language marketplace with reward campaigns: the customer sets a rate per 1,000 views or view tiers, the reward balance is frozen on activation, and clippers withdraw USDT or USDC from $5. Not offered to EU, UK or US residents; the platform fee is shown only in the app.",
+    "ru": "Русскоязычный маркетплейс с наградами за контент: заказчик задаёт ставку за 1000 просмотров или пороги, баланс награды замораживается при активации, нарезчики выводят USDT или USDC от $5. Не работает с резидентами ЕС, Великобритании и США; комиссия платформы видна только в приложении.",
+    "uk": "Російськомовний маркетплейс із винагородами за контент: замовник задає ставку за 1000 переглядів або пороги, баланс винагороди заморожується при активації, нарізчики виводять USDT або USDC від $5. Не працює з резидентами ЄС, Британії та США; комісія платформи видна лише в застосунку."
+   },
+   "fields": {
+    "rate": {
+     "text": {
+      "en": "set per reward by the customer; no examples published",
+      "ru": "задаёт заказчик по каждой награде; примеров нет",
+      "uk": "задає замовник по кожній винагороді; прикладів немає"
+     },
+     "source": {
+      "url": "https://www.primeoracles.com/rewards",
+      "date": "2026-09-02"
+     }
+    },
+    "threshold": {
+     "text": {
+      "en": "set per reward: a minimum payout or view tiers",
+      "ru": "задаётся по награде: минимальная выплата или пороги просмотров",
+      "uk": "задається по винагороді: мінімальна виплата або пороги переглядів"
+     },
+     "source": {
+      "url": "https://www.primeoracles.com/rewards",
+      "date": "2026-09-02"
+     }
+    },
+    "cap": {
+     "text": {
+      "en": "maximum payout set per reward; one payout per video",
+      "ru": "максимальная выплата задаётся по награде; одно видео = одна выплата",
+      "uk": "максимальна виплата задається по винагороді; одне відео = одна виплата"
+     },
+     "source": {
+      "url": "https://www.primeoracles.com/terms-agreement",
+      "date": "2026-09-02"
+     }
+    },
+    "fee": {
+     "text": {
+      "en": "a percentage charged at withdrawal; the number is shown only in the app",
+      "ru": "процент удерживается при выводе; число видно только в приложении",
+      "uk": "відсоток утримується при виведенні; число видно лише в застосунку"
+     },
+     "source": {
+      "url": "https://www.primeoracles.com/rewards",
+      "date": "2026-09-02"
+     }
+    },
+    "minPayout": {
+     "text": {
+      "en": "$5 in USDT ($5–$12 depending on the network)",
+      "ru": "$5 в USDT ($5–$12 в зависимости от сети)",
+      "uk": "$5 в USDT ($5–$12 залежно від мережі)"
+     },
+     "value": 5,
+     "source": {
+      "url": "https://www.primeoracles.com/rewards",
+      "date": "2026-09-02"
+     }
+    },
+    "payoutMethods": {
+     "text": {
+      "en": "USDT or USDC to your wallet (BSC, Solana, Tron); crypto only, cards announced",
+      "ru": "USDT или USDC на кошелёк (BSC, Solana, Tron); только крипта, карты анонсированы",
+      "uk": "USDT або USDC на гаманець (BSC, Solana, Tron); лише крипта, картки анонсовано"
+     },
+     "source": {
+      "url": "https://www.primeoracles.com/aml-policy",
+      "date": "2026-09-02"
+     }
+    },
+    "cis": {
+     "text": {
+      "en": "Russia, Belarus and Kazakhstan are served; EU, UK and US residents are not; Ukraine not mentioned",
+      "ru": "Россия, Беларусь и Казахстан обслуживаются; резиденты ЕС, Британии и США нет; Украина не упомянута",
+      "uk": "Росія, Білорусь і Казахстан обслуговуються; резиденти ЄС, Британії та США ні; Україну не згадано"
+     },
+     "state": "partial",
+     "source": {
+      "url": "https://www.primeoracles.com/terms-agreement",
+      "date": "2026-09-02"
+     }
+    },
+    "followers": {
+     "text": {
+      "en": "none published; identity checks on suspicion or large operations",
+      "ru": "минимума нет; проверка личности при подозрениях или крупных операциях",
+      "uk": "мінімуму немає; перевірка особи за підозр або великих операцій"
+     },
+     "state": "no",
+     "source": {
+      "url": "https://www.primeoracles.com/terms-agreement",
+      "date": "2026-09-02"
+     }
+    },
+    "escrow": {
+     "text": {
+      "en": "yes: the reward balance must cover the maximum payout and is frozen on activation",
+      "ru": "да: баланс награды должен покрывать максимальную выплату и замораживается при активации",
+      "uk": "так: баланс винагороди має покривати максимальну виплату і заморожується при активації"
+     },
+     "state": "yes",
+     "source": {
+      "url": "https://www.primeoracles.com/terms-agreement",
+      "date": "2026-09-02"
+     }
+    },
+    "networks": {
+     "text": {
+      "en": "TikTok, YouTube Shorts, Instagram Reels",
+      "ru": "TikTok, YouTube Shorts, Instagram Reels",
+      "uk": "TikTok, YouTube Shorts, Instagram Reels"
+     },
+     "source": {
+      "url": "https://www.primeoracles.com/rewards",
+      "date": "2026-09-02"
+     }
+    },
+    "verification": {
+     "text": {
+      "en": "automatic link check and anti-fraud script, then manual approval by the customer",
+      "ru": "автоматическая проверка ссылок и антифрод-скрипт, затем ручное одобрение заказчиком",
+      "uk": "автоматична перевірка посилань і антифрод-скрипт, потім ручне схвалення замовником"
+     },
+     "source": {
+      "url": "https://www.primeoracles.com/rewards",
+      "date": "2026-09-02"
+     }
+    }
+   },
+   "pros": {
+    "en": [
+     "Reward balance frozen before the campaign starts",
+     "Low $5 minimum, payouts in USDT or USDC",
+     "Serves Russia, Belarus and Kazakhstan"
+    ],
+    "ru": [
+     "Баланс награды заморожен до старта",
+     "Низкий минимум $5, выплаты в USDT или USDC",
+     "Обслуживает Россию, Беларусь и Казахстан"
+    ],
+    "uk": [
+     "Баланс винагороди заморожений до старту",
+     "Низький мінімум $5, виплати в USDT або USDC",
+     "Обслуговує Росію, Білорусь і Казахстан"
+    ]
+   },
+   "cons": {
+    "en": [
+     "Fee percentage is not published outside the app",
+     "Crypto payouts only",
+     "Customer approves each payout by hand, up to 7 days"
+    ],
+    "ru": [
+     "Процент комиссии не опубликован вне приложения",
+     "Только крипто-выплаты",
+     "Заказчик одобряет каждую выплату вручную, до 7 дней"
+    ],
+    "uk": [
+     "Відсоток комісії не опубліковано поза застосунком",
+     "Лише криптовиплати",
+     "Замовник схвалює кожну виплату вручну, до 7 днів"
+    ]
+   }
+  },
+  {
+   "id": "clipping-io",
+   "name": "Clipping.io",
+   "url": "https://www.clipping.io/",
+   "kind": "clipping marketplace",
+   "operator": "not published (California law)",
+   "bestFor": {
+    "en": "hard to say: almost no terms are published",
+    "ru": "сказать трудно: условий почти нет в открытом доступе",
+    "uk": "сказати важко: умов майже немає у відкритому доступі"
+   },
+   "summary": {
+    "en": "A marketplace that publishes almost no terms: no rates, thresholds, fees, minimums, payout methods or countries on its public pages, only monthly earnings illustrations and the names of its tracking and anti-bot features.",
+    "ru": "Площадка, которая почти не публикует условий: на открытых страницах нет ставок, порогов, комиссий, минимумов, способов выплат и стран, только иллюстрации месячного заработка и названия функций трекинга и антибота.",
+    "uk": "Майданчик, який майже не публікує умов: на відкритих сторінках немає ставок, порогів, комісій, мінімумів, способів виплат і країн, лише ілюстрації місячного заробітку та назви функцій трекінгу й антибота."
+   },
+   "fields": {
+    "rate": {
+     "text": {
+      "en": "",
+      "ru": "",
+      "uk": ""
+     },
+     "source": {
+      "url": "https://www.clipping.io/",
+      "date": "2026-09-02"
+     }
+    },
+    "threshold": {
+     "text": {
+      "en": "",
+      "ru": "",
+      "uk": ""
+     },
+     "source": {
+      "url": "https://www.clipping.io/",
+      "date": "2026-09-02"
+     }
+    },
+    "cap": {
+     "text": {
+      "en": "",
+      "ru": "",
+      "uk": ""
+     },
+     "source": {
+      "url": "https://www.clipping.io/",
+      "date": "2026-09-02"
+     }
+    },
+    "fee": {
+     "text": {
+      "en": "",
+      "ru": "",
+      "uk": ""
+     },
+     "source": {
+      "url": "https://www.clipping.io/",
+      "date": "2026-09-02"
+     }
+    },
+    "minPayout": {
+     "text": {
+      "en": "",
+      "ru": "",
+      "uk": ""
+     },
+     "source": {
+      "url": "https://www.clipping.io/",
+      "date": "2026-09-02"
+     }
+    },
+    "payoutMethods": {
+     "text": {
+      "en": "",
+      "ru": "",
+      "uk": ""
+     },
+     "source": {
+      "url": "https://www.clipping.io/",
+      "date": "2026-09-02"
+     }
+    },
+    "cis": {
+     "text": {
+      "en": "",
+      "ru": "",
+      "uk": ""
+     },
+     "state": "unknown",
+     "source": {
+      "url": "https://www.clipping.io/terms-of-use",
+      "date": "2026-09-02"
+     }
+    },
+    "followers": {
+     "text": {
+      "en": "",
+      "ru": "",
+      "uk": ""
+     },
+     "state": "unknown",
+     "source": {
+      "url": "https://www.clipping.io/",
+      "date": "2026-09-02"
+     }
+    },
+    "escrow": {
+     "text": {
+      "en": "",
+      "ru": "",
+      "uk": ""
+     },
+     "state": "unknown",
+     "source": {
+      "url": "https://www.clipping.io/brands",
+      "date": "2026-09-02"
+     }
+    },
+    "networks": {
+     "text": {
+      "en": "TikTok, Instagram, Snapchat, X, YouTube",
+      "ru": "TikTok, Instagram, Snapchat, X, YouTube",
+      "uk": "TikTok, Instagram, Snapchat, X, YouTube"
+     },
+     "source": {
+      "url": "https://www.clipping.io/",
+      "date": "2026-09-02"
+     }
+    },
+    "verification": {
+     "text": {
+      "en": "'view tracker' and 'anti-bot detection' are named; the method is not described",
+      "ru": "названы «трекер просмотров» и «антибот»; метод не описан",
+      "uk": "названо «трекер переглядів» і «антибот»; метод не описано"
+     },
+     "source": {
+      "url": "https://www.clipping.io/brands",
+      "date": "2026-09-02"
+     }
+    }
+   },
+   "pros": {
+    "en": [
+     "Tracks Snapchat and X alongside TikTok, Instagram and YouTube",
+     "Claims $1.5M+ paid to clippers"
+    ],
+    "ru": [
+     "Считает Snapchat и X наряду с TikTok, Instagram и YouTube",
+     "Заявляет $1.5M+ выплаченных нарезчикам"
+    ],
+    "uk": [
+     "Рахує Snapchat і X поряд із TikTok, Instagram і YouTube",
+     "Заявляє $1.5M+ виплачених нарізчикам"
+    ]
+   },
+   "cons": {
+    "en": [
+     "No rates, fees, minimums or countries published",
+     "Terms are login-only",
+     "No budget custody information"
+    ],
+    "ru": [
+     "Не опубликованы ставки, комиссии, минимумы и страны",
+     "Условия только после входа",
+     "Нет информации о хранении бюджета"
+    ],
+    "uk": [
+     "Не опубліковано ставки, комісії, мінімуми та країни",
+     "Умови лише після входу",
+     "Немає інформації про зберігання бюджету"
+    ]
+   }
+  }
+ ]
+}

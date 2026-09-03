@@ -12,7 +12,7 @@ hero:
   takeaways:
     - "<b>$1.00 to $2.00 per 1,000 views</b> in open contests; the exact rate is printed on each task card before you submit."
     - "<b>No followers, portfolio or application</b>: a brand-new account can take a brief."
-    - "<b>Pays in Russia, Ukraine, Kazakhstan and the rest of CIS</b>, as well as worldwide."
+    - "<b>Pays worldwide with no country restrictions</b>; the community is largest in CIS, and everyone is welcome."
     - "<b>Wallet-backed contests lock the budget on the platform before the start</b>; manual-payout contests are paid by the organizer directly."
     - "<b>Withdrawals: 10 USDT minimum, 10% fee</b>, paid in USDT on TON or as Telegram Stars."
 facts: { id: darebay }
@@ -28,6 +28,16 @@ DareBay is a pay-per-view clipping platform. Brands, streamers and creators publ
 Two kinds of contest exist. In a **wallet-backed contest** the organizer's budget is locked on the platform before the contest opens, and the platform credits each clipper's balance after the count. In a **manual-payout contest** the organizer pays clippers directly and the platform only counts and records; the task card says which kind it is before you take it.
 
 <LFacts />
+
+## What DareBay adds on top of pay per view
+
+**Better offers.** Besides the rate per 1,000 views, an offer task can pay a fixed fee for every accepted clip and a share of the orders your promo code brings in, all on the same task card.
+
+**Ready-made videos with built-in uniqueization.** On offer tasks the platform hands you finished videos and makes every copy unique for you, so you can post without editing software and without repeating another clipper's clip.
+
+**CPA offers directly.** Brands run their CPA offers on DareBay itself, so you work with the offer on the platform, with the budget and the count in one place and no affiliate network in between.
+
+**Worldwide, no country restrictions.** There is no exclusion list: clippers from any country are paid the same way. The community is largest in Russia, Ukraine, Kazakhstan and the rest of CIS, and everyone is welcome.
 
 ## How the money moves
 
@@ -55,7 +65,7 @@ No. Payment tracks the views of one specific clip, so a new account with no foll
 
 ### Does DareBay pay clippers in Russia and CIS?
 
-Yes. Clippers from Russia, Belarus, Ukraine, Kazakhstan and the rest of CIS are paid like everyone else, in USDT on TON or Telegram Stars.
+Yes, and in every other country: there is no exclusion list. Clippers from Russia, Belarus, Ukraine, Kazakhstan and the rest of CIS, where the community is largest, are paid the same way as everyone else, in USDT on TON or Telegram Stars.
 
 ### Is the budget guaranteed?
 

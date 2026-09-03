@@ -55,6 +55,14 @@
     "published": "2026-08-03T17:55:09Z",
     "modified": "2026-08-23T02:37:00+02:00"
   },
+  "en/earnings/clipping-platforms-that-pay-in-russia-and-cis.md": {
+    "published": "2026-09-03T11:05:07Z",
+    "modified": "2026-09-03T11:05:07Z"
+  },
+  "en/earnings/darebay-vs-klipni.md": {
+    "published": "2026-09-03T11:05:07Z",
+    "modified": "2026-09-03T11:05:07Z"
+  },
   "en/earnings/darebay-vs-whop.md": {
     "published": "2026-09-03T10:58:17Z",
     "modified": "2026-09-03T10:58:17Z"
@@ -66,6 +74,10 @@
   "en/earnings/how-pay-per-view-works.md": {
     "published": "2026-08-03T14:31:02Z",
     "modified": "2026-08-23T02:37:00+02:00"
+  },
+  "en/earnings/how-to-choose-a-clipping-platform.md": {
+    "published": "2026-09-03T11:05:07Z",
+    "modified": "2026-09-03T11:05:07Z"
   },
   "en/earnings/how-views-are-counted.md": {
     "published": "2026-08-03T17:55:09Z",
@@ -397,7 +409,7 @@
   },
   "ua/zarobitok/alternatyvy-whop-v-ukraini.md": {
     "published": "2026-09-03T10:58:17Z",
-    "modified": "2026-09-03T10:58:17Z"
+    "modified": "2026-09-03T11:05:46Z"
   },
   "ua/zarobitok/darebay-chy-whop.md": {
     "published": "2026-09-03T10:58:17Z",
@@ -414,6 +426,10 @@
   "ua/zarobitok/naikrashchi-platformy-dlia-zarobitku-na-narizkakh.md": {
     "published": "2026-09-03T10:50:10Z",
     "modified": "2026-09-03T10:50:10Z"
+  },
+  "ua/zarobitok/platformy-dlia-narizchykiv-shcho-platiat-v-ukrainu.md": {
+    "published": "2026-09-03T11:05:07Z",
+    "modified": "2026-09-03T11:05:46Z"
   },
   "ua/zarobitok/robota-narizalnykom.md": {
     "published": "2026-08-03T17:55:09Z",
@@ -435,6 +451,10 @@
     "published": "2026-08-03T17:55:09Z",
     "modified": "2026-08-23T02:37:00+02:00"
   },
+  "ua/zarobitok/yak-obraty-platformu-dlia-narizok.md": {
+    "published": "2026-09-03T11:05:07Z",
+    "modified": "2026-09-03T11:05:07Z"
+  },
   "ua/zarobitok/yak-pratsiuie-oplata-za-perehliady.md": {
     "published": "2026-08-03T14:31:02Z",
     "modified": "2026-08-23T02:37:00+02:00"
@@ -446,6 +466,10 @@
   "zarabotok/analogi-whop-v-rossii.md": {
     "published": "2026-09-03T10:58:17Z",
     "modified": "2026-09-03T10:58:17Z"
+  },
+  "zarabotok/darebay-ili-klipni.md": {
+    "published": "2026-09-03T11:05:07Z",
+    "modified": "2026-09-03T11:05:07Z"
   },
   "zarabotok/darebay-ili-whop.md": {
     "published": "2026-09-03T10:58:17Z",
@@ -471,9 +495,17 @@
     "published": "2026-07-10T13:48:54+02:00",
     "modified": "2026-08-23T02:37:00+02:00"
   },
+  "zarabotok/kak-vybrat-platformu-dlya-narezok.md": {
+    "published": "2026-09-03T11:05:07Z",
+    "modified": "2026-09-03T11:05:07Z"
+  },
   "zarabotok/luchshie-platformy-dlya-zarabotka-na-narezkah.md": {
     "published": "2026-09-03T10:36:52Z",
     "modified": "2026-09-03T10:50:10Z"
+  },
+  "zarabotok/platformy-dlya-narezchikov-kotorye-platyat-v-sng.md": {
+    "published": "2026-09-03T11:05:07Z",
+    "modified": "2026-09-03T11:05:07Z"
   },
   "zarabotok/rabota-narezchikom.md": {
     "published": "2026-07-10T18:20:54Z",

@@ -679,14 +679,22 @@ export default defineConfig({
       dates,
       compared
     )
-    if (pageData.frontmatter.landing) {
-      // Display face of the landing shell (self-hosted next to Manrope). Only
-      // landing pages pay for it; docs pages keep Manrope alone.
-      pageData.frontmatter.head.push(
-        ['link', { rel: 'preload', href: '/content-assets/fonts/unbounded-var-latin.woff2', as: 'font', type: 'font/woff2', crossorigin: '' }],
-        ['link', { rel: 'stylesheet', href: '/content-assets/fonts/unbounded.css' }]
-      )
+    // Every page renders through the landing shell now: the display face is a
+    // site-wide dependency (self-hosted next to Manrope).
+    pageData.frontmatter.head.push(
+      ['link', { rel: 'preload', href: '/content-assets/fonts/unbounded-var-latin.woff2', as: 'font', type: 'font/woff2', crossorigin: '' }],
+      ['link', { rel: 'stylesheet', href: '/content-assets/fonts/unbounded.css' }]
+    )
+    // Section context for the shell: breadcrumb kicker in the hero, "more in
+    // this section" cards, and the visible "updated" date (same value as
+    // dateModified in the markup, from page-dates.json).
+    pageData.frontmatter.sectionHub = {
+      id: found.entry.hub,
+      title: HUB_TITLES[found.lang][found.entry.hub],
+      path: hubEntry ? pagePath(hubEntry, found.lang) : null,
     }
+    pageData.frontmatter.isHub = isHub
+    pageData.frontmatter.updated = dates?.modified?.slice(0, 10) ?? null
     pageData.frontmatter.head.push(['script', { type: 'application/ld+json' }, JSON.stringify(schema)])
 
     pageData.frontmatter.head.push(

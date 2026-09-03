@@ -33,6 +33,16 @@ Live tasks sit in the [clip earnings catalogue](/en/earn/clips): the rate, the t
 - [What streamer clips pay](/en/earnings/streamer-clip-rates) - what gets cut out of a broadcast, what it is worth at the contest rate, and what rights the brief itself grants.
 - [What TikTok pays for views](/en/earnings/tiktok-view-payouts) - a platform creator programme against a contest on an intermediary: what TikTok and YouTube require, across six axes of comparison.
 
+## Platforms compared, with numbers
+
+- [Best clipping platforms in 2026](/en/earnings/best-clipping-platforms) - nine platforms in one table: rate, threshold, cap, fee, payout, countries.
+- [Whop Content Rewards alternatives](/en/earnings/whop-content-rewards-alternatives) - where to go when Whop cannot pay you.
+- [DareBay vs Whop](/en/earnings/darebay-vs-whop) - the two platforms field by field.
+- [DareBay vs Klipni](/en/earnings/darebay-vs-klipni) - rubles and tax status against USDT and worldwide.
+- [Clipping platforms that pay in Russia and CIS](/en/earnings/clipping-platforms-that-pay-in-russia-and-cis) - country by country, in the platforms' own words.
+- [How to choose a clipping platform](/en/earnings/how-to-choose-a-clipping-platform) - nine questions before your first clip.
+- [DareBay at a glance](/en/about/darebay-at-a-glance) - the fact sheet: rates, fees, payouts, countries.
+
 ## Where to start
 
 If this is your first time in the section, the route is short. [Clipping as a job](/en/earnings/clipping-as-a-job) - what the work is as a whole and what it asks of you. [How much you can earn from clips](/en/earnings/how-much-clipping-pays) - how to work out your own figure before you open the editor. [Where to find clipping work](/en/earnings/where-to-find-clipping-work) - where the first brief comes from and what to read on the card.

@@ -23,36 +23,10 @@ const pages = computed(() => hubs[props.hub]?.[lang.value] ?? [])
 </script>
 
 <template>
-    <ul class="db-hub-index">
-        <li v-for="page in pages" :key="page.id">
-            <a :href="page.path">{{ page.title }}</a>
-            <span v-if="page.description"> — {{ page.description }}</span>
-        </li>
-    </ul>
+    <div class="lp-bleed lp-related lp-related--hub">
+        <a v-for="page in pages" :key="page.id" class="lp-card lp-card--link" :href="page.path">
+            <h3>{{ page.title }}</h3>
+            <p v-if="page.description">{{ page.description }}</p>
+        </a>
+    </div>
 </template>
-
-<style scoped>
-.db-hub-index {
-    list-style: none;
-    padding: 0;
-    margin: 1.25rem 0 0;
-}
-
-.db-hub-index li {
-    padding: 0.6rem 0;
-    border-top: 1px solid var(--vp-c-divider);
-    line-height: 1.55;
-}
-
-.db-hub-index li:last-child {
-    border-bottom: 1px solid var(--vp-c-divider);
-}
-
-.db-hub-index a {
-    font-weight: 600;
-}
-
-.db-hub-index span {
-    color: var(--vp-c-text-2);
-}
-</style>

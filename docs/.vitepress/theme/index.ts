@@ -13,6 +13,7 @@ import LPlatforms from './landing/LPlatforms.vue'
 import LMethod from './landing/LMethod.vue'
 import LCalc from './landing/LCalc.vue'
 import LFacts from './landing/LFacts.vue'
+import LRelated from './landing/LRelated.vue'
 import './landing/landing.css'
 import { installWebVitals } from './vitals'
 import './custom.css'
@@ -108,13 +109,14 @@ const DocsLayout = defineComponent({
 
     // `doc-footer-before` sits between the article and the prev/next pager, so the last
     // thing a reader meets is the product — not another sideways link deeper into the docs.
-    // Landing pages (`landing: true`) get their own shell: no sidebar, no doc
-    // chrome, hero + comparison components. The instrumentation above is the
-    // same for both, so analytics do not depend on which shell rendered.
+    // Every page renders through the landing shell (founder directive
+    // 2026-09-03: the old docs format is retired). `landing: false` keeps the
+    // stock VitePress layout as an escape hatch. The instrumentation above is
+    // the same for both, so analytics do not depend on which shell rendered.
     return () =>
-      frontmatter.value.landing
-        ? h(LandingLayout)
-        : h(DefaultTheme.Layout, null, { 'doc-footer-before': () => h(PlatformCta) })
+      frontmatter.value.landing === false
+        ? h(DefaultTheme.Layout, null, { 'doc-footer-before': () => h(PlatformCta) })
+        : h(LandingLayout)
   },
 })
 
@@ -133,6 +135,7 @@ export default {
     app.component('LMethod', LMethod)
     app.component('LCalc', LCalc)
     app.component('LFacts', LFacts)
+    app.component('LRelated', LRelated)
 
     if (typeof window === 'undefined') return
 

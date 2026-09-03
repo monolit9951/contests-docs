@@ -37,6 +37,16 @@ numbers_used: [ppv_cpm_min, ppv_cpm_median, ppv_cpm_max, ppv_min_views_threshold
 - [Сколько платят за просмотры в ТикТок](/zarabotok/skolko-platyat-za-prosmotry-v-tiktok) - партнёрская программа площадки против конкурса у посредника: требования TikTok и YouTube и шесть осей сравнения.
 - [Заработок на нарезках фильмов](/zarabotok/zarabotok-na-narezkah-filmov) - почему «правило 10 секунд» не существует, чем клейм отличается от страйка и почему снятый ролик обнуляет выплату за работу.
 
+## Площадки: сравнения с цифрами
+
+- [Лучшие платформы для заработка на нарезках](/zarabotok/luchshie-platformy-dlya-zarabotka-na-narezkah) - девять площадок в одной таблице: ставка, порог, потолок, комиссия, вывод, страны.
+- [Аналоги Whop в России и СНГ](/zarabotok/analogi-whop-v-rossii) - куда идти, если Whop не платит в твою страну.
+- [DareBay или Whop](/zarabotok/darebay-ili-whop) - две площадки поле за полем.
+- [DareBay или Klipni](/zarabotok/darebay-ili-klipni) - рубли и самозанятость против USDT и всего мира.
+- [Кто платит в Россию и СНГ](/zarabotok/platformy-dlya-narezchikov-kotorye-platyat-v-sng) - страна за страной, словами самих площадок.
+- [Как выбрать платформу для нарезок](/zarabotok/kak-vybrat-platformu-dlya-narezok) - девять вопросов до первого ролика.
+- [DareBay в цифрах](/o-proekte/darebay-v-tsifrakh) - карточка фактов: ставки, комиссии, выплаты, страны.
+
 ## С чего начать
 
 Если ты в разделе впервые, маршрут короткий. [Работа нарезчиком](/zarabotok/rabota-narezchikom) - что это за работа целиком и чего она требует. [Сколько можно заработать на нарезках](/zarabotok/skolko-mozhno-zarabotat-na-narezkah) - как посчитать свою сумму до того, как сядешь за монтаж. [Где брать заказы на нарезки](/zarabotok/gde-brat-zakazy-na-narezki) - где взять первое задание и что читать в карточке. Дальше, когда дойдёт до монтажа, - [Как делать нарезки](/zarabotok/kak-delat-narezki).

@@ -31,7 +31,7 @@ const hostSources = (p: Parameters<typeof sourcesOf>[0]) => {
           <div>
             <span class="lp-rank">{{ String(i + 1).padStart(2, '0') }}</span>
             <h3>
-              <a v-if="p.id === highlight" :href="p.home?.[loc] ?? p.url">{{ p.name }}</a>
+              <a v-if="p.id === highlight" :href="p.home?.[loc] ?? p.url" target="_self">{{ p.name }}</a>
               <a v-else :href="p.url" target="_blank" rel="nofollow noopener">{{ p.name }}</a>
             </h3>
           </div>
@@ -57,7 +57,7 @@ const hostSources = (p: Parameters<typeof sourcesOf>[0]) => {
         </div>
         <div class="lp-card-foot">
           <span class="lp-srcs">{{ copy.sources }}: <template v-for="(s, k) in hostSources(p)" :key="s.url"><a :href="s.url" target="_blank" rel="nofollow noopener" :title="s.date">{{ s.host }}</a><span v-if="k < hostSources(p).length - 1">, </span></template> · {{ copy.updated }} {{ hostSources(p)[0]?.date }}</span>
-          <a v-if="p.id === highlight" class="lp-btn lp-btn-primary lp-btn-sm" :href="p.home?.[loc] ?? p.url">{{ copy.ctaPrimary }}</a>
+          <a v-if="p.id === highlight" class="lp-btn lp-btn-primary lp-btn-sm" :href="p.home?.[loc] ?? p.url" target="_self">{{ copy.ctaPrimary }}</a>
         </div>
       </article>
     </div>

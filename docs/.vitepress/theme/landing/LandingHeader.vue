@@ -23,7 +23,7 @@ const cta = computed(() => (theme.value.nav ?? []).slice(-1)[0] as { text: strin
           <span>{{ currentLang.label }}</span>
           <a v-for="l in localeLinks" :key="l.link" :href="l.link" :hreflang="undefined">{{ l.text }}</a>
         </div>
-        <a v-if="cta" class="lp-btn lp-btn-primary lp-btn-sm" :href="cta.link">{{ cta.text }}</a>
+        <a v-if="cta" class="lp-btn lp-btn-primary lp-btn-sm" :href="cta.link" target="_self">{{ cta.text }}</a>
       </div>
     </div>
   </header>

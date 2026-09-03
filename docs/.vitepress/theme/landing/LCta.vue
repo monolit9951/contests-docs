@@ -17,7 +17,7 @@ const cta = computed(() => (frontmatter.value.cta ?? {}) as { title?: string; le
         <p>{{ cta.lede ?? copy.ctaLede }}</p>
       </div>
       <div class="lp-cta-actions">
-        <a class="lp-btn lp-btn-primary" :href="theme.darebayCta.productUrl">{{ copy.ctaPrimary }}</a>
+        <a class="lp-btn lp-btn-primary" :href="theme.darebayCta.productUrl" target="_self">{{ copy.ctaPrimary }}</a>
         <a class="lp-btn lp-btn-ghost" :href="theme.darebayCta.telegramUrl" target="_blank" rel="noreferrer">{{ copy.ctaSecondary }}</a>
       </div>
     </div>

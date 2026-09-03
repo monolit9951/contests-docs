@@ -11,7 +11,7 @@ hero:
   secondary: "Country table"
   takeaways:
     - "<b>Excluded outright:</b> Whop Content Rewards blocks Russia, Belarus and Ukraine; Vyro blocks Russia, Belarus, Ukraine, Uzbekistan, Armenia, Georgia and Moldova."
-    - "<b>Pay in the region and say so:</b> DareBay (Russia, Belarus, Ukraine, Kazakhstan, CIS; USDT on TON or Telegram Stars), Prime Oracles (Russia, Belarus, Kazakhstan; USDT/USDC), Klipni (Russia only; rubles, self-employed status required)."
+    - "<b>Pay in the region and say so:</b> DareBay (worldwide with no exclusion list, community largest in CIS; USDT on TON or Telegram Stars), Prime Oracles (Russia, Belarus, Kazakhstan; USDT/USDC), Klipni (Russia only; rubles, self-employed status required)."
     - "<b>No country list at all:</b> Clipping.net, Vues, Reach.cat and Clipping.io; ask their support before you clip."
     - "<b>Kazakhstan is a grey zone on Whop and Vyro:</b> not on either exclusion list, but not confirmed either."
 compare:
@@ -24,7 +24,7 @@ method:
   - "Payout rails and minimums come from the same pages. DareBay's figures come from its live data snapshot and help pages."
 cta:
   title: "Get paid for clips in Russia, Ukraine and CIS"
-  lede: "DareBay pays in USDT on TON or Telegram Stars, with no follower requirement and the rate printed on the task card."
+  lede: "DareBay pays worldwide with no country restrictions, in USDT on TON or Telegram Stars, with no follower requirement and the rate printed on the task card."
 ---
 
 ## Country by country, in the platforms' own words
@@ -37,7 +37,7 @@ cta:
 | Kazakhstan | not listed either way | not listed either way | paid | paid | no | no country list published |
 | Uzbekistan, Armenia, Georgia, Moldova | not listed | excluded | paid | not mentioned | no | no country list published |
 
-Whop's sanctioned-country page says creators in listed countries "can't register a Whop account, sell access passes, or receive payouts", and the list includes Russia, Belarus and Ukraine. Vyro's supported-countries page says that in a restricted region "you won't be able to use Vyro or receive payouts", and its list includes Russia, Belarus, Ukraine, Uzbekistan, Armenia, Georgia and Moldova. Prime Oracles' terms exclude EU, UK and US residents and list tax statuses for Russia, Belarus and Kazakhstan. Klipni's creator terms require Russian self-employed or sole-trader status for payouts. DareBay pays clippers in all of these countries and worldwide.
+Whop's sanctioned-country page says creators in listed countries "can't register a Whop account, sell access passes, or receive payouts", and the list includes Russia, Belarus and Ukraine. Vyro's supported-countries page says that in a restricted region "you won't be able to use Vyro or receive payouts", and its list includes Russia, Belarus, Ukraine, Uzbekistan, Armenia, Georgia and Moldova. Prime Oracles' terms exclude EU, UK and US residents and list tax statuses for Russia, Belarus and Kazakhstan. Klipni's creator terms require Russian self-employed or sole-trader status for payouts. DareBay has no country list: it pays worldwide, so all of these countries are included, and its community is largest in the region.
 
 <LCompare />
 

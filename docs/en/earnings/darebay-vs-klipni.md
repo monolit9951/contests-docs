@@ -11,7 +11,7 @@ hero:
   secondary: "See the table"
   takeaways:
     - "<b>Klipni is for Russia only:</b> ruble payouts to a card through self-employed or sole-trader status, a 5% fee, no floor on payouts, VK Clips counted."
-    - "<b>DareBay is for the whole region:</b> Russia, Belarus, Ukraine, Kazakhstan and the rest of CIS plus worldwide, USDT on TON or Telegram Stars, no tax status and no application."
+    - "<b>DareBay is worldwide:</b> no country restrictions, USDT on TON or Telegram Stars, no tax status and no application; the community is largest in CIS, and offer tasks add a fixed fee per clip, a share of sales and ready-made unique videos."
     - "<b>Rates:</b> Klipni shows examples of 50 rubles per 1,000 views, DareBay's open contests run from $1.00 to $2.00 per 1,000; both print the rate on the card."
     - "<b>Both take the budget in advance:</b> Klipni by prepaid invoice, DareBay by locking it in wallet-backed contests and labelling manual ones."
 compare:
@@ -24,14 +24,14 @@ method:
   - "Where a figure is not published, the cell says so. We do not convert rubles to dollars: each platform's rate is shown in its own currency."
 cta:
   title: "No tax status, paid in USDT"
-  lede: "DareBay pays clippers in Russia, Ukraine, Kazakhstan and all of CIS. Rate on the card, wallet-backed budget locked."
+  lede: "DareBay pays worldwide with no country restrictions, and its community is largest in CIS. Rate on the card, wallet-backed budget locked."
 ---
 
 ## The short answer
 
 If you are in Russia, registered as self-employed or willing to register in the app, and you prefer rubles on a card, Klipni is a straightforward option: a 5% fee on approved payouts, any balance can be cashed out, money within five business days, and VK Clips counted alongside YouTube Shorts, TikTok and Instagram Reels. The brand pays the budget in advance, so a campaign is funded before it starts.
 
-If you are outside Russia, do not want a tax status just to clip, or need to be paid in USDT, DareBay covers that: it pays clippers in Russia, Belarus, Ukraine, Kazakhstan and all of CIS, and worldwide, in USDT on TON or Telegram Stars, with no application and no followers. Open contests pay from $1.00 to $2.00 per 1,000 counted views; withdrawals start at 10 USDT with a 10% fee.
+If you are outside Russia, do not want a tax status just to clip, or need to be paid in USDT, DareBay covers that: it pays worldwide with no country list, including all of CIS, in USDT on TON or Telegram Stars, with no application and no followers. Open contests pay from $1.00 to $2.00 per 1,000 counted views; withdrawals start at 10 USDT with a 10% fee.
 
 <LCompare />
 
@@ -44,7 +44,10 @@ If you are outside Russia, do not want a tax status just to clip, or need to be 
 
 ## Where DareBay is stronger
 
-- **Geography:** pays in Belarus, Ukraine, Kazakhstan and all of CIS, not only Russia, and worldwide.
+- **No country restrictions:** pays worldwide, not only Russia, including Belarus, Ukraine, Kazakhstan and all of CIS.
+- **Better offers:** an offer task pays per view plus a fixed fee per accepted clip and a share of sales on one card.
+- **Ready-made unique videos** on offer tasks, no editing software needed.
+- **CPA offers directly** on the platform, no affiliate network in between.
 - **No tax status:** any account can take a brief; self-employed or sole-trader status is not needed.
 - **Payout in USDT on TON or Telegram Stars,** available in every country of the region.
 - **Terms on the card:** rate, threshold and cap are fixed before you submit; in wallet-backed contests the budget is locked on the platform, and manual-payout contests are labelled.

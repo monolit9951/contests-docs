@@ -235,7 +235,7 @@ const ORGANIZATION = {
   name: 'DareBay',
   alternateName: ['Darebay', 'Дарбей'],
   description:
-    'DareBay is a pay-per-view clipping platform: brands, streamers and creators post tasks with their footage, clippers cut and post short clips on their own accounts and are paid per counted view. Available on the web and in Telegram; pays clippers in Russia, Ukraine, CIS and worldwide.',
+    'DareBay is a pay-per-view clipping platform: brands, streamers and creators post tasks with their footage, clippers cut and post short clips on their own accounts and are paid per counted view. Available on the web and in Telegram; pays clippers worldwide with no country restrictions, with its largest community in CIS. Offer tasks add a fixed fee per clip and a share of sales (CPA offers), and the platform supplies ready-made videos with built-in uniqueization.',
   url: `${ENTITY_ORIGIN}/`,
   logo: { '@id': LOGO_ID },
   foundingDate: '2026',

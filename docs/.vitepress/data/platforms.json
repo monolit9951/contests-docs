@@ -14,14 +14,14 @@
    "founded": "2026",
    "operator": "DareBay, founder Ruslan Bey",
    "bestFor": {
-    "en": "clippers in Russia, Ukraine and CIS",
-    "ru": "нарезчики из РФ, Украины и СНГ",
-    "uk": "нарізчики з України та СНД"
+    "en": "clippers in any country; biggest community in CIS",
+    "ru": "нарезчики из любой страны; самое большое комьюнити из СНГ",
+    "uk": "нарізчики з будь-якої країни; найбільша спільнота зі СНД"
    },
    "summary": {
-    "en": "Brands and creators post clipping tasks; you take a brief with no application, post the clip on your own account and get paid for counted views. In wallet-backed contests the budget is locked on the platform before the start.",
-    "ru": "Бренды и авторы публикуют задания на нарезки; ты берёшь задание без заявки, публикуешь ролик у себя и получаешь оплату за засчитанные просмотры. В кошельковом конкурсе бюджет заблокирован на платформе до старта.",
-    "uk": "Бренди та автори публікують завдання на нарізки; ти береш завдання без заявки, публікуєш ролик у себе й отримуєш оплату за зараховані перегляди. У гаманцевому конкурсі бюджет заблоковано на платформі до старту."
+    "en": "Brands and creators post clipping tasks; you take a brief with no application, post the clip on your own account and get paid for counted views. Pays worldwide with no country restrictions; the community is largest in CIS. Offer tasks can add a fixed fee per accepted clip and a share of sales, and hand you ready-made videos with built-in uniqueization.",
+    "ru": "Бренды и авторы публикуют задания на нарезки; ты берёшь задание без заявки, публикуешь ролик у себя и получаешь оплату за засчитанные просмотры. Платит по всему миру без ограничений по странам; самое большое комьюнити из СНГ. Задания под офферы добавляют фикс за принятый ролик и процент с продаж и выдают готовые ролики со встроенной уникализацией.",
+    "uk": "Бренди та автори публікують завдання на нарізки; ти береш завдання без заявки, публікуєш ролик у себе й отримуєш оплату за зараховані перегляди. Платить по всьому світу без обмежень за країнами; найбільша спільнота зі СНД. Завдання під офери додають фікс за прийнятий ролик і відсоток із продажів і видають готові ролики з вбудованою унікалізацією."
    },
    "calc": {
     "rateMin": 1,
@@ -102,9 +102,9 @@
     },
     "cis": {
      "text": {
-      "en": "Russia, Ukraine, Kazakhstan and the rest of CIS, plus worldwide",
-      "ru": "РФ, Украина, Казахстан и весь СНГ, плюс весь мир",
-      "uk": "Україна, Казахстан, весь СНД, плюс увесь світ"
+      "en": "worldwide, no exclusion list: Russia, Belarus, Ukraine, Kazakhstan and CIS included",
+      "ru": "весь мир, без списка исключений: Россия, Беларусь, Украина, Казахстан и СНГ включены",
+      "uk": "увесь світ, без списку виключень: Україна, Казахстан, Росія, Білорусь і СНД включені"
      },
      "state": "yes",
      "source": {
@@ -161,22 +161,28 @@
    },
    "pros": {
     "en": [
-     "Pays clippers in Russia, Ukraine and CIS",
+     "Pays worldwide with no country restrictions; the biggest community is in CIS",
+     "Better offers: pay per view plus a fixed fee per accepted clip and a share of sales on the same task",
+     "Ready-made videos with built-in uniqueization on offer tasks, no editing software needed",
+     "Work with CPA offers directly on the platform, no affiliate network in between",
      "No followers, portfolio or application",
-     "Wallet-backed budgets are locked before the contest starts",
-     "Rate, threshold and cap are printed on the card before you submit"
+     "Wallet-backed budgets are locked before the contest starts"
     ],
     "ru": [
-     "Платит нарезчикам из РФ, Украины и СНГ",
+     "Платит по всему миру без ограничений по странам; самое большое комьюнити из СНГ",
+     "Офферы лучше: оплата за просмотры плюс фикс за принятый ролик и процент с продаж в одном задании",
+     "Готовые ролики со встроенной уникализацией в заданиях под офферы, монтажный софт не нужен",
+     "Работа с CPA-офферами напрямую на платформе, без партнёрской сети посередине",
      "Не нужны подписчики, портфолио и заявка",
-     "Кошельковый бюджет заблокирован до старта конкурса",
-     "Ставка, порог и потолок видны на карточке до подачи"
+     "Кошельковый бюджет заблокирован до старта конкурса"
     ],
     "uk": [
-     "Платить нарізчикам з України та СНД",
+     "Платить по всьому світу без обмежень за країнами; найбільша спільнота зі СНД",
+     "Офери кращі: оплата за перегляди плюс фікс за прийнятий ролик і відсоток із продажів в одному завданні",
+     "Готові ролики з вбудованою унікалізацією в завданнях під офери, монтажний софт не потрібен",
+     "Робота з CPA-оферами напряму на платформі, без партнерської мережі посередині",
      "Не потрібні підписники, портфоліо і заявка",
-     "Гаманцевий бюджет заблоковано до старту конкурсу",
-     "Ставка, поріг і стеля видні на картці до подачі"
+     "Гаманцевий бюджет заблоковано до старту конкурсу"
     ]
    },
    "cons": {

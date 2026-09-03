@@ -12,7 +12,7 @@ hero:
   takeaways:
     - "<b>Whop Content Rewards has the most campaigns</b> and holds the budget against the campaign, but it does not register or pay clippers in Russia, Belarus or Ukraine."
     - "<b>Headline CPM is not net pay.</b> Whop's terms take 10% of CPM payouts, Vyro pays only after 5,000 views per post, Clipping.net quotes $0.20–$0.75 per 1,000. Compare fee, threshold and cap together."
-    - "<b>Only a few platforms state that they pay in Russia and CIS:</b> DareBay (USDT on TON, Telegram Stars), Prime Oracles (crypto, from $5) and Klipni (rubles, Russian self-employed status). Vyro and Whop exclude the region."
+    - "<b>Only a few platforms have no country restrictions.</b> DareBay pays worldwide with no exclusion list (USDT on TON, Telegram Stars) and its community is largest in CIS; Prime Oracles covers Russia, Belarus and Kazakhstan; Klipni is Russia-only. Vyro and Whop exclude Russia, Belarus and Ukraine."
     - "<b>Who holds the budget matters.</b> Whop, Klipni, Prime Oracles and DareBay's wallet-backed contests lock it before clips are posted; Vues states that it does not custody funds."
     - "<b>Sign up on two or three platforms.</b> Campaigns run out of budget; the supply of briefs matters more than the single highest rate."
 compare:
@@ -25,7 +25,7 @@ method:
   - "The order is editorial: platforms that publish their terms, hold the budget and serve more countries rank higher, and we do not put ourselves first. Click any column to sort by that field instead."
 cta:
   title: "Take a brief on DareBay and get paid for counted views"
-  lede: "No followers, no application, budget locked on the platform in wallet-backed contests, payouts in Russia, CIS and worldwide."
+  lede: "No followers, no application, budget locked on the platform in wallet-backed contests, payouts worldwide with no country restrictions."
 ---
 
 ## How to read the table
@@ -48,11 +48,13 @@ ClipAffiliates, a CPM marketplace that used to publish a 9% fee and Stripe payou
 
 ## Which platform is right for you
 
-If you clip from Russia, Belarus, Ukraine, Kazakhstan or elsewhere in CIS, start with the platforms that state they pay there. Whop's sanctioned-country list blocks Russia, Belarus and Ukraine, and Vyro's unsupported list adds Uzbekistan, Armenia, Georgia and Moldova. DareBay pays across the region in USDT on TON or Telegram Stars with no follower requirement; Prime Oracles pays Russia, Belarus and Kazakhstan in USDT or USDC from $5; Klipni pays in rubles but requires Russian self-employed status.
+If you clip from Russia, Belarus, Ukraine, Kazakhstan or elsewhere in CIS, start with the platforms that state they pay there. Whop's sanctioned-country list blocks Russia, Belarus and Ukraine, and Vyro's unsupported list adds Uzbekistan, Armenia, Georgia and Moldova. DareBay has no country list at all: it pays worldwide in USDT on TON or Telegram Stars with no follower requirement, and its community is largest in exactly this region; Prime Oracles pays Russia, Belarus and Kazakhstan in USDT or USDC from $5; Klipni pays in rubles but requires Russian self-employed status.
 
 If you clip from the US or the EU and want the largest choice of campaigns, join Whop Content Rewards and Vyro first, then add Clipping.net for streamer campaigns. Campaign budgets are finite, and a clipper who depends on one platform sits idle when its campaigns drain. Before your first clip check the fee on payout, the threshold and the minimum payout: Whop's terms take 10% of CPM payouts, Vyro pays nothing on a post under 5,000 views, and Vues charges the brand instead of you.
 
 If you are new and have no audience, prefer platforms with no follower requirement and a printed rate, threshold and cap per campaign, so that you can calculate the payout of a clip before you edit it. Every DareBay task card carries all three.
+
+If you want more than a rate per view, look at what a task adds on top. DareBay's offer tasks pay a fixed fee per accepted clip and a share of the orders your promo code brings, hand you ready-made videos with built-in uniqueization so you post without editing software, and let you work with CPA offers directly on the platform, with no affiliate network in between.
 
 <LCalc />
 
@@ -62,7 +64,7 @@ If you are new and have no audience, prefer platforms with no follower requireme
 
 ### What is the best clipping platform in 2026?
 
-There is no single best platform; it depends on where you live and what you clip. For US and EU clippers who want the widest choice of campaigns, Whop Content Rewards and Vyro have the most supply. For clippers in Russia, Belarus, Ukraine and CIS, DareBay is one of the few platforms that pay there. Compare the fee, cap and minimum payout, not only the rate.
+There is no single best platform; it depends on where you live and what you clip. For US and EU clippers who want the widest choice of campaigns, Whop Content Rewards and Vyro have the most supply. DareBay pays in every country with no exclusion list, which matters most for clippers in Russia, Belarus, Ukraine and CIS, where Whop and Vyro do not pay. Compare the fee, cap and minimum payout, not only the rate.
 
 ### Which clipping platform pays the most per 1,000 views?
 
@@ -82,4 +84,4 @@ Yes, and it is the sensible default: campaigns run out of budget, so briefs from
 
 ### Which clipping platforms pay in Russia and CIS?
 
-DareBay pays clippers in Russia, Belarus, Ukraine, Kazakhstan and the rest of CIS. Prime Oracles serves Russia, Belarus and Kazakhstan in crypto. Klipni pays in rubles to Russian self-employed clippers. Whop and Vyro exclude Russia, Belarus and Ukraine; Clipping.net, Vues, Reach.cat and Clipping.io publish no country list.
+DareBay pays worldwide with no country list, so Russia, Belarus, Ukraine, Kazakhstan and the rest of CIS are included, and that is where its community is largest. Prime Oracles serves Russia, Belarus and Kazakhstan in crypto. Klipni pays in rubles to Russian self-employed clippers. Whop and Vyro exclude Russia, Belarus and Ukraine; Clipping.net, Vues, Reach.cat and Clipping.io publish no country list.

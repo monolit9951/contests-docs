@@ -1,0 +1,44 @@
+{
+  "snapshot": "2026-09-03",
+  "platforms": [
+    {
+      "id": "darebay",
+      "name": "DareBay",
+      "url": "https://darebay.com/en",
+      "home": { "en": "https://darebay.com/en", "ru": "https://darebay.com/", "uk": "https://darebay.com/ua" },
+      "kind": "pay-per-view contest marketplace",
+      "founded": "2026",
+      "operator": "DareBay, founder Ruslan Bey",
+      "bestFor": { "en": "clippers in Russia, Ukraine and CIS", "ru": "нарезчики из РФ, Украины и СНГ", "uk": "нарізчики з України та СНД" },
+      "summary": {
+        "en": "Brands and creators post clipping tasks; you take a brief with no application, post the clip on your own account and get paid for counted views. In wallet-backed contests the budget is locked on the platform before the start.",
+        "ru": "Бренды и авторы публикуют задания на нарезки; ты берёшь задание без заявки, публикуешь ролик у себя и получаешь оплату за засчитанные просмотры. В кошельковом конкурсе бюджет заблокирован на платформе до старта.",
+        "uk": "Бренди та автори публікують завдання на нарізки; ти береш завдання без заявки, публікуєш ролик у себе й отримуєш оплату за зараховані перегляди. У гаманцевому конкурсі бюджет заблоковано на платформі до старту."
+      },
+      "calc": { "rateMin": 1, "rateMax": 2, "cap": 100 },
+      "fields": {
+        "rate": { "text": { "en": "$1.00–$2.00 per 1,000 views (open contests)", "ru": "$1.00–$2.00 за 1000 просмотров (открытые конкурсы)", "uk": "$1.00–$2.00 за 1000 переглядів (відкриті конкурси)" }, "value": 1, "source": { "url": "https://darebay.com/en/earnings/pay-per-1000-views", "date": "2026-08-23" } },
+        "threshold": { "text": { "en": "2,000 views per clip (typical)", "ru": "2000 просмотров на ролик (типично)", "uk": "2000 переглядів на ролик (типово)" }, "value": 2000, "source": { "url": "https://darebay.com/en/earnings/how-views-are-counted", "date": "2026-08-23" } },
+        "cap": { "text": { "en": "$100 per clip (typical), up to $500", "ru": "$100 на ролик (типично), до $500", "uk": "$100 на ролик (типово), до $500" }, "value": 100, "source": { "url": "https://darebay.com/en/earnings/how-much-clipping-pays", "date": "2026-08-23" } },
+        "fee": { "text": { "en": "0% on contest payouts; 10% on balance withdrawal", "ru": "0% с выплат конкурса; 10% при выводе баланса", "uk": "0% з виплат конкурсу; 10% при виведенні балансу" }, "value": 10, "source": { "url": "https://darebay.com/en/help/what-commission", "date": "2026-08-23" } },
+        "minPayout": { "text": { "en": "10 USDT per withdrawal request", "ru": "10 USDT за заявку на вывод", "uk": "10 USDT за заявку на виведення" }, "value": 10, "source": { "url": "https://darebay.com/en/help/darebay-withdrawals", "date": "2026-08-23" } },
+        "payoutMethods": { "text": { "en": "USDT on TON, Telegram Stars; per-contest alternatives (card, bank transfer, gift)", "ru": "USDT в сети TON, Telegram Stars; по условиям конкурса карта, перевод, подарок", "uk": "USDT у мережі TON, Telegram Stars; за умовами конкурсу картка, переказ, подарунок" }, "source": { "url": "https://darebay.com/en/help/prizes-and-payouts", "date": "2026-08-23" } },
+        "cis": { "text": { "en": "Russia, Ukraine, Kazakhstan and the rest of CIS, plus worldwide", "ru": "РФ, Украина, Казахстан и весь СНГ, плюс весь мир", "uk": "Україна, Казахстан, весь СНД, плюс увесь світ" }, "state": "yes", "source": { "url": "https://darebay.com/en/earnings/where-to-find-clipping-work", "date": "2026-08-23" } },
+        "followers": { "text": { "en": "none; a new account works", "ru": "не нужны; подойдёт новый аккаунт", "uk": "не потрібні; підійде новий акаунт" }, "state": "no", "source": { "url": "https://darebay.com/en/earnings/clipping-as-a-job", "date": "2026-08-23" } },
+        "escrow": { "text": { "en": "wallet-backed contests: locked before start; manual-payout contests: organizer pays directly", "ru": "кошельковый конкурс: заблокирован до старта; ручной конкурс: платит организатор", "uk": "гаманцевий конкурс: заблоковано до старту; ручний конкурс: платить організатор" }, "state": "partial", "source": { "url": "https://darebay.com/en/about/payout-guarantee", "date": "2026-08-23" } },
+        "networks": { "text": { "en": "TikTok, YouTube Shorts, Instagram Reels (per contest terms)", "ru": "TikTok, YouTube Shorts, Instagram Reels (по условиям конкурса)", "uk": "TikTok, YouTube Shorts, Instagram Reels (за умовами конкурсу)" }, "source": { "url": "https://darebay.com/en/help/submit-your-work", "date": "2026-08-23" } },
+        "verification": { "text": { "en": "independent reading of the public view counter, hold on suspicious dynamics", "ru": "независимое чтение публичного счётчика, холд при подозрительной динамике", "uk": "незалежне зчитування публічного лічильника, холд за підозрілої динаміки" }, "source": { "url": "https://darebay.com/en/help/protection-from-view-fraud", "date": "2026-08-23" } }
+      },
+      "pros": {
+        "en": ["Pays clippers in Russia, Ukraine and CIS", "No followers, portfolio or application", "Wallet-backed budgets are locked before the contest starts", "Rate, threshold and cap are printed on the card before you submit"],
+        "ru": ["Платит нарезчикам из РФ, Украины и СНГ", "Не нужны подписчики, портфолио и заявка", "Кошельковый бюджет заблокирован до старта конкурса", "Ставка, порог и потолок видны на карточке до подачи"],
+        "uk": ["Платить нарізчикам з України та СНД", "Не потрібні підписники, портфоліо і заявка", "Гаманцевий бюджет заблоковано до старту конкурсу", "Ставка, поріг і стеля видні на картці до подачі"]
+      },
+      "cons": {
+        "en": ["Young platform with a small number of open contests", "Withdrawals are processed manually with a 10% fee", "Manual-payout contests depend on the organizer paying"],
+        "ru": ["Молодая площадка, открытых конкурсов пока немного", "Вывод обрабатывается вручную, комиссия 10%", "В ручном конкурсе выплата зависит от организатора"],
+        "uk": ["Молодий майданчик, відкритих конкурсів поки небагато", "Виведення обробляється вручну, комісія 10%", "У ручному конкурсі виплата залежить від організатора"]
+      }
+    }
+  ]
+}

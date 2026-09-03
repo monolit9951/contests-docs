@@ -6,6 +6,7 @@ import { productUrlForLocale, TELEGRAM } from './links'
 import { CHROME_COPY, type DareBayThemeConfig } from './chrome'
 import { installCoveredHeadingRule } from './coveredHeading'
 import PAGE_DATES from '../page-dates.json'
+import PLATFORMS from './data/platforms.json'
 
 // Source file -> commit date, rekeyed to the URL VitePress hands `transformItems`
 // (docs-relative, no leading slash, `.md` dropped, `index` collapsed away).
@@ -305,7 +306,8 @@ function structuredData(
   hubPages: { title: string; path: string }[],
   isHub: boolean,
   hub: HubId,
-  dates?: PageDates
+  dates?: PageDates,
+  compare?: { name: string; url: string }[]
 ) {
   const file = join(DOCS_DIR, relativePath)
   const raw = existsSync(file) ? readFileSync(file, 'utf8') : ''
@@ -418,6 +420,24 @@ function structuredData(
         position: index + 1,
         name: page.title,
         url: `${HOSTNAME}${page.path}`,
+      })),
+    })
+  }
+
+  // A comparison landing lists the platforms it compares, in page order — the
+  // same ItemList shape hub pages use, so a model reading the markup sees the
+  // ranking as a list of named entities, not only as prose.
+  if (compare?.length) {
+    graph.push({
+      '@type': 'ItemList',
+      '@id': `${url}#platforms`,
+      name: title,
+      numberOfItems: compare.length,
+      itemListElement: compare.map((item, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        name: item.name,
+        url: item.url,
       })),
     })
   }
@@ -618,6 +638,16 @@ export default defineConfig({
         : []
     const isArticle = !isHub && found.entry.hub !== 'legal'
 
+    // Comparison landings: the compared platforms, from the same data file the
+    // table renders, so markup and visible table cannot disagree.
+    const compareIds = (pageData.frontmatter.compare as { ids?: string[] } | undefined)?.ids
+    const compared = compareIds
+      ? compareIds
+          .map((id) => PLATFORMS.platforms.find((p) => p.id === id))
+          .filter((p): p is (typeof PLATFORMS.platforms)[number] => Boolean(p))
+          .map((p) => ({ name: p.name, url: p.id === 'darebay' ? (p.home?.[found.lang] ?? p.url) : p.url }))
+      : undefined
+
     const schema = structuredData(
       pageData.relativePath,
       title,
@@ -628,8 +658,17 @@ export default defineConfig({
       hubPages,
       isHub,
       found.entry.hub,
-      dates
+      dates,
+      compared
     )
+    if (pageData.frontmatter.landing) {
+      // Display face of the landing shell (self-hosted next to Manrope). Only
+      // landing pages pay for it; docs pages keep Manrope alone.
+      pageData.frontmatter.head.push(
+        ['link', { rel: 'preload', href: '/content-assets/fonts/unbounded-var-latin.woff2', as: 'font', type: 'font/woff2', crossorigin: '' }],
+        ['link', { rel: 'stylesheet', href: '/content-assets/fonts/unbounded.css' }]
+      )
+    }
     pageData.frontmatter.head.push(['script', { type: 'application/ld+json' }, JSON.stringify(schema)])
 
     pageData.frontmatter.head.push(

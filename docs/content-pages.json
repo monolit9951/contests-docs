@@ -554,6 +554,23 @@
       "slugs": {
         "ru": "zarabotok-na-reels-instagram"
       }
+    },
+    {
+      "id": "darebay-at-a-glance",
+      "hub": "about",
+      "slugs": {
+        "ru": "darebay-v-tsifrakh",
+        "uk": "darebay-u-tsyfrakh",
+        "en": "darebay-at-a-glance"
+      }
+    },
+    {
+      "id": "best-clipping-platforms",
+      "hub": "earnings",
+      "slugs": {
+        "ru": "luchshie-platformy-dlya-zarabotka-na-narezkah",
+        "en": "best-clipping-platforms"
+      }
     }
   ]
 }

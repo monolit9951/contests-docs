@@ -6,6 +6,13 @@ import type { DareBayThemeConfig } from '../chrome'
 import { DocsEvent, installDocsAnalytics, startDocsPage, trackDocsEvent } from './analytics'
 import { flushEngagement, startPageEngagement } from './engagement'
 import HubIndex from './HubIndex.vue'
+import LandingLayout from './landing/LandingLayout.vue'
+import LCompare from './landing/LCompare.vue'
+import LPlatforms from './landing/LPlatforms.vue'
+import LMethod from './landing/LMethod.vue'
+import LCalc from './landing/LCalc.vue'
+import LFacts from './landing/LFacts.vue'
+import './landing/landing.css'
 import { installWebVitals } from './vitals'
 import './custom.css'
 
@@ -61,7 +68,7 @@ const PlatformCta = defineComponent({
 const DocsLayout = defineComponent({
   name: 'DareBayDocsLayout',
   setup() {
-    const { page } = useData()
+    const { page, frontmatter } = useData()
     const router = useRouter()
 
     const onPageReady = () => {
@@ -100,7 +107,13 @@ const DocsLayout = defineComponent({
 
     // `doc-footer-before` sits between the article and the prev/next pager, so the last
     // thing a reader meets is the product — not another sideways link deeper into the docs.
-    return () => h(DefaultTheme.Layout, null, { 'doc-footer-before': () => h(PlatformCta) })
+    // Landing pages (`landing: true`) get their own shell: no sidebar, no doc
+    // chrome, hero + comparison components. The instrumentation above is the
+    // same for both, so analytics do not depend on which shell rendered.
+    return () =>
+      frontmatter.value.landing
+        ? h(LandingLayout)
+        : h(DefaultTheme.Layout, null, { 'doc-footer-before': () => h(PlatformCta) })
   },
 })
 
@@ -113,6 +126,12 @@ export default {
     // and the crawlers that read this site do not run JavaScript — so this sits
     // BEFORE the browser-only bail-out below.
     app.component('HubIndex', HubIndex)
+    // Landing components, also prerendered on the server for the same reason.
+    app.component('LCompare', LCompare)
+    app.component('LPlatforms', LPlatforms)
+    app.component('LMethod', LMethod)
+    app.component('LCalc', LCalc)
+    app.component('LFacts', LFacts)
 
     if (typeof window === 'undefined') return
 

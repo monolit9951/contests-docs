@@ -60,12 +60,13 @@
 .lp-lang { display: flex; gap: 2px; border: 1px solid var(--lp-line-2); border-radius: 999px; padding: 3px; }
 .lp-lang a, .lp-lang span { font-size: 12px; font-weight: 700; padding: 5px 10px; border-radius: 999px; color: var(--lp-muted); }
 .lp-lang span { background: var(--lp-panel-2); color: var(--lp-text); }
-.lp-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; font-weight: 700; font-size: 15px; padding: 12px 20px; border-radius: 999px; border: 1px solid transparent; transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease; white-space: nowrap; }
-.lp-btn-primary { background: var(--lp-accent); color: var(--lp-on-accent); box-shadow: 0 0 0 0 rgba(200, 245, 66, 0); }
-.lp-btn-primary:hover { transform: translateY(-1px); box-shadow: 0 10px 34px -10px var(--lp-accent); }
-.lp-btn-ghost { border-color: var(--lp-line-2); color: var(--lp-text); background: transparent; }
-.lp-btn-ghost:hover { background: var(--lp-panel); }
-.lp-btn-sm { padding: 8px 14px; font-size: 13px; }
+.lp .lp-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; font-weight: 700; font-size: 15px; padding: 12px 20px; border-radius: 999px; border: 1px solid transparent; transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease; white-space: nowrap; }
+.lp .lp-btn-primary { background: var(--lp-accent); color: var(--lp-on-accent); box-shadow: 0 0 0 0 rgba(200, 245, 66, 0); }
+.lp .lp-btn-primary:hover, .lp .lp-btn-primary:focus-visible { color: var(--lp-on-accent); }
+.lp .lp-btn-primary:hover { transform: translateY(-1px); box-shadow: 0 10px 34px -10px var(--lp-accent); }
+.lp .lp-btn-ghost { border-color: var(--lp-line-2); color: var(--lp-text); background: transparent; }
+.lp .lp-btn-ghost:hover { background: var(--lp-panel); }
+.lp .lp-btn-sm { padding: 8px 14px; font-size: 13px; }
 @media (max-width: 860px) { .lp-nav { display: none; } .lp-header-in { gap: 12px; } }
 
 /* ---- hero ------------------------------------------------------------- */
@@ -142,7 +143,7 @@
 .lp-table td .lp-src { display: inline-block; margin-left: 4px; color: var(--lp-faint); font-size: 11px; text-decoration: none; vertical-align: super; }
 .lp-table td .lp-src:hover { color: var(--lp-accent); }
 .lp-chip { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 700; padding: 3px 9px; border-radius: 999px; border: 1px solid var(--lp-line-2); color: var(--lp-text); }
-.lp-chip-accent { background: var(--lp-accent); color: var(--lp-on-accent); border-color: transparent; }
+.lp .lp-chip-accent { background: var(--lp-accent); color: var(--lp-on-accent); border-color: transparent; }
 .lp-chip-good { color: var(--lp-good); border-color: color-mix(in srgb, var(--lp-good) 40%, transparent); }
 .lp-chip-bad { color: var(--lp-bad); border-color: color-mix(in srgb, var(--lp-bad) 40%, transparent); }
 .lp-chip-warn { color: var(--lp-gold); border-color: color-mix(in srgb, var(--lp-gold) 40%, transparent); }

@@ -18,6 +18,9 @@ Live tasks sit in the [clip earnings catalogue](/en/earn/clips): the rate, the t
 - [How much clipping pays](/en/earnings/how-much-clipping-pays) - the formula built from rate, views and cap, worked through on a floor-rate task, the rate reference per 1000 views: what open tasks pay from and to, where the spread comes from, and why followers are not part of it.
 - [Clipping earnings calculator](/en/earnings/clipping-earnings-calculator) - views, clips per week and rate: the monthly figure with the threshold, the cap and the withdrawal fee applied.
 - [Clipping rates by niche](/en/earnings/clipping-rates-by-niche) - a dated benchmark of rates by niche, platform and social network.
+- [Your first $100 clipping](/en/earnings/first-100-dollars-clipping) - what it is in views, a 30-day plan week by week, which tasks to take first.
+- [Make $1,000 a month clipping](/en/earnings/make-1000-a-month-clipping) - the arithmetic of a thousand under a per-clip cap, a weekly system, what breaks the plan.
+- [Taxes for clippers](/en/earnings/taxes-for-clippers) - what counts as income, status options by country, ten minutes of bookkeeping a month.
 
 ## The mechanics: counting and paying
 

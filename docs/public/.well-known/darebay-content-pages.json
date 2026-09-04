@@ -645,6 +645,78 @@
         "uk": "skam-u-klipinhu-chervoni-prapory",
         "en": "clipping-scams-red-flags"
       }
+    },
+    {
+      "id": "earnings-first-100-dollars",
+      "hub": "earnings",
+      "slugs": {
+        "ru": "pervye-100-dollarov-na-narezkah",
+        "uk": "pershi-100-dolariv-na-narizkakh",
+        "en": "first-100-dollars-clipping"
+      }
+    },
+    {
+      "id": "earnings-1000-a-month",
+      "hub": "earnings",
+      "slugs": {
+        "ru": "kak-vyyti-na-1000-dollarov-v-mesyats-na-narezkah",
+        "uk": "yak-vyity-na-1000-dolariv-na-misiats-na-narizkakh",
+        "en": "make-1000-a-month-clipping"
+      }
+    },
+    {
+      "id": "earnings-taxes",
+      "hub": "earnings",
+      "slugs": {
+        "ru": "nalogi-i-samozanyatost-narezchika",
+        "uk": "podatky-narizchyka",
+        "en": "taxes-for-clippers"
+      }
+    },
+    {
+      "id": "brands-campaign-cost",
+      "hub": "brands",
+      "slugs": {
+        "ru": "skolko-stoit-klipping-kampaniya",
+        "uk": "skilky-koshtuie-klipinh-kampaniia",
+        "en": "clipping-campaign-cost"
+      }
+    },
+    {
+      "id": "brands-clipping-vs-ads",
+      "hub": "brands",
+      "slugs": {
+        "ru": "narezki-ili-reklama-chto-deshevle",
+        "uk": "narizky-chy-reklama-shcho-deshevshe",
+        "en": "clipping-vs-paid-ads"
+      }
+    },
+    {
+      "id": "brands-brief-template",
+      "hub": "brands",
+      "slugs": {
+        "ru": "shablon-zadaniya-dlya-narezchikov",
+        "uk": "shablon-zavdannia-dlia-narizchykiv",
+        "en": "clipping-brief-template"
+      }
+    },
+    {
+      "id": "brands-find-clippers",
+      "hub": "brands",
+      "slugs": {
+        "ru": "gde-nayti-narezchikov-dlya-svoego-kontenta",
+        "uk": "de-znaity-narizchykiv-dlia-svoho-kontentu",
+        "en": "how-to-find-clippers"
+      }
+    },
+    {
+      "id": "brands-agencies-cpa",
+      "hub": "brands",
+      "slugs": {
+        "ru": "klipping-dlya-agentstv-i-cpa-partnerov",
+        "uk": "klipinh-dlia-ahentsii-i-cpa-partneriv",
+        "en": "clipping-for-agencies-and-cpa-partners"
+      }
     }
   ]
 }

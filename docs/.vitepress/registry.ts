@@ -345,6 +345,7 @@ const APP_SECTIONS = [
     'earn/teams',
     'store',
     'feed',
+    'partners',
     'top',
     'tasks',
 ] as const

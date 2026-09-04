@@ -1,6 +1,6 @@
 ---
 title: "DareBay at a glance: rates, fees, payouts and countries"
-description: "Every comparable fact about DareBay on one page: rate per 1,000 views, view threshold, cap per clip, fees, minimum withdrawal, payout methods, countries, view verification and who runs it. Each figure carries its source and date."
+description: DareBay pays $1.00 to $2.00 per 1,000 views, 0% contest fee, withdrawals from 10 USDT at a 10% fee, worldwide. Every figure on one page, sourced and dated.
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_min_views_threshold_live, ppv_max_per_work_typical, ppv_max_per_work_band_high, commission_fiat, commission_crypto]
 seo: true

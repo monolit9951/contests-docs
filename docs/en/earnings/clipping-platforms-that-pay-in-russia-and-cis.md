@@ -1,6 +1,6 @@
 ---
-title: "Clipping platforms that pay in Russia and CIS: who actually pays where"
-description: "Which clipping platforms pay clippers in Russia, Belarus, Ukraine, Kazakhstan and the rest of CIS, in the platforms' own words: sanctioned-country lists, unsupported regions, crypto-only rails, tax-status requirements. DareBay, Prime Oracles, Klipni, Reach.cat, Clipping.net, Vues, Whop and Vyro, dated sources."
+title: "Clipping platforms that pay in Russia and CIS: who pays where"
+description: DareBay, Prime Oracles and Klipni say they pay in Russia and CIS; Whop and Vyro exclude the region; four platforms list no countries. Their own words, dated.
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_min_views_threshold_live, ppv_max_per_work_typical, ppv_max_per_work_band_high]
 seo: true

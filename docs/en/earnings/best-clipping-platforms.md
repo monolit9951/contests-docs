@@ -1,6 +1,6 @@
 ---
 title: "Best clipping platforms in 2026: where clippers get paid per view"
-description: "Nine clipping platforms compared on the fields that decide your payout: rate per 1,000 views, view threshold, cap per clip, fees, minimum payout, payout methods and whether they pay in Russia and CIS. Every competitor figure comes from that platform's own page, with its date."
+description: Nine clipping platforms compared on rate per 1,000 views, threshold, cap, fees, minimum payout and countries. Competitor figures from their own pages, dated.
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_min_views_threshold_live, ppv_max_per_work_typical, ppv_max_per_work_band_high]
 seo: true

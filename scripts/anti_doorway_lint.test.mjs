@@ -122,9 +122,9 @@ console.log("anti_doorway_lint: переводы считаются одной s
 {
   const f = fixture()
   const translations = [
-    f.page("docs/zarabotok/skolko-platyat-za-1000-prosmotrov.md"),
-    f.page("docs/ua/zarobitok/skilky-platiat-za-1000-perehliadiv.md"),
-    f.page("docs/en/earnings/pay-per-1000-views.md"),
+    f.page("docs/zarabotok/skolko-mozhno-zarabotat-na-narezkah.md"),
+    f.page("docs/ua/zarobitok/skilky-mozhna-zarobyty-na-narizkakh.md"),
+    f.page("docs/en/earnings/how-much-clipping-pays.md"),
   ]
   const result = runLint({
     corpusDir: "docs",
@@ -265,9 +265,9 @@ console.log("anti_doorway_lint: переводы одной страницы н�
 {
   const f = fixture();
   const translations = [
-    faqPage(f, "docs/zarabotok/skolko-platyat-za-1000-prosmotrov.md", ["Как считаются просмотры?"]),
-    faqPage(f, "docs/ua/zarobitok/skilky-platiat-za-1000-perehliadiv.md", ["Как считаются просмотры?"]),
-    faqPage(f, "docs/en/earnings/pay-per-1000-views.md", ["Как считаются просмотры?"]),
+    faqPage(f, "docs/zarabotok/skolko-mozhno-zarabotat-na-narezkah.md", ["Как считаются просмотры?"]),
+    faqPage(f, "docs/ua/zarobitok/skilky-mozhna-zarobyty-na-narizkakh.md", ["Как считаются просмотры?"]),
+    faqPage(f, "docs/en/earnings/how-much-clipping-pays.md", ["Как считаются просмотры?"]),
   ];
   const res = runLint({ corpusDir: "docs", changedFiles: translations, root: f.root, addedFiles: new Set() });
   check("RU/UK/EN одного semantic id не образуют эхо из трёх страниц",

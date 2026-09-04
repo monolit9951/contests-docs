@@ -325,7 +325,8 @@ function structuredData(
   isHub: boolean,
   hub: HubId,
   dates?: PageDates,
-  compare?: { name: string; url: string }[]
+  compare?: { name: string; url: string }[],
+  extras: { glossary?: { id: string; term: string; definition: string }[]; app?: boolean } = {}
 ) {
   const file = join(DOCS_DIR, relativePath)
   const raw = existsSync(file) ? readFileSync(file, 'utf8') : ''
@@ -424,6 +425,42 @@ function structuredData(
         name: q,
         acceptedAnswer: { '@type': 'Answer', text: a },
       })),
+    })
+  }
+
+  // A glossary page: the same terms the page shows, as DefinedTerm nodes. Read
+  // from the frontmatter the LGlossary component renders, so the two agree.
+  if (extras.glossary?.length) {
+    graph.push({
+      '@type': 'DefinedTermSet',
+      '@id': `${url}#glossary`,
+      name: title,
+      url,
+      hasDefinedTerm: extras.glossary.map((entry) => ({
+        '@type': 'DefinedTerm',
+        '@id': `${url}#${entry.id}`,
+        name: entry.term,
+        description: entry.definition,
+        url: `${url}#${entry.id}`,
+        inDefinedTermSet: { '@id': `${url}#glossary` },
+      })),
+    })
+  }
+
+  // The product as a software entity, on the pages that describe it as one
+  // (the fact sheet, the calculators): what it is, where it runs, what it costs.
+  if (extras.app) {
+    graph.push({
+      '@type': 'WebApplication',
+      '@id': `${ENTITY_ORIGIN}/#app`,
+      name: 'DareBay',
+      url: `${ENTITY_ORIGIN}/`,
+      applicationCategory: 'BusinessApplication',
+      operatingSystem: 'Web, Telegram',
+      inLanguage: ['ru', 'uk', 'en'],
+      isAccessibleForFree: true,
+      offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+      publisher: { '@id': ORG_ID },
     })
   }
 
@@ -677,7 +714,15 @@ export default defineConfig({
       isHub,
       found.entry.hub,
       dates,
-      compared
+      compared,
+      {
+        glossary: Array.isArray(pageData.frontmatter.glossary)
+          ? (pageData.frontmatter.glossary as { id: string; term: string; definition: string }[]).filter(
+              (entry) => entry && typeof entry.id === 'string' && typeof entry.term === 'string' && typeof entry.definition === 'string'
+            )
+          : undefined,
+        app: pageData.frontmatter.app === true,
+      }
     )
     // Every page renders through the landing shell now: the display face is a
     // site-wide dependency (self-hosted next to Manrope).

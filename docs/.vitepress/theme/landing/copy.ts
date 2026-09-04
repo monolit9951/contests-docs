@@ -31,6 +31,22 @@ export interface LandingCopy {
   footerTelegram: string
   related: string
   hubAll: string
+  calcProTitle: string
+  calcClipsPerWeek: string
+  calcPerClip: string
+  calcPerWeek: string
+  calcPerMonth: string
+  calcNet: string
+  calcThresholdNote: string
+  calcCapped: string
+  calcMinPayout: string
+  budgetTitle: string
+  budgetBudget: string
+  budgetViews: string
+  budgetClips: string
+  budgetCpm: string
+  budgetNote: string
+  glossaryTitle: string
 }
 
 const columns = {
@@ -105,6 +121,22 @@ export const LANDING_COPY: Record<Locale, LandingCopy> = {
     footerTelegram: 'Telegram',
     related: 'More in this section',
     hubAll: 'All pages',
+    calcProTitle: 'Clipping earnings calculator',
+    calcClipsPerWeek: 'Clips per week',
+    calcPerClip: 'Per clip',
+    calcPerWeek: 'Per week',
+    calcPerMonth: 'Per month, four weeks',
+    calcNet: 'On hand after the {fee}% withdrawal fee',
+    calcThresholdNote: 'Below the view threshold of {threshold} a clip earns nothing; once past it, every view from the first one counts.',
+    calcCapped: 'at the cap',
+    calcMinPayout: 'Minimum withdrawal {min} USDT',
+    budgetTitle: 'Campaign budget calculator',
+    budgetBudget: 'Budget, USDT',
+    budgetViews: 'Paid views this budget buys',
+    budgetClips: 'Clips at the cap to spend it all',
+    budgetCpm: 'Cost per 1,000 views',
+    budgetNote: 'Contest fee 0%: the whole budget goes to creators. Launching costs 10 USDT once; the budget is locked on the platform before the start.',
+    glossaryTitle: 'Terms',
   },
   ru: {
     updated: 'Обновлено',
@@ -135,6 +167,22 @@ export const LANDING_COPY: Record<Locale, LandingCopy> = {
     footerTelegram: 'Telegram',
     related: 'Ещё в этом разделе',
     hubAll: 'Все страницы',
+    calcProTitle: 'Калькулятор заработка на нарезках',
+    calcClipsPerWeek: 'Роликов в неделю',
+    calcPerClip: 'За ролик',
+    calcPerWeek: 'В неделю',
+    calcPerMonth: 'В месяц, четыре недели',
+    calcNet: 'На руки после комиссии вывода {fee}%',
+    calcThresholdNote: 'Ниже порога {threshold} просмотров ролик не оплачивается; после порога считаются все просмотры с первого.',
+    calcCapped: 'упёрся в потолок',
+    calcMinPayout: 'Минимальный вывод {min} USDT',
+    budgetTitle: 'Калькулятор бюджета кампании',
+    budgetBudget: 'Бюджет, USDT',
+    budgetViews: 'Оплаченных просмотров на этот бюджет',
+    budgetClips: 'Роликов на потолке, чтобы потратить всё',
+    budgetCpm: 'Цена за 1000 просмотров',
+    budgetNote: 'Комиссия конкурса 0%: весь бюджет уходит авторам. Запуск стоит 10 USDT разово, бюджет заблокирован на платформе до старта.',
+    glossaryTitle: 'Термины',
   },
   uk: {
     updated: 'Оновлено',
@@ -165,6 +213,22 @@ export const LANDING_COPY: Record<Locale, LandingCopy> = {
     footerTelegram: 'Telegram',
     related: 'Ще в цьому розділі',
     hubAll: 'Усі сторінки',
+    calcProTitle: 'Калькулятор заробітку на нарізках',
+    calcClipsPerWeek: 'Роликів на тиждень',
+    calcPerClip: 'За ролик',
+    calcPerWeek: 'На тиждень',
+    calcPerMonth: 'На місяць, чотири тижні',
+    calcNet: 'На руки після комісії виводу {fee}%',
+    calcThresholdNote: 'Нижче порога {threshold} переглядів ролик не оплачується; після порога рахуються всі перегляди з першого.',
+    calcCapped: 'вперся в стелю',
+    calcMinPayout: 'Мінімальний вивід {min} USDT',
+    budgetTitle: 'Калькулятор бюджету кампанії',
+    budgetBudget: 'Бюджет, USDT',
+    budgetViews: 'Оплачених переглядів на цей бюджет',
+    budgetClips: 'Роликів на стелі, щоб витратити все',
+    budgetCpm: 'Ціна за 1000 переглядів',
+    budgetNote: 'Комісія конкурсу 0%: увесь бюджет іде авторам. Запуск коштує 10 USDT разово, бюджет заблоковано на платформі до старту.',
+    glossaryTitle: 'Терміни',
   },
 }
 

@@ -33,7 +33,7 @@ You set the terms of the offer yourself when creating the contest. Clippers see 
 | Total budget | set by the buyer | The full amount held on the platform in the wallet-backed mode |
 | Task and publishing site | set by the buyer | The brief, and which of TikTok, YouTube or Instagram the video goes on |
 
-The rate of **$1.00 to $2.00 per 1000 views** reflects the range across open contests, and the threshold of **2000 views** is their typical value, not a platform limit: the system default is 1000 views, and above that the buyer sets whatever threshold they like (platform data, snapshot: 2026-08-23). More on the threshold: [how views are counted for a payout](/en/earnings/how-views-are-counted).
+The rate of **$1.00 to $2.00 per 1000 views** reflects the range across open contests, and the threshold of **2000 views** is their typical value, not a platform limit: the system default is 1000 views, and above that the buyer sets whatever threshold they like (platform data, snapshot: 2026-08-23). More on the threshold: [how pay-per-view works](/en/earnings/how-pay-per-view-works).
 
 ## What to weigh up: a checklist for the buyer
 

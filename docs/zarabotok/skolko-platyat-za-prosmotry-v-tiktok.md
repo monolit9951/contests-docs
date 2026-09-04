@@ -88,14 +88,12 @@ seo: true
 Эти вопросы разобраны на соседних страницах, чтобы не отвечать на них дважды:
 
 - нужны ли подписчики и сколько выйдет по деньгам - [Сколько можно заработать на нарезках](/zarabotok/skolko-mozhno-zarabotat-na-narezkah);
-- как считаются просмотры, порог и что бывает с накруткой - [Как считаются просмотры для выплаты](/zarabotok/kak-schitayutsya-prosmotry-dlya-vyplaty);
-- когда и какими способами приходят деньги - [Как работает оплата за просмотры](/zarabotok/kak-rabotaet-oplata-za-prosmotry);
+- как считаются просмотры, порог, накрутка, когда и какими способами приходят деньги - [Как работает оплата за просмотры](/zarabotok/kak-rabotaet-oplata-za-prosmotry);
 - где брать задания и исходники - [Где брать заказы на нарезки](/zarabotok/gde-brat-zakazy-na-narezki).
 
 ## Куда дальше
 
 - [Где брать заказы на нарезки](/zarabotok/gde-brat-zakazy-na-narezki) - открытая витрина заданий
 - [Как работает оплата за просмотры](/zarabotok/kak-rabotaet-oplata-za-prosmotry) - от замороженного бюджета до выплаты
-- [Сколько платят за 1000 просмотров](/zarabotok/skolko-platyat-za-1000-prosmotrov) - справочник по ставкам
-- [Сколько можно заработать на нарезках](/zarabotok/skolko-mozhno-zarabotat-na-narezkah) - расчёт от ставки до потолка
+- [Сколько можно заработать на нарезках](/zarabotok/skolko-mozhno-zarabotat-na-narezkah) - расчёт от ставки до потолка и справочник по ставкам
 - [Какие комиссии на DareBay](/pomoshch/kakaya-komissiya) - условия создания, магазина и вывода

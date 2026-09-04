@@ -1,14 +1,21 @@
 ---
 title: Clipping as a job - how to earn from video clips
-description: Clipping as a trade, with no followers and no portfolio - how long one clip takes, what the payout depends on, and the route from a first contest to first money.
+description: "Clipping is piecework paid per view: take a brief, cut a clip, publish it and earn $1.00 to $2.00 per 1000 views in open contests. No followers, no portfolio."
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_cpm_min, ppv_cpm_median, ppv_cpm_max, ppv_min_views_threshold_live]
 seo: true
+landing: true
+hero:
+  kicker: "Clipper guide · 2026"
+  lede: "What the job of a clipper actually involves, how long one clip takes, why the income is irregular, and the route from a first contest to first money with no followers and no portfolio."
+  takeaways:
+    - "<b>It is piecework paid by reach:</b> open contests run from $1.00 to $2.00 per 1000 views of one specific video, not the size of your channel."
+    - "<b>The 2000-view threshold is not subtracted:</b> 12,000 views at $1.00 per 1000 is 12,000 / 1000 × $1.00 = $12.00."
+    - "<b>The cap per submission is set by the buyer,</b> and in live contests it sits around the hundred-dollar mark; the next clip is counted from scratch."
+    - "<b>A first clip takes a couple of hours,</b> later ones 20 to 40 minutes; you need a DareBay account, an open account on the contest's site and any editing app."
 ---
 
-# Clipping as a job - how to earn from video clips
-
-A clipper takes a brief on the platform, cuts a short vertical video out of somebody else's footage, publishes it on the contest's site - currently TikTok, YouTube or Instagram - and sends the link. After that, reach pays: rates across open contests run from **$1.00**<!-- baseline: ppv_cpm_min --> to **$2.00 per 1000 views**<!-- baseline: ppv_cpm_max -->, and nothing open right now pays below that floor. Followers, a portfolio and experience are not needed: you are paid for the views of one specific video, not for the size of your channel. In a wallet-backed contest the budget is frozen on the platform before you take the brief, the contest commission is 0%, and taking part is free.
+Clipping as a job is piecework paid per view: a clipper takes a brief on the platform, cuts a short vertical video out of somebody else's footage, publishes it on the contest's site - currently TikTok, YouTube or Instagram - and sends the link. After that, reach pays: rates across open contests run from **$1.00**<!-- baseline: ppv_cpm_min --> to **$2.00 per 1000 views**<!-- baseline: ppv_cpm_max -->, and nothing open right now pays below that floor. Followers, a portfolio and experience are not needed: you are paid for the views of one specific video, not for the size of your channel. In a wallet-backed contest the budget is frozen on the platform before you take the brief, the contest commission is 0%, and taking part is free.
 
 This is piecework, not passive income. Below: what the job actually asks of you, what the result depends on, and one route from zero - first contest, first submission, first money.
 
@@ -86,6 +93,10 @@ The site is set by the contest. The platform can read the published view counter
 
 A first job rarely takes off, and that is normal: its purpose is to show you the whole route and give you a reference point. By the second or third it becomes visible which subjects and which contests work for you, and from there you pick briefs deliberately.
 
+## Other platforms and the DareBay fact sheet
+
+A clipper is better off registered on two or three platforms: campaigns run out of budget, and a supply of briefs matters more than one high rate. How DareBay compares with eight others on rate, threshold, cap, fee and payout countries is in [best clipping platforms](/en/earnings/best-clipping-platforms). Every DareBay figure, from the rate to the withdrawal terms, stands with a source and a date in [DareBay at a glance](/en/about/darebay-at-a-glance). The first things to check on any platform are whether it pays in your country, what fee it takes from the payout and from which threshold it counts views: a headline rate without those three fields says nothing.
+
 ## Frequently asked questions
 
 ### Do I need editing experience or a portfolio?
@@ -107,8 +118,7 @@ Not in the first month. Income adds up from a run of jobs rather than one lucky 
 Questions that have a home of their own in this section:
 
 - Whether followers matter and what the formula produces - [how much you can earn from clips](/en/earnings/how-much-clipping-pays)
-- How views are counted, the threshold and what happens to inflated views - [how views are counted for the payout](/en/earnings/how-views-are-counted)
-- When and how the money arrives, and how many submissions you can send - [how pay-per-view works](/en/earnings/how-pay-per-view-works)
+- How views are counted, the threshold, inflated views, when the money arrives and how many submissions you can send - [how pay-per-view works](/en/earnings/how-pay-per-view-works)
 - What backs the payout - [does DareBay really pay?](/en/about/does-darebay-really-pay)
 - What the fees are - [what fees does DareBay charge](/en/help/what-commission)
 

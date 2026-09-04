@@ -14,7 +14,7 @@ Pay-per-view on DareBay works like this: you fund the budget and set the rate pe
 
 1. **You create the contest and lock the wallet-backed budget.** Open [contest creation on DareBay](https://darebay.com), choose pay-per-view, write the task for the clippers and pay in the wallet-backed budget. The amount is locked and tied to that contest: you cannot take it back before it ends. That is the guarantee for the clippers - the wallet-backed money is already on the platform, and the organizer cannot change their mind.
 2. **Clippers publish their work and send the links.** Creators see your contest in the public feed, take the task, film the content and publish on the site your terms name. Each of them then sends DareBay the link to their video, and the submission enters the contest at that moment and not before. There is no hashtag import: a tag is needed only where your task asks for one, and for anonymous submissions.
-3. **Neither you nor the creator counts the views.** The platform's independent counter reads the published view counter on the site the video went out on. Statistics are collected today for TikTok, YouTube and Instagram; for Instagram it has to be a video with a view count. There is moderation on top of that, and a submission with suspicious view dynamics goes on hold pending review rather than straight into your bill. For more on the count, see [the dedicated page](/en/earnings/how-views-are-counted).
+3. **Neither you nor the creator counts the views.** The platform's independent counter reads the published view counter on the site the video went out on. Statistics are collected today for TikTok, YouTube and Instagram; for Instagram it has to be a video with a view count. There is moderation on top of that, and a submission with suspicious view dynamics goes on hold pending review rather than straight into your bill. For more on the count, see [the dedicated page](/en/earnings/how-pay-per-view-works).
 4. **Amounts are calculated by formula.** The platform records the obligations to creators, and in the wallet-backed mode the unused remainder returns to your organizer balance. Payout fulfilment is handled manually through payout details and statuses; it is not an automatic transfer immediately after counting.
 
 For the step-by-step setup (how to pick the rate, the threshold and the cap for your case), see [how to set up a clipping contest](/en/for-brands/set-up-a-clipping-contest).
@@ -88,7 +88,6 @@ It can be put on hold. Suspicious view dynamics flag a submission and pause the 
 
 - [How to set up a clipping contest](/en/for-brands/set-up-a-clipping-contest) - picking the rate, the threshold and the cap
 - [Terms for business](/en/for-business) - formats, pricing and guarantees
-- [How pay-per-view works](/en/earnings/how-pay-per-view-works) - the PPV mechanic from the participant side
-- [How views are counted for the payout](/en/earnings/how-views-are-counted) - the count, the threshold and moderation
+- [How pay-per-view works](/en/earnings/how-pay-per-view-works) - the PPV mechanic from the participant side: the count, the threshold and moderation
 - [What fees does DareBay charge?](/en/help/what-commission) - current terms by operation
 - [Does DareBay really pay?](/en/about/does-darebay-really-pay) - the payout chain, from the creator's side

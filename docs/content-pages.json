@@ -89,18 +89,10 @@
         "/zarabotok/zarabotok-bez-podpischikov",
         "/ua/zarobitok/zarobitok-bez-pidpysnykiv",
         "/en/earnings/earn-without-followers",
-        "/docs/ru/zarabotok/zarabotok-bez-podpischikov"
-      ]
-    },
-    {
-      "id": "earnings-per-1000-views",
-      "hub": "earnings",
-      "slugs": {
-        "ru": "skolko-platyat-za-1000-prosmotrov",
-        "uk": "skilky-platiat-za-1000-perehliadiv",
-        "en": "pay-per-1000-views"
-      },
-      "retired": [
+        "/docs/ru/zarabotok/zarabotok-bez-podpischikov",
+        "/zarabotok/skolko-platyat-za-1000-prosmotrov",
+        "/ua/zarobitok/skilky-platiat-za-1000-perehliadiv",
+        "/en/earnings/pay-per-1000-views",
         "/docs/ru/zarabotok/skolko-platyat-za-1000-prosmotrov"
       ]
     },
@@ -141,18 +133,10 @@
         "en": "how-pay-per-view-works"
       },
       "retired": [
-        "/docs/ru/kak-rabotaet/kak-rabotaet-oplata-za-prosmotry"
-      ]
-    },
-    {
-      "id": "earnings-view-counting",
-      "hub": "earnings",
-      "slugs": {
-        "ru": "kak-schitayutsya-prosmotry-dlya-vyplaty",
-        "uk": "yak-rakhuiutsia-perehliady-dlia-vyplaty",
-        "en": "how-views-are-counted"
-      },
-      "retired": [
+        "/docs/ru/kak-rabotaet/kak-rabotaet-oplata-za-prosmotry",
+        "/zarabotok/kak-schitayutsya-prosmotry-dlya-vyplaty",
+        "/ua/zarobitok/yak-rakhuiutsia-perehliady-dlia-vyplaty",
+        "/en/earnings/how-views-are-counted",
         "/docs/ru/kak-rabotaet/kak-schitayutsya-prosmotry-dlya-vyplaty",
         "/zarabotok/porog-prosmotrov-dlya-vyplaty",
         "/ua/zarobitok/porih-perehliadiv-dlia-vyplaty",
@@ -615,6 +599,51 @@
       "slugs": {
         "ru": "darebay-ili-klipni",
         "en": "darebay-vs-klipni"
+      }
+    },
+    {
+      "id": "earnings-calculator",
+      "hub": "earnings",
+      "slugs": {
+        "ru": "kalkulyator-zarabotka-na-narezkah",
+        "uk": "kalkuliator-zarobitku-na-narizkakh",
+        "en": "clipping-earnings-calculator"
+      }
+    },
+    {
+      "id": "earnings-glossary",
+      "hub": "earnings",
+      "slugs": {
+        "ru": "slovar-klippinga",
+        "uk": "slovnyk-klipinhu",
+        "en": "clipping-glossary"
+      }
+    },
+    {
+      "id": "earnings-rates-by-niche",
+      "hub": "earnings",
+      "slugs": {
+        "ru": "skolko-platyat-za-narezki-po-nisham",
+        "uk": "skilky-platiat-za-narizky-za-nishamy",
+        "en": "clipping-rates-by-niche"
+      }
+    },
+    {
+      "id": "earnings-why-clips-rejected",
+      "hub": "earnings",
+      "slugs": {
+        "ru": "pochemu-rolik-otklonili-i-prosmotry-ne-zaschitali",
+        "uk": "chomu-rolyk-vidkhylyly-i-perehliady-ne-zarakhuvaly",
+        "en": "why-clips-get-rejected"
+      }
+    },
+    {
+      "id": "about-clipping-scam-red-flags",
+      "hub": "about",
+      "slugs": {
+        "ru": "skam-v-klippinge-krasnye-flagi",
+        "uk": "skam-u-klipinhu-chervoni-prapory",
+        "en": "clipping-scams-red-flags"
       }
     }
   ]

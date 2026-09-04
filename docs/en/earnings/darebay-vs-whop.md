@@ -1,6 +1,6 @@
 ---
-title: "DareBay vs Whop Content Rewards: which clipping platform pays you, and how much"
-description: "DareBay and Whop Content Rewards compared field by field: rate per 1,000 views, threshold, cap, fees, minimum payout, payout methods, countries, verification and who holds the budget. Whop is bigger; DareBay pays in Russia, Ukraine and CIS. Figures from both platforms' own pages, dated."
+title: "DareBay vs Whop Content Rewards: which pays you and how much"
+description: Whop is the bigger clipping marketplace but blocks Russia, Belarus and Ukraine; DareBay pays there and worldwide. Rate, threshold, cap, fees, budget compared.
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_min_views_threshold_live, ppv_max_per_work_typical, ppv_max_per_work_band_high]
 seo: true

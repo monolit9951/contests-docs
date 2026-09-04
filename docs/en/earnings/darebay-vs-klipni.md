@@ -1,6 +1,6 @@
 ---
-title: "DareBay vs Klipni: two clipping platforms for Russia and CIS compared"
-description: "DareBay and Klipni field by field: rate per 1,000 views, threshold, cap, fee, minimum payout, payout methods, countries, verification and who holds the budget. Klipni pays rubles to Russian self-employed clippers; DareBay pays USDT and Telegram Stars across CIS and worldwide. Figures from both platforms' own pages, dated."
+title: "DareBay vs Klipni: two clipping platforms for Russia and CIS"
+description: Klipni pays rubles to Russian self-employed clippers; DareBay pays USDT and Telegram Stars across CIS and worldwide. Rate, cap, fees and budget compared.
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_min_views_threshold_live, ppv_max_per_work_typical, ppv_max_per_work_band_high]
 seo: true

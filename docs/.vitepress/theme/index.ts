@@ -14,6 +14,9 @@ import LMethod from './landing/LMethod.vue'
 import LCalc from './landing/LCalc.vue'
 import LFacts from './landing/LFacts.vue'
 import LRelated from './landing/LRelated.vue'
+import LCalcPro from './landing/LCalcPro.vue'
+import LBudget from './landing/LBudget.vue'
+import LGlossary from './landing/LGlossary.vue'
 import './landing/landing.css'
 import { installWebVitals } from './vitals'
 import './custom.css'
@@ -136,6 +139,9 @@ export default {
     app.component('LCalc', LCalc)
     app.component('LFacts', LFacts)
     app.component('LRelated', LRelated)
+    app.component('LCalcPro', LCalcPro)
+    app.component('LBudget', LBudget)
+    app.component('LGlossary', LGlossary)
 
     if (typeof window === 'undefined') return
 

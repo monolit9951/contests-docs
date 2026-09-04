@@ -1,6 +1,6 @@
 ---
-title: "Альтернативи Whop в Україні у 2026 році: сім майданчиків для нарізчиків"
-description: "Сім альтернатив Whop Content Rewards для нарізчиків з України за ставкою за 1000 переглядів, порогом, стелею, комісією, мінімумом виведення, способами виплати та країнами. Чому шукають заміну: санкційний список, комісія з автора, короткі кампанії. Цифри з власних сторінок майданчиків, датовані."
+title: "Альтернативи Whop в Україні: сім майданчиків для нарізчиків"
+description: "Сім альтернатив Whop Content Rewards для нарізчиків з України, яку Whop тримає в санкційному списку: ставка, поріг, стеля, комісія, виплати та країни."
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_min_views_threshold_live, ppv_max_per_work_typical, ppv_max_per_work_band_high]
 seo: true

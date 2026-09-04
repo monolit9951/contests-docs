@@ -1,6 +1,6 @@
 ---
-title: "How to choose a clipping platform: nine questions before your first clip"
-description: "A clipper's checklist for picking a platform: rate per 1,000 views, view threshold, cap per clip, fee, minimum payout, payout method, country, followers, who holds the budget. For each question, what matters in the answer and which platforms publish it. Figures from their own pages, dated."
+title: "How to choose a clipping platform: nine questions to ask first"
+description: "Pick a clipping platform by nine questions: country, rate per 1,000 views, threshold, cap, fee, minimum payout, payout method, followers, who holds the budget."
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_min_views_threshold_live, ppv_max_per_work_typical, ppv_max_per_work_band_high]
 seo: true

@@ -22,7 +22,7 @@ The rate defines what you pay for every thousand counted views of a clipper subm
 
 The threshold filters out submissions with a handful of views: a video that does not hit the required number takes no part in the budget split and costs you nothing. You enter the value in the "minimum views" field. Leave it empty and the system applies its default minimum of 1000 views. The median threshold across live contests is **2000 views**.
 
-Know what the threshold does and does not do before you raise it. It is an admission test, not a deductible: once a submission clears the line, the whole view counter enters the calculation, not the part above the threshold. Raising it therefore removes weak submissions from the split rather than shaving the price of strong ones. For more, see [how views are counted for a payout](/en/earnings/how-views-are-counted).
+Know what the threshold does and does not do before you raise it. It is an admission test, not a deductible: once a submission clears the line, the whole view counter enters the calculation, not the part above the threshold. Raising it therefore removes weak submissions from the split rather than shaving the price of strong ones. For more, see [how pay-per-view works](/en/earnings/how-pay-per-view-works).
 
 ### 3. Set the cap per submission
 
@@ -38,7 +38,7 @@ Once the contest is live, creators take the task, produce the video and publish 
 
 ### 6. The counter is read
 
-The platform's independent counter reads the published view counter on the site each video went out on. Neither you nor the creator types the number in, and neither can adjust it. On top of that there is moderation: a submission with suspicious view dynamics is flagged and goes on hold pending review instead of going straight into your bill. That is a real check rather than a promise that every manipulated view gets identified. More on that: [how views are counted for the payout](/en/earnings/how-views-are-counted).
+The platform's independent counter reads the published view counter on the site each video went out on. Neither you nor the creator types the number in, and neither can adjust it. On top of that there is moderation: a submission with suspicious view dynamics is flagged and goes on hold pending review instead of going straight into your bill. That is a real check rather than a promise that every manipulated view gets identified. More on that: [how pay-per-view works](/en/earnings/how-pay-per-view-works).
 
 ### 7. The formula determines each amount
 
@@ -93,7 +93,6 @@ The contest goes straight into the public catalogue on [DareBay](https://darebay
 
 - [How to pay clippers per view](/en/for-brands/paying-clippers-per-view) - the payment model, the formula and what happens to the remainder
 - [Terms for business](/en/for-business) - formats, pricing and guarantees
-- [How pay-per-view works](/en/earnings/how-pay-per-view-works) - the full chain from budget to payout
-- [How views are counted for a payout](/en/earnings/how-views-are-counted) - how the threshold works and why it exists
+- [How pay-per-view works](/en/earnings/how-pay-per-view-works) - the full chain from budget to payout, how the threshold works and why it exists
 - [What fees does DareBay charge?](/en/help/what-commission) - contest, store and withdrawal terms
 - [The payout guarantee](/en/about/payout-guarantee) - what is guaranteed to a clipper, and what is not

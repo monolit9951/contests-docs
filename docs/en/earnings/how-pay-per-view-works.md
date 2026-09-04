@@ -1,102 +1,118 @@
 ---
-title: How pay-per-view works on DareBay
-description: "The money chain in a DareBay PPV contest: a frozen budget, a submission sent by link, an automatic calculation, the credit, and the ways and timing of getting paid."
+title: "How pay-per-view works: how views are counted and paid"
+description: "The platform reads the site's counter and the formula views / 1000 × rate sets the payout: the 2000-view threshold is not deducted, the typical cap is $100."
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
-numbers_used: [ppv_cpm_median, ppv_min_views_threshold_live, ppv_max_per_work_typical]
+numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_cpm_median, ppv_min_views_threshold_live, ppv_default_min_views_threshold, ppv_max_per_work_typical]
 seo: true
+landing: true
+hero:
+  kicker: "Guide · 2026"
+  lede: "You cut a clip and want to know where the money comes from and who counts the views. On DareBay the chain is closed: a wallet-backed budget is frozen up front, the platform reads the counter, a formula sets the amount, and the transfer can be handled by hand."
+  takeaways:
+    - "<b>The platform reads the views, not a person:</b> an independent counter takes the site's public counter at the link you sent, and both sides see one figure."
+    - "<b>The threshold is not deducted:</b> clear the typical 2000 views and the whole counter goes into the maths; the system default is 1000 and buyers usually raise it."
+    - "<b>The formula is deterministic:</b> views / 1000 × rate, never above the cap on one submission (usually $100), and it cannot be recomputed in anyone's favour."
+    - "<b>The calculation is automatic, the transfer can be manual:</b> no deadline is promised, but a wallet-backed budget is frozen before you start."
+cta:
+  title: "Take a task whose arithmetic you can check"
+  lede: "The rate, the threshold and the cap are fixed on the DareBay task card before the start, and the result of the calculation is recorded against you. Pick a task and send the link."
 ---
-
-# How pay-per-view works on DareBay
-
-You cut a clip and you want to understand where the money comes from. On DareBay that is a closed chain: in a wallet-backed contest the budget is frozen on the platform before you take the task, the rate and the cap are fixed on the card, and the amount is worked out by a formula against the published view counter. Open contests pay from $1.00 per 1000 views, and the typical cap on one submission is $100. The system does the maths; moving the money is a separate stage and it can be handled by hand. Below is the whole chain step by step, and at the end the answers on timing, reward methods and submitting more than one clip.
-
-Every figure on this page comes from the platform's own data (snapshot: 2026-08-23) and counts only open contests - the ones a clipper can take right now.
 
 ## The full chain: budget to payout
 
-Here is what happens between the contest being created and the money arriving:
+1. **The buyer sets the terms and funds the budget.** The buyer names the rate, the threshold and the cap; in wallet-backed mode the budget is frozen on the platform until the task ends, while direct-payment tasks change step 6 only.
+2. **The clipper publishes the clip and sends the link.** You publish on the site named in the terms, and a submission enters the task only through the link you send: there is no import by hashtag.
+3. **A moderator checks the terms, the platform reads the views.** Nobody types the figure in by hand: an independent counter reads the published view counter on the site. A submission with suspicious growth goes on hold, which is a pause, not a removal.
+4. **The formula sets the amount.** At the end the system works out the payout for each submission: `views / 1000 × rate`. The threshold is an entry condition, not a deduction, and the cap limits one submission.
+5. **The amount is recorded against the author.** The platform creates a credit with a status that the buyer cannot recompute or erase. Once a submission is approved, the credit can be locked in with "Claim now", and fresh credits mature for 24 hours.
+6. **An undistributed remainder goes back to the buyer.** In a wallet-backed task the platform holds the budget and returns the unspent part to the buyer's balance; with direct payment there is nothing to return.
 
-1. **The organizer locks the budget in wallet-backed mode.** Creating a PPV contest, the organizer sets the parameters (rate, threshold, cap) and freezes the whole budget on the platform. The money leaves their balance and is tied to that specific contest: it cannot be taken back before the contest ends. Some contests run without a locked pool, in manual mode - then the platform holds no budget of theirs, and that changes step 6 only.
-
-2. **The clipper publishes the work and sends the link.** The author takes the brief, makes the video and publishes it on the site named in the contest terms. Then they send DareBay a link to the published video - the link is what binds the submission to the contest, and until that moment the work is not in the contest at all. There is no import of submissions by hashtag. A hashtag is needed where the brief spells it out, and it is required for an anonymous submission: there the tag in the video description is the proof that the clip was made for this brief.
-
-3. **An independent counter reads the views.** Nobody types the figures in by hand, neither the author nor the organizer: an independent counter reads the published view counter on the site. Moderation and basic checks run on top of that, and a submission with suspicious growth goes on hold. A hold is a state of its own, not an automatic removal: after review, or on timeout, a payout for that submission may still go through. More in [how views are counted for the payout](/en/earnings/how-views-are-counted).
-
-4. **The formula runs.** When the contest closes, the system works out the payout for each submission: `views / 1000 * rate`. The threshold is an entry condition, not a deduction: a submission that did not clear it takes no part in the split, and one that did goes into the maths with its whole counter. The cap limits the amount for a single submission.
-
-5. **The amount is recorded against the author.** The platform creates a credit or a payout obligation with a status. The organizer cannot recompute the formula after the fact or erase the obligation - it lives on the platform's side.
-
-6. **An undistributed remainder goes back to the organizer.** That is the rule for contests with a frozen wallet-backed budget: the platform holds the money and returns the unspent part to the organizer's balance. In contests without a locked pool (direct debit) there is nothing to return - no leftover refund is queued there, because the platform never held the budget in the first place.
-
-## The parameters of the PPV mechanic
+## Task parameters: rate, threshold, cap, site
 
 | Parameter | Value | What it means |
-|-----------|-------|---------------|
-| Typical rate | $1.00 per 1000 views | The floor across open contests; the organizer names their own |
-| View threshold | 2000 views | The typical figure across open contests; the organizer sets the exact value |
-| Cap on one submission | $100 | The typical value in open contests; the maximum for a single submission |
-| Site | Set by the contest | Live view counting works for TikTok, YouTube and Instagram |
+|---|---|---|
+| Rate | from $1.00 to $2.00 per 1000 views across open tasks | The typical rate is $1.00; the buyer names their own |
+| View threshold | 2000 views (typical); the system default is 1000 | The entry condition; the buyer sets the exact value |
+| Cap per submission | $100 (typical) | The most one submission can earn |
+| Site | Set by the task | Stats are collected for TikTok, YouTube and Instagram |
 
-The organizer sets the rate, the threshold and the cap when creating the contest and does not move them after launch - all three numbers are visible on the card before you submit, so you know in advance what you are playing for. The view threshold keeps a budget from being smeared across dozens of submissions with a handful of views each.
+All three numbers are fixed at creation and stand on the card before you submit. Every figure on this page comes from the platform's own data (snapshot: 2026-08-23) and counts only open tasks.
 
-The site is set by the contest too, and that is not a formality: you have to publish where the brief says. A video on a different site is nothing the platform can count - the view counter is read where the video is published.
+## Where the view figure comes from and who confirms it
+
+An independent counter reads the published view counter on the site at the link you sent when you submitted. Both sides look at the same number, and there is no manual entry anywhere in the chain. The platform does not recount the counter its own way, and only moderation and basic checks run above it. The counter is refreshed several times a day, so the figure in your cabinet can lag the site by a few hours; the final value is fixed at task finalization, and views gathered after that no longer count.
+
+## The threshold is not deducted: the whole counter counts
+
+The threshold is an admission condition, not a deductible: it only decides whether the submission takes part in the budget split. The buyer sets it in the "minimum views" field; left empty, the system fills in its default of **1000 views**, and in practice buyers set it higher: the typical threshold across open tasks is **2000 views**.
+
+An example: a threshold of 2000 views, a rate of $1.00 per 1000 views, and a submission that reached 6000 views.
+
+- **How DareBay counts it:** 6000 / 1000 × $1.00 = **$6.00**; all 6000 views go into the maths.
+- **If the threshold were deducted:** only the remainder would count, 4000 / 1000 × $1.00 = **$4.00**.
+
+| Views on the submission | Task threshold | What goes into the maths |
+|---|---|---|
+| 1800 | 2000 | nothing, the threshold was not cleared |
+| 2000 | 2000 | 2000 views |
+| 6000 | 2000 | 6000 views |
+
+The most valuable stretch in a task is the last few hundred views before the threshold: they turn a zero into a payout on the whole counter.
+
+## Which views go into the maths
+
+| Views | In the maths | Note |
+|---|:-:|---|
+| The video counter on the task's site | Yes | Public value at your link |
+| Views gathered before the threshold was cleared | Yes | The threshold is not deducted |
+| Views after the final data collection | No | The counter is taken as of task finalization |
+| A copy of the video on another site or account | No | One link per submission |
+| A video deleted or hidden before finalization | No | Nothing left to read or confirm |
+| A photo post instead of a video on Instagram | No | A photo post has no view counter |
+| A submission rejected by moderation | No | No part in the split |
+
+The platform takes the number the site's public counter shows and does no deduplication of its own, so keep the video published until the task is over.
+
+## Suspicious growth: the hold and its three outcomes
+
+A submission whose growth pattern looks suspicious is flagged and goes on hold: crediting for it is paused pending review. It is a pause followed by a moderation decision with three possible outcomes: the submission goes through and the whole counter goes into the maths; it stays on hold, and once the review period runs out a payout for it is possible; or moderation rejects it, and there is no money for it. Buying views is therefore a bad bet: you pay for them up front, while a payout on that submission is guaranteed by nothing.
 
 ## The calculation is automatic, the transfer can be manual
 
-These are two different stages, and separating them is more honest than promising "money right after the contest".
+**The system computes.** The formula is deterministic: the same views at the same rate give the same amount, and the result is recorded as a credit with a status you can see in the task.
 
-**The system computes.** The formula is deterministic: the same views at the same rate give the same amount. Neither the organizer nor support writes a result in by hand, and nobody has a "credit them less" button. The result is recorded as a credit or a payout obligation with a status you can see in the contest.
-
-**A person executes.** A transfer to your payout details and a balance withdrawal can be processed by hand: a staff member checks the details and puts the operation through. So between "the amount is recorded" and "the money is in your hands" there is a step that depends on people, not on code.
-
-**No deadline is promised.** DareBay does not claim a standard like "paid within N hours" and does not promise an instant transfer. The support here is different: a wallet-backed contest budget is already frozen on the platform, the calculation is already recorded in a status, and it cannot be replayed in anyone's favour. If a status sits unchanged for a long time, write to support with the request identifier rather than creating a second one.
-
-Taking part costs a clipper nothing: the platform charges nothing for a submission and holds back no share of the calculated prize. Withdrawing a balance is a separate operation with its own terms - see [what fees does DareBay charge](/en/help/what-commission) and [withdrawing money from DareBay](/en/help/darebay-withdrawals).
+**A person executes.** A transfer to your payout details and a balance withdrawal are processed by hand, so between "the amount is recorded" and "the money is in your hands" there is a step that depends on people, not on code. DareBay does not claim a standard like "paid within N hours" and does not promise an instant transfer. The support is different: a wallet-backed task budget is already frozen on the platform, the calculation is already recorded in a status, and it cannot be replayed in anyone's favour. Taking part costs a clipper nothing; withdrawing a balance is a separate operation, see [what fees does DareBay charge](/en/help/what-commission).
 
 ## What happens to an unspent budget
 
-A PPV contest budget is not split "evenly among whoever turned up" - it is spent against the views actually earned. So there is nearly always a part that nobody earned.
-
-A remainder appears in three situations:
-
-- **Fewer submissions arrived than the organizer expected.** Only the videos that were sent are paid for; the rest is not spent.
-- **Submissions missed the threshold.** A video with 1500 views against a 2000 threshold does not enter the split, and its share of the budget stays untouched.
-- **A submission hit the cap.** At $1.00 per 1000 views a video with 80,000 views comes to 80,000 / 1000 * $1.00 = **$80.00** by the formula - below the cap, so the author gets all of it. A video with 400,000 views would come to 400,000 / 1000 * $1.00 = **$400.00**, but against a cap of $100 the calculation takes $100 and the difference stays in the contest budget.
-
-What happens next depends on the contest type. In a contest with a frozen wallet-backed budget the unspent part returns to the organizer's balance: the money neither burns nor stays with the platform. In a contest with direct debit the budget was never held up front, so there is no remainder to return and no refund queue is created.
-
-For a clipper the conclusion is simple: somebody else's shortfall in views does not raise your figure. You are paid exactly what your video earned, not a share of "whatever is left".
+A PPV task budget is spent against the views actually earned, so there is nearly always a part that nobody earned: fewer submissions than expected, some below the threshold, or a submission that hit the cap. In a wallet-backed task the unspent part returns to the buyer's balance; with direct payment the budget was never held up front, so there is nothing to return.
 
 ## Frequently asked questions
 
 ### When does the money arrive?
 
-The calculation starts once the contest closes: the system fixes the views, works out the amounts by formula and creates a credit or a payout obligation with a status. Execution follows, and it can be handled by hand, so DareBay promises no fixed period between the close of entries and money in your hands. If a submission went on hold over suspicious growth, the decision on it is taken separately - up to and including a payout on timeout. Track the state on the contest card, and after a credit, in the status of the withdrawal request. What does not depend on timing: a wallet-backed contest budget has been frozen since creation, and a recorded calculation cannot be recomputed in anyone's favour.
+The calculation starts at the end of the task and produces a credit with a status; once a submission is approved, the credit can be locked in with "Claim now", and fresh credits mature for 24 hours. Execution is handled by hand, so DareBay promises no fixed period; a submission on hold is decided separately, up to and including a payout on timeout.
 
 ### What payout methods are available?
 
-The reward method is set by the contest and it is visible on the card before you submit. A reward can be money or an item; for a cash reward the contest can name a wallet (USDT on TON), a card, a bank transfer or Telegram Stars, while an item is handed over between the organizer and the winner. To withdraw a balance that has already been credited, the withdrawal wizard offers USDT to an external wallet and Telegram Stars; other methods are executed separately and can be processed by hand. Go by what your own request form shows: the minimum amount, the fee and the order of processing are described in [withdrawing money from DareBay](/en/help/darebay-withdrawals). The platform never asks you to send money somewhere in advance to "activate" or "speed up" a payout.
+The withdrawal wizard offers USDT to an external wallet on the TON network and Telegram Stars: the minimum withdrawal is 10 USDT, the withdrawal fee is 10% of the requested amount (a personal rate is possible), and processing is manual. In tasks with direct payment the organizer pays you themselves, in Stars or to a TON wallet; the platform never asks you to send money in advance to "activate" a payout. Details: [withdrawing money from DareBay](/en/help/darebay-withdrawals).
 
 ### Can I submit more than one clip?
 
-Yes, unless the terms of that particular contest limit how many submissions come from one author. The cap applies to one submission, not to the author, so each video is counted separately: its own link, its own view counter, its own threshold. Two videos are two links and two independent submissions, and a weak result on one does not drag the other down. Two limits are worth remembering. First: several submissions do not get around the per-video cap - each submission has its own. Second: copies of the same video are not several submissions but a reason for a moderation check, and originality requirements are in the contest terms.
+Yes, unless the terms of that task limit submissions from one author. The cap applies to one submission, not to the author, so each video is counted separately; copies of the same video are not several submissions but a reason for a moderation check.
 
-### Can the organizer refuse to pay?
+### What happens if I inflate my views?
 
-The organizer cannot arbitrarily change a recorded formula, lower the rate after the fact or delete an obligation. In wallet-backed mode the budget is frozen on the platform before you took the task and sits there for the whole contest. DareBay acts as intermediary and guarantor: it holds the budget, the result of the calculation and the payout status. Execution against your payout details can be manual and is not promised as an instant transfer.
+The submission goes on hold and crediting for it stops pending review; moderation can reject it outright, and then it takes no part in the budget split. The money you spent is already gone; the buyer's side of that protection is in [protection from view fraud](/en/help/protection-from-view-fraud).
 
-### Who counts the views and what happens to inflated views?
+### Are all views counted, or only unique ones?
 
-That is answered on its own page: [how views are counted for the payout](/en/earnings/how-views-are-counted).
-
-### What if a contest gets no entries?
-
-That is answered on its own page: [what if nobody enters](/en/help/if-nobody-enters).
+The platform takes the number the site's public counter shows and does no deduplication of its own on top of it: whatever the site counts as a view goes into the maths once the threshold is cleared.
 
 ## Where to next
 
-- [How views are counted for the payout](/en/earnings/how-views-are-counted) - the independent counter, the threshold and inflated views
-- [How much you can earn from clips](/en/earnings/how-much-clipping-pays) - working out the amount, and whether followers matter
-- [What DareBay pays per 1000 views](/en/earnings/pay-per-1000-views) - the rate reference
-- [What fees does DareBay charge](/en/help/what-commission) - the current terms per operation
-- [Earning from clips](/en/earn/clips) - live contests and the terms of entry
+- [How much clipping pays](/en/earnings/how-much-clipping-pays) - the formula and the rate per 1000 views
+- [Protection from view fraud](/en/help/protection-from-view-fraud) - what the buyer sees
+- [What fees does DareBay charge](/en/help/what-commission) - current terms
+- [Does DareBay really pay?](/en/about/does-darebay-really-pay) - what backs the payout
+- [Earning from clips](/en/earn/clips) - live tasks

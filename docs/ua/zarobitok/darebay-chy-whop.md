@@ -1,6 +1,6 @@
 ---
-title: "DareBay чи Whop Content Rewards: який майданчик тобі заплатить і скільки"
-description: "DareBay і Whop Content Rewards поле за полем: ставка за 1000 переглядів, поріг, стеля, комісії, мінімум виведення, способи виплати, країни, перевірка переглядів і хто тримає бюджет. Whop більший; DareBay платить в Україну та СНД. Цифри з власних сторінок обох майданчиків, датовані."
+title: "DareBay чи Whop Content Rewards: хто заплатить тобі і скільки"
+description: Whop більший, але закриває Україну, Росію та Білорусь; DareBay платить сюди і по всьому світу. Ставка, поріг, стеля, комісії, виплати і бюджет - поле за полем.
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_min_views_threshold_live, ppv_max_per_work_typical, ppv_max_per_work_band_high]
 seo: true

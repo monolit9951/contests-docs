@@ -1,117 +1,115 @@
 ---
-title: How much you can earn from clips on DareBay
-description: "What one clip pays: rates of $1.00-$2.00 per 1000 views, a 2000-view threshold and a typical cap of $100 per submission. No follower requirement."
+title: "How much clipping pays: the rate per 1000 views on DareBay"
+description: "Open tasks pay from $1.00 to $2.00 per 1000 views, with a 2000-view threshold and a typical cap of $100 per clip. The payout formula and how to read the rate."
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
-numbers_used: [ppv_cpm_min, ppv_cpm_median, ppv_cpm_max, ppv_min_views_threshold_live, ppv_max_per_work_typical, ppv_max_per_work_band_high]
+numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_cpm_min, ppv_cpm_max, ppv_cpm_median, ppv_min_views_threshold_live, ppv_max_per_work_typical, ppv_max_per_work_band_high]
 seo: true
+landing: true
+hero:
+  kicker: "Guide · 2026"
+  lede: "You work out what a clip pays before you edit, not after: the rate, the threshold and the cap sit on the task card. Here is the arithmetic of one submission, the reference for rates per 1000 views across open tasks, and why followers never enter the formula."
+  takeaways:
+    - "<b>One formula:</b> views / 1000 × rate, never above the cap on one submission; the threshold opens the count and is not deducted."
+    - "<b>Open tasks pay from $1.00 to $2.00 per 1000 views:</b> the buyer names the rate and it stands on the card before you submit."
+    - "<b>A 2000-view threshold and a cap of usually $100:</b> both are visible in advance, and the largest campaigns go up to $500."
+    - "<b>No followers required:</b> the counter of one specific clip is what gets paid, and a beginner enters at the same rate as a veteran."
+cta:
+  title: "Price your clip before you open the editor"
+  lede: "Open a task on DareBay: the rate, the threshold and the cap are printed on the card, and the payout is set by a formula rather than by anyone's decision after the fact."
 ---
 
-# How much you can earn from clips on DareBay
+## Three numbers on the card: rate, threshold, cap
 
-You work out your figure before you edit, not after. A clipper's earnings come from three numbers: the rate per 1000 views, the views your submission gets, and the cap on a single submission. All three are open on the contest card before you submit. Rates across open contests run from **$1.00 to $2.00 per 1000 views**, and nothing open right now pays below that floor. A submission joins the budget split once it clears the threshold: in a typical open contest that is **2000 views**. The typical cap per submission is **$100**, and the largest campaigns go up to **$500**. The buyer sets these numbers when creating the contest and does not move them after launch, so you know in advance exactly what you are playing for.
+A clipper's earnings come from three numbers, all set by the buyer when creating the task: the rate per 1000 views, the view threshold and the cap on a single submission. Once the task is live they are fixed and are not lowered after the fact, so you decide whether to take the task knowing every input to the formula; the fourth number, the views your clip collects, is the only one that depends on you.
 
-Every figure on this page comes from the platform's own data (snapshot: 2026-08-23) and counts only open contests - the ones a clipper can take right now.
+| Parameter | Value across open tasks | What it means for your figure |
+|---|---|---|
+| Rate | from $1.00 to $2.00 per 1000 views | The price of a thousand views; the typical rate is $1.00 |
+| View threshold | 2000 views | The admission condition; the exact figure is on the card |
+| Cap per submission | $100 (typical), up to $500 in the largest campaigns | The most one clip can earn |
 
-## The three inputs: rate, threshold, cap
+Every figure on this page comes from the platform's own data (snapshot: 2026-08-23) and counts only open tasks.
 
-| Parameter | Value | What it means for your figure |
-|-----------|-------|-------------------------------|
-| Minimum rate | $1.00 per 1000 views | The floor across open contests; it is also the typical rate |
-| Maximum rate | $2.00 per 1000 views | The high end of the rate across live contests |
-| View threshold | 2000 views | Typical across live contests; the exact figure is on the card |
-| Cap per submission | $100 | The typical maximum payout for one submission; up to $500 in the largest campaigns |
+## What DareBay pays per 1000 views and how to read the rate
 
-The buyer - a streamer or a brand - sets the rate, the threshold and the cap when creating the contest. Once it is live they are fixed, they are not lowered after the fact, and you decide whether to take the contest already knowing every input to the formula.
+A thousand views across open DareBay tasks pays from **$1.00** to **$2.00**: nothing open right now pays below the floor, and the top of the spread is exactly twice it. The most common rate is the floor itself, **$1.00 per 1000 views**, so a rate close to **$2.00** is generous by the platform's standards. There is no single "price of a view": the buyer names the rate, not DareBay, and builds it out of the task budget, the value of an audience in their niche and the competition for clippers.
 
-## The anchor scenario: one submission at the floor rate
+The gap shows up best on the same reach. A submission with 20,000 views:
 
-The payout for a single submission:
+| Task rate | Payout for 20,000 views |
+|---|---|
+| $1.00 per 1000 views | 20,000 / 1000 × $1.00 = **$20.00** |
+| $2.00 per 1000 views | 20,000 / 1000 × $2.00 = **$40.00** |
 
-`payout = rate * views / 1000`, and never more than the cap on one submission.
+Same reach, same edit, a result that differs twofold, which is why the rate on the card is the first thing to read when picking a task. Three rules for reading it:
 
-Take a contest at the floor: a rate of **$1.00 per 1000 views**, a threshold of **2000 views** and a cap of **$100**. Your clip reaches 40,000 views.
+1. **The rate stands on the card and does not move.** The buyer has no tool for changing it mid-flight, and the calculation runs on the figure recorded in the task.
+2. **The rate does not depend on the site.** The task names the site, stats are counted for TikTok, YouTube and Instagram, and the price of a thousand views is the one on the card everywhere.
+3. **The rate has a system limit.** The platform's validator refuses a task with a rate above a hard limit, which rules out a stray zero and an unpayable rate posted to collect submissions; the real ceiling is set by the market.
+
+How this sits against the platforms' own creator programmes is covered in [what TikTok pays for views](/en/earnings/tiktok-view-payouts).
+
+## The worked example: one submission at the floor rate
+
+The payout for a single submission is `payout = views / 1000 × rate`, and never more than the cap on one submission. Take a task at the floor: a rate of **$1.00 per 1000 views**, a threshold of **2000 views** and a cap of **$100**. Your clip reaches 40,000 views.
 
 - The threshold is cleared, so the submission takes part in the budget split.
-- The maths: 40,000 / 1000 * $1.00 = **$40.00**.
+- The maths: 40,000 / 1000 × $1.00 = **$40.00**.
 - The cap never came into it: at this rate it only bites at 100,000 views.
 
-The threshold is not subtracted. The moment a submission passes **2000 views**, the whole counter goes into the formula, not the remainder above the threshold. Put your own contest's rate, threshold and cap in place of the example ones and you have your figure before you open the editor.
-
-That is the arithmetic of one specific brief, not a forecast of monthly income. Open PPV contests sit on the board: you pick the ones that suit your subject and your rate, and you know the terms of each one up front. The formula answers the question "what will this piece of work pay me" - and it answers it exactly.
+All 40,000 views went into the maths, not 38,000: the threshold opens the count but is not subtracted from the amount. Put your own task's numbers in place of the example ones and you have your figure before you open the editor; that is the arithmetic of one task, not a forecast of monthly income. How the platform reads the counter and what happens to suspicious growth is in [how pay-per-view works](/en/earnings/how-pay-per-view-works).
 
 ## What moves your figure
 
-A clipper does not move the rate or the cap. Two things are in your hands: which contest you take, and how much reach the clip earns.
+A clipper does not move the rate or the cap. Two things are in your hands: which task you take, and how much reach the clip earns.
 
-1. **The spread of rates.** Between the low and high ends of open contests there is a factor of two: the same thousand views is worth $1.00 or $2.00. The rate is on the card before you submit, so that choice is made before any editing.
-2. **The reach of the individual clip.** Up to the cap the payout grows linearly: every further thousand views is worth exactly the contest rate.
-3. **Clearing the threshold.** A submission that falls short of **2000 views** takes no part in the split at all. The hook in the first seconds decides whether the clip clears the bar.
-4. **How many contests you submit to.** The cap limits what one submission earns, not how many contests you enter.
+1. **The choice of task.** Between the low and high ends of open tasks there is a factor of two for the same thousand views, decided before any editing.
+2. **The reach of the individual clip.** Up to the cap the payout grows linearly: every further thousand views is worth exactly the task rate.
+3. **Clearing the threshold.** A submission short of **2000 views** takes no part in the split at all; the hook in the first seconds decides it.
+4. **How many tasks you submit to.** The cap limits one submission, not how many tasks you enter: the next clip starts with a cap of its own.
 
-## Beginners are paid the same rate as everyone else
+## Beginners get the same rate as everyone else
 
-There is no separate beginner tariff. The rate belongs to the contest, not to the participant: you enter at the same price per thousand views as a clipper with years behind them. No rating, no account seniority, no probation period and no seniority multipliers exist in the calculation - the formula holds the rate, the views and the cap and nothing else.
+There is no separate beginner tariff. The rate belongs to the task, not to the participant: you enter at the same price per thousand views as a clipper with years behind them, and no rating, account seniority or probation period exists in the calculation.
 
-What you actually need to start:
+| What you need to start | What you do not need |
+|---|---|
+| A free DareBay account | A minimum follower count |
+| An account on the task's site: TikTok, YouTube or Instagram | A portfolio, experience or channel verification |
+| A video that matches the task card | An invitation, a selection process or an approved application |
+| A link to the published video, with a hashtag where the terms require it | An entry fee: taking part costs a clipper nothing |
+| A cleared threshold, **2000 views** in a typical open task | Your own source footage, when materials are attached to the task |
 
-| What you need | Why |
-|---------------|-----|
-| A DareBay account | Free. It is how you submit work and see what is credited |
-| An account on the contest's site | The contest names the site: view stats are currently counted for TikTok, YouTube and Instagram |
-| A video that matches the brief | The contest card describes the format, the subject and the requirements |
-| A link to the published video | A submission enters the contest through the link you send. A hashtag is needed where the brief says so, and it is required for an anonymous submission |
-| A cleared view threshold | **2000 views** in a typical live contest, on that individual submission |
+## Followers are not in the formula: the clip's reach pays
 
-Source footage may be attached to the brief: check the contest terms, and if there is none, you pick the source yourself. No portfolio, no entry fee and no approved application are required.
-
-## No followers: the clip's reach pays, not the channel's size
-
-Payment is tied to the counter on one specific video. An independent counter reads the published view counter on the site for the submission you sent, and multiplies those views by the contest rate. Your follower count, your account age and the reach of your past videos take no part in that chain: an account with zero followers and an account with a million are paid the same for a clip with the same reach.
-
-Short-video recommendation feeds hand out impressions on the strength of the video, not the size of the channel. So a fresh account clears the threshold on the same terms as anybody else, and a strong clip on an empty channel beats a weak one on a big channel.
-
-| What you need | What you do not need |
-|---------------|----------------------|
-| An account on the contest's site | A minimum follower count |
-| A video made to the brief | A portfolio, experience or channel verification |
-| A link to the published submission | An invitation, a referral or a selection process |
-| **2000 views** on that submission | An entry fee: taking part costs a clipper nothing |
+Payment is tied to the counter on one specific video: an independent counter reads the published view counter on the site for the submission you sent and multiplies those views by the task rate. Your follower count, your account age and the reach of your past videos take no part in that chain, so an account with zero followers and an account with a million are paid the same for a clip with the same reach. Short-video feeds hand out impressions on the strength of the video, not the size of the channel, so a fresh account clears the threshold on the same terms as anybody else.
 
 ## Frequently asked questions
 
 ### Do I need followers to earn from clips?
 
-No, and that is not a softened answer. There is no follower threshold anywhere in the chain on DareBay: not at sign-up, not at submission, not in the payout calculation. The amount is worked out as `rate * views / 1000`, never above the cap on one submission, and a follower count simply is not in that formula.
+No. There is no follower threshold on DareBay at sign-up, at submission or in the payout calculation: the amount is `views / 1000 × rate`, never above the cap on one submission, and a follower count is not in that formula.
 
-The only threshold here is on the views of one specific submission: **2000 views** in a typical live contest. It is about a single video, not about your channel, and it is reached through the site's recommendations no matter how many people follow you. The platforms' own creator programmes do have audience requirements on the way in - and that is precisely the difference that lets you start on DareBay from zero followers and from your very first piece of work.
+### What counts as a normal rate?
 
-### What is the final amount made of?
+The reference point is the floor across open tasks, **$1.00 per 1000 views**: nothing pays below it right now, it is also the most common rate, and the top of the spread is **$2.00**. Read the rate together with the threshold and the cap: a task with a high rate and a high threshold can turn out worse than a floor-rate task with a low threshold if clips in that subject rarely take off.
 
-Three numbers: the rate per 1000 views, the views your submission gets, and the cap on one submission. The buyer sets all three when creating the contest and shows them on the card. The formula is `rate * views / 1000`, never above the cap. The threshold works as a gate: below it nothing is credited, at it and above it the whole counter goes into the maths.
+### Can the rate change after I submit?
+
+No. The rate is fixed on the task card, the buyer has no tool for moving it mid-flight, and the calculation always runs on the rate recorded in the task. In a wallet-backed task the budget has been frozen on the platform from the start.
 
 ### What is the most one submission can earn?
 
-As much as the contest cap allows; the typical cap across open contests is **$100**. The cap exists so a budget is shared between several authors instead of going entirely to one viral clip. It applies to the submission, not to the author, and it is visible on the card before you submit.
+Exactly what the buyer set as the cap in that task: the figure is open on the card before you submit, the typical cap across open tasks is **$100**, and the largest campaigns go up to **$500**. The cap exists so a budget is shared between several authors instead of going entirely to one viral clip, and it applies to the submission, not to the author.
 
-### Are beginners paid a lower rate?
+### Does the rate depend on the site: TikTok, YouTube or Instagram?
 
-No. The rate belongs to the contest: everyone in it is calculated at the same price per thousand views. There is no probationary tariff, no apprentice rate and no seniority raise in the system.
-
-### Is the formula my monthly income?
-
-No, it is the exact amount for one specific submission in one specific contest. A month adds up from the open contests you actually took. The strength of the formula is elsewhere: it can be computed in advance and does not depend on anyone's decision after the fact. The rate, the threshold and the cap were fixed before you opened the editor.
-
-### Answers that live on other pages
-
-- How views are counted, what happens to inflated views and how the threshold works - [how views are counted for the payout](/en/earnings/how-views-are-counted)
-- When and how the money arrives, how several submissions are handled, why a wallet-backed budget is frozen up front - [how pay-per-view works](/en/earnings/how-pay-per-view-works)
-- Where to look for contests and what to do about source footage - [where to find clipping work](/en/earnings/where-to-find-clipping-work)
-- Which fees apply on the platform - [what fees does DareBay charge](/en/help/what-commission)
+No. The rate is set by the task, and the site is set by the task too: you publish where the terms say, because the counter is read where the video is published. What differs between sites is only how fast each feed hands out impressions.
 
 ## Where to next
 
-- [What DareBay pays per 1000 views](/en/earnings/pay-per-1000-views) - the reference for rates in live contests
-- [How pay-per-view works](/en/earnings/how-pay-per-view-works) - the money's route from the buyer's budget to your balance
-- [How views are counted for the payout](/en/earnings/how-views-are-counted) - the counter, the threshold and what does not count
-- [Where to find clipping work](/en/earnings/where-to-find-clipping-work) - the contest board and picking briefs
+- [How pay-per-view works](/en/earnings/how-pay-per-view-works) - the money's route from the budget to your balance, the counter and the threshold
+- [Where to find clipping work](/en/earnings/where-to-find-clipping-work) - the task board and picking by rate
+- [What TikTok pays for views](/en/earnings/tiktok-view-payouts) - a platform programme against a task on an intermediary
 - [Clipping as a job](/en/earnings/clipping-as-a-job) - the whole trade and the route from zero
+- [What fees does DareBay charge](/en/help/what-commission) - the current terms per operation

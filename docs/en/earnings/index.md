@@ -15,18 +15,20 @@ Live tasks sit in the [clip earnings catalogue](/en/earn/clips): the rate, the t
 
 ## The money: what a clip is worth
 
-- [How much you can earn from clips](/en/earnings/how-much-clipping-pays) - the formula built from rate, views and cap, worked through on a floor-rate contest, and why followers are not part of it.
-- [What DareBay pays per 1000 views](/en/earnings/pay-per-1000-views) - the rate reference: what open contests pay from and to, where the spread comes from and where the system ceiling sits.
+- [How much clipping pays](/en/earnings/how-much-clipping-pays) - the formula built from rate, views and cap, worked through on a floor-rate task, the rate reference per 1000 views: what open tasks pay from and to, where the spread comes from, and why followers are not part of it.
+- [Clipping earnings calculator](/en/earnings/clipping-earnings-calculator) - views, clips per week and rate: the monthly figure with the threshold, the cap and the withdrawal fee applied.
+- [Clipping rates by niche](/en/earnings/clipping-rates-by-niche) - a dated benchmark of rates by niche, platform and social network.
 
 ## The mechanics: counting and paying
 
-- [How pay-per-view works](/en/earnings/how-pay-per-view-works) - the chain from a frozen budget to money on your balance: submitting by link, the calculation, the reward methods, and what happens to an unspent budget.
-- [How views are counted for the payout](/en/earnings/how-views-are-counted) - who reads the counter, why the threshold is not subtracted, what minimum the system sets by default and what happens to suspicious growth.
+- [How pay-per-view works](/en/earnings/how-pay-per-view-works) - the chain from a frozen budget to money on your balance: who reads the counter, why the threshold is not deducted, what happens to suspicious growth, the reward methods, and what happens to an unspent budget.
+- [Why clips get rejected](/en/earnings/why-clips-get-rejected) - ten rejection reasons, six "views but no payout" situations and a submission checklist.
 
 ## The job: from zero to a finished clip
 
 - [Clipping as a job](/en/earnings/clipping-as-a-job) - what one clip involves, how long it takes, why the income is irregular, and the route from signing up to the first money.
 - [Where to find clipping work](/en/earnings/where-to-find-clipping-work) - the open brief board, how a direct deal differs from working through an intermediary, and what to do when no source footage is attached.
+- [Clipping glossary](/en/earnings/clipping-glossary) - fifty-odd terms from rate and threshold to offer and uniqueization, with the pairs people mix up most.
 
 ## Niches: streamers and platforms
 

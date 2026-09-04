@@ -1,6 +1,6 @@
 ---
-title: "Платформи для нарізчиків, які платять в Україну: хто реально платить і куди"
-description: "Які майданчики для нарізчиків платять в Україну, Казахстан і решту СНД, словами самих майданчиків: санкційні списки, непідтримувані регіони, лише крипта, вимога податкового статусу. DareBay, Reach.cat, Clipping.net, Vues, Prime Oracles, Whop, Vyro і Klipni, датовані джерела."
+title: "Платформи для нарізчиків, які платять в Україну: хто і куди"
+description: В Україну прямо платить DareBay; чотири майданчики список країн не публікують; Whop і Vyro Україну виключають, Klipni і Prime Oracles не покривають. Датовано.
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_min_views_threshold_live, ppv_max_per_work_typical, ppv_max_per_work_band_high]
 seo: true

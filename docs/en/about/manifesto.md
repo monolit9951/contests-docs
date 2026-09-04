@@ -55,7 +55,7 @@ and the same product. Come in whichever way suits you, the cycle is the same.
   through payout details and statuses can be manual.
 - **Winners are chosen by a rule fixed in advance.** Four ways: a community vote,
   the buyer's own call, a seeded draw among eligible submissions, or an
-  [independent count of the views](/en/earnings/how-views-are-counted).
+  [independent count of the views](/en/earnings/how-pay-per-view-works).
   [How winners are chosen](/en/help/how-winners-are-chosen). Pick the one that
   fits your contest and lock it in before the start.
 - **[Fees](/en/help/what-commission) are separated by operation.** Contest creation

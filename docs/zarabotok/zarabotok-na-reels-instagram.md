@@ -1,6 +1,6 @@
 ---
-title: Заработок на рилс в Instagram
-description: "Заработок на рилс в Instagram через конкурсы DareBay: платят за просмотры конкретного ролика по ставке от $1.00 до $2.00 за 1000 просмотров. В зачёт идёт видео с открытого профиля, фотопост не считается."
+title: Заработок на рилс в Instagram - конкурсы с оплатой за просмотры
+description: "На рилс в Instagram зарабатывают через конкурсы DareBay: от $1.00 до $2.00 за 1000 просмотров ролика с открытого профиля, без подписчиков. Фото не считается."
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_cpm_min, ppv_cpm_median, ppv_cpm_max, ppv_min_views_threshold_live]
 seo: true
@@ -81,13 +81,13 @@ Instagram - одна из трёх площадок, где DareBay умеет �
 
 - нужны ли подписчики и как считается итоговая сумма - [Сколько можно заработать на нарезках](/zarabotok/skolko-mozhno-zarabotat-na-narezkah);
 - нужен ли хэштег в описании ролика - [Сколько платят за нарезки стримеров](/zarabotok/skolko-platyat-za-narezki-strimerov);
-- что бывает с накруткой и засчитывается ли копия ролика на другой площадке - [Как считаются просмотры для выплаты](/zarabotok/kak-schitayutsya-prosmotry-dlya-vyplaty);
+- что бывает с накруткой и засчитывается ли копия ролика на другой площадке - [Как работает оплата за просмотры](/zarabotok/kak-rabotaet-oplata-za-prosmotry);
 - партнёрская программа площадки против конкурса у посредника - [Сколько платят за просмотры в ТикТок](/zarabotok/skolko-platyat-za-prosmotry-v-tiktok).
 
 ## Куда дальше
 
 - [Где брать заказы на нарезки](/zarabotok/gde-brat-zakazy-na-narezki) - открытая витрина заданий и что читать в карточке
 - [Как делать нарезки](/zarabotok/kak-delat-narezki) - вертикальный кадр, субтитры и бесплатный монтаж
-- [Сколько платят за 1000 просмотров](/zarabotok/skolko-platyat-za-1000-prosmotrov) - справочник по ставкам
+- [Сколько можно заработать на нарезках](/zarabotok/skolko-mozhno-zarabotat-na-narezkah) - справочник по ставкам
 - [Отправить работу](/pomoshch/kak-otpravit-rabotu) - как ссылка привязывает ролик к конкурсу
 - [Заработок на нарезках](/earn/clips) - живые конкурсы и условия участия

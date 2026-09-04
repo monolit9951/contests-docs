@@ -1,6 +1,6 @@
 ---
 title: Is DareBay legit? The terms, the fees and who runs it
-description: What can be verified about DareBay before you work - contest terms fixed on the card, a 0% contest fee, a 10% withdrawal fee with a 10 USDT minimum, and a named operator.
+description: "Yes: contest terms are fixed on the card before you work, the contest fee is 0%, withdrawal costs 10% with a 10 USDT minimum, and a named operator runs it."
 provenance: { snapshot_date: "2026-08-15", source: "darebay-prod-config" }
 numbers_used: []
 seo: true

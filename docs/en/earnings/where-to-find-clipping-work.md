@@ -4,11 +4,18 @@ description: Who pays for clips, where the briefs and the source footage come fr
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_cpm_min, ppv_cpm_median, ppv_cpm_max, ppv_min_views_threshold_live]
 seo: true
+landing: true
+hero:
+  kicker: "Clipper guide · 2026"
+  lede: "The three places clipping work comes from, how they differ in money and risk, where the source footage comes from, and how to take a brief on the DareBay board with no application and no portfolio."
+  takeaways:
+    - "<b>Three sources of work:</b> a streamer directly, a brand or agency through selection, or an intermediary platform with a fixed rate."
+    - "<b>Open DareBay contests pay $1.00 to $2.00 per 1000 views;</b> the rate, threshold and cap stand on the card before you submit and do not move after launch."
+    - "<b>The typical threshold is 2000 views,</b> and it is not subtracted: clear it and the whole counter is paid."
+    - "<b>Footage comes with the brief or from public sources:</b> the streamer's VODs, the author's own videos, the brand's material; other people's clips do not qualify."
 ---
 
-# Where to find clipping work - a marketplace for clips
-
-Paid clipping work sits on DareBay's open contest board: you take a brief yourself, with no application, no interview and no portfolio review. Open contests pay **$1.00 to $2.00 per 1000 views**, and nothing open right now pays below that floor. The typical threshold is **2000 views**: from that mark a submission enters the maths, while the maximum payout for one submission is whatever the buyer named. They fix the rate, the threshold and the cap at contest creation and do not move them after launch, and all three numbers stand on the card before you submit - you know in advance what you are playing for, and for a clipper entry costs nothing.
+Clipping work comes from three places: a streamer directly, with the rate settled in DMs; a brand or the agency running a channel, through selection with an application and work samples; or an intermediary platform with a fixed rate - on DareBay that is the open contest board, where you take a brief yourself, with no application, no interview and no portfolio review. Open contests pay **$1.00 to $2.00 per 1000 views**, and nothing open right now pays below that floor. The typical threshold is **2000 views**: from that mark a submission enters the maths, while the maximum payout for one submission is whatever the buyer named. They fix the rate, the threshold and the cap at contest creation and do not move them after launch, and all three numbers stand on the card before you submit. For a clipper, entry costs nothing.
 
 Every figure on this page comes from the platform's own data (snapshot: 2026-08-23) and counts only open contests - the ones a clipper can take right now.
 
@@ -63,11 +70,15 @@ What one finished clip involves from there is in [clipping as a job](/en/earning
 5. Send DareBay the link to the published video - that link is how the work enters the contest. A hashtag is only needed where the brief spells it out, and for an anonymous submission.
 6. From there the contest mechanic runs: the view counter is read, the amount is worked out by formula, and an undistributed wallet-backed budget remainder goes back to the buyer.
 
-How the counting is built and what the threshold does is in [how views are counted for the payout](/en/earnings/how-views-are-counted).
+How the counting is built, what the threshold does and when the money arrives is in [how pay-per-view works](/en/earnings/how-pay-per-view-works).
 
 ## Taking work across borders
 
 Signing up is open, and taking a brief needs no agency, no manager and no contract with a brand: a contest is taken off the board on terms that are already fixed. The reward method is set by the contest terms, and the balance-withdrawal wizard shows the options available to you. Requests are processed by hand, so there are no promises of a transfer "within minutes" here, and there will not be.
+
+## Compare platforms and check the figures
+
+DareBay is not the only place that pays for clips, and it should be chosen by the numbers rather than the pitch. [Best clipping platforms](/en/earnings/best-clipping-platforms) puts nine platforms side by side on the same fields: rate per 1000 views, threshold, cap per clip, fee on payout, minimum payout and whether they pay in Russia and CIS. DareBay's own figures - rate, threshold, cap, fees and payout methods - are collected with a source and a date in [DareBay at a glance](/en/about/darebay-at-a-glance).
 
 ## Frequently asked questions
 
@@ -94,13 +105,12 @@ No. There is no manager between you and the brief: the contest is visible on the
 The rest is covered where those questions live:
 
 - whether followers matter and what you actually take home - [how much you can earn from clips](/en/earnings/how-much-clipping-pays);
-- how views are counted, the threshold and what happens to inflated views - [how views are counted for the payout](/en/earnings/how-views-are-counted);
-- when and how the money arrives, and several submissions in one contest - [how pay-per-view works](/en/earnings/how-pay-per-view-works);
+- how views are counted, the threshold, inflated views, when the money arrives and several submissions in one contest - [how pay-per-view works](/en/earnings/how-pay-per-view-works);
 - fees and the terms for withdrawing a balance - [what fees does DareBay charge](/en/help/what-commission).
 
 ## Where to next
 
 - [What streamer clips pay](/en/earnings/streamer-clip-rates) - rates and parameters in the streamer niche
-- [What DareBay pays per 1000 views](/en/earnings/pay-per-1000-views) - the rate reference
+- [How much you can earn from clips](/en/earnings/how-much-clipping-pays) - the formula and what moves your figure
 - [Clipping as a job](/en/earnings/clipping-as-a-job) - the whole trade and the route from zero
 - [Earning from clips](/en/earn/clips) - the brief board and the way into contests

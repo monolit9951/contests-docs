@@ -85,4 +85,4 @@ numbers_used: []
 
 ---
 
-→ Див. також: **[як обирають переможця](/ua/dopomoha/yak-obyraiut-peremozhtsia)**, **[як рахуються перегляди для виплати](/ua/zarobitok/yak-rakhuiutsia-perehliady-dlia-vyplaty)**.
+→ Див. також: **[як обирають переможця](/ua/dopomoha/yak-obyraiut-peremozhtsia)**, **[як працює оплата за перегляди](/ua/zarobitok/yak-pratsiuie-oplata-za-perehliady)**.

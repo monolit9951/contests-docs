@@ -88,14 +88,12 @@ There is no point. Programme thresholds move up, not down: YouTube doubles the b
 These questions are covered on neighbouring pages, so as not to answer them twice:
 
 - whether followers matter and what the money comes to - [how much you can earn from clips](/en/earnings/how-much-clipping-pays);
-- how views are counted, the threshold and what happens to inflated views - [how views are counted for the payout](/en/earnings/how-views-are-counted);
-- when and by what methods the money arrives - [how pay-per-view works](/en/earnings/how-pay-per-view-works);
+- how views are counted, the threshold, inflated views, and when and by what methods the money arrives - [how pay-per-view works](/en/earnings/how-pay-per-view-works);
 - where briefs and source footage come from - [where to find clipping work](/en/earnings/where-to-find-clipping-work).
 
 ## Where to next
 
 - [Where to find clipping work](/en/earnings/where-to-find-clipping-work) - the open brief board
 - [How pay-per-view works](/en/earnings/how-pay-per-view-works) - from a frozen budget to the payout
-- [What DareBay pays per 1000 views](/en/earnings/pay-per-1000-views) - the rate reference
-- [How much you can earn from clips](/en/earnings/how-much-clipping-pays) - the calculation from rate to cap
+- [How much clipping pays](/en/earnings/how-much-clipping-pays) - the calculation from rate to cap and the rate reference
 - [What fees does DareBay charge](/en/help/what-commission) - the terms for creation, the store and withdrawals

@@ -1,6 +1,6 @@
 ---
 title: "DareBay в цифрах: ставки, комиссии, выплаты и страны"
-description: "Все сравнимые факты о DareBay на одной странице: ставка за 1000 просмотров, порог, потолок на ролик, комиссии, минимум вывода, способы выплаты, страны, проверка просмотров и кто стоит за проектом. У каждой цифры источник и дата."
+description: DareBay платит от $1.00 до $2.00 за 1000 просмотров, комиссия конкурса 0%, вывод от 10 USDT с комиссией 10%, по всему миру. Все факты на одной странице с датой.
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_min_views_threshold_live, ppv_max_per_work_typical, ppv_max_per_work_band_high, commission_fiat, commission_crypto]
 seo: true

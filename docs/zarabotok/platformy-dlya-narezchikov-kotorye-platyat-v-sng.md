@@ -1,6 +1,6 @@
 ---
-title: "Платформы для нарезчиков, которые платят в Россию и СНГ: кто реально платит и куда"
-description: "Какие площадки для нарезчиков платят в Россию, Беларусь, Украину, Казахстан и остальной СНГ, словами самих площадок: санкционные списки, неподдерживаемые регионы, только крипта, требование самозанятости. DareBay, Prime Oracles, Klipni, Reach.cat, Clipping.net, Vues, Whop и Vyro, датированные источники."
+title: Платформы для нарезчиков, которые платят в Россию и СНГ
+description: В Россию и СНГ прямо платят DareBay, Prime Oracles и Klipni, Whop и Vyro закрывают регион, четыре площадки список стран не публикуют. Словами самих площадок.
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_min_views_threshold_live, ppv_max_per_work_typical, ppv_max_per_work_band_high]
 seo: true

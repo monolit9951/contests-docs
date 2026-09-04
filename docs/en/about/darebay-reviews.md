@@ -2,13 +2,20 @@
 title: DareBay reviews - what to expect instead of testimonials
 description: Who actually uses DareBay, what a contest looks like from each side, and what the platform can and cannot promise - written out instead of collected as reviews.
 provenance: { snapshot_date: "2026-08-15", source: "darebay-prod" }
-numbers_used: []
+numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high]
 seo: true
+landing: true
+hero:
+  kicker: "About DareBay · 2026"
+  lede: "There are few reviews of DareBay because the platform is young, and reviews of earning platforms mostly report the reviewer's own luck. Instead, here is what you would be signing up for and what to check yourself in ten minutes."
+  takeaways:
+    - "<b>No body of reviews yet:</b> the live discussion happens in DareBay's Telegram channel, not on review sites; hundreds of glowing reviews of a young platform would be a warning sign."
+    - "<b>Open contests pay $1.00 to $2.00 per 1000 views,</b> and the rate, threshold, cap and publishing site stand on the card before you submit."
+    - "<b>Terms hold once a contest is live:</b> the rate, the threshold and the budget cannot be rewritten after your clip is up; a wallet-backed budget is charged before you start."
+    - "<b>The friction is at the end:</b> withdrawal is a request with a 10% fee and a 10 USDT minimum, processed by hand with no promised settlement date."
 ---
 
-# DareBay reviews
-
-Reviews of an earning platform are the least reliable thing about it. The winners write glowing ones, the people whose clip missed the threshold write furious ones, and both are describing their own luck rather than the product. So instead of collecting testimonials, this page sets out what you would be signing up for and lets you decide whether it suits you.
+There are few reviews of DareBay: the platform is young, and the live discussion is in the [DareBay Telegram channel](https://t.me/darebay_app), not on review sites. Reviews of an earning platform also mostly report the reviewer's own luck: winners write glowing ones, people whose clip missed the threshold write furious ones. So this page sets out what you would be signing up for and where to check it in ten minutes: the open contest catalogue, one task card read in full, the withdrawal form and the named operator behind the project.
 
 DareBay is a marketplace for content tasks. Someone posts a task with a budget, creators make their own clips, and the reward follows the reach those clips get. The platform stands in the middle as intermediary and guarantor.
 
@@ -28,11 +35,26 @@ DareBay is a marketplace for content tasks. Someone posts a task with a budget, 
 
 **Support is a person, not a queue number.** The product is run by a named operator who answers on Telegram. That is a genuine advantage over faceless platforms and not a substitute for the mechanics above.
 
+## What can be checked instead of reviews
+
+| The usual complaint about earning platforms | What can be checked on DareBay | Where |
+|---|---|---|
+| "They never pay" | A wallet-backed budget is charged from the organizer before the start; the mode is on the card | Contest card |
+| "They understate the views" | Nobody types the figure in: the platform reads the public counter of the publishing site | Your clip and the card |
+| "Hidden fees" | Contest fee 0%; withdrawal fee 10%, 10 USDT minimum, shown in the form before you confirm | [DareBay fees](/en/help/what-commission) |
+| "Payouts take forever" | Requests are processed by hand and no settlement date is promised | Withdrawal form |
+| "Nobody is behind it" | A named founder, Ruslan Bey, answers in person | [@ruslanbwork](https://t.me/ruslanbwork) |
+| "Nobody knows what it pays" | Open contests pay $1.00 to $2.00 per 1000 views, printed on every card | [Contest catalogue](/en/earn/clips) |
+
 ## Reading the figures quoted here
 
 Every figure in this section is read from the platform's own data and dated in the page source, not lifted from someone else's article. Rates and thresholds are live medians across running contests, so they move. When a snapshot goes stale the page is rewritten rather than patched one number at a time.
 
 What you will not find here is an income projection. Nobody can tell you what a clip will do before it is published, and a page that tries is selling something.
+
+## DareBay's numbers, and the other platforms
+
+Where reviews fail, a like-for-like comparison helps. [DareBay at a glance](/en/about/darebay-at-a-glance) collects the rate, threshold, cap, fees, minimum withdrawal and payout methods, each with a source and a date. And in [best clipping platforms](/en/earnings/best-clipping-platforms) DareBay stands next to eight other platforms, every competitor figure taken from its own page.
 
 ## Frequently asked questions
 

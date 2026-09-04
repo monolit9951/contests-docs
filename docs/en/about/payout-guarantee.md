@@ -1,6 +1,6 @@
 ---
-title: The DareBay payout guarantee - what it covers and where it stops
-description: Exactly what DareBay guarantees a clipper - a locked wallet-backed budget, fixed terms and a recorded calculation - and the three things it deliberately does not guarantee.
+title: "DareBay payout guarantee: what it covers and where it stops"
+description: DareBay guarantees a locked wallet-backed budget, fixed terms and a recorded calculation, not views, a payout date or a manual-payout organizer.
 provenance: { snapshot_date: "2026-08-15", source: "darebay-prod" }
 numbers_used: []
 seo: true

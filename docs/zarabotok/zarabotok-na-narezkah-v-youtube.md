@@ -1,6 +1,6 @@
 ---
 title: Заработок на нарезках в YouTube - Shorts, счётчик, подача работы
-description: "Заработок на нарезках в YouTube: чем Shorts отличается от обычного ролика, почему счётчик Shorts считает реплеи, что такое engaged views и что нужно конкурсу - публичный ролик и ссылка на него."
+description: "На нарезках в YouTube зарабатывают через конкурсы DareBay: от $1.00 до $2.00 за 1000 просмотров публичного ролика, без партнёрки. Что считает счётчик Shorts."
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_cpm_min, ppv_cpm_median, ppv_cpm_max, ppv_min_views_threshold_live]
 seo: true
@@ -94,7 +94,7 @@ YouTube - живая площадка DareBay: конкурс может пот�
 
 Вопросы, у которых есть отдельный дом в разделе:
 
-- как считается сумма, порог и что бывает с накруткой - [Как считаются просмотры для выплаты](/zarabotok/kak-schitayutsya-prosmotry-dlya-vyplaty);
+- как считается сумма, порог и что бывает с накруткой - [Как работает оплата за просмотры](/zarabotok/kak-rabotaet-oplata-za-prosmotry);
 - права на чужое видео, клеймы и страйки - [Заработок на нарезках фильмов](/zarabotok/zarabotok-na-narezkah-filmov);
 - где искать конкурсы и исходники - [Где брать заказы на нарезки](/zarabotok/gde-brat-zakazy-na-narezki).
 
@@ -103,5 +103,5 @@ YouTube - живая площадка DareBay: конкурс может пот�
 - [Сколько платят за просмотры в ТикТок](/zarabotok/skolko-platyat-za-prosmotry-v-tiktok) - партнёрка площадки против конкурса у посредника
 - [Как делать нарезки](/zarabotok/kak-delat-narezki) - выбор момента, вертикальный кадр, субтитры
 - [Как работает оплата за просмотры](/zarabotok/kak-rabotaet-oplata-za-prosmotry) - цепочка от бюджета конкурса до выплаты
-- [Сколько платят за 1000 просмотров](/zarabotok/skolko-platyat-za-1000-prosmotrov) - справочник по ставке
+- [Сколько можно заработать на нарезках](/zarabotok/skolko-mozhno-zarabotat-na-narezkah) - справочник по ставке
 - [Заработок на DareBay](/zarabotok/) - все страницы раздела

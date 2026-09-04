@@ -58,8 +58,8 @@ describe('redirectMap locale integrity', () => {
         // Regression guard with the exact addresses that shipped wrong.
         const cases: Array<[string, string]> = [
             ['/ua/zarobitok/skilky-platiat-novachku', '/ua/zarobitok/skilky-mozhna-zarobyty-na-narizkakh'],
-            ['/ua/zarobitok/porih-perehliadiv-dlia-vyplaty', '/ua/zarobitok/yak-rakhuiutsia-perehliady-dlia-vyplaty'],
-            ['/en/earnings/view-threshold', '/en/earnings/how-views-are-counted'],
+            ['/ua/zarobitok/porih-perehliadiv-dlia-vyplaty', '/ua/zarobitok/yak-pratsiuie-oplata-za-perehliady'],
+            ['/en/earnings/view-threshold', '/en/earnings/how-pay-per-view-works'],
             ['/en/earnings/beginner-rates', '/en/earnings/how-much-clipping-pays'],
             ['/zarabotok/skolko-platyat-novichku', '/zarabotok/skolko-mozhno-zarabotat-na-narezkah'],
         ]

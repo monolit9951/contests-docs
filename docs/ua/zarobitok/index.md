@@ -49,6 +49,9 @@ numbers_used: [ppv_cpm_min, ppv_cpm_median, ppv_cpm_max, ppv_min_views_threshold
 - [DareBay чи Whop](/ua/zarobitok/darebay-chy-whop) - два майданчики поле за полем.
 - [Хто платить в Україну](/ua/zarobitok/platformy-dlia-narizchykiv-shcho-platiat-v-ukrainu) - країна за країною, словами самих майданчиків.
 - [Як обрати платформу для нарізок](/ua/zarobitok/yak-obraty-platformu-dlia-narizok) - дев'ять питань до першого ролика.
+- [Whop Content Rewards: огляд](/ua/zarobitok/whop-content-rewards-ohliad) - як влаштовані кампанії, скільки платять, куди не платять і що взяти замість.
+- [Альтернативи Clipping.net](/ua/zarobitok/alternatyvy-clipping-net) - сім альтернатив за чотирма осями: поріг і стеля, бюджет, країни, підписники.
+- [Vyro: огляд платформи](/ua/zarobitok/vyro-ohliad-platformy) - поріг 5000, стеля в переглядах, закриті країни і коли Vyro, а коли DareBay.
 - [DareBay у цифрах](/ua/pro-proekt/darebay-u-tsyfrakh) - картка фактів: ставки, комісії, виплати, країни.
 
 ## З чого почати

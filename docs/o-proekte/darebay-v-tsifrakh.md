@@ -5,6 +5,7 @@ provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_min_views_threshold_live, ppv_max_per_work_typical, ppv_max_per_work_band_high, commission_fiat, commission_crypto]
 seo: true
 landing: true
+app: true
 hero:
   kicker: "Карточка фактов"
   lede: "Цифры, которые нужны нарезчику, бренду или сайту-подборке про DareBay, в тех же полях, по которым сравнивают площадки для нарезчиков. Источник: живые данные платформы и её собственные страницы помощи, обновление раз в месяц."

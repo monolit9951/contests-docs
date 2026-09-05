@@ -50,6 +50,9 @@ Live tasks sit in the [clip earnings catalogue](/en/earn/clips): the rate, the t
 - [DareBay vs Klipni](/en/earnings/darebay-vs-klipni) - rubles and tax status against USDT and worldwide.
 - [Clipping platforms that pay in Russia and CIS](/en/earnings/clipping-platforms-that-pay-in-russia-and-cis) - country by country, in the platforms' own words.
 - [How to choose a clipping platform](/en/earnings/how-to-choose-a-clipping-platform) - nine questions before your first clip.
+- [Whop Content Rewards review](/en/earnings/whop-content-rewards-review) - how campaigns work, what they pay, where they cannot pay, what to use instead.
+- [Clipping.net alternatives](/en/earnings/clipping-net-alternatives) - seven alternatives across four axes: threshold and cap, budget, countries, followers.
+- [Vyro review](/en/earnings/vyro-review) - the 5,000-view threshold, the cap in views, unsupported countries, and when Vyro beats DareBay.
 - [DareBay at a glance](/en/about/darebay-at-a-glance) - the fact sheet: rates, fees, payouts, countries.
 
 ## Where to start

@@ -789,6 +789,33 @@
         "uk": "prohriv-akaunta-i-tinovyi-ban",
         "en": "account-warm-up-and-shadowban"
       }
+    },
+    {
+      "id": "earnings-whop-review",
+      "hub": "earnings",
+      "slugs": {
+        "ru": "whop-content-rewards-obzor",
+        "uk": "whop-content-rewards-ohliad",
+        "en": "whop-content-rewards-review"
+      }
+    },
+    {
+      "id": "earnings-clipping-net-alternatives",
+      "hub": "earnings",
+      "slugs": {
+        "ru": "analogi-clipping-net",
+        "uk": "alternatyvy-clipping-net",
+        "en": "clipping-net-alternatives"
+      }
+    },
+    {
+      "id": "earnings-vyro-review",
+      "hub": "earnings",
+      "slugs": {
+        "ru": "vyro-obzor-platformy",
+        "uk": "vyro-ohliad-platformy",
+        "en": "vyro-review"
+      }
     }
   ]
 }

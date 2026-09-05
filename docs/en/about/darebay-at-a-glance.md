@@ -5,6 +5,7 @@ provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_min_views_threshold_live, ppv_max_per_work_typical, ppv_max_per_work_band_high, commission_fiat, commission_crypto]
 seo: true
 landing: true
+app: true
 hero:
   kicker: "Fact sheet"
   lede: "The numbers a clipper, a brand or a comparison site needs about DareBay, in the same fields other clipping platforms are compared on. Sourced from the platform's live data and its own help pages, refreshed monthly."

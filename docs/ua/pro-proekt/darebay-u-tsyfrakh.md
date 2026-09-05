@@ -5,6 +5,7 @@ provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_min_views_threshold_live, ppv_max_per_work_typical, ppv_max_per_work_band_high, commission_fiat, commission_crypto]
 seo: true
 landing: true
+app: true
 hero:
   kicker: "Картка фактів"
   lede: "Цифри, які потрібні нарізчику, бренду або сайту-добірці про DareBay, у тих самих полях, за якими порівнюють майданчики для нарізчиків. Джерело: живі дані платформи та її власні сторінки допомоги, оновлення раз на місяць."

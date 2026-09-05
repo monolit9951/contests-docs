@@ -717,6 +717,78 @@
         "uk": "klipinh-dlia-ahentsii-i-cpa-partneriv",
         "en": "clipping-for-agencies-and-cpa-partners"
       }
+    },
+    {
+      "id": "brands-clipping-for-music",
+      "hub": "brands",
+      "slugs": {
+        "ru": "narezki-dlya-prodvizheniya-muzyki",
+        "uk": "narizky-dlia-prosuvannia-muzyky",
+        "en": "clipping-for-music-promotion"
+      }
+    },
+    {
+      "id": "brands-clipping-for-podcasts",
+      "hub": "brands",
+      "slugs": {
+        "ru": "narezki-dlya-podkastov",
+        "uk": "narizky-dlia-podkastiv",
+        "en": "clipping-for-podcasts"
+      }
+    },
+    {
+      "id": "brands-clipping-for-games",
+      "hub": "brands",
+      "slugs": {
+        "ru": "narezki-dlya-prodvizheniya-igr",
+        "uk": "narizky-dlia-prosuvannia-ihor",
+        "en": "clipping-for-games"
+      }
+    },
+    {
+      "id": "brands-clipping-for-crypto",
+      "hub": "brands",
+      "slugs": {
+        "ru": "narezki-dlya-kripto-proektov",
+        "uk": "narizky-dlia-krypto-proiektiv",
+        "en": "clipping-for-crypto-projects"
+      }
+    },
+    {
+      "id": "earnings-x-twitter-clips",
+      "hub": "earnings",
+      "slugs": {
+        "ru": "zarabotok-na-narezkah-v-x-twitter",
+        "uk": "zarobitok-na-narizkakh-u-x-twitter",
+        "en": "clipping-on-x-twitter"
+      }
+    },
+    {
+      "id": "earnings-vk-clips",
+      "hub": "earnings",
+      "slugs": {
+        "ru": "zarabotok-na-vk-klipah",
+        "uk": "zarobitok-na-vk-klipakh",
+        "en": "earning-on-vk-clips"
+      }
+    },
+    {
+      "id": "earnings-telegram-clips",
+      "hub": "earnings",
+      "slugs": {
+        "ru": "zarabotok-na-narezkah-v-telegram",
+        "uk": "zarobitok-na-narizkakh-u-telegram",
+        "en": "clipping-on-telegram"
+      }
+    },
+    {
+      "id": "earnings-account-warmup",
+      "hub": "earnings",
+      "slugs": {
+        "ru": "progrev-akkaunta-i-tenevoy-ban",
+        "uk": "prohriv-akaunta-i-tinovyi-ban",
+        "en": "account-warm-up-and-shadowban"
+      }
     }
   ]
 }

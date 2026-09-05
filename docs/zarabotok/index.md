@@ -54,6 +54,9 @@ numbers_used: [ppv_cpm_min, ppv_cpm_median, ppv_cpm_max, ppv_min_views_threshold
 - [DareBay или Klipni](/zarabotok/darebay-ili-klipni) - рубли и самозанятость против USDT и всего мира.
 - [Кто платит в Россию и СНГ](/zarabotok/platformy-dlya-narezchikov-kotorye-platyat-v-sng) - страна за страной, словами самих площадок.
 - [Как выбрать платформу для нарезок](/zarabotok/kak-vybrat-platformu-dlya-narezok) - девять вопросов до первого ролика.
+- [Whop Content Rewards: обзор](/zarabotok/whop-content-rewards-obzor) - как устроены кампании, сколько платят, куда не платят и что взять вместо.
+- [Аналоги Clipping.net](/zarabotok/analogi-clipping-net) - семь альтернатив по четырём осям: порог и потолок, бюджет, страны, подписчики.
+- [Vyro: обзор платформы](/zarabotok/vyro-obzor-platformy) - порог 5000, потолок в просмотрах, закрытые страны и когда Vyro, а когда DareBay.
 - [DareBay в цифрах](/o-proekte/darebay-v-tsifrakh) - карточка фактов: ставки, комиссии, выплаты, страны.
 
 ## С чего начать

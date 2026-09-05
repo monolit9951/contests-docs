@@ -1,6 +1,6 @@
 ---
 title: "Clipping for agencies and CPA partners: offers at scale"
-description: "Run an offer through DareBay's creator network: a tracked link and promo code per creator, conversions by S2S postback, fees and sales share credited by the platform."
+description: "Run an offer through DareBay's creator network: a tracked link and promo code per creator, S2S postback conversions, fees and sales share credited by the platform."
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_min_views_threshold_live, ppv_max_per_work_typical, contest_create_usdt_price, commission_crypto, commission_fiat]
 seo: true

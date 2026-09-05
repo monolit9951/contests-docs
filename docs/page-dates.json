@@ -57,7 +57,7 @@
   },
   "en/about/darebay-at-a-glance.md": {
     "published": "2026-09-03T10:36:52Z",
-    "modified": "2026-09-04T20:08:45Z"
+    "modified": "2026-09-05T12:26:49Z"
   },
   "en/about/darebay-reviews.md": {
     "published": "2026-08-03T17:55:09Z",
@@ -107,6 +107,10 @@
     "published": "2026-09-04T20:08:45Z",
     "modified": "2026-09-04T20:08:45Z"
   },
+  "en/earnings/clipping-net-alternatives.md": {
+    "published": "2026-09-05T12:26:49Z",
+    "modified": "2026-09-05T12:26:49Z"
+  },
   "en/earnings/clipping-on-telegram.md": {
     "published": "2026-09-05T11:38:08Z",
     "modified": "2026-09-05T11:38:08Z"
@@ -153,7 +157,7 @@
   },
   "en/earnings/index.md": {
     "published": "2026-08-03T14:23:10Z",
-    "modified": "2026-09-05T11:38:08Z"
+    "modified": "2026-09-05T12:26:49Z"
   },
   "en/earnings/make-1000-a-month-clipping.md": {
     "published": "2026-09-04T21:40:22Z",
@@ -171,6 +175,10 @@
     "published": "2026-08-03T17:55:09Z",
     "modified": "2026-09-04T20:08:45Z"
   },
+  "en/earnings/vyro-review.md": {
+    "published": "2026-09-05T12:26:49Z",
+    "modified": "2026-09-05T12:26:49Z"
+  },
   "en/earnings/where-to-find-clipping-work.md": {
     "published": "2026-08-03T17:55:09Z",
     "modified": "2026-09-04T20:08:45Z"
@@ -178,6 +186,10 @@
   "en/earnings/whop-content-rewards-alternatives.md": {
     "published": "2026-09-03T10:58:17Z",
     "modified": "2026-09-04T20:08:45Z"
+  },
+  "en/earnings/whop-content-rewards-review.md": {
+    "published": "2026-09-05T12:26:49Z",
+    "modified": "2026-09-05T12:26:49Z"
   },
   "en/earnings/why-clips-get-rejected.md": {
     "published": "2026-09-04T20:08:45Z",
@@ -333,7 +345,7 @@
   },
   "o-proekte/darebay-v-tsifrakh.md": {
     "published": "2026-09-03T10:36:52Z",
-    "modified": "2026-09-04T20:08:45Z"
+    "modified": "2026-09-05T12:26:49Z"
   },
   "o-proekte/garantiya-vyplat.md": {
     "published": "2026-07-10T10:14:11+02:00",
@@ -541,7 +553,7 @@
   },
   "ua/pro-proekt/darebay-u-tsyfrakh.md": {
     "published": "2026-09-03T10:36:52Z",
-    "modified": "2026-09-04T20:08:45Z"
+    "modified": "2026-09-05T12:26:49Z"
   },
   "ua/pro-proekt/darebay-vidhuky.md": {
     "published": "2026-08-03T17:55:09Z",
@@ -563,6 +575,10 @@
     "published": "2026-09-04T20:08:45Z",
     "modified": "2026-09-04T20:08:45Z"
   },
+  "ua/zarobitok/alternatyvy-clipping-net.md": {
+    "published": "2026-09-05T12:26:49Z",
+    "modified": "2026-09-05T12:26:49Z"
+  },
   "ua/zarobitok/alternatyvy-whop-v-ukraini.md": {
     "published": "2026-09-03T10:58:17Z",
     "modified": "2026-09-04T20:08:45Z"
@@ -581,7 +597,7 @@
   },
   "ua/zarobitok/index.md": {
     "published": "2026-08-03T14:23:10Z",
-    "modified": "2026-09-05T11:38:08Z"
+    "modified": "2026-09-05T12:26:49Z"
   },
   "ua/zarobitok/kalkuliator-zarobitku-na-narizkakh.md": {
     "published": "2026-09-04T20:08:45Z",
@@ -631,6 +647,14 @@
     "published": "2026-09-04T20:08:45Z",
     "modified": "2026-09-04T20:08:45Z"
   },
+  "ua/zarobitok/vyro-ohliad-platformy.md": {
+    "published": "2026-09-05T12:26:49Z",
+    "modified": "2026-09-05T12:26:49Z"
+  },
+  "ua/zarobitok/whop-content-rewards-ohliad.md": {
+    "published": "2026-09-05T12:26:49Z",
+    "modified": "2026-09-05T12:26:49Z"
+  },
   "ua/zarobitok/yak-obraty-platformu-dlia-narizok.md": {
     "published": "2026-09-03T11:05:07Z",
     "modified": "2026-09-04T20:08:45Z"
@@ -655,6 +679,10 @@
     "published": "2026-09-05T11:38:08Z",
     "modified": "2026-09-05T11:38:08Z"
   },
+  "zarabotok/analogi-clipping-net.md": {
+    "published": "2026-09-05T12:26:49Z",
+    "modified": "2026-09-05T12:26:49Z"
+  },
   "zarabotok/analogi-whop-v-rossii.md": {
     "published": "2026-09-03T10:58:17Z",
     "modified": "2026-09-04T20:08:45Z"
@@ -673,7 +701,7 @@
   },
   "zarabotok/index.md": {
     "published": "2026-08-03T12:17:13Z",
-    "modified": "2026-09-05T11:38:08Z"
+    "modified": "2026-09-05T12:26:49Z"
   },
   "zarabotok/kak-delat-narezki.md": {
     "published": "2026-08-15T16:35:57Z",
@@ -742,6 +770,14 @@
   "zarabotok/slovar-klippinga.md": {
     "published": "2026-09-04T20:08:45Z",
     "modified": "2026-09-04T20:08:45Z"
+  },
+  "zarabotok/vyro-obzor-platformy.md": {
+    "published": "2026-09-05T12:26:49Z",
+    "modified": "2026-09-05T12:26:49Z"
+  },
+  "zarabotok/whop-content-rewards-obzor.md": {
+    "published": "2026-09-05T12:26:49Z",
+    "modified": "2026-09-05T12:26:49Z"
   },
   "zarabotok/zarabotok-na-narezkah-filmov.md": {
     "published": "2026-08-15T16:35:57Z",

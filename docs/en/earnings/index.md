@@ -32,11 +32,15 @@ Live tasks sit in the [clip earnings catalogue](/en/earn/clips): the rate, the t
 - [Clipping as a job](/en/earnings/clipping-as-a-job) - what one clip involves, how long it takes, why the income is irregular, and the route from signing up to the first money.
 - [Where to find clipping work](/en/earnings/where-to-find-clipping-work) - the open brief board, how a direct deal differs from working through an intermediary, and what to do when no source footage is attached.
 - [Clipping glossary](/en/earnings/clipping-glossary) - fifty-odd terms from rate and threshold to offer and uniqueization, with the pairs people mix up most.
+- [Account warm-up and shadowban](/en/earnings/account-warm-up-and-shadowban) - a seven-day plan, the signs of a shadowban, what to do when views drop.
 
 ## Niches: streamers and platforms
 
 - [What streamer clips pay](/en/earnings/streamer-clip-rates) - what gets cut out of a broadcast, what it is worth at the contest rate, and what rights the brief itself grants.
 - [What TikTok pays for views](/en/earnings/tiktok-view-payouts) - a platform creator programme against a contest on an intermediary: what TikTok and YouTube require, across six axes of comparison.
+- [Clipping on X](/en/earnings/clipping-on-x-twitter) - how X itself pays and how the same clip earns in pay-per-view tasks.
+- [Earning on VK Clips](/en/earnings/earning-on-vk-clips) - the VK creator programme and how it combines with tasks on TikTok, Reels and Shorts.
+- [Clipping on Telegram](/en/earnings/clipping-on-telegram) - a clip channel, DareBay tasks inside Telegram, payouts in Stars.
 
 ## Platforms compared, with numbers
 

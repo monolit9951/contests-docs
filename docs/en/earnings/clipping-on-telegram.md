@@ -47,7 +47,7 @@ DareBay has two equal front doors and one account: the website and Telegram (the
 4. Send the link to the task; without it the submission does not take part. A moderator checks the terms, and the platform reads views from the site's public counter several times a day.
 5. Once the submission is approved, press "Claim now": what has accrued is locked into the wallet, and fresh amounts mature for 24 hours.
 
-Open tasks currently pay from $1 to $2 per 1,000 views, typically $1. The threshold per clip is usually 2,000 views and the cap per submission is usually $100; the formula is views / 1,000 × rate, never above the cap, with the threshold not deducted. A hypothetical clip with 20,000 views at $1.00 makes `20,000 / 1,000 × $1.00 = **$20.00**`. Put your own numbers into the [clipping earnings calculator](/en/earnings/clipping-earnings-calculator).
+Open tasks currently pay from $1 to $2 per 1,000 views, typically $1. The threshold per clip is usually 2,000 views and the cap per submission is usually $100; the formula is views / 1,000 × rate, never above the cap, with the threshold not deducted. A hypothetical clip with 20,000 views at $1.00 makes `20,000 / 1,000 × $1.00 = $20.00`. Put your own numbers into the [clipping earnings calculator](/en/earnings/clipping-earnings-calculator).
 
 Money leaves the wallet by two routes. A withdrawal request from 10 USDT to a wallet on the TON network: the fee is 10% of the requested amount, a personal rate may apply, processing is manual. Or "get it in Stars": the amount arrives as Telegram Stars, and that is not a cash withdrawal, because under Telegram's terms Stars on a personal balance cannot be sold or transferred. The request procedure is in [DareBay withdrawals](/en/help/darebay-withdrawals).
 

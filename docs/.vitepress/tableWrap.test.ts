@@ -1,5 +1,3 @@
-import { readFileSync } from 'node:fs'
-import { join } from 'node:path'
 import { describe, expect, it } from 'vitest'
 import { installTableWrapRule, TABLE_WRAP_CLASS } from './tableWrap'
 
@@ -29,15 +27,4 @@ describe('Markdown table scroll wrapper', () => {
     )
   })
 
-  it('never makes thead/tbody their own table boxes: that misaligns header and cells', () => {
-    // The header columns drift out from under the body columns as soon as a section of the table
-    // gets its own table box, because each box runs the column algorithm on its own rows.
-    const css = readFileSync(join(import.meta.dirname, 'theme/landing/landing.css'), 'utf8')
-    const declarations = css.match(/^\.lp-content[^\n]*:is\(thead[^\n]*|^\.lp-content[^\n]*(thead|tbody)[^\n]*$/gm) ?? []
-
-    for (const declaration of declarations) {
-      expect(declaration).not.toMatch(/display:\s*table\b/)
-    }
-    expect(css).toContain(`.lp-content .${TABLE_WRAP_CLASS}`)
-  })
 })

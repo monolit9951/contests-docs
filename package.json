@@ -25,7 +25,8 @@
     "gen:addresses": "node --experimental-strip-types --no-warnings scripts/print-addresses.mjs > ADDRESSES.md",
     "gates": "node --experimental-strip-types --no-warnings scripts/url-gates.mjs",
     "gen:dates": "node scripts/gen-page-dates.mjs",
-    "check:image": "node scripts/image-boot-check.mjs"
+    "check:image": "node scripts/image-boot-check.mjs",
+    "audit:layout": "node --experimental-strip-types --no-warnings scripts/layout-audit.mjs"
   },
   "devDependencies": {
     "vitepress": "^1.6.3",

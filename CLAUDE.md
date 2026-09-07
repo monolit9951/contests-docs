@@ -60,6 +60,15 @@ Routing, manifest or nginx changes also require `npm run gates` with current bui
 content artifacts. Docker/image changes require `npm run check:image` in an authorized isolated
 runner; global rules prohibit manual Docker builds on this production host.
 
+Changes to the landing shell (`theme/landing/*`, page CSS, anything that decides how Markdown is
+rendered) also require `npm run audit:layout` against a current production build. It opens every
+page in a real browser at phone and desktop widths and reports what valid HTML cannot show:
+horizontal page overflow, table headers drifting off their columns, in-page links that land
+nowhere, text wider than its box. CI has no browser, so this is a local check — set `CHROME` if
+the script cannot find one. Screenshot checks in a bare `--window-size` browser are NOT evidence:
+without device emulation the layout viewport is not the window width, and every page looks like it
+overflows. Emulate the device (`Emulation.setDeviceMetricsOverride`) or measure, as the script does.
+
 When narrowing a failure, use the current scripts from `package.json` (`check:registry`,
 `check:dist`, generators and URL gates). The candidate lint plus production build is authoritative
 for the content/build contract; the scope-specific integration checks above remain required.

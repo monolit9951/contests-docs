@@ -10,6 +10,7 @@ hero:
   kicker: "Fact sheet"
   lede: "The numbers a clipper, a brand or a comparison site needs about DareBay, in the same fields other clipping platforms are compared on. Sourced from the platform's live data and its own help pages, refreshed monthly."
   secondary: "See the fields"
+  secondaryHref: "#facts"
   takeaways:
     - "<b>$1.00 to $2.00 per 1,000 views</b> in open contests; the exact rate is printed on each task card before you submit."
     - "<b>No followers, portfolio or application</b>: a brand-new account can take a brief."

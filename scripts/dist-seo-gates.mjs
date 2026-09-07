@@ -34,6 +34,9 @@ const attr = (tag, name) => tag.match(new RegExp(`\\b${name}="([^"]*)"`))?.[1]
 const tags = (html, tagName) => [...html.matchAll(new RegExp(`<${tagName}\\b[^>]*>`, 'gi'))].map((match) => match[0])
 
 const expectedUrls = new Map()
+const idsByPath = new Map()
+const anchorLinks = []
+const decodeFragment = (value) => { try { return decodeURIComponent(value) } catch { return value } }
 for (const page of PAGES) {
   for (const locale of localesOf(page)) {
     const path = pagePath(page, locale)
@@ -45,6 +48,13 @@ for (const page of PAGES) {
       continue
     }
     const html = readFileSync(file, 'utf8')
+
+    // The page's anchors and the links aiming at them; checked as `anchor-target` after the loop.
+    idsByPath.set(path, new Set([...html.matchAll(/\bid="([^"]+)"/g)].map((match) => decodeFragment(match[1]))))
+    for (const match of html.matchAll(/\bhref="([^"#]*)#([^"]+)"/g)) {
+      const [, target, fragment] = match
+      if (target === '' || target.startsWith('/')) anchorLinks.push({ from: path, target: target || path, fragment: decodeFragment(fragment) })
+    }
 
     const h1Tags = tags(html, 'h1')
     if (h1Tags.length !== 1) fail('h1-count', `${path}: ${h1Tags.length}`)
@@ -187,6 +197,16 @@ for (const page of PAGES) {
       }
     }
   }
+}
+
+// A link to a heading that does not exist is silently dead: the browser stays put and the
+// reader never learns the section was meant to be there. VitePress slugifies headings, and the
+// slug is not always what an author would type — `ї` collapses to `і`, so a hand-written
+// `#_7-комісії` pointed at nothing while the heading carried `#_7-комісіі`.
+for (const { from, target, fragment } of anchorLinks) {
+  const ids = idsByPath.get(target)
+  if (!ids) continue // external or non-page target; addresses are covered by the URL gates
+  if (!ids.has(fragment)) fail('anchor-target', `${from} -> ${target}#${fragment}: no such id on the target page`)
 }
 
 const sitemapPath = join(DIST, 'sitemap-content.xml')

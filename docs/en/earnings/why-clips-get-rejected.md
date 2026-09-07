@@ -46,7 +46,7 @@ Accepted clip, growing counter, flat amount. Six causes, none a reason to redo t
 | "Under review", "Payout stopped by a flag" | The clip is being checked; accrual pauses until a person decides | Wait, no duplicates; if it drags on, ask support |
 | "Stats appear after the first sync", "Video unavailable" | Views not confirmed: no sync yet, or the clip or profile is closed | Open both, wait for the next sync |
 
-Say 20,000 views at $1.00 per 1000: `20,000 / 1000 × $1.00 = **$20.00**`, below the $100 cap, so it is credited in full. Threshold mechanics and the route of the money to your wallet: [how pay-per-view works](/en/earnings/how-pay-per-view-works).
+Say 20,000 views at $1.00 per 1000: `20,000 / 1000 × $1.00 = $20.00`, below the $100 cap, so it is credited in full. Threshold mechanics and the route of the money to your wallet: [how pay-per-view works](/en/earnings/how-pay-per-view-works).
 
 ## How to submit so it is not rejected
 

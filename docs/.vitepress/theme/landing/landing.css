@@ -26,6 +26,8 @@
   --lp-display: 'Unbounded', 'Manrope', system-ui, sans-serif;
   --lp-body: 'Manrope', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   --lp-container: 1216px;
+  --lp-icon-copy: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>');
+  --lp-icon-check: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5 9.5 18 20 6.5"/></svg>');
   --lp-prose: 760px;
   background: var(--lp-bg);
   color: var(--lp-text);
@@ -68,6 +70,24 @@
 .lp .lp-btn-ghost:hover { background: var(--lp-panel); }
 .lp .lp-btn-sm { padding: 8px 14px; font-size: 13px; }
 @media (max-width: 860px) { .lp-nav { display: none; } .lp-header-in { gap: 12px; } }
+/* Phones: the header falls into rows instead of running off the screen. Logo, language switcher
+   and CTA need ~525px in a single row, so below that only the left edge was visible — and the
+   WHOLE document scrolled sideways with it (measured: 545px document in a 390px viewport, on all
+   201 addresses of the corpus; broken at every width up to ~585px). `display: contents` lifts the
+   right-hand group's children into the same flex line, so the button sits beside the logo and the
+   switcher takes the second row whole — a layout that does not depend on how long the labels are
+   in any language, down to 320px. */
+@media (max-width: 640px) {
+  .lp-header-in { flex-wrap: wrap; align-items: center; height: auto; min-height: 56px; padding-top: 8px; padding-bottom: 8px; row-gap: 8px; column-gap: 10px; }
+  .lp-logo { font-size: 16px; order: 1; }
+  .lp-header-right { display: contents; }
+  .lp-header-right > .lp-btn { order: 2; margin-left: auto; }
+  .lp-lang { order: 3; width: 100%; justify-content: center; }
+  .lp-lang a, .lp-lang span { font-size: 11px; padding: 5px 9px; }
+  .lp .lp-btn-sm { padding: 8px 12px; font-size: 12px; }
+  /* The header is taller now; without this an anchor jump hides the heading under it. */
+  .lp-content :is(h2, h3):not(.lp-bleed *) { scroll-margin-top: 108px; }
+}
 
 /* ---- hero ------------------------------------------------------------- */
 .lp-hero { position: relative; overflow: hidden; padding: 84px 0 56px; }
@@ -119,6 +139,21 @@
 .lp-content .lp-md-table :is(th, td) { border-bottom: 1px solid var(--lp-line); padding: 10px 14px; text-align: left; vertical-align: top; }
 .lp-content .lp-md-table tr:last-child td { border-bottom: 0; }
 .lp-content .lp-md-table th { color: var(--lp-muted); font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; }
+/* Code blocks. VitePress emits them as `div.language-*` with its own copy button, and all of the
+   styling lives under `.vp-doc`, a class the landing shell does not have: the block arrived
+   unstyled, stuck to the left edge of the window and stretched the document to 1627px (the brief
+   template pages). Same move as the tables: the outer box holds the width, `pre` holds the
+   scroll, and the block stays inside the prose column. */
+.lp-content div[class*="language-"]:not(.lp-bleed *) { position: relative; width: min(100% - 40px, var(--lp-prose)); margin: 8px auto 24px; border: 1px solid var(--lp-line); border-radius: 14px; background: var(--lp-panel); }
+.lp-content div[class*="language-"] pre { margin: 0; padding: 18px 18px 18px 20px; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.lp-content div[class*="language-"] code { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; font-size: 13px; line-height: 1.75; color: rgba(245, 247, 250, 0.9); }
+.lp-content div[class*="language-"] .lang { display: none; }
+.lp-content div[class*="language-"] > button.copy { position: absolute; top: 10px; right: 10px; width: 32px; height: 32px; border: 1px solid var(--lp-line-2); border-radius: 9px; background: var(--lp-panel-2); cursor: pointer; opacity: 0.75; transition: opacity 0.15s ease, border-color 0.15s ease; }
+.lp-content div[class*="language-"] > button.copy::before { content: ""; position: absolute; inset: 7px; background-color: var(--lp-muted); -webkit-mask: var(--lp-icon-copy) center / 16px 16px no-repeat; mask: var(--lp-icon-copy) center / 16px 16px no-repeat; }
+.lp-content div[class*="language-"] > button.copy:hover, .lp-content div[class*="language-"] > button.copy:focus-visible { opacity: 1; border-color: var(--lp-accent); }
+.lp-content div[class*="language-"] > button.copy.copied::before { background-color: var(--lp-accent); -webkit-mask-image: var(--lp-icon-check); mask-image: var(--lp-icon-check); }
+/* Inline code in prose reads as a chip, not as bare monospace. */
+.lp-content :is(p, li, td):not(.lp-bleed *) code { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; font-size: 0.88em; padding: 2px 6px; border-radius: 6px; border: 1px solid var(--lp-line); background: var(--lp-panel); color: var(--lp-text); overflow-wrap: anywhere; }
 /* FAQ: `## …questions` then `### question` + answer; questions read as an accordion-like list */
 .lp-content h2:not(.lp-bleed *) ~ h3:not(.lp-bleed *) { border-top: 1px solid var(--lp-line); padding-top: 18px; margin-top: 22px; font-family: var(--lp-display); font-weight: 500; font-size: 1.05rem; }
 .lp-content .header-anchor { display: none; }

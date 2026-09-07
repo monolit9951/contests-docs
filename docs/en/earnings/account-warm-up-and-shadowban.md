@@ -62,7 +62,7 @@ Officially the platforms do not use the term: they talk about limited recommenda
 
 ## How this ties into pay-per-view tasks
 
-A task pays for a clip that clears the threshold, usually 2,000 views, and then counts the whole counter. Open tasks pay from $1 to $2 per 1,000 views, typically $1. The cap per submission is usually $100. A hypothetical clip with 20,000 views at $1.00 makes `20,000 / 1,000 × $1.00 = **$20.00**`, while a clip under a restriction never reaches the threshold and earns nothing. Put your own numbers into the [clipping earnings calculator](/en/earnings/clipping-earnings-calculator).
+A task pays for a clip that clears the threshold, usually 2,000 views, and then counts the whole counter. Open tasks pay from $1 to $2 per 1,000 views, typically $1. The cap per submission is usually $100. A hypothetical clip with 20,000 views at $1.00 makes `20,000 / 1,000 × $1.00 = $20.00`, while a clip under a restriction never reaches the threshold and earns nothing. Put your own numbers into the [clipping earnings calculator](/en/earnings/clipping-earnings-calculator).
 
 - **Fake views are rejected twice.** A jump in views inside a single sync tick sends the submission on hold, and moderation removes it with the reason "Fake views". Bought views do not lift a shadowban, but they do cost you the payout: more in [why clips get rejected](/en/earnings/why-clips-get-rejected).
 - **Several accounts and sites are legitimate.** Different clips on different accounts, each on its own topic, and on different sites: TikTok, Reels, Shorts. The same clip on two accounts is a duplicate both for the platform and for the task.

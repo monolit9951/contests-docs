@@ -13,7 +13,8 @@ import { DATA } from './platforms'
 const { frontmatter, theme, lang } = useData<DareBayThemeConfig>()
 const copy = computed(() => LANDING_COPY[localeOf(lang.value)])
 const hero = computed(() => (frontmatter.value.hero ?? {}) as {
-  kicker?: string; lede?: string; takeaways?: string[]; updated?: string; primary?: string; secondary?: string
+  kicker?: string; lede?: string; takeaways?: string[]; updated?: string; primary?: string
+  secondary?: string; secondaryHref?: string
 })
 const hub = computed(() => (frontmatter.value.sectionHub ?? null) as { id: string; title: string; path: string | null } | null)
 const isHub = computed(() => Boolean(frontmatter.value.isHub))
@@ -23,6 +24,11 @@ const crumbHref = computed(() => (!isHub.value && !hero.value.kicker && hub.valu
 const updated = computed(() => hero.value.updated ?? (frontmatter.value.compare ? DATA.snapshot : (frontmatter.value.updated as string | null) ?? null))
 const title = computed(() => String(frontmatter.value.title ?? ''))
 const lede = computed(() => hero.value.lede ?? String(frontmatter.value.description ?? ''))
+// The ghost button jumps to the section the page actually has. It used to be hardcoded to
+// `#compare`, which only exists where the page renders <LCompare />: on the three "at a glance"
+// pages the button read "See the fields" and led nowhere, because their section is <LFacts />
+// (`#facts`). The dist gate `anchor-target` now fails the build on any such dead jump.
+const secondaryHref = computed(() => hero.value.secondaryHref ?? '#compare')
 </script>
 
 <template>
@@ -38,7 +44,7 @@ const lede = computed(() => hero.value.lede ?? String(frontmatter.value.descript
         <p v-if="lede" class="lp-lede">{{ lede }}</p>
         <div class="lp-hero-ctas">
           <a class="lp-btn lp-btn-primary" :href="theme.darebayCta.productUrl" target="_self">{{ hero.primary ?? copy.ctaPrimary }}</a>
-          <a v-if="hero.secondary" class="lp-btn lp-btn-ghost" href="#compare">{{ hero.secondary }}</a>
+          <a v-if="hero.secondary" class="lp-btn lp-btn-ghost" :href="secondaryHref">{{ hero.secondary }}</a>
         </div>
       </div>
       <aside v-if="hero.takeaways?.length" class="lp-takeaways" :aria-label="copy.keyTakeaways">

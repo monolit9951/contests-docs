@@ -5,6 +5,7 @@ import { fileURLToPath } from 'node:url'
 import { productUrlForLocale, TELEGRAM } from './links'
 import { CHROME_COPY, type DareBayThemeConfig } from './chrome'
 import { installCoveredHeadingRule } from './coveredHeading'
+import { installTableWrapRule } from './tableWrap'
 import PAGE_DATES from '../page-dates.json'
 import PLATFORMS from './data/platforms.json'
 
@@ -549,6 +550,7 @@ export default defineConfig({
   markdown: {
     config(md) {
       installCoveredHeadingRule(md)
+      installTableWrapRule(md)
       // Rewrites in-page links onto addresses that exist — see
       // `resolveLocalizedLink` in registry.ts. Content is translated page by
       // page, so a translated article links to siblings that may still be

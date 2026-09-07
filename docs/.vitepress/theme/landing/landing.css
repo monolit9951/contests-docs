@@ -99,7 +99,7 @@
    element, not by nesting depth; anything inside a landing component
    (`.lp-bleed`) is excluded and styles itself. */
 .lp-content { padding: 24px 0 0; }
-.lp-content :is(h2, h3, h4, p, ul, ol, blockquote, table, hr):not(.lp-bleed *) { width: min(100% - 40px, var(--lp-prose)); margin-inline: auto; }
+.lp-content :is(h2, h3, h4, p, ul, ol, blockquote, hr):not(.lp-bleed *) { width: min(100% - 40px, var(--lp-prose)); margin-inline: auto; }
 .lp-content .lp-bleed { width: min(100% - 40px, var(--lp-container)); margin-inline: auto; }
 .lp-content h2:not(.lp-bleed *) { font-family: var(--lp-display); font-weight: 600; font-size: clamp(1.55rem, 2.6vw, 2.25rem); line-height: 1.15; letter-spacing: -0.01em; margin-top: 72px; margin-bottom: 16px; text-wrap: balance; scroll-margin-top: 80px; }
 .lp-content h3:not(.lp-bleed *) { font-family: var(--lp-body); font-weight: 800; font-size: 1.15rem; margin-top: 34px; margin-bottom: 8px; scroll-margin-top: 80px; }
@@ -109,11 +109,16 @@
 .lp-content :is(ul, ol):not(.lp-bleed *) li { margin-bottom: 6px; }
 .lp-content a:not(.lp-btn):not(.lp-bleed *) { color: var(--lp-accent); text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--lp-accent) 40%, transparent); text-underline-offset: 3px; }
 .lp-content blockquote:not(.lp-bleed *) { border-left: 3px solid var(--lp-accent); margin-top: 8px; margin-bottom: 20px; padding: 6px 0 6px 18px; color: var(--lp-muted); }
-.lp-content table:not(.lp-bleed *) { border-collapse: collapse; font-size: 14.5px; display: block; overflow-x: auto; width: min(100% - 40px, var(--lp-container)); border: 1px solid var(--lp-line); border-radius: 14px; background: var(--lp-panel); margin-top: 8px; margin-bottom: 24px; }
-.lp-content table:not(.lp-bleed *) tbody, .lp-content table:not(.lp-bleed *) thead { display: table; width: 100%; min-width: 720px; }
-.lp-content table:not(.lp-bleed *) :is(th, td) { border-bottom: 1px solid var(--lp-line); padding: 10px 14px; text-align: left; vertical-align: top; }
-.lp-content table:not(.lp-bleed *) tr:last-child td { border-bottom: 0; }
-.lp-content table:not(.lp-bleed *) th { color: var(--lp-muted); font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; }
+/* Markdown tables. The scroll box is the WRAPPER (`installTableWrapRule`), never the table
+   itself: `display: block` on <table> plus `display: table` on thead/tbody gives each section its
+   own table box and its own column widths, and the header labels drift out from under the cells
+   they name. One real table inside an overflowing wrapper keeps the columns shared. Width lives
+   on the wrapper, which is why `table` is not in the prose-width rule above. */
+.lp-content .lp-md-table:not(.lp-bleed *) { width: min(100% - 40px, var(--lp-container)); margin: 8px auto 24px; border: 1px solid var(--lp-line); border-radius: 14px; background: var(--lp-panel); overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.lp-content .lp-md-table table { border-collapse: collapse; font-size: 14.5px; width: 100%; min-width: 720px; margin: 0; }
+.lp-content .lp-md-table :is(th, td) { border-bottom: 1px solid var(--lp-line); padding: 10px 14px; text-align: left; vertical-align: top; }
+.lp-content .lp-md-table tr:last-child td { border-bottom: 0; }
+.lp-content .lp-md-table th { color: var(--lp-muted); font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; }
 /* FAQ: `## …questions` then `### question` + answer; questions read as an accordion-like list */
 .lp-content h2:not(.lp-bleed *) ~ h3:not(.lp-bleed *) { border-top: 1px solid var(--lp-line); padding-top: 18px; margin-top: 22px; font-family: var(--lp-display); font-weight: 500; font-size: 1.05rem; }
 .lp-content .header-anchor { display: none; }

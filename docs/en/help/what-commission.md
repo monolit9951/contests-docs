@@ -25,7 +25,7 @@ Before confirmation, the form shows the requested amount, the fee and the amount
 
 ## How withdrawals are processed
 
-A withdrawal is a separate step after a reward has been credited to the available balance. The user submits a request and the team processes it manually. DareBay therefore does not promise an automatic transfer or settlement “within minutes”. The product shows the request status; if it is delayed, contact support@darebay.com.
+A withdrawal is a separate step after a reward has been credited to the available balance. The user submits a request and the team handles the rest. DareBay therefore does not promise an automatic transfer or settlement “within minutes”. The product shows the request status; if it is delayed, contact support@darebay.com.
 
 Never send a separate payment to “unlock” a prize. The legitimate fee is calculated inside the withdrawal form and deducted from the requested amount; it is not an advance transfer to somebody else's address.
 
@@ -49,7 +49,7 @@ Contest results determine what is credited to the balance. A separate 10% fee ap
 
 ### Is the payout automatic?
 
-No. Withdrawal requests are processed manually. Do not rely on promises of instant settlement; the status in DareBay is the source for a specific request.
+No. Withdrawal requests are checked manually by the team before they are sent. Do not rely on promises of instant settlement; the status in DareBay is the source for a specific request.
 
 ### Where do these terms come from?
 
@@ -57,4 +57,4 @@ This page reflects the active product configuration on 15 August 2026. Operation
 
 ## In short
 
-Contest creation and top-ups are currently free for organizers, and entering is free for creators. The store fee is 8%. Withdrawing an available balance has a 10 USDT minimum and a 10% fee, and requests are processed manually. See [how withdrawals work](/en/help/darebay-withdrawals), [prizes and payouts](/en/help/prizes-and-payouts), and [how DareBay secures payouts](/en/about/payout-guarantee).
+Contest creation and top-ups are currently free for organizers, and entering is free for creators. The store fee is 8%. Withdrawing an available balance has a 10 USDT minimum and a 10% fee, and the team handles the requests. See [how withdrawals work](/en/help/darebay-withdrawals), [prizes and payouts](/en/help/prizes-and-payouts), and [how DareBay secures payouts](/en/about/payout-guarantee).

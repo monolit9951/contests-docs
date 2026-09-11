@@ -1,6 +1,6 @@
 ---
 title: DareBay withdrawals - fee, minimum and timing
-description: "How to withdraw an available DareBay balance: a 10 USDT minimum, a 10% fee, manual request processing and available payout methods."
+description: "How to withdraw an available DareBay balance: a 10 USDT minimum, a 10% fee, requests checked manually by the team and available payout methods."
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod-config" }
 numbers_used: []
 seo: true
@@ -8,7 +8,7 @@ seo: true
 
 # DareBay withdrawals - fee, minimum and timing
 
-An available DareBay balance is withdrawn by submitting a request. The minimum request is **10 USDT**, and the default platform fee is **10% of the requested amount**. A personal fee override may apply; the form shows the exact rate before confirmation. Requests are processed manually, so there is no fixed promise of settlement “within minutes”.
+An available DareBay balance is withdrawn by submitting a request. The minimum request is **10 USDT**, and the default platform fee is **10% of the requested amount**. A personal fee override may apply; the form shows the exact rate before confirmation. Requests are handled by the team, so there is no fixed promise of settlement “within minutes”.
 
 Entering a contest is free. The current fee to create or top up a contest is 0%; the withdrawal fee is a separate operation after a reward has been credited.
 
@@ -17,7 +17,7 @@ Entering a contest is free. The current fee to create or top up a contest is 0%;
 1. **Wait for an available balance.** While a contest or its result is still being finalized, funds may remain frozen.
 2. **Open the withdrawal form.** Enter an amount of at least 10 USDT and choose an available method.
 3. **Review the calculation.** Before confirmation, the form shows the requested amount, the 10% fee and the amount to receive.
-4. **Submit the request.** The team checks the details and processes the transfer manually. Follow its status in DareBay.
+4. **Submit the request.** The team checks the details and checks the details manually and sends the transfer. Follow its status in DareBay.
 
 For example, a 10 USDT request has a 1 USDT fee and a 9 USDT amount to receive. The request records the rate that applied when it was created.
 
@@ -29,7 +29,7 @@ Always rely on the methods shown in your request form. Never send money to an ex
 
 ## How long it takes
 
-The contest must first finish and pass the relevant result checks. After the reward reaches the available balance, the user submits a separate withdrawal request. That request is processed manually, so timing depends on detail checks and the chosen method; instant or automatic settlement is not guaranteed.
+The contest must first finish and pass the relevant result checks. After the reward reaches the available balance, the user submits a separate withdrawal request. The team handles that request, so timing depends on detail checks and the chosen method; instant or automatic settlement is not guaranteed.
 
 If the status does not change for an unusual amount of time, check the payout details and contact support@darebay.com with the request identifier. Do not create duplicate requests or transfer the fee separately.
 
@@ -57,7 +57,7 @@ It is 10% of the requested amount. The exact calculation and amount to receive a
 
 ### Is withdrawal automatic?
 
-No. Requests are processed manually. DareBay does not promise settlement within minutes.
+No. Once submitted, the request is handled by the team; nothing more is needed from you. DareBay does not promise settlement within minutes.
 
 ### Why is the reward credited but the amount received is lower?
 
@@ -69,4 +69,4 @@ No. It is deducted inside the request. Never transfer money in advance to unlock
 
 ## In short
 
-Withdrawing an available balance requires a request of at least 10 USDT. The fee is 10%, processing is manual, and the form shows the methods available to you. See [current DareBay fees](/en/help/what-commission), [prizes and payouts](/en/help/prizes-and-payouts), and [does DareBay really pay](/en/about/does-darebay-really-pay).
+Withdrawing an available balance requires a request of at least 10 USDT. The fee is 10%, every request is checked manually by the team before it is sent, and the form shows the methods available to you. See [current DareBay fees](/en/help/what-commission), [prizes and payouts](/en/help/prizes-and-payouts), and [does DareBay really pay](/en/about/does-darebay-really-pay).

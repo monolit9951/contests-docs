@@ -13,7 +13,7 @@ change it mid-run.
 
 Whichever type a contest uses, the budget is recorded against it from publication, and in a
 wallet-backed contest it is charged from the organizer at that moment. After the result is
-confirmed, the platform stores a credit or obligation; fulfilment can be processed by hand and no
+confirmed, the platform stores a credit or obligation; fulfilment is done by the team and no
 settlement date is promised.
 
 ## Seeded draw among eligible active works (RANDOM)

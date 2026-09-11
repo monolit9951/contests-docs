@@ -97,7 +97,7 @@ A pay-per-view task pays one thing: the rate per 1000 counted views, up to the c
 
 ### Withdrawal and Stars
 
-A withdrawal is a request for USDT on the TON network: from 10 USDT, a withdrawal fee of 10% of the requested amount, processed by hand, a personal rate possible. Stars are the second route in the same wizard: the amount goes out as Telegram Stars and stays inside Telegram, so it is not a withdrawal. Both routes use the available balance once fresh earnings have matured for 24 hours; details on the [withdrawals page](/en/help/darebay-withdrawals).
+A withdrawal is a request for USDT on the TON network: from 10 USDT, a withdrawal fee of 10% of the requested amount, handled by the team, a personal rate possible. Stars are the second route in the same wizard: the amount goes out as Telegram Stars and stays inside Telegram, so it is not a withdrawal. Both routes use the available balance once fresh earnings have matured for 24 hours; details on the [withdrawals page](/en/help/darebay-withdrawals).
 
 ## Frequently asked questions
 

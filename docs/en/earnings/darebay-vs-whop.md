@@ -39,7 +39,7 @@ If you are in Russia, Belarus, Ukraine, Kazakhstan or elsewhere in CIS, Whop is 
 
 - **Supply.** Whop is the largest clipping marketplace; DareBay is young and has few open contests at any time.
 - **Rate ceiling.** Live Whop campaigns run up to $5 per 1,000 views; open DareBay contests run from $1.00 to $2.00.
-- **Payout rails.** Whop pays to bank accounts, PayPal, mobile wallets and crypto in 200+ countries with no minimum; DareBay pays USDT on TON and Telegram Stars, with a 10 USDT minimum request processed manually.
+- **Payout rails.** Whop pays to bank accounts, PayPal, mobile wallets and crypto in 200+ countries with no minimum; DareBay pays USDT on TON and Telegram Stars, with a 10 USDT minimum request, handled by the team.
 - **Per-clip ceiling.** Whop campaigns show maximums of $400–$600 per video; a typical DareBay contest caps one submission at $100, with the largest campaigns going up to $500.
 
 ## Where DareBay is stronger

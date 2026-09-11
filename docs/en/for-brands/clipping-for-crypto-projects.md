@@ -52,7 +52,7 @@ In open tasks rates currently run from $1 to $2 per 1,000 views. The threshold d
 
 Creating a contest costs 10 USDT once, the contest fee is 0% and topping up the budget is 0%: the pool goes to creators in full. In a wallet-backed task the budget is locked on the platform before launch, spent on counted views, and the remainder returns to your balance.
 
-Once a submission is approved, the creator can lock in what it has earned and withdraw USDT to their TON wallet: the minimum withdrawal is 10 USDT, the withdrawal fee is 10% of the requested amount, processing is manual. In manual mode the organizer pays creators directly from the platform's statement, in Telegram Stars or to a TON wallet. The full campaign cost is on the [clipping campaign cost](/en/for-brands/clipping-campaign-cost) page.
+Once a submission is approved, the creator can lock in what it has earned and withdraw USDT to their TON wallet: the minimum withdrawal is 10 USDT, the withdrawal fee is 10% of the requested amount, the team handles processing. In manual mode the organizer pays creators directly from the platform's statement, in Telegram Stars or to a TON wallet. The full campaign cost is on the [clipping campaign cost](/en/for-brands/clipping-campaign-cost) page.
 
 ## Two formats: the explainer and the product tutorial
 

@@ -67,7 +67,7 @@ transfer, Telegram Stars, Telegram gifts) or **ITEM** (a thing, described in
 text: "a signed vinyl record", "concert tickets"). You can set several prize
 places (1st, 2nd, 3rd) and several winners in one place.
 The contest defines the reward method. This does not mean that a credited balance can be
-withdrawn automatically through every method in that list: fulfilment can be manual, and the
+withdrawn automatically through every method in that list: fulfilment is done by the team, and the
 balance-withdrawal wizard shows its available rails separately.
 
 A wallet-backed money prize is locked the moment you publish: it leaves your balance and

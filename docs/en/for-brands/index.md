@@ -15,7 +15,7 @@ Set the contest up on [darebay.com](https://darebay.com); the formats and terms 
 
 ## Short answers to the questions brands ask first
 
-- **How you pay clippers.** One task with a rate per 1000 views: each clipper who sends in a link is credited by formula for the views the clip got, up to the cap per submission. Fulfilment can be manual, with no promised date: [how to pay clippers per view](/en/for-brands/paying-clippers-per-view).
+- **How you pay clippers.** One task with a rate per 1000 views: each clipper who sends in a link is credited by formula for the views the clip got, up to the cap per submission. Fulfilment is done by the team, with no promised date: [how to pay clippers per view](/en/for-brands/paying-clippers-per-view).
 - **What it costs.** 10 USDT to create the contest plus the prize budget you set yourself. The contest commission is 0%, and there is no separate charge for topping up the budget.
 - **Who holds the budget.** In a wallet-backed contest the budget is locked on DareBay from the moment you publish, so creators know the money is real, and whatever they did not earn comes back to your balance. In a manual-payout contest the money never enters the platform: you pay creators directly, and DareBay records the result.
 - **What if nobody shows up.** A wallet-backed budget goes only to views that happened: no submissions, or none over the threshold, means nothing to pay for.
@@ -24,7 +24,7 @@ Set the contest up on [darebay.com](https://darebay.com); the formats and terms 
 - **CPA offers.** For results rather than reach, you can work with clippers on a CPA basis directly: a fixed amount per published clip plus a share of the sales it brings, set out in the task before anyone starts.
 - **Why this beats private arrangements.** One task instead of a chat with a dozen creators, and no view figure ever arrives as a screenshot: [how to commission clips for a campaign](/en/for-brands/commission-clips-for-a-campaign).
 
-Said up front: the amount is calculated automatically, but the payout to creators can be fulfilled manually with no promised date, and a suspicious submission goes on hold rather than vanishing silently.
+Said up front: the amount is calculated automatically, but the payout to creators is fulfilled by the team with no promised date, and a suspicious submission goes on hold rather than vanishing silently.
 
 ## Pages in this section
 

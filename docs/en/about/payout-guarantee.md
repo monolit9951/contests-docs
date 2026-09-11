@@ -24,7 +24,7 @@ DareBay is an intermediary and guarantor. It holds money, records the arithmetic
 
 ## Where the guarantee stops
 
-**It is not a deadline.** DareBay does not promise settlement within any window. Fulfilment of a recorded obligation can be processed by hand, and the honest version of this page says that instead of inventing a number.
+**It is not a deadline.** DareBay does not promise settlement within any window. Fulfilment of a recorded obligation is done by the team, and the honest version of this page says that instead of inventing a number.
 
 **It is not an anti-fraud warranty.** There is moderation and there are basic checks, and a clip with suspicious dynamics goes on hold pending review. That is a real safeguard, not a claim that every manipulated view on the internet gets caught.
 

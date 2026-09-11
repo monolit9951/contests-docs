@@ -12,7 +12,7 @@ hero:
     - "<b>No body of reviews yet:</b> the live discussion happens in DareBay's Telegram channel, not on review sites; hundreds of glowing reviews of a young platform would be a warning sign."
     - "<b>Open contests pay $1.00 to $2.00 per 1000 views,</b> and the rate, threshold, cap and publishing site stand on the card before you submit."
     - "<b>Terms hold once a contest is live:</b> the rate, the threshold and the budget cannot be rewritten after your clip is up; a wallet-backed budget is charged before you start."
-    - "<b>The friction is at the end:</b> withdrawal is a request with a 10% fee and a 10 USDT minimum, processed by hand with no promised settlement date."
+    - "<b>The friction is at the end:</b> withdrawal is a request with a 10% fee and a 10 USDT minimum, handled by the team with no promised settlement date."
 ---
 
 There are few reviews of DareBay: the platform is young, and the live discussion is in the [DareBay Telegram channel](https://t.me/darebay_app), not on review sites. Reviews of an earning platform also mostly report the reviewer's own luck: winners write glowing ones, people whose clip missed the threshold write furious ones. So this page sets out what you would be signing up for and where to check it in ten minutes: the open contest catalogue, one task card read in full, the withdrawal form and the named operator behind the project.
@@ -31,7 +31,7 @@ DareBay is a marketplace for content tasks. Someone posts a task with a budget, 
 
 **The upside is that the terms hold.** The rate, the threshold and the budget are recorded at creation and cannot be rewritten once your clip is up. In a wallet-backed contest the budget is charged from the organizer before you take the task.
 
-**The friction is at the end.** Calculation is automatic; getting the money out is a request with a fee and a minimum, processed by hand. No settlement deadline is promised, so if a predictable payout date is a hard requirement for you, this is the part to weigh.
+**The friction is at the end.** Calculation is automatic; getting the money out is a request with a fee and a minimum, handled by the team. No settlement deadline is promised, so if a predictable payout date is a hard requirement for you, this is the part to weigh.
 
 **Support is a person, not a queue number.** The product is run by a named operator who answers on Telegram. That is a genuine advantage over faceless platforms and not a substitute for the mechanics above.
 
@@ -42,7 +42,7 @@ DareBay is a marketplace for content tasks. Someone posts a task with a budget, 
 | "They never pay" | A wallet-backed budget is charged from the organizer before the start; the mode is on the card | Contest card |
 | "They understate the views" | Nobody types the figure in: the platform reads the public counter of the publishing site | Your clip and the card |
 | "Hidden fees" | Contest fee 0%; withdrawal fee 10%, 10 USDT minimum, shown in the form before you confirm | [DareBay fees](/en/help/what-commission) |
-| "Payouts take forever" | Requests are processed by hand and no settlement date is promised | Withdrawal form |
+| "Payouts take forever" | Requests are handled by the team and no settlement date is promised | Withdrawal form |
 | "Nobody is behind it" | A named founder, Ruslan Bey, answers in person | [@ruslanbwork](https://t.me/ruslanbwork) |
 | "Nobody knows what it pays" | Open contests pay $1.00 to $2.00 per 1000 views, printed on every card | [Contest catalogue](/en/earn/clips) |
 

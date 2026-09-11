@@ -9,7 +9,7 @@ numbers_used: []
 
 Half of what a participant weighs up is the prize itself. The other half: *is
 this organizer real, and will they fulfil the obligation?* The platform records
-the budget, result and credit or payout status. Fulfilment itself can be manual.
+the budget, result and credit or payout status. Fulfilment itself is done by the team.
 Verification and open ratings answer who exactly is behind the contest.
 
 ## Verification levels

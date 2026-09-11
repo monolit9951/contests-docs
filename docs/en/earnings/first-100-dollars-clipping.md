@@ -63,7 +63,7 @@ The rate next to the threshold and the cap is covered in [how much clipping pays
 
 Accruals on approved clips sit in your DareBay wallet, two steps from cash. Step one: "Claim now" appears once a clip is approved and locks in what has been credited; fresh accruals mature for 24 hours. Pressing it stops the clip earning in that task, so wait until the counter has stopped.
 
-Step two: a withdrawal request from 10 USDT. The 10% fee comes out of the requested amount, a personal rate may apply, the form shows the exact figure, and processing is manual. You receive USDT to a wallet on the TON network or Telegram Stars; Stars are "get it in Stars", not a cash withdrawal. A hundred on the balance at the standard fee is $90 in the wallet. Details in [DareBay withdrawals](/en/help/darebay-withdrawals) and [what commission DareBay charges](/en/help/what-commission).
+Step two: a withdrawal request from 10 USDT. The 10% fee comes out of the requested amount, a personal rate may apply, the form shows the exact figure, and the team handles processing. You receive USDT to a wallet on the TON network or Telegram Stars; Stars are "get it in Stars", not a cash withdrawal. A hundred on the balance at the standard fee is $90 in the wallet. Details in [DareBay withdrawals](/en/help/darebay-withdrawals) and [what commission DareBay charges](/en/help/what-commission).
 
 Once the first hundred is in, the next question is scale: [how to make $1,000 a month clipping](/en/earnings/make-1000-a-month-clipping).
 
@@ -79,7 +79,7 @@ Do not redo or delete them: a clip has until the task is finalised to reach the 
 
 ### Can I take the first $100 out in one request?
 
-Yes, once the amount is locked in with "Claim now" and has matured. A request for 100 USDT at the standard 10% fee gives $90 in the wallet; processing is manual, no timeframe is promised. The minimum for one request is 10 USDT, so the hundred can also go out in parts.
+Yes, once the amount is locked in with "Claim now" and has matured. A request for 100 USDT at the standard 10% fee gives $90 in the wallet; the team handles processing, no timeframe is promised. The minimum for one request is 10 USDT, so the hundred can also go out in parts.
 
 ### Should a beginner start with offer tasks and ready-made videos?
 

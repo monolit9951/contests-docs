@@ -10,7 +10,7 @@ seo: true
 
 No. The short reason is mechanical rather than reassuring: in a wallet-backed contest the budget is charged from the organizer and locked against that contest **before** anyone picks the task up, the rate per 1000 views and the view threshold sit on the contest card before you edit a single frame, and the sum you are owed is worked out by formula from a counter neither side can type into.
 
-The honest counterweight, said here rather than buried: **executing the payout can be manual, and DareBay promises no settlement deadline.** A platform that told you otherwise would be the one worth suspecting.
+The honest counterweight, said here rather than buried: **executing the payout is done by the team, and DareBay promises no settlement deadline.** A platform that told you otherwise would be the one worth suspecting.
 
 ## The tells of a fake earning platform
 

@@ -43,7 +43,7 @@ Whop's sanctioned-country page says creators in listed countries "can't register
 
 ## How the money actually reaches you
 
-**DareBay** credits your balance after the count and pays withdrawals in USDT on the TON network or as Telegram Stars; a withdrawal request is at least 10 USDT with a 10% fee and is processed manually. Individual contests can add a card, a bank transfer or a gift as the reward. No tax status, follower count or application is needed to take a brief.
+**DareBay** credits your balance after the count and pays withdrawals in USDT on the TON network or as Telegram Stars; a withdrawal request is at least 10 USDT with a 10% fee; submit it once and the platform handles the check and the transfer. Individual contests can add a card, a bank transfer or a gift as the reward. No tax status, follower count or application is needed to take a brief.
 
 **Prime Oracles** pays only in crypto: USDT or USDC to your own wallet on BSC, Solana or Tron, from $5, after the customer approves each payout by hand. The platform's fee percentage is shown only inside the app.
 

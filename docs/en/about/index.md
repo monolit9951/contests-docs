@@ -25,7 +25,7 @@ and nobody to ask. This one has a name, and someone who answers.
 The reward is funded by whoever posts the task. In a wallet-backed contest the budget is charged
 and locked against that contest before anyone picks the task up, and the buyer cannot pull it back
 or spend it elsewhere. The platform calculates the result and stores a credit or payout obligation
-with a status; fulfilment through payout details can be manual, and no settlement time is promised.
+with a status; fulfilment through payout details is done by the team, and no settlement time is promised.
 
 Nobody types the view count in by hand. The platform's independent counter reads the published
 view counter on the site the video was posted on, so the buyer and the creator look at the same
@@ -37,8 +37,7 @@ itself, before a creator takes it on. There is no single platform-wide rate: it 
 posts the task.
 
 Taking part is free for creators: there is no entry fee, deposit or access charge.
-Withdrawing an already credited balance is a separate operation with a minimum, fee and manual
-processing; see the [current fee terms](/en/help/what-commission).
+Withdrawing an already credited balance is a separate operation with a minimum, fee and a check by the team; see the [current fee terms](/en/help/what-commission).
 
 ## Where the numbers come from
 

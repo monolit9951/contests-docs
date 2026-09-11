@@ -1,6 +1,6 @@
 ---
 title: Does DareBay really pay? The chain from clip to money
-description: The full DareBay payout chain step by step - what is automatic, what is manual, where a submission can be put on hold, and what to do when a status stops moving.
+description: The full DareBay payout chain step by step - what is automatic, what is done by people, where a submission can be put on hold, and what to do when a status stops moving.
 provenance: { snapshot_date: "2026-08-15", source: "darebay-prod" }
 numbers_used: []
 seo: true
@@ -10,7 +10,7 @@ seo: true
 
 Yes. The useful answer is not the word but the chain, because that is what tells you which steps nobody can interfere with and which step is done by a person.
 
-Short version: the calculation is automatic and cannot be re-run in anyone's favour; moving the money is a separate stage that can be handled by hand, with no promised deadline attached to it.
+Short version: the calculation is automatic and cannot be re-run in anyone's favour; moving the money is a separate stage handled by the team, with no promised deadline attached to it.
 
 ## The chain from a published clip to money
 
@@ -20,7 +20,7 @@ Short version: the calculation is automatic and cannot be re-run in anyone's fav
 4. **The counter is read.** The platform's independent counter reads the published view counter on the site the clip was posted on. Neither the buyer nor the clipper types that figure in, and neither can adjust it.
 5. **The formula runs.** `views / 1000 * rate`, capped at the contest's cap per submission, for every clip that cleared the threshold. Clearing the threshold puts the whole counter into the calculation, not just the part above it.
 6. **The result becomes an obligation.** The platform records a credit or a payout obligation with a status attached to it. That record is what you follow from here.
-7. **The obligation is fulfilled.** This is the manual step. Money reaching your hands depends on payout details and processing, and DareBay does not publish a settlement time for it.
+7. **The obligation is fulfilled.** This is the step done by people, not by code. Money reaching your hands depends on payout details and processing, and DareBay does not publish a settlement time for it.
 
 Steps 1 to 6 leave no room for a change of mind: the terms were fixed at creation, the figure came from outside both parties, and the arithmetic is fixed. Step 7 is the one where you are relying on the operator rather than on the mechanism, and pretending otherwise would be dishonest.
 
@@ -42,7 +42,7 @@ Two things not to do: do not create a second request for the same money, and do 
 
 ### How long does a payout take?
 
-There is no published figure, because fulfilment can be processed by hand and DareBay would rather say so than invent an SLA. What does not depend on timing: the wallet-backed budget was locked before you started, and the recorded calculation cannot be revised in anyone's favour after the fact.
+There is no published figure, because fulfilment is done by the team, and DareBay would rather say so than invent an SLA. What does not depend on timing: the wallet-backed budget was locked before you started, and the recorded calculation cannot be revised in anyone's favour after the fact.
 
 ### What happens to my clip if it is flagged?
 

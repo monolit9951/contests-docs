@@ -11,7 +11,7 @@ A reward on DareBay is one of two things - **money** or **an item** - and the co
 method it is delivered through. This page is the catalogue: what you can put up, how balances and
 funding modes work, and what happens at the end. The chain itself is short: the budget is recorded
 when the contest publishes, the result is confirmed, and a credit or payout obligation gets a
-status. Moving the money is a separate stage that can be processed by hand.
+status. Moving the money is a separate stage done by the team.
 
 ## Where it works
 
@@ -67,7 +67,7 @@ carry no fee.
 
 Creating a contest and topping up its budget currently carry no fee. Entry is
 free. After a reward is credited, withdrawing an available balance is a separate
-request with a fee, minimum and manual processing. See [current fees](/en/help/what-commission).
+request with a fee, minimum and processing by the team. See [current fees](/en/help/what-commission).
 
 ## Paying the winners
 
@@ -79,7 +79,7 @@ The contest is over, the result is confirmed:
 - **Items and gifts**: both sides get a notification, and the organizer hands the
   reward over within the agreed time.
 
-The amount follows an independently counted result. Fulfilment can be processed by hand and no
+The amount follows an independently counted result. Fulfilment is done by the team and no
 settlement date is promised: follow the status and payout details in DareBay, and contact
 support@darebay.com if it stops moving.
 

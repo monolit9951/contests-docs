@@ -42,7 +42,7 @@ The platform's independent counter reads the published view counter on the site 
 
 ### 7. The formula determines each amount
 
-The platform records each obligation using `views / 1000 * rate`. Submissions below the threshold take no part, and submissions above the cap receive the cap. Payout fulfilment then runs manually through payout details and statuses; an automatic transfer immediately after counting is not promised.
+The platform records each obligation using `views / 1000 * rate`. Submissions below the threshold take no part, and submissions above the cap receive the cap. Payout fulfilment then runs through payout details and statuses as a separate step by the team; a transfer immediately after counting is not promised.
 
 ### 8. The unearned budget comes back
 

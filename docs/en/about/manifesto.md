@@ -52,7 +52,7 @@ and the same product. Come in whichever way suits you, the cycle is the same.
 - **Bold creators deserve serious rewards.** You set the task and the price.
   A contest can define money (by card, bank transfer or wallet), an item,
   Telegram Stars or a gift. The method is fixed in the contest, while fulfilment
-  through payout details and statuses can be manual.
+  through payout details and statuses is done by the team.
 - **Winners are chosen by a rule fixed in advance.** Four ways: a community vote,
   the buyer's own call, a seeded draw among eligible submissions, or an
   [independent count of the views](/en/earnings/how-pay-per-view-works).
@@ -85,7 +85,7 @@ Break the rules and you are out. No warnings.
    before confirmation; contest creation, store purchases and withdrawals are distinct.
 2. **[The winner's obligation stays recorded](/en/about/payout-guarantee).** The budget
    is assigned to the contest, the result is confirmed, and a credit or payout
-   obligation receives a status. Fulfilment can be manual.
+   obligation receives a status. Fulfilment is done by the team.
 3. **Disputes are read by a human.** A stuffed vote, a set-up contest: we look
    into every report ourselves and answer it. We will not promise in advance
    what the answer will be, because a promise to reverse any result on request
@@ -100,7 +100,7 @@ the platform calculates the result and stores a credit or payout obligation. In 
 wallet-backed contest the unspent remainder returns to the organizer, because the
 platform was holding it; where no pool was deposited there is nothing to return.
 Moving money is a separate stage that follows payout details and statuses, can be
-processed by hand, and carries no settlement deadline from us.
+handled by the team, and carries no settlement deadline from us.
 
 First you choose what you are putting up: money or an item. A contest can define
 a card, bank transfer, USDT on TON, Telegram Stars, a gift or an item. This is a

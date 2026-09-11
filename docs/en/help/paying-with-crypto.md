@@ -38,7 +38,7 @@ What exactly protects the payout and why it works without a blockchain is covere
 
 ## Do you have to pay with crypto
 
-No. The terms of a contest can name a card, a bank transfer, Telegram Stars, a Telegram gift or an item. Those are reward methods of that particular contest, not withdrawal rails for the balance: the withdrawal wizard offers USDT to an external wallet and Telegram Stars, and the request is processed manually.
+No. The terms of a contest can name a card, a bank transfer, Telegram Stars, a Telegram gift or an item. Those are reward methods of that particular contest, not withdrawal rails for the balance: the withdrawal wizard offers USDT to an external wallet and Telegram Stars, and the team handles the request.
 
 ---
 

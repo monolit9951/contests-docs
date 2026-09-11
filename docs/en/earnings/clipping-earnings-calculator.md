@@ -13,7 +13,7 @@ hero:
     - "<b>One formula:</b> views / 1,000 × rate, never above the cap per clip. Open tasks pay $1 to $2 per 1,000 views."
     - "<b>The 2,000-view threshold is a gate, not a deduction:</b> a clip below it earns nothing, a clip above it is paid from the first view."
     - "<b>The cap is $100 per clip,</b> so ten clips at 50,000 views bring more than one clip at a million."
-    - "<b>You take home a tenth less:</b> withdrawal requests start at 10 USDT, the fee is 10%, processing is manual."
+    - "<b>You take home a tenth less:</b> withdrawal requests start at 10 USDT, the fee is 10%, the team handles processing."
 cta:
   title: "Done the maths? Now take a brief"
   lede: "Rate, threshold and cap are printed on every open task card. No followers, no application: post the clip, send the link, the platform counts the views."
@@ -57,7 +57,7 @@ This is the arithmetic of the formula, not a forecast: a real month is made of t
 
 ## How to get paid
 
-Accruals on approved clips build up in your DareBay wallet, and there are two steps between them and money in hand. First, the "Claim now" button on the task card: once a clip is approved, it locks in what has been credited so far, and the clip stops earning in that task; fresh accruals mature for 24 hours, then the button unlocks by itself. Second, a withdrawal request: the minimum request is 10 USDT, the fee is 10% of the requested amount, processing is manual, and a personal rate may apply, which the form shows before you confirm. The money arrives as USDT to a wallet on the TON network or as Telegram Stars.
+Accruals on approved clips build up in your DareBay wallet, and there are two steps between them and money in hand. First, the "Claim now" button on the task card: once a clip is approved, it locks in what has been credited so far, and the clip stops earning in that task; fresh accruals mature for 24 hours, then the button unlocks by itself. Second, a withdrawal request: the minimum request is 10 USDT, the fee is 10% of the requested amount, the team handles processing, and a personal rate may apply, which the form shows before you confirm. The money arrives as USDT to a wallet on the TON network or as Telegram Stars.
 
 The inputs are covered in [how much clipping pays](/en/earnings/how-much-clipping-pays); the charges in [what commission DareBay charges](/en/help/what-commission) and [DareBay withdrawals](/en/help/darebay-withdrawals). For other platforms' rate, threshold and cap, see [the best clipping platforms](/en/earnings/best-clipping-platforms) or the fact sheet [DareBay at a glance](/en/about/darebay-at-a-glance).
 

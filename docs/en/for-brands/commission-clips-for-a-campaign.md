@@ -19,7 +19,7 @@ The submitted link is what enters a video into the contest - nothing is imported
 view figure is read from the published view counter on the site each video went out on. Amounts for
 submissions above the threshold are calculated by formula and recorded as credits or obligations,
 and in the wallet-backed mode the unearned remainder returns to your balance; fulfilment can be
-processed by hand. The full mechanic step by step: [how pay-per-view works](/en/earnings/how-pay-per-view-works).
+handled by the team. The full mechanic step by step: [how pay-per-view works](/en/earnings/how-pay-per-view-works).
 
 ## The parameters the buyer sets
 
@@ -60,14 +60,14 @@ DareBay works as an intermediary and guarantor between the buyer and the clipper
 
 You also keep a lever of your own: during the selection window you reject work that does not meet
 the task, and a rejected submission is paid nothing. Each creator's amount is recorded as an
-auditable obligation, and fulfilment follows payout details and statuses and can be manual.
+auditable obligation, and fulfilment follows payout details and statuses and is done by the team.
 
 ## Reach and access
 
 Many Western UGC platforms restrict registration or payment rails for creators in Russia and the
 CIS. DareBay is open across the region and runs in English. A contest defines its reward method:
 USDT on TON, a card, bank transfer, Telegram Stars, a gift or an item. Fulfilment follows the
-available payout details and statuses and can be manual.
+available payout details and statuses and is done by the team.
 
 ## Frequently asked questions
 

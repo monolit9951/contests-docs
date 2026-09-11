@@ -49,7 +49,7 @@ Whop's terms take 10% of CPM payouts and its FAQ describes tiers from 25% down t
 
 ## Question 6. What is the minimum payout, and how fast is it?
 
-Whop has no minimum; a clip earns for 7 days after approval plus a 3-day hold. Vyro has a $10 minimum and pays once every 7 days after the campaign ends. Prime Oracles has a $5 minimum in USDT. Klipni has no minimum and pays within 5 business days. DareBay takes requests from 10 USDT, processed manually. Clipping.net and Vues name no minimum.
+Whop has no minimum; a clip earns for 7 days after approval plus a 3-day hold. Vyro has a $10 minimum and pays once every 7 days after the campaign ends. Prime Oracles has a $5 minimum in USDT. Klipni has no minimum and pays within 5 business days. DareBay takes requests from 10 USDT; the platform handles the rest. Clipping.net and Vues name no minimum.
 
 ## Question 7. How do they pay?
 

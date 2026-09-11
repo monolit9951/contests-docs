@@ -45,7 +45,7 @@ Two kinds of contest exist. In a **wallet-backed contest** the organizer's budge
 
 Every task card fixes three numbers before you start: the rate per 1,000 counted views, the view threshold a clip has to clear, and the cap on what one clip can earn. Open contests currently pay from $1.00 to $2.00 per 1,000 views, the typical threshold is 2,000 views, and the typical cap per submission is $100, with the largest campaigns going up to $500. Once a contest is live these terms are not lowered.
 
-Views are read from the public counter of the published video by the platform, not typed in by either side. A clip with suspicious dynamics goes on hold for a manual check. After the count, the amount is credited to your DareBay balance; withdrawing that balance takes a request of at least 10 USDT, carries a 10% fee, and is processed manually. Payout rails are USDT on the TON network and Telegram Stars; a contest can additionally name a card, a bank transfer or a gift as its reward method.
+Views are read from the public counter of the published video by the platform, not typed in by either side. A clip with suspicious dynamics goes on hold for a manual check. After the count, the amount is credited to your DareBay balance; withdrawing that balance takes a request of at least 10 USDT and carries a 10% fee; once you submit it, the platform handles the check and the transfer. Payout rails are USDT on the TON network and Telegram Stars; a contest can additionally name a card, a bank transfer or a gift as its reward method.
 
 ## Who is behind it
 

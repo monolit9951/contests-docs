@@ -94,7 +94,7 @@ You get a notification, and the platform records what you are owed with a status
 In a wallet-backed contest that money left the organizer's balance back when the contest was
 created, so nothing depends on their goodwill at this point. Fulfilment itself can be processed by
 hand and carries no promised date. Entry is free, while [withdrawal](/en/help/darebay-withdrawals)
-is a separate request with a minimum, a fee and manual processing; the form shows the method
+is a separate request with a minimum, a fee and processing by the team; the form shows the method
 available to you. For an **ITEM** prize the organizer gets in touch to arrange the handover.
 
 ## 6. If you do not win

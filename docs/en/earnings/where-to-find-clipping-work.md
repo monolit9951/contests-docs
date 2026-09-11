@@ -74,7 +74,7 @@ How the counting is built, what the threshold does and when the money arrives is
 
 ## Taking work across borders
 
-Signing up is open, and taking a brief needs no agency, no manager and no contract with a brand: a contest is taken off the board on terms that are already fixed. The reward method is set by the contest terms, and the balance-withdrawal wizard shows the options available to you. Requests are processed by hand, so there are no promises of a transfer "within minutes" here, and there will not be.
+Signing up is open, and taking a brief needs no agency, no manager and no contract with a brand: a contest is taken off the board on terms that are already fixed. The reward method is set by the contest terms, and the balance-withdrawal wizard shows the options available to you. Requests are handled by the team, so there are no promises of a transfer "within minutes" here, and there will not be.
 
 ## Compare platforms and check the figures
 

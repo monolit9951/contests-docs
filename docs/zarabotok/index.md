@@ -40,7 +40,9 @@ numbers_used: [ppv_cpm_min, ppv_cpm_median, ppv_cpm_max, ppv_min_views_threshold
 ## Ниши: стримеры, площадки, фильмы
 
 - [Сколько платят за нарезки стримеров](/zarabotok/skolko-platyat-za-narezki-strimerov) - что режут из эфира, сколько это стоит по ставке конкурса и какие права на исходник даёт само задание.
-- [Сколько платят за просмотры в ТикТок](/zarabotok/skolko-platyat-za-prosmotry-v-tiktok) - партнёрская программа площадки против конкурса у посредника: требования TikTok и YouTube и шесть осей сравнения.
+- [Монетизация TikTok в России](/zarabotok/skolko-platyat-za-prosmotry-v-tiktok) - программа закрыта для России, что платит вместо; партнёрская программа площадки против конкурса у посредника: требования TikTok и YouTube и шесть осей сравнения.
+- [Заработок на YouTube Shorts в России](/zarabotok/zarabotok-na-narezkah-v-youtube) - партнёрка закрыта, счётчик Shorts, подача работы.
+- [Заработок на рилс в Instagram](/zarabotok/zarabotok-na-reels-instagram) - что считает счётчик рилс и чего Instagram не меняет в задании.
 - [Заработок на нарезках фильмов](/zarabotok/zarabotok-na-narezkah-filmov) - почему «правило 10 секунд» не существует, чем клейм отличается от страйка и почему снятый ролик обнуляет выплату за работу.
 - [Заработок на нарезках в X](/zarabotok/zarabotok-na-narezkah-v-x-twitter) - как платит сама площадка и как тот же ролик зарабатывает в заданиях за просмотры.
 - [Заработок на VK Клипах](/zarabotok/zarabotok-na-vk-klipah) - программа VK для авторов и связка с заданиями на TikTok, Reels и Shorts.

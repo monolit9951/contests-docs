@@ -3,14 +3,14 @@
 // Markdown H1 is stripped by the covered-heading rule (dist gate: one h1).
 // Two shapes: comparison pages carry `hero.takeaways` and get the two-column
 // hero; every other page gets the compact one: section breadcrumb, title,
-// the description as lede, the product CTA.
+// the description as lede, the byline, the CTA into the open-task catalogue.
 import { useData } from 'vitepress'
 import { computed } from 'vue'
 import type { DareBayThemeConfig } from '../../chrome'
 import { LANDING_COPY, localeOf } from './copy'
 import { DATA } from './platforms'
 
-const { frontmatter, theme, lang } = useData<DareBayThemeConfig>()
+const { frontmatter, theme, lang, page } = useData<DareBayThemeConfig>()
 const copy = computed(() => LANDING_COPY[localeOf(lang.value)])
 const hero = computed(() => (frontmatter.value.hero ?? {}) as {
   kicker?: string; lede?: string; takeaways?: string[]; updated?: string; primary?: string
@@ -29,6 +29,13 @@ const lede = computed(() => hero.value.lede ?? String(frontmatter.value.descript
 // pages the button read "See the fields" and led nowhere, because their section is <LFacts />
 // (`#facts`). The dist gate `anchor-target` now fails the build on any such dead jump.
 const secondaryHref = computed(() => hero.value.secondaryHref ?? '#compare')
+// The byline names who signs the corpus. Hubs are directories, legal texts carry the
+// operator's name in their own body and no Article node, and the author page would
+// only link to itself.
+const currentPath = computed(() => `/${page.value.relativePath.replace(/\.md$/, '').replace(/(^|\/)index$/, '$1')}`)
+const showByline = computed(
+  () => Boolean(theme.value.authorLink) && !isHub.value && hub.value?.id !== 'legal' && currentPath.value !== theme.value.authorLink?.path
+)
 </script>
 
 <template>
@@ -39,11 +46,12 @@ const secondaryHref = computed(() => hero.value.secondaryHref ?? '#compare')
           <a v-if="crumbHref" class="lp-kicker" :href="crumbHref">{{ kicker }}</a>
           <span v-else-if="kicker" class="lp-kicker">{{ kicker }}</span>
           <span v-if="updated" class="lp-updated">{{ copy.updated }} <b><time :datetime="updated">{{ updated }}</time></b></span>
+          <a v-if="showByline && theme.authorLink" class="lp-updated lp-byline" :href="theme.authorLink.path" rel="author">{{ copy.byline }} <b>{{ theme.authorLink.name }}</b></a>
         </div>
         <h1>{{ title }}</h1>
         <p v-if="lede" class="lp-lede">{{ lede }}</p>
         <div class="lp-hero-ctas">
-          <a class="lp-btn lp-btn-primary" :href="theme.darebayCta.productUrl" target="_self">{{ hero.primary ?? copy.ctaPrimary }}</a>
+          <a class="lp-btn lp-btn-primary" :href="theme.darebayCta.tasksUrl" target="_self">{{ hero.primary ?? copy.ctaPrimary }}</a>
           <a v-if="hero.secondary" class="lp-btn lp-btn-ghost" :href="secondaryHref">{{ hero.secondary }}</a>
         </div>
       </div>

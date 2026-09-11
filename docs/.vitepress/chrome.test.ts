@@ -7,6 +7,9 @@ const CASES: {
   locale: Locale
   localeKey: 'root' | 'ua' | 'en'
   productUrl: string
+  tasksUrl: string
+  authorName: string
+  authorPath: string
   docsHome: string
   outline: string
   previous: string
@@ -18,6 +21,9 @@ const CASES: {
     locale: 'ru',
     localeKey: 'root',
     productUrl: 'https://darebay.com/',
+    tasksUrl: 'https://darebay.com/tasks',
+    authorName: 'Руслан Бей',
+    authorPath: '/o-proekte/kto-pishet-i-otkuda-tsifry',
     docsHome: '/zarabotok/',
     outline: 'На этой странице',
     previous: 'Предыдущая страница',
@@ -29,6 +35,9 @@ const CASES: {
     locale: 'uk',
     localeKey: 'ua',
     productUrl: 'https://darebay.com/ua',
+    tasksUrl: 'https://darebay.com/ua/tasks',
+    authorName: 'Руслан Бей',
+    authorPath: '/ua/pro-proekt/khto-pyshe-i-zvidky-tsyfry',
     docsHome: '/ua/zarobitok/',
     outline: 'На цій сторінці',
     previous: 'Попередня сторінка',
@@ -40,6 +49,9 @@ const CASES: {
     locale: 'en',
     localeKey: 'en',
     productUrl: 'https://darebay.com/en',
+    tasksUrl: 'https://darebay.com/en/tasks',
+    authorName: 'Ruslan Bey',
+    authorPath: '/en/about/who-writes-darebay-guides',
     docsHome: '/en/earnings/',
     outline: 'On this page',
     previous: 'Previous page',
@@ -57,6 +69,8 @@ describe.each(CASES)('$locale shared chrome', (expected) => {
     expect(theme.nav?.at(-1)).toMatchObject({ link: expected.productUrl })
     expect(theme.footer?.message).toContain(`href="${expected.productUrl}"`)
     expect(theme.darebayCta.productUrl).toBe(expected.productUrl)
+    expect(theme.darebayCta.tasksUrl).toBe(expected.tasksUrl)
+    expect(theme.authorLink).toEqual({ name: expected.authorName, path: expected.authorPath })
   })
 
   it('uses native locale theme config for the logo and visible labels', () => {

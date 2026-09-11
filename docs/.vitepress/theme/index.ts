@@ -42,7 +42,7 @@ const PlatformCta = defineComponent({
           h('p', { class: 'db-cta-lede' }, cta.lede),
         ]),
         h('div', { class: 'db-cta-actions' }, [
-          h('a', { class: 'db-cta-btn db-cta-btn-primary', href: cta.productUrl, target: '_self' }, cta.productLabel),
+          h('a', { class: 'db-cta-btn db-cta-btn-primary', href: cta.tasksUrl, target: '_self' }, cta.productLabel),
           h(
             'a',
             {

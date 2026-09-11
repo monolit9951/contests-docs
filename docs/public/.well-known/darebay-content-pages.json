@@ -816,6 +816,24 @@
         "uk": "vyro-ohliad-platformy",
         "en": "vyro-review"
       }
+    },
+    {
+      "id": "about-author",
+      "hub": "about",
+      "slugs": {
+        "ru": "kto-pishet-i-otkuda-tsifry",
+        "uk": "khto-pyshe-i-zvidky-tsyfry",
+        "en": "who-writes-darebay-guides"
+      }
+    },
+    {
+      "id": "about-editorial-policy",
+      "hub": "about",
+      "slugs": {
+        "ru": "redaktsionnaya-politika",
+        "uk": "redaktsiina-polityka",
+        "en": "editorial-policy"
+      }
     }
   ]
 }

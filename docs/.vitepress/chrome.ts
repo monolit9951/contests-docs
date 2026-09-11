@@ -6,13 +6,23 @@ export interface DareBayCtaConfig {
   readonly lede: string
   readonly productLabel: string
   readonly productUrl: string
+  /** Open-task catalogue in the page's language: the primary CTA target. */
+  readonly tasksUrl: string
   readonly telegramLabel: string
   readonly telegramUrl: string
+}
+
+/** The byline every article carries: who signs the corpus and where that page is. */
+export interface AuthorLink {
+  readonly name: string
+  readonly path: string
 }
 
 /** Default-theme config plus the one custom block rendered by theme/index.ts. */
 export interface DareBayThemeConfig extends DefaultTheme.Config {
   readonly darebayCta: DareBayCtaConfig
+  /** Null only while the author page is missing from the manifest in this locale. */
+  readonly authorLink: AuthorLink | null
 }
 
 interface ChromeCopy {
@@ -29,7 +39,7 @@ interface ChromeCopy {
   readonly previousPage: string
   readonly nextPage: string
   readonly telegramAriaLabel: string
-  readonly cta: Omit<DareBayCtaConfig, 'productUrl' | 'telegramUrl'>
+  readonly cta: Omit<DareBayCtaConfig, 'productUrl' | 'tasksUrl' | 'telegramUrl'>
 }
 
 /**

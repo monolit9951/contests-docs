@@ -99,6 +99,7 @@
 .lp-hero-meta { display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; margin-bottom: 18px; }
 .lp-updated { font-size: 13px; color: var(--lp-muted); display: inline-flex; gap: 8px; align-items: center; }
 .lp-updated b { color: var(--lp-text); font-weight: 700; }
+.lp-hero-meta a.lp-byline:hover b { text-decoration: underline; text-underline-offset: 3px; }
 .lp-hero h1 { font-family: var(--lp-display); font-weight: 700; font-size: clamp(2rem, 4.6vw, 3.9rem); line-height: 1.06; letter-spacing: -0.02em; margin: 0 0 22px; text-wrap: balance; }
 .lp-hero h1 em { font-style: normal; color: var(--lp-accent); }
 .lp-lede { font-size: clamp(1.05rem, 1.4vw, 1.25rem); line-height: 1.55; color: var(--lp-muted); max-width: 62ch; margin: 0 0 28px; }

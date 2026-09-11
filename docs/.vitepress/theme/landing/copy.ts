@@ -4,6 +4,8 @@ import type { Locale } from '../../registry'
 
 export interface LandingCopy {
   updated: string
+  /** Label before the author's name in the hero byline. */
+  byline: string
   snapshotNote: string
   keyTakeaways: string
   compareTitle: string
@@ -94,6 +96,7 @@ const columns = {
 export const LANDING_COPY: Record<Locale, LandingCopy> = {
   en: {
     updated: 'Updated',
+    byline: 'By',
     snapshotNote: 'Competitor figures are taken from each platform’s own public pages on the date shown; DareBay figures come from live platform data.',
     keyTakeaways: 'Key takeaways',
     compareTitle: 'Side by side',
@@ -113,7 +116,7 @@ export const LANDING_COPY: Record<Locale, LandingCopy> = {
     calcNote: 'Formula: rate × views ÷ 1,000, never above the cap. Rates and caps come from the live open contests.',
     ctaTitle: 'Take a brief and get paid per view',
     ctaLede: 'No followers, no application. The budget is locked on the platform before you start; views are counted independently.',
-    ctaPrimary: 'Open DareBay →',
+    ctaPrimary: 'Open the tasks →',
     ctaSecondary: 'Telegram channel',
     columns: columns.en,
     cis: { yes: 'yes', no: 'no', partial: 'partly', unknown: 'not stated' },
@@ -140,6 +143,7 @@ export const LANDING_COPY: Record<Locale, LandingCopy> = {
   },
   ru: {
     updated: 'Обновлено',
+    byline: 'Автор:',
     snapshotNote: 'Цифры площадок сняты с их публичных страниц в указанную дату; цифры DareBay берутся из живых данных платформы.',
     keyTakeaways: 'Главное',
     compareTitle: 'Площадки рядом',
@@ -159,7 +163,7 @@ export const LANDING_COPY: Record<Locale, LandingCopy> = {
     calcNote: 'Формула: ставка × просмотры ÷ 1000, но не выше потолка. Ставки и потолки взяты из открытых конкурсов.',
     ctaTitle: 'Возьми задание и получай за просмотры',
     ctaLede: 'Подписчики и заявка не нужны. Бюджет лежит на платформе до старта, просмотры считаются независимо.',
-    ctaPrimary: 'Открыть DareBay →',
+    ctaPrimary: 'Открыть задания →',
     ctaSecondary: 'Канал в Telegram',
     columns: columns.ru,
     cis: { yes: 'да', no: 'нет', partial: 'частично', unknown: 'не указано' },
@@ -186,6 +190,7 @@ export const LANDING_COPY: Record<Locale, LandingCopy> = {
   },
   uk: {
     updated: 'Оновлено',
+    byline: 'Автор:',
     snapshotNote: 'Цифри майданчиків зняті з їхніх публічних сторінок у вказану дату; цифри DareBay беруться з живих даних платформи.',
     keyTakeaways: 'Головне',
     compareTitle: 'Майданчики поруч',
@@ -205,7 +210,7 @@ export const LANDING_COPY: Record<Locale, LandingCopy> = {
     calcNote: 'Формула: ставка × перегляди ÷ 1000, але не вище стелі. Ставки та стелі взяті з відкритих конкурсів.',
     ctaTitle: 'Візьми завдання й отримуй за перегляди',
     ctaLede: 'Підписники та заявка не потрібні. Бюджет лежить на платформі до старту, перегляди рахуються незалежно.',
-    ctaPrimary: 'Відкрити DareBay →',
+    ctaPrimary: 'Відкрити завдання →',
     ctaSecondary: 'Канал у Telegram',
     columns: columns.uk,
     cis: { yes: 'так', no: 'ні', partial: 'частково', unknown: 'не вказано' },

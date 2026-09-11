@@ -67,6 +67,10 @@
     "published": "2026-08-03T17:55:09Z",
     "modified": "2026-08-16T00:49:46Z"
   },
+  "en/about/editorial-policy.md": {
+    "published": "2026-09-11T19:25:42Z",
+    "modified": "2026-09-11T19:25:42Z"
+  },
   "en/about/index.md": {
     "published": "2026-08-03T14:23:10Z",
     "modified": "2026-08-16T00:49:46Z"
@@ -86,6 +90,10 @@
   "en/about/payout-guarantee.md": {
     "published": "2026-08-03T17:55:09Z",
     "modified": "2026-09-04T20:08:45Z"
+  },
+  "en/about/who-writes-darebay-guides.md": {
+    "published": "2026-09-11T19:25:42Z",
+    "modified": "2026-09-11T19:25:42Z"
   },
   "en/earnings/account-warm-up-and-shadowban.md": {
     "published": "2026-09-05T11:38:08Z",
@@ -249,7 +257,7 @@
   },
   "en/help/darebay-withdrawals.md": {
     "published": "2026-08-03T17:55:09Z",
-    "modified": "2026-08-23T02:37:00+02:00"
+    "modified": "2026-08-04T19:10:51Z"
   },
   "en/help/how-winners-are-chosen.md": {
     "published": "2026-08-03T17:55:09Z",
@@ -289,7 +297,7 @@
   },
   "en/help/verification.md": {
     "published": "2026-08-03T17:55:09Z",
-    "modified": "2026-08-16T09:44:05Z"
+    "modified": "2026-08-04T19:10:51Z"
   },
   "en/help/watch-vote-win.md": {
     "published": "2026-08-03T17:55:09Z",
@@ -297,7 +305,7 @@
   },
   "en/help/what-commission.md": {
     "published": "2026-08-03T17:55:09Z",
-    "modified": "2026-08-23T02:37:00+02:00"
+    "modified": "2026-08-16T00:49:46Z"
   },
   "en/help/your-first-contest.md": {
     "published": "2026-08-03T17:55:09Z",
@@ -355,9 +363,17 @@
     "published": "2026-08-03T10:42:28Z",
     "modified": "2026-08-16T00:49:46Z"
   },
+  "o-proekte/kto-pishet-i-otkuda-tsifry.md": {
+    "published": "2026-09-11T19:25:42Z",
+    "modified": "2026-09-11T19:25:42Z"
+  },
   "o-proekte/manifest.md": {
     "published": "2026-04-16T17:10:50Z",
     "modified": "2026-09-04T20:08:45Z"
+  },
+  "o-proekte/redaktsionnaya-politika.md": {
+    "published": "2026-09-11T19:25:42Z",
+    "modified": "2026-09-11T19:25:42Z"
   },
   "o-proekte/skam-v-klippinge-krasnye-flagi.md": {
     "published": "2026-09-04T20:08:45Z",
@@ -369,7 +385,7 @@
   },
   "pomoshch/darebay-vyvod-deneg.md": {
     "published": "2026-07-10T10:14:26+02:00",
-    "modified": "2026-08-23T02:37:00+02:00"
+    "modified": "2026-08-16T00:49:46Z"
   },
   "pomoshch/esli-nikto-ne-uchastvuet.md": {
     "published": "2026-04-16T17:38:37Z",
@@ -567,9 +583,17 @@
     "published": "2026-08-03T14:23:10Z",
     "modified": "2026-08-16T00:49:46Z"
   },
+  "ua/pro-proekt/khto-pyshe-i-zvidky-tsyfry.md": {
+    "published": "2026-09-11T19:25:42Z",
+    "modified": "2026-09-11T19:25:42Z"
+  },
   "ua/pro-proekt/manifest.md": {
     "published": "2026-08-03T17:55:09Z",
     "modified": "2026-09-04T20:08:45Z"
+  },
+  "ua/pro-proekt/redaktsiina-polityka.md": {
+    "published": "2026-09-11T19:25:42Z",
+    "modified": "2026-09-11T19:25:42Z"
   },
   "ua/pro-proekt/skam-u-klipinhu-chervoni-prapory.md": {
     "published": "2026-09-04T20:08:45Z",

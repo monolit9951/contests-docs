@@ -10,8 +10,10 @@
 
 - [О проекте DareBay](https://darebay.com/o-proekte/): Кто стоит за DareBay, как устроены деньги конкурса, откуда берутся цифры в этом разделе и куда написать, если цифра неверна.
 - [Гарантия выплат на DareBay - чем обеспечено обязательство](https://darebay.com/o-proekte/garantiya-vyplat): Два режима финансирования конкурса, где лежат деньги в каждом из них, что гарантия покрывает и чего не покрывает, куда уходит неизрасходованный бюджет.
+- [Кто пишет гайды DareBay и откуда в них цифры](https://darebay.com/o-proekte/kto-pishet-i-otkuda-tsifry): Кто отвечает за тексты о заработке на нарезках, откуда берутся ставки и пороги, как проверяются цифры других площадок и куда писать об ошибке.
 - [Манифест DareBay](https://darebay.com/o-proekte/manifest): Во что верит DareBay, чего не терпит и что обещает: результат вместо метрик, зафиксированные до старта условия и обязательство перед победителем.
 - [Отзывы о DareBay - и что проверить вместо них](https://darebay.com/o-proekte/darebay-otzyvy): Почему отзывов о молодой площадке почти нет и как за десять минут проверить DareBay самому: каталог конкурсов, карточка задания, форма вывода, лицо проекта.
+- [Редакционная политика раздела о заработке на нарезках](https://darebay.com/o-proekte/redaktsionnaya-politika): Правила раздела: одна страница на один вопрос, источник и дата у каждой цифры, чужие площадки по их документам, что не обещаем, как правим ошибки.
 - [Скам в клиппинге: девять красных флагов площадки для нарезок](https://darebay.com/o-proekte/skam-v-klippinge-krasnye-flagi): Клиппинг не развод, но площадки бывают разными. Девять красных флагов, проверка площадки за десять минут и что делать, если уже заплатил за «доступ».
 - [DareBay - развод или нет? Где здесь платишь ты](https://darebay.com/o-proekte/darebay-razvod-ili-net): Нет: участие бесплатное, комиссия конкурса 0%, платная операция одна - вывод баланса 10% внутри заявки, переводов от тебя нет. Плюс красные флаги мошенников.
 - [DareBay - это скам? Разбор по признакам](https://darebay.com/o-proekte/darebay-eto-skam): Прогон DareBay по шести признакам скам-площадки: предоплата, доход без работы, плавающие условия, чужая цифра результата. Плюс честный список слабых мест.
@@ -100,7 +102,9 @@
 - [Про проєкт DareBay](https://darebay.com/ua/pro-proekt/): Проєкт заснував Руслан Бей. Як влаштовані гаманцеві й ручні виплати та звідки беруться цифри в цьому розділі.
 - [Гарантія виплат на DareBay - що вона покриває, а що ні](https://darebay.com/ua/pro-proekt/harantiia-vyplat): Межі гарантії DareBay: заморожений гаманцевий бюджет і зафіксовані умови конкурсу покриті, строк виконання переказу й результат розбору холду - ні.
 - [Маніфест DareBay](https://darebay.com/ua/pro-proekt/manifest): Як ми проводимо активності, обираємо переможців і тримаємо все чесно.
+- [Редакційна політика розділу про заробіток на нарізках](https://darebay.com/ua/pro-proekt/redaktsiina-polityka): Правила розділу: одна сторінка на одне питання, джерело і дата в кожної цифри, чужі майданчики за їхніми документами, чого не обіцяємо, як правимо помилки.
 - [Скам у кліпінгу: дев'ять червоних прапорців для нарізчика](https://darebay.com/ua/pro-proekt/skam-u-klipinhu-chervoni-prapory): Кліпінг не розвод, але майданчики бувають різними. Дев'ять червоних прапорців, перевірка за десять хвилин і що робити, якщо вже заплатив за «доступ».
+- [Хто пише гайди DareBay і звідки в них цифри](https://darebay.com/ua/pro-proekt/khto-pyshe-i-zvidky-tsyfry): Хто відповідає за тексти про заробіток на нарізках, звідки беруться ставки і пороги, як перевіряються цифри інших майданчиків і куди писати про помилку.
 - [DareBay - відгуки і те, що можна перевірити замість них](https://darebay.com/ua/pro-proekt/darebay-vidhuky): Чому ми не публікуємо відгуки про DareBay і що варто перевірити самому: кому підходить майданчик, які параметри видно наперед і які ролі на ньому є.
 - [DareBay - розвод чи ні? Комісії, платежі й червоні прапорці](https://darebay.com/ua/pro-proekt/darebay-rozvod-chy-ni): Ні: окремого переказу в продукті не існує, участь безкоштовна, платне лише виведення з комісією всередині заявки. Як відрізнити справжню заявку від шахрайства.
 - [DareBay - скам чи ні? Розбір механіки посередника](https://darebay.com/ua/pro-proekt/darebay-tse-skam): Чим DareBay відрізняється від шахрайського майданчика: що можна перевірити до подачі роботи, які ознаки скаму тут не працюють і де майданчик не дає гарантій.
@@ -187,9 +191,11 @@ Guides to content tasks, participation, validated views and payouts on DareBay.
 - [DareBay payout guarantee: what it covers and where it stops](https://darebay.com/en/about/payout-guarantee): DareBay guarantees a locked wallet-backed budget, fixed terms and a recorded calculation, not views, a payout date or a manual-payout organizer.
 - [DareBay reviews - what to expect instead of testimonials](https://darebay.com/en/about/darebay-reviews): Who actually uses DareBay, what a contest looks like from each side, and what the platform can and cannot promise - written out instead of collected as reviews.
 - [Does DareBay really pay? The chain from clip to money](https://darebay.com/en/about/does-darebay-really-pay): The full DareBay payout chain step by step - what is automatic, what is manual, where a submission can be put on hold, and what to do when a status stops moving.
+- [Editorial policy of the clipping earnings section](https://darebay.com/en/about/editorial-policy): Rules of this section: one page per question, a source and a date on every figure, other platforms from their own documents, no promises, how errors get fixed.
 - [Is DareBay a scam? Checking it against the fraud patterns](https://darebay.com/en/about/is-darebay-a-scam): DareBay checked against the standard tells of a fake earning platform - no entry fee, no unlock transfer, no income promises - plus the one part that really is weak.
 - [Is DareBay legit? The terms, the fees and who runs it](https://darebay.com/en/about/is-darebay-legit): Yes: contest terms are fixed on the card before you work, the contest fee is 0%, withdrawal costs 10% with a 10 USDT minimum, and a named operator runs it.
 - [The DareBay manifesto](https://darebay.com/en/about/manifesto): How we run activities, pick winners and keep everything honest.
+- [Who writes the DareBay guides and where the numbers come from](https://darebay.com/en/about/who-writes-darebay-guides): Who is responsible for the clipping guides, where rates and thresholds are read from, how other platforms' figures are checked, and where to report an error.
 
 ### Earnings
 

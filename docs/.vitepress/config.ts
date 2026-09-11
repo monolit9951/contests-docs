@@ -2,8 +2,8 @@ import { defineConfig } from 'vitepress'
 import { readFileSync, existsSync } from 'node:fs'
 import { join, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { productUrlForLocale, TELEGRAM } from './links'
-import { CHROME_COPY, type DareBayThemeConfig } from './chrome'
+import { productUrlForLocale, tasksUrlForLocale, TELEGRAM } from './links'
+import { CHROME_COPY, type AuthorLink, type DareBayThemeConfig } from './chrome'
 import { installCoveredHeadingRule } from './coveredHeading'
 import { installTableWrapRule } from './tableWrap'
 import PAGE_DATES from '../page-dates.json'
@@ -177,8 +177,10 @@ export const themeForLocale = (lang: Locale): DareBayThemeConfig => {
     darebayCta: {
       ...copy.cta,
       productUrl,
+      tasksUrl: tasksUrlForLocale(lang),
       telegramUrl: TELEGRAM,
     },
+    authorLink: authorLinkForLocale(lang),
   }
 }
 
@@ -252,12 +254,26 @@ const ORGANIZATION = {
 
 // The founder's name in the page's own script: Latin on English pages,
 // Cyrillic on Russian and Ukrainian, the other form as alternateName.
+const AUTHOR_NAME: Record<Locale, string> = { ru: 'Руслан Бей', uk: 'Руслан Бей', en: 'Ruslan Bey' }
+
+// The author page is a manifest entry like any other, so its address is derived
+// and the byline, the Person node and the sidebar can never point three ways.
+const authorPathForLocale = (language: Locale): string | null => {
+  const entry = PAGES.find((page) => page.id === 'about-author')
+  return entry ? pagePath(entry, language) : null
+}
+
+const authorLinkForLocale = (language: Locale): AuthorLink | null => {
+  const path = authorPathForLocale(language)
+  return path ? { name: AUTHOR_NAME[language], path } : null
+}
+
 const author = (language: Locale) => ({
   '@type': 'Person',
   '@id': AUTHOR_ID,
-  name: language === 'en' ? 'Ruslan Bey' : 'Руслан Бей',
+  name: AUTHOR_NAME[language],
   alternateName: language === 'en' ? 'Руслан Бей' : 'Ruslan Bey',
-  url: `${ENTITY_ORIGIN}/o-proekte/`,
+  url: `${ENTITY_ORIGIN}${authorPathForLocale(language) ?? '/o-proekte/'}`,
   sameAs: ['https://t.me/ruslanbwork'],
   jobTitle: 'Founder',
   worksFor: { '@id': ORG_ID },

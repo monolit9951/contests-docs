@@ -530,6 +530,9 @@ for (const canonical of new Set(appUrls)) {
 }
 
 // ---- 10. every language-switcher link is a live address --------------------
+// The switcher lives in the landing header (`.lp-lang`, theme/landing/LandingHeader.vue)
+// since the whole corpus moved onto the landing shell on 2026-09-03; the stock
+// VitePress `VPMenuLink` markup this gate first matched no longer exists on any page.
 //
 // The defect this exists for: VitePress builds the other locale's address by
 // swapping the PREFIX on the current path, and our docs slugs are translated on
@@ -546,7 +549,7 @@ for (const canonical of new Set(appUrls)) {
         const res = await body(url)
         if (res.status !== 200) continue
         const links = [
-            ...res.text.matchAll(/class="VPMenuLink"[^>]*>\s*<a class="VPLink link" href="([^"]+)"/g),
+            ...(res.text.match(/class="lp-lang"[\s\S]*?<\/div>/)?.[0] ?? '').matchAll(/<a [^>]*href="([^"]+)"/g),
         ].map((m) => m[1])
         for (const href of new Set(links)) {
             checked += 1

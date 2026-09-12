@@ -27,15 +27,15 @@ seo: true
 landing: true
 hero:
   kicker: "Review · 2026"
-  lede: "A clipper's read of Whop Content Rewards before you spend a weekend on it: how a campaign is built, what the numbers on a card mean, how much of the rate reaches your wallet and when. Every figure comes from Whop's own pages and carries its date; where Whop cannot pay you, the platforms that can are named."
+  lede: "Before you cut for Whop Content Rewards, find out how much of the rate actually reaches you and when. Here is how a campaign is built, what every number on a card means, the creator fee, the payout timing and the countries Whop will not pay. Every figure is read off Whop's own pages and dated, and for the closed countries the platforms without a country list are named."
   takeaways:
-    - "<b>Whop is the biggest board of clipping campaigns.</b> Dozens of live campaigns, a budget of up to $238,000 on one card <!-- source: https://contentrewards.com/discover 2026-09-05 -->, rates of $0.50–$5 per 1,000 views <!-- source: https://contentrewards.com/discover 2026-09-02 -->."
-    - "<b>The rate on the card is not the money in hand.</b> The terms take 10% of CPM payouts <!-- source: https://contentrewards.com/terms 2026-09-05 -->, the creator FAQ shows tiers from 25% down to 7% <!-- source: https://contentrewards.com/creators 2026-09-02 -->, and a clip below the campaign's minimum payout per video never reaches review."
-    - "<b>Money lands about ten days after approval.</b> A clip earns for 7 days, then a 3-day hold <!-- source: https://contentrewards.com/creators 2026-09-02 -->; withdrawals go to a bank, PayPal, a mobile wallet or crypto in 200+ countries."
-    - "<b>Russia, Belarus and Ukraine are on Whop's sanctioned list</b> <!-- source: https://docs.whop.com/trust-and-safety/trust-safety-overview/sanctioned-countries 2026-09-02 -->: no account, no payout. For those countries there are platforms with no country list, DareBay among them."
+    - "<b>Whop is the biggest board of clipping campaigns, and there is plenty to pick from.</b> Dozens of live campaigns, a budget of up to $238,000 on one card <!-- source: https://contentrewards.com/discover 2026-09-05 -->, rates of $0.50–$5 per 1,000 views <!-- source: https://contentrewards.com/discover 2026-09-02 -->."
+    - "<b>The rate on the card is not the money in hand, so do the sum first.</b> The terms take 10% of CPM payouts <!-- source: https://contentrewards.com/terms 2026-09-05 -->, the creator FAQ shows tiers from 25% down to 7% <!-- source: https://contentrewards.com/creators 2026-09-02 -->, and a clip below the campaign's minimum payout per video never reaches review."
+    - "<b>Expect the money about ten days after approval.</b> A clip earns for 7 days, then sits through a 3-day hold <!-- source: https://contentrewards.com/creators 2026-09-02 -->; withdrawals go to a bank, PayPal, a mobile wallet or crypto in 200+ countries."
+    - "<b>Russia, Belarus and Ukraine sit on Whop's sanctioned list</b> <!-- source: https://docs.whop.com/trust-and-safety/trust-safety-overview/sanctioned-countries 2026-09-02 -->: no account, no payout, and a VPN changes nothing. For those countries there are platforms with no country list, DareBay among them."
 cta:
-  title: "Whop cannot pay your country? There are tasks with no country list"
-  lede: "DareBay pays worldwide in USDT to your wallet: rate, threshold and cap are printed on the task card, and you need neither followers nor an application."
+  title: "Whop cannot pay your country? DareBay has no country list"
+  lede: "DareBay pays worldwide in USDT to your wallet, and every task card states the pay rate, the view threshold and the ceiling on a single clip before you submit. Nobody screens your follower count and nobody reviews an application, so the weekend you spend editing is not spent on a maybe."
 ---
 ## What Content Rewards is and how a campaign is built
 

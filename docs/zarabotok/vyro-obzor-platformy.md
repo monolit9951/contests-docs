@@ -26,15 +26,15 @@ seo: true
 landing: true
 hero:
   kicker: "Обзор площадки · 2026"
-  lede: "Vyro это площадка нарезок компании MrBeast, построенная Beast Industries; кампании здесь запускают сам MrBeast, Mark Rober и крупные студии. Ниже то, что реально доходит до нарезчика: три числа, которые решают доход, как выглядят кампании, какие страны закрыты, и одна таблица, где Vyro стоит рядом с DareBay."
+  lede: "Vyro это площадка нарезок компании MrBeast, построенная Beast Industries, и кампании здесь запускают сам MrBeast, Mark Rober и крупные студии. Громкие имена не отменяют вопроса, что реально дойдёт до тебя: ниже три числа, которые решают доход, как устроены кампании, какие страны закрыты, и одна таблица, где Vyro стоит рядом с DareBay."
   takeaways:
     - "<b>Порог 5000 просмотров считается на каждый пост</b> <!-- source: https://vyro.com/help/earnings-and-payments/how-many-views-do-i-need-before-i-can-start-earning 2026-09-05 -->: ролик на 4900 просмотров не приносит ничего, сколько бы ни набрала кампания в сумме."
-    - "<b>Ставки в живых кампаниях $1–$2 за 1000 просмотров</b> <!-- source: https://vyro.com/campaigns 2026-09-02 -->, на карточке они показаны за 1 млн; один ролик оплачивается максимум за 1 млн засчитанных просмотров <!-- source: https://vyro.com/help/earnings-and-payments/whats-the-most-i-can-earn-per-clip 2026-09-05 -->."
-    - "<b>70 стран и территорий закрыты платёжным провайдером</b> <!-- source: https://vyro.com/help/getting-started/what-countries-are-supported 2026-09-05 -->: Россия, Беларусь, Украина, Узбекистан, Армения, Грузия, Молдова и Турция в списке, Казахстана в нём нет."
-    - "<b>Деньги доступны только после конца кампании</b>: ещё 7–10 дней проверки <!-- source: https://vyro.com/help/earnings-and-payments/when-will-i-receive-my-earnings 2026-09-05 -->, потом вывод от $10 раз в 7 дней через PayPal или Stripe <!-- source: https://vyro.com/help/earnings-and-payments/how-can-i-withdraw-my-earnings 2026-09-05 -->."
+    - "<b>Ставки в живых кампаниях $1–$2 за 1000 просмотров</b> <!-- source: https://vyro.com/campaigns 2026-09-02 -->, хотя на карточке они показаны за 1 млн и выглядят внушительнее; один ролик оплачивается максимум за 1 млн засчитанных просмотров <!-- source: https://vyro.com/help/earnings-and-payments/whats-the-most-i-can-earn-per-clip 2026-09-05 -->."
+    - "<b>70 стран и территорий закрыты платёжным провайдером</b> <!-- source: https://vyro.com/help/getting-started/what-countries-are-supported 2026-09-05 -->: Россия, Беларусь, Украина, Узбекистан, Армения, Грузия, Молдова и Турция в списке, Казахстана в нём нет, так что для многих в СНГ вопрос закрывается ещё до регистрации."
+    - "<b>Деньги доступны только после конца кампании,</b> и ждать придётся дольше: ещё 7–10 дней проверки <!-- source: https://vyro.com/help/earnings-and-payments/when-will-i-receive-my-earnings 2026-09-05 -->, потом вывод от $10 раз в 7 дней через PayPal или Stripe <!-- source: https://vyro.com/help/earnings-and-payments/how-can-i-withdraw-my-earnings 2026-09-05 -->."
 cta:
-  title: "Vyro закрыл твою страну? Возьми задание на DareBay"
-  lede: "Без списка стран, типичный порог 2000 просмотров, ставка и потолок напечатаны на карточке до подачи. Выплаты в USDT в сети TON или звёздами Telegram."
+  title: "Vyro закрыл твою страну? На DareBay списка стран нет"
+  lede: "Списка закрытых стран нет, типичный порог 2000 просмотров, ставка и потолок стоят в карточке до подачи. Получить можно USDT на кошелёк в сети TON или звёздами Telegram."
 ---
 ## Vyro в трёх числах
 

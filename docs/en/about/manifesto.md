@@ -1,6 +1,6 @@
 ---
 title: The DareBay manifesto
-description: How we run activities, pick winners and keep everything honest.
+description: "The DareBay manifesto: why results beat metrics, how winners are picked, what the platform will not tolerate and what it commits to in return."
 provenance: { snapshot_date: "2026-08-15", source: "darebay-prod" }
 numbers_used: []
 ---
@@ -22,10 +22,10 @@ import { HOMEPAGE, TELEGRAM } from '../../.vitepress/links'
 
 # The DareBay manifesto
 
-The internet is loud. It is full of empty views, bought likes and activity
-passed off as achievement. **DareBay is the opposite.** Here you win not
-because a graph crept upwards, but because you did the thing and showed the
-result, and the community (or whoever put up the prize) said:
+The internet is loud, and most of it pays for noise: empty views, bought
+likes, activity passed off as achievement. **DareBay is the opposite.** Here
+you win because you did the thing and showed the result, not because a graph
+crept upwards, and because the community (or whoever put up the prize) said:
 *yes, that is it.*
 
 ## What DareBay is

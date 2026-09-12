@@ -7,15 +7,15 @@ seo: true
 landing: true
 hero:
   kicker: "Glossary · 2026"
-  lede: "The words from DareBay task cards, payout rules and clipper chats, collected on one page with short definitions. Every term has its own anchor, so you can answer 'what is CPM' with a link. Figures come from the platform's data as of 23 August 2026."
+  lede: "Opened a task card and met CPM, threshold, cap and claim now in one breath? Every one of them is here in a sentence or two, taken from DareBay task cards, payout rules and clipper chats, so you read terms like someone who has clipped for years. Each term has its own anchor, so 'what is CPM' is answered with a link. Figures come from the platform's data as of 23 August 2026."
   takeaways:
-    - "<b>CPM is the rate per 1,000 counted views.</b> Across open DareBay tasks it runs from $1 to $2, and it is not an advertising price."
-    - "<b>Threshold and cap bound a clip from both sides.</b> The typical 2000-view threshold is not deducted; the typical cap of $100 closes the amount from above."
-    - "<b>Counted views are paid, displayed views are not.</b> The platform's counter reads the site's public counter, and inflated views are filtered at moderation."
-    - "<b>Withdrawal and Stars are two different actions.</b> A withdrawal request starts from 10 USDT with a 10% fee; getting it in Stars stays inside Telegram."
+    - "<b>CPM here means the rate for 1,000 counted views.</b> Across open DareBay tasks it runs from $1 to $2, and it has nothing to do with the price of an ad."
+    - "<b>Threshold and cap hold a clip from both ends.</b> Clear the typical 2000-view threshold and nothing is subtracted for it; the typical cap of $100 closes the amount from above."
+    - "<b>You are paid for counted views, not for the figure in your stats.</b> The platform's counter reads the site's public counter, and inflated views are filtered at moderation."
+    - "<b>Withdrawal and Stars are two different doors.</b> A withdrawal request starts from 10 USDT with a 10% fee and goes to your wallet; getting it in Stars stays inside Telegram."
 cta:
-  title: "The terms are learned, the task is waiting"
-  lede: "A DareBay task card shows the rate, the threshold and the cap before you submit, and in a wallet-backed contest the fund is frozen on the platform. Open the catalogue and test the glossary on a live task."
+  title: "Now go and read a real card"
+  lede: "Open the DareBay catalogue and these words stop being abstract: the card names the rate, the threshold and the cap before you submit, and in a wallet-backed contest the fund already sits on the platform. Find every term you have just learned in the first card you open."
 glossary:
   - { id: "account-warmup", term: "Account warm-up", definition: "Getting a new account ready before posting for a task: watching, liking, following and publishing the first videos at a human pace. A fresh account that drops ten clips in an hour is easy for the site to restrict." }
   - { id: "affiliate-link", term: "Affiliate link", definition: "The offer link with your own code: every clipper gets a personal one and puts it in the bio or a pinned comment. It tells the task whose orders came in; the organizer sets the link template and it cannot be changed." }
@@ -71,7 +71,7 @@ glossary:
   - { id: "withdrawal-fee", term: "Withdrawal fee", definition: "The withdrawal fee is 10% of the requested amount; some accounts have a personal rate, and the form shows the exact figure before you confirm. A person processes the request, so the platform promises no settlement time." }
 ---
 
-Clipping runs on jargon: CPM or per thousand, threshold or cap, claim now or withdrawal. This glossary collects 52 terms from DareBay task cards, payout rules and clipper chats, each explained in a sentence or two.
+Read a task card without stumbling and you stop guessing what it will pay you: CPM or per thousand, threshold or cap, claim now or withdrawal. This glossary collects 52 terms from DareBay task cards, payout rules and clipper chats, each explained in a sentence or two.
 
 The definitions follow the platform's own rules: every figure comes from DareBay's data as of 23 August 2026 and matches the task cards. Every term has its own anchor you can link to from a chat. For the whole mechanic, start with [how pay-per-view works](/en/earnings/how-pay-per-view-works).
 

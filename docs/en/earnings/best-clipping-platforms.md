@@ -7,14 +7,14 @@ seo: true
 landing: true
 hero:
   kicker: "Clipping platforms compared · 2026"
-  lede: "Nine platforms that pay clippers for views, side by side on the same fields: rate per 1,000 views, threshold, cap, fee on payout, minimum payout, payout methods and countries. Competitor numbers are taken from each platform's own pages and dated; DareBay's come from live platform data."
+  lede: "Nine platforms that pay clippers for views, lined up on the fields you feel in the payout: rate per 1,000 views, threshold, cap, fee on payout, minimum payout, payout methods and countries. Every competitor figure is taken from that platform's own pages and dated; DareBay's come from live platform data. Sort any column and pick by what matters to you."
   secondary: "Jump to the table"
   takeaways:
-    - "<b>Whop Content Rewards has the most campaigns</b> and holds the budget against the campaign, but it does not register or pay clippers in Russia, Belarus or Ukraine."
-    - "<b>Headline CPM is not net pay.</b> Whop's terms take 10% of CPM payouts, Vyro pays only after 5,000 views per post, Clipping.net quotes $0.20–$0.75 per 1,000. Compare fee, threshold and cap together."
-    - "<b>Only a few platforms have no country restrictions.</b> DareBay pays worldwide with no exclusion list (USDT on TON, Telegram Stars) and its community is largest in CIS; Prime Oracles covers Russia, Belarus and Kazakhstan; Klipni is Russia-only. Vyro and Whop exclude Russia, Belarus and Ukraine."
-    - "<b>Who holds the budget matters.</b> Whop, Klipni, Prime Oracles and DareBay's wallet-backed contests lock it before clips are posted; Vues states that it does not custody funds."
-    - "<b>Sign up on two or three platforms.</b> Campaigns run out of budget; the supply of briefs matters more than the single highest rate."
+    - "<b>Whop Content Rewards has the most campaigns</b> and holds the budget against each one, but it does not register or pay clippers in Russia, Belarus or Ukraine. Read the country list before you count on it."
+    - "<b>The headline CPM is not what reaches your hands.</b> Whop's terms take 10% of CPM payouts, Vyro pays only after 5,000 views per post, Clipping.net quotes $0.20–$0.75 per 1,000. Read fee, threshold and cap as one number."
+    - "<b>Where you live can decide more than the rate does.</b> DareBay pays worldwide with no exclusion list (USDT on TON, Telegram Stars) and its community is largest in CIS; Prime Oracles covers Russia, Belarus and Kazakhstan; Klipni is Russia-only. Vyro and Whop exclude Russia, Belarus and Ukraine."
+    - "<b>Ask who is holding the money before you start editing.</b> Whop, Klipni, Prime Oracles and DareBay's wallet-backed contests lock the budget before clips are posted; Vues states that it does not custody funds."
+    - "<b>Sign up on two or three platforms and keep working.</b> Campaigns run out of budget, so a steady supply of briefs beats the single highest rate on the board."
 compare:
   ids: [whop, vyro, darebay, clipping-net, vues, reach-cat, prime-oracles, klipni, clipping-io]
   columns: [rate, threshold, cap, fee, minPayout, payoutMethods, cis, followers, escrow]
@@ -24,8 +24,8 @@ method:
   - "Every competitor figure was taken from that platform's own public page on the date shown next to it. Where a platform does not publish a figure, the table says so instead of guessing. DareBay's figures come from the platform's live data snapshot."
   - "The order is editorial: platforms that publish their terms, hold the budget and serve more countries rank higher, and we do not put ourselves first. Click any column to sort by that field instead."
 cta:
-  title: "Take a brief on DareBay and get paid for counted views"
-  lede: "No followers, no application, budget locked on the platform in wallet-backed contests, payouts worldwide with no country restrictions."
+  title: "Take a brief where the terms cannot move"
+  lede: "DareBay asks for no followers and no application. In a wallet-backed contest the budget is locked on the platform before the start, the terms you agreed to stay put after launch, and payouts go out worldwide with no country list."
 ---
 
 ## How to read the table

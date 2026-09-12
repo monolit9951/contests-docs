@@ -7,18 +7,18 @@ seo: true
 landing: true
 hero:
   kicker: "Agencies and CPA partners · 2026"
-  lede: "An offer enters the platform once and spreads across the creator network: every creator gets a tracked link and a promo code, conversions arrive by postback, the platform credits the fixed fee per clip and the sales share itself, and the agency sees a report per creator and per clip. Below is the whole pipeline, three agency models and the economics in numbers."
+  lede: "Upload an offer once and the creator network takes it from there: each creator gets a tracked link and a promo code, conversions arrive by postback, the platform credits the fee per clip and the sales share, and the report per creator and per clip is already built. Below: the whole pipeline, three agency models and the economics in numbers."
   takeaways:
-    - "<b>One offer, the whole network.</b> Terms, materials and ready-made clips with built-in uniqueization are uploaded once; creators take the offer themselves, links and promo codes are issued to each."
-    - "<b>Conversions arrive by S2S postback</b> from the advertiser's or network's tracker, are tied to the creator and the clip, and the platform credits the fixed fee and the sales share itself."
-    - "<b>Three agency models:</b> a markup on the per-view rate, a management retainer, a clips-plus-traffic package; open tasks pay creators $1.00 to $2.00 per 1,000 views."
-    - "<b>Anti-fraud is built in:</b> incentivized, bot and pop traffic is filtered before anything is credited, and refunds take the share back from the creator's balance, not from the client's budget."
+    - "<b>One upload, the whole network.</b> Terms, materials and ready-made clips with built-in uniqueization go in once; creators pick the offer up themselves, and the platform hands every one of them a link and a promo code."
+    - "<b>Conversions arrive by S2S postback</b> from the advertiser's or network's tracker and land on a named creator and a named clip, so there are no spreadsheets to reconcile: the platform credits the fixed fee and the sales share."
+    - "<b>Three ways an agency earns on this:</b> a markup on the per-view rate, a management retainer, or a clips-plus-traffic package. Open tasks pay creators $1.00 to $2.00 per 1,000 views, and your margin sits on top."
+    - "<b>Anti-fraud comes with the pipeline:</b> incentivized, bot and pop traffic is filtered out before anything is credited, and a refund takes the share back from the creator's balance rather than the client's budget."
 cta:
-  title: "Launch an offer through the creator network"
-  lede: "Creating a task costs 10 USDT, the fee is 0%. A wallet-backed budget is locked on the platform and goes out on counted views and confirmed conversions; the report per creator, clip and link is kept by the platform."
+  title: "Hand the offer to the network, let the platform keep score"
+  lede: "Creating a task costs 10 USDT, the fee is 0%. A wallet-backed budget is locked on the platform, goes out only on counted views and confirmed conversions, and whatever is left comes back to your balance. The report per creator, clip and link is assembled for you."
 ---
 
-An agency or a CPA partner treats DareBay as a ready creator network: the offer and the budget live on the platform, and tracked links, promo codes, postbacks, anti-fraud, accruals and reports are handled by it. The agency owns the client, the offer terms and the clip selection; everything between a click and a payout is counted without manual work.
+For an agency or a CPA partner DareBay is a creator network you do not have to recruit: the offer and the budget live on the platform, and tracked links, promo codes, postbacks, anti-fraud, accruals and reports come with it. You keep the client, the offer terms and the clip selection. Everything between a click and a payout is counted without manual work, and the figures for each creator and each clip are waiting in the cabinet.
 
 ## How an offer works on the platform
 

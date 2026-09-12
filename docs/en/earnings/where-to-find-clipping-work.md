@@ -7,15 +7,18 @@ seo: true
 landing: true
 hero:
   kicker: "Clipper guide · 2026"
-  lede: "The three places clipping work comes from, how they differ in money and risk, where the source footage comes from, and how to take a brief on the DareBay board with no application and no portfolio."
+  lede: "Three places hand out clipping work, and they differ less in the rate than in where the money sits while you edit. Here is how each one compares on pay and risk, where the source footage comes from, and how to take a brief on the DareBay board with no application, no interview and no portfolio."
   takeaways:
-    - "<b>Three sources of work:</b> a streamer directly, a brand or agency through selection, or an intermediary platform with a fixed rate."
-    - "<b>Open DareBay contests pay $1.00 to $2.00 per 1000 views;</b> the rate, threshold and cap stand on the card before you submit and do not move after launch."
-    - "<b>The typical threshold is 2000 views,</b> and it is not subtracted: clear it and the whole counter is paid."
-    - "<b>Footage comes with the brief or from public sources:</b> the streamer's VODs, the author's own videos, the brand's material; other people's clips do not qualify."
+    - "<b>Work comes from three pockets:</b> a streamer out of their own income, a brand or agency through selection, or an intermediary that holds the money first."
+    - "<b>Open DareBay contests pay $1.00 to $2.00 per 1000 views,</b> and you never haggle: the rate, the threshold and the cap stand on the card before you submit and stay put after launch."
+    - "<b>The typical threshold is 2000 views,</b> and nobody deducts it: clear the mark and the whole counter goes into the maths."
+    - "<b>Footage comes with the brief or from public sources:</b> the streamer's VODs, the author's own videos, the brand's material. Somebody else's clip or edit will not pass."
+cta:
+  title: "Pick a brief off the board tonight"
+  lede: "No application, no interview, no contractor rating to build up first. The rate, the threshold and the cap are set before you arrive, so you cut the clip, publish it on the site the brief names and send the link. Everything after that runs on terms fixed at the start."
 ---
 
-Clipping work comes from three places: a streamer directly, with the rate settled in DMs; a brand or the agency running a channel, through selection with an application and work samples; or an intermediary platform with a fixed rate - on DareBay that is the open contest board, where you take a brief yourself, with no application, no interview and no portfolio review. Open contests pay **$1.00 to $2.00 per 1000 views**, and nothing open right now pays below that floor. The typical threshold is **2000 views**: from that mark a submission enters the maths, while the maximum payout for one submission is whatever the buyer named. They fix the rate, the threshold and the cap at contest creation and do not move them after launch, and all three numbers stand on the card before you submit. For a clipper, entry costs nothing.
+The safest work is the work somebody already paid for. It comes from three places: a streamer directly, with the rate settled in DMs; a brand or the agency running a channel, through selection with an application and work samples; or an intermediary platform with a fixed rate - on DareBay that is the open contest board, where you take a brief yourself, with no application, no interview and no portfolio review. Open contests pay **$1.00 to $2.00 per 1000 views**, and nothing open right now pays below that floor. The typical threshold is **2000 views**: from that mark a submission enters the maths, while the maximum payout for one submission is whatever the buyer named. They fix the rate, the threshold and the cap at contest creation and do not move them after launch, and all three numbers stand on the card before you submit. For a clipper, entry costs nothing.
 
 Every figure on this page comes from the platform's own data (snapshot: 2026-08-23) and counts only open contests - the ones a clipper can take right now.
 

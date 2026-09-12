@@ -7,15 +7,15 @@ seo: true
 landing: true
 hero:
   kicker: "Guide · 2026"
-  lede: "How earning from clips on X works: the rules by which the network pays creators, which clips gain there, and how to top up the income from the same clip where views are paid at a set rate. No promises, and no third-party numbers that cannot be checked."
+  lede: "One edit can earn twice: on X through the network's own rewards programme, and under a task where the rate is known before you publish. Here is how X decides what it pays, which clips gain there, and how to add the second stream without cutting anything new. No promises, and no third-party numbers that cannot be checked."
   takeaways:
-    - "<b>X pays out of its own pocket, by its own rules.</b> It takes a paid subscription, an audience of verified accounts and original posts; there is no rate per 1,000 views on X."
-    - "<b>DareBay does not count views on X.</b> Tasks count a clip only on TikTok, Instagram Reels, YouTube Shorts and Facebook Reels."
+    - "<b>X pays out of its own pocket, by its own rules.</b> It takes a paid subscription, an audience of verified accounts and original posts; there is no rate per 1,000 views on X, and you learn the sum when the payout lands."
+    - "<b>DareBay does not count views on X.</b> Tasks count a clip only on TikTok, Instagram Reels, YouTube Shorts and Facebook Reels, so the task copy goes there and the X copy runs separately."
     - "<b>One edit, two streams.</b> The clip goes to TikTok, Reels or Shorts for a task at $1–$2 per 1,000 views, while its copy on X works for the X programme."
-    - "<b>The text hook decides more than the edit.</b> On X a video is opened from a feed of text, so the first line of the post and the first second of the clip are one unit."
+    - "<b>The text hook decides more than the edit.</b> On X a video is opened from a feed of text, so the first line of the post and the first second of the clip are one unit, and a quote beats a summary."
 cta:
-  title: "Take a task for the same clip"
-  lede: "The rate, the threshold and the cap are printed on the card before you submit. Publish on TikTok, Reels or Shorts, send the link, and the platform counts the views."
+  title: "Put the same edit to work twice"
+  lede: "The rate, the threshold and the cap are printed on the card before you submit, and no subscription or follower count is asked for. Publish on TikTok, Reels or Shorts, send the link, and the platform counts the views while your copy on X keeps working."
 ---
 
 ## How X pays for video

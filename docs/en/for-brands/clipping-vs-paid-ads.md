@@ -18,15 +18,15 @@ seo: true
 landing: true
 hero:
   kicker: "Comparison · 2026"
-  lede: "One table instead of the 'ads or clips' argument: what a thousand impressions cost on Meta, TikTok Ads, YouTube, VK Ads and Yandex Direct against a thousand counted views of a clip on DareBay. Outside CPMs are read from public benchmarks and rate cards and dated, our figure comes from live platform data, and next to every number stands what you are actually paying for."
+  lede: "A thousand counted views of a clip costs you less than a thousand ad impressions, and the table below settles the 'ads or clips' argument in figures: Meta, TikTok Ads, YouTube, VK Ads and Yandex Direct against DareBay. Outside CPMs come from dated public benchmarks and rate cards, our figure from live platform data, and beside every number stands what it actually buys you."
   takeaways:
-    - "<b>An ad impression costs more than a clip view.</b> Meta averages $13.48 per 1,000 impressions <!-- source: https://www.adamigo.ai/blog/meta-ads-cpm-benchmarks-by-industry-2026 2026-09-04 -->, TikTok Ads $5–$12 <!-- source: https://www.admetrics.io/en/post/tiktok-ads-costs-complete-2026-pricing-guide 2026-09-04 -->, clips on DareBay $1–$2 per 1,000 counted views."
-    - "<b>Ads sell impressions, clips sell views.</b> An impression counts the moment the ad renders on a screen; a view is read from the network's public counter and paid only above the 2,000 threshold."
-    - "<b>The creative is in the price.</b> With ads you pay for the shoot and the edit separately; with clips the creators make them, and the videos stay on their accounts after the campaign."
-    - "<b>Ads are sharper, clips are cheaper.</b> Targeting, speed and the pixel stay with ads; price per view, trust and pay-for-results stay with clips. The working setup: test with clips, scale with ads."
+    - "<b>A clip view costs less than an ad impression.</b> Meta averages $13.48 per 1,000 impressions <!-- source: https://www.adamigo.ai/blog/meta-ads-cpm-benchmarks-by-industry-2026 2026-09-04 -->, TikTok Ads $5–$12 <!-- source: https://www.admetrics.io/en/post/tiktok-ads-costs-complete-2026-pricing-guide 2026-09-04 -->, clips on DareBay run $1–$2 per 1,000 counted views."
+    - "<b>You pay for a watched clip, not for a banner flashing past.</b> An impression counts the moment the ad renders on a screen; a clip view is read from the network's public counter and paid only above the 2,000 threshold."
+    - "<b>The creative is already in the price.</b> With ads you pay for the shoot and the edit separately; with clips the clippers make them, and the videos stay on their accounts collecting views after the campaign."
+    - "<b>Ads are sharper, clips are cheaper.</b> Targeting, speed and the pixel stay with ads; price per view, viewer trust and paying by result stay with clips. The setup that works: test with clips, scale with ads."
 cta:
-  title: "Test the price of a view on your own product"
-  lede: "Create a task with a $1–$2 rate per 1,000 views, a threshold and a cap: the budget sits on the platform and is spent only on counted views."
+  title: "Find your own cost per view, not the market average"
+  lede: "Create a task with a $1–$2 rate per 1,000 views, a threshold and a cap. In a wallet-backed task the budget is locked on the platform before the start, goes to clippers only for counted views, and whatever is left over comes back to you."
 ---
 
 ## The table: what a thousand costs

@@ -7,15 +7,18 @@ seo: true
 landing: true
 hero:
   kicker: "Clipper guide · 2026"
-  lede: "What the job of a clipper actually involves, how long one clip takes, why the income is irregular, and the route from a first contest to first money with no followers and no portfolio."
+  lede: "A clipper is paid for the reach of one video, not for the size of a channel, so zero followers and an empty portfolio are a normal place to start. Here is the craft without the varnish: what goes into one clip, how long it takes, why the income swings, and the route from a first contest to first money."
   takeaways:
-    - "<b>It is piecework paid by reach:</b> open contests run from $1.00 to $2.00 per 1000 views of one specific video, not the size of your channel."
-    - "<b>The 2000-view threshold is not subtracted:</b> 12,000 views at $1.00 per 1000 is 12,000 / 1000 × $1.00 = $12.00."
-    - "<b>The cap per submission is set by the buyer,</b> and in live contests it sits around the hundred-dollar mark; the next clip is counted from scratch."
-    - "<b>A first clip takes a couple of hours,</b> later ones 20 to 40 minutes; you need a DareBay account, an open account on the contest's site and any editing app."
+    - "<b>Reach pays here, not your follower count:</b> open contests run from $1.00 to $2.00 per 1000 views of one specific video, whatever the size of your channel."
+    - "<b>The 2000-view threshold is never subtracted:</b> clear it and the whole counter is paid, so 12,000 views at $1.00 per 1000 is 12,000 / 1000 × $1.00 = $12.00."
+    - "<b>The cap per submission is set by the buyer,</b> and in live contests it sits around the hundred-dollar mark; your next clip starts its own count from scratch."
+    - "<b>Your first clip takes a couple of hours,</b> later ones 20 to 40 minutes; all you need is a DareBay account, an open account on the contest's site and any editing app."
+cta:
+  title: "Your first brief is on the board today"
+  lede: "No application, no portfolio, no follower count to clear. Open the DareBay catalogue, pick a brief whose numbers you have checked on the card, and send in your first clip as a link."
 ---
 
-Clipping as a job is piecework paid per view: a clipper takes a brief on the platform, cuts a short vertical video out of somebody else's footage, publishes it on the contest's site - currently TikTok, YouTube or Instagram - and sends the link. After that, reach pays: rates across open contests run from **$1.00**<!-- baseline: ppv_cpm_min --> to **$2.00 per 1000 views**<!-- baseline: ppv_cpm_max -->, and nothing open right now pays below that floor. Followers, a portfolio and experience are not needed: you are paid for the views of one specific video, not for the size of your channel. In a wallet-backed contest the budget is frozen on the platform before you take the brief, the contest commission is 0%, and taking part is free.
+You can earn from clips with no followers and nothing to show, because clipping is piecework paid per view. A clipper takes a brief on the platform, cuts a short vertical video out of somebody else's footage, publishes it on the contest's site - currently TikTok, YouTube or Instagram - and sends the link. After that, reach pays: rates across open contests run from **$1.00**<!-- baseline: ppv_cpm_min --> to **$2.00 per 1000 views**<!-- baseline: ppv_cpm_max -->, and nothing open right now pays below that floor. A portfolio and years of practice buy you nothing here: you are paid for the views of one specific video, not for the size of your channel. In a wallet-backed contest the budget is frozen on the platform before you take the brief, the contest commission is 0%, and taking part is free.
 
 This is piecework, not passive income. Below: what the job actually asks of you, what the result depends on, and one route from zero - first contest, first submission, first money.
 

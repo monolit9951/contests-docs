@@ -1,6 +1,6 @@
 ---
 title: Does DareBay really pay? The chain from clip to money
-description: The full DareBay payout chain step by step - what is automatic, what is done by people, where a submission can be put on hold, and what to do when a status stops moving.
+description: "Does DareBay pay? Yes. The amount is worked out by code, the transfer is done by people: the chain from final counter to your wallet, step by step."
 provenance: { snapshot_date: "2026-08-15", source: "darebay-prod" }
 numbers_used: []
 seo: true
@@ -8,7 +8,7 @@ seo: true
 
 # Does DareBay really pay?
 
-Yes. The useful answer is not the word but the chain, because that is what tells you which steps nobody can interfere with and which step is done by a person.
+Yes, and your figure does not hang on anyone's mood. More useful than the word is the chain behind it: it shows which steps nobody can interfere with, and the one step where a person does the work.
 
 Short version: the calculation is automatic and cannot be re-run in anyone's favour; moving the money is a separate stage handled by the team, with no promised deadline attached to it.
 

@@ -16,15 +16,15 @@ seo: true
 landing: true
 hero:
   kicker: "Benchmark · 2026"
-  lede: "One page instead of ten tabs: what clipping pays per 1,000 views across eight niches, six platforms and four social networks. Competitor rates are read from the platforms' own public pages and dated, DareBay's come from live platform data, and next to every rate stands what erodes it: the threshold, the cap and rejections."
+  lede: "Before you spend an evening on an edit you want one number: what 1,000 views is really worth in your niche. Here it is across eight niches, six platforms and four social networks, read from the platforms' own public pages and dated, with DareBay's band from live platform data. Next to every rate stands the thing that eats it: the threshold, the cap and rejected clips."
   takeaways:
-    - "<b>The niche matters more than the platform.</b> On ClipRadar's live board music averages $0.35 per 1,000 while tech averages $6.60 <!-- source: https://clipradar.co/rates 2026-09-04 -->: a near twenty-fold gap for the same edit."
-    - "<b>The typical advertised rate on the market is $2.00 per 1,000</b> <!-- source: https://clipradar.co/rates 2026-09-04 -->; DareBay's $1–$2 band sits inside it, and the rate on a task card is the same for every niche."
-    - "<b>A high rate is not a high payout.</b> Vyro's 5,000-view threshold per post <!-- source: https://vyro.com/help/earnings-and-payments/how-many-views-do-i-need-before-i-can-start-earning 2026-09-04 --> and Whop campaigns capped at $400–$600 per video <!-- source: https://contentrewards.com/discover 2026-09-04 --> cut the payout harder than the gap between rates."
-    - "<b>Calculate the payout, not the rate.</b> The same clip at 100,000 views earns $100 at $1 with no threshold, and only $50 at $3 with a threshold and a $50 cap: the formula is below."
+    - "<b>Your niche decides more than your platform does.</b> On ClipRadar's live board music averages $0.35 per 1,000 while tech averages $6.60 <!-- source: https://clipradar.co/rates 2026-09-04 -->: nearly twenty times the money for the same edit."
+    - "<b>The typical advertised rate on the market is $2.00 per 1,000</b> <!-- source: https://clipradar.co/rates 2026-09-04 -->; DareBay's $1–$2 band sits inside it, and the rate printed on a task card is the same whatever the niche."
+    - "<b>A big rate is not a big payout.</b> Vyro's 5,000-view threshold per post <!-- source: https://vyro.com/help/earnings-and-payments/how-many-views-do-i-need-before-i-can-start-earning 2026-09-04 --> and Whop campaigns capped at $400–$600 per video <!-- source: https://contentrewards.com/discover 2026-09-04 --> cut what reaches you harder than any gap between rates."
+    - "<b>Count the payout, not the rate.</b> The same clip at 100,000 views earns $100 at $1 with no threshold, and only $50 at $3 with a threshold and a $50 cap. The formula is right below."
 cta:
-  title: "Take a task with the rate printed on the card"
-  lede: "On DareBay the rate, the threshold and the cap are printed on every task before you submit, and payouts go worldwide with no country restrictions."
+  title: "See what the rate is worth before you edit"
+  lede: "Compare card against card, not niche against niche: every DareBay task prints what it pays for 1,000 views, where the payout starts and where it stops, and the payout does not depend on which country you live in."
 ---
 
 ## Rates by niche

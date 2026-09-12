@@ -1,15 +1,15 @@
 ---
 title: How are winners chosen?
-description: Four selection types - seeded random among eligible active works, organizer choice, community voting, or oracle-attested pay per view.
+description: "How winners are chosen: one of four types, fixed before the start. A seeded draw, the organizer's own call, a viewer vote, or pay per view."
 provenance: { snapshot_date: "2026-08-15", source: "darebay-prod" }
 numbers_used: []
 ---
 
 # How are winners chosen?
 
-Every DareBay contest uses **one of four** selection types. The type is
-fixed before the start: the organizer picks it at creation and cannot
-change it mid-run.
+Read the selection type before you spend an evening on the edit. Every
+DareBay contest uses **one of four**, fixed before the start: the organizer
+picks it at creation and cannot switch it mid-run.
 
 Whichever type a contest uses, the budget is recorded against it from publication, and in a
 wallet-backed contest it is charged from the organizer at that moment. After the result is

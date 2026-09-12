@@ -1,16 +1,16 @@
 ---
 title: Submit your work
-description: How to submit work on DareBay. In pay-per-view contests you send the link to the published video, in the rest you upload the file.
+description: "Submit work on DareBay without losing the payout: in a pay-per-view contest the entry arrives as a link to the published video, in the rest you upload a file."
 provenance: { snapshot_date: "2026-08-15", source: "darebay-prod" }
 numbers_used: []
 ---
 
 # Submit your work
 
-The one thing to get right: **a submission enters a contest through the link you send.** In a
-pay-per-view contest, publishing the video is only half of it - until the URL reaches DareBay,
-your work is not in the contest and not in the budget split. Everything else on this page is
-detail around that.
+Sending work in takes less time than reading this page. In a wallet-backed contest the prize is
+already locked on the platform by then, so you are working for money that exists; all you have to
+get right is the route. **A submission enters a contest through the link you send.** Publish the
+video and stop there, and your work is not in the contest and not in the budget split.
 
 ## 1. Find a contest that fits
 

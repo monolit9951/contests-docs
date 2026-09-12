@@ -7,18 +7,18 @@ seo: true
 landing: true
 hero:
   kicker: "Streamer and creator guide · 2026"
-  lede: "Four ways to find clippers for a stream or a channel, what they need from you before the first clip, why pay per view is fairer than a flat fee, and how to put a task together in one evening."
+  lede: "Clippers are easier to find than they look once you know where they sit and what they want from you. Four places to look, six things a good one needs before the first cut, why paying per view beats a flat fee, and how to put a task together in one evening."
   takeaways:
-    - "<b>Four sources of clippers:</b> a post in your chat and Discord, freelance boards, your own clip channel with a team, a pay-per-view platform."
-    - "<b>A clipper needs six things before starting:</b> access to recordings, rights, a hashtag, a format, a rate and a steady flow of material."
-    - "<b>Open DareBay tasks pay $1.00 to $2.00 per 1000 views;</b> you set the threshold and the cap per clip yourself."
-    - "<b>A wallet-backed budget is locked on the platform</b> before launch and is spent only on counted views; the remainder comes back."
+    - "<b>Clippers come from four places.</b> A post in your chat and Discord, freelance boards, your own clip channel with a team, or a pay-per-view platform where creators take the task themselves."
+    - "<b>Six things and a clipper starts the same day.</b> Access to recordings, rights, a hashtag, a format, a rate and a steady flow of material."
+    - "<b>Open DareBay tasks pay $1.00 to $2.00 per 1000 views.</b> You set the threshold and the cap per clip yourself, so you pay for reach and not for the hours someone spent editing."
+    - "<b>A wallet-backed budget is locked on the platform before launch.</b> It is spent only on counted views, and whatever the clips did not earn comes back to you."
 cta:
-  title: "Launch a task for clippers today"
-  lede: "Contest creation costs 10 USDT, the contest fee is 0%. You set the rate, threshold and cap, the platform counts the views, and a wallet-backed budget is spent only on counted views."
+  title: "Post the task tonight, creators pick it up themselves"
+  lede: "Contest creation costs 10 USDT, the contest fee is 0%. You set the rate, the threshold and the cap, the platform counts the views, and a wallet-backed budget only pays for the views it counted."
 ---
 
-Clippers come from four places: your own chat and Discord, freelance boards, your own clip channel, or a pay-per-view platform where creators take the task themselves. The first three cost you time; the fourth moves the counting to the platform.
+Finding clippers costs you evenings, not money. Your own chat and Discord, a freelance board and a clip channel of your own all run on your time: agreeing a rate, collecting links, counting views by hand. The fourth way, a pay-per-view platform, moves the counting off your desk.
 
 ## Four ways to find clippers
 

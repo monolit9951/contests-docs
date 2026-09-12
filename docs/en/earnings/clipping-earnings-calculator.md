@@ -8,15 +8,15 @@ landing: true
 app: true
 hero:
   kicker: "Calculator · 2026"
-  lede: "Three sliders instead of back-of-the-envelope guesses: views per clip, clips per week and the rate. The calculator runs the formula the platform pays by and shows straight away what is left after the withdrawal fee."
+  lede: "Three sliders instead of back-of-the-envelope guesses: views per clip, clips per week and the rate. From there the calculator runs the same formula the platform pays by, applies the threshold and the cap, and shows what is left after the withdrawal fee. Not a range off somebody else's screenshot. Your numbers."
   takeaways:
-    - "<b>One formula:</b> views / 1,000 × rate, never above the cap per clip. Open tasks pay $1 to $2 per 1,000 views."
-    - "<b>The 2,000-view threshold is a gate, not a deduction:</b> a clip below it earns nothing, a clip above it is paid from the first view."
-    - "<b>The cap is $100 per clip,</b> so ten clips at 50,000 views bring more than one clip at a million."
-    - "<b>You take home a tenth less:</b> withdrawal requests start at 10 USDT, the fee is 10%, the team handles processing."
+    - "<b>One formula, and you can run it before you edit:</b> views / 1,000 × rate, never above the cap per clip. Open tasks pay $1 to $2 per 1,000 views."
+    - "<b>The 2,000-view threshold is a gate, not a deduction:</b> a clip below it earns nothing, a clip that clears it is paid for every view from the first."
+    - "<b>The cap is $100 per clip,</b> so ten clips at 50,000 views beat one clip at a million: a steady week pays better than one hit."
+    - "<b>What lands is a tenth less:</b> you file a withdrawal request from 10 USDT, the fee is 10%, and the team checks the details and sends it."
 cta:
-  title: "Done the maths? Now take a brief"
-  lede: "Rate, threshold and cap are printed on every open task card. No followers, no application: post the clip, send the link, the platform counts the views."
+  title: "Like the number? Go and earn it"
+  lede: "The figures you just dragged into place exist on live task cards, visible before you open the editor, and nobody checks your follower count at the door. Cut the clip, publish it, send the link, and the platform does the counting from there."
 ---
 
 <LCalcPro />

@@ -7,15 +7,15 @@ seo: true
 landing: true
 hero:
   kicker: "Game studio guide · 2026"
-  lede: "How to market a game with gameplay clips: which clip formats bring views, what to hand clippers, what a launch, an update and a season cost under pay-per-view, and what to ban in the brief."
+  lede: "Gameplay clips reach players where a trailer no longer does: short-video feeds, cut by clippers on their own accounts, paid for only on counted views. Here are the five formats that sell a game, the folder of material clippers need from you, what a launch, an update and a season cost under pay-per-view, and the bans worth writing into the brief up front."
   takeaways:
-    - "<b>Five formats sell a game:</b> the gameplay moment, the fail or clutch, the how-to-beat-it guide, the streamer reaction and the before-and-after of an update."
-    - "<b>Clippers do not buy your game for a task:</b> the build or keys, gameplay captures, partner streams and spoiler rules live in one folder linked from the brief."
-    - "<b>Open tasks pay $1 to $2 per 1,000 views,</b> the threshold is usually 2,000 and the cap per clip is usually $100; installs are paid through the second mode, a CPA offer."
-    - "<b>Launch, update and season are three different tasks,</b> not one big one: different formats, pools and deadlines."
+    - "<b>Five formats sell a game, so name them in the brief:</b> the gameplay moment, the fail or the clutch, the how-to-beat-it guide, the streamer reaction and the before-and-after of an update."
+    - "<b>Nobody buys your game to enter a task, you hand it over:</b> the build or keys, gameplay captures, partner streams and spoiler rules live in one folder linked from the brief."
+    - "<b>Open tasks pay $1 to $2 per 1,000 views, and that is all you pay for:</b> the threshold is usually 2,000, the cap per clip usually $100, and installs run through the second mode, a CPA offer."
+    - "<b>Launch, update and season are three separate tasks,</b> not one big one: different formats, pools and deadlines, and views you can compare directly."
 cta:
-  title: "Build the task for your game"
-  lede: "The formats, materials and bans on this page go straight into the brief fields; you set the rate, threshold, cap and budget when you create the contest, and a wallet-backed budget is spent only on counted views."
+  title: "Launch the first task for your game"
+  lede: "The formats, materials and bans on this page drop straight into the brief fields. You set the rate, the threshold, the cap and the budget when you create the contest, a wallet-backed budget goes out only on counted views, and anything unspent comes back to you."
 ---
 
 ## Which clips sell a game

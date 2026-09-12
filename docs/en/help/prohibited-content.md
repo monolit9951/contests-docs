@@ -1,16 +1,16 @@
 ---
 title: What to do about prohibited or dangerous content?
-description: Report it. A confirmed violation means the work is removed and the account banned. These categories get no "three strikes".
+description: "Prohibited content on DareBay: where to report a work, a comment or a profile, which categories carry zero tolerance, and what a confirmed violation costs."
 provenance: { snapshot_date: "2026-08-15", source: "darebay-prod" }
 numbers_used: []
 ---
 
 # What to do about prohibited or dangerous content?
 
-Report it, and use the right channel: anything urgent or illegal goes to
-**trust@darebay.com** rather than the in-app report menu. DareBay is not a stage
-for illegal, violent or hateful content, and the categories below are not
-negotiable.
+One report starts a review, and you need not find anyone to file it: a work or
+comment has **Report** in the **⋯** menu, an account has the link on its
+profile, and anything urgent or illegal goes to **trust@darebay.com**. In
+the zero-tolerance categories below there is no warning, only removal and a ban.
 
 ## Zero tolerance
 

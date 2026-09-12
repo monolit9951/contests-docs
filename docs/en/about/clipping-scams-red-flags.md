@@ -7,18 +7,18 @@ seo: true
 landing: true
 hero:
   kicker: "Guide · 2026"
-  lede: "Paying clippers for views is an ordinary advertising deal: a buyer purchases reach, you produce it. The fraud lives in specific platforms and the \"managers\" who hide behind them, not in the model. Here are nine tells you can spot before you edit a single clip, plus a ten-minute check."
+  lede: "Clipping is an honest trade: a buyer pays for the reach your clip brought in, and on a real platform you never pay anybody for anything. The fraud lives in particular sites and the «managers» who work out of direct messages. Here are nine tells you can read before you cut a single clip, plus a ten-minute check that needs no sign-up."
   takeaways:
-    - "<b>Money only flows towards you.</b> Any request to pay for access, an \"unlock\" or a faster payout identifies the platform on the spot, no exceptions."
-    - "<b>The terms are written before the work.</b> The rate per 1,000 views, the view threshold and the per-clip cap belong on the task before you submit, not in a chat afterwards."
-    - "<b>The budget should sit with the platform.</b> A site that only introduces the two sides leaves the buyer paying when they feel like it; Whop, Klipni and DareBay's wallet-backed tasks keep the budget on the platform."
-    - "<b>A threshold, a cap and withdrawals handled by the team are not flags.</b> On DareBay the typical threshold is 2,000 views, the cap is usually $100 and withdrawals carry a 10% fee and are handled by the team on request rather than by an 'instant' script: that is what a real economy looks like."
+    - "<b>Money only ever moves towards you.</b> A request to pay for access, an «unlock» or a quicker payout gives the platform away in its first message, and there are no exceptions."
+    - "<b>The terms are written before the work, not after it.</b> The rate per 1,000 views, the view threshold and the per-clip cap belong on the task before you submit; if they are «discussed later», the sum will not be set in your favour."
+    - "<b>The budget should be sitting with the platform.</b> A site that merely introduces the two sides leaves the buyer paying when and if the mood takes them; Whop, Klipni and DareBay's wallet-backed tasks keep the budget on the platform."
+    - "<b>A threshold, a cap and a withdrawal the team processes are not flags.</b> On DareBay the typical threshold is 2,000 views, the cap is usually $100, and a withdrawal carrying a 10% fee is filed by you and processed by the team: that is what a live economy with real money looks like."
 cta:
-  title: "Run DareBay through the same list"
-  lede: "Rate, threshold, cap and funding mode sit on the task card before you submit, a wallet-backed budget stays on the platform, and payouts go worldwide with no exclusion list."
+  title: "Run DareBay through the same nine"
+  lede: "Rate, threshold, cap and funding mode are all open on the card before you take the task, a wallet-backed budget stays on the platform, payouts go worldwide with no exclusion list, and nobody here will ask you to pay for access."
 ---
 
-The clipping model is honest: a buyer sets a price per 1,000 views and funds a budget, a clipper posts on their own account, the platform counts views and pays. DareBay's own answers: [Is DareBay legit?](/en/about/is-darebay-legit) and [Is DareBay a scam?](/en/about/is-darebay-a-scam); this page covers the category.
+The question usually follows one strange platform, and the model is not to blame. A buyer sets a price per 1,000 views and funds a budget, a clipper posts on their own account, the platform counts and pays; the fraud starts where somebody asks you for money. DareBay's answers: [Is DareBay legit?](/en/about/is-darebay-legit) and [Is DareBay a scam?](/en/about/is-darebay-a-scam); this page covers the category.
 
 ## Nine red flags
 

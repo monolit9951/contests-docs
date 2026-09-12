@@ -1,15 +1,16 @@
 ---
 title: Watch, vote, win
-description: The viewer's side of DareBay. Scroll, like, vote, because often that is exactly what decides a contest.
+description: "The viewer's side of DareBay: how the feed works, which contests your vote actually decides, where a like changes nothing, and what a clean record buys you."
 provenance: { snapshot_date: "2026-08-15", source: "darebay-prod" }
 numbers_used: []
 ---
 
 # Watch, vote, win
 
-Most of the traffic on DareBay is neither organizers nor participants. It is
-viewers: people who scroll the feed, like what they like, and vote when a contest
-asks them to. You do not have to submit anything to take part in that.
+You do not have to film anything to change how a contest ends: an account is
+enough. Most people here are viewers, scrolling the feed, reacting to the work
+they like and voting when a contest asks them to. In **VIEWER_VOTING** contests
+those votes are what decides who takes the reward.
 
 ## Scroll the feed
 

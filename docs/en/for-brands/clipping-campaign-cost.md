@@ -7,15 +7,15 @@ seo: true
 landing: true
 hero:
   kicker: "Buyer's guide · 2026"
-  lede: "How much a campaign with clippers costs on DareBay, which part of the price is fixed and what every dollar of budget buys. Three budgets worked through the platform's own formula, with no promises and no borrowed figures."
+  lede: "A campaign with clippers costs exactly as many views as you decide to buy: one line of the price is fixed, and everything after it goes to counted views at the rate you chose. The unspent part of a wallet-backed budget comes back to your balance. Below are three budgets worked through the platform's own formula, from a first test to a full campaign."
   takeaways:
-    - "<b>Only one line is fixed:</b> 10 USDT to create the contest. The contest fee is 0% and topping up costs nothing, so the whole pool goes to creators."
-    - "<b>Budget is rate × paid views.</b> Open tasks currently pay $1 to $2 per 1,000 views, and $1 is the typical rate."
-    - "<b>$1,000 at $1 buys 1,000,000 paid views,</b> or 10 clips that each hit a $100 cap. That is arithmetic, not a forecast."
-    - "<b>Overspending is hard:</b> a budget limit, a pause and the cap per clip hold the spend, and clips under the threshold cost nothing."
+    - "<b>Only one line is fixed:</b> 10 USDT to create the contest. The contest fee is 0% and a top-up costs nothing, so every dollar of the pool reaches the clippers."
+    - "<b>The budget is rate × paid views, and the rate is yours to set.</b> Open tasks currently pay $1 to $2 per 1,000 views, with $1 the typical rate."
+    - "<b>$1,000 at $1 buys 1,000,000 paid views,</b> or 10 clips that each hit a $100 cap. That is arithmetic, not a forecast: put your own figure into the calculator below."
+    - "<b>Overspending is hard:</b> a budget limit, a pause and the cap per clip hold the spend, clips under the threshold cost you nothing, and a wallet-backed remainder returns to your balance."
 cta:
-  title: "Budget done? Now write the task"
-  lede: "Rate, threshold, cap and budget are set when you create the contest; a wallet-backed budget is locked on the platform before the start, and the remainder comes back to you."
+  title: "Numbers add up? Now write the task"
+  lede: "You set the rate, the threshold, the cap and the budget when you create the contest, and you pay only for views the platform counted. A wallet-backed budget is locked on the platform before the start, and whatever the clips did not earn comes back to your balance."
 ---
 
 <LBudget />

@@ -1,13 +1,13 @@
 ---
 title: About DareBay
-description: The project was founded by Ruslan Bey. How wallet-backed and manual-payout tasks work, and where the numbers in this section come from.
+description: "About DareBay without the sales pitch: who builds the platform, where contest money sits before a payout, where our numbers come from, who answers you."
 ---
 
 # About DareBay
 
-DareBay is a marketplace where brands and individuals post content tasks, and creators film
-their own videos and get paid for them. The reward is calculated from the views the video
-actually got.
+DareBay is a marketplace where brands and ordinary people post content tasks, and creators
+make their own videos and get paid for them. What counts is the reach the video actually
+collected: views, not followers, a portfolio or account age.
 
 The platform is open in two places at once: on darebay.com and inside Telegram. It is one
 product, not a website plus a separate app.

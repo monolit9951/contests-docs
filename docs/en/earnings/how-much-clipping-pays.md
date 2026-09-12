@@ -7,15 +7,15 @@ seo: true
 landing: true
 hero:
   kicker: "Guide · 2026"
-  lede: "You work out what a clip pays before you edit, not after: the rate, the threshold and the cap sit on the task card. Here is the arithmetic of one submission, the reference for rates per 1000 views across open tasks, and why followers never enter the formula."
+  lede: "You can put a price on a clip before you open the editor, because the rate, the threshold and the cap are printed on the task card. Below is the arithmetic of one submission, what open tasks pay for a thousand views, and why your follower count never enters the formula."
   takeaways:
-    - "<b>One formula:</b> views / 1000 × rate, never above the cap on one submission; the threshold opens the count and is not deducted."
-    - "<b>Open tasks pay from $1.00 to $2.00 per 1000 views:</b> the buyer names the rate and it stands on the card before you submit."
-    - "<b>A 2000-view threshold and a cap of usually $100:</b> both are visible in advance, and the largest campaigns go up to $500."
-    - "<b>No followers required:</b> the counter of one specific clip is what gets paid, and a beginner enters at the same rate as a veteran."
+    - "<b>One formula for everyone.</b> Views / 1000 × rate, never above the cap on one submission; the threshold opens the count and is not deducted from it."
+    - "<b>Open tasks pay from $1.00 to $2.00 per 1000 views.</b> The buyer names the rate, it stands on the card before you submit, and it does not move after the start."
+    - "<b>A 2000-view threshold and a cap of usually $100.</b> You see both before you take the task, and the largest campaigns carry a cap of up to $500."
+    - "<b>No followers required.</b> The counter of one specific clip is what gets paid, so a fresh account and a veteran work at the same rate."
 cta:
-  title: "Price your clip before you open the editor"
-  lede: "Open a task on DareBay: the rate, the threshold and the cap are printed on the card, and the payout is set by a formula rather than by anyone's decision after the fact."
+  title: "Do the maths first, then take the task"
+  lede: "The rate, the threshold and the cap sit on every open DareBay card before you submit, and the payout follows the formula rather than anyone's decision after the fact. Pick the task that fits your reach."
 ---
 
 ## Three numbers on the card: rate, threshold, cap

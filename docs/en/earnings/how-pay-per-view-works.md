@@ -7,15 +7,15 @@ seo: true
 landing: true
 hero:
   kicker: "Guide · 2026"
-  lede: "You cut a clip and want to know where the money comes from and who counts the views. On DareBay the chain is closed: a wallet-backed budget is frozen up front, the platform reads the counter, a formula sets the amount, and the transfer is handled by the team."
+  lede: "You post the clip, and from that point nobody gets to argue about the numbers. In a wallet-backed task the budget is locked on the platform before you start, the platform reads the public counter at your link, a formula turns those views into money, and the team sends the transfer. Here is the whole chain step by step, with the threshold, the cap and an example in dollars."
   takeaways:
-    - "<b>The platform reads the views, not a person:</b> an independent counter takes the site's public counter at the link you sent, and both sides see one figure."
-    - "<b>The threshold is not deducted:</b> clear the typical 2000 views and the whole counter goes into the maths; the system default is 1000 and buyers usually raise it."
-    - "<b>The formula is deterministic:</b> views / 1000 × rate, never above the cap on one submission (usually $100), and it cannot be recomputed in anyone's favour."
-    - "<b>The calculation is automatic, the transfer is done by the team:</b> no deadline is promised, but a wallet-backed budget is frozen before you start."
+    - "<b>The platform reads the views, not a person:</b> an independent counter takes the site's public figure at the link you sent, so neither side can nudge it up or down."
+    - "<b>The threshold is not a deduction:</b> clear the typical 2000 views and you are paid on the whole counter from the very first one; the system default is 1000 and buyers usually raise it."
+    - "<b>One formula for everybody:</b> views / 1000 × rate, never above the cap on one submission (usually $100), and neither the buyer nor support can replay it in someone's favour."
+    - "<b>Code counts, the team pays:</b> no deadline is promised, but a wallet-backed budget is frozen before you start and the calculation is already on the record."
 cta:
-  title: "Take a task whose arithmetic you can check"
-  lede: "The rate, the threshold and the cap are fixed on the DareBay task card before the start, and the result of the calculation is recorded against you. Pick a task and send the link."
+  title: "Pick a task where the maths is open before you start"
+  lede: "Rate, threshold and cap are set before anyone opens an editor, the platform reads your counter, and the result is recorded against your name. Choose a task for the site you already post on, publish the clip and send the link."
 ---
 
 ## The full chain: budget to payout

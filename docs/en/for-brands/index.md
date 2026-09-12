@@ -1,13 +1,13 @@
 ---
 title: "For brands - commission UGC and pay only for views"
-description: "What a clipping contest costs a brand, who holds the budget, how views are verified, what you can change after launch and how CPA offers fit in."
+description: "Dozens of clips about your product in days: what a clipping contest costs a brand, who holds the budget, how views are verified, what changes after launch."
 provenance: { snapshot_date: "2026-08-15", source: "darebay-prod" }
 numbers_used: [contest_create_usdt_price, commission_fiat, commission_crypto, commission_coins]
 ---
 
 # For brands
 
-You pay for the views a clip actually collected, not for the fact that someone filmed it. Creating a contest costs **10 USDT**, and the contest commission is **0%**: the platform keeps no share of the prize budget. You set the rate per 1000 views, the view threshold and the cap per submission yourself, and all three numbers sit on the contest card before any creator takes the task.
+Dozens of clips about your product go out on creators' accounts within days, and you pay for the views they collected, not for the fact that someone filmed one. Creating a contest costs **10 USDT**, and the contest commission is **0%**: the platform keeps no share of the prize budget. You set the rate per 1000 views, the view threshold and the cap per submission, all three sit on the contest card before a creator takes the task, and an unspent wallet-backed budget comes back to your balance.
 
 Nobody's word decides the count: the platform's independent counter reads the published view counter of the site each clip went out on, so there is nothing to argue about after publication.
 

@@ -7,15 +7,15 @@ seo: true
 landing: true
 hero:
   kicker: "Crypto project guide · 2026"
-  lede: "How an exchange, a wallet or a protocol gets dozens of short clips from clippers without regulatory trouble: which formats work, which rules protect the project, how to pay per view in USDT and how to measure the result."
+  lede: "An exchange, a wallet or a protocol gets from clipping what no ad account gives: dozens of clips from different creators within days of launch, payment in USDT for counted views only, and an unspent budget back on your balance. Below are the formats that work in crypto, the brief rules that keep the project out of trouble, and what to measure after launch."
   takeaways:
-    - "<b>Crypto lives in short clips:</b> explainers, news, product tutorials and AMA cuts collect views without an ad account."
-    - "<b>The brief rules protect the project:</b> no promises of returns, no signals, a disclaimer in every clip, official links only, no third-party referral links."
-    - "<b>Clippers receive USDT to a TON wallet:</b> open tasks pay $1 to $2 per 1,000 views, launch costs 10 USDT and the contest fee is 0%."
-    - "<b>The community is a ready pool of clippers:</b> a task turns active chat members into creators paid on counted views."
+    - "<b>Crypto gets watched in the feed, not on a landing page:</b> explainers, news clips, product tutorials and AMA cuts collect views with no ad account and no sponsored label."
+    - "<b>The rules in your brief are what protect the project:</b> no promises of returns, no signals, a disclaimer in every clip, official links only, no third-party referral links."
+    - "<b>Clippers receive USDT to a TON wallet and you pay for reach:</b> the rate in open tasks runs $1 to $2 per 1,000 views, launch costs 10 USDT and the contest fee is 0%."
+    - "<b>Your community already explains the product for free:</b> a pay-per-view task turns the active members of your chat into creators paid honestly by the counter."
 cta:
-  title: "Launch a task for your project"
-  lede: "The rules and formats on this page paste straight into the task description; the budget is funded in USDT and creators are paid on counted views."
+  title: "Launch the task, get clips within days"
+  lede: "Copy the rules and formats from this page into the task description and fund the budget in USDT. You pay only for counted views, and an unspent wallet-backed budget comes back to your balance."
 ---
 
 ## Why crypto lives in short clips

@@ -1,6 +1,6 @@
 ---
 title: "Can you pay with crypto on DareBay?"
-description: "Yes: the DareBay wallet runs on USDT on the TON network for top-ups, prize budgets and withdrawals. Crypto is optional, and COINS are not a cryptocurrency."
+description: "Paying with crypto on DareBay means one coin: USDT on the TON network, for top-ups, budgets and withdrawals. Crypto is optional, COINS never leave it."
 provenance: { snapshot_date: "2026-08-15", source: "darebay-prod" }
 numbers_used: [contest_create_usdt_price, commission_fiat, commission_crypto, commission_coins]
 seo: true
@@ -8,7 +8,7 @@ seo: true
 
 # Can you pay with crypto on DareBay?
 
-Yes, with one qualification: there is exactly one cryptocurrency here, **USDT on the TON network**. Through the DareBay wallet you can top up your balance, fund the prize budget of a contest and withdraw an available balance to an external wallet. No other coin and no other network exist in the wallet, and this is a case where "few options" means "fewer ways to lose money".
+Yes, and you will not have to learn a new coin or a new network to do it: there is exactly one cryptocurrency here, **USDT on the TON network**. Through the DareBay wallet you top up your balance, fund the prize budget of a contest and withdraw an available balance to an external wallet. Nothing else lives in the wallet, and that works in your favour: fewer options mean fewer ways to send money nowhere.
 
 Crypto is not mandatory for entering or for the reward: the payment method and the reward method are set by the terms of each contest.
 

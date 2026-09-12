@@ -13,15 +13,15 @@ seo: true
 landing: true
 hero:
   kicker: "Guide · 2026"
-  lede: "What VK Clips actually pay a creator, who the platform suits, how to prepare a clip for its feed, and how to pair VK with tasks that pay a set rate per view. VK is a Russian platform with a Russian-speaking audience, and every VK figure here comes from VK's own official pages, dated."
+  lede: "VK Clips pay no rate per view: they pay a share of ad revenue nobody can work out in advance. Here is what that means for a creator, who VK suits, how to cut a clip for its feed, and how to top the same edit up in tasks that name the rate before you publish. VK is a Russian platform with a Russian-speaking audience, and every VK figure here comes from VK's own pages, dated."
   takeaways:
-    - "<b>Clips are monetized through the VK Video partner programme.</b> A creator gets 50 to 80% of the platform's ad income from their videos <!-- source: https://vk.company/ru/press/releases/11856/ 2026-09-04 -->, and clip views count toward that monetization <!-- source: https://vk.company/ru/press/releases/11895/ 2026-09-04 -->."
-    - "<b>Entry from 1 September 2026: 1,000 subscribers and 500 watch hours over 90 days</b> <!-- source: https://vk.company/ru/press/releases/12381/ 2026-09-04 -->; VK publishes no rate per 1,000 clip views."
-    - "<b>DareBay does not count VK views.</b> Tasks count only TikTok, Instagram Reels, YouTube Shorts and Facebook Reels, where the $1–$2 per 1,000 views rate is printed on the card."
-    - "<b>Region decides.</b> VK's audience is Russia and the CIS, it is blocked in Ukraine, and this page is a reference for readers where VK is open, not a reason to move your audience."
+    - "<b>VK runs no separate pay-per-view for clips: they are monetized through the VK Video partner programme.</b> A creator gets 50 to 80% of the platform's ad income from their videos <!-- source: https://vk.company/ru/press/releases/11856/ 2026-09-04 -->, and clip views count toward that monetization <!-- source: https://vk.company/ru/press/releases/11895/ 2026-09-04 -->."
+    - "<b>Entry from 1 September 2026: 1,000 subscribers and 500 watch hours over 90 days</b> <!-- source: https://vk.company/ru/press/releases/12381/ 2026-09-04 -->; VK publishes no rate per 1,000 clip views, so a clip's income is known only after the payout."
+    - "<b>DareBay does not count VK views.</b> Tasks count only TikTok, Instagram Reels, YouTube Shorts and Facebook Reels, and there the $1–$2 per 1,000 views rate is printed on the card before you publish."
+    - "<b>Region decides whether VK is worth your time at all.</b> Its audience is Russia and the CIS, it is blocked in Ukraine, and this page is a reference for readers where VK is open, not a reason to move your audience."
 cta:
-  title: "Top up the same clip where the rate is on the card"
-  lede: "On DareBay the rate, the threshold and the cap are printed on every task. Publish a copy of the clip on TikTok, Reels or Shorts, send the link, and the platform counts the views."
+  title: "One edit, two places to earn from it"
+  lede: "Leave the VK copy to VK's programme and send the second copy where the terms are known up front. Publish on TikTok, Reels or Shorts, send the link, and the platform reads the site's public counter instead of asking you for a screenshot."
 ---
 
 ## What VK Clips are and how they pay a creator

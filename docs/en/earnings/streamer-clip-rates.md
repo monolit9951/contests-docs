@@ -7,15 +7,18 @@ seo: true
 landing: true
 hero:
   kicker: "Clipper guide · 2026"
-  lede: "What a stream clip pays, how the payout is worked out, what rights a streamer's brief grants over the broadcast, and the route from picking a contest to sending the link."
+  lede: "The footage is already shot and the emotion is in it: your job is to find the moment and build the vertical. You are paid for the reach of your clip, not the size of your channel. Here is what open contests pay, how the payout is worked out and where it stops, what rights a streamer's brief grants over the broadcast, and the route from picking a contest to sending the link."
   takeaways:
-    - "<b>Open contests pay $1.00 to $2.00 per 1000 views;</b> the spread is twofold, so pick a contest by the numbers on the card, not the streamer's name."
-    - "<b>Payout = views / 1000 × rate, never above the cap on one submission:</b> 20,000 views at $1.00 is 20,000 / 1000 × $1.00 = $20.00."
-    - "<b>The 2000-view threshold is not subtracted,</b> and the typical cap across open contests is $100 per submission; the largest campaigns go up to $500."
-    - "<b>The brief itself is the permission to cut the broadcast:</b> the boundaries are in the contest terms, the clip is submitted by link, and a hashtag is only needed where the brief says so."
+    - "<b>Open contests pay $1.00 to $2.00 per 1000 views.</b> The spread is twofold, so the same clip is worth double at the top of the band: read the numbers on the card, not the streamer's name."
+    - "<b>Payout = views / 1000 × rate, never above the cap on one submission.</b> You can run it before you edit: 20,000 views at $1.00 is 20,000 / 1000 × $1.00 = $20.00."
+    - "<b>Clear the 2000-view threshold and the whole counter is paid, not the part above the bar.</b> The typical cap across open contests is $100 per submission, and the largest campaigns go up to $500."
+    - "<b>The brief is your permission to cut the broadcast, so there is nobody to ask.</b> The boundaries sit in the contest terms, the clip goes in by link, and a hashtag is only needed where the brief says so."
+cta:
+  title: "Pick a streamer contest by its numbers, not by the name"
+  lede: "The catalogue prints rate, threshold, cap, site and deadline on every streamer brief. Filter for pay-per-view, take the one that suits the reach you already get, cut a single moment out of the broadcast, publish it and send the link."
 ---
 
-Streamer clips on DareBay pay **$1.00 to $2.00 per 1000 views** of one specific video, and nothing open right now pays below that floor. The streamer's name matters less than the numbers on the card: the same clip is worth twice as much in a contest at the top of the band as at the floor rate. The cap on a single submission is named by the buyer at contest creation. Followers are not required, entry costs a clipper nothing, and the contest commission is 0%. In a wallet-backed contest the budget is frozen on the platform before you take the brief, and the rate and the cap stand on the card before you submit: you know in advance what you are playing for.
+Streamer clips on DareBay pay **$1.00 to $2.00 per 1000 views** of one specific video, and nothing open right now pays below that floor. Followers play no part in it: what is counted is the reach of your clip, not the size of the account it went out on. The streamer's name matters less than the numbers on the card, because the same clip is worth twice as much in a contest at the top of the band as at the floor rate. The cap on a single submission is named by the buyer at contest creation. Entry costs a clipper nothing and the contest commission is 0%. In a wallet-backed contest the budget is frozen on the platform before you take the brief, and the rate and the cap stand on the card before you submit: you know in advance what you are playing for.
 
 Every figure on this page comes from the platform's own data (snapshot: 2026-08-23) and counts only open contests - the ones a clipper can take right now.
 

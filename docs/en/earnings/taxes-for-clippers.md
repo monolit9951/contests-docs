@@ -16,15 +16,15 @@ seo: true
 landing: true
 hero:
   kicker: "Guide · 2026"
-  lede: "Where 'I just earned a bit' ends and taxable income begins: country by country, with no invented rates, and allowing for the fact that the money arrives in USDT. This is a map, not advice: the rules depend on your country and they change, so check with your tax office or an accountant."
+  lede: "Earned your first USDT from clips and not sure what the tax office wants? Here it is country by country: which status fits, what counts as income and which papers to keep, all read off the tax authorities' own documents with no invented rates. This is a map, not advice: rules differ by country and they change, so check with your tax office or an accountant."
   takeaways:
-    - "<b>Income is the view payout, the fixed fee per clip and the share of sales.</b> All of it lands in USDT in your DareBay wallet, and to a tax office it is income whatever the currency."
-    - "<b>The platform is not a tax agent.</b> DareBay withholds no tax and issues no statements in your tax office's format; the history of credits and withdrawals is visible in your cabinet."
-    - "<b>The status is your call.</b> Self-employed (NPD) in Russia, a FOP in Ukraine, a sole trader on the simplified regime in Kazakhstan: options, each with its own conditions and its own crypto caveats."
-    - "<b>Bookkeeping takes ten minutes a month.</b> Date, task, credited, withdrawn, rate, local-currency amount: with that table you have an answer for most questions a tax office asks."
+    - "<b>All of it is income: the view payout, the fixed fee per clip and the share of sales.</b> It lands in USDT in your DareBay wallet, and to a tax office the currency changes nothing."
+    - "<b>Nobody withholds the tax for you.</b> DareBay is not a tax agent and issues no statements in your tax office's format, but the whole history of credits and withdrawals sits in your cabinet."
+    - "<b>The status is yours to pick, and there is usually a fit.</b> Self-employed (NPD) in Russia, a FOP in Ukraine, a sole trader on the simplified regime in Kazakhstan, each with its own conditions and its own crypto caveats."
+    - "<b>Ten minutes a month covers the bookkeeping.</b> Date, task, credited, withdrawn, rate, amount in local currency: fill those columns and most questions a tax office asks already have an answer."
 cta:
-  title: "Count real income, not rumours"
-  lede: "Open DareBay tasks pay for counted views in USDT; the history of credits and withdrawals stays in your cabinet, and how you report it is your decision under your country's rules."
+  title: "First earn it, then declare it"
+  lede: "Open DareBay tasks pay in USDT for counted views, and every credit and every withdrawal stays in your cabinet history, ready to move into your monthly ledger. How you report that income is your own decision, under the rules of your country."
 ---
 
 ## What counts as a clipper's income

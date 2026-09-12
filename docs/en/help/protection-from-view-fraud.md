@@ -1,16 +1,16 @@
 ---
 title: Protection from view fraud and fake submissions
-description: What actually stands between a faked submission and a payout on DareBay - an independent count, a moderation hold and the three ways a flagged clip can end.
+description: "View fraud protection on DareBay: the figure is read from the public counter on the site your video went out on, and suspicious growth goes on hold."
 provenance: { snapshot_date: "2026-08-15", source: "darebay-prod" }
 numbers_used: []
 ---
 
 # Protection from view fraud and fake submissions
 
-Two separate things protect a contest, and they are worth telling apart. The **count** is
-independent: neither the buyer nor the participant supplies the view figure, so nobody can argue
-it up or down. The **checks on top of it** are moderation and a hold, which is a real safeguard
-and not a claim that every manipulated view on the internet gets spotted.
+Nobody rewrites your result by hand: the view figure is supplied by neither the buyer nor you. The
+platform reads the published counter on the site the video went out on, and the work is tied to the
+contest by the URL you submitted. **The checks on top of that** are moderation and a hold, which is
+a real safeguard and not a claim that every manipulated view on the internet gets spotted.
 
 Anyone who tells you a platform detects all inflation is guessing. What DareBay can state is what
 it does.

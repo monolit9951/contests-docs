@@ -1,6 +1,6 @@
 ---
 title: How to commission clips for a campaign on DareBay
-description: How to buy promotion from clippers through DareBay. A wallet-backed budget is locked up front; a manual-payout contest is paid directly by its organizer.
+description: "Commission clips for a campaign with one task: clippers take it from the feed, a wallet-backed budget pays for counted views, and the unspent part comes back."
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_cpm_min, ppv_cpm_max, ppv_min_views_threshold_live, ppv_default_min_views_threshold]
 seo: true
@@ -8,7 +8,7 @@ seo: true
 
 # How to commission clips for a campaign
 
-Commissioning clips on DareBay takes no negotiation and no advance payment to a freelancer. You write the task, choose the funding mode and the clippers pick the job up themselves. In a wallet-backed contest, the money is locked on the platform and unused funds return to you; in a manual-payout contest, no money enters the DareBay wallet and you pay creators directly under the contest terms.
+One task can put your product into dozens of clips in a few days, and your budget moves only against views the platform counted. There is nothing to negotiate and no advance to hand a freelancer: you write the task, choose the funding mode, and clippers pick the job up themselves. In a wallet-backed contest, the money is locked on the platform and unused funds return to you; in a manual-payout contest, no money enters the DareBay wallet and you pay creators directly under the contest terms.
 
 ## The model: the buyer creates a contest, clippers take the task
 

@@ -1,17 +1,19 @@
 ---
 title: Prizes and payouts
-description: "What you can put up as a reward on DareBay, how balances work, and how a wallet-backed contest differs from one the organizer settles directly."
+description: "Prizes and payouts on DareBay: money or an item as the reward, where the budget sits in a wallet-backed contest, and what happens once the result is in."
 provenance: { snapshot_date: "2026-08-15", source: "darebay-prod" }
 numbers_used: []
 ---
 
 # Prizes and payouts
 
-A reward on DareBay is one of two things - **money** or **an item** - and the contest decides which
-method it is delivered through. This page is the catalogue: what you can put up, how balances and
-funding modes work, and what happens at the end. The chain itself is short: the budget is recorded
-when the contest publishes, the result is confirmed, and a credit or payout obligation gets a
-status. Moving the money is a separate stage done by the team.
+Read the size of a prize second and what backs it first: that is what decides whether you wait
+calmly or keep an eye on the organizer. A reward on DareBay is one of two things - **money** or
+**an item** - and the contest decides which method it is delivered through. This page is the
+catalogue: what you can put up, how balances and funding modes work, and what happens at the end.
+The chain itself is short: the budget is recorded when the contest publishes, the result is
+confirmed, and a credit or payout obligation gets a status. Moving the money is a separate stage
+done by the team.
 
 ## Where it works
 

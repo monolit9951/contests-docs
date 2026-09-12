@@ -7,13 +7,13 @@ seo: true
 landing: true
 hero:
   kicker: "Checklist · 2026"
-  lede: "You pick a clipping platform by nine questions, not by the advertised rate, and the answers are either on the platform's pages or they are not. Below is each question, what matters in the answer, and which platforms publish it. The full table is at the bottom to check against."
+  lede: "The rate on a platform's front page does not tell you what lands in your hand. These nine questions weed out the platforms that cannot pay your country, keep the threshold and the cap out of sight, or say nothing about the fee. Each one shows what matters in the answer and who publishes it; the full table is at the bottom."
   secondary: "Check the table"
   takeaways:
-    - "<b>Country first, everything else second.</b> Whop and Vyro are closed to Russia, Belarus and Ukraine; if a platform publishes no country list, ask before your first clip."
-    - "<b>Three numbers must be on the campaign card:</b> rate, threshold and cap. If one is missing you cannot calculate what a clip pays."
-    - "<b>Fee and minimum payout</b> separate the money on the card from the money in your hand: 10% at Whop, 5% at Klipni, 0% on the payout and 10% on withdrawal at DareBay."
-    - "<b>The budget should sit with the platform before you post.</b> Vues states that it does not custody funds; Whop, Klipni, Prime Oracles and DareBay's wallet-backed contests do."
+    - "<b>Country first, everything else second.</b> Whop and Vyro are closed to Russia, Belarus and Ukraine; if a platform publishes no country list, ask support before you cut anything."
+    - "<b>Three numbers belong on the campaign card: rate, threshold and cap.</b> Miss any one of them and you cannot work out what a clip pays before you cut it."
+    - "<b>Fee and minimum payout separate the advertised sum from the money in your hand.</b> 10% at Whop, 5% at Klipni, 0% on the payout and 10% on withdrawal at DareBay."
+    - "<b>The budget should already be with the platform before you post.</b> Vues states that it does not custody funds; Whop, Klipni, Prime Oracles and DareBay's wallet-backed contests hold it."
 compare:
   ids: [whop, vyro, darebay, clipping-net, vues, reach-cat, prime-oracles, klipni, clipping-io]
   columns: [rate, threshold, cap, fee, minPayout, payoutMethods, cis, followers, escrow]
@@ -23,8 +23,8 @@ method:
   - "The nine questions are the nine columns we compare platforms on across this section. Platform answers come from their own pages on the date shown; 'not published' is also an answer."
   - "DareBay's figures come from the platform's live data snapshot and its help pages."
 cta:
-  title: "Every DareBay task card carries all three numbers"
-  lede: "Rate, threshold and cap before you submit, the wallet-backed budget locked, payouts in Russia, CIS and worldwide."
+  title: "DareBay has an answer to all nine questions"
+  lede: "Rate, threshold and cap stand on the task card before you submit, the wallet-backed contest budget is locked on the platform before the start, followers are not required, and payouts reach Russia, the CIS and the rest of the world."
 ---
 
 ## Question 1. Can the platform pay to my country?

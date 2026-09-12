@@ -1,6 +1,6 @@
 ---
 title: Editorial policy of the clipping earnings section
-description: "Rules of this section: one page per question, a source and a date on every figure, other platforms from their own documents, no promises, how errors get fixed."
+description: "The editorial rules behind these clipping guides: one question per page, a source and a date on every figure, rival platforms quoted from their own documents."
 provenance: { snapshot_date: "2026-09-11", source: "darebay-prod" }
 numbers_used: []
 seo: true
@@ -8,9 +8,9 @@ seo: true
 
 # Editorial policy of the clipping earnings section
 
-This section exists so that someone about to earn from clipping, or to order clips, gets an answer to
-their question before spending time or money. Below are the rules the section is written and updated
-by. They are short, and each can be checked on any page.
+You are about to earn from clipping, or to order clips, and you want a straight answer before you
+spend time or money. That is what this section is for. Below are the rules it is written and updated
+by: they are short, and every one of them can be checked on any page you open.
 
 ## One page answers one question
 

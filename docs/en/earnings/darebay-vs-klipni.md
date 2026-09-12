@@ -7,13 +7,13 @@ seo: true
 landing: true
 hero:
   kicker: "Head to head · 2026"
-  lede: "Two platforms that pay clippers where the Western marketplaces do not, built differently. Klipni is a Russian platform with rubles, brand subscriptions and self-employed tax status for creators. DareBay is a platform for all of CIS and the world with USDT, Telegram Stars and no tax status. Here is every field where they differ."
+  lede: "Both platforms pay clippers where the Western marketplaces will not, and they suit different people. Klipni is the Russian option: rubles on a card, brand subscriptions, self-employed tax status for creators. DareBay covers all of CIS and the rest of the world, pays in USDT or Telegram Stars and asks for no tax status. Here is every field where the two split."
   secondary: "See the table"
   takeaways:
-    - "<b>Klipni is for Russia only:</b> ruble payouts to a card through self-employed or sole-trader status, a 5% fee, no floor on payouts, VK Clips counted."
-    - "<b>DareBay is worldwide:</b> no country restrictions, USDT on TON or Telegram Stars, no tax status and no application; the community is largest in CIS, and offer tasks add a fixed fee per clip, a share of sales and ready-made unique videos."
-    - "<b>Rates:</b> Klipni shows examples of 50 rubles per 1,000 views, DareBay's open contests run from $1.00 to $2.00 per 1,000; both print the rate on the card."
-    - "<b>Both take the budget in advance:</b> Klipni by prepaid invoice, DareBay by locking it in wallet-backed contests and labelling manual ones."
+    - "<b>Klipni is for Russia only.</b> Ruble payouts reach a card through self-employed or sole-trader status. The fee is 5%, there is no floor on payouts, and VK Clips are counted."
+    - "<b>DareBay is worldwide.</b> No country restrictions, USDT on TON or Telegram Stars, no tax status and no application; the community is largest in CIS, and offer tasks add a fixed fee per clip, a share of sales and ready-made unique videos."
+    - "<b>Both print the rate before you edit.</b> Klipni shows examples of 50 rubles per 1,000 views, DareBay's open contests run from $1.00 to $2.00 per 1,000, and either way the number is on the card."
+    - "<b>Both take the budget in advance.</b> Klipni by prepaid invoice, DareBay by locking it in wallet-backed contests and labelling the manual ones."
 compare:
   ids: [darebay, klipni]
   columns: [rate, threshold, cap, fee, minPayout, payoutMethods, cis, followers, escrow, networks, verification]
@@ -23,8 +23,8 @@ method:
   - "Klipni's figures come from klipni.com's creator, brand and legal pages on the date shown next to each; DareBay's from its live data snapshot and help pages."
   - "Where a figure is not published, the cell says so. We do not convert rubles to dollars: each platform's rate is shown in its own currency."
 cta:
-  title: "No tax status, paid in USDT"
-  lede: "DareBay pays worldwide with no country restrictions, and its community is largest in CIS. Rate on the card, wallet-backed budget locked."
+  title: "Clip without a tax status, get paid in USDT"
+  lede: "DareBay pays worldwide with no country restrictions, and its community is largest in CIS. The rate sits on the card before you submit, and in a wallet-backed contest the budget is locked on the platform before the start."
 ---
 
 ## The short answer

@@ -1,6 +1,6 @@
 ---
 title: DareBay fees - contests, store and withdrawals
-description: "Current DareBay fees: 0% to create or top up a contest, 8% for store purchases, and 10% to withdraw a balance with a 10 USDT minimum."
+description: "DareBay fees by operation: 0% to create or top up a contest, 10% to withdraw a balance, minimum request 10 USDT. A store purchase costs 8%."
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod-config" }
 numbers_used: []
 seo: true
@@ -8,7 +8,7 @@ seo: true
 
 # What fees DareBay charges
 
-DareBay applies different terms to different operations. Creating a contest and topping up its budget currently carry a **0% fee** for fiat, USDT and COINS. The default platform fee when an available balance is withdrawn is **10% of the requested amount**, with a **10 USDT minimum** request. A personal fee override may apply; the form shows the exact rate before confirmation. Store purchases are a separate flow with an **8% fee**.
+Every DareBay charge is tied to an operation rather than to your account, and the whole list fits in one paragraph. Creating a contest and topping up its budget currently carry a **0% fee** for fiat, USDT and COINS. Taking an available balance out costs **10% of the requested amount**, with a **10 USDT minimum** request, and the team checks the details manually before the money goes anywhere. A personal fee override may apply, and the form shows the exact rate before you confirm. A store purchase is a separate flow and carries an **8% fee**.
 
 Entering a contest remains free. There is no charge to register, submit work or be included in the results.
 

@@ -1,6 +1,6 @@
 ---
 title: Who writes the DareBay guides and where the numbers come from
-description: "Who is responsible for the clipping guides, where rates and thresholds are read from, how other platforms' figures are checked, and where to report an error."
+description: "Who writes the DareBay clipping guides and answers for every figure: where rates come from, how other platforms' numbers are checked, where to report an error."
 provenance: { snapshot_date: "2026-09-11", source: "darebay-prod" }
 numbers_used: []
 seo: true
@@ -8,10 +8,11 @@ seo: true
 
 # Who writes the DareBay guides and where the numbers come from
 
-The earning section is written by the DareBay team and signed by the platform's founder, Ruslan
-Bey, who is answerable for it. This is not an editorial desk watching the market from the outside:
-the same people build the product, see how views are counted and how payouts leave. That position
-has a strong side and a weak side, and both are named below.
+You are reading the people who build DareBay: the earning section is written by the platform team
+and signed by its founder, Ruslan Bey, who is answerable for it. Nobody here is studying the market
+from the outside. The same people watch every day how views are counted and how payouts leave, so
+what is written down is how the product actually works. That position has a strong side and a weak
+side, and both are named below.
 
 ## Who the author is
 

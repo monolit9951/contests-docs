@@ -7,18 +7,18 @@ seo: true
 landing: true
 hero:
   kicker: "For podcasters · 2026"
-  lede: "Why a podcast is the easiest material for clippers, the three clip formats one episode produces, what to hand over, what an episode costs when you pay per view, and how to put clipping on a weekly cycle alongside your releases."
+  lede: "A podcast cuts more easily than any other source: the thoughts are already spoken, the questions are already asked, the faces are already on camera. Below are the three clip formats one episode produces, what to hand clippers, what an episode costs when you pay per counted view, and how to put clipping on a weekly cycle beside your releases."
   takeaways:
-    - "<b>An hour of talk is 10 to 20 clips:</b> a quotable point, a disagreement or emotion, a question and answer. A podcast cuts faster than any other source because the meaning is already spoken."
-    - "<b>You pay for counted views:</b> open tasks pay $1 to $2 per 1,000 views, the threshold is typically 2,000 views, the cap per clip typically $100."
-    - "<b>An episode with 120,000 counted views at $1.00 is 120,000 / 1,000 × $1.00 = $120.00.</b> Launch costs 10 USDT once, the contest fee is 0%."
-    - "<b>Guest and context are protected by the brief:</b> the guest's consent before release, a list of topics that must not be taken out of context, and a required link to the full episode."
+    - "<b>An hour of talk is 10 to 20 clips:</b> a quotable point, a disagreement or a moment of emotion, a question and answer. Your guest has already made the point and your host has already asked the question, so the clipper only picks the best seconds and adds a hook."
+    - "<b>You pay for counted views, not for editing hours:</b> open tasks pay $1 to $2 per 1,000 views, the threshold is typically 2,000 views and the cap per clip typically $100, and the rate is yours to choose."
+    - "<b>An episode with 120,000 counted views at $1.00 costs 120,000 / 1,000 × $1.00 = $120.00.</b> Launch is 10 USDT once and the contest fee is 0%."
+    - "<b>The brief protects your guest, a verbal promise does not:</b> consent agreed before release, a list of topics nobody may lift out of context, and a required link to the full episode."
 cta:
-  title: "Episode recorded? Hand it to clippers"
-  lede: "Launch costs 10 USDT, the contest fee is 0%. A link to the recording, three formats in the terms, a rate per 1,000 views, a threshold and a cap: the task appears in the feed after launch and creators take it themselves."
+  title: "The clips are already inside your episode"
+  lede: "Launch is 10 USDT, the contest fee is 0%, and the editing time is not on your invoice. A link to the recording, three formats in the terms, a rate per 1,000 views, a threshold and a cap, and the task lands in the feed where clippers pick it up themselves."
 ---
 
-A podcast is the easiest source for clips: an hour of conversation already holds finished points, disagreements and answers, and faces on camera give a clip what a screen recording cannot. One episode becomes 10 to 20 clips for TikTok, Reels and Shorts, paid by counted views, not by editing.
+One episode is 10 to 20 clips for TikTok, Reels and Shorts, and on DareBay you pay for the views they count, not for the hours somebody spent editing. An hour of conversation already holds finished points, disagreements and answers, and faces on camera give a clip what a screen recording never will.
 
 ## Why a podcast is ideal material for clips
 

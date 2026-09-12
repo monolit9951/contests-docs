@@ -9,15 +9,15 @@ seo: true
 landing: true
 hero:
   kicker: "Guide · 2026"
-  lede: "To a platform a new account is a stranger with no history, and its first clips often start from zero distribution. This page has a seven-day warm-up plan, the signs and causes of a shadowban, what to do when views drop, and how all of it runs into the task threshold."
+  lede: "Your first clip from a new account often starts from zero distribution, and not because it is weak: the platform does not yet know who to show it to. A week of warm-up gives it that data. Here is the plan day by day, the signs and causes of a shadowban, what to do when views drop, and where all of it runs into the task threshold that the money sits behind."
   takeaways:
-    - "<b>Warm-up is data for the algorithm, not a trick.</b> A week of behaving like an ordinary viewer on one topic tells the platform who to show your first clips to."
-    - "<b>A shadowban is a symptom, not a verdict.</b> Reach to new viewers drops after duplicates, reposts, bought views and mass actions; officially the platforms do not use the term."
-    - "<b>The order of fixes: pause, clear duplicates, new material.</b> A new account is the last resort, and only if reach has not returned after the pause."
-    - "<b>A task does not forgive fake views.</b> Bought views will not get a clip past the 2,000-view threshold: the submission goes on hold and moderation removes it entirely."
+    - "<b>Warm-up is data for the algorithm, not a trick.</b> A week of behaving like an ordinary viewer on one topic tells the platform whose feed your first clips belong in, instead of nobody's."
+    - "<b>A shadowban is a symptom, not a verdict.</b> Reach to new viewers drops after duplicates, re-uploads, bought views and mass actions; the platforms never use the word, but that is what the restrictions are handed out for."
+    - "<b>The order of fixes: pause, clear duplicates, new material.</b> A new account is the last resort, only if reach has not come back after the pause, and the old one stays alive until its task clips are paid."
+    - "<b>A task does not forgive fake views.</b> Bought views will not carry a clip past the 2,000-view threshold: the submission goes on hold, moderation removes it in full, and the money you spent on bots is already gone."
 cta:
-  title: "Warm the account up, then take your first task"
-  lede: "A DareBay task card shows the site, threshold and cap before the start. A week of warm-up on the task's topic, then a clip, a link, and views counted by the platform."
+  title: "Account warm? Take your first task"
+  lede: "A DareBay task card names its site before the start, so you can warm the account on exactly the topic you plan to clip. A week by the plan above, then one clip, one link, and a counter the platform reads for you."
 ---
 
 ## What warm-up is and why a clipper needs it

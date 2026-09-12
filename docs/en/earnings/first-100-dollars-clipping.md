@@ -7,15 +7,15 @@ seo: true
 landing: true
 hero:
   kicker: "Guide · 2026"
-  lede: "How many clips and views stand behind the first hundred dollars, how to spread them over four weeks, and what to do with the first accruals. Every figure follows the platform's formula; the ranges in the table are a hypothesis, not a promise."
+  lede: "The first hundred comes from a run of ordinary clips that cleared the threshold, not from one lucky hit. Here is how many clips and views that takes, how to spread them over four weeks, and what to do with the first accruals. Every figure follows the platform's formula; the ranges in the table are a hypothesis, not a promise."
   takeaways:
-    - "<b>$100 is 100,000 counted views at $1 per 1,000</b> and 50,000 at $2; the sum runs across every clip that cleared the threshold."
-    - "<b>The 2,000-view threshold sits on each clip separately:</b> a clip below it earns nothing, a clip above it is paid for the whole counter."
-    - "<b>No guarantees, but a plan:</b> four weeks with a rising clip count, so that by the end of the month you know your average reach instead of guessing."
-    - "<b>Two steps to cash:</b> 'Claim now' once a clip is approved, then a withdrawal request from 10 USDT with a 10% fee."
+    - "<b>$100 is 100,000 counted views at $1 per 1,000.</b> At $2 it is 50,000, and they add up across every clip that cleared the threshold, not one lucky one."
+    - "<b>The 2,000-view threshold sits on each clip separately.</b> A clip below it earns nothing, a clip above it is paid for the whole counter."
+    - "<b>No guarantees, but a plan.</b> Four weeks with a rising clip count, so that by the end of the month you know your own average reach instead of guessing at it."
+    - "<b>Two steps to cash.</b> 'Claim now' once a clip is approved, then a withdrawal request from 10 USDT with a 10% fee, which the team checks and sends."
 cta:
-  title: "Open your first task today"
-  lede: "Every open DareBay task card shows the rate, the threshold and the cap. Post the clip, send the link, and the platform counts the views."
+  title: "First clip today, first hundred this month"
+  lede: "Every open DareBay card shows the rate, the threshold and the cap, so you know what the hundred costs in views before you edit. Post the clip, send the link, and the platform counts the views."
 ---
 
 ## What $100 looks like in views

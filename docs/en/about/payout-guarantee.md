@@ -1,6 +1,6 @@
 ---
 title: "DareBay payout guarantee: what it covers and where it stops"
-description: DareBay guarantees a locked wallet-backed budget, fixed terms and a recorded calculation, not views, a payout date or a manual-payout organizer.
+description: "The DareBay payout guarantee: a wallet-backed budget is frozen on the platform before the start and the terms stay fixed. And where it stops."
 provenance: { snapshot_date: "2026-08-15", source: "darebay-prod" }
 numbers_used: []
 seo: true
@@ -8,7 +8,7 @@ seo: true
 
 # The DareBay payout guarantee
 
-A guarantee is only worth something if its edges are drawn. This page draws them: what DareBay actually stands behind, and what it deliberately does not.
+You take a task and you want one answer: is the money for it actually there? In a wallet-backed contest it is, and this page draws the exact edges of that yes.
 
 DareBay is an intermediary and guarantor. It holds money, records the arithmetic and keeps the obligation. It is not an escrow contract and it does not underwrite an organizer who never put money on the platform in the first place.
 

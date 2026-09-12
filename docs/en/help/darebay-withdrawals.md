@@ -1,6 +1,6 @@
 ---
 title: DareBay withdrawals - fee, minimum and timing
-description: "How to withdraw an available DareBay balance: a 10 USDT minimum, a 10% fee, requests checked manually by the team and available payout methods."
+description: "DareBay withdrawals: one request from 10 USDT, a 10% fee, details checked manually by the team, and payouts in USDT on TON or Telegram Stars."
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod-config" }
 numbers_used: []
 seo: true
@@ -8,7 +8,7 @@ seo: true
 
 # DareBay withdrawals - fee, minimum and timing
 
-An available DareBay balance is withdrawn by submitting a request. The minimum request is **10 USDT**, and the default platform fee is **10% of the requested amount**. A personal fee override may apply; the form shows the exact rate before confirmation. Requests are handled by the team, so there is no fixed promise of settlement “within minutes”.
+Your DareBay balance leaves in one move: you file a withdrawal request, and the team checks the details manually and sends the transfer. The minimum request is **10 USDT**, and the default platform fee is **10% of the requested amount**. A personal fee override may apply; the form shows the exact rate before confirmation. Because a person checks every request, there is no fixed promise of settlement “within minutes”.
 
 Entering a contest is free. The current fee to create or top up a contest is 0%; the withdrawal fee is a separate operation after a reward has been credited.
 
@@ -17,7 +17,7 @@ Entering a contest is free. The current fee to create or top up a contest is 0%;
 1. **Wait for an available balance.** While a contest or its result is still being finalized, funds may remain frozen.
 2. **Open the withdrawal form.** Enter an amount of at least 10 USDT and choose an available method.
 3. **Review the calculation.** Before confirmation, the form shows the requested amount, the 10% fee and the amount to receive.
-4. **Submit the request.** The team checks the details and checks the details manually and sends the transfer. Follow its status in DareBay.
+4. **Submit the request.** The team checks the details manually and sends the transfer. Follow its status in DareBay.
 
 For example, a 10 USDT request has a 1 USDT fee and a 9 USDT amount to receive. The request records the rate that applied when it was created.
 

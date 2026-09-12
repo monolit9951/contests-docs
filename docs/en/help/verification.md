@@ -1,16 +1,17 @@
 ---
 title: Verification and trust
-description: Verified badges, dual ratings, and why trust is the main currency on DareBay.
+description: "Verification and ratings on DareBay: what a verified badge proves, how the organizer and participant ratings are built, and what changes when they drop."
 provenance: { snapshot_date: "2026-08-15", source: "darebay-prod" }
 numbers_used: []
 ---
 
 # Verification and trust
 
-Half of what a participant weighs up is the prize itself. The other half: *is
-this organizer real, and will they fulfil the obligation?* The platform records
-the budget, result and credit or payout status. Fulfilment itself is done by the team.
-Verification and open ratings answer who exactly is behind the contest.
+Before you take a contest you ask two things: how much it pays, and who is
+behind it. The card answers the first; the badge and the ratings answer the
+second. A badge means a person or a company checked against documents, and the
+ratings show how that account behaved in earlier contests. The platform records
+the budget, result and payout status, and fulfilment is done by the team.
 
 ## Verification levels
 

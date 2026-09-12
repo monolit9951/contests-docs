@@ -1,6 +1,6 @@
 ---
 title: How to pay clippers per view
-description: "The pay-per-view model for buyers: wallet-backed funding locks the budget on DareBay, while manual payout leaves direct payment to the organizer."
+description: "Paying clippers per view: you set the rate per 1000 views, the platform counts them for you, and an unspent wallet-backed budget comes back to you."
 provenance: { snapshot_date: "2026-08-15", source: "darebay-prod" }
 numbers_used: []
 seo: true
@@ -8,7 +8,7 @@ seo: true
 
 # How to pay clippers per view
 
-Pay-per-view on DareBay works like this: you fund the budget and set the rate per 1000 views, the view threshold and the cap per submission. Clippers film, publish and send in their links; the platform reads the view counters independently and records what each creator has earned. In the wallet-backed mode DareBay holds the budget as intermediary and guarantor, so the calculation depends on no number supplied by either side, and whatever the clippers did not earn returns to your balance.
+You pay for views that already happened, not for the promise of them. You set the rate per 1000 views, the view threshold and the cap per submission; clippers film, publish and send you the links; and the platform reads the published view counters itself, so there is no figure for either side to argue over. In the wallet-backed mode DareBay holds the budget as intermediary and guarantor, it is spent only against counted views, and whatever the clippers did not earn comes back to your balance.
 
 ## How the payment model works
 

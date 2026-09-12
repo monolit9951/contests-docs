@@ -1,6 +1,6 @@
 ---
 title: Quick start on DareBay
-description: "Pick a role and start in minutes: launch an activity, submit work, or watch and vote. Payout fulfilment follows later statuses."
+description: "Quick start on DareBay: pick one of three roles and go. Launch a contest, submit work, or watch and vote. One account covers the site and Telegram."
 provenance: { snapshot_date: "2026-08-15", source: "darebay-prod" }
 numbers_used: []
 ---
@@ -13,10 +13,11 @@ numbers_used: []
 
 # Quick start
 
-DareBay runs three roles at once. You can be an **organizer** (you set the
-activity and the reward), a **participant** (you make your own version of the
-content and take the reward) or a **viewer** (you watch, vote, comment, and
-often that is exactly what decides it). Most accounts end up doing all three.
+A minute after you sign up you can launch a contest, send in work or vote,
+depending on why you came. There are three roles: an **organizer** sets the
+activity and the reward, a **participant** makes their own version of the
+content and takes that reward, a **viewer** watches, comments and votes, and
+often that vote decides it. Most accounts end up doing all three.
 
 DareBay has two equal front doors and one account behind them: the site
 [**darebay.com**](https://darebay.com) and Telegram (the app, the bot, the

@@ -14,15 +14,15 @@ seo: true
 landing: true
 hero:
   kicker: "Guide · 2026"
-  lede: "Telegram does not count short-video views the way TikTok does, so clip money on Telegram arrives by three different routes. This page covers all three: a channel with a share of Telegram's ad revenue, DareBay tasks you take inside Telegram, and clipping services sold through a portfolio channel, with the terms and figures for each."
+  lede: "Clip money on Telegram arrives by three different routes, because Telegram does not count short-video views the way TikTok does. All three are below with terms and figures: a channel earning a share of Telegram's ad revenue, DareBay tasks you take without leaving the messenger, and clipping services sold through a portfolio channel. One works from day one with no audience."
   takeaways:
-    - "<b>Telegram shares ad revenue with channels.</b> The owner of a public channel with at least 1,000 subscribers receives 50% of the revenue from ads shown in it <!-- source: https://telegram.org/blog/monetization-for-channels 2026-09-04 -->, with rewards paid in Toncoin through Fragment."
-    - "<b>DareBay tasks are taken in Telegram, but the clips go on TikTok, Reels, Shorts or Facebook Reels.</b> Only those views count: $1–$2 per 1,000, a typical 2,000-view threshold, a cap of about $100 per clip."
-    - "<b>Stars are a way to receive what you earned, not a withdrawal.</b> Under Telegram's terms, Stars on a personal balance cannot be sold or turned into cash and are spent inside the messenger; cash comes as USDT on the TON network."
-    - "<b>Other people's clips and casino ads close both routes.</b> Tasks reject such clips, and Telegram Ads does not accept ads for real-money gambling <!-- source: https://ads.telegram.org/guidelines 2026-09-04 -->."
+    - "<b>Telegram hands channels a share of its ad revenue.</b> The owner of a public channel with at least 1,000 subscribers keeps 50% of the revenue from ads shown in it <!-- source: https://telegram.org/blog/monetization-for-channels 2026-09-04 -->, collected in Toncoin through Fragment."
+    - "<b>Take the task in Telegram, post the clip on TikTok, Reels, Shorts or Facebook Reels.</b> Only views there are counted, and they pay $1–$2 per 1,000, with a typical 2,000-view threshold and a cap of about $100 per clip."
+    - "<b>Stars are a way to receive what you earned, not a way to cash out.</b> Under Telegram's terms, Stars on a personal balance cannot be sold or turned into cash and are spent inside the messenger. If it is money you want, pick USDT on the TON network."
+    - "<b>Other people's clips and casino ads shut both routes at once.</b> A task rejects a reposted clip, and Telegram Ads does not accept ads for real-money gambling <!-- source: https://ads.telegram.org/guidelines 2026-09-04 -->."
 cta:
-  title: "Take a task right inside Telegram"
-  lede: "The Telegram version of DareBay carries the same task catalogue as the site: rate, threshold and cap are visible before you start. Post the clip on TikTok, Reels or Shorts, send the link, and receive what you earned in USDT or in Stars."
+  title: "Start without leaving the messenger"
+  lede: "The Telegram version of DareBay carries the same task catalogue as the site, with the rate, the threshold and the cap visible before you start. Post the clip on TikTok, Reels or Shorts, send the link back to the task, and receive what you earned in USDT on the TON network or in Telegram Stars."
 ---
 
 ## Three ways to earn from clips through Telegram

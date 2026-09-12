@@ -7,15 +7,18 @@ seo: true
 landing: true
 hero:
   kicker: "About DareBay · 2026"
-  lede: "There are few reviews of DareBay because the platform is young, and reviews of earning platforms mostly report the reviewer's own luck. Instead, here is what you would be signing up for and what to check yourself in ten minutes."
+  lede: "There is no pile of DareBay reviews, and we are not about to invent one: the platform is young, and reviews of earning platforms mostly record the reviewer's own luck. What works better takes ten minutes and asks you to trust nobody, us included. Here is exactly what to open and what to look at."
   takeaways:
-    - "<b>No body of reviews yet:</b> the live discussion happens in DareBay's Telegram channel, not on review sites; hundreds of glowing reviews of a young platform would be a warning sign."
-    - "<b>Open contests pay $1.00 to $2.00 per 1000 views,</b> and the rate, threshold, cap and publishing site stand on the card before you submit."
-    - "<b>Terms hold once a contest is live:</b> the rate, the threshold and the budget cannot be rewritten after your clip is up; a wallet-backed budget is charged before you start."
-    - "<b>The friction is at the end:</b> withdrawal is a request with a 10% fee and a 10 USDT minimum, handled by the team with no promised settlement date."
+    - "<b>Few reviews, and for a young platform that is the honest state of things:</b> the live talk happens in DareBay's Telegram channel rather than on review sites, and hundreds of glowing reviews would be a reason to worry."
+    - "<b>Open contests pay $1.00 to $2.00 per 1000 views,</b> and the rate, threshold, cap and publishing site stand on the card before you submit: you decide on figures, not on strangers."
+    - "<b>Nothing moves once a contest is live:</b> rate, threshold and budget stay exactly as written after your clip is up, and a wallet-backed budget is charged from the organizer before you start."
+    - "<b>The friction sits at the end, and we would rather you knew now:</b> withdrawal is a request with a 10% fee and a 10 USDT minimum, checked and sent by the team, with no date promised."
+cta:
+  title: "Skip the reviews and check for yourself"
+  lede: "Open the contest catalogue, read one card from top to bottom, look at the withdrawal form before you confirm anything, and write to the founder. That walk through the product tells you more about DareBay than any testimonial could."
 ---
 
-There are few reviews of DareBay: the platform is young, and the live discussion is in the [DareBay Telegram channel](https://t.me/darebay_app), not on review sites. Reviews of an earning platform also mostly report the reviewer's own luck: winners write glowing ones, people whose clip missed the threshold write furious ones. So this page sets out what you would be signing up for and where to check it in ten minutes: the open contest catalogue, one task card read in full, the withdrawal form and the named operator behind the project.
+Good news first: you do not need reviews to judge DareBay, because everything a review would claim about it is open to check. There are few of them anyway: the platform is young, and the live discussion is in the [DareBay Telegram channel](https://t.me/darebay_app), not on review sites. Reviews of an earning platform also mostly report the reviewer's own luck: winners write glowing ones, people whose clip missed the threshold write furious ones. So this page sets out what you would be signing up for and where to check it in ten minutes: the open contest catalogue, one task card read in full, the withdrawal form and the named operator behind the project.
 
 DareBay is a marketplace for content tasks. Someone posts a task with a budget, creators make their own clips, and the reward follows the reach those clips get. The platform stands in the middle as intermediary and guarantor.
 

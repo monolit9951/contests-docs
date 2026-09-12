@@ -7,18 +7,18 @@ seo: true
 landing: true
 hero:
   kicker: "For artists and labels · 2026"
-  lede: "How to get dozens of clips built around your track from clippers and pay only for views: the formats artists and labels ask for, what goes into the brief, how the payout is calculated and what to measure after release week."
+  lede: "A track starts to travel when dozens of people post to it, not when one label account does. Here is how to get those clips from clippers and pay only for counted views: the formats artists and labels ask for, what goes into the brief, how the payout is worked out and what to measure after release week."
   takeaways:
-    - "<b>Five formats around a track:</b> sound under a clip, lip sync, dance, concert footage, video teaser. Each one is a condition in the brief, not a wish."
-    - "<b>You pay for clip views, not for uses of the sound:</b> the platform reads the clip's public counter, and open tasks pay $1 to $2 per 1,000 views."
-    - "<b>Release week is arithmetic:</b> 300,000 counted views at a $2.00 rate is 300,000 / 1,000 × $2.00 = $600.00, plus 10 USDT to launch."
-    - "<b>The rights to the track stay with you,</b> the clips go out on clippers' own TikTok, Reels and Shorts accounts, and sound usage growth is read on the platform itself."
+    - "<b>Five formats do the work around a track:</b> sound under a clip, lip sync, dance, concert footage, video teaser. Write each one into the brief and you can insist on it."
+    - "<b>You pay for views of a clip, never for uses of the sound:</b> the platform reads the clip's public counter, and open tasks pay $1 to $2 per 1,000 views."
+    - "<b>Release week can be costed before it starts:</b> 300,000 counted views at a $2.00 rate is 300,000 / 1,000 × $2.00 = $600.00, plus 10 USDT to launch."
+    - "<b>The rights to the track never leave you,</b> the clips go out on clippers' own TikTok, Reels and Shorts accounts, and growth in sound uses is read on the platform itself."
 cta:
-  title: "Snippet ready? Launch a task around the track"
-  lede: "Launch costs 10 USDT, the contest fee is 0%. Upload the snippet, set a rate per 1,000 views, a threshold and a cap: creators see the task in the feed once it starts."
+  title: "Put the snippet in front of clippers"
+  lede: "Launch costs 10 USDT and the contest fee is 0%, with the wallet-backed budget held on the platform from the first second. Upload the snippet, set a rate per 1,000 views, a threshold and a cap, and creators see the task in the feed the moment it opens."
 ---
 
-Promoting a song with clippers is simple: you hand them the track and a 15 to 30 second snippet, set a rate per 1,000 views, and they shoot clips to your sound on their own accounts. You pay for counted views, not for posting.
+Your song reaches the feed on other people's accounts, and what you spend follows the views those clips actually collected. You hand clippers the track and a 15 to 30 second snippet, set a rate per 1,000 views, and they shoot to your sound on their own accounts.
 
 ## What artists and labels ask clippers for
 

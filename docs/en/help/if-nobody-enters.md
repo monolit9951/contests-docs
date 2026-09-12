@@ -1,15 +1,16 @@
 ---
 title: What if nobody enters?
-description: With no valid entries, a wallet-backed budget goes back to the organizer balance. Contest creation and top-ups currently carry a 0% fee.
+description: "Nobody entered? A wallet-backed budget returns to your balance in full, the 0% fee on creation and top-ups leaves nothing to refund, and your rating holds."
 provenance: { snapshot_date: "2026-08-15", source: "darebay-prod" }
 numbers_used: [commission_fiat, commission_crypto, commission_coins]
 ---
 
 # What if nobody enters?
 
-Nothing bad happens to you. A contest that closes with zero valid entries costs the organizer
-nothing beyond the time spent writing it, and it leaves no mark on the account. The detail worth
-reading is which budget comes back and which was never held in the first place.
+You lose nothing but the time you spent writing it. A contest that closes with zero valid entries
+hands a wallet-backed budget straight back to your available balance, leaves your organizer rating
+untouched and asks nothing of you to make that happen. What is worth reading next is which budget
+comes back and which was never held in the first place.
 
 ## What happens to the budget
 

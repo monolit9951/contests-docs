@@ -7,15 +7,15 @@ seo: true
 landing: true
 hero:
   kicker: "Guide · 2026"
-  lede: "Clipping as a main income is a question of clip count, not of one viral hit. Here is the arithmetic of a thousand with a $100 cap per clip, three layouts by number of submissions, a weekly system and the things that usually break the plan. Every scenario is hypothetical."
+  lede: "A thousand a month is built from the clips you finish, not from one viral hit: the $100 cap per clip cannot be out-reached. Here is the arithmetic of that thousand, three layouts by number of submissions, a week you can actually run, and the things that usually break the plan, each with its own way out. Every scenario is hypothetical."
   takeaways:
-    - "<b>$1,000 at $1 is a million counted views:</b> 10 clips right at the $100 cap, 25 at 40,000 or 50 at 20,000. Three layouts, none of them a promise."
-    - "<b>The cap per clip is usually $100,</b> so no reach pays more than a hundred for one submission: a thousand is built from volume, not from one hit."
-    - "<b>Volume is legitimate:</b> several submissions in one task when the terms allow it, different clips on different accounts and sites, ready-made setups with uniqueization."
-    - "<b>Four things break the plan:</b> rejected clips, view fraud by neighbours in the task, an exhausted fund and a paused task. Each needs a reserve."
+    - "<b>$1,000 at $1 is a million counted views, and more than one way to collect them:</b> 10 clips right at the $100 cap, 25 at 40,000 or 50 at 20,000. Three layouts, none of them a promise."
+    - "<b>The cap per clip is usually $100,</b> and no amount of reach pays more than a hundred for one submission. The thousand is built from accepted work, not from a lucky video."
+    - "<b>You grow the count honestly, inside the task rules:</b> several submissions in one task when the terms allow it, different clips on different accounts and sites, ready-made setups with uniqueization."
+    - "<b>Four things break the plan, and each one needs a spare task behind it:</b> rejected clips, view fraud by neighbours in the task, an exhausted fund and a paused task."
 cta:
-  title: "Build your own monthly layout"
-  lede: "Open DareBay tasks show the rate, the threshold and the cap before the start. Take two or three tasks on your topic and count the thousand with your own numbers."
+  title: "Lay your own thousand out over a month"
+  lede: "Pick two or three DareBay tasks on your topic, run your real average reach through the arithmetic above, and see how many clips a month it actually asks for. Keep a spare task going, so a fund that runs dry costs you a batch and not the month."
 ---
 
 ## The arithmetic of a thousand

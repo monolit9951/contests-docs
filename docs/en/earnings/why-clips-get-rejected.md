@@ -7,15 +7,15 @@ seo: true
 landing: true
 hero:
   kicker: "Guide · 2026"
-  lede: "A rejected clip and a clip that has not earned yet are two different problems with two different fixes. This page lists the ten reasons an organizer takes a clip down, the six situations where views exist but money does not, and a submission checklist that leaves nothing to argue about."
+  lede: "A rejected clip and a clip that has not earned yet are two different problems: the first needs a new video, the second usually just needs the threshold or the next sync. Here are the ten reasons an organizer takes a clip down, the six situations where the views are there and the money is not, and a checklist that leaves nothing to argue about."
   takeaways:
-    - "<b>The reason is always written down.</b> An organizer cannot reject a clip without one: four common reasons come as presets, the rest are typed in, and all of it shows in your cabinet."
-    - "<b>No accrual does not mean rejected.</b> Most of the time the clip has not cleared the threshold, the counter has not synced with the site yet, or a fresh amount is maturing for 24 h."
-    - "<b>The threshold admits, it does not deduct.</b> Past the typical 2000 views the whole counter is paid, but above the per-clip cap, usually $100, the amount stops growing."
-    - "<b>Links and dates win disputes, not emotions.</b> The clip link, a screenshot of the caption with the hashtag and the posting time settle most reviews."
+    - "<b>You always get the reason in writing.</b> An organizer cannot reject a clip without one: four common reasons come as presets, the rest are typed out, and all of it shows in your cabinet."
+    - "<b>No accrual does not mean rejected, and nothing needs redoing.</b> Most of the time the clip has not cleared the threshold, the counter has not synced with the site yet, or a fresh amount is maturing for 24 h."
+    - "<b>The threshold lets you in, it does not take a cut.</b> Past the typical 2000 views the whole counter is paid from the first view; above the per-clip cap, usually $100, the amount stops growing."
+    - "<b>A dispute is won with links and dates.</b> The clip link, a screenshot of the caption with the hashtag and the time you posted close most reviews, so save them as you go."
 cta:
-  title: "Check the terms before you post, not after a rejection"
-  lede: "A DareBay task card shows the site, hashtag, date window, threshold and cap before the start. Run the seven-point checklist and the clip goes through first time."
+  title: "Read the card first and skip the rejection"
+  lede: "A DareBay task card names the site, the hashtag, the date window, the threshold and the cap before the start, not after. Walk the seven points above, publish on the site the task names and send the link, and the clip clears review the first time."
 ---
 
 ## Ten reasons a clip gets rejected

@@ -1,6 +1,6 @@
 ---
 title: DareBay help
-description: How contests, payouts, commission and withdrawals work. Short answers, no marketing fog.
+description: "DareBay help: how a contest reward is set and paid, what the fees are, how to withdraw a balance and what protects your result. Answers before you start."
 ---
 
 <div class="docs-cover">
@@ -11,12 +11,13 @@ description: How contests, payouts, commission and withdrawals work. Short answe
 
 # DareBay help
 
-Everything worth knowing before your first contest: fees, withdrawals, submitting work, picking a
-winner, and what moderation actually does. The short version first: a wallet-backed budget is
-charged against the contest at creation, the result is checked, and a credit or payout obligation
-receives a status you can follow. Fulfilment and withdrawal are separate stages, can be processed
-by hand, and carry no promised date. If your question is whether we can be trusted at all, see
-[about the project](/en/about/).
+Everything worth knowing before your first contest lives on these pages: how a reward is set and
+held, how a winner is chosen, what a withdrawal costs and what protects your result. Three of them
+are worth having up front. In a wallet-backed contest the budget is locked on the platform at
+creation, earlier than anyone starts working. The amount is set by a formula, while a withdrawal
+request is checked and sent by the team, with no promised date. The fee follows the operation, not
+your account, so it shows up at the withdrawal and not before. If your question is about trust
+rather than mechanics, that is the next section: [about the project](/en/about/).
 
 ## Pages in this section
 

@@ -1,6 +1,6 @@
 ---
 title: What TikTok pays for views - two routes to monetization
-description: What views pay on TikTok and YouTube. A platform creator programme against a contest on an intermediary - $1.00 to $2.00 per 1000 views, with no followers needed.
+description: "What TikTok pays for views: the creator programme wants an audience first, a contest pays $1.00 to $2.00 per 1000 views from your very first clip."
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_cpm_min, ppv_cpm_median, ppv_cpm_max, ppv_min_views_threshold_live]
 seo: true
@@ -8,7 +8,7 @@ seo: true
 
 # What TikTok pays for views
 
-Views are paid for in two different ways, and it pays to tell them apart. A platform's creator programme pays you for the audience you have already built. A contest on an intermediary platform pays for the reach of one specific video: no audience needed, and you see the rate before you sit down to edit. On DareBay, open contest rates run from **$1.00 to $2.00 per 1000 views**, and the typical threshold is **2000 views**: from that mark a submission enters the split. The site is set by the contest: submissions are accepted on TikTok, YouTube and Instagram.
+You can be paid for views before you have a single follower, and that is the whole difference between the two routes below. A platform's creator programme pays you for the audience you have already built. A contest on an intermediary platform pays for the reach of one specific video: no audience needed, and you see the rate before you sit down to edit. On DareBay, open contest rates run from **$1.00 to $2.00 per 1000 views**, and the typical threshold is **2000 views**: from that mark a submission enters the split. The site is set by the contest: submissions are accepted on TikTok, YouTube and Instagram.
 
 The platform's figures are a data snapshot from 2026-08-15. The TikTok and YouTube programme requirements below were **checked against the platforms' own sources on 15 August 2026**: platforms move their bars, so check them with the platform itself before you apply.
 

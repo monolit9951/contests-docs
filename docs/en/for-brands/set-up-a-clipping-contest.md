@@ -1,6 +1,6 @@
 ---
 title: How to set up a clipping contest on DareBay
-description: A step-by-step guide to setting up a pay-per-view contest - how to choose the rate, the threshold and the cap, lock the budget and get the remainder back.
+description: "Set up a clipping contest and pay only for counted views: how to choose the rate, the threshold and the cap, lock the budget and get the unspent part back."
 provenance: { snapshot_date: "2026-08-15", source: "darebay-prod" }
 numbers_used: [ppv_default_min_views_threshold, ppv_min_views_threshold_live, ppv_max_cpm_rate]
 seo: true
@@ -8,7 +8,7 @@ seo: true
 
 # How to set up a clipping contest on DareBay
 
-A clipping contest is promotion you pay for by results. You fund the budget and set three parameters: the rate per 1000 views, the view threshold and the cap per submission. In the wallet-backed mode the platform holds the money and returns what the clippers did not earn; in the manual-payout mode no money enters the DareBay wallet and you settle with creators directly. Clippers publish their videos and send in the links, and every amount due is worked out by formula from independently counted views.
+A clipping contest brings you videos about your product from many different creators within days, and you pay only for the views that were counted. You fund the budget and set three parameters: the rate per 1000 views, the view threshold and the cap per submission. In the wallet-backed mode the platform holds the money and returns what the clippers did not earn; in the manual-payout mode no money enters the DareBay wallet and you settle with creators directly. Clippers publish their videos and send in the links, and every amount due is worked out by formula from independently counted views.
 
 Every figure on this page comes from the platform's own data (snapshot: 2026-08-15).
 

@@ -7,15 +7,15 @@ seo: true
 landing: true
 hero:
   kicker: "Template · 2026"
-  lede: "A brief that tells a clipper what to shoot and tells you what you are paying for. Copy the template, fill in ten fields using the notes below and run the checklist before you launch."
+  lede: "A good brief saves you the private chat with every single creator: a clipper reads it once and knows what to cut, and you know in advance what you are paying for and what you can turn down. Copy the template, fill in ten fields with the notes below, run the checklist and publish."
   takeaways:
-    - "<b>Ten fields close the disputes:</b> goal, materials, format, platforms, hashtag, must-haves, banned content, rate with threshold and cap, deadline, acceptance."
-    - "<b>The three numbers are rate, threshold and cap:</b> open tasks pay $1 to $2 per 1,000 views, the threshold is usually 2,000 and the cap per clip is usually $100."
-    - "<b>A clip enters the task only through the link the creator sends,</b> a moderator checks it against the terms and fake views are filtered out. The terms are your acceptance tool."
-    - "<b>Five phrasings ruin most briefs:</b> a vague goal, no bans, no example, 'like our competitor' and a deadline without a date."
+    - "<b>Ten fields answer the questions before anyone asks them:</b> goal, materials, format, platforms, hashtag, must-haves, banned content, rate with threshold and cap, deadline, acceptance."
+    - "<b>Three numbers decide who takes the task: rate, threshold and cap.</b> Open tasks pay $1 to $2 per 1,000 views, the threshold is usually 2,000 and the cap per clip is usually $100."
+    - "<b>A clip enters the task only through the link the creator sends.</b> A moderator checks it against your terms and fake views are filtered out, so the brief is your acceptance tool: what is not in it cannot be demanded later."
+    - "<b>Five phrasings bring you the wrong clips:</b> a vague goal, no bans, no example, 'like our competitor' and a deadline with no date. Each one is rewritten below."
 cta:
-  title: "Template filled in? Publish the task"
-  lede: "Paste the text into the contest description, set the rate, threshold and cap, fund the budget. Creators see the task in the feed as soon as it goes live."
+  title: "Template ready? Launch the task"
+  lede: "Paste the text into the contest description, set the rate, threshold and cap, and fund the budget. From launch every clipper sees the task in the feed, and you pay only for counted views."
 ---
 
 ## The template to copy

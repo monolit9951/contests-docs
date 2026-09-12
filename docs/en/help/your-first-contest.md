@@ -1,14 +1,14 @@
 ---
 title: Create your first contest
-description: Step by step, from "I have a budget and an idea" to "the entries are flying in". Publishing takes under ten minutes.
+description: "Your first DareBay contest takes under ten minutes: title, terms, format, selection type, prize and dates on one screen. What is locked after launch."
 provenance: { snapshot_date: "2026-08-15", source: "darebay-prod" }
 numbers_used: []
 ---
 
 # Create your first contest
 
-A contest is a prize, terms and a deadline. If all three are already in your
-head, publishing takes under ten minutes.
+A contest is three decisions: what you give, what has to be done for it and
+by when. With all three in your head, publishing takes under ten minutes.
 
 ## 1. Open the creation page
 

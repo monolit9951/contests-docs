@@ -1,6 +1,6 @@
 ---
 title: Is DareBay a scam? Checking it against the fraud patterns
-description: DareBay checked against the standard tells of a fake earning platform - no entry fee, no unlock transfer, no income promises - plus the one part that really is weak.
+description: "Scam or not: DareBay put through the tells of a fake earning platform. No entry fee, no unlock transfer, no income promises, and the weak part named."
 provenance: { snapshot_date: "2026-08-15", source: "darebay-prod" }
 numbers_used: []
 seo: true
@@ -8,7 +8,7 @@ seo: true
 
 # Is DareBay a scam?
 
-No. The short reason is mechanical rather than reassuring: in a wallet-backed contest the budget is charged from the organizer and locked against that contest **before** anyone picks the task up, the rate per 1000 views and the view threshold sit on the contest card before you edit a single frame, and the sum you are owed is worked out by formula from a counter neither side can type into.
+No. But the word "no" is worth nothing until you can check it, so every point below is one you can check yourself. Start with the mechanics: in a wallet-backed contest the budget is charged from the organizer and locked against that contest **before** anyone picks the task up, the rate per 1000 views and the view threshold sit on the contest card before you edit a single frame, and the sum you are owed is worked out by formula from a counter neither side can type into.
 
 The honest counterweight, said here rather than buried: **executing the payout is done by the team, and DareBay promises no settlement deadline.** A platform that told you otherwise would be the one worth suspecting.
 

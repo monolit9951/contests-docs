@@ -8,19 +8,19 @@ landing: true
 app: true
 hero:
   kicker: "Fact sheet"
-  lede: "The numbers a clipper, a brand or a comparison site needs about DareBay, in the same fields other clipping platforms are compared on. Sourced from the platform's live data and its own help pages, refreshed monthly."
+  lede: "Every number a clipper, a brand or a comparison site asks about DareBay, on one page and in the same fields other clipping platforms are compared on. Each figure is read from the platform's live data and its own help pages, carries the date it was read, and is refreshed monthly."
   secondary: "See the fields"
   secondaryHref: "#facts"
   takeaways:
-    - "<b>$1.00 to $2.00 per 1,000 views</b> in open contests; the exact rate is printed on each task card before you submit."
-    - "<b>No followers, portfolio or application</b>: a brand-new account can take a brief."
-    - "<b>Pays worldwide with no country restrictions</b>; the community is largest in CIS, and everyone is welcome."
-    - "<b>Wallet-backed contests lock the budget on the platform before the start</b>; manual-payout contests are paid by the organizer directly."
-    - "<b>Withdrawals: 10 USDT minimum, 10% fee</b>, paid in USDT on TON or as Telegram Stars."
+    - "<b>$1.00 to $2.00 per 1,000 views in open contests.</b> The exact rate is printed on the task card, so you read it before you submit."
+    - "<b>No followers, no portfolio, no application.</b> An account opened this morning can take a brief on the same terms as anyone else."
+    - "<b>Pays worldwide, with no country shut out.</b> The community is largest in CIS, and clippers from anywhere are paid the same way."
+    - "<b>Wallet-backed contests lock the budget on the platform before the start.</b> In a manual-payout contest the organizer pays directly, and the card says which kind it is."
+    - "<b>Withdrawals: 10 USDT minimum, 10% fee.</b> You are paid in USDT on TON or in Telegram Stars."
 facts: { id: darebay }
 cta:
-  title: "Take a brief and get paid for counted views"
-  lede: "Open tasks are on the board right now. No application, no follower check: pick a brief, post the clip, the platform counts the views."
+  title: "Start with one brief, not an application"
+  lede: "Open tasks are on the board right now, each with its rate printed on the card. Nobody checks your follower count: pick a brief, post the clip, and the platform counts the views."
 ---
 
 ## What DareBay is

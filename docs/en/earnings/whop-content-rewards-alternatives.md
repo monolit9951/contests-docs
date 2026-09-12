@@ -77,3 +77,10 @@ Yes, for any country, and especially where Whop cannot pay: pay-per-view tasks w
 ### What happened to ClipAffiliates?
 
 On the day we checked, clipaffiliates.com answered "service suspended" and its bare domain pointed nowhere, so it is not in this comparison. Its archived pages described a 9% fee and Stripe payouts; we will add it back if it returns.
+
+## Where to next
+
+- [Whop Content Rewards review](/en/earnings/whop-content-rewards-review) - campaigns, the 10% cut, payout timing and the sanctioned-country list in detail
+- [DareBay vs Whop](/en/earnings/darebay-vs-whop) - the two platforms compared field by field
+- [Clipping platforms that pay in Russia and CIS](/en/earnings/clipping-platforms-that-pay-in-russia-and-cis) - who pays into Russia, Belarus, Ukraine and Kazakhstan, in the platforms' own words
+- [How much clipping pays](/en/earnings/how-much-clipping-pays) - worked examples per 1,000 views with threshold and cap

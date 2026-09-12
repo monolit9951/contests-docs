@@ -93,7 +93,8 @@
         "/zarabotok/skolko-platyat-za-1000-prosmotrov",
         "/ua/zarobitok/skilky-platiat-za-1000-perehliadiv",
         "/en/earnings/pay-per-1000-views",
-        "/docs/ru/zarabotok/skolko-platyat-za-1000-prosmotrov"
+        "/docs/ru/zarabotok/skolko-platyat-za-1000-prosmotrov",
+        "/docs/skolko-platyat-novichku"
       ]
     },
     {
@@ -254,7 +255,9 @@
       },
       "retired": [
         "/docs/ru/getting-started/prizes-and-payouts",
-        "/docs/getting-started/prizes-and-payouts"
+        "/docs/getting-started/prizes-and-payouts",
+        "/docs/ru/getting-started/prizes",
+        "/docs/getting-started/prizes"
       ]
     },
     {
@@ -332,7 +335,8 @@
       },
       "retired": [
         "/docs/ru/faq/darebay-vyvod-deneg",
-        "/docs/faq/withdraw"
+        "/docs/faq/withdraw",
+        "/docs/faq/darebay-vyvod-deneg"
       ]
     },
     {

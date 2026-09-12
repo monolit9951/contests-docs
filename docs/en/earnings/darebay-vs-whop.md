@@ -81,3 +81,10 @@ Both do in their main mode: Whop holds the brand's budget against the campaign, 
 ### Can I be on both?
 
 Yes, if Whop can register you. Campaign budgets run out on every platform, so most clippers keep briefs from two or three sources.
+
+## Where to next
+
+- [Whop Content Rewards review](/en/earnings/whop-content-rewards-review) - the platform on its own terms: campaigns, fees, payout timing
+- [Whop Content Rewards alternatives](/en/earnings/whop-content-rewards-alternatives) - seven platforms to run alongside or instead of Whop
+- [Clipping platforms that pay in Russia and CIS](/en/earnings/clipping-platforms-that-pay-in-russia-and-cis) - the country question answered for the whole region
+- [Clipping earnings calculator](/en/earnings/clipping-earnings-calculator) - what a rate turns into after threshold, cap and withdrawal fee

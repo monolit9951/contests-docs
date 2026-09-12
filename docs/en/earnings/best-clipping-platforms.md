@@ -85,3 +85,11 @@ Yes, and it is the sensible default: campaigns run out of budget, so briefs from
 ### Which clipping platforms pay in Russia and CIS?
 
 DareBay pays worldwide with no country list, so Russia, Belarus, Ukraine, Kazakhstan and the rest of CIS are included, and that is where its community is largest. Prime Oracles serves Russia, Belarus and Kazakhstan in crypto. Klipni pays in rubles to Russian self-employed clippers. Whop and Vyro exclude Russia, Belarus and Ukraine; Clipping.net, Vues, Reach.cat and Clipping.io publish no country list.
+
+## Where to next
+
+- [Clipping platforms that pay in Russia and CIS](/en/earnings/clipping-platforms-that-pay-in-russia-and-cis) - which of these nine can actually send money east of the EU, country by country
+- [Clipping rates by niche](/en/earnings/clipping-rates-by-niche) - what the same 1,000 views are worth in music, gaming, finance and tech
+- [How much clipping pays](/en/earnings/how-much-clipping-pays) - rate, threshold and cap turned into a payout for one clip
+- [Where to find clipping work](/en/earnings/where-to-find-clipping-work) - streamers, brands and marketplaces as three different sources of briefs
+- [Clipping earnings calculator](/en/earnings/clipping-earnings-calculator) - your views, clips per week and rate as a monthly figure

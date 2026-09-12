@@ -114,6 +114,13 @@
       ]
     },
     {
+      "id": "earnings-streamers-who-pay",
+      "hub": "earnings",
+      "slugs": {
+        "ru": "kto-iz-strimerov-platit-za-narezki"
+      }
+    },
+    {
       "id": "earnings-tiktok-views",
       "hub": "earnings",
       "slugs": {

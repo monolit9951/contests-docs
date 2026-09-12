@@ -39,6 +39,7 @@ numbers_used: [ppv_cpm_min, ppv_cpm_median, ppv_cpm_max, ppv_min_views_threshold
 
 ## Ниши: стримеры, площадки, фильмы
 
+- [Кто из стримеров платит за нарезки](/zarabotok/kto-iz-strimerov-platit-za-narezki) - Мелстрой, Эвелон, Злой, T2x2 и другие: ставки за 100 000 просмотров словами каналов, как подать, кто остановил выплаты.
 - [Сколько платят за нарезки стримеров](/zarabotok/skolko-platyat-za-narezki-strimerov) - что режут из эфира, сколько это стоит по ставке конкурса и какие права на исходник даёт само задание.
 - [Монетизация TikTok в России](/zarabotok/skolko-platyat-za-prosmotry-v-tiktok) - программа закрыта для России, что платит вместо; партнёрская программа площадки против конкурса у посредника: требования TikTok и YouTube и шесть осей сравнения.
 - [Заработок на YouTube Shorts в России](/zarabotok/zarabotok-na-narezkah-v-youtube) - партнёрка закрыта, счётчик Shorts, подача работы.

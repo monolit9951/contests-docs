@@ -8,7 +8,7 @@ seo: true
 
 # How to set up a clipping contest on DareBay
 
-A clipping contest brings you videos about your product from many different creators within days, and you pay only for the views that were counted. You fund the budget and set three parameters: the rate per 1000 views, the view threshold and the cap per submission. In the wallet-backed mode the platform holds the money and returns what the clippers did not earn; in the manual-payout mode no money enters the DareBay wallet and you settle with creators directly. Clippers publish their videos and send in the links, and every amount due is worked out by formula from independently counted views.
+A clipping contest brings you videos about your product from many different creators within days, and you pay only for the views that were counted. You fund the budget and set three parameters: the rate per 1000 views, the view threshold and the cap per submission. The platform holds that money and returns what the clippers did not earn. Clippers publish their videos and send in the links, and every amount due is worked out by formula from independently counted views.
 
 Every figure on this page comes from the platform's own data (snapshot: 2026-08-15).
 
@@ -30,7 +30,7 @@ The cap limits the most any single submission can be paid. You set it yourself, 
 
 ### 4. Fund the budget
 
-In the wallet-backed mode the full budget is charged when the contest is created, and DareBay holds it as intermediary and guarantor: the money is tied to that one contest, it cannot be taken back before the end, and the clippers can see the payout is covered. That visibility is the reason funded tasks get picked up faster than a promise to pay later. The manual-payout mode works differently: no money enters the DareBay wallet, and the organizer settles with creators directly.
+The full budget is charged when the contest is created, and DareBay holds it as intermediary and guarantor: the money is tied to that one contest, it cannot be taken back before the end, and the clippers can see the payout is covered. That visibility is the reason funded tasks get picked up faster than a promise to pay later.
 
 ### 5. Clippers publish and send links
 
@@ -46,7 +46,7 @@ The platform records each obligation using `views / 1000 * rate`. Submissions be
 
 ### 8. The unearned budget comes back
 
-In the wallet-backed mode, whatever the clippers did not earn returns to your organizer balance. In the manual-payout mode the platform never held the budget, so there is nothing for it to return.
+Whatever the clippers did not earn returns to your organizer balance.
 
 ## Contest setup parameters
 

@@ -26,7 +26,7 @@ Only one line of a DareBay campaign's cost is fixed. Creating a contest costs 10
 
 The formula: clip views / 1,000 × rate, never more than the cap per clip. A clip with 20,000 views at $1 earns its creator 20,000 / 1,000 × $1.00 = **$20.00**; a clip with a million views stops at the cap, $100 if that is what you set. The threshold is an entry condition, not a deductible: a clip under it is not paid, a clip over it is paid for every view from the first.
 
-A budget limit is optional: with one, accruals stop at your figure; without one, they follow only the views of accepted clips. In the wallet-backed mode the budget is locked on the platform before the start and the remainder returns to your balance. In manual payout the organizer pays creators directly, in Telegram Stars or to a TON wallet, against the platform's statement; no money enters the DareBay wallet. Both modes: [how to pay clippers](/en/for-brands/paying-clippers-per-view).
+A budget limit is optional: with one, accruals stop at your figure; without one, they follow only the views of accepted clips. The pool itself is locked on the platform before the start, and the remainder returns to your balance. How creators get paid from it: [how to pay clippers](/en/for-brands/paying-clippers-per-view).
 
 ## Three budgets: what $200, $1,000 and $5,000 buy
 
@@ -86,4 +86,4 @@ Yes, the limit is optional. Without it, accruals follow only the views of accept
 
 ### Which is cheaper for the buyer: a wallet-backed budget or manual payout?
 
-The launch price and the formula are the same. The difference is where the money sits: in the wallet-backed mode the pool is locked on the platform and the remainder returns to you; in the manual mode you pay creators directly against the platform's statement. Wallet-backed tasks also gather creators faster: they can see the payout is covered.
+The launch price and the formula are the same. A task you launch yourself always runs on a wallet-backed budget, though: the pool is locked on the platform before the start, whatever the clips do not earn returns to your balance, and creators take the task sooner because they can see the payout is covered. If your campaign needs a different payment setup, message the founder on Telegram: [@ruslanbwork](https://t.me/ruslanbwork).

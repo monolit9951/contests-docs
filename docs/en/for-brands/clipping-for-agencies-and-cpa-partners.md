@@ -77,7 +77,7 @@ Put your own budget, rate and cap into the calculator:
 1. **Collect the offer and the materials from the client.** The target action, payout terms, creative restrictions, footage or the product to film; for a network, the tracker link and the postback parameters.
 2. **Create the task or the offer.** From the agency's or the client's account: platforms, rate per 1,000 views, fee per clip, sales share, threshold, cap, budget. Creating a task costs 10 USDT once, the fee is 0%. Step by step: [Set up a clipping contest](/en/for-brands/set-up-a-clipping-contest).
 3. **Connect the postback.** Put the platform's postback URL into the advertiser's tracker, send a test conversion and check it in the cabinet log.
-4. **Fund the budget.** In wallet-backed mode the sum is locked on the platform before the start; in manual mode you pay creators yourself from the platform's statement.
+4. **Fund the budget.** The sum is locked on the platform before the start.
 5. **Accept works and watch conversions.** Reject clips that break the terms; views, conversions and accruals are counted by the platform.
 6. **Report to the client.** Links, counted views, conversions and sums per creator come from the campaign. What the launch price includes and how the remainder is returned: [How to pay clippers per view](/en/for-brands/paying-clippers-per-view) and [Clipping campaign cost](/en/for-brands/clipping-campaign-cost). Other business formats: [the business page](/en/for-business).
 
@@ -93,7 +93,7 @@ Any tracker that can send an S2S postback to a URL with parameters: the platform
 
 ### Who pays the creators on an offer, the agency or the platform?
 
-The platform: creators get the fixed fee and the sales share credited to their balance, payouts come from the offer budget, and the advertiser or the network settles with the platform under the offer terms. If the agency runs an ordinary pay-per-view task, its own budget pays the creators: wallet-backed by formula or manual from the statement.
+The platform: creators get the fixed fee and the sales share credited to their balance, payouts come from the offer budget, and the advertiser or the network settles with the platform under the offer terms. If the agency runs an ordinary pay-per-view task, creators are paid by the formula from the agency's own budget, which is locked on the platform at launch. For a client whose campaign needs a different payment setup, message the founder on Telegram: [@ruslanbwork](https://t.me/ruslanbwork).
 
 ### What happens to incentivized traffic?
 

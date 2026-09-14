@@ -70,7 +70,7 @@ Then you pay nothing. If no submission clears the view threshold, or nobody ente
 
 ### How does the remainder come back?
 
-In the wallet-backed mode it lands on your organizer balance once the contest ends and the payouts are distributed, with no claim to file. Budget $200, paid out $70 - the remaining $130 comes back. Where no pool was deposited, nothing was held, so there is no refund to queue.
+It lands on your organizer balance once the contest ends and the payouts are distributed, with no claim to file. Budget $200, paid out $70 - the remaining $130 comes back.
 
 ### How do clippers get the money?
 

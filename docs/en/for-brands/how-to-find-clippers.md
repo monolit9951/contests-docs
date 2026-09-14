@@ -7,7 +7,7 @@ seo: true
 landing: true
 hero:
   kicker: "Streamer and creator guide · 2026"
-  lede: "Clippers are easier to find than they look once you know where they sit and what they want from you. Four places to look, six things a good one needs before the first cut, why paying per view beats a flat fee, and how to put a task together in one evening."
+  lede: "You can find clippers for a stream or a channel in four ways, and the real difference between them is who counts the views and pays: you or the platform. Below: each way, what a clipper needs from you, and how to put a task together in one evening."
   takeaways:
     - "<b>Clippers come from four places.</b> A post in your chat and Discord, freelance boards, your own clip channel with a team, or a pay-per-view platform where creators take the task themselves."
     - "<b>Six things and a clipper starts the same day.</b> Access to recordings, rights, a hashtag, a format, a rate and a steady flow of material."
@@ -18,7 +18,7 @@ cta:
   lede: "Contest creation costs 10 USDT, the contest fee is 0%. You set the rate, the threshold and the cap, the platform counts the views, and a wallet-backed budget only pays for the views it counted."
 ---
 
-Finding clippers costs you evenings, not money. Your own chat and Discord, a freelance board and a clip channel of your own all run on your time: agreeing a rate, collecting links, counting views by hand. The fourth way, a pay-per-view platform, moves the counting off your desk.
+To find clippers, post in your own chat and Discord, try a freelance board, build a clip channel with a team, or publish a task on a pay-per-view platform where creators take it themselves. With the first three, agreeing the rate, collecting links and counting views is on you. On the platform the counting is done for you, and you pay for counted views.
 
 ## Four ways to find clippers
 
@@ -69,7 +69,7 @@ The threshold is not deducted: clear it and the whole counter is paid. At 150 00
 3. **Set the budget.** Rate per 1000 views, threshold, cap, total. Contest creation costs 10 USDT once, the contest fee is 0%, topping up is 0%.
 4. **Publish.** The task appears in the feed and creators take it. Step by step: [how to set up a clipping contest](/en/for-brands/set-up-a-clipping-contest); other formats are on the [business page](/en/for-business).
 5. **Accept links.** A submission counts only after its link is sent and a moderator checks it against the terms; unfit clips are rejected and unpaid.
-6. **Payout.** In wallet-backed mode each amount follows the formula from counted views; with manual payout you pay from the platform's statement, in Stars or to a TON wallet.
+6. **Payout.** Each creator's amount follows the formula from counted views and comes out of the budget the platform has held since launch.
 
 ## What to do with the finished clips
 
@@ -87,7 +87,7 @@ No. A clipper cares about the material and the terms, not your channel size. A t
 
 ### Can I pay clippers directly, without the platform wallet?
 
-Yes, that is manual payout mode: the platform counts views and draws up the statement, and you pay the creators yourself, in Stars or to a TON wallet. No money enters the platform, so creators have no guarantee.
+Not on a task you launch yourself: its budget is locked on the platform at launch, and creators are paid from it by the formula. Clippers can see the money is there before they start cutting, which matters when they do not know you yet. If you need a different payment setup, message the founder on Telegram: [@ruslanbwork](https://t.me/ruslanbwork).
 
 ### What if a clipper posted a clip but never sent the link?
 

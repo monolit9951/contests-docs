@@ -73,7 +73,7 @@ Payouts are cycle-based: no withdraw button, the sponsor closes the cycle, cycle
 
 ## Seven alternatives
 
-**DareBay.** For clippers anywhere, above all in CIS, and for beginners with no audience: $1–$2 per 1,000 views in open tasks, threshold typically 2,000, 0% fee on contest payouts, withdrawals from 10 USDT with a 10% fee. Offer tasks add a fixed fee per accepted clip and a share of sales and hand you ready-made videos with built-in uniqueization. The minus: young platform, fewer open tasks than Clipping.net has campaigns. Every field: [DareBay fact sheet](/en/about/darebay-at-a-glance).
+**DareBay.** For clippers anywhere, above all in CIS, and for beginners with no audience: $1–$2 per 1,000 views in open tasks, threshold typically 2,000, 0% fee on contest payouts, withdrawals from 10 USDT with a 10% fee. Offer tasks add a fixed fee per accepted clip and a share of sales, and hand you ready-made videos with built-in uniqueization. The minus: young platform, fewer open tasks than Clipping.net has campaigns. Every field: [DareBay fact sheet](/en/about/darebay-at-a-glance).
 
 **Whop Content Rewards.** For US and EU clippers who want the most campaigns: $0.50–$5 per 1,000 <!-- source: https://contentrewards.com/discover 2026-09-02 -->, 10% of CPM payouts and 25%→7% tiers in the FAQ <!-- source: https://contentrewards.com/creators 2026-09-02 -->. The minus: Russia, Belarus and Ukraine are on the sanctioned list <!-- source: https://docs.whop.com/trust-and-safety/trust-safety-overview/sanctioned-countries 2026-09-02 -->. More: [Whop alternatives](/en/earnings/whop-content-rewards-alternatives).
 

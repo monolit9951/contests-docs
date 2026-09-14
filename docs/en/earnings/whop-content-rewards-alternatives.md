@@ -72,7 +72,7 @@ Yes. Nothing on Whop's pages forbids clipping for other marketplaces, and campai
 
 ### Is DareBay a Whop alternative?
 
-Yes, for any country, and especially where Whop cannot pay: pay-per-view tasks with the rate, threshold and cap printed on the card, no follower requirement, no country restrictions, and in wallet-backed contests the budget is locked on the platform before the start. Offer tasks add a fixed fee per accepted clip and a share of sales and hand you ready-made videos with built-in uniqueization. It has fewer open contests than Whop.
+Yes, for any country, and especially where Whop cannot pay: pay-per-view tasks with the rate, threshold and cap printed on the card, no follower requirement, no country restrictions, and in wallet-backed contests the budget is locked on the platform before the start. Offer tasks add a fixed fee per accepted clip and a share of sales, and hand you ready-made videos with built-in uniqueization. It has fewer open contests than Whop.
 
 ### What happened to ClipAffiliates?
 

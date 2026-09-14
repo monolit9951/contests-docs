@@ -10,6 +10,10 @@ export interface DareBayCtaConfig {
   readonly tasksUrl: string
   readonly telegramLabel: string
   readonly telegramUrl: string
+  /** Business page in the page's language: the primary CTA target of the brands section. */
+  readonly businessUrl: string
+  /** The founder's own Telegram: the second CTA of the brands section. */
+  readonly founderUrl: string
 }
 
 /** The byline every article carries: who signs the corpus and where that page is. */
@@ -39,7 +43,7 @@ interface ChromeCopy {
   readonly previousPage: string
   readonly nextPage: string
   readonly telegramAriaLabel: string
-  readonly cta: Omit<DareBayCtaConfig, 'productUrl' | 'tasksUrl' | 'telegramUrl'>
+  readonly cta: Omit<DareBayCtaConfig, 'productUrl' | 'tasksUrl' | 'telegramUrl' | 'businessUrl' | 'founderUrl'>
 }
 
 /**

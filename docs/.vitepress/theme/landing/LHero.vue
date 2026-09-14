@@ -3,7 +3,8 @@
 // Markdown H1 is stripped by the covered-heading rule (dist gate: one h1).
 // Two shapes: comparison pages carry `hero.takeaways` and get the two-column
 // hero; every other page gets the compact one: section breadcrumb, title,
-// the description as lede, the byline, the CTA into the open-task catalogue.
+// the description as lede, the byline, the CTA into the open-task catalogue (the business page on
+// a page of the brands section, whose reader is the one funding the task).
 import { useData } from 'vitepress'
 import { computed } from 'vue'
 import type { DareBayThemeConfig } from '../../chrome'
@@ -17,6 +18,9 @@ const hero = computed(() => (frontmatter.value.hero ?? {}) as {
   secondary?: string; secondaryHref?: string
 })
 const hub = computed(() => (frontmatter.value.sectionHub ?? null) as { id: string; title: string; path: string | null } | null)
+const brands = computed(() => hub.value?.id === 'brands')
+const primaryHref = computed(() => (brands.value ? theme.value.darebayCta.businessUrl : theme.value.darebayCta.tasksUrl))
+const primaryLabel = computed(() => hero.value.primary ?? (brands.value ? copy.value.bizCtaPrimary : copy.value.ctaPrimary))
 const isHub = computed(() => Boolean(frontmatter.value.isHub))
 const compact = computed(() => !hero.value.takeaways?.length)
 const kicker = computed(() => hero.value.kicker ?? hub.value?.title ?? '')
@@ -51,7 +55,7 @@ const showByline = computed(
         <h1>{{ title }}</h1>
         <p v-if="lede" class="lp-lede">{{ lede }}</p>
         <div class="lp-hero-ctas">
-          <a class="lp-btn lp-btn-primary" :href="theme.darebayCta.tasksUrl" target="_self">{{ hero.primary ?? copy.ctaPrimary }}</a>
+          <a class="lp-btn lp-btn-primary" :href="primaryHref" target="_self">{{ primaryLabel }}</a>
           <a v-if="hero.secondary" class="lp-btn lp-btn-ghost" :href="secondaryHref">{{ hero.secondary }}</a>
         </div>
       </div>

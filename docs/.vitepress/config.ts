@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 import { readFileSync, existsSync } from 'node:fs'
 import { join, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { productUrlForLocale, tasksUrlForLocale, TELEGRAM } from './links'
+import { businessUrlForLocale, FOUNDER_TELEGRAM, productUrlForLocale, tasksUrlForLocale, TELEGRAM } from './links'
 import { CHROME_COPY, type AuthorLink, type DareBayThemeConfig } from './chrome'
 import { installCoveredHeadingRule } from './coveredHeading'
 import { installTableWrapRule } from './tableWrap'
@@ -179,6 +179,8 @@ export const themeForLocale = (lang: Locale): DareBayThemeConfig => {
       productUrl,
       tasksUrl: tasksUrlForLocale(lang),
       telegramUrl: TELEGRAM,
+      businessUrl: businessUrlForLocale(lang),
+      founderUrl: FOUNDER_TELEGRAM,
     },
     authorLink: authorLinkForLocale(lang),
   }
@@ -274,7 +276,7 @@ const author = (language: Locale) => ({
   name: AUTHOR_NAME[language],
   alternateName: language === 'en' ? 'Руслан Бей' : 'Ruslan Bey',
   url: `${ENTITY_ORIGIN}${authorPathForLocale(language) ?? '/o-proekte/'}`,
-  sameAs: ['https://t.me/ruslanbwork'],
+  sameAs: [FOUNDER_TELEGRAM],
   jobTitle: 'Founder',
   worksFor: { '@id': ORG_ID },
 })

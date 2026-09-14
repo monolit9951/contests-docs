@@ -1,12 +1,13 @@
 import type { Locale } from './registry'
 
-// Single source of truth for the outbound links the docs site owns: the product itself,
-// the business page, the Telegram channel and the founder's own Telegram. The product has one explicit route per locale. Keeping the
-// route here — instead of scattering bare `https://darebay.com` links through the theme —
-// prevents a reader from being thrown back into Russian when they leave an EN/UK article.
+// Single source of truth for the outbound links the docs site owns: the product itself, the
+// business page, the Telegram channel and the founder's own Telegram. The product has one explicit
+// route per locale. Keeping the route here — instead of scattering bare `https://darebay.com` links
+// through the theme — prevents a reader from being thrown back into Russian when they leave an
+// EN/UK article.
 //
-// TELEGRAM is the channel, not the bot: `@darebay_app_bot` is the mini-app entry point and
-// belongs in product surfaces, not in a docs "follow us" slot.
+// TELEGRAM is the channel, not the bot: `@darebay_app_bot` is the mini-app entry point and belongs
+// in product surfaces, not in a docs "follow us" slot.
 export const HOMEPAGE = 'https://darebay.com'
 export const TELEGRAM = 'https://t.me/darebay_app'
 /** The founder's personal Telegram: the contact a brand is sent to, and `Person.sameAs`. */

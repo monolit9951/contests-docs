@@ -6,7 +6,7 @@ export interface DareBayCtaConfig {
   readonly lede: string
   readonly productLabel: string
   readonly productUrl: string
-  /** Open-task catalogue in the page's language: the primary CTA target. */
+  /** Open-task catalogue in the page's language: the primary CTA target outside the brands section. */
   readonly tasksUrl: string
   readonly telegramLabel: string
   readonly telegramUrl: string

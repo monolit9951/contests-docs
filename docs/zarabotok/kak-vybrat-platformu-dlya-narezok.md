@@ -1,6 +1,6 @@
 ---
 title: "Как выбрать платформу для нарезок: девять вопросов"
-description: "Чек-лист до первого ролика: заплатит ли площадка в твою страну, указаны ли ставка, порог и потолок, сколько съест комиссия и кто держит бюджет."
+description: "Как выбрать площадку до первого ролика: заплатит ли она в твою страну, указаны ли ставка, порог и потолок, сколько съест комиссия и кто держит бюджет."
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_min_views_threshold_live, ppv_max_per_work_typical, ppv_max_per_work_band_high]
 seo: true

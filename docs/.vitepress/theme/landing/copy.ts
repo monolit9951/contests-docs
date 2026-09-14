@@ -124,7 +124,7 @@ export const LANDING_COPY: Record<Locale, LandingCopy> = {
     ctaPrimary: 'Open the tasks →',
     ctaSecondary: 'Telegram channel',
     bizCtaTitle: 'Creators make the clips and you pay per view',
-    bizCtaLede: 'You set the rate, threshold and cap before launch, and the budget goes only to views on clips that cleared the threshold. Want to talk the launch through first? The founder is on Telegram.',
+    bizCtaLede: 'You set the rate, threshold and cap before launch, and the budget goes only to views on clips that cleared the threshold. Questions before you launch? Ask the founder on Telegram.',
     bizCtaPrimary: 'Discuss a launch →',
     bizCtaSecondary: 'Message the founder',
     columns: columns.en,

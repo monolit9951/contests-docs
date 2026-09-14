@@ -86,4 +86,4 @@ No: every task needs a budget, and accruals stop when it runs out. Inside that b
 
 ### Which is cheaper for the buyer: a wallet-backed budget or manual payout?
 
-The launch price and the formula are the same. A task you launch yourself always runs on a wallet-backed budget, though: the pool is locked on the platform before the start, whatever the clips do not earn returns to your balance, and creators take the task sooner because they can see the payout is covered. To talk through another way to pay creators, write to the founder on Telegram: [@ruslanbwork](https://t.me/ruslanbwork).
+There is nothing to compare when you launch a task yourself: it always runs on a wallet-backed budget. The pool is locked on the platform before the start, whatever the clips do not earn returns to your balance, and creators take the task sooner because they can see the payout is covered. To talk through another way to pay creators, write to the founder on Telegram: [@ruslanbwork](https://t.me/ruslanbwork).

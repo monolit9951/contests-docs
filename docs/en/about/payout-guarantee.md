@@ -16,7 +16,7 @@ DareBay is an intermediary and guarantor. It holds money, records the arithmetic
 
 **The wallet-backed budget is out of the buyer's reach.** In a wallet-backed contest the prize amount leaves the organizer's available balance the moment the contest is created and is tied to that contest. They cannot spend it elsewhere, cannot take it back mid-run and cannot cancel their way out of it once submissions exist.
 
-**The terms cannot be rewritten around you.** The rate per 1000 views, the view threshold and the budget are recorded at creation. A buyer has no tool for lowering the rate retroactively or moving the threshold once your clip is up. Only the cap per submission can be adjusted after launch, and it is on the card.
+**The terms cannot be rewritten around you.** The rate per 1000 views and the view threshold are recorded at creation. A buyer has no tool for lowering the rate retroactively or moving the threshold once your clip is up. After launch the buyer can adjust the cap per submission (never below what a clip has already earned), move the deadline or top up the budget.
 
 **The figure comes from outside both parties.** The platform's independent counter reads the published view counter on the site the clip was posted on. Neither side supplies the number, so neither side can argue it downwards or upwards.
 

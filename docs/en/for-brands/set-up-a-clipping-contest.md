@@ -26,7 +26,7 @@ Know what the threshold does and does not do before you raise it. It is an admis
 
 ### 3. Set the cap per submission
 
-The cap limits the most any single submission can be paid. You set it yourself, and it is on the contest card before anyone submits, so clippers know their upside up front. The cap keeps the budget in your hands: without it, one video that goes viral takes everything. With it, that submission gets its maximum and the rest goes to other creators or back to you. It is the only parameter you can adjust after launch, so check it again before the contest fills up.
+The cap limits the most any single submission can be paid. You set it yourself, and it is on the contest card before anyone submits, so clippers know their upside up front. The cap keeps the budget in your hands: without it, one video that goes viral takes everything. With it, that submission gets its maximum and the rest goes to other creators or back to you. You can still change it after launch, but never below what a clip has already earned.
 
 ### 4. Fund the budget
 

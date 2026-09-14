@@ -32,7 +32,7 @@ DareBay is a marketplace for content tasks. Someone posts a task with a budget, 
 
 **Nothing is guaranteed to be worth your evening.** Whether a clip earns depends on views it has not got yet. A clip below the threshold earns nothing at all, and there is no consolation payment. That is the deal in every pay-per-view contest anywhere, and it is stated on the card rather than discovered afterwards.
 
-**The upside is that the terms hold.** The rate, the threshold and the budget are recorded at creation and cannot be rewritten once your clip is up. In a wallet-backed contest the budget is charged from the organizer before you take the task.
+**The upside is that the terms hold.** The rate and the threshold are recorded at creation and cannot be rewritten once your clip is up. In a wallet-backed contest the budget is charged from the organizer before you take the task.
 
 **The friction is at the end.** Calculation is automatic; getting the money out is a request with a fee and a minimum, handled by the team. No settlement deadline is promised, so if a predictable payout date is a hard requirement for you, this is the part to weigh.
 

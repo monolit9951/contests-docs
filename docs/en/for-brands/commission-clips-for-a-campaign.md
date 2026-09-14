@@ -13,12 +13,12 @@ One task can put your product into dozens of clips in a few days, and your budge
 ## The model: the buyer creates a contest, clippers take the task
 
 On DareBay the buyer does not hunt for a contractor and does not haggle. You create a PPV contest
-(pay-per-view) with a task and terms. In the wallet-backed mode the budget is charged and held on
+(pay-per-view) with a task and terms. The budget is charged and held on
 the platform; clippers find the contest in the feed, publish their videos and send in the links.
 The submitted link is what enters a video into the contest - nothing is imported by hashtag. The
 view figure is read from the published view counter on the site each video went out on. Amounts for
 submissions above the threshold are calculated by formula and recorded as credits or obligations,
-and in the wallet-backed mode the unearned remainder returns to your balance; fulfilment can be
+and the unearned remainder returns to your balance; fulfilment can be
 handled by the team. The full mechanic step by step: [how pay-per-view works](/en/earnings/how-pay-per-view-works).
 
 ## The parameters the buyer sets
@@ -30,7 +30,7 @@ You set the terms of the offer yourself when creating the contest. Clippers see 
 | Rate per 1000 views | set by the buyer (across open contests $1.00 - $2.00 per 1000 views) | Defines what a clipper gets for every thousand counted views |
 | View threshold | set by the buyer (typical threshold across open contests 2000, system default 1000) | Submissions below the threshold take no part in the split and cost you nothing |
 | Cap per submission | set by the buyer | Limits the maximum payout to one creator so a single video cannot eat the whole budget |
-| Total budget | set by the buyer | The full amount held on the platform in the wallet-backed mode |
+| Total budget | set by the buyer | The full amount held on the platform |
 | Task and publishing site | set by the buyer | The brief, and which of TikTok, YouTube or Instagram the video goes on |
 
 The rate of **$1.00 to $2.00 per 1000 views** reflects the range across open contests, and the threshold of **2000 views** is their typical value, not a platform limit: the system default is 1000 views, and above that the buyer sets whatever threshold they like (platform data, snapshot: 2026-08-23). More on the threshold: [how pay-per-view works](/en/earnings/how-pay-per-view-works).
@@ -43,7 +43,7 @@ The rate of **$1.00 to $2.00 per 1000 views** reflects the range across open con
 4. **The task.** The more concrete the result you describe (format, style, key moments), the closer the work lands to what you wanted. Clippers pick the tasks they understand on the first read.
 5. **The publishing site.** Statistics are collected today for TikTok, YouTube and Instagram, and your terms name the one you want. For Instagram it has to be a video with a view count, since a photo post gives no such metric.
 6. **The budget.** Work out the total from the expected number of participants and the rate. Overshooting is safe, since anything unspent comes back.
-7. **The payment method.** Pick an available funding method and review the total before confirmation.
+7. **Payment.** The budget is taken from your DareBay balance: top it up if it falls short, then review the total before you confirm.
 
 ## Launch cost
 
@@ -95,7 +95,7 @@ There is no limit on participants: everyone your terms suit can submit. What dec
 
 ### Can a contest be cancelled after it is created?
 
-No, and that is the point of the guarantee: in the wallet-backed mode the budget stays with the contest until it ends, and you cannot change your mind and take the money back. Cancellation is possible only right after creation, while there is not a single submission. What the clippers do not earn comes back to you at the end in any case.
+No, and that is the point of the guarantee: the budget stays with the contest until it ends, and you cannot change your mind and take the money back. Cancellation is possible only right after creation, while there is not a single submission. What the clippers do not earn comes back to you at the end in any case.
 
 ### Do I have to review the clippers' work by hand?
 

@@ -25,7 +25,7 @@ Every pay-per-view contest card carries its own terms, and they are the whole de
 | Funding mode | Whether this is a wallet-backed contest held by the platform, or one the organizer settles directly |
 | Platform and task terms | Where to publish and what the clip has to contain |
 
-The rate, the threshold and the budget are fixed at creation. The cap per submission is the one parameter a buyer can adjust after launch. Nothing else moves, which is the point: you agree to a price before you spend an evening editing.
+The rate and the threshold are fixed at creation. After launch a buyer can adjust the cap per submission (never below what a clip has already earned), move the deadline or top up the budget. The price per view does not move, which is the point: you agree to it before you spend an evening editing.
 
 One detail worth knowing because it works in your favour: clearing the threshold does not cost you the first views. Once a clip is over the line, the whole counter goes into the calculation, not the remainder above the threshold.
 

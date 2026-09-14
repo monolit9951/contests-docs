@@ -8,14 +8,14 @@ seo: true
 
 # How to pay clippers per view
 
-You pay for views that already happened, not for the promise of them. You set the rate per 1000 views, the view threshold and the cap per submission; clippers film, publish and send you the links; and the platform reads the published view counters itself, so there is no figure for either side to argue over. In the wallet-backed mode DareBay holds the budget as intermediary and guarantor, it is spent only against counted views, and whatever the clippers did not earn comes back to your balance.
+You pay for views that already happened, not for the promise of them. You set the rate per 1000 views, the view threshold and the cap per submission; clippers film, publish and send you the links; and the platform reads the published view counters itself, so there is no figure for either side to argue over. DareBay holds the wallet-backed budget as intermediary and guarantor, it is spent only against counted views, and whatever the clippers did not earn comes back to your balance.
 
 ## How the payment model works
 
 1. **You create the contest and lock the wallet-backed budget.** Open [contest creation on DareBay](https://darebay.com), choose pay-per-view, write the task for the clippers and pay in the wallet-backed budget. The amount is locked and tied to that contest: you cannot take it back before it ends. That is the guarantee for the clippers - the wallet-backed money is already on the platform, and the organizer cannot change their mind.
 2. **Clippers publish their work and send the links.** Creators see your contest in the public feed, take the task, film the content and publish on the site your terms name. Each of them then sends DareBay the link to their video, and the submission enters the contest at that moment and not before. There is no hashtag import: a tag is needed only where your task asks for one, and for anonymous submissions.
 3. **Neither you nor the creator counts the views.** The platform's independent counter reads the published view counter on the site the video went out on. Statistics are collected today for TikTok, YouTube and Instagram; for Instagram it has to be a video with a view count. There is moderation on top of that, and a submission with suspicious view dynamics goes on hold pending review rather than straight into your bill. For more on the count, see [the dedicated page](/en/earnings/how-pay-per-view-works).
-4. **Amounts are calculated by formula.** The platform records the obligations to creators, and in the wallet-backed mode the unused remainder returns to your organizer balance. Payout fulfilment is a separate step after counting: the team runs it through payout details and statuses.
+4. **Amounts are calculated by formula.** The platform records the obligations to creators, and the unused remainder returns to your organizer balance. Payout fulfilment is a separate step after counting: the team runs it through payout details and statuses.
 
 For the step-by-step setup (how to pick the rate, the threshold and the cap for your case), see [how to set up a clipping contest](/en/for-brands/set-up-a-clipping-contest).
 
@@ -50,7 +50,7 @@ See [current DareBay fees](/en/help/what-commission) for the operational terms.
 
 ## Why this works for the buyer
 
-**The budget only leaves for reach that happened.** In the wallet-backed mode the money sits on the platform and is released against counted views. No views, no spend, and the remainder comes back to you.
+**The budget only leaves for reach that happened.** The money sits on the platform and is released against counted views. No views, no spend, and the remainder comes back to you.
 
 **No manual calculation for every creator.** One contest replaces ten spreadsheets: clippers take the task themselves, and the platform counts the result and records the payout obligations.
 

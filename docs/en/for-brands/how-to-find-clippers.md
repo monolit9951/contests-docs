@@ -87,7 +87,7 @@ No. A clipper cares about the material and the terms, not your channel size. A t
 
 ### Can I pay clippers directly, without the platform wallet?
 
-No: your task runs on a wallet-backed budget, locked on the platform at launch, and creators are paid from it by the formula. Clippers can see the money is there before they start cutting, which matters when they do not know you yet. If you need a different payment setup, message the founder on Telegram: [@ruslanbwork](https://t.me/ruslanbwork).
+No: your task runs on a wallet-backed budget, locked on the platform at launch, and creators are paid from it by the formula. If you need a different payment setup, message the founder on Telegram: [@ruslanbwork](https://t.me/ruslanbwork).
 
 ### What if a clipper posted a clip but never sent the link?
 

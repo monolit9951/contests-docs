@@ -25,7 +25,7 @@ DareBay is a marketplace for content tasks. Someone posts a task with a budget, 
 ## Who it actually suits
 
 - **Clippers and video creators.** You take a task from the open feed, cut a clip in your own style, publish it on the site the contest names and send the link back. Clear the view threshold and you are in the budget split. No agency, no portfolio, no follower minimum - the payment follows the reach of one specific clip.
-- **Brands and buyers.** You write the task, choose the funding mode and let creators pick it up themselves. Instead of negotiating with ten freelancers you publish one set of terms and pay by result.
+- **Brands and buyers.** You write the task, fund the budget and let creators pick it up themselves. Instead of negotiating with ten freelancers you publish one set of terms and pay by result.
 - **People running something for themselves.** A challenge among friends, a personal contest, a small campaign for a project nobody has heard of yet. Same mechanic, no minimum budget to qualify.
 
 ## What the experience is honestly like

@@ -10,7 +10,7 @@ hero:
   lede: "Three places hand out clipping work, and they differ less in the rate than in where the money sits while you edit. Here is how each one compares on pay and risk, where the source footage comes from, and how to take a brief on the DareBay board with no application, no interview and no portfolio."
   takeaways:
     - "<b>Work comes from three pockets:</b> a streamer out of their own income, a brand or agency through selection, or an intermediary that holds the money first."
-    - "<b>Open DareBay contests pay $1.00 to $2.00 per 1000 views,</b> and you never haggle: the rate, the threshold and the cap stand on the card before you submit and stay put after launch."
+    - "<b>Open DareBay contests pay $1.00 to $2.00 per 1000 views,</b> and you never haggle: the rate, the threshold and the cap stand on the card before you submit, and the rate and threshold do not change after launch."
     - "<b>The typical threshold is 2000 views,</b> and nobody deducts it: clear the mark and the whole counter goes into the maths."
     - "<b>Footage comes with the brief or from public sources:</b> the streamer's VODs, the author's own videos, the brand's material. Somebody else's clip or edit will not pass."
 cta:

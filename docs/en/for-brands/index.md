@@ -21,7 +21,7 @@ Set the contest up on [darebay.com](https://darebay.com); the formats and terms 
 - **What if nobody shows up.** A wallet-backed budget goes only to views that happened: no submissions, or none over the threshold, means nothing to pay for.
 - **How views are verified.** The figure is read from the site's public counter, never sent as a screenshot; a submission with suspicious view dynamics goes on hold for review instead of into your bill. Statistics are collected today for TikTok, YouTube and Instagram.
 - **What you can change after launch.** The cap per submission, the deadline, a pause, a budget top-up and the creator block list. The rate and the threshold are fixed once the contest is live: [what changes and what does not](/en/for-brands/set-up-a-clipping-contest).
-- **CPA offers.** For results rather than reach, you can work with clippers on a CPA basis directly: a fixed amount per published clip plus a share of the sales it brings, set out in the task before anyone starts.
+- **CPA offers.** For results rather than reach, a task can pay clippers on a CPA basis: a fixed amount per published clip plus a share of the sales it brings, set out in the task before anyone starts.
 - **Why this beats private arrangements.** One task instead of a chat with a dozen creators, and no view figure ever arrives as a screenshot: [how to commission clips for a campaign](/en/for-brands/commission-clips-for-a-campaign).
 
 Said up front: the amount is calculated automatically, but the payout to creators is fulfilled by the team with no promised date, and a suspicious submission goes on hold rather than vanishing silently.

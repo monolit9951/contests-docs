@@ -48,7 +48,7 @@ No. Registering, browsing the contest feed and submitting work cost nothing, and
 
 ### Can a platform this new be trusted?
 
-Age is a weak signal in both directions: old scams exist and young honest projects exist. The checkable signals are better ones - a funding mode you can read before you work, terms that cannot move afterwards, a count neither side supplies, and a named operator who answers. Judge those.
+Age is a weak signal in both directions: old scams exist and young honest projects exist. The checkable signals are better ones - a funding mode you can read before you work, a rate and threshold that cannot change afterwards, a count neither side supplies, and a named operator who answers. Judge those.
 
 ### Does the platform decide who wins by hand?
 

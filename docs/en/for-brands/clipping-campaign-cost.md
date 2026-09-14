@@ -26,7 +26,7 @@ Only one line of a DareBay campaign's cost is fixed. Creating a contest costs 10
 
 The formula: clip views / 1,000 × rate, never more than the cap per clip. A clip with 20,000 views at $1 earns its creator 20,000 / 1,000 × $1.00 = **$20.00**; a clip with a million views stops at the cap, $100 if that is what you set. The threshold is an entry condition, not a deductible: a clip under it is not paid, a clip over it is paid for every view from the first.
 
-A budget limit is optional: with one, accruals stop at your figure; without one, they follow only the views of accepted clips. The pool itself is locked on the platform before the start, and the remainder returns to your balance. How creators get paid from it: [how to pay clippers](/en/for-brands/paying-clippers-per-view).
+Accruals stop when the budget you set runs out, and the wallet-backed pool is locked on the platform before the start; whatever the clips do not earn returns to your balance. How creators get paid from it: [how to pay clippers](/en/for-brands/paying-clippers-per-view).
 
 ## Three budgets: what $200, $1,000 and $5,000 buy
 
@@ -62,7 +62,7 @@ The pool and the launch price cover creator payouts and the platform's work: vie
 
 ## How not to overpay
 
-**A limit.** Set a budget limit if you need a predictable total: accruals stop there whatever the clips collect afterwards.
+**The budget.** Your budget is the ceiling on spend: accruals stop there whatever the clips collect afterwards.
 
 **A pause.** A task can be paused: new submissions stop while the task stays open, a brake for when clips come in faster than expected.
 
@@ -82,7 +82,7 @@ As much as it collected: views / 1,000 × rate, up to the cap. A clip with 20,00
 
 ### Can a task run without a budget limit?
 
-Yes, the limit is optional. Without it, accruals follow only the views of accepted clips, and the spend is held by the rate, the threshold and the cap per clip. That suits maximum reach; if the total matters more, set the limit.
+Not when you launch it yourself: a task you create needs a budget, and accruals stop when it runs out. Inside that budget the rate, the threshold and the cap per clip hold the spend, so a bigger budget buys more views rather than a higher price per view.
 
 ### Which is cheaper for the buyer: a wallet-backed budget or manual payout?
 

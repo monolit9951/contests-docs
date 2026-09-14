@@ -49,7 +49,7 @@ If you are in Russia, Belarus, Ukraine, Kazakhstan or elsewhere in CIS, Whop is 
 - **Ready-made unique videos.** On offer tasks the platform hands you finished videos and makes every copy unique for you; no editing software needed.
 - **Fee on the payout itself.** DareBay takes 0% of contest payouts; Whop's terms take 10% of CPM payouts, and its creator FAQ describes tiers that start at 25%.
 - **Entry.** No follower requirement, no application and no KYC before your first brief on DareBay; Whop requires identity verification before payouts and some campaigns require an application.
-- **Terms on the card.** Rate, threshold and cap are fixed on every DareBay task card before you submit and are not lowered afterwards.
+- **Terms on the card.** Rate, threshold and cap are on every DareBay task card before you submit; the rate and threshold do not change after launch.
 
 ## Fees and what actually reaches you
 

@@ -44,7 +44,7 @@ Creating a contest and topping up its budget currently carry no fee. The organiz
 | Contest creation | no fee | The organizer funds the budget |
 | Budget top-up | no fee | No additional top-up charge |
 | Creator withdrawal | separate terms | Fee, minimum and processing by the team are stated on the withdrawal page |
-| Refund of the remainder | wallet-backed contests | What the clippers did not earn goes back to the organizer balance. Where no pool was deposited, there is nothing to refund |
+| Refund of the remainder | wallet-backed contests | What the clippers did not earn goes back to the organizer balance |
 
 See [current DareBay fees](/en/help/what-commission) for the operational terms.
 

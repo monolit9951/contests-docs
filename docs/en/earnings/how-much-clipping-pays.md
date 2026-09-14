@@ -20,7 +20,7 @@ cta:
 
 ## Three numbers on the card: rate, threshold, cap
 
-A clipper's earnings come from three numbers, all set by the buyer when creating the task: the rate per 1000 views, the view threshold and the cap on a single submission. Once the task is live the rate and threshold no longer change, and the cap can never be cut below what a clip has already earned, so you decide whether to take the task knowing the formula; the fourth number, the views your clip collects, is the only one that depends on you.
+A clipper's earnings come from three numbers, all set by the buyer when creating the task: the rate per 1000 views, the view threshold and the cap on a single submission. Once the task is live the rate and threshold do not change, and the cap can never be cut below what a clip has already earned, so you decide whether to take the task knowing the formula; the fourth number, the views your clip collects, is the only one that depends on you.
 
 | Parameter | Value across open tasks | What it means for your figure |
 |---|---|---|

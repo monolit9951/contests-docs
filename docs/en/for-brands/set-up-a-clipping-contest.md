@@ -67,7 +67,7 @@ Creating a contest and topping up its budget currently carry no fee: the organiz
 
 ### Can the rate be changed after the contest starts?
 
-No. The rate, the threshold and the budget are fixed when the contest is created and do not change: that is part of the guarantee for clippers. The one exception is the cap per submission, which you can adjust after launch.
+No. The rate and the threshold are fixed when the contest is created and do not change: that is part of the guarantee for clippers. After launch you can still adjust the cap per submission (not below what a clip has already earned), move the deadline and top up the budget.
 
 ### Why is there a cap per submission?
 

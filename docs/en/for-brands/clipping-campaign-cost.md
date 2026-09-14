@@ -12,7 +12,7 @@ hero:
     - "<b>Only one line is fixed:</b> 10 USDT to create the contest. The contest fee is 0% and a top-up costs nothing, so every dollar of the pool reaches the clippers."
     - "<b>The budget is rate × paid views, and the rate is yours to set.</b> Open tasks currently pay $1 to $2 per 1,000 views, with $1 the typical rate."
     - "<b>$1,000 at $1 buys 1,000,000 paid views,</b> or 10 clips that each hit a $100 cap. That is arithmetic, not a forecast: put your own figure into the calculator below."
-    - "<b>Overspending is hard:</b> a budget limit, a pause and the cap per clip hold the spend, clips under the threshold cost you nothing, and a wallet-backed remainder returns to your balance."
+    - "<b>Overspending is hard:</b> the budget, a pause and the cap per clip hold the spend, clips under the threshold cost you nothing, and a wallet-backed remainder returns to your balance."
 cta:
   title: "Numbers add up? Now write the task"
   lede: "You set the rate, the threshold, the cap and the budget when you create the contest, and you pay only for views the platform counted. A wallet-backed budget is locked on the platform before the start, and whatever the clips did not earn comes back to your balance."
@@ -62,7 +62,7 @@ The pool and the launch price cover creator payouts and the platform's work: vie
 
 ## How not to overpay
 
-**The budget.** Your budget is the ceiling on spend: accruals stop there whatever the clips collect afterwards.
+**The budget.** A task never spends more than the sum you set: accruals stop there whatever the clips collect afterwards.
 
 **A pause.** A task can be paused: new submissions stop while the task stays open, a brake for when clips come in faster than expected.
 
@@ -82,7 +82,7 @@ As much as it collected: views / 1,000 × rate, up to the cap. A clip with 20,00
 
 ### Can a task run without a budget limit?
 
-Not when you launch it yourself: a task you create needs a budget, and accruals stop when it runs out. Inside that budget the rate, the threshold and the cap per clip hold the spend, so a bigger budget buys more views rather than a higher price per view.
+No: every task needs a budget, and accruals stop when it runs out. Inside that budget the rate, the threshold and the cap per clip hold the spend, so a bigger budget buys more views rather than a higher price per view.
 
 ### Which is cheaper for the buyer: a wallet-backed budget or manual payout?
 

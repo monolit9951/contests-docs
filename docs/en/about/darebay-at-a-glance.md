@@ -37,8 +37,6 @@ Two kinds of contest exist. In a **wallet-backed contest** the organizer's budge
 
 **Ready-made videos with built-in uniqueization.** On offer tasks the platform hands you finished videos and makes every copy unique for you, so you can post without editing software and without repeating another clipper's clip.
 
-**CPA offers directly.** Brands run their CPA offers on DareBay itself, so you work with the offer on the platform, with the budget and the count in one place and no affiliate network in between.
-
 **Worldwide, no country restrictions.** There is no exclusion list: clippers from any country are paid the same way. The community is largest in Russia, Ukraine, Kazakhstan and the rest of CIS, and everyone is welcome.
 
 ## How the money moves

@@ -47,7 +47,6 @@ If you are outside Russia, do not want a tax status just to clip, or need to be 
 - **No country restrictions:** pays worldwide, not only Russia, including Belarus, Ukraine, Kazakhstan and all of CIS.
 - **Better offers:** an offer task pays per view plus a fixed fee per accepted clip and a share of sales on one card.
 - **Ready-made unique videos** on offer tasks, no editing software needed.
-- **CPA offers directly** on the platform, no affiliate network in between.
 - **No tax status:** any account can take a brief; self-employed or sole-trader status is not needed.
 - **Payout in USDT on TON or Telegram Stars,** available in every country of the region.
 - **Terms on the card:** rate, threshold and cap are fixed before you submit; in wallet-backed contests the budget is locked on the platform, and manual-payout contests are labelled.

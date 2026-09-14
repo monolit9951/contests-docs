@@ -54,7 +54,7 @@ If you clip from the US or the EU and want the largest choice of campaigns, join
 
 If you are new and have no audience, prefer platforms with no follower requirement and a printed rate, threshold and cap per campaign, so that you can calculate the payout of a clip before you edit it. Every DareBay task card carries all three.
 
-If you want more than a rate per view, look at what a task adds on top. DareBay's offer tasks pay a fixed fee per accepted clip and a share of the orders your promo code brings, hand you ready-made videos with built-in uniqueization so you post without editing software, and let you work with CPA offers directly on the platform, with no affiliate network in between.
+If you want more than a rate per view, look at what a task adds on top. DareBay's offer tasks pay a fixed fee per accepted clip and a share of the orders your promo code brings, and hand you ready-made videos with built-in uniqueization so you post without editing software.
 
 <LCalc />
 

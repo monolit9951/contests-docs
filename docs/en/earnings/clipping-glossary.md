@@ -26,7 +26,7 @@ glossary:
   - { id: "clipping", term: "Clipping", definition: "Cutting streams, podcasts and long videos into short clips, or shooting short videos of your own for a task, then posting them on your own accounts and getting paid per view. The Russian-speaking scene calls the same thing narezki." }
   - { id: "contest-fee", term: "Contest fee", definition: "The share of a task's budget the platform keeps: on DareBay it is 0%, so the whole fund goes to clippers. Creating a contest costs the buyer 10 USDT once, and that has nothing to do with your payout." }
   - { id: "counted-view", term: "Counted view", definition: "A view the platform's counter has read from the site's public counter and that has passed moderation and fraud checks. Only counted views are paid, and the figure is refreshed several times a day." }
-  - { id: "cpa", term: "CPA", definition: "Cost per action: payment for a target action such as a sign-up, an application or a purchase through your link or promo code. Brands run CPA offers on DareBay directly, with no affiliate network in between, and such a task pays a fixed fee per accepted clip plus a share of sales." }
+  - { id: "cpa", term: "CPA", definition: "Cost per action: payment for a target action such as a sign-up, an application or a purchase through your link or promo code. On DareBay, a CPA offer task pays a fixed fee per accepted clip plus a share of sales." }
   - { id: "cpm", term: "CPM", definition: "Cost per mille, the advertising price of a thousand impressions. In clipping the same word means the rate per 1000 counted views: at a CPM of $1, a clip with 20,000 views makes 20,000 / 1000 × $1 = $20." }
   - { id: "cps", term: "CPS", definition: "Cost per sale: you get a percentage of the orders that came through your affiliate link or promo code. On an offer task CPS usually sits on top of pay per view." }
   - { id: "creator-decision", term: "Creator's decision", definition: "The CREATOR_DECISION selection type: the organizer reviews the entries and names the winner by the selection deadline fixed when the contest was created. It rests on the organizer's good faith, so check their rating first." }
@@ -93,7 +93,7 @@ A displayed view is the figure in your account statistics the moment you look. A
 
 ### Offer and pay-per-view task
 
-A pay-per-view task pays one thing: the rate per 1000 counted views, up to the cap. An offer task adds a fixed fee per accepted clip and a share of sales through your affiliate link or promo code, often with a ready-made uniqueized setup. All three parts are on the card; brands run CPA offers on DareBay directly, no affiliate network in between.
+A pay-per-view task pays one thing: the rate per 1000 counted views, up to the cap. An offer task adds a fixed fee per accepted clip and a share of sales through your affiliate link or promo code, often with a ready-made uniqueized setup. All three parts are on the card.
 
 ### Withdrawal and Stars
 

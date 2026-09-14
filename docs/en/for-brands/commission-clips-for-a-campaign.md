@@ -8,7 +8,7 @@ seo: true
 
 # How to commission clips for a campaign
 
-One task can put your product into dozens of clips in a few days, and your budget moves only against views the platform counted. There is nothing to negotiate and no advance to hand a freelancer: you write the task, fund the budget, and clippers pick the job up themselves. The money is locked on the platform, and unused funds return to you.
+One task can put your product into dozens of clips in a few days, and your budget moves only against views the platform counted. There is nothing to negotiate and no advance to hand a freelancer: you write the task, fund it, and clippers pick the job up themselves. The budget is wallet-backed: the money is locked on the platform, and unused funds return to you.
 
 ## The model: the buyer creates a contest, clippers take the task
 

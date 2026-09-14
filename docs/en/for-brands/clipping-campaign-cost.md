@@ -86,4 +86,4 @@ Not when you launch it yourself: a task you create needs a budget, and accruals 
 
 ### Which is cheaper for the buyer: a wallet-backed budget or manual payout?
 
-The launch price and the formula are the same. A task you launch yourself always runs on a wallet-backed budget, though: the pool is locked on the platform before the start, whatever the clips do not earn returns to your balance, and creators take the task sooner because they can see the payout is covered. If your campaign needs a different payment setup, message the founder on Telegram: [@ruslanbwork](https://t.me/ruslanbwork).
+The launch price and the formula are the same. A task you launch yourself always runs on a wallet-backed budget, though: the pool is locked on the platform before the start, whatever the clips do not earn returns to your balance, and creators take the task sooner because they can see the payout is covered. To talk through another way to pay creators, write to the founder on Telegram: [@ruslanbwork](https://t.me/ruslanbwork).

@@ -7,7 +7,7 @@ seo: true
 landing: true
 hero:
   kicker: "Streamer and creator guide · 2026"
-  lede: "You can find clippers for a stream or a channel in four ways, and the real difference between them is who counts the views and pays: you or the platform. Below: each way, what a clipper needs from you, and how to put a task together in one evening."
+  lede: "You can find clippers for a stream or a channel in four ways, and the real difference between them is who counts the views and pays the creators: you or the platform. Below: each way, what a clipper needs from you, and how to put a task together in one evening."
   takeaways:
     - "<b>Clippers come from four places.</b> A post in your chat and Discord, freelance boards, your own clip channel with a team, or a pay-per-view platform where creators take the task themselves."
     - "<b>Six things and a clipper starts the same day.</b> Access to recordings, rights, a hashtag, a format, a rate and a steady flow of material."
@@ -18,7 +18,7 @@ cta:
   lede: "Contest creation costs 10 USDT, the contest fee is 0%. You set the rate, the threshold and the cap, the platform counts the views, and a wallet-backed budget only pays for the views it counted."
 ---
 
-To find clippers, post in your own chat and Discord, try a freelance board, build a clip channel with a team, or publish a task on a pay-per-view platform where creators take it themselves. With the first three, agreeing the rate, collecting links and counting views is on you. On the platform the counting is done for you, and you pay for counted views.
+To find clippers, post in your own chat and Discord, try a freelance board, build a clip channel with a team, or publish a task on a pay-per-view platform where creators take it themselves. With the first three, you agree the rate, collect the links and count the views yourself. On the platform the counting is done for you, and you pay for counted views.
 
 ## Four ways to find clippers
 
@@ -87,7 +87,7 @@ No. A clipper cares about the material and the terms, not your channel size. A t
 
 ### Can I pay clippers directly, without the platform wallet?
 
-Not on a task you launch yourself: its wallet-backed budget is locked on the platform at launch, and creators are paid from it by the formula. Clippers can see the money is there before they start cutting, which matters when they do not know you yet. If you need a different payment setup, message the founder on Telegram: [@ruslanbwork](https://t.me/ruslanbwork).
+No: your task runs on a wallet-backed budget, locked on the platform at launch, and creators are paid from it by the formula. Clippers can see the money is there before they start cutting, which matters when they do not know you yet. If you need a different payment setup, message the founder on Telegram: [@ruslanbwork](https://t.me/ruslanbwork).
 
 ### What if a clipper posted a clip but never sent the link?
 

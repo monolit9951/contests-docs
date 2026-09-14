@@ -93,7 +93,7 @@ Any tracker that can send an S2S postback to a URL with parameters: the platform
 
 ### Who pays the creators on an offer, the agency or the platform?
 
-The platform: creators get the fixed fee and the sales share credited to their balance, payouts come from the offer budget, and the advertiser or the network settles with the platform under the offer terms. If the agency runs an ordinary pay-per-view task, creators are paid by the formula from the agency's own budget, which is locked on the platform at launch. For a client whose campaign needs a different payment setup, message the founder on Telegram: [@ruslanbwork](https://t.me/ruslanbwork).
+The platform: creators get the fixed fee and the sales share credited to their balance, payouts come from the offer budget, and the advertiser or the network settles with the platform under the offer terms. If the agency runs an ordinary pay-per-view task, creators are paid by the formula from the agency's own budget, which is locked on the platform at launch. If a client needs its own settlement terms with creators, contact the founder on Telegram: [@ruslanbwork](https://t.me/ruslanbwork).
 
 ### What happens to incentivized traffic?
 

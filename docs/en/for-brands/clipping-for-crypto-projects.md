@@ -90,7 +90,7 @@ The setup order is in [how to set up a contest](/en/for-brands/set-up-a-clipping
 
 ### Can I pay clippers in my own token?
 
-No: on a task you launch yourself, creators are paid by the formula from the USDT budget locked on the platform, and they withdraw it as USDT to a TON wallet or as Telegram Stars. A bonus in your own token is neither counted nor guaranteed by the platform, and promising it in the brief breaks your own rules.
+No: creators are paid by the formula from the USDT budget locked on the platform and withdraw their earnings as USDT to a TON wallet or as Telegram Stars. A bonus in your own token is neither counted nor guaranteed by the platform, and promising it in the brief breaks your own rules.
 
 ### How do crypto clips get through platform moderation?
 

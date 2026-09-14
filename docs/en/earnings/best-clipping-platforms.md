@@ -24,8 +24,8 @@ method:
   - "Every competitor figure was taken from that platform's own public page on the date shown next to it. Where a platform does not publish a figure, the table says so instead of guessing. DareBay's figures come from the platform's live data snapshot."
   - "The order is editorial: platforms that publish their terms, hold the budget and serve more countries rank higher, and we do not put ourselves first. Click any column to sort by that field instead."
 cta:
-  title: "Take a brief where the terms cannot move"
-  lede: "DareBay asks for no followers and no application. In a wallet-backed contest the budget is locked on the platform before the start, the terms you agreed to stay put after launch, and payouts go out worldwide with no country list."
+  title: "Take a brief on DareBay and get paid for counted views"
+  lede: "DareBay asks for no followers and no application. In a wallet-backed contest the budget is locked on the platform before the start, and payouts go out worldwide with no country list."
 ---
 
 ## How to read the table

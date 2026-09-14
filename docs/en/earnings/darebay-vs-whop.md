@@ -11,7 +11,7 @@ hero:
   secondary: "See the table"
   takeaways:
     - "<b>Whop wins on choice:</b> the most campaigns anywhere, budgets from $1,000, rates from $0.50 to $5 per 1,000 views and payouts in 200+ countries with no floor on withdrawals."
-    - "<b>DareBay wins on access and on what the task hands you:</b> no country list at all, so it pays where Whop cannot; offer tasks add a fixed fee per accepted clip and a share of the orders your promo code brings, ready-made unique videos and CPA offers with no network in between."
+    - "<b>DareBay wins on access and on what the task hands you:</b> no country list at all, so it pays where Whop cannot; offer tasks add a fixed fee per accepted clip and a share of the orders your promo code brings and ready-made unique videos."
     - "<b>The fee bites in different places:</b> Whop's terms take 10% of CPM payouts (its FAQ shows 25%→7% tiers); DareBay takes 0% from a contest payout and 10% only when you withdraw, from a 10 USDT request."
     - "<b>Both hold the money</b> in their main mode: Whop keeps the brand's budget against the campaign, DareBay locks the organizer's budget on the platform in a wallet-backed contest; DareBay also runs manual-payout contests where the organizer pays directly."
 compare:
@@ -47,7 +47,6 @@ If you are in Russia, Belarus, Ukraine, Kazakhstan or elsewhere in CIS, Whop is 
 - **No country restrictions.** DareBay pays worldwide with no exclusion list, including Russia, Belarus, Ukraine, Kazakhstan and CIS, which Whop's sanctioned list excludes.
 - **Better offers.** An offer task pays the rate per view plus a fixed fee per accepted clip and a share of the orders your promo code brings, on one card.
 - **Ready-made unique videos.** On offer tasks the platform hands you finished videos and makes every copy unique for you; no editing software needed.
-- **CPA offers directly.** Brands run their CPA offers on DareBay itself, with no affiliate network in between.
 - **Fee on the payout itself.** DareBay takes 0% of contest payouts; Whop's terms take 10% of CPM payouts, and its creator FAQ describes tiers that start at 25%.
 - **Entry.** No follower requirement, no application and no KYC before your first brief on DareBay; Whop requires identity verification before payouts and some campaigns require an application.
 - **Terms on the card.** Rate, threshold and cap are fixed on every DareBay task card before you submit and are not lowered afterwards.

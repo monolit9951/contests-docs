@@ -37,6 +37,12 @@ import {
 // Branch-aware host for the sitemap + a dev-only noindex (the develop preview must not be indexed;
 // only the release/prod build is indexable). CD passes DOCS_ENV=prod on the release branch.
 const DOCS_ENV = process.env.DOCS_ENV || 'dev'
+// CD builds with RELEASE_SHA set to the deployed commit (Dockerfile → docs:build). The analytics
+// beacon reports it as `releaseSha` from import.meta.env.VITE_BUILD_SHA, the name the app uses;
+// Vite exposes only VITE_-prefixed variables to the client, so `vite.define` below maps it.
+const RELEASE_SHA = /^[a-f0-9]{7,40}$/i.test(process.env.RELEASE_SHA ?? '')
+  ? process.env.RELEASE_SHA
+  : undefined
 // The `/docs/` base is gone as of the 2026-08 URL migration: content now answers on
 // root-level hubs (`/zarabotok/`, `/pomoshch/`, ...) and the host nginx routes those
 // prefixes to this container. So the hostname is the bare origin again.
@@ -624,6 +630,7 @@ export default defineConfig({
         },
       ],
     },
+    define: RELEASE_SHA ? { 'import.meta.env.VITE_BUILD_SHA': JSON.stringify(RELEASE_SHA) } : {},
   },
 
   // No " | Документация DareBay" after every title. Two reasons: it spent ~25 of the ~60

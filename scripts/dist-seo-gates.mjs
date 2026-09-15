@@ -1,7 +1,7 @@
 #!/usr/bin/env node --experimental-strip-types
 // Validate the artifacts a crawler actually receives, not only their sources.
 
-import { existsSync, readFileSync } from 'node:fs'
+import { existsSync, readdirSync, readFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
@@ -258,6 +258,14 @@ const expectedRelease = process.env.RELEASE_SHA || 'development'
 if (!existsSync(releaseMarker)) fail('release-marker', 'missing release identity')
 else if (readFileSync(releaseMarker, 'utf8').trim() !== expectedRelease) {
   fail('release-marker', `${readFileSync(releaseMarker, 'utf8').trim()} != ${expectedRelease}`)
+}
+// The analytics beacon reports the same identity as `releaseSha` (config.ts defines it for the
+// client). That wiring was once missing unnoticed, and every docs event shipped without one.
+if (expectedRelease !== 'development') {
+  const bundles = readdirSync(DIST, { recursive: true }).filter((file) => file.endsWith('.js'))
+  if (!bundles.some((file) => readFileSync(join(DIST, file), 'utf8').includes(expectedRelease))) {
+    fail('release-beacon', `no client bundle carries ${expectedRelease}`)
+  }
 }
 
 if (failures.length) {

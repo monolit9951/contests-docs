@@ -207,13 +207,29 @@ describe('docs analytics persistence boundaries', () => {
                 hostname: 'darebay.com',
             },
         })
-        vi.stubGlobal('document', {
-            referrer: '',
-            documentElement: { lang: 'ru' },
-        })
+        vi.stubGlobal('document', { referrer: '' })
         vi.stubGlobal('navigator', { language: 'ru' })
         vi.stubGlobal('atob', (value: string) => Buffer.from(value, 'base64').toString('binary'))
         resetDocsAnalyticsForTests()
+    })
+
+    it('reports the browser language as the SPA does, never the page locale', () => {
+        // <html lang> is the article's locale, and Chrome's page translator
+        // rewrites it: docs events arrived as `ar` with no Arabic locale.
+        vi.stubGlobal('document', { referrer: '', documentElement: { lang: 'ar' } })
+        vi.stubGlobal('navigator', { language: 'en-US', languages: [' ru-RU ', 'en-US'] })
+
+        trackDocsEvent(DocsEvent.PageView, {}, { dedupeKey: 'languages', deferFlush: true })
+
+        expect(readDocsOutbox()[0].language).toBe('ru-RU')
+    })
+
+    it('falls back to navigator.language within the backend 32-character bound', () => {
+        vi.stubGlobal('navigator', { language: `en-US-${'x'.repeat(40)}`, languages: [] })
+
+        trackDocsEvent(DocsEvent.PageView, {}, { dedupeKey: 'language', deferFlush: true })
+
+        expect(readDocsOutbox()[0].language).toBe(`en-US-${'x'.repeat(26)}`)
     })
 
     it('reads the same identity-scoped first-touch format as the SPA', () => {

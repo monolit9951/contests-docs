@@ -225,6 +225,13 @@ const telegramInitData = (): string | undefined => {
     return typeof value === 'string' ? bounded(value, 8192) : undefined
 }
 
+// The browser's language, read exactly as the app's beacon reads it
+// (contests-frontend trackEvent.ts): both fill one `language` column. Not
+// <html lang> — that is the article's locale, already carried by `page`, and
+// Chrome's page translator rewrites it.
+const browserLanguage = (): string | undefined =>
+    bounded(navigator.languages?.[0] || navigator.language, 32)
+
 const actorContext = (): { boundary: string; impersonated: boolean } => {
     const impersonated = safeGet(IMPERSONATOR_TOKEN_KEY) !== null
     const accountId = jwtAccountId()
@@ -573,7 +580,7 @@ export const trackDocsEvent = (
         page: pageContext.page,
         targetUrl: sanitizeTarget(targetUrl),
         releaseSha: import.meta.env.VITE_BUILD_SHA?.slice(0, 64),
-        language: document.documentElement.lang || navigator.language,
+        language: browserLanguage(),
         isImpersonated: actorContext().impersonated || undefined,
         firstTouchUtmSource: session.firstTouch.utm?.source,
         firstTouchUtmMedium: session.firstTouch.utm?.medium,

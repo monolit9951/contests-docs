@@ -50,7 +50,7 @@ const CASES: {
     localeKey: 'en',
     productUrl: 'https://darebay.com/en',
     tasksUrl: 'https://darebay.com/en/tasks',
-    authorName: 'Ruslan Bey',
+    authorName: 'Ruslan Bei',
     authorPath: '/en/about/who-writes-darebay-guides',
     docsHome: '/en/earnings/',
     outline: 'On this page',

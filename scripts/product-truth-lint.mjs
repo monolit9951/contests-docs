@@ -245,6 +245,13 @@ const CLAIM_RULES = [
       /\b(?:крипта|криптовалюта|гаманець|USDT)[^.\n]{0,45}8\s*%/i,
     ],
   },
+  {
+    // The founder's name in Latin script is Ruslan Bei, as on the legal pages (founder,
+    // 2026-09-15). A Markdown wrap can split the name, and an FAQ question still publishes it.
+    id: "founder-name-latin",
+    includeQuestions: true,
+    patterns: [/\bRuslan\s+Bey\b/i, /^\W*Bey\b/],
+  },
 ];
 
 function markdownFiles(dir) {
@@ -503,7 +510,7 @@ export function lintText(text, file, truth, declaration = pageDeclaration(text))
       for (const pattern of rule.patterns) {
         const match = pattern.exec(line);
         pattern.lastIndex = 0;
-        if (!match || isQuestion(line)) continue;
+        if (!match || (isQuestion(line) && !rule.includeQuestions)) continue;
         if (rule.allowNegated && isNegated(line, match.index, lines[index - 1] || "")) continue;
         if (rule.allowWalletQualified && isWalletQualified(line, lines[index - 1] || "")) continue;
         addViolation(violations, rule.id, file, lineNumber,

@@ -261,8 +261,9 @@ const ORGANIZATION = {
 }
 
 // The founder's name in the page's own script: Latin on English pages,
-// Cyrillic on Russian and Ukrainian, the other form as alternateName.
-const AUTHOR_NAME: Record<Locale, string> = { ru: 'Руслан Бей', uk: 'Руслан Бей', en: 'Ruslan Bey' }
+// Cyrillic on Russian and Ukrainian, the other form as alternateName. The Latin
+// spelling is Ruslan Bei, as on the legal pages (founder, 2026-09-15).
+const AUTHOR_NAME: Record<Locale, string> = { ru: 'Руслан Бей', uk: 'Руслан Бей', en: 'Ruslan Bei' }
 
 // The author page is a manifest entry like any other, so its address is derived
 // and the byline, the Person node and the sidebar can never point three ways.
@@ -280,7 +281,7 @@ const author = (language: Locale) => ({
   '@type': 'Person',
   '@id': AUTHOR_ID,
   name: AUTHOR_NAME[language],
-  alternateName: language === 'en' ? 'Руслан Бей' : 'Ruslan Bey',
+  alternateName: language === 'en' ? AUTHOR_NAME.ru : AUTHOR_NAME.en,
   url: `${ENTITY_ORIGIN}${authorPathForLocale(language) ?? '/o-proekte/'}`,
   sameAs: [FOUNDER_TELEGRAM],
   jobTitle: 'Founder',

@@ -273,3 +273,14 @@ describe('product-truth CI provenance contract', () => {
     expect(dockerignore).toMatch(/^\.product-truth-sources$/m)
   })
 })
+
+describe('build identity contract', () => {
+  // check:dist can prove the release marker and the analytics beacon's releaseSha only for a
+  // real revision; a build without RELEASE_SHA passes both checks without proving anything.
+  it.each([
+    ['release', workflow, 'RELEASE_SHA="${GITHUB_SHA}"'],
+    ['pull request', namedStep(lintWorkflow, 'build (dead links + frontmatter)'), 'RELEASE_SHA: ${{ github.event.pull_request.head.sha }}'],
+  ])('%s workflow builds the docs with its commit as RELEASE_SHA', (_name, source, assignment) => {
+    expect(source).toContain(assignment)
+  })
+})

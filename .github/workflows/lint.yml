@@ -72,6 +72,9 @@ jobs:
         run: npm run docs:build
         env:
           DOCS_ENV: dev
+          # A real revision, as the release build passes: without one, check:dist cannot verify
+          # that the analytics beacon carries the build identity.
+          RELEASE_SHA: ${{ github.event.pull_request.head.sha }}
       - name: spell (advisory)
         run: bash .github/scripts/spell-diff.sh || true
         env:

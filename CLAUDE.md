@@ -44,12 +44,14 @@ After the candidate commit exists, validate the exact committed change before pu
 npm test
 node --experimental-strip-types --no-warnings scripts/anti_doorway_lint.mjs \
   --corpus docs --base <actual-target-branch-base-sha>
-DOCS_ENV=prod npm run docs:build
+RELEASE_SHA=$(git rev-parse HEAD) DOCS_ENV=prod npm run docs:build
 ```
 
 Run post-commit validation from a clean isolated worktree checked out at the candidate HEAD; verify
 that `git status --porcelain` is empty before starting. The linter derives paths from git but reads
-file contents from the working tree.
+file contents from the working tree. Pass the candidate SHA as CD does: without a real `RELEASE_SHA`,
+`check:dist` cannot prove that the build carries its release identity (the release marker and the
+analytics beacon's `releaseSha`).
 
 Do not rely on the linter's default `origin/develop` base when targeting `release`. Inspect generated
 tracked changes after every build; never discard another session's output.

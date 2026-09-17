@@ -11,7 +11,7 @@
   "packageManager": "npm@10.9.3",
   "scripts": {
     "docs:dev": "vitepress dev docs",
-    "prebuild": "npm run gen:dates && npm run check:registry && npm run gen:manifest && npm run gen:release-marker && npm run check:truth && npm run gen:redirects",
+    "prebuild": "npm run gen:dates && npm run gen:facts && npm run check:registry && npm run gen:manifest && npm run gen:release-marker && npm run check:truth && npm run gen:redirects",
     "docs:build": "npm run prebuild && vitepress build docs && node --experimental-strip-types --no-warnings scripts/finalize-dist.mjs && npm run check:dist",
     "docs:preview": "vitepress preview docs",
     "test": "vitest run && node --experimental-strip-types --no-warnings scripts/anti_doorway_lint.test.mjs && node scripts/product-truth-lint.test.mjs && npm run check:truth && bash deploy/install-host-nginx-snippet.sh --self-test && bash deploy/deploy-content-transaction.sh --self-test",
@@ -21,6 +21,8 @@
     "gen:manifest": "node --experimental-strip-types --no-warnings scripts/gen-public-content-manifest.mjs",
     "gen:release-marker": "node scripts/gen-release-marker.mjs",
     "gen:llms": "node --experimental-strip-types --no-warnings scripts/gen-llms.mjs",
+    "gen:facts": "node scripts/gen-facts-json.mjs",
+    "facts:refresh": "node scripts/facts-refresh.mjs",
     "gen:redirects": "node --experimental-strip-types --no-warnings scripts/gen-nginx-redirects.mjs",
     "gen:addresses": "node --experimental-strip-types --no-warnings scripts/print-addresses.mjs > ADDRESSES.md",
     "gates": "node --experimental-strip-types --no-warnings scripts/url-gates.mjs",

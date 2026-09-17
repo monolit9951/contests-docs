@@ -1,0 +1,226 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-09-17T21:33:12.754Z",
+  "url": "https://darebay.com/data/darebay-facts.json",
+  "operator": "Ruslan Bei",
+  "sources": {
+    "productTruth": {
+      "file": "data/product-truth.json",
+      "verifiedAt": "2026-08-23"
+    },
+    "productIntent": {
+      "file": "data/product-intent.json",
+      "decidedAt": "2026-09-17"
+    },
+    "liveCatalogue": {
+      "file": "data/contests-snapshot.json",
+      "endpoint": "https://darebay.com/api/contests",
+      "fetchedAt": "2026-09-17T21:04:06.211Z",
+      "openTasks": 1
+    }
+  },
+  "facts": [
+    {
+      "id": "rate-per-1000-views",
+      "value": {
+        "min": 1,
+        "max": 2
+      },
+      "unit": "usd_per_1000_views",
+      "labels": {
+        "ru": "Ставка за 1000 просмотров",
+        "uk": "Ставка за 1000 переглядів",
+        "en": "Rate per 1,000 views"
+      },
+      "text": {
+        "ru": "$1.00–$2.00 за 1000 просмотров (открытые конкурсы)",
+        "uk": "$1.00–$2.00 за 1000 переглядів (відкриті конкурси)",
+        "en": "$1.00–$2.00 per 1,000 views (open tasks)"
+      },
+      "source": "product-truth.json#ppv.stable.bands.cpm",
+      "asOf": "2026-08-23",
+      "note": "Reviewed stable band; 1 open listed task in the live catalogue on 2026-09-17 pays $2.00 per 1,000 views. A task's exact rate is printed on its card and cannot change after the start."
+    },
+    {
+      "id": "cap-per-clip",
+      "value": 500,
+      "unit": "usd",
+      "labels": {
+        "ru": "Потолок на один ролик",
+        "uk": "Стеля на один ролик",
+        "en": "Cap per clip"
+      },
+      "text": {
+        "ru": "до $500 на ролик",
+        "uk": "до $500 на ролик",
+        "en": "up to $500 per clip"
+      },
+      "source": "product-truth.json#ppv.stable.bands.maxPerWork.high",
+      "asOf": "2026-08-23",
+      "note": "The highest cap a task may set, founder-approved in product-intent.json#rate-band; highest cap among 1 open listed task in the live catalogue on 2026-09-17: $500. After the start a cap may only be raised."
+    },
+    {
+      "id": "view-threshold",
+      "value": 1000,
+      "unit": "views",
+      "labels": {
+        "ru": "Порог просмотров",
+        "uk": "Поріг переглядів",
+        "en": "View threshold"
+      },
+      "text": {
+        "ru": "задаёт задание (по умолчанию 1000 просмотров)",
+        "uk": "задає завдання (за замовчуванням 1000 переглядів)",
+        "en": "set per task (system default 1,000 views)"
+      },
+      "source": "product-truth.json#ppv.stable.defaultMinimumViews.value",
+      "asOf": "2026-08-23",
+      "note": "The system default a task starts from; a task may set any threshold inside the reviewed band 1–2,000 views. Thresholds among 1 open listed task in the live catalogue on 2026-09-17: 1."
+    },
+    {
+      "id": "contest-creation-fee",
+      "value": 0,
+      "unit": "percent",
+      "labels": {
+        "ru": "Комиссия за создание конкурса",
+        "uk": "Комісія за створення конкурсу",
+        "en": "Contest creation fee"
+      },
+      "text": {
+        "ru": "0%",
+        "uk": "0%",
+        "en": "0%"
+      },
+      "source": "product-truth.json#contest.creationCommissionPercent",
+      "asOf": "2026-08-23"
+    },
+    {
+      "id": "budget-top-up-fee",
+      "value": 0,
+      "unit": "percent",
+      "labels": {
+        "ru": "Комиссия за пополнение бюджета конкурса",
+        "uk": "Комісія за поповнення бюджету конкурсу",
+        "en": "Contest budget top-up fee"
+      },
+      "text": {
+        "ru": "0%",
+        "uk": "0%",
+        "en": "0%"
+      },
+      "source": "product-truth.json#contest.topUpCommissionPercent",
+      "asOf": "2026-08-23"
+    },
+    {
+      "id": "store-fee",
+      "value": 8,
+      "unit": "percent",
+      "labels": {
+        "ru": "Комиссия с покупки в магазине",
+        "uk": "Комісія з покупки в магазині",
+        "en": "Store purchase fee"
+      },
+      "text": {
+        "ru": "8%",
+        "uk": "8%",
+        "en": "8%"
+      },
+      "source": "product-truth.json#store.commissionPercent",
+      "asOf": "2026-08-23"
+    },
+    {
+      "id": "withdrawal-fee",
+      "value": 0,
+      "unit": "percent",
+      "labels": {
+        "ru": "Комиссия за вывод баланса",
+        "uk": "Комісія за виведення балансу",
+        "en": "Balance withdrawal fee"
+      },
+      "text": {
+        "ru": "без комиссии, заявка от 10 USDT",
+        "uk": "без комісії, заявка від 10 USDT",
+        "en": "no fee, request from 10 USDT"
+      },
+      "source": "product-intent.json#withdrawal-free",
+      "asOf": "2026-09-17",
+      "note": "The target product, decided 2026-09-17 and recorded as product-intent.json#withdrawal-free. The live backend still charges 10% and processes withdrawals manually; the fee reaches 0% when that pending product change ships."
+    },
+    {
+      "id": "withdrawal-minimum",
+      "value": 10,
+      "unit": "USDT",
+      "labels": {
+        "ru": "Минимальная заявка на вывод",
+        "uk": "Мінімальна заявка на виведення",
+        "en": "Minimum withdrawal request"
+      },
+      "text": {
+        "ru": "10 USDT",
+        "uk": "10 USDT",
+        "en": "10 USDT"
+      },
+      "source": "product-truth.json#withdrawal.minimumGrossAmount",
+      "asOf": "2026-08-23",
+      "note": "Gross amount of one withdrawal request; the team checks the payout details by hand."
+    },
+    {
+      "id": "payout-rails",
+      "value": [
+        "USDT_TON_EXTERNAL_WALLET",
+        "TELEGRAM_STARS"
+      ],
+      "labels": {
+        "ru": "Способы выплаты",
+        "uk": "Способи виплати",
+        "en": "Payout rails"
+      },
+      "text": {
+        "ru": "USDT в сети TON, звёзды Telegram",
+        "uk": "USDT у мережі TON, зірки Telegram",
+        "en": "USDT on TON, Telegram Stars"
+      },
+      "source": "product-truth.json#withdrawal.wizardMethods",
+      "asOf": "2026-08-23",
+      "note": "Balance withdrawal rails. A single task may additionally award a card payout, a bank transfer or a gift."
+    },
+    {
+      "id": "platforms",
+      "value": [
+        "TIKTOK",
+        "YOUTUBE",
+        "INSTAGRAM"
+      ],
+      "labels": {
+        "ru": "Площадки",
+        "uk": "Майданчики",
+        "en": "Platforms"
+      },
+      "text": {
+        "ru": "TikTok, YouTube, Instagram и другие сайты, названные в задании",
+        "uk": "TikTok, YouTube, Instagram та інші сайти, названі в завданні",
+        "en": "TikTok, YouTube, Instagram and other sites named in the task"
+      },
+      "source": "gen-facts-json.mjs#WORDING.platforms",
+      "asOf": "2026-09-17",
+      "note": "Where a clip may be published; every task names its own platforms on the card."
+    },
+    {
+      "id": "geography",
+      "value": "worldwide",
+      "labels": {
+        "ru": "География выплат",
+        "uk": "Географія виплат",
+        "en": "Geography of payouts"
+      },
+      "text": {
+        "ru": "весь мир, без списка стран",
+        "uk": "увесь світ, без списку країн",
+        "en": "worldwide, no country list"
+      },
+      "source": "gen-facts-json.mjs#WORDING.geography",
+      "asOf": "2026-09-17",
+      "note": "No exclusion list: clippers from any country are paid the same way."
+    }
+  ]
+}

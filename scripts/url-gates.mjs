@@ -35,6 +35,7 @@ import { existsSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'no
 import { tmpdir } from 'node:os'
 import { join, dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { FACT_IDS, FACTS_PUBLIC_PATH } from './gen-facts-json.mjs'
 import { parseHreflangCluster, sameHreflangMap } from './hreflang-cluster.mjs'
 import { readLocalSitemapTree } from './sitemap-tree.mjs'
 
@@ -368,6 +369,41 @@ for (const file of CONTENT_ROOT_FILES) {
     } catch (error) {
         fail('5-manifest', `невалидный JSON: ${error.message}`)
     }
+}
+
+// The machine-readable fact card carries the same contract as the semantic manifest, for the same
+// reason: an artifact that exists only inside the image is a public 404, and a comparison site or
+// an assistant that cannot tell the bytes are JSON will not parse them. One extra rule of its own
+// — it must stay OUT of the sitemaps. It is data to cite next to a page, not a page to send a
+// reader to, and a JSON document in a sitemap is a soft-404 in the eyes of a crawler.
+{
+    const res = await body(FACTS_PUBLIC_PATH)
+    if (res.status !== 200) fail('5-facts', `${FACTS_PUBLIC_PATH} -> ${res.status}`)
+    const contentType = res.headers.get('content-type') ?? ''
+    const cacheControl = res.headers.get('cache-control') ?? ''
+    if (!/^application\/json\b/i.test(contentType)) fail('5-facts', `content-type: ${contentType}`)
+    if (!/no-cache/i.test(cacheControl) || !/must-revalidate/i.test(cacheControl)) {
+        fail('5-facts', `cache-control: ${cacheControl}`)
+    }
+    if (!/nosniff/i.test(res.headers.get('x-content-type-options') ?? '')) fail('5-facts', 'нет nosniff')
+    try {
+        const served = JSON.parse(res.text)
+        const built = JSON.parse(readFileSync(join(CONTENT_DIST, FACTS_PUBLIC_PATH.slice(1)), 'utf8'))
+        if (JSON.stringify(served) !== JSON.stringify(built)) fail('5-facts', 'ответ отличается от собранного артефакта')
+        const ids = (served.facts ?? []).map((fact) => fact.id)
+        if (ids.length !== FACT_IDS.length || ids.some((id, index) => id !== FACT_IDS[index])) {
+            fail('5-facts', `поля: [${ids.join(', ')}]`)
+        }
+        for (const fact of served.facts ?? []) {
+            if (!fact.source || !/^\d{4}-\d{2}-\d{2}$/.test(fact.asOf ?? '')) {
+                fail('5-facts', `${fact.id}: нет source или asOf`)
+            }
+        }
+    } catch (error) {
+        fail('5-facts', `невалидный JSON: ${error.message}`)
+    }
+    const sitemap = await body('/sitemap-content.xml')
+    if (sitemap.text.includes(FACTS_PUBLIC_PATH)) fail('5-facts', 'машинная карточка попала в sitemap-content.xml')
 }
 
 {

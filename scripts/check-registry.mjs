@@ -30,6 +30,7 @@ const {
     ROOT_LOCALE,
     ORPHAN_REDIRECTS,
     APP_ROUTES,
+    CONTENT_ROOT_FILES,
     pagePath,
     sourceFile,
     localesOf,
@@ -340,10 +341,18 @@ for (const entry of PAGES) {
         )
     )
 
+    // Published artifacts that are addresses without being pages: the host routes exactly
+    // `CONTENT_ROOT_FILES` to this container, so the machine-readable fact card at
+    // `/data/darebay-facts.json` is a live address that no page set can know about. Declared is
+    // not the same as served, and this gate cannot tell the difference — `url-gates.mjs` gate 5
+    // and `probe-live-routing.mjs` both request every entry and fail on anything but 200.
+    const rootFiles = new Set(CONTENT_ROOT_FILES)
+
     for (const file of walk(DOCS)) {
         const raw = readFileSync(file, 'utf8')
         for (const [, href] of raw.matchAll(/\]\((\/[^)#\s]*)/g)) {
             if (live.has(href) || hubRoots.has(href) || appRoutes.has(href)) continue
+            if (rootFiles.has(href)) continue
             // `/legal/*` is shared across locales by design.
             if (href.startsWith('/legal/')) continue
             fail('dead-internal-link', `docs/${relative(DOCS, file)} -> ${href}`)

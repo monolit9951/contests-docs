@@ -382,6 +382,13 @@ export const CONTENT_ROOT_FILES: readonly string[] = [
     '/llms.txt',
     '/.well-known/darebay-content-pages.json',
     '/.well-known/darebay-content-release.txt',
+    // The machine-readable fact card (`scripts/gen-facts-json.mjs`): the eleven public numbers
+    // with the file each came from and the date it was read. Routed as ONE exact address rather
+    // than a `/data/` prefix — a prefix would take that whole namespace away from the application
+    // for the sake of a single file, and nothing here should claim more of the domain than it
+    // serves. Adding it here is what makes it public: the host routes exactly this list, and
+    // `url-gates.mjs` gate 5 plus `probe-live-routing.mjs` both probe every entry.
+    '/data/darebay-facts.json',
     '/vp-icons.css',
     '/hashmap.json',
 ]

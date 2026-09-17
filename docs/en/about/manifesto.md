@@ -1,5 +1,5 @@
 ---
-title: The DareBay manifesto
+title: "The DareBay manifesto: what we pay for and what we never promise"
 description: "The DareBay manifesto: why results beat metrics, how winners are picked, what the platform will not tolerate and what it commits to in return."
 provenance: { snapshot_date: "2026-08-15", source: "darebay-prod" }
 numbers_used: []

@@ -1,5 +1,5 @@
 ---
-title: How are winners chosen?
+title: "How winners are chosen on DareBay: a formula, not a jury"
 description: "How winners are chosen: one of four types, fixed before the start. A seeded draw, the organizer's own call, a viewer vote, or pay per view."
 provenance: { snapshot_date: "2026-08-15", source: "darebay-prod" }
 numbers_used: []

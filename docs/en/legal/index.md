@@ -1,5 +1,5 @@
 ---
-title: Legal documents
+title: "DareBay legal documents: terms and privacy"
 description: DareBay terms of use and privacy policy - what the platform promises you and what it expects from you.
 ---
 

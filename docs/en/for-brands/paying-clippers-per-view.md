@@ -1,5 +1,5 @@
 ---
-title: How to pay clippers per view
+title: "How to pay clippers per view: rate, threshold, cap"
 description: "Paying clippers per view: you set the rate per 1000 views, the platform counts them for you, and an unspent wallet-backed budget comes back to you."
 provenance: { snapshot_date: "2026-08-15", source: "darebay-prod" }
 numbers_used: []

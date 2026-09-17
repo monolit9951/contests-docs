@@ -1,5 +1,5 @@
 ---
-title: Что, если никто не участвует?
+title: "Что, если никто не участвует в конкурсе: бюджет и возврат"
 description: "Никто не участвует в конкурсе? Бюджет кошелькового конкурса возвращается на баланс, рейтинг организатора не падает, а отклик чинят четыре параметра задания."
 provenance: { snapshot_date: "2026-08-15", source: "darebay-prod" }
 numbers_used: [commission_fiat, commission_crypto, commission_coins]

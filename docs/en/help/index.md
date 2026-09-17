@@ -1,5 +1,5 @@
 ---
-title: DareBay help
+title: "DareBay help: quick start, payouts, verification"
 description: "DareBay help: how a contest reward is set and paid, what the fees are, how to withdraw a balance and what protects your result. Answers before you start."
 ---
 

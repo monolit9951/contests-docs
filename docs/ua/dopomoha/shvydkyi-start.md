@@ -1,5 +1,5 @@
 ---
-title: "Швидкий старт на DareBay"
+title: "Швидкий старт на DareBay: перше завдання з нуля"
 description: "Швидкий старт на DareBay: за п'ять хвилин обираєш роль і починаєш. Запустити конкурс, надіслати роботу або голосувати можна з одного акаунта."
 provenance: { snapshot_date: "2026-08-15", source: "darebay-prod" }
 numbers_used: []

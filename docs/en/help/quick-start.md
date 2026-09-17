@@ -1,5 +1,5 @@
 ---
-title: Quick start on DareBay
+title: "Quick start on DareBay: your first task from zero"
 description: "Quick start on DareBay: pick one of three roles and go. Launch a contest, submit work, or watch and vote. One account covers the site and Telegram."
 provenance: { snapshot_date: "2026-08-15", source: "darebay-prod" }
 numbers_used: []

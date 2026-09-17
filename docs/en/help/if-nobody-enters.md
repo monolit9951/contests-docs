@@ -1,5 +1,5 @@
 ---
-title: What if nobody enters?
+title: "What if nobody enters your contest: budget and refund"
 description: "Nobody entered? A wallet-backed budget returns to your balance in full, the 0% fee on creation and top-ups leaves nothing to refund, and your rating holds."
 provenance: { snapshot_date: "2026-08-15", source: "darebay-prod" }
 numbers_used: [commission_fiat, commission_crypto, commission_coins]

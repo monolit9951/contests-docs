@@ -1,5 +1,5 @@
 ---
-title: Submit your work
+title: "How to submit your work on DareBay: link and checks"
 description: "Submit work on DareBay without losing the payout: in a pay-per-view contest the entry arrives as a link to the published video, in the rest you upload a file."
 provenance: { snapshot_date: "2026-08-15", source: "darebay-prod" }
 numbers_used: []

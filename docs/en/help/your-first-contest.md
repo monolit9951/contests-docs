@@ -1,5 +1,5 @@
 ---
-title: Create your first contest
+title: "Create your first contest on DareBay: rate, threshold, budget"
 description: "Your first DareBay contest takes under ten minutes: title, terms, format, selection type, prize and dates on one screen. What is locked after launch."
 provenance: { snapshot_date: "2026-08-15", source: "darebay-prod" }
 numbers_used: []

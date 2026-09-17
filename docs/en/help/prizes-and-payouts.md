@@ -1,5 +1,5 @@
 ---
-title: Prizes and payouts
+title: "Prizes and payouts on DareBay: how they accrue and arrive"
 description: "Prizes and payouts on DareBay: money or an item as the reward, where the budget sits in a wallet-backed contest, and what happens once the result is in."
 provenance: { snapshot_date: "2026-08-15", source: "darebay-prod" }
 numbers_used: []

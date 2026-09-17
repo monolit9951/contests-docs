@@ -1,5 +1,5 @@
 ---
-title: Terms of Use
+title: "DareBay Terms of Use: rules, payouts, disputes"
 description: The DareBay rules. What we promise, what we expect from you, and what gets you removed.
 ---
 

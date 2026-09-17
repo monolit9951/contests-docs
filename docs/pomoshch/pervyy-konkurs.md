@@ -1,5 +1,5 @@
 ---
-title: Создать первый конкурс
+title: "Как создать первый конкурс на DareBay: ставка, порог, бюджет"
 description: "Первый конкурс на DareBay меньше чем за десять минут: заголовок, условия, формат, тип отбора, награда и сроки на одном экране. Что не поменять после старта."
 provenance: { snapshot_date: "2026-08-15", source: "darebay-prod" }
 numbers_used: [contest_create_usdt_price, commission_fiat, commission_crypto, commission_coins]

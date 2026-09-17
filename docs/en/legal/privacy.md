@@ -1,5 +1,5 @@
 ---
-title: Privacy Policy
+title: "DareBay Privacy Policy: what data we keep and why"
 description: What data DareBay collects, why, how long it keeps it, and how to manage it.
 ---
 

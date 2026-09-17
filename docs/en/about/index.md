@@ -1,5 +1,5 @@
 ---
-title: About DareBay
+title: "About DareBay: who runs the platform and how it pays"
 description: "About DareBay without the sales pitch: who builds the platform, where contest money sits before a payout, where our numbers come from, who answers you."
 ---
 

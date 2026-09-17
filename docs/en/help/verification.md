@@ -1,5 +1,5 @@
 ---
-title: Verification and trust
+title: "Verification and trust on DareBay: who checks what"
 description: "Verification and ratings on DareBay: what a verified badge proves, how the organizer and participant ratings are built, and what changes when they drop."
 provenance: { snapshot_date: "2026-08-15", source: "darebay-prod" }
 numbers_used: []

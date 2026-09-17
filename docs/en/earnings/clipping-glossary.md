@@ -49,7 +49,7 @@ glossary:
   - { id: "s2s-postback", term: "S2S postback", definition: "A server-to-server notification of a conversion: the advertiser's tracker tells the platform that a sign-up or a purchase came through the link with your code. That is how a sale is tied to a specific clipper without cookies or screenshots." }
   - { id: "setup", term: "Setup (ready-made video)", definition: "A kit inside an offer task: a finished video or source footage, a caption, a link with your code and posting instructions. Every clipper gets their own setup and the copy is made unique for you, so no editing software is needed." }
   - { id: "shadowban", term: "Shadowban", definition: "A hidden reach restriction with no notice: clips stop reaching recommendations and views fall back to followers only. The sign is a sharp drop on new clips; for a task it is the risk of missing the threshold, which is why you clip from a healthy account." }
-  - { id: "shorts-reels-tiktok", term: "Shorts, Reels and TikTok", definition: "The three homes of vertical short video: YouTube Shorts, Instagram Reels and TikTok. The task names the site to post on, and DareBay's live view counting works precisely for TikTok, YouTube and Instagram." }
+  - { id: "shorts-reels-tiktok", term: "Shorts, Reels and TikTok", definition: "The three homes of vertical short video: YouTube Shorts, Instagram Reels and TikTok. The task names the site to post on, and DareBay's live view counting works precisely for TikTok, YouTube, Instagram and the other sites named in the task." }
   - { id: "slideshow", term: "Slideshow", definition: "A clip assembled from photos over music, which TikTok calls photo mode. The format is alive, but whether it fits a task is decided by its requirements: you are paid for the clip's view counter, not for a post's reach." }
   - { id: "store", term: "Store", definition: "The DareBay section with digital goods from creators and brands: courses, closed communities, access and files. A purchase in the store carries an 8% fee; it has nothing to do with tasks or pay per view." }
   - { id: "submission", term: "Submission", definition: "Sending the link to your published clip into the task. Until then the work is not in the task at all; the exact URL you sent is what counts, and a copy on another account is a different work." }
@@ -85,7 +85,7 @@ In advertising, CPM is the price of a thousand impressions paid to a platform. I
 
 ### Threshold and cap
 
-The threshold looks at views, the cap at money. The threshold is the minimum without which a clip is not paid at all: set by the task (1000 by default), never deducted. The cap is the most one video can earn, up to $500 in open tasks, and a second clip is counted on its own with no limit per author. 20,000 views at a $1 rate make 20,000 / 1000 × $1.00 = **$20.00**, well under the $100 cap; the threshold check is in [how pay-per-view works](/en/earnings/how-pay-per-view-works).
+The threshold looks at views, the cap at money. The threshold is the minimum without which a clip is not paid at all: set by the task (1000 by default), never deducted. The cap is the most one video can earn, up to $500 in open tasks, and a second clip is counted on its own with no limit per author. 20,000 views at a $1 rate make 20,000 / 1000 × $1.00 = **$20.00**, well under any cap on the card; the threshold check is in [how pay-per-view works](/en/earnings/how-pay-per-view-works).
 
 ### Counted and displayed views
 

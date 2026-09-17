@@ -22,7 +22,7 @@ cta:
 
 The payout formula does not change with scale: views / 1,000 × rate, never above the cap per clip. Open tasks pay $1 to $2 per 1,000 views, and the threshold is set by the task, counted on every clip separately. So a thousand at $1 is a million counted views a month, half a million at $2.
 
-The cap per clip sets the lower bound on count: at the $100 cap used in the example, fewer than ten clips cannot make a thousand at any reach. Three hypothetical layouts at $1 and a $100 cap:
+The cap per clip sets the lower bound on count: with the $100 cap used in the example, fewer than ten clips cannot make a thousand at any reach, while a task capped at $500 needs as few as two. Three hypothetical layouts at $1 and a $100 cap:
 
 | Layout | Clips a month | Views per clip | Per clip | Clips a week |
 |---|---:|---:|---:|---:|
@@ -76,7 +76,7 @@ The flip side: a partner programme has no cap on one video and does not end with
 
 ### How many clips a week does $1,000 take at a $1 rate?
 
-It depends on average reach: at 40,000 views per clip it is 25 clips a month, six or seven a week; at 20,000 it is fifty. With a $100 cap, fewer than ten clips cannot make a thousand at any reach; a task with a $500 cap needs as few as two. All figures are hypothetical.
+It depends on average reach: at 40,000 views per clip it is 25 clips a month, six or seven a week; at 20,000 it is fifty. With a $100 cap on the card, fewer than ten clips cannot make a thousand at any reach; a task capped at $500 needs as few as two. All figures are hypothetical.
 
 ### Can I take one task from several accounts?
 

@@ -46,13 +46,13 @@ A clip that breaks any of the six is rejected in the selection window and is not
 
 For a crypto project the money side is already in USDT: the budget is funded in USDT and creators receive USDT to a wallet on the TON network. You set a rate per 1,000 views, a threshold, a cap per clip and a budget; the platform reads views from the site's public counter, reconciles several times a day and filters out inflated views.
 
-In open tasks rates currently run from $1 to $2 per 1,000 views. The threshold defaults to 1,000 views and is typically 2,000: a clip below it costs nothing, a clip above it is paid for its whole counter. The cap per clip is usually $100: a viral clip gets the maximum, the rest goes to other creators. A hypothetical calculation:
+In open tasks rates currently run from $1 to $2 per 1,000 views. The view threshold is set by each task, with a system default of 1,000 views: a clip below it costs nothing, a clip above it is paid for its whole counter. The cap per clip runs up to $500: a viral clip gets the maximum, the rest goes to other creators. A hypothetical calculation:
 
 > 20,000 / 1,000 × $1.00 = **$20.00**
 
 Creating a contest costs 10 USDT once, the contest fee is 0% and topping up the budget is 0%: the pool goes to creators in full. In a wallet-backed task the budget is locked on the platform before launch, spent on counted views, and the remainder returns to your balance.
 
-Once a submission is approved, the creator can lock in what it has earned and withdraw USDT to their TON wallet: the minimum withdrawal is 10 USDT, the withdrawal fee is 10% of the requested amount, the team handles processing. The full campaign cost is on the [clipping campaign cost](/en/for-brands/clipping-campaign-cost) page.
+Once a submission is approved, the creator can lock in what it has earned and withdraw USDT to their TON wallet: withdrawal to the wallet is fee-free with requests from 10 USDT, and the team handles processing. The full campaign cost is on the [clipping campaign cost](/en/for-brands/clipping-campaign-cost) page.
 
 ## Two formats: the explainer and the product tutorial
 

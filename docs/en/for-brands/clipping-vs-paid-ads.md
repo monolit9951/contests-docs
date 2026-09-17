@@ -40,7 +40,7 @@ Outside figures were read on 2026-09-04 from public benchmark, agency and rate-c
 | YouTube Ads | $5–$10, Shorts around $4 <!-- source: https://www.storegrowers.com/youtube-ads-benchmarks/ 2026-09-04 -->; $4–$10 in another guide <!-- source: https://megadigital.ai/en/blog/youtube-ads-cost/ 2026-09-04 --> | an impression around a video | you or your agency |
 | VK Ads | 30–70 ₽ broad, 60–150 ₽ interests, 80–250 ₽ retargeting <!-- source: https://www.cossa.ru/zaley_cash/349828/ 2026-09-04 -->; about 30 ₽ on average <!-- source: https://www.directline.pro/blog/skolko-stoit-reklama-v-vk/ 2026-09-04 --> | a feed, clips or stories impression | you or your agency |
 | Yandex Direct | video network: minimum bid from 5 ₽ before VAT, fixed vCPM Premium 500 ₽ <!-- source: https://yandex.ru/adv/prices 2026-09-04 -->; video and pre-rolls 200–2,000 ₽ (agency range) <!-- source: https://rosedigital.ru/uslugi/stoimost-pokazov-v-yandeks-direkt 2026-09-04 --> | an impression or viewable impression (vCPM) | you or your agency |
-| Clips on DareBay | $1–$2 per 1,000 views on open tasks | a counted view on the creator's account above the 2,000 threshold, up to the $100 cap | clippers, included |
+| Clips on DareBay | $1–$2 per 1,000 views on open tasks | a counted view on the creator's account above the threshold you set, up to the cap you set (up to $500 per clip) | clippers, included |
 
 ## What each dollar buys
 
@@ -63,8 +63,8 @@ Honestly: four jobs stay with paid ads.
 - **Creative for free.** Creators edit their own clips; on tasks with ready-made videos the platform hands them files with built-in uniqueness, so nobody edits.
 - **Trust.** A person's account, no sponsored label, no banner blindness.
 - **The long tail.** Ads stop with the budget; clips stay up and keep collecting views.
-- **Pay for results.** You pay for views above the 2,000 threshold by formula, not for intent: 20,000 / 1,000 × $1.00 = **$20.00** for a clip, never more than the $100 cap you set.
-- **The budget is locked and spent as it happens.** On a wallet-backed task the budget sits on the platform before the start, goes out per counted view, and the remainder comes back. Launch costs a one-off 10 USDT, the contest commission is 0%. Rate, threshold and cap: [how to pay clippers per view](/en/for-brands/paying-clippers-per-view); the full budget maths: [what a clipping campaign costs](/en/for-brands/clipping-campaign-cost).
+- **Pay for results.** You pay for views above the threshold on the card by formula, not for intent: 20,000 / 1,000 × $1.00 = **$20.00** for a clip, never more than the cap you set.
+- **The budget is locked and spent as it happens.** On a wallet-backed task the budget sits on the platform before the start, goes out per counted view, and the remainder comes back. Launching a task is free, the contest commission is 0%. Rate, threshold and cap: [how to pay clippers per view](/en/for-brands/paying-clippers-per-view); the full budget maths: [what a clipping campaign costs](/en/for-brands/clipping-campaign-cost).
 
 ## How to combine them
 
@@ -87,11 +87,11 @@ What cannot be compared head-on:
 
 ### Why not just divide the ad CPM by the clipping rate?
 
-Because they count different things: a thousand ad appearances against a thousand views of a clip on a creator's account. An impression counts the moment the ad renders; a view is read from the public counter and paid only above the 2,000 threshold. Compare the cost of the result you need: a watch, a click or a sign-up.
+Because they count different things: a thousand ad appearances against a thousand views of a clip on a creator's account. An impression counts the moment the ad renders; a view is read from the public counter and paid only above the threshold named in the task. Compare the cost of the result you need: a watch, a click or a sign-up.
 
 ### How much budget does a fair test of both channels take?
 
-Launch costs a one-off 10 USDT, then the budget goes per counted view: hypothetically, ten clips at 20,000 views each at $1.00 cost 10 × 20,000 / 1,000 × $1.00 = **$200.00**, none reaching the $100 cap. At Meta's $13.48 average CPM <!-- source: https://www.adamigo.ai/blog/meta-ads-cpm-benchmarks-by-industry-2026 2026-09-04 --> the same $200 buys roughly 14,800 impressions, creative not included.
+Launching a task is free, and the budget goes per counted view: hypothetically, ten clips at 20,000 views each at $1.00 cost 10 × 20,000 / 1,000 × $1.00 = **$200.00**, none of them anywhere near a cap. At Meta's $13.48 average CPM <!-- source: https://www.adamigo.ai/blog/meta-ads-cpm-benchmarks-by-industry-2026 2026-09-04 --> the same $200 buys roughly 14,800 impressions, creative not included.
 
 ### Do clips replace ads or add to them?
 

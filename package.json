@@ -18,6 +18,7 @@
     "check:registry": "node --experimental-strip-types --no-warnings scripts/check-registry.mjs",
     "check:truth": "npm run gen:llms --silent && node scripts/product-truth-lint.mjs",
     "check:dist": "node --experimental-strip-types --no-warnings scripts/dist-seo-gates.mjs",
+    "check:sources": "node --experimental-strip-types --no-warnings scripts/check-sources.mjs",
     "gen:manifest": "node --experimental-strip-types --no-warnings scripts/gen-public-content-manifest.mjs",
     "gen:release-marker": "node scripts/gen-release-marker.mjs",
     "gen:llms": "node --experimental-strip-types --no-warnings scripts/gen-llms.mjs",

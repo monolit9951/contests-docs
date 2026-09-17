@@ -224,6 +224,23 @@
 .lp-method li a { color: var(--lp-text); text-decoration: underline; text-decoration-color: var(--lp-line-2); text-underline-offset: 3px; word-break: break-all; }
 .lp-method li time { color: var(--lp-faint); white-space: nowrap; font-variant-numeric: tabular-nums; }
 
+/* Visible citation trail of a `sources: visible` page (see .vitepress/sources.ts). The h2 and the
+   ol inside pick up the prose width from the `.lp-content` rules above, so only the marker, the
+   separator and the jump target need saying. `scroll-margin-top` is not decoration: without it a
+   reader who taps a reference number lands with the item they wanted hidden under the sticky
+   header, which is the one thing this block exists to avoid. */
+.lp-content .src-ref { font-size: 11px; line-height: 0; vertical-align: super; margin-left: 2px; }
+.lp-content .src-ref a:not(.lp-bleed *) { color: var(--lp-faint); text-decoration: none; font-variant-numeric: tabular-nums; }
+.lp-content .src-ref a:hover { color: var(--lp-accent); }
+.lp-content .db-sources { width: min(100% - 40px, var(--lp-prose)); margin: 64px auto 0; border-top: 1px solid var(--lp-line); padding-top: 8px; }
+/* The section now owns the prose width, so its heading and list must NOT take it again from the
+   generic `.lp-content` rules above: `width: min(100% - 40px, ...)` applied a second time inside
+   an already-narrow box indents both 20px from their own separator. Same specificity, later rule. */
+.lp-content .db-sources :is(h2, ol) { width: auto; margin-inline: 0; }
+.lp-content .db-sources h2 { margin-top: 24px; font-size: 1.15rem; }
+.lp-content .db-sources ol { font-size: 13.5px; color: var(--lp-muted); }
+.lp-content .db-sources li { scroll-margin-top: 108px; overflow-wrap: anywhere; }
+
 /* ---- calculator ---------------------------------------------------------- */
 .lp-calc { background: var(--lp-panel); border: 1px solid var(--lp-line); border-radius: 22px; padding: 26px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 24px; align-items: center; }
 @media (max-width: 860px) { .lp-calc { grid-template-columns: 1fr; } }

@@ -6,6 +6,7 @@ import { businessUrlForLocale, FOUNDER_TELEGRAM, productUrlForLocale, tasksUrlFo
 import { CHROME_COPY, type AuthorLink, type DareBayThemeConfig } from './chrome'
 import { installCoveredHeadingRule } from './coveredHeading'
 import { installTableWrapRule } from './tableWrap'
+import { installSourcesRule } from './sources'
 import PAGE_DATES from '../page-dates.json'
 import PLATFORMS from './data/platforms.json'
 
@@ -577,6 +578,11 @@ export default defineConfig({
     config(md) {
       installCoveredHeadingRule(md)
       installTableWrapRule(md)
+      // Paints the `<!-- source: URL DATE -->` citation trail of a page whose frontmatter says
+      // `sources: visible`, and only such a page — see sources.ts. Installed last because it is
+      // the only rule here that appends to the article body, and the block it appends belongs
+      // after everything the page itself says.
+      installSourcesRule(md)
       // Rewrites in-page links onto addresses that exist — see
       // `resolveLocalizedLink` in registry.ts. Content is translated page by
       // page, so a translated article links to siblings that may still be

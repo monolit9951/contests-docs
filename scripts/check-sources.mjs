@@ -117,7 +117,9 @@ export async function probe(url, { fetchImpl = fetch, timeout = TIMEOUT_MS } = {
   let response
   try {
     response = await request('HEAD')
-    if ([400, 403, 405, 406, 501].includes(response.status)) response = await request('GET')
+    // 404 is on the list because Google's help centre answers HEAD with 404 and GET with 200
+    // (support.google.com/youtube/answer/3399767, 2026-09-17): a citation is dead only when GET says so.
+    if ([400, 403, 404, 405, 406, 501].includes(response.status)) response = await request('GET')
   } catch (headError) {
     try {
       response = await request('GET')

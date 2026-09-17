@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "decidedAt": "2026-09-17",
+  "source": "darebay-ceo/docs/decisions.md 2026-09-17",
+  "supersedes": ["2026-08-01 withdrawal-not-free"],
+  "claims": [
+    {
+      "id": "withdrawal-free",
+      "claim": {
+        "ru": "Вывод на кошелёк - без комиссии.",
+        "en": "Withdrawal to a wallet carries no commission.",
+        "uk": "Виведення на гаманець - без комісії."
+      },
+      "liveTruth": "withdrawal.defaultCommissionPercent",
+      "target": 0,
+      "status": "pending-product-change",
+      "decision": "founder-approved",
+      "note": "Live product still charges 10% and processes withdrawals manually; the backend change is the product-side half of this decision.",
+      "pages": [
+        "docs/pomoshch/darebay-vyvod-deneg.md",
+        "docs/en/help/darebay-withdrawals.md",
+        "docs/ua/dopomoha/darebay-vyvedennia-hroshei.md",
+        "docs/pomoshch/kakaya-komissiya.md",
+        "docs/en/help/what-commission.md",
+        "docs/ua/dopomoha/yaka-komisiia.md"
+      ]
+    },
+    {
+      "id": "withdrawal-minimum",
+      "claim": {
+        "ru": "Минимальная заявка на вывод - 10 USDT.",
+        "en": "The minimum withdrawal request is 10 USDT.",
+        "uk": "Мінімальна заявка на виведення - 10 USDT."
+      },
+      "liveTruth": "withdrawal.minimumGrossAmount",
+      "target": 10,
+      "status": "matches-live",
+      "decision": "founder-to-confirm",
+      "note": "The target product keeps the 10 USDT floor. Until the founder confirms otherwise, a page may not claim that there is no minimum: the `no-withdrawal-minimum` rule stays hard and is wired to the (absent) `withdrawal-no-minimum` record.",
+      "pages": [
+        "docs/pomoshch/darebay-vyvod-deneg.md",
+        "docs/en/help/darebay-withdrawals.md",
+        "docs/ua/dopomoha/darebay-vyvedennia-hroshei.md"
+      ]
+    },
+    {
+      "id": "contest-creation-free",
+      "claim": {
+        "ru": "Создание и запуск конкурса - бесплатно, пополнение бюджета без комиссии.",
+        "en": "Creating and launching a contest is free; a budget top-up carries no fee.",
+        "uk": "Створення та запуск конкурсу - безкоштовно, поповнення бюджету без комісії."
+      },
+      "liveTruth": ["contest.creationCommissionPercent", "contest.topUpCommissionPercent"],
+      "target": [0, 0],
+      "status": "matches-live",
+      "decision": "founder-approved",
+      "pages": [
+        "docs/brendam/kak-sozdat-konkurs-dlya-narezchikov.md",
+        "docs/en/for-brands/set-up-a-clipping-contest.md",
+        "docs/ua/brendam/yak-stvoryty-konkurs-dlia-narizalnykiv.md"
+      ]
+    },
+    {
+      "id": "cap-raise-only",
+      "claim": {
+        "ru": "После запуска потолок на одну работу можно только поднять - не ниже уже начисленного.",
+        "en": "After launch the cap per submission can only be raised, never below what a submission already earned.",
+        "uk": "Після запуску стелю на одну роботу можна тільки підняти - не нижче вже нарахованого."
+      },
+      "liveTruth": null,
+      "liveTruthNote": "Not a number in product-truth.json: the reviewed snapshot pins the cap band, not its adjustability. Live wording that already states the rule: docs/ua/brendam/yak-stvoryty-konkurs-dlia-narizalnykiv.md and docs/o-proekte/garantiya-vyplat.md.",
+      "target": "raise-only",
+      "status": "matches-live",
+      "decision": "founder-approved",
+      "pages": [
+        "docs/o-proekte/garantiya-vyplat.md",
+        "docs/en/about/payout-guarantee.md",
+        "docs/ua/pro-proekt/harantiia-vyplat.md"
+      ]
+    },
+    {
+      "id": "rate-band",
+      "claim": {
+        "ru": "Ставка - $1-2 за 1000 просмотров, потолок на один ролик - до $500.",
+        "en": "Rates run $1-2 per 1000 views, with a cap of up to $500 per clip.",
+        "uk": "Ставка - $1-2 за 1000 переглядів, стеля на один ролик - до $500."
+      },
+      "liveTruth": [
+        "ppv.stable.bands.cpm.low",
+        "ppv.stable.bands.cpm.high",
+        "ppv.stable.bands.maxPerWork.high"
+      ],
+      "target": [1, 2, 500],
+      "status": "matches-live",
+      "decision": "founder-approved",
+      "pages": [
+        "docs/zarabotok/kak-rabotaet-oplata-za-prosmotry.md",
+        "docs/en/earnings/how-pay-per-view-works.md",
+        "docs/ua/zarobitok/yak-pratsiuie-oplata-za-perehliady.md"
+      ]
+    }
+  ]
+}

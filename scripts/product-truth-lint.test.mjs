@@ -10,12 +10,15 @@ import {
   corpusDeclaration,
   lintText,
   pageDeclaration,
+  readProductIntent,
+  validateProductIntent,
   validateTruthSnapshot,
   verifySourceProvenance,
 } from "./product-truth-lint.mjs";
 
 const root = resolve(import.meta.dirname, "..");
 const truth = JSON.parse(readFileSync(join(root, "data/product-truth.json"), "utf8"));
+const intent = readProductIntent(join(root, "data/product-intent.json"));
 let passed = 0;
 
 function test(name, fn) {
@@ -32,6 +35,22 @@ function test(name, fn) {
 
 function rules(value) {
   return new Set(lintText(value, "fixture.md", truth).map((item) => item.rule));
+}
+
+// The same lint, judged against a different decided target product: `null` is "no intent file at
+// all", an object is the file as it would be after the edit under test.
+function rulesWithIntent(value, decided) {
+  return new Set(lintText(value, "fixture.md", truth, undefined, { intent: decided }).map((item) => item.rule));
+}
+
+function intentWithout(id) {
+  const changed = structuredClone(intent);
+  changed.claims = changed.claims.filter((claim) => claim.id !== id);
+  return changed;
+}
+
+function intentRecord(changed, id) {
+  return changed.claims.find((claim) => claim.id === id);
 }
 
 function git(repo, ...args) {
@@ -113,9 +132,129 @@ test("a local shadow branch cannot replace the remote-tracking source branch", (
   }
 });
 
+console.log("product_truth_lint: the decided target product");
+
+// The founder decided on 2026-09-17 that the wallet withdrawal fee goes to 0%, and that the
+// public pages describe that target product before the backend ships it. These are the wordings
+// the decision licenses; the live snapshot still says 10%, which is the point.
+const FREE_WITHDRAWAL_WORDINGS = [
+  "Withdrawals are free and have no platform fee.",
+  "Вывод баланса без комиссии.",
+  "Виведення без комісії.",
+];
+const ZERO_FEE_WORDINGS = [
+  "The balance withdrawal fee is 0%.",
+  "Комиссия за вывод баланса - 0%.",
+  "Комісія за виведення балансу - 0%.",
+];
+
+test("the decided free withdrawal passes in all three locales while the record stands", () => {
+  for (const wording of [...FREE_WITHDRAWAL_WORDINGS, ...ZERO_FEE_WORDINGS]) {
+    assert.deepEqual(lintText(wording, "fixture.md", truth), [], wording);
+  }
+});
+
+test("the licence names the record that granted it", () => {
+  const allowed = [];
+  lintText("Withdrawals are free and have no platform fee.", "fixture.md", truth, undefined,
+    { onAllowed: (allowance) => allowed.push(allowance) });
+  assert.equal(allowed.length, 1);
+  assert.equal(allowed[0].rule, "free-withdrawal");
+  assert.equal(allowed[0].intentId, "withdrawal-free");
+  assert.equal(allowed[0].message,
+    "claim allowed by product-intent: withdrawal-free (pending product change, decided 2026-09-17)");
+
+  const numeric = [];
+  lintText("The balance withdrawal fee is 0%.", "fixture.md", truth, undefined,
+    { onAllowed: (allowance) => numeric.push(allowance) });
+  assert.deepEqual(numeric.map((allowance) => allowance.rule), ["withdrawal-fee"]);
+  assert.equal(numeric[0].intentId, "withdrawal-free");
+});
+
+test("the same claims fail again without the record, and without the file", () => {
+  const dropped = intentWithout("withdrawal-free");
+  for (const wording of FREE_WITHDRAWAL_WORDINGS) {
+    assert(rulesWithIntent(wording, dropped).has("free-withdrawal"), wording);
+    assert(rulesWithIntent(wording, null).has("free-withdrawal"), wording);
+  }
+  for (const wording of ZERO_FEE_WORDINGS) {
+    assert(rulesWithIntent(wording, dropped).has("withdrawal-fee"), wording);
+    assert(rulesWithIntent(wording, null).has("withdrawal-fee"), wording);
+  }
+});
+
+// The money rules that were left hard on purpose: nothing in the intent file names them, so a
+// page that promises automation, a minute-level SLA or every payout rail still fails.
+test("a fee-free withdrawal wording is not read as automation, an SLA or a rail promise", () => {
+  for (const wording of [...FREE_WITHDRAWAL_WORDINGS, ...ZERO_FEE_WORDINGS]) {
+    const found = rulesWithIntent(wording, null);
+    for (const rule of ["automatic-payout", "instant-payout-sla", "all-payout-methods"]) {
+      assert(!found.has(rule), `${rule} fired on ${wording}`);
+    }
+  }
+});
+
+test("the recorded 10 USDT minimum licenses nothing: no-minimum claims still fail", () => {
+  assert(rules("Withdraw any amount, no minimum withdrawal.").has("no-withdrawal-minimum"));
+  assert(rules("Выводите любую сумму без минимума.").has("no-withdrawal-minimum"));
+  assert(rules("Виведення без мінімуму: виводьте будь-яку суму.").has("no-withdrawal-minimum"));
+  assert(rules("The minimum withdrawal request is 2 USDT.").has("withdrawal-minimum"));
+});
+
+test("a decided target relaxes its own field only", () => {
+  assert(rules("Store purchase: 0%.").has("store-fee"));
+  assert(rules("Комиссия за вывод баланса - 3%.").has("withdrawal-fee"));
+});
+
+test("the committed intent file agrees with the reviewed snapshot", () => {
+  assert.deepEqual(validateProductIntent(intent, truth, { root }), []);
+  assert.equal(intent.decidedAt, "2026-09-17");
+  assert.deepEqual(intent.supersedes, ["2026-08-01 withdrawal-not-free"]);
+});
+
+test("an intent record that misstates the live product fails", () => {
+  const pretendsLive = structuredClone(intent);
+  intentRecord(pretendsLive, "withdrawal-free").status = "matches-live";
+  assert.match(validateProductIntent(pretendsLive, truth).join("\n"),
+    /withdrawal\.defaultCommissionPercent is 10 and the target is 0/);
+
+  const pretendsPending = structuredClone(intent);
+  intentRecord(pretendsPending, "withdrawal-minimum").status = "pending-product-change";
+  assert.match(validateProductIntent(pretendsPending, truth).join("\n"), /already equals the target 10/);
+
+  const unknownPath = structuredClone(intent);
+  intentRecord(unknownPath, "withdrawal-free").liveTruth = "withdrawal.noSuchField";
+  assert.match(validateProductIntent(unknownPath, truth).join("\n"), /does not exist in the reviewed product truth/);
+
+  const unanchored = structuredClone(intent);
+  intentRecord(unanchored, "cap-raise-only").status = "pending-product-change";
+  assert.match(validateProductIntent(unanchored, truth).join("\n"), /liveTruth must name the value that has to move/);
+
+  const duplicate = structuredClone(intent);
+  duplicate.claims.push(structuredClone(intentRecord(duplicate, "rate-band")));
+  assert.match(validateProductIntent(duplicate, truth).join("\n"), /is declared twice/);
+
+  const missingPage = structuredClone(intent);
+  intentRecord(missingPage, "rate-band").pages.push("docs/zarabotok/net-takoy-stranicy.md");
+  assert.match(validateProductIntent(missingPage, truth, { root }).join("\n"), /lists a missing page/);
+});
+
+test("an unrecognised status fails the gate and licenses nothing", () => {
+  const changed = structuredClone(intent);
+  intentRecord(changed, "withdrawal-free").status = "founder-approved";
+  assert.match(validateProductIntent(changed, truth).join("\n"), /status must be one of/);
+  assert(rulesWithIntent("Withdrawals are free and have no platform fee.", changed).has("free-withdrawal"));
+});
+
+test("a missing intent file is not an error and leaves every rule hard", () => {
+  assert.deepEqual(validateProductIntent(null, truth), []);
+  assert.equal(readProductIntent(join(root, "data/no-such-intent.json")), null);
+  assert(rulesWithIntent("Withdrawals are free and have no platform fee.", null).has("free-withdrawal"));
+});
+
 console.log("product_truth_lint: contradictory claims");
-test("free withdrawal claims fail", () => {
-  assert(rules("Withdrawals are free and have no platform fee.").has("free-withdrawal"));
+test("free withdrawal claims fail against the live snapshot alone", () => {
+  assert(rulesWithIntent("Withdrawals are free and have no platform fee.", null).has("free-withdrawal"));
 });
 
 test("old payment-method rate matrix fails", () => {

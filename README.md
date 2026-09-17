@@ -103,6 +103,39 @@ and implementation evidence. Set `PRODUCT_TRUTH_REQUIRE_LOCAL_SOURCES=1` to requ
 instead of permitting a content-only checkout. The gate runs during `npm test` and before every
 documentation build.
 
+### Target product: `data/product-intent.json`
+
+Since the founder decision of 2026-09-17 the public pages describe the **target** product, and
+[`data/product-intent.json`](data/product-intent.json) is where that target is recorded. A claim is
+publishable when it matches the target product, even when the live backend has not shipped the
+change yet; every claim the file does not name is still judged against `data/product-truth.json`.
+
+Each record carries the claim in RU/EN/UK, the `liveTruth` path it is about, the decided `target`
+value and a `status`:
+
+- `pending-product-change` — the live value still contradicts the page and the backend owes the
+  change (today only `withdrawal-free`: the wallet withdrawal fee 10% → 0%).
+- `matches-live` — the target and the live product already agree, so the record documents the
+  decision and relaxes nothing.
+
+A claim rule names the record that licenses it (`intentId`), and the numeric rules widen only when
+the recorded target actually differs from the live value. When a record licenses a claim the gate
+prints `claim allowed by product-intent: <id> (pending product change, decided 2026-09-17)`, and
+every green run names the rules the file currently holds open. Validation resolves each `liveTruth`
+path against the reviewed snapshot: a `matches-live` target that is not the live value, or a
+`pending-product-change` target that already equals it, fails the gate. The file can only relax
+what it names, and only while it tells the truth about the live product.
+
+`no-withdrawal-minimum` is deliberately left hard: the 10 USDT floor stays in the target product
+(`withdrawal-minimum`, `decision: founder-to-confirm`), so "withdraw any amount" contradicts the
+target as much as the live snapshot. The rules that are not about money — live on-chain escrow,
+the official-API view oracle, the retired selection model, the founder's Latin name, unqualified
+prize-lock — are not wired to the intent file at all.
+
+The founder's decision list is `darebay-ceo/docs/seo-growth-founder-queue-2026-09-17.md`, part 4.
+
 When the product policy genuinely changes, update the backend first, then update the reviewed
 snapshot, the double-entry baseline in `scripts/product-truth-lint.mjs`, all canonical pages and the
-mutation tests in one reviewed change. Do not change the snapshot alone.
+mutation tests in one reviewed change. Do not change the snapshot alone. A decision to change the
+product is not a snapshot edit either: record it in `data/product-intent.json`, and retire the
+record when the backend ships and the snapshot catches up.

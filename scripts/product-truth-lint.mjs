@@ -8,6 +8,7 @@ import { spawnSync } from "node:child_process";
 const SCRIPT_DIR = dirname(fileURLToPath(import.meta.url));
 const DEFAULT_ROOT = resolve(SCRIPT_DIR, "..");
 const DEFAULT_TRUTH = join(DEFAULT_ROOT, "data/product-truth.json");
+const DEFAULT_INTENT = join(DEFAULT_ROOT, "data/product-intent.json");
 
 // Two classes of product number, and they need opposite handling.
 //
@@ -58,6 +59,175 @@ const REVIEWED_BASELINE = Object.freeze({
 const VOLATILE_DECLARATION_HINT =
   "declare its truth-pack key in `numbers_used` with a `provenance.snapshot_date`, print the stable band instead, or drop the number";
 
+// The target product, decided by the founder on 2026-09-17, is the second axis of this gate.
+// `data/product-truth.json` stays what it always was: what the live backend does today, generated
+// and pinned, never edited to make a page pass. `data/product-intent.json` records the claims the
+// founder has decided the product will be changed to match. A claim that matches a recorded
+// intent is publishable ahead of the backend change; every other claim is still judged against
+// the live snapshot, so the file relaxes exactly what it names and nothing else.
+//
+// Two statuses license a claim. `pending-product-change` means the live value still contradicts
+// the page and the backend owes the change. `matches-live` means the target and the live product
+// already agree, so the record documents the decision without moving any gate at all - the
+// numeric rules below only widen when the recorded target actually differs from the live value.
+//
+// A record is not a free pass for a whole topic: `validateProductIntent` resolves every
+// `liveTruth` path against the reviewed snapshot and fails when a `matches-live` target does not
+// equal the live value, or when a `pending-product-change` target does equal it. An intent file
+// that lies about the live product cannot silently turn a rule off.
+const PRODUCT_INTENT_STATUSES = new Set(["pending-product-change", "matches-live"]);
+const INTENT_PHRASE = {
+  "pending-product-change": "pending product change",
+  "matches-live": "matches live product",
+};
+
+export function readProductIntent(path = DEFAULT_INTENT) {
+  if (!existsSync(path)) return null;
+  return JSON.parse(readFileSync(path, "utf8"));
+}
+
+let defaultIntentCache;
+function defaultProductIntent() {
+  if (defaultIntentCache === undefined) defaultIntentCache = readProductIntent();
+  return defaultIntentCache;
+}
+
+function truthPathValue(truth, path) {
+  let value = truth;
+  for (const key of String(path).split(".")) {
+    if (value === null || typeof value !== "object" || !(key in value)) return undefined;
+    value = value[key];
+  }
+  return value;
+}
+
+function sameValue(first, second) {
+  return JSON.stringify(first ?? null) === JSON.stringify(second ?? null);
+}
+
+function intentPaths(claim) {
+  if (claim.liveTruth == null) return [];
+  return Array.isArray(claim.liveTruth) ? claim.liveTruth : [claim.liveTruth];
+}
+
+function intentTargets(claim) {
+  if (claim.liveTruth == null) return [];
+  return Array.isArray(claim.liveTruth) ? (Array.isArray(claim.target) ? claim.target : []) : [claim.target];
+}
+
+// The runtime view of the file: one lookup by claim id (for the regex rules, which name an
+// `intentId`) and one by product-truth path (for the numeric rules, which compare a printed
+// number against the live value and may now also accept the decided target).
+export function productIntentIndex(intent) {
+  const byId = new Map();
+  const byPath = new Map();
+  const decidedAt = typeof intent?.decidedAt === "string" ? intent.decidedAt : null;
+  if (!intent || !Array.isArray(intent.claims)) return { byId, byPath, decidedAt };
+  for (const claim of intent.claims) {
+    if (!claim || typeof claim.id !== "string" || !PRODUCT_INTENT_STATUSES.has(claim.status)) continue;
+    const record = { id: claim.id, status: claim.status, decidedAt };
+    byId.set(claim.id, record);
+    const paths = intentPaths(claim);
+    const targets = intentTargets(claim);
+    if (paths.length !== targets.length) continue;
+    paths.forEach((path, index) => byPath.set(path, { ...record, target: targets[index] }));
+  }
+  return { byId, byPath, decidedAt };
+}
+
+const EMPTY_INTENT_INDEX = productIntentIndex(null);
+
+function intentMessage(record) {
+  return `claim allowed by product-intent: ${record.id} (${INTENT_PHRASE[record.status]}, decided ${record.decidedAt})`;
+}
+
+export function validateProductIntent(intent, truth, { root = null } = {}) {
+  const errors = [];
+  // An absent file is not an error: the gate then judges every claim against the live snapshot,
+  // which is the safe direction. A present but malformed file is an error, because a half-read
+  // record must never be the reason a rule stopped firing.
+  if (intent == null) return errors;
+  if (intent.schemaVersion !== 1) errors.push(`schemaVersion: expected 1, got ${JSON.stringify(intent.schemaVersion)}`);
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(intent.decidedAt || "")) errors.push("decidedAt must be YYYY-MM-DD");
+  if (typeof intent.source !== "string" || !intent.source.trim()) {
+    errors.push("source must name the founder decision record this file was written from");
+  }
+  if (!Array.isArray(intent.supersedes) || intent.supersedes.some((item) => typeof item !== "string")) {
+    errors.push("supersedes must be a list of strings");
+  }
+  if (!Array.isArray(intent.claims) || intent.claims.length === 0) {
+    errors.push("claims must list at least one decided claim");
+    return errors;
+  }
+
+  const seen = new Set();
+  intent.claims.forEach((claim, index) => {
+    const label = typeof claim?.id === "string" && claim.id ? `claims.${claim.id}` : `claims[${index}]`;
+    if (!claim || typeof claim !== "object") {
+      errors.push(`${label} must be an object`);
+      return;
+    }
+    if (typeof claim.id !== "string" || !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(claim.id)) {
+      errors.push(`${label}.id must be a kebab-case identifier`);
+    } else if (seen.has(claim.id)) {
+      errors.push(`${label}.id is declared twice`);
+    } else {
+      seen.add(claim.id);
+    }
+    for (const locale of ["ru", "en", "uk"]) {
+      const text = claim.claim?.[locale];
+      if (typeof text !== "string" || !text.trim()) errors.push(`${label}.claim.${locale} must be a non-empty string`);
+    }
+    if (!PRODUCT_INTENT_STATUSES.has(claim.status)) {
+      errors.push(`${label}.status must be one of ${[...PRODUCT_INTENT_STATUSES].join(", ")}, got ${JSON.stringify(claim.status)}`);
+    }
+    if (claim.target === undefined) errors.push(`${label}.target must state the decided value`);
+
+    const paths = intentPaths(claim);
+    if (claim.liveTruth != null && paths.some((path) => typeof path !== "string" || !path.trim())) {
+      errors.push(`${label}.liveTruth must be a product-truth path or a list of them`);
+    } else if (claim.liveTruth == null) {
+      if (typeof claim.liveTruthNote !== "string" || !claim.liveTruthNote.trim()) {
+        errors.push(`${label}.liveTruthNote must say where the live behaviour is verified when liveTruth is null`);
+      }
+      if (claim.status === "pending-product-change") {
+        errors.push(`${label} is pending a product change, so liveTruth must name the value that has to move`);
+      }
+    } else {
+      const targets = intentTargets(claim);
+      if (paths.length !== targets.length) {
+        errors.push(`${label}.target must list one value per liveTruth path (${paths.length})`);
+      } else {
+        paths.forEach((path, position) => {
+          const live = truthPathValue(truth, path);
+          if (live === undefined) {
+            errors.push(`${label}.liveTruth path ${path} does not exist in the reviewed product truth`);
+            return;
+          }
+          const target = targets[position];
+          if (claim.status === "matches-live" && !sameValue(target, live)) {
+            errors.push(`${label} claims to match the live product, but ${path} is ${JSON.stringify(live)} and the target is ${JSON.stringify(target)}`);
+          }
+          if (claim.status === "pending-product-change" && sameValue(target, live)) {
+            errors.push(`${label} is pending a product change, but ${path} already equals the target ${JSON.stringify(target)}; use matches-live`);
+          }
+        });
+      }
+    }
+
+    if (claim.pages !== undefined) {
+      if (!Array.isArray(claim.pages) || claim.pages.some((page) => typeof page !== "string" || !page.trim())) {
+        errors.push(`${label}.pages must be a list of repository paths`);
+      } else if (root) {
+        for (const page of claim.pages) {
+          if (!existsSync(join(root, page))) errors.push(`${label}.pages lists a missing page ${page}`);
+        }
+      }
+    }
+  });
+  return errors;
+}
+
 const LANG = {
   en: {
     creation: String.raw`(?:contest[- ]creation|creat(?:e|ing) (?:a )?contest)`,
@@ -84,28 +254,43 @@ const LANG = {
 
 const NO_FEE = /\b(?:no (?:fee|commission)|without (?:a )?(?:fee|commission))\b|без коміс(?:ії|си(?:и|й))|коміс(?:ія|ії) не (?:стягується|взимається)|комисс(?:ия|ии) не (?:взимается|бер[её]тся)/i;
 
+// `intentId` names the record in `data/product-intent.json` that licenses the claim this rule
+// cuts. The rule keeps firing until that record exists with a licensing status, so wiring one is
+// free: it is what makes a founder decision a one-record data edit instead of a code change.
 const CLAIM_RULES = [
   {
     id: "free-withdrawal",
+    // Licensed by the 2026-09-17 decision: the wallet withdrawal fee goes to 0%.
+    intentId: "withdrawal-free",
     patterns: [
       /\bwithdraw(?:al|ing)?s? (?:is|are|remains?|stays?) (?:completely )?free\b/i,
       /\bno (?:platform )?(?:withdrawal|payout) fee\b/i,
       /\bwithdraw(?:al|ing)?s?[^.\n]{0,30}without (?:a )?fee\b/i,
-      /\bвывод(?: средств| денег| баланса)? (?:полностью )?бесплат(?:ен|ный|но)\b/i,
-      /\bвывод[^.\n]{0,30}без комиссии\b/i,
-      /\bкомисси(?:и|я) за вывод (?:нет|не взимается)\b/i,
-      /\bвиведення(?: коштів| грошей| балансу)? (?:повністю )?безкоштовн(?:е|ий|о)\b/i,
-      /\bвиведення[^.\n]{0,30}без комісії\b/i,
-      /\bкомісі(?:ї|я) за виведення (?:немає|не стягується)\b/i,
+      // `\b` is an ASCII word boundary: before a Cyrillic letter one side is never a word
+      // character, so `\bвывод` cannot match at the start of a word and these six patterns were
+      // dead letters. A Unicode letter/number lookaround is the boundary these lines meant.
+      /(?<![\p{L}\p{N}])вывод(?: средств| денег| баланса)? (?:полностью )?бесплат(?:ен|ный|но)(?![\p{L}\p{N}])/iu,
+      /(?<![\p{L}\p{N}])вывод[^.\n]{0,30}без комиссии(?![\p{L}\p{N}])/iu,
+      /(?<![\p{L}\p{N}])комисси(?:и|я) за вывод (?:нет|не взимается)(?![\p{L}\p{N}])/iu,
+      /(?<![\p{L}\p{N}])виведення(?: коштів| грошей| балансу)? (?:повністю )?безкоштовн(?:е|ий|о)(?![\p{L}\p{N}])/iu,
+      /(?<![\p{L}\p{N}])виведення[^.\n]{0,30}без комісії(?![\p{L}\p{N}])/iu,
+      /(?<![\p{L}\p{N}])комісі(?:ї|я) за виведення (?:немає|не стягується)(?![\p{L}\p{N}])/iu,
     ],
   },
   {
     id: "no-withdrawal-minimum",
+    // Deliberately NOT wired to the `withdrawal-minimum` record. That record keeps the floor at
+    // 10 USDT (`matches-live`, founder-to-confirm), so "withdraw any amount" contradicts the
+    // target product as much as the live one and must keep failing. The day the founder drops
+    // the minimum, the licence is one `withdrawal-no-minimum` record in product-intent.json.
+    intentId: "withdrawal-no-minimum",
     patterns: [
       /\b(?:no|without a) minimum (?:withdrawal|payout)\b/i,
       /\bwithdraw[^.\n]{0,35}(?:any amount|from any amount)\b/i,
-      /\bвывод[^.\n]{0,35}(?:без минимума|любую сумму|с любой суммы)\b/i,
-      /\bвиведення[^.\n]{0,35}(?:без мінімуму|будь-яку суму|з будь-якої суми)\b/i,
+      // Same ASCII-boundary defect as above: these two only start matching with a Unicode
+      // boundary, and they must keep matching - the target product keeps the 10 USDT floor.
+      /(?<![\p{L}\p{N}])вывод[^.\n]{0,35}(?:без минимума|любую сумму|с любой суммы)(?![\p{L}\p{N}])/iu,
+      /(?<![\p{L}\p{N}])виведення[^.\n]{0,35}(?:без мінімуму|будь-яку суму|з будь-якої суми)(?![\p{L}\p{N}])/iu,
     ],
   },
   {
@@ -313,47 +498,71 @@ function addViolation(out, rule, file, line, message) {
   out.push({ rule, file, line, message });
 }
 
-function numericPercentClaims(line, file, lineNumber, truth, out) {
+// A numeric rule is widened only by a record whose decided target actually differs from the live
+// value; a `matches-live` record changes nothing, and a target of 3% still rejects "3%" for any
+// other field. Returns the licensing record or null.
+function intentForPath(intent, path, expected) {
+  const record = intent.byPath.get(path);
+  if (!record || typeof record.target !== "number" || record.target === expected) return null;
+  return record;
+}
+
+function numericPercentClaims(line, file, lineNumber, truth, intent, out, allow) {
   const facts = [
-    ["contest-creation-fee", LANG.en.creation, truth.contest.creationCommissionPercent],
-    ["contest-creation-fee", LANG.ru.creation, truth.contest.creationCommissionPercent],
-    ["contest-creation-fee", LANG.ua.creation, truth.contest.creationCommissionPercent],
-    ["contest-topup-fee", LANG.en.topUp, truth.contest.topUpCommissionPercent],
-    ["contest-topup-fee", LANG.ru.topUp, truth.contest.topUpCommissionPercent],
-    ["contest-topup-fee", LANG.ua.topUp, truth.contest.topUpCommissionPercent],
-    ["store-fee", LANG.en.store, truth.store.commissionPercent],
-    ["store-fee", LANG.ru.store, truth.store.commissionPercent],
-    ["store-fee", LANG.ua.store, truth.store.commissionPercent],
-    ["withdrawal-fee", LANG.en.withdrawal, truth.withdrawal.defaultCommissionPercent],
-    ["withdrawal-fee", LANG.ru.withdrawal, truth.withdrawal.defaultCommissionPercent],
-    ["withdrawal-fee", LANG.ua.withdrawal, truth.withdrawal.defaultCommissionPercent],
+    ["contest-creation-fee", LANG.en.creation, truth.contest.creationCommissionPercent, "contest.creationCommissionPercent"],
+    ["contest-creation-fee", LANG.ru.creation, truth.contest.creationCommissionPercent, "contest.creationCommissionPercent"],
+    ["contest-creation-fee", LANG.ua.creation, truth.contest.creationCommissionPercent, "contest.creationCommissionPercent"],
+    ["contest-topup-fee", LANG.en.topUp, truth.contest.topUpCommissionPercent, "contest.topUpCommissionPercent"],
+    ["contest-topup-fee", LANG.ru.topUp, truth.contest.topUpCommissionPercent, "contest.topUpCommissionPercent"],
+    ["contest-topup-fee", LANG.ua.topUp, truth.contest.topUpCommissionPercent, "contest.topUpCommissionPercent"],
+    ["store-fee", LANG.en.store, truth.store.commissionPercent, "store.commissionPercent"],
+    ["store-fee", LANG.ru.store, truth.store.commissionPercent, "store.commissionPercent"],
+    ["store-fee", LANG.ua.store, truth.store.commissionPercent, "store.commissionPercent"],
+    ["withdrawal-fee", LANG.en.withdrawal, truth.withdrawal.defaultCommissionPercent, "withdrawal.defaultCommissionPercent"],
+    ["withdrawal-fee", LANG.ru.withdrawal, truth.withdrawal.defaultCommissionPercent, "withdrawal.defaultCommissionPercent"],
+    ["withdrawal-fee", LANG.ua.withdrawal, truth.withdrawal.defaultCommissionPercent, "withdrawal.defaultCommissionPercent"],
   ];
 
-  for (const [rule, subject, expected] of facts) {
+  for (const [rule, subject, expected, path] of facts) {
+    const intended = intentForPath(intent, path, expected);
     const regex = new RegExp(`${subject}[^.%\\n]{0,100}?(\\d+(?:[.,]\\d+)?)\\s*%`, "ig");
     for (const match of line.matchAll(regex)) {
-      if (expected === 0 && NO_FEE.test(match[0])) continue;
+      if (NO_FEE.test(match[0])) {
+        if (expected === 0) continue;
+        if (intended?.target === 0) {
+          allow(intended, rule, file, lineNumber, match[0].trim());
+          continue;
+        }
+      }
       const beforeSubject = line.slice(Math.max(0, match.index - 80), match.index);
       const expectedBefore = new RegExp(`${expected}\\s*%[^.%\\n]{0,75}$`, "i");
       if (expectedBefore.test(beforeSubject)) continue;
       const actual = Number(match[1].replace(",", "."));
-      if (actual !== expected) {
-        addViolation(out, rule, file, lineNumber,
-          `claims ${actual}% but reviewed product truth is ${expected}%`);
+      if (actual === expected) continue;
+      if (intended && actual === intended.target) {
+        allow(intended, rule, file, lineNumber, match[0].trim());
+        continue;
       }
+      addViolation(out, rule, file, lineNumber,
+        `claims ${actual}% but reviewed product truth is ${expected}%`);
     }
   }
 }
 
-function numericMinimumClaims(line, file, lineNumber, truth, out) {
+function numericMinimumClaims(line, file, lineNumber, truth, intent, out, allow) {
+  const expected = truth.withdrawal.minimumGrossAmount;
+  const intended = intentForPath(intent, "withdrawal.minimumGrossAmount", expected);
   const minimumSubjects = String.raw`(?:minimum (?:withdrawal )?(?:request|amount)|minimum withdrawal|минимальн(?:ая|ый) (?:заявка|сумма вывода)|мінімальн(?:а|ий) (?:заявка|сума виведення))`;
   const regex = new RegExp(`${minimumSubjects}[^.\\n]{0,60}?(\\d+(?:[.,]\\d+)?)\\s*USDT`, "ig");
   for (const match of line.matchAll(regex)) {
     const actual = Number(match[1].replace(",", "."));
-    if (actual !== truth.withdrawal.minimumGrossAmount) {
-      addViolation(out, "withdrawal-minimum", file, lineNumber,
-        `claims ${actual} USDT but reviewed product truth is ${truth.withdrawal.minimumGrossAmount} USDT`);
+    if (actual === expected) continue;
+    if (intended && actual === intended.target) {
+      allow(intended, "withdrawal-minimum", file, lineNumber, match[0].trim());
+      continue;
     }
+    addViolation(out, "withdrawal-minimum", file, lineNumber,
+      `claims ${actual} USDT but reviewed product truth is ${expected} USDT`);
   }
 
   const paraphrases = [
@@ -364,10 +573,13 @@ function numericMinimumClaims(line, file, lineNumber, truth, out) {
   for (const pattern of paraphrases) {
     for (const match of line.matchAll(pattern)) {
       const actual = Number(match[1].replace(",", "."));
-      if (actual !== truth.withdrawal.minimumGrossAmount) {
-        addViolation(out, "withdrawal-minimum", file, lineNumber,
-          `claims ${actual} USDT but reviewed product truth is ${truth.withdrawal.minimumGrossAmount} USDT`);
+      if (actual === expected) continue;
+      if (intended && actual === intended.target) {
+        allow(intended, "withdrawal-minimum", file, lineNumber, match[0].trim());
+        continue;
       }
+      addViolation(out, "withdrawal-minimum", file, lineNumber,
+        `claims ${actual} USDT but reviewed product truth is ${expected} USDT`);
     }
   }
 }
@@ -498,13 +710,26 @@ function numericPpvClaims(line, file, lineNumber, truth, declaration, out) {
   ppvCapClaims(line, file, lineNumber, truth, declaration, out);
 }
 
-export function lintText(text, file, truth, declaration = pageDeclaration(text)) {
+// `options.intent` is the parsed `data/product-intent.json` (or `null` to judge the text against
+// the live snapshot alone); it defaults to the committed file. `options.onAllowed` receives every
+// claim a record licensed, which is what the CLI prints and what a caller can assert on.
+export function lintText(text, file, truth, declaration = pageDeclaration(text), options = {}) {
   const violations = [];
+  const intentSource = options.intent === undefined ? defaultProductIntent() : options.intent;
+  const intent = intentSource && intentSource.byId instanceof Map
+    ? intentSource
+    : (intentSource ? productIntentIndex(intentSource) : EMPTY_INTENT_INDEX);
+  const allow = (record, rule, allowedFile, line, claim) => {
+    options.onAllowed?.({
+      rule, intentId: record.id, status: record.status, decidedAt: record.decidedAt,
+      file: allowedFile, line, claim, message: intentMessage(record),
+    });
+  };
   const lines = stripFencedCode(text).split("\n");
   lines.forEach((line, index) => {
     const lineNumber = index + 1;
-    numericPercentClaims(line, file, lineNumber, truth, violations);
-    numericMinimumClaims(line, file, lineNumber, truth, violations);
+    numericPercentClaims(line, file, lineNumber, truth, intent, violations, allow);
+    numericMinimumClaims(line, file, lineNumber, truth, intent, violations, allow);
     numericPpvClaims(line, file, lineNumber, truth, declaration, violations);
     for (const rule of CLAIM_RULES) {
       for (const pattern of rule.patterns) {
@@ -513,6 +738,11 @@ export function lintText(text, file, truth, declaration = pageDeclaration(text))
         if (!match || (isQuestion(line) && !rule.includeQuestions)) continue;
         if (rule.allowNegated && isNegated(line, match.index, lines[index - 1] || "")) continue;
         if (rule.allowWalletQualified && isWalletQualified(line, lines[index - 1] || "")) continue;
+        const intended = intent.byId.get(rule.intentId);
+        if (intended) {
+          allow(intended, rule.id, file, lineNumber, match[0].trim());
+          break;
+        }
         addViolation(violations, rule.id, file, lineNumber,
           `contradicts reviewed product truth: ${match[0].trim()}`);
         break;
@@ -809,10 +1039,18 @@ function packSourceLine(key, value, unit) {
   return new RegExp(`\`${escape(key)}\` = ${escape(value)} ${escape(unit)}`);
 }
 
-export function lintRepository({ root = DEFAULT_ROOT, truthPath = join(root, "data/product-truth.json") } = {}) {
+export function lintRepository({
+  root = DEFAULT_ROOT,
+  truthPath = join(root, "data/product-truth.json"),
+  intentPath = join(root, "data/product-intent.json"),
+} = {}) {
   const truth = JSON.parse(readFileSync(truthPath, "utf8"));
+  const intent = readProductIntent(intentPath);
   const validation = validateTruthSnapshot(truth).map((message) => ({
     rule: "truth-snapshot", file: relative(root, truthPath), line: 1, message,
+  }));
+  const intentValidation = validateProductIntent(intent, truth, { root }).map((message) => ({
+    rule: "product-intent", file: relative(root, intentPath), line: 1, message,
   }));
   const provenance = verifySourceProvenance(truth);
   const sourceValidation = provenance.errors.map((message) => ({
@@ -829,11 +1067,30 @@ export function lintRepository({ root = DEFAULT_ROOT, truthPath = join(root, "da
   // the generator to restate what it copied. The stable-band bound still applies to it, and it
   // cannot contain a number that no page description already published.
   const generated = corpusDeclaration(pages.map((page) => page.declaration));
+  const intentIndex = productIntentIndex(intent);
+  const allowances = [];
+  const options = { intent: intentIndex, onAllowed: (allowance) => allowances.push(allowance) };
   const content = sources.flatMap((source) =>
-    lintText(source.text, source.file, truth, source.declaration ?? generated));
+    lintText(source.text, source.file, truth, source.declaration ?? generated, options));
   const canonical = checkCanonicalPages(root, truth);
-  return { truth, filesChecked: sources.length, sourcesChecked: provenance.checked,
-    violations: [...validation, ...sourceValidation, ...canonical, ...content] };
+  return { truth, intent, filesChecked: sources.length, sourcesChecked: provenance.checked, allowances,
+    relaxedRules: relaxedByIntent(truth, intentIndex),
+    violations: [...validation, ...intentValidation, ...sourceValidation, ...canonical, ...content] };
+}
+
+// Which rules the intent file currently holds open, printed on every green run so a relaxed gate
+// is never invisible. A `matches-live` record holds nothing open: the target is the live value.
+function relaxedByIntent(truth, intent) {
+  const relaxed = [];
+  for (const rule of CLAIM_RULES) {
+    const record = intent.byId.get(rule.intentId);
+    if (record) relaxed.push(`${rule.id} <- ${record.id}`);
+  }
+  for (const [path, record] of intent.byPath) {
+    const live = truthPathValue(truth, path);
+    if (!sameValue(record.target, live)) relaxed.push(`${path} ${JSON.stringify(live)} -> ${JSON.stringify(record.target)} <- ${record.id}`);
+  }
+  return relaxed;
 }
 
 function runCli() {
@@ -841,7 +1098,12 @@ function runCli() {
   const root = rootArg >= 0 ? resolve(process.argv[rootArg + 1]) : DEFAULT_ROOT;
   const truthArg = process.argv.indexOf("--truth");
   const truthPath = truthArg >= 0 ? resolve(process.argv[truthArg + 1]) : join(root, "data/product-truth.json");
-  const result = lintRepository({ root, truthPath });
+  const intentArg = process.argv.indexOf("--intent");
+  const intentPath = intentArg >= 0 ? resolve(process.argv[intentArg + 1]) : join(root, "data/product-intent.json");
+  const result = lintRepository({ root, truthPath, intentPath });
+  for (const allowance of result.allowances) {
+    console.log(`${allowance.message} - ${allowance.file}:${allowance.line} [${allowance.rule}] ${allowance.claim}`);
+  }
   if (result.violations.length) {
     console.error(`product_truth_lint: ${result.violations.length} violation(s)`);
     for (const violation of result.violations) {
@@ -849,7 +1111,10 @@ function runCli() {
     }
     process.exit(1);
   }
-  console.log(`product_truth_lint: OK (${result.filesChecked} public claim files; ${result.sourcesChecked} source repos; snapshot ${result.truth.verifiedAt})`);
+  const intentSummary = result.intent
+    ? `; product-intent ${result.intent.decidedAt} (${result.relaxedRules.length ? result.relaxedRules.join(", ") : "no rule relaxed"}; ${result.allowances.length} claim(s) allowed)`
+    : "";
+  console.log(`product_truth_lint: OK (${result.filesChecked} public claim files; ${result.sourcesChecked} source repos; snapshot ${result.truth.verifiedAt}${intentSummary})`);
 }
 
 if (import.meta.url === pathToFileURL(process.argv[1]).href) runCli();

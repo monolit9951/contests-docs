@@ -45,7 +45,7 @@ Turning a moment into a finished video - the vertical frame, the hook, subtitles
 | View threshold | Set by the contest | From that mark a submission joins the budget split |
 | Cap on one submission | Set by the buyer | The maximum payout for a single submission; it stands on the card before you submit |
 
-The spread of rates between contests is twofold, so a contest is chosen by the numbers on the card, not by the streamer's name. The buyer fixes the rate, the threshold and the cap at contest creation and does not move them after launch.
+The spread of rates between contests is twofold, so a contest is chosen by the numbers on the card, not by the streamer's name. The buyer fixes the rate and the threshold at contest creation and does not move them after launch; the cap per clip can only be raised, never dropped below what a clip has already earned.
 
 The payout is worked out as `views / 1000 * the contest rate`, and never above the cap on one submission. The threshold is not subtracted: once a submission clears the threshold on the card, the whole counter goes into the maths, not the remainder above the bar.
 
@@ -105,7 +105,7 @@ As a general rule, no. A submission is bound to the contest by the link you sent
 
 ### What happens to the rate once a contest is running?
 
-Nothing. The rate, the threshold and the cap are fixed at contest creation and do not move after launch, and a wallet-backed contest budget was frozen on the platform in advance. The terms you edited to will be the same ones.
+Nothing. The rate and the threshold are fixed at contest creation and do not move after launch, the cap per clip can only be raised, and a wallet-backed contest budget was frozen on the platform in advance. The terms you edited to will be the same ones or better.
 
 **Neighbouring questions live on their own pages:**
 

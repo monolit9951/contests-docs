@@ -15,7 +15,7 @@ Short version: the calculation is automatic and cannot be re-run in anyone's fav
 ## The chain from a published clip to money
 
 1. **The contest is created with its terms.** The buyer sets the rate per 1000 views, the view threshold and the cap per submission. In a wallet-backed contest the budget is charged from their balance and locked against that contest at this point, before anybody sees the task.
-2. **A clipper takes the task and publishes.** The clip goes out on the site the contest names. Statistics are collected today for TikTok, YouTube and Instagram.
+2. **A clipper takes the task and publishes.** The clip goes out on the site the contest names. Statistics are collected today for TikTok, YouTube, Instagram and the other sites named in the task.
 3. **The clipper sends the link.** The submitted URL is what attaches a clip to a contest. Nothing is imported by hashtag, so a clip that was published but never submitted takes no part in anything.
 4. **The counter is read.** The platform's independent counter reads the published view counter on the site the clip was posted on. Neither the buyer nor the clipper types that figure in, and neither can adjust it.
 5. **The formula runs.** `views / 1000 * rate`, capped at the contest's cap per submission, for every clip that cleared the threshold. Clearing the threshold puts the whole counter into the calculation, not just the part above it.

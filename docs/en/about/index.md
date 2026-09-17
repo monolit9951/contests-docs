@@ -30,7 +30,7 @@ with a status; fulfilment through payout details is done by the team, and no set
 Nobody types the view count in by hand. The platform's independent counter reads the published
 view counter on the site the video was posted on, so the buyer and the creator look at the same
 figure and neither can nudge it. The contest sets the site: view statistics are collected today
-for TikTok, YouTube and Instagram.
+for TikTok, YouTube, Instagram and the other sites named in the task.
 
 The rate per 1000 views, the view threshold and the cap per submission are stated in the task
 itself, before a creator takes it on. There is no single platform-wide rate: it is set by whoever

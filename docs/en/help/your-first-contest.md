@@ -92,7 +92,8 @@ withdrawal is a separate operation with its own terms: [current fees](/en/help/w
 One click. The contest moves from **UPCOMING** to **ACTIVE**, a wallet-backed
 prize pool leaves your balance for the contest, and participants start sending in
 work. In a pay-per-view contest they publish on the site you named - statistics
-are collected today for TikTok, YouTube and Instagram - and send you the link.
+are collected today for TikTok, YouTube, Instagram and the other sites
+named in the task - and send you the link.
 
 ---
 

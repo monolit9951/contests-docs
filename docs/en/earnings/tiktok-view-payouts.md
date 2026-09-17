@@ -8,7 +8,7 @@ seo: true
 
 # What TikTok pays for views
 
-You can be paid for views before you have a single follower, and that is the whole difference between the two routes below. A platform's creator programme pays you for the audience you have already built. A contest on an intermediary platform pays for the reach of one specific video: no audience needed, and you see the rate before you sit down to edit. On DareBay, open contest rates run from **$1.00 to $2.00 per 1000 views**, and the threshold is printed on the card: from that mark a submission enters the split. The site is set by the contest: submissions are accepted on TikTok, YouTube and Instagram.
+You can be paid for views before you have a single follower, and that is the whole difference between the two routes below. A platform's creator programme pays you for the audience you have already built. A contest on an intermediary platform pays for the reach of one specific video: no audience needed, and you see the rate before you sit down to edit. On DareBay, open contest rates run from **$1.00 to $2.00 per 1000 views**, and the threshold is printed on the card: from that mark a submission enters the split. The site is set by the contest: submissions are accepted on TikTok, YouTube, Instagram and the other sites named in the task.
 
 The platform's figures are a data snapshot from 2026-08-15. The TikTok and YouTube programme requirements below were **checked against the platforms' own sources on 15 August 2026**: platforms move their bars, so check them with the platform itself before you apply.
 
@@ -36,7 +36,7 @@ The common denominator of both programmes: build the audience first, find out wh
 
 Here you are paid not by the site but by a specific buyer who announced a contest. DareBay stands between you and the buyer as intermediary and guarantor: in wallet-backed mode the contest budget is frozen on the platform before you take the brief, and the payout comes out of that frozen pool.
 
-What is visible on the contest card **before you submit**: the rate per 1000 views, the view threshold, the cap on one submission, the publishing site and the brief itself. The buyer fixes the rate and the cap at creation and does not move them after launch, so you know in advance what you are playing for.
+What is visible on the contest card **before you submit**: the rate per 1000 views, the view threshold, the cap on one submission, the publishing site and the brief itself. The buyer fixes the rate and the threshold at creation and does not move them after launch, and the cap per clip can only be raised, so you know in advance what you are playing for.
 
 There are no follower requirements at all: the money is tied to the reach of one specific video, not to the size of a channel. A beginner clipper and an author with a million followers enter the same contest on the same terms. Taking part is free, and the platform takes no commission out of the payout.
 

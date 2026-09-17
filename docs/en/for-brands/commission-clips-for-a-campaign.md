@@ -28,7 +28,7 @@ You set the terms of the offer yourself when creating the contest. Clippers see 
 | Parameter | Who sets it and typical values | What it is for |
 |-----------|--------------------------------|----------------|
 | Rate per 1000 views | set by the buyer (across open contests $1.00 - $2.00 per 1000 views) | Defines what a clipper gets for every thousand counted views |
-| View threshold | set by the buyer (typical threshold across open contests 2000, system default 1000) | Submissions below the threshold take no part in the split and cost you nothing |
+| View threshold | set by the buyer and printed on the task card (system default 1000) | Submissions below the threshold take no part in the split and cost you nothing |
 | Cap per submission | set by the buyer | Limits the maximum payout to one creator so a single video cannot eat the whole budget |
 | Total budget | set by the buyer | The full amount held on the platform |
 | Task and publishing site | set by the buyer | The brief, and which of TikTok, YouTube or Instagram the video goes on |
@@ -38,10 +38,10 @@ The rate of **$1.00 to $2.00 per 1000 views** reflects the range across open con
 ## What to weigh up: a checklist for the buyer
 
 1. **The rate.** A high rate brings in more clippers and burns the budget faster; a low rate saves budget but gets picked up slowly. The range across open contests: $1.00 - $2.00 per 1000 views.
-2. **The threshold.** It protects the budget from submissions with a handful of views: anything below it costs you nothing. The typical threshold in live contests: 2000.
+2. **The threshold.** It protects the budget from submissions with a handful of views: anything below it costs you nothing. The threshold is set by each task and printed on its card.
 3. **The cap.** It stops one video that went viral from taking the whole budget. Pick it so the same money buys videos from several creators.
 4. **The task.** The more concrete the result you describe (format, style, key moments), the closer the work lands to what you wanted. Clippers pick the tasks they understand on the first read.
-5. **The publishing site.** Statistics are collected today for TikTok, YouTube and Instagram, and your terms name the one you want. For Instagram it has to be a video with a view count, since a photo post gives no such metric.
+5. **The publishing site.** Statistics are collected today for TikTok, YouTube, Instagram and the other sites named in the task, and your terms name the one you want. For Instagram it has to be a video with a view count, since a photo post gives no such metric.
 6. **The budget.** Work out the total from the expected number of participants and the rate. Overshooting is safe, since anything unspent comes back.
 7. **Payment.** The budget is taken from your DareBay balance: top it up if it falls short, then review the total before you confirm.
 

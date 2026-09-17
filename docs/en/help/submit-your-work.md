@@ -44,7 +44,7 @@ them up is the most common way to end up unpaid.
 ### Pay-per-view contests (PPV)
 
 The video lives on a public site rather than with us. Statistics are collected today for
-**TikTok, YouTube and Instagram**, and the contest terms say which one it wants. For Instagram it
+**TikTok, YouTube, Instagram and the other sites named in the task**, and the contest terms say which one it wants. For Instagram it
 has to be a video with a view count: a photo post produces no such metric, so there is nothing to
 read. New to the mechanic? [How pay-per-view works](/en/earnings/how-pay-per-view-works).
 

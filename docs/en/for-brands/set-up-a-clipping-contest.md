@@ -34,7 +34,7 @@ The full budget is charged when the contest is created, and DareBay holds it as 
 
 ### 5. Clippers publish and send links
 
-Once the contest is live, creators take the task, produce the video and publish it on the site your terms name - statistics are collected today for TikTok, YouTube and Instagram - then send DareBay the link. **A submission enters the contest only when that link arrives.** Nothing is imported by hashtag, so ask for a tag only if you actually want one in the description; it is separately required from anyone submitting anonymously.
+Once the contest is live, creators take the task, produce the video and publish it on the site your terms name - statistics are collected today for TikTok, YouTube, Instagram and the other sites named in the task - then send DareBay the link. **A submission enters the contest only when that link arrives.** Nothing is imported by hashtag, so ask for a tag only if you actually want one in the description; it is separately required from anyone submitting anonymously.
 
 ### 6. The counter is read
 
@@ -75,7 +75,7 @@ The cap protects the budget from a situation where one video takes everything. I
 
 ### Which sites can clippers publish on?
 
-TikTok, YouTube and Instagram: statistics are collected for all three today. Your contest terms name the one you want. For Instagram it has to be a video with a view count, because a photo post produces no such metric and there would be nothing to read.
+TikTok, YouTube, Instagram and the other sites named in the task: statistics are collected for them today. Your contest terms name the one you want. For Instagram it has to be a video with a view count, because a photo post produces no such metric and there would be nothing to read.
 
 ### Does a clipper need a minimum audience?
 

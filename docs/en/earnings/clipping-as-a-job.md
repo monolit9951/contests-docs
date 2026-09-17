@@ -56,7 +56,7 @@ Before you submit, everything is known except one thing: how many views the vide
 | The rate per 1000 views | How many views the video collects |
 | The threshold at which a submission joins the split | Whether the submission clears the threshold |
 | The cap on a single submission | Whether the payout ever reaches the cap |
-| A wallet-backed contest budget is frozen and the terms do not move after launch | How the site hands out impressions |
+| A wallet-backed contest budget is frozen and the rate and threshold do not move after launch | How the site hands out impressions |
 
 That is where the shape of the income comes from. One video takes 3000 views and the next one on the same account takes 200,000, and there is no predicting it in advance. Submissions that miss the threshold on the card bring in nothing. So a clipper's income is measured not by the hour but by a run of jobs across a month, where some go to zero and one or two carry the result.
 

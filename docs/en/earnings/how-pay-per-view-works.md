@@ -24,7 +24,7 @@ cta:
 2. **The clipper publishes the clip and sends the link.** You publish on the site named in the terms, and a submission enters the task only through the link you send: there is no import by hashtag.
 3. **A moderator checks the terms, the platform reads the views.** Nobody types the figure in by hand: an independent counter reads the published view counter on the site. A submission with suspicious growth goes on hold, which is a pause, not a removal.
 4. **The formula sets the amount.** At the end the system works out the payout for each submission: `views / 1000 × rate`. The threshold is an entry condition, not a deduction, and the cap limits one submission.
-5. **The amount is recorded against the author.** The platform creates a credit with a status that the buyer cannot recompute or erase. Once a submission is approved, the credit can be locked in with "Claim now", and fresh credits mature for 24 hours.
+5. **The amount is recorded against the author.** The platform creates a credit with a status that the buyer cannot recompute or erase. Once a submission is approved, the credit can be locked in with "Claim now": the button opens when the whole credited amount is 24 hours old, so on a clip that is still gathering views the clock starts again.
 6. **An undistributed remainder goes back to the buyer.** In a wallet-backed task the platform holds the budget and returns the unspent part to the buyer's balance; with direct payment there is nothing to return.
 
 ## Task parameters: rate, threshold, cap, site
@@ -91,7 +91,7 @@ A PPV task budget is spent against the views actually earned, so there is nearly
 
 ### When does the money arrive?
 
-The calculation starts at the end of the task and produces a credit with a status; once a submission is approved, the credit can be locked in with "Claim now", and fresh credits mature for 24 hours. Execution is handled by the team, so DareBay promises no fixed period; a submission on hold is decided separately, up to and including a payout on timeout.
+The calculation starts at the end of the task and produces a credit with a status; once a submission is approved, the credit can be locked in with "Claim now": the button opens when the whole credited amount is 24 hours old, so on a clip that is still growing the clock starts again. Execution is handled by the team, so DareBay promises no fixed period; a submission on hold is decided separately, up to and including a payout on timeout.
 
 ### What payout methods are available?
 

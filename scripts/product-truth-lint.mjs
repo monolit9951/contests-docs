@@ -252,7 +252,17 @@ const LANG = {
   },
 };
 
-const NO_FEE = /\b(?:no (?:fee|commission)|without (?:a )?(?:fee|commission))\b|без коміс(?:ії|си(?:и|й))|коміс(?:ія|ії) не (?:стягується|взимається)|комисс(?:ия|ии) не (?:взимается|бер[её]тся)/i;
+// `\b` is an ASCII word boundary: it takes every Cyrillic letter for a non-word character, so
+// `\bвывод` can only match where the word is glued to a Latin letter or a digit and never at the
+// start of a Russian or Ukrainian word. Until 2026-09-17 that made every Russian and Ukrainian
+// pattern written with `\b` a dead letter. A pattern that contains Cyrillic therefore spells its
+// boundary as `(?<![\p{L}\p{N}])` / `(?![\p{L}\p{N}])` under the `u` flag (without `u`, `\p{L}`
+// is the literal text "p{L}"), and the test suite scans this file so that neither an ASCII `\b`
+// beside Cyrillic nor a `\p{..}` without `u` can come back.
+//
+// The Russian and Ukrainian stems differ in one letter (комисс- / коміс-), so they are spelled
+// separately: a shared stem matched neither language's "no fee".
+const NO_FEE = /(?<![\p{L}\p{N}])(?:no (?:fee|commission)|without (?:a )?(?:fee|commission))(?![\p{L}\p{N}])|без (?:комисси[ий]|комісії)|коміс(?:ія|ії) не (?:стягується|взимається)|комисс(?:ия|ии) не (?:взимается|бер[её]тся)/iu;
 
 // `intentId` names the record in `data/product-intent.json` that licenses the claim this rule
 // cuts. The rule keeps firing until that record exists with a licensing status, so wiring one is
@@ -266,9 +276,7 @@ const CLAIM_RULES = [
       /\bwithdraw(?:al|ing)?s? (?:is|are|remains?|stays?) (?:completely )?free\b/i,
       /\bno (?:platform )?(?:withdrawal|payout) fee\b/i,
       /\bwithdraw(?:al|ing)?s?[^.\n]{0,30}without (?:a )?fee\b/i,
-      // `\b` is an ASCII word boundary: before a Cyrillic letter one side is never a word
-      // character, so `\bвывод` cannot match at the start of a word and these six patterns were
-      // dead letters. A Unicode letter/number lookaround is the boundary these lines meant.
+      // Unicode boundaries, not `\b`: see the note above NO_FEE.
       /(?<![\p{L}\p{N}])вывод(?: средств| денег| баланса)? (?:полностью )?бесплат(?:ен|ный|но)(?![\p{L}\p{N}])/iu,
       /(?<![\p{L}\p{N}])вывод[^.\n]{0,30}без комиссии(?![\p{L}\p{N}])/iu,
       /(?<![\p{L}\p{N}])комисси(?:и|я) за вывод (?:нет|не взимается)(?![\p{L}\p{N}])/iu,
@@ -287,8 +295,8 @@ const CLAIM_RULES = [
     patterns: [
       /\b(?:no|without a) minimum (?:withdrawal|payout)\b/i,
       /\bwithdraw[^.\n]{0,35}(?:any amount|from any amount)\b/i,
-      // Same ASCII-boundary defect as above: these two only start matching with a Unicode
-      // boundary, and they must keep matching - the target product keeps the 10 USDT floor.
+      // Unicode boundaries again, and these two must keep matching - the target product keeps
+      // the 10 USDT floor.
       /(?<![\p{L}\p{N}])вывод[^.\n]{0,35}(?:без минимума|любую сумму|с любой суммы)(?![\p{L}\p{N}])/iu,
       /(?<![\p{L}\p{N}])виведення[^.\n]{0,35}(?:без мінімуму|будь-яку суму|з будь-якої суми)(?![\p{L}\p{N}])/iu,
     ],
@@ -300,10 +308,10 @@ const CLAIM_RULES = [
       /\b(?:payout|withdrawal|transfer|settlement)s? (?:is|are|runs?|happens?) automatic(?:ally)?\b/i,
       /\bautomatically (?:pay(?:s|ed)?|transfer(?:s|red)?|send(?:s|sent)?|withdraw(?:s|n)?|settles?)\b/i,
       /\b(?:paid|transferred|sent|withdrawn|settled) automatically\b/i,
-      /\b(?:выплат[аы]|вывод|перевод|зачисление) (?:происходит |ид[её]т )?автоматическ(?:и|ий|ая)\b/i,
-      /\bавтоматическ(?:и|ая|ий) (?:выплачивает|переводит|выводит|зачисляет|выплата|перевод)\b/i,
-      /\b(?:виплат[аи]|виведення|переказ|зарахування) (?:відбувається |йде )?автоматичн(?:о|ий|а)\b/i,
-      /\bавтоматичн(?:о|а|ий) (?:виплачує|переказує|виводить|зараховує|виплата|переказ)\b/i,
+      /(?<![\p{L}\p{N}])(?:выплат[аы]|вывод|перевод|зачисление) (?:происходит |ид[её]т )?автоматическ(?:и|ий|ая)(?![\p{L}\p{N}])/iu,
+      /(?<![\p{L}\p{N}])автоматическ(?:и|ая|ий) (?:выплачивает|переводит|выводит|зачисляет|выплата|перевод)(?![\p{L}\p{N}])/iu,
+      /(?<![\p{L}\p{N}])(?:виплат[аи]|виведення|переказ|зарахування) (?:відбувається |йде )?автоматичн(?:о|ий|а)(?![\p{L}\p{N}])/iu,
+      /(?<![\p{L}\p{N}])автоматичн(?:о|а|ий) (?:виплачує|переказує|виводить|зараховує|виплата|переказ)(?![\p{L}\p{N}])/iu,
       /\b(?:instant|immediate) payouts?\b/i,
       /\b(?:winner|creator)s? (?:is|are|get|gets|will be) paid (?:instantly|immediately|straight away)\b/i,
       /\b(?:money|funds|the prize) (?:goes|is sent|is transferred) (?:straight|directly) to (?:the )?(?:winner|creator)s?\b/i,
@@ -320,8 +328,8 @@ const CLAIM_RULES = [
       /\b(?:payout|withdrawal|transfer|settlement)[^.\n]{0,45}(?:arrives?|lands?|completes?|takes?|is processed)[^.\n]{0,20}(?:in|within) (?:a few |several )?minutes\b/i,
       /\b(?:money|funds)[^.\n]{0,30}(?:arrives?|lands?)[^.\n]{0,20}(?:in|within) (?:a few |several )?minutes\b/i,
       /\b(?:instant|immediate) (?:payout|withdrawal|settlement|transfer)s?\b/i,
-      /\b(?:выплата|вывод|перевод|зачисление)[^.\n]{0,45}(?:приходит|занимает|проходит|обрабатывается)[^.\n]{0,20}(?:за|в течение) (?:нескольких |пары )?минут\b/i,
-      /\b(?:виплата|виведення|переказ|зарахування)[^.\n]{0,45}(?:приходить|займає|відбувається|обробляється)[^.\n]{0,20}(?:за|протягом) (?:кількох |пари )?хвилин\b/i,
+      /(?<![\p{L}\p{N}])(?:выплата|вывод|перевод|зачисление)[^.\n]{0,45}(?:приходит|занимает|проходит|обрабатывается)[^.\n]{0,20}(?:за|в течение) (?:нескольких |пары )?минут(?![\p{L}\p{N}])/iu,
+      /(?<![\p{L}\p{N}])(?:виплата|виведення|переказ|зарахування)[^.\n]{0,45}(?:приходить|займає|відбувається|обробляється)[^.\n]{0,20}(?:за|протягом) (?:кількох |пари )?хвилин(?![\p{L}\p{N}])/iu,
     ],
   },
   {
@@ -330,28 +338,28 @@ const CLAIM_RULES = [
       /\ball (?:five|six|of these) (?:payout |withdrawal |reward )?(?:methods|options|ways) (?:work|are available|are supported)\b/i,
       /\b(?:card|bank|wallet|Stars|reward)[^.\n]{0,100}(?:all of these work|every one of them works)\b/i,
       /\bevery creator[^.\n]{0,50}(?:is paid|receives payment)[^.\n]{0,40}(?:way|method) (?:that )?(?:suits them|they choose|they prefer)\b/i,
-      /\bвсе (?:пять|шесть|эти) (?:способа|способов|варианта|вариантов) (?:выплаты )?(?:работают|доступны|поддерживаются)\b/i,
-      /\bработают все (?:способы|варианты)\b/i,
-      /\bкаждый автор[^.\n]{0,60}(?:получает выплату|получает деньги)[^.\n]{0,40}(?:который выбрал|по своему выбору|как ему удобно)\b/i,
-      /\bусі (?:п.?ять|шість|ці) (?:способи|варіанти) (?:виплати )?(?:працюють|доступні|підтримуються)\b/i,
-      /\bпрацюють усі (?:способи|варіанти)\b/i,
-      /\bкожен автор[^.\n]{0,60}(?:отримує виплату|отримує гроші)[^.\n]{0,40}(?:який обрав|за своїм вибором|як йому зручно)\b/i,
+      /(?<![\p{L}\p{N}])все (?:пять|шесть|эти) (?:способа|способов|варианта|вариантов) (?:выплаты )?(?:работают|доступны|поддерживаются)(?![\p{L}\p{N}])/iu,
+      /(?<![\p{L}\p{N}])работают все (?:способы|варианты)(?![\p{L}\p{N}])/iu,
+      /(?<![\p{L}\p{N}])каждый автор[^.\n]{0,60}(?:получает выплату|получает деньги)[^.\n]{0,40}(?:который выбрал|по своему выбору|как ему удобно)(?![\p{L}\p{N}])/iu,
+      /(?<![\p{L}\p{N}])усі (?:п.?ять|шість|ці) (?:способи|варіанти) (?:виплати )?(?:працюють|доступні|підтримуються)(?![\p{L}\p{N}])/iu,
+      /(?<![\p{L}\p{N}])працюють усі (?:способи|варіанти)(?![\p{L}\p{N}])/iu,
+      /(?<![\p{L}\p{N}])кожен автор[^.\n]{0,60}(?:отримує виплату|отримує гроші)[^.\n]{0,40}(?:який обрав|за своїм вибором|як йому зручно)(?![\p{L}\p{N}])/iu,
     ],
   },
   {
     id: "legacy-contest-commission-refund",
     patterns: [
       /\b(?:part|share) of the commission[^.\n]{0,80}(?:returns?|is returned)[^.\n]{0,80}(?:feed placement|promotion)[^.\n]{0,40}(?:does not|is not)\b/i,
-      /\bчаст[ьи] комисси[^.\n]{0,80}возвращается[^.\n]{0,80}(?:лента|промо)[^.\n]{0,40}не возвращается\b/i,
-      /\bчастина комісі[^.\n]{0,80}повертається[^.\n]{0,80}(?:стрічц|промо)[^.\n]{0,40}не повертається\b/i,
+      /(?<![\p{L}\p{N}])част[ьи] комисси[^.\n]{0,80}возвращается[^.\n]{0,80}(?:лента|промо)[^.\n]{0,40}не возвращается(?![\p{L}\p{N}])/iu,
+      /(?<![\p{L}\p{N}])частина комісі[^.\n]{0,80}повертається[^.\n]{0,80}(?:стрічц|промо)[^.\n]{0,40}не повертається(?![\p{L}\p{N}])/iu,
     ],
   },
   {
     id: "organizer-pays-creator-fee",
     patterns: [
       /\b(?:commission|fee) (?:is )?paid by the (?:buyer|organizer),? not the (?:creator|clipper)\b/i,
-      /\bкомисси[юя] платит (?:заказчик|организатор),? не (?:автор|участник|нарезчик)\b/i,
-      /\bкомісі[юя] платить (?:замовник|організатор),? а? ?не (?:автор|учасник|нарізальник)\b/i,
+      /(?<![\p{L}\p{N}])комисси[юя] платит (?:заказчик|организатор),? не (?:автор|участник|нарезчик)(?![\p{L}\p{N}])/iu,
+      /(?<![\p{L}\p{N}])комісі[юя] платить (?:замовник|організатор),? а? ?не (?:автор|учасник|нарізальник)(?![\p{L}\p{N}])/iu,
     ],
   },
   {
@@ -359,8 +367,8 @@ const CLAIM_RULES = [
     allowNegated: true,
     patterns: [
       /\b(?:at contest close|at the end of the contest|when the contest ends?)[^.\n]{0,80}(?:money|payout|prize)[^.\n]{0,35}(?:goes out|goes to|is sent|is transferred) (?:to )?(?:the )?winners?\b/i,
-      /\b(?:в конце конкурса|при завершении конкурса|когда конкурс завершается)[^.\n]{0,80}(?:деньги|выплата|приз)[^.\n]{0,35}(?:уходит|переводится|отправляется) победител/i,
-      /\b(?:наприкінці конкурсу|під час завершення конкурсу|коли конкурс завершується)[^.\n]{0,80}(?:гроші|виплата|приз)[^.\n]{0,35}(?:йде|переказується|надсилається) переможц/i,
+      /(?<![\p{L}\p{N}])(?:в конце конкурса|при завершении конкурса|когда конкурс завершается)[^.\n]{0,80}(?:деньги|выплата|приз)[^.\n]{0,35}(?:уходит|переводится|отправляется) победител/iu,
+      /(?<![\p{L}\p{N}])(?:наприкінці конкурсу|під час завершення конкурсу|коли конкурс завершується)[^.\n]{0,80}(?:гроші|виплата|приз)[^.\n]{0,35}(?:йде|переказується|надсилається) переможц/iu,
     ],
   },
   {
@@ -371,8 +379,8 @@ const CLAIM_RULES = [
       /\b(?:smart contract|on[- ]chain escrow) (?:holds|locks|releases|pays)\b/i,
       /\b(?:prize|funds|money|budget) (?:is|are) (?:secured|protected|guaranteed|safeguarded) by (?:a )?(?:blockchain |on[- ]chain )?(?:smart |escrow )?contract\b/i,
       /\b(?:blockchain|smart|escrow) contract (?:secures|protects|guarantees|safeguards) (?:the )?(?:prize|funds|money|budget)\b/i,
-      /\b(?:деньги|средства|приз|бюджет) (?:хранится|хранятся|заблокирован|удерживается|выплачивается) (?:в|через|смарт-контрактом) (?:он[- ]чейн )?(?:эскроу|смарт-контракт)\b/i,
-      /\b(?:деньги|кошти|приз|бюджет) (?:зберігається|зберігаються|заблокований|утримується|виплачується) (?:в|через|смарт-контрактом) (?:он[- ]чейн )?(?:ескроу|смарт-контракт)\b/i,
+      /(?<![\p{L}\p{N}])(?:деньги|средства|приз|бюджет) (?:хранится|хранятся|заблокирован|удерживается|выплачивается) (?:в|через|смарт-контрактом) (?:он[- ]чейн )?(?:эскроу|смарт-контракт)(?![\p{L}\p{N}])/iu,
+      /(?<![\p{L}\p{N}])(?:деньги|кошти|приз|бюджет) (?:зберігається|зберігаються|заблокований|утримується|виплачується) (?:в|через|смарт-контрактом) (?:он[- ]чейн )?(?:ескроу|смарт-контракт)(?![\p{L}\p{N}])/iu,
     ],
   },
   {
@@ -424,10 +432,10 @@ const CLAIM_RULES = [
     patterns: [
       /\b(?:fiat|bank card|card payment)[^.\n]{0,45}5\s*%/i,
       /\b(?:crypto|wallet|USDT)[^.\n]{0,45}8\s*%/i,
-      /\b(?:фиат|банковская карта|оплата картой)[^.\n]{0,45}5\s*%/i,
-      /\b(?:крипта|криптовалюта|кошел[её]к|USDT)[^.\n]{0,45}8\s*%/i,
-      /\b(?:фіат|банківська картка|оплата карткою)[^.\n]{0,45}5\s*%/i,
-      /\b(?:крипта|криптовалюта|гаманець|USDT)[^.\n]{0,45}8\s*%/i,
+      /(?<![\p{L}\p{N}])(?:фиат|банковская карта|оплата картой)[^.\n]{0,45}5\s*%/iu,
+      /(?<![\p{L}\p{N}])(?:крипта|криптовалюта|кошел[её]к|USDT)[^.\n]{0,45}8\s*%/iu,
+      /(?<![\p{L}\p{N}])(?:фіат|банківська картка|оплата карткою)[^.\n]{0,45}5\s*%/iu,
+      /(?<![\p{L}\p{N}])(?:крипта|криптовалюта|гаманець|USDT)[^.\n]{0,45}8\s*%/iu,
     ],
   },
   {
@@ -478,12 +486,12 @@ function isNegated(line, index, previousLine = "") {
   const clause = currentPrefix.slice(Math.max(
     currentPrefix.lastIndexOf("."), currentPrefix.lastIndexOf("!"),
     currentPrefix.lastIndexOf("?"), currentPrefix.lastIndexOf(";")) + 1).toLowerCase();
-  const negation = /(?:\b(?:not|never|cannot|can't|does not|doesn't|isn't|aren't|without|no promise (?:of|that)|no guarantee (?:of|that))\b|(?:^|\s)(?:не|нет|без|немає|не обіцяє|не гарантується|не гарантируется)(?:\s|$))/;
+  const negation = /(?:(?<![\p{L}\p{N}])(?:not|never|cannot|can't|does not|doesn't|isn't|aren't|without|no promise (?:of|that)|no guarantee (?:of|that))(?![\p{L}\p{N}])|(?:^|\s)(?:не|нет|без|немає|не обіцяє|не гарантується|не гарантируется)(?:\s|$))/u;
   if (negation.test(clause) || /\bno (?:fixed )?(?:or )?$/i.test(clause)) return true;
 
   // Preserve a genuine line-wrapped clause, but do not let an unrelated sentence on
   // the previous line suppress a claim on this one.
-  if (!currentPrefix.trim() && /(?:\b(?:can|cannot|can't|is|are|be|being|будет|буде|может|може)\s*)$/i.test(previousLine)) {
+  if (!currentPrefix.trim() && /(?:(?<![\p{L}\p{N}])(?:can|cannot|can't|is|are|be|being|будет|буде|может|може)\s*)$/iu.test(previousLine)) {
     return negation.test(previousLine.toLowerCase());
   }
   return false;
@@ -491,7 +499,7 @@ function isNegated(line, index, previousLine = "") {
 
 function isWalletQualified(line, previousLine = "") {
   const context = `${previousLine} ${line}`.toLowerCase();
-  return /\bwallet[- ]backed\b|\bfunded (?:wallet )?(?:flow|contest|mode)\b|кошельков|кошелёчн|гаманцев|\b(?:only|только|лишь|лише) (?:for |для )?(?:wallet|кошел|гаман)/.test(context);
+  return /(?<![\p{L}\p{N}])wallet[- ]backed(?![\p{L}\p{N}])|(?<![\p{L}\p{N}])funded (?:wallet )?(?:flow|contest|mode)(?![\p{L}\p{N}])|кошельков|кошелёчн|гаманцев|(?<![\p{L}\p{N}])(?:only|только|лишь|лише) (?:for |для )?(?:wallet|кошел|гаман)/u.test(context);
 }
 
 function addViolation(out, rule, file, line, message) {

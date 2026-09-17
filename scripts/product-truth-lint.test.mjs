@@ -516,6 +516,111 @@ test("the founder's Latin name is Ruslan Bei, across a line wrap and in a questi
   assert.deepEqual(lintText("Founded by **Ruslan Bei** (Руслан Бей).\nBeyond the byline, nothing changes.", "fixture.md", truth), []);
 });
 
+console.log("product_truth_lint: Russian and Ukrainian wordings");
+
+// `\b` never matched beside a Cyrillic letter, so until 2026-09-17 every Russian and Ukrainian
+// pattern written with it was a dead letter and these rules only ever judged English pages.
+// Each rule is fed the smallest sentence in both languages it must cut, plus wording it must
+// let through.
+test("automatic payout promises fail in Russian and Ukrainian", () => {
+  assert(rules("Выплата происходит автоматически.").has("automatic-payout"));
+  assert(rules("Платформа автоматически переводит деньги.").has("automatic-payout"));
+  assert(rules("Виплата відбувається автоматично.").has("automatic-payout"));
+  assert(rules("Платформа автоматично переказує гроші.").has("automatic-payout"));
+  assert.deepEqual(lintText("Мы не обещаем, что выплата происходит автоматически.", "fixture.md", truth), []);
+  assert.deepEqual(lintText("Ми не обіцяємо, що виплата відбувається автоматично.", "fixture.md", truth), []);
+});
+
+test("minute-level settlement promises fail in Russian and Ukrainian", () => {
+  assert(rules("Вывод обрабатывается в течение нескольких минут.").has("instant-payout-sla"));
+  assert(rules("Виведення обробляється протягом кількох хвилин.").has("instant-payout-sla"));
+  assert.deepEqual(lintText("Никто не обещает, что вывод проходит в течение нескольких минут.", "fixture.md", truth), []);
+  assert.deepEqual(lintText("Ніхто не обіцяє, що виведення відбувається протягом кількох хвилин.", "fixture.md", truth), []);
+});
+
+test("promising every payout rail works fails in Russian and Ukrainian", () => {
+  assert(rules("Работают все способы выплаты.").has("all-payout-methods"));
+  assert(rules("Все пять способов выплаты доступны.").has("all-payout-methods"));
+  assert(rules("Працюють усі способи виплати.").has("all-payout-methods"));
+  assert(rules("Усі ці способи виплати працюють.").has("all-payout-methods"));
+  assert.deepEqual(lintText("Способы выплаты зависят от задания.", "fixture.md", truth), []);
+  assert.deepEqual(lintText("Способи виплати залежать від завдання.", "fixture.md", truth), []);
+});
+
+test("the retired commission refund fails in Russian and Ukrainian", () => {
+  assert(rules("Часть комиссии возвращается, но лента не возвращается.").has("legacy-contest-commission-refund"));
+  assert(rules("Частина комісії повертається, але промо не повертається.").has("legacy-contest-commission-refund"));
+  assert.deepEqual(lintText("Комиссия за создание конкурса не взимается.", "fixture.md", truth), []);
+  assert.deepEqual(lintText("Комісія за створення конкурсу не стягується.", "fixture.md", truth), []);
+});
+
+test("saying the organizer pays the creator fee fails in Russian and Ukrainian", () => {
+  assert(rules("Комиссию платит заказчик, не автор.").has("organizer-pays-creator-fee"));
+  assert(rules("Комісію платить замовник, а не автор.").has("organizer-pays-creator-fee"));
+  assert.deepEqual(lintText("Комиссию за вывод платит автор, а не заказчик.", "fixture.md", truth), []);
+  assert.deepEqual(lintText("Комісію за виведення платить автор, а не замовник.", "fixture.md", truth), []);
+});
+
+test("a transfer promised at contest close fails in Russian and Ukrainian", () => {
+  assert(rules("В конце конкурса приз отправляется победителю.").has("contest-close-auto-transfer"));
+  assert(rules("Наприкінці конкурсу приз надсилається переможцю.").has("contest-close-auto-transfer"));
+  assert.deepEqual(lintText("Мы не обещаем, что в конце конкурса приз отправляется победителю в тот же день.", "fixture.md", truth), []);
+  assert.deepEqual(lintText("Ми не обіцяємо, що наприкінці конкурсу приз надсилається переможцю того ж дня.", "fixture.md", truth), []);
+});
+
+test("live escrow claims fail in Russian and Ukrainian", () => {
+  assert(rules("Деньги хранятся в эскроу.").has("live-on-chain-escrow"));
+  assert(rules("Бюджет удерживается через смарт-контракт.").has("live-on-chain-escrow"));
+  assert(rules("Кошти зберігаються в ескроу.").has("live-on-chain-escrow"));
+  assert(rules("Бюджет утримується через смарт-контракт.").has("live-on-chain-escrow"));
+  assert.deepEqual(lintText("Пока эскроу не запущен, никто не обещает, что деньги хранятся в эскроу.", "fixture.md", truth), []);
+  assert.deepEqual(lintText("Поки ескроу не запущено, ніхто не обіцяє, що кошти зберігаються в ескроу.", "fixture.md", truth), []);
+});
+
+test("the retired 5% and 8% funding-method rates fail in Russian and Ukrainian", () => {
+  assert(rules("Фиат: 5 %.").has("legacy-method-rate"));
+  assert(rules("Криптовалюта и кошелёк: 8 %.").has("legacy-method-rate"));
+  assert(rules("Фіат: 5 %.").has("legacy-method-rate"));
+  assert(rules("Криптовалюта та гаманець: 8 %.").has("legacy-method-rate"));
+  assert.deepEqual(lintText("Покупка в магазине: 8 %.", "fixture.md", truth), []);
+  assert.deepEqual(lintText("Покупка в магазині: 8 %.", "fixture.md", truth), []);
+});
+
+test("a line-wrapped Russian or Ukrainian negation still suppresses a false positive", () => {
+  assert.deepEqual(lintText("Это не значит, что после проверки будет\nавтоматическая выплата на кошелёк.", "fixture.md", truth), []);
+  assert.deepEqual(lintText("Це не означає, що після перевірки буде\nавтоматична виплата на гаманець.", "fixture.md", truth), []);
+  // A previous line that merely ends with the verb, without a negation, hides nothing.
+  assert(rules("После проверки будет\nавтоматическая выплата на кошелёк.").has("automatic-payout"));
+});
+
+test("a Russian or Ukrainian wallet qualifier licenses a prize-lock sentence", () => {
+  assert(rules("Приз заблокирован на платформе.").has("unqualified-prize-lock"));
+  assert(rules("Приз заблокований на платформі.").has("unqualified-prize-lock"));
+  assert.deepEqual(lintText("Только для кошелька: приз заблокирован на платформе.", "fixture.md", truth), []);
+  assert.deepEqual(lintText("Лише для гаманця: приз заблокований на платформі.", "fixture.md", truth), []);
+});
+
+test("a Russian 'no fee' beside another operation's rate is not read as that rate", () => {
+  assert.deepEqual(lintText("Создание конкурса без комиссии, а покупка в магазине — 8 %.", "fixture.md", truth), []);
+  assert.deepEqual(lintText("Створення конкурсу без комісії, а покупка в магазині — 8 %.", "fixture.md", truth), []);
+  assert(rules("Создание конкурса — 8 %.").has("contest-creation-fee"));
+});
+
+test("the Unicode boundary is a boundary: a stem inside a longer word does not fire", () => {
+  assert.deepEqual(lintText("Заработают все способы продвижения.", "fixture.md", truth), []);
+});
+
+test("no pattern in the linter puts an ASCII \\b beside Cyrillic or a \\p{..} outside the u flag", () => {
+  const source = readFileSync(join(root, "scripts/product-truth-lint.mjs"), "utf8").split("\n");
+  const offenders = [];
+  source.forEach((line, index) => {
+    if (/^\s*\/\//.test(line)) return;
+    if (/[Ѐ-ӿ]/.test(line) && line.includes("\\b")) offenders.push(`${index + 1}: ASCII \\b beside Cyrillic`);
+    if (line.includes("\\p{") && !/\/[dgimsy]*u[dgimsy]*(?![\w$])/.test(line)) offenders.push(`${index + 1}: \\p{..} without the u flag`);
+  });
+  assert.deepEqual(offenders, []);
+});
+
 console.log("product_truth_lint: safe corrections and parser boundaries");
 test("current facts and explicit corrections pass", () => {
   const value = [

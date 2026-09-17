@@ -832,7 +832,31 @@ function percentMarker(subject, value) {
   return new RegExp(`${subject}[^%\\n]{0,100}${value}\\s*%`, "i");
 }
 
-function canonicalSpecifications(truth) {
+// The help pages that carry the money terms may state the decided target of a pending
+// product change instead of the live value (founder, 2026-09-17): a withdrawal fee of 0 is
+// written as "no fee" / «без комиссии», and a per-user override cannot exist without a fee.
+// The legal terms keep describing the live contract until the product itself changes.
+const HELP_NO_FEE = {
+  en: /withdraw[^.\n]{0,80}(?:no (?:withdrawal )?fee|0\s*%|free of (?:commission|charge)|carries no fee)|no (?:withdrawal )?fee[^.\n]{0,40}withdraw/i,
+  ru: /вывод[^.\n]{0,80}(?:без комиссии|0\s*%)|без комиссии[^.\n]{0,40}вывод/i,
+  ua: /(?:вивед|виві)[^.\n]{0,80}(?:без комісії|0\s*%)|без комісії[^.\n]{0,40}(?:вивед|виві)/i,
+};
+
+function effectiveWithdrawalFee(truth, intentIndex) {
+  const record = intentIndex?.byPath?.get("withdrawal.defaultCommissionPercent");
+  if (record && record.status === "pending-product-change" && typeof record.target === "number") return record.target;
+  return truth.withdrawal.defaultCommissionPercent;
+}
+
+function canonicalSpecifications(truth, intentIndex = EMPTY_INTENT_INDEX) {
+  const helpFee = effectiveWithdrawalFee(truth, intentIndex);
+  const feeFree = helpFee === 0 && helpFee !== truth.withdrawal.defaultCommissionPercent;
+  const helpFeeRequirement = (lang) => feeFree
+    ? [["withdrawal fee", HELP_NO_FEE[lang]]]
+    : [["withdrawal fee", percentMarker(LANG[lang].withdrawal, helpFee)], ["per-user withdrawal override", override[lang]]];
+  const helpFeeBare = (lang) => feeFree
+    ? [["withdrawal fee", HELP_NO_FEE[lang]]]
+    : [["withdrawal fee", new RegExp(`${helpFee}\\s*%`, "i")], ["per-user withdrawal override", override[lang]]];
   const override = {
     en: /personal (?:fee |commission )?(?:rate |override)|per-user (?:fee |commission )?override/i,
     ru: /персональн(?:ая|ой) ставк|индивидуальн(?:ая|ой) комисси/i,
@@ -842,14 +866,12 @@ function canonicalSpecifications(truth) {
     ["contest creation fee", percentMarker(LANG[lang].creation, truth.contest.creationCommissionPercent)],
     ["contest top-up fee", percentMarker(LANG[lang].topUp, truth.contest.topUpCommissionPercent)],
     ["store fee", percentMarker(LANG[lang].store, truth.store.commissionPercent)],
-    ["withdrawal fee", percentMarker(LANG[lang].withdrawal, truth.withdrawal.defaultCommissionPercent)],
-    ["per-user withdrawal override", override[lang]],
+    ...helpFeeRequirement(lang),
     ["withdrawal minimum", new RegExp(`${truth.withdrawal.minimumGrossAmount}\\s*${truth.withdrawal.minimumCurrency}`, "i")],
     ["manual processing", LANG[lang].manual],
   ];
   const withdrawal = (lang) => [
-    ["withdrawal fee", new RegExp(`${truth.withdrawal.defaultCommissionPercent}\\s*%`, "i")],
-    ["per-user withdrawal override", override[lang]],
+    ...helpFeeBare(lang),
     ["withdrawal minimum", new RegExp(`${truth.withdrawal.minimumGrossAmount}\\s*${truth.withdrawal.minimumCurrency}`, "i")],
     ["manual processing", LANG[lang].manual],
     ["USDT withdrawal", /USDT/i],
@@ -876,9 +898,9 @@ function canonicalSpecifications(truth) {
   ];
 }
 
-export function checkCanonicalPages(root, truth) {
+export function checkCanonicalPages(root, truth, intentIndex = EMPTY_INTENT_INDEX) {
   const violations = [];
-  for (const [file, , requirements, requireSnapshot] of canonicalSpecifications(truth)) {
+  for (const [file, , requirements, requireSnapshot] of canonicalSpecifications(truth, intentIndex)) {
     const absolute = join(root, file);
     if (!existsSync(absolute)) {
       addViolation(violations, "canonical-page", file, 1, "required truth page is missing");
@@ -1072,7 +1094,7 @@ export function lintRepository({
   const options = { intent: intentIndex, onAllowed: (allowance) => allowances.push(allowance) };
   const content = sources.flatMap((source) =>
     lintText(source.text, source.file, truth, source.declaration ?? generated, options));
-  const canonical = checkCanonicalPages(root, truth);
+  const canonical = checkCanonicalPages(root, truth, intentIndex);
   return { truth, intent, filesChecked: sources.length, sourcesChecked: provenance.checked, allowances,
     relaxedRules: relaxedByIntent(truth, intentIndex),
     violations: [...validation, ...intentValidation, ...sourceValidation, ...canonical, ...content] };

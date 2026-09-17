@@ -10,9 +10,9 @@ hero:
   lede: "Opened a task card and met CPM, threshold, cap and claim now in one breath? Every one of them is here in a sentence or two, taken from DareBay task cards, payout rules and clipper chats, so you read terms like someone who has clipped for years. Each term has its own anchor, so 'what is CPM' is answered with a link. Figures come from the platform's data as of 23 August 2026."
   takeaways:
     - "<b>CPM here means the rate for 1,000 counted views.</b> Across open DareBay tasks it runs from $1 to $2, and it has nothing to do with the price of an ad."
-    - "<b>Threshold and cap hold a clip from both ends.</b> Clear the typical 2000-view threshold and nothing is subtracted for it; the typical cap of $100 closes the amount from above."
+    - "<b>Threshold and cap hold a clip from both ends.</b> Clear the threshold on the card and nothing is subtracted for it; the cap (up to $500 in open tasks) closes the amount from above."
     - "<b>You are paid for counted views, not for the figure in your stats.</b> The platform's counter reads the site's public counter, and inflated views are filtered at moderation."
-    - "<b>Withdrawal and Stars are two different doors.</b> A withdrawal request starts from 10 USDT with a 10% fee and goes to your wallet; getting it in Stars stays inside Telegram."
+    - "<b>Withdrawal and Stars are two different doors.</b> A withdrawal request starts from 10 USDT with no fee and goes to your wallet; getting it in Stars stays inside Telegram."
 cta:
   title: "Now go and read a real card"
   lede: "Open the DareBay catalogue and these words stop being abstract: the card names the rate, the threshold and the cap before you submit, and in a wallet-backed contest the fund already sits on the platform. Find every term you have just learned in the first card you open."
@@ -68,7 +68,7 @@ glossary:
   - { id: "viewer-voting", term: "Viewer voting", definition: "The VIEWER_VOTING selection type: the winner is chosen by viewers' votes for the entries, not by a view counter. One of four selection types on DareBay, visible on the card before you submit." }
   - { id: "wallet", term: "Wallet", definition: "Your balance on DareBay. When a task ends, your earnings are credited here, and from here you file a withdrawal request: USDT to an external wallet on TON or Telegram Stars." }
   - { id: "watch-time", term: "Watch time (retention)", definition: "The share of a clip the viewer watched to the end. The main signal for recommendations: a clip with high retention gets shown further, and views grow without followers." }
-  - { id: "withdrawal-fee", term: "Withdrawal fee", definition: "The withdrawal fee is 10% of the requested amount; some accounts have a personal rate, and the form shows the exact figure before you confirm. A person processes the request, so the platform promises no settlement time." }
+  - { id: "withdrawal-fee", term: "Withdrawal fee", definition: "A charge for moving money from the balance to a wallet. DareBay has none: a request from 10 USDT reaches the wallet in full. A person processes the request, so the platform promises no settlement time." }
 ---
 
 Read a task card without stumbling and you stop guessing what it will pay you: CPM or per thousand, threshold or cap, claim now or withdrawal. This glossary collects 52 terms from DareBay task cards, payout rules and clipper chats, each explained in a sentence or two.
@@ -85,7 +85,7 @@ In advertising, CPM is the price of a thousand impressions paid to a platform. I
 
 ### Threshold and cap
 
-The threshold looks at views, the cap at money. The threshold is the minimum without which a clip is not paid at all: typically 2000 views in open tasks, 1000 by default, never deducted. The cap is the most one video can earn: the typical cap is $100, and a second clip is counted on its own with no limit per author. 20,000 views at a $1 rate make 20,000 / 1000 × $1.00 = **$20.00**, well under the $100 cap; the threshold check is in [how pay-per-view works](/en/earnings/how-pay-per-view-works).
+The threshold looks at views, the cap at money. The threshold is the minimum without which a clip is not paid at all: set by the task (1000 by default), never deducted. The cap is the most one video can earn, up to $500 in open tasks, and a second clip is counted on its own with no limit per author. 20,000 views at a $1 rate make 20,000 / 1000 × $1.00 = **$20.00**, well under the $100 cap; the threshold check is in [how pay-per-view works](/en/earnings/how-pay-per-view-works).
 
 ### Counted and displayed views
 
@@ -97,7 +97,7 @@ A pay-per-view task pays one thing: the rate per 1000 counted views, up to the c
 
 ### Withdrawal and Stars
 
-A withdrawal is a request for USDT on the TON network: from 10 USDT, a withdrawal fee of 10% of the requested amount, handled by the team, a personal rate possible. Stars are the second route in the same wizard: the amount goes out as Telegram Stars and stays inside Telegram, so it is not a withdrawal. Both routes use the available balance once fresh earnings have matured for 24 hours; details on the [withdrawals page](/en/help/darebay-withdrawals).
+A withdrawal is a request for USDT on the TON network: from 10 USDT, with no withdrawal fee, handled by the team. Stars are the second route in the same wizard: the amount goes out as Telegram Stars and stays inside Telegram, so it is not a withdrawal. Both routes use the available balance once fresh earnings have matured for 24 hours; details on the [withdrawals page](/en/help/darebay-withdrawals).
 
 ## Frequently asked questions
 

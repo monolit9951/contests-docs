@@ -69,7 +69,7 @@ carry no fee.
 
 Creating a contest and topping up its budget currently carry no fee. Entry is
 free. After a reward is credited, withdrawing an available balance is a separate
-request with a fee, minimum and processing by the team. See [current fees](/en/help/what-commission).
+request with a 10 USDT minimum, no fee and processing by the team. See [current fees](/en/help/what-commission).
 
 ## Paying the winners
 

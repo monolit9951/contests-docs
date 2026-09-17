@@ -13,8 +13,7 @@ import {
   readProductIntent,
   validateProductIntent,
   validateTruthSnapshot,
-  verifySourceProvenance,
-} from "./product-truth-lint.mjs";
+  verifySourceProvenance, productIntentIndex } from "./product-truth-lint.mjs";
 
 const root = resolve(import.meta.dirname, "..");
 const truth = JSON.parse(readFileSync(join(root, "data/product-truth.json"), "utf8"));
@@ -572,6 +571,34 @@ test("mutating a canonical withdrawal rate fails", () => {
     writeFileSync(target, readFileSync(target, "utf8").replaceAll("10%", "9%"));
     assert(checkCanonicalPages(fixture, truth).some((item) =>
       item.file === "docs/en/help/darebay-withdrawals.md" && /withdrawal fee/.test(item.message)));
+  } finally {
+    rmSync(fixture, { recursive: true, force: true });
+  }
+});
+
+test("a help page stating no withdrawal fee passes only under the pending intent", () => {
+  const fixture = mkdtempSync(join(tmpdir(), "product-truth-intent-canon-"));
+  const canonicalFiles = [
+    "docs/pomoshch/kakaya-komissiya.md", "docs/en/help/what-commission.md", "docs/ua/dopomoha/yaka-komisiia.md",
+    "docs/pomoshch/darebay-vyvod-deneg.md", "docs/en/help/darebay-withdrawals.md", "docs/ua/dopomoha/darebay-vyvedennia-hroshei.md",
+    "docs/legal/terms.md", "docs/en/legal/terms.md", "docs/ua/legal/terms.md",
+  ];
+  try {
+    for (const file of canonicalFiles) {
+      const target = join(fixture, file);
+      mkdirSync(dirname(target), { recursive: true });
+      writeFileSync(target, readFileSync(join(root, file), "utf8"));
+    }
+    const intentIndex = productIntentIndex({
+      schemaVersion: 1, decidedAt: "2026-09-17", source: "test", supersedes: [],
+      claims: [{ id: "withdrawal-free", status: "pending-product-change", liveTruth: "withdrawal.defaultCommissionPercent", target: 0 }],
+    });
+    const en = "docs/en/help/darebay-withdrawals.md";
+    const withIntent = checkCanonicalPages(fixture, truth, intentIndex).filter((item) => item.file === en);
+    assert(!withIntent.some((item) => /withdrawal fee|per-user withdrawal override/.test(item.message)),
+      `unexpected: ${JSON.stringify(withIntent)}`);
+    const without = checkCanonicalPages(fixture, truth).filter((item) => item.file === en);
+    assert(without.some((item) => /withdrawal fee/.test(item.message)));
   } finally {
     rmSync(fixture, { recursive: true, force: true });
   }

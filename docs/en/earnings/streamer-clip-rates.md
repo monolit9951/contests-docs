@@ -1,6 +1,6 @@
 ---
 title: What streamer clips pay and how to start
-description: Streamer clips pay $1.00 to $2.00 per 1000 views, with a cap per submission set by the buyer. What to cut, what rights the brief grants, how to submit.
+description: "Streamer clips pay $1–2 per 1,000 views, up to $500 per clip, withdrawals with no fee. What to cut from a stream, what rights the brief grants and how to submit your first clip."
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_cpm_min, ppv_cpm_median, ppv_cpm_max, ppv_min_views_threshold_live]
 seo: true
@@ -11,7 +11,7 @@ hero:
   takeaways:
     - "<b>Open contests pay $1.00 to $2.00 per 1000 views.</b> The spread is twofold, so the same clip is worth double at the top of the band: read the numbers on the card, not the streamer's name."
     - "<b>Payout = views / 1000 × rate, never above the cap on one submission.</b> You can run it before you edit: 20,000 views at $1.00 is 20,000 / 1000 × $1.00 = $20.00."
-    - "<b>Clear the 2000-view threshold and the whole counter is paid, not the part above the bar.</b> The typical cap across open contests is $100 per submission, and the largest campaigns go up to $500."
+    - "<b>Clear the threshold on the card and the whole counter is paid, not the part above the bar.</b> Caps across open contests run up to $500 per submission, and both numbers are on the card before you submit."
     - "<b>The brief is your permission to cut the broadcast, so there is nobody to ask.</b> The boundaries sit in the contest terms, the clip goes in by link, and a hashtag is only needed where the brief says so."
 cta:
   title: "Pick a streamer contest by its numbers, not by the name"
@@ -42,12 +42,12 @@ Turning a moment into a finished video - the vertical frame, the hook, subtitles
 |-----------|-------|-----------------------|
 | Rate, minimum | $1.00 per 1000 views | The floor across open contests; it is also the typical rate |
 | Rate, maximum | $2.00 per 1000 views | The high end of live contests |
-| View threshold | 2000 | The typical figure across open contests: from that mark a submission joins the budget split |
+| View threshold | Set by the contest | From that mark a submission joins the budget split |
 | Cap on one submission | Set by the buyer | The maximum payout for a single submission; it stands on the card before you submit |
 
 The spread of rates between contests is twofold, so a contest is chosen by the numbers on the card, not by the streamer's name. The buyer fixes the rate, the threshold and the cap at contest creation and does not move them after launch.
 
-The payout is worked out as `views / 1000 * the contest rate`, and never above the cap on one submission. The threshold is not subtracted: once a submission clears the threshold of 2000 views, the whole counter goes into the maths, not the remainder above the bar.
+The payout is worked out as `views / 1000 * the contest rate`, and never above the cap on one submission. The threshold is not subtracted: once a submission clears the threshold on the card, the whole counter goes into the maths, not the remainder above the bar.
 
 At the floor rate of $1.00 per 1000 views:
 
@@ -55,7 +55,7 @@ At the floor rate of $1.00 per 1000 views:
 - 120,000 views: 120,000 / 1000 * $1.00 = **$120.00**
 - 300,000 views: 300,000 / 1000 * $1.00 = **$300.00**, but where the formula runs above the contest cap, the payout for that submission stops at the cap
 
-A cap is a mechanic for sharing a budget, not a verdict on your work: without one, a single viral video would take the whole contest budget and leave the other clippers nothing. The buyer sets it at contest creation: across open contests the typical cap is $100 per submission, and the largest campaigns go up to $500. The higher the rate, the sooner a submission runs into it: in a contest at $2.00 per 1000 views that happens twice as early in views as at $1.00 per 1000. So the rate and the cap are read together.
+A cap is a mechanic for sharing a budget, not a verdict on your work: without one, a single viral video would take the whole contest budget and leave the other clippers nothing. The buyer sets it at contest creation: across open contests the cap runs up to $500 per submission. The higher the rate, the sooner a submission runs into it: in a contest at $2.00 per 1000 views that happens twice as early in views as at $1.00 per 1000. So the rate and the cap are read together.
 
 ## Rights to the source: what a streamer's brief allows
 
@@ -77,9 +77,9 @@ The permission works within the boundaries of the brief. A broadcast by an outsi
 
 2. **Read the terms in full.** Which material is allowed, whether footage is attached to the brief, where to publish, and the date entries close. If nothing is attached, you pick the source yourself within the brief.
 
-3. **Pick a moment and cut the clip.** One moment, one video. The hook in the first second decides whether the work clears the 2000-view threshold.
+3. **Pick a moment and cut the clip.** One moment, one video. The hook in the first second decides whether the work clears the threshold.
 
-4. **Publish the video on the site named in the terms.** The platform can read the view counter for TikTok, YouTube and Instagram; the specific site is set by the contest.
+4. **Publish the video on the site named in the terms.** The platform reads the view counter for TikTok, YouTube, Instagram and the other sites named in the terms; the specific site is set by the contest.
 
 5. **Send the link to the published video.** A submission enters the contest through the link you sent: without that step it takes no part in the budget split, however many views it collects. A hashtag is only needed where the brief says so.
 

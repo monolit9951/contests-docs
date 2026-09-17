@@ -8,7 +8,7 @@ seo: true
 
 # What TikTok pays for views
 
-You can be paid for views before you have a single follower, and that is the whole difference between the two routes below. A platform's creator programme pays you for the audience you have already built. A contest on an intermediary platform pays for the reach of one specific video: no audience needed, and you see the rate before you sit down to edit. On DareBay, open contest rates run from **$1.00 to $2.00 per 1000 views**, and the typical threshold is **2000 views**: from that mark a submission enters the split. The site is set by the contest: submissions are accepted on TikTok, YouTube and Instagram.
+You can be paid for views before you have a single follower, and that is the whole difference between the two routes below. A platform's creator programme pays you for the audience you have already built. A contest on an intermediary platform pays for the reach of one specific video: no audience needed, and you see the rate before you sit down to edit. On DareBay, open contest rates run from **$1.00 to $2.00 per 1000 views**, and the threshold is printed on the card: from that mark a submission enters the split. The site is set by the contest: submissions are accepted on TikTok, YouTube and Instagram.
 
 The platform's figures are a data snapshot from 2026-08-15. The TikTok and YouTube programme requirements below were **checked against the platforms' own sources on 15 August 2026**: platforms move their bars, so check them with the platform itself before you apply.
 
@@ -40,7 +40,7 @@ What is visible on the contest card **before you submit**: the rate per 1000 vie
 
 There are no follower requirements at all: the money is tied to the reach of one specific video, not to the size of a channel. A beginner clipper and an author with a million followers enter the same contest on the same terms. Taking part is free, and the platform takes no commission out of the payout.
 
-The live sites for submissions are TikTok, YouTube and Instagram. Which one is needed is set by the individual contest, so earning from YouTube clips works here exactly like clipping for TikTok. On Instagram what counts is a video with views; a photo post gives no such metric. A submission enters the contest through the link you send to the published video; a hashtag is needed where the brief says so, and it is required for an anonymous submission.
+The live sites for submissions are TikTok, YouTube, Instagram and the other sites named in the contest. Which one is needed is set by the individual contest, so earning from YouTube clips works here exactly like clipping for TikTok. On Instagram what counts is a video with views; a photo post gives no such metric. A submission enters the contest through the link you send to the published video; a hashtag is needed where the brief says so, and it is required for an anonymous submission.
 
 The platform takes the views neither from your word nor from the buyer's: an independent counter reads the published view counter on the site. There is moderation and there are basic checks, and a submission with suspicious growth goes on hold.
 
@@ -48,7 +48,7 @@ The platform takes the views neither from your word nor from the buyer's: an ind
 
 | Axis | A platform creator programme | A contest on an intermediary |
 |---|---|---|
-| Barrier to entry | An audience already built: 10,000 followers and 100,000 views over 30 days at TikTok, 1000 subscribers plus watch hours or millions of Shorts views at YouTube | No audience needed. The threshold is counted on the individual submission, and the typical threshold across open contests is 2000 views |
+| Barrier to entry | An audience already built: 10,000 followers and 100,000 views over 30 days at TikTok, 1000 subscribers plus watch hours or millions of Shorts views at YouTube | No audience needed. The threshold is counted on the individual submission and printed on the contest card |
 | Who pays | The platform, out of its own revenue and by its own rules | A specific buyer, out of a budget frozen on the platform before the start |
 | Is the rate known in advance | No. Neither TikTok nor YouTube publishes a tariff per 1000 views | Yes. The rate stands on the contest card and does not move after launch |
 | How the payout is worked out | The platform's closed formula: four quality metrics at TikTok, ad auctions at YouTube | Views are divided by 1000 and multiplied by the rate. The threshold is not subtracted: once a submission clears it, the whole counter goes into the maths. Nothing is paid above the cap on one submission, and the buyer names that cap, visible on the card before you submit |
@@ -79,7 +79,7 @@ No, those are different restrictions. The list of countries for a creator progra
 
 ### Which site should I publish the work on?
 
-The one the contest named. The platform currently counts views for TikTok, YouTube and Instagram, the specific site is chosen by the buyer at contest creation, and it is stated on the card. Publishing on a different site does not count.
+The one the contest named. The platform counts views for TikTok, YouTube, Instagram and the other sites named in the contest, the specific site is chosen by the buyer at contest creation, and it is stated on the card. Publishing on a different site does not count.
 
 ### Is it worth waiting until I have an audience and only then starting?
 

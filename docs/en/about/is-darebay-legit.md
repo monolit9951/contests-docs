@@ -31,9 +31,9 @@ One detail worth knowing because it works in your favour: clearing the threshold
 
 ## What the platform charges
 
-Creating a contest and topping up its budget currently carry no fee, and entering a contest is free for creators. Money only meets a percentage at one point: withdrawing a credited balance has a **10% fee** and a **10 USDT minimum request**, and a personal rate override can apply, in which case the form shows the exact figure before you confirm.
+Creating a contest and topping up its budget currently carry no fee, and entering a contest is free for creators. Withdrawing a credited balance carries **no fee** and has a **10 USDT minimum request**; the form shows the amount to receive before you confirm.
 
-The fee is deducted from the amount you requested. It is never a separate transfer, and never something you send in advance. The full breakdown by operation is on the [DareBay fees page](/en/help/what-commission).
+Nothing is ever a separate transfer, and nothing is ever sent in advance. The full breakdown by operation is on the [DareBay fees page](/en/help/what-commission).
 
 ## Who answers when something breaks
 

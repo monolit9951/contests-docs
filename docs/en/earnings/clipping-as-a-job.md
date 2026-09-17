@@ -1,6 +1,6 @@
 ---
 title: Clipping as a job - how to earn from video clips
-description: "Clipping is piecework paid per view: take a brief, cut a clip, publish it and earn $1.00 to $2.00 per 1000 views in open contests. No followers, no portfolio."
+description: "Clipping is piecework paid per view: take a brief, cut a clip, publish it and earn $1–2 per 1,000 views, up to $500 per clip, with a fee-free withdrawal. No followers, no portfolio."
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_cpm_min, ppv_cpm_median, ppv_cpm_max, ppv_min_views_threshold_live]
 seo: true
@@ -10,15 +10,15 @@ hero:
   lede: "A clipper is paid for the reach of one video, not for the size of a channel, so zero followers and an empty portfolio are a normal place to start. Here is the craft without the varnish: what goes into one clip, how long it takes, why the income swings, and the route from a first contest to first money."
   takeaways:
     - "<b>Reach pays here, not your follower count:</b> open contests run from $1.00 to $2.00 per 1000 views of one specific video, whatever the size of your channel."
-    - "<b>The 2000-view threshold is never subtracted:</b> clear it and the whole counter is paid, so 12,000 views at $1.00 per 1000 is 12,000 / 1000 × $1.00 = $12.00."
-    - "<b>The cap per submission is set by the buyer,</b> and in live contests it sits around the hundred-dollar mark; your next clip starts its own count from scratch."
+    - "<b>The threshold on the card is never subtracted:</b> clear it and the whole counter is paid, so 12,000 views at $1.00 per 1000 is 12,000 / 1000 × $1.00 = $12.00."
+    - "<b>The cap per submission is set by the buyer,</b> up to $500 in open contests; your next clip starts its own count from scratch."
     - "<b>Your first clip takes a couple of hours,</b> later ones 20 to 40 minutes; all you need is a DareBay account, an open account on the contest's site and any editing app."
 cta:
   title: "Your first brief is on the board today"
   lede: "No application, no portfolio, no follower count to clear. Open the DareBay catalogue, pick a brief whose numbers you have checked on the card, and send in your first clip as a link."
 ---
 
-You can earn from clips with no followers and nothing to show, because clipping is piecework paid per view. A clipper takes a brief on the platform, cuts a short vertical video out of somebody else's footage, publishes it on the contest's site - currently TikTok, YouTube or Instagram - and sends the link. After that, reach pays: rates across open contests run from **$1.00**<!-- baseline: ppv_cpm_min --> to **$2.00 per 1000 views**<!-- baseline: ppv_cpm_max -->, and nothing open right now pays below that floor. A portfolio and years of practice buy you nothing here: you are paid for the views of one specific video, not for the size of your channel. In a wallet-backed contest the budget is frozen on the platform before you take the brief, the contest commission is 0%, and taking part is free.
+You can earn from clips with no followers and nothing to show, because clipping is piecework paid per view. A clipper takes a brief on the platform, cuts a short vertical video out of somebody else's footage, publishes it on the contest's site - TikTok, YouTube, Instagram or another site named in the brief - and sends the link. After that, reach pays: rates across open contests run from **$1.00**<!-- baseline: ppv_cpm_min --> to **$2.00 per 1000 views**<!-- baseline: ppv_cpm_max -->, and nothing open right now pays below that floor. A portfolio and years of practice buy you nothing here: you are paid for the views of one specific video, not for the size of your channel. In a wallet-backed contest the budget is frozen on the platform before you take the brief, the contest commission is 0%, and taking part is free.
 
 This is piecework, not passive income. Below: what the job actually asks of you, what the result depends on, and one route from zero - first contest, first submission, first money.
 
@@ -56,7 +56,7 @@ Before you submit, everything is known except one thing: how many views the vide
 | The cap on a single submission | Whether the payout ever reaches the cap |
 | A wallet-backed contest budget is frozen and the terms do not move after launch | How the site hands out impressions |
 
-That is where the shape of the income comes from. One video takes 3000 views and the next one on the same account takes 200,000, and there is no predicting it in advance. Submissions that miss the threshold bring in nothing: the typical threshold across open contests is **2000 views**<!-- baseline: ppv_min_views_threshold_live -->. So a clipper's income is measured not by the hour but by a run of jobs across a month, where some go to zero and one or two carry the result.
+That is where the shape of the income comes from. One video takes 3000 views and the next one on the same account takes 200,000, and there is no predicting it in advance. Submissions that miss the threshold on the card bring in nothing. So a clipper's income is measured not by the hour but by a run of jobs across a month, where some go to zero and one or two carry the result.
 
 The threshold is not subtracted, though: once a submission clears it, the whole counter goes into the maths. A video with 12,000 views at $1.00<!-- baseline: ppv_cpm_median --> per 1000 brings 12,000 / 1000 * $1.00 = **$12.00** - all 12,000 count, not the remainder above the bar.
 
@@ -73,7 +73,7 @@ The cap on a single submission is set by the buyer at contest creation: that is 
 
 Not needed: followers, account seniority, a portfolio, membership of a site's creator programme, an invitation or an entry fee.
 
-The site is set by the contest. The platform can read the published view counter on TikTok, YouTube and Instagram, so submissions are accepted from those sites. Instagram needs a video with views: a photo post has no such metric and does not go into the maths.
+The site is set by the contest. The platform reads the published view counter on TikTok, YouTube, Instagram and the other sites named in the brief. Instagram needs a video with views: a photo post has no such metric and does not go into the maths.
 
 ## From zero: first contest, first submission, first money
 
@@ -91,7 +91,7 @@ The site is set by the contest. The platform can read the published view counter
 
 **The first money**
 
-7. **Clear the threshold.** A submission with reach below the threshold takes no part in the budget split. The typical threshold across open contests is **2000 views**<!-- baseline: ppv_min_views_threshold_live -->.
+7. **Clear the threshold.** A submission with reach below the threshold takes no part in the budget split. The threshold is printed on the contest card and is never deducted.
 8. **Wait for the results.** The calculation is automatic: an independent counter reads the published view counter on the site and works out the payout at the contest rate. There is moderation and there are basic checks, and a submission with suspicious growth goes on hold. Paying the money out can be handled by hand, and the platform promises no specific deadline.
 
 A first job rarely takes off, and that is normal: its purpose is to show you the whole route and give you a reference point. By the second or third it becomes visible which subjects and which contests work for you, and from there you pick briefs deliberately.

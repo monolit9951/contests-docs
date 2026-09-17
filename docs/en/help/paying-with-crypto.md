@@ -15,7 +15,7 @@ Crypto is not mandatory for entering or for the reward: the payment method and t
 ## What the wallet can do
 
 - **Top up the balance** in USDT.
-- **Fund the prize budget** of a contest. Creating a contest costs 10 USDT as a one-off payment, and the contest commission is 0%; there is no separate charge for topping up a contest budget either.
+- **Fund the prize budget** of a contest. Creating a contest is free, and the contest commission is 0%; there is no separate charge for topping up a contest budget either.
 - **Withdraw an available balance** to an external wallet on the TON network, as a separate request in the withdrawal wizard.
 
 The current top-up and withdrawal methods are listed right on those screens in the app. Go by them, not by the list in a contest description.

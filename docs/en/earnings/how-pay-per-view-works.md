@@ -1,6 +1,6 @@
 ---
 title: "How pay-per-view works: how views are counted and paid"
-description: "The platform reads the site's counter and the formula views / 1000 × rate sets the payout: the 2000-view threshold is not deducted, the typical cap is $100."
+description: "How pay-per-view works: the platform reads the site's counter, views / 1,000 × rate sets the payout, the threshold is not deducted, caps run up to $500 per clip, withdrawals are fee-free."
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_cpm_median, ppv_min_views_threshold_live, ppv_default_min_views_threshold, ppv_max_per_work_typical]
 seo: true
@@ -10,9 +10,9 @@ hero:
   lede: "You post the clip, and from that point nobody gets to argue about the numbers. In a wallet-backed task the budget is locked on the platform before you start, the platform reads the public counter at your link, a formula turns those views into money, and the team sends the transfer. Here is the whole chain step by step, with the threshold, the cap and an example in dollars."
   takeaways:
     - "<b>The platform reads the views, not a person:</b> an independent counter takes the site's public figure at the link you sent, so neither side can nudge it up or down."
-    - "<b>The threshold is not a deduction:</b> clear the typical 2000 views and you are paid on the whole counter from the very first one; the system default is 1000 and buyers usually raise it."
-    - "<b>One formula for everybody:</b> views / 1000 × rate, never above the cap on one submission (usually $100), and neither the buyer nor support can replay it in someone's favour."
-    - "<b>Code counts, the team pays:</b> no deadline is promised, but a wallet-backed budget is frozen before you start and the calculation is already on the record."
+    - "<b>The threshold is not a deduction:</b> clear the threshold printed on the task card and you are paid on the whole counter from the very first view."
+    - "<b>One formula for everybody:</b> views / 1000 × rate, never above the cap on one submission (up to $500 in open tasks), and neither the buyer nor support can replay it in someone's favour."
+    - "<b>Code counts, the money is already on the platform:</b> a wallet-backed budget is frozen before you start, the calculation is on the record, and withdrawals to your wallet carry no fee."
 cta:
   title: "Pick a task where the maths is open before you start"
   lede: "Rate, threshold and cap are set before anyone opens an editor, the platform reads your counter, and the result is recorded against your name. Choose a task for the site you already post on, publish the clip and send the link."
@@ -32,9 +32,9 @@ cta:
 | Parameter | Value | What it means |
 |---|---|---|
 | Rate | from $1.00 to $2.00 per 1000 views across open tasks | The typical rate is $1.00; the buyer names their own |
-| View threshold | 2000 views (typical); the system default is 1000 | The entry condition; the buyer sets the exact value |
-| Cap per submission | $100 (typical) | The most one submission can earn |
-| Site | Set by the task | Stats are collected for TikTok, YouTube and Instagram |
+| View threshold | Set by the buyer on the card | The entry condition: below it a clip earns nothing, above it the whole counter is paid |
+| Cap per submission | Up to $500 in open tasks | The most one submission can earn |
+| Site | Set by the task | Stats are collected for TikTok, YouTube, Instagram and the other sites named in the task |
 
 All three numbers are fixed at creation and stand on the card before you submit. Every figure on this page comes from the platform's own data (snapshot: 2026-08-23) and counts only open tasks.
 
@@ -44,7 +44,7 @@ An independent counter reads the published view counter on the site at the link 
 
 ## The threshold is not deducted: the whole counter counts
 
-The threshold is an admission condition, not a deductible: it only decides whether the submission takes part in the budget split. The buyer sets it in the "minimum views" field; left empty, the system fills in its default of **1000 views**, and in practice buyers set it higher: the typical threshold across open tasks is **2000 views**.
+The threshold is an admission condition, not a deductible: it only decides whether the submission takes part in the budget split. The buyer sets it in the "minimum views" field; left empty, the system fills in its default of **1000 views**, and the buyer can set any figure, down to a single view; the exact value is always on the card before you submit.
 
 An example: a threshold of 2000 views, a rate of $1.00 per 1000 views, and a submission that reached 6000 views.
 
@@ -95,7 +95,7 @@ The calculation starts at the end of the task and produces a credit with a statu
 
 ### What payout methods are available?
 
-The withdrawal wizard offers USDT to an external wallet on the TON network and Telegram Stars: the minimum withdrawal is 10 USDT, the withdrawal fee is 10% of the requested amount (a personal rate is possible), and the team handles processing. In tasks with direct payment the organizer pays you themselves, in Stars or to a TON wallet; the platform never asks you to send money in advance to "activate" a payout. Details: [withdrawing money from DareBay](/en/help/darebay-withdrawals).
+The withdrawal wizard offers USDT to an external wallet on the TON network and Telegram Stars: the minimum withdrawal is 10 USDT, there is no withdrawal fee, and the team handles processing. In tasks with direct payment the organizer pays you themselves, in Stars or to a TON wallet; the platform never asks you to send money in advance to "activate" a payout. Details: [withdrawing money from DareBay](/en/help/darebay-withdrawals).
 
 ### Can I submit more than one clip?
 

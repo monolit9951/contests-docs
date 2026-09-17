@@ -1,6 +1,6 @@
 ---
 title: Where to find clipping work - a marketplace for clips
-description: Who pays for clips, where the briefs and the source footage come from, how a direct deal differs from an intermediary. Rates of $1.00 to $2.00 per 1000 views.
+description: "Where to find clipping work: streamers directly, brands through selection, and the DareBay board with $1–2 per 1,000 views, up to $500 per clip, no application and no followers."
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_cpm_min, ppv_cpm_median, ppv_cpm_max, ppv_min_views_threshold_live]
 seo: true
@@ -11,7 +11,7 @@ hero:
   takeaways:
     - "<b>Work comes from three pockets:</b> a streamer out of their own income, a brand or agency through selection, or an intermediary that holds the money first."
     - "<b>Open DareBay contests pay $1.00 to $2.00 per 1000 views,</b> and you never haggle: the rate and the threshold stand on the card before you submit and do not change after launch."
-    - "<b>The typical threshold is 2000 views,</b> and nobody deducts it: clear the mark and the whole counter goes into the maths."
+    - "<b>The threshold is set by the brief,</b> and nobody deducts it: clear the mark and the whole counter goes into the maths; caps run up to $500 per clip."
     - "<b>Footage comes with the brief or from public sources:</b> the streamer's VODs, the author's own videos, the brand's material. Somebody else's clip or edit will not pass."
 cta:
   title: "Pick a brief off the board tonight"
@@ -69,7 +69,7 @@ What one finished clip involves from there is in [clipping as a job](/en/earning
 1. Sign up at [DareBay](https://darebay.com) - an account is all you need, no portfolio and no application.
 2. Open the contest board and pick a brief on your subject: streamer clips, reviews, challenges, videos to a brand's brief.
 3. Read the card in full: the rate per 1000 views, the threshold, the cap per submission, the total budget, the deadline, the publishing site and any attached footage.
-4. Edit the video and publish it on your own account on the site the contest named. Counters are read for TikTok, YouTube and Instagram.
+4. Edit the video and publish it on your own account on the site the contest named. Counters are read for TikTok, YouTube, Instagram and the other sites named in the brief.
 5. Send DareBay the link to the published video - that link is how the work enters the contest. A hashtag is only needed where the brief spells it out, and for an anonymous submission.
 6. From there the contest mechanic runs: the view counter is read, the amount is worked out by formula, and an undistributed wallet-backed budget remainder goes back to the buyer.
 

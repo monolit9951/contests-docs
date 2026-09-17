@@ -1,16 +1,16 @@
 ---
 title: "How to make $1,000 a month clipping: the arithmetic"
-description: "$1,000 a month at $1 per 1,000 views is a million counted views: 10 clips at the $100 cap, 25 at 40,000, 50 at 20,000. A weekly system and what breaks the plan."
+description: "How to make $1,000 a month clipping: at $1 per 1,000 views that is a million counted views, at $2 half a million. Three layouts by clip count, a weekly system and a fee-free withdrawal."
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_cpm_median, ppv_min_views_threshold_live, ppv_max_per_work_typical]
 seo: true
 landing: true
 hero:
   kicker: "Guide · 2026"
-  lede: "A thousand a month is built from the clips you finish, not from one viral hit: the $100 cap per clip cannot be out-reached. Here is the arithmetic of that thousand, three layouts by number of submissions, a week you can actually run, and the things that usually break the plan, each with its own way out. Every scenario is hypothetical."
+  lede: "A thousand a month is built from the clips you finish, not from one viral hit: the cap per clip (up to $500 in open tasks) cannot be out-reached. Here is the arithmetic of that thousand, three layouts by number of submissions, a week you can actually run, and the things that usually break the plan, each with its own way out. Every scenario is hypothetical."
   takeaways:
-    - "<b>$1,000 at $1 is a million counted views, and more than one way to collect them:</b> 10 clips right at the $100 cap, 25 at 40,000 or 50 at 20,000. Three layouts, none of them a promise."
-    - "<b>The cap per clip is usually $100,</b> and no amount of reach pays more than a hundred for one submission. The thousand is built from accepted work, not from a lucky video."
+    - "<b>$1,000 at $1 is a million counted views, and more than one way to collect them:</b> 10 clips at 100,000 views, 25 at 40,000 or 50 at 20,000. Three layouts, none of them a promise."
+    - "<b>The cap per clip is set by the task, up to $500 in open tasks.</b> The thousand is still built from accepted work, not from a lucky video: a steady run of clips beats one viral hit."
     - "<b>You grow the count honestly, inside the task rules:</b> several submissions in one task when the terms allow it, different clips on different accounts and sites, ready-made setups with uniqueization."
     - "<b>Four things break the plan, and each one needs a spare task behind it:</b> rejected clips, view fraud by neighbours in the task, an exhausted fund and a paused task."
 cta:
@@ -20,9 +20,9 @@ cta:
 
 ## The arithmetic of a thousand
 
-The payout formula does not change with scale: views / 1,000 × rate, never above the cap per clip. Open tasks pay $1 to $2 per 1,000 views, typically $1, and the typical threshold is 2,000 views on every clip. So a thousand at $1 is a million counted views a month, half a million at $2.
+The payout formula does not change with scale: views / 1,000 × rate, never above the cap per clip. Open tasks pay $1 to $2 per 1,000 views, and the threshold is set by the task, counted on every clip separately. So a thousand at $1 is a million counted views a month, half a million at $2.
 
-The cap per clip, usually $100, sets the lower bound on count: fewer than ten clips cannot make a thousand at any reach. Three hypothetical layouts at $1:
+The cap per clip sets the lower bound on count: at the $100 cap used in the example, fewer than ten clips cannot make a thousand at any reach. Three hypothetical layouts at $1 and a $100 cap:
 
 | Layout | Clips a month | Views per clip | Per clip | Clips a week |
 |---|---:|---:|---:|---:|
@@ -32,7 +32,7 @@ The cap per clip, usually $100, sets the lower bound on count: fewer than ten cl
 
 Middle row: 40,000 / 1,000 × $1.00 = **$40.00** per clip, and 25 clips make $1,000.00. Bottom row: 20,000 / 1,000 × $1.00 = **$20.00**, fifty of them. Ten capped clips in a row is a rarity, not a plan. At $2 each clip needs half the views, but the cap is reached at 50,000, so the top row does not change.
 
-A thousand on the balance is not a thousand in the wallet: the withdrawal fee of 10% of the requested amount leaves $900. Recalculate any layout for your own rate and threshold in the [clipping earnings calculator](/en/earnings/clipping-earnings-calculator).
+A thousand on the balance is a thousand in the wallet: withdrawals carry no fee. Recalculate any layout for your own rate and threshold in the [clipping earnings calculator](/en/earnings/clipping-earnings-calculator).
 
 ## Why the per-clip cap pushes you toward volume
 
@@ -76,7 +76,7 @@ The flip side: a partner programme has no cap on one video and does not end with
 
 ### How many clips a week does $1,000 take at a $1 rate?
 
-It depends on average reach: at 40,000 views per clip it is 25 clips a month, six or seven a week; at 20,000 it is fifty. Fewer than ten clips cannot make a thousand at any reach because of the $100 cap. All figures are hypothetical.
+It depends on average reach: at 40,000 views per clip it is 25 clips a month, six or seven a week; at 20,000 it is fifty. With a $100 cap, fewer than ten clips cannot make a thousand at any reach; a task with a $500 cap needs as few as two. All figures are hypothetical.
 
 ### Can I take one task from several accounts?
 

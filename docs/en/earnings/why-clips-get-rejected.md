@@ -11,7 +11,7 @@ hero:
   takeaways:
     - "<b>You always get the reason in writing.</b> An organizer cannot reject a clip without one: four common reasons come as presets, the rest are typed out, and all of it shows in your cabinet."
     - "<b>No accrual does not mean rejected, and nothing needs redoing.</b> Most of the time the clip has not cleared the threshold, the counter has not synced with the site yet, or a fresh amount is maturing for 24 h."
-    - "<b>The threshold lets you in, it does not take a cut.</b> Past the typical 2000 views the whole counter is paid from the first view; above the per-clip cap, usually $100, the amount stops growing."
+    - "<b>The threshold lets you in, it does not take a cut.</b> Past the threshold on the card the whole counter is paid from the first view; above the per-clip cap (up to $500 in open tasks) the amount stops growing."
     - "<b>A dispute is won with links and dates.</b> The clip link, a screenshot of the caption with the hashtag and the time you posted close most reviews, so save them as you go."
 cta:
   title: "Read the card first and skip the rejection"
@@ -39,14 +39,14 @@ Accepted clip, growing counter, flat amount. Six causes, none a reason to redo t
 
 | What you see | Why | What to do |
 |---|---|---|
-| "N views to threshold" | Threshold not cleared: typical "Min views" 2000, system default 1000 | Wait; past it the whole counter is paid |
+| "N views to threshold" | Threshold not cleared: the "Min views" figure on the card, system default 1000 | Wait; past it the whole counter is paid |
 | A lower figure than on the site | Views update several times a day, see "Last sync"; fresh earnings mature for 24 h | Nothing, the sync catches up |
-| "Per-work cap reached" | The cap on one submission, usually $100, is full: views keep coming, money does not | A new clip has its own cap |
+| "Per-work cap reached" | The cap on one submission is full: views keep coming, money does not | A new clip has its own cap |
 | "Pool exhausted" | Other clips used up the task fund; posting is still allowed, paying is not | Check "Fund exhausted at", take another task |
 | "Under review", "Payout stopped by a flag" | The clip is being checked; accrual pauses until a person decides | Wait, no duplicates; if it drags on, ask support |
 | "Stats appear after the first sync", "Video unavailable" | Views not confirmed: no sync yet, or the clip or profile is closed | Open both, wait for the next sync |
 
-Say 20,000 views at $1.00 per 1000: `20,000 / 1000 × $1.00 = $20.00`, below the $100 cap, so it is credited in full. Threshold mechanics and the route of the money to your wallet: [how pay-per-view works](/en/earnings/how-pay-per-view-works).
+Say 20,000 views at $1.00 per 1000: `20,000 / 1000 × $1.00 = $20.00`, below the cap, so it is credited in full. Threshold mechanics and the route of the money to your wallet: [how pay-per-view works](/en/earnings/how-pay-per-view-works).
 
 ## How to submit so it is not rejected
 

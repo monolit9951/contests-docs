@@ -48,6 +48,8 @@ Accepted clip, growing counter, flat amount. Six causes, none a reason to redo t
 
 Say 20,000 views at $1.00 per 1000: `20,000 / 1000 × $1.00 = $20.00`, below the cap, so it is credited in full. Threshold mechanics and the route of the money to your wallet: [how pay-per-view works](/en/earnings/how-pay-per-view-works).
 
+A separate case is a clip that went live and barely gets views: that is not a rejection and not a counter glitch but the platform's reach; [TikTok shadowban and account warm-up](/en/earnings/account-warm-up-and-shadowban) covers it.
+
 ## How to submit so it is not rejected
 
 1. Read the whole card: site, format, length, hashtag, mention, account requirements, date window.

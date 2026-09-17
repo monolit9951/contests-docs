@@ -24,6 +24,8 @@ This is piecework, not passive income. Below: what the job actually asks of you,
 
 Every figure on this page comes from the platform's own data (snapshot: 2026-08-23) and counts only open contests - the ones a clipper can take right now.
 
+The words this page uses - hook, threshold, cap, counted views - are explained in the [clipping glossary](/en/earnings/clipping-glossary).
+
 ## What the job actually involves
 
 One clip is not "cut a chunk out and upload it". The full cycle looks like this:
@@ -61,6 +63,8 @@ That is where the shape of the income comes from. One video takes 3000 views and
 The threshold is not subtracted, though: once a submission clears it, the whole counter goes into the maths. A video with 12,000 views at $1.00<!-- baseline: ppv_cpm_median --> per 1000 brings 12,000 / 1000 * $1.00 = **$12.00** - all 12,000 count, not the remainder above the bar.
 
 The cap on a single submission is set by the buyer at contest creation: that is how they insure the budget against one viral video taking everything. You see your own contest's value on the card before you submit, and in live contests caps sit around the hundred-dollar mark. It works per submission, not per author: your next clip is counted against its own cap from scratch. A cap is a limit in the mechanic, not a plan for the month.
+
+Silence for a beginner often comes from the account itself: platforms show a fresh profile cautiously and the first clips may stay in the hundreds of views; how that works and what to do is in [TikTok shadowban and account warm-up](/en/earnings/account-warm-up-and-shadowban).
 
 ## What you need to start
 

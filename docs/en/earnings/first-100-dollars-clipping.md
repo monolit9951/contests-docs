@@ -18,6 +18,8 @@ cta:
   lede: "Every open DareBay card shows the rate, the threshold and the cap, so you know what the hundred costs in views before you edit. Post the clip, send the link, and the platform counts the views."
 ---
 
+The terms used below - rate, threshold, cap, counted views - are collected in the [clipping glossary](/en/earnings/clipping-glossary).
+
 ## What $100 looks like in views
 
 The first hundred is not one lucky clip but the sum of counted views across every submission that cleared the threshold. The platform runs one formula: views / 1,000 × rate, never above the cap per clip. Open tasks pay $1 to $2 per 1,000 views, so a hundred is 100,000 counted views at $1 or 50,000 at $2.
@@ -58,6 +60,8 @@ The rate next to the threshold and the cap is covered in [how much clipping pays
 4. **Buying views to reach the threshold.** A clip with suspicious growth goes on hold, inflated views are filtered out, and the money spent is gone.
 5. **Counting money by the site's counter.** Views sync several times a day and fresh accruals mature for 24 hours, so the cabinet trails TikTok by hours.
 6. **Quitting after week one.** The first week is calibration: it shows which topics and formats work for you.
+
+If clips from a fresh account stall at a few hundred views, the account is usually the reason, not the edit: see [TikTok shadowban and account warm-up](/en/earnings/account-warm-up-and-shadowban).
 
 ## When the money is in your hands
 

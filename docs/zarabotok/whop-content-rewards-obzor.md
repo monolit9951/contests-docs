@@ -6,6 +6,8 @@ numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_min_views_threshold_live
 competitor_sources:
   - { platform: "Whop Content Rewards", url: "https://contentrewards.com/discover", date: "2026-09-02" }
   - { platform: "Whop Content Rewards", url: "https://contentrewards.com/discover", date: "2026-09-05" }
+  - { platform: "Whop Content Rewards", url: "https://contentrewards.com/terms", date: "2026-09-17" }
+  - { platform: "Sprites", url: "https://www.sprites.ai/blog/whop-content-rewards-guide", date: "2026-09-17" }
   - { platform: "Whop Content Rewards", url: "https://contentrewards.com/creators", date: "2026-09-02" }
   - { platform: "Whop Content Rewards", url: "https://contentrewards.com/creators", date: "2026-09-05" }
   - { platform: "Whop Content Rewards", url: "https://contentrewards.com/brand", date: "2026-09-05" }
@@ -54,7 +56,7 @@ Content Rewards это приложение внутри Whop, через кот
 | Бюджет | от $1,000 <!-- source: https://contentrewards.com/brand 2026-09-05 -->, на витрине до $238 000 <!-- source: https://contentrewards.com/discover 2026-09-05 --> | Кончился остаток, кампания не платит |
 | Максимум на видео | задаёт кампания; на карточках UGC $400 и $600 <!-- source: https://contentrewards.com/discover 2026-09-05 --> | Выше него ролик не зарабатывает <!-- source: https://contentrewards.com/creators 2026-09-05 --> |
 | Минимальная выплата за видео | единого порога нет, бренд задаёт свою <!-- source: https://docs.whop.com/memberships-and-access/third-party-apps/content-rewards 2026-09-02 --> | Ниже неё ролик не идёт на проверку |
-| Комиссия с автора | 10% по условиям <!-- source: https://contentrewards.com/terms 2026-09-05 -->; в FAQ ступени 25% до $1,000 заработка, 20% до $2,500, 12.5% до $5,000, дальше 7% <!-- source: https://contentrewards.com/creators 2026-09-05 --> | Уточни в поддержке, что действует |
+| Комиссия с автора | 10% с выплаты в кампаниях с бюджетом до $5,000 и 0% («Premium») от $5,000 по условиям <!-- source: https://contentrewards.com/terms 2026-09-17 -->; в FAQ для авторов ступени 25% до $1,000 заработка, 20% до $2,500, 12.5% до $5,000, дальше 7% <!-- source: https://contentrewards.com/creators 2026-09-05 --> | Уточни в поддержке, что действует для твоей кампании |
 
 Считай выплату, а не ставку: 30 000 просмотров по $1 за 1000 это 30 000 / 1000 × $1 = $30 до вычетов, $27 после 10% по условиям и $22.50 по ступени 25% для новичка.
 
@@ -69,7 +71,7 @@ Content Rewards это приложение внутри Whop, через кот
 - Нарезчику из США, Европы, Латинской Америки или Азии, который хочет выбирать из десятков живых кампаний.
 - Тому, кто умеет работать по требованиям бренда, вплоть до «40% аудитории из США, Великобритании и Канады», как просит одна из кампаний <!-- source: https://contentrewards.com/discover 2026-09-05 -->.
 - Авторам без камеры: на витрине есть UGC-кампании со слайдшоу <!-- source: https://contentrewards.com/discover 2026-09-05 -->.
-- Тому, кто ценит защиту от чужой накрутки: каждая заявка получает оценку вероятности ботов до одобрения <!-- source: https://contentrewards.com/brand 2026-09-05 -->, а покупка просмотров это перманентный бан <!-- source: https://contentrewards.com/terms 2026-09-05 -->.
+- Тому, кто ценит защиту от чужой накрутки: каждая заявка получает Bot Score, оценку риска накрутки от 0 до 100 от стороннего антифрод-провайдера, и выше порога кампании ролик уходит на ручную проверку с заморозкой выплаты <!-- source: https://contentrewards.com/terms 2026-09-17 -->, а покупка просмотров это перманентный бан <!-- source: https://contentrewards.com/terms 2026-09-05 -->.
 
 ## Где он теряет
 
@@ -77,6 +79,7 @@ Content Rewards это приложение внутри Whop, через кот
 - Комиссия. 10% по условиям <!-- source: https://contentrewards.com/terms 2026-09-05 --> против ступеней от 25% в FAQ <!-- source: https://contentrewards.com/creators 2026-09-02 -->: площадка сама называет разные цифры.
 - Минимальная выплата за видео. Ролик ниже неё не попадает в очередь <!-- source: https://docs.whop.com/memberships-and-access/third-party-apps/content-rewards 2026-09-02 -->, и его просмотры сгорают.
 - Ручное одобрение брендом. Без решения человека ничего не платится <!-- source: https://contentrewards.com/brand 2026-09-05 -->, отказ означает ноль, а начисленную, но не выплаченную сумму Whop может отозвать при отклонении после одобрения или подтверждённом флаге накрутки <!-- source: https://contentrewards.com/terms 2026-09-05 -->.
+- Резерв бюджета после обновления V2 (лето 2026). Бюджет резервируется под ролик в момент подачи, поэтому кампания с длинной очередью заявок может выглядеть живой, когда платить уже нечем <!-- source: https://www.sprites.ai/blog/whop-content-rewards-guide 2026-09-17 -->.
 - Конкуренция и остаток. На одной кампании 2,4 тысячи авторов, у Eneba осталось $206 из $3 000 <!-- source: https://contentrewards.com/discover 2026-09-05 -->: ставка ничего не гарантирует, если бюджет разобран.
 
 ## Как выглядит рабочий день на Whop
@@ -107,7 +110,7 @@ DareBay работает без списка стран: заказчик пуб
 
 ### Почему ролик на Whop отклоняют, хотя просмотры есть?
 
-Потому что одобряет бренд, а не счётчик: несоответствие формату, шаблону, языку или аудитории это отказ <!-- source: https://contentrewards.com/brand 2026-09-05 -->. Вторая причина в оценке вероятности ботов: при флаге выплата держится на проверке <!-- source: https://contentrewards.com/brand 2026-09-05 -->. Третья: ролик не дошёл до минимальной выплаты за видео <!-- source: https://docs.whop.com/memberships-and-access/third-party-apps/content-rewards 2026-09-02 -->.
+Потому что одобряет бренд, а не счётчик: несоответствие формату, шаблону, языку или аудитории это отказ <!-- source: https://contentrewards.com/brand 2026-09-05 -->. Вторая причина в Bot Score, оценке риска накрутки от 0 до 100: при флаге выплата держится на проверке <!-- source: https://contentrewards.com/brand 2026-09-05 -->. Третья: ролик не дошёл до минимальной выплаты за видео <!-- source: https://docs.whop.com/memberships-and-access/third-party-apps/content-rewards 2026-09-02 -->.
 
 ### Поможет ли VPN, если моя страна в санкционном списке Whop?
 

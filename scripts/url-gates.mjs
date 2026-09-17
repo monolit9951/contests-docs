@@ -429,6 +429,33 @@ for (const page of PAGES.filter((entry) => localesOf(entry).some((language) => e
     }
 }
 
+// `/<hub>/index` is the file name VitePress writes the hub to, not an address.
+// `try_files $uri $uri/ $uri.html` resolved it anyway and served the hub with a
+// 200 and a canonical pointing at `/<hub>/` — fifteen crawlable duplicates that
+// only a live probe could see, because nothing in the build ever emits the
+// address. `/<hub>/index/` stays a real 404: a file name with a trailing slash
+// was never an address, and redirecting it would invent one.
+for (const page of PAGES.filter((entry) => localesOf(entry).some((language) => entry.slugs[language] === ''))) {
+    for (const language of localesOf(page)) {
+        if (page.slugs[language] !== '') continue
+        const canonical = pagePath(page, language)
+        const fileName = `${canonical}index`
+        const res = await head(fileName)
+        if (res.status !== 301 || res.location !== canonical) {
+            fail('7-hub-index', `${fileName} -> ${res.status} ${res.location}, ожидался 301 ${canonical}`)
+        } else {
+            const landing = await head(res.location)
+            if (landing.status !== 200) fail('7-hub-index', `${fileName} -> ${res.location} -> ${landing.status}`)
+        }
+        const slashed = await head(`${fileName}/`)
+        if (slashed.status !== 404) fail('7-hub-index', `${fileName}/ -> ${slashed.status}, ожидался 404`)
+        const extension = await head(`${fileName}.html`)
+        if (extension.status !== 301 || extension.location !== canonical) {
+            fail('7-hub-index', `${fileName}.html -> ${extension.status} ${extension.location}, ожидался 301 ${canonical}`)
+        }
+    }
+}
+
 // Every prerendered app artifact has one public spelling. Keep this separate
 // from the retired-route parser: `/index.html` uses nginx variables for query
 // preservation and is not a retired route with a literal target.

@@ -1,3 +1,4 @@
+import { readFileSync } from 'node:fs'
 import { describe, expect, it } from 'vitest'
 import { HUBS, LOCALES, PAGES, ROOT_LOCALE, pagePath, redirectMap } from './registry'
 
@@ -77,5 +78,51 @@ describe('redirectMap locale integrity', () => {
         const covered = new Set(Object.keys(map).map(localeOfPath))
         for (const axis of LOCALES) expect(covered.has(axis.language)).toBe(true)
         expect(Object.keys(HUBS).length).toBeGreaterThan(0)
+    })
+})
+
+// `/<hub>/index` is the file VitePress writes the hub to, not an address the
+// site ever meant to answer. The container's `try_files $uri $uri/ $uri.html`
+// fallback resolved the extensionless file name anyway and served the hub with
+// 200 plus a canonical pointing at `/<hub>/` — fifteen crawlable duplicates,
+// one per hub per locale, all discovered on the live site rather than here.
+//
+// A redirect is a public contract, so the rule is asserted against the SHIPPED
+// redirects.conf: the failure this has to catch is a registry that grew a hub
+// and an artifact nobody regenerated, and importing the generator's own source
+// would hide exactly that.
+describe('hub index duplicates', () => {
+    const conf = readFileSync(new URL('../../redirects.conf', import.meta.url), 'utf8')
+    const hubs = PAGES.flatMap((entry) =>
+        LOCALES.filter((axis) => entry.slugs[axis.language] === '').map((axis) => pagePath(entry, axis.language)!),
+    )
+
+    it('retires the file name of every hub in every locale', () => {
+        expect(hubs.length).toBe(Object.keys(HUBS).length * LOCALES.length)
+        for (const hub of hubs) {
+            expect(conf).toContain(`location = ${hub}index { return 301 ${hub}$is_args$args; }`)
+        }
+    })
+
+    it('leaves the neighbouring spellings alone', () => {
+        // `/<hub>/index.html` is answered by the clean-url regex in nginx.conf and
+        // `/<hub>/index/` is a deliberate 404. An exact `=` rule for either one here
+        // would take that decision away from the file that documents it.
+        for (const hub of hubs) {
+            expect(conf).not.toContain(`location = ${hub}index.html`)
+            expect(conf).not.toContain(`location = ${hub}index/`)
+        }
+    })
+
+    it('hops onto a hub that exists, never onto a 404', () => {
+        const live = new Set(
+            PAGES.flatMap((entry) => LOCALES.map((axis) => pagePath(entry, axis.language)).filter(Boolean)),
+        )
+        const emitted = [...conf.matchAll(/location = (\S+)index \{ return 301 (\S+)\$is_args/g)]
+        expect(emitted.length).toBe(hubs.length)
+        for (const [, source, target] of emitted) {
+            expect(source).toBe(target)
+            expect(live.has(target), `${target} is not a live address`).toBe(true)
+        }
     })
 })

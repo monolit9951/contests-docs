@@ -260,9 +260,10 @@ const ORGANIZATION = {
   ],
 }
 
-// The founder's name in the page's own script: Latin on English pages,
-// Cyrillic on Russian and Ukrainian, the other form as alternateName. The Latin
-// spelling is Ruslan Bei, as on the legal pages (founder, 2026-09-15).
+// Byline in the page's own script: Latin on English pages, Cyrillic on Russian
+// and Ukrainian. The Person node is one entity across the app and the corpus, so
+// its `name` is the Latin spelling on every page (founder, 2026-09-15; app parity
+// gate 11-entity) and the Cyrillic form is the alternateName.
 const AUTHOR_NAME: Record<Locale, string> = { ru: 'Руслан Бей', uk: 'Руслан Бей', en: 'Ruslan Bei' }
 
 // The author page is a manifest entry like any other, so its address is derived
@@ -280,8 +281,8 @@ const authorLinkForLocale = (language: Locale): AuthorLink | null => {
 const author = (language: Locale) => ({
   '@type': 'Person',
   '@id': AUTHOR_ID,
-  name: AUTHOR_NAME[language],
-  alternateName: language === 'en' ? AUTHOR_NAME.ru : AUTHOR_NAME.en,
+  name: AUTHOR_NAME.en,
+  alternateName: AUTHOR_NAME.ru,
   url: `${ENTITY_ORIGIN}${authorPathForLocale(language) ?? '/o-proekte/'}`,
   sameAs: [FOUNDER_TELEGRAM],
   jobTitle: 'Founder',

@@ -17,7 +17,7 @@ import { join, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 const HERE = dirname(fileURLToPath(import.meta.url))
-const { redirectMap } = await import(join(HERE, '..', 'docs', '.vitepress', 'registry.ts'))
+const { redirectMap, PAGES, localesOf, pagePath } = await import(join(HERE, '..', 'docs', '.vitepress', 'registry.ts'))
 
 const map = redirectMap()
 const lines = []
@@ -26,7 +26,8 @@ lines.push('# ⚙️ GENERATED — do not edit.')
 lines.push('#   node --experimental-strip-types scripts/gen-nginx-redirects.mjs')
 lines.push('#')
 lines.push('# Every address the content site used to answer on, mapped onto the address it')
-lines.push('# answers on now. Source of truth: docs/.vitepress/registry.ts.')
+lines.push('# answers on now, plus the hub file names that were never addresses at all.')
+lines.push('# Source of truth: docs/.vitepress/registry.ts.')
 lines.push('#')
 lines.push('# These rules are PERMANENT. A 301 costs one line and holds an old address for')
 lines.push('# years; deleting one turns an indexed url into a 404 and throws away whatever')
@@ -48,6 +49,30 @@ for (const from of Object.keys(map).sort((a, b) => b.length - a.length)) {
     // try_files `$uri/` would have found the directory), so it redirects rather
     // than 404s.
     else if (from !== '/docs/') lines.push(`location = ${from.slice(0, -1)} { return 301 ${to}$is_args$args; }`)
+}
+
+// `/<hub>/index` is a file name, not an address. VitePress writes each hub to
+// `<hub>/index.html`, and the container's `try_files $uri $uri/ $uri.html`
+// fallback answered the extensionless file name with 200 and a canonical
+// pointing back at the hub — a reachable, indexable duplicate of every hub in
+// every locale. One exact permanent hop retires each of them.
+//
+// `=` is what keeps the two neighbouring spellings exactly as they are: nginx
+// matches an exact location only against the whole URI, so `/<hub>/index.html`
+// still falls to the clean-url regex in nginx.conf (301 onto the hub) and
+// `/<hub>/index/` still ends in a real 404 — the trailing-slash handler skips
+// `/index/` deliberately, because a file name with a slash was never an address.
+//
+// Derived from the hub pages themselves (slug ''), not from the hub segments:
+// a redirect may only be emitted where the target hub page actually exists, or
+// the hop would land on a 404.
+lines.push('')
+for (const hub of PAGES.flatMap((entry) =>
+    localesOf(entry)
+        .filter((language) => entry.slugs[language] === '')
+        .map((language) => pagePath(entry, language))
+).sort()) {
+    lines.push(`location = ${hub}index { return 301 ${hub}$is_args$args; }`)
 }
 
 // Unknown addresses under the retired prefix intentionally fall through to a

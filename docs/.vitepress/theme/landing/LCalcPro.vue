@@ -48,7 +48,8 @@ const fill = (text: string, values: Record<string, string | number>) => text.rep
           <div><span class="lp-kicker">{{ copy.calcPerClip }}</span><b>{{ money(perClip) }}</b><span v-if="capped" class="lp-calc-badge">{{ copy.calcCapped }}</span></div>
           <div><span class="lp-kicker">{{ copy.calcPerWeek }}</span><b>{{ money(perWeek) }}</b></div>
         </div>
-        <p class="lp-calc-net">{{ fill(copy.calcNet, { fee: calc.fee }) }}: <b>{{ money(net) }}</b>. {{ fill(copy.calcMinPayout, { min: calc.minPayout }) }}.</p>
+        <!-- Target product (founder, 2026-09-17): no withdrawal fee, so the net row states that instead of a 0% deduction. -->
+        <p class="lp-calc-net"><template v-if="calc.fee > 0">{{ fill(copy.calcNet, { fee: calc.fee }) }}: <b>{{ money(net) }}</b>. </template><template v-else>{{ copy.calcNetFree }}: <b>{{ money(net) }}</b>. </template>{{ fill(copy.calcMinPayout, { min: calc.minPayout }) }}.</p>
         <p>{{ copy.calcNote }}</p>
       </div>
     </div>

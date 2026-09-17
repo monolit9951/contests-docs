@@ -44,6 +44,7 @@ export interface LandingCopy {
   calcPerWeek: string
   calcPerMonth: string
   calcNet: string
+  calcNetFree: string
   calcThresholdNote: string
   calcCapped: string
   calcMinPayout: string
@@ -139,6 +140,7 @@ export const LANDING_COPY: Record<Locale, LandingCopy> = {
     calcPerWeek: 'Per week',
     calcPerMonth: 'Per month, four weeks',
     calcNet: 'On hand after the {fee}% withdrawal fee',
+    calcNetFree: 'To your wallet, no withdrawal fee',
     calcThresholdNote: 'Below the view threshold of {threshold} a clip earns nothing; once past it, every view from the first one counts.',
     calcCapped: 'at the cap',
     calcMinPayout: 'Minimum withdrawal {min} USDT',
@@ -190,6 +192,7 @@ export const LANDING_COPY: Record<Locale, LandingCopy> = {
     calcPerWeek: 'В неделю',
     calcPerMonth: 'В месяц, четыре недели',
     calcNet: 'На руки после комиссии вывода {fee}%',
+    calcNetFree: 'На кошелёк без комиссии за вывод',
     calcThresholdNote: 'Ниже порога {threshold} просмотров ролик не оплачивается; после порога считаются все просмотры с первого.',
     calcCapped: 'упёрся в потолок',
     calcMinPayout: 'Минимальный вывод {min} USDT',
@@ -241,6 +244,7 @@ export const LANDING_COPY: Record<Locale, LandingCopy> = {
     calcPerWeek: 'На тиждень',
     calcPerMonth: 'На місяць, чотири тижні',
     calcNet: 'На руки після комісії виводу {fee}%',
+    calcNetFree: 'На гаманець без комісії за виведення',
     calcThresholdNote: 'Нижче порога {threshold} переглядів ролик не оплачується; після порога рахуються всі перегляди з першого.',
     calcCapped: 'вперся в стелю',
     calcMinPayout: 'Мінімальний вивід {min} USDT',

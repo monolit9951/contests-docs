@@ -26,9 +26,9 @@
       "calc": {
         "rateMin": 1,
         "rateMax": 2,
-        "cap": 100,
-        "threshold": 2000,
-        "fee": 10,
+        "cap": 500,
+        "threshold": 1000,
+        "fee": 0,
         "minPayout": 10
       },
       "fields": {
@@ -46,38 +46,38 @@
         },
         "threshold": {
           "text": {
-            "en": "2,000 views per clip (typical)",
-            "ru": "2000 просмотров на ролик (типично)",
-            "uk": "2000 переглядів на ролик (типово)"
+            "en": "set per task (system default 1,000 views)",
+            "ru": "задаёт задание (по умолчанию 1000 просмотров)",
+            "uk": "задає завдання (за замовчуванням 1000 переглядів)"
           },
-          "value": 2000,
+          "value": 1000,
           "source": {
-            "url": "https://darebay.com/en/earnings/how-pay-per-view-works",
-            "date": "2026-08-23"
+            "url": "https://darebay.com/o-proekte/darebay-v-tsifrakh",
+            "date": "2026-09-17"
           }
         },
         "cap": {
           "text": {
-            "en": "$100 per clip (typical), up to $500",
-            "ru": "$100 на ролик (типично), до $500",
-            "uk": "$100 на ролик (типово), до $500"
+            "en": "up to $500 per clip",
+            "ru": "до $500 на ролик",
+            "uk": "до $500 на ролик"
           },
-          "value": 100,
+          "value": 500,
           "source": {
-            "url": "https://darebay.com/en/earnings/how-much-clipping-pays",
-            "date": "2026-08-23"
+            "url": "https://darebay.com/o-proekte/darebay-v-tsifrakh",
+            "date": "2026-09-17"
           }
         },
         "fee": {
           "text": {
-            "en": "0% on contest payouts; 10% on balance withdrawal",
-            "ru": "0% с выплат конкурса; 10% при выводе баланса",
-            "uk": "0% з виплат конкурсу; 10% при виведенні балансу"
+            "en": "0% on contest payouts; 0% on wallet withdrawal",
+            "ru": "0% с выплат конкурса; 0% при выводе на кошелёк",
+            "uk": "0% з виплат конкурсу; 0% при виведенні на гаманець"
           },
-          "value": 10,
+          "value": 0,
           "source": {
-            "url": "https://darebay.com/en/help/what-commission",
-            "date": "2026-08-23"
+            "url": "https://darebay.com/o-proekte/darebay-v-tsifrakh",
+            "date": "2026-09-17"
           }
         },
         "minPayout": {
@@ -141,13 +141,13 @@
         },
         "networks": {
           "text": {
-            "en": "TikTok, YouTube Shorts, Instagram Reels (per contest terms)",
-            "ru": "TikTok, YouTube Shorts, Instagram Reels (по условиям конкурса)",
-            "uk": "TikTok, YouTube Shorts, Instagram Reels (за умовами конкурсу)"
+            "en": "TikTok, YouTube Shorts, Instagram Reels, Facebook Reels (per task terms)",
+            "ru": "TikTok, YouTube Shorts, Instagram Reels, Facebook Reels (по условиям задания)",
+            "uk": "TikTok, YouTube Shorts, Instagram Reels, Facebook Reels (за умовами завдання)"
           },
           "source": {
-            "url": "https://darebay.com/en/help/submit-your-work",
-            "date": "2026-08-23"
+            "url": "https://darebay.com/o-proekte/darebay-v-tsifrakh",
+            "date": "2026-09-17"
           }
         },
         "verification": {

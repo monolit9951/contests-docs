@@ -214,7 +214,17 @@ const localized = (build) => ({ ru: build('ru'), uk: build('uk'), en: build('en'
 // The document.
 // ---------------------------------------------------------------------------
 
-export function buildFacts({ truth, intent, snapshot, now = new Date() }) {
+/** The newest reading among the inputs; a rebuild with the same inputs stamps the same date. */
+function latestInput({ truth, intent, snapshot }) {
+  const candidates = [truth?.verifiedAt, intent?.decidedAt, snapshot?.fetchedAt]
+    .filter(Boolean)
+    .map((value) => new Date(value))
+    .filter((date) => !Number.isNaN(date.getTime()))
+  if (candidates.length === 0) throw new Error('gen-facts-json: no dated input to stamp generatedAt')
+  return new Date(Math.max(...candidates.map((date) => date.getTime())))
+}
+
+export function buildFacts({ truth, intent, snapshot, now }) {
   const intentIndex = productIntentIndex(intent)
   const rails = truth.withdrawal.wizardMethods ?? []
   if ([...rails].sort().join() !== [...WORDING.rails.methods].sort().join()) {
@@ -389,7 +399,9 @@ export function buildFacts({ truth, intent, snapshot, now = new Date() }) {
 
   return {
     schemaVersion: FACTS_SCHEMA_VERSION,
-    generatedAt: now.toISOString(),
+    // Deterministic by default: the newest input timestamp, not the wall clock, so a rebuild with
+    // unchanged inputs writes the same file and never dirties the working tree (`prebuild`).
+    generatedAt: (now ?? latestInput({ truth, intent, snapshot })).toISOString(),
     url: `https://darebay.com${FACTS_PUBLIC_PATH}`,
     operator: WORDING.operator,
     sources: {

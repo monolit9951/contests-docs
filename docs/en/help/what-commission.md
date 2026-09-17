@@ -53,7 +53,7 @@ No. Withdrawal requests are checked manually by the team before they are sent. D
 
 ### Where do these terms come from?
 
-This page reflects the active product configuration on 15 August 2026. Operational terms are also shown before confirmation; if the public rates change, the form is authoritative for a new request.
+These are the platform's rules, and the form repeats them before confirmation; for a specific new request, the form is authoritative. If the public terms change, the form shows it first.
 
 ## In short
 

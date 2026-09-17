@@ -538,6 +538,13 @@
       }
     },
     {
+      "id": "earnings-is-clipping-legal",
+      "hub": "earnings",
+      "slugs": {
+        "ru": "zakonno-li-delat-narezki"
+      }
+    },
+    {
       "id": "earnings-youtube-clips",
       "hub": "earnings",
       "slugs": {

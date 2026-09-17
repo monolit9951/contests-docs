@@ -120,3 +120,4 @@ seo: true
 - [Работа нарезчиком](/zarabotok/rabota-narezchikom) - как устроена профессия и с чего начать с нуля
 - [Где брать заказы на нарезки](/zarabotok/gde-brat-zakazy-na-narezki) - витрина заданий и что делать, если исходники не приложены
 - [Сколько платят за нарезки стримеров](/zarabotok/skolko-platyat-za-narezki-strimerov) - ставки и параметры оплаты
+- [Законно ли делать нарезки](/zarabotok/zakonno-li-delat-narezki) - права на исходник, музыка, маркировка рекламы, возраст

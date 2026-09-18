@@ -1,6 +1,6 @@
 ---
 title: Clipping as a job - how to earn from video clips
-description: "Clipping is piecework paid per view: take a brief, cut a clip, publish it and earn $1–2 per 1,000 views, up to $500 per clip, with a fee-free withdrawal. No followers, no portfolio."
+description: "Clipping is piecework paid per view: take a brief, cut a clip, publish it and earn $1–2 per 1,000 views, up to $500 per clip, withdrawable from 10 USDT. No followers, no portfolio."
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_cpm_min, ppv_cpm_median, ppv_cpm_max, ppv_min_views_threshold_live]
 seo: true

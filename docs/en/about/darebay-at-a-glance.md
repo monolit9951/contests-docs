@@ -1,6 +1,6 @@
 ---
 title: "DareBay at a glance: rates, fees, payouts and countries"
-description: DareBay pays $1.00 to $2.00 per 1,000 views, 0% contest fee, no-fee withdrawals from 10 USDT, worldwide. Every figure on one page, sourced and dated.
+description: DareBay pays $1.00 to $2.00 per 1,000 views, 0% contest fee, withdrawals to your wallet from 10 USDT, worldwide. Every figure on one page, sourced and dated.
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_min_views_threshold_live, ppv_max_per_work_typical, ppv_max_per_work_band_high, commission_fiat, commission_crypto]
 seo: true
@@ -16,7 +16,7 @@ hero:
     - "<b>No followers, no portfolio, no application.</b> An account opened this morning can take a brief on the same terms as anyone else."
     - "<b>Pays worldwide, with no country shut out.</b> The community is largest in CIS, and clippers from anywhere are paid the same way."
     - "<b>Wallet-backed contests lock the budget on the platform before the start.</b> In a manual-payout contest the organizer pays directly, and the card says which kind it is."
-    - "<b>Withdrawals: 10 USDT minimum, no fee.</b> You are paid in USDT on TON or in Telegram Stars."
+    - "<b>Withdrawals to your wallet from 10 USDT.</b> You are paid in USDT on TON or in Telegram Stars."
 cta:
   title: "Start with one brief, not an application"
   lede: "Open tasks are on the board right now, each with its rate printed on the card. Nobody checks your follower count: pick a brief, post the clip, and the platform counts the views."
@@ -58,7 +58,7 @@ The same card in machine-readable form lives at [/data/darebay-facts.json](/data
 
 Every task card fixes three numbers before you start: the rate per 1,000 counted views, the view threshold a clip has to clear, and the cap on what one clip can earn. Open contests currently pay from $1.00 to $2.00 per 1,000 views, the view threshold is set by each task - check the card in the catalog - and the cap per clip runs up to $500. The rate and the threshold do not change after launch; the cap per clip can only be raised.
 
-Views are read from the public counter of the published video by the platform, not typed in by either side. A clip with suspicious dynamics goes on hold for a manual check. After the count, the amount is credited to your DareBay balance; withdrawal to your wallet is fee-free, with requests from 10 USDT, and once you submit one the team checks the details and sends the transfer. Payout rails are USDT on the TON network and Telegram Stars; a contest can additionally name a card, a bank transfer or a gift as its reward method.
+Views are read from the public counter of the published video by the platform, not typed in by either side. A clip with suspicious dynamics goes on hold for a manual check. After the count, the amount is credited to your DareBay balance in full: the platform takes nothing from the task budget or from your earnings. The only fee a clipper pays is 10% when withdrawing the balance, deducted inside a request from 10 USDT; the form shows the amount to receive before you confirm, and once you submit the request the team checks the details and sends the transfer. Payout rails are USDT on the TON network and Telegram Stars; a contest can additionally name a card, a bank transfer or a gift as its reward method.
 
 ## Who is behind it
 
@@ -88,4 +88,4 @@ In a wallet-backed contest the organizer's budget is locked on the platform befo
 
 ### What are the fees?
 
-Taking part is free and the contest fee is 0%. Withdrawing your available balance is fee-free, with a 10 USDT minimum request: the amount you ask for is the amount that arrives.
+Taking part is free and the contest fee is 0%: the platform takes nothing from the task budget or from what you earn. The only fee a clipper pays is 10% when withdrawing your available balance, deducted inside the request: a 100 USDT request pays out 90 USDT, the minimum request is 10 USDT, and the form shows the amount to receive before you confirm.

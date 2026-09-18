@@ -60,8 +60,8 @@ and the same product. Come in whichever way suits you, the cycle is the same.
   fits your contest and lock it in before the start.
 - **[Fees](/en/help/what-commission) are separated by operation.** Contest creation
   and top-ups currently carry 0%, the store carries 8%, and withdrawal to your
-  wallet is fee-free from a 10 USDT minimum. The amount you receive is shown
-  before confirmation, and it matches the amount you asked for.
+  wallet carries 10% of the requested amount, from a 10 USDT minimum. The amount
+  you receive, fee already deducted, is shown before confirmation.
 - **A locked budget beats a promise.** A wallet-backed prize is locked the moment a contest
   goes live and it sits with the platform for the whole run. The buyer cannot
   change their mind about it, which is the only kind of reassurance worth

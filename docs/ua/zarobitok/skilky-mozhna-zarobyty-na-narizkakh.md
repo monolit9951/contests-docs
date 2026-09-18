@@ -1,6 +1,6 @@
 ---
 title: "Скільки можна заробити на нарізках: ставка за 1000 переглядів"
-description: "Скільки можна заробити на нарізках: відкриті завдання платять $1–2 за 1000 переглядів, до $500 за ролик, виведення без комісії. Формула і як читати ставку."
+description: "Скільки можна заробити на нарізках: відкриті завдання платять $1–2 за 1000 переглядів, до $500 за ролик, виведення від 10 USDT. Формула і як читати ставку."
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_cpm_min, ppv_cpm_max, ppv_cpm_median, ppv_min_views_threshold_live, ppv_max_per_work_typical, ppv_max_per_work_band_high]
 seo: true

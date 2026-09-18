@@ -12,7 +12,7 @@ hero:
     - "<b>Money only ever moves towards you.</b> A request to pay for access, an «unlock» or a quicker payout gives the platform away in its first message, and there are no exceptions."
     - "<b>The terms are written before the work, not after it.</b> The rate per 1,000 views, the view threshold and the per-clip cap belong on the task before you submit; if they are «discussed later», the sum will not be set in your favour."
     - "<b>The budget should be sitting with the platform.</b> A site that merely introduces the two sides leaves the buyer paying when and if the mood takes them; Whop, Klipni and DareBay's wallet-backed tasks keep the budget on the platform."
-    - "<b>A threshold, a cap and a withdrawal the team processes are not flags.</b> On DareBay each task prints its own threshold, the cap runs up to $500 per clip, and a fee-free withdrawal is filed by you and processed by the team: that is what a live economy with real money looks like."
+    - "<b>A threshold, a cap and a withdrawal the team processes are not flags.</b> On DareBay each task prints its own threshold, the cap runs up to $500 per clip, and a withdrawal to your wallet from 10 USDT is filed by you and processed by the team: that is what a live economy with real money looks like."
 cta:
   title: "Run DareBay through the same nine"
   lede: "Rate, threshold, cap and funding mode are all open on the card before you take the task, a wallet-backed budget stays on the platform, payouts go worldwide with no exclusion list, and nobody here will ask you to pay for access."
@@ -57,7 +57,7 @@ DareBay as the example:
 | A per-clip cap | Stops one clip eating a budget meant for dozens | Set by the task, up to $500 per clip |
 | Moderation | Filters fake views and rule-breaking clips, protecting your share | Counts once the link is sent; a moderator checks it |
 | Payouts handled by people | A person verifies the details; slower, but honest | Handled by the team on request, no promised timing |
-| A withdrawal fee | Comes out of what you earned, never up front | None on DareBay: 0% on the contest payout and 0% on withdrawal, 10 USDT minimum request |
+| A withdrawal fee | Comes out of what you earned, never up front | 10% of the request on DareBay, deducted inside it, with the amount to receive shown before you confirm; 0% on the contest payout, 10 USDT minimum request |
 
 A fresh DareBay accrual matures for 24 hours before "Claim now" locks it in: a second pass over the counter, not a hold on your money. Open DareBay tasks pay from $1 to $2 per 1,000 views: modest next to advertising promises, and the sign of a real budget.
 

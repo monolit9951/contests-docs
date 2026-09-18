@@ -1,6 +1,6 @@
 ---
 title: Is DareBay legit? The terms, the fees and who runs it
-description: "Is DareBay legit? Contest terms are fixed on the card before you edit, the contest fee is 0%, withdrawal to your wallet is fee-free from 10 USDT, and a named operator answers."
+description: "Is DareBay legit? Contest terms are fixed on the card before you edit, the contest fee is 0%, you withdraw to your wallet from 10 USDT, and a named operator answers."
 provenance: { snapshot_date: "2026-08-15", source: "darebay-prod-config" }
 numbers_used: []
 seo: true
@@ -31,7 +31,7 @@ One detail worth knowing because it works in your favour: clearing the threshold
 
 ## What the platform charges
 
-Creating a contest and topping up its budget currently carry no fee, and entering a contest is free for creators. Withdrawing a credited balance carries **no fee** and has a **10 USDT minimum request**; the form shows the amount to receive before you confirm.
+Creating a contest and topping up its budget currently carry no fee, entering a contest is free for creators, and the budget split reaches your balance untouched. Withdrawing a credited balance costs **10% of the requested amount**, deducted inside the request, with a **10 USDT minimum request**: that is the platform's only earning on contests, and the form shows the amount to receive before you confirm.
 
 Nothing is ever a separate transfer, and nothing is ever sent in advance. The full breakdown by operation is on the [DareBay fees page](/en/help/what-commission).
 

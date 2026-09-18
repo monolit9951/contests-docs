@@ -1,6 +1,6 @@
 ---
 title: "Earning from clipping: what it pays and how to start"
-description: "Clipper earnings on DareBay run $1.00 to $2.00 per 1000 views, up to $500 a clip, with fee-free withdrawal from 10 USDT. Every guide, mapped."
+description: "Clipper earnings on DareBay run $1.00 to $2.00 per 1000 views, up to $500 a clip, with withdrawals to your wallet from 10 USDT. Every guide, mapped."
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_cpm_min, ppv_cpm_median, ppv_cpm_max, ppv_min_views_threshold_live, ppv_max_per_work_typical]
 ---
@@ -16,7 +16,7 @@ Live tasks sit in the [clip earnings catalogue](/en/earn/clips): the rate, the t
 ## The money: what a clip is worth
 
 - [How much clipping pays](/en/earnings/how-much-clipping-pays) - the formula built from rate, views and cap, worked through on a floor-rate task, the rate reference per 1000 views: what open tasks pay from and to, where the spread comes from, and why followers are not part of it.
-- [Clipping earnings calculator](/en/earnings/clipping-earnings-calculator) - views, clips per week and rate: the monthly figure with the threshold and the cap applied, and a fee-free withdrawal at the end.
+- [Clipping earnings calculator](/en/earnings/clipping-earnings-calculator) - views, clips per week and rate: the monthly figure with the threshold and the cap applied, down to the sum on hand after withdrawal.
 - [Clipping rates by niche](/en/earnings/clipping-rates-by-niche) - a dated benchmark of rates by niche, platform and social network.
 - [Your first $100 clipping](/en/earnings/first-100-dollars-clipping) - what it is in views, a 30-day plan week by week, which tasks to take first.
 - [Make $1,000 a month clipping](/en/earnings/make-1000-a-month-clipping) - the arithmetic of a thousand under a per-clip cap, a weekly system, what breaks the plan.

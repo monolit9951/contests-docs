@@ -743,6 +743,17 @@ test("a help page stating no withdrawal fee passes only under the pending intent
       claims: [{ id: "withdrawal-free", status: "pending-product-change", liveTruth: "withdrawal.defaultCommissionPercent", target: 0 }],
     });
     const en = "docs/en/help/darebay-withdrawals.md";
+    // 2026-09-18: the committed page states the live 10% fee again, so the no-fee wording this
+    // test exercises is written into the fixture instead of being read from the corpus.
+    writeFileSync(join(fixture, en), [
+      "---",
+      `provenance: { snapshot_date: "${truth.verifiedAt}", source: "fixture" }`,
+      "---",
+      "",
+      "Withdrawing an available balance carries no fee. The minimum request is 10 USDT, and the team checks every request manually.",
+      "The wizard pays USDT on TON and Telegram Stars.",
+      "",
+    ].join("\n"));
     const withIntent = checkCanonicalPages(fixture, truth, intentIndex).filter((item) => item.file === en);
     assert(!withIntent.some((item) => /withdrawal fee|per-user withdrawal override/.test(item.message)),
       `unexpected: ${JSON.stringify(withIntent)}`);

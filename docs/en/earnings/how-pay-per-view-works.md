@@ -1,6 +1,6 @@
 ---
 title: "How pay-per-view works: how views are counted and paid"
-description: "How pay-per-view works: the platform reads the site's counter, views / 1,000 × rate sets the payout, the threshold is not deducted, caps run up to $500 per clip, withdrawals are fee-free."
+description: "How pay-per-view works: the platform reads the site's counter, views / 1,000 × rate sets the payout, the threshold is not deducted, caps run up to $500 per clip, withdrawals from 10 USDT."
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_cpm_median, ppv_min_views_threshold_live, ppv_default_min_views_threshold, ppv_max_per_work_typical]
 seo: true
@@ -12,7 +12,7 @@ hero:
     - "<b>The platform reads the views, not a person:</b> an independent counter takes the site's public figure at the link you sent, so neither side can nudge it up or down."
     - "<b>The threshold is not a deduction:</b> clear the threshold printed on the task card and you are paid on the whole counter from the very first view."
     - "<b>One formula for everybody:</b> views / 1000 × rate, never above the cap on one submission (up to $500 in open tasks), and neither the buyer nor support can replay it in someone's favour."
-    - "<b>Code counts, the money is already on the platform:</b> a wallet-backed budget is frozen before you start, the calculation is on the record, and withdrawals to your wallet carry no fee."
+    - "<b>Code counts, the money is already on the platform:</b> a wallet-backed budget is frozen before you start, the calculation is on the record, and you withdraw to your wallet from 10 USDT."
 cta:
   title: "Pick a task where the maths is open before you start"
   lede: "Rate, threshold and cap are set before anyone opens an editor, the platform reads your counter, and the result is recorded against your name. Choose a task for the site you already post on, publish the clip and send the link."
@@ -95,7 +95,7 @@ The calculation starts at the end of the task and produces a credit with a statu
 
 ### What payout methods are available?
 
-The withdrawal wizard offers USDT to an external wallet on the TON network and Telegram Stars: the minimum withdrawal is 10 USDT, there is no withdrawal fee, and the team handles processing. In tasks with direct payment the organizer pays you themselves, in Stars or to a TON wallet; the platform never asks you to send money in advance to "activate" a payout. Details: [withdrawing money from DareBay](/en/help/darebay-withdrawals).
+The withdrawal wizard offers USDT to an external wallet on the TON network and Telegram Stars: the minimum withdrawal is 10 USDT, the fee is 10% of the requested amount, deducted inside the request with the amount to receive shown before you confirm, and the team handles processing. In tasks with direct payment the organizer pays you themselves, in Stars or to a TON wallet; the platform never asks you to send money in advance to "activate" a payout. Details: [withdrawing money from DareBay](/en/help/darebay-withdrawals).
 
 ### Can I submit more than one clip?
 

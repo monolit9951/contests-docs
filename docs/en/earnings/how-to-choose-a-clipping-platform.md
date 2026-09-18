@@ -12,7 +12,7 @@ hero:
   takeaways:
     - "<b>Country first, everything else second.</b> Whop and Vyro are closed to Russia, Belarus and Ukraine; if a platform publishes no country list, ask support before you cut anything."
     - "<b>Three numbers belong on the campaign card: rate, threshold and cap.</b> Miss any one of them and you cannot work out what a clip pays before you cut it."
-    - "<b>Fee and minimum payout separate the advertised sum from the money in your hand.</b> 10% at Whop, 5% at Klipni, and at DareBay 0% on the payout with a fee-free withdrawal from 10 USDT."
+    - "<b>Fee and minimum payout separate the advertised sum from the money in your hand.</b> 10% at Whop, 5% at Klipni, and at DareBay 0% on the payout and 10% on withdrawal, from 10 USDT."
     - "<b>The budget should already be with the platform before you post.</b> Vues states that it does not custody funds; Whop, Klipni, Prime Oracles and DareBay's wallet-backed contests hold it."
 compare:
   ids: [whop, vyro, darebay, clipping-net, vues, reach-cat, prime-oracles, klipni, clipping-io]
@@ -45,7 +45,7 @@ The cap limits what one clip can earn, and it is what cuts your income on a vira
 
 ## Question 5. What is the fee on the payout?
 
-Whop's terms take 10% of CPM payouts and its FAQ describes tiers from 25% down to 7%. Klipni takes 5%. Vues and Reach.cat charge the brand, and the clipper only a processing fee on withdrawal. DareBay takes 0% on contest payouts and nothing on balance withdrawals: requests start at 10 USDT and the team checks the details before sending. Clipping.net and Vyro publish no clipper fee, which is a question for support.
+Whop's terms take 10% of CPM payouts and its FAQ describes tiers from 25% down to 7%. Klipni takes 5%. Vues and Reach.cat charge the brand, and the clipper only a processing fee on withdrawal. DareBay takes 0% on contest payouts and 10% on balance withdrawals: requests start at 10 USDT, the form shows the amount to receive before you confirm, and the team checks the details before sending. Clipping.net and Vyro publish no clipper fee, which is a question for support.
 
 ## Question 6. What is the minimum payout, and how fast is it?
 

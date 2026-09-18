@@ -12,7 +12,7 @@ hero:
     - "<b>CPM here means the rate for 1,000 counted views.</b> Across open DareBay tasks it runs from $1 to $2, and it has nothing to do with the price of an ad."
     - "<b>Threshold and cap hold a clip from both ends.</b> Clear the threshold on the card and nothing is subtracted for it; the cap (up to $500 in open tasks) closes the amount from above."
     - "<b>You are paid for counted views, not for the figure in your stats.</b> The platform's counter reads the site's public counter, and inflated views are filtered at moderation."
-    - "<b>Withdrawal and Stars are two different doors.</b> A withdrawal request starts from 10 USDT with no fee and goes to your wallet; getting it in Stars stays inside Telegram."
+    - "<b>Withdrawal and Stars are two different doors.</b> A withdrawal request starts from 10 USDT and goes to your wallet; getting it in Stars stays inside Telegram."
 cta:
   title: "Now go and read a real card"
   lede: "Open the DareBay catalogue and these words stop being abstract: the card names the rate, the threshold and the cap before you submit, and in a wallet-backed contest the fund already sits on the platform. Find every term you have just learned in the first card you open."
@@ -68,7 +68,7 @@ glossary:
   - { id: "viewer-voting", term: "Viewer voting", definition: "The VIEWER_VOTING selection type: the winner is chosen by viewers' votes for the entries, not by a view counter. One of four selection types on DareBay, visible on the card before you submit." }
   - { id: "wallet", term: "Wallet", definition: "Your balance on DareBay. When a task ends, your earnings are credited here, and from here you file a withdrawal request: USDT to an external wallet on TON or Telegram Stars." }
   - { id: "watch-time", term: "Watch time (retention)", definition: "The share of a clip the viewer watched to the end. The main signal for recommendations: a clip with high retention gets shown further, and views grow without followers." }
-  - { id: "withdrawal-fee", term: "Withdrawal fee", definition: "A charge for moving money from the balance to a wallet. DareBay has none: a request from 10 USDT reaches the wallet in full. A person processes the request, so the platform promises no settlement time." }
+  - { id: "withdrawal-fee", term: "Withdrawal fee", definition: "A charge for moving money from the balance to a wallet. On DareBay it is 10% of the requested amount, deducted inside the request; a personal rate may apply, and the form shows the exact rate and the amount to receive before you confirm. A person processes the request, so the platform promises no settlement time." }
 ---
 
 Read a task card without stumbling and you stop guessing what it will pay you: CPM or per thousand, threshold or cap, claim now or withdrawal. This glossary collects 52 terms from DareBay task cards, payout rules and clipper chats, each explained in a sentence or two.
@@ -97,7 +97,7 @@ A pay-per-view task pays one thing: the rate per 1000 counted views, up to the c
 
 ### Withdrawal and Stars
 
-A withdrawal is a request for USDT on the TON network: from 10 USDT, with no withdrawal fee, handled by the team. Stars are the second route in the same wizard: the amount goes out as Telegram Stars and stays inside Telegram, so it is not a withdrawal. Both routes use the available balance once fresh earnings have matured for 24 hours; details on the [withdrawals page](/en/help/darebay-withdrawals).
+A withdrawal is a request for USDT on the TON network: from 10 USDT, with a 10% fee deducted inside the request, handled by the team. Stars are the second route in the same wizard: the amount goes out as Telegram Stars and stays inside Telegram, so it is not a withdrawal. Both routes use the available balance once fresh earnings have matured for 24 hours; details on the [withdrawals page](/en/help/darebay-withdrawals).
 
 ## Frequently asked questions
 

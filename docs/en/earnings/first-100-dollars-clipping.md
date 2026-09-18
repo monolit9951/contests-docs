@@ -1,6 +1,6 @@
 ---
 title: "Your first $100 from clipping: a 30-day plan"
-description: "Your first $100 from clipping: 100,000 counted views at $1 per 1,000, or 50,000 at $2. A 30-day week-by-week plan, starter tasks, rookie mistakes and a fee-free withdrawal."
+description: "Your first $100 from clipping: 100,000 counted views at $1 per 1,000, or 50,000 at $2. A 30-day week-by-week plan, starter tasks, rookie mistakes and your first withdrawal."
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_cpm_median, ppv_min_views_threshold_live, ppv_default_min_views_threshold, ppv_max_per_work_typical]
 seo: true
@@ -12,7 +12,7 @@ hero:
     - "<b>$100 is 100,000 counted views at $1 per 1,000.</b> At $2 it is 50,000, and they add up across every clip that cleared the threshold, not one lucky one."
     - "<b>The task's threshold sits on each clip separately.</b> A clip below it earns nothing, a clip above it is paid for the whole counter."
     - "<b>No guarantees, but a plan.</b> Four weeks with a rising clip count, so that by the end of the month you know your own average reach instead of guessing at it."
-    - "<b>Two steps to cash.</b> 'Claim now' once a clip is approved, then a withdrawal request from 10 USDT with no fee, which the team checks and sends."
+    - "<b>Two steps to cash.</b> 'Claim now' once a clip is approved, then a withdrawal request from 10 USDT, which the team checks and sends."
 cta:
   title: "First clip today, first hundred this month"
   lede: "Every open DareBay card shows the rate, the threshold and the cap, so you know what the hundred costs in views before you edit. Post the clip, send the link, and the platform counts the views."
@@ -67,7 +67,7 @@ If clips from a fresh account stall at a few hundred views, the account is usual
 
 Accruals on approved clips sit in your DareBay wallet, two steps from cash. Step one: "Claim now" appears once a clip is approved and locks in what has been credited; fresh accruals mature for 24 hours. Pressing it stops the clip earning in that task, so wait until the counter has stopped.
 
-Step two: a withdrawal request from 10 USDT with no fee; the team handles processing. You receive USDT to a wallet on the TON network or Telegram Stars; Stars are "get it in Stars", not a cash withdrawal. A hundred on the balance is a hundred in the wallet. Details in [DareBay withdrawals](/en/help/darebay-withdrawals) and [what commission DareBay charges](/en/help/what-commission).
+Step two: a withdrawal request from 10 USDT; the team handles processing. You receive USDT to a wallet on the TON network or Telegram Stars; Stars are "get it in Stars", not a cash withdrawal. The only fee along the way is 10% of the request, deducted inside it: a hundred on the balance pays out 90 USDT, and the form shows that amount before you confirm. Details in [DareBay withdrawals](/en/help/darebay-withdrawals) and [what commission DareBay charges](/en/help/what-commission).
 
 Once the first hundred is in, the next question is scale: [how to make $1,000 a month clipping](/en/earnings/make-1000-a-month-clipping).
 
@@ -83,7 +83,7 @@ Do not redo or delete them: a clip has until the task is finalised to reach the 
 
 ### Can I take the first $100 out in one request?
 
-Yes, once the amount is locked in with "Claim now" and has matured. A request for 100 USDT arrives as 100 USDT, there is no fee; the team handles processing, no timeframe is promised. The minimum for one request is 10 USDT, so the hundred can also go out in parts.
+Yes, once the amount is locked in with "Claim now" and has matured. A request for 100 USDT pays out 90 USDT after the 10% withdrawal fee, which is deducted inside the request and shown before you confirm; the team handles processing, no timeframe is promised. The minimum for one request is 10 USDT, so the hundred can also go out in parts.
 
 ### Should a beginner start with offer tasks and ready-made videos?
 

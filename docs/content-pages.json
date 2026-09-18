@@ -13,33 +13,42 @@
     "en": {
       "prefix": "/en",
       "vitepressKey": "en"
+    },
+    "ar": {
+      "prefix": "/ar",
+      "vitepressKey": "ar"
     }
   },
   "hubs": {
     "earnings": {
       "ru": "zarabotok",
       "uk": "zarobitok",
-      "en": "earnings"
+      "en": "earnings",
+      "ar": "earnings"
     },
     "brands": {
       "ru": "brendam",
       "uk": "brendam",
-      "en": "for-brands"
+      "en": "for-brands",
+      "ar": "for-brands"
     },
     "help": {
       "ru": "pomoshch",
       "uk": "dopomoha",
-      "en": "help"
+      "en": "help",
+      "ar": "help"
     },
     "about": {
       "ru": "o-proekte",
       "uk": "pro-proekt",
-      "en": "about"
+      "en": "about",
+      "ar": "about"
     },
     "legal": {
       "ru": "legal",
       "uk": "legal",
-      "en": "legal"
+      "en": "legal",
+      "ar": "legal"
     }
   },
   "pages": [
@@ -49,7 +58,8 @@
       "slugs": {
         "ru": "",
         "uk": "",
-        "en": ""
+        "en": "",
+        "ar": ""
       },
       "retired": [
         "/docs/ru/zarabotok/",
@@ -78,7 +88,8 @@
       "slugs": {
         "ru": "skolko-mozhno-zarabotat-na-narezkah",
         "uk": "skilky-mozhna-zarobyty-na-narizkakh",
-        "en": "how-much-clipping-pays"
+        "en": "how-much-clipping-pays",
+        "ar": "how-much-clipping-pays"
       },
       "retired": [
         "/docs/ru/zarabotok/skolko-mozhno-zarabotat-na-narezkah",
@@ -138,7 +149,8 @@
       "slugs": {
         "ru": "kak-rabotaet-oplata-za-prosmotry",
         "uk": "yak-pratsiuie-oplata-za-perehliady",
-        "en": "how-pay-per-view-works"
+        "en": "how-pay-per-view-works",
+        "ar": "how-pay-per-view-works"
       },
       "retired": [
         "/docs/ru/kak-rabotaet/kak-rabotaet-oplata-za-prosmotry",
@@ -233,7 +245,8 @@
       "slugs": {
         "ru": "bystryy-start",
         "uk": "shvydkyi-start",
-        "en": "quick-start"
+        "en": "quick-start",
+        "ar": "quick-start"
       },
       "retired": [
         "/docs/ru/getting-started/",
@@ -564,7 +577,8 @@
       "slugs": {
         "ru": "darebay-v-tsifrakh",
         "uk": "darebay-u-tsyfrakh",
-        "en": "darebay-at-a-glance"
+        "en": "darebay-at-a-glance",
+        "ar": "darebay-at-a-glance"
       }
     },
     {
@@ -635,7 +649,8 @@
       "id": "clipping-platforms-egypt-mena",
       "hub": "earnings",
       "slugs": {
-        "en": "clipping-platforms-that-pay-in-egypt-and-arab-countries"
+        "en": "clipping-platforms-that-pay-in-egypt-and-arab-countries",
+        "ar": "clipping-platforms-that-pay-in-egypt-and-arab-countries"
       }
     },
     {

@@ -117,11 +117,18 @@ describe('the platforms every regional page compares', () => {
   })
 
   it('never claims DareBay pays somewhere without the worldwide statement behind it', () => {
+    // DareBay excludes no country, so every regional cell says so and cites a darebay.com page.
+    // Until 2026-09-18 every cell was also required to read plain "yes". That stopped being true
+    // for regions whose regulator bars or criminalizes dealing in crypto (Egypt, Algeria and Iraq
+    // in `mena`): DareBay's only money rail is USDT on TON, so "yes" there would contradict the
+    // regional page itself. Such a cell is `partial`, and it must name the rail it is limited by.
     const darebay = byId('darebay')!
     for (const key of REGION_FIELDS) {
-      expect(darebay.fields[key].state).toBe('yes')
-      expect(darebay.fields[key].text?.en).toContain('no exclusion list')
-      expect(darebay.fields[key].source?.url).toMatch(/^https:\/\/darebay\.com\//)
+      const field = darebay.fields[key]
+      expect(['yes', 'partial'], `darebay.${key}`).toContain(field.state)
+      expect(field.text?.en).toContain('no exclusion list')
+      expect(field.source?.url).toMatch(/^https:\/\/darebay\.com\//)
+      if (field.state === 'partial') expect(field.text?.en, `darebay.${key}`).toContain('USDT on TON')
     }
   })
 })

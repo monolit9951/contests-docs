@@ -213,11 +213,11 @@
         },
         "mena": {
           "text": {
-            "en": "worldwide, no exclusion list: any country is paid the same way, in USDT on TON or Telegram Stars"
+            "en": "no exclusion list, but the only money rail is USDT on TON: the regulators in Egypt, Algeria and Iraq bar or criminalize dealing in crypto, so there the balance has no withdrawal route; elsewhere, check the regulator row above"
           },
-          "state": "yes",
+          "state": "partial",
           "source": {
-            "url": "https://darebay.com/en/about/darebay-at-a-glance",
+            "url": "https://darebay.com/en/earnings/clipping-platforms-that-pay-in-egypt-and-arab-countries",
             "date": "2026-09-18"
           }
         },

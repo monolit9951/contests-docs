@@ -7,6 +7,7 @@ seo: true
 landing: true
 sources: visible
 hero:
+  updated: "2026-09-18"
   kicker: "Platform review · 2026"
   lede: "Reach.cat sells itself on speed and privacy: an account in minutes, no ID, payment in crypto. Its own terms, rewritten on 13 September 2026, and the payout screen inside its app tell a more detailed story. This review puts the landing pages, the terms and the app side by side, dated, so the difference is visible before you post the first clip."
   secondary: "Comparison table"

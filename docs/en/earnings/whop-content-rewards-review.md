@@ -25,6 +25,7 @@ seo: true
 landing: true
 sources: visible
 hero:
+  updated: "2026-09-18"
   kicker: "Review · 2026"
   lede: "Whop Content Rewards is no longer just an app inside Whop. It runs on its own site under its own terms, and Whop stays underneath for sign-in, identity checks and withdrawals. Here is what that means for a clipper today: how a campaign card reads, what the flat 10% fee leaves you, how long the money takes on each side, and which countries Whop will not pay, every figure read off the two companies' own pages and dated."
   takeaways:

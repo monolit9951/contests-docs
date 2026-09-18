@@ -7,6 +7,7 @@ seo: true
 landing: true
 sources: visible
 hero:
+  updated: "2026-09-18"
   kicker: "Payouts into Bangladesh and Nepal · 2026"
   lede: "Neither Bangladesh nor Nepal is on PayPal's table of countries that can receive a payout or on Stripe's list of supported countries, and both central banks have published that crypto transactions are not permitted (Bangladesh Bank) or illegal, stablecoins included (Nepal Rastra Bank). That leaves a short list of fiat routes: Payoneer into a bank or a bKash wallet, Whop's payouts in taka or rupees, a Khalti payment link in Nepal. This page reads each one from its operator's and its regulator's own pages."
   secondary: "The two-country table"

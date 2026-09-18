@@ -22,6 +22,7 @@ seo: true
 landing: true
 sources: visible
 hero:
+  updated: "2026-09-18"
   kicker: "Trust check · 2026"
   lede: "Wondeed publishes clear rules for clippers, from tier rates of ₹5 to ₹10 per 1,000 views to a 72-hour hold, UPI payouts requested from ₹500 and tax deducted at source, but not the company behind them: its legal entity reads \"Wondeed\", its GSTIN \"To be updated\" and its court clause \"[Registered City]\". We found no independent reviews either way. Here is what each of its pages said on 18 September 2026, and three checks you can run yourself."
   secondary: "See the table"

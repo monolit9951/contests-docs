@@ -7,6 +7,7 @@ seo: true
 landing: true
 sources: visible
 hero:
+  updated: "2026-09-18"
   kicker: "Payout rails · 2026"
   lede: "PayPal lists 93 countries it can send a payout to and Stripe lists 51 countries it operates in, so for a large part of the world the question is not which campaign pays best but whether the money has a road to travel on at all. This page sorts clipping platforms by the road: card and bank, USDT and which network it runs on, Telegram Stars, and what each one asks for before it releases anything."
   secondary: "Rail matrix"

@@ -7,6 +7,7 @@ seo: true
 landing: true
 sources: visible
 hero:
+  updated: "2026-09-18"
   kicker: "Platform review · 2026"
   lede: "Vues is a pay-per-view clipping marketplace with an iPhone app, a public roster weighted toward betting, crypto and prediction markets, and a claim of more than $3 million paid to clippers. Before the rate, one line in its terms decides how you get paid: the brand owes you the money, not Vues. This review reads its terms, app page, campaign directory and blog side by side, dated, and names the places where they disagree."
   secondary: "Comparison table"

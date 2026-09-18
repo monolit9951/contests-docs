@@ -20,6 +20,7 @@ seo: true
 landing: true
 sources: visible
 hero:
+  updated: "2026-09-18"
   kicker: "Platform review · 2026"
   lede: "ClipGrow is a Kerala clipping agency that pays rupees over UPI for verified Instagram and YouTube views and takes no fee from clippers, but before your first clip you need to know which of its payout calendars applies and where the ceiling on the card stops your earnings. On 18 September 2026 its three live campaigns paid ₹50 per 1,000 views and capped a clip at ₹2,000. Every figure below is read off ClipGrow's own pages that day."
   secondary: "See the table"

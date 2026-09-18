@@ -1,5 +1,5 @@
 import { LANDING_COPY } from './theme/landing/copy.ts'
-import type { Locale } from './registry'
+import { localeOfSourcePath, type Locale } from './registry'
 
 /**
  * Visible source references — the opt-in half of the citation trail.
@@ -141,16 +141,13 @@ export function isCompetitorHost(hostname: string): boolean {
 /**
  * The locale a page's sources speak, from its path.
  *
- * The same rule the rest of the site uses: Russian is the unprefixed root, `ua/` is Ukrainian,
- * `en/` is English. Taken from the path rather than from `localeIndex` so the heading is right in
- * a unit test that has only a filename, and so it cannot disagree with the address the page ships
- * on.
+ * The same rule the rest of the site uses, from the registry's one table of locale directories:
+ * Russian is the unprefixed root, `ua/` is Ukrainian, `en/` English, `ar/` Arabic. Taken from the
+ * path rather than from `localeIndex` so the heading is right in a unit test that has only a
+ * filename, and so it cannot disagree with the address the page ships on.
  */
 export function localeFromPath(path: string): Locale {
-  const normalized = `/${String(path).replace(/^\/+/, '')}`
-  if (normalized.startsWith('/ua/')) return 'uk'
-  if (normalized.startsWith('/en/')) return 'en'
-  return 'ru'
+  return localeOfSourcePath(path)
 }
 
 /** «Источники» / «Джерела» / "Sources" — the label the compare cards already print. */

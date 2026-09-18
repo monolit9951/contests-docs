@@ -2,7 +2,7 @@
 // every locale, so a number is refreshed in one place and cannot disagree
 // between pages. Each field carries its own source URL and date.
 import raw from '../../data/platforms.json'
-import type { Locale } from '../../registry'
+import { textDirectionOf, type Locale } from '../../registry'
 
 export type Localized = Record<Locale, string>
 export interface Source { url: string; date: string }
@@ -55,6 +55,18 @@ export const DATA = raw as PlatformsData
 export const byId = (id: string): Platform | undefined => DATA.platforms.find((p) => p.id === id)
 export const pick = (ids: string[]): Platform[] => ids.map(byId).filter((p): p is Platform => Boolean(p))
 export const text = (p: Platform, field: string, lang: Locale): string => p.fields[field]?.text?.[lang] ?? p.fields[field]?.text?.en ?? ''
+/** The language `text()` answered in: the page's own when the field has it, English when it fell back. */
+export const textLang = (p: Platform, field: string, lang: Locale): Locale =>
+  p.fields[field]?.text?.[lang] !== undefined ? lang : 'en'
+/**
+ * Attributes for a value written in `valueLang` on a page in `pageLang` — only when the two run in
+ * opposite directions. An English fallback inside an Arabic table has to be laid out as an English
+ * run: left to the Arabic line around it, "$1–$2 per 1,000 views" comes out as "per 1,000 views
+ * $2–$1" and a closing period jumps to the front. Same-direction values get nothing, so the
+ * left-to-right trees render exactly the markup they rendered before Arabic existed.
+ */
+export const bidiAttrs = (valueLang: Locale, pageLang: Locale): { lang?: Locale; dir?: 'ltr' | 'rtl' } =>
+  textDirectionOf(valueLang) === textDirectionOf(pageLang) ? {} : { lang: valueLang, dir: textDirectionOf(valueLang) }
 /**
  * One entry per source url of a platform, in the order its fields declare them.
  *

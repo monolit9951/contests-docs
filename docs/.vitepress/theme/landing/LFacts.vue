@@ -3,7 +3,7 @@
 import { useData } from 'vitepress'
 import { computed } from 'vue'
 import { LANDING_COPY, localeOf } from './copy'
-import { byId, text } from './platforms'
+import { bidiAttrs, byId, text, textLang } from './platforms'
 
 const FIELDS = ['rate', 'threshold', 'cap', 'fee', 'minPayout', 'payoutMethods', 'cis', 'followers', 'escrow', 'networks', 'verification']
 const { lang, frontmatter } = useData()
@@ -18,7 +18,7 @@ const fields = computed(() => ((frontmatter.value.facts as { fields?: string[] }
     <dl class="lp-facts">
       <div v-for="f in fields" :key="f" class="lp-fact">
         <dt>{{ copy.columns[f] ?? f }}</dt>
-        <dd :class="{ 'lp-money': f === 'rate' }">{{ text(p, f, loc) || (p.fields[f]?.state ? copy.cis[p.fields[f].state!] : copy.notPublished) }}</dd>
+        <dd v-bind="text(p, f, loc) ? bidiAttrs(textLang(p, f, loc), loc) : {}" :class="{ 'lp-money': f === 'rate' }">{{ text(p, f, loc) || (p.fields[f]?.state ? copy.cis[p.fields[f].state!] : copy.notPublished) }}</dd>
         <small v-if="p.fields[f]?.source?.date">{{ copy.updated }} {{ p.fields[f].source!.date }}</small>
       </div>
     </dl>

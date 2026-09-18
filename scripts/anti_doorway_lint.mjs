@@ -22,6 +22,7 @@ import { join, relative, resolve } from 'node:path'
 import { execFileSync } from 'node:child_process'
 import {
   HUBS,
+  LOCALES,
   PAGES,
   pagePath,
   sourceFile,
@@ -86,11 +87,17 @@ export const FAQ_ECHO_LIMIT = 3
 export const HEADING_ECHO_LIMIT = 3
 
 const FLEET_HUBS = new Set(['earnings', 'brands', 'help', 'about'])
-const CONTENT_PATHS = [
-  /^docs\/(zarabotok|brendam|pomoshch|o-proekte)\//,
-  /^docs\/ua\/(zarobitok|brendam|dopomoha|pro-proekt)\//,
-  /^docs\/en\/(earnings|for-brands|help|about)\//,
-]
+const escapeRegExp = (text) => text.replace(/[.*+?^${}()|[\]\\/]/g, '\\$&')
+/** Каталог локали внутри docs/: '' у корневой, `ua/`, `en/`, `ar/` у остальных — как в `sourceFile`. */
+const localeDir = (axis) => (axis.vitepressKey === 'root' ? '' : `${axis.vitepressKey}/`)
+
+/** Гейтируемые каталоги: хабы флота в каждом ОБЪЯВЛЕННОМ дереве манифеста. Выводятся из реестра,
+ * а не перечислены руками: новое дерево (арабское) попадает под гейт в тот день, когда манифест
+ * его объявляет, и ни днём позже — страница в незаявленном дереве здесь не видна вовсе, её не
+ * пропустит `check-registry` (unregistered-file). */
+export const CONTENT_PATHS = LOCALES.map((axis) => new RegExp(
+  `^docs\\/${escapeRegExp(localeDir(axis))}(${[...FLEET_HUBS].map((hub) => escapeRegExp(HUBS[hub][axis.language])).join('|')})\\/`
+))
 
 const REDIRECT_PATTERNS = [
   /http-equiv\s*=\s*["']?\s*refresh/i,
@@ -102,7 +109,7 @@ const REDIRECT_PATTERNS = [
 ]
 
 const normalPath = (path) => path.replace(/\\/g, '/').replace(/^\.\//, '')
-const isPotentialContentPath = (path) => CONTENT_PATHS.some((pattern) => pattern.test(normalPath(path)))
+export const isPotentialContentPath = (path) => CONTENT_PATHS.some((pattern) => pattern.test(normalPath(path)))
 
 /** Локализованный сегмент пути -> канонический хаб: `zarabotok`, `zarobitok` и `earnings` — один
  * хаб, и сравнивать FAQ надо внутри него, а не внутри каталога. Выводится из манифеста, а не
@@ -162,6 +169,12 @@ function parseFront(text) {
   }
 }
 
+/** Путь ещё не зарегистрированной страницы: `docs/<каталог локали?>/<хаб>/<slug>.md`, где каталог —
+ * любой объявленный в манифесте (`ua`, `en`, …), а без каталога — корневая локаль. */
+const UNREGISTERED_PAGE = new RegExp(
+  `^docs\\/(?:(${LOCALES.filter((axis) => axis.vitepressKey !== 'root').map((axis) => escapeRegExp(axis.vitepressKey)).join('|')})\\/)?([^/]+)\\/([^/]+)\\.md$`
+)
+
 /** Resolve a source path through the semantic manifest, with a strict fallback
  * for a new file that has not yet been registered. */
 export function pathInfo(path) {
@@ -184,12 +197,13 @@ export function pathInfo(path) {
     }
   }
 
-  const match = norm.match(/^docs\/(?:(ua|en)\/)?([^/]+)\/([^/]+)\.md$/)
+  const match = norm.match(UNREGISTERED_PAGE)
   if (!match) return { isPage: false, norm }
-  const [, prefix, zone, slug] = match
-  const locale = prefix === 'ua' ? 'uk' : prefix === 'en' ? 'en' : 'ru'
+  const [, dir, zone, slug] = match
+  const axis = LOCALES.find((candidate) => candidate.vitepressKey === (dir ?? 'root'))
+  const locale = axis.language
   const validZone = isPotentialContentPath(norm)
-  const publicPrefix = prefix ? `/${prefix}` : ''
+  const publicPrefix = axis.prefix
   return {
     isPage: true,
     norm,
@@ -230,27 +244,40 @@ function jaccard(left, right) {
 
 /** H2, которым домашний стиль обязывает закрывать почти каждую страницу. Это вёрстка, а не
  * содержание: «Куда дальше» стоит на 13 из 15 страниц /zarabotok/ и на стольких же в /ua/ и /en/.
- * Считать их дублированием — значит заливать гейт шумом ровно там, где всё здорово. */
+ * Считать их дублированием — значит заливать гейт шумом ровно там, где всё здорово.
+ * Арабские — те же блоки арабского дерева («Куда дальше», «Страницы раздела», «Итог»): без них
+ * «إلى أين بعد ذلك» на каждой арабской странице хаба зажгла бы heading-echo на первой же волне.
+ * Список приводится через `normalizeHeading`, поэтому пишется так, как пишет редактор. */
 const BOILERPLATE_H2 = new Set([
   'куда дальше', 'куди далі', 'where to next',
   'страницы раздела', 'сторінки розділу', 'pages in this section',
   'итог', 'підсумок', 'the bottom line', 'in short',
-])
+  'إلى أين بعد ذلك', 'ماذا بعد', 'صفحات هذا القسم', 'الخلاصة', 'باختصار',
+].map((heading) => normalizeHeading(heading)))
 
 /** H2, открывающий блок FAQ. Вопросы внутри него разбираются отдельным правилом. */
 const FAQ_H2 = new Set([
   'часто задаваемые вопросы', 'частые вопросы', 'вопросы и ответы',
   'часті питання', 'часті запитання', 'питання і відповіді',
   'frequently asked questions', 'common questions', 'faq',
-])
+  'الأسئلة الشائعة', 'أسئلة شائعة', 'الأسئلة المتكررة', 'أسئلة متكررة', 'أسئلة وأجوبة', 'الأسئلة والأجوبة',
+].map((heading) => normalizeHeading(heading)))
 
-/** Нижний регистр, снятая разметка, ё=е, без пунктуации и лишних пробелов. */
+/** Нижний регистр, снятая разметка, ё=е, без пунктуации и лишних пробелов.
+ * Арабский приводится к одному написанию тех букв, которые редактор пишет то так, то эдак:
+ * алиф с хамзой или маддой — просто алиф (الأسئلة = الاسئلة), алиф максура — йа, та марбута — ха;
+ * огласовки и татвиль снимаются, а не превращаются в пробел посреди слова. На кириллицу и
+ * латиницу эти замены не действуют — в них нет ни одного из этих символов. */
 export function normalizeHeading(text) {
   return text
     .replace(/\[([^\]]*)\]\([^)]*\)/g, '$1')
     .replace(/\*\*|__|[*_`~]/g, ' ')
     .toLowerCase()
     .replace(/ё/g, 'е')
+    .replace(/[\u064B-\u065F\u0670\u0640]/g, '')
+    .replace(/[\u0622\u0623\u0625]/g, '\u0627')
+    .replace(/\u0649/g, '\u064A')
+    .replace(/\u0629/g, '\u0647')
     .replace(/[^\p{L}\p{N}\s]/gu, ' ')
     .replace(/\s+/g, ' ')
     .trim()
@@ -258,9 +285,15 @@ export function normalizeHeading(text) {
 
 /** Ключ для сравнения «почти одинаковых» заголовков: слова, обрезанные до 4 символов. Обрезка
  * снимает словоизменение («нужны»/«нужна», «приходят»/«приходит», «counted»/«counting») без
- * словаря и одинаково ведёт себя во всех трёх локалях. */
-function headingKey(normalized) {
-  return new Set(normalized.split(' ').filter(Boolean).map((word) => word.slice(0, 4)))
+ * словаря и одинаково ведёт себя во всех трёх локалях.
+ *
+ * Арабский приклеивает к слову артикль и однобуквенные союзы и предлоги: «المشاهدات»,
+ * «والمشاهدات», «بالمشاهدات», «للمشاهدات». Обрезанные до четырёх букв, все такие слова стали бы
+ * «المش», и разные вопросы арабского хаба считались бы эхом друг друга. Поэтому префикс
+ * снимается до обрезки — и только арабский: слова другой письменности он не трогает. */
+const ARABIC_PREFIX = /^(?:[وفبك]?ال|لل)(?=\p{L}{2})/u
+export function headingKey(normalized) {
+  return new Set(normalized.split(' ').filter(Boolean).map((word) => word.replace(ARABIC_PREFIX, '').slice(0, 4)))
 }
 
 function headingsSimilar(left, right) {

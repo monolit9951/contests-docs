@@ -43,8 +43,9 @@ import contentManifest from '../content-pages.json' with { type: 'json' }
 //     locale is self-canonical and its own x-default, exactly as the six ru-only
 //     pages already are.
 
-export type Locale = 'ru' | 'uk' | 'en'
+export type Locale = 'ru' | 'uk' | 'en' | 'ar'
 export type HubId = 'earnings' | 'brands' | 'help' | 'about' | 'legal'
+export type TextDirection = 'ltr' | 'rtl'
 
 export interface LocaleAxis {
     /** i18next / hreflang / <html lang> code. */
@@ -53,6 +54,97 @@ export interface LocaleAxis {
     readonly prefix: string
     /** VitePress locale key: 'root' for the unprefixed one, else the dir name. */
     readonly vitepressKey: string
+    /** `<html dir>`: the side every logical CSS property of the page resolves to. */
+    readonly dir: TextDirection
+}
+
+// ---------------------------------------------------------------------------
+// KNOWING a language and SERVING it are two different things.
+//
+// The table below is code: every language the build knows how to render, with
+// the fixed shape of its tree — the URL prefix, the source directory, the
+// writing direction — and the application tree its readers are sent to. The
+// manifest (`docs/content-pages.json`) decides which of them are LIVE: a known
+// language that the manifest does not declare has no address, no route, no
+// sitemap entry and no hreflang, exactly like a translation a page does not
+// have. So a new language is prepared here — its shape, its interface copy, its
+// right-to-left layout — and goes live the day the manifest declares it
+// together with its first pages, with no second code change.
+//
+// `app` is the application locale behind the product links of a docs locale.
+// The application speaks Russian, Ukrainian and English (and Polish, which has
+// no docs tree), not Arabic: an Arabic reader who presses "open the tasks" is
+// sent to the English interface, and that decision lives here, once, rather
+// than in the text of every Arabic page (`appPathFor`, `appLinkTarget`).
+// ---------------------------------------------------------------------------
+
+interface LocaleShape {
+    readonly prefix: string
+    readonly vitepressKey: string
+    readonly dir: TextDirection
+    readonly app: Locale
+}
+
+const LOCALE_SHAPES: Readonly<Record<Locale, LocaleShape>> = {
+    ru: { prefix: '', vitepressKey: 'root', dir: 'ltr', app: 'ru' },
+    uk: { prefix: '/ua', vitepressKey: 'ua', dir: 'ltr', app: 'uk' },
+    en: { prefix: '/en', vitepressKey: 'en', dir: 'ltr', app: 'en' },
+    // Latin slugs under `/ar`, like every other tree: an Arabic-script slug would
+    // travel as percent-escapes, and the slug grammar below admits none.
+    ar: { prefix: '/ar', vitepressKey: 'ar', dir: 'rtl', app: 'en' },
+}
+
+/**
+ * Every language the build can render, in the order its trees are listed —
+ * hreflang clusters, the language switcher, llms.txt, the host routes. A new
+ * language is appended, so nothing already published changes its order.
+ *
+ * Every per-locale dictionary (interface copy, labels, Open Graph locales) is
+ * keyed by this list, and `locales.test.ts` fails when one of them misses a
+ * language here.
+ */
+export const KNOWN_LOCALES: readonly Locale[] = ['ru', 'uk', 'en', 'ar']
+
+/**
+ * The trees the manifest can never drop: they have pages, host routes and
+ * indexed addresses. Every other known language is optional and dark until the
+ * manifest declares it.
+ */
+const MANDATORY_LOCALES: readonly Locale[] = ['ru', 'uk', 'en']
+
+/**
+ * The fixed axis of a known language, declared or not: where its tree WOULD live. For the live
+ * trees use `LOCALES` / `localeAxis`; this is for code that has to be ready before a tree is
+ * declared — a hand-written nginx location, a test of it.
+ */
+export const knownAxisOf = (language: Locale): LocaleAxis => {
+    const { prefix, vitepressKey, dir } = LOCALE_SHAPES[language]
+    return { language, prefix, vitepressKey, dir }
+}
+
+/** Writing direction of a known language, declared or not. */
+export const textDirectionOf = (language: Locale): TextDirection => LOCALE_SHAPES[language].dir
+
+/**
+ * The application locale a reader of this docs locale is sent to: the same
+ * language where the application has it, English where it does not.
+ */
+export const appLocaleOf = (language: Locale): Locale => LOCALE_SHAPES[language].app
+
+/**
+ * The language of a page, read off its docs-relative source path: `ua/…` is
+ * Ukrainian, `ar/…` Arabic, anything outside a locale directory the root locale.
+ * It is how a Markdown rule that only has a file name knows the language of the
+ * page it is rendering. Directories are matched whole, so `uanews/x.md` is not
+ * Ukrainian.
+ */
+export const localeOfSourcePath = (path: string): Locale => {
+    const normalized = String(path).replace(/\\/g, '/').replace(/^\/+/, '')
+    for (const language of KNOWN_LOCALES) {
+        const { vitepressKey } = LOCALE_SHAPES[language]
+        if (vitepressKey !== 'root' && normalized.startsWith(`${vitepressKey}/`)) return language
+    }
+    return KNOWN_LOCALES.find((language) => LOCALE_SHAPES[language].vitepressKey === 'root')!
 }
 
 export interface RegistryEntry {
@@ -79,12 +171,13 @@ export interface RegistryEntry {
 interface ContentManifest {
     readonly schemaVersion: 1
     readonly origin: string
-    readonly locales: Readonly<Record<Locale, Omit<LocaleAxis, 'language'>>>
-    readonly hubs: Readonly<Record<HubId, Readonly<Record<Locale, string>>>>
+    /** The LIVE trees: a subset of `KNOWN_LOCALES` that always holds the mandatory three. */
+    readonly locales: Readonly<Partial<Record<Locale, Omit<LocaleAxis, 'language' | 'dir'>>>>
+    /** One segment per hub for every declared locale — and for no other. */
+    readonly hubs: Readonly<Record<HubId, Readonly<Partial<Record<Locale, string>>>>>
     readonly pages: readonly RegistryEntry[]
 }
 
-const LOCALE_ORDER: readonly Locale[] = ['ru', 'uk', 'en']
 const HUB_ORDER: readonly HubId[] = ['earnings', 'brands', 'help', 'about', 'legal']
 const isRecord = (value: unknown): value is Record<string, unknown> =>
     typeof value === 'object' && value !== null && !Array.isArray(value)
@@ -114,17 +207,23 @@ export const parseContentManifest = (input: unknown): ContentManifest => {
     if (input.origin !== 'https://darebay.com') throw new Error('registry: manifest origin must be https://darebay.com')
 
     if (!isRecord(input.locales)) throw new Error('registry: manifest.locales must be an object')
-    assertKeys(input.locales, LOCALE_ORDER, [], 'manifest.locales')
-    const expectedAxes = {
-        ru: { prefix: '', vitepressKey: 'root' },
-        uk: { prefix: '/ua', vitepressKey: 'ua' },
-        en: { prefix: '/en', vitepressKey: 'en' },
-    } as const
-    for (const locale of LOCALE_ORDER) {
-        const axis = input.locales[locale]
+    assertKeys(
+        input.locales,
+        MANDATORY_LOCALES,
+        KNOWN_LOCALES.filter((locale) => !MANDATORY_LOCALES.includes(locale)),
+        'manifest.locales',
+    )
+    // The live trees, in the fixed order of `KNOWN_LOCALES` whatever the key
+    // order in the file. Everything below — hub segments, page slugs — is
+    // checked against THIS list, so a language the manifest has not declared
+    // cannot slip in through a hub or a page.
+    const declared = KNOWN_LOCALES.filter((locale) => locale in input.locales)
+    for (const locale of declared) {
+        const axis = (input.locales as Record<string, unknown>)[locale]
         if (!isRecord(axis)) throw new Error(`registry: manifest.locales.${locale} must be an object`)
         assertKeys(axis, ['prefix', 'vitepressKey'], [], `manifest.locales.${locale}`)
-        if (axis.prefix !== expectedAxes[locale].prefix || axis.vitepressKey !== expectedAxes[locale].vitepressKey) {
+        const shape = LOCALE_SHAPES[locale]
+        if (axis.prefix !== shape.prefix || axis.vitepressKey !== shape.vitepressKey) {
             throw new Error(`registry: manifest.locales.${locale} violates the stable locale axis`)
         }
     }
@@ -134,8 +233,8 @@ export const parseContentManifest = (input: unknown): ContentManifest => {
     for (const hub of HUB_ORDER) {
         const localized = input.hubs[hub]
         if (!isRecord(localized)) throw new Error(`registry: manifest.hubs.${hub} must be an object`)
-        assertKeys(localized, LOCALE_ORDER, [], `manifest.hubs.${hub}`)
-        for (const locale of LOCALE_ORDER) {
+        assertKeys(localized, declared, [], `manifest.hubs.${hub}`)
+        for (const locale of declared) {
             assertString(localized[locale], `manifest.hubs.${hub}.${locale}`)
             if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(localized[locale])) {
                 throw new Error(`registry: invalid hub slug manifest.hubs.${hub}.${locale}`)
@@ -154,7 +253,7 @@ export const parseContentManifest = (input: unknown): ContentManifest => {
         assertString(page.hub, `${label}.hub`)
         if (!HUB_ORDER.includes(page.hub as HubId)) throw new Error(`registry: ${label}.hub is unknown`)
         if (!isRecord(page.slugs)) throw new Error(`registry: ${label}.slugs must be an object`)
-        assertKeys(page.slugs, [], LOCALE_ORDER, `${label}.slugs`)
+        assertKeys(page.slugs, [], declared, `${label}.slugs`)
         // At least one locale, and no locale is privileged: a page with only
         // `en` is as valid as a page with only `ru`. A page with none has no
         // address at all, so it could not be served, linked or redirected to.
@@ -184,36 +283,9 @@ export const parseContentManifest = (input: unknown): ContentManifest => {
     return input as unknown as ContentManifest
 }
 
-const manifest = parseContentManifest(contentManifest)
-
-// `/ua` and not `/uk`: `uk` is the LANGUAGE code (ISO 639-1) and the only value
-// hreflang accepts, but a Ukrainian reader parses `/uk/` as United Kingdom. The
-// URL segment talks to a human, the hreflang value talks to a crawler.
-export const LOCALES: readonly LocaleAxis[] = LOCALE_ORDER.map((language) => ({
-    language,
-    ...manifest.locales[language],
-}))
-
-export const ROOT_LOCALE = LOCALES[0]
-export const ORIGIN = manifest.origin
-
-/** Top-level sections, including every locale segment needed to resolve URLs. */
-export const HUBS: Readonly<Record<HubId, Readonly<Record<Locale, string>>>> = manifest.hubs
-
 // ---------------------------------------------------------------------------
-// The pages.
-//
-// Sorted by hub, index page first. `retired` carries the pre-migration address
-// of every page; the four-level `/docs/ru/<zone>/<slug>` shape is gone, and two
-// of those levels never carried meaning.
-//
-// Slugs that were English (`create-your-first-contest`, `submit-a-work`, …) are
-// leftovers of the EN tree removed in July: Russian pages wearing English
-// addresses. They are translated here, which is the whole point of the rule.
+// Constants that belong to no manifest.
 // ---------------------------------------------------------------------------
-
-export const CONTENT_MANIFEST_SCHEMA_VERSION = manifest.schemaVersion
-export const PAGES = manifest.pages
 
 /**
  * Retired addresses whose page or file did not survive the migration, mapped
@@ -272,38 +344,6 @@ export const ALREADY_REDIRECTING: readonly string[] = [
     '/docs/ru/',
 ]
 
-// ---------------------------------------------------------------------------
-// Derivations. Nothing below is ever hand-maintained.
-// ---------------------------------------------------------------------------
-
-export const localeAxis = (language: Locale): LocaleAxis => {
-    const axis = LOCALES.find((l) => l.language === language)
-    if (!axis) throw new Error(`registry: unknown locale ${language}`)
-    return axis
-}
-
-/** Locales a page actually exists in, in LOCALES order. */
-export const localesOf = (entry: RegistryEntry): Locale[] =>
-    LOCALES.map((l) => l.language).filter((lang) => entry.slugs[lang] !== undefined)
-
-/**
- * Public path of a page in one locale, or null when the page has no version in
- * it. Hub indexes keep their trailing slash; leaf pages have none. One form per
- * address, always — two forms answering 200 is a duplicate on every page.
- */
-export const pagePath = (entry: RegistryEntry, language: Locale): string | null => {
-    const slug = entry.slugs[language]
-    if (slug === undefined) return null
-    const { prefix } = localeAxis(language)
-    const hub = HUBS[entry.hub][language]
-    return slug === '' ? `${prefix}/${hub}/` : `${prefix}/${hub}/${slug}`
-}
-
-export const pageUrl = (entry: RegistryEntry, language: Locale): string | null => {
-    const path = pagePath(entry, language)
-    return path === null ? null : `${ORIGIN}${path}`
-}
-
 /**
  * The language `x-default` stands for: the version shown to a reader none of the
  * cluster's languages match. English, because English is what the site itself
@@ -313,80 +353,6 @@ export const pageUrl = (entry: RegistryEntry, language: Locale): string | null =
  * `contests-frontend/src/domain/i18n/localeRoute.ts` (`withXDefault`).
  */
 export const X_DEFAULT_LANGUAGE: Locale = 'en'
-
-/**
- * The locale a page's `x-default` points at: English when the page has it, the
- * root locale otherwise — and, when it has neither, its first declared locale.
- *
- * That last branch is not a hypothetical: a page declares at least one locale
- * and may declare only one, so the only total answer for a page outside both
- * preferred languages is "itself". Returning `undefined` there would drop
- * x-default from its cluster and leave `hreflangCluster` partial for a page
- * that is perfectly well-formed.
- */
-export const xDefaultLocaleOf = (entry: RegistryEntry): Locale => {
-    const langs = localesOf(entry)
-    if (langs.includes(X_DEFAULT_LANGUAGE)) return X_DEFAULT_LANGUAGE
-    if (langs.includes(ROOT_LOCALE.language)) return ROOT_LOCALE.language
-    return langs[0]
-}
-
-/**
- * The OTHER locales a page exists in, seen from one of them — what the language
- * switcher offers and what `og:locale:alternate` announces.
- *
- * One rule, one implementation: the menu for humans and the tags for crawlers
- * used to filter `localesOf` inline in two places in config.ts, and the whole
- * reason `theme/langs.ts` exists is that those two once disagreed. For a
- * single-locale page this is empty, so the switcher offers nothing rather than
- * a translation that does not exist.
- */
-export const alternateLocalesOf = (entry: RegistryEntry, current: Locale): Locale[] =>
-    localesOf(entry).filter((language) => language !== current)
-
-/**
- * The hreflang cluster of one page: every locale it EXISTS in, itself included,
- * plus x-default on the English version — or on the root one for a page that has
- * no English (`xDefaultLocaleOf`).
- *
- * A single-locale page still gets a self-referencing entry plus x-default on
- * itself — two links, both pointing at the page. That is valid, it is what the
- * six ru-only pages already emit, and it is what keeps the set symmetric once a
- * translation is added later.
- */
-export const hreflangCluster = (entry: RegistryEntry): { hreflang: string; href: string }[] => {
-    const langs = localesOf(entry)
-    const cluster = langs.map((lang) => ({ hreflang: lang, href: pageUrl(entry, lang)! }))
-    cluster.push({ hreflang: 'x-default', href: pageUrl(entry, xDefaultLocaleOf(entry))! })
-    return cluster
-}
-
-/**
- * Source file of a page inside `docs/`, relative and extension-included.
- * Root locale lives at `<hub>/<slug>.md`, every other locale one level down
- * under its VitePress key — which is exactly what `locales` expects.
- */
-export const sourceFile = (entry: RegistryEntry, language: Locale): string | null => {
-    const slug = entry.slugs[language]
-    if (slug === undefined) return null
-    const { vitepressKey } = localeAxis(language)
-    const dir = vitepressKey === 'root' ? '' : `${vitepressKey}/`
-    const hub = HUBS[entry.hub][language]
-    return slug === '' ? `${dir}${hub}/index.md` : `${dir}${hub}/${slug}.md`
-}
-
-/**
- * Locales a page DECLARES but has no file for, given the docs-relative paths
- * that exist on disk.
- *
- * A declared locale is a promise of an address: it enters the sitemap, the
- * hreflang cluster, the hub list and the host routes. Declaring one without the
- * file behind it is how a sitemap fills with 404s, so `check-registry.mjs`
- * gate 6 refuses it — this is that rule, named and pure so it can be exercised
- * on a file list instead of only on the current tree.
- */
-export const missingSources = (entry: RegistryEntry, onDisk: ReadonlySet<string>): Locale[] =>
-    localesOf(entry).filter((language) => !onDisk.has(sourceFile(entry, language)!))
 
 /**
  * Addresses on darebay.com that the APPLICATION serves, which content pages
@@ -416,24 +382,24 @@ const APP_SECTIONS = [
     'tasks',
 ] as const
 
-// The application serves ONE slug per section under every locale prefix (its
-// slugs were translated for one afternoon on 2026-08-03 and reverted), so the
-// list is derived rather than written out three times. If that ever changes
-// again, this is where it breaks — loudly, via VitePress's dead-link check.
-export const APP_ROUTES: readonly string[] = LOCALES.flatMap((locale) =>
-    APP_SECTIONS.map((slug) => `${locale.prefix}/${slug}`)
-)
+export type AppSection = (typeof APP_SECTIONS)[number]
 
 /**
- * Every URL prefix the content container answers on — and ONLY the ones that
- * have pages.
- *
- * A locale is routed here when at least one page declares it. Routing
- * `/ua/zarobitok/` before a single Ukrainian page exists would hand the reader
- * a 404 from the content container instead of the application's own 404 page,
- * and would put an empty branch in front of the crawler. Same rule as
- * `hreflangCluster`: what does not exist is not announced.
+ * The application's address of one section for a reader of `language` — in the
+ * application tree that reader is sent to (`appLocaleOf`), so an Arabic page
+ * gets the English catalogue. The ONE place the docs build writes a product
+ * address; `links.ts` (header, hero, CTA) and the Markdown link rewrite below
+ * both come through here.
  */
+export const appPathFor = (language: Locale, section: AppSection | ''): string => {
+    const prefix = LOCALE_SHAPES[appLocaleOf(language)].prefix
+    if (section === '') return prefix || '/'
+    if (!(APP_SECTIONS as readonly string[]).includes(section)) {
+        throw new Error(`registry: "${section}" is not an application section`)
+    }
+    return `${prefix}/${section}`
+}
+
 /**
  * Files the content build writes to the ROOT of its output, which therefore
  * need their own route on the host: with routing by hub prefix, anything not
@@ -459,103 +425,381 @@ export const CONTENT_ROOT_FILES: readonly string[] = [
     '/hashmap.json',
 ]
 
-export const CONTENT_SEGMENTS: readonly string[] = LOCALES.flatMap((locale) => {
-    const hubsWithPages = new Set(
-        PAGES.filter((page) => page.slugs[locale.language] !== undefined).map((page) => page.hub)
+// ---------------------------------------------------------------------------
+// Derivations. Nothing below is ever hand-maintained.
+//
+// They are built by `createRegistry` from ONE parsed manifest, and the module
+// exports the instance built from the live `docs/content-pages.json`. The
+// factory exists so the rules can be exercised on a manifest that is not the
+// live one — a tree the live manifest has not declared yet (Arabic, until its
+// first pages ship) has no address in the live instance, and a test that could
+// only see the live instance could not prove anything about it.
+// ---------------------------------------------------------------------------
+
+export const createRegistry = (input: unknown) => {
+    const manifest = parseContentManifest(input)
+
+    // `/ua` and not `/uk`: `uk` is the LANGUAGE code (ISO 639-1) and the only value
+    // hreflang accepts, but a Ukrainian reader parses `/uk/` as United Kingdom. The
+    // URL segment talks to a human, the hreflang value talks to a crawler.
+    const LOCALES: readonly LocaleAxis[] = KNOWN_LOCALES.filter((language) => manifest.locales[language]).map(
+        (language) => ({
+            language,
+            ...manifest.locales[language]!,
+            dir: LOCALE_SHAPES[language].dir,
+        }),
     )
-    return [...hubsWithPages].map((hubId) => {
-        const segment = HUBS[hubId][locale.language]
-        return locale.prefix ? `${locale.prefix.slice(1)}/${segment}` : segment
+
+    const ROOT_LOCALE = LOCALES[0]
+    const ORIGIN = manifest.origin
+
+    /** Top-level sections, with a segment for every DECLARED locale. */
+    const HUBS: Readonly<Record<HubId, Readonly<Partial<Record<Locale, string>>>>> = manifest.hubs
+
+    // -----------------------------------------------------------------------
+    // The pages.
+    //
+    // Sorted by hub, index page first. `retired` carries the pre-migration address
+    // of every page; the four-level `/docs/ru/<zone>/<slug>` shape is gone, and two
+    // of those levels never carried meaning.
+    //
+    // Slugs that were English (`create-your-first-contest`, `submit-a-work`, …) are
+    // leftovers of the EN tree removed in July: Russian pages wearing English
+    // addresses. They are translated here, which is the whole point of the rule.
+    // -----------------------------------------------------------------------
+
+    const CONTENT_MANIFEST_SCHEMA_VERSION = manifest.schemaVersion
+    const PAGES = manifest.pages
+
+    const localeAxis = (language: Locale): LocaleAxis => {
+        const axis = LOCALES.find((l) => l.language === language)
+        if (!axis) throw new Error(`registry: unknown locale ${language}`)
+        return axis
+    }
+
+    /** Hub segment of a DECLARED locale; the parser guarantees every hub has one. */
+    const hubSegment = (hub: HubId, language: Locale): string => {
+        const segment = HUBS[hub][language]
+        if (segment === undefined) throw new Error(`registry: hub ${hub} has no segment for ${language}`)
+        return segment
+    }
+
+    /** Locales a page actually exists in, in LOCALES order. */
+    const localesOf = (entry: RegistryEntry): Locale[] =>
+        LOCALES.map((l) => l.language).filter((lang) => entry.slugs[lang] !== undefined)
+
+    /**
+     * Public path of a page in one locale, or null when the page has no version in
+     * it. Hub indexes keep their trailing slash; leaf pages have none. One form per
+     * address, always — two forms answering 200 is a duplicate on every page.
+     */
+    const pagePath = (entry: RegistryEntry, language: Locale): string | null => {
+        const slug = entry.slugs[language]
+        if (slug === undefined) return null
+        const { prefix } = localeAxis(language)
+        const hub = hubSegment(entry.hub, language)
+        return slug === '' ? `${prefix}/${hub}/` : `${prefix}/${hub}/${slug}`
+    }
+
+    const pageUrl = (entry: RegistryEntry, language: Locale): string | null => {
+        const path = pagePath(entry, language)
+        return path === null ? null : `${ORIGIN}${path}`
+    }
+
+    /**
+     * The index page of a hub in one language, or null when that hub has no index
+     * there yet.
+     *
+     * A tree does not have to open with every section: Arabic starts with the
+     * earnings hub and a handful of pages that live under About and Help. Every
+     * link to a hub root — the header nav, the breadcrumb, the "all pages" link —
+     * asks here first, so a section with no index in a language is simply not
+     * offered in it instead of being linked to a 404.
+     */
+    const hubIndexPath = (hub: HubId, language: Locale): string | null => {
+        const index = PAGES.find((entry) => entry.hub === hub && entry.slugs[language] === '')
+        return index ? pagePath(index, language) : null
+    }
+
+    /**
+     * The locale a page's `x-default` points at: English when the page has it, the
+     * root locale otherwise — and, when it has neither, its first declared locale.
+     *
+     * That last branch is not a hypothetical: a page declares at least one locale
+     * and may declare only one, so the only total answer for a page outside both
+     * preferred languages is "itself". Returning `undefined` there would drop
+     * x-default from its cluster and leave `hreflangCluster` partial for a page
+     * that is perfectly well-formed. An Arabic-only page is exactly that page.
+     */
+    const xDefaultLocaleOf = (entry: RegistryEntry): Locale => {
+        const langs = localesOf(entry)
+        if (langs.includes(X_DEFAULT_LANGUAGE)) return X_DEFAULT_LANGUAGE
+        if (langs.includes(ROOT_LOCALE.language)) return ROOT_LOCALE.language
+        return langs[0]
+    }
+
+    /**
+     * The OTHER locales a page exists in, seen from one of them — what the language
+     * switcher offers and what `og:locale:alternate` announces.
+     *
+     * One rule, one implementation: the menu for humans and the tags for crawlers
+     * used to filter `localesOf` inline in two places in config.ts, and the whole
+     * reason `theme/langs.ts` exists is that those two once disagreed. For a
+     * single-locale page this is empty, so the switcher offers nothing rather than
+     * a translation that does not exist.
+     */
+    const alternateLocalesOf = (entry: RegistryEntry, current: Locale): Locale[] =>
+        localesOf(entry).filter((language) => language !== current)
+
+    /**
+     * The hreflang cluster of one page: every locale it EXISTS in, itself included,
+     * plus x-default on the English version — or on the root one for a page that has
+     * no English (`xDefaultLocaleOf`).
+     *
+     * A single-locale page still gets a self-referencing entry plus x-default on
+     * itself — two links, both pointing at the page. That is valid, it is what the
+     * six ru-only pages already emit, and it is what keeps the set symmetric once a
+     * translation is added later.
+     */
+    const hreflangCluster = (entry: RegistryEntry): { hreflang: string; href: string }[] => {
+        const langs = localesOf(entry)
+        const cluster = langs.map((lang) => ({ hreflang: lang, href: pageUrl(entry, lang)! }))
+        cluster.push({ hreflang: 'x-default', href: pageUrl(entry, xDefaultLocaleOf(entry))! })
+        return cluster
+    }
+
+    /**
+     * Source file of a page inside `docs/`, relative and extension-included.
+     * Root locale lives at `<hub>/<slug>.md`, every other locale one level down
+     * under its VitePress key — which is exactly what `locales` expects.
+     */
+    const sourceFile = (entry: RegistryEntry, language: Locale): string | null => {
+        const slug = entry.slugs[language]
+        if (slug === undefined) return null
+        const { vitepressKey } = localeAxis(language)
+        const dir = vitepressKey === 'root' ? '' : `${vitepressKey}/`
+        const hub = hubSegment(entry.hub, language)
+        return slug === '' ? `${dir}${hub}/index.md` : `${dir}${hub}/${slug}.md`
+    }
+
+    /**
+     * Locales a page DECLARES but has no file for, given the docs-relative paths
+     * that exist on disk.
+     *
+     * A declared locale is a promise of an address: it enters the sitemap, the
+     * hreflang cluster, the hub list and the host routes. Declaring one without the
+     * file behind it is how a sitemap fills with 404s, so `check-registry.mjs`
+     * gate 6 refuses it — this is that rule, named and pure so it can be exercised
+     * on a file list instead of only on the current tree.
+     */
+    const missingSources = (entry: RegistryEntry, onDisk: ReadonlySet<string>): Locale[] =>
+        localesOf(entry).filter((language) => !onDisk.has(sourceFile(entry, language)!))
+
+    // The application serves ONE slug per section under every locale prefix (its
+    // slugs were translated for one afternoon on 2026-08-03 and reverted), so the
+    // list is derived rather than written out once per language. If that ever
+    // changes again, this is where it breaks — loudly, via VitePress's dead-link
+    // check. A docs tree without an application tree of its own (Arabic) adds no
+    // routes: its readers are sent to the tree `appLocaleOf` names.
+    const APP_ROUTES: readonly string[] = [
+        ...new Set(LOCALES.flatMap((locale) => APP_SECTIONS.map((section) => appPathFor(locale.language, section)))),
+    ]
+
+    /**
+     * The application address a docs link resolves to, or null when the link is
+     * not a link into the application under a docs prefix of its own.
+     *
+     * A translator writes the product links of an Arabic page the way every other
+     * tree writes them — `/ar/tasks`, the catalogue in the reader's language. The
+     * application has no Arabic tree, so that address would be a 404 in the
+     * product; this sends it to the tree `appLocaleOf` names, anchor and query
+     * kept. Links under a locale the application does serve are left alone: they
+     * are already the address.
+     */
+    const appLinkTarget = (href: string): string | null => {
+        if (!href.startsWith('/')) return null
+        const clean = href.replace(/[?#].*$/, '')
+        const rest = href.slice(clean.length)
+        for (const locale of LOCALES) {
+            if (!locale.prefix || LOCALE_SHAPES[appLocaleOf(locale.language)].prefix === locale.prefix) continue
+            if (!clean.startsWith(`${locale.prefix}/`)) continue
+            const section = clean.slice(locale.prefix.length + 1).replace(/\/$/, '')
+            if ((APP_SECTIONS as readonly string[]).includes(section)) {
+                return `${appPathFor(locale.language, section as AppSection)}${rest}`
+            }
+        }
+        return null
+    }
+
+    /**
+     * Every URL prefix the content container answers on — and ONLY the ones that
+     * have pages.
+     *
+     * A locale is routed here when at least one page declares it. Routing
+     * `/ua/zarobitok/` before a single Ukrainian page exists would hand the reader
+     * a 404 from the content container instead of the application's own 404 page,
+     * and would put an empty branch in front of the crawler. Same rule as
+     * `hreflangCluster`: what does not exist is not announced.
+     */
+    const CONTENT_SEGMENTS: readonly string[] = LOCALES.flatMap((locale) => {
+        const hubsWithPages = new Set(
+            PAGES.filter((page) => page.slugs[locale.language] !== undefined).map((page) => page.hub)
+        )
+        return [...hubsWithPages].map((hubId) => {
+            const segment = hubSegment(hubId, locale.language)
+            return locale.prefix ? `${locale.prefix.slice(1)}/${segment}` : segment
+        })
     })
-})
 
-/**
- * Old address → new address, one hop each.
- *
- * ⚠️ The eight redirects added in July (the EN-tree removal) pointed at
- * `/docs/ru/...`, which this migration then moves again. Chaining them would
- * make `EN → RU-old → new` a two- or three-hop trip, and every hop bleeds a
- * little authority and a lot of crawl budget. They are therefore rewritten onto
- * their FINAL address here rather than layered on top — which is why entries
- * like `/docs/faq/fees` sit in the `retired` list of the page they now serve.
- */
-/**
- * The locale a retired address was written in, read from its own prefix.
- *
- * Until the 2026-08 consolidation every `retired` entry was Russian (`/docs/ru/…`),
- * so mapping them all onto the RU canonical was invisibly correct. Collapsing six
- * pages across all three locales broke that assumption: a Ukrainian reader arriving
- * on `/ua/zarobitok/skilky-platiat-novachku` was 301'd onto the RUSSIAN survivor.
- * A cross-language redirect is worse than a 404 — it silently swaps the reader's
- * language and puts the wrong page in the hreflang cluster.
- */
-const retiredLocale = (old: string): Locale => {
-    for (const axis of LOCALES) {
-        if (axis.prefix && (old === axis.prefix || old.startsWith(`${axis.prefix}/`))) return axis.language
+    /**
+     * The locale a retired address was written in, read from its own prefix.
+     *
+     * Until the 2026-08 consolidation every `retired` entry was Russian (`/docs/ru/…`),
+     * so mapping them all onto the RU canonical was invisibly correct. Collapsing six
+     * pages across all three locales broke that assumption: a Ukrainian reader arriving
+     * on `/ua/zarobitok/skilky-platiat-novachku` was 301'd onto the RUSSIAN survivor.
+     * A cross-language redirect is worse than a 404 — it silently swaps the reader's
+     * language and puts the wrong page in the hreflang cluster.
+     */
+    const retiredLocale = (old: string): Locale => {
+        for (const axis of LOCALES) {
+            if (axis.prefix && (old === axis.prefix || old.startsWith(`${axis.prefix}/`))) return axis.language
+        }
+        return ROOT_LOCALE.language
     }
-    return ROOT_LOCALE.language
-}
 
-/**
- * Where one retired address of one page lands.
- *
- * Land in the reader's own language when the survivor has it. When it does not
- * — a translation that does not exist yet, or a page written for one market
- * only — fall back to the survivor's x-default version: a live page in another
- * language beats a dead address, and the fallback disappears the moment the
- * locale is registered.
- *
- * This used to fall back to the RU canonical and SKIP the page entirely when it
- * had none, which silently dropped every retired address of a page without a
- * Russian version. Since 2026-09-18 such pages are legitimate, and a dropped
- * 301 is an indexed address turning into a 404.
- */
-export const redirectTarget = (entry: RegistryEntry, old: string): string =>
-    pagePath(entry, retiredLocale(old)) ?? pagePath(entry, xDefaultLocaleOf(entry))!
+    /**
+     * Where one retired address of one page lands.
+     *
+     * Land in the reader's own language when the survivor has it. When it does not
+     * — a translation that does not exist yet, or a page written for one market
+     * only — fall back to the survivor's x-default version: a live page in another
+     * language beats a dead address, and the fallback disappears the moment the
+     * locale is registered.
+     *
+     * This used to fall back to the RU canonical and SKIP the page entirely when it
+     * had none, which silently dropped every retired address of a page without a
+     * Russian version. Since 2026-09-18 such pages are legitimate, and a dropped
+     * 301 is an indexed address turning into a 404.
+     */
+    const redirectTarget = (entry: RegistryEntry, old: string): string =>
+        pagePath(entry, retiredLocale(old)) ?? pagePath(entry, xDefaultLocaleOf(entry))!
 
-export const redirectMap = (): Record<string, string> => {
-    const map: Record<string, string> = { ...ORPHAN_REDIRECTS }
-    for (const entry of PAGES) {
-        for (const old of entry.retired ?? []) map[old] = redirectTarget(entry, old)
+    /**
+     * Old address → new address, one hop each.
+     *
+     * ⚠️ The eight redirects added in July (the EN-tree removal) pointed at
+     * `/docs/ru/...`, which this migration then moves again. Chaining them would
+     * make `EN → RU-old → new` a two- or three-hop trip, and every hop bleeds a
+     * little authority and a lot of crawl budget. They are therefore rewritten onto
+     * their FINAL address here rather than layered on top — which is why entries
+     * like `/docs/faq/fees` sit in the `retired` list of the page they now serve.
+     */
+    const redirectMap = (): Record<string, string> => {
+        const map: Record<string, string> = { ...ORPHAN_REDIRECTS }
+        for (const entry of PAGES) {
+            for (const old of entry.retired ?? []) map[old] = redirectTarget(entry, old)
+        }
+        return map
     }
-    return map
+
+    /**
+     * Resolves a link written for a locale onto an address that EXISTS.
+     *
+     * Content is translated page by page, so a Ukrainian article legitimately links
+     * to siblings that are still Russian only. Three ways to handle that, and two of
+     * them are wrong: leave the link to 404, or drop it and leave the reader with no
+     * way onward. The third is to send them to the HUB of that section in their own
+     * language — a live page, in their language, listing everything that section has
+     * so far. They land one click from where they were going instead of nowhere.
+     *
+     * The fallback disappears by itself the moment the translation is registered:
+     * once the address resolves, this returns it untouched.
+     *
+     * A link into the application under a tree the application does not have
+     * (`/ar/tasks`) goes to the application tree that reader is sent to
+     * (`appLinkTarget`) — the same rule as every product button of the page.
+     *
+     * A link that matches no live page AND no known hub is left exactly as written,
+     * so VitePress's dead-link check still fails on a genuine typo. That is the line
+     * between "not translated yet" and "wrong".
+     */
+    const resolveLocalizedLink = (href: string): string => {
+        if (!href.startsWith('/')) return href
+
+        const app = appLinkTarget(href)
+        if (app !== null) return app
+
+        const clean = href.replace(/#.*$/, '')
+        const anchor = href.slice(clean.length)
+
+        const live = PAGES.some((entry) =>
+            LOCALES.some((locale) => entry.slugs[locale.language] !== undefined && pagePath(entry, locale.language) === clean)
+        )
+        if (live) return href
+
+        const locale = LOCALES.find((l) => l.prefix && clean.startsWith(`${l.prefix}/`))
+        if (!locale) return href
+
+        const segment = clean.slice(locale.prefix.length + 1).split('/')[0]
+        const hubId = (Object.keys(HUBS) as HubId[]).find((id) => HUBS[id][locale.language] === segment)
+        if (!hubId) return href
+
+        const hubPath = hubIndexPath(hubId, locale.language)
+        return hubPath ? `${hubPath}${anchor}` : href
+    }
+
+    return {
+        LOCALES,
+        ROOT_LOCALE,
+        ORIGIN,
+        HUBS,
+        CONTENT_MANIFEST_SCHEMA_VERSION,
+        PAGES,
+        APP_ROUTES,
+        CONTENT_SEGMENTS,
+        localeAxis,
+        localesOf,
+        pagePath,
+        pageUrl,
+        hubIndexPath,
+        xDefaultLocaleOf,
+        alternateLocalesOf,
+        hreflangCluster,
+        sourceFile,
+        missingSources,
+        appLinkTarget,
+        redirectTarget,
+        redirectMap,
+        resolveLocalizedLink,
+    }
 }
 
-/**
- * Resolves a link written for a locale onto an address that EXISTS.
- *
- * Content is translated page by page, so a Ukrainian article legitimately links
- * to siblings that are still Russian only. Three ways to handle that, and two of
- * them are wrong: leave the link to 404, or drop it and leave the reader with no
- * way onward. The third is to send them to the HUB of that section in their own
- * language — a live page, in their language, listing everything that section has
- * so far. They land one click from where they were going instead of nowhere.
- *
- * The fallback disappears by itself the moment the translation is registered:
- * once the address resolves, this returns it untouched.
- *
- * A link that matches no live page AND no known hub is left exactly as written,
- * so VitePress's dead-link check still fails on a genuine typo. That is the line
- * between "not translated yet" and "wrong".
- */
-export const resolveLocalizedLink = (href: string): string => {
-    if (!href.startsWith('/')) return href
+export type ContentRegistry = ReturnType<typeof createRegistry>
 
-    const clean = href.replace(/#.*$/, '')
-    const anchor = href.slice(clean.length)
-
-    const live = PAGES.some((entry) =>
-        LOCALES.some((locale) => entry.slugs[locale.language] !== undefined && pagePath(entry, locale.language) === clean)
-    )
-    if (live) return href
-
-    const locale = LOCALES.find((l) => l.prefix && clean.startsWith(`${l.prefix}/`))
-    if (!locale) return href
-
-    const hubSegment = clean.slice(locale.prefix.length + 1).split('/')[0]
-    const hubId = (Object.keys(HUBS) as HubId[]).find((id) => HUBS[id][locale.language] === hubSegment)
-    if (!hubId) return href
-
-    const hubEntry = PAGES.find((e) => e.hub === hubId && e.slugs[locale.language] === '')
-    return hubEntry ? `${pagePath(hubEntry, locale.language)}${anchor}` : href
-}
+// The live registry: `docs/content-pages.json` as shipped. Every consumer of this
+// module — the VitePress config, the generators, the gates — reads these.
+export const {
+    LOCALES,
+    ROOT_LOCALE,
+    ORIGIN,
+    HUBS,
+    CONTENT_MANIFEST_SCHEMA_VERSION,
+    PAGES,
+    APP_ROUTES,
+    CONTENT_SEGMENTS,
+    localeAxis,
+    localesOf,
+    pagePath,
+    pageUrl,
+    hubIndexPath,
+    xDefaultLocaleOf,
+    alternateLocalesOf,
+    hreflangCluster,
+    sourceFile,
+    missingSources,
+    appLinkTarget,
+    redirectTarget,
+    redirectMap,
+    resolveLocalizedLink,
+} = createRegistry(contentManifest)

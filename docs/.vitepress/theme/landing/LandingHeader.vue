@@ -15,11 +15,11 @@ const cta = computed(() => (theme.value.nav ?? []).slice(-1)[0] as { text: strin
   <header class="lp-header">
     <div class="lp-container lp-header-in">
       <a class="lp-logo" :href="theme.logoLink as string"><i aria-hidden="true"></i>DareBay</a>
-      <nav class="lp-nav" aria-label="Sections">
+      <nav class="lp-nav" :aria-label="theme.navLabel">
         <a v-for="l in links" :key="l.link" :href="l.link">{{ l.text }}</a>
       </nav>
       <div class="lp-header-right">
-        <div class="lp-lang" aria-label="Language">
+        <div class="lp-lang" :aria-label="theme.languageLabel">
           <span>{{ currentLang.label }}</span>
           <a v-for="l in localeLinks" :key="l.link" :href="l.link" :hreflang="undefined">{{ l.text }}</a>
         </div>

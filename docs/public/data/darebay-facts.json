@@ -10,7 +10,7 @@
     },
     "productIntent": {
       "file": "data/product-intent.json",
-      "decidedAt": "2026-09-20"
+      "decidedAt": "2026-09-18"
     },
     "liveCatalogue": {
       "file": "data/contests-snapshot.json",
@@ -24,22 +24,24 @@
       "id": "rate-per-1000-views",
       "value": {
         "min": 1,
-        "max": 10
+        "max": 2
       },
       "unit": "usd_per_1000_views",
       "labels": {
         "ru": "Ставка за 1000 просмотров",
         "uk": "Ставка за 1000 переглядів",
-        "en": "Rate per 1,000 views"
+        "en": "Rate per 1,000 views",
+        "ar": "السعر لكل 1,000 مشاهدة"
       },
       "text": {
-        "ru": "$1.00–$10.00 за 1000 просмотров (открытые конкурсы)",
-        "uk": "$1.00–$10.00 за 1000 переглядів (відкриті конкурси)",
-        "en": "$1.00–$10.00 per 1,000 views (open tasks)"
+        "ru": "$1.00–$2.00 за 1000 просмотров (открытые конкурсы)",
+        "uk": "$1.00–$2.00 за 1000 переглядів (відкриті конкурси)",
+        "en": "$1.00–$2.00 per 1,000 views (open tasks)",
+        "ar": "$1.00–$2.00 لكل 1,000 مشاهدة (المهام المفتوحة)"
       },
-      "source": "product-intent.json#rate-band",
-      "asOf": "2026-09-20",
-      "note": "Target band decided 2026-09-20 (product-intent.json#rate-band); the reviewed live band is $1.00–$2.00; 2 open listed tasks in the live catalogue on 2026-09-20 pay $1.19–$5.94 per 1,000 views. A task's exact rate is printed on its card and cannot change after the start."
+      "source": "product-truth.json#ppv.stable.bands.cpm",
+      "asOf": "2026-08-23",
+      "note": "Reviewed stable band; 2 open listed tasks in the live catalogue on 2026-09-20 pay $1.19–$5.94 per 1,000 views. A task's exact rate is printed on its card and cannot change after the start."
     },
     {
       "id": "cap-per-clip",
@@ -48,12 +50,14 @@
       "labels": {
         "ru": "Потолок на один ролик",
         "uk": "Стеля на один ролик",
-        "en": "Cap per clip"
+        "en": "Cap per clip",
+        "ar": "الحد الأقصى لكل مقطع"
       },
       "text": {
         "ru": "до $500 на ролик",
         "uk": "до $500 на ролик",
-        "en": "up to $500 per clip"
+        "en": "up to $500 per clip",
+        "ar": "حتى $500 لكل مقطع"
       },
       "source": "product-truth.json#ppv.stable.bands.maxPerWork.high",
       "asOf": "2026-08-23",
@@ -66,12 +70,14 @@
       "labels": {
         "ru": "Порог просмотров",
         "uk": "Поріг переглядів",
-        "en": "View threshold"
+        "en": "View threshold",
+        "ar": "حد المشاهدات"
       },
       "text": {
         "ru": "задаёт задание (по умолчанию 1000 просмотров)",
         "uk": "задає завдання (за замовчуванням 1000 переглядів)",
-        "en": "set per task (system default 1,000 views)"
+        "en": "set per task (system default 1,000 views)",
+        "ar": "تحدده المهمة (الافتراضي في النظام 1,000 مشاهدة)"
       },
       "source": "product-truth.json#ppv.stable.defaultMinimumViews.value",
       "asOf": "2026-08-23",
@@ -84,12 +90,14 @@
       "labels": {
         "ru": "Комиссия за создание конкурса",
         "uk": "Комісія за створення конкурсу",
-        "en": "Contest creation fee"
+        "en": "Contest creation fee",
+        "ar": "عمولة إنشاء المسابقة"
       },
       "text": {
         "ru": "0%",
         "uk": "0%",
-        "en": "0%"
+        "en": "0%",
+        "ar": "0%"
       },
       "source": "product-truth.json#contest.creationCommissionPercent",
       "asOf": "2026-08-23"
@@ -101,12 +109,14 @@
       "labels": {
         "ru": "Комиссия за пополнение бюджета конкурса",
         "uk": "Комісія за поповнення бюджету конкурсу",
-        "en": "Contest budget top-up fee"
+        "en": "Contest budget top-up fee",
+        "ar": "عمولة شحن ميزانية المسابقة"
       },
       "text": {
         "ru": "0%",
         "uk": "0%",
-        "en": "0%"
+        "en": "0%",
+        "ar": "0%"
       },
       "source": "product-truth.json#contest.topUpCommissionPercent",
       "asOf": "2026-08-23"
@@ -118,12 +128,14 @@
       "labels": {
         "ru": "Комиссия с покупки в магазине",
         "uk": "Комісія з покупки в магазині",
-        "en": "Store purchase fee"
+        "en": "Store purchase fee",
+        "ar": "عمولة الشراء من المتجر"
       },
       "text": {
         "ru": "8%",
         "uk": "8%",
-        "en": "8%"
+        "en": "8%",
+        "ar": "8%"
       },
       "source": "product-truth.json#store.commissionPercent",
       "asOf": "2026-08-23"
@@ -135,12 +147,14 @@
       "labels": {
         "ru": "Комиссия за вывод баланса",
         "uk": "Комісія за виведення балансу",
-        "en": "Balance withdrawal fee"
+        "en": "Balance withdrawal fee",
+        "ar": "عمولة سحب الرصيد"
       },
       "text": {
         "ru": "10% от суммы заявки, заявка от 10 USDT",
         "uk": "10% від суми заявки, заявка від 10 USDT",
-        "en": "10% of the requested amount, request from 10 USDT"
+        "en": "10% of the requested amount, request from 10 USDT",
+        "ar": "10% من المبلغ المطلوب، والطلب من 10 USDT"
       },
       "source": "product-truth.json#withdrawal.defaultCommissionPercent",
       "asOf": "2026-08-23",
@@ -153,12 +167,14 @@
       "labels": {
         "ru": "Минимальная заявка на вывод",
         "uk": "Мінімальна заявка на виведення",
-        "en": "Minimum withdrawal request"
+        "en": "Minimum withdrawal request",
+        "ar": "الحد الأدنى لطلب السحب"
       },
       "text": {
         "ru": "10 USDT",
         "uk": "10 USDT",
-        "en": "10 USDT"
+        "en": "10 USDT",
+        "ar": "10 USDT"
       },
       "source": "product-truth.json#withdrawal.minimumGrossAmount",
       "asOf": "2026-08-23",
@@ -173,12 +189,14 @@
       "labels": {
         "ru": "Способы выплаты",
         "uk": "Способи виплати",
-        "en": "Payout rails"
+        "en": "Payout rails",
+        "ar": "طرق الدفع"
       },
       "text": {
         "ru": "USDT в сети TON, звёзды Telegram",
         "uk": "USDT у мережі TON, зірки Telegram",
-        "en": "USDT on TON, Telegram Stars"
+        "en": "USDT on TON, Telegram Stars",
+        "ar": "USDT على شبكة TON، ونجوم Telegram"
       },
       "source": "product-truth.json#withdrawal.wizardMethods",
       "asOf": "2026-08-23",
@@ -194,12 +212,14 @@
       "labels": {
         "ru": "Площадки",
         "uk": "Майданчики",
-        "en": "Platforms"
+        "en": "Platforms",
+        "ar": "المنصات"
       },
       "text": {
         "ru": "TikTok, YouTube, Instagram и другие сайты, названные в задании",
         "uk": "TikTok, YouTube, Instagram та інші сайти, названі в завданні",
-        "en": "TikTok, YouTube, Instagram and other sites named in the task"
+        "en": "TikTok, YouTube, Instagram and other sites named in the task",
+        "ar": "TikTok وYouTube وInstagram ومواقع أخرى تحددها المهمة"
       },
       "source": "gen-facts-json.mjs#WORDING.platforms",
       "asOf": "2026-09-17",
@@ -211,12 +231,14 @@
       "labels": {
         "ru": "География выплат",
         "uk": "Географія виплат",
-        "en": "Geography of payouts"
+        "en": "Geography of payouts",
+        "ar": "جغرافيا الدفع"
       },
       "text": {
         "ru": "весь мир, без списка стран",
         "uk": "увесь світ, без списку країн",
-        "en": "worldwide, no country list"
+        "en": "worldwide, no country list",
+        "ar": "العالم كله، دون قائمة دول"
       },
       "source": "gen-facts-json.mjs#WORDING.geography",
       "asOf": "2026-09-17",

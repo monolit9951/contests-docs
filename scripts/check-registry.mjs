@@ -31,6 +31,8 @@ const {
     ORPHAN_REDIRECTS,
     APP_ROUTES,
     CONTENT_ROOT_FILES,
+    appLinkTarget,
+    hubIndexPath,
     pagePath,
     sourceFile,
     localesOf,
@@ -340,6 +342,14 @@ for (const entry of PAGES) {
         for (const lang of localesOf(entry)) live.add(pagePath(entry, lang))
     }
     const appRoutes = new Set(APP_ROUTES)
+    // A product link written under a tree the application does not have (`/ar/tasks`) is not a
+    // typo: the Markdown rewrite sends it to the application tree that reader is sent to
+    // (`appLinkTarget`, the same rule as every product button). It is accepted exactly when that
+    // rewrite lands on a real application route.
+    const appLink = (href) => {
+        const target = appLinkTarget(href)
+        return target !== null && appRoutes.has(target)
+    }
 
     // The hub root of every locale — a link there is the legitimate fallback.
     const hubRoots = new Set(
@@ -358,7 +368,7 @@ for (const entry of PAGES) {
     for (const file of walk(DOCS)) {
         const raw = readFileSync(file, 'utf8')
         for (const [, href] of raw.matchAll(/\]\((\/[^)#\s]*)/g)) {
-            if (live.has(href) || hubRoots.has(href) || appRoutes.has(href)) continue
+            if (live.has(href) || hubRoots.has(href) || appRoutes.has(href) || appLink(href)) continue
             if (rootFiles.has(href)) continue
             // `/legal/*` is shared across locales by design.
             if (href.startsWith('/legal/')) continue
@@ -418,6 +428,21 @@ for (const entry of PAGES) {
     if (LOCALES[0].language !== ROOT_LOCALE.language) fail('root-locale-not-first', LOCALES[0].language)
     for (const locale of LOCALES.slice(1)) {
         if (!locale.prefix) fail('non-root-locale-unprefixed', locale.language)
+    }
+}
+
+// ---------------------------------------------------------------------------
+// 9. Every declared tree has its home: the earnings hub index.
+//    The logo of every page in a tree leads there and so does the tree's 404;
+//    a tree declared without it would build pages whose first link is dead.
+//    Declaring a language (Arabic) therefore means declaring this page with it
+//    — every other section may open later, this one may not.
+// ---------------------------------------------------------------------------
+{
+    for (const axis of LOCALES) {
+        if (!hubIndexPath('earnings', axis.language)) {
+            fail('locale-without-home', `${axis.language}: earnings-hub declares no "${axis.language}" slug ('')`)
+        }
     }
 }
 

@@ -4,7 +4,7 @@
 // data file as the creator calculator.
 import { useData } from 'vitepress'
 import { computed, ref } from 'vue'
-import { LANDING_COPY, localeOf } from './copy'
+import { LANDING_COPY, NUMBER_LOCALE, localeOf } from './copy'
 import { byId } from './platforms'
 
 interface Calc { rateMin: number; rateMax: number; cap: number }
@@ -16,7 +16,7 @@ const rate = ref(calc.value.rateMin)
 const cap = ref(calc.value.cap)
 const views = computed(() => Math.floor((budget.value / rate.value) * 1000))
 const clipsAtCap = computed(() => Math.ceil(budget.value / cap.value))
-const numLocale = computed(() => (lang.value === 'en' ? 'en-US' : lang.value === 'uk' ? 'uk-UA' : 'ru-RU'))
+const numLocale = computed(() => NUMBER_LOCALE[localeOf(lang.value)])
 const fmt = (n: number) => n.toLocaleString(numLocale.value)
 const money = (n: number) => '$' + n.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })
 </script>

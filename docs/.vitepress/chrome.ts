@@ -22,11 +22,15 @@ export interface AuthorLink {
   readonly path: string
 }
 
-/** Default-theme config plus the one custom block rendered by theme/index.ts. */
+/** Default-theme config plus the custom blocks rendered by the landing shell and theme/index.ts. */
 export interface DareBayThemeConfig extends DefaultTheme.Config {
   readonly darebayCta: DareBayCtaConfig
   /** Null only while the author page is missing from the manifest in this locale. */
   readonly authorLink: AuthorLink | null
+  /** Accessible name of the section navigation in the header and the footer. */
+  readonly navLabel: string
+  /** Accessible name of the language switcher. */
+  readonly languageLabel: string
 }
 
 interface ChromeCopy {
@@ -43,6 +47,8 @@ interface ChromeCopy {
   readonly previousPage: string
   readonly nextPage: string
   readonly telegramAriaLabel: string
+  readonly navLabel: string
+  readonly languageLabel: string
   readonly cta: Omit<DareBayCtaConfig, 'productUrl' | 'tasksUrl' | 'telegramUrl' | 'businessUrl' | 'founderUrl'>
 }
 
@@ -74,6 +80,8 @@ export const CHROME_COPY: Record<Locale, ChromeCopy> = {
     previousPage: 'Предыдущая страница',
     nextPage: 'Следующая страница',
     telegramAriaLabel: 'Telegram-канал DareBay',
+    navLabel: 'Разделы',
+    languageLabel: 'Язык',
     cta: {
       title: 'Открыть DareBay',
       lede: 'Задания и конкурсы живут на сайте и в Telegram — это две равные двери в один продукт.',
@@ -101,6 +109,8 @@ export const CHROME_COPY: Record<Locale, ChromeCopy> = {
     previousPage: 'Попередня сторінка',
     nextPage: 'Наступна сторінка',
     telegramAriaLabel: 'Telegram-канал DareBay',
+    navLabel: 'Розділи',
+    languageLabel: 'Мова',
     cta: {
       title: 'Відкрити DareBay',
       lede: 'Завдання та конкурси доступні на сайті й у Telegram — це два рівноцінні входи в один продукт.',
@@ -128,11 +138,45 @@ export const CHROME_COPY: Record<Locale, ChromeCopy> = {
     previousPage: 'Previous page',
     nextPage: 'Next page',
     telegramAriaLabel: 'DareBay Telegram channel',
+    navLabel: 'Sections',
+    languageLabel: 'Language',
     cta: {
       title: 'Open DareBay',
       lede: 'Tasks and contests are available on the website and in Telegram — two equal ways into the same product.',
       productLabel: 'Go to darebay.com →',
       telegramLabel: 'Telegram channel',
+    },
+  },
+  // Right-to-left: an arrow that means "onward" points left. The product buttons open the
+  // English interface (the application has no Arabic one — `appLocaleOf` in the registry), and
+  // the CTA says so rather than letting the reader find out after the click.
+  ar: {
+    navCta: 'الانتقال إلى الموقع ←',
+    notFound: {
+      code: '404',
+      title: 'الصفحة غير موجودة',
+      quote: 'هذا الرابط لا يؤدي إلى أي مكان: إما أن الصفحة غُيّر اسمها وإما أنها لم تكن موجودة أصلًا.',
+      linkLabel: 'إلى الصفحة الرئيسية للأدلة',
+      linkText: 'العودة إلى الأدلة',
+    },
+    darkModeSwitchLabel: 'المظهر',
+    lightModeSwitchTitle: 'التبديل إلى المظهر الفاتح',
+    darkModeSwitchTitle: 'التبديل إلى المظهر الداكن',
+    sidebarMenuLabel: 'القائمة',
+    returnToTopLabel: 'العودة إلى الأعلى',
+    langMenuLabel: 'تغيير اللغة',
+    skipToContentLabel: 'الانتقال إلى المحتوى',
+    outlineLabel: 'في هذه الصفحة',
+    previousPage: 'الصفحة السابقة',
+    nextPage: 'الصفحة التالية',
+    telegramAriaLabel: 'قناة DareBay على Telegram',
+    navLabel: 'الأقسام',
+    languageLabel: 'اللغة',
+    cta: {
+      title: 'افتح DareBay',
+      lede: 'المهام والمسابقات متاحة على الموقع وفي Telegram، وهما مدخلان متكافئان إلى المنتج نفسه. واجهة المنصة بالإنجليزية.',
+      productLabel: 'الانتقال إلى darebay.com ←',
+      telegramLabel: 'قناة Telegram',
     },
   },
 }

@@ -53,7 +53,7 @@ const PORT_APP = PORT_HOST + 1
 const PORT_CONTENT = PORT_HOST + 2
 const ORIGIN = `http://127.0.0.1:${PORT_HOST}`
 
-const { PAGES, pagePath, localesOf, redirectMap, CONTENT_ROOT_FILES } = await import(
+const { PAGES, HUBS, LOCALES, ROOT_LOCALE, pagePath, localesOf, hubIndexPath, redirectMap, CONTENT_ROOT_FILES } = await import(
     join(CONTENT_ROOT, 'docs', '.vitepress', 'registry.ts')
 )
 const { contestCanonicalForLocale } = await import(
@@ -236,6 +236,11 @@ const sitemapUrls = (file) => {
 }
 
 const contentUrls = PAGES.flatMap((page) => localesOf(page).map((lang) => pagePath(page, lang)))
+const contentUrlSet = new Set(contentUrls)
+
+/** The declared tree an address belongs to, read off its prefix; the root tree for anything else. */
+const axisOfPath = (url) =>
+    LOCALES.find((axis) => axis.prefix && (url === axis.prefix || url.startsWith(`${axis.prefix}/`))) ?? ROOT_LOCALE
 const appUrls = [
     ...sitemapUrls('sitemap.xml'),
     ...sitemapUrls('sitemap-contests.xml'),
@@ -310,8 +315,14 @@ for (const url of allUrls) {
     }
 
     const langs = tag(res.text, /<html[^>]+lang="([^"]+)"/g)
-    const expectedLang = url.startsWith('/ua') ? 'uk' : url.startsWith('/en') ? 'en' : 'ru'
-    if (langs[0] !== expectedLang) fail('6-html-lang', `${url}: lang="${langs[0]}", ожидался "${expectedLang}"`)
+    const axis = axisOfPath(url)
+    if (langs[0] !== axis.language) fail('6-html-lang', `${url}: lang="${langs[0]}", ожидался "${axis.language}"`)
+    // A content page also carries its tree's writing direction: an Arabic page laid out left to
+    // right is readable by nobody. The application's own documents are its gates' business.
+    if (contentUrlSet.has(url)) {
+        const dirs = tag(res.text, /<html[^>]+dir="([^"]+)"/g)
+        if (dirs[0] !== axis.dir) fail('6-html-dir', `${url}: dir="${dirs[0]}", ожидался "${axis.dir}"`)
+    }
 }
 
 // ---- 4. hreflang clusters are unique, same-origin and fully reciprocal -----
@@ -436,16 +447,34 @@ for (const file of CONTENT_ROOT_FILES) {
 }
 
 // ---- 7. unknown content is a localized, non-indexable real 404 -------------
-for (const [junk, language] of [
-    ['/zarabotok/nope-nothing-here', 'ru'],
-    ['/ua/zarobitok/nope-nothing-here', 'uk'],
-    ['/en/earnings/nope-nothing-here', 'en'],
-    ['/docs/nope-nothing-here', 'ru'],
+// One miss under the home hub of every declared tree (its earnings hub: every tree has it, gate
+// `locale-without-home` of check-registry), plus the retired `/docs/` prefix. A tree added to the
+// manifest is probed here the day it is declared: its container location, its 404 document and
+// that document's direction.
+//
+// Plus the root of every section that has pages in a tree but no index there yet — a tree may
+// open with fewer sections than the others (Arabic starts with earnings alone, while its fact
+// card lives under About). The host routes that section to the container, the directory exists
+// and has no index.html, and nginx's own answer to that is a 403.
+const sectionsWithoutIndex = LOCALES.flatMap((locale) =>
+    Object.keys(HUBS)
+        .filter((hub) => PAGES.some((page) => page.hub === hub && page.slugs[locale.language] !== undefined))
+        .filter((hub) => !hubIndexPath(hub, locale.language))
+        .map((hub) => [`${locale.prefix}/${HUBS[hub][locale.language]}/`, locale])
+)
+for (const [junk, axis] of [
+    ...LOCALES.map((locale) => [`${hubIndexPath('earnings', locale.language)}nope-nothing-here`, locale]),
+    ...sectionsWithoutIndex,
+    ['/docs/nope-nothing-here', ROOT_LOCALE],
 ]) {
+    const language = axis.language
     const res = await body(junk)
     if (res.status !== 404) fail('7-404', `${junk} -> ${res.status}, ожидался 404`)
     if (!new RegExp(`<html\\b[^>]*lang="${language}"`).test(res.text)) {
         fail('7-404', `${junk}: нет локализованного lang="${language}"`)
+    }
+    if (!new RegExp(`<html\\b[^>]*dir="${axis.dir}"`).test(res.text)) {
+        fail('7-404', `${junk}: нет dir="${axis.dir}"`)
     }
     if (!/<meta name="robots" content="noindex, follow">/.test(res.text)) {
         fail('7-404', `${junk}: нет meta robots noindex`)

@@ -55,10 +55,10 @@
 .lp-header-in { display: flex; align-items: center; gap: 22px; height: 64px; }
 .lp-logo { font-family: var(--lp-display); font-weight: 700; font-size: 18px; letter-spacing: 0.02em; display: inline-flex; align-items: center; gap: 10px; }
 .lp-logo i { width: 10px; height: 10px; border-radius: 50%; background: var(--lp-accent); box-shadow: 0 0 18px var(--lp-accent); }
-.lp-nav { display: flex; gap: 18px; margin-left: 8px; }
+.lp-nav { display: flex; gap: 18px; margin-inline-start: 8px; }
 .lp-nav a { color: var(--lp-muted); font-weight: 600; font-size: 14px; padding: 6px 2px; }
 .lp-nav a:hover { color: var(--lp-text); }
-.lp-header-right { margin-left: auto; display: flex; align-items: center; gap: 12px; }
+.lp-header-right { margin-inline-start: auto; display: flex; align-items: center; gap: 12px; }
 .lp-lang { display: flex; gap: 2px; border: 1px solid var(--lp-line-2); border-radius: 999px; padding: 3px; }
 .lp-lang a, .lp-lang span { font-size: 12px; font-weight: 700; padding: 5px 10px; border-radius: 999px; color: var(--lp-muted); }
 .lp-lang span { background: var(--lp-panel-2); color: var(--lp-text); }
@@ -81,7 +81,7 @@
   .lp-header-in { flex-wrap: wrap; align-items: center; height: auto; min-height: 56px; padding-top: 8px; padding-bottom: 8px; row-gap: 8px; column-gap: 10px; }
   .lp-logo { font-size: 16px; order: 1; }
   .lp-header-right { display: contents; }
-  .lp-header-right > .lp-btn { order: 2; margin-left: auto; }
+  .lp-header-right > .lp-btn { order: 2; margin-inline-start: auto; }
   .lp-lang { order: 3; width: 100%; justify-content: center; }
   .lp-lang a, .lp-lang span { font-size: 11px; padding: 5px 9px; }
   .lp .lp-btn-sm { padding: 8px 12px; font-size: 12px; }
@@ -126,10 +126,10 @@
 .lp-content h3:not(.lp-bleed *) { font-family: var(--lp-body); font-weight: 800; font-size: 1.15rem; margin-top: 34px; margin-bottom: 8px; scroll-margin-top: 80px; }
 .lp-content p:not(.lp-bleed *) { margin-top: 0; margin-bottom: 16px; color: rgba(245, 247, 250, 0.86); }
 .lp-content p:not(.lp-bleed *) strong { color: var(--lp-text); }
-.lp-content :is(ul, ol):not(.lp-bleed *) { margin-top: 0; margin-bottom: 16px; padding-left: 22px; color: rgba(245, 247, 250, 0.86); }
+.lp-content :is(ul, ol):not(.lp-bleed *) { margin-top: 0; margin-bottom: 16px; padding-inline-start: 22px; color: rgba(245, 247, 250, 0.86); }
 .lp-content :is(ul, ol):not(.lp-bleed *) li { margin-bottom: 6px; }
 .lp-content a:not(.lp-btn):not(.lp-bleed *) { color: var(--lp-accent); text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--lp-accent) 40%, transparent); text-underline-offset: 3px; }
-.lp-content blockquote:not(.lp-bleed *) { border-left: 3px solid var(--lp-accent); margin-top: 8px; margin-bottom: 20px; padding: 6px 0 6px 18px; color: var(--lp-muted); }
+.lp-content blockquote:not(.lp-bleed *) { border-inline-start: 3px solid var(--lp-accent); margin-top: 8px; margin-bottom: 20px; padding-block: 6px; padding-inline: 18px 0; color: var(--lp-muted); }
 /* Markdown tables. The scroll box is the WRAPPER (`installTableWrapRule`), never the table
    itself: `display: block` on <table> plus `display: table` on thead/tbody gives each section its
    own table box and its own column widths, and the header labels drift out from under the cells
@@ -137,7 +137,7 @@
    on the wrapper, which is why `table` is not in the prose-width rule above. */
 .lp-content .lp-md-table:not(.lp-bleed *) { width: min(100% - 40px, var(--lp-container)); margin: 8px auto 24px; border: 1px solid var(--lp-line); border-radius: 14px; background: var(--lp-panel); overflow-x: auto; -webkit-overflow-scrolling: touch; }
 .lp-content .lp-md-table table { border-collapse: collapse; font-size: 14.5px; width: 100%; min-width: 720px; margin: 0; }
-.lp-content .lp-md-table :is(th, td) { border-bottom: 1px solid var(--lp-line); padding: 10px 14px; text-align: left; vertical-align: top; }
+.lp-content .lp-md-table :is(th, td) { border-bottom: 1px solid var(--lp-line); padding: 10px 14px; text-align: start; vertical-align: top; }
 .lp-content .lp-md-table tr:last-child td { border-bottom: 0; }
 .lp-content .lp-md-table th { color: var(--lp-muted); font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; }
 /* Code blocks. VitePress emits them as `div.language-*` with its own copy button, and all of the
@@ -146,10 +146,10 @@
    template pages). Same move as the tables: the outer box holds the width, `pre` holds the
    scroll, and the block stays inside the prose column. */
 .lp-content div[class*="language-"]:not(.lp-bleed *) { position: relative; width: min(100% - 40px, var(--lp-prose)); margin: 8px auto 24px; border: 1px solid var(--lp-line); border-radius: 14px; background: var(--lp-panel); }
-.lp-content div[class*="language-"] pre { margin: 0; padding: 18px 18px 18px 20px; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.lp-content div[class*="language-"] pre { margin: 0; padding-block: 18px; padding-inline: 20px 18px; overflow-x: auto; -webkit-overflow-scrolling: touch; }
 .lp-content div[class*="language-"] code { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; font-size: 13px; line-height: 1.75; color: rgba(245, 247, 250, 0.9); }
 .lp-content div[class*="language-"] .lang { display: none; }
-.lp-content div[class*="language-"] > button.copy { position: absolute; top: 10px; right: 10px; width: 32px; height: 32px; border: 1px solid var(--lp-line-2); border-radius: 9px; background: var(--lp-panel-2); cursor: pointer; opacity: 0.75; transition: opacity 0.15s ease, border-color 0.15s ease; }
+.lp-content div[class*="language-"] > button.copy { position: absolute; top: 10px; inset-inline-end: 10px; width: 32px; height: 32px; border: 1px solid var(--lp-line-2); border-radius: 9px; background: var(--lp-panel-2); cursor: pointer; opacity: 0.75; transition: opacity 0.15s ease, border-color 0.15s ease; }
 .lp-content div[class*="language-"] > button.copy::before { content: ""; position: absolute; inset: 7px; background-color: var(--lp-muted); -webkit-mask: var(--lp-icon-copy) center / 16px 16px no-repeat; mask: var(--lp-icon-copy) center / 16px 16px no-repeat; }
 .lp-content div[class*="language-"] > button.copy:hover, .lp-content div[class*="language-"] > button.copy:focus-visible { opacity: 1; border-color: var(--lp-accent); }
 .lp-content div[class*="language-"] > button.copy.copied::before { background-color: var(--lp-accent); -webkit-mask-image: var(--lp-icon-check); mask-image: var(--lp-icon-check); }
@@ -168,7 +168,7 @@
 .lp-table-wrap { border: 1px solid var(--lp-line); border-radius: 22px; background: var(--lp-panel); overflow: hidden; }
 .lp-table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
 .lp-table { border-collapse: separate; border-spacing: 0; width: 100%; min-width: 980px; font-size: 14px; }
-.lp-table th { position: sticky; top: 0; z-index: 2; background: var(--lp-panel-2); color: var(--lp-muted); font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700; text-align: left; padding: 14px 14px; border-bottom: 1px solid var(--lp-line-2); white-space: nowrap; }
+.lp-table th { position: sticky; top: 0; z-index: 2; background: var(--lp-panel-2); color: var(--lp-muted); font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700; text-align: start; padding: 14px 14px; border-bottom: 1px solid var(--lp-line-2); white-space: nowrap; }
 .lp-table th button { all: unset; cursor: pointer; display: inline-flex; gap: 6px; align-items: center; }
 .lp-table th button::after { content: '↕'; opacity: 0.5; font-size: 11px; }
 .lp-table th.is-sorted button::after { content: '↓'; opacity: 1; color: var(--lp-accent); }
@@ -177,13 +177,13 @@
 .lp-table tr:last-child td { border-bottom: 0; }
 .lp-table td.lp-cell-name { font-weight: 700; white-space: normal; min-width: 150px; max-width: 220px; }
 .lp-table td.lp-cell-name small { display: block; font-weight: 500; color: var(--lp-muted); font-size: 12px; margin-top: 2px; }
-.lp-table .lp-cell-name, .lp-table th:first-child { position: sticky; left: 0; background: var(--lp-panel); z-index: 1; box-shadow: 1px 0 0 var(--lp-line); }
+.lp-table .lp-cell-name, .lp-table th:first-child { position: sticky; inset-inline-start: 0; background: var(--lp-panel); z-index: 1; box-shadow: 1px 0 0 var(--lp-line); }
 .lp-table th:first-child { background: var(--lp-panel-2); z-index: 3; }
 .lp-table tr.is-us td { background: color-mix(in srgb, var(--lp-accent) 7%, transparent); }
 .lp-table tr.is-us td.lp-cell-name { background: color-mix(in srgb, var(--lp-accent) 12%, var(--lp-panel)); }
 .lp-table td .lp-money { display: inline; }
 .lp-table td .lp-na { color: var(--lp-muted); }
-.lp-table td .lp-src { display: inline-block; margin-left: 4px; color: var(--lp-faint); font-size: 11px; text-decoration: none; vertical-align: super; }
+.lp-table td .lp-src { display: inline-block; margin-inline-start: 4px; color: var(--lp-faint); font-size: 11px; text-decoration: none; vertical-align: super; }
 .lp-table td .lp-src:hover { color: var(--lp-accent); }
 .lp-chip { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 700; padding: 3px 9px; border-radius: 999px; border: 1px solid var(--lp-line-2); color: var(--lp-text); }
 .lp .lp-chip-accent { background: var(--lp-accent); color: var(--lp-on-accent); border-color: transparent; }
@@ -207,7 +207,7 @@
 .lp-card-grid dt { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--lp-faint); font-weight: 700; margin: 0 0 3px; }
 .lp-card-grid dd { margin: 0; font-size: 14px; line-height: 1.4; }
 .lp-card-pc { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; font-size: 14px; }
-.lp-card-pc ul { margin: 0; padding-left: 18px; }
+.lp-card-pc ul { margin: 0; padding-inline-start: 18px; }
 .lp-card-pc li { margin-bottom: 4px; }
 .lp-card-pc .lp-pros li::marker { color: var(--lp-good); }
 .lp-card-pc .lp-cons li::marker { color: var(--lp-bad); }
@@ -229,7 +229,7 @@
    separator and the jump target need saying. `scroll-margin-top` is not decoration: without it a
    reader who taps a reference number lands with the item they wanted hidden under the sticky
    header, which is the one thing this block exists to avoid. */
-.lp-content .src-ref { font-size: 11px; line-height: 0; vertical-align: super; margin-left: 2px; }
+.lp-content .src-ref { font-size: 11px; line-height: 0; vertical-align: super; margin-inline-start: 2px; }
 .lp-content .src-ref a:not(.lp-bleed *) { color: var(--lp-faint); text-decoration: none; font-variant-numeric: tabular-nums; }
 .lp-content .src-ref a:hover { color: var(--lp-accent); }
 .lp-content .db-sources { width: min(100% - 40px, var(--lp-prose)); margin: 64px auto 0; border-top: 1px solid var(--lp-line); padding-top: 8px; }
@@ -247,8 +247,8 @@
 .lp-calc label { display: block; font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--lp-faint); font-weight: 700; margin: 12px 0 6px; }
 .lp-calc input[type='range'] { width: 100%; accent-color: var(--lp-accent); }
 .lp-calc .lp-calc-val { font-family: var(--lp-body); font-weight: 700; font-size: 15px; }
-.lp-calc-out { text-align: center; border-left: 1px solid var(--lp-line); padding-left: 24px; }
-@media (max-width: 860px) { .lp-calc-out { border-left: 0; padding-left: 0; border-top: 1px solid var(--lp-line); padding-top: 18px; } }
+.lp-calc-out { text-align: center; border-inline-start: 1px solid var(--lp-line); padding-inline-start: 24px; }
+@media (max-width: 860px) { .lp-calc-out { border-inline-start: 0; padding-inline-start: 0; border-top: 1px solid var(--lp-line); padding-top: 18px; } }
 .lp-calc-out .lp-big { font-family: var(--lp-display); font-weight: 700; font-size: clamp(2.2rem, 4vw, 3.2rem); color: var(--lp-gold); line-height: 1; font-variant-numeric: tabular-nums; }
 .lp-calc-out p { margin: 8px 0 0; color: var(--lp-muted); font-size: 13.5px; }
 
@@ -308,11 +308,11 @@
 .lp-content h4:not(.lp-bleed *) { font-weight: 800; margin-top: 24px; margin-bottom: 6px; }
 
 /* ---- pro calculator, budget calculator, glossary ------------------------- */
-.lp-calc-rows { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 18px; margin-top: 14px; text-align: left; }
+.lp-calc-rows { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 18px; margin-top: 14px; text-align: start; }
 .lp-calc-rows div { border: 1px solid var(--lp-line); border-radius: 14px; padding: 10px 12px; }
 .lp-calc-rows .lp-kicker { display: block; margin-bottom: 4px; }
 .lp-calc-rows b { font-family: var(--lp-display); font-size: 1.15rem; color: var(--lp-gold); font-variant-numeric: tabular-nums; }
-.lp-calc-badge { display: inline-block; margin-left: 8px; padding: 2px 8px; border-radius: 999px; font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; background: color-mix(in srgb, var(--lp-accent) 18%, transparent); color: var(--lp-accent); }
+.lp-calc-badge { display: inline-block; margin-inline-start: 8px; padding: 2px 8px; border-radius: 999px; font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; background: color-mix(in srgb, var(--lp-accent) 18%, transparent); color: var(--lp-accent); }
 .lp-calc-net { margin-top: 12px; font-size: 14px; color: var(--lp-muted); }
 .lp-calc-net b { color: var(--lp-text); font-variant-numeric: tabular-nums; }
 .lp .lp-glossary { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin: 0; }
@@ -322,3 +322,55 @@
 .lp .lp-glossary dt a { color: inherit; text-decoration: none; }
 .lp .lp-glossary dt a:hover { color: var(--lp-accent); }
 .lp .lp-glossary dd { margin: 0; color: var(--lp-muted); line-height: 1.55; font-size: 14.5px; }
+
+/* ---- right-to-left (Arabic) ------------------------------------------------
+   Everything above is written in logical properties (`margin-inline-start`, `text-align: start`,
+   `inset-inline-start`), so a right-to-left page mirrors itself and a left-to-right one renders
+   exactly as before: in LTR every logical property IS its physical twin. `landing.test.ts` keeps
+   physical left/right out of this file. What stays below is what mirroring alone cannot do.
+
+   Values that are not Arabic text. A calculator figure, a date, a URL, a host or a platform name
+   is laid out by the bidi algorithm against the Arabic line around it: a URL's trailing slash
+   jumps to its front, a superscript source number glues onto the figure before it. Each of these
+   is its own left-to-right island here — isolated, so the line around it keeps its order and the
+   value keeps its own.
+
+   Arabic sentences are deliberately NOT isolated or auto-directed, and neither is a table cell
+   (`.lp-money` in LCompare, LPlatforms, LFacts holds a whole phrase, "$1.00–$2.00 per 1,000
+   views"). Forced left to right, an Arabic phrase is read backwards; auto-directed, one that
+   starts with a Latin brand ("DareBay يدفع…") is. An Arabic cell keeps the page's direction —
+   a range in it reads right to left, the Arabic convention — and an English fallback is marked
+   by its language instead (`bidiAttrs` in platforms.ts puts dir="ltr" on exactly those). */
+[dir='rtl'] .lp :is(.lp-num, .lp-big, .lp-calc-val, .lp-calc-rows b, .lp-calc-net b, time),
+[dir='rtl'] .lp-table td.lp-cell-name > a,
+[dir='rtl'] .lp-method li :is(a, b),
+[dir='rtl'] .lp-card-foot .lp-srcs a,
+[dir='rtl'] .lp-content .db-sources li > a,
+[dir='rtl'] .lp-content :is(p, li, td, th):not(.lp-bleed *) code { direction: ltr; unicode-bidi: isolate; }
+/* Source markers are isolated in the page's own direction: a superscript `3` after `10%` must
+   stay a separate token that FOLLOWS the figure, not become the last digit of `10%3`. */
+[dir='rtl'] .lp :is(.lp-src, .src-ref) { unicode-bidi: isolate; }
+/* A code block is code: always left to right, whatever the page. Its copy button stays in the
+   block's own top-right corner through `inset-inline-end` above. */
+[dir='rtl'] .lp-content div[class*="language-"] { direction: ltr; }
+/* An English value in a fact card (`bidiAttrs` marked the whole dd dir="ltr") keeps the card's
+   alignment: `end` of a left-to-right box is the right edge, where the Arabic label above it
+   starts. */
+[dir='rtl'] .lp-fact dd[dir='ltr'] { text-align: end; }
+/* The sticky platform column's divider sits on its inline-end side: on the left of the column in
+   a right-to-left table. */
+[dir='rtl'] .lp-table .lp-cell-name, [dir='rtl'] .lp-table th:first-child { box-shadow: -1px 0 0 var(--lp-line); }
+
+/* Arabic is a cursive script: letters join, and tracking pulls them apart — every uppercase kicker
+   and table label here is letter-spaced for Latin and Cyrillic. Neither Manrope nor Unbounded has
+   Arabic glyphs, so the Arabic falls back to the platform's Arabic face; naming the common ones
+   keeps body and headings in one family, and Manrope (not the wide Unbounded display face) carries
+   the Latin words inside Arabic headings. Arabic also sits taller on the line than the tight
+   display leading was set for. */
+.lp:lang(ar) {
+  --lp-display: 'Manrope', 'Noto Sans Arabic', 'Segoe UI', Tahoma, 'Geeza Pro', system-ui, sans-serif;
+  --lp-body: 'Manrope', 'Noto Sans Arabic', 'Segoe UI', Tahoma, 'Geeza Pro', ui-sans-serif, system-ui, sans-serif;
+}
+.lp:lang(ar), .lp:lang(ar) * { letter-spacing: normal !important; }
+.lp:lang(ar) :is(.lp-hero h1, .lp-h2, .lp-cta h2, .lp-notfound h1),
+.lp:lang(ar) .lp-content h2:not(.lp-bleed *) { line-height: 1.35; }

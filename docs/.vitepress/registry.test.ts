@@ -2,13 +2,20 @@ import { readFileSync } from 'node:fs'
 import { describe, expect, it } from 'vitest'
 import liveManifest from '../content-pages.json' with { type: 'json' }
 import {
+    APP_ROUTES,
     CONTENT_ROOT_FILES,
     HUBS,
+    KNOWN_LOCALES,
     LOCALES,
     PAGES,
     ROOT_LOCALE,
     alternateLocalesOf,
+    appLocaleOf,
+    appPathFor,
+    createRegistry,
     hreflangCluster,
+    hubIndexPath,
+    localeOfSourcePath,
     localesOf,
     missingSources,
     pagePath,
@@ -16,7 +23,9 @@ import {
     redirectMap,
     redirectTarget,
     sourceFile,
+    textDirectionOf,
     xDefaultLocaleOf,
+    type HubId,
     type Locale,
     type RegistryEntry,
 } from './registry'
@@ -97,7 +106,13 @@ describe('registry: locale declaration', () => {
     it('rejects a locale outside the declared axes', () => {
         // The axis for a language is what gives it a prefix, a directory and an
         // hreflang value. A slug under an unknown key has none of the three.
-        expect(() => parsed([{ ...EN_ONLY, slugs: { ar: 'x' } }])).toThrow(/unknown key "ar"/)
+        //
+        // The example used to be `ar`. Arabic is now a KNOWN language that the
+        // manifest may declare (wave 3 does), so it would stop being an example
+        // of an unknown key the day it ships; `fr` is unknown to the build. A
+        // known language the manifest has not declared is refused the same way —
+        // see "accepts an Arabic slug only on a manifest that declares the tree".
+        expect(() => parsed([{ ...EN_ONLY, slugs: { fr: 'x' } }])).toThrow(/unknown key "fr"/)
     })
 
     it('reports a declared locale that has no source file', () => {
@@ -221,9 +236,12 @@ describe('redirectMap locale integrity', () => {
         }
     })
 
-    it('covers all three locales, so the guard cannot pass vacuously', () => {
+    it('covers the three trees that have moved addresses, so the guard cannot pass vacuously', () => {
+        // Russian, Ukrainian and English are the trees whose addresses were ever retired. A tree
+        // that opens later (Arabic) starts with nothing to redirect, so "every declared tree" would
+        // turn this guard red the day a new language ships — without any redirect being wrong.
         const covered = new Set(Object.keys(map).map(localeOfPath))
-        for (const axis of LOCALES) expect(covered.has(axis.language)).toBe(true)
+        for (const language of ['ru', 'uk', 'en'] as const) expect(covered.has(language)).toBe(true)
         expect(Object.keys(HUBS).length).toBeGreaterThan(0)
     })
 })
@@ -245,7 +263,12 @@ describe('hub index duplicates', () => {
     )
 
     it('retires the file name of every hub in every locale', () => {
-        expect(hubs.length).toBe(Object.keys(HUBS).length * LOCALES.length)
+        // Not vacuous: every hub has its index in the root tree, and every tree has its home, the
+        // earnings hub. The count is NOT hubs × locales: a tree may open with one section (Arabic
+        // starts with earnings alone), and a hub with no index in a language has no file name to
+        // retire there.
+        for (const hub of Object.keys(HUBS) as HubId[]) expect(hubs).toContain(hubIndexPath(hub, ROOT_LOCALE.language))
+        for (const axis of LOCALES) expect(hubs).toContain(hubIndexPath('earnings', axis.language))
         for (const hub of hubs) {
             expect(conf).toContain(`location = ${hub}index { return 301 ${hub}$is_args$args; }`)
         }
@@ -291,5 +314,235 @@ describe('retired docs sitemap', () => {
         expect(conf).not.toContain('location = /docs/sitemap.xml.html')
         // Page addresses keep theirs.
         expect(conf).toContain('location = /docs/faq/fees.html {')
+    })
+})
+
+// ---------------------------------------------------------------------------
+// A tree the live manifest has not declared yet: Arabic.
+//
+// Everything a new tree needs is prepared in code before its first page ships
+// (its shape in `LOCALE_SHAPES`, its interface copy, its right-to-left layout),
+// and declaring it in docs/content-pages.json is the whole switch. These tests
+// hold the registry half of that promise on an in-memory manifest that declares
+// `ar` — the live instance cannot, because in the live manifest Arabic has no
+// address yet. Axes, hub segments and the translated entries are read from the
+// live manifest, so the fixture cannot drift from production topology.
+// ---------------------------------------------------------------------------
+
+const AR_AXIS = { prefix: '/ar', vitepressKey: 'ar' }
+/** Arabic hub segments: the English ones, under `/ar` (Latin slugs, no transliteration). */
+const arabicHubs = Object.fromEntries(
+    Object.entries(liveManifest.hubs).map(([hub, segments]) => [hub, { ...segments, ar: segments.en }]),
+)
+const withArabic = (pages: unknown[]) => ({
+    ...manifestWith(pages),
+    locales: { ...liveManifest.locales, ar: AR_AXIS },
+    hubs: arabicHubs,
+})
+/** The same manifest with the Arabic tree NOT declared, whatever the live one says by then. */
+const withoutArabic = (pages: unknown[]) => {
+    const { ar: _axis, ...locales } = liveManifest.locales as Record<string, unknown>
+    const hubs = Object.fromEntries(
+        Object.entries(liveManifest.hubs).map(([hub, segments]) => {
+            const { ar: _segment, ...rest } = segments as Record<string, string>
+            return [hub, rest]
+        }),
+    )
+    return { ...manifestWith(pages), locales, hubs }
+}
+/** A live entry without its Arabic slug, for a manifest that does not declare the tree. */
+const untranslated = (id: string) => {
+    const entry = PAGES.find((page) => page.id === id)
+    if (!entry) throw new Error(`fixture: ${id} is not in the live manifest`)
+    const { ar: _arabic, ...slugs } = entry.slugs
+    return { ...entry, slugs }
+}
+/** A live entry with an Arabic slug added — the shape of a wave-3 translation. */
+const translated = (id: string, arabicSlug?: string) => {
+    const entry = PAGES.find((page) => page.id === id)
+    if (!entry) throw new Error(`fixture: ${id} is not in the live manifest`)
+    return { ...entry, slugs: { ...entry.slugs, ar: arabicSlug ?? entry.slugs.en } }
+}
+
+const AR_ONLY = {
+    id: 'earnings-clipping-in-the-gulf',
+    hub: 'earnings',
+    slugs: { ar: 'clipping-in-the-gulf' },
+    retired: ['/ar/earnings/gulf-clipping'],
+}
+const EN_AND_AR = {
+    id: 'clipping-platforms-egypt-mena',
+    hub: 'earnings',
+    slugs: {
+        en: 'clipping-platforms-that-pay-in-egypt-and-arab-countries',
+        ar: 'clipping-platforms-that-pay-in-egypt-and-arab-countries',
+    },
+}
+
+describe('registry: the Arabic tree, declared', () => {
+    // The About hub keeps no Arabic index: the Arabic fact card lives in a section that has not
+    // opened in Arabic, exactly the wave-3 shape.
+    const aboutHub = PAGES.find((page) => page.id === 'about-hub')
+    const arabic = createRegistry(
+        withArabic([translated('earnings-hub', ''), aboutHub, translated('darebay-at-a-glance'), AR_ONLY, EN_AND_AR]),
+    )
+    const byId = (id: string) => arabic.PAGES.find((page) => page.id === id)!
+    const glance = byId('darebay-at-a-glance')
+    const arOnly = byId(AR_ONLY.id)
+    const egypt = byId(EN_AND_AR.id)
+    const abs = (path: string) => `https://darebay.com${path}`
+
+    it('appends Arabic after the existing trees, right to left, with its own prefix and directory', () => {
+        expect(arabic.LOCALES.map((axis) => axis.language)).toEqual(['ru', 'uk', 'en', 'ar'])
+        expect(arabic.LOCALES.at(-1)).toEqual({ language: 'ar', prefix: '/ar', vitepressKey: 'ar', dir: 'rtl' })
+        expect(arabic.ROOT_LOCALE.language).toBe('ru')
+        for (const axis of arabic.LOCALES.slice(0, 3)) expect(axis.dir).toBe('ltr')
+    })
+
+    it('gives a translated page its Arabic address, source file and a symmetric cluster', () => {
+        expect(arabic.pagePath(glance, 'ar')).toBe('/ar/about/darebay-at-a-glance')
+        expect(arabic.sourceFile(glance, 'ar')).toBe('ar/about/darebay-at-a-glance.md')
+        const cluster = [
+            { hreflang: 'ru', href: abs('/o-proekte/darebay-v-tsifrakh') },
+            { hreflang: 'uk', href: abs('/ua/pro-proekt/darebay-u-tsyfrakh') },
+            { hreflang: 'en', href: abs('/en/about/darebay-at-a-glance') },
+            { hreflang: 'ar', href: abs('/ar/about/darebay-at-a-glance') },
+            // x-default stays English: the Arabic version does not move it.
+            { hreflang: 'x-default', href: abs('/en/about/darebay-at-a-glance') },
+        ]
+        // One cluster per page, printed identically on every version of it — the English page now
+        // names the Arabic one, and the Arabic one names the English one back.
+        expect(arabic.hreflangCluster(glance)).toEqual(cluster)
+        expect(arabic.alternateLocalesOf(glance, 'ar')).toEqual(['ru', 'uk', 'en'])
+        expect(arabic.alternateLocalesOf(glance, 'en')).toEqual(['ru', 'uk', 'ar'])
+    })
+
+    it('makes an Arabic-only page its own canonical and its own x-default', () => {
+        const self = abs('/ar/earnings/clipping-in-the-gulf')
+        expect(arabic.localesOf(arOnly)).toEqual(['ar'])
+        expect(arabic.xDefaultLocaleOf(arOnly)).toBe('ar')
+        expect(arabic.hreflangCluster(arOnly)).toEqual([
+            { hreflang: 'ar', href: self },
+            { hreflang: 'x-default', href: self },
+        ])
+        expect(arabic.alternateLocalesOf(arOnly, 'ar')).toEqual([])
+        for (const language of ['ru', 'uk', 'en'] as const) expect(arabic.pagePath(arOnly, language)).toBeNull()
+    })
+
+    it('points x-default of an English and Arabic page at the English version', () => {
+        expect(arabic.xDefaultLocaleOf(egypt)).toBe('en')
+        expect(arabic.hreflangCluster(egypt)).toEqual([
+            { hreflang: 'en', href: abs('/en/earnings/clipping-platforms-that-pay-in-egypt-and-arab-countries') },
+            { hreflang: 'ar', href: abs('/ar/earnings/clipping-platforms-that-pay-in-egypt-and-arab-countries') },
+            { hreflang: 'x-default', href: abs('/en/earnings/clipping-platforms-that-pay-in-egypt-and-arab-countries') },
+        ])
+    })
+
+    it('routes only the Arabic hubs that have pages, and none before the tree is declared', () => {
+        expect(arabic.CONTENT_SEGMENTS.filter((segment) => segment.startsWith('ar/'))).toEqual([
+            'ar/earnings',
+            'ar/about',
+        ])
+        const dark = createRegistry(withoutArabic([untranslated('earnings-hub')]))
+        expect(dark.CONTENT_SEGMENTS.some((segment) => segment.startsWith('ar/'))).toBe(false)
+    })
+
+    it('offers a section only where its index exists in the language', () => {
+        expect(arabic.hubIndexPath('earnings', 'ar')).toBe('/ar/earnings/')
+        expect(arabic.hubIndexPath('about', 'ar')).toBeNull()
+        expect(arabic.hubIndexPath('about', 'en')).toBe('/en/about/')
+    })
+
+    it('keeps retired Arabic addresses in Arabic, and lands a foreign one on the page itself', () => {
+        expect(arabic.redirectTarget(arOnly, '/ar/earnings/gulf-clipping')).toBe('/ar/earnings/clipping-in-the-gulf')
+        // No Russian version and no English one: x-default is the Arabic page.
+        expect(arabic.redirectTarget(arOnly, '/zarabotok/staryy-adres')).toBe('/ar/earnings/clipping-in-the-gulf')
+        expect(arabic.redirectMap()['/ar/earnings/gulf-clipping']).toBe('/ar/earnings/clipping-in-the-gulf')
+    })
+
+    it('rescues a link to an untranslated Arabic sibling onto the Arabic hub, where there is one', () => {
+        expect(arabic.resolveLocalizedLink('/ar/earnings/how-much-clipping-pays#rates')).toBe('/ar/earnings/#rates')
+        // No Arabic About index: left as written, so the dead-link check still catches it.
+        expect(arabic.resolveLocalizedLink('/ar/about/is-darebay-legit')).toBe('/ar/about/is-darebay-legit')
+        expect(arabic.resolveLocalizedLink('/ar/about/darebay-at-a-glance')).toBe('/ar/about/darebay-at-a-glance')
+    })
+})
+
+describe('registry: product links from the Arabic tree lead into the English application', () => {
+    const arabic = createRegistry(withArabic([translated('earnings-hub', '')]))
+
+    it('names English as the application tree of an Arabic reader, and each tree its own otherwise', () => {
+        expect(appLocaleOf('ar')).toBe('en')
+        for (const language of ['ru', 'uk', 'en'] as const) expect(appLocaleOf(language)).toBe(language)
+        expect(appPathFor('ar', 'tasks')).toBe('/en/tasks')
+        expect(appPathFor('ar', 'for-business')).toBe('/en/for-business')
+        expect(appPathFor('ar', '')).toBe('/en')
+        expect(appPathFor('ru', '')).toBe('/')
+        expect(appPathFor('uk', 'tasks')).toBe('/ua/tasks')
+    })
+
+    it('rewrites an application link written under /ar onto the English route, anchor and query kept', () => {
+        expect(arabic.appLinkTarget('/ar/tasks')).toBe('/en/tasks')
+        expect(arabic.appLinkTarget('/ar/earn/clips?from=docs#top')).toBe('/en/earn/clips?from=docs#top')
+        expect(arabic.resolveLocalizedLink('/ar/tasks')).toBe('/en/tasks')
+        expect(arabic.resolveLocalizedLink('/ar/for-business#launch')).toBe('/en/for-business#launch')
+    })
+
+    it('leaves every other link alone', () => {
+        // Already an application address, in a tree the application serves.
+        expect(arabic.appLinkTarget('/en/tasks')).toBeNull()
+        expect(arabic.appLinkTarget('/ua/tasks')).toBeNull()
+        expect(arabic.resolveLocalizedLink('/en/tasks')).toBe('/en/tasks')
+        // An Arabic content address, and something that is neither.
+        expect(arabic.appLinkTarget('/ar/earnings/')).toBeNull()
+        expect(arabic.appLinkTarget('/ar/nothing-here')).toBeNull()
+        expect(arabic.appLinkTarget('https://darebay.com/ar/tasks')).toBeNull()
+    })
+
+    it('adds no application routes: the dead-link allowance stays the three application trees', () => {
+        const dark = createRegistry(withoutArabic([untranslated('earnings-hub')]))
+        expect(arabic.APP_ROUTES).toEqual(dark.APP_ROUTES)
+        expect(APP_ROUTES).toEqual(dark.APP_ROUTES)
+        expect(APP_ROUTES.some((route) => route.startsWith('/ar/'))).toBe(false)
+    })
+
+    it('has nothing to rewrite while the tree is not declared', () => {
+        const dark = createRegistry(withoutArabic([untranslated('earnings-hub')]))
+        expect(dark.appLinkTarget('/ar/tasks')).toBeNull()
+        expect(dark.resolveLocalizedLink('/ar/tasks')).toBe('/ar/tasks')
+    })
+})
+
+describe('registry: declaring a tree is validated before anything is derived', () => {
+    it('knows Arabic without the live manifest declaring it', () => {
+        expect(KNOWN_LOCALES).toEqual(['ru', 'uk', 'en', 'ar'])
+        expect(textDirectionOf('ar')).toBe('rtl')
+        expect(localeOfSourcePath('ar/earnings/x.md')).toBe('ar')
+        expect(localeOfSourcePath('arabic/x.md')).toBe('ru')
+    })
+
+    it('holds the Arabic axis to its stable shape', () => {
+        expect(() => parseContentManifest({ ...withArabic([]), pages: [EN_ONLY], locales: { ...liveManifest.locales, ar: { prefix: '/arabic', vitepressKey: 'ar' } } })).toThrow(
+            /manifest\.locales\.ar violates the stable locale axis/,
+        )
+    })
+
+    it('requires an Arabic hub segment for every hub once the tree is declared, and refuses one before', () => {
+        const withoutSegment = { ...withArabic([EN_ONLY]), hubs: { ...arabicHubs, help: withoutArabic([]).hubs.help } }
+        expect(() => parseContentManifest(withoutSegment)).toThrow(/manifest\.hubs\.help is missing "ar"/)
+        expect(() => parseContentManifest({ ...withoutArabic([EN_ONLY]), hubs: arabicHubs })).toThrow(/unknown key "ar"/)
+    })
+
+    it('never lets the manifest drop a live tree or declare an unknown one', () => {
+        const { uk: _dropped, ...withoutUkrainian } = liveManifest.locales
+        expect(() => parseContentManifest({ ...manifestWith([EN_ONLY]), locales: withoutUkrainian })).toThrow(/missing "uk"/)
+        expect(() =>
+            parseContentManifest({ ...manifestWith([EN_ONLY]), locales: { ...liveManifest.locales, fr: { prefix: '/fr', vitepressKey: 'fr' } } }),
+        ).toThrow(/unknown key "fr"/)
+    })
+
+    it('accepts an Arabic slug only on a manifest that declares the tree', () => {
+        expect(() => parseContentManifest(withArabic([AR_ONLY]))).not.toThrow()
+        expect(() => parseContentManifest(withoutArabic([AR_ONLY]))).toThrow(/unknown key "ar"/)
     })
 })

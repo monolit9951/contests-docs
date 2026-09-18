@@ -64,27 +64,40 @@ const WORDING = {
     ru: 'USDT в сети TON, звёзды Telegram',
     uk: 'USDT у мережі TON, зірки Telegram',
     en: 'USDT on TON, Telegram Stars',
+    ar: 'USDT على شبكة TON، ونجوم Telegram',
   },
   platforms: {
     ids: ['TIKTOK', 'YOUTUBE', 'INSTAGRAM'],
     ru: 'TikTok, YouTube, Instagram и другие сайты, названные в задании',
     uk: 'TikTok, YouTube, Instagram та інші сайти, названі в завданні',
     en: 'TikTok, YouTube, Instagram and other sites named in the task',
+    ar: 'TikTok وYouTube وInstagram ومواقع أخرى تحددها المهمة',
   },
   geography: {
     value: 'worldwide',
     ru: 'весь мир, без списка стран',
     uk: 'увесь світ, без списку країн',
     en: 'worldwide, no country list',
+    ar: 'العالم كله، دون قائمة دول',
   },
   operator: 'Ruslan Bei',
 }
 
+/**
+ * The languages every label and text below is written in: every language the docs registry KNOWS
+ * (`KNOWN_LOCALES` in docs/.vitepress/registry.ts), including one whose tree is not live yet, so the
+ * day its fact card is translated the table it has to carry already exists. A plain list rather than
+ * an import: this generator runs under plain `node`, without TypeScript stripping. The test suite
+ * fails when the two lists part.
+ */
+export const FACT_LOCALES = Object.freeze(['ru', 'uk', 'en', 'ar'])
+
 /** Column headers of the rendered fact table, per locale. Labels, never values. */
-const TABLE_HEADERS = {
+export const TABLE_HEADERS = {
   ru: ['Показатель', 'Значение', 'Источник', 'На дату'],
   uk: ['Показник', 'Значення', 'Джерело', 'Станом на'],
   en: ['Field', 'Value', 'Source', 'As of'],
+  ar: ['البند', 'القيمة', 'المصدر', 'بتاريخ'],
 }
 
 /** Row labels. The fact NAMES a reader sees; the values next to them are computed. */
@@ -93,61 +106,73 @@ const LABELS = {
     ru: 'Ставка за 1000 просмотров',
     uk: 'Ставка за 1000 переглядів',
     en: 'Rate per 1,000 views',
+    ar: 'السعر لكل 1,000 مشاهدة',
   },
   'cap-per-clip': {
     ru: 'Потолок на один ролик',
     uk: 'Стеля на один ролик',
     en: 'Cap per clip',
+    ar: 'الحد الأقصى لكل مقطع',
   },
   'view-threshold': {
     ru: 'Порог просмотров',
     uk: 'Поріг переглядів',
     en: 'View threshold',
+    ar: 'حد المشاهدات',
   },
   'contest-creation-fee': {
     ru: 'Комиссия за создание конкурса',
     uk: 'Комісія за створення конкурсу',
     en: 'Contest creation fee',
+    ar: 'عمولة إنشاء المسابقة',
   },
   'budget-top-up-fee': {
     ru: 'Комиссия за пополнение бюджета конкурса',
     uk: 'Комісія за поповнення бюджету конкурсу',
     en: 'Contest budget top-up fee',
+    ar: 'عمولة شحن ميزانية المسابقة',
   },
   'store-fee': {
     ru: 'Комиссия с покупки в магазине',
     uk: 'Комісія з покупки в магазині',
     en: 'Store purchase fee',
+    ar: 'عمولة الشراء من المتجر',
   },
   'withdrawal-fee': {
     ru: 'Комиссия за вывод баланса',
     uk: 'Комісія за виведення балансу',
     en: 'Balance withdrawal fee',
+    ar: 'عمولة سحب الرصيد',
   },
   'withdrawal-minimum': {
     ru: 'Минимальная заявка на вывод',
     uk: 'Мінімальна заявка на виведення',
     en: 'Minimum withdrawal request',
+    ar: 'الحد الأدنى لطلب السحب',
   },
   'payout-rails': {
     ru: 'Способы выплаты',
     uk: 'Способи виплати',
     en: 'Payout rails',
+    ar: 'طرق الدفع',
   },
   platforms: {
     ru: 'Площадки',
     uk: 'Майданчики',
     en: 'Platforms',
+    ar: 'المنصات',
   },
   geography: {
     ru: 'География выплат',
     uk: 'Географія виплат',
     en: 'Geography of payouts',
+    ar: 'جغرافيا الدفع',
   },
 }
 
 /** The published order. Eleven fields, the same eleven every fact card prints. */
 export const FACT_IDS = Object.freeze(Object.keys(LABELS))
+export { LABELS }
 
 // ---------------------------------------------------------------------------
 // Formatting. Numbers arrive from the data files and are only rendered here.
@@ -157,15 +182,22 @@ const money = (value) => `$${Number.isInteger(value) ? value : value.toFixed(2)}
 /** A rate is always printed with cents: "$1.00–$2.00" reads as money, "$1–$2" as a guess. */
 const rate = (value) => `$${value.toFixed(2)}`
 // English groups thousands ("1,000 views"); the Russian and Ukrainian corpus writes them bare
-// ("1000 просмотров"), and the truth gate's own patterns are written for that form.
-const group = (value, locale) => (locale === 'en' ? value.toLocaleString('en-US') : String(value))
+// ("1000 просмотров"), and the truth gate's own patterns are written for that form. Arabic is
+// written with Latin digits and groups them the English way ("1,000 مشاهدة"), like the money
+// ranges next to it.
+const group = (value, locale) => (locale === 'en' || locale === 'ar' ? value.toLocaleString('en-US') : String(value))
 const views = (value, locale) =>
-  ({ ru: `${group(value, 'ru')} просмотров`, uk: `${group(value, 'uk')} переглядів`, en: `${group(value, 'en')} views` })[locale]
+  ({
+    ru: `${group(value, 'ru')} просмотров`,
+    uk: `${group(value, 'uk')} переглядів`,
+    en: `${group(value, 'en')} views`,
+    ar: `${group(value, 'ar')} مشاهدة`,
+  })[locale]
 
 const dateOf = (isoTimestamp) => isoTimestamp.slice(0, 10)
 const DAY_MS = 86_400_000
 
-const percentText = (value) => ({ ru: `${value}%`, uk: `${value}%`, en: `${value}%` })
+const percentText = (value) => ({ ru: `${value}%`, uk: `${value}%`, en: `${value}%`, ar: `${value}%` })
 
 // ---------------------------------------------------------------------------
 // Inputs.
@@ -208,7 +240,7 @@ export function effectiveWithdrawalFee(truth, intentIndex) {
   return { percent: truth.withdrawal.defaultCommissionPercent, intentId: null, decidedAt: null }
 }
 
-const localized = (build) => ({ ru: build('ru'), uk: build('uk'), en: build('en') })
+const localized = (build) => Object.fromEntries(FACT_LOCALES.map((locale) => [locale, build(locale)]))
 
 // ---------------------------------------------------------------------------
 // The document.
@@ -268,6 +300,7 @@ export function buildFacts({ truth, intent, snapshot, now }) {
           ru: `${range} за 1000 просмотров (открытые конкурсы)`,
           uk: `${range} за 1000 переглядів (відкриті конкурси)`,
           en: `${range} per 1,000 views (open tasks)`,
+          ar: `${range} لكل 1,000 مشاهدة (المهام المفتوحة)`,
         }[locale]
       }),
       source: cpmTargeted ? `product-intent.json#${cpmHighIntent.id}` : 'product-truth.json#ppv.stable.bands.cpm',
@@ -283,6 +316,7 @@ export function buildFacts({ truth, intent, snapshot, now }) {
         ru: `до ${money(capBand.high)} на ролик`,
         uk: `до ${money(capBand.high)} на ролик`,
         en: `up to ${money(capBand.high)} per clip`,
+        ar: `حتى ${money(capBand.high)} لكل مقطع`,
       }[locale])),
       source: 'product-truth.json#ppv.stable.bands.maxPerWork.high',
       asOf: truthAsOf,
@@ -300,6 +334,7 @@ export function buildFacts({ truth, intent, snapshot, now }) {
         ru: `задаёт задание (по умолчанию ${views(threshold.value, 'ru')})`,
         uk: `задає завдання (за замовчуванням ${views(threshold.value, 'uk')})`,
         en: `set per task (system default ${views(threshold.value, 'en')})`,
+        ar: `تحدده المهمة (الافتراضي في النظام ${views(threshold.value, 'ar')})`,
       }[locale])),
       source: 'product-truth.json#ppv.stable.defaultMinimumViews.value',
       asOf: truthAsOf,
@@ -347,11 +382,13 @@ export function buildFacts({ truth, intent, snapshot, now }) {
               ru: `без комиссии, заявка от ${minimum}`,
               uk: `без комісії, заявка від ${minimum}`,
               en: `no fee, request from ${minimum}`,
+              ar: `دون عمولة، والطلب من ${minimum}`,
             }[locale]
           : {
               ru: `${fee.percent}% от суммы заявки, заявка от ${minimum}`,
               uk: `${fee.percent}% від суми заявки, заявка від ${minimum}`,
               en: `${fee.percent}% of the requested amount, request from ${minimum}`,
+              ar: `${fee.percent}% من المبلغ المطلوب، والطلب من ${minimum}`,
             }[locale]
       }),
       source: fee.intentId ? `product-intent.json#${fee.intentId}` : 'product-truth.json#withdrawal.defaultCommissionPercent',
@@ -376,7 +413,7 @@ export function buildFacts({ truth, intent, snapshot, now }) {
       id: 'payout-rails',
       value: [...rails],
       labels: LABELS['payout-rails'],
-      text: { ru: WORDING.rails.ru, uk: WORDING.rails.uk, en: WORDING.rails.en },
+      text: localized((locale) => WORDING.rails[locale]),
       source: 'product-truth.json#withdrawal.wizardMethods',
       asOf: truthAsOf,
       note: 'Balance withdrawal rails. A single task may additionally award a card payout, a bank transfer or a gift.',
@@ -385,7 +422,7 @@ export function buildFacts({ truth, intent, snapshot, now }) {
       id: 'platforms',
       value: [...WORDING.platforms.ids],
       labels: LABELS.platforms,
-      text: { ru: WORDING.platforms.ru, uk: WORDING.platforms.uk, en: WORDING.platforms.en },
+      text: localized((locale) => WORDING.platforms[locale]),
       source: 'gen-facts-json.mjs#WORDING.platforms',
       asOf: WORDING.reviewedAt,
       note: 'Where a clip may be published; every task names its own platforms on the card.',
@@ -394,7 +431,7 @@ export function buildFacts({ truth, intent, snapshot, now }) {
       id: 'geography',
       value: WORDING.geography.value,
       labels: LABELS.geography,
-      text: { ru: WORDING.geography.ru, uk: WORDING.geography.uk, en: WORDING.geography.en },
+      text: localized((locale) => WORDING.geography[locale]),
       source: 'gen-facts-json.mjs#WORDING.geography',
       asOf: WORDING.reviewedAt,
       note: 'No exclusion list: clippers from any country are paid the same way.',
@@ -445,11 +482,11 @@ const cell = (value) => String(value).replaceAll('|', '\\|')
 // The page shows a reader where a number comes from; the JSON keeps the machine reference
 // (`fact.source`). A file path and a JSON pointer mean nothing to a reader, so the table
 // names the kind of source instead and leaves the exact pointer to the JSON copy.
-const SOURCE_LABELS = {
-  'product-truth.json': { ru: 'правила платформы', uk: 'правила платформи', en: 'platform rules' },
-  'product-intent.json': { ru: 'решение по продукту', uk: 'рішення щодо продукту', en: 'product decision' },
-  'gen-facts-json.mjs': { ru: 'условия заданий', uk: 'умови завдань', en: 'task terms' },
-  'contests-snapshot.json': { ru: 'живой каталог', uk: 'живий каталог', en: 'live catalogue' },
+export const SOURCE_LABELS = {
+  'product-truth.json': { ru: 'правила платформы', uk: 'правила платформи', en: 'platform rules', ar: 'قواعد المنصة' },
+  'product-intent.json': { ru: 'решение по продукту', uk: 'рішення щодо продукту', en: 'product decision', ar: 'قرار المنتج' },
+  'gen-facts-json.mjs': { ru: 'условия заданий', uk: 'умови завдань', en: 'task terms', ar: 'شروط المهام' },
+  'contests-snapshot.json': { ru: 'живой каталог', uk: 'живий каталог', en: 'live catalogue', ar: 'الكتالوج الحي' },
 }
 
 export function sourceLabel(source, locale) {

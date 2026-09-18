@@ -193,15 +193,19 @@ describe('helpers', () => {
     expect(localeFromPath('/o-proekte/index.md')).toBe('ru')
     expect(localeFromPath('ua/dopomoha/veryfikatsiia.md')).toBe('uk')
     expect(localeFromPath('en/help/verification.md')).toBe('en')
+    // Arabic, known to the build before its tree is declared.
+    expect(localeFromPath('ar/earnings/clipping-platforms-that-pay-in-egypt-and-arab-countries.md')).toBe('ar')
     // Not a locale prefix: a slug that merely starts with the letters.
     expect(localeFromPath('uanews/x.md')).toBe('ru')
+    expect(localeFromPath('arabic/x.md')).toBe('ru')
   })
 
   it('takes the heading from the one landing copy table', () => {
-    expect([sourcesHeading('ru'), sourcesHeading('uk'), sourcesHeading('en')]).toEqual([
+    expect([sourcesHeading('ru'), sourcesHeading('uk'), sourcesHeading('en'), sourcesHeading('ar')]).toEqual([
       'Источники',
       'Джерела',
       'Sources',
+      'المصادر',
     ])
   })
 })

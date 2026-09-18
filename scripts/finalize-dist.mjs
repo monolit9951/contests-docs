@@ -42,12 +42,14 @@ const escapeHtml = (value) => value
 const home = PAGES.find((page) => page.id === 'earnings-hub')
 if (!home) throw new Error('finalize-dist: earnings-hub missing from content manifest')
 
+// One 404 per DECLARED tree, in its language and its writing direction: nginx.conf answers a miss
+// under `/ar/` with `/404.ar.html`, and an Arabic 404 laid out left to right reads backwards.
 for (const locale of LOCALES) {
   const copy = CHROME_COPY[locale.language].notFound
   const homePath = pagePath(home, locale.language)
   if (!homePath) throw new Error(`finalize-dist: earnings-hub missing ${locale.language}`)
   const html = `<!doctype html>
-<html lang="${locale.language}">
+<html lang="${locale.language}" dir="${locale.dir}">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">

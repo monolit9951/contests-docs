@@ -4,7 +4,7 @@
 // refreshed from the baseline; nothing is typed by hand here.
 import { useData } from 'vitepress'
 import { computed, ref } from 'vue'
-import { LANDING_COPY, localeOf } from './copy'
+import { LANDING_COPY, NUMBER_LOCALE, localeOf } from './copy'
 import { byId } from './platforms'
 
 const { lang } = useData()
@@ -13,7 +13,7 @@ const calc = computed(() => (byId('darebay') as unknown as { calc?: { rateMin: n
 const views = ref(50000)
 const rate = ref(calc.value.rateMin)
 const payout = computed(() => Math.min((rate.value * views.value) / 1000, calc.value.cap))
-const fmt = (n: number) => n.toLocaleString(lang.value === 'en' ? 'en-US' : 'ru-RU')
+const fmt = (n: number) => n.toLocaleString(NUMBER_LOCALE[localeOf(lang.value)])
 const money = (n: number) => '$' + n.toFixed(2)
 </script>
 

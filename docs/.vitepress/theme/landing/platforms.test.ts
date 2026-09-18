@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import { LANDING_COPY } from './copy'
-import { DATA, DEFAULT_COLUMNS, REGION_FIELDS, byId, sourceIndex, sourcesOf, text } from './platforms'
-import type { Locale } from '../../registry'
+import { DATA, DEFAULT_COLUMNS, REGION_FIELDS, bidiAttrs, byId, sourceIndex, sourcesOf, text, textLang } from './platforms'
+import { KNOWN_LOCALES } from '../../registry'
 
 /**
  * One data file feeds every comparison page, so a field added for one page is a field every other
@@ -14,7 +14,9 @@ import type { Locale } from '../../registry'
  * country column with exactly the source list they had.
  */
 
-const LOCALES: Locale[] = ['ru', 'uk', 'en']
+// Every language the build knows, not only the live trees: a regional column shown on an Arabic
+// page the day the Arabic tree is declared must already have its Arabic heading.
+const LOCALES = KNOWN_LOCALES
 
 describe('per-country columns', () => {
   it('exist on every platform, with a state, a source and English text', () => {
@@ -131,5 +133,27 @@ describe('the platforms every regional page compares', () => {
       expect(field.source?.url).toMatch(/^https:\/\/darebay\.com\//)
       if (field.state === 'partial') expect(field.text?.en, `darebay.${key}`).toContain('USDT on TON')
     }
+  })
+})
+
+describe('a value shown in a page of another writing direction', () => {
+  // A synthetic platform, so the rule does not depend on which languages the live data carries.
+  const fixture = {
+    ...byId('whop')!,
+    fields: { rate: { text: { en: '$1–$2 per 1,000 views', ru: '$1–$2 за 1000 просмотров' } } },
+  }
+
+  it('falls back to English and says so', () => {
+    expect(text(fixture, 'rate', 'ar')).toBe('$1–$2 per 1,000 views')
+    expect(textLang(fixture, 'rate', 'ar')).toBe('en')
+    expect(textLang(fixture, 'rate', 'ru')).toBe('ru')
+  })
+
+  it('is marked as a left-to-right English run inside a right-to-left page, and only there', () => {
+    expect(bidiAttrs('en', 'ar')).toEqual({ lang: 'en', dir: 'ltr' })
+    expect(bidiAttrs('ar', 'ar')).toEqual({})
+    // Left-to-right trees keep their markup: an English fallback in a Russian table is not marked.
+    expect(bidiAttrs('en', 'ru')).toEqual({})
+    expect(bidiAttrs('en', 'en')).toEqual({})
   })
 })

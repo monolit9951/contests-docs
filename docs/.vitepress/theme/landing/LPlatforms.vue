@@ -3,12 +3,15 @@
 // reader (or a model) can compare without re-reading prose.
 import { useData } from 'vitepress'
 import { computed } from 'vue'
+import { appLocaleOf } from '../../registry'
 import { LANDING_COPY, localeOf } from './copy'
-import { pick, sourcesOf, text } from './platforms'
+import { bidiAttrs, pick, sourcesOf, text, textLang } from './platforms'
 
 const CARD_FIELDS = ['rate', 'threshold', 'cap', 'fee', 'minPayout', 'payoutMethods', 'cis', 'escrow']
 const { frontmatter, lang } = useData()
 const loc = computed(() => localeOf(lang.value))
+// DareBay's card links into the product, in the application tree this reader is sent to.
+const appLoc = computed(() => appLocaleOf(loc.value))
 const copy = computed(() => LANDING_COPY[loc.value])
 const cfg = computed(() => (frontmatter.value.cards ?? frontmatter.value.compare ?? {}) as { ids?: string[]; highlight?: string; fields?: string[] })
 const rows = computed(() => pick(cfg.value.ids ?? []))
@@ -32,7 +35,7 @@ const hostSources = (p: Parameters<typeof sourcesOf>[0]) => {
           <div>
             <span class="lp-rank">{{ String(i + 1).padStart(2, '0') }}</span>
             <h3>
-              <a v-if="p.id === highlight" :href="p.home?.[loc] ?? p.url" target="_self">{{ p.name }}</a>
+              <a v-if="p.id === highlight" :href="p.home?.[appLoc] ?? p.url" target="_self">{{ p.name }}</a>
               <a v-else :href="p.url" target="_blank" rel="nofollow noopener">{{ p.name }}</a>
             </h3>
           </div>
@@ -44,8 +47,8 @@ const hostSources = (p: Parameters<typeof sourcesOf>[0]) => {
             <dt>{{ copy.columns[f] ?? f }}</dt>
             <dd>
               <template v-if="text(p, f, loc)">
-                <span v-if="p.fields[f]?.state" :class="p.fields[f].state === 'yes' ? 'lp-chip lp-chip-good' : p.fields[f].state === 'no' ? 'lp-chip lp-chip-bad' : 'lp-chip lp-chip-warn'" style="margin-right:6px">{{ copy.cis[p.fields[f].state!] }}</span>
-                <span :class="{ 'lp-money': f === 'rate' }">{{ text(p, f, loc) }}</span>
+                <span v-if="p.fields[f]?.state" :class="p.fields[f].state === 'yes' ? 'lp-chip lp-chip-good' : p.fields[f].state === 'no' ? 'lp-chip lp-chip-bad' : 'lp-chip lp-chip-warn'" style="margin-inline-end:6px">{{ copy.cis[p.fields[f].state!] }}</span>
+                <span v-bind="bidiAttrs(textLang(p, f, loc), loc)" :class="{ 'lp-money': f === 'rate' }">{{ text(p, f, loc) }}</span>
               </template>
               <span v-else-if="p.fields[f]?.state" :class="p.fields[f].state === 'yes' ? 'lp-chip lp-chip-good' : p.fields[f].state === 'no' ? 'lp-chip lp-chip-bad' : 'lp-chip'">{{ copy.cis[p.fields[f].state!] }}</span>
               <span v-else class="lp-na lp-muted">{{ copy.notPublished }}</span>
@@ -58,7 +61,7 @@ const hostSources = (p: Parameters<typeof sourcesOf>[0]) => {
         </div>
         <div class="lp-card-foot">
           <span class="lp-srcs">{{ copy.sources }}: <template v-for="(s, k) in hostSources(p)" :key="s.url"><a :href="s.url" target="_blank" rel="nofollow noopener" :title="s.date">{{ s.host }}</a><span v-if="k < hostSources(p).length - 1">, </span></template> · {{ copy.updated }} {{ hostSources(p)[0]?.date }}</span>
-          <a v-if="p.id === highlight" class="lp-btn lp-btn-primary lp-btn-sm" :href="p.home?.[loc] ?? p.url" target="_self">{{ copy.ctaPrimary }}</a>
+          <a v-if="p.id === highlight" class="lp-btn lp-btn-primary lp-btn-sm" :href="p.home?.[appLoc] ?? p.url" target="_self">{{ copy.ctaPrimary }}</a>
         </div>
       </article>
     </div>

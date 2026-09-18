@@ -1,6 +1,6 @@
 // UI strings of the landing shell and components, per locale. Product facts are
 // NOT here (they live in data/platforms.json with sources); only labels.
-import type { Locale } from '../../registry'
+import { KNOWN_LOCALES, ROOT_LOCALE, type Locale } from '../../registry'
 
 export interface LandingCopy {
   updated: string
@@ -10,6 +10,8 @@ export interface LandingCopy {
   keyTakeaways: string
   compareTitle: string
   compareNote: string
+  /** Heading of the comparison table's first column, the one naming each platform. */
+  platform: string
   us: string
   bestFor: string
   pros: string
@@ -121,6 +123,28 @@ const columns = {
     indonesia: 'Платить в Індонезію',
     philippines: 'Платить на Філіппіни',
   },
+  // The platform is the grammatical subject (المنصة, feminine), hence تدفع.
+  ar: {
+    rate: 'السعر لكل 1,000 مشاهدة',
+    threshold: 'حد المشاهدات',
+    cap: 'الحد الأقصى لكل مقطع',
+    fee: 'العمولة عند الدفع',
+    minPayout: 'الحد الأدنى للسحب',
+    payoutMethods: 'طرق الدفع',
+    cis: 'تدفع في روسيا ورابطة الدول المستقلة',
+    followers: 'هل يلزم متابعون',
+    escrow: 'الميزانية محجوزة مسبقًا',
+    networks: 'المنصات المحتسبة',
+    verification: 'كيف تُحتسب المشاهدات',
+    india: 'تدفع في الهند',
+    pakistan: 'تدفع في باكستان',
+    bangladesh: 'تدفع في بنغلاديش',
+    nigeria: 'تدفع في نيجيريا',
+    kenya: 'تدفع في كينيا',
+    mena: 'تدفع في مصر والدول العربية',
+    indonesia: 'تدفع في إندونيسيا',
+    philippines: 'تدفع في الفلبين',
+  },
 }
 
 export const LANDING_COPY: Record<Locale, LandingCopy> = {
@@ -131,6 +155,7 @@ export const LANDING_COPY: Record<Locale, LandingCopy> = {
     keyTakeaways: 'Key takeaways',
     compareTitle: 'Side by side',
     compareNote: 'Click a column to sort. A superscript number links to the source page.',
+    platform: 'Platform',
     us: 'DareBay',
     bestFor: 'Best for',
     pros: 'Strong points',
@@ -183,6 +208,7 @@ export const LANDING_COPY: Record<Locale, LandingCopy> = {
     keyTakeaways: 'Главное',
     compareTitle: 'Площадки рядом',
     compareNote: 'Нажми на колонку, чтобы отсортировать. Цифра сверху ведёт на страницу-источник.',
+    platform: 'Площадка',
     us: 'DareBay',
     bestFor: 'Кому подходит',
     pros: 'Сильные стороны',
@@ -235,6 +261,7 @@ export const LANDING_COPY: Record<Locale, LandingCopy> = {
     keyTakeaways: 'Головне',
     compareTitle: 'Майданчики поруч',
     compareNote: 'Натисни на колонку, щоб відсортувати. Цифра зверху веде на сторінку-джерело.',
+    platform: 'Майданчик',
     us: 'DareBay',
     bestFor: 'Кому підходить',
     pros: 'Сильні сторони',
@@ -280,6 +307,82 @@ export const LANDING_COPY: Record<Locale, LandingCopy> = {
     budgetNote: 'Комісія конкурсу 0%: увесь бюджет іде авторам. Запуск безкоштовний; у гаманцевому конкурсі бюджет заблоковано на платформі до старту.',
     glossaryTitle: 'Терміни',
   },
+  // Arabic. Arrows that mean "onward" point left in a right-to-left line. The product buttons open
+  // the English interface (the application has no Arabic one — `appLocaleOf` in the registry), and
+  // both CTA ledes say so, so a reader is not surprised after the click. Terms: clip مقطع, view
+  // مشاهدة, task مهمة, contest مسابقة, rate السعر, view threshold حد المشاهدات, cap per clip الحد
+  // الأقصى لكل مقطع, withdrawal السحب; USDT, TON and Telegram stay in Latin script.
+  ar: {
+    updated: 'آخر تحديث',
+    byline: 'بقلم',
+    snapshotNote: 'أرقام المنصات الأخرى مأخوذة من صفحاتها العامة في التاريخ المذكور، وأرقام DareBay من بيانات المنصة الحية.',
+    keyTakeaways: 'أهم النقاط',
+    compareTitle: 'مقارنة جنبًا إلى جنب',
+    compareNote: 'انقر على عمود لترتيب الجدول. الرقم الصغير المرتفع يقود إلى صفحة المصدر.',
+    platform: 'المنصة',
+    us: 'DareBay',
+    bestFor: 'لمن تناسب',
+    pros: 'نقاط القوة',
+    cons: 'ما يجب الانتباه إليه',
+    sources: 'المصادر',
+    notPublished: 'غير معلن',
+    methodTitle: 'كيف أُعدّت هذه المقارنة',
+    calcTitle: 'كم يدفع مقطع واحد على DareBay',
+    calcViews: 'المشاهدات المحتسبة لمقطع واحد',
+    calcRate: 'السعر لكل 1,000 مشاهدة',
+    calcCap: 'الحد الأقصى لكل مقطع',
+    calcOut: 'المبلغ المستحق عن هذا المقطع',
+    calcNote: 'المعادلة: السعر × المشاهدات ÷ 1,000، دون تجاوز الحد الأقصى. الأسعار والحدود القصوى مأخوذة من المسابقات المفتوحة حاليًا.',
+    ctaTitle: 'خذ مهمة واحصل على أجر مقابل المشاهدات',
+    ctaLede: 'لا حاجة إلى متابعين ولا إلى طلب انضمام. الميزانية محجوزة على المنصة قبل أن تبدأ، والمشاهدات تُحتسب بشكل مستقل. واجهة المنصة بالإنجليزية.',
+    ctaPrimary: 'افتح المهام ←',
+    ctaSecondary: 'قناة Telegram',
+    bizCtaTitle: 'صانعو المحتوى يصنعون المقاطع وأنت تدفع مقابل المشاهدات',
+    bizCtaLede: 'تحدد السعر وحد المشاهدات والحد الأقصى لكل مقطع قبل الإطلاق، ولا تُنفق الميزانية إلا على مشاهدات المقاطع التي تجاوزت الحد. لديك أسئلة قبل الإطلاق؟ اسأل المؤسس على Telegram. واجهة المنصة بالإنجليزية.',
+    bizCtaPrimary: 'ناقش الإطلاق ←',
+    bizCtaSecondary: 'راسل المؤسس',
+    columns: columns.ar,
+    cis: { yes: 'نعم', no: 'لا', partial: 'جزئيًا', unknown: 'غير مذكور' },
+    footerHome: 'darebay.com',
+    footerTelegram: 'Telegram',
+    related: 'المزيد في هذا القسم',
+    hubAll: 'كل الصفحات',
+    calcProTitle: 'حاسبة الأرباح من المقاطع',
+    calcClipsPerWeek: 'عدد المقاطع أسبوعيًا',
+    calcPerClip: 'لكل مقطع',
+    calcPerWeek: 'أسبوعيًا',
+    calcPerMonth: 'شهريًا، أربعة أسابيع',
+    calcNet: 'الصافي بعد عمولة السحب {fee}%',
+    calcNetFree: 'إلى محفظتك دون عمولة سحب',
+    calcThresholdNote: 'تحت حد {threshold} مشاهدة لا يُدفع للمقطع شيء، وبعد تجاوزه تُحتسب كل المشاهدات من الأولى.',
+    calcCapped: 'بلغ الحد الأقصى',
+    calcMinPayout: 'الحد الأدنى للسحب {min} USDT',
+    budgetTitle: 'حاسبة ميزانية الحملة',
+    budgetBudget: 'الميزانية، USDT',
+    budgetViews: 'المشاهدات المدفوعة التي تشتريها هذه الميزانية',
+    budgetClips: 'عدد المقاطع عند الحد الأقصى لإنفاق الميزانية كلها',
+    budgetCpm: 'التكلفة لكل 1,000 مشاهدة',
+    budgetNote: 'عمولة المسابقة 0%: الميزانية كلها تذهب إلى صانعي المحتوى. الإطلاق مجاني، والميزانية محجوزة على المنصة قبل البدء.',
+    glossaryTitle: 'المصطلحات',
+  },
 }
 
-export const localeOf = (lang: string): Locale => (lang === 'uk' ? 'uk' : lang === 'en' ? 'en' : 'ru')
+/**
+ * How the calculators group a number (`toLocaleString`), per tree. Arabic is written with Latin
+ * digits: the money beside every figure is formatted `$1,000.00` whatever the page's language,
+ * and the tables, the fact card and the sources this corpus quotes all use Latin digits too — a
+ * calculator in Arabic-Indic digits (٥٠٬٠٠٠) would be the one place on the page that disagrees.
+ */
+export const NUMBER_LOCALE: Record<Locale, string> = {
+  ru: 'ru-RU',
+  uk: 'uk-UA',
+  en: 'en-US',
+  ar: 'ar-u-nu-latn',
+}
+
+/**
+ * The copy locale of a VitePress `lang`: the language itself when the build knows it, the root
+ * locale otherwise (the stock 404 page, rendered outside every tree).
+ */
+export const localeOf = (lang: string): Locale =>
+  (KNOWN_LOCALES as readonly string[]).includes(lang) ? (lang as Locale) : ROOT_LOCALE.language

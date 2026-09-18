@@ -6,6 +6,7 @@ import { describe, expect, it } from 'vitest'
 
 import {
   FACT_IDS,
+  FACT_LOCALES,
   FACTS_OUTPUT_FILE,
   FACTS_PUBLIC_PATH,
   SNAPSHOT_MAX_AGE_DAYS,
@@ -33,13 +34,13 @@ describe('machine-readable fact card', () => {
     expect(document.operator).toBe('Ruslan Bei')
   })
 
-  it('gives every field a source, a reading date and all three labels', () => {
+  it('gives every field a source, a reading date and a label in every language', () => {
     for (const fact of document.facts) {
       expect(fact.source, `${fact.id}.source`).toMatch(/\S/)
       expect(fact.asOf, `${fact.id}.asOf`).toMatch(/^\d{4}-\d{2}-\d{2}$/)
       // A date in the future would mean the card is quoting a reading nobody has taken.
       expect(Date.parse(fact.asOf), `${fact.id}.asOf`).toBeLessThanOrEqual(Date.parse(document.generatedAt))
-      for (const locale of ['ru', 'uk', 'en']) {
+      for (const locale of FACT_LOCALES) {
         expect(fact.labels[locale], `${fact.id}.labels.${locale}`).toMatch(/\S/)
         expect(fact.text[locale], `${fact.id}.text.${locale}`).toMatch(/\S/)
       }
@@ -197,5 +198,29 @@ describe('the Russian fact card prints exactly what the JSON publishes', () => {
   it('keeps the search snippet inside its budget', () => {
     const description = /^description:\s*"?(.+?)"?\s*$/m.exec(ruPage)[1]
     expect(description.length).toBeLessThanOrEqual(160)
+  })
+})
+
+// Every translation of the fact card the manifest declares, whatever the language: the three above
+// by name, and the Arabic one (or any later one) from the day its slug is declared. Read through the
+// registry, so the check follows the page to its address instead of a path written here.
+const registry = await import('../docs/.vitepress/registry.ts')
+
+describe('every declared fact card prints exactly what the JSON publishes', () => {
+  const { PAGES, localesOf, sourceFile } = registry
+  const card = PAGES.find((page) => page.id === 'darebay-at-a-glance')
+
+  it.each(localesOf(card).map((locale) => [locale]))('%s', (locale) => {
+    const page = readFileSync(join(ROOT, 'docs', sourceFile(card, locale)), 'utf8')
+    expect(page).toContain(renderTable(document, locale))
+    expect(page).toContain(`](${FACTS_PUBLIC_PATH})`)
+    expect(page).toContain('{#facts}')
+  })
+
+  it('renders the Arabic table with Arabic headers and Latin digits, ready for its page', () => {
+    const table = renderTable(document, 'ar')
+    expect(table.split('\n')[0]).toBe('| البند | القيمة | المصدر | بتاريخ |')
+    expect(table).toContain('| 10 USDT |')
+    expect(table).not.toMatch(/[\u0660-\u0669]/)
   })
 })

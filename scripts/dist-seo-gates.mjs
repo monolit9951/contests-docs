@@ -14,6 +14,7 @@ const {
   ORIGIN,
   PAGES,
   hreflangCluster,
+  localeAxis,
   localesOf,
   pagePath,
   sourceFile,
@@ -61,6 +62,13 @@ for (const page of PAGES) {
 
     const documentLanguage = html.match(/<html\b[^>]*\blang="([^"]+)"/i)?.[1]
     if (documentLanguage !== locale) fail('html-lang', `${path}: ${documentLanguage ?? 'missing'} != ${locale}`)
+    // The tree's writing direction, from the same registry axis: an Arabic page rendered
+    // left to right reverses every sentence that mixes in a number or a Latin name.
+    const documentDirection = html.match(/<html\b[^>]*\bdir="([^"]+)"/i)?.[1]
+    const expectedDirection = localeAxis(locale).dir
+    if (documentDirection !== expectedDirection) {
+      fail('html-dir', `${path}: ${documentDirection ?? 'missing'} != ${expectedDirection}`)
+    }
 
     const canonicalTags = tags(html, 'link').filter((tag) => attr(tag, 'rel') === 'canonical')
     const expectedCanonical = `${hostname}${path}`
@@ -237,6 +245,7 @@ for (const locale of LOCALES) {
   }
   const html = readFileSync(file, 'utf8')
   if (!new RegExp(`<html\\b[^>]*lang="${locale.language}"`).test(html)) fail('404-lang', locale.language)
+  if (!new RegExp(`<html\\b[^>]*dir="${locale.dir}"`).test(html)) fail('404-dir', locale.language)
   if (!/<meta name="robots" content="noindex, follow">/.test(html)) fail('404-robots', locale.language)
   if (/rel="canonical"/.test(html)) fail('404-canonical', locale.language)
 }

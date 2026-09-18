@@ -21,13 +21,14 @@ const PAGE_DATES_BY_URL: Record<string, PageDates> = Object.fromEntries(
   ])
 )
 import {
-  HUBS,
   LOCALES,
   PAGES,
   ROOT_LOCALE,
   APP_ROUTES,
   alternateLocalesOf,
+  appLocaleOf,
   hreflangCluster,
+  hubIndexPath,
   localesOf,
   resolveLocalizedLink,
   pagePath,
@@ -60,10 +61,11 @@ const DOCS_DIR = join(dirname(fileURLToPath(import.meta.url)), '..')
  * so two copies of these strings would silently stop the menu from hiding the
  * page you are already on.
  */
-const LOCALE_LABELS: Record<Locale, string> = {
+export const LOCALE_LABELS: Record<Locale, string> = {
   ru: 'Русский',
   uk: 'Українська',
   en: 'English',
+  ar: 'العربية',
 }
 
 /**
@@ -86,12 +88,28 @@ const VERIFICATION_TAGS: [string, Record<string, string>][] = [
     .map(([name, content]) => ['meta', { name, content: content.trim() }])
 
 const SITE_DESCRIPTION = 'Запускайте активности, отправляйте работы, получайте награды на DareBay.'
+
+/**
+ * The site description of each tree: what a page falls back to when it has none of its own. The
+ * root tree inherits the site-level one; every other tree states its own in its own language.
+ */
+export const LOCALE_DESCRIPTIONS: Record<Locale, string> = {
+  ru: SITE_DESCRIPTION,
+  uk: 'Запускайте активності, надсилайте роботи, отримуйте винагороди на DareBay.',
+  en: 'Launch activities, submit work, get rewarded on DareBay.',
+  ar: 'أطلق الأنشطة، وأرسل أعمالك، واحصل على المكافآت على DareBay.',
+}
 // Shared with the app so a docs link and a site link preview identically.
 const OG_IMAGE = 'https://darebay.com/og-default.jpg'
 
 // Open Graph wants a locale, not a language: `ru_RU`, not `ru`. hreflang wants
 // the opposite. Two audiences, two formats, one table so they cannot drift.
-const OG_LOCALE: Record<Locale, string> = { ru: 'ru_RU', uk: 'uk_UA', en: 'en_US' }
+//
+// Arabic is `ar_AR`: the Arabic locale in Facebook's own list, which is the list
+// og:locale is read against. It names no country on purpose — the Arabic tree is
+// written for readers across Egypt, the Maghreb, Iraq and the Gulf alike, and
+// `ar_EG` or `ar_SA` would claim one market for all of them.
+export const OG_LOCALE: Record<Locale, string> = { ru: 'ru_RU', uk: 'uk_UA', en: 'en_US', ar: 'ar_AR' }
 
 // Nav and sidebar, built from the registry.
 //
@@ -100,19 +118,27 @@ const OG_LOCALE: Record<Locale, string> = { ru: 'ru_RU', uk: 'uk_UA', en: 'en_US
 // stale: it named five earnings articles when ten had shipped. Deriving them means a page
 // that exists is a page that is linked — the cheapest ranking asset we have, and the one
 // that rots fastest when a human owns it.
-const HUB_TITLES: Record<Locale, Record<HubId, string>> = {
+export const HUB_TITLES: Record<Locale, Record<HubId, string>> = {
   ru: { about: 'О проекте', earnings: 'Заработок', brands: 'Брендам', help: 'Помощь', legal: 'Юридические документы' },
   uk: { about: 'Про проєкт', earnings: 'Заробіток', brands: 'Брендам', help: 'Допомога', legal: 'Юридичні документи' },
   en: { about: 'About', earnings: 'Earning', brands: 'For brands', help: 'Help', legal: 'Legal' },
+  ar: { about: 'عن المشروع', earnings: 'الربح', brands: 'للعلامات التجارية', help: 'المساعدة', legal: 'الوثائق القانونية' },
 }
 
-const OVERVIEW: Record<Locale, string> = { ru: 'Обзор', uk: 'Огляд', en: 'Overview' }
-const localePrefix = (lang: Locale) => LOCALES.find((l) => l.language === lang)?.prefix ?? ''
+export const OVERVIEW: Record<Locale, string> = { ru: 'Обзор', uk: 'Огляд', en: 'Overview', ar: 'نظرة عامة' }
+
+// A tree's home is its earnings hub: the logo leads there, and so does the 404. A declared locale
+// without one is refused by `check-registry.mjs` (`locale-without-home`) before the build gets here.
 const contentHomeForLocale = (lang: Locale) => {
-  const home = PAGES.find((page) => page.id === 'earnings-hub')
-  if (!home) throw new Error('config: earnings-hub is missing from docs/content-pages.json')
-  return pagePath(home, lang)!
+  const home = hubIndexPath('earnings', lang)
+  if (!home) throw new Error(`config: the earnings hub has no ${lang} index in docs/content-pages.json`)
+  return home
 }
+
+// The sections the header offers, in this order, each only where its index page exists in the
+// reader's language. A tree may open with one section (Arabic starts with earnings alone); linking
+// the other two would put 404s in the header of every page of it.
+const NAV_HUBS: readonly HubId[] = ['earnings', 'brands', 'help']
 
 // Order in the sidebar. "О проекте" is first on purpose: earnings is a subject where the
 // reader's first question — and Google's — is who is behind the page and where the
@@ -146,9 +172,10 @@ export const themeForLocale = (lang: Locale): DareBayThemeConfig => {
     // server-rendered and hydrated logo always share this exact href. No DOM rewrite.
     logoLink: contentHomeForLocale(lang),
     nav: [
-      { text: HUB_TITLES[lang].earnings, link: `${localePrefix(lang)}/${HUBS.earnings[lang]}/` },
-      { text: HUB_TITLES[lang].brands, link: `${localePrefix(lang)}/${HUBS.brands[lang]}/` },
-      { text: HUB_TITLES[lang].help, link: `${localePrefix(lang)}/${HUBS.help[lang]}/` },
+      ...NAV_HUBS.flatMap((hub) => {
+        const link = hubIndexPath(hub, lang)
+        return link ? [{ text: HUB_TITLES[lang][hub], link }] : []
+      }),
       // The CTA link is styled separately via CSS — see the `:last-child` rules under
       // "The CTA" in custom.css. It must stay LAST in this array: the gradient-pill
       // styling keys off `:last-child`, and so does the rule that keeps it visible on
@@ -164,6 +191,8 @@ export const themeForLocale = (lang: Locale): DareBayThemeConfig => {
     returnToTopLabel: copy.returnToTopLabel,
     langMenuLabel: copy.langMenuLabel,
     skipToContentLabel: copy.skipToContentLabel,
+    navLabel: copy.navLabel,
+    languageLabel: copy.languageLabel,
     outline: { label: copy.outlineLabel, level: [2, 3] },
     docFooter: { prev: copy.previousPage, next: copy.nextPage },
     // Only surfaces DareBay actually runs. Add another network only once the
@@ -267,8 +296,10 @@ const ORGANIZATION = {
 // Byline in the page's own script: Latin on English pages, Cyrillic on Russian
 // and Ukrainian. The Person node is one entity across the app and the corpus, so
 // its `name` is the Latin spelling on every page (founder, 2026-09-15; app parity
-// gate 11-entity) and the Cyrillic form is the alternateName.
-const AUTHOR_NAME: Record<Locale, string> = { ru: 'Руслан Бей', uk: 'Руслан Бей', en: 'Ruslan Bei' }
+// gate 11-entity) and the Cyrillic form is the alternateName. Arabic pages keep
+// the Latin spelling: no Arabic transcription of the name has been approved, and
+// an invented one would be a third spelling of one person.
+export const AUTHOR_NAME: Record<Locale, string> = { ru: 'Руслан Бей', uk: 'Руслан Бей', en: 'Ruslan Bei', ar: 'Ruslan Bei' }
 
 // The author page is a manifest entry like any other, so its address is derived
 // and the byline, the Person node and the sidebar can never point three ways.
@@ -293,16 +324,24 @@ const author = (language: Locale) => ({
   worksFor: { '@id': ORG_ID },
 })
 
+// The WebSite node is ONE entity published by two renderers, the application and this build, and
+// `url-gates.mjs` gate 11 requires the two copies to be identical. Its languages are therefore the
+// ones the application's copy declares (contests-frontend `metadata.ts` and `prerender.mjs`), not
+// this build's list of trees: deriving them from the manifest would make declaring a docs tree
+// (Arabic) break parity until the application shipped the same change. Each page states its own
+// language in its own node (`inLanguage` on the Article / CollectionPage / WebPage below).
 const WEBSITE = {
   '@type': 'WebSite',
   '@id': WEBSITE_ID,
   name: 'DareBay',
   url: `${ENTITY_ORIGIN}/`,
-  inLanguage: LOCALES.map((locale) => locale.language),
+  inLanguage: ['ru', 'uk', 'en'],
   publisher: { '@id': ORG_ID },
 }
 
-const FAQ_HEADING = /вопрос|питання|question/i
+// The H2 that opens a page's FAQ, in every tree's language. Arabic is matched with and without
+// the hamza an editor may drop (أسئلة / اسئلة), and on the singular سؤال.
+const FAQ_HEADING = /вопрос|питання|question|أسئلة|اسئلة|سؤال/i
 
 const stripMarkdown = (text: string) =>
   text
@@ -621,11 +660,23 @@ export default defineConfig({
   title: 'DareBay',
   description: SITE_DESCRIPTION,
 
-  locales: {
-    root: { label: LOCALE_LABELS.ru, lang: 'ru', themeConfig: themeForLocale('ru') },
-    ua: { label: LOCALE_LABELS.uk, lang: 'uk', title: 'DareBay', description: 'Запускайте активності, надсилайте роботи, отримуйте винагороди на DareBay.', themeConfig: themeForLocale('uk') },
-    en: { label: LOCALE_LABELS.en, lang: 'en', title: 'DareBay', description: 'Launch activities, submit work, get rewarded on DareBay.', themeConfig: themeForLocale('en') },
-  },
+  // One VitePress locale per tree the manifest DECLARES, keyed by its directory — which is what
+  // makes a page under `ar/` render with `<html lang="ar" dir="rtl">`. A tree is not listed here
+  // by hand: declaring it in docs/content-pages.json is what brings it to life, and a known
+  // language the manifest has not declared yet has no locale, no pages and no address.
+  locales: Object.fromEntries(
+    LOCALES.map((axis) => [
+      axis.vitepressKey,
+      {
+        label: LOCALE_LABELS[axis.language],
+        lang: axis.language,
+        dir: axis.dir,
+        // The root tree inherits the site-level title and description above.
+        ...(axis.vitepressKey === 'root' ? {} : { title: 'DareBay', description: LOCALE_DESCRIPTIONS[axis.language] }),
+        themeConfig: themeForLocale(axis.language),
+      },
+    ])
+  ),
 
   // The stock language switcher builds the other locale's address by swapping
   // the prefix on the current path, which is wrong the moment a slug is
@@ -708,8 +759,9 @@ export default defineConfig({
     )
 
     // Breadcrumb trail: hub, then page. The hub index is its own root, so it
-    // gets a single crumb and no list.
-    const hubSegment = HUBS[found.entry.hub][found.lang]
+    // gets a single crumb and no list. A section with no index in this language
+    // (a tree that opened without it) has no trail at all rather than a crumb
+    // pointing at a 404.
     const hubEntry = PAGES.find((e) => e.hub === found.entry.hub && e.slugs[found.lang] === '')
     const crumbs = hubEntry
       ? [
@@ -717,7 +769,6 @@ export default defineConfig({
           ...(found.entry.id === hubEntry.id ? [] : [{ name: title, path: pagePath(found.entry, found.lang)! }]),
         ]
       : []
-    void hubSegment
 
     // A hub page lists its section; an article lists nothing.
     const isHub = found.entry.slugs[found.lang] === ''
@@ -739,7 +790,11 @@ export default defineConfig({
       ? compareIds
           .map((id) => PLATFORMS.platforms.find((p) => p.id === id))
           .filter((p): p is (typeof PLATFORMS.platforms)[number] => Boolean(p))
-          .map((p) => ({ name: p.name, url: p.id === 'darebay' ? (p.home?.[found.lang] ?? p.url) : p.url }))
+          .map((p) => ({
+            name: p.name,
+            // DareBay's own row links into the product, in the tree the reader is sent to.
+            url: p.id === 'darebay' ? ((p.home as Partial<Record<Locale, string>> | undefined)?.[appLocaleOf(found.lang)] ?? p.url) : p.url,
+          }))
       : undefined
 
     const schema = structuredData(

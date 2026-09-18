@@ -4,11 +4,14 @@
 // server-rendered order is the page's editorial order.
 import { useData } from 'vitepress'
 import { computed, ref } from 'vue'
+import { appLocaleOf } from '../../registry'
 import { LANDING_COPY, localeOf } from './copy'
-import { DEFAULT_COLUMNS, pick, sourceIndex, text, type Platform } from './platforms'
+import { DEFAULT_COLUMNS, bidiAttrs, pick, sourceIndex, text, textLang, type Platform } from './platforms'
 
 const { frontmatter, lang } = useData()
 const loc = computed(() => localeOf(lang.value))
+// DareBay's own row links into the product, in the application tree this reader is sent to.
+const appLoc = computed(() => appLocaleOf(loc.value))
 const copy = computed(() => LANDING_COPY[loc.value])
 const cfg = computed(() => (frontmatter.value.compare ?? {}) as { ids?: string[]; columns?: string[]; highlight?: string; title?: string; note?: string })
 const columns = computed(() => cfg.value.columns ?? DEFAULT_COLUMNS)
@@ -55,7 +58,7 @@ const stateClass = (s?: string) => (s === 'yes' ? 'lp-chip lp-chip-good' : s ===
         <table class="lp-table">
           <thead>
             <tr>
-              <th scope="col">Platform</th>
+              <th scope="col">{{ copy.platform }}</th>
               <th v-for="c in columns" :key="c" scope="col" :class="{ 'is-sorted': sortKey === c, desc: sortKey === c && desc }">
                 <button type="button" @click="toggle(c)">{{ copy.columns[c] ?? c }}</button>
               </th>
@@ -64,7 +67,7 @@ const stateClass = (s?: string) => (s === 'yes' ? 'lp-chip lp-chip-good' : s ===
           <tbody>
             <tr v-for="p in sorted" :key="p.id" :class="{ 'is-us': p.id === highlight }">
               <td class="lp-cell-name">
-                <a v-if="p.id === highlight" :href="p.home?.[loc] ?? p.url" target="_self">{{ p.name }}</a>
+                <a v-if="p.id === highlight" :href="p.home?.[appLoc] ?? p.url" target="_self">{{ p.name }}</a>
                 <a v-else :href="p.url" target="_blank" rel="nofollow noopener">{{ p.name }}</a>
                 <small v-if="p.bestFor?.[loc]">{{ p.bestFor[loc] }}</small>
               </td>
@@ -73,8 +76,8 @@ const stateClass = (s?: string) => (s === 'yes' ? 'lp-chip lp-chip-good' : s ===
                   <span :class="stateClass(p.fields[c].state)">{{ copy.cis[p.fields[c].state!] }}</span>
                 </template>
                 <template v-else-if="text(p, c, loc)">
-                  <span v-if="p.fields[c]?.state" :class="stateClass(p.fields[c].state)" style="margin-right:6px">{{ copy.cis[p.fields[c].state!] }}</span>
-                  <span :class="{ 'lp-money': c === 'rate' || c === 'cap' || c === 'minPayout' }">{{ text(p, c, loc) }}</span>
+                  <span v-if="p.fields[c]?.state" :class="stateClass(p.fields[c].state)" style="margin-inline-end:6px">{{ copy.cis[p.fields[c].state!] }}</span>
+                  <span v-bind="bidiAttrs(textLang(p, c, loc), loc)" :class="{ 'lp-money': c === 'rate' || c === 'cap' || c === 'minPayout' }">{{ text(p, c, loc) }}</span>
                   <a v-if="p.fields[c]?.source?.url" class="lp-src" :href="p.fields[c].source!.url" target="_blank" rel="nofollow noopener" :title="p.fields[c].source!.date">{{ sourceIndex(p, p.fields[c].source!.url, columns) }}</a>
                 </template>
                 <span v-else class="lp-na">{{ copy.notPublished }}</span>

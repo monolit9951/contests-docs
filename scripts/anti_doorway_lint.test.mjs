@@ -29,9 +29,14 @@ import {
   runLint,
   normalizeHeading,
   sectionHeadings,
+  headingKey,
+  isPotentialContentPath,
+  pathInfo,
   DUP_THRESHOLD,
   PARAPHRASE_THRESHOLD,
+  QUESTION_SIMILARITY,
 } from "./anti_doorway_lint.mjs";
+import { HUBS, LOCALES } from "../docs/.vitepress/registry.ts";
 
 let failed = 0;
 const ok = (n) => console.log(`  ok   ${n}`);
@@ -525,6 +530,76 @@ console.log("anti_doorway_lint: ратчет не распространяетс
     !res.inherited.some((v) => ["duplicate", "redirect", "provenance", "path", "registry", "cap"].includes(v.rule)),
     `долг: ${JSON.stringify(res.inherited)}`);
   f.cleanup();
+}
+
+// Зачем (2026-09-18, арабская локаль): гейтируемые каталоги были перечислены руками для трёх
+// деревьев, и четвёртое (арабское) прошло бы мимо гейта целиком — страница вне CONTENT_PATHS не
+// проверяется вовсе. Теперь каталоги выводятся из объявленных в манифесте деревьев; тест держит
+// это для КАЖДОГО объявленного дерева, так что арабское попадёт под гейт в день объявления.
+console.log("anti_doorway_lint: гейтируемые каталоги выводятся из объявленных деревьев");
+{
+  const fleet = ["earnings", "brands", "help", "about"];
+  for (const axis of LOCALES) {
+    const dir = axis.vitepressKey === "root" ? "" : `${axis.vitepressKey}/`;
+    for (const hub of fleet) {
+      const path = `docs/${dir}${HUBS[hub][axis.language]}/some-page.md`;
+      check(`${axis.language}: ${path} под гейтом`, isPotentialContentPath(path), "каталог хаба выпал из гейта");
+      check(`${axis.language}: ${path} разбирается в своей локали`,
+        pathInfo(path).locale === axis.language && pathInfo(path).url === `${axis.prefix}/${HUBS[hub][axis.language]}/some-page`,
+        JSON.stringify(pathInfo(path)));
+    }
+    check(`${axis.language}: юридический хаб вне гейта`,
+      !isPotentialContentPath(`docs/${dir}${HUBS.legal[axis.language]}/terms.md`), "legal попал под гейт флота");
+  }
+  check("каталог необъявленного дерева не выдаётся за страницу",
+    !isPotentialContentPath("docs/fr/earnings/x.md") && pathInfo("docs/fr/earnings/x.md").isPage === false,
+    JSON.stringify(pathInfo("docs/fr/earnings/x.md")));
+}
+
+// Зачем (2026-09-18): у арабских страниц свои «Часто задаваемые вопросы» и «Куда дальше». Без них
+// в словарях FAQ-секция арабской страницы считалась бы содержательным H2, а все её вопросы —
+// обычными H3: heading-echo загорелся бы на первых же четырёх страницах арабского хаба.
+console.log("anti_doorway_lint: арабские FAQ и сквозные блоки узнаются");
+{
+  const body = [
+    "## كيف تُحتسب المشاهدات",
+    "نص",
+    "## الأسئلة الشائعة",
+    "### هل أحتاج إلى متابعين؟",
+    "لا.",
+    "## إلى أين بعد ذلك",
+    "- رابط",
+  ].join("\n\n");
+  const { h2, faq } = sectionHeadings(body);
+  check("арабский FAQ-блок уходит в вопросы, а не в H2",
+    faq.length === 1 && !h2.some((heading) => /اسئله/.test(heading)), JSON.stringify({ h2, faq }));
+  check("«إلى أين بعد ذلك» — сквозной блок, не содержательный H2",
+    h2.length === 1 && h2[0] === normalizeHeading("كيف تُحتسب المشاهدات"), JSON.stringify(h2));
+  check("хамза и огласовки не делают из одного заголовка два",
+    normalizeHeading("الأسئلة الشائعة") === normalizeHeading("الاسئلة الشائعة") &&
+      normalizeHeading("كيف تُحتسب") === normalizeHeading("كيف تحتسب"),
+    `${normalizeHeading("الأسئلة الشائعة")} / ${normalizeHeading("الاسئلة الشائعة")}`);
+}
+
+console.log("anti_doorway_lint: арабский артикль не склеивает разные вопросы");
+{
+  const similarity = (a, b) => {
+    const left = headingKey(normalizeHeading(a));
+    const right = headingKey(normalizeHeading(b));
+    let common = 0;
+    for (const word of left) if (right.has(word)) common += 1;
+    return common / (left.size + right.size - common);
+  };
+  // Без снятия артикля каждое слово ниже обрезалось бы до «الم»/«الس» и вопросы совпали бы.
+  check("разные вопросы с артиклем не эхо",
+    similarity("كم السعر للمشاهدات المحتسبة", "متى السحب إلى المحفظة الخاصة") < QUESTION_SIMILARITY,
+    String(similarity("كم السعر للمشاهدات المحتسبة", "متى السحب إلى المحفظة الخاصة")));
+  check("тот же вопрос с союзом и предлогом — эхо",
+    similarity("كم يدفع DareBay مقابل المشاهدات", "كم يدفع DareBay مقابل والمشاهدات") >= QUESTION_SIMILARITY,
+    String(similarity("كم يدفع DareBay مقابل المشاهدات", "كم يدفع DareBay مقابل والمشاهدات")));
+  check("кириллица и латиница режутся как раньше",
+    [...headingKey("нужны ли подписчики")].join() === "нужн,ли,подп" && [...headingKey("counted views")].join() === "coun,view",
+    `${[...headingKey("нужны ли подписчики")]} / ${[...headingKey("counted views")]}`);
 }
 
 console.log("");

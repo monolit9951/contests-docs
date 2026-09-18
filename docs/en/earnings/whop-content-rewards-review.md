@@ -1,116 +1,143 @@
 ---
-title: "Whop Content Rewards review: what clippers actually get paid"
-description: "Whop Content Rewards is the largest clipping marketplace, but not for every country: rates, creator fee, payout timing, sanctioned list and alternatives."
-provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
+title: "Content Rewards review: the Whop clipping app, now standalone"
+description: "Content Rewards now runs on its own site, with Whop kept for sign-in, KYC and withdrawals. Its flat 10% fee, payout timing and closed countries, dated."
+provenance: { snapshot_date: "2026-09-18", source: "darebay-prod" }
 numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_min_views_threshold_live, ppv_max_per_work_typical, commission_crypto, commission_fiat]
 competitor_sources:
-  - { platform: "Whop Content Rewards", url: "https://contentrewards.com/discover", date: "2026-09-02" }
-  - { platform: "Whop Content Rewards", url: "https://contentrewards.com/discover", date: "2026-09-05" }
-  - { platform: "Whop Content Rewards", url: "https://contentrewards.com/creators", date: "2026-09-02" }
-  - { platform: "Whop Content Rewards", url: "https://contentrewards.com/creators", date: "2026-09-05" }
-  - { platform: "Whop Content Rewards", url: "https://contentrewards.com/brand", date: "2026-09-05" }
-  - { platform: "Whop Content Rewards", url: "https://contentrewards.com/terms", date: "2026-09-05" }
-  - { platform: "Whop Content Rewards", url: "https://contentrewards.com/", date: "2026-09-05" }
-  - { platform: "Whop", url: "https://docs.whop.com/memberships-and-access/third-party-apps/content-rewards", date: "2026-09-02" }
-  - { platform: "Whop", url: "https://docs.whop.com/memberships-and-access/third-party-apps/content-rewards", date: "2026-09-05" }
-  - { platform: "Whop", url: "https://docs.whop.com/trust-and-safety/trust-safety-overview/sanctioned-countries", date: "2026-09-18" }
+  - { platform: "Content Rewards", url: "https://contentrewards.com/", date: "2026-09-18" }
+  - { platform: "Content Rewards", url: "https://contentrewards.com/creators", date: "2026-09-18" }
+  - { platform: "Content Rewards", url: "https://contentrewards.com/terms", date: "2026-09-18" }
+  - { platform: "Content Rewards", url: "https://contentrewards.com/changelog", date: "2026-09-18" }
+  - { platform: "Content Rewards", url: "https://contentrewards.com/discover", date: "2026-09-18" }
+  - { platform: "Content Rewards", url: "https://contentrewards.com/pricing/creators", date: "2026-09-18" }
+  - { platform: "Whop", url: "https://docs.whop.com/memberships-and-access/third-party-apps/content-rewards", date: "2026-09-18" }
+  - { platform: "Whop", url: "https://docs.whop.com/manage-your-business/manage-payouts/payout-methods", date: "2026-09-18" }
   - { platform: "Whop", url: "https://docs.whop.com/manage-your-business/manage-payouts/set-up-payouts", date: "2026-09-18" }
-  - { platform: "Klipni", url: "https://klipni.com/creators", date: "2026-09-02" }
-  - { platform: "Klipni", url: "https://klipni.com/legal/terms", date: "2026-09-02" }
-  - { platform: "Vyro", url: "https://vyro.com/campaigns", date: "2026-09-02" }
-  - { platform: "Vyro", url: "https://vyro.com/help/earnings-and-payments/how-many-views-do-i-need-before-i-can-start-earning", date: "2026-09-02" }
-  - { platform: "Vyro", url: "https://vyro.com/help/getting-started/what-countries-are-supported", date: "2026-09-02" }
-  - { platform: "Clipping.net", url: "https://clipping.net/clip", date: "2026-09-02" }
-  - { platform: "Clipping.net", url: "https://clipping.net/policies/clipper-terms-and-conditions", date: "2026-09-02" }
-  - { platform: "Clipping.net", url: "https://clipping.net/docs/clippers/payments", date: "2026-09-02" }
+  - { platform: "Whop", url: "https://docs.whop.com/trust-and-safety/trust-safety-overview/sanctioned-countries", date: "2026-09-18" }
+  - { platform: "Klipni", url: "https://klipni.com/creators", date: "2026-09-18" }
+  - { platform: "Klipni", url: "https://klipni.com/legal/terms", date: "2026-09-18" }
+  - { platform: "Vyro", url: "https://vyro.com/campaigns", date: "2026-09-18" }
+  - { platform: "Vyro", url: "https://vyro.com/help/earnings-and-payments/how-many-views-do-i-need-before-i-can-start-earning", date: "2026-09-18" }
+  - { platform: "Vyro", url: "https://vyro.com/help/getting-started/what-countries-are-supported", date: "2026-09-18" }
+  - { platform: "Clipping.net", url: "https://clipping.net/policies/clipper-terms-and-conditions", date: "2026-09-18" }
+  - { platform: "Clipping.net", url: "https://clipping.net/docs/clippers/payments", date: "2026-09-18" }
 seo: true
 landing: true
+sources: visible
 hero:
   kicker: "Review · 2026"
-  lede: "Before you cut for Whop Content Rewards, find out how much of the rate actually reaches you and when. Here is how a campaign is built, what every number on a card means, the creator fee, the payout timing and the countries Whop will not pay. Every figure is read off Whop's own pages and dated, and for the closed countries the platforms without a country list are named."
+  lede: "Whop Content Rewards is no longer just an app inside Whop. It runs on its own site under its own terms, and Whop stays underneath for sign-in, identity checks and withdrawals. Here is what that means for a clipper today: how a campaign card reads, what the flat 10% fee leaves you, how long the money takes on each side, and which countries Whop will not pay, every figure read off the two companies' own pages and dated."
   takeaways:
-    - "<b>Whop is the biggest board of clipping campaigns, and there is plenty to pick from.</b> Dozens of live campaigns, a budget of up to $238,000 on one card <!-- source: https://contentrewards.com/discover 2026-09-05 -->, rates of $0.50–$5 per 1,000 views <!-- source: https://contentrewards.com/discover 2026-09-02 -->."
-    - "<b>The rate on the card is not the money in hand, so do the sum first.</b> The terms take 10% of CPM payouts <!-- source: https://contentrewards.com/terms 2026-09-05 -->, the creator FAQ shows tiers from 25% down to 7% <!-- source: https://contentrewards.com/creators 2026-09-02 -->, and a clip below the campaign's minimum payout per video never reaches review."
-    - "<b>Expect the money about ten days after approval.</b> A clip earns for 7 days, then sits through a 3-day hold <!-- source: https://contentrewards.com/creators 2026-09-02 -->; withdrawals go to a bank, PayPal, a mobile wallet or crypto in 200+ countries."
-    - "<b>Russia and Belarus sit on Whop's sanctioned list, along with six regions of Ukraine</b> <!-- source: https://docs.whop.com/trust-and-safety/trust-safety-overview/sanctioned-countries 2026-09-18 -->: no account, no payout, and a VPN changes nothing. For those places there are platforms with no country list, DareBay among them."
+    - "<b>Content Rewards has its own site now, and Whop is still underneath.</b> Campaigns, review and fraud checks run on contentrewards.com; sign-in, identity checks and withdrawals stay with Whop, under Whop's terms."
+    - "<b>The fee is a flat 10% of what you earn.</b> The old step-down ladder is gone, and per-post and retainer campaigns with a budget of $5,000 or more charge the creator nothing."
+    - "<b>Count about ten days from approval on CPM.</b> A clip earns for 7 days, then sits through a 3-day hold; after that you move the money to your Whop balance, and it leaves on Whop's schedule."
+    - "<b>Russia and Belarus stay closed.</b> Whop's sanctioned list names them and six Ukrainian regions, while the rest of Ukraine and Kazakhstan are on its payout list. Where Whop cannot pay, DareBay has no country list."
 cta:
   title: "Whop cannot pay your country? DareBay has no country list"
   lede: "DareBay pays worldwide in USDT to your wallet, and every task card states the pay rate, the view threshold and the ceiling on a single clip before you submit. Nobody screens your follower count and nobody reviews an application, so the weekend you spend editing is not spent on a maybe."
 ---
-## What Content Rewards is and how a campaign is built
+## What Content Rewards is today, and what stays on Whop
 
-Content Rewards is an app inside Whop where brands, podcasts, studios and course creators buy views from clippers; the site talks about 1M+ creators <!-- source: https://contentrewards.com/ 2026-09-05 -->.
+Content Rewards is a clipping and UGC marketplace: a brand puts up a budget, you make content that fits the brief, post it from your own accounts and get paid on what the campaign pays for <!-- source: https://contentrewards.com/creators 2026-09-18 -->. The older version is an app a brand adds to its whop from the Whop App Store, and Whop's help centre still documents it that way <!-- source: https://docs.whop.com/memberships-and-access/third-party-apps/content-rewards 2026-09-18 -->. The release Content Rewards calls V2, dated 19 August 2026, rebuilt the platform with separate apps for brands and for creators <!-- source: https://contentrewards.com/changelog 2026-09-18 -->. Its Creator Terms, last updated on 3 September, are an agreement with Content Rewards Inc, a Delaware corporation based in Beverly Hills, for the "Content Rewards web application"; the version inside Whop is now "an earlier experience hosted inside the Whop platform", and campaigns you joined there stay under the old clipper terms <!-- source: https://contentrewards.com/terms 2026-09-18 -->.
 
-Every campaign has the same fields: type, Clipping or UGC, budget, rate per 1,000 views, minimum and maximum payout per video, networks and requirements <!-- source: https://docs.whop.com/memberships-and-access/third-party-apps/content-rewards 2026-09-05 -->. Campaigns start at $1,000 <!-- source: https://contentrewards.com/brand 2026-09-05 -->; the money goes in before launch, and Whop holds it until creators earn it <!-- source: https://contentrewards.com/brand 2026-09-05 -->.
+Whop has not left. The Creator Terms split the work between the two companies <!-- source: https://contentrewards.com/terms 2026-09-18 -->:
 
-Some campaigns accept everyone, others ask for an application first <!-- source: https://contentrewards.com/creators 2026-09-02 -->. Networks: Instagram, Facebook, TikTok, YouTube and X <!-- source: https://contentrewards.com/terms 2026-09-05 -->; 18 or older <!-- source: https://contentrewards.com/terms 2026-09-05 -->; no follower minimum published <!-- source: https://contentrewards.com/creators 2026-09-02 -->.
+| Content Rewards runs | Whop runs |
+|---|---|
+| Campaigns, submissions, view checks, fraud flags and the ledger of your earnings | Sign-in credentials, identity checks (KYC), brand budgets and money movement, withdrawals |
 
-## How much Whop pays and how to read a card
+So a Whop account is still part of the deal. If Whop bans you or you lose access to it, the terms warn that you may be unable to withdraw, and any other payout route is at Content Rewards' discretion <!-- source: https://contentrewards.com/terms 2026-09-18 -->. The creator page counts 1M+ creators and $20M paid out <!-- source: https://contentrewards.com/creators 2026-09-18 -->.
 
-Each campaign sets its own rate: live campaigns sit between $0.50 and $5 per 1,000 views <!-- source: https://contentrewards.com/discover 2026-09-02 -->. On the day we checked most cards stood at $1; Call of Duty paid $1.75, CEO Podcast $3 <!-- source: https://contentrewards.com/discover 2026-09-05 -->. A card shows three more numbers.
+## How a campaign pays, and how to read its card
 
-| Card field | What Whop prints | What it means |
+A campaign pays in one of three ways: CPM per 1,000 views, a flat amount per approved post, or a retainer paid per cycle for an agreed set of deliverables <!-- source: https://contentrewards.com/creators 2026-09-18 -->. Every type needs a brand budget of at least $1,000 <!-- source: https://contentrewards.com/terms 2026-09-18 -->, paid in before launch and kept against the campaign until creators earn it <!-- source: https://contentrewards.com/ 2026-09-18 -->. The creator page groups the work into clipping, music, logo and UGC campaigns <!-- source: https://contentrewards.com/creators 2026-09-18 -->.
+
+On 18 September all 50 campaigns the Discover board listed paid per 1,000 views. Rates spread between $0.05 on a logo campaign and $10 on a trading firm's campaign; 17 of the 50 paid $1, and the Call of Duty: Modern Warfare 4 campaign paid $1.75 <!-- source: https://contentrewards.com/discover 2026-09-18 -->. A card carries more than the rate:
+
+| On the card | Example from the board | What it means for you |
 |---|---|---|
-| Budget | from $1,000 <!-- source: https://contentrewards.com/brand 2026-09-05 -->, up to $238,000 on the board <!-- source: https://contentrewards.com/discover 2026-09-05 --> | No remainder, no payment |
-| Maximum per video | set per campaign; UGC cards show $400 and $600 <!-- source: https://contentrewards.com/discover 2026-09-05 --> | The clip stops earning there <!-- source: https://contentrewards.com/creators 2026-09-05 --> |
-| Minimum payout per video | no platform-wide threshold; each brand sets its own <!-- source: https://docs.whop.com/memberships-and-access/third-party-apps/content-rewards 2026-09-02 --> | Below it, no review |
-| Creator fee | 10% per the terms <!-- source: https://contentrewards.com/terms 2026-09-05 -->; the FAQ shows tiers of 25% up to $1,000 lifetime, 20% to $2,500, 12.5% to $5,000, then 7% <!-- source: https://contentrewards.com/creators 2026-09-05 --> | Ask support which applies |
+| Budget used and total | $242K of $248K on the largest campaign <!-- source: https://contentrewards.com/discover 2026-09-18 --> | A clip earns only while the campaign stays funded <!-- source: https://contentrewards.com/terms 2026-09-18 --> |
+| Creators | 2,888 on ForgeGUI Clipping, the busiest one <!-- source: https://contentrewards.com/discover 2026-09-18 --> | Everyone draws on the same budget |
+| Maximum per clip | on the campaign page: $400 on DreamMe, $600 on Daimon X Syndicate <!-- source: https://contentrewards.com/discover 2026-09-18 --> | The clip stops earning there <!-- source: https://contentrewards.com/creators 2026-09-18 --> |
+| Minimum per clip | set by the brand inside the campaign <!-- source: https://contentrewards.com/terms 2026-09-18 --> | A clip below it is not paid |
+| Application | required on 4 of the 50 <!-- source: https://contentrewards.com/discover 2026-09-18 --> | The rest take anyone who joins |
 
-30,000 views at $1 per 1,000 is $30 gross, $27 after the 10% in the terms, $22.50 on the 25% tier for a newcomer.
+## The fee: a flat 10%, and the ladder is gone
 
-## Payouts and countries
+Content Rewards takes a flat 10% creator fee on every CPM payout, whatever your lifetime earnings or the campaign's size; per-post and retainer campaigns cost the creator 10% below a $5,000 budget and nothing from $5,000 up <!-- source: https://contentrewards.com/terms 2026-09-18 -->. The creator FAQ now says the same thing, "no tiers, no thresholds" <!-- source: https://contentrewards.com/creators 2026-09-18 -->, and the V2 release notes describe the flat fee as coming "with no step-down ladder" <!-- source: https://contentrewards.com/changelog 2026-09-18 -->. A write-up that still quotes a lower fee for creators who have earned more is describing the old version.
 
-On CPM a clip earns for 7 days from approval, then a 3-day hold <!-- source: https://contentrewards.com/creators 2026-09-02 -->; the terms put settlement at about 10 days <!-- source: https://contentrewards.com/terms 2026-09-05 -->. Withdrawals go to a bank, PayPal, a mobile wallet or crypto in 200+ countries, with no floor and no charge from Whop <!-- source: https://contentrewards.com/creators 2026-09-02 -->.
+At $1 per 1,000 views, 30,000 views earn $30 before the fee and $27 after it.
 
-Whop's sanctioned list carries Russia and Belarus as well as Iran, Syria, Cuba and others <!-- source: https://docs.whop.com/trust-and-safety/trust-safety-overview/sanctioned-countries 2026-09-18 -->: a creator there can neither register nor get paid <!-- source: https://docs.whop.com/trust-and-safety/trust-safety-overview/sanctioned-countries 2026-09-18 -->. Ukraine is on it for six regions only: Crimea, Sevastopol, Donetsk, Luhansk, Zaporizhzhia and Kherson <!-- source: https://docs.whop.com/trust-and-safety/trust-safety-overview/sanctioned-countries 2026-09-18 -->. Kazakhstan, Uzbekistan, Kyrgyzstan, Armenia, Georgia and Moldova are not on the list <!-- source: https://docs.whop.com/trust-and-safety/trust-safety-overview/sanctioned-countries 2026-09-18 -->, and Whop's payout setup page names them, and Ukraine, among the countries it pays out to <!-- source: https://docs.whop.com/manage-your-business/manage-payouts/set-up-payouts 2026-09-18 -->.
+## Payouts: Content Rewards' clock first, then Whop's
 
-That payout list does not simply mirror the sanctioned one: [clipping platforms that pay in Pakistan](/en/earnings/clipping-platforms-that-pay-in-pakistan) finds Pakistan named on the payout list, while [clipping platforms that pay in Nigeria, Kenya and Ghana](/en/earnings/clipping-platforms-that-pay-in-nigeria-and-kenya) finds Nigeria missing from it though it is on no sanctioned list either.
+On CPM, approval starts 7 days in which the clip keeps earning, then a 3-day hold, so the payout settles about 10 days after approval <!-- source: https://contentrewards.com/terms 2026-09-18 -->. Per-post payouts settle shortly after approval, 15 minutes by the V2 release notes <!-- source: https://contentrewards.com/changelog 2026-09-18 -->, and retainers after the end of each cycle <!-- source: https://contentrewards.com/terms 2026-09-18 -->. An open fraud flag pauses settlement until it is resolved, and a credited payout that has not settled can still be reversed if the clip is rejected later or the flag is upheld <!-- source: https://contentrewards.com/terms 2026-09-18 -->.
 
-## Who Whop suits
+The money then moves twice:
 
-- A clipper outside the sanctioned list who wants dozens of live campaigns to pick from.
-- Someone who can meet a brand's requirements, down to "40% tier 1 audience (USA, UK, CA)" <!-- source: https://contentrewards.com/discover 2026-09-05 -->.
-- Creators without a camera: the board carries UGC slideshow campaigns <!-- source: https://contentrewards.com/discover 2026-09-05 -->.
-- Anyone who wants protection from fake traffic: every submission gets a bot-likelihood score <!-- source: https://contentrewards.com/brand 2026-09-05 -->, and buying views is a permanent ban <!-- source: https://contentrewards.com/terms 2026-09-05 -->.
+1. **From your Content Rewards wallet to your Whop balance.** The creator pricing page says this step costs nothing and has no minimum, "so you can take out $3 or $3,000" <!-- source: https://contentrewards.com/pricing/creators 2026-09-18 -->.
+2. **From your Whop balance to you.** Whop pays out to a bank account, a mobile wallet or a crypto wallet in over 200 countries, with different options per country; standard payouts take up to 5 business days, and Whop can hold a withdrawal for a manual compliance review <!-- source: https://docs.whop.com/manage-your-business/manage-payouts/payout-methods 2026-09-18 -->. The Creator Terms put Whop's timing at about 3–5 business days, or instantly for a fee Whop charges, and say Content Rewards does not control it <!-- source: https://contentrewards.com/terms 2026-09-18 -->. Whop's withdrawal guide asks for your details, a linked bank and an uploaded ID, and mentions "a minimum withdrawal threshold of $10 (if applicable)" <!-- source: https://docs.whop.com/manage-your-business/manage-payouts/set-up-payouts 2026-09-18 -->.
+
+On that last point the two companies' pages disagree: the Content Rewards FAQ says there is no minimum and no charge <!-- source: https://contentrewards.com/creators 2026-09-18 -->, while Whop's guide names $10 where it applies. Check the figure your own Whop balance screen shows before you plan a small cash-out.
+
+## Which countries are closed
+
+Content Rewards publishes no country list of its own. Its terms say the prohibited jurisdictions "are listed by reference on our website" and that Content Rewards screens creators against sanctions lists itself and can withhold payouts <!-- source: https://contentrewards.com/terms 2026-09-18 -->; we found no such list on the site. The list that decides in practice is Whop's, because every withdrawal goes through Whop. It names Russia and Belarus in full, six Ukrainian regions (Crimea, Sevastopol, Donetsk, Luhansk, Zaporizhzhia and Kherson), and countries such as Afghanistan, Cuba, Iran, Iraq, North Korea, Syria and Venezuela; a creator there "can't register a Whop account, sell access passes, or receive payouts" <!-- source: https://docs.whop.com/trust-and-safety/trust-safety-overview/sanctioned-countries 2026-09-18 -->. The rest of Ukraine is on Whop's list of 200+ payout countries, and so are Kazakhstan, Uzbekistan, Kyrgyzstan, Armenia, Georgia and Moldova <!-- source: https://docs.whop.com/manage-your-business/manage-payouts/set-up-payouts 2026-09-18 -->.
+
+That payout list is a second filter, and it does not mirror the sanctioned one: [clipping platforms that pay in Pakistan](/en/earnings/clipping-platforms-that-pay-in-pakistan) finds Pakistan named on it, while [clipping platforms that pay in Nigeria, Kenya and Ghana](/en/earnings/clipping-platforms-that-pay-in-nigeria-and-kenya) finds Nigeria missing from it though Nigeria is on no sanctioned list either.
+
+## Who Content Rewards suits
+
+- A clipper Whop can pay who wants choice: 50 campaigns on the board on the day we checked, with budgets up to $248,000 <!-- source: https://contentrewards.com/discover 2026-09-18 -->.
+- Someone who can meet a brand's audience rules, down to a "40% tier 1 audience" with the USA, UK and Canada first <!-- source: https://contentrewards.com/discover 2026-09-18 -->.
+- Creators without a camera: slideshow campaigns such as PixelSurf AI's chat-style slides and Elo Cooking's recipes <!-- source: https://contentrewards.com/discover 2026-09-18 -->.
+- Anyone who wants fraud screening with a person at the end: every submission gets a 0–100 Bot Score from a third-party provider, a person makes every final decision, and buying views is a permanent ban <!-- source: https://contentrewards.com/terms 2026-09-18 -->.
 
 ## Where it falls short
 
-- Countries. Russia, Belarus and six regions of Ukraine are shut out, and a VPN does not help: identity verification comes before the payout.
-- The fee. 10% under the terms <!-- source: https://contentrewards.com/terms 2026-09-05 --> against tiers from 25% in the FAQ <!-- source: https://contentrewards.com/creators 2026-09-02 -->: the platform quotes different numbers.
-- The minimum payout per video. A clip below it never enters the queue <!-- source: https://docs.whop.com/memberships-and-access/third-party-apps/content-rewards 2026-09-02 -->; its views are lost.
-- Manual approval by the brand. Nothing is paid without a human deciding <!-- source: https://contentrewards.com/brand 2026-09-05 -->, and a credited but unsettled payout can be reversed if the clip is rejected later or a fraud flag is upheld <!-- source: https://contentrewards.com/terms 2026-09-05 -->.
-- Competition and remainder. One campaign lists 2.4K creators, Eneba had $206 left of $3,000 <!-- source: https://contentrewards.com/discover 2026-09-05 -->: no budget, no rate.
+- **Two companies between you and the money.** Your earnings sit on Content Rewards, your sign-in and withdrawals on Whop, and losing Whop access can block a withdrawal <!-- source: https://contentrewards.com/terms 2026-09-18 -->.
+- **Countries.** Russia, Belarus and six Ukrainian regions are shut by Whop's list <!-- source: https://docs.whop.com/trust-and-safety/trust-safety-overview/sanctioned-countries 2026-09-18 -->, and a VPN does not change that: Content Rewards runs its own sanctions screening and Whop handles identity checks before money leaves <!-- source: https://contentrewards.com/terms 2026-09-18 -->.
+- **The fee comes off every CPM payout.** It is 10% whatever the campaign's size <!-- source: https://contentrewards.com/terms 2026-09-18 -->.
+- **The minimum per clip.** A clip that never reaches the brand's minimum earns nothing <!-- source: https://contentrewards.com/terms 2026-09-18 -->.
+- **Budgets run out.** On the day we checked, Double Coverage Podcast had $27 left of $43,615 and ForgeGUI Clipping was shared by 2,888 creators <!-- source: https://contentrewards.com/discover 2026-09-18 -->.
 
-## What a working day on Whop looks like
+## A working day on Content Rewards
 
-The morning starts on the Discover board, sorted by available budget, CPM or creators <!-- source: https://contentrewards.com/discover 2026-09-05 -->. You open a card, read the four numbers and the requirements: Call of Duty rejects raw gameplay, Bible BFF wants its own templates, WatchMeWin a Latvian audience <!-- source: https://contentrewards.com/discover 2026-09-05 -->.
+The morning starts on Discover, sorted by budget, CPM, amount paid out or number of creators <!-- source: https://contentrewards.com/creators 2026-09-18 -->. Open a card and read the brief before the rate: Call of Duty wants edited clips and says "do not post it as a raw reel", Scroll The Bible hands you ready-made templates <!-- source: https://contentrewards.com/discover 2026-09-18 -->. Post from a connected Instagram, Facebook, TikTok, YouTube or X account <!-- source: https://contentrewards.com/terms 2026-09-18 --> and submit the link within 30 minutes <!-- source: https://contentrewards.com/creators 2026-09-18 -->.
 
-Then the edit, the post on your connected account and the link. The clip collects views up to the minimum payout and only then enters the queue <!-- source: https://docs.whop.com/memberships-and-access/third-party-apps/content-rewards 2026-09-02 -->; Whop scores it for bot likelihood, the brand approves or rejects it <!-- source: https://contentrewards.com/brand 2026-09-05 -->. After approval, a week of earning, a three-day hold, then the sum in the wallet <!-- source: https://contentrewards.com/creators 2026-09-02 -->. Evenings go to checking remainders: a morning campaign can close by night.
+The Bot Score runs first, then a brand moderator approves or rejects <!-- source: https://contentrewards.com/terms 2026-09-18 -->; a rejection note names the reason, usually the wrong platform, missing tags or disclosure, reused content, or a post edited or deleted after you submitted it <!-- source: https://contentrewards.com/creators 2026-09-18 -->. After approval come a week of earning and a three-day hold, then the money sits in your Content Rewards wallet until you move it to Whop. Check what is left in each campaign before the next clip, not after it.
 
-## Alternatives if Whop cannot pay your country
+## When DareBay is the better choice
 
-DareBay has no country list: you post the clip on your own account, send the link, the platform counts the views, the money lands in your wallet in USDT on TON or as Telegram Stars. Open tasks pay from $1 to $2 per 1,000 views, the view threshold is set by each task, and the cap runs up to $500 per clip, all three on the card before you submit. The fee on the task payout is 0%; a balance withdrawal costs 10% of the request, from a 10 USDT minimum request, and is handled by the team. Hypothetically: 20,000 / 1,000 × $1.00 = **$20.00**, never above the cap the task printed. Field by field: [DareBay vs Whop](/en/earnings/darebay-vs-whop); every figure: [fact sheet](/en/about/darebay-at-a-glance).
+DareBay fits the clipper Whop cannot pay, and anyone who would rather not have a second company between the clip and the money. It has no country list: you post the clip on your own account, send the link, the platform counts the views, and your balance leaves in USDT on TON to your wallet or in Telegram Stars. Open tasks pay from $1 to $2 per 1,000 views, the view threshold is set by each task, and the cap runs up to $500 per clip, all three on the card before you submit. The fee on the task payout is 0%; a balance withdrawal costs 10% of the request, from a 10 USDT minimum request, and the team checks every request by hand. Hypothetically: 20,000 / 1,000 × $1.00 = **$20.00**, never above the cap the task printed. Field by field: [DareBay vs Whop](/en/earnings/darebay-vs-whop); every figure: [fact sheet](/en/about/darebay-at-a-glance).
 
-- **Klipni**: rubles for Russian self-employed clippers, a 5% fee on approved payouts, no withdrawal floor, card payouts within five business days <!-- source: https://klipni.com/creators 2026-09-02 --> <!-- source: https://klipni.com/legal/terms 2026-09-02 -->.
-- **Vyro**: MrBeast's marketplace, big US creators at $1–$2 per 1,000 views <!-- source: https://vyro.com/campaigns 2026-09-02 -->, a 5,000-view minimum per post <!-- source: https://vyro.com/help/earnings-and-payments/how-many-views-do-i-need-before-i-can-start-earning 2026-09-02 -->, but Russia, Belarus, Ukraine, Uzbekistan, Armenia, Georgia and Moldova are unsupported <!-- source: https://vyro.com/help/getting-started/what-countries-are-supported 2026-09-02 -->.
-- **Clipping.net**: streamer and celebrity campaigns at $0.20–$0.75+ per 1,000 views <!-- source: https://clipping.net/clip 2026-09-02 -->, 1,000 views per post <!-- source: https://clipping.net/policies/clipper-terms-and-conditions 2026-09-02 -->, PayPal or USDC/USDT on Ethereum at cycle close <!-- source: https://clipping.net/docs/clippers/payments 2026-09-02 -->; no country list published.
+Content Rewards is the better choice when Whop can pay you and volume matters: its board carries far more campaigns than DareBay's open tasks, some paying $3, $5 or $10 per 1,000 views <!-- source: https://contentrewards.com/discover 2026-09-18 -->.
+
+Other boards for the countries Whop closes:
+
+- **Klipni**: rubles to a Russian bank account for self-employed or sole-trader authors, 5% of each approved payout, no floor on withdrawals <!-- source: https://klipni.com/creators 2026-09-18 -->, and money within five business days after the bank accepts the payout <!-- source: https://klipni.com/legal/terms 2026-09-18 -->.
+- **Vyro**: a clipping board that calls itself a MrBeast company, paying $1–$2 per 1,000 views, shown as $1,000–$2,000 per million <!-- source: https://vyro.com/campaigns 2026-09-18 -->, once a post passes 5,000 views <!-- source: https://vyro.com/help/earnings-and-payments/how-many-views-do-i-need-before-i-can-start-earning 2026-09-18 -->; Russia, Belarus, Ukraine, Uzbekistan, Armenia, Georgia and Moldova are on its unsupported list <!-- source: https://vyro.com/help/getting-started/what-countries-are-supported 2026-09-18 -->.
+- **Clipping.net**: 1,000 views per post and usually 25,000 per campaign before earnings release, paid by PayPal or USDC/USDT on Ethereum mainnet only <!-- source: https://clipping.net/docs/clippers/payments 2026-09-18 -->, when the sponsor closes a cycle; the terms ask for residence "in the territories where we operate" and name none <!-- source: https://clipping.net/policies/clipper-terms-and-conditions 2026-09-18 -->.
 
 Seven platforms on the same fields: [Whop alternatives](/en/earnings/whop-content-rewards-alternatives); the full ranking: [the best clipping platforms](/en/earnings/best-clipping-platforms).
 
 ## Frequently asked questions
 
-### Is Whop Content Rewards legit, or a scam?
+### Is Content Rewards still part of Whop?
 
-Legit: a Delaware corporation stands behind it <!-- source: https://contentrewards.com/terms 2026-09-05 -->, the brand funds the budget before launch <!-- source: https://contentrewards.com/brand 2026-09-05 -->, and the terms spell out settlement timing and payout reversals <!-- source: https://contentrewards.com/terms 2026-09-05 -->. Reviews mostly complain about rejected clips, the minimum payout, the fee and closed countries.
+As a product, no: it runs as its own web application under Creator Terms from Content Rewards Inc, and those terms call the version inside Whop an earlier experience <!-- source: https://contentrewards.com/terms 2026-09-18 -->. Whop stays underneath as the payment layer: sign-in credentials, identity checks, brand budgets and your withdrawals all go through it.
 
-### How fast does Whop pay out?
+### Is Content Rewards legit, or a scam?
 
-On CPM a clip earns for 7 days after approval, then a 3-day hold <!-- source: https://contentrewards.com/creators 2026-09-02 -->; the terms put settlement at about 10 days <!-- source: https://contentrewards.com/terms 2026-09-05 -->. Add the brand's review and the transfer from the wallet: count on noticeably more than ten days from submission.
+Legit: a named Delaware corporation with a Beverly Hills address stands behind it, and its terms spell out the fee, the settlement timing, payout reversals and a one-appeal process for flagged clips <!-- source: https://contentrewards.com/terms 2026-09-18 -->. Brands fund the budget before launch <!-- source: https://contentrewards.com/ 2026-09-18 -->. What its pages cannot settle for you is whether Whop can pay your country, so read the sanctioned list first.
 
-### Why do clips get rejected on Whop even with views?
+### How fast does Content Rewards pay out?
 
-Because the brand approves, not the counter: the wrong format, template, language or audience is a rejection <!-- source: https://contentrewards.com/brand 2026-09-05 -->. Second, the bot-likelihood score: a flagged payout is held for review <!-- source: https://contentrewards.com/brand 2026-09-05 -->. Third, the clip never reached the minimum payout per video <!-- source: https://docs.whop.com/memberships-and-access/third-party-apps/content-rewards 2026-09-02 -->.
+On CPM, about ten days after approval: 7 days of earning, then a 3-day hold; per post pays after approval and a retainer at the end of each cycle <!-- source: https://contentrewards.com/pricing/creators 2026-09-18 -->. Then comes Whop's leg, about 3–5 business days as the Creator Terms describe it <!-- source: https://contentrewards.com/terms 2026-09-18 -->. Add the brand's review before approval, and count on more than ten days from posting.
+
+### Why do clips get rejected even with views?
+
+Because a person approves each submission, not the view counter: "nothing approves automatically". The usual reasons are the wrong platform, missing tags or disclosure, reused content, or a post edited or deleted after you submitted it <!-- source: https://contentrewards.com/creators 2026-09-18 -->. A brand may reject only for a requirement written in the campaign itself, and a Bot Score at or above the fraud threshold can flag the clip and pause its payout while a person reviews it <!-- source: https://contentrewards.com/terms 2026-09-18 -->.
 
 ### Will a VPN help if my country is on Whop's sanctioned list?
 
-No. The terms require that you are not in a sanctioned jurisdiction <!-- source: https://contentrewards.com/terms 2026-09-05 -->, identity verification comes before payouts <!-- source: https://contentrewards.com/terms 2026-09-05 -->, and an account under sanctions can be suspended <!-- source: https://docs.whop.com/trust-and-safety/trust-safety-overview/sanctioned-countries 2026-09-18 -->. If you are in Russia, Belarus or one of the six listed regions of Ukraine, pick a platform that pays there openly.
+No. The Creator Terms require that you are not located in or resident in a sanctioned jurisdiction and let Content Rewards screen you and withhold payouts <!-- source: https://contentrewards.com/terms 2026-09-18 -->, Whop's withdrawal setup includes an ID upload <!-- source: https://docs.whop.com/manage-your-business/manage-payouts/set-up-payouts 2026-09-18 -->, and Whop may suspend accounts that become subject to sanctions <!-- source: https://docs.whop.com/trust-and-safety/trust-safety-overview/sanctioned-countries 2026-09-18 -->. If you are in Russia, Belarus or one of the six listed Ukrainian regions, pick a platform that pays your country openly.

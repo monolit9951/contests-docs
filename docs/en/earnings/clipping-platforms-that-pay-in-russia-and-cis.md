@@ -5,6 +5,7 @@ provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_min_views_threshold_live, ppv_max_per_work_typical, ppv_max_per_work_band_high]
 seo: true
 landing: true
+sources: visible
 hero:
   kicker: "Payouts by country · 2026"
   lede: "Three platforms will pay into Russia and the CIS, two keep exclusion lists, and four never say either way. Long before the rate matters, that is the question: can the money reach you at all. Whop's sanctioned list shuts out Russia and Belarus, Vyro's unsupported list adds Ukraine and four more countries, so here is what each platform's own pages state, country by country."
@@ -15,7 +16,7 @@ hero:
     - "<b>Four publish no country list at all:</b> Clipping.net, Vues, Reach.cat and Clipping.io; ask their support before your first clip."
     - "<b>Kazakhstan is on neither exclusion list:</b> Whop names it among its payout countries; Vyro leaves it off its unsupported list."
 compare:
-  ids: [darebay, prime-oracles, klipni, reach-cat, clipping-net, vues, whop, vyro, clipping-io]
+  ids: [darebay, prime-oracles, klipni, klipbait, reach-cat, clipping-net, vues, whop, vyro, clipping-io]
   columns: [cis, payoutMethods, minPayout, fee, followers, escrow]
   highlight: darebay
   title: "Payout access and rails, platform by platform"
@@ -29,15 +30,17 @@ cta:
 
 ## Country by country, in the platforms' own words
 
-| Country | Whop Content Rewards | Vyro | DareBay | Prime Oracles | Klipni | Clipping.net, Vues, Reach.cat, Clipping.io |
-|---|---|---|---|---|---|---|
-| Russia | excluded (sanctioned list) | excluded (unsupported list) | paid | paid | paid, self-employed status required | no country list published |
-| Belarus | excluded | excluded | paid | paid | no | no country list published |
-| Ukraine | on the payout list; six regions excluded (sanctioned list) | excluded | paid | not mentioned | no | no country list published |
-| Kazakhstan | on the payout list | not listed either way | paid | paid | no | no country list published |
-| Uzbekistan, Armenia, Georgia, Moldova | on the payout list | excluded | paid | not mentioned | no | no country list published |
+| Country | Whop Content Rewards | Vyro | DareBay | Prime Oracles | Klipni | Klipbait | Clipping.net, Vues, Reach.cat, Clipping.io |
+|---|---|---|---|---|---|---|---|
+| Russia | excluded (sanctioned list) | excluded (unsupported list) | paid | paid | paid, self-employed status required | named in its site description, no terms published <!-- source: https://www.klipbait.com/ru 2026-09-18 --> | no country list published |
+| Belarus | excluded | excluded | paid | paid | no | named | no country list published |
+| Ukraine | on the payout list; six regions excluded (sanctioned list) | excluded | paid | not mentioned | no | named | no country list published |
+| Kazakhstan | on the payout list | not listed either way | paid | paid | no | named | no country list published |
+| Uzbekistan, Armenia, Georgia, Moldova | on the payout list | excluded | paid | not mentioned | no | not named; its blog says your own location does not matter <!-- source: https://www.klipbait.com/ru/blog/whop-klipping-iz-rossii 2026-09-18 --> | no country list published |
 
 Whop's sanctioned-country page says creators in listed countries "can't register a Whop account, sell access passes, or receive payouts". The list carries Russia and Belarus in full and, of Ukraine, "the following jurisdictions only": Crimea, Sevastopol, Donetsk, Luhansk, Zaporizhzhia and Kherson. Whop's payout setup page names Ukraine, Kazakhstan, Uzbekistan, Armenia, Georgia and Moldova among the 200+ countries it pays out to. The page lists Zaporizhzhia and Kherson by name without saying whether that means each whole region, so a clipper there should ask Whop's support first. Vyro's supported-countries page says that in a restricted region "you won't be able to use Vyro or receive payouts", and its list includes Russia, Belarus, Ukraine, Uzbekistan, Armenia, Georgia and Moldova. Prime Oracles' terms exclude EU, UK and US residents and list tax statuses for Russia, Belarus and Kazakhstan. Klipni's creator terms require Russian self-employed or sole-trader status for payouts. DareBay has no country list: it pays worldwide, so all of these countries are included, and its community is largest in the region.
+
+Klipbait, a Russian- and Ukrainian-language front end for Western campaigns, describes itself in Russian as "access to Western campaigns for creators from Russia, Belarus, Ukraine and Kazakhstan" with payouts in USDT <!-- source: https://www.klipbait.com/ru 2026-09-18 -->, and its blog adds that where the creator lives does not matter, only where the audience does <!-- source: https://www.klipbait.com/ru/blog/whop-klipping-iz-rossii 2026-09-18 -->.
 
 <LCompare />
 
@@ -48,6 +51,8 @@ Whop's sanctioned-country page says creators in listed countries "can't register
 **Prime Oracles** pays only in crypto: USDT or USDC to your own wallet on BSC, Solana or Tron, from $5, after the customer approves each payout by hand. The platform's fee percentage is shown only inside the app.
 
 **Klipni** pays in rubles to a bank card, but only through Russian self-employed (НПД) or sole-trader status registered in the app, with a 5% fee and no minimum. In practice that makes it Russia-only even though it does not publish a country list.
+
+**Klipbait** pays in USDT or to a card; for USDT you pick the network yourself, its blog calling TRC-20 the default for amounts this size, and a withdrawal can be requested once the balance reaches $20.00 <!-- source: https://www.klipbait.com/ru/blog/kak-vyvesti-dengi-za-klipping-iz-rossii 2026-09-18 -->. It promises no date: the money waits until the brand behind each campaign settles, "usually a few days, sometimes longer", as its Russian FAQ puts it <!-- source: https://www.klipbait.com/ru 2026-09-18 -->, and only views from tier-1 countries such as the US, the UK, Germany, France, Canada and Australia are paid <!-- source: https://www.klipbait.com/ru/blog/whop-klipping-iz-rossii 2026-09-18 -->. It publishes no terms of service, no privacy policy and no operator name: its sitemap lists landing pages and a blog only <!-- source: https://www.klipbait.com/sitemap.xml 2026-09-18 -->, and support is a Telegram chat.
 
 **Reach.cat** pays weekly in USDT and claims 149+ countries, but publishes no list and its pages disagree on whether identity verification is required. **Clipping.net** pays by PayPal or USDC/USDT on Ethereum and requires legal residence "in the territories where we operate", without naming them. **Vues** pays USDT, Solana, BTC, PayPal or bank transfer and publishes no country list. Treat all three as "ask first".
 

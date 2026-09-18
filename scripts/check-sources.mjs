@@ -119,7 +119,9 @@ export async function probe(url, { fetchImpl = fetch, timeout = TIMEOUT_MS } = {
     response = await request('HEAD')
     // 404 is on the list because Google's help centre answers HEAD with 404 and GET with 200
     // (support.google.com/youtube/answer/3399767, 2026-09-17): a citation is dead only when GET says so.
-    if ([400, 403, 404, 405, 406, 501].includes(response.status)) response = await request('GET')
+    // 401 joined it for India's Press Information Bureau, which answers HEAD with 401 and GET with
+    // 200 (pib.gov.in/PressReleasePage.aspx, 2026-09-18) — a press release is not behind a login.
+    if ([400, 401, 403, 404, 405, 406, 501].includes(response.status)) response = await request('GET')
   } catch (headError) {
     try {
       response = await request('GET')

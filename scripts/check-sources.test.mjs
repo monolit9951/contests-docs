@@ -79,6 +79,16 @@ describe('probing one citation', () => {
     expect(fetchImpl.mock.calls.map((call) => call[1].method)).toEqual(['HEAD', 'GET'])
   })
 
+  it('falls back to GET when HEAD is answered with 401 by a public page', async () => {
+    // pib.gov.in answers HEAD with 401 and GET with 200: a press release is not behind a login.
+    const fetchImpl = vi.fn()
+      .mockResolvedValueOnce(response(401))
+      .mockResolvedValueOnce(response(200))
+
+    expect(await probe('https://www.pib.gov.in/PressReleasePage.aspx?PRID=1', { fetchImpl })).toEqual({ state: 'ok', detail: '200' })
+    expect(fetchImpl.mock.calls.map((call) => call[1].method)).toEqual(['HEAD', 'GET'])
+  })
+
   it('falls back to GET when HEAD throws, and reports both failures when GET throws too', async () => {
     const recovered = vi.fn()
       .mockRejectedValueOnce(new Error('socket hang up'))

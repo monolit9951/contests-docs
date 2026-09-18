@@ -51,8 +51,8 @@ const SOURCE_COMMENT_OPENER = /<!--\s*source:/g
  * clipping-campaign rate board that aggregates the same offers across 18 platforms. Whop is two
  * entries because the product and its docs answer on different hosts.
  * Extended 2026-09-18 with the regional marketplaces the per-country pages cite: ClipGrow, Wondeed
- * and ClipConnect (India), both Cliptocash namesakes (.io for Africa, .com under French law) and
- * Klipbait (CIS).
+ * and ClipConnect (India), both Cliptocash namesakes (.io for Africa, .com under French law),
+ * ClippaPay (Nigeria) and Klipbait (CIS).
  *
  * Matched by host, so `docs.whop.com` and `www.vyro.com` need no entry of their own. A trailing
  * `.*` means "this brand under any TLD" — `klipni.*` and `vues.*` are one small platform each and
@@ -76,6 +76,7 @@ export const COMPETITOR_SOURCE_HOSTS: readonly string[] = [
   'cliptocash.io',
   'cliptocash.com',
   'klipbait.com',
+  'clippapay.com',
 ]
 
 /** The host as a reader would say it — what `LPlatforms.vue` already prints for the same sources. */

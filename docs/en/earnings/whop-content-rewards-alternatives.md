@@ -40,6 +40,8 @@ Whop Content Rewards is where most clipping campaigns live: brands fund CPM camp
 
 **Timing.** A clip earns for 7 days from approval and the payout is then held for 3 days, so money arrives a week and a half after the clip did its work.
 
+The sanctioned list is not the only filter, either: Whop publishes a separate list of the countries it pays out to, and its payout setup ends in identity verification — [clipping platforms that pay without PayPal or Stripe](/en/earnings/clipping-platforms-that-pay-without-paypal-or-stripe) weighs alternatives on exactly those two points.
+
 <LCompare />
 
 ## The alternatives, one by one

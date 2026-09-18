@@ -86,6 +86,10 @@ Yes, and it is the sensible default: campaigns run out of budget, so briefs from
 
 DareBay pays worldwide with no country list, so Russia, Belarus, Ukraine, Kazakhstan and the rest of CIS are included, and that is where its community is largest. Prime Oracles serves Russia, Belarus and Kazakhstan in crypto. Klipni pays in rubles to Russian self-employed clippers. Whop and Vyro exclude Russia, Belarus and Ukraine; Clipping.net, Vues, Reach.cat and Clipping.io publish no country list.
 
+### What if my country or my payout method is the real limit?
+
+Then the ranking is the wrong page to start on. Separate breakdowns cover what reaches a clipper in [India](/en/earnings/clipping-platforms-that-pay-in-india), in [Pakistan](/en/earnings/clipping-platforms-that-pay-in-pakistan), in [Nigeria, Kenya and Ghana](/en/earnings/clipping-platforms-that-pay-in-nigeria-and-kenya) and in [Egypt and the Arab countries](/en/earnings/clipping-platforms-that-pay-in-egypt-and-arab-countries); if the obstacle is the payout rail itself, [clipping platforms that pay without PayPal or Stripe](/en/earnings/clipping-platforms-that-pay-without-paypal-or-stripe) is the one to open first.
+
 ## Where to next
 
 - [Clipping platforms that pay in Russia and CIS](/en/earnings/clipping-platforms-that-pay-in-russia-and-cis) - which of these nine can actually send money east of the EU, country by country

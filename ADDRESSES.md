@@ -3,7 +3,7 @@
 > ⚙️ **Сгенерировано** из `docs/.vitepress/registry.ts`. Руками не править —
 > `node --experimental-strip-types scripts/print-addresses.mjs > ADDRESSES.md`.
 
-Страниц: **74** · адресов: **209** · редиректов со старых адресов: **92**
+Страниц: **79** · адресов: **214** · редиректов со старых адресов: **92**
 
 Страница объявляет только те языки, на которых она действительно существует: той,
 которой нет на языке, в сайтмапе этой локали и в hreflang нет вообще. Русская версия
@@ -32,6 +32,11 @@
 | — *(новая)* | `/zarabotok/analogi-whop-v-rossii` | `whop-alternatives` |
 | — *(новая)* | `/zarabotok/darebay-ili-whop` | `darebay-vs-whop` |
 | — *(новая)* | `/zarabotok/platformy-dlya-narezchikov-kotorye-platyat-v-sng` | `clipping-platforms-cis` |
+| — *(новая)* | `/en/earnings/clipping-platforms-that-pay-in-india` | `clipping-platforms-india` |
+| — *(новая)* | `/en/earnings/clipping-platforms-that-pay-in-pakistan` | `clipping-platforms-pakistan` |
+| — *(новая)* | `/en/earnings/clipping-platforms-that-pay-in-nigeria-and-kenya` | `clipping-platforms-nigeria-kenya` |
+| — *(новая)* | `/en/earnings/clipping-platforms-that-pay-without-paypal-or-stripe` | `clipping-platforms-without-paypal` |
+| — *(новая)* | `/en/earnings/clipping-platforms-that-pay-in-egypt-and-arab-countries` | `clipping-platforms-egypt-mena` |
 | — *(новая)* | `/zarabotok/kak-vybrat-platformu-dlya-narezok` | `how-to-choose-clipping-platform` |
 | — *(новая)* | `/zarabotok/darebay-ili-klipni` | `darebay-vs-klipni` |
 | — *(новая)* | `/zarabotok/kalkulyator-zarabotka-na-narezkah` | `earnings-calculator` |

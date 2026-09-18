@@ -55,6 +55,8 @@ Whop has no minimum; a clip earns for 7 days after approval plus a 3-day hold. V
 
 Check that you can actually receive the rail. Whop pays to bank, PayPal, mobile wallets and crypto; Vyro only PayPal or Stripe; Clipping.net PayPal or USDC/USDT on Ethereum; Vues USDT, Solana, BTC, PayPal or bank; Reach.cat USDT; Prime Oracles USDT or USDC; Klipni a card through self-employed status; DareBay USDT on TON or Telegram Stars.
 
+If PayPal and Stripe are not available where you live, start from the rail rather than the shortlist: [clipping platforms that pay without PayPal or Stripe](/en/earnings/clipping-platforms-that-pay-without-paypal-or-stripe) sets out which of these platforms send a stablecoin, which send Telegram Stars, and which end at a bank account.
+
 ## Question 8. Do I need followers, an application or documents?
 
 Followers are required almost nowhere: Whop, Clipping.net, Vues, Reach.cat, Klipni and DareBay say so directly. An application is needed on some Whop and Vues campaigns. Identity verification is required at Whop before payouts and, according to its app, at Reach.cat before withdrawal. Klipni requires Russian self-employed status. DareBay requires none of these to take a brief.

@@ -58,6 +58,8 @@ Whop's sanctioned-country page says creators in listed countries "can't register
 - Check whether a tax status is required (Klipni) and whether identity verification is demanded before withdrawal (Whop, and Reach.cat according to its app).
 - Prefer a platform that locks the budget before you post: DareBay's wallet-backed contests, Prime Oracles' frozen reward balance and Klipni's prepaid budgets do; Vues states that it does not custody funds.
 
+Other regions have their own version of this page: there is one for [India](/en/earnings/clipping-platforms-that-pay-in-india), one for [Pakistan](/en/earnings/clipping-platforms-that-pay-in-pakistan), one for [Nigeria, Kenya and Ghana](/en/earnings/clipping-platforms-that-pay-in-nigeria-and-kenya) and one for [Egypt and the Arab countries](/en/earnings/clipping-platforms-that-pay-in-egypt-and-arab-countries), each read country by country, while [clipping platforms that pay without PayPal or Stripe](/en/earnings/clipping-platforms-that-pay-without-paypal-or-stripe) answers the same worry without a border in it.
+
 <LMethod />
 
 ## Frequently asked questions

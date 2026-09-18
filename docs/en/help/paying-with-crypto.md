@@ -26,6 +26,8 @@ The only supported network is TON. An address copied from a wallet on another ne
 
 So before your first withdrawal, check the network specifically, not just the address, and send a small test amount if you are unsure. The terms and the request procedure are on [withdrawals](/en/help/darebay-withdrawals).
 
+Which other clipping platforms pay in crypto, and on which network each of them sends it, is compared in [clipping platforms that pay without PayPal or Stripe](/en/earnings/clipping-platforms-that-pay-without-paypal-or-stripe); what your own country has published about receiving a stablecoin sits on the [India](/en/earnings/clipping-platforms-that-pay-in-india) page, the [Pakistan](/en/earnings/clipping-platforms-that-pay-in-pakistan) page, the [Nigeria, Kenya and Ghana](/en/earnings/clipping-platforms-that-pay-in-nigeria-and-kenya) page and the [Egypt and the Arab countries](/en/earnings/clipping-platforms-that-pay-in-egypt-and-arab-countries) page.
+
 ## COINS are not a cryptocurrency
 
 COINS are the platform's internal game currency. They live inside the product, never leave it and do not convert into USDT: the withdrawable balance is denominated in USDT. If you expect accumulated COINS to land in your wallet one day, do not: they are not built for that.

@@ -604,6 +604,41 @@
       }
     },
     {
+      "id": "clipping-platforms-india",
+      "hub": "earnings",
+      "slugs": {
+        "en": "clipping-platforms-that-pay-in-india"
+      }
+    },
+    {
+      "id": "clipping-platforms-pakistan",
+      "hub": "earnings",
+      "slugs": {
+        "en": "clipping-platforms-that-pay-in-pakistan"
+      }
+    },
+    {
+      "id": "clipping-platforms-nigeria-kenya",
+      "hub": "earnings",
+      "slugs": {
+        "en": "clipping-platforms-that-pay-in-nigeria-and-kenya"
+      }
+    },
+    {
+      "id": "clipping-platforms-without-paypal",
+      "hub": "earnings",
+      "slugs": {
+        "en": "clipping-platforms-that-pay-without-paypal-or-stripe"
+      }
+    },
+    {
+      "id": "clipping-platforms-egypt-mena",
+      "hub": "earnings",
+      "slugs": {
+        "en": "clipping-platforms-that-pay-in-egypt-and-arab-countries"
+      }
+    },
+    {
       "id": "how-to-choose-clipping-platform",
       "hub": "earnings",
       "slugs": {

@@ -44,6 +44,8 @@ What to keep:
 - the task terms and the platform's offer;
 - every USDT-to-fiat swap with date and rate.
 
+Country pages elsewhere in this section carry tax notes of their own: [clipping platforms that pay in India](/en/earnings/clipping-platforms-that-pay-in-india) quotes the Income Tax Department on the flat rate for virtual digital assets and the Schedule VDA disclosure, [clipping platforms that pay in Nigeria, Kenya and Ghana](/en/earnings/clipping-platforms-that-pay-in-nigeria-and-kenya) quotes the Nigeria Revenue Service on income received in virtual assets and the KRA excise duty, and [clipping platforms that pay in Egypt and Arab countries](/en/earnings/clipping-platforms-that-pay-in-egypt-and-arab-countries) points to the turnover-based regime Egypt set out in Law No. 6 of 2025.
+
 ## Russia: self-employment and NPD
 
 Self-employment in Russia is the tax on professional income (NPD), a regime for individuals and sole traders with no staff. The Federal Tax Service lists 4% on payments from individuals and 6% from sole traders and companies <!-- source: https://npd.nalog.ru/ 2026-09-04 -->, an income cap of 2.4 million rubles a year <!-- source: https://npd.nalog.ru/ 2026-09-04 -->, no tax return with income logged in the Moy Nalog app <!-- source: https://npd.nalog.ru/ 2026-09-04 -->, and access for citizens of Russia, the EAEU and Ukraine <!-- source: https://npd.nalog.ru/ 2026-09-04 -->.

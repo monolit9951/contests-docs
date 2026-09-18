@@ -65,6 +65,8 @@ The two services people reach for next do not close the gap. Stripe's availabili
 
 Wise draws the line at the currency: NGN, KES and GHS all sit in the group Wise says you can only send money to, and cannot receive or hold <!-- source: https://wise.com/help/articles/2571907/what-currencies-can-i-send-to-and-from 2026-09-18 -->. It is a way for somebody abroad to send you naira, shillings or cedis, not an account a campaign can pay into.
 
+Take the three countries out of the question and what is left is the rail: [clipping platforms that pay without PayPal or Stripe](/en/earnings/clipping-platforms-that-pay-without-paypal-or-stripe) puts every platform here against what it can actually send and what it demands before it sends anything.
+
 ## What the CBN, the CBK and the Bank of Ghana have published
 
 **Nigeria.** The CBN states that on 22 December 2023 it issued guidelines for operating bank accounts for Virtual Asset Service Providers, "acknowledging the growing influence of virtual assets like cryptocurrencies and their potential impact on monetary stability" <!-- source: https://www.cbn.gov.ng/AboutCBN/Reforms.html 2026-09-18 -->; its circular register carries that document under reference FPR/DIR/PUB/CIR/002/003 <!-- source: https://www.cbn.gov.ng/Documents/circulars.html 2026-09-18 -->. SEC Nigeria publishes the firms it has admitted: Busha and Quidax appear as Digital Assets Exchanges in its accelerated incubation cohort <!-- source: https://sec.gov.ng/fintech-and-innovation-hub-finport/registered-fintech-operators/ 2026-09-18 -->.

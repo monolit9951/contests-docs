@@ -46,7 +46,7 @@ Those three absences decide most of the board. Vyro withdraws only through "PayP
 | Raast | The State Bank's free instant system for bank customers moving funds inside the country <!-- source: https://archive.sbp.org.pk/dfs/Raast-P2P.html 2026-09-18 -->, not described as a way to be paid by a foreign platform |
 | USDT | Reaches a wallet you control and needs no bank; the published regulatory picture has its own section below |
 
-The question on any campaign card is therefore narrow: does this platform hand me a payout Payoneer or a local bank can finish, or does it hand me tokens? For the rate side of the decision, see [how much clipping pays](/en/earnings/how-much-clipping-pays).
+The question on any campaign card is therefore narrow: does this platform hand me a payout Payoneer or a local bank can finish, or does it hand me tokens? For the rate side of the decision, see [how much clipping pays](/en/earnings/how-much-clipping-pays). Asked of every platform at once instead of one country, that is the question behind [clipping platforms that pay without PayPal or Stripe](/en/earnings/clipping-platforms-that-pay-without-paypal-or-stripe), which names the coin and the chain behind each "crypto" line.
 
 ## Platform by platform, in their own words
 
@@ -69,6 +69,8 @@ The question on any campaign card is therefore narrow: does this platform hand m
 If a platform offers a bank or wallet payout, Payoneer is the piece that completes it. Its partnership pages describe withdrawals landing "directly to local Pakistani bank accounts in PKR" with conversion from USD <!-- source: https://www.payoneer.com/resources/payoneer-and-meezan-bank-transform-international-payment-withdrawals-in-pakistan-with-new-partnership/ 2026-09-18 -->, and an HBL route where the transfer is "in real-time and within seconds", available around the clock <!-- source: https://www.payoneer.com/resources/business/payoneer-partners-with-hbl-bank-to-enable-real-time-withdrawals-for-pakistani-customers/ 2026-09-18 -->. The wallet route runs through JazzCash, which Payoneer describes as instant and open from as little as $1 <!-- source: https://www.payoneer.com/resources/how-to-use-payoneer/jazzcash-and-payoneer-team-up-to-make-freelance-payments-easy/ 2026-09-18 -->; JazzCash says the same from its side, that the wallet receives international freelance payments and remittances <!-- source: https://www.jazzcash.com.pk/store-money/freelance-digital-account 2026-09-18 -->.
 
 Timing and cost are published only in general terms: withdrawals typically reach a local bank within one to three business days, fees vary by withdrawal type and are shown before you confirm, and there is no setup or monthly fee <!-- source: https://www.payoneer.com/withdraw-funds/ 2026-09-18 -->. No percentage specific to a Pakistani account is published, so read the figure on the withdrawal screen rather than one from a forum.
+
+India, next door, is built the other way round: rupee boards settle straight to a UPI ID and the global ones hand over PayPal or a wallet, which [clipping platforms that pay in India](/en/earnings/clipping-platforms-that-pay-in-india) works through side by side.
 
 ## The dollar account the State Bank built for freelance earnings
 

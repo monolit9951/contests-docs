@@ -64,6 +64,8 @@ On CPM a clip earns for 7 days from approval, then a 3-day hold <!-- source: htt
 
 Whop's sanctioned list carries Russia, Belarus and Ukraine as well as Iran, Syria, Cuba and others <!-- source: https://docs.whop.com/trust-and-safety/trust-safety-overview/sanctioned-countries 2026-09-05 -->: a creator there can neither register nor get paid <!-- source: https://docs.whop.com/trust-and-safety/trust-safety-overview/sanctioned-countries 2026-09-05 -->. Kazakhstan, Uzbekistan, Kyrgyzstan, Armenia, Georgia and Moldova are not on the list <!-- source: https://docs.whop.com/trust-and-safety/trust-safety-overview/sanctioned-countries 2026-09-05 -->.
 
+That country count comes from a second list, and it does not mirror the sanctioned one: [clipping platforms that pay in Pakistan](/en/earnings/clipping-platforms-that-pay-in-pakistan) finds Pakistan named on the payout list, while [clipping platforms that pay in Nigeria, Kenya and Ghana](/en/earnings/clipping-platforms-that-pay-in-nigeria-and-kenya) finds Nigeria missing from it though it is on no sanctioned list either.
+
 ## Who Whop suits
 
 - A clipper outside the sanctioned list who wants dozens of live campaigns to pick from.

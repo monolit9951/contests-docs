@@ -11,7 +11,7 @@ hero:
   takeaways:
     - "<b>Crypto gets watched in the feed, not on a landing page:</b> explainers, news clips, product tutorials and AMA cuts collect views with no ad account and no sponsored label."
     - "<b>The rules in your brief are what protect the project:</b> no promises of returns, no signals, a disclaimer in every clip, official links only, no third-party referral links."
-    - "<b>Clippers receive USDT to a TON wallet and you pay for reach:</b> the rate in open tasks runs $1 to $2 per 1,000 views, launch costs 10 USDT and the contest fee is 0%."
+    - "<b>Clippers receive USDT to a TON wallet and you pay for reach:</b> the rate in open tasks runs $1 to $2 per 1,000 views, launching is free and the contest fee is 0%."
     - "<b>Your community already explains the product for free:</b> a pay-per-view task turns the active members of your chat into creators paid honestly by the counter."
 cta:
   title: "Launch the task, get clips within days"

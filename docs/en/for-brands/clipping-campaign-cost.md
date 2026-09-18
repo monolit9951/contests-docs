@@ -1,6 +1,6 @@
 ---
 title: "Clipping campaign cost: what a clipper budget buys"
-description: "Launch costs 10 USDT once with a 0% contest fee; the budget is rate times paid views at $1 to $2 per 1,000 views. Worked numbers for $200, $1,000 and $5,000."
+description: "Launching is free and the contest fee is 0%: the budget is rate times paid views at $1 to $2 per 1,000 views. Worked numbers for $200, $1,000 and $5,000."
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [contest_create_usdt_price, commission_crypto, commission_fiat, ppv_cpm_band_low, ppv_cpm_band_high, ppv_cpm_median, ppv_default_min_views_threshold, ppv_min_views_threshold_live, ppv_max_per_work_typical]
 seo: true

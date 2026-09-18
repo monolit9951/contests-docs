@@ -15,7 +15,7 @@ hero:
     - "<b>A wallet-backed budget is locked on the platform before launch.</b> It is spent only on counted views, and whatever the clips did not earn comes back to you."
 cta:
   title: "Post the task tonight, creators pick it up themselves"
-  lede: "Contest creation costs 10 USDT, the contest fee is 0%. You set the rate, the threshold and the cap, the platform counts the views, and a wallet-backed budget only pays for the views it counted."
+  lede: "Contest creation is free and the contest fee is 0%. You set the rate, the threshold and the cap, the platform counts the views, and a wallet-backed budget only pays for the views it counted."
 ---
 
 To find clippers, post in your own chat and Discord, try a freelance board, build a clip channel with a team, or publish a task on a pay-per-view platform where creators take it themselves. With the first three, you agree the rate, collect the links and count the views yourself. On the platform the counting is done for you, and you pay for counted views.
@@ -66,7 +66,7 @@ The threshold is not deducted: clear it and the whole counter is paid. At 150 00
 
 1. **Gather the material.** Links to VODs or a folder with the latest streams.
 2. **Write the terms.** Format, sites, hashtag, what must not be cut, how many clips you accept per creator.
-3. **Set the budget.** Rate per 1000 views, threshold, cap, total. Contest creation costs 10 USDT once, the contest fee is 0%, topping up is 0%.
+3. **Set the budget.** Rate per 1000 views, threshold, cap, total. Contest creation is free, the contest fee is 0%, topping up is 0%.
 4. **Publish.** The task appears in the feed and creators take it. Step by step: [how to set up a clipping contest](/en/for-brands/set-up-a-clipping-contest); other formats are on the [business page](/en/for-business).
 5. **Accept links.** A submission counts only after its link is sent and a moderator checks it against the terms; unfit clips are rejected and unpaid.
 6. **Payout.** Each creator's amount follows the formula from counted views and comes out of the budget the platform has held since launch.

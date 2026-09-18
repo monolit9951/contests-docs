@@ -15,7 +15,7 @@ hero:
     - "<b>The rights to the track never leave you,</b> the clips go out on clippers' own TikTok, Reels and Shorts accounts, and growth in sound uses is read on the platform itself."
 cta:
   title: "Put the snippet in front of clippers"
-  lede: "Launch costs 10 USDT and the contest fee is 0%, with the wallet-backed budget held on the platform from the first second. Upload the snippet, set a rate per 1,000 views, a threshold and a cap, and creators see the task in the feed the moment it opens."
+  lede: "Launching is free and the contest fee is 0%, with the wallet-backed budget held on the platform from the first second. Upload the snippet, set a rate per 1,000 views, a threshold and a cap, and creators see the task in the feed the moment it opens."
 ---
 
 Your song reaches the feed on other people's accounts, and what you spend follows the views those clips actually collected. You hand clippers the track and a 15 to 30 second snippet, set a rate per 1,000 views, and they shoot to your sound on their own accounts.
@@ -90,4 +90,4 @@ Check whose sound it is. If the platform muted your track over rights, ask your 
 
 ### Does this work for an independent artist without a label?
 
-Yes. Launch costs 10 USDT, you set the budget, and spend follows counted views only, so a small pool with a low cap is enough for a first release. Creators worldwide see the task; the largest community is in the CIS.
+Yes. Launching is free, you set the budget, and spend follows counted views only, so a small pool with a low cap is enough for a first release. Creators worldwide see the task; the largest community is in the CIS.

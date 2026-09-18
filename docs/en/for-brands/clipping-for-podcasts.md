@@ -11,11 +11,11 @@ hero:
   takeaways:
     - "<b>An hour of talk is 10 to 20 clips:</b> a quotable point, a disagreement or a moment of emotion, a question and answer. Your guest has already made the point and your host has already asked the question, so the clipper only picks the best seconds and adds a hook."
     - "<b>You pay for counted views, not for editing hours:</b> open tasks pay $1 to $2 per 1,000 views, the threshold and the cap per clip are yours to set (the platform allows up to $500 per clip), and so is the rate."
-    - "<b>An episode with 120,000 counted views at $1.00 costs 120,000 / 1,000 × $1.00 = $120.00.</b> Launch is 10 USDT once and the contest fee is 0%."
+    - "<b>An episode with 120,000 counted views at $1.00 costs 120,000 / 1,000 × $1.00 = $120.00.</b> Launching is free and the contest fee is 0%."
     - "<b>The brief protects your guest, a verbal promise does not:</b> consent agreed before release, a list of topics nobody may lift out of context, and a required link to the full episode."
 cta:
   title: "The clips are already inside your episode"
-  lede: "Launch is 10 USDT, the contest fee is 0%, and the editing time is not on your invoice. A link to the recording, three formats in the terms, a rate per 1,000 views, a threshold and a cap, and the task lands in the feed where clippers pick it up themselves."
+  lede: "Launching is free, the contest fee is 0%, and the editing time is not on your invoice. A link to the recording, three formats in the terms, a rate per 1,000 views, a threshold and a cap, and the task lands in the feed where clippers pick it up themselves."
 ---
 
 One episode is 10 to 20 clips for TikTok, Reels and Shorts, and on DareBay you pay for the views they count, not for the hours somebody spent editing. An hour of conversation already holds finished points, disagreements and answers, and faces on camera give a clip what a screen recording never will.

@@ -412,6 +412,21 @@ for (const file of CONTENT_ROOT_FILES) {
     if (sitemap.text.includes(FACTS_PUBLIC_PATH)) fail('5-facts', 'машинная карточка попала в sitemap-content.xml')
 }
 
+// llms.txt is linked from the fact card, so crawlers now find it. Two rules of its own: an explicit
+// UTF-8 charset, because a client that follows HTTP's default for text/* reads the Russian and
+// Ukrainian sections as Latin-1, and noindex, so the raw file stays out of web search while an
+// assistant can still fetch it.
+{
+    const res = await body('/llms.txt')
+    if (res.status !== 200) fail('5-llms', `/llms.txt -> ${res.status}`)
+    const contentType = res.headers.get('content-type') ?? ''
+    if (!/^text\/plain;\s*charset=utf-8$/i.test(contentType)) fail('5-llms', `content-type: ${contentType}`)
+    if (!/\bnoindex\b/i.test(res.headers.get('x-robots-tag') ?? '')) fail('5-llms', 'нет X-Robots-Tag noindex')
+    if (res.text !== readFileSync(join(CONTENT_DIST, 'llms.txt'), 'utf8')) {
+        fail('5-llms', 'ответ отличается от собранного артефакта')
+    }
+}
+
 {
     const key = 'f54f4783c3e2566c84087cd19b829ddc'
     const res = await body(`/${key}.txt`)

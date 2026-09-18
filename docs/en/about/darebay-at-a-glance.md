@@ -44,7 +44,7 @@ Two kinds of contest exist. In a **wallet-backed contest** the organizer's budge
 | Platforms | TikTok, YouTube, Instagram and other sites named in the task | task terms | 2026-09-17 |
 | Geography of payouts | worldwide, no country list | task terms | 2026-09-17 |
 
-The same card in machine-readable form lives at [/data/darebay-facts.json](/data/darebay-facts.json): the same eleven fields with a source and a reading date for each, so a comparison site or an assistant can take the values from data instead of prose.
+The same card in machine-readable form lives at [/data/darebay-facts.json](/data/darebay-facts.json): the same eleven fields with a source and a reading date for each, so a comparison site or an assistant can take the values from data instead of prose. A list of every article on the site, in Russian, Ukrainian and English, with addresses and one-line summaries, lives in the plain-text file [/llms.txt](/llms.txt), so an assistant does not have to crawl the whole site to find the right page.
 
 ## What DareBay adds on top of pay per view
 

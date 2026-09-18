@@ -31,7 +31,7 @@ cta:
 
 If you are in Russia, registered as self-employed or willing to register in the app, and you prefer rubles on a card, Klipni is a straightforward option: a 5% fee on approved payouts, any balance can be cashed out, money within five business days, and VK Clips counted alongside YouTube Shorts, TikTok and Instagram Reels. The brand pays the budget in advance, so a campaign is funded before it starts.
 
-If you are outside Russia, do not want a tax status just to clip, or need to be paid in USDT, DareBay covers that: it pays worldwide with no country list, including all of CIS, in USDT on TON or Telegram Stars, with no application and no followers. Open contests pay from $1.00 to $2.00 per 1,000 counted views; withdrawals start at 10 USDT with a 10% fee.
+If you are outside Russia, do not want a tax status just to clip, or need to be paid in USDT, DareBay covers that: it pays worldwide with no country list, including all of CIS, in USDT on TON or Telegram Stars, with no application and no followers. Open contests pay from $1.00 to $2.00 per 1,000 counted views, up to $500 per clip, and withdrawal to your wallet is fee-free from 10 USDT.
 
 <LCompare />
 
@@ -49,11 +49,11 @@ If you are outside Russia, do not want a tax status just to clip, or need to be 
 - **Ready-made unique videos** on offer tasks, no editing software needed.
 - **No tax status:** any account can take a brief; self-employed or sole-trader status is not needed.
 - **Payout in USDT on TON or Telegram Stars,** available in every country of the region.
-- **Terms on the card:** rate, threshold and cap are fixed before you submit; in wallet-backed contests the budget is locked on the platform, and manual-payout contests are labelled.
+- **Terms on the card:** rate, threshold and cap are printed before you submit, the rate and the threshold do not change after launch and the cap per clip can only be raised; in wallet-backed contests the budget is locked on the platform, and manual-payout contests are labelled.
 
 ## What reaches your hands
 
-On Klipni 5% is deducted from an approved payout, there is no minimum, and the money reaches a card within five business days after the bank accepts the payout. On DareBay nothing is deducted from a contest payout, the amount is credited to your balance after the count, and 10% is charged when you withdraw the balance, with a 10 USDT minimum request. Klipni does not publish a view threshold; DareBay's is typically 2,000 views per clip; both set the cap per clip in the campaign.
+On Klipni 5% is deducted from an approved payout, there is no minimum, and the money reaches a card within five business days after the bank accepts the payout. On DareBay nothing is deducted from a contest payout, the amount is credited to your balance after the count, and withdrawal to your wallet is fee-free from a 10 USDT minimum request, so the credited amount is the amount that arrives. Klipni does not publish a view threshold; on DareBay the view threshold is set by each task - check the card in the catalog; both set the cap per clip in the campaign, and DareBay's runs up to $500.
 
 <LCalc />
 

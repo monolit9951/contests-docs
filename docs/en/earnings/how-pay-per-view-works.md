@@ -46,16 +46,16 @@ An independent counter reads the published view counter on the site at the link 
 
 The threshold is an admission condition, not a deductible: it only decides whether the submission takes part in the budget split. The buyer sets it in the "minimum views" field; left empty, the system fills in its default of **1000 views**, and the buyer can set any figure, down to a single view; the exact value is always on the card before you submit.
 
-An example: a threshold of 2000 views, a rate of $1.00 per 1000 views, and a submission that reached 6000 views.
+An example: a threshold of 1000 views, a rate of $1.00 per 1000 views, and a submission that reached 6000 views.
 
 - **How DareBay counts it:** 6000 / 1000 × $1.00 = **$6.00**; all 6000 views go into the maths.
-- **If the threshold were deducted:** only the remainder would count, 4000 / 1000 × $1.00 = **$4.00**.
+- **If the threshold were deducted:** only the remainder would count, 5000 / 1000 × $1.00 = **$5.00**.
 
 | Views on the submission | Task threshold | What goes into the maths |
 |---|---|---|
-| 1800 | 2000 | nothing, the threshold was not cleared |
-| 2000 | 2000 | 2000 views |
-| 6000 | 2000 | 6000 views |
+| 800 | 1000 | nothing, the threshold was not cleared |
+| 1000 | 1000 | 1000 views |
+| 6000 | 1000 | 6000 views |
 
 The most valuable stretch in a task is the last few hundred views before the threshold: they turn a zero into a payout on the whole counter.
 

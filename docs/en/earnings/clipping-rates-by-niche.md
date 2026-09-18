@@ -55,7 +55,7 @@ A platform does not pay the rate, the campaign buyer does, but each platform dra
 | Vyro | $1.00–$2.00 (campaigns quote $1,000–$2,000 per 1M) <!-- source: https://vyro.com/campaigns 2026-09-04 --> | 5,000 views per post <!-- source: https://vyro.com/help/earnings-and-payments/how-many-views-do-i-need-before-i-can-start-earning 2026-09-04 --> | 1M eligible views per clip, usually $500–$2,000 <!-- source: https://vyro.com/help/earnings-and-payments/whats-the-most-i-can-earn-per-clip 2026-09-04 --> | [vyro.com/campaigns](https://vyro.com/campaigns) |
 | Vues | on each brief in the app; site example $3.00 <!-- source: https://vues.app 2026-09-04 --> | not published | not published | [vues.app](https://vues.app) |
 | Klipni | in rubles; site example 50 ₽ per 1,000 <!-- source: https://klipni.com 2026-09-04 --> | not published | per-post limit set by each campaign <!-- source: https://klipni.com 2026-09-04 --> | [klipni.com](https://klipni.com) |
-| DareBay | $1–$2 per 1,000 views | 2,000 views, typical | $100 per clip, typical | live platform data, snapshot 2026-08-23 |
+| DareBay | $1–$2 per 1,000 views | set by the task, on the card | up to $500 per clip | live platform data, snapshot 2026-08-23 |
 
 Vues and Klipni keep thresholds and caps inside their campaigns, so a payout cannot be worked out from the public page alone. Fees, minimum payouts and payout countries for the same platforms are collected in [the clipping platforms roundup](/en/earnings/best-clipping-platforms).
 
@@ -81,7 +81,7 @@ A payout is a product of three factors: the rate, the share of views that reach 
 
 The triple rate lost to the ceiling, and a clip with 4,000 views would have earned nothing in campaign B because of the threshold, against 4,000 / 1,000 × $1.00 = **$4.00** in campaign A. That is why the tables above keep the threshold and the cap next to the rate, and where a platform does not publish them it is more honest to say so than to guess.
 
-On DareBay all three numbers are printed on the task card. The typical threshold across open tasks is 2,000 views, and it is not subtracted: clear it and you are paid for the whole counter. The typical cap is $100 per clip. At $1.00 per 1,000 views a clip with 100,000 views earns 100,000 / 1,000 × $1.00 = **$100.00**, exactly the cap, and a clip with 20,000 views earns 20,000 / 1,000 × $1.00 = **$20.00**. The remaining fields platforms are compared on are in [the DareBay fact card](/en/about/darebay-at-a-glance).
+On DareBay all three numbers are printed on the task card. The view threshold is set by each task - check the card in the catalog - and it is not subtracted: clear it and you are paid for the whole counter. The cap runs up to $500 per clip. At $1.00 per 1,000 views a clip with 100,000 views earns 100,000 / 1,000 × $1.00 = **$100.00**, well inside a $500 cap, and a clip with 20,000 views earns 20,000 / 1,000 × $1.00 = **$20.00**. The remaining fields platforms are compared on are in [the DareBay fact card](/en/about/darebay-at-a-glance).
 
 ## How we built the benchmark
 

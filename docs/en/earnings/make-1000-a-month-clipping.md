@@ -36,7 +36,7 @@ A thousand on the balance is a thousand in the wallet: withdrawals carry no fee.
 
 ## Why the per-clip cap pushes you toward volume
 
-The cap sits on one submission inside one task. A clip with a million views at $1 would be worth $1,000.00 by the formula, but the platform pays $100: that is how the buyer protects the budget from one viral hit. Income therefore grows with the number of accepted submissions, in four legitimate ways.
+The cap sits on one submission inside one task. A clip with a million views at $1 would be worth $1,000.00 by the formula, but a task with a $100 cap pays $100: that is how the buyer protects the budget from one viral hit. Income therefore grows with the number of accepted submissions, in four legitimate ways.
 
 - **Several submissions in one task.** Unless the terms limit submissions per author, every new clip comes with its own link, counter, threshold and cap. Copies of one clip are a duplicate that moderation removes.
 - **Different clips on different accounts and sites.** The task names the site, TikTok, Reels or Shorts; different clips from different connected accounts are different submissions, while the same clip on two accounts is a duplicate.

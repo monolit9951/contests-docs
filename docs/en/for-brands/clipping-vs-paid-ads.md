@@ -21,7 +21,7 @@ hero:
   lede: "A thousand counted views of a clip costs you less than a thousand ad impressions, and the table below settles the 'ads or clips' argument in figures: Meta, TikTok Ads, YouTube, VK Ads and Yandex Direct against DareBay. Outside CPMs come from dated public benchmarks and rate cards, our figure from live platform data, and beside every number stands what it actually buys you."
   takeaways:
     - "<b>A clip view costs less than an ad impression.</b> Meta averages $13.48 per 1,000 impressions <!-- source: https://www.adamigo.ai/blog/meta-ads-cpm-benchmarks-by-industry-2026 2026-09-04 -->, TikTok Ads $5–$12 <!-- source: https://www.admetrics.io/en/post/tiktok-ads-costs-complete-2026-pricing-guide 2026-09-04 -->, clips on DareBay run $1–$2 per 1,000 counted views."
-    - "<b>You pay for a watched clip, not for a banner flashing past.</b> An impression counts the moment the ad renders on a screen; a clip view is read from the network's public counter and paid only above the 2,000 threshold."
+    - "<b>You pay for a watched clip, not for a banner flashing past.</b> An impression counts the moment the ad renders on a screen; a clip view is read from the network's public counter and paid only above the threshold named in the task."
     - "<b>The creative is already in the price.</b> With ads you pay for the shoot and the edit separately; with clips the clippers make them, and the videos stay on their accounts collecting views after the campaign."
     - "<b>Ads are sharper, clips are cheaper.</b> Targeting, speed and the pixel stay with ads; price per view, viewer trust and paying by result stay with clips. The setup that works: test with clips, scale with ads."
 cta:

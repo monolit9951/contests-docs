@@ -1,22 +1,22 @@
 ---
 title: "Earning from clipping: what it pays and how to start"
-description: "Clipper earnings on DareBay run $1.00 to $2.00 per 1000 views. Clear the 2000-view threshold and one clip earns up to a typical $100. Every guide, mapped."
+description: "Clipper earnings on DareBay run $1.00 to $2.00 per 1000 views, up to $500 a clip, with fee-free withdrawal from 10 USDT. Every guide, mapped."
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_cpm_min, ppv_cpm_median, ppv_cpm_max, ppv_min_views_threshold_live, ppv_max_per_work_typical]
 ---
 
 # Earning from clipping: what it pays and how to start
 
-You know what one clip is worth before you open the editor, because the price is printed on the card. Rates across open contests run from **$1.00 to $2.00 per 1000 views**, and nothing open right now pays below that floor. A submission joins the budget split once it clears the threshold: in a typical open contest that is **2000 views**. The typical cap per submission is **$100**. The buyer sets all three when the contest is created and does not move them after launch, so nothing about the money turns into a surprise once you start cutting.
+You know what one clip is worth before you open the editor, because the price is printed on the card. Rates across open contests run from **$1.00 to $2.00 per 1000 views**, and nothing open right now pays below that floor. A submission joins the budget split once it clears the threshold, and the view threshold is set by each task - check the card in the catalog. The cap on one submission runs **up to $500**. The buyer sets all three when the contest is created; the rate and the threshold do not change after launch, and the cap per clip can only be raised, so nothing about the money turns into a surprise once you start cutting.
 
 The amount is worked out by the system: an independent counter reads the published view counter on the site where you posted, and the result is recorded against you. Paying that money out is a separate step and it can be handled by hand, so no deadline is promised. One thing does not depend on timing: in a wallet-backed contest the budget is frozen on the platform before you take the task, and a recorded calculation cannot be replayed after the fact.
 
-Live tasks sit in the [clip earnings catalogue](/en/earn/clips): the rate, the threshold, the cap and the publishing site are all on the contest card before you submit, and taking part costs a clipper nothing. The contest names the site - view stats are currently counted for TikTok, YouTube and Instagram.
+Live tasks sit in the [clip earnings catalogue](/en/earn/clips): the rate, the threshold, the cap and the publishing site are all on the contest card before you submit, and taking part costs a clipper nothing. The contest names the site - view stats are counted for TikTok, YouTube, Instagram and the other sites named in the task.
 
 ## The money: what a clip is worth
 
 - [How much clipping pays](/en/earnings/how-much-clipping-pays) - the formula built from rate, views and cap, worked through on a floor-rate task, the rate reference per 1000 views: what open tasks pay from and to, where the spread comes from, and why followers are not part of it.
-- [Clipping earnings calculator](/en/earnings/clipping-earnings-calculator) - views, clips per week and rate: the monthly figure with the threshold, the cap and the withdrawal fee applied.
+- [Clipping earnings calculator](/en/earnings/clipping-earnings-calculator) - views, clips per week and rate: the monthly figure with the threshold and the cap applied, and a fee-free withdrawal at the end.
 - [Clipping rates by niche](/en/earnings/clipping-rates-by-niche) - a dated benchmark of rates by niche, platform and social network.
 - [Your first $100 clipping](/en/earnings/first-100-dollars-clipping) - what it is in views, a 30-day plan week by week, which tasks to take first.
 - [Make $1,000 a month clipping](/en/earnings/make-1000-a-month-clipping) - the arithmetic of a thousand under a per-clip cap, a weekly system, what breaks the plan.

@@ -149,3 +149,21 @@ describe('routing of the published JSON', () => {
     expect(manifest).not.toContain('darebay-facts')
   })
 })
+
+describe('the English fact card prints exactly what the JSON publishes', () => {
+  const enPage = readFileSync(join(ROOT, 'docs', 'en', 'about', 'darebay-at-a-glance.md'), 'utf8')
+
+  it('carries the generated table verbatim', () => {
+    expect(enPage).toContain(renderTable(document, 'en'))
+  })
+
+  it('names the machine-readable copy and keeps the facts anchor alive', () => {
+    expect(enPage).toContain(`](${FACTS_PUBLIC_PATH})`)
+    expect(enPage).toContain('{#facts}')
+  })
+
+  it('keeps the search snippet inside its budget', () => {
+    const description = /^description:\s*"?(.+?)"?\s*$/m.exec(enPage)[1]
+    expect(description.length).toBeLessThanOrEqual(160)
+  })
+})

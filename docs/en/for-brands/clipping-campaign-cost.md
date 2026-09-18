@@ -11,7 +11,7 @@ hero:
   takeaways:
     - "<b>Only one line is fixed:</b> 10 USDT to create the contest. The contest fee is 0% and a top-up costs nothing, so every dollar of the pool reaches the clippers."
     - "<b>The budget is rate × paid views, and the rate is yours to set.</b> Open tasks currently pay $1 to $2 per 1,000 views, with $1 the typical rate."
-    - "<b>$1,000 at $1 buys 1,000,000 paid views,</b> or 10 clips that each hit a $100 cap. That is arithmetic, not a forecast: put your own figure into the calculator below."
+    - "<b>$1,000 at $1 buys 1,000,000 paid views,</b> or as few as two clips at the $500 cap the platform allows. That is arithmetic, not a forecast: put your own figure into the calculator below."
     - "<b>Overspending is hard:</b> the budget, a pause and the cap per clip hold the spend, clips under the threshold cost you nothing, and a wallet-backed remainder returns to your balance."
 cta:
   title: "Numbers add up? Now write the task"
@@ -24,13 +24,13 @@ cta:
 
 Only one line of a DareBay campaign's cost is fixed. Creating a contest costs 10 USDT, once. The contest fee is 0%: the platform takes no share of the prize pool, and topping it up costs nothing either.
 
-The formula: clip views / 1,000 × rate, never more than the cap per clip. A clip with 20,000 views at $1 earns its creator 20,000 / 1,000 × $1.00 = **$20.00**; a clip with a million views stops at the cap, $100 if that is what you set. The threshold is an entry condition, not a deductible: a clip under it is not paid, a clip over it is paid for every view from the first.
+The formula: clip views / 1,000 × rate, never more than the cap per clip. A clip with 20,000 views at $1 earns its creator 20,000 / 1,000 × $1.00 = **$20.00**; a clip with a million views stops at the cap you set, anywhere up to $500. The threshold is an entry condition, not a deductible: a clip under it is not paid, a clip over it is paid for every view from the first.
 
 Accruals stop when the budget you set runs out, and the wallet-backed pool is locked on the platform before the start; whatever the clips do not earn returns to your balance. How creators get paid from it: [how to pay clippers](/en/for-brands/paying-clippers-per-view).
 
 ## Three budgets: what $200, $1,000 and $5,000 buy
 
-Three budgets at both ends of the open-task band, $1 and $2 per 1,000 views, with the typical $100 cap. The creator column is an assumption, not data: one creator brings 20,000 views, two clips of 10,000.
+Three budgets at both ends of the open-task band, $1 and $2 per 1,000 views, with a $100 cap in the example (the platform allows up to $500). The creator column is an assumption, not data: one creator brings 20,000 views, two clips of 10,000.
 
 | Pool | Paid views at $1 | Paid views at $2 | Clips at the $100 cap | Creators, rough guide, at $1 / $2 |
 |---|---:|---:|---:|---:|
@@ -46,7 +46,7 @@ Add 10 USDT for the launch; it is not part of the pool. This is arithmetic, not 
 
 **The rate.** Open tasks currently sit between $1 and $2 per 1,000 views, with $1 typical. A rate below the band fails to attract creators because a clipper compares tasks in the feed on that one number and takes the one that pays more for the same clip. The rate is fixed from launch, so an under-priced task is fixed only by a new one; check yours in the [platform comparison](/en/earnings/best-clipping-platforms).
 
-**The threshold.** The default is 1,000 views, the typical value in open tasks 2,000. It drops clips without a minimum audience at no cost to you, but gives no discount: a clip that clears it is paid in full.
+**The threshold.** The system default is 1,000 views, and above that the figure is yours to set. It drops clips without a minimum audience at no cost to you, but gives no discount: a clip that clears it is paid in full.
 
 **The cap.** A sensible band is 5-50% of the pool. For $200, a cap of half the pool means two clips take everything, so take the lower end. For $5,000, a $100 cap is 2% of the pool and keeps the distribution even: a viral clip takes its maximum, the rest spreads across other creators. The cap is the only one of the three you can raise after the start, so getting it wrong is cheaper than getting the rate wrong. Form walkthrough: [how to set up a contest](/en/for-brands/set-up-a-clipping-contest).
 
@@ -78,7 +78,7 @@ No. It is a one-time price for creating the contest, charged separately, and non
 
 ### How much does one clip cost under pay-per-view?
 
-As much as it collected: views / 1,000 × rate, up to the cap. A clip with 20,000 views at $1 costs 20,000 / 1,000 × $1.00 = **$20.00**, and a clip with a million views stops at a $100 cap.
+As much as it collected: views / 1,000 × rate, up to the cap. A clip with 20,000 views at $1 costs 20,000 / 1,000 × $1.00 = **$20.00**, and a clip with a million views stops at the cap you set.
 
 ### Can a task run without a budget limit?
 

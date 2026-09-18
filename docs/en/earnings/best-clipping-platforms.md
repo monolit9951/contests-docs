@@ -76,7 +76,7 @@ On most campaign-based platforms, no: you are paid for the views of the clip you
 
 ### Do clipping platforms charge clippers a fee?
 
-Many do, either as a percentage of the payout or as a withdrawal fee. Whop's terms take 10% of CPM payouts, Klipni takes 5% of each approved payout, Vues and Reach.cat charge the brand instead, and Clipping.net and Vyro do not publish a clipper fee. DareBay takes 0% on contest payouts and 10% on balance withdrawals with a 10 USDT minimum request.
+Many do, either as a percentage of the payout or as a withdrawal fee. Whop's terms take 10% of CPM payouts, Klipni takes 5% of each approved payout, Vues and Reach.cat charge the brand instead, and Clipping.net and Vyro do not publish a clipper fee. DareBay takes 0% on contest payouts and nothing on balance withdrawals: requests start at 10 USDT and the team checks the details before sending.
 
 ### Can I clip for several platforms at once?
 

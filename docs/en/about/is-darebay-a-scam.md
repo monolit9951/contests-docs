@@ -19,7 +19,7 @@ Fraud in this niche is not creative. It reuses the same five moves, and they are
 | The tell | What it looks like | DareBay |
 |---|---|---|
 | Pay to start | A deposit, an "activation", a paid access tier | Entry is free. No deposit, no access charge, no follower minimum |
-| Pay to get paid | A transfer to an outside wallet to "unlock" or "verify" a prize | Never. The withdrawal fee is calculated inside the request form and deducted from the amount you asked for |
+| Pay to get paid | A transfer to an outside wallet to "unlock" or "verify" a prize | Never. Withdrawal to your wallet is fee-free, and the form shows the amount to receive before you confirm |
 | Money for nothing | Income for signing up, clicking or inviting friends | Payment follows a result: counted views, votes, or a judged decision. No result, no money |
 | Terms that move | The rate or the rules change once the work is done | The rate and the threshold are fixed when the contest is created. After launch the buyer can change the cap per submission (never below what a clip has already earned), move the deadline or top up the budget |
 | Nobody to ask | No name, no address, no human | The platform is run by Ruslan Bei under his own name, reachable at [@ruslanbwork](https://t.me/ruslanbwork) |
@@ -40,7 +40,7 @@ DareBay also supports contests without a locked pool, where the organizer settle
 
 ### Do I have to send money to unlock a prize?
 
-No, and nobody legitimate will ever ask you to. The DareBay withdrawal fee is shown inside the request form before you confirm and comes out of the amount you requested. A message asking you to transfer money to an unknown wallet first is not part of this product, whoever appears to be sending it.
+No, and nobody legitimate will ever ask you to. A DareBay withdrawal carries no fee at all, and the request form shows the amount to receive before you confirm. A message asking you to transfer money to an unknown wallet first is not part of this product, whoever appears to be sending it.
 
 ### Is there an entry fee or a deposit?
 

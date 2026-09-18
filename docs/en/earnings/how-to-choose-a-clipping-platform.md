@@ -37,11 +37,11 @@ Almost everywhere the campaign owner sets the rate and the platform only prints 
 
 ## Question 3. What is the view threshold?
 
-The threshold is the number of views below which a clip pays nothing at all. Vyro sets 5,000 per post, Clipping.net 1,000 per post and usually 25,000 per campaign, DareBay typically 2,000 per clip; Whop has no threshold but the brand sets a minimum payout per video. A 5,000-view threshold at $1 per 1,000 means the first $5 of every clip are never paid.
+The threshold is the number of views below which a clip pays nothing at all. Vyro sets 5,000 per post, Clipping.net 1,000 per post and usually 25,000 per campaign, and on DareBay each task sets its own threshold and prints it on the card; Whop has no threshold but the brand sets a minimum payout per video. A 5,000-view threshold at $1 per 1,000 means the first $5 of every clip are never paid.
 
 ## Question 4. What is the cap per clip?
 
-The cap limits what one clip can earn, and it is what cuts your income on a viral clip. On Vyro a clip stops earning after 1 million views, Whop campaigns show maximums of $400–$600 per video, and a typical DareBay contest caps one submission at $100, with the largest campaigns up to $500. A cap is the price of a budget that lasts for everyone; what matters is that it is written in advance.
+The cap limits what one clip can earn, and it is what cuts your income on a viral clip. On Vyro a clip stops earning after 1 million views, Whop campaigns show maximums of $400–$600 per video, and a DareBay contest sets its own cap on one submission, up to $500 per clip. A cap is the price of a budget that lasts for everyone; what matters is that it is written in advance.
 
 ## Question 5. What is the fee on the payout?
 

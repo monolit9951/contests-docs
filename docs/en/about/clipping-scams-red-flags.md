@@ -12,7 +12,7 @@ hero:
     - "<b>Money only ever moves towards you.</b> A request to pay for access, an «unlock» or a quicker payout gives the platform away in its first message, and there are no exceptions."
     - "<b>The terms are written before the work, not after it.</b> The rate per 1,000 views, the view threshold and the per-clip cap belong on the task before you submit; if they are «discussed later», the sum will not be set in your favour."
     - "<b>The budget should be sitting with the platform.</b> A site that merely introduces the two sides leaves the buyer paying when and if the mood takes them; Whop, Klipni and DareBay's wallet-backed tasks keep the budget on the platform."
-    - "<b>A threshold, a cap and a withdrawal the team processes are not flags.</b> On DareBay the typical threshold is 2,000 views, the cap is usually $100, and a withdrawal carrying a 10% fee is filed by you and processed by the team: that is what a live economy with real money looks like."
+    - "<b>A threshold, a cap and a withdrawal the team processes are not flags.</b> On DareBay each task prints its own threshold, the cap runs up to $500 per clip, and a fee-free withdrawal is filed by you and processed by the team: that is what a live economy with real money looks like."
 cta:
   title: "Run DareBay through the same nine"
   lede: "Rate, threshold, cap and funding mode are all open on the card before you take the task, a wallet-backed budget stays on the platform, payouts go worldwide with no exclusion list, and nobody here will ask you to pay for access."
@@ -26,7 +26,7 @@ The question usually follows one strange platform, and the model is not to blame
 2. **The budget does not sit with the platform.** If the money stays with the buyer, they pay when they choose. Whop and Klipni say they hold a campaign's budget until spent, as do DareBay's wallet-backed tasks; Vues says it does not custody campaign funds, so the brand pays.
 3. **Rate, threshold and cap not written in advance.** Three numbers define a clip's economics: what 1,000 views pay, where counting starts, the most one clip earns. Missing one? Your sum is set after the views are in, not in your favour.
 4. **No public list of payout countries.** Where a platform pays must be public before you register, or you work a week and get refused. A restriction list is normal; its absence is the flag. DareBay pays worldwide with no exclusion list; its largest community is in the CIS.
-5. **Promised sums with no formula.** A real sum comes from numbers: views / 1,000 × rate, never above the cap. Example: 20,000 views at $1.00 give 20,000 / 1,000 × $1.00 = **$20.00**; a $100 cap stops any clip at a hundred. "Hundreds a week" is advertising, not a term.
+5. **Promised sums with no formula.** A real sum comes from numbers: views / 1,000 × rate, never above the cap. Example: 20,000 views at $1.00 give 20,000 / 1,000 × $1.00 = **$20.00**; the cap the task printed stops a clip there and no further. "Hundreds a week" is advertising, not a term.
 6. **Payout screenshots instead of rules.** A transfer screenshot proves that someone once paid somebody. Rules are checked differently: a task card with numbers, a work status in your cabinet, a fees page; receipts and testimonials are a sales funnel.
 7. **Payouts only "by arrangement" in chat.** A normal payout is an operation in the product: amount, fee, details, status. A chat leaves no record and nobody to turn to once the person goes quiet; a "guarantor" routing money through themselves is a third wallet.
 8. **No view verification.** No moderation looks like a favour, and that is the trap: unfiltered fake views hand the budget to neighbours with bought traffic; your honest clip gets the remainder. Anti-fraud checks protect your share: [how DareBay does it](/en/help/protection-from-view-fraud).
@@ -53,11 +53,11 @@ DareBay as the example:
 
 | What you see | Why it is normal | On DareBay |
 |---|---|---|
-| A view threshold | Filters out clips not worth paying for; past it the whole counter is paid | Typically 2,000 views, default 1,000 |
-| A per-clip cap | Stops one clip eating a budget meant for dozens | Usually $100, up to $500 |
+| A view threshold | Filters out clips not worth paying for; past it the whole counter is paid | Set by the task and printed on its card, system default 1,000 views |
+| A per-clip cap | Stops one clip eating a budget meant for dozens | Set by the task, up to $500 per clip |
 | Moderation | Filters fake views and rule-breaking clips, protecting your share | Counts once the link is sent; a moderator checks it |
 | Payouts handled by people | A person verifies the details; slower, but honest | Handled by the team on request, no promised timing |
-| A withdrawal fee | Comes out of what you earned, never up front | 10% of the request, 10 USDT minimum, 0% on the contest payout |
+| A withdrawal fee | Comes out of what you earned, never up front | None on DareBay: 0% on the contest payout and 0% on withdrawal, 10 USDT minimum request |
 
 A fresh DareBay accrual matures for 24 hours before "Claim now" locks it in: a second pass over the counter, not a hold on your money. Open DareBay tasks pay from $1 to $2 per 1,000 views: modest next to advertising promises, and the sign of a real budget.
 

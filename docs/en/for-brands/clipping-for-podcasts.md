@@ -10,7 +10,7 @@ hero:
   lede: "A podcast cuts more easily than any other source: the thoughts are already spoken, the questions are already asked, the faces are already on camera. Below are the three clip formats one episode produces, what to hand clippers, what an episode costs when you pay per counted view, and how to put clipping on a weekly cycle beside your releases."
   takeaways:
     - "<b>An hour of talk is 10 to 20 clips:</b> a quotable point, a disagreement or a moment of emotion, a question and answer. Your guest has already made the point and your host has already asked the question, so the clipper only picks the best seconds and adds a hook."
-    - "<b>You pay for counted views, not for editing hours:</b> open tasks pay $1 to $2 per 1,000 views, the threshold is typically 2,000 views and the cap per clip typically $100, and the rate is yours to choose."
+    - "<b>You pay for counted views, not for editing hours:</b> open tasks pay $1 to $2 per 1,000 views, the threshold and the cap per clip are yours to set (the platform allows up to $500 per clip), and so is the rate."
     - "<b>An episode with 120,000 counted views at $1.00 costs 120,000 / 1,000 × $1.00 = $120.00.</b> Launch is 10 USDT once and the contest fee is 0%."
     - "<b>The brief protects your guest, a verbal promise does not:</b> consent agreed before release, a list of topics nobody may lift out of context, and a required link to the full episode."
 cta:
@@ -50,11 +50,11 @@ A point gets quoted, a disagreement gets watched to the end, and a question and 
 
 ## How many clips one episode yields and what it costs
 
-Hypothetically, clippers made 15 clips from an hour-long episode. Three missed the 2,000-view threshold and are not paid; twelve gathered 120,000 counted views at a $1.00 rate.
+Hypothetically, clippers made 15 clips from an hour-long episode. Three missed the view threshold set on the task and are not paid; twelve gathered 120,000 counted views at a $1.00 rate.
 
 > 120,000 / 1,000 × $1.00 = **$120.00**
 
-If one clip takes off to 150,000 views, the formula gives $150.00, but with a $100 cap the creator gets $100. At $2.00 the same episode would cost $240.00: open tasks currently pay $1 to $2 per 1,000 views, and the rate is yours. Add 10 USDT to create the contest, once; the contest fee is 0% and topping up costs nothing.
+If one clip takes off to 150,000 views, the formula gives $150.00, but with a $100 cap set on the task the creator gets $100. At $2.00 the same episode would cost $240.00: open tasks currently pay $1 to $2 per 1,000 views, and the rate is yours. Add 10 USDT to create the contest, once; the contest fee is 0% and topping up costs nothing.
 
 A wallet-backed budget is locked on the platform before the start, spent on counted views, and the remainder comes back. Rate and cap for a pool: [clipping campaign cost](/en/for-brands/clipping-campaign-cost); the calculator below works any budget.
 

@@ -20,7 +20,7 @@ The rate defines what you pay for every thousand counted views of a clipper subm
 
 ### 2. Set the minimum view threshold
 
-The threshold filters out submissions with a handful of views: a video that does not hit the required number takes no part in the budget split and costs you nothing. You enter the value in the "minimum views" field. Leave it empty and the system applies its default minimum of 1000 views. The median threshold across live contests is **2000 views**.
+The threshold filters out submissions with a handful of views: a video that does not hit the required number takes no part in the budget split and costs you nothing. You enter the value in the "minimum views" field. Leave it empty and the system applies its default minimum of 1000 views. Above that the figure is yours, and it is printed on the contest card before anyone submits.
 
 Know what the threshold does and does not do before you raise it. It is an admission test, not a deductible: once a submission clears the line, the whole view counter enters the calculation, not the part above the threshold. Raising it therefore removes weak submissions from the split rather than shaving the price of strong ones. For more, see [how pay-per-view works](/en/earnings/how-pay-per-view-works).
 
@@ -53,9 +53,9 @@ Whatever the clippers did not earn returns to your organizer balance.
 | Parameter | Typical value in live contests | What it means |
 |-----------|--------------------------------|---------------|
 | Rate per 1000 views | set by the organizer | What you pay for every thousand counted views |
-| View threshold | 2000 (system default is 1000) | The minimum views for a submission to take part in the split |
-| Cap per submission | set by the buyer | The maximum payout for a single submission |
-| Publishing site | set by the organizer | TikTok, YouTube or Instagram. For Instagram it has to be a video with a view count |
+| View threshold | set by the organizer (system default is 1000) | The minimum views for a submission to take part in the split |
+| Cap per submission | set by the buyer, up to $500 per clip | The maximum payout for a single submission |
+| Publishing site | set by the organizer | TikTok, YouTube, Instagram or another site named in the contest. For Instagram it has to be a video with a view count |
 
 You set the rate, the threshold and the cap yourself when creating the contest. The exact set of fields is shown on the contest creation screen. One system-level limit exists as a typo guard rather than a market signal: the validator refuses a contest with a rate above $100 per 1000 views.
 

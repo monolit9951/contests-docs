@@ -71,7 +71,7 @@ Silence for a beginner often comes from the account itself: platforms show a fre
 | What you need | Why |
 |---------------|-----|
 | An account on [DareBay](https://darebay.com) | To pick a contest and submit work. Signing up is free and channel verification is not required |
-| An open account on the contest's site - TikTok, YouTube or Instagram | To publish the video. The view counter has to be public: the payout is worked out from it |
+| An open account on the contest's site - TikTok, YouTube, Instagram or another site named in the brief | To publish the video. The view counter has to be public: the payout is worked out from it |
 | A phone or computer with any editing app | To build a vertical video. Paid software is not needed |
 | A few hours for the first job | To read the brief, watch the source, edit and publish |
 

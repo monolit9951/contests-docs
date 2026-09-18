@@ -48,13 +48,13 @@ Rate, threshold and cap go into separate fields; everything above maps onto the 
 
 Labels count uses of a sound, but the platform counts views of a clip: it reads the public counter of the clip whose link the creator sent. Other people's clips under your sound cost you nothing.
 
-You set three numbers. Open tasks currently pay $1 to $2 per 1,000 views, and music tends to sit at the top of the band because a clip to a sound is quick to shoot. The threshold, typically 2,000 views, drops clips with no reach at no cost. The cap per clip, typically $100, stops one viral clip from taking the budget.
+You set three numbers. Open tasks currently pay $1 to $2 per 1,000 views, and music tends to sit at the top of the band because a clip to a sound is quick to shoot. The threshold is yours to set, with a system default of 1,000 views, and it drops clips with no reach at no cost. The cap per clip is yours too, up to $500, and it stops one viral clip from taking the budget.
 
 A hypothetical example: a clip reaches 25,000 views at a $2.00 rate.
 
 > 25,000 / 1,000 × $2.00 = **$50.00**
 
-A clip with 80,000 views would give $160.00, but with a $100 cap the creator gets $100.
+A clip with 80,000 views would give $160.00, but with a $100 cap set on the task the creator gets $100.
 
 A release-week budget is a scenario, not a forecast. Say the target is 300,000 counted views in seven days at $2.00: 300,000 / 1,000 × $2.00 = **$600.00**, plus 10 USDT to create the contest; the contest fee is 0%. With a $100 cap that is at least six clips, in practice dozens. A wallet-backed budget is locked on the platform before the start, spent only on counted views, and the remainder comes back. Other budgets: [clipping campaign cost](/en/for-brands/clipping-campaign-cost).
 

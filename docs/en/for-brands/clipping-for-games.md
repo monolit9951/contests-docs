@@ -11,7 +11,7 @@ hero:
   takeaways:
     - "<b>Five formats sell a game, so name them in the brief:</b> the gameplay moment, the fail or the clutch, the how-to-beat-it guide, the streamer reaction and the before-and-after of an update."
     - "<b>Nobody buys your game to enter a task, you hand it over:</b> the build or keys, gameplay captures, partner streams and spoiler rules live in one folder linked from the brief."
-    - "<b>Open tasks pay $1 to $2 per 1,000 views, and that is all you pay for:</b> the threshold is usually 2,000, the cap per clip usually $100, and installs run through the second mode, a CPA offer."
+    - "<b>Open tasks pay $1 to $2 per 1,000 views, and that is all you pay for:</b> the threshold and the cap per clip are yours to set (up to $500 per clip), and installs run through the second mode, a CPA offer."
     - "<b>Launch, update and season are three separate tasks,</b> not one big one: different formats, pools and deadlines, and views you can compare directly."
 cta:
   title: "Launch the first task for your game"
@@ -46,7 +46,7 @@ All five map onto the Materials, Must-be-in-the-clip and Not-allowed fields of t
 
 The primary mode for a game is pay per view: you set a rate per 1,000 views, a threshold and a cap per clip, and fund the budget. The clipper publishes on their own TikTok, Reels or Shorts account and sends the link; the platform reads views from the site's public counter, reconciles several times a day and drops inflated views.
 
-In open tasks rates currently run from $1 to $2 per 1,000 views, typically $1. The threshold defaults to 1,000 views and is usually 2,000; a clip below it earns nothing, a clip above it is paid for its whole counter. The cap per clip is usually $100, so no single viral clip takes the whole pool. A hypothetical example:
+In open tasks rates currently run from $1 to $2 per 1,000 views. The threshold defaults to 1,000 views and above that the figure is yours to set; a clip below it earns nothing, a clip above it is paid for its whole counter. The cap per clip is yours too, up to $500, so no single viral clip takes the whole pool. A hypothetical example:
 
 > 20,000 / 1,000 × $1.00 = **$20.00**
 
@@ -54,7 +54,7 @@ The second mode suits games that earn from paying players and need installs rath
 
 ## Launch, update, season: three campaign scenarios
 
-The scenarios use the formula at $1 per 1,000 views and a $100 cap per clip. This is arithmetic, not a forecast: the number of clips and views depends on the game, the materials and the brief.
+The scenarios use the formula at $1 per 1,000 views and a $100 cap per clip in the example (the platform allows up to $500). This is arithmetic, not a forecast: the number of clips and views depends on the game, the materials and the brief.
 
 | Scenario | Pool | Paid views at $1 | Clips at the $100 maximum | The brief |
 |---|---:|---:|---:|---|

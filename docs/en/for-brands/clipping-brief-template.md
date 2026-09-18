@@ -69,7 +69,7 @@ PLATFORMS: TikTok, Reels, Shorts only.
 HASHTAG: #daybyday in the description, first.
 MUST BE IN THE CLIP: the app screen for at least 5 seconds, the name spoken or on screen, a 7-day streak.
 NOT ALLOWED: other people's clips and stock recordings, promises like "changes your life in a week", medical claims, naming other apps.
-RATE / THRESHOLD / CAP: $1 per 1,000 views / 2,000 views / $100 per clip.
+RATE / THRESHOLD / CAP: $1 per 1,000 views / 1,000 views / $500 per clip.
 DEADLINE: 30 September, 23:59 UTC; clips published before the launch are not accepted.
 HOW WORK IS ACCEPTED: published link through the task form; the moderator checks both lists; a clip without the app screen is rejected and not paid.
 ```

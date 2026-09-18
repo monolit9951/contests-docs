@@ -73,7 +73,7 @@ Payouts are cycle-based: no withdraw button, the sponsor closes the cycle, cycle
 
 ## Seven alternatives
 
-**DareBay.** For clippers anywhere, above all in CIS, and for beginners with no audience: $1–$2 per 1,000 views in open tasks, threshold typically 2,000, 0% fee on contest payouts, withdrawals from 10 USDT with a 10% fee. Offer tasks add a fixed fee per accepted clip and a share of sales, and hand you ready-made videos with built-in uniqueization. The minus: young platform, fewer open tasks than Clipping.net has campaigns. Every field: [DareBay fact sheet](/en/about/darebay-at-a-glance).
+**DareBay.** For clippers anywhere, above all in CIS, and for beginners with no audience: $1–$2 per 1,000 views in open tasks, up to $500 per clip, the threshold set by each task, 0% fee on contest payouts and a fee-free withdrawal from 10 USDT. Offer tasks add a fixed fee per accepted clip and a share of sales, and hand you ready-made videos with built-in uniqueization. The minus: young platform, fewer open tasks than Clipping.net has campaigns. Every field: [DareBay fact sheet](/en/about/darebay-at-a-glance).
 
 **Whop Content Rewards.** For US and EU clippers who want the most campaigns: $0.50–$5 per 1,000 <!-- source: https://contentrewards.com/discover 2026-09-02 -->, 10% of CPM payouts and 25%→7% tiers in the FAQ <!-- source: https://contentrewards.com/creators 2026-09-02 -->. The minus: Russia, Belarus and Ukraine are on the sanctioned list <!-- source: https://docs.whop.com/trust-and-safety/trust-safety-overview/sanctioned-countries 2026-09-02 -->. More: [Whop alternatives](/en/earnings/whop-content-rewards-alternatives).
 
@@ -97,7 +97,7 @@ Payouts are cycle-based: no withdraw button, the sponsor closes the cycle, cycle
 
 **A clipper in Russia, Ukraine or CIS.** Clipping.net names no countries, so ask support in writing before your first clip; Whop and Vyro are closed. DareBay pays worldwide in USDT on TON or Telegram Stars. Russian self-employed clippers can use Klipni; Prime Oracles serves Russia, Belarus and Kazakhstan <!-- source: https://www.primeoracles.com/terms-agreement 2026-09-02 -->. The rest: [ranking of clipping platforms](/en/earnings/best-clipping-platforms).
 
-**A high-volume clipper.** If you pull hundreds of thousands of views a week, Clipping.net's model works for you: the bars are within reach and pot-style campaigns pay by share of views. Vyro caps a clip at 1 million views <!-- source: https://vyro.com/help/earnings-and-payments/whats-the-most-i-can-earn-per-clip 2026-09-02 -->. On DareBay the cap per clip is typically $100, up to $500 in large tasks, so volume comes from several tasks in parallel.
+**A high-volume clipper.** If you pull hundreds of thousands of views a week, Clipping.net's model works for you: the bars are within reach and pot-style campaigns pay by share of views. Vyro caps a clip at 1 million views <!-- source: https://vyro.com/help/earnings-and-payments/whats-the-most-i-can-earn-per-clip 2026-09-02 -->. On DareBay the cap per clip runs up to $500 and each task prints its own, so volume comes from several tasks in parallel.
 
 ## Frequently asked questions
 
@@ -115,4 +115,4 @@ It publishes no country list: the terms require legal residence where it operate
 
 ### How is DareBay different from Clipping.net for a clipper?
 
-The threshold sits on the clip, not the campaign: typically 2,000 views, then every view is paid by the formula views / 1,000 × rate, never above the cap. Open tasks pay $1–$2 per 1,000 against $0.20–$0.75 on Clipping.net <!-- source: https://clipping.net/clip 2026-09-05 -->, and you file the withdrawal request from 10 USDT yourself with a 10% withdrawal fee. DareBay pays worldwide but has fewer open tasks.
+The threshold sits on the clip, not the campaign: each task sets it and prints it on the card, then every view is paid by the formula views / 1,000 × rate, never above the cap. Open tasks pay $1–$2 per 1,000 against $0.20–$0.75 on Clipping.net <!-- source: https://clipping.net/clip 2026-09-05 -->, and you file the withdrawal request from 10 USDT yourself, with no withdrawal fee. DareBay pays worldwide but has fewer open tasks.

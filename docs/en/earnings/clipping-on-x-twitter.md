@@ -41,7 +41,7 @@ Formats that gain steadily on X:
 
 DareBay tasks count views only on TikTok, Instagram Reels, YouTube Shorts and Facebook Reels: a link to an X post is not accepted, and views on X never enter the calculation. Combining still works: the same clip is published twice, on TikTok, in Reels or in Shorts for a task that pays a rate per view, and on X for the network's own programme, as long as the task's terms do not demand exclusivity.
 
-A buyer publishes a task, hands over materials and sets a rate per 1,000 views; in open tasks it runs from $1 to $2. A clip takes part once you have sent the link and a moderator has checked the terms. The typical threshold is 2,000 views, and it is not deducted: clear it and the whole counter is paid. The typical cap per clip is $100. Formula: views / 1,000 × rate, never above the cap. A hypothetical example: 20,000 / 1,000 × $1.00 = **$20.00**. Put your own numbers into the [clipping earnings calculator](/en/earnings/clipping-earnings-calculator).
+A buyer publishes a task, hands over materials and sets a rate per 1,000 views; in open tasks it runs from $1 to $2. A clip takes part once you have sent the link and a moderator has checked the terms. The view threshold is set by each task - check the card in the catalog - and it is not deducted: clear it and the whole counter is paid. The cap per clip runs up to $500. Formula: views / 1,000 × rate, never above the cap. A hypothetical example: 20,000 / 1,000 × $1.00 = **$20.00**. Put your own numbers into the [clipping earnings calculator](/en/earnings/clipping-earnings-calculator).
 
 | Stream | Who pays | For what | Where to publish |
 |---|---|---|---|

@@ -11,8 +11,8 @@ hero:
   takeaways:
     - "<b>Few reviews, and for a young platform that is the honest state of things:</b> the live talk happens in DareBay's Telegram channel rather than on review sites, and hundreds of glowing reviews would be a reason to worry."
     - "<b>Open contests pay $1.00 to $2.00 per 1000 views,</b> and the rate, threshold, cap and publishing site stand on the card before you submit: you decide on figures, not on strangers."
-    - "<b>Nothing moves once a contest is live:</b> rate, threshold and budget stay exactly as written after your clip is up, and a wallet-backed budget is charged from the organizer before you start."
-    - "<b>The friction sits at the end, and we would rather you knew now:</b> withdrawal is a request with a 10% fee and a 10 USDT minimum, checked and sent by the team, with no date promised."
+    - "<b>Nothing moves once a contest is live:</b> the rate and the threshold stay exactly as written after your clip is up, the cap per clip can only be raised, and a wallet-backed budget is charged from the organizer before you start."
+    - "<b>The last step is plain too:</b> withdrawal to your wallet is fee-free from a 10 USDT request, checked and sent by the team, with no date promised."
 cta:
   title: "Skip the reviews and check for yourself"
   lede: "Open the contest catalogue, read one card from top to bottom, look at the withdrawal form before you confirm anything, and write to the founder. That walk through the product tells you more about DareBay than any testimonial could."
@@ -44,7 +44,7 @@ DareBay is a marketplace for content tasks. Someone posts a task with a budget, 
 |---|---|---|
 | "They never pay" | A wallet-backed budget is charged from the organizer before the start; the mode is on the card | Contest card |
 | "They understate the views" | Nobody types the figure in: the platform reads the public counter of the publishing site | Your clip and the card |
-| "Hidden fees" | Contest fee 0%; withdrawal fee 10%, 10 USDT minimum, shown in the form before you confirm | [DareBay fees](/en/help/what-commission) |
+| "Hidden fees" | Contest fee 0%; withdrawal fee-free, 10 USDT minimum, with the amount to receive shown before you confirm | [DareBay fees](/en/help/what-commission) |
 | "Payouts take forever" | Requests are handled by the team and no settlement date is promised | Withdrawal form |
 | "Nobody is behind it" | A named founder, Ruslan Bei, answers in person | [@ruslanbwork](https://t.me/ruslanbwork) |
 | "Nobody knows what it pays" | Open contests pay $1.00 to $2.00 per 1000 views, printed on every card | [Contest catalogue](/en/earn/clips) |

@@ -53,7 +53,7 @@ The rate, the threshold and the budget cannot. They are written into the contest
 
 ### Which sites can a clip be published on?
 
-The contest names the site. View statistics are collected today for TikTok, YouTube and Instagram. For Instagram it has to be a video with a view count, because a photo post does not produce that metric.
+The contest names the site. View statistics are collected for TikTok, YouTube, Instagram and the other sites named in the task. For Instagram it has to be a video with a view count, because a photo post does not produce that metric.
 
 ### Do I need a crypto wallet to use DareBay?
 

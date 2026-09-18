@@ -12,7 +12,7 @@ hero:
   takeaways:
     - "<b>Whop wins on choice:</b> the most campaigns anywhere, budgets from $1,000, rates from $0.50 to $5 per 1,000 views and payouts in 200+ countries with no floor on withdrawals."
     - "<b>DareBay wins on access and on what the task hands you:</b> no country list at all, so it pays where Whop cannot; offer tasks add a fixed fee per accepted clip, a share of the orders your promo code brings and ready-made unique videos."
-    - "<b>The fee bites in different places:</b> Whop's terms take 10% of CPM payouts (its FAQ shows 25%→7% tiers); DareBay takes 0% from a contest payout and 10% only when you withdraw, from a 10 USDT request."
+    - "<b>The fee bites in different places:</b> Whop's terms take 10% of CPM payouts (its FAQ shows 25%→7% tiers); DareBay takes 0% from a contest payout and nothing when you withdraw to your wallet, from a 10 USDT request."
     - "<b>Both hold the money</b> in their main mode: Whop keeps the brand's budget against the campaign, DareBay locks the organizer's budget on the platform in a wallet-backed contest; DareBay also runs manual-payout contests where the organizer pays directly."
 compare:
   ids: [darebay, whop]
@@ -31,7 +31,7 @@ cta:
 
 If you are in the US, the EU or most of the world and want the largest choice of clipping campaigns, Whop Content Rewards is the bigger platform: more brands, higher budgets, rates on live campaigns from $0.50 to $5 per 1,000 views, a wallet with no floor on withdrawals and payouts in more than 200 countries. Its terms take 10% from CPM payouts, and a clip earns for 7 days after approval with a 3-day hold after that.
 
-If you are in Russia, Belarus, Ukraine, Kazakhstan or elsewhere in CIS, Whop is not available to you at all: its sanctioned-country list blocks registration and payouts. DareBay has no country list: it pays worldwide, and its community is largest in exactly these countries. Open contests pay from $1.00 to $2.00 per 1,000 counted views, the threshold and the cap are printed on the task card, no followers or application are needed, and in wallet-backed contests the organizer's budget is locked on the platform before the start. Balance withdrawals cost 10% with a 10 USDT minimum, in USDT on TON or Telegram Stars.
+If you are in Russia, Belarus, Ukraine, Kazakhstan or elsewhere in CIS, Whop is not available to you at all: its sanctioned-country list blocks registration and payouts. DareBay has no country list: it pays worldwide, and its community is largest in exactly these countries. Open contests pay from $1.00 to $2.00 per 1,000 counted views, the threshold and the cap are printed on the task card, no followers or application are needed, and in wallet-backed contests the organizer's budget is locked on the platform before the start. Balance withdrawals are fee-free from a 10 USDT minimum, in USDT on TON or Telegram Stars.
 
 <LCompare />
 
@@ -40,7 +40,7 @@ If you are in Russia, Belarus, Ukraine, Kazakhstan or elsewhere in CIS, Whop is 
 - **Supply.** Whop is the largest clipping marketplace; DareBay is young and has few open contests at any time.
 - **Rate ceiling.** Live Whop campaigns run up to $5 per 1,000 views; open DareBay contests run from $1.00 to $2.00.
 - **Payout rails.** Whop pays to bank accounts, PayPal, mobile wallets and crypto in 200+ countries with no minimum; DareBay pays USDT on TON and Telegram Stars, with a 10 USDT minimum request, handled by the team.
-- **Per-clip ceiling.** Whop campaigns show maximums of $400–$600 per video; a typical DareBay contest caps one submission at $100, with the largest campaigns going up to $500.
+- **Per-clip ceiling.** Whop campaigns show maximums of $400–$600 per video; a DareBay contest sets its own cap on one submission, up to $500 per clip.
 
 ## Where DareBay is stronger
 
@@ -49,11 +49,11 @@ If you are in Russia, Belarus, Ukraine, Kazakhstan or elsewhere in CIS, Whop is 
 - **Ready-made unique videos.** On offer tasks the platform hands you finished videos and makes every copy unique for you; no editing software needed.
 - **Fee on the payout itself.** DareBay takes 0% of contest payouts; Whop's terms take 10% of CPM payouts, and its creator FAQ describes tiers that start at 25%.
 - **Entry.** No follower requirement, no application and no KYC before your first brief on DareBay; Whop requires identity verification before payouts and some campaigns require an application.
-- **Terms on the card.** Rate, threshold and cap are on every DareBay task card before you submit; the rate and threshold do not change after launch.
+- **Terms on the card.** Rate, threshold and cap are on every DareBay task card before you submit; the rate and the threshold do not change after launch, and the cap per clip can only be raised.
 
 ## Fees and what actually reaches you
 
-Take one clip with 50,000 counted views. On a Whop campaign at $2 per 1,000 views the clip earns $100 gross, and the terms deduct 10% at payout. On a DareBay contest at $2 per 1,000 views the same clip earns $100 and the contest fee is 0%; the only later charge is 10% when you withdraw your balance, with a 10 USDT minimum request. On both platforms the payout for one clip stops at the ceiling the campaign or contest printed.
+Take one clip with 50,000 counted views. On a Whop campaign at $2 per 1,000 views the clip earns $100 gross, and the terms deduct 10% at payout. On a DareBay contest at $2 per 1,000 views the same clip earns $100, the contest fee is 0% and withdrawal to your wallet is fee-free from a 10 USDT request, so the $100 reaches you in full. On both platforms the payout for one clip stops at the ceiling the campaign or contest printed.
 
 <LCalc />
 
@@ -86,4 +86,4 @@ Yes, if Whop can register you. Campaign budgets run out on every platform, so mo
 - [Whop Content Rewards review](/en/earnings/whop-content-rewards-review) - the platform on its own terms: campaigns, fees, payout timing
 - [Whop Content Rewards alternatives](/en/earnings/whop-content-rewards-alternatives) - seven platforms to run alongside or instead of Whop
 - [Clipping platforms that pay in Russia and CIS](/en/earnings/clipping-platforms-that-pay-in-russia-and-cis) - the country question answered for the whole region
-- [Clipping earnings calculator](/en/earnings/clipping-earnings-calculator) - what a rate turns into after threshold, cap and withdrawal fee
+- [Clipping earnings calculator](/en/earnings/clipping-earnings-calculator) - what a rate turns into after threshold and cap, with a fee-free withdrawal

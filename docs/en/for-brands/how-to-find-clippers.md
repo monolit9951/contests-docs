@@ -54,13 +54,13 @@ A good clipper starts the same day if six things are in place.
 
 A flat fee per clip is fair while clips perform evenly. Once one gets 200 thousand views and another 300, the first creator feels cheated and you overpaid. Pay per view removes the argument: earnings grow with reach, and you pay for the result.
 
-On DareBay, across open tasks the rate currently runs from $1.00 to $2.00 per 1000 views. The default threshold is 1000 views, the typical one in open tasks 2000: a clip below it costs nothing. The cap per submission, typically $100, protects the budget from a single viral clip. A wallet-backed budget is locked on the platform before launch and is spent only on counted views; the remainder returns to you. Views are read from the site's public counter, and fraud is filtered out (platform data, snapshot 2026-08-23).
+On DareBay, across open tasks the rate currently runs from $1.00 to $2.00 per 1000 views. The threshold is yours to set, with a system default of 1000 views: a clip below it costs nothing. The cap per submission is yours too, up to $500, and protects the budget from a single viral clip. A wallet-backed budget is locked on the platform before launch and is spent only on counted views; the remainder returns to you. Views are read from the site's public counter, and fraud is filtered out (platform data, snapshot 2026-08-23).
 
 A hypothetical example: a clip got 20 000 views at $1.00.
 
 > 20 000 / 1000 × $1.00 = **$20.00**
 
-The threshold is not deducted: clear it and the whole counter is paid. At 150 000 views the formula would give $150.00, but a $100 cap limits the payout. The full maths is on [how to pay clippers per view](/en/for-brands/paying-clippers-per-view) and [what a clipping campaign costs](/en/for-brands/clipping-campaign-cost).
+The threshold is not deducted: clear it and the whole counter is paid. At 150 000 views the formula would give $150.00, but a $100 cap set on the task limits the payout. The full maths is on [how to pay clippers per view](/en/for-brands/paying-clippers-per-view) and [what a clipping campaign costs](/en/for-brands/clipping-campaign-cost).
 
 ## How to launch a task in one evening
 

@@ -66,7 +66,7 @@ Elsewhere in CIS the principle is the same: declare income in local currency at 
 
 DareBay pays for counted views in USDT but is not a tax agent: it withholds no tax and issues no statements in your tax office's format. It keeps the history of credits and withdrawals in your cabinet; no tax status is needed to take a task, so that decision is yours.
 
-Once a submission is approved you can lock in credits with "Claim now"; fresh credits mature for 24 hours. Withdrawal is a separate operation: a request of at least 10 USDT, a withdrawal fee of 10% of the requested amount, a personal rate may apply, and the team handles processing; see [DareBay withdrawals](/en/help/darebay-withdrawals) and [DareBay fees](/en/help/what-commission). Record both the requested and the received amount: the difference is the fee, deductible or not depending on your regime. Telegram Stars are "get it in Stars", not a cash withdrawal; how a tax office treats them is its call.
+Once a submission is approved you can lock in credits with "Claim now"; fresh credits mature for 24 hours. Withdrawal is a separate operation: a request of at least 10 USDT, no withdrawal fee, and the team checks the details and sends it; see [DareBay withdrawals](/en/help/darebay-withdrawals) and [DareBay fees](/en/help/what-commission). Record the requested and the received amount anyway: on DareBay they match, and a tax office may still ask for both. Telegram Stars are "get it in Stars", not a cash withdrawal; how a tax office treats them is its call.
 
 ## A ten-minute monthly ledger
 

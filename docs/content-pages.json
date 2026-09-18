@@ -604,6 +604,13 @@
       }
     },
     {
+      "id": "clipping-platforms-india",
+      "hub": "earnings",
+      "slugs": {
+        "en": "clipping-platforms-that-pay-in-india"
+      }
+    },
+    {
       "id": "how-to-choose-clipping-platform",
       "hub": "earnings",
       "slugs": {

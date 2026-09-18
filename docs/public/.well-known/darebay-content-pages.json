@@ -639,6 +639,20 @@
       }
     },
     {
+      "id": "clipping-platforms-bangladesh-nepal",
+      "hub": "earnings",
+      "slugs": {
+        "en": "clipping-platforms-that-pay-in-bangladesh-and-nepal"
+      }
+    },
+    {
+      "id": "clipping-platforms-indonesia-philippines",
+      "hub": "earnings",
+      "slugs": {
+        "en": "clipping-platforms-that-pay-in-indonesia-and-the-philippines"
+      }
+    },
+    {
       "id": "how-to-choose-clipping-platform",
       "hub": "earnings",
       "slugs": {
@@ -869,6 +883,34 @@
         "ru": "vyro-obzor-platformy",
         "uk": "vyro-ohliad-platformy",
         "en": "vyro-review"
+      }
+    },
+    {
+      "id": "clipgrow-review",
+      "hub": "earnings",
+      "slugs": {
+        "en": "clipgrow-review"
+      }
+    },
+    {
+      "id": "is-wondeed-legit",
+      "hub": "earnings",
+      "slugs": {
+        "en": "is-wondeed-legit"
+      }
+    },
+    {
+      "id": "vues-review",
+      "hub": "earnings",
+      "slugs": {
+        "en": "vues-review"
+      }
+    },
+    {
+      "id": "reach-cat-review",
+      "hub": "earnings",
+      "slugs": {
+        "en": "reach-cat-review"
       }
     },
     {

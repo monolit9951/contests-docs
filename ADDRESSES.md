@@ -3,7 +3,7 @@
 > ⚙️ **Сгенерировано** из `docs/.vitepress/registry.ts`. Руками не править —
 > `node --experimental-strip-types scripts/print-addresses.mjs > ADDRESSES.md`.
 
-Страниц: **79** · адресов: **214** · редиректов со старых адресов: **92**
+Страниц: **85** · адресов: **220** · редиректов со старых адресов: **92**
 
 Страница объявляет только те языки, на которых она действительно существует: той,
 которой нет на языке, в сайтмапе этой локали и в hreflang нет вообще. Русская версия
@@ -37,6 +37,8 @@
 | — *(новая)* | `/en/earnings/clipping-platforms-that-pay-in-nigeria-and-kenya` | `clipping-platforms-nigeria-kenya` |
 | — *(новая)* | `/en/earnings/clipping-platforms-that-pay-without-paypal-or-stripe` | `clipping-platforms-without-paypal` |
 | — *(новая)* | `/en/earnings/clipping-platforms-that-pay-in-egypt-and-arab-countries` | `clipping-platforms-egypt-mena` |
+| — *(новая)* | `/en/earnings/clipping-platforms-that-pay-in-bangladesh-and-nepal` | `clipping-platforms-bangladesh-nepal` |
+| — *(новая)* | `/en/earnings/clipping-platforms-that-pay-in-indonesia-and-the-philippines` | `clipping-platforms-indonesia-philippines` |
 | — *(новая)* | `/zarabotok/kak-vybrat-platformu-dlya-narezok` | `how-to-choose-clipping-platform` |
 | — *(новая)* | `/zarabotok/darebay-ili-klipni` | `darebay-vs-klipni` |
 | — *(новая)* | `/zarabotok/kalkulyator-zarabotka-na-narezkah` | `earnings-calculator` |
@@ -53,6 +55,10 @@
 | — *(новая)* | `/zarabotok/whop-content-rewards-obzor` | `earnings-whop-review` |
 | — *(новая)* | `/zarabotok/analogi-clipping-net` | `earnings-clipping-net-alternatives` |
 | — *(новая)* | `/zarabotok/vyro-obzor-platformy` | `earnings-vyro-review` |
+| — *(новая)* | `/en/earnings/clipgrow-review` | `clipgrow-review` |
+| — *(новая)* | `/en/earnings/is-wondeed-legit` | `is-wondeed-legit` |
+| — *(новая)* | `/en/earnings/vues-review` | `vues-review` |
+| — *(новая)* | `/en/earnings/reach-cat-review` | `reach-cat-review` |
 
 ## Брендам — `/brendam/`
 

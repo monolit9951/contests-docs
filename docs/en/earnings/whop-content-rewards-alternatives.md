@@ -48,6 +48,8 @@ The sanctioned list is not the only filter, either: Whop publishes a separate li
 
 <LPlatforms />
 
+Vues and Reach.cat each have a full review that reads the platform's terms against its landing pages and app: [the Vues review](/en/earnings/vues-review) and [the Reach.cat review](/en/earnings/reach-cat-review).
+
 ## Choose the alternative by your situation
 
 **You are in a country Whop excludes.** DareBay has no exclusion list: it pays worldwide in USDT on TON or Telegram Stars, with no follower requirement and the budget locked on the platform in wallet-backed contests, and its community is largest in Russia, Ukraine and CIS. Prime Oracles serves Russia, Belarus and Kazakhstan in USDT or USDC from $5. Klipni pays in rubles but requires Russian self-employed status. Vyro is not an option: its unsupported list includes Russia, Belarus, Ukraine, Uzbekistan, Armenia, Georgia and Moldova.

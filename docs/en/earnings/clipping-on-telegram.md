@@ -1,6 +1,6 @@
 ---
-title: "Clipping on Telegram: a clip channel, DareBay tasks and Stars"
-description: "Clipping on Telegram pays three ways: a clip channel with a share of ad revenue, DareBay tasks taken inside Telegram and paid per view, and clipping services."
+title: "Clipping on Telegram: clipping jobs, DareBay tasks and Stars"
+description: "Clipping work through Telegram: take a DareBay task with no application, send the link there, get paid in USDT on TON or Stars, and spot fake job channels."
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_cpm_median, ppv_min_views_threshold_live, ppv_max_per_work_typical]
 competitor_sources:
@@ -51,6 +51,33 @@ Open tasks pay from $1 to $2 per 1,000 views. The threshold per clip is set by t
 
 Money leaves the wallet by two routes. A withdrawal request from 10 USDT to a wallet on the TON network: the fee is 10% of the request, deducted inside it, and the team handles processing. Or "get it in Stars": the amount arrives as Telegram Stars, and that is not a cash withdrawal, because under Telegram's terms Stars on a personal balance cannot be sold or transferred. The request procedure is in [DareBay withdrawals](/en/help/darebay-withdrawals).
 
+## Clipping jobs through Telegram: how the work runs end to end
+
+Both doors into DareBay open on one account: the site and Telegram - the app, the bot, the group, as [quick start](/en/help/quick-start) sets out. Whichever you came in through, the catalogue, your submissions and your wallet are the same, so a clipper who lives in the messenger never has to open the site.
+
+What that removes is the application stage. You write to nobody, wait for no approval and send no samples: the card is the offer, and taking it means publishing a clip on the site it names and sending the link back. There is nothing to bargain over either - the buyer fixed the rate, the threshold and the cap when the task was created.
+
+The two payout routes above are not interchangeable, and side by side the difference is easier to see:
+
+| | USDT on the TON network | Telegram Stars |
+|---|---|---|
+| What it is | A transfer to your own external wallet | Virtual items bought and spent inside Telegram <!-- source: https://telegram.org/tos/stars 2026-09-04 --> |
+| What it takes | A request from 10 USDT, 10% deducted inside it, details checked by the team by hand | Choosing Stars instead; the amount arrives on the Telegram balance |
+| What it does for you | Whatever a wallet does | Digital goods, gifts and paid content in Telegram; a personal balance may not be sold, withdrawn or transferred <!-- source: https://telegram.org/tos/stars 2026-09-04 --> |
+
+So the choice is about purpose, not speed: one route ends in your own wallet, the other inside Telegram. Stars receive what you earned; the request is what turns it into money.
+
+## Fake clipping jobs in Telegram: how to tell them apart
+
+A public channel costs nothing to open, so "clipping job" channels are easy to fake. The markers below are general; one alone is enough to walk away.
+
+- **Something is owed by you first.** A fee for "training", a "starter pack", a deposit, an activation payment or a paid verification. Clipping work bills the buyer; none of it asks the clipper to pay to begin.
+- **The terms appear only after you agree.** A brief that will not say what is counted, from what mark and up to what limit is not a brief: a payout nobody described cannot be checked afterwards.
+- **The pay is quoted per hour for engagement.** Hourly money for likes, comments, subscriptions or "watching" describes a click farm; clipping is paid for the reach of a video you published yourself.
+- **They approached you.** An unsolicited message with a rate in it, a "manager" moving the talk to another app, an account with no history behind it.
+
+One rule sits under all four: the terms must be visible before the work, and the payer is the platform or the organizer, never the clipper. The same test for whole platforms is in [clipping scams](/en/about/clipping-scams-red-flags).
+
 ## A clip channel: what it takes to make money
 
 A channel earns not by existing but by holding an audience. Four conditions.
@@ -97,3 +124,11 @@ That is exactly the design. The task and the wallet live in the Telegram version
 ### Can Telegram Stars be exchanged for money?
 
 Not from a personal balance: under Telegram's terms those Stars are spent inside the messenger, not sold. If you need money, choose USDT on the TON network in the wizard and file a request from 10 USDT.
+
+### Can I find clipping jobs on Telegram?
+
+Yes, in two different shapes. DareBay tasks are taken in the Telegram version itself, where the card carries the rate, the threshold and the cap, and the clip is then published on TikTok, Reels, Shorts or Facebook Reels, because a Telegram post has no public counter to read. Offers posted in ordinary channels and chats are the other shape, and there the terms are only as complete as whoever wrote the post decided to make them.
+
+### Is it safe to take clipping work from a Telegram channel?
+
+It depends on the channel, so judge the terms rather than the name. They have to be readable before you work, the payer has to be the organizer or the platform, and nothing should be due from you in advance. A channel wanting money for training, a deposit or a verification is not offering work, and an hourly rate for likes or subscriptions is not clipping; the rest of the markers are listed above.

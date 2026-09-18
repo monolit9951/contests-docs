@@ -1,6 +1,6 @@
 ---
-title: Where to find clipping work - a marketplace for clips
-description: "Where to find clipping work: streamers directly, brands through selection, and the DareBay board with $1–2 per 1,000 views, up to $500 per clip, no application and no followers."
+title: Where to find clipping work and clipping jobs for beginners
+description: "Where clipping jobs are posted: streamers direct, brands through selection, and the DareBay board - $1–2 per 1,000 views, up to $500 per clip, no application."
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_cpm_min, ppv_cpm_median, ppv_cpm_max, ppv_min_views_threshold_live]
 seo: true
@@ -47,6 +47,19 @@ How you get the work matters more than the rate itself: it decides who holds the
 | Is the rate visible in advance | However you agree it, and it can drift in the chat | In the job description, but haggling downwards is normal | The rate, the threshold and the cap stand on the card before you submit; the rate and threshold do not change after launch |
 
 An intermediary has a price of its own. The rules are the same for everyone: you cannot haggle the rate up, and the terms are set by the buyer at contest creation. The calculation is automatic, but paying the money out can be handled by hand, and we promise no deadline for it. In exchange, you never have to prove your own view count or negotiate it after publication.
+
+## Clipping jobs for beginners: where they are actually posted
+
+Openings for clippers are advertised in four places, and each publishes a different amount of the deal up front.
+
+- **Task boards on clipping platforms.** The card is the advert: rate, threshold, cap, deadline and site are printed before you take anything, and nothing needs approving - you submit a clip, not a candidacy.
+- **Posts in Discord, Telegram and X.** Most "clipping jobs for beginners" messages live here, and so do the thinnest terms: a rate in one sentence, the rest agreed in DMs, nothing written down about what is counted.
+- **Freelance marketplaces.** A vacancy shape: you send a proposal, compete on rating and samples, and agree a fee per order rather than per 1000 views.
+- **Agency and studio hiring.** Closest to being employed, and the slowest door for a beginner: selection, a test task, sometimes reporting.
+
+Two filters separate paid work from a sales pitch wearing the word "job". First, which way the money travels: an advert charging for "training", a "starter pack", "verification" or a deposit is selling you something, and clipping work bills the buyer, never the clipper. Second, whether the terms can be read before you work - what is counted, from what mark, and what limits one payment. The longer check is in [clipping scams: nine red flags](/en/about/clipping-scams-red-flags).
+
+A fixed-rate brief is not a vacancy either: no post to be appointed to and no salary, only published terms that anyone may take, with the payout following the reach of one video.
 
 ## Where to get the source footage
 
@@ -104,6 +117,14 @@ The brief describes whose material is wanted. If a brand created the contest and
 ### Do I need an intermediary or an agency to take briefs from abroad?
 
 No. There is no manager between you and the brief: the contest is visible on the board, the terms are open, and work is submitted by link. The only intermediary here is the platform itself, and it stands on the side of the calculation, not on the side of the negotiation.
+
+### Are there clipping jobs for beginners with no followers?
+
+Yes, wherever the pay is tied to the reach of one video instead of the size of a channel. An open brief on the board sets no audience floor: the rate is applied to the views that one clip collects, so a new account and a large one are paid by the same formula. A fresh profile does change how a site hands out impressions in the first weeks, but that is a question of reach, not of admission - what it does to the figure is in [how much you can earn from clips](/en/earnings/how-much-clipping-pays).
+
+### Are clipping jobs remote?
+
+By construction, almost always. The work is editing and publishing, so the source, the terms and the finished video all travel as links, and there is nothing to attend: no office, no shift, no time zone to match, only the deadline printed on the card. A direct arrangement with a streamer or an agency can add calls and reporting on somebody else's schedule, but that is a condition of that particular deal rather than of the craft.
 
 The rest is covered where those questions live:
 

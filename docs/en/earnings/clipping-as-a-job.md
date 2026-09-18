@@ -1,6 +1,6 @@
 ---
-title: Clipping as a job - how to earn from video clips
-description: "Clipping is piecework paid per view: take a brief, cut a clip, publish it and earn $1–2 per 1,000 views, up to $500 per clip, withdrawable from 10 USDT. No followers, no portfolio."
+title: Clipping as a job - what clipping jobs involve and pay
+description: "What clipping jobs involve: piecework paid per view, $1–2 per 1,000 views, up to $500 per clip, withdrawable from 10 USDT. No followers, no portfolio."
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_cpm_min, ppv_cpm_median, ppv_cpm_max, ppv_min_views_threshold_live]
 seo: true
@@ -46,6 +46,17 @@ The result rides on more than the edit:
 - **Luck.** Reach is decided by the site's algorithm, not by the platform and not by the buyer.
 
 Which moments in a broadcast are worth cutting, and what the brief itself allows you to use, is covered separately in [what streamer clips pay](/en/earnings/streamer-clip-rates).
+
+## Is a clipping job a real job?
+
+It is paid work with no employer on the other side of it. You are not hired and not taken on: a brief is published, you deliver a video to it, and the reach of that video is what is paid for. That makes clipping piecework done on your own account, with four consequences worth knowing before you plan around it.
+
+- **No schedule and no manager.** The only date binding you is the deadline on the card. Nobody hands out work or signs off hours, and an evening you skip costs you that evening's jobs and nothing else.
+- **Paid by result, not by time.** Two hours on a clip that flops pay nothing; forty minutes on a clip that travels pay the same rate as anyone else's. An hourly figure exists only afterwards, once a month of payouts is divided by the hours it took.
+- **The overheads are yours.** Your device, your editor, your accounts, and your own tax position, which depends on where you live rather than on the platform - the country picture is in [taxes for clippers](/en/earnings/taxes-for-clippers). There is no sick pay, holiday or notice period on either side.
+- **There is no queue to join.** The other side of having no employer: nothing stands between you and tonight's brief, and nothing stops you keeping several platforms open at once.
+
+So: a real source of income, yes; a job with a contract, a position and a monthly salary, no.
 
 ## Why the income is irregular
 
@@ -121,6 +132,14 @@ Only the time you spent. Taking part is free, there is no entry fee, there are n
 ### Can this become a main income?
 
 Not in the first month. Income adds up from a run of jobs rather than one lucky hit, and it depends on how many live contests are running on your subjects. A sensible strategy is to start alongside your main occupation and build up the number of jobs until you can see your own steady monthly average.
+
+### Do clipping jobs pay hourly or per view?
+
+Per view, in the shape the brief sets: a rate for every 1000 counted views of the video you published, limited by the cap on one submission. Time is not measured anywhere, and nothing is paid for the hours spent watching source or re-cutting an opening. An hourly rate only appears after the fact, if you divide what a month brought by the hours it took.
+
+### Are clipping jobs real jobs or freelance piecework?
+
+Piecework, taken freelance. The work is real and the terms are published before you start, but nobody employs you: there is no contract of employment, no position and no notice on either side, and each brief is a short arrangement that closes once the payout is worked out. Whether a run of them can carry a month is a separate question, and one clip never answers it.
 
 Questions that have a home of their own in this section:
 

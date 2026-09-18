@@ -3906,6 +3906,1112 @@
           "No operator or legal entity anywhere on the site"
         ]
       }
+    },
+    {
+      "id": "ternak-klip",
+      "name": "Ternak Klip",
+      "url": "https://ternakklip.com/home",
+      "kind": "pay-per-view clipping marketplace (Indonesia)",
+      "founded": "not published",
+      "operator": "PT Media Klip Nusantara (site footer, which also states registration with Indonesia's Ministry of Communication and Digital Affairs)",
+      "bestFor": {
+        "en": "Indonesian clippers who want rupiah campaigns from local brands, film studios and podcasts with no follower minimum"
+      },
+      "summary": {
+        "en": "An Indonesian clipping marketplace: brands, film studios and podcasters post campaigns with a rupiah rate per 1,000 views, and clippers post from linked TikTok, Instagram, YouTube or X accounts. The public list on 2026-09-18 showed clipping rates of Rp1,000 to Rp5,000 per 1,000 views. Its FAQ says the platform keeps 20% of creator payouts and pays every seven days after a submission is verified."
+      },
+      "calc": {
+        "rateMin": null,
+        "rateMax": null,
+        "cap": null,
+        "threshold": null,
+        "fee": 20,
+        "minPayout": null
+      },
+      "fields": {
+        "rate": {
+          "text": {
+            "en": "Rp1,000–Rp5,000 per 1,000 views on the clipping campaigns listed on 2026-09-18, Rp2,000–Rp3,000 on most; a long-form YouTube UGC campaign lists Rp15,000"
+          },
+          "source": {
+            "url": "https://ternakklip.com/explore",
+            "date": "2026-09-18"
+          }
+        },
+        "threshold": {
+          "text": {
+            "en": "set per campaign: \"Minimum payout ditetapkan oleh masing-masing campaign\" (each campaign sets the smallest amount a clip must earn before it is paid)"
+          },
+          "source": {
+            "url": "https://ternakklip.com/home",
+            "date": "2026-09-18"
+          }
+        },
+        "cap": {
+          "text": {
+            "en": "each campaign sets a maximum claim per post; once a clip reaches it, earnings stop even if views keep growing"
+          },
+          "source": {
+            "url": "https://ternakklip.com/home",
+            "date": "2026-09-18"
+          }
+        },
+        "fee": {
+          "text": {
+            "en": "20% of creator payouts: \"Ternak Klip mengambil biaya 20% dari semua creator payouts\"; the brand-side FAQ separately says 20% of the campaign budget goes to platform and operating costs"
+          },
+          "value": 20,
+          "source": {
+            "url": "https://ternakklip.com/home",
+            "date": "2026-09-18"
+          }
+        },
+        "minPayout": {
+          "text": {
+            "en": "not published; the FAQ says a clip is paid only once it reaches the campaign's minimum and seven days have passed since submission"
+          },
+          "source": {
+            "url": "https://ternakklip.com/home",
+            "date": "2026-09-18"
+          }
+        },
+        "payoutMethods": {
+          "text": {
+            "en": "a transfer to your bank account (\"langsung ke rekeningmu\") after verification, every seven days for each submission that earned; no other method is named"
+          },
+          "source": {
+            "url": "https://ternakklip.com/home",
+            "date": "2026-09-18"
+          }
+        },
+        "cis": {
+          "text": {
+            "en": "partial: its FAQ says where you live does not matter for joining a campaign (\"Apakah lokasi tempat tinggal saya berpengaruh? Tidak.\"), but the only payout it shows is a transfer to your bank account (\"rekening\") and no non-Indonesian payout method is published"
+          },
+          "state": "partial",
+          "source": {
+            "url": "https://ternakklip.com/home",
+            "date": "2026-09-18"
+          }
+        },
+        "followers": {
+          "text": {
+            "en": "no minimum: \"Anda tidak memerlukan followers atau pengalaman sebelumnya\""
+          },
+          "state": "no",
+          "source": {
+            "url": "https://ternakklip.com/home",
+            "date": "2026-09-18"
+          }
+        },
+        "escrow": {
+          "text": {
+            "en": "not published: the page promises \"Proteksi Pembayaran\" but does not say whether a campaign budget is funded before launch"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://ternakklip.com/home",
+            "date": "2026-09-18"
+          }
+        },
+        "networks": {
+          "text": {
+            "en": "TikTok, Instagram, YouTube or X, as each campaign allows; submissions must come from public accounts"
+          },
+          "source": {
+            "url": "https://ternakklip.com/home",
+            "date": "2026-09-18"
+          }
+        },
+        "verification": {
+          "text": {
+            "en": "social accounts are linked so the system can verify videos; each submission is reviewed by the campaign admin, and bot views lead to rejection and a ban"
+          },
+          "source": {
+            "url": "https://ternakklip.com/home",
+            "date": "2026-09-18"
+          }
+        },
+        "india": {
+          "text": {
+            "en": "partial: its FAQ says where you live does not matter for joining a campaign (\"Apakah lokasi tempat tinggal saya berpengaruh? Tidak.\"), but the only payout it shows is a transfer to your bank account (\"rekening\") and no non-Indonesian payout method is published"
+          },
+          "state": "partial",
+          "source": {
+            "url": "https://ternakklip.com/home",
+            "date": "2026-09-18"
+          }
+        },
+        "pakistan": {
+          "text": {
+            "en": "partial: its FAQ says where you live does not matter for joining a campaign (\"Apakah lokasi tempat tinggal saya berpengaruh? Tidak.\"), but the only payout it shows is a transfer to your bank account (\"rekening\") and no non-Indonesian payout method is published"
+          },
+          "state": "partial",
+          "source": {
+            "url": "https://ternakklip.com/home",
+            "date": "2026-09-18"
+          }
+        },
+        "bangladesh": {
+          "text": {
+            "en": "partial: its FAQ says where you live does not matter for joining a campaign (\"Apakah lokasi tempat tinggal saya berpengaruh? Tidak.\"), but the only payout it shows is a transfer to your bank account (\"rekening\") and no non-Indonesian payout method is published"
+          },
+          "state": "partial",
+          "source": {
+            "url": "https://ternakklip.com/home",
+            "date": "2026-09-18"
+          }
+        },
+        "nigeria": {
+          "text": {
+            "en": "partial: its FAQ says where you live does not matter for joining a campaign (\"Apakah lokasi tempat tinggal saya berpengaruh? Tidak.\"), but the only payout it shows is a transfer to your bank account (\"rekening\") and no non-Indonesian payout method is published"
+          },
+          "state": "partial",
+          "source": {
+            "url": "https://ternakklip.com/home",
+            "date": "2026-09-18"
+          }
+        },
+        "kenya": {
+          "text": {
+            "en": "partial: its FAQ says where you live does not matter for joining a campaign (\"Apakah lokasi tempat tinggal saya berpengaruh? Tidak.\"), but the only payout it shows is a transfer to your bank account (\"rekening\") and no non-Indonesian payout method is published"
+          },
+          "state": "partial",
+          "source": {
+            "url": "https://ternakklip.com/home",
+            "date": "2026-09-18"
+          }
+        },
+        "mena": {
+          "text": {
+            "en": "partial: its FAQ says where you live does not matter for joining a campaign (\"Apakah lokasi tempat tinggal saya berpengaruh? Tidak.\"), but the only payout it shows is a transfer to your bank account (\"rekening\") and no non-Indonesian payout method is published"
+          },
+          "state": "partial",
+          "source": {
+            "url": "https://ternakklip.com/home",
+            "date": "2026-09-18"
+          }
+        },
+        "indonesia": {
+          "text": {
+            "en": "yes: an Indonesian marketplace with rupiah campaigns, operated by PT Media Klip Nusantara"
+          },
+          "state": "yes",
+          "source": {
+            "url": "https://ternakklip.com/home",
+            "date": "2026-09-18"
+          }
+        },
+        "philippines": {
+          "text": {
+            "en": "partial: its FAQ says where you live does not matter for joining a campaign (\"Apakah lokasi tempat tinggal saya berpengaruh? Tidak.\"), but the only payout it shows is a transfer to your bank account (\"rekening\") and no non-Indonesian payout method is published"
+          },
+          "state": "partial",
+          "source": {
+            "url": "https://ternakklip.com/home",
+            "date": "2026-09-18"
+          }
+        }
+      },
+      "pros": {
+        "en": [
+          "The campaign list is public and shows the rupiah rate per 1,000 views and the budget left",
+          "No follower or experience requirement, and the FAQ says location does not matter for joining",
+          "A weekly payout cycle is stated in the FAQ"
+        ]
+      },
+      "cons": {
+        "en": [
+          "Keeps 20% of creator payouts",
+          "No payout method other than \"your bank account\" is published, and the terms of service contain no payout clauses",
+          "The FAQ answers are in Indonesian only and appear only when clicked"
+        ]
+      }
+    },
+    {
+      "id": "clippo",
+      "name": "Clippo",
+      "url": "https://clippo.id/",
+      "kind": "pay-per-view clipping marketplace (Indonesia)",
+      "founded": "not published",
+      "operator": "PT Clippo Media Digital, South Jakarta (NIB 0207260037825, with a private-scope electronic system operator registration)",
+      "bestFor": {
+        "en": "Indonesian clippers who want no platform fee, income tax handled at withdrawal and payouts to a local bank or e-wallet"
+      },
+      "summary": {
+        "en": "An Indonesian clipping marketplace for TikTok and Instagram Reels. Each campaign sets a rupiah rate per 1,000 views and may cap paid views per clip; the 24 campaigns listed on 2026-09-18 paid Rp500 to Rp7,000. A clip needs 1,000 views to be submitted, withdrawals start at Rp100,000 after a KTP identity check, and instead of a platform fee Clippo withholds Indonesian income tax when you withdraw."
+      },
+      "calc": {
+        "rateMin": null,
+        "rateMax": null,
+        "cap": null,
+        "threshold": 1000,
+        "fee": 0,
+        "minPayout": null
+      },
+      "fields": {
+        "rate": {
+          "text": {
+            "en": "Rp500–Rp7,000 per 1,000 views across the 24 campaigns listed on 2026-09-18, Rp2,000–Rp5,000 on most; the rate may differ by platform within one campaign"
+          },
+          "source": {
+            "url": "https://app.clippo.id/campaigns",
+            "date": "2026-09-18"
+          }
+        },
+        "threshold": {
+          "text": {
+            "en": "1,000 views per clip before it can be submitted; reviewers also look for a like rate of at least 0.5%, organic views and at least 10 followers"
+          },
+          "value": 1000,
+          "source": {
+            "url": "https://app.clippo.id/terms-and-conditions",
+            "date": "2026-09-18"
+          }
+        },
+        "cap": {
+          "text": {
+            "en": "a campaign may set a maximum number of paid views per clip; if it states none, there is no cap"
+          },
+          "source": {
+            "url": "https://app.clippo.id/terms-and-conditions",
+            "date": "2026-09-18"
+          }
+        },
+        "fee": {
+          "text": {
+            "en": "0% platform fee on earnings and on withdrawals, and Clippo covers the bank or e-wallet transfer charge; income tax (PPh 21) is withheld at withdrawal for individuals and is not a platform fee"
+          },
+          "value": 0,
+          "source": {
+            "url": "https://app.clippo.id/terms-and-conditions",
+            "date": "2026-09-18"
+          }
+        },
+        "minPayout": {
+          "text": {
+            "en": "Rp100,000 per withdrawal, only after the KTP identity check; up to Rp5,000,000 a day"
+          },
+          "source": {
+            "url": "https://app.clippo.id/terms-and-conditions",
+            "date": "2026-09-18"
+          }
+        },
+        "payoutMethods": {
+          "text": {
+            "en": "Indonesian bank account or e-wallet only, in rupiah: \"Rekening luar negeri, e-wallet luar negeri, dan cryptocurrency tidak didukung saat ini\"; the target is up to six working days, although the home page says \"Withdraw Instan\""
+          },
+          "source": {
+            "url": "https://app.clippo.id/terms-and-conditions",
+            "date": "2026-09-18"
+          }
+        },
+        "cis": {
+          "text": {
+            "en": "no: the terms say the platform is intended for users in Indonesia and pays only to Indonesian bank accounts or e-wallets (\"Platform ditujukan untuk pengguna di Indonesia\")"
+          },
+          "state": "no",
+          "source": {
+            "url": "https://app.clippo.id/terms-and-conditions",
+            "date": "2026-09-18"
+          }
+        },
+        "followers": {
+          "text": {
+            "en": "10 followers and a 0.5% like rate are among the review criteria"
+          },
+          "state": "yes",
+          "source": {
+            "url": "https://app.clippo.id/terms-and-conditions",
+            "date": "2026-09-18"
+          }
+        },
+        "escrow": {
+          "text": {
+            "en": "yes: the brand's campaign budget must be fully funded before the campaign is shown to clippers (terms, section 17.6)"
+          },
+          "state": "yes",
+          "source": {
+            "url": "https://app.clippo.id/terms-and-conditions",
+            "date": "2026-09-18"
+          }
+        },
+        "networks": {
+          "text": {
+            "en": "TikTok and Instagram Reels under the terms; the live list on 2026-09-18 also shows one Facebook-only campaign"
+          },
+          "source": {
+            "url": "https://app.clippo.id/terms-and-conditions",
+            "date": "2026-09-18"
+          }
+        },
+        "verification": {
+          "text": {
+            "en": "accounts are verified by a six-digit code in the bio; clips are validated over five working days, and earnings can be clawed back for deleted videos or fraud"
+          },
+          "source": {
+            "url": "https://app.clippo.id/terms-and-conditions",
+            "date": "2026-09-18"
+          }
+        },
+        "india": {
+          "text": {
+            "en": "no: the terms say the platform is intended for users in Indonesia and pays only to Indonesian bank accounts or e-wallets (\"Platform ditujukan untuk pengguna di Indonesia\")"
+          },
+          "state": "no",
+          "source": {
+            "url": "https://app.clippo.id/terms-and-conditions",
+            "date": "2026-09-18"
+          }
+        },
+        "pakistan": {
+          "text": {
+            "en": "no: the terms say the platform is intended for users in Indonesia and pays only to Indonesian bank accounts or e-wallets (\"Platform ditujukan untuk pengguna di Indonesia\")"
+          },
+          "state": "no",
+          "source": {
+            "url": "https://app.clippo.id/terms-and-conditions",
+            "date": "2026-09-18"
+          }
+        },
+        "bangladesh": {
+          "text": {
+            "en": "no: the terms say the platform is intended for users in Indonesia and pays only to Indonesian bank accounts or e-wallets (\"Platform ditujukan untuk pengguna di Indonesia\")"
+          },
+          "state": "no",
+          "source": {
+            "url": "https://app.clippo.id/terms-and-conditions",
+            "date": "2026-09-18"
+          }
+        },
+        "nigeria": {
+          "text": {
+            "en": "no: the terms say the platform is intended for users in Indonesia and pays only to Indonesian bank accounts or e-wallets (\"Platform ditujukan untuk pengguna di Indonesia\")"
+          },
+          "state": "no",
+          "source": {
+            "url": "https://app.clippo.id/terms-and-conditions",
+            "date": "2026-09-18"
+          }
+        },
+        "kenya": {
+          "text": {
+            "en": "no: the terms say the platform is intended for users in Indonesia and pays only to Indonesian bank accounts or e-wallets (\"Platform ditujukan untuk pengguna di Indonesia\")"
+          },
+          "state": "no",
+          "source": {
+            "url": "https://app.clippo.id/terms-and-conditions",
+            "date": "2026-09-18"
+          }
+        },
+        "mena": {
+          "text": {
+            "en": "no: the terms say the platform is intended for users in Indonesia and pays only to Indonesian bank accounts or e-wallets (\"Platform ditujukan untuk pengguna di Indonesia\")"
+          },
+          "state": "no",
+          "source": {
+            "url": "https://app.clippo.id/terms-and-conditions",
+            "date": "2026-09-18"
+          }
+        },
+        "indonesia": {
+          "text": {
+            "en": "yes: built for users in Indonesia, pays in rupiah to an Indonesian bank account or e-wallet"
+          },
+          "state": "yes",
+          "source": {
+            "url": "https://app.clippo.id/terms-and-conditions",
+            "date": "2026-09-18"
+          }
+        },
+        "philippines": {
+          "text": {
+            "en": "no: the terms say the platform is intended for users in Indonesia and pays only to Indonesian bank accounts or e-wallets (\"Platform ditujukan untuk pengguna di Indonesia\")"
+          },
+          "state": "no",
+          "source": {
+            "url": "https://app.clippo.id/terms-and-conditions",
+            "date": "2026-09-18"
+          }
+        }
+      },
+      "pros": {
+        "en": [
+          "Numbered, dated terms that spell out fees, limits, review times and clawbacks",
+          "0% platform fee, with transfer charges paid by the platform",
+          "Campaign budgets must be fully funded before clippers see the campaign"
+        ]
+      },
+      "cons": {
+        "en": [
+          "Indonesian users only; foreign accounts, foreign e-wallets and crypto are not supported",
+          "KTP identity check with a live selfie before the first withdrawal",
+          "The home page promises instant withdrawals, while the terms target up to six working days"
+        ]
+      }
+    },
+    {
+      "id": "trybuzzer",
+      "name": "TryBuzzer",
+      "url": "https://www.trybuzzer.com/en",
+      "kind": "pay-per-view clipping and creator marketplace (Indonesia)",
+      "founded": "not published",
+      "operator": "PT Beruang Teknologi Group (terms); office address in Tangerang, Banten",
+      "bestFor": {
+        "en": "Indonesian clippers who want payouts to GoPay, OVO, DANA or ShopeePay and a mobile app"
+      },
+      "summary": {
+        "en": "An Indonesian CPM clipping platform for TikTok and Instagram Reels, with an Android and iOS app. Its payment page quotes campaign rates of Rp500 to Rp50,000 per 1,000 verified views and a typical payout threshold of 10,000 to 50,000 views. Earnings are credited in full; each withdrawal loses 20% for platform fee and tax plus a Rp2,500 or Rp5,000 transfer charge, from a usual minimum of Rp50,000."
+      },
+      "calc": {
+        "rateMin": null,
+        "rateMax": null,
+        "cap": null,
+        "threshold": null,
+        "fee": 20,
+        "minPayout": null
+      },
+      "fields": {
+        "rate": {
+          "text": {
+            "en": "\"Rp 500 sampai Rp 50.000 per 1.000 views\" by campaign; some campaigns pay fixed amounts per view tier instead"
+          },
+          "source": {
+            "url": "https://www.trybuzzer.com/cara-bayar",
+            "date": "2026-09-18"
+          }
+        },
+        "threshold": {
+          "text": {
+            "en": "set per campaign, \"biasanya antara 10.000 sampai 50.000 verified views\""
+          },
+          "source": {
+            "url": "https://www.trybuzzer.com/cara-bayar",
+            "date": "2026-09-18"
+          }
+        },
+        "cap": {
+          "text": {
+            "en": "some campaigns cap paid views, for example at 1 million; the cap, if any, is in the brief"
+          },
+          "source": {
+            "url": "https://www.trybuzzer.com/cara-bayar",
+            "date": "2026-09-18"
+          }
+        },
+        "fee": {
+          "text": {
+            "en": "nothing when earnings are credited; 20% (platform fee plus tax) of every withdrawal, plus Rp2,500 to an e-wallet or Rp5,000 to a bank: a Rp100,000 withdrawal to DANA arrives as Rp77,500"
+          },
+          "value": 20,
+          "source": {
+            "url": "https://www.trybuzzer.com/cara-bayar",
+            "date": "2026-09-18"
+          }
+        },
+        "minPayout": {
+          "text": {
+            "en": "\"biasanya Rp 50.000\" (usually Rp50,000)"
+          },
+          "source": {
+            "url": "https://www.trybuzzer.com/cara-bayar",
+            "date": "2026-09-18"
+          }
+        },
+        "payoutMethods": {
+          "text": {
+            "en": "GoPay, OVO, DANA, ShopeePay or an Indonesian bank (BCA, BRI, Mandiri, BNI, CIMB and others); usually 1–3 working days"
+          },
+          "source": {
+            "url": "https://www.trybuzzer.com/cara-bayar",
+            "date": "2026-09-18"
+          }
+        },
+        "cis": {
+          "text": {
+            "en": "no in practice: the English home page says \"Get paid to make content, from anywhere\", but every payout method it names is an Indonesian e-wallet or bank, and its FAQ says the platform is for \"Semua content creator Indonesia\""
+          },
+          "state": "no",
+          "source": {
+            "url": "https://www.trybuzzer.com/cara-bayar",
+            "date": "2026-09-18"
+          }
+        },
+        "followers": {
+          "text": {
+            "en": "no platform-wide minimum: \"Kamu bisa mulai dari followers kecil bahkan baru\"; each campaign can set its own requirement"
+          },
+          "state": "no",
+          "source": {
+            "url": "https://www.trybuzzer.com/faq",
+            "date": "2026-09-18"
+          }
+        },
+        "escrow": {
+          "text": {
+            "en": "not published"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://www.trybuzzer.com/cara-bayar",
+            "date": "2026-09-18"
+          }
+        },
+        "networks": {
+          "text": {
+            "en": "TikTok and Instagram Reels; the FAQ says YouTube Shorts support is being prepared and is not active"
+          },
+          "source": {
+            "url": "https://www.trybuzzer.com/faq",
+            "date": "2026-09-18"
+          }
+        },
+        "verification": {
+          "text": {
+            "en": "view counts pulled from the platforms' official data, a screen recording of the video analytics, and a human reviewer on every submission"
+          },
+          "source": {
+            "url": "https://www.trybuzzer.com/faq",
+            "date": "2026-09-18"
+          }
+        },
+        "india": {
+          "text": {
+            "en": "no in practice: the English home page says \"Get paid to make content, from anywhere\", but every payout method it names is an Indonesian e-wallet or bank, and its FAQ says the platform is for \"Semua content creator Indonesia\""
+          },
+          "state": "no",
+          "source": {
+            "url": "https://www.trybuzzer.com/cara-bayar",
+            "date": "2026-09-18"
+          }
+        },
+        "pakistan": {
+          "text": {
+            "en": "no in practice: the English home page says \"Get paid to make content, from anywhere\", but every payout method it names is an Indonesian e-wallet or bank, and its FAQ says the platform is for \"Semua content creator Indonesia\""
+          },
+          "state": "no",
+          "source": {
+            "url": "https://www.trybuzzer.com/cara-bayar",
+            "date": "2026-09-18"
+          }
+        },
+        "bangladesh": {
+          "text": {
+            "en": "no in practice: the English home page says \"Get paid to make content, from anywhere\", but every payout method it names is an Indonesian e-wallet or bank, and its FAQ says the platform is for \"Semua content creator Indonesia\""
+          },
+          "state": "no",
+          "source": {
+            "url": "https://www.trybuzzer.com/cara-bayar",
+            "date": "2026-09-18"
+          }
+        },
+        "nigeria": {
+          "text": {
+            "en": "no in practice: the English home page says \"Get paid to make content, from anywhere\", but every payout method it names is an Indonesian e-wallet or bank, and its FAQ says the platform is for \"Semua content creator Indonesia\""
+          },
+          "state": "no",
+          "source": {
+            "url": "https://www.trybuzzer.com/cara-bayar",
+            "date": "2026-09-18"
+          }
+        },
+        "kenya": {
+          "text": {
+            "en": "no in practice: the English home page says \"Get paid to make content, from anywhere\", but every payout method it names is an Indonesian e-wallet or bank, and its FAQ says the platform is for \"Semua content creator Indonesia\""
+          },
+          "state": "no",
+          "source": {
+            "url": "https://www.trybuzzer.com/cara-bayar",
+            "date": "2026-09-18"
+          }
+        },
+        "mena": {
+          "text": {
+            "en": "no in practice: the English home page says \"Get paid to make content, from anywhere\", but every payout method it names is an Indonesian e-wallet or bank, and its FAQ says the platform is for \"Semua content creator Indonesia\""
+          },
+          "state": "no",
+          "source": {
+            "url": "https://www.trybuzzer.com/cara-bayar",
+            "date": "2026-09-18"
+          }
+        },
+        "indonesia": {
+          "text": {
+            "en": "yes: \"The CPM platform for Indonesian short-form creators\", paying to Indonesian e-wallets and banks"
+          },
+          "state": "yes",
+          "source": {
+            "url": "https://www.trybuzzer.com/en",
+            "date": "2026-09-18"
+          }
+        },
+        "philippines": {
+          "text": {
+            "en": "no in practice: the English home page says \"Get paid to make content, from anywhere\", but every payout method it names is an Indonesian e-wallet or bank, and its FAQ says the platform is for \"Semua content creator Indonesia\""
+          },
+          "state": "no",
+          "source": {
+            "url": "https://www.trybuzzer.com/cara-bayar",
+            "date": "2026-09-18"
+          }
+        }
+      },
+      "pros": {
+        "en": [
+          "Worked payout example on its own page: Rp100,000 to DANA arrives as Rp77,500",
+          "Pays to the four big Indonesian e-wallets and to major banks",
+          "Per-platform rates and tiered campaigns are explained before you submit"
+        ]
+      },
+      "cons": {
+        "en": [
+          "20% of every withdrawal goes to platform fee and tax, plus a transfer charge",
+          "Payout thresholds of 10,000–50,000 views are high for a new account",
+          "Campaigns are visible only after login, so rates cannot be checked in advance"
+        ]
+      }
+    },
+    {
+      "id": "konten-com",
+      "name": "Konten.com",
+      "url": "https://konten.com/",
+      "kind": "pay-per-view clipping marketplace (Indonesia)",
+      "founded": "not published",
+      "operator": "PT Konten Kreasi Media (site footer and terms, which state registration as a private-scope electronic system operator)",
+      "bestFor": {
+        "en": "Indonesian clippers who want a public campaign list and a ranking system with bonuses for regular clippers"
+      },
+      "summary": {
+        "en": "An Indonesian clipping marketplace for TikTok, Instagram Reels and YouTube Shorts. The public campaign list on 2026-09-18 showed clipping rates of Rp1,500 to Rp7,000 per 1,000 views. Since July 2026 it keeps 20% of gross earnings and charges Rp10,000 per withdrawal, with a Rp50,000 minimum, rupiah-only payouts to Indonesian banks or verified e-wallets, and no KTP check."
+      },
+      "calc": {
+        "rateMin": null,
+        "rateMax": null,
+        "cap": null,
+        "threshold": null,
+        "fee": 20,
+        "minPayout": null
+      },
+      "fields": {
+        "rate": {
+          "text": {
+            "en": "Rp1,500–Rp7,000 per 1,000 views on the clipping campaigns shown on 2026-09-18; a UGC campaign shows Rp20,000"
+          },
+          "source": {
+            "url": "https://konten.com/campaigns",
+            "date": "2026-09-18"
+          }
+        },
+        "threshold": {
+          "text": {
+            "en": "set per campaign; a video starts earning at a reduced rate from an early-earnings threshold before it reaches the brand's minimum, and payouts are counted in units of 1,000 new views"
+          },
+          "source": {
+            "url": "https://konten.com/terms",
+            "date": "2026-09-18"
+          }
+        },
+        "cap": {
+          "text": {
+            "en": "not published in the creator terms"
+          },
+          "source": {
+            "url": "https://konten.com/terms",
+            "date": "2026-09-18"
+          }
+        },
+        "fee": {
+          "text": {
+            "en": "20% of gross earnings (\"biaya platform sebesar 20%\") plus Rp10,000 per withdrawal, both since 1 July 2026"
+          },
+          "value": 20,
+          "source": {
+            "url": "https://konten.com/terms",
+            "date": "2026-09-18"
+          }
+        },
+        "minPayout": {
+          "text": {
+            "en": "Rp50,000 per withdrawal; up to Rp10,000,000 a day and Rp50,000,000 a calendar month"
+          },
+          "source": {
+            "url": "https://konten.com/terms",
+            "date": "2026-09-18"
+          }
+        },
+        "payoutMethods": {
+          "text": {
+            "en": "Indonesian bank account or a verified (premium) e-wallet such as GoPay, OVO, DANA or ShopeePay, in rupiah only; foreign accounts, foreign e-wallets and crypto are not supported"
+          },
+          "source": {
+            "url": "https://konten.com/terms",
+            "date": "2026-09-18"
+          }
+        },
+        "cis": {
+          "text": {
+            "en": "no: the terms say the platform is intended for users in Indonesia and pays only to Indonesian bank accounts or e-wallets in rupiah (\"Ditujukan untuk pengguna di Indonesia\")"
+          },
+          "state": "no",
+          "source": {
+            "url": "https://konten.com/terms",
+            "date": "2026-09-18"
+          }
+        },
+        "followers": {
+          "text": {
+            "en": "not published in the creator terms"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://konten.com/terms",
+            "date": "2026-09-18"
+          }
+        },
+        "escrow": {
+          "text": {
+            "en": "not published in the creator terms"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://konten.com/terms",
+            "date": "2026-09-18"
+          }
+        },
+        "networks": {
+          "text": {
+            "en": "TikTok, Instagram Reels and YouTube Shorts"
+          },
+          "source": {
+            "url": "https://konten.com/terms",
+            "date": "2026-09-18"
+          }
+        },
+        "verification": {
+          "text": {
+            "en": "accounts are verified by a six-digit bio or channel code; the platform's own view count is final, and earnings wait five calendar days before they can be withdrawn"
+          },
+          "source": {
+            "url": "https://konten.com/terms",
+            "date": "2026-09-18"
+          }
+        },
+        "india": {
+          "text": {
+            "en": "no: the terms say the platform is intended for users in Indonesia and pays only to Indonesian bank accounts or e-wallets in rupiah (\"Ditujukan untuk pengguna di Indonesia\")"
+          },
+          "state": "no",
+          "source": {
+            "url": "https://konten.com/terms",
+            "date": "2026-09-18"
+          }
+        },
+        "pakistan": {
+          "text": {
+            "en": "no: the terms say the platform is intended for users in Indonesia and pays only to Indonesian bank accounts or e-wallets in rupiah (\"Ditujukan untuk pengguna di Indonesia\")"
+          },
+          "state": "no",
+          "source": {
+            "url": "https://konten.com/terms",
+            "date": "2026-09-18"
+          }
+        },
+        "bangladesh": {
+          "text": {
+            "en": "no: the terms say the platform is intended for users in Indonesia and pays only to Indonesian bank accounts or e-wallets in rupiah (\"Ditujukan untuk pengguna di Indonesia\")"
+          },
+          "state": "no",
+          "source": {
+            "url": "https://konten.com/terms",
+            "date": "2026-09-18"
+          }
+        },
+        "nigeria": {
+          "text": {
+            "en": "no: the terms say the platform is intended for users in Indonesia and pays only to Indonesian bank accounts or e-wallets in rupiah (\"Ditujukan untuk pengguna di Indonesia\")"
+          },
+          "state": "no",
+          "source": {
+            "url": "https://konten.com/terms",
+            "date": "2026-09-18"
+          }
+        },
+        "kenya": {
+          "text": {
+            "en": "no: the terms say the platform is intended for users in Indonesia and pays only to Indonesian bank accounts or e-wallets in rupiah (\"Ditujukan untuk pengguna di Indonesia\")"
+          },
+          "state": "no",
+          "source": {
+            "url": "https://konten.com/terms",
+            "date": "2026-09-18"
+          }
+        },
+        "mena": {
+          "text": {
+            "en": "no: the terms say the platform is intended for users in Indonesia and pays only to Indonesian bank accounts or e-wallets in rupiah (\"Ditujukan untuk pengguna di Indonesia\")"
+          },
+          "state": "no",
+          "source": {
+            "url": "https://konten.com/terms",
+            "date": "2026-09-18"
+          }
+        },
+        "indonesia": {
+          "text": {
+            "en": "yes: a clipping marketplace for Indonesia, paying in rupiah to Indonesian banks and e-wallets"
+          },
+          "state": "yes",
+          "source": {
+            "url": "https://konten.com/terms",
+            "date": "2026-09-18"
+          }
+        },
+        "philippines": {
+          "text": {
+            "en": "no: the terms say the platform is intended for users in Indonesia and pays only to Indonesian bank accounts or e-wallets in rupiah (\"Ditujukan untuk pengguna di Indonesia\")"
+          },
+          "state": "no",
+          "source": {
+            "url": "https://konten.com/terms",
+            "date": "2026-09-18"
+          }
+        }
+      },
+      "pros": {
+        "en": [
+          "Public campaign list with rates and remaining budget",
+          "Dated terms with the fee, limits and waiting period stated plainly",
+          "No KTP identity check at present, only email and phone verification"
+        ]
+      },
+      "cons": {
+        "en": [
+          "20% of gross earnings plus Rp10,000 on every withdrawal",
+          "Indonesia only; foreign accounts, foreign e-wallets and crypto are not supported",
+          "Tax is not withheld: the terms leave all income tax reporting to the clipper"
+        ]
+      }
+    },
+    {
+      "id": "ayoklip",
+      "name": "AyoKlip",
+      "url": "https://ayoklip.com/",
+      "kind": "pay-per-view clipping marketplace (Indonesia)",
+      "founded": "not published",
+      "operator": "PT Setiawan Solusi Digital (site footer)",
+      "bestFor": {
+        "en": "Indonesian clippers who want a low 5% fee and small withdrawals from Rp50,000"
+      },
+      "summary": {
+        "en": "A small Indonesian clipping marketplace (530+ active clippers by its own count) for TikTok, Instagram and YouTube. Brands deposit into escrow and set a rate per view; clippers keep 95% of each approved payment and withdraw from Rp50,000 to an Indonesian bank or e-wallet. Views are verified manually against screenshots, and a KTP check applies to larger withdrawals."
+      },
+      "calc": {
+        "rateMin": null,
+        "rateMax": null,
+        "cap": null,
+        "threshold": null,
+        "fee": 5,
+        "minPayout": null
+      },
+      "fields": {
+        "rate": {
+          "text": {
+            "en": "set by the brand; the brand calculator starts at Rp1 per view, which is Rp1,000 per 1,000 views; live campaigns are behind a login"
+          },
+          "source": {
+            "url": "https://ayoklip.com/",
+            "date": "2026-09-18"
+          }
+        },
+        "threshold": {
+          "text": {
+            "en": "not published"
+          },
+          "source": {
+            "url": "https://ayoklip.com/cara-kerja",
+            "date": "2026-09-18"
+          }
+        },
+        "cap": {
+          "text": {
+            "en": "not published"
+          },
+          "source": {
+            "url": "https://ayoklip.com/cara-kerja",
+            "date": "2026-09-18"
+          }
+        },
+        "fee": {
+          "text": {
+            "en": "5% of each approved payment for clippers; transfers to banks other than BCA and Mandiri cost Rp2,500"
+          },
+          "value": 5,
+          "source": {
+            "url": "https://ayoklip.com/cara-kerja",
+            "date": "2026-09-18"
+          }
+        },
+        "minPayout": {
+          "text": {
+            "en": "Rp50,000; withdrawals of Rp1,000,000 or more need a WhatsApp OTP, and new accounts start with a Rp50,000-per-transaction, Rp200,000-per-day limit"
+          },
+          "source": {
+            "url": "https://ayoklip.com/cara-kerja",
+            "date": "2026-09-18"
+          }
+        },
+        "payoutMethods": {
+          "text": {
+            "en": "Indonesian bank account or local e-wallet; transferred within one working day after verification"
+          },
+          "source": {
+            "url": "https://ayoklip.com/cara-kerja",
+            "date": "2026-09-18"
+          }
+        },
+        "cis": {
+          "text": {
+            "en": "no: its FAQ says \"Saat ini fokus ke Indonesia. Pembayaran via rekening bank Indonesia + e-wallet lokal\", with international expansion only planned"
+          },
+          "state": "no",
+          "source": {
+            "url": "https://ayoklip.com/cara-kerja",
+            "date": "2026-09-18"
+          }
+        },
+        "followers": {
+          "text": {
+            "en": "no minimum: \"Nggak ada minimum followers\""
+          },
+          "state": "no",
+          "source": {
+            "url": "https://ayoklip.com/cara-kerja",
+            "date": "2026-09-18"
+          }
+        },
+        "escrow": {
+          "text": {
+            "en": "yes, as stated by the platform: \"Dana brand ditahan di escrow sampai job selesai\""
+          },
+          "state": "yes",
+          "source": {
+            "url": "https://ayoklip.com/",
+            "date": "2026-09-18"
+          }
+        },
+        "networks": {
+          "text": {
+            "en": "TikTok, Instagram Reels and YouTube Shorts; the home page also lists Facebook"
+          },
+          "source": {
+            "url": "https://ayoklip.com/cara-kerja",
+            "date": "2026-09-18"
+          }
+        },
+        "verification": {
+          "text": {
+            "en": "manual: an admin opens the clip, checks the views on the platform against an uploaded analytics screenshot and looks for a verification code in the video description"
+          },
+          "source": {
+            "url": "https://ayoklip.com/cara-kerja",
+            "date": "2026-09-18"
+          }
+        },
+        "india": {
+          "text": {
+            "en": "no: its FAQ says \"Saat ini fokus ke Indonesia. Pembayaran via rekening bank Indonesia + e-wallet lokal\", with international expansion only planned"
+          },
+          "state": "no",
+          "source": {
+            "url": "https://ayoklip.com/cara-kerja",
+            "date": "2026-09-18"
+          }
+        },
+        "pakistan": {
+          "text": {
+            "en": "no: its FAQ says \"Saat ini fokus ke Indonesia. Pembayaran via rekening bank Indonesia + e-wallet lokal\", with international expansion only planned"
+          },
+          "state": "no",
+          "source": {
+            "url": "https://ayoklip.com/cara-kerja",
+            "date": "2026-09-18"
+          }
+        },
+        "bangladesh": {
+          "text": {
+            "en": "no: its FAQ says \"Saat ini fokus ke Indonesia. Pembayaran via rekening bank Indonesia + e-wallet lokal\", with international expansion only planned"
+          },
+          "state": "no",
+          "source": {
+            "url": "https://ayoklip.com/cara-kerja",
+            "date": "2026-09-18"
+          }
+        },
+        "nigeria": {
+          "text": {
+            "en": "no: its FAQ says \"Saat ini fokus ke Indonesia. Pembayaran via rekening bank Indonesia + e-wallet lokal\", with international expansion only planned"
+          },
+          "state": "no",
+          "source": {
+            "url": "https://ayoklip.com/cara-kerja",
+            "date": "2026-09-18"
+          }
+        },
+        "kenya": {
+          "text": {
+            "en": "no: its FAQ says \"Saat ini fokus ke Indonesia. Pembayaran via rekening bank Indonesia + e-wallet lokal\", with international expansion only planned"
+          },
+          "state": "no",
+          "source": {
+            "url": "https://ayoklip.com/cara-kerja",
+            "date": "2026-09-18"
+          }
+        },
+        "mena": {
+          "text": {
+            "en": "no: its FAQ says \"Saat ini fokus ke Indonesia. Pembayaran via rekening bank Indonesia + e-wallet lokal\", with international expansion only planned"
+          },
+          "state": "no",
+          "source": {
+            "url": "https://ayoklip.com/cara-kerja",
+            "date": "2026-09-18"
+          }
+        },
+        "indonesia": {
+          "text": {
+            "en": "yes: \"Platform #1 untuk Brand & Content Creator di Indonesia\", paying to Indonesian banks and e-wallets"
+          },
+          "state": "yes",
+          "source": {
+            "url": "https://ayoklip.com/",
+            "date": "2026-09-18"
+          }
+        },
+        "philippines": {
+          "text": {
+            "en": "no: its FAQ says \"Saat ini fokus ke Indonesia. Pembayaran via rekening bank Indonesia + e-wallet lokal\", with international expansion only planned"
+          },
+          "state": "no",
+          "source": {
+            "url": "https://ayoklip.com/cara-kerja",
+            "date": "2026-09-18"
+          }
+        }
+      },
+      "pros": {
+        "en": [
+          "The lowest published clipper fee of the Indonesian boards checked: 5%",
+          "Brand money is held in escrow until the job is done, as the platform states",
+          "No follower minimum"
+        ]
+      },
+      "cons": {
+        "en": [
+          "Small network: 530+ active clippers by its own count",
+          "Manual verification from screenshots rather than platform data",
+          "Its FAQ gives two different KYC thresholds: above Rp2,000,000 in one answer, above Rp1,000,000 in another"
+        ]
+      }
     }
   ]
 }

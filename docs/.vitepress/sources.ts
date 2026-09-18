@@ -56,6 +56,7 @@ const SOURCE_COMMENT_OPENER = /<!--\s*source:/g
  * Clip2Earn (Arab countries).
  * and ClipConnect (India), both Cliptocash namesakes (.io for Africa, .com under French law),
  * ClippaPay (Nigeria), Klipbait (CIS) and Nashr (Saudi Arabia).
+ * Extended again 2026-09-18 with the five Indonesian rupiah boards: Ternak Klip, Clippo, TryBuzzer, Konten.com, AyoKlip.
  *
  * Matched by host, so `docs.whop.com` and `www.vyro.com` need no entry of their own. A trailing
  * `.*` means "this brand under any TLD" — `klipni.*` and `vues.*` are one small platform each and
@@ -92,6 +93,11 @@ export const COMPETITOR_SOURCE_HOSTS: readonly string[] = [
   'skycontentrewards.com',
   'wusulclips.com',
   'clip2earn.money',
+  'ternakklip.com',
+  'clippo.id',
+  'trybuzzer.com',
+  'konten.com',
+  'ayoklip.com',
 ]
 
 /** The host as a reader would say it — what `LPlatforms.vue` already prints for the same sources. */

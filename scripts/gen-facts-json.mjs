@@ -486,7 +486,7 @@ export const SOURCE_LABELS = {
   'product-truth.json': { ru: 'правила платформы', uk: 'правила платформи', en: 'platform rules', ar: 'قواعد المنصة' },
   'product-intent.json': { ru: 'решение по продукту', uk: 'рішення щодо продукту', en: 'product decision', ar: 'قرار المنتج' },
   'gen-facts-json.mjs': { ru: 'условия заданий', uk: 'умови завдань', en: 'task terms', ar: 'شروط المهام' },
-  'contests-snapshot.json': { ru: 'живой каталог', uk: 'живий каталог', en: 'live catalogue', ar: 'الكتالوج الحي' },
+  'contests-snapshot.json': { ru: 'живой каталог', uk: 'живий каталог', en: 'live catalogue', ar: 'قائمة المهام الحالية' },
 }
 
 export function sourceLabel(source, locale) {

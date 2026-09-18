@@ -2395,7 +2395,7 @@
         },
         "cap": {
           "text": {
-            "en": "no cap on counted views, but each campaign sets a maximum payout per clip; the amount is not published outside the campaign brief"
+            "en": "each campaign sets a maximum payout per clip, shown on the clipper page: ₹2,000 on the three live campaigns and ₹5,000 on the closed one on 2026-09-18; views above it are counted but not paid"
           },
           "source": {
             "url": "https://clipgrow.in/for-clippers",
@@ -2423,7 +2423,7 @@
         },
         "payoutMethods": {
           "text": {
-            "en": "UPI to GPay, PhonePe or Paytm; the clipper page says payouts run every Sunday, the terms say a monthly cycle"
+            "en": "UPI to GPay, PhonePe or Paytm from ₹500 a run; its pages give three schedules: every Sunday (home and clipper page), a monthly cycle (terms and campaign pages), month-end lock and payment by the 7th (guides)"
           },
           "source": {
             "url": "https://clipgrow.in/terms",
@@ -2562,16 +2562,17 @@
       "pros": {
         "en": [
           "Public terms and privacy policy name the payout rail, the clipper fee and the view-verification APIs",
-          "Live campaign pages publish the rate, the total budget, the budget still available and the 1,000-view minimum",
-          "No fee for clippers and no follower minimum"
+          "Live campaign pages publish the rate, the total budget, the budget still available, the 1,000-view minimum and the per-clip ceiling",
+          "No fee for clippers, no follower minimum, and no PAN or Aadhaar collected"
         ]
       },
       "cons": {
         "en": [
-          "The site contradicts itself on payout timing: the clipper page says every Sunday, the terms and the campaign pages say a monthly cycle",
+          "Its own pages name three payout schedules: every Sunday, a monthly cycle, and payment by the 7th of the next month",
           "No legal entity is named anywhere — only \"operated from Kerala, India\"",
-          "Rates and the payout minimum are in rupees, and the per-clip payout ceiling is not published",
-          "Once a clip is paid it is closed: views it gains afterwards earn nothing"
+          "Rates and the payout minimum are in rupees; live campaigns cap a clip at ₹2,000",
+          "Once a clip is paid it is closed: views it gains afterwards earn nothing",
+          "Instagram tracking needs a Professional account added to a Meta tester list while ClipGrow’s app is in review"
         ]
       }
     },
@@ -2580,7 +2581,7 @@
       "name": "Wondeed",
       "url": "https://www.wondeed.com/",
       "kind": "performance clipping marketplace (India)",
-      "founded": "not published",
+      "founded": "2025 (per its press page)",
       "operator": "not published; terms say \"operated by Wondeed\" and the GST page lists the GSTIN as \"To be updated\"",
       "bestFor": {
         "en": "Indian residents who want an escrow-backed rupee campaign with UPI payouts"
@@ -2599,10 +2600,10 @@
       "fields": {
         "rate": {
           "text": {
-            "en": "₹90 per 1,000 verified views in the worked example on the home page; there is no separate rate card"
+            "en": "₹5, ₹7 or ₹10 per 1,000 views by clipper tier on the clipper page (\"actual rates vary by campaign\"); the home page works an example at ₹90"
           },
           "source": {
-            "url": "https://www.wondeed.com/",
+            "url": "https://www.wondeed.com/clippers",
             "date": "2026-09-18"
           }
         },
@@ -2793,7 +2794,7 @@
           "No legal entity, and the GST page lists the GSTIN as \"To be updated\"",
           "The terms still carry a template placeholder: jurisdiction is \"the courts of [Registered City], India\"",
           "Indian residents only, and TDS under section 194-O is deducted before payout",
-          "Most footer links — For Clippers, For Brands, Refund Policy, Help Center, even sitemap.xml — return the login page instead of a page"
+          "New clippers start at Tier 1: standard campaigns only, three at a time, with a 14-day payout window"
         ]
       }
     },

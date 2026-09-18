@@ -11,7 +11,7 @@ hero:
   takeaways:
     - "<b>Five formats do the work around a track:</b> sound under a clip, lip sync, dance, concert footage, video teaser. Write each one into the brief and you can insist on it."
     - "<b>You pay for views of a clip, never for uses of the sound:</b> the platform reads the clip's public counter, and open tasks pay $1 to $2 per 1,000 views."
-    - "<b>Release week can be costed before it starts:</b> 300,000 counted views at a $2.00 rate is 300,000 / 1,000 × $2.00 = $600.00, plus 10 USDT to launch."
+    - "<b>Release week can be costed before it starts:</b> 300,000 counted views at a $2.00 rate is 300,000 / 1,000 × $2.00 = $600.00, and launching the contest is free."
     - "<b>The rights to the track never leave you,</b> the clips go out on clippers' own TikTok, Reels and Shorts accounts, and growth in sound uses is read on the platform itself."
 cta:
   title: "Put the snippet in front of clippers"
@@ -56,7 +56,7 @@ A hypothetical example: a clip reaches 25,000 views at a $2.00 rate.
 
 A clip with 80,000 views would give $160.00, but with a $100 cap set on the task the creator gets $100.
 
-A release-week budget is a scenario, not a forecast. Say the target is 300,000 counted views in seven days at $2.00: 300,000 / 1,000 × $2.00 = **$600.00**, plus 10 USDT to create the contest; the contest fee is 0%. With a $100 cap that is at least six clips, in practice dozens. A wallet-backed budget is locked on the platform before the start, spent only on counted views, and the remainder comes back. Other budgets: [clipping campaign cost](/en/for-brands/clipping-campaign-cost).
+A release-week budget is a scenario, not a forecast. Say the target is 300,000 counted views in seven days at $2.00: 300,000 / 1,000 × $2.00 = **$600.00**, and that is the whole cost: creating the contest is free and the contest fee is 0%. With a $100 cap set on the task that is at least six clips, in practice dozens. A wallet-backed budget is locked on the platform before the start, spent only on counted views, and the remainder comes back. Other budgets: [clipping campaign cost](/en/for-brands/clipping-campaign-cost).
 
 <LBudget />
 

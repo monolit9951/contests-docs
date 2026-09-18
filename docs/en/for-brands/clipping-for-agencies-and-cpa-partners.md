@@ -15,7 +15,7 @@ hero:
     - "<b>Anti-fraud comes with the pipeline:</b> incentivized, bot and pop traffic is filtered out before anything is credited, and a refund takes the share back from the creator's balance rather than the client's budget."
 cta:
   title: "Hand the offer to the network, let the platform keep score"
-  lede: "Creating a task costs 10 USDT, the fee is 0%. A wallet-backed budget is locked on the platform, goes out only on counted views and confirmed conversions, and whatever is left comes back to your balance. The report per creator, clip and link is assembled for you."
+  lede: "Creating a task is free, the fee is 0%. A wallet-backed budget is locked on the platform, goes out only on counted views and confirmed conversions, and whatever is left comes back to your balance. The report per creator, clip and link is assembled for you."
 ---
 
 For an agency or a CPA partner DareBay is a creator network you do not have to recruit: the offer and the budget live on the platform, and tracked links, promo codes, postbacks, anti-fraud, accruals and reports come with it. You keep the client, the offer terms and the clip selection. Everything between a click and a payout is counted without manual work, and the figures for each creator and each clip are waiting in the cabinet.
@@ -66,7 +66,7 @@ The economics of every model come down to one formula: the price to the client p
 
 > price to client = creators' rate × (1 + markup)
 
-A hypothetical example. Client budget $2,000, creators' rate $1.00 per 1,000 views (open tasks currently pay $1.00 to $2.00 per 1,000 views), agency markup say 25%. The price to the client is $1.25 per 1,000, and the budget buys 2,000 / 1.25 × 1,000 = 1,600,000 counted views. Creators receive 1,600,000 / 1,000 × $1.00 = **$1,600.00**, the agency keeps **$400.00**, plus 10 USDT for creating the task. The view threshold, typically 2,000, cuts off clips with no reach. The cap per work, typically $100, spreads the sum across at least 16 clips by different creators. On an offer the sales share comes on top: it is counted from confirmed conversions, not from views, so it is not part of the reach budget. Platform figures from the 2026-08-23 snapshot; the markup is illustrative.
+A hypothetical example. Client budget $2,000, creators' rate $1.00 per 1,000 views (open tasks currently pay $1.00 to $2.00 per 1,000 views), agency markup say 25%. The price to the client is $1.25 per 1,000, and the budget buys 2,000 / 1.25 × 1,000 = 1,600,000 counted views. Creators receive 1,600,000 / 1,000 × $1.00 = **$1,600.00**, the agency keeps **$400.00**, and creating the task costs nothing. The view threshold you set on the task cuts off clips with no reach, and the cap per work (up to $500) spreads the sum across many clips by different creators. On an offer the sales share comes on top: it is counted from confirmed conversions, not from views, so it is not part of the reach budget. Platform figures from the 2026-08-23 snapshot; the markup is illustrative.
 
 Put your own budget, rate and cap into the calculator:
 
@@ -75,7 +75,7 @@ Put your own budget, rate and cap into the calculator:
 ## How to start
 
 1. **Collect the offer and the materials from the client.** The target action, payout terms, creative restrictions, footage or the product to film; for a network, the tracker link and the postback parameters.
-2. **Create the task or the offer.** From the agency's or the client's account: platforms, rate per 1,000 views, fee per clip, sales share, threshold, cap, budget. Creating a task costs 10 USDT once, the fee is 0%. Step by step: [Set up a clipping contest](/en/for-brands/set-up-a-clipping-contest).
+2. **Create the task or the offer.** From the agency's or the client's account: platforms, rate per 1,000 views, fee per clip, sales share, threshold, cap, budget. Creating a task is free, the fee is 0%. Step by step: [Set up a clipping contest](/en/for-brands/set-up-a-clipping-contest).
 3. **Connect the postback.** Put the platform's postback URL into the advertiser's tracker, send a test conversion and check it in the cabinet log.
 4. **Fund the budget.** The sum is locked on the platform before the start.
 5. **Accept works and watch conversions.** Reject clips that break the terms; views, conversions and accruals are counted by the platform.

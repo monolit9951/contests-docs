@@ -68,7 +68,7 @@ The scenarios use the formula at $1 per 1,000 views and a $100 cap per clip in t
 
 **Season.** A series of tasks instead of one big one; creators who earned last season come back first.
 
-Add 10 USDT for creating a contest to any pool; the contest fee is 0% and topping up the budget is 0%. Put your budget and rate into the calculator:
+Creating a contest is free, the contest fee is 0% and topping up the budget is 0%: the whole pool goes to creators. Put your budget and rate into the calculator:
 
 <LBudget />
 

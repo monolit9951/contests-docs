@@ -99,7 +99,7 @@ DareBay работает как посредник-гарант между за�
 
 ## Куда дальше
 
-- [Как платить нарезчикам за просмотры](/brendam/kak-platit-narezchikam-za-prosmotry) - цена запуска, формула и возврат остатка
+- [Как платить нарезчикам за просмотры](/brendam/kak-platit-narezchikam-za-prosmotry) - бесплатный запуск, формула и возврат остатка
 - [Как создать конкурс для нарезчиков](/brendam/kak-sozdat-konkurs-dlya-narezchikov) - параметры запуска и что меняется после старта
 - [Где брать заказы на нарезки](/zarabotok/gde-brat-zakazy-na-narezki) - как устроен рынок заказов и сравнение условий
 - [Как работает оплата за просмотры](/zarabotok/kak-rabotaet-oplata-za-prosmotry) - полная механика PPV-конкурса

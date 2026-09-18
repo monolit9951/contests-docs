@@ -54,7 +54,7 @@ Hypothetically, clippers made 15 clips from an hour-long episode. Three missed t
 
 > 120,000 / 1,000 × $1.00 = **$120.00**
 
-If one clip takes off to 150,000 views, the formula gives $150.00, but with a $100 cap set on the task the creator gets $100. At $2.00 the same episode would cost $240.00: open tasks currently pay $1 to $2 per 1,000 views, and the rate is yours. Add 10 USDT to create the contest, once; the contest fee is 0% and topping up costs nothing.
+If one clip takes off to 150,000 views, the formula gives $150.00, but with a $100 cap set on the task the creator gets $100. At $2.00 the same episode would cost $240.00: open tasks currently pay $1 to $2 per 1,000 views, and the rate is yours. Creating the contest is free, the contest fee is 0% and topping up costs nothing.
 
 A wallet-backed budget is locked on the platform before the start, spent on counted views, and the remainder comes back. Rate and cap for a pool: [clipping campaign cost](/en/for-brands/clipping-campaign-cost); the calculator below works any budget.
 

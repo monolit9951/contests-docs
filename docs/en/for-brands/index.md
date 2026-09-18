@@ -7,7 +7,7 @@ numbers_used: [contest_create_usdt_price, commission_fiat, commission_crypto, co
 
 # For brands
 
-Dozens of clips about your product go out on creators' accounts within days, and you pay for the views they collected, not for the fact that someone filmed one. Creating a contest costs **10 USDT**, and the contest commission is **0%**: the platform keeps no share of the prize budget. You set the rate per 1000 views, the view threshold and the cap per submission, all three sit on the contest card before a creator takes the task, and an unspent wallet-backed budget comes back to your balance.
+Dozens of clips about your product go out on creators' accounts within days, and you pay for the views they collected, not for the fact that someone filmed one. Creating a contest is **free**, and the contest commission is **0%**: the platform keeps no share of the prize budget. You set the rate per 1000 views, the view threshold and the cap per submission, all three sit on the contest card before a creator takes the task, and an unspent wallet-backed budget comes back to your balance.
 
 Nobody's word decides the count: the platform's independent counter reads the published view counter of the site each clip went out on, so there is nothing to argue about after publication.
 
@@ -16,7 +16,7 @@ Set the contest up on [darebay.com](https://darebay.com); the formats and terms 
 ## Short answers to the questions brands ask first
 
 - **How you pay clippers.** One task with a rate per 1000 views: each clipper who sends in a link is credited by formula for the views the clip got, up to the cap per submission. Fulfilment is done by the team, with no promised date: [how to pay clippers per view](/en/for-brands/paying-clippers-per-view).
-- **What it costs.** 10 USDT to create the contest plus the prize budget you set yourself. The contest commission is 0%, and there is no separate charge for topping up the budget.
+- **What it costs.** Only the prize budget you set yourself: creating the contest is free. The contest commission is 0%, and there is no separate charge for topping up the budget.
 - **Who holds the budget.** The platform. A contest you publish yourself has its budget locked on DareBay from that moment, so creators know the money is real, and whatever they did not earn comes back to your balance.
 - **What if nobody shows up.** A wallet-backed budget goes only to views that happened: no submissions, or none over the threshold, means nothing to pay for.
 - **How views are verified.** The figure is read from the site's public counter, never sent as a screenshot; a submission with suspicious view dynamics goes on hold for review instead of into your bill. Statistics are collected today for TikTok, YouTube, Instagram and the other sites named in the task.

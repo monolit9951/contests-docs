@@ -50,7 +50,7 @@ In open tasks rates currently run from $1 to $2 per 1,000 views. The view thresh
 
 > 20,000 / 1,000 × $1.00 = **$20.00**
 
-Creating a contest costs 10 USDT once, the contest fee is 0% and topping up the budget is 0%: the pool goes to creators in full. In a wallet-backed task the budget is locked on the platform before launch, spent on counted views, and the remainder returns to your balance.
+Creating a contest is free, the contest fee is 0% and topping up the budget is 0%: the pool goes to creators in full. In a wallet-backed task the budget is locked on the platform before launch, spent on counted views, and the remainder returns to your balance.
 
 Once a submission is approved, the creator can lock in what it has earned and withdraw USDT to their TON wallet from a 10 USDT request: the 10% withdrawal fee comes out of that request, never out of your budget, and the team handles processing. The full campaign cost is on the [clipping campaign cost](/en/for-brands/clipping-campaign-cost) page.
 

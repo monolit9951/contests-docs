@@ -893,6 +893,20 @@
       }
     },
     {
+      "id": "vues-review",
+      "hub": "earnings",
+      "slugs": {
+        "en": "vues-review"
+      }
+    },
+    {
+      "id": "reach-cat-review",
+      "hub": "earnings",
+      "slugs": {
+        "en": "reach-cat-review"
+      }
+    },
+    {
       "id": "about-author",
       "hub": "about",
       "slugs": {

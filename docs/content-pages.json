@@ -872,6 +872,20 @@
       }
     },
     {
+      "id": "clipgrow-review",
+      "hub": "earnings",
+      "slugs": {
+        "en": "clipgrow-review"
+      }
+    },
+    {
+      "id": "is-wondeed-legit",
+      "hub": "earnings",
+      "slugs": {
+        "en": "is-wondeed-legit"
+      }
+    },
+    {
       "id": "about-author",
       "hub": "about",
       "slugs": {

@@ -13,7 +13,7 @@ import { join, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 const HERE = dirname(fileURLToPath(import.meta.url))
-const { PAGES, HUBS, ORPHAN_REDIRECTS, pagePath, localesOf, redirectMap } = await import(
+const { PAGES, HUBS, ORPHAN_REDIRECTS, pagePath, localesOf, redirectMap, xDefaultLocaleOf } = await import(
     join(HERE, '..', 'docs', '.vitepress', 'registry.ts')
 )
 
@@ -37,9 +37,11 @@ const urls = PAGES.reduce((n, e) => n + localesOf(e).length, 0)
 const redirects = Object.keys(redirectMap()).length
 out.push(`Страниц: **${total}** · адресов: **${urls}** · редиректов со старых адресов: **${redirects}**`)
 out.push('')
-out.push('Контент сегодня русский, поэтому у страниц объявлена только локаль `ru`: страница,')
-out.push('которой нет на языке, в сайтмап этой локали и в hreflang не попадает вообще. Украинские')
-out.push('и английские адреса появятся здесь по мере перевода, постранично.')
+out.push('Страница объявляет только те языки, на которых она действительно существует: той,')
+out.push('которой нет на языке, в сайтмапе этой локали и в hreflang нет вообще. Русская версия')
+out.push('не обязательна — страница про чужой рынок бывает только английской (решение фаундера')
+out.push('18.09.2026). В колонке «Стало» — адрес в корневой локали, а у страницы без русской')
+out.push('версии её x-default.')
 out.push('')
 
 for (const hubId of Object.keys(HUBS)) {
@@ -50,7 +52,7 @@ for (const hubId of Object.keys(HUBS)) {
     out.push('| Было | Стало | id |')
     out.push('|---|---|---|')
     for (const page of pages) {
-        const to = pagePath(page, 'ru')
+        const to = pagePath(page, 'ru') ?? pagePath(page, xDefaultLocaleOf(page))
         const from = (page.retired ?? []).map((r) => `\`${r}\``).join('<br>') || '— *(новая)*'
         out.push(`| ${from} | \`${to}\` | \`${page.id}\` |`)
     }

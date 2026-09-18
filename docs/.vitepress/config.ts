@@ -26,6 +26,7 @@ import {
   PAGES,
   ROOT_LOCALE,
   APP_ROUTES,
+  alternateLocalesOf,
   hreflangCluster,
   localesOf,
   resolveLocalizedLink,
@@ -204,8 +205,10 @@ function hubSection(hubId: HubId, lang: Locale) {
       link: pagePath(entry, lang)!,
       isIndex: entry.slugs[lang] === '',
     }))
-    // Index first, then alphabetical — the same order the hub page itself renders.
-    .sort((a, b) => (a.isIndex ? -1 : b.isIndex ? 1 : a.text.localeCompare(b.text, 'ru')))
+    // Index first, then alphabetical IN THIS LANGUAGE — the same order the hub
+    // page itself renders (see hubs.data.ts, which already collates by `lang`).
+    // A fixed 'ru' collator here sorted Ukrainian titles by Russian rules.
+    .sort((a, b) => (a.isIndex ? -1 : b.isIndex ? 1 : a.text.localeCompare(b.text, lang)))
     .map(({ text, link }) => ({ text, link }))
   return { text: HUB_TITLES[lang][hubId], collapsed: false, items }
 }
@@ -684,12 +687,13 @@ export default defineConfig({
     // Read by theme/langs.ts, which replaces the stock composable.
     //
     // Only the locales this page HAS, so the menu can never offer a translation
-    // that does not exist — the same promise `hreflangCluster` above makes.
-    pageData.frontmatter.localeLinks = LOCALES.filter(
-      (locale) => locale.language !== found.lang && localesOf(found.entry).includes(locale.language)
-    ).map((locale) => ({
-      text: LOCALE_LABELS[locale.language],
-      link: pagePath(found.entry, locale.language)!,
+    // that does not exist — the same promise `hreflangCluster` above makes, from
+    // the same registry rule. A single-locale page (EN-only, or one of the
+    // ru-only ones) yields an empty list and therefore no switcher at all: there
+    // is no other version of that document to switch to.
+    pageData.frontmatter.localeLinks = alternateLocalesOf(found.entry, found.lang).map((language) => ({
+      text: LOCALE_LABELS[language],
+      link: pagePath(found.entry, language)!,
     }))
 
     pageData.frontmatter.head ??= []
@@ -779,9 +783,10 @@ export default defineConfig({
 
     pageData.frontmatter.head.push(
       ['link', { rel: 'canonical', href: url }],
-      // The page's translations, itself included. Today every page is Russian, so a
-      // cluster is one self-referencing link plus x-default — which is valid, and is
-      // what keeps the set symmetric the moment a translation is added. A cluster
+      // The page's translations, itself included. A page that exists in one language
+      // only — ru-only, or EN-only since the 2026-09-18 decision — emits one
+      // self-referencing link plus x-default on that same address, which is valid and
+      // is what keeps the set symmetric the moment a translation is added. A cluster
       // Google considers asymmetric is a cluster Google throws away entirely.
       ...hreflangCluster(found.entry).map(
         ({ hreflang, href }) => [
@@ -815,13 +820,11 @@ export default defineConfig({
           ][])
         : []),
       // The page's own locale, plus the ones it is translated into — the same
-      // list hreflang gets, from the same registry call.
+      // list the switcher gets, from the same registry call.
       ['meta', { property: 'og:locale', content: OG_LOCALE[found.lang] }],
-      ...LOCALES.filter(
-        (locale) => locale.language !== found.lang && localesOf(found.entry).includes(locale.language)
-      ).map(
-        (locale) =>
-          ['meta', { property: 'og:locale:alternate', content: OG_LOCALE[locale.language] }] as [
+      ...alternateLocalesOf(found.entry, found.lang).map(
+        (language) =>
+          ['meta', { property: 'og:locale:alternate', content: OG_LOCALE[language] }] as [
             string,
             Record<string, string>,
           ]

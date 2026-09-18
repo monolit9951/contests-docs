@@ -53,7 +53,7 @@ const PORT_APP = PORT_HOST + 1
 const PORT_CONTENT = PORT_HOST + 2
 const ORIGIN = `http://127.0.0.1:${PORT_HOST}`
 
-const { PAGES, ROOT_LOCALE, pagePath, localesOf, redirectMap, CONTENT_ROOT_FILES } = await import(
+const { PAGES, pagePath, localesOf, redirectMap, CONTENT_ROOT_FILES } = await import(
     join(CONTENT_ROOT, 'docs', '.vitepress', 'registry.ts')
 )
 const { contestCanonicalForLocale } = await import(
@@ -178,6 +178,12 @@ if (!(await ready())) {
 
 const failures = []
 const fail = (gate, detail) => failures.push(`[${gate}] ${detail}`)
+
+// One arbitrary content page, used by the asset and entity gates below as "a
+// document this container serves". Its locale is read off the page rather than
+// assumed to be the root one: what those gates need is an address that answers
+// 200 from the content container, and every registry entry has at least one.
+const SAMPLE_CONTENT_PATH = pagePath(PAGES[0], localesOf(PAGES[0])[0])
 
 // A Location header may be absolute or relative depending on the container's
 // `absolute_redirect`; the probe compares paths, so it normalises to one form.
@@ -435,7 +441,16 @@ for (const [junk, language] of [
 
 // Clean URLs are the only 200 form. VitePress writes .html files, but exposing
 // both forms splits links and crawl signals across duplicate addresses.
-for (const page of PAGES.slice(0, 1).concat(PAGES.filter((entry) => entry.slugs.ru).slice(0, 1))) {
+//
+// Two samples, because the two shapes are answered by different nginx rules:
+// the first entry (a hub, written to `<hub>/index.html`) and the first LEAF in
+// any locale (`<slug>.html`). The leaf used to be picked by a truthy
+// `entry.slugs.ru`, which asked two questions at once — "has Russian" and "is
+// not a hub" — and would silently pick nothing on a corpus of pages without a
+// Russian version.
+for (const page of PAGES.slice(0, 1).concat(
+    PAGES.filter((entry) => localesOf(entry).some((language) => entry.slugs[language] !== '')).slice(0, 1)
+)) {
     for (const language of localesOf(page)) {
         const clean = pagePath(page, language)
         const nonCanonical = clean.endsWith('/') ? `${clean}index.html` : `${clean}.html`
@@ -520,7 +535,7 @@ for (const canonical of new Set(appUrls)) {
     // The concrete files each page loads matter more than the directory: pull
     // the first stylesheet off a content page and off an app page and fetch it.
     for (const [label, page] of [
-        ['контент', pagePath(PAGES[0], ROOT_LOCALE.language)],
+        ['контент', SAMPLE_CONTENT_PATH],
         ['приложение', '/'],
     ]) {
         const res = await body(page)
@@ -530,7 +545,7 @@ for (const canonical of new Set(appUrls)) {
         }
     }
 
-    const contentPage = await body(pagePath(PAGES[0], ROOT_LOCALE.language))
+    const contentPage = await body(SAMPLE_CONTENT_PATH)
     const hashed = contentPage.text.match(
         /(?:href|src)="(\/content-assets\/[^"?]+\.[A-Za-z0-9_-]{8}(?:\.lean)?\.(?:js|mjs|css|woff2?|png|jpe?g|svg|webp))"/
     )?.[1]
@@ -676,7 +691,7 @@ for (const canonical of new Set(appUrls)) {
         }
     }
     const app = contract((await body('/')).text, 'app /')
-    const contentPath = pagePath(PAGES[0], ROOT_LOCALE.language)
+    const contentPath = SAMPLE_CONTENT_PATH
     const content = contract((await body(contentPath)).text, `content ${contentPath}`)
     if (app && content && JSON.stringify(app) !== JSON.stringify(content)) {
         fail('11-entity', `app/content stable entity contracts differ:\napp=${JSON.stringify(app)}\ncontent=${JSON.stringify(content)}`)

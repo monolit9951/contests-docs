@@ -28,9 +28,20 @@ import contentManifest from '../content-pages.json' with { type: 'json' }
 //     an EN tree sat on the SHORT urls while RU sat a level deeper; Google
 //     indexed the English pages and served English sitelinks under a Russian
 //     brand query, and the tree had to be removed on 2026-07-25. Never again.
-//  2. A PAGE DECLARES ONLY THE LOCALES IT ACTUALLY HAS. `hreflangCluster`
-//     lists exactly those. This is what makes partial translation safe: no empty
-//     locale tree and no fallback-language text under a translated address.
+//     This fixes the ADDRESS SHAPE of the `ru` axis; it does not oblige any
+//     individual page to exist in Russian.
+//  2. A PAGE DECLARES ONLY THE LOCALES IT ACTUALLY HAS — at least one, and
+//     every declared one backed by a file. `hreflangCluster` lists exactly
+//     those. This is what makes partial translation safe: no empty locale tree
+//     and no fallback-language text under a translated address.
+//
+//     A page therefore needs no Russian version at all. Founder, 2026-09-18:
+//     pages about markets that do not read Russian ("who pays clippers in
+//     India / Pakistan / Nigeria") ship EN-only, because the Russian twin of
+//     such a page would be a doorway — text written for nobody, to satisfy a
+//     registry rule. Nothing below singles the root locale out; a page with one
+//     locale is self-canonical and its own x-default, exactly as the six ru-only
+//     pages already are.
 
 export type Locale = 'ru' | 'uk' | 'en'
 export type HubId = 'earnings' | 'brands' | 'help' | 'about' | 'legal'
@@ -56,7 +67,9 @@ export interface RegistryEntry {
     readonly slugs: Partial<Record<Locale, string>>
     /**
      * Public paths this page used to answer on, absolute and origin-less.
-     * Every one becomes a single-hop 301 onto the page's current RU address.
+     * Every one becomes a single-hop 301 onto this page's current address in
+     * the reader's own language, or onto its x-default version when the page
+     * has no version in that language (`redirectTarget`).
      * Entries are never deleted: a 301 costs nothing and holds the old address
      * for years.
      */
@@ -84,8 +97,15 @@ const assertString = (value: unknown, label: string): asserts value is string =>
     if (typeof value !== 'string') throw new Error(`registry: ${label} must be a string`)
 }
 
-/** Fail closed before any sitemap, redirect or public manifest is derived. */
-const parseManifest = (input: unknown): ContentManifest => {
+/**
+ * Fail closed before any sitemap, redirect or public manifest is derived.
+ *
+ * Exported so the schema contract can be exercised on an in-memory manifest:
+ * the rules that matter here — at least one locale per page, only known
+ * locales, slug hygiene — are rejections, and a rejection cannot be proven by
+ * the live manifest, which by definition contains no rejected entry.
+ */
+export const parseContentManifest = (input: unknown): ContentManifest => {
     if (!isRecord(input)) throw new Error('registry: docs/content-pages.json must be an object')
     assertKeys(input, ['schemaVersion', 'origin', 'locales', 'hubs', 'pages'], [], 'manifest')
     if (input.schemaVersion !== 1) {
@@ -135,7 +155,12 @@ const parseManifest = (input: unknown): ContentManifest => {
         if (!HUB_ORDER.includes(page.hub as HubId)) throw new Error(`registry: ${label}.hub is unknown`)
         if (!isRecord(page.slugs)) throw new Error(`registry: ${label}.slugs must be an object`)
         assertKeys(page.slugs, [], LOCALE_ORDER, `${label}.slugs`)
-        if (!Object.keys(page.slugs).length) throw new Error(`registry: ${label}.slugs must not be empty`)
+        // At least one locale, and no locale is privileged: a page with only
+        // `en` is as valid as a page with only `ru`. A page with none has no
+        // address at all, so it could not be served, linked or redirected to.
+        if (!Object.keys(page.slugs).length) {
+            throw new Error(`registry: ${label}.slugs declares no locale — a semantic page needs at least one`)
+        }
         for (const [locale, slug] of Object.entries(page.slugs)) {
             assertString(slug, `${label}.slugs.${locale}`)
             if (slug !== '' && !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug)) {
@@ -159,7 +184,7 @@ const parseManifest = (input: unknown): ContentManifest => {
     return input as unknown as ContentManifest
 }
 
-const manifest = parseManifest(contentManifest)
+const manifest = parseContentManifest(contentManifest)
 
 // `/ua` and not `/uk`: `uk` is the LANGUAGE code (ISO 639-1) and the only value
 // hreflang accepts, but a Ukrainian reader parses `/uk/` as United Kingdom. The
@@ -283,28 +308,50 @@ export const pageUrl = (entry: RegistryEntry, language: Locale): string | null =
  */
 export const X_DEFAULT_LANGUAGE: Locale = 'en'
 
-/** The locale a page's `x-default` points at, or undefined when it has neither candidate. */
-export const xDefaultLocaleOf = (entry: RegistryEntry): Locale | undefined => {
+/**
+ * The locale a page's `x-default` points at: English when the page has it, the
+ * root locale otherwise — and, when it has neither, its first declared locale.
+ *
+ * That last branch is not a hypothetical: a page declares at least one locale
+ * and may declare only one, so the only total answer for a page outside both
+ * preferred languages is "itself". Returning `undefined` there would drop
+ * x-default from its cluster and leave `hreflangCluster` partial for a page
+ * that is perfectly well-formed.
+ */
+export const xDefaultLocaleOf = (entry: RegistryEntry): Locale => {
     const langs = localesOf(entry)
     if (langs.includes(X_DEFAULT_LANGUAGE)) return X_DEFAULT_LANGUAGE
-    return langs.includes(ROOT_LOCALE.language) ? ROOT_LOCALE.language : undefined
+    if (langs.includes(ROOT_LOCALE.language)) return ROOT_LOCALE.language
+    return langs[0]
 }
+
+/**
+ * The OTHER locales a page exists in, seen from one of them — what the language
+ * switcher offers and what `og:locale:alternate` announces.
+ *
+ * One rule, one implementation: the menu for humans and the tags for crawlers
+ * used to filter `localesOf` inline in two places in config.ts, and the whole
+ * reason `theme/langs.ts` exists is that those two once disagreed. For a
+ * single-locale page this is empty, so the switcher offers nothing rather than
+ * a translation that does not exist.
+ */
+export const alternateLocalesOf = (entry: RegistryEntry, current: Locale): Locale[] =>
+    localesOf(entry).filter((language) => language !== current)
 
 /**
  * The hreflang cluster of one page: every locale it EXISTS in, itself included,
  * plus x-default on the English version — or on the root one for a page that has
  * no English (`xDefaultLocaleOf`).
  *
- * A single-locale page still gets a self-referencing entry — that is valid and
- * it is what keeps the set symmetric once a translation is added later.
+ * A single-locale page still gets a self-referencing entry plus x-default on
+ * itself — two links, both pointing at the page. That is valid, it is what the
+ * six ru-only pages already emit, and it is what keeps the set symmetric once a
+ * translation is added later.
  */
 export const hreflangCluster = (entry: RegistryEntry): { hreflang: string; href: string }[] => {
     const langs = localesOf(entry)
     const cluster = langs.map((lang) => ({ hreflang: lang, href: pageUrl(entry, lang)! }))
-    const fallback = xDefaultLocaleOf(entry)
-    if (fallback) {
-        cluster.push({ hreflang: 'x-default', href: pageUrl(entry, fallback)! })
-    }
+    cluster.push({ hreflang: 'x-default', href: pageUrl(entry, xDefaultLocaleOf(entry))! })
     return cluster
 }
 
@@ -321,6 +368,19 @@ export const sourceFile = (entry: RegistryEntry, language: Locale): string | nul
     const hub = HUBS[entry.hub][language]
     return slug === '' ? `${dir}${hub}/index.md` : `${dir}${hub}/${slug}.md`
 }
+
+/**
+ * Locales a page DECLARES but has no file for, given the docs-relative paths
+ * that exist on disk.
+ *
+ * A declared locale is a promise of an address: it enters the sitemap, the
+ * hreflang cluster, the hub list and the host routes. Declaring one without the
+ * file behind it is how a sitemap fills with 404s, so `check-registry.mjs`
+ * gate 6 refuses it — this is that rule, named and pure so it can be exercised
+ * on a file list instead of only on the current tree.
+ */
+export const missingSources = (entry: RegistryEntry, onDisk: ReadonlySet<string>): Locale[] =>
+    localesOf(entry).filter((language) => !onDisk.has(sourceFile(entry, language)!))
 
 /**
  * Addresses on darebay.com that the APPLICATION serves, which content pages
@@ -430,18 +490,27 @@ const retiredLocale = (old: string): Locale => {
     return ROOT_LOCALE.language
 }
 
+/**
+ * Where one retired address of one page lands.
+ *
+ * Land in the reader's own language when the survivor has it. When it does not
+ * — a translation that does not exist yet, or a page written for one market
+ * only — fall back to the survivor's x-default version: a live page in another
+ * language beats a dead address, and the fallback disappears the moment the
+ * locale is registered.
+ *
+ * This used to fall back to the RU canonical and SKIP the page entirely when it
+ * had none, which silently dropped every retired address of a page without a
+ * Russian version. Since 2026-09-18 such pages are legitimate, and a dropped
+ * 301 is an indexed address turning into a 404.
+ */
+export const redirectTarget = (entry: RegistryEntry, old: string): string =>
+    pagePath(entry, retiredLocale(old)) ?? pagePath(entry, xDefaultLocaleOf(entry))!
+
 export const redirectMap = (): Record<string, string> => {
     const map: Record<string, string> = { ...ORPHAN_REDIRECTS }
     for (const entry of PAGES) {
-        const rootTarget = pagePath(entry, ROOT_LOCALE.language)
-        if (!rootTarget) continue
-        for (const old of entry.retired ?? []) {
-            // Land in the reader's own language when the survivor has it. A page
-            // registered ru-only (a translation that does not exist yet) still falls
-            // back to the root canonical: a live page in the wrong language beats a
-            // dead address, and the fallback disappears once the locale is registered.
-            map[old] = pagePath(entry, retiredLocale(old)) ?? rootTarget
-        }
+        for (const old of entry.retired ?? []) map[old] = redirectTarget(entry, old)
     }
     return map
 }

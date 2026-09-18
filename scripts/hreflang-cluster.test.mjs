@@ -4,13 +4,26 @@ import { parseHreflangCluster, sameHreflangMap } from './hreflang-cluster.mjs'
 const link = (hreflang, href) => `<link rel="alternate" hreflang="${hreflang}" href="${href}">`
 
 describe('hreflang cluster parser', () => {
-  it('accepts x-default sharing the root-locale URL', () => {
-    const parsed = parseHreflangCluster([
+  it('accepts x-default sharing a language URL, including a page that has one language', () => {
+    // x-default is a duplicate href by construction: it always repeats whichever
+    // language version it stands for. Only a repeated NON-default target is a
+    // mistake.
+    const twoLanguages = parseHreflangCluster([
       link('ru', 'https://darebay.com/zarabotok/'),
       link('uk', 'https://darebay.com/ua/zarobitok/'),
       link('x-default', 'https://darebay.com/zarabotok/'),
     ].join(''))
-    expect(parsed.errors).toEqual([])
+    expect(twoLanguages.errors).toEqual([])
+
+    // The whole cluster of a page that exists in one language — ru-only, or
+    // EN-only since 2026-09-18: the page names itself and stands in for every
+    // reader it has no version for. Two links, one address, and no error.
+    const oneLanguage = parseHreflangCluster([
+      link('en', 'https://darebay.com/en/earnings/who-pays-clippers-in-india'),
+      link('x-default', 'https://darebay.com/en/earnings/who-pays-clippers-in-india'),
+    ].join(''))
+    expect(oneLanguage.errors).toEqual([])
+    expect([...oneLanguage.map.keys()]).toEqual(['en', 'x-default'])
   })
 
   it('detects duplicate languages, duplicate non-default targets and off-origin URLs', () => {

@@ -81,8 +81,10 @@ and never hand-patch `docs/.vitepress/dist`.
 ## Content and URL invariants
 
 - Add a page and its stable semantic entry in `docs/content-pages.json` in the same change. Every
-  semantic page must declare an existing Russian root canonical. Add `uk` or `en` only when the
-  corresponding source file exists; an omitted locale produces no docs URL and no hreflang.
+  semantic page must declare at least one locale, and a locale only once its source file exists;
+  an omitted locale produces no docs URL and no hreflang. No locale is mandatory: a page about a
+  market that does not read Russian may ship EN-only or AR-only (founder, 2026-09-18). Never write
+  an RU/UA twin just to satisfy the registry — a page nobody reads is a doorway.
 - Every Markdown page needs `title` and `description`; their combined search snippet must satisfy
   the executable uniqueness and cannibalization checks. Changed non-hub fleet content needs
   `provenance.snapshot_date`; `seo: true` leaves must satisfy the executable thin-content,

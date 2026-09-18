@@ -34,6 +34,7 @@ const {
     pagePath,
     sourceFile,
     localesOf,
+    missingSources,
     hreflangCluster,
     xDefaultLocaleOf,
     redirectMap,
@@ -54,7 +55,14 @@ if (CONTENT_MANIFEST_SCHEMA_VERSION !== 1) {
     for (const entry of PAGES) {
         if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(entry.id)) fail('bad-id', entry.id)
         if (!(entry.hub in HUBS)) fail('bad-hub', `${entry.id}: ${entry.hub}`)
-        if (!('ru' in entry.slugs)) fail('missing-root-locale', `${entry.id}: every semantic page needs a RU root canonical`)
+        // No locale is required by name. Until 2026-09-18 this gate demanded a
+        // Russian slug on every entry; the founder lifted that, because a page
+        // about a market that does not read Russian ("who pays clippers in
+        // India") would have had to grow a Russian twin nobody reads, which is
+        // a doorway. What remains required is unchanged and stricter than the
+        // old rule was: AT LEAST ONE locale — enforced in registry.ts's
+        // `parseContentManifest`, which throws before this script can run a
+        // single check — and a FILE for each declared one, gate 6 below.
         for (const locale of Object.keys(entry.slugs)) {
             if (!LOCALES.some((axis) => axis.language === locale)) fail('unknown-locale', `${entry.id}: ${locale}`)
         }
@@ -159,10 +167,9 @@ for (const entry of PAGES) {
     const onDisk = new Set(walk(DOCS))
     const declared = new Set()
     for (const entry of PAGES) {
-        for (const lang of localesOf(entry)) {
-            const file = sourceFile(entry, lang)
-            declared.add(file)
-            if (!onDisk.has(file)) fail('missing-file', `${entry.id} [${lang}] expects docs/${file}`)
+        for (const lang of localesOf(entry)) declared.add(sourceFile(entry, lang))
+        for (const lang of missingSources(entry, onDisk)) {
+            fail('missing-file', `${entry.id} [${lang}] expects docs/${sourceFile(entry, lang)}`)
         }
     }
     for (const file of onDisk) {

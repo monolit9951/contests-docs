@@ -1,6 +1,24 @@
 import { readFileSync } from 'node:fs'
 import { describe, expect, it } from 'vitest'
-import { HUBS, LOCALES, PAGES, ROOT_LOCALE, pagePath, redirectMap } from './registry'
+import liveManifest from '../content-pages.json' with { type: 'json' }
+import {
+    HUBS,
+    LOCALES,
+    PAGES,
+    ROOT_LOCALE,
+    alternateLocalesOf,
+    hreflangCluster,
+    localesOf,
+    missingSources,
+    pagePath,
+    parseContentManifest,
+    redirectMap,
+    redirectTarget,
+    sourceFile,
+    xDefaultLocaleOf,
+    type Locale,
+    type RegistryEntry,
+} from './registry'
 
 // A retired address must land the reader in the language they arrived in.
 //
@@ -14,27 +32,152 @@ import { HUBS, LOCALES, PAGES, ROOT_LOCALE, pagePath, redirectMap } from './regi
 // A cross-language redirect is worse than a 404: the reader silently loses their
 // language, and the wrong page ends up answering for that locale.
 
-const localeOfPath = (path: string): string => {
+const localeOfPath = (path: string): Locale => {
     for (const axis of LOCALES) {
         if (axis.prefix && (path === axis.prefix || path.startsWith(`${axis.prefix}/`))) return axis.language
     }
     return ROOT_LOCALE.language
 }
 
+// ---------------------------------------------------------------------------
+// A semantic page declares the locales it HAS — at least one, and no particular
+// one.
+//
+// WHAT CHANGED AND WHY. Until 2026-09-18 `check-registry.mjs` carried a
+// `missing-root-locale` rule: every entry needed a `ru` slug, on the theory that
+// the root canonical is where a page's identity lives. The founder retired that
+// rule, because the pages now being written — "who pays clippers in India, in
+// Pakistan, in Nigeria" — have no Russian-speaking audience, and a Russian twin
+// of such a page is text written for nobody: a doorway, produced to satisfy a
+// gate. That rule had no test of its own; these are its replacement, and they
+// state the invariant that survived it — AT LEAST ONE locale, every declared one
+// backed by a file — rather than naming a language.
+//
+// The rejections are exercised on in-memory manifests: a rejected entry cannot
+// by definition be found in the live one. The locale axes and hub segments come
+// from the real manifest so the fixtures cannot drift from production topology.
+// ---------------------------------------------------------------------------
+
+const manifestWith = (pages: unknown[]) => ({
+    schemaVersion: liveManifest.schemaVersion,
+    origin: liveManifest.origin,
+    locales: liveManifest.locales,
+    hubs: liveManifest.hubs,
+    pages,
+})
+
+const EN_ONLY = {
+    id: 'earnings-who-pays-clippers-in-india',
+    hub: 'earnings',
+    slugs: { en: 'who-pays-clippers-in-india' },
+    retired: ['/en/earnings/india-clipping-rates'],
+}
+
+/** The fixture entries, after the schema gate has accepted them. */
+const parsed = (pages: unknown[]): readonly RegistryEntry[] => parseContentManifest(manifestWith(pages)).pages
+
+describe('registry: locale declaration', () => {
+    it('accepts a page that declares English only', () => {
+        const [entry] = parsed([EN_ONLY])
+        expect(localesOf(entry)).toEqual(['en'])
+        expect(pagePath(entry, 'en')).toBe('/en/earnings/who-pays-clippers-in-india')
+        expect(sourceFile(entry, 'en')).toBe('en/earnings/who-pays-clippers-in-india.md')
+        // No address, no file and no hreflang entry in a language it does not have.
+        for (const language of ['ru', 'uk'] as const) {
+            expect(pagePath(entry, language)).toBeNull()
+            expect(sourceFile(entry, language)).toBeNull()
+        }
+    })
+
+    it('rejects a page that declares no locale at all', () => {
+        expect(() => parsed([{ ...EN_ONLY, slugs: {} }])).toThrow(/declares no locale/)
+    })
+
+    it('rejects a locale outside the declared axes', () => {
+        // The axis for a language is what gives it a prefix, a directory and an
+        // hreflang value. A slug under an unknown key has none of the three.
+        expect(() => parsed([{ ...EN_ONLY, slugs: { ar: 'x' } }])).toThrow(/unknown key "ar"/)
+    })
+
+    it('reports a declared locale that has no source file', () => {
+        const [entry] = parsed([{ id: 'x', hub: 'earnings', slugs: { ru: 'a', en: 'b' } }])
+        const onDisk = new Set(['zarabotok/a.md', 'en/earnings/b.md'])
+        expect(missingSources(entry, onDisk)).toEqual([])
+        expect(missingSources(entry, new Set(['zarabotok/a.md']))).toEqual(['en'])
+        expect(missingSources(entry, new Set())).toEqual(['ru', 'en'])
+    })
+})
+
+describe('registry: a page that exists in one language', () => {
+    const [enOnly] = parsed([EN_ONLY])
+    // The six ru-only pages in the live manifest are the shape an EN-only page
+    // has to match. Read from the manifest, not restated, so the comparison
+    // cannot go stale when one of them is finally translated.
+    const ruOnly = PAGES.find((entry) => localesOf(entry).length === 1 && localesOf(entry)[0] === 'ru')
+
+    it('is its own canonical and its own x-default, exactly like the ru-only pages', () => {
+        expect(ruOnly, 'no single-locale page left to compare against').toBeDefined()
+        for (const entry of [enOnly, ruOnly!]) {
+            const [language] = localesOf(entry)
+            const self = `https://darebay.com${pagePath(entry, language)}`
+            expect(xDefaultLocaleOf(entry)).toBe(language)
+            expect(hreflangCluster(entry)).toEqual([
+                { hreflang: language, href: self },
+                { hreflang: 'x-default', href: self },
+            ])
+        }
+    })
+
+    it('offers no language switcher, because there is nothing to switch to', () => {
+        // `localeLinks` in config.ts and `og:locale:alternate` are both this call.
+        expect(alternateLocalesOf(enOnly, 'en')).toEqual([])
+        expect(alternateLocalesOf(ruOnly!, 'ru')).toEqual([])
+    })
+
+    it('contributes exactly one URL, to its own locale', () => {
+        // The sitemap (via VitePress), llms.txt and the dist gates all enumerate
+        // `pagePath(entry, locale)` over `localesOf(entry)`; this is that set.
+        const urls = LOCALES.map((axis) => [axis.language, pagePath(enOnly, axis.language)] as const)
+        expect(urls.filter(([, path]) => path !== null)).toEqual([
+            ['en', '/en/earnings/who-pays-clippers-in-india'],
+        ])
+    })
+
+    it('still redirects its retired addresses instead of dropping them', () => {
+        // The old implementation looked up the RU canonical first and skipped the
+        // whole entry when there was none — every retired address of a page
+        // without a Russian version silently became a 404.
+        expect(redirectTarget(enOnly, '/en/earnings/india-clipping-rates')).toBe(
+            '/en/earnings/who-pays-clippers-in-india',
+        )
+        // A retired address in a language this page does not have lands on its
+        // x-default: a live page beats a dead address.
+        expect(redirectTarget(enOnly, '/zarabotok/staryy-adres')).toBe('/en/earnings/who-pays-clippers-in-india')
+    })
+})
+
 describe('redirectMap locale integrity', () => {
     const map = redirectMap()
 
     it('never sends a reader across languages', () => {
         // The ONE legal crossing: the survivor has no page in the source language
-        // yet, so the root canonical is the only live address there is.
+        // at all, so its x-default version is the only live address there is.
+        //
+        // That used to read "the root canonical", which was the same sentence
+        // while every page had a Russian version. Since 2026-09-18 a survivor may
+        // be EN-only, and then the only address it has is the English one — so the
+        // rule is stated against `xDefaultLocaleOf`, which is what `redirectTarget`
+        // actually falls back to.
         const illegal = Object.entries(map)
             .filter(([from, to]) => localeOfPath(from) !== localeOfPath(to))
             .filter(([from, to]) => {
-                if (localeOfPath(to) !== ROOT_LOCALE.language) return true
-                const survivor = PAGES.find((entry) => pagePath(entry, ROOT_LOCALE.language) === to)
+                const survivor = PAGES.find((entry) =>
+                    LOCALES.some((axis) => pagePath(entry, axis.language) === to),
+                )
                 if (!survivor) return true
-                const language = localeOfPath(from) as (typeof LOCALES)[number]['language']
-                return pagePath(survivor, language) !== null
+                const language = localeOfPath(from)
+                if (pagePath(survivor, language) !== null) return true
+                return to !== pagePath(survivor, xDefaultLocaleOf(survivor))
             })
             .map(([from, to]) => `${from} -> ${to}`)
 
@@ -47,9 +190,12 @@ describe('redirectMap locale integrity', () => {
             if (language === ROOT_LOCALE.language) continue
             const axis = LOCALES.find((candidate) => candidate.language === language)
             expect(axis, `unknown locale for ${from}`).toBeDefined()
-            // A UA address may only resolve to a UA address (or fall back to root).
+            // A UA address may only resolve to a UA address, or leave its tree
+            // for the one address a survivor without Ukrainian still has.
+            const survivor = PAGES.find((entry) => LOCALES.some((a) => pagePath(entry, a.language) === to))
             expect(
-                to.startsWith(`${axis!.prefix}/`) || localeOfPath(to) === ROOT_LOCALE.language,
+                to.startsWith(`${axis!.prefix}/`) ||
+                    (survivor !== undefined && to === pagePath(survivor, xDefaultLocaleOf(survivor))),
                 `${from} -> ${to} escapes its locale tree`,
             ).toBe(true)
         }

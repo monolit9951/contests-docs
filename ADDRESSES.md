@@ -3,11 +3,13 @@
 > ⚙️ **Сгенерировано** из `docs/.vitepress/registry.ts`. Руками не править —
 > `node --experimental-strip-types scripts/print-addresses.mjs > ADDRESSES.md`.
 
-Страниц: **72** · адресов: **207** · редиректов со старых адресов: **90**
+Страниц: **74** · адресов: **209** · редиректов со старых адресов: **91**
 
-Контент сегодня русский, поэтому у страниц объявлена только локаль `ru`: страница,
-которой нет на языке, в сайтмап этой локали и в hreflang не попадает вообще. Украинские
-и английские адреса появятся здесь по мере перевода, постранично.
+Страница объявляет только те языки, на которых она действительно существует: той,
+которой нет на языке, в сайтмапе этой локали и в hreflang нет вообще. Русская версия
+не обязательна — страница про чужой рынок бывает только английской (решение фаундера
+18.09.2026). В колонке «Стало» — адрес в корневой локали, а у страницы без русской
+версии её x-default.
 
 ## Заработок — `/zarabotok/`
 
@@ -17,11 +19,13 @@
 | `/docs/ru/zarabotok/rabota-narezchikom`<br>`/zarabotok/kak-zarabotat-na-narezkah-s-nulya`<br>`/ua/zarobitok/yak-zarobyty-na-narizkakh-z-nulia`<br>`/en/earnings/start-clipping-from-zero`<br>`/docs/ru/zarabotok/kak-zarabotat-na-narezkah-s-nulya` | `/zarabotok/rabota-narezchikom` | `earnings-clipper-job` |
 | `/docs/ru/zarabotok/skolko-mozhno-zarabotat-na-narezkah`<br>`/zarabotok/skolko-platyat-novichku`<br>`/ua/zarobitok/skilky-platiat-novachku`<br>`/en/earnings/beginner-rates`<br>`/docs/ru/zarabotok/skolko-platyat-novichku`<br>`/zarabotok/zarabotok-bez-podpischikov`<br>`/ua/zarobitok/zarobitok-bez-pidpysnykiv`<br>`/en/earnings/earn-without-followers`<br>`/docs/ru/zarabotok/zarabotok-bez-podpischikov`<br>`/zarabotok/skolko-platyat-za-1000-prosmotrov`<br>`/ua/zarobitok/skilky-platiat-za-1000-perehliadiv`<br>`/en/earnings/pay-per-1000-views`<br>`/docs/ru/zarabotok/skolko-platyat-za-1000-prosmotrov`<br>`/docs/skolko-platyat-novichku` | `/zarabotok/skolko-mozhno-zarabotat-na-narezkah` | `earnings-how-much-total` |
 | `/docs/ru/zarabotok/skolko-platyat-za-narezki-strimerov`<br>`/zarabotok/kak-zarabotat-na-narezkah-strimerov`<br>`/ua/zarobitok/yak-zarobyty-na-narizkakh-strymeriv`<br>`/en/earnings/earn-from-streamer-clips`<br>`/docs/ru/zarabotok/kak-zarabotat-na-narezkah-strimerov` | `/zarabotok/skolko-platyat-za-narezki-strimerov` | `earnings-streamer-clip-rate` |
+| — *(новая)* | `/zarabotok/kto-iz-strimerov-platit-za-narezki` | `earnings-streamers-who-pay` |
 | `/docs/ru/zarabotok/skolko-platyat-za-prosmotry-v-tiktok` | `/zarabotok/skolko-platyat-za-prosmotry-v-tiktok` | `earnings-tiktok-views` |
 | `/docs/ru/kak-rabotaet/kak-rabotaet-oplata-za-prosmotry`<br>`/zarabotok/kak-schitayutsya-prosmotry-dlya-vyplaty`<br>`/ua/zarobitok/yak-rakhuiutsia-perehliady-dlia-vyplaty`<br>`/en/earnings/how-views-are-counted`<br>`/docs/ru/kak-rabotaet/kak-schitayutsya-prosmotry-dlya-vyplaty`<br>`/zarabotok/porog-prosmotrov-dlya-vyplaty`<br>`/ua/zarobitok/porih-perehliadiv-dlia-vyplaty`<br>`/en/earnings/view-threshold`<br>`/docs/ru/kak-rabotaet/porog-prosmotrov-dlya-vyplaty` | `/zarabotok/kak-rabotaet-oplata-za-prosmotry` | `earnings-ppv-mechanics` |
-| `/docs/ru/platformy/gde-brat-zakazy-na-narezki`<br>`/zarabotok/ploshchadki-i-komissii`<br>`/ua/zarobitok/maidanchyky-i-komisii`<br>`/en/earnings/platforms-and-fees`<br>`/docs/ru/platformy/` | `/zarabotok/gde-brat-zakazy-na-narezki` | `earnings-where-to-find-work` |
+| `/docs/ru/platformy/gde-brat-zakazy-na-narezki`<br>`/zarabotok/ploshchadki-i-komissii`<br>`/ua/zarobitok/maidanchyky-i-komisii`<br>`/en/earnings/platforms-and-fees`<br>`/docs/ru/platformy/`<br>`/docs/platformy/` | `/zarabotok/gde-brat-zakazy-na-narezki` | `earnings-where-to-find-work` |
 | — *(новая)* | `/zarabotok/kak-delat-narezki` | `earnings-how-to-clip` |
 | — *(новая)* | `/zarabotok/zarabotok-na-narezkah-filmov` | `earnings-film-clips` |
+| — *(новая)* | `/zarabotok/zakonno-li-delat-narezki` | `earnings-is-clipping-legal` |
 | — *(новая)* | `/zarabotok/zarabotok-na-narezkah-v-youtube` | `earnings-youtube-clips` |
 | — *(новая)* | `/zarabotok/zarabotok-na-reels-instagram` | `earnings-instagram-reels` |
 | — *(новая)* | `/zarabotok/luchshie-platformy-dlya-zarabotka-na-narezkah` | `best-clipping-platforms` |

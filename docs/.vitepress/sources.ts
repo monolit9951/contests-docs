@@ -52,7 +52,7 @@ const SOURCE_COMMENT_OPENER = /<!--\s*source:/g
  * entries because the product and its docs answer on different hosts.
  * Extended 2026-09-18 with the regional marketplaces the per-country pages cite: ClipGrow, Wondeed
  * and ClipConnect (India), both Cliptocash namesakes (.io for Africa, .com under French law),
- * ClippaPay (Nigeria) and Klipbait (CIS).
+ * ClippaPay (Nigeria), Klipbait (CIS) and Nashr (Saudi Arabia).
  *
  * Matched by host, so `docs.whop.com` and `www.vyro.com` need no entry of their own. A trailing
  * `.*` means "this brand under any TLD" — `klipni.*` and `vues.*` are one small platform each and
@@ -77,6 +77,7 @@ export const COMPETITOR_SOURCE_HOSTS: readonly string[] = [
   'cliptocash.com',
   'klipbait.com',
   'clippapay.com',
+  'nashrapp.com',
 ]
 
 /** The host as a reader would say it — what `LPlatforms.vue` already prints for the same sources. */

@@ -167,3 +167,21 @@ describe('the English fact card prints exactly what the JSON publishes', () => {
     expect(description.length).toBeLessThanOrEqual(160)
   })
 })
+
+describe('the Russian fact card prints exactly what the JSON publishes', () => {
+  const ruPage = readFileSync(join(ROOT, 'docs', 'o-proekte', 'darebay-v-tsifrakh.md'), 'utf8')
+
+  it('carries the generated table verbatim', () => {
+    expect(ruPage).toContain(renderTable(document, 'ru'))
+  })
+
+  it('names the machine-readable copy and keeps the facts anchor alive', () => {
+    expect(ruPage).toContain(`](${FACTS_PUBLIC_PATH})`)
+    expect(ruPage).toContain('{#facts}')
+  })
+
+  it('keeps the search snippet inside its budget', () => {
+    const description = /^description:\s*"?(.+?)"?\s*$/m.exec(ruPage)[1]
+    expect(description.length).toBeLessThanOrEqual(160)
+  })
+})

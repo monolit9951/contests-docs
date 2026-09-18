@@ -1069,61 +1069,60 @@
       "name": "Vues",
       "url": "https://vues.app/",
       "kind": "clipping marketplace",
-      "operator": "not published (Delaware law)",
+      "operator": "Vues Technology LLC (its App Store listing); its terms name only \"Vues\", under Delaware law",
       "bestFor": {
         "en": "clippers who want crypto or PayPal payouts without follower minimums",
         "ru": "нарезчики, которым нужны выплаты криптой или PayPal без порога подписчиков",
         "uk": "нарізчики, яким потрібні виплати криптою або PayPal без порогу підписників"
       },
       "summary": {
-        "en": "A CPM marketplace where brands set a rate and a budget cap and Vues takes its 10% from the brand; clippers withdraw to USDT, Solana, BTC, PayPal or bank. Funds are not held by Vues, and rates are shown only inside the app.",
-        "ru": "CPM-площадка, где бренд задаёт ставку и потолок бюджета, а свои 10% Vues берёт с бренда; нарезчики выводят в USDT, Solana, BTC, PayPal или на банк. Деньги Vues не держит, ставки видны только внутри приложения.",
-        "uk": "CPM-майданчик, де бренд задає ставку і стелю бюджету, а свої 10% Vues бере з бренду; нарізчики виводять у USDT, Solana, BTC, PayPal або на банк. Гроші Vues не тримає, ставки видно лише всередині застосунку."
+        "en": "A CPM marketplace whose public campaigns come from casino, sportsbook and prediction-market brands. The brand, not Vues, pays each clipper and Vues holds no campaign money; rates show only inside the app, and its own pages disagree on the clipper fee and on when payouts happen.",
+        "ru": "CPM-площадка, чьи публичные кампании запускают казино, букмекеры и рынки предсказаний. Нарезчику платит бренд, а не Vues, и деньги кампаний Vues не держит; ставки видны только в приложении, а её же страницы расходятся в комиссии с нарезчика и в сроках выплат.",
+        "uk": "CPM-майданчик, чиї публічні кампанії запускають казино, букмекери й ринки передбачень. Нарізчикові платить бренд, а не Vues, і грошей кампаній Vues не тримає; ставки видно лише в застосунку, а його ж сторінки розходяться щодо комісії з нарізчика і строків виплат."
       },
       "fields": {
         "rate": {
           "text": {
-            "en": "set per campaign and shown only in the app; site example $3.00 per 1,000",
-            "ru": "задаёт кампания, видно только в приложении; пример на сайте $3.00 за 1000",
-            "uk": "задає кампанія, видно лише в застосунку; приклад на сайті $3.00 за 1000"
+            "en": "set per campaign and shown only in the app; the homepage calculator uses $3.00 per 1,000",
+            "ru": "задаёт кампания, видно только в приложении; калькулятор на главной считает по $3.00 за 1000",
+            "uk": "задає кампанія, видно лише в застосунку; калькулятор на головній рахує за $3.00 за 1000"
           },
           "source": {
-            "url": "https://vues.app/campaigns/polymarket",
-            "date": "2026-09-02"
+            "url": "https://vues.app/",
+            "date": "2026-09-18"
           }
         },
         "threshold": {
           "text": {
-            "en": "",
-            "ru": "",
-            "uk": ""
+            "en": "none per clip in Vues' own comparison table; a campaign can set a minimum payout per post",
+            "ru": "порога на ролик нет по сравнительной таблице самой Vues; кампания может задать минимальную выплату за пост",
+            "uk": "порогу на ролик немає за порівняльною таблицею самої Vues; кампанія може задати мінімальну виплату за пост"
           },
           "source": {
-            "url": "https://vues.app/",
-            "date": "2026-09-02"
+            "url": "https://vues.app/blog/best-clipping-platforms-that-pay-crypto",
+            "date": "2026-09-18"
           }
         },
         "cap": {
           "text": {
-            "en": "campaign budget cap; per-clip cap not published",
-            "ru": "потолок бюджета кампании; потолок на ролик не опубликован",
-            "uk": "стеля бюджету кампанії; стелю на ролик не опубліковано"
+            "en": "campaign budget cap; a campaign can also cap the payout per post and per profile, amounts shown only in the app",
+            "ru": "потолок бюджета кампании; кампания может ограничить и выплату на пост и на профиль, суммы видны только в приложении",
+            "uk": "стеля бюджету кампанії; кампанія може обмежити й виплату на пост і на профіль, суми видно лише в застосунку"
           },
           "source": {
-            "url": "https://vues.app/terms",
-            "date": "2026-09-02"
+            "url": "https://vues.app/blog/how-cpm-payouts-work",
+            "date": "2026-09-18"
           }
         },
         "fee": {
           "text": {
-            "en": "0% from the clipper; Vues takes 10% from the brand; a processing fee on withdrawal, amount not published",
-            "ru": "0% с нарезчика; 10% Vues берёт с бренда; комиссия за вывод есть, размер не опубликован",
-            "uk": "0% з нарізчика; 10% Vues бере з бренду; комісія за виведення є, розмір не опубліковано"
+            "en": "not published as a rate: its homepage says Vues' cut comes from the brand and clippers see only \"a small processing fee\" on withdrawal; its referral page illustrates a 10% platform fee on each cash-out",
+            "ru": "ставка не опубликована: главная пишет, что Vues берёт свою долю из бюджета бренда, а нарезчик видит лишь небольшую плату за обработку при выводе; страница реферальной программы иллюстрирует комиссию платформы 10% с каждого вывода",
+            "uk": "ставку не опубліковано: головна пише, що Vues бере свою частку з бюджету бренду, а нарізчик бачить лише невелику плату за обробку при виведенні; сторінка реферальної програми ілюструє комісію платформи 10% з кожного виведення"
           },
-          "value": 0,
           "source": {
             "url": "https://vues.app/affiliate",
-            "date": "2026-09-02"
+            "date": "2026-09-18"
           }
         },
         "minPayout": {
@@ -1139,13 +1138,13 @@
         },
         "payoutMethods": {
           "text": {
-            "en": "USDT, Solana, BTC, PayPal, bank transfer",
-            "ru": "USDT, Solana, BTC, PayPal, банковский перевод",
-            "uk": "USDT, Solana, BTC, PayPal, банківський переказ"
+            "en": "homepage: USDT, Solana, BTC, PayPal or bank transfer; terms: whatever the brand enables, such as USDT, PayPal or Zelle; the iOS app pays USDT on ERC-20",
+            "ru": "главная: USDT, Solana, BTC, PayPal или банковский перевод; условия: то, что включит бренд, например USDT, PayPal или Zelle; iOS-приложение платит USDT в сети ERC-20",
+            "uk": "головна: USDT, Solana, BTC, PayPal або банківський переказ; умови: те, що ввімкне бренд, наприклад USDT, PayPal або Zelle; iOS-застосунок платить USDT у мережі ERC-20"
           },
           "source": {
-            "url": "https://vues.app/",
-            "date": "2026-09-02"
+            "url": "https://vues.app/terms",
+            "date": "2026-09-18"
           }
         },
         "cis": {
@@ -1174,14 +1173,14 @@
         },
         "escrow": {
           "text": {
-            "en": "no: the terms say campaign funds stay with the brand and are not custodied by Vues",
-            "ru": "нет: по условиям деньги кампании остаются у бренда, Vues их не хранит",
-            "uk": "ні: за умовами гроші кампанії лишаються у бренду, Vues їх не зберігає"
+            "en": "no: its terms say campaign funds stay with the brand and are not custodied by Vues, although its homepage promises \"a 100% guarantee for payout\"",
+            "ru": "нет: по условиям деньги кампании остаются у бренда и Vues их не хранит, хотя главная обещает «100% guarantee for payout»",
+            "uk": "ні: за умовами гроші кампанії лишаються у бренду і Vues їх не зберігає, хоча головна обіцяє «100% guarantee for payout»"
           },
           "state": "no",
           "source": {
             "url": "https://vues.app/terms",
-            "date": "2026-09-02"
+            "date": "2026-09-18"
           }
         },
         "networks": {
@@ -1289,17 +1288,17 @@
       },
       "pros": {
         "en": [
-          "Brand pays the platform fee, not the clipper",
+          "Clips posted to X are counted too",
           "Many payout rails including USDT and Solana",
           "No follower minimum"
         ],
         "ru": [
-          "Комиссию платформе платит бренд, а не нарезчик",
+          "Засчитываются и ролики в X",
           "Много способов вывода, включая USDT и Solana",
           "Нет минимума подписчиков"
         ],
         "uk": [
-          "Комісію платформі платить бренд, а не нарізчик",
+          "Зараховуються й ролики в X",
           "Багато способів виведення, включно з USDT і Solana",
           "Немає мінімуму підписників"
         ]
@@ -1307,17 +1306,17 @@
       "cons": {
         "en": [
           "Funds are not held by the platform",
-          "Rates, threshold and minimum payout are not published outside the app",
+          "Rates, the minimum payout and the fee rate are not published outside the app",
           "No country list"
         ],
         "ru": [
           "Деньги не хранятся на платформе",
-          "Ставки, порог и минимум вывода не опубликованы вне приложения",
+          "Ставки, минимум вывода и размер комиссии не опубликованы вне приложения",
           "Нет списка стран"
         ],
         "uk": [
           "Гроші не зберігаються на платформі",
-          "Ставки, поріг і мінімум виведення не опубліковані поза застосунком",
+          "Ставки, мінімум виведення і розмір комісії не опубліковані поза застосунком",
           "Немає списку країн"
         ]
       }
@@ -1327,120 +1326,120 @@
       "name": "Reach.cat",
       "url": "https://reach.cat/",
       "kind": "CPM campaign marketplace",
-      "operator": "not published",
+      "operator": "REACH MARKETING NETWORK - FZCO, Dubai Silicon Oasis, UAE (its terms and privacy policy); UAE law",
       "bestFor": {
-        "en": "weekly USDT payouts in many countries",
-        "ru": "еженедельные выплаты в USDT во многих странах",
-        "uk": "щотижневі виплати в USDT у багатьох країнах"
+        "en": "clippers who want USDT on Ethereum, BNB Smart Chain or Solana, or a bank payout by IBAN",
+        "ru": "нарезчики, которым нужен USDT в Ethereum, BNB Smart Chain или Solana либо выплата на банк по IBAN",
+        "uk": "нарізчики, яким потрібен USDT в Ethereum, BNB Smart Chain або Solana чи виплата на банк за IBAN"
       },
       "summary": {
-        "en": "Brand-set CPM campaigns with weekly payouts in USDT and a bio-code account check; the site says 149+ countries and $1–$3 per 1,000 for new clippers, though its own pages give different CPM ranges and disagree on whether identity verification is required.",
-        "ru": "CPM-кампании со ставкой от бренда, еженедельные выплаты в USDT и проверка аккаунта кодом в био; сайт пишет про 149+ стран и $1–$3 за 1000 для новичков, хотя его же страницы дают разные диапазоны ставок и расходятся в том, нужна ли верификация личности.",
-        "uk": "CPM-кампанії зі ставкою від бренду, щотижневі виплати в USDT і перевірка акаунта кодом у біо; сайт пише про 149+ країн і $1–$3 за 1000 для новачків, хоча його ж сторінки дають різні діапазони ставок і розходяться в тому, чи потрібна верифікація особи."
+        "en": "A Dubai-registered marketplace of brand-funded CPM campaigns that pays clippers itself, in USDT or by bank transfer. Its landing pages say \"No KYC. No ID check.\", while its terms effective 13 September 2026 require identity verification through iDenfy once payout requests pass $500, and its pages quote different CPM ranges.",
+        "ru": "Площадка из Дубая с CPM-кампаниями, которые оплачивают бренды, а выплаты нарезчикам делает сама, в USDT или банковским переводом. Лендинги пишут «No KYC. No ID check.», а условия, действующие с 13 сентября 2026 года, требуют проверку личности через iDenfy, как только запросы на выплату превысили $500; диапазоны ставок на её страницах тоже расходятся.",
+        "uk": "Майданчик із Дубая з CPM-кампаніями, які оплачують бренди, а виплати нарізчикам робить сам, у USDT або банківським переказом. Лендинги пишуть «No KYC. No ID check.», а умови, чинні з 13 вересня 2026 року, вимагають перевірку особи через iDenfy, щойно запити на виплату перевищили $500; діапазони ставок на його сторінках теж розходяться."
       },
       "fields": {
         "rate": {
           "text": {
-            "en": "$1–$3 per 1,000 for new clippers per its clipper page; other pages quote other ranges",
-            "ru": "$1–$3 за 1000 для новичков по странице для нарезчиков; другие страницы называют другие диапазоны",
-            "uk": "$1–$3 за 1000 для новачків за сторінкою для нарізчиків; інші сторінки називають інші діапазони"
+            "en": "$1–$3 per 1,000 \"from day one\" per its clipper page; its blog says $1–$6 and its brand page $5–$18",
+            "ru": "$1–$3 за 1000 «с первого дня» по странице для нарезчиков; в блоге $1–$6, на странице для брендов $5–$18",
+            "uk": "$1–$3 за 1000 «з першого дня» за сторінкою для нарізчиків; у блозі $1–$6, на сторінці для брендів $5–$18"
           },
           "value": 1,
           "source": {
             "url": "https://reach.cat/become-a-clipper/",
-            "date": "2026-09-02"
+            "date": "2026-09-18"
           }
         },
         "threshold": {
           "text": {
-            "en": "set per campaign, can be none; pays from 1,000 views per its creator page",
-            "ru": "задаётся кампанией, может отсутствовать; по странице для авторов платят от 1000 просмотров",
-            "uk": "задається кампанією, може бути відсутнім; за сторінкою для авторів платять від 1000 переглядів"
+            "en": "set per campaign: the app's campaign card shows \"Min. views to earn\" (read 2026-09-18), which can be left empty; below it a link earns nothing, above it all its views are paid",
+            "ru": "задаёт кампания: карточка кампании в приложении показывает «Min. views to earn» (прочитано 18.09.2026), порога может не быть; ниже него ссылка ничего не зарабатывает, выше оплачиваются все её просмотры",
+            "uk": "задає кампанія: картка кампанії в застосунку показує «Min. views to earn» (прочитано 18.09.2026), порогу може не бути; нижче нього посилання нічого не заробляє, вище оплачуються всі його перегляди"
           },
-          "value": 1000,
           "source": {
-            "url": "https://reach.cat/creator",
-            "date": "2026-09-02"
+            "url": "https://reach.cat/dashboard/creator/campaigns",
+            "date": "2026-09-18"
           }
         },
         "cap": {
           "text": {
-            "en": "per-campaign daily cap and per-clip maximum, shown in the app",
-            "ru": "дневной потолок кампании и максимум на ролик, видны в приложении",
-            "uk": "денна стеля кампанії та максимум на ролик, видно в застосунку"
+            "en": "set per campaign: its brand page names a daily cap, and the app's campaign card shows a maximum payout per link (read 2026-09-18)",
+            "ru": "задаёт кампания: страница для брендов называет дневной потолок, карточка кампании в приложении показывает максимум выплаты на ссылку (прочитано 18.09.2026)",
+            "uk": "задає кампанія: сторінка для брендів називає денну стелю, картка кампанії в застосунку показує максимум виплати на посилання (прочитано 18.09.2026)"
           },
           "source": {
-            "url": "https://reach.cat/agency",
-            "date": "2026-09-02"
+            "url": "https://reach.cat/",
+            "date": "2026-09-18"
           }
         },
         "fee": {
           "text": {
-            "en": "not published for clippers; brands pay a flat 10%",
-            "ru": "для нарезчиков не опубликована; бренд платит 10%",
-            "uk": "для нарізчиків не опублікована; бренд платить 10%"
+            "en": "terms: \"approximately 10% on all CPM-based payouts\"; its blog says brands pay the 10% and clippers keep 100%; the app's payout screen shows a $0 fee on USDT and $4 on a bank payout (read 2026-09-18)",
+            "ru": "условия: «approximately 10% on all CPM-based payouts»; блог пишет, что 10% платит бренд, а нарезчик получает 100%; экран выплат в приложении показывает сбор $0 на USDT и $4 на банковскую выплату (прочитано 18.09.2026)",
+            "uk": "умови: «approximately 10% on all CPM-based payouts»; блог пише, що 10% платить бренд, а нарізчик отримує 100%; екран виплат у застосунку показує збір $0 на USDT і $4 на банківську виплату (прочитано 18.09.2026)"
           },
           "source": {
-            "url": "https://reach.cat/clipping-fee-calculator/",
-            "date": "2026-09-02"
+            "url": "https://reach.cat/terms",
+            "date": "2026-09-18"
           }
         },
         "minPayout": {
           "text": {
-            "en": "exists, amount not published; payouts weekly",
-            "ru": "есть, сумма не опубликована; выплаты еженедельно",
-            "uk": "є, суму не опубліковано; виплати щотижня"
+            "en": "the app's payout screen shows $5 for USDT and $10 for a bank payout (read 2026-09-18); two landing pages advertise no floor, while its clipper page mentions a minimum threshold",
+            "ru": "экран выплат в приложении показывает минимум $5 для USDT и $10 для банка (прочитано 18.09.2026); два лендинга обещают вывод без нижней границы, а страница для нарезчиков упоминает минимальный порог",
+            "uk": "екран виплат у застосунку показує мінімум $5 для USDT і $10 для банку (прочитано 18.09.2026); два лендинги обіцяють виведення без нижньої межі, а сторінка для нарізчиків згадує мінімальний поріг"
           },
+          "value": 5,
           "source": {
-            "url": "https://reach.cat/creator",
-            "date": "2026-09-02"
+            "url": "https://reach.cat/dashboard/creator/earnings",
+            "date": "2026-09-18"
           }
         },
         "payoutMethods": {
           "text": {
-            "en": "USDT to a crypto wallet (some pages add SOL or bank transfer); weekly, 3–5 business days via a payment partner",
-            "ru": "USDT на криптокошелёк (на части страниц ещё SOL или банк); еженедельно, 3–5 рабочих дней через платёжного партнёра",
-            "uk": "USDT на криптогаманець (на частині сторінок ще SOL або банк); щотижня, 3–5 робочих днів через платіжного партнера"
+            "en": "the app's payout screen offers USDT on ERC20, BEP20 or Solana, or a bank transfer by IBAN (read 2026-09-18); its clipper landing page says \"USDT or SOL\"; its terms put payouts at 3–5 business days after validation",
+            "ru": "экран выплат в приложении предлагает USDT в сетях ERC20, BEP20 или Solana либо банковский перевод по IBAN (прочитано 18.09.2026); лендинг для нарезчиков пишет «USDT or SOL»; по условиям выплата за 3–5 рабочих дней после проверки",
+            "uk": "екран виплат у застосунку пропонує USDT у мережах ERC20, BEP20 або Solana чи банківський переказ за IBAN (прочитано 18.09.2026); лендинг для нарізчиків пише «USDT or SOL»; за умовами виплата за 3–5 робочих днів після перевірки"
           },
           "source": {
-            "url": "https://reach.cat/become-a-clipper/",
-            "date": "2026-09-02"
+            "url": "https://reach.cat/dashboard/creator/earnings",
+            "date": "2026-09-18"
           }
         },
         "cis": {
           "text": {
-            "en": "149+ countries claimed; no excluded-country list published",
-            "ru": "заявлено 149+ стран; списка исключённых стран нет",
-            "uk": "заявлено 149+ країн; списку виключених країн немає"
+            "en": "149+ countries claimed on its clipper page, 130+ in its blog; no country list published",
+            "ru": "на странице для нарезчиков заявлено 149+ стран, в блоге 130+; списка стран нет",
+            "uk": "на сторінці для нарізчиків заявлено 149+ країн, у блозі 130+; списку країн немає"
           },
           "state": "unknown",
           "source": {
             "url": "https://reach.cat/become-a-clipper/",
-            "date": "2026-09-02"
+            "date": "2026-09-18"
           }
         },
         "followers": {
           "text": {
-            "en": "no followers required; bio-code verification; the app also asks for identity verification before withdrawal",
-            "ru": "подписчики не нужны; проверка кодом в био; приложение просит верификацию личности перед выводом",
-            "uk": "підписники не потрібні; перевірка кодом у біо; застосунок просить верифікацію особи перед виведенням"
+            "en": "no platform-wide follower minimum, though a campaign can set one; bio-code account check; landing pages say \"No KYC. No ID check.\", while its terms effective 13 September 2026 require identity verification (iDenfy) once payout requests pass $500",
+            "ru": "общего минимума подписчиков нет, но кампания может его задать; проверка аккаунта кодом в био; лендинги пишут «No KYC. No ID check.», а условия, действующие с 13 сентября 2026 года, требуют проверку личности (iDenfy), когда запросы на выплату превысили $500",
+            "uk": "загального мінімуму підписників немає, але кампанія може його задати; перевірка акаунта кодом у біо; лендинги пишуть «No KYC. No ID check.», а умови, чинні з 13 вересня 2026 року, вимагають перевірку особи (iDenfy), коли запити на виплату перевищили $500"
           },
           "state": "no",
           "source": {
-            "url": "https://reach.cat/become-a-clipper/",
-            "date": "2026-09-02"
+            "url": "https://reach.cat/user-agreement",
+            "date": "2026-09-18"
           }
         },
         "escrow": {
           "text": {
-            "en": "not stated as escrow; a campaign is funded by one payment before it runs and the brand approves each post",
-            "ru": "эскроу не заявлено; кампания оплачивается одним платежом до запуска, бренд одобряет каждый пост",
-            "uk": "ескроу не заявлено; кампанія оплачується одним платежем до запуску, бренд схвалює кожен пост"
+            "en": "partly: the brand prepays the budget plus 10% before launch and Reach.cat pays clippers from it, but no terms describe how the budget is held",
+            "ru": "частично: бренд заранее оплачивает бюджет и 10% сверху, а Reach.cat платит нарезчикам из него, но как хранится бюджет, условия не описывают",
+            "uk": "частково: бренд наперед оплачує бюджет і 10% зверху, а Reach.cat платить нарізчикам із нього, але як зберігається бюджет, умови не описують"
           },
-          "state": "unknown",
+          "state": "partial",
           "source": {
-            "url": "https://reach.cat/agency",
-            "date": "2026-09-02"
+            "url": "https://reach.cat/blog/reach-cat-pricing-brands-2026/",
+            "date": "2026-09-18"
           }
         },
         "networks": {
@@ -1467,117 +1466,117 @@
         },
         "india": {
           "text": {
-            "en": "no country list; 149+ countries claimed, paid in USDT or SOL to a wallet, no bank or ID"
+            "en": "no country list, 149+ countries claimed; USDT or a bank transfer by IBAN per the app's payout screen (read 2026-09-18); landing pages say no ID check, but terms effective 13 September 2026 require one once payout requests pass $500"
           },
           "state": "unknown",
           "source": {
-            "url": "https://reach.cat/become-a-clipper/",
+            "url": "https://reach.cat/terms",
             "date": "2026-09-18"
           }
         },
         "pakistan": {
           "text": {
-            "en": "no country list; 149+ countries claimed, paid in USDT or SOL to a wallet, no bank or ID"
+            "en": "no country list, 149+ countries claimed; USDT or a bank transfer by IBAN per the app's payout screen (read 2026-09-18); landing pages say no ID check, but terms effective 13 September 2026 require one once payout requests pass $500"
           },
           "state": "unknown",
           "source": {
-            "url": "https://reach.cat/become-a-clipper/",
+            "url": "https://reach.cat/terms",
             "date": "2026-09-18"
           }
         },
         "bangladesh": {
           "text": {
-            "en": "no country list; 149+ countries claimed, paid in USDT or SOL to a wallet, no bank or ID"
+            "en": "no country list, 149+ countries claimed; USDT or a bank transfer by IBAN per the app's payout screen (read 2026-09-18); landing pages say no ID check, but terms effective 13 September 2026 require one once payout requests pass $500"
           },
           "state": "unknown",
           "source": {
-            "url": "https://reach.cat/become-a-clipper/",
+            "url": "https://reach.cat/terms",
             "date": "2026-09-18"
           }
         },
         "nigeria": {
           "text": {
-            "en": "no country list, but its clipper page shows a paid clipper in Nigeria; USDT or SOL, no bank"
+            "en": "no country list, but a testimonial on its clipper page names a paid clipper in Nigeria; USDT or a bank transfer by IBAN per the app's payout screen (read 2026-09-18); landing pages say no ID check, but terms effective 13 September 2026 require one once payout requests pass $500"
           },
           "state": "partial",
           "source": {
-            "url": "https://reach.cat/become-a-clipper/",
+            "url": "https://reach.cat/terms",
             "date": "2026-09-18"
           }
         },
         "kenya": {
           "text": {
-            "en": "no country list; 149+ countries claimed, paid in USDT or SOL to a wallet, no bank or ID"
+            "en": "no country list, 149+ countries claimed; USDT or a bank transfer by IBAN per the app's payout screen (read 2026-09-18); landing pages say no ID check, but terms effective 13 September 2026 require one once payout requests pass $500"
           },
           "state": "unknown",
           "source": {
-            "url": "https://reach.cat/become-a-clipper/",
+            "url": "https://reach.cat/terms",
             "date": "2026-09-18"
           }
         },
         "mena": {
           "text": {
-            "en": "no country list, but its clipper page shows a paid clipper in Morocco; USDT or SOL, no bank"
+            "en": "no country list, but a testimonial on its clipper page names a paid clipper in Morocco; USDT or a bank transfer by IBAN per the app's payout screen (read 2026-09-18); landing pages say no ID check, but terms effective 13 September 2026 require one once payout requests pass $500"
           },
           "state": "partial",
           "source": {
-            "url": "https://reach.cat/become-a-clipper/",
+            "url": "https://reach.cat/terms",
             "date": "2026-09-18"
           }
         },
         "indonesia": {
           "text": {
-            "en": "no country list; 149+ countries claimed, paid in USDT or SOL to a wallet, no bank or ID"
+            "en": "no country list, 149+ countries claimed; USDT or a bank transfer by IBAN per the app's payout screen (read 2026-09-18); landing pages say no ID check, but terms effective 13 September 2026 require one once payout requests pass $500"
           },
           "state": "unknown",
           "source": {
-            "url": "https://reach.cat/become-a-clipper/",
+            "url": "https://reach.cat/terms",
             "date": "2026-09-18"
           }
         },
         "philippines": {
           "text": {
-            "en": "no country list, but its clipper page shows a paid clipper in the Philippines; USDT or SOL"
+            "en": "no country list, but a testimonial on its clipper page names a paid clipper in the Philippines; USDT or a bank transfer by IBAN per the app's payout screen (read 2026-09-18); landing pages say no ID check, but terms effective 13 September 2026 require one once payout requests pass $500"
           },
           "state": "partial",
           "source": {
-            "url": "https://reach.cat/become-a-clipper/",
+            "url": "https://reach.cat/terms",
             "date": "2026-09-18"
           }
         }
       },
       "pros": {
         "en": [
-          "Weekly USDT payouts",
-          "No follower requirement",
+          "USDT on three networks or a bank payout by IBAN",
+          "No platform-wide follower minimum",
           "Brand fee is flat and published"
         ],
         "ru": [
-          "Еженедельные выплаты в USDT",
-          "Без требований к подписчикам",
+          "USDT в трёх сетях или выплата на банк по IBAN",
+          "Нет общего минимума подписчиков",
           "Комиссия бренда фиксированная и опубликована"
         ],
         "uk": [
-          "Щотижневі виплати в USDT",
-          "Без вимог до підписників",
+          "USDT у трьох мережах або виплата на банк за IBAN",
+          "Немає загального мінімуму підписників",
           "Комісія бренду фіксована й опублікована"
         ]
       },
       "cons": {
         "en": [
-          "Its own pages disagree on rates and on identity checks",
-          "No published clipper fee, minimum payout or country list",
-          "Budget custody is not stated"
+          "Landing pages say no ID check; its terms require one once payout requests pass $500",
+          "A post taken down within 60 days of the campaign's end can lose its earnings, even paid ones",
+          "Its pages disagree on rates, the payout floor and the coin paid out"
         ],
         "ru": [
-          "Его же страницы расходятся по ставкам и по проверке личности",
-          "Нет опубликованной комиссии нарезчика, минимума вывода и списка стран",
-          "Хранение бюджета не описано"
+          "Лендинги пишут, что проверки личности нет, а условия требуют её после $500 запросов на выплату",
+          "Пост, удалённый раньше чем через 60 дней после конца кампании, может лишиться заработка, даже уже выплаченного",
+          "Его страницы расходятся в ставках, минимуме вывода и монете выплаты"
         ],
         "uk": [
-          "Його ж сторінки розходяться щодо ставок і перевірки особи",
-          "Немає опублікованої комісії нарізчика, мінімуму виведення і списку країн",
-          "Зберігання бюджету не описано"
+          "Лендинги пишуть, що перевірки особи немає, а умови вимагають її після $500 запитів на виплату",
+          "Пост, видалений раніше ніж через 60 днів після кінця кампанії, може втратити заробіток, навіть уже виплачений",
+          "Його сторінки розходяться щодо ставок, мінімуму виведення і монети виплати"
         ]
       }
     },

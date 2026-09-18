@@ -2351,6 +2351,1561 @@
           "Немає інформації про зберігання бюджету"
         ]
       }
+    },
+    {
+      "id": "clipgrow",
+      "name": "ClipGrow",
+      "url": "https://clipgrow.in/",
+      "kind": "performance clipping agency (India)",
+      "founded": "not published",
+      "operator": "not published; terms and privacy say only \"operated from Kerala, India\"",
+      "bestFor": {
+        "en": "Indian clippers who want rupee campaigns paid to UPI with no follower minimum"
+      },
+      "summary": {
+        "en": "An Indian clipping agency that runs brand campaigns and pays clippers 30-70 rupees per 1,000 verified views, checked against Instagram's Insights API and the YouTube Data API. The live campaign pages publish the rate, the budget, the remaining budget and a 1,000-view minimum per clip. Clippers pay no fee; the brand pays a 20% management fee on top of the campaign budget."
+      },
+      "calc": {
+        "rateMin": null,
+        "rateMax": null,
+        "cap": null,
+        "threshold": 1000,
+        "fee": 0,
+        "minPayout": null
+      },
+      "fields": {
+        "rate": {
+          "text": {
+            "en": "₹30–₹70 per 1,000 verified views; the campaigns live on the site on 2026-09-18 pay ₹50"
+          },
+          "source": {
+            "url": "https://clipgrow.in/campaigns/mali-music-campaign-905",
+            "date": "2026-09-18"
+          }
+        },
+        "threshold": {
+          "text": {
+            "en": "1,000 views per clip on the live campaigns; the terms say every campaign brief sets its own minimum"
+          },
+          "value": 1000,
+          "source": {
+            "url": "https://clipgrow.in/campaigns/heyschool-3",
+            "date": "2026-09-18"
+          }
+        },
+        "cap": {
+          "text": {
+            "en": "no cap on counted views, but each campaign sets a maximum payout per clip; the amount is not published outside the campaign brief"
+          },
+          "source": {
+            "url": "https://clipgrow.in/for-clippers",
+            "date": "2026-09-18"
+          }
+        },
+        "fee": {
+          "text": {
+            "en": "0% for clippers; the brand pays a separate 20% management fee on top of the campaign budget, of which 40% is due upfront"
+          },
+          "value": 0,
+          "source": {
+            "url": "https://clipgrow.in/for-brands",
+            "date": "2026-09-18"
+          }
+        },
+        "minPayout": {
+          "text": {
+            "en": "₹500 per payout run; anything below rolls over"
+          },
+          "source": {
+            "url": "https://clipgrow.in/for-clippers",
+            "date": "2026-09-18"
+          }
+        },
+        "payoutMethods": {
+          "text": {
+            "en": "UPI to GPay, PhonePe or Paytm; the clipper page says payouts run every Sunday, the terms say a monthly cycle"
+          },
+          "source": {
+            "url": "https://clipgrow.in/terms",
+            "date": "2026-09-18"
+          }
+        },
+        "cis": {
+          "text": {
+            "en": "not published; the privacy policy says ClipGrow \"serves Clippers and Clients across India\""
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://clipgrow.in/privacy",
+            "date": "2026-09-18"
+          }
+        },
+        "followers": {
+          "text": {
+            "en": "no minimum: \"No followers, no investment, no experience required\"; 18+"
+          },
+          "state": "no",
+          "source": {
+            "url": "https://clipgrow.in/for-clippers",
+            "date": "2026-09-18"
+          }
+        },
+        "escrow": {
+          "text": {
+            "en": "no: the brand pays 40% of the commitment upfront and the remaining 60% as the first tranche runs down; unspent money is refunded on five days' notice"
+          },
+          "state": "no",
+          "source": {
+            "url": "https://clipgrow.in/for-brands",
+            "date": "2026-09-18"
+          }
+        },
+        "networks": {
+          "text": {
+            "en": "Instagram Reels and YouTube Shorts"
+          },
+          "source": {
+            "url": "https://clipgrow.in/for-clippers",
+            "date": "2026-09-18"
+          }
+        },
+        "verification": {
+          "text": {
+            "en": "views are read from Instagram's Insights API or the YouTube Data API — no screenshots or self-reported numbers — and every clip is checked against the brand brief"
+          },
+          "source": {
+            "url": "https://clipgrow.in/terms",
+            "date": "2026-09-18"
+          }
+        },
+        "india": {
+          "text": {
+            "en": "yes: \"a performance-based clipping agency in India\", rupee rates and UPI payouts, operated from Kerala"
+          },
+          "state": "yes",
+          "source": {
+            "url": "https://clipgrow.in/",
+            "date": "2026-09-18"
+          }
+        },
+        "pakistan": {
+          "text": {
+            "en": "not published; the privacy policy says it serves Clippers and Clients across India"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://clipgrow.in/privacy",
+            "date": "2026-09-18"
+          }
+        },
+        "bangladesh": {
+          "text": {
+            "en": "not published; the privacy policy says it serves Clippers and Clients across India"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://clipgrow.in/privacy",
+            "date": "2026-09-18"
+          }
+        },
+        "nigeria": {
+          "text": {
+            "en": "not published; the privacy policy says it serves Clippers and Clients across India"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://clipgrow.in/privacy",
+            "date": "2026-09-18"
+          }
+        },
+        "kenya": {
+          "text": {
+            "en": "not published; the privacy policy says it serves Clippers and Clients across India"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://clipgrow.in/privacy",
+            "date": "2026-09-18"
+          }
+        },
+        "mena": {
+          "text": {
+            "en": "not published; the privacy policy says it serves Clippers and Clients across India"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://clipgrow.in/privacy",
+            "date": "2026-09-18"
+          }
+        },
+        "indonesia": {
+          "text": {
+            "en": "not published; the privacy policy says it serves Clippers and Clients across India"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://clipgrow.in/privacy",
+            "date": "2026-09-18"
+          }
+        },
+        "philippines": {
+          "text": {
+            "en": "not published; the privacy policy says it serves Clippers and Clients across India"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://clipgrow.in/privacy",
+            "date": "2026-09-18"
+          }
+        }
+      },
+      "pros": {
+        "en": [
+          "Public terms and privacy policy name the payout rail, the clipper fee and the view-verification APIs",
+          "Live campaign pages publish the rate, the total budget, the budget still available and the 1,000-view minimum",
+          "No fee for clippers and no follower minimum"
+        ]
+      },
+      "cons": {
+        "en": [
+          "The site contradicts itself on payout timing: the clipper page says every Sunday, the terms and the campaign pages say a monthly cycle",
+          "No legal entity is named anywhere — only \"operated from Kerala, India\"",
+          "Rates and the payout minimum are in rupees, and the per-clip payout ceiling is not published",
+          "Once a clip is paid it is closed: views it gains afterwards earn nothing"
+        ]
+      }
+    },
+    {
+      "id": "wondeed",
+      "name": "Wondeed",
+      "url": "https://www.wondeed.com/",
+      "kind": "performance clipping marketplace (India)",
+      "founded": "not published",
+      "operator": "not published; terms say \"operated by Wondeed\" and the GST page lists the GSTIN as \"To be updated\"",
+      "bestFor": {
+        "en": "Indian residents who want an escrow-backed rupee campaign with UPI payouts"
+      },
+      "summary": {
+        "en": "An Indian clipping marketplace where the brand's budget sits in an escrow wallet and is drawn down only after views clear the Instagram Graph and YouTube Data APIs, an anomaly check and a 72-hour hold. Clippers are paid to UPI within 7 business days above a ₹500 balance, pay no fee and need no followers. The terms restrict the platform to Indian residents aged 18 or over."
+      },
+      "calc": {
+        "rateMin": null,
+        "rateMax": null,
+        "cap": null,
+        "threshold": null,
+        "fee": 0,
+        "minPayout": null
+      },
+      "fields": {
+        "rate": {
+          "text": {
+            "en": "₹90 per 1,000 verified views in the worked example on the home page; there is no separate rate card"
+          },
+          "source": {
+            "url": "https://www.wondeed.com/",
+            "date": "2026-09-18"
+          }
+        },
+        "threshold": {
+          "text": {
+            "en": "not published: no minimum view count per clip is stated anywhere"
+          },
+          "source": {
+            "url": "https://www.wondeed.com/terms",
+            "date": "2026-09-18"
+          }
+        },
+        "cap": {
+          "text": {
+            "en": "not published for clippers; brands on the Premium and Enterprise plans can set daily view caps"
+          },
+          "source": {
+            "url": "https://www.wondeed.com/pricing",
+            "date": "2026-09-18"
+          }
+        },
+        "fee": {
+          "text": {
+            "en": "0% taken from clippers and 0% from the campaign budget; the platform's income is the brand's subscription (free / ₹8,000 / ₹20,000 a month)"
+          },
+          "value": 0,
+          "source": {
+            "url": "https://www.wondeed.com/pricing",
+            "date": "2026-09-18"
+          }
+        },
+        "minPayout": {
+          "text": {
+            "en": "₹500 minimum balance before a payout is issued"
+          },
+          "source": {
+            "url": "https://www.wondeed.com/terms",
+            "date": "2026-09-18"
+          }
+        },
+        "payoutMethods": {
+          "text": {
+            "en": "UPI within 7 business days of a payout request, after a 72-hour hold; Tier 3 clippers get a 3-day fast-track"
+          },
+          "source": {
+            "url": "https://www.wondeed.com/trust",
+            "date": "2026-09-18"
+          }
+        },
+        "cis": {
+          "text": {
+            "en": "no: \"You must be at least 18 years old and an Indian resident to use Wondeed\""
+          },
+          "state": "no",
+          "source": {
+            "url": "https://www.wondeed.com/terms",
+            "date": "2026-09-18"
+          }
+        },
+        "followers": {
+          "text": {
+            "en": "no minimum: \"Zero followers is fine\""
+          },
+          "state": "no",
+          "source": {
+            "url": "https://www.wondeed.com/",
+            "date": "2026-09-18"
+          }
+        },
+        "escrow": {
+          "text": {
+            "en": "yes: the budget sits in an escrow wallet and money moves only after each view passes the API check, the anomaly check and the 72-hour hold"
+          },
+          "state": "yes",
+          "source": {
+            "url": "https://www.wondeed.com/trust",
+            "date": "2026-09-18"
+          }
+        },
+        "networks": {
+          "text": {
+            "en": "Instagram Reels and YouTube Shorts"
+          },
+          "source": {
+            "url": "https://www.wondeed.com/",
+            "date": "2026-09-18"
+          }
+        },
+        "verification": {
+          "text": {
+            "en": "views pulled from the Instagram Graph API and the YouTube Data API, anomaly detection on watch-time, engagement rate and view velocity, then a 72-hour hold"
+          },
+          "source": {
+            "url": "https://www.wondeed.com/trust",
+            "date": "2026-09-18"
+          }
+        },
+        "india": {
+          "text": {
+            "en": "yes: Indian residents only, rupee campaigns, UPI payouts and data stored on Indian-region infrastructure"
+          },
+          "state": "yes",
+          "source": {
+            "url": "https://www.wondeed.com/terms",
+            "date": "2026-09-18"
+          }
+        },
+        "pakistan": {
+          "text": {
+            "en": "no: the terms admit only Indian residents"
+          },
+          "state": "no",
+          "source": {
+            "url": "https://www.wondeed.com/terms",
+            "date": "2026-09-18"
+          }
+        },
+        "bangladesh": {
+          "text": {
+            "en": "no: the terms admit only Indian residents"
+          },
+          "state": "no",
+          "source": {
+            "url": "https://www.wondeed.com/terms",
+            "date": "2026-09-18"
+          }
+        },
+        "nigeria": {
+          "text": {
+            "en": "no: the terms admit only Indian residents"
+          },
+          "state": "no",
+          "source": {
+            "url": "https://www.wondeed.com/terms",
+            "date": "2026-09-18"
+          }
+        },
+        "kenya": {
+          "text": {
+            "en": "no: the terms admit only Indian residents"
+          },
+          "state": "no",
+          "source": {
+            "url": "https://www.wondeed.com/terms",
+            "date": "2026-09-18"
+          }
+        },
+        "mena": {
+          "text": {
+            "en": "no: the terms admit only Indian residents"
+          },
+          "state": "no",
+          "source": {
+            "url": "https://www.wondeed.com/terms",
+            "date": "2026-09-18"
+          }
+        },
+        "indonesia": {
+          "text": {
+            "en": "no: the terms admit only Indian residents"
+          },
+          "state": "no",
+          "source": {
+            "url": "https://www.wondeed.com/terms",
+            "date": "2026-09-18"
+          }
+        },
+        "philippines": {
+          "text": {
+            "en": "no: the terms admit only Indian residents"
+          },
+          "state": "no",
+          "source": {
+            "url": "https://www.wondeed.com/terms",
+            "date": "2026-09-18"
+          }
+        }
+      },
+      "pros": {
+        "en": [
+          "Terms, pricing, trust and GST pages publish the payout rail, the ₹500 minimum, the 72-hour hold and the verification APIs",
+          "Escrow wallet: the brand's budget is drawn down only after views pass all three checks",
+          "No fee for clippers, no follower minimum, and a published grievance-officer address"
+        ]
+      },
+      "cons": {
+        "en": [
+          "No legal entity, and the GST page lists the GSTIN as \"To be updated\"",
+          "The terms still carry a template placeholder: jurisdiction is \"the courts of [Registered City], India\"",
+          "Indian residents only, and TDS under section 194-O is deducted before payout",
+          "Most footer links — For Clippers, For Brands, Refund Policy, Help Center, even sitemap.xml — return the login page instead of a page"
+        ]
+      }
+    },
+    {
+      "id": "cliptocash",
+      "name": "ClipToCash",
+      "url": "https://cliptocash.io/",
+      "kind": "clipping campaign marketplace for Africa (pre-launch waitlist)",
+      "founded": "not published",
+      "operator": "not published",
+      "bestFor": {
+        "en": "clippers in Nigeria, Ghana, Kenya and South Africa who cannot use PayPal"
+      },
+      "summary": {
+        "en": "A pre-launch clipping marketplace aimed at African brands and clippers, pricing campaigns in naira, cedi, shilling and stablecoins. It publishes a typical CPM range of $0.50-$2.00 per 1,000 views and says payouts go to a local bank account or a stablecoin wallet, with no PayPal required. Campaigns are not open yet: both sign-ups are external waitlist forms, and the site has no terms, privacy policy or named operator."
+      },
+      "calc": {
+        "rateMin": 0.5,
+        "rateMax": 2,
+        "cap": null,
+        "threshold": null,
+        "fee": null,
+        "minPayout": null
+      },
+      "fields": {
+        "rate": {
+          "text": {
+            "en": "\"Campaigns typically pay $0.50–$2.00 per 1,000 views\", labelled on the page as illustrative rates"
+          },
+          "value": 0.5,
+          "source": {
+            "url": "https://cliptocash.io/",
+            "date": "2026-09-18"
+          }
+        },
+        "threshold": {
+          "text": {
+            "en": "not published"
+          },
+          "source": {
+            "url": "https://cliptocash.io/",
+            "date": "2026-09-18"
+          }
+        },
+        "cap": {
+          "text": {
+            "en": "not published"
+          },
+          "source": {
+            "url": "https://cliptocash.io/",
+            "date": "2026-09-18"
+          }
+        },
+        "fee": {
+          "text": {
+            "en": "not published"
+          },
+          "source": {
+            "url": "https://cliptocash.io/",
+            "date": "2026-09-18"
+          }
+        },
+        "minPayout": {
+          "text": {
+            "en": "not published"
+          },
+          "source": {
+            "url": "https://cliptocash.io/",
+            "date": "2026-09-18"
+          }
+        },
+        "payoutMethods": {
+          "text": {
+            "en": "local bank account or stablecoin wallet — \"No PayPal required. Ever.\""
+          },
+          "source": {
+            "url": "https://cliptocash.io/",
+            "date": "2026-09-18"
+          }
+        },
+        "cis": {
+          "text": {
+            "en": "not published: no country list beyond Africa"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://cliptocash.io/",
+            "date": "2026-09-18"
+          }
+        },
+        "followers": {
+          "text": {
+            "en": "no minimum: \"Most campaigns pay on views, not follower count. A fresh account posting good clips can earn from day one.\""
+          },
+          "state": "no",
+          "source": {
+            "url": "https://cliptocash.io/",
+            "date": "2026-09-18"
+          }
+        },
+        "escrow": {
+          "text": {
+            "en": "partly: the brand funds a budget that \"only spends as real, verified views come in\", but no escrow or custody arrangement is described"
+          },
+          "state": "partial",
+          "source": {
+            "url": "https://cliptocash.io/",
+            "date": "2026-09-18"
+          }
+        },
+        "networks": {
+          "text": {
+            "en": "TikTok, Instagram Reels and YouTube Shorts"
+          },
+          "source": {
+            "url": "https://cliptocash.io/",
+            "date": "2026-09-18"
+          }
+        },
+        "verification": {
+          "text": {
+            "en": "\"Views are tracked automatically and your budget spends only as real, verified views come in. No screenshots, no guesswork.\" The method is not described"
+          },
+          "source": {
+            "url": "https://cliptocash.io/",
+            "date": "2026-09-18"
+          }
+        },
+        "india": {
+          "text": {
+            "en": "not published"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://cliptocash.io/",
+            "date": "2026-09-18"
+          }
+        },
+        "pakistan": {
+          "text": {
+            "en": "not published"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://cliptocash.io/",
+            "date": "2026-09-18"
+          }
+        },
+        "bangladesh": {
+          "text": {
+            "en": "not published"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://cliptocash.io/",
+            "date": "2026-09-18"
+          }
+        },
+        "nigeria": {
+          "text": {
+            "en": "yes: Nigeria is named as a target market, campaign amounts are quoted in naira and payouts go to local bank accounts"
+          },
+          "state": "yes",
+          "source": {
+            "url": "https://cliptocash.io/",
+            "date": "2026-09-18"
+          }
+        },
+        "kenya": {
+          "text": {
+            "en": "yes: Kenya is named as a target market and amounts are quoted in shillings"
+          },
+          "state": "yes",
+          "source": {
+            "url": "https://cliptocash.io/",
+            "date": "2026-09-18"
+          }
+        },
+        "mena": {
+          "text": {
+            "en": "not published: the named markets are Nigeria, Ghana, Kenya and South Africa"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://cliptocash.io/",
+            "date": "2026-09-18"
+          }
+        },
+        "indonesia": {
+          "text": {
+            "en": "not published"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://cliptocash.io/",
+            "date": "2026-09-18"
+          }
+        },
+        "philippines": {
+          "text": {
+            "en": "not published"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://cliptocash.io/",
+            "date": "2026-09-18"
+          }
+        }
+      },
+      "pros": {
+        "en": [
+          "Publishes a CPM range in US dollars and names its payout rails: local bank account or stablecoin wallet, no PayPal",
+          "Explicitly built for Nigeria, Ghana, Kenya and South Africa, with amounts shown in naira, cedi and shilling",
+          "No follower minimum, and its own guides document African payout routes in detail"
+        ]
+      },
+      "cons": {
+        "en": [
+          "Pre-launch: no campaigns are open and both sign-ups are external waitlist forms",
+          "No terms, no privacy policy, no operator and no jurisdiction — /terms, /privacy, /legal and /about all return 404",
+          "Threshold, cap, fee and minimum payout are all unpublished, and the CPM range is marked illustrative"
+        ]
+      }
+    },
+    {
+      "id": "content-rewards",
+      "name": "Content Rewards",
+      "url": "https://contentrewards.com/",
+      "kind": "clipping and UGC campaign marketplace on its own web app",
+      "founded": "not published",
+      "operator": "Content Rewards Inc, a Delaware corporation, principal place of business Beverly Hills, California",
+      "bestFor": {
+        "en": "clippers who want a large campaign catalogue with published fees and fraud rules"
+      },
+      "summary": {
+        "en": "The standalone Content Rewards marketplace, run by the same Content Rewards Inc that operates the older Whop-hosted experience, which the terms now call a legacy experience. Campaigns pay per 1,000 verified views, per approved post or on retainer, with a flat 10% creator fee and 0% on per-post and retainer campaigns of $5,000 or more. Content Rewards runs earning, verification and fraud detection; Whop is used only for sign-in, money movement, KYC and withdrawals."
+      },
+      "calc": {
+        "rateMin": 0.05,
+        "rateMax": 5,
+        "cap": null,
+        "threshold": null,
+        "fee": 10,
+        "minPayout": null
+      },
+      "fields": {
+        "rate": {
+          "text": {
+            "en": "$0.05–$5.00 per 1,000 verified views across the 50 campaigns listed on Discover on 2026-09-18; CPM campaigns need a minimum brand budget of $1,000"
+          },
+          "value": 0.05,
+          "source": {
+            "url": "https://contentrewards.com/discover",
+            "date": "2026-09-18"
+          }
+        },
+        "threshold": {
+          "text": {
+            "en": "not published platform-wide: \"The Brand may set a minimum a Clip must earn before it is paid\", set inside each campaign"
+          },
+          "source": {
+            "url": "https://contentrewards.com/terms",
+            "date": "2026-09-18"
+          }
+        },
+        "cap": {
+          "text": {
+            "en": "not published platform-wide: the maximum a clip can earn is \"set in the Campaign\" by the brand"
+          },
+          "source": {
+            "url": "https://contentrewards.com/terms",
+            "date": "2026-09-18"
+          }
+        },
+        "fee": {
+          "text": {
+            "en": "flat 10% creator fee on every CPM payout; 10% on per-post and retainer campaigns under $5,000 and 0% at $5,000 or more; brands pay 10%, or 8% once verified"
+          },
+          "value": 10,
+          "source": {
+            "url": "https://contentrewards.com/terms",
+            "date": "2026-09-18"
+          }
+        },
+        "minPayout": {
+          "text": {
+            "en": "not published: withdrawals run through Whop, typically about 3–5 business days or instant for a fee charged by Whop"
+          },
+          "source": {
+            "url": "https://contentrewards.com/terms",
+            "date": "2026-09-18"
+          }
+        },
+        "payoutMethods": {
+          "text": {
+            "en": "balance is credited on Content Rewards and withdrawn through Whop's Finance page; sign-in credentials and KYC are handled by Whop under Whop's own terms"
+          },
+          "source": {
+            "url": "https://contentrewards.com/terms",
+            "date": "2026-09-18"
+          }
+        },
+        "cis": {
+          "text": {
+            "en": "not published: the terms say prohibited jurisdictions \"are listed by reference on our website\", but no such page exists on the site; sanctions and watchlist screening applies"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://contentrewards.com/terms",
+            "date": "2026-09-18"
+          }
+        },
+        "followers": {
+          "text": {
+            "en": "not published; strictly 18+ with no exception, including with parental consent"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://contentrewards.com/terms",
+            "date": "2026-09-18"
+          }
+        },
+        "escrow": {
+          "text": {
+            "en": "yes: the brand funds the campaign budget through Whop, per-post and retainer payouts are reserved against it at approval, and CPM draws it down as verified views accrue"
+          },
+          "state": "yes",
+          "source": {
+            "url": "https://contentrewards.com/terms",
+            "date": "2026-09-18"
+          }
+        },
+        "networks": {
+          "text": {
+            "en": "Instagram, Facebook, TikTok, YouTube and X, connected by OAuth with read-only scopes"
+          },
+          "source": {
+            "url": "https://contentrewards.com/terms",
+            "date": "2026-09-18"
+          }
+        },
+        "verification": {
+          "text": {
+            "en": "a 0–100 Bot Score from a third-party fraud provider triages every submission, a brand moderator approves or rejects, and a CPM payout settles about 10 days after approval (7 earning days plus a 3-day hold)"
+          },
+          "source": {
+            "url": "https://contentrewards.com/terms",
+            "date": "2026-09-18"
+          }
+        },
+        "india": {
+          "text": {
+            "en": "not published: no country list, only sanctions screening"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://contentrewards.com/terms",
+            "date": "2026-09-18"
+          }
+        },
+        "pakistan": {
+          "text": {
+            "en": "not published: no country list, only sanctions screening"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://contentrewards.com/terms",
+            "date": "2026-09-18"
+          }
+        },
+        "bangladesh": {
+          "text": {
+            "en": "not published: no country list, only sanctions screening"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://contentrewards.com/terms",
+            "date": "2026-09-18"
+          }
+        },
+        "nigeria": {
+          "text": {
+            "en": "not published: no country list, only sanctions screening"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://contentrewards.com/terms",
+            "date": "2026-09-18"
+          }
+        },
+        "kenya": {
+          "text": {
+            "en": "not published: no country list, only sanctions screening"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://contentrewards.com/terms",
+            "date": "2026-09-18"
+          }
+        },
+        "mena": {
+          "text": {
+            "en": "not published: no country list, only sanctions screening"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://contentrewards.com/terms",
+            "date": "2026-09-18"
+          }
+        },
+        "indonesia": {
+          "text": {
+            "en": "not published: no country list, only sanctions screening"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://contentrewards.com/terms",
+            "date": "2026-09-18"
+          }
+        },
+        "philippines": {
+          "text": {
+            "en": "not published: no country list, only sanctions screening"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://contentrewards.com/terms",
+            "date": "2026-09-18"
+          }
+        }
+      },
+      "pros": {
+        "en": [
+          "Detailed public Creator Terms name the operator, its address, the fee, the validation window, the appeal process and the fraud scoring",
+          "The Discover page shows every campaign's CPM, budget and spend before you sign up",
+          "0% creator fee on per-post and retainer campaigns with a budget of $5,000 or more"
+        ]
+      },
+      "cons": {
+        "en": [
+          "Sign-in, KYC and money movement are outsourced to Whop: losing Whop access can block withdrawals",
+          "No published country list — the prohibited-jurisdictions page the terms refer to does not exist on the site",
+          "No minimum payout is published, and the per-clip minimum and cap are set by each brand rather than the platform",
+          "Campaigns you joined on the older Whop-hosted experience stay under the prior terms, which are only available by emailing legal@contentrewards.com"
+        ]
+      }
+    },
+    {
+      "id": "klipbait",
+      "name": "Klipbait",
+      "url": "https://klipbait.com/",
+      "kind": "Russian-language intermediary for Western clipping campaigns",
+      "founded": "not published",
+      "operator": "not published",
+      "bestFor": {
+        "en": "Russian-speaking clippers in the CIS who need USDT payouts"
+      },
+      "summary": {
+        "en": "A Russian and Ukrainian language front-end that brings Western clipping campaigns to creators in Russia, Belarus, Ukraine and Kazakhstan and pays in USDT. Each live campaign publishes its rate and its view minimum before sign-up, currently $1.50-$2.00 per 1,000 views with a 990 or 1,000 view minimum. The site has no terms of service, no privacy policy and no named operator, and does not promise a payout deadline."
+      },
+      "calc": {
+        "rateMin": 1.5,
+        "rateMax": 2,
+        "cap": null,
+        "threshold": null,
+        "fee": 0,
+        "minPayout": null
+      },
+      "fields": {
+        "rate": {
+          "text": {
+            "en": "$1.50–$2.00 per 1,000 views; the campaigns open on 2026-09-18 pay $1.50, $1.70 and $2.00"
+          },
+          "value": 1.5,
+          "source": {
+            "url": "https://klipbait.com/ru",
+            "date": "2026-09-18"
+          }
+        },
+        "threshold": {
+          "text": {
+            "en": "set per campaign: the open campaigns require 990 or 1,000 views before a clip pays"
+          },
+          "value": 990,
+          "source": {
+            "url": "https://klipbait.com/ru",
+            "date": "2026-09-18"
+          }
+        },
+        "cap": {
+          "text": {
+            "en": "each post has its own ceiling, shown in the campaign before you start; the amount is not published on the site"
+          },
+          "source": {
+            "url": "https://klipbait.com/ru",
+            "date": "2026-09-18"
+          }
+        },
+        "fee": {
+          "text": {
+            "en": "0 for creators: \"Это бесплатно… Ты не платишь ничего\" (it is free, you pay nothing)"
+          },
+          "value": 0,
+          "source": {
+            "url": "https://klipbait.com/ru",
+            "date": "2026-09-18"
+          }
+        },
+        "minPayout": {
+          "text": {
+            "en": "not published: the only stated gate is each campaign's view minimum"
+          },
+          "source": {
+            "url": "https://klipbait.com/ru",
+            "date": "2026-09-18"
+          }
+        },
+        "payoutMethods": {
+          "text": {
+            "en": "USDT; the site's own description says \"выплаты в USDT\" and the balance widget offers a USDT withdrawal. Timing is explicitly not promised: \"обычно это несколько дней, иногда дольше\""
+          },
+          "source": {
+            "url": "https://klipbait.com/ru",
+            "date": "2026-09-18"
+          }
+        },
+        "cis": {
+          "text": {
+            "en": "yes: \"Доступ к западным кампаниям для креаторов из России, Беларуси, Украины и Казахстана\""
+          },
+          "state": "yes",
+          "source": {
+            "url": "https://klipbait.com/ru",
+            "date": "2026-09-18"
+          }
+        },
+        "followers": {
+          "text": {
+            "en": "no minimum: \"Платят за просмотры, а не за подписчиков. Большинство креаторов стартуют с нового аккаунта.\""
+          },
+          "state": "no",
+          "source": {
+            "url": "https://klipbait.com/ru",
+            "date": "2026-09-18"
+          }
+        },
+        "escrow": {
+          "text": {
+            "en": "no: views past an exhausted budget keep counting but are paid only \"если бренд его пополнит\" (if the brand tops it up)"
+          },
+          "state": "no",
+          "source": {
+            "url": "https://klipbait.com/ru",
+            "date": "2026-09-18"
+          }
+        },
+        "networks": {
+          "text": {
+            "en": "TikTok, Instagram Reels and YouTube Shorts"
+          },
+          "source": {
+            "url": "https://klipbait.com/ru/brands",
+            "date": "2026-09-18"
+          }
+        },
+        "verification": {
+          "text": {
+            "en": "every clip is moderated before it counts, with checks for inflated views and for the geography of the audience; anomalies go to manual review"
+          },
+          "source": {
+            "url": "https://klipbait.com/ru/brands",
+            "date": "2026-09-18"
+          }
+        },
+        "india": {
+          "text": {
+            "en": "not published: the site addresses Russia, Belarus, Ukraine and Kazakhstan only"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://klipbait.com/ru",
+            "date": "2026-09-18"
+          }
+        },
+        "pakistan": {
+          "text": {
+            "en": "not published: the site addresses Russia, Belarus, Ukraine and Kazakhstan only"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://klipbait.com/ru",
+            "date": "2026-09-18"
+          }
+        },
+        "bangladesh": {
+          "text": {
+            "en": "not published: the site addresses Russia, Belarus, Ukraine and Kazakhstan only"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://klipbait.com/ru",
+            "date": "2026-09-18"
+          }
+        },
+        "nigeria": {
+          "text": {
+            "en": "not published: the site addresses Russia, Belarus, Ukraine and Kazakhstan only"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://klipbait.com/ru",
+            "date": "2026-09-18"
+          }
+        },
+        "kenya": {
+          "text": {
+            "en": "not published: the site addresses Russia, Belarus, Ukraine and Kazakhstan only"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://klipbait.com/ru",
+            "date": "2026-09-18"
+          }
+        },
+        "mena": {
+          "text": {
+            "en": "not published: the site addresses Russia, Belarus, Ukraine and Kazakhstan only"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://klipbait.com/ru",
+            "date": "2026-09-18"
+          }
+        },
+        "indonesia": {
+          "text": {
+            "en": "not published: the site addresses Russia, Belarus, Ukraine and Kazakhstan only"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://klipbait.com/ru",
+            "date": "2026-09-18"
+          }
+        },
+        "philippines": {
+          "text": {
+            "en": "not published: the site addresses Russia, Belarus, Ukraine and Kazakhstan only"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://klipbait.com/ru",
+            "date": "2026-09-18"
+          }
+        }
+      },
+      "pros": {
+        "en": [
+          "Every open campaign shows its CPM and its view minimum before you register",
+          "Openly serves Russia, Belarus, Ukraine and Kazakhstan and pays in USDT",
+          "States plainly that it has no clipper earnings statistics of its own and refuses to quote an average"
+        ]
+      },
+      "cons": {
+        "en": [
+          "No terms of service, no privacy policy, no offer and no named operator: every legal URL returns 404 and the sitemap has no legal pages",
+          "Payout timing is explicitly not guaranteed and the minimum payout is not published",
+          "Payment depends on the brand settling the campaign first, and an exhausted budget pays only if the brand tops it up",
+          "Campaigns come from partner platforms rather than from Klipbait itself — Content Rewards is listed among the partners"
+        ]
+      }
+    },
+    {
+      "id": "cliptocash-com",
+      "name": "Cliptocash (cliptocash.com)",
+      "url": "https://cliptocash.com/",
+      "kind": "UGC and clipping creator network under French law",
+      "founded": "not published",
+      "operator": "not published; the terms are governed by French law and the competent French courts",
+      "bestFor": {
+        "en": "creators who want weekly Monday payouts and earning rules written down in full"
+      },
+      "summary": {
+        "en": "A creator network that pays for validated views on TikTok, Instagram and YouTube short-form video, unrelated to the African cliptocash.io despite the identical name. Its terms set out the earning rules exactly: a campaign RPM per 1,000 views, a 1,000-view threshold, a 125,000-view cap per video that no campaign can raise, a 30-day counting window and a 7-day submission window. Earnings are paid every Monday via Stripe or Whop; the minimum payout amount is not published."
+      },
+      "calc": {
+        "rateMin": 1.5,
+        "rateMax": 2,
+        "cap": null,
+        "threshold": 1000,
+        "fee": null,
+        "minPayout": null
+      },
+      "fields": {
+        "rate": {
+          "text": {
+            "en": "each campaign sets its own RPM; the campaigns shown on the home page pay $1.50–$2.00 per 1,000 validated views"
+          },
+          "value": 1.5,
+          "source": {
+            "url": "https://cliptocash.com/",
+            "date": "2026-09-18"
+          }
+        },
+        "threshold": {
+          "text": {
+            "en": "1,000 validated views before a video earns anything, unless a campaign sets its own threshold"
+          },
+          "value": 1000,
+          "source": {
+            "url": "https://cliptocash.com/legal/terms",
+            "date": "2026-09-18"
+          }
+        },
+        "cap": {
+          "text": {
+            "en": "125,000 paid views per video, a limit no campaign can raise; a clip also stops being counted 30 days after posting, and a campaign may add its own per-video euro cap"
+          },
+          "source": {
+            "url": "https://cliptocash.com/legal/terms",
+            "date": "2026-09-18"
+          }
+        },
+        "fee": {
+          "text": {
+            "en": "not published"
+          },
+          "source": {
+            "url": "https://cliptocash.com/legal/terms",
+            "date": "2026-09-18"
+          }
+        },
+        "minPayout": {
+          "text": {
+            "en": "not published: \"A minimum payout threshold may apply; below it, your balance is CARRIED OVER to the following week and is never lost\""
+          },
+          "source": {
+            "url": "https://cliptocash.com/legal/terms",
+            "date": "2026-09-18"
+          }
+        },
+        "payoutMethods": {
+          "text": {
+            "en": "paid out every Monday via Stripe or via Whop; with Whop the money credits a Whop balance you then withdraw yourself, under Whop's own delays and threshold"
+          },
+          "source": {
+            "url": "https://cliptocash.com/legal/terms",
+            "date": "2026-09-18"
+          }
+        },
+        "cis": {
+          "text": {
+            "en": "not published: no country list"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://cliptocash.com/legal/terms",
+            "date": "2026-09-18"
+          }
+        },
+        "followers": {
+          "text": {
+            "en": "not published; you must be at least 18 or have a legal guardian's authorisation, and hold one account only"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://cliptocash.com/legal/terms",
+            "date": "2026-09-18"
+          }
+        },
+        "escrow": {
+          "text": {
+            "en": "not published: the terms describe no budget custody or escrow arrangement"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://cliptocash.com/legal/terms",
+            "date": "2026-09-18"
+          }
+        },
+        "networks": {
+          "text": {
+            "en": "TikTok, Instagram and YouTube; only Reels, Shorts and TikTok videos are accepted — photo posts, carousels and long videos are refused"
+          },
+          "source": {
+            "url": "https://cliptocash.com/legal/terms",
+            "date": "2026-09-18"
+          }
+        },
+        "verification": {
+          "text": {
+            "en": "every video is reviewed by the team or automated tools before any view counts, and only validated, non-fraudulent views are paid; a required brand mention is re-checked daily"
+          },
+          "source": {
+            "url": "https://cliptocash.com/legal/terms",
+            "date": "2026-09-18"
+          }
+        },
+        "india": {
+          "text": {
+            "en": "not published: no country list"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://cliptocash.com/legal/terms",
+            "date": "2026-09-18"
+          }
+        },
+        "pakistan": {
+          "text": {
+            "en": "not published: no country list"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://cliptocash.com/legal/terms",
+            "date": "2026-09-18"
+          }
+        },
+        "bangladesh": {
+          "text": {
+            "en": "not published: no country list"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://cliptocash.com/legal/terms",
+            "date": "2026-09-18"
+          }
+        },
+        "nigeria": {
+          "text": {
+            "en": "not published: no country list"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://cliptocash.com/legal/terms",
+            "date": "2026-09-18"
+          }
+        },
+        "kenya": {
+          "text": {
+            "en": "not published: no country list"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://cliptocash.com/legal/terms",
+            "date": "2026-09-18"
+          }
+        },
+        "mena": {
+          "text": {
+            "en": "not published: no country list"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://cliptocash.com/legal/terms",
+            "date": "2026-09-18"
+          }
+        },
+        "indonesia": {
+          "text": {
+            "en": "not published: no country list"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://cliptocash.com/legal/terms",
+            "date": "2026-09-18"
+          }
+        },
+        "philippines": {
+          "text": {
+            "en": "not published: no country list"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://cliptocash.com/legal/terms",
+            "date": "2026-09-18"
+          }
+        }
+      },
+      "pros": {
+        "en": [
+          "The terms spell out the exact earning rules: 1,000-view threshold, 125,000-view cap, 30-day counting window, 7-day submission window",
+          "Weekly Monday payouts through Stripe or Whop, and a balance below the threshold carries over instead of being lost",
+          "The 125,000-view cap is fixed and explicitly cannot be raised by any campaign"
+        ]
+      },
+      "cons": {
+        "en": [
+          "Not related to the African cliptocash.io despite the identical name — easy to confuse",
+          "No legal entity, address or company number is published, only \"French law\"",
+          "The minimum payout amount and the creator fee are not published",
+          "A video must have been posted less than 7 days before submission, and stops earning 30 days after posting"
+        ]
+      }
+    },
+    {
+      "id": "clipconnect-india",
+      "name": "ClipConnect India",
+      "url": "https://clipconnect.in/",
+      "kind": "clipping marketplace (India)",
+      "founded": "not published",
+      "operator": "not published",
+      "bestFor": {
+        "en": "Indian clippers who want a rupee CPM and a ₹500 UPI withdrawal"
+      },
+      "summary": {
+        "en": "An Indian clipping marketplace that publishes a rupee CPM range, both halves of its platform fee and a ₹500 UPI withdrawal threshold on its home page. Clippers complete KYC and supply UPI details before taking a campaign. The footer links to Terms, Privacy and a Refund Policy, but all three return 404, and no operator or legal entity is named anywhere."
+      },
+      "calc": {
+        "rateMin": null,
+        "rateMax": null,
+        "cap": null,
+        "threshold": null,
+        "fee": 10,
+        "minPayout": null
+      },
+      "fields": {
+        "rate": {
+          "text": {
+            "en": "₹50–₹300 per 1,000 views depending on the niche"
+          },
+          "source": {
+            "url": "https://clipconnect.in/",
+            "date": "2026-09-18"
+          }
+        },
+        "threshold": {
+          "text": {
+            "en": "not published"
+          },
+          "source": {
+            "url": "https://clipconnect.in/",
+            "date": "2026-09-18"
+          }
+        },
+        "cap": {
+          "text": {
+            "en": "not published"
+          },
+          "source": {
+            "url": "https://clipconnect.in/",
+            "date": "2026-09-18"
+          }
+        },
+        "fee": {
+          "text": {
+            "en": "20% platform fee split in half: 10% charged to the brand on top of the budget and 10% deducted from the clipper's earnings"
+          },
+          "value": 10,
+          "source": {
+            "url": "https://clipconnect.in/",
+            "date": "2026-09-18"
+          }
+        },
+        "minPayout": {
+          "text": {
+            "en": "₹500 before a withdrawal can be made"
+          },
+          "source": {
+            "url": "https://clipconnect.in/",
+            "date": "2026-09-18"
+          }
+        },
+        "payoutMethods": {
+          "text": {
+            "en": "UPI to a bank account via GPay, PhonePe or Paytm"
+          },
+          "source": {
+            "url": "https://clipconnect.in/",
+            "date": "2026-09-18"
+          }
+        },
+        "cis": {
+          "text": {
+            "en": "not published"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://clipconnect.in/",
+            "date": "2026-09-18"
+          }
+        },
+        "followers": {
+          "text": {
+            "en": "not published; sign-up requires KYC and UPI details"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://clipconnect.in/",
+            "date": "2026-09-18"
+          }
+        },
+        "escrow": {
+          "text": {
+            "en": "claimed but not documented: the home page shows an \"ESCROW SAFETY — Protected Funds\" badge, and the brand deposits the budget before launch, but no terms describe how funds are held"
+          },
+          "state": "partial",
+          "source": {
+            "url": "https://clipconnect.in/",
+            "date": "2026-09-18"
+          }
+        },
+        "networks": {
+          "text": {
+            "en": "Instagram Reels and YouTube Shorts"
+          },
+          "source": {
+            "url": "https://clipconnect.in/",
+            "date": "2026-09-18"
+          }
+        },
+        "verification": {
+          "text": {
+            "en": "campaigns are vetted, clippers are KYC-verified and the page claims live view tracking through a \"Direct Scraper Engine\" plus bot protection; no method is documented"
+          },
+          "source": {
+            "url": "https://clipconnect.in/",
+            "date": "2026-09-18"
+          }
+        },
+        "india": {
+          "text": {
+            "en": "yes: self-described as \"India's #1 Video Clipping Marketplace\", rupee CPM, UPI payouts and Indian KYC"
+          },
+          "state": "yes",
+          "source": {
+            "url": "https://clipconnect.in/",
+            "date": "2026-09-18"
+          }
+        },
+        "pakistan": {
+          "text": {
+            "en": "not published"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://clipconnect.in/",
+            "date": "2026-09-18"
+          }
+        },
+        "bangladesh": {
+          "text": {
+            "en": "not published"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://clipconnect.in/",
+            "date": "2026-09-18"
+          }
+        },
+        "nigeria": {
+          "text": {
+            "en": "not published"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://clipconnect.in/",
+            "date": "2026-09-18"
+          }
+        },
+        "kenya": {
+          "text": {
+            "en": "not published"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://clipconnect.in/",
+            "date": "2026-09-18"
+          }
+        },
+        "mena": {
+          "text": {
+            "en": "not published"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://clipconnect.in/",
+            "date": "2026-09-18"
+          }
+        },
+        "indonesia": {
+          "text": {
+            "en": "not published"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://clipconnect.in/",
+            "date": "2026-09-18"
+          }
+        },
+        "philippines": {
+          "text": {
+            "en": "not published"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://clipconnect.in/",
+            "date": "2026-09-18"
+          }
+        }
+      },
+      "pros": {
+        "en": [
+          "Publishes the CPM range, both sides of the platform fee and the ₹500 UPI threshold on one page",
+          "UPI payouts to GPay, PhonePe or Paytm with a low withdrawal minimum"
+        ]
+      },
+      "cons": {
+        "en": [
+          "Terms & Conditions, Privacy Policy and Refund Policy are linked in the footer but all three return 404",
+          "No operator or legal entity anywhere on the site"
+        ]
+      }
     }
   ]
 }

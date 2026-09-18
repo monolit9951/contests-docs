@@ -79,7 +79,7 @@ Put your own budget, rate and cap into the calculator:
 3. **Connect the postback.** Put the platform's postback URL into the advertiser's tracker, send a test conversion and check it in the cabinet log.
 4. **Fund the budget.** The sum is locked on the platform before the start.
 5. **Accept works and watch conversions.** Reject clips that break the terms; views, conversions and accruals are counted by the platform.
-6. **Report to the client.** Links, counted views, conversions and sums per creator come from the campaign. What the launch price includes and how the remainder is returned: [How to pay clippers per view](/en/for-brands/paying-clippers-per-view) and [Clipping campaign cost](/en/for-brands/clipping-campaign-cost). Other business formats: [the business page](/en/for-business).
+6. **Report to the client.** Links, counted views, conversions and sums per creator come from the campaign. What the campaign price is made of and how the remainder is returned: [How to pay clippers per view](/en/for-brands/paying-clippers-per-view) and [Clipping campaign cost](/en/for-brands/clipping-campaign-cost). Other business formats: [the business page](/en/for-business).
 
 ## Questions and answers
 

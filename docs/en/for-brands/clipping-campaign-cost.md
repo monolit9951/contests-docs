@@ -7,7 +7,7 @@ seo: true
 landing: true
 hero:
   kicker: "Buyer's guide · 2026"
-  lede: "A campaign with clippers costs exactly as many views as you decide to buy: one line of the price is fixed, and everything after it goes to counted views at the rate you chose. The unspent part of a wallet-backed budget comes back to your balance. Below are three budgets worked through the platform's own formula, from a first test to a full campaign."
+  lede: "A campaign with clippers costs exactly as many views as you decide to buy: there is no fixed part, launching is free, and the whole budget goes to counted views at the rate you chose. The unspent part of a wallet-backed budget comes back to your balance. Below are three budgets worked through the platform's own formula, from a first test to a full campaign."
   takeaways:
     - "<b>You pay for the pool and nothing else:</b> creating the contest is free, the contest fee is 0% and a top-up costs nothing, so every dollar of the pool reaches the clippers."
     - "<b>The budget is rate × paid views, and the rate is yours to set.</b> Open tasks currently pay $1 to $2 per 1,000 views, with $1 the typical rate."
@@ -52,7 +52,7 @@ There is nothing to add for the launch: creating the contest is free. This is ar
 
 ## What the budget does not cover
 
-The pool and the launch price cover creator payouts and the platform's work: views counted from the site's public counter, several reconciliations a day, fake views filtered out, every submission checked by a moderator. Three costs stay on your side.
+One pool covers creator payouts and the platform's work, and launching is free: views counted from the site's public counter, several reconciliations a day, fake views filtered out, every submission checked by a moderator. Three costs stay on your side.
 
 **Editing and materials.** If you have ready-made clips with built-in uniqueization, the platform hands them to creators and nobody edits. Without such setups, you prepare the footage and the creator edits, and prices that work in.
 

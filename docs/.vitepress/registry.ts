@@ -216,9 +216,9 @@ export const CONTENT_MANIFEST_SCHEMA_VERSION = manifest.schemaVersion
 export const PAGES = manifest.pages
 
 /**
- * Retired addresses whose page did not survive the migration, mapped onto the
- * page that replaced them. Kept apart from `PAGES` because there is no entry
- * they belong to — but they must still single-hop, not 404.
+ * Retired addresses whose page or file did not survive the migration, mapped
+ * onto the address that replaced them. Kept apart from `PAGES` because there is
+ * no entry they belong to — but they must still single-hop, not 404.
  */
 export const ORPHAN_REDIRECTS: Readonly<Record<string, string>> = {
     // The old `kak-rabotaet` index duplicated the app's own explainer, which
@@ -226,6 +226,12 @@ export const ORPHAN_REDIRECTS: Readonly<Record<string, string>> = {
     // 2026-08-07. Points at the app's CURRENT address — naming a retired one
     // would make this a two-hop chain, caught by gate 1 of scripts/url-gates.mjs.
     '/docs/ru/kak-rabotaet/': '/earn',
+    // The sitemap of the old `/docs/` tree. robots.txt named it until 2026-08-04
+    // (contests-frontend 8c30ea14), when the migration replaced it with the root
+    // `/sitemap-content.xml` of this same site. Crawlers keep sitemap addresses
+    // long after robots.txt drops them: GPTBot asked for this one on 14 of the 15
+    // days of the 2026-09-18 nginx baseline and got a 404 every time.
+    '/docs/sitemap.xml': '/sitemap-content.xml',
 }
 
 /**

@@ -2,6 +2,7 @@ import { readFileSync } from 'node:fs'
 import { describe, expect, it } from 'vitest'
 import liveManifest from '../content-pages.json' with { type: 'json' }
 import {
+    CONTENT_ROOT_FILES,
     HUBS,
     LOCALES,
     PAGES,
@@ -270,5 +271,25 @@ describe('hub index duplicates', () => {
             expect(source).toBe(target)
             expect(live.has(target), `${target} is not a live address`).toBe(true)
         }
+    })
+})
+
+// The old `/docs/` tree had its own sitemap. robots.txt stopped naming it on
+// 2026-08-04, but crawlers keep sitemap addresses: GPTBot asked for it on 14 of
+// the 15 days of the 2026-09-18 nginx baseline and got a 404 each time. Asserted
+// against the SHIPPED redirects.conf for the same reason as the hub rule above.
+describe('retired docs sitemap', () => {
+    const conf = readFileSync(new URL('../../redirects.conf', import.meta.url), 'utf8')
+
+    it('hops once onto the sitemap that replaced it, which this container still serves', () => {
+        expect(redirectMap()['/docs/sitemap.xml']).toBe('/sitemap-content.xml')
+        expect(CONTENT_ROOT_FILES).toContain('/sitemap-content.xml')
+        expect(conf).toContain('location = /docs/sitemap.xml { return 301 /sitemap-content.xml$is_args$args; }')
+    })
+
+    it('gets no .html twin: a file was only ever served under its own name', () => {
+        expect(conf).not.toContain('location = /docs/sitemap.xml.html')
+        // Page addresses keep theirs.
+        expect(conf).toContain('location = /docs/faq/fees.html {')
     })
 })

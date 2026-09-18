@@ -38,13 +38,18 @@ lines.push('')
 // nginx picks the longest matching prefix among `^~` locations regardless of
 // file order, but `=` exact matches win outright — and exact is what every one
 // of these is, which removes the ordering question entirely.
+// A file address such as `/docs/sitemap.xml` was only ever served under its own
+// name, unlike a page, so it gets no `.html` twin below.
+const FILE_ADDRESS = /\.[A-Za-z0-9]+$/
 for (const from of Object.keys(map).sort((a, b) => b.length - a.length)) {
     const to = map[from]
     lines.push(`location = ${from} { return 301 ${to}$is_args$args; }`)
     // VitePress with cleanUrls answered on both `/foo` and `/foo.html`, and the
     // old EN tree was linked with the extension in places, so both forms are
     // live addresses that must land somewhere.
-    if (!from.endsWith('/')) lines.push(`location = ${from}.html { return 301 ${to}$is_args$args; }`)
+    if (!from.endsWith('/')) {
+        if (!FILE_ADDRESS.test(from)) lines.push(`location = ${from}.html { return 301 ${to}$is_args$args; }`)
+    }
     // A trailing-slash variant of a leaf address was reachable too (nginx's
     // try_files `$uri/` would have found the directory), so it redirects rather
     // than 404s.

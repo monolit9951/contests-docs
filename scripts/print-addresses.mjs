@@ -25,6 +25,16 @@ const HUB_TITLES = {
     legal: 'Правовое',
 }
 
+// Why each orphan redirect has no page of its own. Keyed by address, so a new
+// orphan without a reason stops this script instead of silently dropping out of
+// the table the founder reads.
+const ORPHAN_REASONS = {
+    '/docs/ru/kak-rabotaet/':
+        'дублировал лендинг приложения «Как это работает», который переведён на три языка и остаётся в SPA',
+    '/docs/sitemap.xml':
+        'сайтмап старого дерева `/docs/`; с 04.08.2026 его заменил `/sitemap-content.xml`, а GPTBot продолжал запрашивать старый адрес и получал 404',
+}
+
 const out = []
 out.push('# Таблица адресов контента')
 out.push('')
@@ -61,15 +71,17 @@ for (const hubId of Object.keys(HUBS)) {
 
 const orphans = Object.entries(ORPHAN_REDIRECTS)
 if (orphans.length) {
-    out.push('## Страницы, которые не переезжают')
+    out.push('## Адреса, которые не переезжают')
     out.push('')
-    out.push('Адрес остаётся живым 301-редиректом, но своей страницы у него больше нет.')
+    out.push('Адрес остаётся живым 301-редиректом, но своей страницы или файла у него больше нет.')
     out.push('')
     out.push('| Было | Ведёт на | Почему |')
     out.push('|---|---|---|')
-    out.push(
-        `| \`/docs/ru/kak-rabotaet/\` | \`${ORPHAN_REDIRECTS['/docs/ru/kak-rabotaet/']}\` | дублировал лендинг приложения «Как это работает», который переведён на три языка и остаётся в SPA |`
-    )
+    for (const [from, to] of orphans) {
+        const why = ORPHAN_REASONS[from]
+        if (!why) throw new Error(`print-addresses: no reason recorded for orphan redirect ${from}`)
+        out.push(`| \`${from}\` | \`${to}\` | ${why} |`)
+    }
     out.push('')
 }
 

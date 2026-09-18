@@ -183,11 +183,11 @@
         },
         "bangladesh": {
           "text": {
-            "en": "worldwide, no exclusion list: any country is paid the same way, in USDT on TON or Telegram Stars"
+            "en": "no exclusion list, but the only money rail is USDT on TON, and Bangladesh Bank and Nepal Rastra Bank do not permit crypto transactions, so there the balance has no withdrawal route"
           },
-          "state": "yes",
+          "state": "partial",
           "source": {
-            "url": "https://darebay.com/en/about/darebay-at-a-glance",
+            "url": "https://darebay.com/en/earnings/clipping-platforms-that-pay-in-bangladesh-and-nepal",
             "date": "2026-09-18"
           }
         },
@@ -288,86 +288,85 @@
       "name": "Whop Content Rewards",
       "url": "https://contentrewards.com/",
       "kind": "clipping and UGC campaign marketplace",
-      "operator": "Content Rewards Inc (Delaware, US), on Whop",
+      "operator": "Content Rewards Inc (Delaware, US); sign-in, KYC and withdrawals through Whop",
       "bestFor": {
         "en": "US/EU clippers who want the most campaigns",
         "ru": "нарезчики из США и Европы, которым нужен максимум кампаний",
         "uk": "нарізчики зі США та Європи, яким потрібен максимум кампаній"
       },
       "summary": {
-        "en": "The largest clipping marketplace: brands fund CPM campaigns, the budget is held against the campaign, and clippers are paid per verified view through the Whop wallet. Registration and payouts are blocked in Russia, Belarus and six regions of Ukraine.",
-        "ru": "Самая большая площадка для нарезчиков: бренды финансируют CPM-кампании, бюджет удерживается под кампанию, нарезчикам платят за проверенные просмотры через кошелёк Whop. Регистрация и выплаты закрыты для России, Беларуси и шести регионов Украины.",
-        "uk": "Найбільший майданчик для нарізчиків: бренди фінансують CPM-кампанії, бюджет утримується під кампанію, нарізчикам платять за перевірені перегляди через гаманець Whop. Реєстрація та виплати закриті для Росії, Білорусі та шести регіонів України."
+        "en": "The largest clipping marketplace, now on its own site: brands fund CPM, per-post and retainer campaigns, the budget is held against the campaign, and clippers are paid into a Content Rewards balance that is withdrawn through Whop. Registration and payouts are blocked in Russia, Belarus and six regions of Ukraine.",
+        "ru": "Самая большая площадка для нарезчиков, теперь на собственном сайте: бренды финансируют кампании с оплатой за просмотры, за пост и ретейнер, бюджет удерживается под кампанию, нарезчикам платят на баланс Content Rewards, а выводят его через Whop. Регистрация и выплаты закрыты для России, Беларуси и шести регионов Украины.",
+        "uk": "Найбільший майданчик для нарізчиків, тепер на власному сайті: бренди фінансують кампанії з оплатою за перегляди, за пост і ретейнер, бюджет утримується під кампанію, нарізчикам платять на баланс Content Rewards, а виводять його через Whop. Реєстрація та виплати закриті для Росії, Білорусі та шести регіонів України."
       },
       "fields": {
         "rate": {
           "text": {
-            "en": "$0.50–$5 per 1,000 views on live campaigns; set per campaign",
-            "ru": "$0.50–$5 за 1000 просмотров в живых кампаниях; ставку задаёт кампания",
-            "uk": "$0.50–$5 за 1000 переглядів у живих кампаніях; ставку задає кампанія"
+            "en": "$0.05–$10 per 1,000 views across the 50 campaigns on the Discover board, most at $1; set per campaign",
+            "ru": "$0.05–$10 за 1000 просмотров в 50 кампаниях на витрине Discover, чаще всего $1; ставку задаёт кампания",
+            "uk": "$0.05–$10 за 1000 переглядів у 50 кампаніях на вітрині Discover, найчастіше $1; ставку задає кампанія"
           },
-          "value": 0.5,
+          "value": 0.05,
           "source": {
             "url": "https://contentrewards.com/discover",
-            "date": "2026-09-02"
+            "date": "2026-09-18"
           }
         },
         "threshold": {
           "text": {
-            "en": "no platform-wide threshold; the brand sets a minimum payout per video before review",
-            "ru": "единого порога нет; бренд задаёт минимальную выплату за видео до проверки",
-            "uk": "єдиного порогу немає; бренд задає мінімальну виплату за відео до перевірки"
+            "en": "no platform-wide threshold; the brand may set a minimum a clip must earn before it is paid",
+            "ru": "единого порога нет; бренд может задать минимум, который ролик должен заработать до выплаты",
+            "uk": "єдиного порогу немає; бренд може задати мінімум, який ролик має заробити до виплати"
           },
           "source": {
-            "url": "https://docs.whop.com/memberships-and-access/third-party-apps/content-rewards",
-            "date": "2026-09-02"
+            "url": "https://contentrewards.com/terms",
+            "date": "2026-09-18"
           }
         },
         "cap": {
           "text": {
-            "en": "per campaign; live examples $400–$600 per video",
-            "ru": "задаётся кампанией; живые примеры $400–$600 за видео",
-            "uk": "задається кампанією; живі приклади $400–$600 за відео"
+            "en": "set per campaign and shown on the campaign page; live examples $400 and $600 per video",
+            "ru": "задаётся кампанией и указан на её странице; живые примеры $400 и $600 за видео",
+            "uk": "задається кампанією і вказаний на її сторінці; живі приклади $400 і $600 за відео"
           },
           "value": 400,
           "source": {
-            "url": "https://contentrewards.com/creators",
-            "date": "2026-09-02"
+            "url": "https://contentrewards.com/discover",
+            "date": "2026-09-18"
           }
         },
         "fee": {
           "text": {
-            "en": "10% on CPM payouts per the terms; the creator FAQ shows tiers from 25% down to 7%",
-            "ru": "10% с CPM-выплат по условиям; FAQ для авторов показывает ступени от 25% до 7%",
-            "uk": "10% з CPM-виплат за умовами; FAQ для авторів показує сходинки від 25% до 7%"
+            "en": "flat 10% of every CPM payout; per-post and retainer campaigns: 10% under a $5,000 budget, 0% from $5,000",
+            "ru": "фиксированные 10% с каждой CPM-выплаты; кампании за пост и ретейнер: 10% при бюджете меньше $5,000, 0% от $5,000",
+            "uk": "фіксовані 10% з кожної CPM-виплати; кампанії за пост і ретейнер: 10% за бюджету менше $5,000, 0% від $5,000"
           },
           "value": 10,
           "source": {
-            "url": "https://contentrewards.com/creators",
-            "date": "2026-09-02"
+            "url": "https://contentrewards.com/terms",
+            "date": "2026-09-18"
           }
         },
         "minPayout": {
           "text": {
-            "en": "none; no withdrawal charge",
-            "ru": "нет; за вывод не берут",
-            "uk": "немає; за виведення не беруть"
+            "en": "Content Rewards: no minimum and no charge to move earnings to your Whop balance; Whop's own withdrawal guide sets a $10 minimum \"if applicable\"",
+            "ru": "Content Rewards: перевод заработка на баланс Whop без минимума и без платы; в инструкции самого Whop по выводу — минимум $10 «if applicable» (если применимо)",
+            "uk": "Content Rewards: переказ заробітку на баланс Whop без мінімуму й без плати; в інструкції самого Whop з виведення — мінімум $10 «if applicable» (якщо застосовно)"
           },
-          "value": 0,
           "source": {
-            "url": "https://contentrewards.com/creators",
-            "date": "2026-09-02"
+            "url": "https://contentrewards.com/pricing/creators",
+            "date": "2026-09-18"
           }
         },
         "payoutMethods": {
           "text": {
-            "en": "bank, PayPal, mobile wallet or crypto in 200+ countries; a clip earns 7 days after approval, then a 3-day hold",
-            "ru": "банк, PayPal, мобильный кошелёк или крипта в 200+ странах; ролик зарабатывает 7 дней после одобрения, затем холд 3 дня",
-            "uk": "банк, PayPal, мобільний гаманець або крипта у 200+ країнах; ролик заробляє 7 днів після схвалення, потім холд 3 дні"
+            "en": "earnings move from the Content Rewards wallet to your Whop balance, then to a bank, PayPal, mobile wallet or crypto in 200+ countries; on CPM a clip earns 7 days after approval, then a 3-day hold",
+            "ru": "заработок переходит из кошелька Content Rewards на баланс Whop, оттуда — в банк, PayPal, мобильный кошелёк или крипту в 200+ странах; на CPM ролик зарабатывает 7 дней после одобрения, затем холд 3 дня",
+            "uk": "заробіток переходить із гаманця Content Rewards на баланс Whop, звідти — у банк, PayPal, мобільний гаманець або крипту у 200+ країнах; на CPM ролик заробляє 7 днів після схвалення, потім холд 3 дні"
           },
           "source": {
             "url": "https://contentrewards.com/creators",
-            "date": "2026-09-02"
+            "date": "2026-09-18"
           }
         },
         "cis": {
@@ -390,8 +389,8 @@
           },
           "state": "no",
           "source": {
-            "url": "https://contentrewards.com/creators",
-            "date": "2026-09-02"
+            "url": "https://contentrewards.com/terms",
+            "date": "2026-09-18"
           }
         },
         "escrow": {
@@ -402,8 +401,8 @@
           },
           "state": "yes",
           "source": {
-            "url": "https://contentrewards.com/brand",
-            "date": "2026-09-02"
+            "url": "https://contentrewards.com/",
+            "date": "2026-09-18"
           }
         },
         "networks": {
@@ -414,18 +413,18 @@
           },
           "source": {
             "url": "https://contentrewards.com/terms",
-            "date": "2026-09-02"
+            "date": "2026-09-18"
           }
         },
         "verification": {
           "text": {
-            "en": "platform APIs, a bot-likelihood score per submission, then approval by the brand",
-            "ru": "API площадок, оценка вероятности ботов по каждой заявке, затем одобрение брендом",
-            "uk": "API майданчиків, оцінка ймовірності ботів по кожній заявці, потім схвалення брендом"
+            "en": "platform APIs and a 0–100 Bot Score from a third-party provider on every submission, then approval by the brand's moderator; a person makes the final call",
+            "ru": "API площадок и оценка Bot Score 0–100 от внешнего провайдера по каждой заявке, затем одобрение модератором бренда; окончательное решение принимает человек",
+            "uk": "API майданчиків і оцінка Bot Score 0–100 від зовнішнього провайдера для кожної заявки, потім схвалення модератором бренду; остаточне рішення ухвалює людина"
           },
           "source": {
-            "url": "https://contentrewards.com/brand",
-            "date": "2026-09-02"
+            "url": "https://contentrewards.com/terms",
+            "date": "2026-09-18"
           }
         },
         "india": {
@@ -513,33 +512,33 @@
         "en": [
           "Largest choice of campaigns and budgets",
           "Budget held against the campaign before clips are posted",
-          "No minimum withdrawal"
+          "No minimum or charge to move earnings to your Whop balance"
         ],
         "ru": [
           "Самый большой выбор кампаний и бюджетов",
           "Бюджет удерживается под кампанию до публикации роликов",
-          "Нет минимума на вывод"
+          "Перевод заработка на баланс Whop без минимума и без платы"
         ],
         "uk": [
           "Найбільший вибір кампаній і бюджетів",
           "Бюджет утримується під кампанію до публікації роликів",
-          "Немає мінімуму на виведення"
+          "Переказ заробітку на баланс Whop без мінімуму й без плати"
         ]
       },
       "cons": {
         "en": [
           "Does not register or pay clippers in Russia, Belarus or six regions of Ukraine",
-          "Creator fee is stated differently on its own pages (10% vs 25%→7% tiers)",
+          "Sign-in, identity checks and withdrawals go through Whop: losing Whop access can block a withdrawal",
           "Campaign minimum for brands is $1,000, so campaigns come and go"
         ],
         "ru": [
           "Не регистрирует и не платит нарезчикам из России, Беларуси и шести регионов Украины",
-          "Комиссия для авторов на своих же страницах указана по-разному (10% против ступеней 25%→7%)",
+          "Вход, проверка личности и вывод идут через Whop: без доступа к Whop вывести деньги может не получиться",
           "Минимум кампании для бренда $1,000, кампании быстро заканчиваются"
         ],
         "uk": [
           "Не реєструє і не платить нарізчикам з Росії, Білорусі та шести регіонів України",
-          "Комісія для авторів на власних сторінках указана по-різному (10% проти сходинок 25%→7%)",
+          "Вхід, перевірка особи та виведення йдуть через Whop: без доступу до Whop вивести гроші може не вийти",
           "Мінімум кампанії для бренду $1,000, кампанії швидко закінчуються"
         ]
       }
@@ -2470,7 +2469,7 @@
         },
         "verification": {
           "text": {
-            "en": "views are read from Instagram's Insights API or the YouTube Data API — no screenshots or self-reported numbers — and every clip is checked against the brand brief"
+            "en": "views are read from Instagram's Insights API or the YouTube Data API — no screenshots or self-reported numbers; Instagram needs a Professional account, added to a Meta tester list while ClipGrow's app is in review; every clip is reviewed by hand against the brief and must carry a CTA"
           },
           "source": {
             "url": "https://clipgrow.in/terms",
@@ -2586,7 +2585,7 @@
         "en": "Indian residents who want an escrow-backed rupee campaign with UPI payouts"
       },
       "summary": {
-        "en": "An Indian clipping marketplace where the brand's budget sits in an escrow wallet and is drawn down only after views clear the Instagram Graph and YouTube Data APIs, an anomaly check and a 72-hour hold. Clippers are paid to UPI within 7 business days above a ₹500 balance, pay no fee and need no followers. The terms restrict the platform to Indian residents aged 18 or over."
+        "en": "An Indian clipping marketplace that pays ₹5, ₹7 or ₹10 per 1,000 verified views by campaign earning level, with the higher levels unlocked as a clipper moves up its tiers. The brand's budget sits in what Wondeed calls an escrow wallet and is drawn down only after views clear the Instagram Graph and YouTube Data APIs, an anomaly check and a 72-hour hold. Clippers request UPI payouts from a ₹500 balance, pay no fee and need no followers; the terms admit only Indian residents aged 18 or over."
       },
       "calc": {
         "rateMin": null,
@@ -2617,10 +2616,10 @@
         },
         "cap": {
           "text": {
-            "en": "not published for clippers; brands on the Premium and Enterprise plans can set daily view caps"
+            "en": "no ceiling per clip on the clipper page (\"No ceiling — a viral clip keeps earning as long as views come in\"); brands on the paid plans can set daily view caps instead"
           },
           "source": {
-            "url": "https://www.wondeed.com/pricing",
+            "url": "https://www.wondeed.com/clippers",
             "date": "2026-09-18"
           }
         },
@@ -2645,10 +2644,10 @@
         },
         "payoutMethods": {
           "text": {
-            "en": "UPI within 7 business days of a payout request, after a 72-hour hold; Tier 3 clippers get a 3-day fast-track"
+            "en": "UPI to a UPI ID linked to an Indian bank account, requested from a ₹500 balance after a 72-hour hold and paid \"within 7 days\" (the terms say 7 business days); the clipper page gives Tier 1 a 14-day payout window and Tier 3 a 3-day fast-track"
           },
           "source": {
-            "url": "https://www.wondeed.com/trust",
+            "url": "https://www.wondeed.com/clippers",
             "date": "2026-09-18"
           }
         },
@@ -2684,16 +2683,16 @@
         },
         "networks": {
           "text": {
-            "en": "Instagram Reels and YouTube Shorts"
+            "en": "Instagram Reels and YouTube Shorts; TikTok is \"planned but not available yet\""
           },
           "source": {
-            "url": "https://www.wondeed.com/",
+            "url": "https://www.wondeed.com/help",
             "date": "2026-09-18"
           }
         },
         "verification": {
           "text": {
-            "en": "views pulled from the Instagram Graph API and the YouTube Data API, anomaly detection on watch-time, engagement rate and view velocity, then a 72-hour hold"
+            "en": "views pulled from the Instagram Graph API and the YouTube Data API for the account you connect read-only, anomaly detection on watch-time, engagement rate and view velocity, then a 72-hour hold in which the brand can reject the clip; watch-time floors apply on Shorts"
           },
           "source": {
             "url": "https://www.wondeed.com/trust",
@@ -3033,7 +3032,7 @@
       },
       "calc": {
         "rateMin": 0.05,
-        "rateMax": 5,
+        "rateMax": 10,
         "cap": null,
         "threshold": null,
         "fee": 10,
@@ -3042,7 +3041,7 @@
       "fields": {
         "rate": {
           "text": {
-            "en": "$0.05–$5.00 per 1,000 verified views across the 50 campaigns listed on Discover on 2026-09-18; CPM campaigns need a minimum brand budget of $1,000"
+            "en": "$0.05–$10.00 per 1,000 verified views across the 50 campaigns listed on Discover on 2026-09-18, 17 of them at $1; CPM campaigns need a minimum brand budget of $1,000"
           },
           "value": 0.05,
           "source": {
@@ -3080,10 +3079,10 @@
         },
         "minPayout": {
           "text": {
-            "en": "not published: withdrawals run through Whop, typically about 3–5 business days or instant for a fee charged by Whop"
+            "en": "no minimum and no charge to move earnings to your Whop balance (\"you can take out $3 or $3,000\"); Whop's own withdrawal guide sets a $10 minimum \"if applicable\", and Whop takes about 3–5 business days or pays instantly for a fee"
           },
           "source": {
-            "url": "https://contentrewards.com/terms",
+            "url": "https://contentrewards.com/pricing/creators",
             "date": "2026-09-18"
           }
         },
@@ -3252,7 +3251,7 @@
         "en": "Russian-speaking clippers in the CIS who need USDT payouts"
       },
       "summary": {
-        "en": "A Russian and Ukrainian language front-end that brings Western clipping campaigns to creators in Russia, Belarus, Ukraine and Kazakhstan and pays in USDT. Each live campaign publishes its rate and its view minimum before sign-up, currently $1.50-$2.00 per 1,000 views with a 990 or 1,000 view minimum. The site has no terms of service, no privacy policy and no named operator, and does not promise a payout deadline."
+        "en": "A Russian and Ukrainian language front-end that brings Western clipping campaigns to creators in Russia, Belarus, Ukraine and Kazakhstan and pays in USDT or to a card. Each live campaign publishes its rate and its view minimum before sign-up, currently $1.50-$2.00 per 1,000 views with a 990 or 1,000 view minimum. The site has no terms of service, no privacy policy and no named operator, and does not promise a payout deadline."
       },
       "calc": {
         "rateMin": 1.5,
@@ -3260,7 +3259,7 @@
         "cap": null,
         "threshold": null,
         "fee": 0,
-        "minPayout": null
+        "minPayout": 20
       },
       "fields": {
         "rate": {
@@ -3304,19 +3303,20 @@
         },
         "minPayout": {
           "text": {
-            "en": "not published: the only stated gate is each campaign's view minimum"
+            "en": "$20.00 to request a withdrawal, a live value its blog prints: \"Минимальный баланс для запроса выплаты сейчас: $20.00\""
           },
+          "value": 20,
           "source": {
-            "url": "https://klipbait.com/ru",
+            "url": "https://www.klipbait.com/ru/blog/kak-vyvesti-dengi-za-klipping-iz-rossii",
             "date": "2026-09-18"
           }
         },
         "payoutMethods": {
           "text": {
-            "en": "USDT; the site's own description says \"выплаты в USDT\" and the balance widget offers a USDT withdrawal. Timing is explicitly not promised: \"обычно это несколько дней, иногда дольше\""
+            "en": "USDT to your wallet on the network you pick (its blog calls TRC-20 the default for these amounts) or to a card. Timing is not promised: about four days by its own estimate, more than two weeks on some campaigns"
           },
           "source": {
-            "url": "https://klipbait.com/ru",
+            "url": "https://www.klipbait.com/ru/blog/kak-vyvesti-dengi-za-klipping-iz-rossii",
             "date": "2026-09-18"
           }
         },
@@ -3452,14 +3452,14 @@
       "pros": {
         "en": [
           "Every open campaign shows its CPM and its view minimum before you register",
-          "Openly serves Russia, Belarus, Ukraine and Kazakhstan and pays in USDT",
+          "Openly serves Russia, Belarus, Ukraine and Kazakhstan and pays in USDT or to a card",
           "States plainly that it has no clipper earnings statistics of its own and refuses to quote an average"
         ]
       },
       "cons": {
         "en": [
           "No terms of service, no privacy policy, no offer and no named operator: every legal URL returns 404 and the sitemap has no legal pages",
-          "Payout timing is explicitly not guaranteed and the minimum payout is not published",
+          "Payout timing is explicitly not guaranteed: about four days by its own estimate, more than two weeks on some campaigns",
           "Payment depends on the brand settling the campaign first, and an exhausted budget pays only if the brand tops it up",
           "Campaigns come from partner platforms rather than from Klipbait itself — Content Rewards is listed among the partners"
         ]

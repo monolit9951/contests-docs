@@ -5,9 +5,8 @@
 import { useData } from 'vitepress'
 import { computed, ref } from 'vue'
 import { LANDING_COPY, localeOf } from './copy'
-import { pick, sourceIndex, text, type Platform } from './platforms'
+import { DEFAULT_COLUMNS, pick, sourceIndex, text, type Platform } from './platforms'
 
-const DEFAULT_COLUMNS = ['rate', 'threshold', 'cap', 'fee', 'minPayout', 'payoutMethods', 'cis', 'followers', 'escrow']
 const { frontmatter, lang } = useData()
 const loc = computed(() => localeOf(lang.value))
 const copy = computed(() => LANDING_COPY[loc.value])
@@ -76,7 +75,7 @@ const stateClass = (s?: string) => (s === 'yes' ? 'lp-chip lp-chip-good' : s ===
                 <template v-else-if="text(p, c, loc)">
                   <span v-if="p.fields[c]?.state" :class="stateClass(p.fields[c].state)" style="margin-right:6px">{{ copy.cis[p.fields[c].state!] }}</span>
                   <span :class="{ 'lp-money': c === 'rate' || c === 'cap' || c === 'minPayout' }">{{ text(p, c, loc) }}</span>
-                  <a v-if="p.fields[c]?.source?.url" class="lp-src" :href="p.fields[c].source!.url" target="_blank" rel="nofollow noopener" :title="p.fields[c].source!.date">{{ sourceIndex(p, p.fields[c].source!.url) }}</a>
+                  <a v-if="p.fields[c]?.source?.url" class="lp-src" :href="p.fields[c].source!.url" target="_blank" rel="nofollow noopener" :title="p.fields[c].source!.date">{{ sourceIndex(p, p.fields[c].source!.url, columns) }}</a>
                 </template>
                 <span v-else class="lp-na">{{ copy.notPublished }}</span>
               </td>

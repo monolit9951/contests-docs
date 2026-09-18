@@ -160,6 +160,86 @@
             "url": "https://darebay.com/en/help/protection-from-view-fraud",
             "date": "2026-08-23"
           }
+        },
+        "india": {
+          "text": {
+            "en": "worldwide, no exclusion list: any country is paid the same way, in USDT on TON or Telegram Stars"
+          },
+          "state": "yes",
+          "source": {
+            "url": "https://darebay.com/en/about/darebay-at-a-glance",
+            "date": "2026-09-18"
+          }
+        },
+        "pakistan": {
+          "text": {
+            "en": "worldwide, no exclusion list: any country is paid the same way, in USDT on TON or Telegram Stars"
+          },
+          "state": "yes",
+          "source": {
+            "url": "https://darebay.com/en/about/darebay-at-a-glance",
+            "date": "2026-09-18"
+          }
+        },
+        "bangladesh": {
+          "text": {
+            "en": "worldwide, no exclusion list: any country is paid the same way, in USDT on TON or Telegram Stars"
+          },
+          "state": "yes",
+          "source": {
+            "url": "https://darebay.com/en/about/darebay-at-a-glance",
+            "date": "2026-09-18"
+          }
+        },
+        "nigeria": {
+          "text": {
+            "en": "worldwide, no exclusion list: any country is paid the same way, in USDT on TON or Telegram Stars"
+          },
+          "state": "yes",
+          "source": {
+            "url": "https://darebay.com/en/about/darebay-at-a-glance",
+            "date": "2026-09-18"
+          }
+        },
+        "kenya": {
+          "text": {
+            "en": "worldwide, no exclusion list: any country is paid the same way, in USDT on TON or Telegram Stars"
+          },
+          "state": "yes",
+          "source": {
+            "url": "https://darebay.com/en/about/darebay-at-a-glance",
+            "date": "2026-09-18"
+          }
+        },
+        "mena": {
+          "text": {
+            "en": "worldwide, no exclusion list: any country is paid the same way, in USDT on TON or Telegram Stars"
+          },
+          "state": "yes",
+          "source": {
+            "url": "https://darebay.com/en/about/darebay-at-a-glance",
+            "date": "2026-09-18"
+          }
+        },
+        "indonesia": {
+          "text": {
+            "en": "worldwide, no exclusion list: any country is paid the same way, in USDT on TON or Telegram Stars"
+          },
+          "state": "yes",
+          "source": {
+            "url": "https://darebay.com/en/about/darebay-at-a-glance",
+            "date": "2026-09-18"
+          }
+        },
+        "philippines": {
+          "text": {
+            "en": "worldwide, no exclusion list: any country is paid the same way, in USDT on TON or Telegram Stars"
+          },
+          "state": "yes",
+          "source": {
+            "url": "https://darebay.com/en/about/darebay-at-a-glance",
+            "date": "2026-09-18"
+          }
         }
       },
       "pros": {
@@ -347,6 +427,86 @@
             "url": "https://contentrewards.com/brand",
             "date": "2026-09-02"
           }
+        },
+        "india": {
+          "text": {
+            "en": "India is on Whop's list of 200+ payout countries; the payout options depend on the country"
+          },
+          "state": "yes",
+          "source": {
+            "url": "https://docs.whop.com/manage-your-business/manage-payouts/set-up-payouts",
+            "date": "2026-09-18"
+          }
+        },
+        "pakistan": {
+          "text": {
+            "en": "Pakistan is on Whop's list of 200+ payout countries; the payout options depend on the country"
+          },
+          "state": "yes",
+          "source": {
+            "url": "https://docs.whop.com/manage-your-business/manage-payouts/set-up-payouts",
+            "date": "2026-09-18"
+          }
+        },
+        "bangladesh": {
+          "text": {
+            "en": "Bangladesh and Nepal are both on Whop's list of 200+ payout countries"
+          },
+          "state": "yes",
+          "source": {
+            "url": "https://docs.whop.com/manage-your-business/manage-payouts/set-up-payouts",
+            "date": "2026-09-18"
+          }
+        },
+        "nigeria": {
+          "text": {
+            "en": "not sanctioned, but Nigeria is missing from Whop's list of 200+ payout countries"
+          },
+          "state": "partial",
+          "source": {
+            "url": "https://docs.whop.com/manage-your-business/manage-payouts/set-up-payouts",
+            "date": "2026-09-18"
+          }
+        },
+        "kenya": {
+          "text": {
+            "en": "Kenya and Ghana are both on Whop's list of 200+ payout countries"
+          },
+          "state": "yes",
+          "source": {
+            "url": "https://docs.whop.com/manage-your-business/manage-payouts/set-up-payouts",
+            "date": "2026-09-18"
+          }
+        },
+        "mena": {
+          "text": {
+            "en": "Egypt, Morocco, Algeria, Saudi Arabia and UAE are payout countries; Iraq is not listed"
+          },
+          "state": "partial",
+          "source": {
+            "url": "https://docs.whop.com/manage-your-business/manage-payouts/set-up-payouts",
+            "date": "2026-09-18"
+          }
+        },
+        "indonesia": {
+          "text": {
+            "en": "Indonesia is on Whop's list of 200+ payout countries; the payout options depend on the country"
+          },
+          "state": "yes",
+          "source": {
+            "url": "https://docs.whop.com/manage-your-business/manage-payouts/set-up-payouts",
+            "date": "2026-09-18"
+          }
+        },
+        "philippines": {
+          "text": {
+            "en": "the Philippines is on Whop's list of 200+ payout countries"
+          },
+          "state": "yes",
+          "source": {
+            "url": "https://docs.whop.com/manage-your-business/manage-payouts/set-up-payouts",
+            "date": "2026-09-18"
+          }
         }
       },
       "pros": {
@@ -528,6 +688,86 @@
             "url": "https://vyro.com/help/account-and-security/what-prevents-clippers-from-botting-their-views",
             "date": "2026-09-02"
           }
+        },
+        "india": {
+          "text": {
+            "en": "India is not on Vyro's unsupported-countries list, so the platform is available"
+          },
+          "state": "yes",
+          "source": {
+            "url": "https://vyro.com/help/getting-started/what-countries-are-supported",
+            "date": "2026-09-18"
+          }
+        },
+        "pakistan": {
+          "text": {
+            "en": "Pakistan is on Vyro's unsupported list: blocked from using Vyro or receiving payouts"
+          },
+          "state": "no",
+          "source": {
+            "url": "https://vyro.com/help/getting-started/what-countries-are-supported",
+            "date": "2026-09-18"
+          }
+        },
+        "bangladesh": {
+          "text": {
+            "en": "Bangladesh is on Vyro's unsupported list; Nepal is not listed"
+          },
+          "state": "no",
+          "source": {
+            "url": "https://vyro.com/help/getting-started/what-countries-are-supported",
+            "date": "2026-09-18"
+          }
+        },
+        "nigeria": {
+          "text": {
+            "en": "Nigeria is not on Vyro's unsupported-countries list, so the platform is available"
+          },
+          "state": "yes",
+          "source": {
+            "url": "https://vyro.com/help/getting-started/what-countries-are-supported",
+            "date": "2026-09-18"
+          }
+        },
+        "kenya": {
+          "text": {
+            "en": "Kenya is not on Vyro's unsupported list, but Ghana is"
+          },
+          "state": "partial",
+          "source": {
+            "url": "https://vyro.com/help/getting-started/what-countries-are-supported",
+            "date": "2026-09-18"
+          }
+        },
+        "mena": {
+          "text": {
+            "en": "Egypt, Algeria and Iraq are unsupported; Morocco, Saudi Arabia and UAE are not listed"
+          },
+          "state": "partial",
+          "source": {
+            "url": "https://vyro.com/help/getting-started/what-countries-are-supported",
+            "date": "2026-09-18"
+          }
+        },
+        "indonesia": {
+          "text": {
+            "en": "Indonesia is not on Vyro's unsupported-countries list, so the platform is available"
+          },
+          "state": "yes",
+          "source": {
+            "url": "https://vyro.com/help/getting-started/what-countries-are-supported",
+            "date": "2026-09-18"
+          }
+        },
+        "philippines": {
+          "text": {
+            "en": "the Philippines is not on Vyro's unsupported list, so the platform is available"
+          },
+          "state": "yes",
+          "source": {
+            "url": "https://vyro.com/help/getting-started/what-countries-are-supported",
+            "date": "2026-09-18"
+          }
         }
       },
       "pros": {
@@ -707,6 +947,86 @@
             "url": "https://clipping.net/clip",
             "date": "2026-09-02"
           }
+        },
+        "india": {
+          "text": {
+            "en": "no country list; the terms only require residence in the territories where the network operates"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://clipping.net/policies/clipper-terms-and-conditions",
+            "date": "2026-09-18"
+          }
+        },
+        "pakistan": {
+          "text": {
+            "en": "no country list; the terms only require residence in the territories where the network operates"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://clipping.net/policies/clipper-terms-and-conditions",
+            "date": "2026-09-18"
+          }
+        },
+        "bangladesh": {
+          "text": {
+            "en": "no country list; the terms only require residence in the territories where the network operates"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://clipping.net/policies/clipper-terms-and-conditions",
+            "date": "2026-09-18"
+          }
+        },
+        "nigeria": {
+          "text": {
+            "en": "no country list; the terms only require residence in the territories where the network operates"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://clipping.net/policies/clipper-terms-and-conditions",
+            "date": "2026-09-18"
+          }
+        },
+        "kenya": {
+          "text": {
+            "en": "no country list; the terms only require residence in the territories where the network operates"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://clipping.net/policies/clipper-terms-and-conditions",
+            "date": "2026-09-18"
+          }
+        },
+        "mena": {
+          "text": {
+            "en": "no country list; the terms only require residence in the territories where the network operates"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://clipping.net/policies/clipper-terms-and-conditions",
+            "date": "2026-09-18"
+          }
+        },
+        "indonesia": {
+          "text": {
+            "en": "no country list; the terms only require residence in the territories where the network operates"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://clipping.net/policies/clipper-terms-and-conditions",
+            "date": "2026-09-18"
+          }
+        },
+        "philippines": {
+          "text": {
+            "en": "no country list; the terms only require residence in the territories where the network operates"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://clipping.net/policies/clipper-terms-and-conditions",
+            "date": "2026-09-18"
+          }
         }
       },
       "pros": {
@@ -884,6 +1204,86 @@
           "source": {
             "url": "https://vues.app/",
             "date": "2026-09-02"
+          }
+        },
+        "india": {
+          "text": {
+            "en": "no country list; payouts by crypto such as USDT, PayPal or Zelle, subject to provider screening"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://vues.app/terms",
+            "date": "2026-09-18"
+          }
+        },
+        "pakistan": {
+          "text": {
+            "en": "no country list; payouts by crypto such as USDT, PayPal or Zelle, subject to provider screening"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://vues.app/terms",
+            "date": "2026-09-18"
+          }
+        },
+        "bangladesh": {
+          "text": {
+            "en": "no country list; payouts by crypto such as USDT, PayPal or Zelle, subject to provider screening"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://vues.app/terms",
+            "date": "2026-09-18"
+          }
+        },
+        "nigeria": {
+          "text": {
+            "en": "no country list; payouts by crypto such as USDT, PayPal or Zelle, subject to provider screening"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://vues.app/terms",
+            "date": "2026-09-18"
+          }
+        },
+        "kenya": {
+          "text": {
+            "en": "no country list; payouts by crypto such as USDT, PayPal or Zelle, subject to provider screening"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://vues.app/terms",
+            "date": "2026-09-18"
+          }
+        },
+        "mena": {
+          "text": {
+            "en": "no country list; payouts by crypto such as USDT, PayPal or Zelle, subject to provider screening"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://vues.app/terms",
+            "date": "2026-09-18"
+          }
+        },
+        "indonesia": {
+          "text": {
+            "en": "no country list; payouts by crypto such as USDT, PayPal or Zelle, subject to provider screening"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://vues.app/terms",
+            "date": "2026-09-18"
+          }
+        },
+        "philippines": {
+          "text": {
+            "en": "no country list; payouts by crypto such as USDT, PayPal or Zelle, subject to provider screening"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://vues.app/terms",
+            "date": "2026-09-18"
           }
         }
       },
@@ -1064,6 +1464,86 @@
             "url": "https://reach.cat/creator",
             "date": "2026-09-02"
           }
+        },
+        "india": {
+          "text": {
+            "en": "no country list; 149+ countries claimed, paid in USDT or SOL to a wallet, no bank or ID"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://reach.cat/become-a-clipper/",
+            "date": "2026-09-18"
+          }
+        },
+        "pakistan": {
+          "text": {
+            "en": "no country list; 149+ countries claimed, paid in USDT or SOL to a wallet, no bank or ID"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://reach.cat/become-a-clipper/",
+            "date": "2026-09-18"
+          }
+        },
+        "bangladesh": {
+          "text": {
+            "en": "no country list; 149+ countries claimed, paid in USDT or SOL to a wallet, no bank or ID"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://reach.cat/become-a-clipper/",
+            "date": "2026-09-18"
+          }
+        },
+        "nigeria": {
+          "text": {
+            "en": "no country list, but its clipper page shows a paid clipper in Nigeria; USDT or SOL, no bank"
+          },
+          "state": "partial",
+          "source": {
+            "url": "https://reach.cat/become-a-clipper/",
+            "date": "2026-09-18"
+          }
+        },
+        "kenya": {
+          "text": {
+            "en": "no country list; 149+ countries claimed, paid in USDT or SOL to a wallet, no bank or ID"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://reach.cat/become-a-clipper/",
+            "date": "2026-09-18"
+          }
+        },
+        "mena": {
+          "text": {
+            "en": "no country list, but its clipper page shows a paid clipper in Morocco; USDT or SOL, no bank"
+          },
+          "state": "partial",
+          "source": {
+            "url": "https://reach.cat/become-a-clipper/",
+            "date": "2026-09-18"
+          }
+        },
+        "indonesia": {
+          "text": {
+            "en": "no country list; 149+ countries claimed, paid in USDT or SOL to a wallet, no bank or ID"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://reach.cat/become-a-clipper/",
+            "date": "2026-09-18"
+          }
+        },
+        "philippines": {
+          "text": {
+            "en": "no country list, but its clipper page shows a paid clipper in the Philippines; USDT or SOL"
+          },
+          "state": "partial",
+          "source": {
+            "url": "https://reach.cat/become-a-clipper/",
+            "date": "2026-09-18"
+          }
         }
       },
       "pros": {
@@ -1243,6 +1723,86 @@
             "url": "https://klipni.com/",
             "date": "2026-09-02"
           }
+        },
+        "india": {
+          "text": {
+            "en": "pays only authors with Russian self-employed (NPD) or sole-trader tax status"
+          },
+          "state": "no",
+          "source": {
+            "url": "https://klipni.com/legal/terms",
+            "date": "2026-09-18"
+          }
+        },
+        "pakistan": {
+          "text": {
+            "en": "pays only authors with Russian self-employed (NPD) or sole-trader tax status"
+          },
+          "state": "no",
+          "source": {
+            "url": "https://klipni.com/legal/terms",
+            "date": "2026-09-18"
+          }
+        },
+        "bangladesh": {
+          "text": {
+            "en": "pays only authors with Russian self-employed (NPD) or sole-trader tax status"
+          },
+          "state": "no",
+          "source": {
+            "url": "https://klipni.com/legal/terms",
+            "date": "2026-09-18"
+          }
+        },
+        "nigeria": {
+          "text": {
+            "en": "pays only authors with Russian self-employed (NPD) or sole-trader tax status"
+          },
+          "state": "no",
+          "source": {
+            "url": "https://klipni.com/legal/terms",
+            "date": "2026-09-18"
+          }
+        },
+        "kenya": {
+          "text": {
+            "en": "pays only authors with Russian self-employed (NPD) or sole-trader tax status"
+          },
+          "state": "no",
+          "source": {
+            "url": "https://klipni.com/legal/terms",
+            "date": "2026-09-18"
+          }
+        },
+        "mena": {
+          "text": {
+            "en": "pays only authors with Russian self-employed (NPD) or sole-trader tax status"
+          },
+          "state": "no",
+          "source": {
+            "url": "https://klipni.com/legal/terms",
+            "date": "2026-09-18"
+          }
+        },
+        "indonesia": {
+          "text": {
+            "en": "pays only authors with Russian self-employed (NPD) or sole-trader tax status"
+          },
+          "state": "no",
+          "source": {
+            "url": "https://klipni.com/legal/terms",
+            "date": "2026-09-18"
+          }
+        },
+        "philippines": {
+          "text": {
+            "en": "pays only authors with Russian self-employed (NPD) or sole-trader tax status"
+          },
+          "state": "no",
+          "source": {
+            "url": "https://klipni.com/legal/terms",
+            "date": "2026-09-18"
+          }
         }
       },
       "pros": {
@@ -1421,6 +1981,86 @@
             "url": "https://www.primeoracles.com/rewards",
             "date": "2026-09-02"
           }
+        },
+        "india": {
+          "text": {
+            "en": "not named; barred only for EU, UK and US residents and where crypto services are restricted"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://www.primeoracles.com/terms-agreement",
+            "date": "2026-09-18"
+          }
+        },
+        "pakistan": {
+          "text": {
+            "en": "not named; barred only for EU, UK and US residents and where crypto services are restricted"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://www.primeoracles.com/terms-agreement",
+            "date": "2026-09-18"
+          }
+        },
+        "bangladesh": {
+          "text": {
+            "en": "not named; barred only for EU, UK and US residents and where crypto services are restricted"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://www.primeoracles.com/terms-agreement",
+            "date": "2026-09-18"
+          }
+        },
+        "nigeria": {
+          "text": {
+            "en": "not named; barred only for EU, UK and US residents and where crypto services are restricted"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://www.primeoracles.com/terms-agreement",
+            "date": "2026-09-18"
+          }
+        },
+        "kenya": {
+          "text": {
+            "en": "not named; barred only for EU, UK and US residents and where crypto services are restricted"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://www.primeoracles.com/terms-agreement",
+            "date": "2026-09-18"
+          }
+        },
+        "mena": {
+          "text": {
+            "en": "not named; barred only for EU, UK and US residents and where crypto services are restricted"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://www.primeoracles.com/terms-agreement",
+            "date": "2026-09-18"
+          }
+        },
+        "indonesia": {
+          "text": {
+            "en": "not named; barred only for EU, UK and US residents and where crypto services are restricted"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://www.primeoracles.com/terms-agreement",
+            "date": "2026-09-18"
+          }
+        },
+        "philippines": {
+          "text": {
+            "en": "not named; barred only for EU, UK and US residents and where crypto services are restricted"
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://www.primeoracles.com/terms-agreement",
+            "date": "2026-09-18"
+          }
         }
       },
       "pros": {
@@ -1597,6 +2237,86 @@
           "source": {
             "url": "https://www.clipping.io/brands",
             "date": "2026-09-02"
+          }
+        },
+        "india": {
+          "text": {
+            "en": ""
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://www.clipping.io/terms-of-use",
+            "date": "2026-09-18"
+          }
+        },
+        "pakistan": {
+          "text": {
+            "en": ""
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://www.clipping.io/terms-of-use",
+            "date": "2026-09-18"
+          }
+        },
+        "bangladesh": {
+          "text": {
+            "en": ""
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://www.clipping.io/terms-of-use",
+            "date": "2026-09-18"
+          }
+        },
+        "nigeria": {
+          "text": {
+            "en": ""
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://www.clipping.io/terms-of-use",
+            "date": "2026-09-18"
+          }
+        },
+        "kenya": {
+          "text": {
+            "en": ""
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://www.clipping.io/terms-of-use",
+            "date": "2026-09-18"
+          }
+        },
+        "mena": {
+          "text": {
+            "en": ""
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://www.clipping.io/terms-of-use",
+            "date": "2026-09-18"
+          }
+        },
+        "indonesia": {
+          "text": {
+            "en": ""
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://www.clipping.io/terms-of-use",
+            "date": "2026-09-18"
+          }
+        },
+        "philippines": {
+          "text": {
+            "en": ""
+          },
+          "state": "unknown",
+          "source": {
+            "url": "https://www.clipping.io/terms-of-use",
+            "date": "2026-09-18"
           }
         }
       },

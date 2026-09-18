@@ -4,13 +4,17 @@
 import { useData } from 'vitepress'
 import { computed } from 'vue'
 import { LANDING_COPY, localeOf } from './copy'
-import { pick, sourcesOf, DATA } from './platforms'
+import { DEFAULT_COLUMNS, pick, sourcesOf, DATA } from './platforms'
 
 const { frontmatter, lang } = useData()
 const copy = computed(() => LANDING_COPY[localeOf(lang.value)])
 const paragraphs = computed(() => (frontmatter.value.method ?? []) as string[])
-const ids = computed(() => ((frontmatter.value.compare ?? {}) as { ids?: string[] }).ids ?? [])
-const sources = computed(() => pick(ids.value).flatMap((p) => sourcesOf(p).map((s) => ({ name: p.name, ...s }))))
+const cfg = computed(() => (frontmatter.value.compare ?? {}) as { ids?: string[]; columns?: string[] })
+const ids = computed(() => cfg.value.ids ?? [])
+// Same columns the table above renders, so a per-country source is listed exactly on the pages
+// that print the country column and nowhere else.
+const columns = computed(() => cfg.value.columns ?? DEFAULT_COLUMNS)
+const sources = computed(() => pick(ids.value).flatMap((p) => sourcesOf(p, columns.value).map((s) => ({ name: p.name, ...s }))))
 </script>
 
 <template>

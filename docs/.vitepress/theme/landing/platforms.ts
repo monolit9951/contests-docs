@@ -31,14 +31,45 @@ export interface Platform {
 }
 export interface PlatformsData { snapshot: string; platforms: Platform[] }
 
+/** The columns a comparison table shows when its frontmatter names none. */
+export const DEFAULT_COLUMNS = ['rate', 'threshold', 'cap', 'fee', 'minPayout', 'payoutMethods', 'cis', 'followers', 'escrow']
+
+/**
+ * Per-country columns: cited only by the page that asks for one.
+ *
+ * `sourcesOf` rolls a platform's whole fine print into one numbered list, which is right for the
+ * eleven fields every comparison page is built on — a reader checking the rate is one click from
+ * the page the threshold came from too. These eight are different. Each answers one regional
+ * page's one question ("does it pay in Nigeria"), there are eight of them per platform, and the
+ * twenty pages that will never print the column would otherwise carry up to eight more rows in
+ * "how this comparison was built" for claims they do not make. So a regional field's source enters
+ * the roll-up only when the page renders that column, and `sourcesOf(p)` with no argument is what
+ * it always was: every field except these.
+ *
+ * Keep this in sync with the `columns` labels in `copy.ts` — a key here with no label prints the
+ * raw key as a table heading.
+ */
+export const REGION_FIELDS: readonly string[] = ['india', 'pakistan', 'bangladesh', 'nigeria', 'kenya', 'mena', 'indonesia', 'philippines']
+
 export const DATA = raw as PlatformsData
 export const byId = (id: string): Platform | undefined => DATA.platforms.find((p) => p.id === id)
 export const pick = (ids: string[]): Platform[] => ids.map(byId).filter((p): p is Platform => Boolean(p))
 export const text = (p: Platform, field: string, lang: Locale): string => p.fields[field]?.text?.[lang] ?? p.fields[field]?.text?.en ?? ''
-export const sourcesOf = (p: Platform): Source[] => {
+/**
+ * One entry per source url of a platform, in the order its fields declare them.
+ *
+ * `shown` is the fields the calling page renders; it only ever admits regional columns, never
+ * removes anything else, so a page that shows none of them gets the list it got before regional
+ * columns existed.
+ */
+export const sourcesOf = (p: Platform, shown: readonly string[] = []): Source[] => {
   const seen = new Map<string, Source>()
-  for (const f of Object.values(p.fields)) if (f.source?.url && !seen.has(f.source.url)) seen.set(f.source.url, f.source)
+  for (const [key, f] of Object.entries(p.fields)) {
+    if (REGION_FIELDS.includes(key) && !shown.includes(key)) continue
+    if (f.source?.url && !seen.has(f.source.url)) seen.set(f.source.url, f.source)
+  }
   return [...seen.values()]
 }
 /** stable index of a source url inside a platform, for superscript references */
-export const sourceIndex = (p: Platform, url: string): number => sourcesOf(p).findIndex((s) => s.url === url) + 1
+export const sourceIndex = (p: Platform, url: string, shown: readonly string[] = []): number =>
+  sourcesOf(p, shown).findIndex((s) => s.url === url) + 1

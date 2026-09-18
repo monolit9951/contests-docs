@@ -16,9 +16,10 @@ const fields = computed(() => cfg.value.fields ?? CARD_FIELDS)
 const highlight = computed(() => cfg.value.highlight ?? 'darebay')
 const host = (u: string) => { try { return new URL(u).hostname.replace(/^www\./, '') } catch { return u } }
 // One link per source host: a platform documented across ten pages of one site is one source to the reader.
+// Scoped to the fields this card prints, so a per-country source only appears under a card showing it.
 const hostSources = (p: Parameters<typeof sourcesOf>[0]) => {
   const seen = new Map<string, { url: string; date: string }>()
-  for (const s of sourcesOf(p)) { const h = host(s.url); if (!seen.has(h)) seen.set(h, s) }
+  for (const s of sourcesOf(p, fields.value)) { const h = host(s.url); if (!seen.has(h)) seen.set(h, s) }
   return [...seen.entries()].map(([h, s]) => ({ host: h, ...s }))
 }
 </script>

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-17T21:04:06.211Z",
+  "generatedAt": "2026-09-18T00:00:00.000Z",
   "url": "https://darebay.com/data/darebay-facts.json",
   "operator": "Ruslan Bei",
   "sources": {
@@ -10,7 +10,7 @@
     },
     "productIntent": {
       "file": "data/product-intent.json",
-      "decidedAt": "2026-09-17"
+      "decidedAt": "2026-09-18"
     },
     "liveCatalogue": {
       "file": "data/contests-snapshot.json",
@@ -130,7 +130,7 @@
     },
     {
       "id": "withdrawal-fee",
-      "value": 0,
+      "value": 10,
       "unit": "percent",
       "labels": {
         "ru": "Комиссия за вывод баланса",
@@ -138,13 +138,13 @@
         "en": "Balance withdrawal fee"
       },
       "text": {
-        "ru": "без комиссии, заявка от 10 USDT",
-        "uk": "без комісії, заявка від 10 USDT",
-        "en": "no fee, request from 10 USDT"
+        "ru": "10% от суммы заявки, заявка от 10 USDT",
+        "uk": "10% від суми заявки, заявка від 10 USDT",
+        "en": "10% of the requested amount, request from 10 USDT"
       },
-      "source": "product-intent.json#withdrawal-free",
-      "asOf": "2026-09-17",
-      "note": "The target product, decided 2026-09-17 and recorded as product-intent.json#withdrawal-free. The live backend still charges 10% and processes withdrawals manually; the fee reaches 0% when that pending product change ships."
+      "source": "product-truth.json#withdrawal.defaultCommissionPercent",
+      "asOf": "2026-08-23",
+      "note": "Live value; withdrawals are processed manually."
     },
     {
       "id": "withdrawal-minimum",

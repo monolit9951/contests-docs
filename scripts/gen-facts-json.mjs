@@ -344,7 +344,11 @@ export function buildFacts({ truth, intent, snapshot, now }) {
               uk: `без комісії, заявка від ${minimum}`,
               en: `no fee, request from ${minimum}`,
             }[locale]
-          : percentText(fee.percent)[locale]
+          : {
+              ru: `${fee.percent}% от суммы заявки, заявка от ${minimum}`,
+              uk: `${fee.percent}% від суми заявки, заявка від ${minimum}`,
+              en: `${fee.percent}% of the requested amount, request from ${minimum}`,
+            }[locale]
       }),
       source: fee.intentId ? `product-intent.json#${fee.intentId}` : 'product-truth.json#withdrawal.defaultCommissionPercent',
       asOf: fee.decidedAt ?? truthAsOf,

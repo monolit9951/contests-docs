@@ -28,7 +28,7 @@
         "rateMax": 2,
         "cap": 500,
         "threshold": 1000,
-        "fee": 0,
+        "fee": 10,
         "minPayout": 10
       },
       "fields": {
@@ -70,14 +70,14 @@
         },
         "fee": {
           "text": {
-            "en": "0% on contest payouts; 0% on wallet withdrawal",
-            "ru": "0% с выплат конкурса; 0% при выводе на кошелёк",
-            "uk": "0% з виплат конкурсу; 0% при виведенні на гаманець"
+            "en": "0% on contest payouts; 10% on balance withdrawal",
+            "ru": "0% с выплат конкурса; 10% при выводе баланса",
+            "uk": "0% з виплат конкурсу; 10% при виведенні балансу"
           },
-          "value": 0,
+          "value": 10,
           "source": {
-            "url": "https://darebay.com/o-proekte/darebay-v-tsifrakh",
-            "date": "2026-09-17"
+            "url": "https://darebay.com/en/help/what-commission",
+            "date": "2026-08-23"
           }
         },
         "minPayout": {

@@ -52,6 +52,41 @@ function intentRecord(changed, id) {
   return changed.claims.find((claim) => claim.id === id);
 }
 
+// 2026-09-18: the founder kept the 10% withdrawal fee, so the committed intent file no longer carries
+// the `withdrawal-free` record. The mechanism that record exercised stays in the lint for the next
+// decided change, and the tests below keep proving it on a fixture: the record exactly as it stood
+// from 17.09 to 18.09, added back onto the committed file.
+const WITHDRAWAL_FREE_RECORD = {
+  "id": "withdrawal-free",
+  "claim": {
+    "ru": "Вывод на кошелёк - без комиссии.",
+    "en": "Withdrawal to a wallet carries no commission.",
+    "uk": "Виведення на гаманець - без комісії."
+  },
+  "liveTruth": "withdrawal.defaultCommissionPercent",
+  "target": 0,
+  "status": "pending-product-change",
+  "decision": "founder-approved",
+  "note": "Live product still charges 10% and processes withdrawals manually; the backend change is the product-side half of this decision.",
+  "pages": [
+    "docs/pomoshch/darebay-vyvod-deneg.md",
+    "docs/en/help/darebay-withdrawals.md",
+    "docs/ua/dopomoha/darebay-vyvedennia-hroshei.md",
+    "docs/pomoshch/kakaya-komissiya.md",
+    "docs/en/help/what-commission.md",
+    "docs/ua/dopomoha/yaka-komisiia.md"
+  ]
+};
+
+function intentWithFreeWithdrawal() {
+  const changed = structuredClone(intent);
+  changed.decidedAt = "2026-09-17";
+  changed.claims = [structuredClone(WITHDRAWAL_FREE_RECORD), ...changed.claims];
+  return changed;
+}
+
+const DECIDED_FREE = intentWithFreeWithdrawal();
+
 function git(repo, ...args) {
   return execFileSync("git", ["-C", repo, ...args], { encoding: "utf8", stdio: ["ignore", "pipe", "pipe"] }).trim();
 }
@@ -133,9 +168,10 @@ test("a local shadow branch cannot replace the remote-tracking source branch", (
 
 console.log("product_truth_lint: the decided target product");
 
-// The founder decided on 2026-09-17 that the wallet withdrawal fee goes to 0%, and that the
-// public pages describe that target product before the backend ships it. These are the wordings
-// the decision licenses; the live snapshot still says 10%, which is the point.
+// From 2026-09-17 to 2026-09-18 the founder had decided that the wallet withdrawal fee goes to 0%
+// and that the public pages describe that target before the backend ships it; on 2026-09-18 the
+// decision was reversed and the fee stays 10%. These are the wordings such a decision licenses,
+// judged against the fixture above; against the committed file they fail again.
 const FREE_WITHDRAWAL_WORDINGS = [
   "Withdrawals are free and have no platform fee.",
   "Вывод баланса без комиссии.",
@@ -149,14 +185,20 @@ const ZERO_FEE_WORDINGS = [
 
 test("the decided free withdrawal passes in all three locales while the record stands", () => {
   for (const wording of [...FREE_WITHDRAWAL_WORDINGS, ...ZERO_FEE_WORDINGS]) {
-    assert.deepEqual(lintText(wording, "fixture.md", truth), [], wording);
+    assert.deepEqual(lintText(wording, "fixture.md", truth, undefined, { intent: DECIDED_FREE }), [], wording);
   }
+});
+
+test("the committed file (founder kept 10% on 2026-09-18) licenses no free withdrawal", () => {
+  for (const wording of FREE_WITHDRAWAL_WORDINGS) assert(rules(wording).has("free-withdrawal"), wording);
+  for (const wording of ZERO_FEE_WORDINGS) assert(rules(wording).has("withdrawal-fee"), wording);
+  assert.equal(intentRecord(intent, "withdrawal-free"), undefined);
 });
 
 test("the licence names the record that granted it", () => {
   const allowed = [];
   lintText("Withdrawals are free and have no platform fee.", "fixture.md", truth, undefined,
-    { onAllowed: (allowance) => allowed.push(allowance) });
+    { intent: DECIDED_FREE, onAllowed: (allowance) => allowed.push(allowance) });
   assert.equal(allowed.length, 1);
   assert.equal(allowed[0].rule, "free-withdrawal");
   assert.equal(allowed[0].intentId, "withdrawal-free");
@@ -165,13 +207,14 @@ test("the licence names the record that granted it", () => {
 
   const numeric = [];
   lintText("The balance withdrawal fee is 0%.", "fixture.md", truth, undefined,
-    { onAllowed: (allowance) => numeric.push(allowance) });
+    { intent: DECIDED_FREE, onAllowed: (allowance) => numeric.push(allowance) });
   assert.deepEqual(numeric.map((allowance) => allowance.rule), ["withdrawal-fee"]);
   assert.equal(numeric[0].intentId, "withdrawal-free");
 });
 
 test("the same claims fail again without the record, and without the file", () => {
-  const dropped = intentWithout("withdrawal-free");
+  const dropped = structuredClone(DECIDED_FREE);
+  dropped.claims = dropped.claims.filter((claim) => claim.id !== "withdrawal-free");
   for (const wording of FREE_WITHDRAWAL_WORDINGS) {
     assert(rulesWithIntent(wording, dropped).has("free-withdrawal"), wording);
     assert(rulesWithIntent(wording, null).has("free-withdrawal"), wording);
@@ -207,12 +250,13 @@ test("a decided target relaxes its own field only", () => {
 
 test("the committed intent file agrees with the reviewed snapshot", () => {
   assert.deepEqual(validateProductIntent(intent, truth, { root }), []);
-  assert.equal(intent.decidedAt, "2026-09-17");
-  assert.deepEqual(intent.supersedes, ["2026-08-01 withdrawal-not-free"]);
+  assert.equal(intent.decidedAt, "2026-09-18");
+  assert.deepEqual(intent.supersedes, ["2026-09-17 withdrawal-free"]);
+  assert.deepEqual(validateProductIntent(DECIDED_FREE, truth, { root }), []);
 });
 
 test("an intent record that misstates the live product fails", () => {
-  const pretendsLive = structuredClone(intent);
+  const pretendsLive = structuredClone(DECIDED_FREE);
   intentRecord(pretendsLive, "withdrawal-free").status = "matches-live";
   assert.match(validateProductIntent(pretendsLive, truth).join("\n"),
     /withdrawal\.defaultCommissionPercent is 10 and the target is 0/);
@@ -221,7 +265,7 @@ test("an intent record that misstates the live product fails", () => {
   intentRecord(pretendsPending, "withdrawal-minimum").status = "pending-product-change";
   assert.match(validateProductIntent(pretendsPending, truth).join("\n"), /already equals the target 10/);
 
-  const unknownPath = structuredClone(intent);
+  const unknownPath = structuredClone(DECIDED_FREE);
   intentRecord(unknownPath, "withdrawal-free").liveTruth = "withdrawal.noSuchField";
   assert.match(validateProductIntent(unknownPath, truth).join("\n"), /does not exist in the reviewed product truth/);
 
@@ -239,7 +283,7 @@ test("an intent record that misstates the live product fails", () => {
 });
 
 test("an unrecognised status fails the gate and licenses nothing", () => {
-  const changed = structuredClone(intent);
+  const changed = structuredClone(DECIDED_FREE);
   intentRecord(changed, "withdrawal-free").status = "founder-approved";
   assert.match(validateProductIntent(changed, truth).join("\n"), /status must be one of/);
   assert(rulesWithIntent("Withdrawals are free and have no platform fee.", changed).has("free-withdrawal"));

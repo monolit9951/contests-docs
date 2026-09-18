@@ -73,21 +73,25 @@ describe('machine-readable fact card', () => {
   })
 
   /**
-   * The withdrawal fee is the one field where the docs describe the DECIDED product instead of
-   * the live one. It must publish the target, name the intent record as its source, and say in
-   * the open what the live product still charges — the same resolution the truth gate applies.
+   * The withdrawal fee follows the same resolution the truth gate applies: a pending decided
+   * change in the intent file wins, otherwise the live value stands. Since the founder kept the
+   * 10% fee on 2026-09-18 there is no such record, so the card publishes the live fee with its
+   * minimum request.
    */
-  it('publishes the effective withdrawal fee with the live value disclosed', () => {
+  it('publishes the effective withdrawal fee', () => {
     const { truth, intent } = inputs
-    const record = intent.claims.find((claim) => claim.id === 'withdrawal-free')
-    expect(record.status).toBe('pending-product-change')
+    const record = intent?.claims?.find((claim) => claim.id === 'withdrawal-free')
     const fee = byId.get('withdrawal-fee')
-    expect(fee.value).toBe(record.target)
-    expect(fee.value).toBe(0)
-    expect(fee.source).toBe('product-intent.json#withdrawal-free')
-    expect(fee.asOf).toBe(intent.decidedAt)
-    expect(fee.note).toContain(`${truth.withdrawal.defaultCommissionPercent}%`)
-    expect(fee.text.uk).toBe('без комісії, заявка від 10 USDT')
+    if (record && record.status === 'pending-product-change') {
+      expect(fee.value).toBe(record.target)
+      expect(fee.source).toBe('product-intent.json#withdrawal-free')
+    } else {
+      expect(fee.value).toBe(truth.withdrawal.defaultCommissionPercent)
+      expect(fee.source).toBe('product-truth.json#withdrawal.defaultCommissionPercent')
+      expect(fee.text.ru).toBe(`${truth.withdrawal.defaultCommissionPercent}% от суммы заявки, заявка от 10 USDT`)
+      expect(fee.text.uk).toBe(`${truth.withdrawal.defaultCommissionPercent}% від суми заявки, заявка від 10 USDT`)
+      expect(fee.text.en).toBe(`${truth.withdrawal.defaultCommissionPercent}% of the requested amount, request from 10 USDT`)
+    }
   })
 
   it('warns about a stale catalogue snapshot but still builds', () => {

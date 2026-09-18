@@ -1,30 +1,11 @@
 {
   "schemaVersion": 1,
-  "decidedAt": "2026-09-17",
-  "source": "darebay-ceo/docs/decisions.md 2026-09-17",
-  "supersedes": ["2026-08-01 withdrawal-not-free"],
+  "decidedAt": "2026-09-18",
+  "source": "darebay-ceo/docs/decisions.md 2026-09-18",
+  "supersedes": [
+    "2026-09-17 withdrawal-free"
+  ],
   "claims": [
-    {
-      "id": "withdrawal-free",
-      "claim": {
-        "ru": "Вывод на кошелёк - без комиссии.",
-        "en": "Withdrawal to a wallet carries no commission.",
-        "uk": "Виведення на гаманець - без комісії."
-      },
-      "liveTruth": "withdrawal.defaultCommissionPercent",
-      "target": 0,
-      "status": "pending-product-change",
-      "decision": "founder-approved",
-      "note": "Live product still charges 10% and processes withdrawals manually; the backend change is the product-side half of this decision.",
-      "pages": [
-        "docs/pomoshch/darebay-vyvod-deneg.md",
-        "docs/en/help/darebay-withdrawals.md",
-        "docs/ua/dopomoha/darebay-vyvedennia-hroshei.md",
-        "docs/pomoshch/kakaya-komissiya.md",
-        "docs/en/help/what-commission.md",
-        "docs/ua/dopomoha/yaka-komisiia.md"
-      ]
-    },
     {
       "id": "withdrawal-minimum",
       "claim": {
@@ -50,8 +31,14 @@
         "en": "Creating and launching a contest is free; a budget top-up carries no fee.",
         "uk": "Створення та запуск конкурсу - безкоштовно, поповнення бюджету без комісії."
       },
-      "liveTruth": ["contest.creationCommissionPercent", "contest.topUpCommissionPercent"],
-      "target": [0, 0],
+      "liveTruth": [
+        "contest.creationCommissionPercent",
+        "contest.topUpCommissionPercent"
+      ],
+      "target": [
+        0,
+        0
+      ],
       "status": "matches-live",
       "decision": "founder-approved",
       "pages": [
@@ -90,7 +77,11 @@
         "ppv.stable.bands.cpm.high",
         "ppv.stable.bands.maxPerWork.high"
       ],
-      "target": [1, 2, 500],
+      "target": [
+        1,
+        2,
+        500
+      ],
       "status": "matches-live",
       "decision": "founder-approved",
       "pages": [

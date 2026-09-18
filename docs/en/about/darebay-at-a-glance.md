@@ -38,7 +38,7 @@ Two kinds of contest exist. In a **wallet-backed contest** the organizer's budge
 | Contest creation fee | 0% | platform rules | 2026-08-23 |
 | Contest budget top-up fee | 0% | platform rules | 2026-08-23 |
 | Store purchase fee | 8% | platform rules | 2026-08-23 |
-| Balance withdrawal fee | no fee, request from 10 USDT | product decision | 2026-09-17 |
+| Balance withdrawal fee | 10% of the requested amount, request from 10 USDT | platform rules | 2026-08-23 |
 | Minimum withdrawal request | 10 USDT | platform rules | 2026-08-23 |
 | Payout rails | USDT on TON, Telegram Stars | platform rules | 2026-08-23 |
 | Platforms | TikTok, YouTube, Instagram and other sites named in the task | task terms | 2026-09-17 |

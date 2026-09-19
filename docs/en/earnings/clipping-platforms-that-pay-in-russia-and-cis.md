@@ -54,13 +54,13 @@ Klipbait, a Russian- and Ukrainian-language front end for Western campaigns, des
 
 **Klipbait** pays in USDT or to a card; for USDT you pick the network yourself, its blog calling TRC-20 the default for amounts this size, and a withdrawal can be requested once the balance reaches $20.00 <!-- source: https://www.klipbait.com/ru/blog/kak-vyvesti-dengi-za-klipping-iz-rossii 2026-09-18 -->. It promises no date: the money waits until the brand behind each campaign settles, "usually a few days, sometimes longer", as its Russian FAQ puts it <!-- source: https://www.klipbait.com/ru 2026-09-18 -->, and only views from tier-1 countries such as the US, the UK, Germany, France, Canada and Australia are paid <!-- source: https://www.klipbait.com/ru/blog/whop-klipping-iz-rossii 2026-09-18 -->. It publishes no terms of service, no privacy policy and no operator name: its sitemap lists landing pages and a blog only <!-- source: https://www.klipbait.com/sitemap.xml 2026-09-18 -->, and support is a Telegram chat.
 
-**Reach.cat** pays weekly in USDT and claims 149+ countries, but publishes no list and its pages disagree on whether identity verification is required. **Clipping.net** pays by PayPal or USDC/USDT on Ethereum and requires legal residence "in the territories where we operate", without naming them. **Vues** pays USDT, Solana, BTC, PayPal or bank transfer and publishes no country list. Treat all three as "ask first".
+**Reach.cat**'s payout screen offers USDT on Ethereum, BNB Smart Chain or Solana, or a bank transfer by IBAN <!-- source: https://reach.cat/dashboard/creator/earnings 2026-09-18 -->; it claims 149+ countries but publishes no list, and its clipper page says "No KYC. No ID check." <!-- source: https://reach.cat/become-a-clipper/ 2026-09-18 -->, while its terms effective 13 September 2026 require an identity check once payout requests pass $500 <!-- source: https://reach.cat/terms 2026-09-18 -->. **Clipping.net** pays by PayPal or USDC/USDT on Ethereum and requires legal residence "in the territories where we operate", without naming them. **Vues** names USDT, Solana, BTC, PayPal or bank transfer on its homepage <!-- source: https://vues.app/ 2026-09-18 -->, while its terms say a payout goes through whatever the brand enables, such as USDT, PayPal or Zelle <!-- source: https://vues.app/terms 2026-09-18 -->, and publishes no country list. Treat all three as "ask first".
 
 ## Before your first clip
 
 - Read the platform's own country page or terms, not a forum post; lists change and the platform's page is what its payout partner enforces.
 - Check the payout rail you can actually receive: PayPal and Stripe are unavailable to many clippers in the region, USDT on TON or Tron and Telegram Stars are not.
-- Check whether a tax status is required (Klipni) and whether identity verification is demanded before withdrawal (Whop, and Reach.cat according to its app).
+- Check whether a tax status is required (Klipni) and whether identity verification is demanded before withdrawal (Whop, and Reach.cat once payout requests pass $500 <!-- source: https://reach.cat/terms 2026-09-18 -->).
 - Prefer a platform that locks the budget before you post: DareBay's wallet-backed contests, Prime Oracles' frozen reward balance and Klipni's prepaid budgets do; Vues states that it does not custody funds.
 
 Other regions have their own version of this page: there is one for [India](/en/earnings/clipping-platforms-that-pay-in-india), one for [Pakistan](/en/earnings/clipping-platforms-that-pay-in-pakistan), one for [Nigeria, Kenya and Ghana](/en/earnings/clipping-platforms-that-pay-in-nigeria-and-kenya) and one for [Egypt and the Arab countries](/en/earnings/clipping-platforms-that-pay-in-egypt-and-arab-countries), each read country by country, while [clipping platforms that pay without PayPal or Stripe](/en/earnings/clipping-platforms-that-pay-without-paypal-or-stripe) answers the same worry without a border in it.
@@ -83,8 +83,8 @@ DareBay and Prime Oracles state that they pay in Kazakhstan, and Whop lists Kaza
 
 ### Can I get paid in USDT?
 
-Yes, on several platforms: DareBay pays USDT on TON, Prime Oracles USDT or USDC on BSC, Solana or Tron, Reach.cat USDT weekly, Clipping.net USDT or USDC on Ethereum, Vues USDT among other rails.
+Yes, on several platforms: DareBay pays USDT on TON, Prime Oracles USDT or USDC on BSC, Solana or Tron, Reach.cat USDT on Ethereum, BNB Smart Chain or Solana <!-- source: https://reach.cat/dashboard/creator/earnings 2026-09-18 -->, Clipping.net USDT or USDC on Ethereum, Vues USDT among other rails.
 
 ### Do I need a tax status or KYC?
 
-DareBay needs neither to take a brief. Klipni requires Russian self-employed or sole-trader status. Whop requires identity verification before payouts. Reach.cat's public pages say no KYC, but its app asks for identity verification before withdrawal.
+DareBay needs neither to take a brief. Klipni requires Russian self-employed or sole-trader status. Whop requires identity verification before payouts. Reach.cat's landing pages say no KYC, but its terms effective 13 September 2026 require identity verification through iDenfy once payout requests pass $500 <!-- source: https://reach.cat/terms 2026-09-18 -->.

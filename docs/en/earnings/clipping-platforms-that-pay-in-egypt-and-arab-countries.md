@@ -117,7 +117,7 @@ No. The Central Bank of Egypt describes the Instant Payment Network as linking b
 
 ### Do clippers in Morocco and Algeria actually get paid?
 
-Morocco yes, Algeria no. Morocco is on PayPal's payout list through a licensed local partner and on Whop's, and Al Barid Bank receives SWIFT into the account; Algeria is on none of those lists, is not served by Wise, and is named on Vyro's unsupported-countries page.
+Morocco yes; Algeria only on Whop's list. Morocco is on PayPal's payout list through a licensed local partner and on Whop's, and Al Barid Bank receives SWIFT into the account; Algeria is absent from PayPal's payout list, is not served by Wise and is named on Vyro's unsupported-countries page, though Whop names it among its payout countries. <!-- source: https://docs.whop.com/manage-your-business/manage-payouts/set-up-payouts 2026-09-18 -->
 
 ### Why is Iraq shut out by so many platforms?
 

@@ -10,9 +10,9 @@ hero:
   lede: "If Whop Content Rewards cannot pay you because you are in Russia or Belarus, the choice is already made for you: DareBay pays clippers there and worldwide. If Whop is open to you, there is a real trade-off: more campaigns on that side, no followers and no application on this one. Below is every field where the two differ, with the source for each number."
   secondary: "See the table"
   takeaways:
-    - "<b>Whop wins on choice:</b> the most campaigns anywhere, budgets from $1,000, rates from $0.50 to $5 per 1,000 views and payouts in 200+ countries with no floor on withdrawals."
+    - "<b>Whop wins on choice:</b> the most campaigns anywhere, budgets from $1,000, rates from $0.05 to $10 per 1,000 views, 17 of 50 at $1, and payouts in 200+ countries through Whop."
     - "<b>DareBay wins on access and on what the task hands you:</b> no country list at all, so it pays where Whop cannot; offer tasks add a fixed fee per accepted clip, a share of the orders your promo code brings and ready-made unique videos."
-    - "<b>The fee bites in different places:</b> Whop's terms take 10% of CPM payouts (its FAQ shows 25%→7% tiers); DareBay takes 0% from a contest payout and 10% when you withdraw to your wallet, from a 10 USDT request."
+    - "<b>The fee bites in different places:</b> Whop's terms take a flat 10% of CPM payouts, and its FAQ says the same; DareBay takes 0% from a contest payout and 10% when you withdraw to your wallet, from a 10 USDT request."
     - "<b>Both hold the money</b> in their main mode: Whop keeps the brand's budget against the campaign, DareBay locks the organizer's budget on the platform in a wallet-backed contest; DareBay also runs manual-payout contests where the organizer pays directly."
 compare:
   ids: [darebay, whop]
@@ -29,7 +29,7 @@ cta:
 
 ## The short answer
 
-If you are in the US, the EU or most of the world and want the largest choice of clipping campaigns, Whop Content Rewards is the bigger platform: more brands, higher budgets, rates on live campaigns from $0.50 to $5 per 1,000 views, a wallet with no floor on withdrawals and payouts in more than 200 countries. Its terms take 10% from CPM payouts, and a clip earns for 7 days after approval with a 3-day hold after that.
+If you are in the US, the EU or most of the world and want the largest choice of clipping campaigns, Whop Content Rewards is the bigger platform: more brands, higher budgets, rates on live campaigns from $0.05 to $10 per 1,000 views, 17 of the 50 at $1 <!-- source: https://contentrewards.com/discover 2026-09-18 -->, a wallet you empty to your Whop balance with no minimum and no charge <!-- source: https://contentrewards.com/pricing/creators 2026-09-18 -->, and payouts in more than 200 countries. Its terms take 10% from CPM payouts, and a clip earns for 7 days after approval with a 3-day hold after that.
 
 If you are in Russia or Belarus, Whop is not available to you at all: its sanctioned-country list blocks registration and payouts, and of Ukraine it names six regions (Crimea, Sevastopol, Donetsk, Luhansk, Zaporizhzhia and Kherson). The rest of Ukraine, Kazakhstan and the other CIS countries are on Whop's payout list, so there the choice comes down to the fields below. DareBay has no country list: it pays worldwide, and its community is largest in Russia, Ukraine, Kazakhstan and the rest of CIS. Open contests pay from $1.00 to $2.00 per 1,000 counted views, the threshold and the cap are printed on the task card, no followers or application are needed, and in wallet-backed contests the organizer's budget is locked on the platform before the start. Balance withdrawals carry a 10% fee, from a 10 USDT minimum, in USDT on TON or Telegram Stars.
 
@@ -38,8 +38,8 @@ If you are in Russia or Belarus, Whop is not available to you at all: its sancti
 ## Where Whop Content Rewards is stronger
 
 - **Supply.** Whop is the largest clipping marketplace; DareBay is young and has few open contests at any time.
-- **Rate ceiling.** Live Whop campaigns run up to $5 per 1,000 views; open DareBay contests run from $1.00 to $2.00.
-- **Payout rails.** Whop pays to bank accounts, PayPal, mobile wallets and crypto in 200+ countries with no minimum; DareBay pays USDT on TON and Telegram Stars, with a 10 USDT minimum request, handled by the team.
+- **Rate ceiling.** Live Whop campaigns run up to $10 per 1,000 views <!-- source: https://contentrewards.com/discover 2026-09-18 -->; open DareBay contests run from $1.00 to $2.00.
+- **Payout rails.** Whop pays to bank accounts, PayPal, mobile wallets and crypto in 200+ countries, with no minimum to your Whop balance <!-- source: https://contentrewards.com/pricing/creators 2026-09-18 --> and a $10 threshold "if applicable" on Whop's side <!-- source: https://docs.whop.com/manage-your-business/manage-payouts/set-up-payouts 2026-09-18 -->; DareBay pays USDT on TON and Telegram Stars, with a 10 USDT minimum request, handled by the team.
 - **Per-clip ceiling.** Whop campaigns show maximums of $400–$600 per video; a DareBay contest sets its own cap on one submission, up to $500 per clip.
 
 ## Where DareBay is stronger
@@ -47,7 +47,7 @@ If you are in Russia or Belarus, Whop is not available to you at all: its sancti
 - **No country restrictions.** DareBay pays worldwide with no exclusion list, including Russia and Belarus, which Whop's sanctioned list excludes, and every region of Ukraine.
 - **Better offers.** An offer task pays the rate per view plus a fixed fee per accepted clip and a share of the orders your promo code brings, on one card.
 - **Ready-made unique videos.** On offer tasks the platform hands you finished videos and makes every copy unique for you; no editing software needed.
-- **Fee on the payout itself.** DareBay takes 0% of contest payouts; Whop's terms take 10% of CPM payouts, and its creator FAQ describes tiers that start at 25%.
+- **Fee on the payout itself.** DareBay takes 0% of contest payouts; Whop's terms take a flat 10% of CPM payouts, and its creator FAQ says the same, with no tiers <!-- source: https://contentrewards.com/creators 2026-09-18 -->.
 - **Entry.** No follower requirement, no application and no KYC before your first brief on DareBay; Whop requires identity verification before payouts and some campaigns require an application.
 - **Terms on the card.** Rate, threshold and cap are on every DareBay task card before you submit; the rate and the threshold do not change after launch, and the cap per clip can only be raised.
 
@@ -63,7 +63,7 @@ Take one clip with 50,000 counted views. On a Whop campaign at $2 per 1,000 view
 
 ### Which pays more per 1,000 views, DareBay or Whop?
 
-Whop campaigns run from $0.50 to $5 per 1,000 views and its terms take 10% of CPM payouts; open DareBay contests run from $1.00 to $2.00 with 0% taken from the payout. The net difference depends on the campaign you can actually take, and on whether Whop can pay you at all.
+Whop campaigns run from $0.05 to $10 per 1,000 views <!-- source: https://contentrewards.com/discover 2026-09-18 --> and its terms take 10% of CPM payouts; open DareBay contests run from $1.00 to $2.00 with 0% taken from the payout. The net difference depends on the campaign you can actually take, and on whether Whop can pay you at all.
 
 ### Does Whop pay clippers in Russia or Ukraine?
 

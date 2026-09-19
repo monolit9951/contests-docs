@@ -90,7 +90,7 @@ So when is another board the better answer? If you want rupees in your bank and 
 
 ### Does Whop Content Rewards pay clippers in India?
 
-India appears on Whop's published list of payout countries, and Whop notes that the options differ by country <!-- source: https://docs.whop.com/manage-your-business/manage-payouts/set-up-payouts 2026-09-18 -->. Content Rewards describes wallet withdrawals to a bank account, PayPal, a mobile wallet or crypto across 200+ countries <!-- source: https://contentrewards.com/creators 2026-09-18 -->. Which of those rails appears in India is not published, so confirm yours before your first clip.
+India appears on Whop's published list of payout countries, and Whop notes that the options differ by country <!-- source: https://docs.whop.com/manage-your-business/manage-payouts/set-up-payouts 2026-09-18 -->. Earnings first move from the Content Rewards wallet to your Whop balance <!-- source: https://contentrewards.com/pricing/creators 2026-09-18 -->, and its creator FAQ describes sending money on from there to a bank account, PayPal, a mobile wallet or crypto across 200+ countries <!-- source: https://contentrewards.com/creators 2026-09-18 -->. Which of those rails appears in India is not published, so confirm yours before your first clip.
 
 ### Can a clipping platform send money straight to my UPI from abroad?
 

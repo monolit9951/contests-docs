@@ -65,7 +65,7 @@ The table carries what the data card below does not: whether a rail exists, whic
 
 <LCompare />
 
-**Whop** casts the widest net: its documentation lists over 200 payout countries, Pakistan, Bangladesh, Egypt, Ghana, Nepal and India among them, and adds that "different payout options will be available depending on the country". Nigeria is absent although Whop's sanctions page does not name it <!-- source: https://docs.whop.com/trust-and-safety/trust-safety-overview/sanctioned-countries 2026-09-18 --> — clearing a sanctions check and having a road are different things. Timing, fees and identity checks belong to Whop, not to Content Rewards. <!-- source: https://contentrewards.com/terms 2026-09-18 -->
+**Whop** casts the widest net: its documentation lists over 200 payout countries, Pakistan, Bangladesh, Egypt, Ghana, Nepal and India among them, and adds that "different payout options will be available depending on the country". Nigeria is absent although Whop's sanctions page does not name it <!-- source: https://docs.whop.com/trust-and-safety/trust-safety-overview/sanctioned-countries 2026-09-18 --> — clearing a sanctions check and having a road are different things. Withdrawal timing, withdrawal fees and identity checks belong to Whop, not to Content Rewards, which charges its own flat 10% creator fee on a CPM payout. <!-- source: https://contentrewards.com/terms 2026-09-18 -->
 
 **Vues** reads as a crypto-and-PayPal platform on its homepage, but its terms move the obligation: "The Brand - not Vues - is responsible for paying the Clipper", and Vues "does not own, custody, receive, convert, exchange, or transmit the funds". <!-- source: https://vues.app/terms 2026-09-18 -->
 

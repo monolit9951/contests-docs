@@ -50,7 +50,7 @@ ClipAffiliates, a CPM marketplace that used to publish a 9% fee and Stripe payou
 
 If you clip from Russia, Belarus, Ukraine, Kazakhstan or elsewhere in CIS, start with the platforms that state they pay there. Whop's sanctioned-country list blocks Russia, Belarus and six regions of Ukraine (Crimea, Sevastopol, Donetsk, Luhansk, Zaporizhzhia, Kherson); Vyro's unsupported list covers Russia, Belarus, all of Ukraine, Uzbekistan, Armenia, Georgia and Moldova. DareBay has no country list at all: it pays worldwide in USDT on TON or Telegram Stars with no follower requirement, and its community is largest in exactly this region; Prime Oracles pays Russia, Belarus and Kazakhstan in USDT or USDC from $5; Klipni pays in rubles but requires Russian self-employed status.
 
-If you clip from the US or the EU and want the largest choice of campaigns, join Whop Content Rewards and Vyro first, then add Clipping.net for streamer campaigns. Campaign budgets are finite, and a clipper who depends on one platform sits idle when its campaigns drain. Before your first clip check the fee on payout, the threshold and the minimum payout: Whop's terms take 10% of CPM payouts, Vyro pays nothing on a post under 5,000 views, and Vues charges the brand instead of you.
+If you clip from the US or the EU and want the largest choice of campaigns, join Whop Content Rewards and Vyro first, then add Clipping.net for streamer campaigns. Campaign budgets are finite, and a clipper who depends on one platform sits idle when its campaigns drain. Before your first clip check the fee on payout, the threshold and the minimum payout: Whop's terms take 10% of CPM payouts, Vyro pays nothing on a post under 5,000 views, and Vues does not publish a clipper fee rate (its homepage puts its cut on the brand's budget and shows clippers a processing fee on withdrawal <!-- source: https://vues.app/ 2026-09-18 -->, while its referral page illustrates a 10% platform fee on each cash-out <!-- source: https://vues.app/affiliate 2026-09-18 -->).
 
 If you are new and have no audience, prefer platforms with no follower requirement and a printed rate, threshold and cap per campaign, so that you can calculate the payout of a clip before you edit it. Every DareBay task card carries all three.
 
@@ -68,7 +68,7 @@ There is no single best platform; it depends on where you live and what you clip
 
 ### Which clipping platform pays the most per 1,000 views?
 
-The highest advertised rates are not the highest net pay. Whop campaigns run from $0.50 to $5 per 1,000 but its terms take 10% of CPM payouts; Vyro pays $1–$2 per 1,000 only after 5,000 views per post; Clipping.net quotes $0.20–$0.75 per 1,000. Sort the table by the rate column, then read the fee, threshold and cap columns for the same row.
+The highest advertised rates are not the highest net pay. Whop campaigns run from $0.05 to $10 per 1,000, with $1 the most common rate <!-- source: https://contentrewards.com/discover 2026-09-18 -->, but its terms take 10% of CPM payouts; Vyro pays $1–$2 per 1,000 only after 5,000 views per post; Clipping.net quotes $0.20–$0.75 per 1,000. Sort the table by the rate column, then read the fee, threshold and cap columns for the same row.
 
 ### Do I need followers to join a clipping platform?
 
@@ -76,7 +76,7 @@ On most campaign-based platforms, no: you are paid for the views of the clip you
 
 ### Do clipping platforms charge clippers a fee?
 
-Many do, either as a percentage of the payout or as a withdrawal fee. Whop's terms take 10% of CPM payouts, Klipni takes 5% of each approved payout, Vues and Reach.cat charge the brand instead, and Clipping.net and Vyro do not publish a clipper fee. DareBay takes 0% on contest payouts and 10% on balance withdrawals: requests start at 10 USDT and the team checks the details before sending.
+Many do, either as a percentage of the payout or as a withdrawal fee. Whop's terms take 10% of CPM payouts, Klipni takes 5% of each approved payout, Vues does not publish a rate and its pages disagree (its homepage puts its cut on the brand's budget, its referral page illustrates a 10% platform fee on each cash-out <!-- source: https://vues.app/affiliate 2026-09-18 -->), Reach.cat's terms name a commission of approximately 10% on all CPM-based payouts <!-- source: https://reach.cat/terms 2026-09-18 --> while its blog says the brand pays the 10% and clippers keep 100% <!-- source: https://reach.cat/blog/best-clipping-platforms/ 2026-09-18 -->, and Clipping.net and Vyro do not publish a clipper fee. DareBay takes 0% on contest payouts and 10% on balance withdrawals: requests start at 10 USDT and the team checks the details before sending.
 
 ### Can I clip for several platforms at once?
 

@@ -45,25 +45,25 @@ The cap limits what one clip can earn, and it is what cuts your income on a vira
 
 ## Question 5. What is the fee on the payout?
 
-Whop's terms take 10% of CPM payouts and its FAQ describes tiers from 25% down to 7%. Klipni takes 5%. Vues and Reach.cat charge the brand, and the clipper only a processing fee on withdrawal. DareBay takes 0% on contest payouts and 10% on balance withdrawals: requests start at 10 USDT, the form shows the amount to receive before you confirm, and the team checks the details before sending. Clipping.net and Vyro publish no clipper fee, which is a question for support.
+Whop's terms take 10% of CPM payouts and its creator FAQ shows the same flat 10%, with no tiers <!-- source: https://contentrewards.com/creators 2026-09-18 -->. Klipni takes 5%. Vues does not publish a rate: its homepage says its cut comes from the brand, its referral page illustrates a 10% fee on each cash-out <!-- source: https://vues.app/affiliate 2026-09-18 -->; Reach.cat bills brands 10% on top of the budget <!-- source: https://reach.cat/blog/reach-cat-pricing-brands-2026/ 2026-09-18 -->, while its terms cite about 10% on all CPM-based payouts <!-- source: https://reach.cat/terms 2026-09-18 -->. DareBay takes 0% on contest payouts and 10% on balance withdrawals: requests start at 10 USDT, the form shows the amount to receive before you confirm, and the team checks the details before sending. Clipping.net and Vyro publish no clipper fee, which is a question for support.
 
 ## Question 6. What is the minimum payout, and how fast is it?
 
-Whop has no minimum; a clip earns for 7 days after approval plus a 3-day hold. Vyro has a $10 minimum and pays once every 7 days after the campaign ends. Prime Oracles has a $5 minimum in USDT. Klipni has no minimum and pays within 5 business days. DareBay takes requests from 10 USDT; the platform handles the rest. Clipping.net and Vues name no minimum.
+At Whop, Content Rewards sets no minimum for moving earnings to your Whop balance <!-- source: https://contentrewards.com/pricing/creators 2026-09-18 -->, while Whop's own withdrawal guide names a $10 minimum "if applicable" <!-- source: https://docs.whop.com/manage-your-business/manage-payouts/set-up-payouts 2026-09-18 -->; a clip earns for 7 days after approval plus a 3-day hold. Vyro has a $10 minimum and pays once every 7 days after the campaign ends. Prime Oracles has a $5 minimum in USDT. Klipni has no minimum and pays within 5 business days. DareBay takes requests from 10 USDT; the platform handles the rest. Clipping.net and Vues name no minimum.
 
 ## Question 7. How do they pay?
 
-Check that you can actually receive the rail. Whop pays to bank, PayPal, mobile wallets and crypto; Vyro only PayPal or Stripe; Clipping.net PayPal or USDC/USDT on Ethereum; Vues USDT, Solana, BTC, PayPal or bank; Reach.cat USDT; Prime Oracles USDT or USDC; Klipni a card through self-employed status; DareBay USDT on TON or Telegram Stars.
+Check that you can actually receive the rail. Whop pays to bank, PayPal, mobile wallets and crypto; Vyro only PayPal or Stripe; Clipping.net PayPal or USDC/USDT on Ethereum; Vues USDT, Solana, BTC, PayPal or bank per its homepage <!-- source: https://vues.app/ 2026-09-18 -->; Reach.cat USDT on Ethereum, BNB Smart Chain or Solana, or bank by IBAN <!-- source: https://reach.cat/dashboard/creator/earnings 2026-09-18 -->; Prime Oracles USDT or USDC; Klipni a card through self-employed status; DareBay USDT on TON or Telegram Stars.
 
 If PayPal and Stripe are not available where you live, start from the rail rather than the shortlist: [clipping platforms that pay without PayPal or Stripe](/en/earnings/clipping-platforms-that-pay-without-paypal-or-stripe) sets out which of these platforms send a stablecoin, which send Telegram Stars, and which end at a bank account.
 
 ## Question 8. Do I need followers, an application or documents?
 
-Followers are required almost nowhere: Whop, Clipping.net, Vues, Reach.cat, Klipni and DareBay say so directly. An application is needed on some Whop and Vues campaigns. Identity verification is required at Whop before payouts and, according to its app, at Reach.cat before withdrawal. Klipni requires Russian self-employed status. DareBay requires none of these to take a brief.
+Followers are required almost nowhere: Whop, Clipping.net, Vues, Reach.cat, Klipni and DareBay say so directly. An application is needed on some Whop and Vues campaigns. Identity verification is required at Whop before payouts and at Reach.cat, under its terms, once payout requests pass $500 <!-- source: https://reach.cat/terms 2026-09-18 -->. Klipni requires Russian self-employed status. DareBay requires none of these to take a brief.
 
 ## Question 9. Where does the budget sit while I clip?
 
-If the budget sits with the platform before clips are posted, the promise to pay does not depend on the client's mood. Whop holds the brand's budget against the campaign, Klipni takes prepayment, Prime Oracles freezes the reward balance, and DareBay locks the budget in wallet-backed contests and labels the manual-payout contests where the organizer pays. Vues states that it does not custody funds; Clipping.net, Reach.cat and Clipping.io do not say.
+If the budget sits with the platform before clips are posted, the promise to pay does not depend on the client's mood. Whop holds the brand's budget against the campaign, Klipni takes prepayment, Prime Oracles freezes the reward balance, and DareBay locks the budget in wallet-backed contests and labels the manual-payout contests where the organizer pays. Vues states that it does not custody funds; Clipping.net and Clipping.io do not say.
 
 <LCompare />
 

@@ -54,7 +54,7 @@ Openings for clippers are advertised in four places, and each publishes a differ
 
 - **Task boards on clipping platforms.** The card is the advert: rate, threshold, cap, deadline and site are printed before you take anything, and nothing needs approving - you submit a clip, not a candidacy.
 - **Posts in Discord, Telegram and X.** Most "clipping jobs for beginners" messages live here, and so do the thinnest terms: a rate in one sentence, the rest agreed in DMs, nothing written down about what is counted.
-- **Freelance marketplaces.** A vacancy shape: you send a proposal, compete on rating and samples, and agree a fee per order rather than per 1000 views.
+- **Freelance marketplaces.** A vacancy shape: you send a proposal, compete on rating and samples, and agree a fee per order rather than per 1000 views. On Upwork the proposal itself is paid for, in Connects at $0.15 each<!-- source: https://support.upwork.com/hc/en-us/articles/211062898-Understanding-and-using-Connects 2026-09-20 -->.
 - **Agency and studio hiring.** Closest to being employed, and the slowest door for a beginner: selection, a test task, sometimes reporting.
 
 Two filters separate paid work from a sales pitch wearing the word "job". First, which way the money travels: an advert charging for "training", a "starter pack", "verification" or a deposit is selling you something, and clipping work bills the buyer, never the clipper. Second, whether the terms can be read before you work - what is counted, from what mark, and what limits one payment. The longer check is in [clipping scams: nine red flags](/en/about/clipping-scams-red-flags).

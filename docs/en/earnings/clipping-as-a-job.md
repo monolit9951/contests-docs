@@ -1,7 +1,7 @@
 ---
 title: Clipping as a job - what clipping jobs involve and pay
 description: "What clipping jobs involve: piecework paid per view, $1–2 per 1,000 views, up to $500 per clip, withdrawable from 10 USDT. No followers, no portfolio."
-provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
+provenance: { snapshot_date: "2026-09-20", source: "darebay-prod" }
 numbers_used: [ppv_cpm_min, ppv_cpm_median, ppv_cpm_max, ppv_min_views_threshold_live]
 seo: true
 landing: true
@@ -22,7 +22,7 @@ You can earn from clips with no followers and nothing to show, because clipping 
 
 This is piecework, not passive income. Below: what the job actually asks of you, what the result depends on, and one route from zero - first contest, first submission, first money.
 
-Every figure on this page comes from the platform's own data (snapshot: 2026-08-23) and counts only open contests - the ones a clipper can take right now.
+Every DareBay figure on this page comes from the platform's own data (snapshot: 2026-08-23) and counts only open contests - the ones a clipper can take right now.
 
 The words this page uses - hook, threshold, cap, counted views - are explained in the [clipping glossary](/en/earnings/clipping-glossary).
 
@@ -46,6 +46,18 @@ The result rides on more than the edit:
 - **Luck.** Reach is decided by the site's algorithm, not by the platform and not by the buyer.
 
 Which moments in a broadcast are worth cutting, and what the brief itself allows you to use, is covered separately in [what streamer clips pay](/en/earnings/streamer-clip-rates).
+
+## Hired editing, a gig you sell, or a task paid per view
+
+Three arrangements share the name "clipping job", and they differ most at the door.
+
+| Kind of work | Who pays you | What you need first | How pay is set | Worker-side fee, as published | When money arrives, as published |
+|---|---|---|---|---|---|
+| Hired hourly or fixed-price (Upwork) | The client, via the marketplace | Accepted application; portfolio advised for getting hired<!-- source: https://support.upwork.com/hc/en-us/articles/211067578-How-to-get-started-as-a-freelancer-on-Upwork 2026-09-20 -->; proposals are sent with Connects, $0.15 each<!-- source: https://support.upwork.com/hc/en-us/articles/211062898-Understanding-and-using-Connects 2026-09-20 --> | Negotiated, above a $3.00/hour or $5.00 fixed-price floor<!-- source: https://support.upwork.com/hc/en-us/articles/211062988-What-are-the-minimum-hourly-and-fixed-price-rates-on-Upwork 2026-09-20 --> | 0% to 15% per contract, fixed before you accept<!-- source: https://support.upwork.com/hc/en-us/articles/211062538-Learn-about-the-Freelancer-Service-Fee 2026-09-20 --> | Hourly: 10 days after the week's Sunday close<!-- source: https://support.upwork.com/hc/en-us/articles/211063698-How-to-manage-the-weekly-billing-cycle 2026-09-20 -->; fixed-price: up to 14 days' review, then a five-day hold<!-- source: https://support.upwork.com/hc/en-us/articles/211063718-How-payments-for-milestones-and-fixed-price-contracts-work 2026-09-20 --> |
+| A per-gig service you sell (Fiverr) | The client, via the marketplace | A published Gig; identity verification may be required, sometimes for a fee<!-- source: https://help.fiverr.com/hc/en-us/articles/6348992414097-Verifying-your-identity-as-a-new-freelancer 2026-09-20 --> | You set it, from a $5 "minimum starting price"<!-- source: https://help.fiverr.com/hc/en-us/articles/360010451397-Creating-a-Gig 2026-09-20 -->; hourly needs "Level One and above"<!-- source: https://help.fiverr.com/hc/en-us/articles/27516246556945-Hourly-work-for-freelancers 2026-09-20 --> | You earn "80% of the purchase amount"<!-- source: https://help.fiverr.com/hc/en-us/articles/9234443621137-Your-earnings-page 2026-09-20 --> | Order completes, then a 14-day clearing period<!-- source: https://help.fiverr.com/hc/en-us/articles/34069565843985-How-Fiverr-works-for-freelancers 2026-09-20 --> |
+| A task paid per view (DareBay) | The buyer's contest budget, via the platform | An account, an open account on the contest's site; no followers, application or portfolio | A rate per 1000 views, threshold and cap printed on the card | 0% from the contest payout; withdrawal has its own [fee](/en/help/what-commission) | The system counts the views; a person checks each withdrawal request, and no deadline is promised |
+
+For a beginner with nothing to show, the difference is the entry price: both marketplace routes want something before you may compete. A per-view task asks for an account and nothing else, and it promises nothing - a clip below the threshold pays nothing.
 
 ## Is a clipping job a real job?
 
@@ -140,6 +152,10 @@ Per view, in the shape the brief sets: a rate for every 1000 counted views of th
 ### Are clipping jobs real jobs or freelance piecework?
 
 Piecework, taken freelance. The work is real and the terms are published before you start, but nobody employs you: there is no contract of employment, no position and no notice on either side, and each brief is a short arrangement that closes once the payout is worked out. Whether a run of them can carry a month is a separate question, and one clip never answers it.
+
+### Does applying for clipping work cost anything?
+
+On a freelance marketplace it can: Upwork proposals are paid for in Connects, at $0.15 each<!-- source: https://support.upwork.com/hc/en-us/articles/211062898-Understanding-and-using-Connects 2026-09-20 -->. Taking a brief off a contest board costs nothing - no entry fee and no application.
 
 Questions that have a home of their own in this section:
 

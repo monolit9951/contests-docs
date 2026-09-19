@@ -1843,95 +1843,95 @@
       "name": "Prime Oracles",
       "url": "https://www.primeoracles.com/",
       "kind": "Russian-language content marketplace with reward campaigns",
-      "operator": "ИП Aliaksey Maysak, Georgia",
+      "operator": "a sole trader registered in Tbilisi, Georgia (named in its user agreement); Georgian law",
       "bestFor": {
-        "en": "Russian-speaking clippers who want crypto payouts from $5",
-        "ru": "русскоязычные нарезчики, которым нужны крипто-выплаты от $5",
-        "uk": "російськомовні нарізчики, яким потрібні криптовиплати від $5"
+        "en": "clippers with Russian or English who want USDT, USDC or TON from $5 and the rate, the cap and the remaining budget printed before they register",
+        "ru": "нарезчики с русским или английским, которым нужны USDT, USDC или TON от $5 и ставка, потолок и остаток бюджета, напечатанные до регистрации",
+        "uk": "нарізчики з російською чи англійською, яким потрібні USDT, USDC або TON від $5 і ставка, стеля та залишок бюджету, надруковані до реєстрації"
       },
       "summary": {
-        "en": "A Russian-language marketplace with reward campaigns: the customer sets a rate per 1,000 views or view tiers, the reward balance is frozen on activation, and clippers withdraw USDT or USDC from $5. Not offered to EU, UK or US residents; the platform fee is shown only in the app.",
-        "ru": "Русскоязычный маркетплейс с наградами за контент: заказчик задаёт ставку за 1000 просмотров или пороги, баланс награды замораживается при активации, нарезчики выводят USDT или USDC от $5. Не работает с резидентами ЕС, Великобритании и США; комиссия платформы видна только в приложении.",
-        "uk": "Російськомовний маркетплейс із винагородами за контент: замовник задає ставку за 1000 переглядів або пороги, баланс винагороди заморожується при активації, нарізчики виводять USDT або USDC від $5. Не працює з резидентами ЄС, Британії та США; комісія платформи видна лише в застосунку."
+        "en": "A marketplace of digital products with a rewards board for short video: the customer sets a rate per 1,000 views or view tiers, the reward balance is frozen on activation, and the public card prints the rate, the cap and what is left of the budget. Withdrawal is in USDT, USDC or TON, from $5 to $12 depending on the network, with a published 10% fee; USD to cards and bank accounts through Garna (Cyprus) is described in the agreement. Residents and citizens of the EU, the UK and the US are not served.",
+        "ru": "Маркетплейс цифровых продуктов с доской наград за видео: заказчик задаёт ставку за 1000 просмотров или пороги, баланс награды замораживается при активации, а открытая карточка печатает ставку, потолок и остаток бюджета. Вывод в USDT, USDC или TON, от $5 до $12 в зависимости от сети, комиссия 10% опубликована; вывод в USD на карты и счета через Garna (Кипр) описан в соглашении. Резидентам и гражданам ЕС, Великобритании и США услуги не оказываются.",
+        "uk": "Маркетплейс цифрових продуктів із дошкою винагород за відео: замовник задає ставку за 1000 переглядів або пороги, баланс винагороди заморожується при активації, а відкрита картка друкує ставку, стелю та залишок бюджету. Виведення в USDT, USDC або TON, від $5 до $12 залежно від мережі, комісія 10% опублікована; виведення в USD на картки та рахунки через Garna (Кіпр) описане в угоді. Резидентам і громадянам ЄС, Британії та США послуги не надаються."
       },
       "fields": {
         "rate": {
           "text": {
-            "en": "set per reward by the customer; no examples published",
-            "ru": "задаёт заказчик по каждой награде; примеров нет",
-            "uk": "задає замовник по кожній винагороді; прикладів немає"
+            "en": "printed on every public card; $0.02–$8.00 per 1,000 views across the 20 open rewards on 19.09.2026",
+            "ru": "напечатана на каждой открытой карточке; $0.02–$8.00 за 1000 просмотров у 20 открытых наград на 19.09.2026",
+            "uk": "надрукована на кожній відкритій картці; $0.02–$8.00 за 1000 переглядів у 20 відкритих винагород на 19.09.2026"
           },
           "source": {
             "url": "https://www.primeoracles.com/rewards",
-            "date": "2026-09-02"
+            "date": "2026-09-19"
           }
         },
         "threshold": {
           "text": {
-            "en": "set per reward: a minimum payout or view tiers",
-            "ru": "задаётся по награде: минимальная выплата или пороги просмотров",
-            "uk": "задається по винагороді: мінімальна виплата або пороги переглядів"
+            "en": "no platform-wide floor; derived per card from the minimum payout divided by the rate, printed as \"$1 (1K views)\"",
+            "ru": "общего порога нет; на карточке он получается делением минимальной выплаты на ставку и напечатан как «$1 (1K views)»",
+            "uk": "загального порога немає; на картці він виходить діленням мінімальної виплати на ставку і надрукований як «$1 (1K views)»"
           },
           "source": {
             "url": "https://www.primeoracles.com/rewards",
-            "date": "2026-09-02"
+            "date": "2026-09-19"
           }
         },
         "cap": {
           "text": {
-            "en": "maximum payout set per reward; one payout per video",
-            "ru": "максимальная выплата задаётся по награде; одно видео = одна выплата",
-            "uk": "максимальна виплата задається по винагороді; одне відео = одна виплата"
+            "en": "maximum payout set per reward; $15–$300 across the open rewards on 19.09.2026; one payout per video",
+            "ru": "максимальная выплата задаётся по награде; $15–$300 у открытых наград на 19.09.2026; одно видео = одна выплата",
+            "uk": "максимальна виплата задається по винагороді; $15–$300 у відкритих винагород на 19.09.2026; одне відео = одна виплата"
           },
           "source": {
-            "url": "https://www.primeoracles.com/terms-agreement",
-            "date": "2026-09-02"
+            "url": "https://www.primeoracles.com/rewards",
+            "date": "2026-09-19"
           }
         },
         "fee": {
           "text": {
-            "en": "a percentage charged at withdrawal; the number is shown only in the app",
-            "ru": "процент удерживается при выводе; число видно только в приложении",
-            "uk": "відсоток утримується при виведенні; число видно лише в застосунку"
+            "en": "10% of the withdrawal, taken from what you earned; 0% to create a reward; network fees on top",
+            "ru": "10% от суммы вывода, удерживаются с заработанного; создание награды 0%; сетевая комиссия сверху",
+            "uk": "10% від суми виведення, утримуються із заробленого; створення винагороди 0%; мережева комісія зверху"
           },
           "source": {
-            "url": "https://www.primeoracles.com/rewards",
-            "date": "2026-09-02"
+            "url": "https://www.primeoracles.com/terms-agreement",
+            "date": "2026-09-19"
           }
         },
         "minPayout": {
           "text": {
-            "en": "$5 in USDT ($5–$12 depending on the network)",
-            "ru": "$5 в USDT ($5–$12 в зависимости от сети)",
-            "uk": "$5 в USDT ($5–$12 залежно від мережі)"
+            "en": "from $5 to $12 depending on the network; the agreement leaves the exact figure to the interface",
+            "ru": "от $5 до $12 в зависимости от сети; точную сумму соглашение оставляет интерфейсу",
+            "uk": "від $5 до $12 залежно від мережі; точну суму угода залишає інтерфейсу"
           },
           "value": 5,
           "source": {
-            "url": "https://www.primeoracles.com/rewards",
-            "date": "2026-09-02"
+            "url": "https://www.primeoracles.com/terms-agreement",
+            "date": "2026-09-19"
           }
         },
         "payoutMethods": {
           "text": {
-            "en": "USDT or USDC to your wallet (BSC, Solana, Tron); crypto only, cards announced",
-            "ru": "USDT или USDC на кошелёк (BSC, Solana, Tron); только крипта, карты анонсированы",
-            "uk": "USDT або USDC на гаманець (BSC, Solana, Tron); лише крипта, картки анонсовано"
+            "en": "USDT (Tron, BNB Smart Chain, Solana), USDC (Ethereum, Solana), TON; USD to cards and bank accounts through Garna (Cyprus) described in the agreement, with Garna's own KYC; whether it is open to an ordinary account is not published",
+            "ru": "USDT (Tron, BNB Smart Chain, Solana), USDC (Ethereum, Solana), TON; вывод в USD на карты и счета через Garna (Кипр) описан в соглашении, KYC делает сама Garna; открыт ли канал обычному аккаунту, не публикуется",
+            "uk": "USDT (Tron, BNB Smart Chain, Solana), USDC (Ethereum, Solana), TON; виведення в USD на картки та рахунки через Garna (Кіпр) описане в угоді, KYC робить сама Garna; чи відкритий канал звичайному акаунту, не публікується"
           },
           "source": {
-            "url": "https://www.primeoracles.com/aml-policy",
-            "date": "2026-09-02"
+            "url": "https://www.primeoracles.com/terms-agreement",
+            "date": "2026-09-19"
           }
         },
         "cis": {
           "text": {
-            "en": "Russia, Belarus and Kazakhstan are served; EU, UK and US residents are not; Ukraine not mentioned",
-            "ru": "Россия, Беларусь и Казахстан обслуживаются; резиденты ЕС, Британии и США нет; Украина не упомянута",
-            "uk": "Росія, Білорусь і Казахстан обслуговуються; резиденти ЄС, Британії та США ні; Україну не згадано"
+            "en": "the tax clause names Russia, Belarus, Kazakhstan, Uzbekistan, Kyrgyzstan, Armenia, Azerbaijan, Moldova, Tajikistan, Turkmenistan and other CIS member states; Ukraine is not named; EU, UK and US residents and nationals are barred",
+            "ru": "налоговый пункт называет Россию, Беларусь, Казахстан, Узбекистан, Кыргызстан, Армению, Азербайджан, Молдову, Таджикистан, Туркменистан и иные государства СНГ; Украина не названа; резидентам и гражданам ЕС, Великобритании и США нельзя",
+            "uk": "податковий пункт називає Росію, Білорусь, Казахстан, Узбекистан, Киргизстан, Вірменію, Азербайджан, Молдову, Таджикистан, Туркменістан та інші держави СНД; Україну не названо; резидентам і громадянам ЄС, Британії та США не можна"
           },
           "state": "partial",
           "source": {
             "url": "https://www.primeoracles.com/terms-agreement",
-            "date": "2026-09-02"
+            "date": "2026-09-19"
           }
         },
         "followers": {
@@ -1943,7 +1943,7 @@
           "state": "no",
           "source": {
             "url": "https://www.primeoracles.com/terms-agreement",
-            "date": "2026-09-02"
+            "date": "2026-09-19"
           }
         },
         "escrow": {
@@ -1955,7 +1955,7 @@
           "state": "yes",
           "source": {
             "url": "https://www.primeoracles.com/terms-agreement",
-            "date": "2026-09-02"
+            "date": "2026-09-19"
           }
         },
         "networks": {
@@ -2064,34 +2064,34 @@
       "pros": {
         "en": [
           "Reward balance frozen before the campaign starts",
-          "Low $5 minimum, payouts in USDT or USDC",
-          "Serves Russia, Belarus and Kazakhstan"
+          "USDT, USDC or TON on five chains; the agreement puts the floor at $5 to $12 by network",
+          "Ten CIS states named in the agreement's tax clause"
         ],
         "ru": [
           "Баланс награды заморожен до старта",
-          "Низкий минимум $5, выплаты в USDT или USDC",
-          "Обслуживает Россию, Беларусь и Казахстан"
+          "USDT, USDC или TON в пяти сетях; по соглашению минимум от $5 до $12 в зависимости от сети",
+          "Десять стран СНГ прямо названы в налоговом пункте соглашения"
         ],
         "uk": [
           "Баланс винагороди заморожений до старту",
-          "Низький мінімум $5, виплати в USDT або USDC",
-          "Обслуговує Росію, Білорусь і Казахстан"
+          "USDT, USDC або TON у п'яти мережах; за угодою мінімум від $5 до $12 залежно від мережі",
+          "Десять країн СНД прямо названо в податковому пункті угоди"
         ]
       },
       "cons": {
         "en": [
-          "Fee percentage is not published outside the app",
-          "Crypto payouts only",
+          "One payout per video: views gathered after it add nothing",
+          "Residents and citizens of the EU, the UK and the US are barred and geo-blocked",
           "Customer approves each payout by hand, up to 7 days"
         ],
         "ru": [
-          "Процент комиссии не опубликован вне приложения",
-          "Только крипто-выплаты",
+          "Одно видео — одна выплата: просмотры после неё ничего не добавляют",
+          "Резидентам и гражданам ЕС, Великобритании и США вход закрыт и геоблокирован",
           "Заказчик одобряет каждую выплату вручную, до 7 дней"
         ],
         "uk": [
-          "Відсоток комісії не опубліковано поза застосунком",
-          "Лише криптовиплати",
+          "Одне відео — одна виплата: перегляди після неї нічого не додають",
+          "Резидентам і громадянам ЄС, Британії та США вхід закрито й геоблоковано",
           "Замовник схвалює кожну виплату вручну, до 7 днів"
         ]
       }

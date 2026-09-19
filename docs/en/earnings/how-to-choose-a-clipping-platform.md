@@ -29,11 +29,11 @@ cta:
 
 ## Question 1. Can the platform pay to my country?
 
-The fastest way to waste time is to cut ten clips for a platform that cannot pay you. Whop keeps a sanctioned-country list with Russia, Belarus and six regions of Ukraine (Crimea, Sevastopol, Donetsk, Luhansk, Zaporizhzhia, Kherson); Vyro keeps an unsupported list with Russia, Belarus, Ukraine, Uzbekistan, Armenia, Georgia and Moldova. DareBay states that it pays in any country with no exclusion list; Prime Oracles and Klipni list the countries they serve. Clipping.net, Vues, Reach.cat and Clipping.io publish no country list: that is not a "no", but it is a question for support before your first clip.
+The fastest way to waste time is to cut ten clips for a platform that cannot pay you. Whop keeps a sanctioned-country list with Russia, Belarus and six regions of Ukraine (Crimea, Sevastopol, Donetsk, Luhansk, Zaporizhzhia, Kherson); Vyro keeps an unsupported list with Russia, Belarus, Ukraine, Uzbekistan, Armenia, Georgia and Moldova. DareBay states that it pays in any country with no exclusion list; [Prime Oracles](/en/earnings/prime-oracles-review) and Klipni list the countries they serve. Clipping.net, Vues, Reach.cat and Clipping.io publish no country list: that is not a "no", but it is a question for support before your first clip.
 
 ## Question 2. What is the rate per 1,000 views, and who sets it?
 
-Almost everywhere the campaign owner sets the rate and the platform only prints it on the card. What matters is that the rate is printed before you submit and does not change after the start: that is how DareBay, Whop, Vyro and Klipni work. Vues shows rates only inside the app, Reach.cat gives different ranges on different pages, Prime Oracles and Clipping.io publish no examples.
+Almost everywhere the campaign owner sets the rate and the platform only prints it on the card. What matters is that the rate is printed before you submit and does not change after the start: that is how DareBay, Whop, Vyro and Klipni work. Vues shows rates only inside the app, Reach.cat gives different ranges on different pages, Clipping.io publishes no examples, and every Prime Oracles reward card prints its rate, $0.02–$8.00 per 1,000 views across the rewards open on 19 September 2026 <!-- source: https://www.primeoracles.com/rewards 2026-09-19 -->.
 
 ## Question 3. What is the view threshold?
 
@@ -49,11 +49,11 @@ Whop's terms take 10% of CPM payouts and its creator FAQ shows the same flat 10%
 
 ## Question 6. What is the minimum payout, and how fast is it?
 
-At Whop, Content Rewards sets no minimum for moving earnings to your Whop balance <!-- source: https://contentrewards.com/pricing/creators 2026-09-18 -->, while Whop's own withdrawal guide names a $10 minimum "if applicable" <!-- source: https://docs.whop.com/manage-your-business/manage-payouts/set-up-payouts 2026-09-18 -->; a clip earns for 7 days after approval plus a 3-day hold. Vyro has a $10 minimum and pays once every 7 days after the campaign ends. Prime Oracles has a $5 minimum in USDT. Klipni has no minimum and pays within 5 business days. DareBay takes requests from 10 USDT; the platform handles the rest. Clipping.net and Vues name no minimum.
+At Whop, Content Rewards sets no minimum for moving earnings to your Whop balance <!-- source: https://contentrewards.com/pricing/creators 2026-09-18 -->, while Whop's own withdrawal guide names a $10 minimum "if applicable" <!-- source: https://docs.whop.com/manage-your-business/manage-payouts/set-up-payouts 2026-09-18 -->; a clip earns for 7 days after approval plus a 3-day hold. Vyro has a $10 minimum and pays once every 7 days after the campaign ends. Prime Oracles' agreement sets a minimum of $5 to $12 by network <!-- source: https://www.primeoracles.com/terms-agreement 2026-09-19 -->. Klipni has no minimum and pays within 5 business days. DareBay takes requests from 10 USDT; the platform handles the rest. Clipping.net and Vues name no minimum.
 
 ## Question 7. How do they pay?
 
-Check that you can actually receive the rail. Whop pays to bank, PayPal, mobile wallets and crypto; Vyro only PayPal or Stripe; Clipping.net PayPal or USDC/USDT on Ethereum; Vues USDT, Solana, BTC, PayPal or bank per its homepage <!-- source: https://vues.app/ 2026-09-18 -->; Reach.cat USDT on Ethereum, BNB Smart Chain or Solana, or bank by IBAN <!-- source: https://reach.cat/dashboard/creator/earnings 2026-09-18 -->; Prime Oracles USDT or USDC; Klipni a card through self-employed status; DareBay USDT on TON or Telegram Stars.
+Check that you can actually receive the rail. Whop pays to bank, PayPal, mobile wallets and crypto; Vyro only PayPal or Stripe; Clipping.net PayPal or USDC/USDT on Ethereum; Vues USDT, Solana, BTC, PayPal or bank per its homepage <!-- source: https://vues.app/ 2026-09-18 -->; Reach.cat USDT on Ethereum, BNB Smart Chain or Solana, or bank by IBAN <!-- source: https://reach.cat/dashboard/creator/earnings 2026-09-18 -->; Prime Oracles USDT, USDC or TON <!-- source: https://www.primeoracles.com/terms-agreement 2026-09-19 -->; Klipni a card through self-employed status; DareBay USDT on TON or Telegram Stars.
 
 If PayPal and Stripe are not available where you live, start from the rail rather than the shortlist: [clipping platforms that pay without PayPal or Stripe](/en/earnings/clipping-platforms-that-pay-without-paypal-or-stripe) sets out which of these platforms send a stablecoin, which send Telegram Stars, and which end at a bank account.
 

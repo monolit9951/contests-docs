@@ -12,7 +12,7 @@ hero:
   secondary: "Country table"
   takeaways:
     - "<b>Two platforms keep exclusion lists:</b> Whop Content Rewards blocks Russia and Belarus, and of Ukraine only six regions (Crimea, Sevastopol, Donetsk, Luhansk, Zaporizhzhia, Kherson); Vyro blocks Russia, Belarus, Ukraine, Uzbekistan, Armenia, Georgia and Moldova."
-    - "<b>Three pay here and put it in writing:</b> DareBay (worldwide with no exclusion list, community largest in CIS; USDT on TON or Telegram Stars), Prime Oracles (Russia, Belarus, Kazakhstan; USDT/USDC), Klipni (Russia only; rubles, self-employed status required)."
+    - "<b>Three pay here and put it in writing:</b> DareBay (worldwide with no exclusion list, community largest in CIS; USDT on TON or Telegram Stars), Prime Oracles (ten CIS states named; USDT, USDC or TON), Klipni (Russia only; rubles, self-employed status required)."
     - "<b>Four publish no country list at all:</b> Clipping.net, Vues, Reach.cat and Clipping.io; ask their support before your first clip."
     - "<b>Kazakhstan is on neither exclusion list:</b> Whop names it among its payout countries; Vyro leaves it off its unsupported list."
 compare:
@@ -36,9 +36,9 @@ cta:
 | Belarus | excluded | excluded | paid | paid | no | named | no country list published |
 | Ukraine | on the payout list; six regions excluded (sanctioned list) | excluded | paid | not mentioned | no | named | no country list published |
 | Kazakhstan | on the payout list | not listed either way | paid | paid | no | named | no country list published |
-| Uzbekistan, Armenia, Georgia, Moldova | on the payout list | excluded | paid | not mentioned | no | not named; its blog says your own location does not matter <!-- source: https://www.klipbait.com/ru/blog/whop-klipping-iz-rossii 2026-09-18 --> | no country list published |
+| Uzbekistan, Armenia, Georgia, Moldova | on the payout list | excluded | paid | Uzbekistan, Armenia, Moldova named; Georgia not | no | not named; its blog says your own location does not matter <!-- source: https://www.klipbait.com/ru/blog/whop-klipping-iz-rossii 2026-09-18 --> | no country list published |
 
-Whop's sanctioned-country page says creators in listed countries "can't register a Whop account, sell access passes, or receive payouts". The list carries Russia and Belarus in full and, of Ukraine, "the following jurisdictions only": Crimea, Sevastopol, Donetsk, Luhansk, Zaporizhzhia and Kherson. Whop's payout setup page names Ukraine, Kazakhstan, Uzbekistan, Armenia, Georgia and Moldova among the 200+ countries it pays out to. The page lists Zaporizhzhia and Kherson by name without saying whether that means each whole region, so a clipper there should ask Whop's support first. Vyro's supported-countries page says that in a restricted region "you won't be able to use Vyro or receive payouts", and its list includes Russia, Belarus, Ukraine, Uzbekistan, Armenia, Georgia and Moldova. Prime Oracles' terms exclude EU, UK and US residents and list tax statuses for Russia, Belarus and Kazakhstan. Klipni's creator terms require Russian self-employed or sole-trader status for payouts. DareBay has no country list: it pays worldwide, so all of these countries are included, and its community is largest in the region.
+Whop's sanctioned-country page says creators in listed countries "can't register a Whop account, sell access passes, or receive payouts". The list carries Russia and Belarus in full and, of Ukraine, "the following jurisdictions only": Crimea, Sevastopol, Donetsk, Luhansk, Zaporizhzhia and Kherson. Whop's payout setup page names Ukraine, Kazakhstan, Uzbekistan, Armenia, Georgia and Moldova among the 200+ countries it pays out to. The page lists Zaporizhzhia and Kherson by name without saying whether that means each whole region, so a clipper there should ask Whop's support first. Vyro's supported-countries page says that in a restricted region "you won't be able to use Vyro or receive payouts", and its list includes Russia, Belarus, Ukraine, Uzbekistan, Armenia, Georgia and Moldova. Prime Oracles' terms exclude EU, UK and US residents and list tax statuses for Russia, Belarus, Kazakhstan, Uzbekistan, Kyrgyzstan, Armenia, Azerbaijan, Moldova, Tajikistan, Turkmenistan and other CIS states <!-- source: https://www.primeoracles.com/terms-agreement 2026-09-19 -->. Klipni's creator terms require Russian self-employed or sole-trader status for payouts. DareBay has no country list: it pays worldwide, so all of these countries are included, and its community is largest in the region.
 
 Klipbait, a Russian- and Ukrainian-language front end for Western campaigns, describes itself in Russian as "access to Western campaigns for creators from Russia, Belarus, Ukraine and Kazakhstan" with payouts in USDT <!-- source: https://www.klipbait.com/ru 2026-09-18 -->, and its blog adds that where the creator lives does not matter, only where the audience does <!-- source: https://www.klipbait.com/ru/blog/whop-klipping-iz-rossii 2026-09-18 -->.
 
@@ -48,7 +48,7 @@ Klipbait, a Russian- and Ukrainian-language front end for Western campaigns, des
 
 **DareBay** credits your balance after the count and pays withdrawals in USDT on the TON network or as Telegram Stars; a withdrawal request is at least 10 USDT and carries a 10% fee, deducted inside it; submit it once and the team handles the check and the transfer. Individual contests can add a card, a bank transfer or a gift as the reward. No tax status, follower count or application is needed to take a brief.
 
-**Prime Oracles** pays only in crypto: USDT or USDC to your own wallet on BSC, Solana or Tron, from $5, after the customer approves each payout by hand. The platform's fee percentage is shown only inside the app.
+**[Prime Oracles](/en/earnings/prime-oracles-review)** pays USDT on Tron, BNB Smart Chain or Solana, USDC on Ethereum or Solana, or TON, from $5 to $12 by network, after the customer approves each payout by hand. Its agreement publishes a 10% withdrawal fee and describes USD to cards and bank accounts through its partner Garna, without saying whether that route is open to an ordinary account <!-- source: https://www.primeoracles.com/terms-agreement 2026-09-19 -->.
 
 **Klipni** pays in rubles to a bank card, but only through Russian self-employed (НПД) or sole-trader status registered in the app, with a 5% fee and no minimum. In practice that makes it Russia-only even though it does not publish a country list.
 
@@ -75,7 +75,7 @@ Not in Russia or Belarus: Whop's sanctioned-country list blocks registration, se
 
 ### Which clipping platforms pay in Ukraine?
 
-DareBay states that it pays clippers in Ukraine, in USDT on TON or Telegram Stars. Whop lists Ukraine among its payout countries and excludes only six regions (Crimea, Sevastopol, Donetsk, Luhansk, Zaporizhzhia and Kherson). Vyro excludes Ukraine. Clipping.net, Vues, Reach.cat and Clipping.io publish no country list, and Prime Oracles names Russia, Belarus and Kazakhstan without mentioning Ukraine.
+DareBay states that it pays clippers in Ukraine, in USDT on TON or Telegram Stars. Whop lists Ukraine among its payout countries and excludes only six regions (Crimea, Sevastopol, Donetsk, Luhansk, Zaporizhzhia and Kherson). Vyro excludes Ukraine. Clipping.net, Vues, Reach.cat and Clipping.io publish no country list, and Prime Oracles' agreement names ten CIS states without mentioning Ukraine.
 
 ### Which clipping platforms pay in Kazakhstan?
 
@@ -83,7 +83,7 @@ DareBay and Prime Oracles state that they pay in Kazakhstan, and Whop lists Kaza
 
 ### Can I get paid in USDT?
 
-Yes, on several platforms: DareBay pays USDT on TON, Prime Oracles USDT or USDC on BSC, Solana or Tron, Reach.cat USDT on Ethereum, BNB Smart Chain or Solana <!-- source: https://reach.cat/dashboard/creator/earnings 2026-09-18 -->, Clipping.net USDT or USDC on Ethereum, Vues USDT among other rails.
+Yes, on several platforms: DareBay pays USDT on TON, Prime Oracles USDT on Tron, BNB Smart Chain or Solana, Reach.cat USDT on Ethereum, BNB Smart Chain or Solana <!-- source: https://reach.cat/dashboard/creator/earnings 2026-09-18 -->, Clipping.net USDT or USDC on Ethereum, Vues USDT among other rails.
 
 ### Do I need a tax status or KYC?
 

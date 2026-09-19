@@ -13,8 +13,8 @@ competitor_sources:
   - { platform: "Whop Content Rewards", url: "https://contentrewards.com/", date: "2026-09-05" }
   - { platform: "Whop", url: "https://docs.whop.com/memberships-and-access/third-party-apps/content-rewards", date: "2026-09-02" }
   - { platform: "Whop", url: "https://docs.whop.com/memberships-and-access/third-party-apps/content-rewards", date: "2026-09-05" }
-  - { platform: "Whop", url: "https://docs.whop.com/trust-and-safety/trust-safety-overview/sanctioned-countries", date: "2026-09-02" }
-  - { platform: "Whop", url: "https://docs.whop.com/trust-and-safety/trust-safety-overview/sanctioned-countries", date: "2026-09-05" }
+  - { platform: "Whop", url: "https://docs.whop.com/trust-and-safety/trust-safety-overview/sanctioned-countries", date: "2026-09-18" }
+  - { platform: "Whop", url: "https://docs.whop.com/manage-your-business/manage-payouts/set-up-payouts", date: "2026-09-18" }
   - { platform: "Klipni", url: "https://klipni.com/creators", date: "2026-09-02" }
   - { platform: "Klipni", url: "https://klipni.com/legal/terms", date: "2026-09-02" }
   - { platform: "Vyro", url: "https://vyro.com/campaigns", date: "2026-09-02" }
@@ -32,7 +32,7 @@ hero:
     - "<b>Whop is the biggest board of clipping campaigns, and there is plenty to pick from.</b> Dozens of live campaigns, a budget of up to $238,000 on one card <!-- source: https://contentrewards.com/discover 2026-09-05 -->, rates of $0.50–$5 per 1,000 views <!-- source: https://contentrewards.com/discover 2026-09-02 -->."
     - "<b>The rate on the card is not the money in hand, so do the sum first.</b> The terms take 10% of CPM payouts <!-- source: https://contentrewards.com/terms 2026-09-05 -->, the creator FAQ shows tiers from 25% down to 7% <!-- source: https://contentrewards.com/creators 2026-09-02 -->, and a clip below the campaign's minimum payout per video never reaches review."
     - "<b>Expect the money about ten days after approval.</b> A clip earns for 7 days, then sits through a 3-day hold <!-- source: https://contentrewards.com/creators 2026-09-02 -->; withdrawals go to a bank, PayPal, a mobile wallet or crypto in 200+ countries."
-    - "<b>Russia, Belarus and Ukraine sit on Whop's sanctioned list</b> <!-- source: https://docs.whop.com/trust-and-safety/trust-safety-overview/sanctioned-countries 2026-09-02 -->: no account, no payout, and a VPN changes nothing. For those countries there are platforms with no country list, DareBay among them."
+    - "<b>Russia and Belarus sit on Whop's sanctioned list, along with six regions of Ukraine</b> <!-- source: https://docs.whop.com/trust-and-safety/trust-safety-overview/sanctioned-countries 2026-09-18 -->: no account, no payout, and a VPN changes nothing. For those places there are platforms with no country list, DareBay among them."
 cta:
   title: "Whop cannot pay your country? DareBay has no country list"
   lede: "DareBay pays worldwide in USDT to your wallet, and every task card states the pay rate, the view threshold and the ceiling on a single clip before you submit. Nobody screens your follower count and nobody reviews an application, so the weekend you spend editing is not spent on a maybe."
@@ -62,9 +62,9 @@ Each campaign sets its own rate: live campaigns sit between $0.50 and $5 per 1,0
 
 On CPM a clip earns for 7 days from approval, then a 3-day hold <!-- source: https://contentrewards.com/creators 2026-09-02 -->; the terms put settlement at about 10 days <!-- source: https://contentrewards.com/terms 2026-09-05 -->. Withdrawals go to a bank, PayPal, a mobile wallet or crypto in 200+ countries, with no floor and no charge from Whop <!-- source: https://contentrewards.com/creators 2026-09-02 -->.
 
-Whop's sanctioned list carries Russia, Belarus and Ukraine as well as Iran, Syria, Cuba and others <!-- source: https://docs.whop.com/trust-and-safety/trust-safety-overview/sanctioned-countries 2026-09-05 -->: a creator there can neither register nor get paid <!-- source: https://docs.whop.com/trust-and-safety/trust-safety-overview/sanctioned-countries 2026-09-05 -->. Kazakhstan, Uzbekistan, Kyrgyzstan, Armenia, Georgia and Moldova are not on the list <!-- source: https://docs.whop.com/trust-and-safety/trust-safety-overview/sanctioned-countries 2026-09-05 -->.
+Whop's sanctioned list carries Russia and Belarus as well as Iran, Syria, Cuba and others <!-- source: https://docs.whop.com/trust-and-safety/trust-safety-overview/sanctioned-countries 2026-09-18 -->: a creator there can neither register nor get paid <!-- source: https://docs.whop.com/trust-and-safety/trust-safety-overview/sanctioned-countries 2026-09-18 -->. Ukraine is on it for six regions only: Crimea, Sevastopol, Donetsk, Luhansk, Zaporizhzhia and Kherson <!-- source: https://docs.whop.com/trust-and-safety/trust-safety-overview/sanctioned-countries 2026-09-18 -->. Kazakhstan, Uzbekistan, Kyrgyzstan, Armenia, Georgia and Moldova are not on the list <!-- source: https://docs.whop.com/trust-and-safety/trust-safety-overview/sanctioned-countries 2026-09-18 -->, and Whop's payout setup page names them, and Ukraine, among the countries it pays out to <!-- source: https://docs.whop.com/manage-your-business/manage-payouts/set-up-payouts 2026-09-18 -->.
 
-That country count comes from a second list, and it does not mirror the sanctioned one: [clipping platforms that pay in Pakistan](/en/earnings/clipping-platforms-that-pay-in-pakistan) finds Pakistan named on the payout list, while [clipping platforms that pay in Nigeria, Kenya and Ghana](/en/earnings/clipping-platforms-that-pay-in-nigeria-and-kenya) finds Nigeria missing from it though it is on no sanctioned list either.
+That payout list does not simply mirror the sanctioned one: [clipping platforms that pay in Pakistan](/en/earnings/clipping-platforms-that-pay-in-pakistan) finds Pakistan named on the payout list, while [clipping platforms that pay in Nigeria, Kenya and Ghana](/en/earnings/clipping-platforms-that-pay-in-nigeria-and-kenya) finds Nigeria missing from it though it is on no sanctioned list either.
 
 ## Who Whop suits
 
@@ -75,7 +75,7 @@ That country count comes from a second list, and it does not mirror the sanction
 
 ## Where it falls short
 
-- Countries. Russia, Belarus and Ukraine are shut out, and a VPN does not help: identity verification comes before the payout.
+- Countries. Russia, Belarus and six regions of Ukraine are shut out, and a VPN does not help: identity verification comes before the payout.
 - The fee. 10% under the terms <!-- source: https://contentrewards.com/terms 2026-09-05 --> against tiers from 25% in the FAQ <!-- source: https://contentrewards.com/creators 2026-09-02 -->: the platform quotes different numbers.
 - The minimum payout per video. A clip below it never enters the queue <!-- source: https://docs.whop.com/memberships-and-access/third-party-apps/content-rewards 2026-09-02 -->; its views are lost.
 - Manual approval by the brand. Nothing is paid without a human deciding <!-- source: https://contentrewards.com/brand 2026-09-05 -->, and a credited but unsettled payout can be reversed if the clip is rejected later or a fraud flag is upheld <!-- source: https://contentrewards.com/terms 2026-09-05 -->.
@@ -113,4 +113,4 @@ Because the brand approves, not the counter: the wrong format, template, languag
 
 ### Will a VPN help if my country is on Whop's sanctioned list?
 
-No. The terms require that you are not in a sanctioned jurisdiction <!-- source: https://contentrewards.com/terms 2026-09-05 -->, identity verification comes before payouts <!-- source: https://contentrewards.com/terms 2026-09-05 -->, and an account under sanctions can be suspended <!-- source: https://docs.whop.com/trust-and-safety/trust-safety-overview/sanctioned-countries 2026-09-05 -->. If you are in Russia, Belarus or Ukraine, pick a platform that pays your country openly.
+No. The terms require that you are not in a sanctioned jurisdiction <!-- source: https://contentrewards.com/terms 2026-09-05 -->, identity verification comes before payouts <!-- source: https://contentrewards.com/terms 2026-09-05 -->, and an account under sanctions can be suspended <!-- source: https://docs.whop.com/trust-and-safety/trust-safety-overview/sanctioned-countries 2026-09-18 -->. If you are in Russia, Belarus or one of the six listed regions of Ukraine, pick a platform that pays there openly.

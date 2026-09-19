@@ -1,13 +1,13 @@
 ---
 title: "DareBay vs Whop Content Rewards: which pays you and how much"
-description: Whop is the bigger clipping marketplace but blocks Russia, Belarus and Ukraine; DareBay pays there and worldwide. Rate, threshold, cap, fees, budget compared.
+description: Whop is the bigger clipping marketplace but blocks Russia and Belarus; DareBay pays there and worldwide. Rate, threshold, cap, fees, budget compared.
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_min_views_threshold_live, ppv_max_per_work_typical, ppv_max_per_work_band_high]
 seo: true
 landing: true
 hero:
   kicker: "Head to head · 2026"
-  lede: "If Whop Content Rewards cannot pay you because you are in Russia, Belarus or Ukraine, the choice is already made for you: DareBay pays clippers there and worldwide. If Whop is open to you, there is a real trade-off: more campaigns on that side, no followers and no application on this one. Below is every field where the two differ, with the source for each number."
+  lede: "If Whop Content Rewards cannot pay you because you are in Russia or Belarus, the choice is already made for you: DareBay pays clippers there and worldwide. If Whop is open to you, there is a real trade-off: more campaigns on that side, no followers and no application on this one. Below is every field where the two differ, with the source for each number."
   secondary: "See the table"
   takeaways:
     - "<b>Whop wins on choice:</b> the most campaigns anywhere, budgets from $1,000, rates from $0.50 to $5 per 1,000 views and payouts in 200+ countries with no floor on withdrawals."
@@ -31,7 +31,7 @@ cta:
 
 If you are in the US, the EU or most of the world and want the largest choice of clipping campaigns, Whop Content Rewards is the bigger platform: more brands, higher budgets, rates on live campaigns from $0.50 to $5 per 1,000 views, a wallet with no floor on withdrawals and payouts in more than 200 countries. Its terms take 10% from CPM payouts, and a clip earns for 7 days after approval with a 3-day hold after that.
 
-If you are in Russia, Belarus, Ukraine, Kazakhstan or elsewhere in CIS, Whop is not available to you at all: its sanctioned-country list blocks registration and payouts. DareBay has no country list: it pays worldwide, and its community is largest in exactly these countries. Open contests pay from $1.00 to $2.00 per 1,000 counted views, the threshold and the cap are printed on the task card, no followers or application are needed, and in wallet-backed contests the organizer's budget is locked on the platform before the start. Balance withdrawals carry a 10% fee, from a 10 USDT minimum, in USDT on TON or Telegram Stars.
+If you are in Russia or Belarus, Whop is not available to you at all: its sanctioned-country list blocks registration and payouts, and of Ukraine it names six regions (Crimea, Sevastopol, Donetsk, Luhansk, Zaporizhzhia and Kherson). The rest of Ukraine, Kazakhstan and the other CIS countries are on Whop's payout list, so there the choice comes down to the fields below. DareBay has no country list: it pays worldwide, and its community is largest in Russia, Ukraine, Kazakhstan and the rest of CIS. Open contests pay from $1.00 to $2.00 per 1,000 counted views, the threshold and the cap are printed on the task card, no followers or application are needed, and in wallet-backed contests the organizer's budget is locked on the platform before the start. Balance withdrawals carry a 10% fee, from a 10 USDT minimum, in USDT on TON or Telegram Stars.
 
 <LCompare />
 
@@ -44,7 +44,7 @@ If you are in Russia, Belarus, Ukraine, Kazakhstan or elsewhere in CIS, Whop is 
 
 ## Where DareBay is stronger
 
-- **No country restrictions.** DareBay pays worldwide with no exclusion list, including Russia, Belarus, Ukraine, Kazakhstan and CIS, which Whop's sanctioned list excludes.
+- **No country restrictions.** DareBay pays worldwide with no exclusion list, including Russia and Belarus, which Whop's sanctioned list excludes, and every region of Ukraine.
 - **Better offers.** An offer task pays the rate per view plus a fixed fee per accepted clip and a share of the orders your promo code brings, on one card.
 - **Ready-made unique videos.** On offer tasks the platform hands you finished videos and makes every copy unique for you; no editing software needed.
 - **Fee on the payout itself.** DareBay takes 0% of contest payouts; Whop's terms take 10% of CPM payouts, and its creator FAQ describes tiers that start at 25%.
@@ -67,7 +67,7 @@ Whop campaigns run from $0.50 to $5 per 1,000 views and its terms take 10% of CP
 
 ### Does Whop pay clippers in Russia or Ukraine?
 
-No. Whop's sanctioned-country list blocks registration and payouts for Russia, Belarus and Ukraine, among other countries. DareBay pays clippers in all of them.
+Not in Russia or Belarus: Whop's sanctioned-country list blocks registration and payouts there. In Ukraine it does, except the six regions the same list names: Crimea, Sevastopol, Donetsk, Luhansk, Zaporizhzhia and Kherson. DareBay pays clippers in all of them.
 
 ### Do I need followers on either platform?
 

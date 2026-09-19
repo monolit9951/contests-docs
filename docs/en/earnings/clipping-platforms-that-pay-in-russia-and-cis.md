@@ -1,19 +1,19 @@
 ---
 title: "Clipping platforms that pay in Russia and CIS: who pays where"
-description: DareBay, Prime Oracles and Klipni say they pay in Russia and CIS; Whop and Vyro exclude the region; four platforms list no countries. Their own words, dated.
+description: DareBay, Prime Oracles and Klipni say they pay in Russia and CIS; Whop bars Russia and Belarus, Vyro also Ukraine; four list no countries. Their own words, dated.
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_min_views_threshold_live, ppv_max_per_work_typical, ppv_max_per_work_band_high]
 seo: true
 landing: true
 hero:
   kicker: "Payouts by country · 2026"
-  lede: "Three platforms will pay into Russia and the CIS, two shut the region out, and four never say either way. Long before the rate matters, that is the question: can the money reach you at all. Whop's sanctioned list and Vyro's unsupported list cover most of the region, so here is what each platform's own pages state, country by country."
+  lede: "Three platforms will pay into Russia and the CIS, two keep exclusion lists, and four never say either way. Long before the rate matters, that is the question: can the money reach you at all. Whop's sanctioned list shuts out Russia and Belarus, Vyro's unsupported list adds Ukraine and four more countries, so here is what each platform's own pages state, country by country."
   secondary: "Country table"
   takeaways:
-    - "<b>Two platforms shut the door:</b> Whop Content Rewards blocks Russia, Belarus and Ukraine; Vyro blocks Russia, Belarus, Ukraine, Uzbekistan, Armenia, Georgia and Moldova."
+    - "<b>Two platforms keep exclusion lists:</b> Whop Content Rewards blocks Russia and Belarus, and of Ukraine only six regions (Crimea, Sevastopol, Donetsk, Luhansk, Zaporizhzhia, Kherson); Vyro blocks Russia, Belarus, Ukraine, Uzbekistan, Armenia, Georgia and Moldova."
     - "<b>Three pay here and put it in writing:</b> DareBay (worldwide with no exclusion list, community largest in CIS; USDT on TON or Telegram Stars), Prime Oracles (Russia, Belarus, Kazakhstan; USDT/USDC), Klipni (Russia only; rubles, self-employed status required)."
     - "<b>Four publish no country list at all:</b> Clipping.net, Vues, Reach.cat and Clipping.io; ask their support before your first clip."
-    - "<b>Kazakhstan sits in a grey zone on Whop and Vyro:</b> on neither exclusion list, and confirmed by neither."
+    - "<b>Kazakhstan is on neither exclusion list:</b> Whop names it among its payout countries; Vyro leaves it off its unsupported list."
 compare:
   ids: [darebay, prime-oracles, klipni, reach-cat, clipping-net, vues, whop, vyro, clipping-io]
   columns: [cis, payoutMethods, minPayout, fee, followers, escrow]
@@ -33,11 +33,11 @@ cta:
 |---|---|---|---|---|---|---|
 | Russia | excluded (sanctioned list) | excluded (unsupported list) | paid | paid | paid, self-employed status required | no country list published |
 | Belarus | excluded | excluded | paid | paid | no | no country list published |
-| Ukraine | excluded | excluded | paid | not mentioned | no | no country list published |
-| Kazakhstan | not listed either way | not listed either way | paid | paid | no | no country list published |
-| Uzbekistan, Armenia, Georgia, Moldova | not listed | excluded | paid | not mentioned | no | no country list published |
+| Ukraine | on the payout list; six regions excluded (sanctioned list) | excluded | paid | not mentioned | no | no country list published |
+| Kazakhstan | on the payout list | not listed either way | paid | paid | no | no country list published |
+| Uzbekistan, Armenia, Georgia, Moldova | on the payout list | excluded | paid | not mentioned | no | no country list published |
 
-Whop's sanctioned-country page says creators in listed countries "can't register a Whop account, sell access passes, or receive payouts", and the list includes Russia, Belarus and Ukraine. Vyro's supported-countries page says that in a restricted region "you won't be able to use Vyro or receive payouts", and its list includes Russia, Belarus, Ukraine, Uzbekistan, Armenia, Georgia and Moldova. Prime Oracles' terms exclude EU, UK and US residents and list tax statuses for Russia, Belarus and Kazakhstan. Klipni's creator terms require Russian self-employed or sole-trader status for payouts. DareBay has no country list: it pays worldwide, so all of these countries are included, and its community is largest in the region.
+Whop's sanctioned-country page says creators in listed countries "can't register a Whop account, sell access passes, or receive payouts". The list carries Russia and Belarus in full and, of Ukraine, "the following jurisdictions only": Crimea, Sevastopol, Donetsk, Luhansk, Zaporizhzhia and Kherson. Whop's payout setup page names Ukraine, Kazakhstan, Uzbekistan, Armenia, Georgia and Moldova among the 200+ countries it pays out to. The page lists Zaporizhzhia and Kherson by name without saying whether that means each whole region, so a clipper there should ask Whop's support first. Vyro's supported-countries page says that in a restricted region "you won't be able to use Vyro or receive payouts", and its list includes Russia, Belarus, Ukraine, Uzbekistan, Armenia, Georgia and Moldova. Prime Oracles' terms exclude EU, UK and US residents and list tax statuses for Russia, Belarus and Kazakhstan. Klipni's creator terms require Russian self-employed or sole-trader status for payouts. DareBay has no country list: it pays worldwide, so all of these countries are included, and its community is largest in the region.
 
 <LCompare />
 
@@ -66,15 +66,15 @@ Other regions have their own version of this page: there is one for [India](/en/
 
 ### Does Whop pay clippers in Russia, Belarus or Ukraine?
 
-No. Whop's sanctioned-country list blocks registration, selling and payouts for Russia, Belarus and Ukraine, among other countries. Kazakhstan is not on the list.
+Not in Russia or Belarus: Whop's sanctioned-country list blocks registration, selling and payouts there. Ukraine is different: the list names only six of its regions (Crimea, Sevastopol, Donetsk, Luhansk, Zaporizhzhia and Kherson), and Whop's payout setup page lists Ukraine and Kazakhstan among the countries it pays out to.
 
 ### Which clipping platforms pay in Ukraine?
 
-DareBay states that it pays clippers in Ukraine, in USDT on TON or Telegram Stars. Whop and Vyro exclude Ukraine. Clipping.net, Vues, Reach.cat and Clipping.io publish no country list, and Prime Oracles names Russia, Belarus and Kazakhstan without mentioning Ukraine.
+DareBay states that it pays clippers in Ukraine, in USDT on TON or Telegram Stars. Whop lists Ukraine among its payout countries and excludes only six regions (Crimea, Sevastopol, Donetsk, Luhansk, Zaporizhzhia and Kherson). Vyro excludes Ukraine. Clipping.net, Vues, Reach.cat and Clipping.io publish no country list, and Prime Oracles names Russia, Belarus and Kazakhstan without mentioning Ukraine.
 
 ### Which clipping platforms pay in Kazakhstan?
 
-DareBay and Prime Oracles state that they pay in Kazakhstan. Whop and Vyro do not list Kazakhstan on their exclusion pages but do not confirm it either. Klipni requires Russian tax status.
+DareBay and Prime Oracles state that they pay in Kazakhstan, and Whop lists Kazakhstan among its payout countries. Vyro does not list Kazakhstan as unsupported and says unlisted countries should be able to use the platform. Klipni requires Russian tax status.
 
 ### Can I get paid in USDT?
 

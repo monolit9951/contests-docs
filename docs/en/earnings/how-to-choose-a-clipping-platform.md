@@ -10,7 +10,7 @@ hero:
   lede: "The rate on a platform's front page does not tell you what lands in your hand. These nine questions weed out the platforms that cannot pay your country, keep the threshold and the cap out of sight, or say nothing about the fee. Each one shows what matters in the answer and who publishes it; the full table is at the bottom."
   secondary: "Check the table"
   takeaways:
-    - "<b>Country first, everything else second.</b> Whop and Vyro are closed to Russia, Belarus and Ukraine; if a platform publishes no country list, ask support before you cut anything."
+    - "<b>Country first, everything else second.</b> Whop is closed to Russia, Belarus and six regions of Ukraine, Vyro to all three countries; if a platform publishes no country list, ask support before you cut anything."
     - "<b>Three numbers belong on the campaign card: rate, threshold and cap.</b> Miss any one of them and you cannot work out what a clip pays before you cut it."
     - "<b>Fee and minimum payout separate the advertised sum from the money in your hand.</b> 10% at Whop, 5% at Klipni, and at DareBay 0% on the payout and 10% on withdrawal, from 10 USDT."
     - "<b>The budget should already be with the platform before you post.</b> Vues states that it does not custody funds; Whop, Klipni, Prime Oracles and DareBay's wallet-backed contests hold it."
@@ -29,7 +29,7 @@ cta:
 
 ## Question 1. Can the platform pay to my country?
 
-The fastest way to waste time is to cut ten clips for a platform that cannot pay you. Whop keeps a sanctioned-country list with Russia, Belarus and Ukraine; Vyro keeps an unsupported list with Russia, Belarus, Ukraine, Uzbekistan, Armenia, Georgia and Moldova. DareBay states that it pays in any country with no exclusion list; Prime Oracles and Klipni list the countries they serve. Clipping.net, Vues, Reach.cat and Clipping.io publish no country list: that is not a "no", but it is a question for support before your first clip.
+The fastest way to waste time is to cut ten clips for a platform that cannot pay you. Whop keeps a sanctioned-country list with Russia, Belarus and six regions of Ukraine (Crimea, Sevastopol, Donetsk, Luhansk, Zaporizhzhia, Kherson); Vyro keeps an unsupported list with Russia, Belarus, Ukraine, Uzbekistan, Armenia, Georgia and Moldova. DareBay states that it pays in any country with no exclusion list; Prime Oracles and Klipni list the countries they serve. Clipping.net, Vues, Reach.cat and Clipping.io publish no country list: that is not a "no", but it is a question for support before your first clip.
 
 ## Question 2. What is the rate per 1,000 views, and who sets it?
 

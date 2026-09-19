@@ -45,7 +45,7 @@ numbers_used: [ppv_cpm_min, ppv_cpm_median, ppv_cpm_max, ppv_min_views_threshold
 ## Майданчики: порівняння з цифрами
 
 - [Найкращі платформи для заробітку на нарізках](/ua/zarobitok/naikrashchi-platformy-dlia-zarobitku-na-narizkakh) - дев'ять майданчиків в одній таблиці: ставка, поріг, стеля, комісія, виведення, країни.
-- [Альтернативи Whop в Україні](/ua/zarobitok/alternatyvy-whop-v-ukraini) - куди йти, якщо Whop не платить у твою країну.
+- [Альтернативи Whop в Україні](/ua/zarobitok/alternatyvy-whop-v-ukraini) - куди йти, якщо Whop тобі не підходить або твій регіон у його санкційному списку.
 - [DareBay чи Whop](/ua/zarobitok/darebay-chy-whop) - два майданчики поле за полем.
 - [Хто платить в Україну](/ua/zarobitok/platformy-dlia-narizchykiv-shcho-platiat-v-ukrainu) - країна за країною, словами самих майданчиків.
 - [Як обрати платформу для нарізок](/ua/zarobitok/yak-obraty-platformu-dlia-narizok) - дев'ять питань до першого ролика.

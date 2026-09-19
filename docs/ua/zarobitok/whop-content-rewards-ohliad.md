@@ -13,8 +13,8 @@ competitor_sources:
   - { platform: "Whop Content Rewards", url: "https://contentrewards.com/", date: "2026-09-05" }
   - { platform: "Whop", url: "https://docs.whop.com/memberships-and-access/third-party-apps/content-rewards", date: "2026-09-02" }
   - { platform: "Whop", url: "https://docs.whop.com/memberships-and-access/third-party-apps/content-rewards", date: "2026-09-05" }
-  - { platform: "Whop", url: "https://docs.whop.com/trust-and-safety/trust-safety-overview/sanctioned-countries", date: "2026-09-02" }
-  - { platform: "Whop", url: "https://docs.whop.com/trust-and-safety/trust-safety-overview/sanctioned-countries", date: "2026-09-05" }
+  - { platform: "Whop", url: "https://docs.whop.com/trust-and-safety/trust-safety-overview/sanctioned-countries", date: "2026-09-18" }
+  - { platform: "Whop", url: "https://docs.whop.com/manage-your-business/manage-payouts/set-up-payouts", date: "2026-09-18" }
   - { platform: "Klipni", url: "https://klipni.com/creators", date: "2026-09-02" }
   - { platform: "Klipni", url: "https://klipni.com/legal/terms", date: "2026-09-02" }
   - { platform: "Vyro", url: "https://vyro.com/campaigns", date: "2026-09-02" }
@@ -32,7 +32,7 @@ hero:
     - "<b>Whop це найбільша вітрина кампаній для нарізчиків, і обирати там є з чого.</b> Десятки живих кампаній, бюджет до $238 000 на одній картці <!-- source: https://contentrewards.com/discover 2026-09-05 -->, ставки $0.50–$5 за 1000 переглядів <!-- source: https://contentrewards.com/discover 2026-09-02 -->."
     - "<b>Ставка на картці це не сума на руки, рахуй виплату.</b> Умови беруть 10% з CPM-виплат <!-- source: https://contentrewards.com/terms 2026-09-05 -->, FAQ для авторів показує сходинки від 25% до 7% <!-- source: https://contentrewards.com/creators 2026-09-02 -->, а ролик нижче мінімальної виплати за відео до перевірки навіть не доходить."
     - "<b>Грошей чекати приблизно десять днів після схвалення.</b> Ролик заробляє 7 днів, потім ще холд 3 дні <!-- source: https://contentrewards.com/creators 2026-09-02 -->; виведення на банк, PayPal, мобільний гаманець або в крипту у 200+ країн."
-    - "<b>Україна, Росія та Білорусь у санкційному списку Whop</b> <!-- source: https://docs.whop.com/trust-and-safety/trust-safety-overview/sanctioned-countries 2026-09-02 -->: ні акаунта, ні виплат, і VPN не рятує. Для цих країн є майданчики без списку країн, DareBay серед них."
+    - "<b>В Україну Whop платить, крім шести регіонів зі свого санкційного списку</b> <!-- source: https://docs.whop.com/trust-and-safety/trust-safety-overview/sanctioned-countries 2026-09-18 -->: там, як і в Росії та Білорусі, ні акаунта, ні виплат, і VPN не рятує. Для них є майданчики без списку країн, DareBay серед них."
 cta:
   title: "Whop не платить у твою країну? На DareBay списку країн немає"
   lede: "DareBay платить по всьому світу в USDT на гаманець: ставка, поріг і стеля стоять на картці завдання до подачі, підписники і заявка не потрібні, а найбільше авторів тут якраз із СНД."
@@ -62,7 +62,7 @@ Content Rewards це застосунок усередині Whop, через я
 
 Нарахування накопичуються в гаманці Whop. На CPM-кампанії ролик заробляє 7 днів з моменту схвалення, потім виплата тримається ще 3 дні <!-- source: https://contentrewards.com/creators 2026-09-02 -->; умови кажуть про розрахунок приблизно через 10 днів після схвалення <!-- source: https://contentrewards.com/terms 2026-09-05 -->. З гаманця гроші йдуть на банк, PayPal, мобільний гаманець або в крипту, Whop називає понад 200 країн <!-- source: https://contentrewards.com/creators 2026-09-02 -->; нижньої межі виведення немає, за саме виведення Whop не бере <!-- source: https://contentrewards.com/creators 2026-09-02 -->.
 
-У санкційному списку Whop стоять Україна, Росія та Білорусь, а також Іран, Сирія, Куба та інші <!-- source: https://docs.whop.com/trust-and-safety/trust-safety-overview/sanctioned-countries 2026-09-05 -->: автор звідти не може ні завести акаунт, ні отримати виплату <!-- source: https://docs.whop.com/trust-and-safety/trust-safety-overview/sanctioned-countries 2026-09-05 -->. Казахстану, Узбекистану, Киргизстану, Вірменії, Грузії та Молдови в списку немає <!-- source: https://docs.whop.com/trust-and-safety/trust-safety-overview/sanctioned-countries 2026-09-05 -->, а акаунт, що потрапив під санкції, Whop може призупинити <!-- source: https://docs.whop.com/trust-and-safety/trust-safety-overview/sanctioned-countries 2026-09-05 -->.
+У санкційному списку Whop стоять Росія та Білорусь, а також Іран, Сирія, Куба та інші <!-- source: https://docs.whop.com/trust-and-safety/trust-safety-overview/sanctioned-countries 2026-09-18 -->: автор звідти не може ні завести акаунт, ні отримати виплату <!-- source: https://docs.whop.com/trust-and-safety/trust-safety-overview/sanctioned-countries 2026-09-18 -->. Україна стоїть у ньому лише шістьма регіонами: Крим, Севастополь, Донецька, Луганська, Запорізька та Херсонська області <!-- source: https://docs.whop.com/trust-and-safety/trust-safety-overview/sanctioned-countries 2026-09-18 -->. Казахстану, Узбекистану, Киргизстану, Вірменії, Грузії та Молдови в списку немає <!-- source: https://docs.whop.com/trust-and-safety/trust-safety-overview/sanctioned-countries 2026-09-18 -->, і на сторінці налаштування виплат Whop називає їх та Україну серед країн, куди виводить гроші <!-- source: https://docs.whop.com/manage-your-business/manage-payouts/set-up-payouts 2026-09-18 -->, а акаунт, що потрапив під санкції, Whop може призупинити <!-- source: https://docs.whop.com/trust-and-safety/trust-safety-overview/sanctioned-countries 2026-09-18 -->.
 
 ## Кому Whop підходить
 
@@ -73,7 +73,7 @@ Content Rewards це застосунок усередині Whop, через я
 
 ## Де він програє
 
-- Країни. Україна, Росія та Білорусь закриті повністю, і VPN не допомагає: перед виплатою стоїть перевірка особи.
+- Країни. Росія та Білорусь закриті повністю, Україна шістьма регіонами, і VPN не допомагає: перед виплатою стоїть перевірка особи.
 - Комісія. 10% за умовами <!-- source: https://contentrewards.com/terms 2026-09-05 --> проти сходинок від 25% у FAQ <!-- source: https://contentrewards.com/creators 2026-09-02 -->: майданчик сам називає різні цифри.
 - Мінімальна виплата за відео. Ролик нижче неї не потрапляє в чергу <!-- source: https://docs.whop.com/memberships-and-access/third-party-apps/content-rewards 2026-09-02 -->, і його перегляди згорають.
 - Ручне схвалення брендом. Без рішення людини нічого не платиться <!-- source: https://contentrewards.com/brand 2026-09-05 -->, відмова означає нуль, а нараховану, але не виплачену суму Whop може відкликати при відхиленні після схвалення або підтвердженому прапорці накрутки <!-- source: https://contentrewards.com/terms 2026-09-05 -->.
@@ -111,4 +111,4 @@ DareBay працює без списку країн: замовник публі
 
 ### Чи допоможе VPN, якщо моя країна в санкційному списку Whop?
 
-Ні. Умови вимагають, щоб автор не перебував у санкційній юрисдикції <!-- source: https://contentrewards.com/terms 2026-09-05 -->, перед виплатами проходить перевірка особи <!-- source: https://contentrewards.com/terms 2026-09-05 -->, а акаунт під санкціями Whop може призупинити <!-- source: https://docs.whop.com/trust-and-safety/trust-safety-overview/sanctioned-countries 2026-09-05 -->. Якщо ти в Україні, бери майданчик, який платить у твою країну відкрито.
+Ні. Умови вимагають, щоб автор не перебував у санкційній юрисдикції <!-- source: https://contentrewards.com/terms 2026-09-05 -->, перед виплатами проходить перевірка особи <!-- source: https://contentrewards.com/terms 2026-09-05 -->, а акаунт під санкціями Whop може призупинити <!-- source: https://docs.whop.com/trust-and-safety/trust-safety-overview/sanctioned-countries 2026-09-18 -->. Якщо ти в одному з шести закритих регіонів України, бери майданчик, який платить туди відкрито.

@@ -295,9 +295,9 @@
         "uk": "нарізчики зі США та Європи, яким потрібен максимум кампаній"
       },
       "summary": {
-        "en": "The largest clipping marketplace: brands fund CPM campaigns, the budget is held against the campaign, and clippers are paid per verified view through the Whop wallet. Registration and payouts are blocked in Russia, Belarus and Ukraine.",
-        "ru": "Самая большая площадка для нарезчиков: бренды финансируют CPM-кампании, бюджет удерживается под кампанию, нарезчикам платят за проверенные просмотры через кошелёк Whop. Регистрация и выплаты закрыты для России, Беларуси и Украины.",
-        "uk": "Найбільший майданчик для нарізчиків: бренди фінансують CPM-кампанії, бюджет утримується під кампанію, нарізчикам платять за перевірені перегляди через гаманець Whop. Реєстрація та виплати закриті для Росії, Білорусі та України."
+        "en": "The largest clipping marketplace: brands fund CPM campaigns, the budget is held against the campaign, and clippers are paid per verified view through the Whop wallet. Registration and payouts are blocked in Russia, Belarus and six regions of Ukraine.",
+        "ru": "Самая большая площадка для нарезчиков: бренды финансируют CPM-кампании, бюджет удерживается под кампанию, нарезчикам платят за проверенные просмотры через кошелёк Whop. Регистрация и выплаты закрыты для России, Беларуси и шести регионов Украины.",
+        "uk": "Найбільший майданчик для нарізчиків: бренди фінансують CPM-кампанії, бюджет утримується під кампанію, нарізчикам платять за перевірені перегляди через гаманець Whop. Реєстрація та виплати закриті для Росії, Білорусі та шести регіонів України."
       },
       "fields": {
         "rate": {
@@ -372,14 +372,14 @@
         },
         "cis": {
           "text": {
-            "en": "no: Russia, Belarus and Ukraine are on Whop's sanctioned list; Kazakhstan is not listed",
-            "ru": "нет: Россия, Беларусь и Украина в санкционном списке Whop; Казахстан не указан",
-            "uk": "ні: Росія, Білорусь та Україна в санкційному списку Whop; Казахстан не вказано"
+            "en": "Russia and Belarus are on Whop's sanctioned list; Ukraine is listed only for six regions (Crimea, Sevastopol, Donetsk, Luhansk, Zaporizhzhia, Kherson); Kazakhstan is not listed",
+            "ru": "Россия и Беларусь в санкционном списке Whop; Украина указана только для шести регионов (Крым, Севастополь, Донецкая, Луганская, Запорожская и Херсонская области); Казахстан не указан",
+            "uk": "Росія та Білорусь у санкційному списку Whop; Україна вказана лише для шести регіонів (Крим, Севастополь, Донецька, Луганська, Запорізька та Херсонська області); Казахстан не вказано"
           },
-          "state": "no",
+          "state": "partial",
           "source": {
             "url": "https://docs.whop.com/trust-and-safety/trust-safety-overview/sanctioned-countries",
-            "date": "2026-09-02"
+            "date": "2026-09-18"
           }
         },
         "followers": {
@@ -528,17 +528,17 @@
       },
       "cons": {
         "en": [
-          "Does not register or pay clippers in Russia, Belarus or Ukraine",
+          "Does not register or pay clippers in Russia, Belarus or six regions of Ukraine",
           "Creator fee is stated differently on its own pages (10% vs 25%→7% tiers)",
           "Campaign minimum for brands is $1,000, so campaigns come and go"
         ],
         "ru": [
-          "Не регистрирует и не платит нарезчикам из России, Беларуси и Украины",
+          "Не регистрирует и не платит нарезчикам из России, Беларуси и шести регионов Украины",
           "Комиссия для авторов на своих же страницах указана по-разному (10% против ступеней 25%→7%)",
           "Минимум кампании для бренда $1,000, кампании быстро заканчиваются"
         ],
         "uk": [
-          "Не реєструє і не платить нарізчикам з Росії, Білорусі та України",
+          "Не реєструє і не платить нарізчикам з Росії, Білорусі та шести регіонів України",
           "Комісія для авторів на власних сторінках указана по-різному (10% проти сходинок 25%→7%)",
           "Мінімум кампанії для бренду $1,000, кампанії швидко закінчуються"
         ]

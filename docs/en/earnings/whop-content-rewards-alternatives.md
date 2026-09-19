@@ -7,10 +7,10 @@ seo: true
 landing: true
 hero:
   kicker: "Whop alternatives · 2026"
-  lede: "Whop Content Rewards is the biggest clipping marketplace, and it will not pay everyone who clips for it: Russia, Belarus and Ukraine sit on its sanctioned list, its terms take 10% of CPM payouts, and campaigns need a $1,000 brand budget. Seven platforms take those clippers instead, lined up here on the same fields, every figure read off the platform's own page."
+  lede: "Whop Content Rewards is the biggest clipping marketplace, and it will not pay everyone who clips for it: Russia and Belarus sit on its sanctioned list, its terms take 10% of CPM payouts, and campaigns need a $1,000 brand budget. Seven platforms take those clippers instead, lined up here on the same fields, every figure read off the platform's own page."
   secondary: "Compare the alternatives"
   takeaways:
-    - "<b>If Whop cannot pay you</b> (Russia, Belarus, Ukraine), you are not out of options: DareBay pays worldwide with no country list, Prime Oracles covers Russia, Belarus and Kazakhstan, Klipni is Russia-only. Vyro excludes the same countries and more."
+    - "<b>If Whop cannot pay you</b> (Russia, Belarus, six regions of Ukraine), you are not out of options: DareBay pays worldwide with no country list, Prime Oracles covers Russia, Belarus and Kazakhstan, Klipni is Russia-only. Vyro excludes Russia, Belarus, all of Ukraine and more."
     - "<b>Read the fee before you cut anything.</b> Klipni takes 5%, Vues and Reach.cat charge the brand instead of the clipper, and DareBay takes 0% on contest payouts and 10% on withdrawal, from 10 USDT."
     - "<b>Budgets run dry everywhere, so hold two platforms open, not one.</b> Vyro and Clipping.net carry the large streamer and creator campaigns worth keeping next to Whop."
     - "<b>An editor is not a marketplace:</b> OpusClip, Klap and Submagic help you cut the clip, and none of them pays you for its views."
@@ -32,7 +32,7 @@ cta:
 
 Whop Content Rewards is where most clipping campaigns live: brands fund CPM campaigns, Whop keeps the brand's budget on its side of the campaign, and clippers are paid per verified view into a Whop wallet with no floor on withdrawals. Four things send clippers looking for an alternative, and each of them is written on Whop's own pages.
 
-**Countries.** Whop's sanctioned-country list blocks registration and payouts for Russia, Belarus and Ukraine, among others; Kazakhstan is not listed. A clipper in those countries cannot be paid there at all.
+**Countries.** Whop's sanctioned-country list blocks registration and payouts for Russia and Belarus, among others, and for six regions of Ukraine: Crimea, Sevastopol, Donetsk, Luhansk, Zaporizhzhia and Kherson; Kazakhstan is not listed. A clipper in those places cannot be paid there at all.
 
 **The fee.** Whop's terms take a flat 10% from CPM payouts; the creator FAQ describes tiers that start at 25% and fall to 7% after $5,000 of lifetime earnings. Either way, the rate on the campaign card is not the rate that reaches you.
 

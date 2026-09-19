@@ -1,21 +1,21 @@
 ---
 title: "Clipping platforms that pay in Indonesia and the Philippines"
 description: "Which clipping platforms pay in Indonesia and the Philippines, how rupiah and pesos reach DANA or GCash, and what Bank Indonesia and BSP say about USDT."
-provenance: { snapshot_date: "2026-09-18", source: "darebay-prod" }
+provenance: { snapshot_date: "2026-09-19", source: "darebay-prod" }
 numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high]
 seo: true
 landing: true
 sources: visible
 hero:
-  updated: "2026-09-18"
+  updated: "2026-09-19"
   kicker: "Payouts by country · 2026"
-  lede: "Jakarta and Manila get opposite answers. Indonesia has five clipping boards of its own that quote rupiah and pay into DANA, GoPay or a local bank, and four of them pay only into Indonesian accounts. No Philippine board with readable terms turned up, so the money comes from global platforms and reaches GCash through PayPal or Payoneer. Here is what each board states, what each payment company publishes about the two countries, and what Bank Indonesia, OJK, the BSP and the SEC say about being paid in USDT."
+  lede: "Jakarta and Manila get opposite answers. Indonesia has ten clipping boards of its own that publish terms and pay into DANA, GoPay or a local bank, and none of them names a rail outside Indonesia. The one Manila board with readable terms has no campaign open yet, so the money comes from global platforms and reaches GCash through PayPal or Payoneer. Here is what each board states, what each payment company publishes about the two countries, and what Bank Indonesia, OJK, the BSP and the SEC say about being paid in USDT."
   secondary: "The two-country table"
   secondaryHref: "#indonesia-and-the-philippines-in-one-table"
   takeaways:
-    - "<b>Indonesia pays itself in rupiah.</b> Five local boards publish rupiah rates per 1,000 views and pay into Indonesian wallets or banks; four of the five pay only into Indonesian accounts."
-    - "<b>A Filipino clipper is paid by a global platform, then moves the money into GCash.</b> GCash links a Philippine PayPal or a Payoneer account; its PayPal cash-in costs 1%."
-    - "<b>Stripe Connect reaches neither country.</b> Stripe accounts in Indonesia are invite-only, and the Philippines is not on Stripe's list at all."
+    - "<b>Indonesia pays itself in rupiah.</b> Ten local boards publish terms and none names a rail outside Indonesia's wallets and banks; three of the ten print no rate at all."
+    - "<b>The one Manila board that publishes GCash and Maya terms has no campaign open.</b> Until it does, pesos arrive from a global platform through PayPal or Payoneer, at GCash's 1% PayPal cash-in."
+    - "<b>DareBay pays neither rupiah nor pesos.</b> Its one cash rail is USDT on the TON network, a withdrawal request starts at 10 USDT and 10% is taken inside it; there is no DANA, GoPay or GCash route."
     - "<b>The two countries' regulators answer differently.</b> Bank Indonesia says virtual currency is not a legal means of payment; the Philippine SEC says its crypto rules do not prohibit trading, while the BSP keeps new licences frozen."
 compare:
   ids: [ternak-klip, clippo, trybuzzer, konten-com, ayoklip, whop, vyro, reach-cat, clipping-net, vues, darebay]
@@ -23,7 +23,7 @@ compare:
   highlight: darebay
   title: "Rupiah boards and global boards: what each says about the two countries"
 method:
-  - "Every platform fact was read on 18 September 2026 from the platform's own terms, FAQ, payment page or public campaign list. The Indonesian boards publish in Indonesian; quotes are kept in the original with the meaning given in English, and where a board's home page and its terms disagree, both are quoted."
+  - "Every platform fact was read on 18 or 19 September 2026 from the platform's own terms, FAQ, payment page or public campaign list. The Indonesian boards publish in Indonesian; quotes are kept in the original with the meaning given in English, and where a board's home page and its terms disagree, both are quoted."
   - "Payment facts come from the payment companies' own pages: PayPal's payout-country table and its Indonesian and Philippine fee schedules, Stripe's availability, Connect and Global Payouts documentation, Wise's country lists, Payoneer's coverage data, and the help and product pages of DANA, GoPay, BCA, GCash and Maya. Regulators are quoted from their own publications: Bank Indonesia, OJK through its joint release with Bank Indonesia, the Directorate General of Taxes, the BSP, the SEC and the BIR."
   - "\"Not published\" means a platform or a payment company says nothing on the point anywhere public. Nothing here is legal or tax advice, and no route around a rule is described: where a rule and a payout rail meet, the page quotes the rule and stops."
 cta:
@@ -40,9 +40,23 @@ Two questions decide clipping here: will a platform pay you at all, and what doe
 | **Indonesia** | Bank Indonesia: not a legal means of payment <!-- source: https://www.bi.go.id/id/publikasi/ruang-media/news-release/Pages/sp_200418.aspx 2026-09-18 -->; OJK has supervised crypto assets since 10 January 2025 <!-- source: https://www.bi.go.id/id/publikasi/ruang-media/news-release/Pages/sp_270625.aspx 2026-09-18 --> | **Yes**, "Send, receive, and withdraw" <!-- source: https://developer.paypal.com/payouts/supported-features 2026-09-18 -->; free bank withdrawal above Rp1,500,000 <!-- source: https://www.paypal.com/id/digital-wallet/paypal-consumer-fees 2026-09-18 --> | Invite-only <!-- source: https://support.stripe.com/questions/requirements-to-open-a-stripe-account-in-indonesia 2026-09-18 -->; no cross-border Connect <!-- source: https://support.stripe.com/questions/stripe-indonesia-support-for-marketplaces 2026-09-18 --> | Payoneer shows a local rupiah route <!-- source: https://www.payoneer.com/resources/tools/global-payment-capabilities/ 2026-09-18 -->; Wise sends rupiah in; no balance for residents <!-- source: https://wise.com/help/articles/2813542/where-do-i-need-to-live-to-hold-money-with-wise 2026-09-18 --> | DANA <!-- source: https://www.dana.id/help-center/article/bagaimana-caranya-kirim-uang-ke-aplikasi-dana-dari-luar-negeri?lng=id 2026-09-18 --> and GoPay <!-- source: https://gopay.co.id/blog/cara-transfer-dari-luar-negeri-ke-gopay-pakai-panda-remit 2026-09-18 --> take remittances from partner services |
 | **Philippines** | BSP: no legal-tender status <!-- source: https://www.bsp.gov.ph/Regulations/Issuances/2021/1108.pdf 2026-09-18 -->; freeze on new licences continued from 1 September 2025 <!-- source: https://www.bsp.gov.ph/Regulations/Issuances/2025/M-2025-031.pdf 2026-09-18 -->; SEC: its rules do not prohibit trading <!-- source: https://www.sec.gov.ph/wp-content/uploads/2025/08/2025EIPD_Advisory_CASP-Rules.pdf 2026-09-18 --> | **Yes**, in local currency <!-- source: https://developer.paypal.com/payouts/supported-features 2026-09-18 -->; free bank withdrawal above ₱7,000 <!-- source: https://www.paypal.com/ph/digital-wallet/paypal-consumer-fees 2026-09-18 --> | Not listed <!-- source: https://stripe.com/global 2026-09-18 --> | Payoneer shows a local peso route <!-- source: https://www.payoneer.com/resources/tools/global-payment-capabilities/ 2026-09-18 -->; Wise lets residents hold money <!-- source: https://wise.com/help/articles/2813542/where-do-i-need-to-live-to-hold-money-with-wise 2026-09-18 --> | GCash links PayPal and Payoneer <!-- source: https://gcash.com/services/cash-in/global-wallets 2026-09-18 -->; Maya claims Western Union <!-- source: https://www.maya.ph/claim-remittance 2026-09-18 --> |
 
+## Five more rupiah boards and one in Manila
+
+Six more local boards publish payout terms, five Indonesian and one Philippine, and none of the six publishes a country rule.
+
+| Board | How it pays | Rails | Minimum withdrawal | What it does not publish |
+|---|---|---|---|---|
+| **Clipink** | Rp500 per 1,000 views on its one live campaign, its own <!-- source: https://clipink.id/campaigns 2026-09-19 --> | DANA, GoPay, OVO or a bank <!-- source: https://clipink.id/terms 2026-09-19 --> | Rp100,000, less a 10% service fee <!-- source: https://clipink.id/terms 2026-09-19 --> | Its operating company |
+| **Wefluence** | Per 1,000 verified views, or a flat rate per video <!-- source: https://wefluence.id/faq.html 2026-09-19 --> | A bank or e-wallet account in your own name <!-- source: https://wefluence.id/terms.html 2026-09-19 --> | Rp50,000, or Rp20,000 in the first 30 days; 5% to withdraw, at least Rp6,500 <!-- source: https://wefluence.id/terms.html 2026-09-19 --> | Which e-wallets it pays |
+| **Catrova**, which calls its product Clipper | CPM on net views <!-- source: https://catrova.com/id/help 2026-09-19 -->; its home page shows one campaign at Rp3,500 per 1,000 <!-- source: https://catrova.com/id 2026-09-19 --> | 14 Indonesian banks and wallets, among them BCA, Mandiri, DANA, OVO, ShopeePay and GoPay <!-- source: https://catrova.com/id/help 2026-09-19 --> | Rp50,000 <!-- source: https://catrova.com/id/help 2026-09-19 --> | A fee or payout time in its terms <!-- source: https://catrova.com/id/terms-of-use 2026-09-19 -->; its help page says "secara instan" <!-- source: https://catrova.com/id/help 2026-09-19 -->, its home page "100% Bebas Biaya Admin" <!-- source: https://catrova.com/id 2026-09-19 --> |
+| **Indoclip** | CPM on views checked in 1 to 3 working days <!-- source: https://indoclip.id/ 2026-09-19 --> | DANA, GoPay, OVO or ShopeePay <!-- source: https://indoclip.id/ 2026-09-19 --> | Not published | The rate or the fee; its terms keep a right to adjust a reward <!-- source: https://indoclip.id/terms 2026-09-19 --> |
+| **Ternak Buzzer**, not TryBuzzer or Ternak Klip | On each campaign's terms, after a view check it calls final <!-- source: https://ternakbuzzer.id/terms-of-service 2026-09-19 --> | An e-wallet or a bank transfer after approval <!-- source: https://ternakbuzzer.id/cara-kerja 2026-09-19 --> | Not published | The rate, the operator, the size of its fee |
+| **Vouched** (Manila, pre-launch) | A fixed rate per 1,000 eligible verified views, or a pool share <!-- source: https://www.vouched.ph/how-it-works/creators 2026-09-19 --> | GCash or Maya, a bank account in a later clause <!-- source: https://www.vouched.ph/terms 2026-09-19 --> | None; the floor is what the transfer costs <!-- source: https://www.vouched.ph/terms 2026-09-19 --> | Its operating company, or any delivery time |
+| **DareBay** | $1.00 to $2.00 per 1,000 counted views | USDT on the TON network only: no rupiah, DANA, GoPay or GCash route | 10 USDT per request, 10% taken inside it | A settlement time: a person checks every request |
+
 ## Rupiah boards built in Indonesia, and who they are open to
 
-The job has a local name, *ternak klip*, and five Indonesian marketplaces publish full terms for it: rupiah rates per 1,000 views, payouts inside Indonesia, and different cuts, floors and entry rules.
+The job has a local name, *ternak klip*, and ten Indonesian marketplaces publish terms for it: the five in the table above, and the five below, each with rupiah rates per 1,000 views, payouts inside Indonesia, and different cuts, floors and entry rules.
 
 **Clippo** has the most explicit terms: "Platform ditujukan untuk pengguna di Indonesia" (intended for users in Indonesia), and "Rekening luar negeri, e-wallet luar negeri, dan cryptocurrency tidak didukung saat ini" — foreign accounts, foreign e-wallets and crypto are not supported. It charges clippers no platform fee but withholds income tax (PPh 21) at cash-out, wants a KTP photo and a live selfie before the first cash-out, and sets the floor at Rp100,000. Its terms target up to six working days, "bukan jaminan" (not a guarantee) <!-- source: https://app.clippo.id/terms-and-conditions 2026-09-18 -->, while its home page says "Withdraw Instan". <!-- source: https://clippo.id/ 2026-09-18 --> Its campaign list showed Rp500 to Rp7,000 per 1,000 views on 18 September 2026 <!-- source: https://app.clippo.id/campaigns 2026-09-18 -->, about $0.03 to $0.39 at Bank Indonesia's reference rate of Rp17,745 to the dollar that day. <!-- source: https://www.bi.go.id/id/statistik/informasi-kurs/jisdor/default.aspx 2026-09-18 -->
 
@@ -54,11 +68,11 @@ The job has a local name, *ternak klip*, and five Indonesian marketplaces publis
 
 **AyoKlip** is the smallest, with 530-plus active clippers by its own count, and takes the smallest cut: 5% of each approved payment, from a Rp50,000 floor. An admin checks views against your screenshots, and for now it is "fokus ke Indonesia", focused on Indonesia. <!-- source: https://ayoklip.com/cara-kerja 2026-09-18 -->
 
-## No Philippine board with published terms, so pesos arrive from global ones
+## Manila's one board with published terms has nothing to clip yet
 
-No marketplace built in the Philippines with readable terms was found on 18 September 2026. The one local candidate, ClipFarm, did not load on any attempt, and ClipBayani is a Filipino community hosted on Whop, "still building, preparing, and reaching out to potential clients". <!-- source: https://whop.com/clipbayani/ 2026-09-18 -->
+Vouched, the Manila board in the table above, charges its 8% fee to the brand, not the clipper <!-- source: https://www.vouched.ph/pricing 2026-09-19 -->, but it is pre-launch: "No campaigns are open yet" <!-- source: https://www.vouched.ph/campaigns 2026-09-19 -->, under terms marked "Draft for the pre-launch build" <!-- source: https://www.vouched.ph/terms 2026-09-19 -->. ClipFarm did not load on 18 or 19 September 2026: Cloudflare answered 522 on every path tried <!-- source: https://clipfarm.ph/economy 2026-09-19 -->. ClipBayani is a Filipino community hosted on Whop, "still building, preparing, and reaching out to potential clients". <!-- source: https://whop.com/clipbayani/ 2026-09-18 -->
 
-So a clipper in Manila or Cebu works for global platforms, as can an Indonesian who wants dollars. Whop names both countries among its payout countries <!-- source: https://docs.whop.com/manage-your-business/manage-payouts/set-up-payouts 2026-09-18 --> and says the options differ by country <!-- source: https://docs.whop.com/manage-your-business/manage-payouts/payout-methods 2026-09-18 -->; Vyro's unsupported list names neither <!-- source: https://vyro.com/help/getting-started/what-countries-are-supported 2026-09-18 -->; Reach.cat quotes a paid clipper from the Philippines. <!-- source: https://reach.cat/become-a-clipper/ 2026-09-18 -->
+So until a brief is funded there, a clipper in Manila or Cebu works for global platforms, as can an Indonesian who wants dollars. Whop names both countries among its payout countries <!-- source: https://docs.whop.com/manage-your-business/manage-payouts/set-up-payouts 2026-09-18 --> and says the options differ by country <!-- source: https://docs.whop.com/manage-your-business/manage-payouts/payout-methods 2026-09-18 -->; Vyro's unsupported list names neither <!-- source: https://vyro.com/help/getting-started/what-countries-are-supported 2026-09-18 -->; Reach.cat quotes a paid clipper from the Philippines. <!-- source: https://reach.cat/become-a-clipper/ 2026-09-18 -->
 
 <LCompare />
 
@@ -98,7 +112,7 @@ The Philippine BIR requires anyone earning through electronic platforms to regis
 
 DareBay publishes no exclusion list, so both countries are in, and it has one money rail: USDT on the TON network. Telegram Stars, its other withdrawal method, are not cash: "You may not sell, withdraw, transfer or use Stars in your personal balance" beyond what Telegram's terms allow. <!-- source: https://telegram.org/tos/stars 2026-09-18 --> Nothing is taken from a task budget; the one charge a clipper meets is 10% when withdrawing a balance, deducted inside a request of at least 10 USDT, and a person checks each request, so no settlement time is promised. The rate is printed on the task card; open tasks pay from $1.00 to $2.00 per 1,000 counted views. The interface is English, Russian and Ukrainian, with no Indonesian or Tagalog version, and a balance has no rupiah, GCash or bank route.
 
-So a rupiah board is the better answer for an Indonesian resident who wants rupiah in DANA or GoPay with no crypto in the chain; Clippo even withholds the income tax. In Manila, a global board paying by PayPal or Payoneer is better when the money must end up in GCash. DareBay fits a clipper who already holds a TON wallet, falls outside the rupiah boards' residency rules and has read the regulators above. The rails, platform by platform, are in [clipping platforms that pay without PayPal or Stripe](/en/earnings/clipping-platforms-that-pay-without-paypal-or-stripe).
+So a rupiah board is the better answer for an Indonesian resident who wants rupiah in DANA or GoPay with no crypto in the chain; Clippo even withholds the income tax. In Manila, while the local board has no brief to take, a global board paying by PayPal or Payoneer is better when the money must end up in GCash. DareBay fits a clipper who already holds a TON wallet, falls outside the rupiah boards' residency rules and has read the regulators above. The rails, platform by platform, are in [clipping platforms that pay without PayPal or Stripe](/en/earnings/clipping-platforms-that-pay-without-paypal-or-stripe).
 
 <LMethod />
 
@@ -110,7 +124,7 @@ Its footer names the operator, PT Media Klip Nusantara, and a registration with 
 
 ### Can a clipper outside Indonesia join a rupiah board?
 
-Mostly not. Clippo and Konten.com serve users in Indonesia and pay only to Indonesian accounts, AyoKlip is focused on Indonesia, and TryBuzzer lists only Indonesian rails. Ternak Klip says residence does not matter, yet names only a bank payout.
+Mostly not. Clippo and Konten.com serve users in Indonesia and pay only to Indonesian accounts, AyoKlip is focused on Indonesia, and TryBuzzer lists only Indonesian rails. Ternak Klip says residence does not matter, yet names only a bank payout. The five boards read on 19 September publish no residency rule, and none names a rail outside Indonesia.
 
 ### Can I move PayPal money to DANA or GoPay?
 

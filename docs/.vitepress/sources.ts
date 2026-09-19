@@ -53,7 +53,8 @@ const SOURCE_COMMENT_OPENER = /<!--\s*source:/g
  * Extended 2026-09-18 with the regional marketplaces the per-country pages cite: ClipGrow, Wondeed
  * Extended 2026-09-19 with the local boards answer engines name per country: Dashrize, INDclipping, ClipAdda, Cluvi,
  * KANMITO and Reachr (India), Tsunami at sunaami.com (Pakistan), ClipperFC and Sky Kenya (Nigeria, Kenya), Wusul and
- * Clip2Earn (Arab countries).
+ * Clip2Earn (Arab countries); and, for the Indonesia and Philippines page, Clipink, Wefluence, Catrova, Indoclip,
+ * Ternak Buzzer, Vouched and ClipFarm.
  * and ClipConnect (India), both Cliptocash namesakes (.io for Africa, .com under French law),
  * ClippaPay (Nigeria), Klipbait (CIS) and Nashr (Saudi Arabia).
  * Extended again 2026-09-18 with the five Indonesian rupiah boards: Ternak Klip, Clippo, TryBuzzer, Konten.com, AyoKlip.
@@ -98,6 +99,13 @@ export const COMPETITOR_SOURCE_HOSTS: readonly string[] = [
   'trybuzzer.com',
   'konten.com',
   'ayoklip.com',
+  'clipink.id',
+  'wefluence.id',
+  'catrova.com',
+  'indoclip.id',
+  'ternakbuzzer.id',
+  'vouched.ph',
+  'clipfarm.ph',
 ]
 
 /** The host as a reader would say it — what `LPlatforms.vue` already prints for the same sources. */

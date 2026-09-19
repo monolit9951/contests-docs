@@ -1,19 +1,20 @@
 ---
 title: "Clipping platforms that pay in Pakistan, without PayPal"
 description: PayPal and Stripe do not work in Pakistan. Which clipping platforms still pay, and whether the money arrives by Payoneer, a local bank or USDT.
-provenance: { snapshot_date: "2026-09-18", source: "darebay-prod" }
+provenance: { snapshot_date: "2026-09-19", source: "darebay-prod" }
 numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_max_per_work_band_high]
 seo: true
 landing: true
 sources: visible
 hero:
+  updated: "2026-09-19"
   kicker: "Payouts into Pakistan · 2026"
   lede: "Whop lists Pakistan among its payout countries and Vyro lists it among the blocked ones, and the difference is not the rate but the rail: PayPal's own country list has no Pakistan entry, Stripe's has none either, and a Wise account cannot be held from here. What is left for a clipper in Karachi or Lahore is Payoneer into a local bank or a mobile wallet, or a crypto wallet. This page reads each platform's own payout page and each regulator's own circular, and says which of the two your earnings would travel on."
   secondary: "Platform table"
   takeaways:
-    - "<b>Two rails, not five.</b> Payoneer withdraws to a Pakistani bank in PKR and into a JazzCash wallet from $1; a crypto wallet needs neither. PayPal, Stripe and Wise are all unavailable to a resident here."
+    - "<b>Two rails from abroad, not five.</b> Payoneer withdraws to a Pakistani bank in PKR and into a JazzCash wallet from $1; a crypto wallet needs neither. One rupee board lists JazzCash among its rails, the brand paying. PayPal, Stripe and Wise are unavailable here."
     - "<b>Vyro is closed and Klipni is unreachable.</b> Vyro names Pakistan on its unsupported list and pays only by PayPal or Stripe; Klipni pays only authors holding Russian self-employed tax status."
-    - "<b>Clipping.net is half open.</b> Its campaigns pay PayPal or USDC/USDT on Ethereum, and the campaign picks — you cannot swap a PayPal campaign for crypto."
+    - "<b>DareBay's rail is USDT on TON.</b> It publishes no exclusion list and asks for no follower count, but there is no Payoneer or JazzCash step: a withdrawal request starts at 10 USDT, with 10% deducted inside it."
     - "<b>The USDT question has no single answer yet.</b> The State Bank's 2026 circular replaced the 2018 prohibition for banks dealing with licensed providers, PVARA licenses the businesses, and neither publishes a rule covering a private individual."
 compare:
   ids: [whop, darebay, reach-cat, prime-oracles, clipping-net, vues, clipping-io, vyro, klipni]
@@ -21,7 +22,7 @@ compare:
   highlight: darebay
   title: "Pakistan access and the rail behind it, platform by platform"
 method:
-  - "Every country statement is taken from the platform's own payout page, sanctioned-country page or terms, read on 2026-09-18; 'no country list' means the platform names no countries anywhere on its public pages, which is not the same as saying yes."
+  - "Every country statement is taken from the platform's own payout page, sanctioned-country page or terms, read on 2026-09-18 (the rupee board and the Pakistan-only campaign on 2026-09-19); 'no country list' means the platform names no countries anywhere on its public pages, which is not the same as saying yes."
   - "Payment-service and regulator statements come from the operator's or the regulator's own page on the same date: PayPal's country list, Stripe's availability page, Wise's help centre, Payoneer's and JazzCash's own pages, and State Bank of Pakistan circulars and press releases."
   - "DareBay's own figures come from its live data snapshot and its help pages, not from this comparison."
 cta:
@@ -46,7 +47,7 @@ Those three absences decide most of the board. Vyro withdraws only through "PayP
 | Raast | The State Bank's free instant system for bank customers moving funds inside the country <!-- source: https://archive.sbp.org.pk/dfs/Raast-P2P.html 2026-09-18 -->, not described as a way to be paid by a foreign platform |
 | USDT | Reaches a wallet you control and needs no bank; the published regulatory picture has its own section below |
 
-The question on any campaign card is therefore narrow: does this platform hand me a payout Payoneer or a local bank can finish, or does it hand me tokens? For the rate side of the decision, see [how much clipping pays](/en/earnings/how-much-clipping-pays). Asked of every platform at once instead of one country, that is the question behind [clipping platforms that pay without PayPal or Stripe](/en/earnings/clipping-platforms-that-pay-without-paypal-or-stripe), which names the coin and the chain behind each "crypto" line.
+The question on any campaign card is therefore narrow: does this platform hand me a payout Payoneer or a local bank can finish, does it price the campaign in rupees and reach the wallet itself, or does it hand me tokens? For the rate side of the decision, see [how much clipping pays](/en/earnings/how-much-clipping-pays). Asked of every platform at once instead of one country, that is the question behind [clipping platforms that pay without PayPal or Stripe](/en/earnings/clipping-platforms-that-pay-without-paypal-or-stripe), which names the coin and the chain behind each "crypto" line.
 
 ## Platform by platform, in their own words
 
@@ -55,7 +56,7 @@ The question on any campaign card is therefore narrow: does this platform hand m
 | Platform | What that means for a clipper in Pakistan |
 |---|---|
 | Whop Content Rewards | Listed for payouts and sanctioned nowhere, paying to "your bank account, mobile wallet, or crypto wallet" by country; a payout will not land in a dollar account where the country uses another currency <!-- source: https://docs.whop.com/manage-your-business/manage-payouts/payout-methods 2026-09-18 -->, so expect PKR. |
-| DareBay | No exclusion list, so no country is checked at the door; the money leaves as USDT on TON, which means a wallet rather than a Pakistani bank. |
+| DareBay | No exclusion list, so no country is checked at the door; the money leaves as USDT on TON into a wallet, not a Pakistani bank or JazzCash account, on a withdrawal request of at least 10 USDT with 10% deducted inside it. |
 | Reach.cat | A crypto-wallet board with no PayPal step, though not an anonymous one: its landing page says "No KYC. No ID check. No bank account needed" <!-- source: https://reach.cat/become-a-clipper/ 2026-09-18 -->, while its terms effective 13 September 2026 require identity verification through iDenfy once payout requests pass $500 <!-- source: https://reach.cat/terms 2026-09-18 -->. The app's payout screen offers USDT on ERC20, BEP20 or Solana, or a bank transfer by IBAN <!-- source: https://reach.cat/dashboard/creator/earnings 2026-09-18 -->. It claims 149+ countries but lists none. |
 | Prime Oracles | Bars EU, UK and US residents "or any jurisdiction in which the use of cryptocurrency services is restricted or prohibited under applicable law" <!-- source: https://www.primeoracles.com/terms-agreement 2026-09-18 --> — a clause that names no country and points back at your own rules. |
 | Clipping.net | Requires residence "in the territories where we operate" without listing them <!-- source: https://clipping.net/policies/clipper-terms-and-conditions 2026-09-18 -->, and half its rails are PayPal. |
@@ -64,9 +65,18 @@ The question on any campaign card is therefore narrow: does this platform hand m
 | Vyro | Closed: Pakistan is named on the unsupported list. |
 | Klipni | Unreachable: it pays only authors holding Russian self-employed or sole-trader tax status <!-- source: https://klipni.com/legal/terms 2026-09-18 -->. |
 
+## A rupee board, and one campaign written for Pakistan only
+
+| Platform | How it pays | Rails | Minimum | What it does not publish |
+|---|---|---|---|---|
+| Tsunami, at sunaami.com | A rate per 1,000 views set by the brand per campaign and per network, and paid out by that brand: "brands pay creators directly rather than the platform holding funds", with no timetable promised <!-- source: https://sunaami.com/faq 2026-09-19 --> | JazzCash, Easypaisa or bank transfer, "for PKR settlement" <!-- source: https://sunaami.com/for-creators 2026-09-19 --> | Rs 2,000, per campaign rather than per account <!-- source: https://sunaami.com/for-creators 2026-09-19 --> | Its operator, address, country rules, KYC and age; Terms, User Agreement and Privacy pages carry one sentence each and no terms <!-- source: https://sunaami.com/terms 2026-09-19 --> |
+| Content Rewards, Clipclops campaign | $3.00 per 1,000 views on YouTube, TikTok and Instagram alike, under a note: "only for clippers based in Pakistan and accounts with their default reach in Pakistan" <!-- source: https://contentrewards.com/discover/baa092b2-25bc-4883-82eb-7c55cf9e8dc8 2026-09-19 --> | Whop's, as in the table above, less the flat 10% creator fee its terms take from every CPM payout <!-- source: https://contentrewards.com/terms 2026-09-19 --> | $9.99 to be paid, with one clip capped at $100.00 <!-- source: https://contentrewards.com/discover/baa092b2-25bc-4883-82eb-7c55cf9e8dc8 2026-09-19 --> | Whether Pakistan is on the prohibited-jurisdiction list its terms cite; the site does not carry it <!-- source: https://contentrewards.com/terms 2026-09-19 --> |
+
+Tsunami's figures need their date: on 19 September 2026 its counter read "₨ 0 — Paid to creators", the leaderboard below it showed earnings to ₨ 3,607, and its one campaign a top rate of ₨ 50 per 1,000 views <!-- source: https://sunaami.com/ 2026-09-19 -->.
+
 ## From Payoneer into JazzCash, HBL or Meezan
 
-If a platform offers a bank or wallet payout, Payoneer is the piece that completes it. Its partnership pages describe withdrawals landing "directly to local Pakistani bank accounts in PKR" with conversion from USD <!-- source: https://www.payoneer.com/resources/payoneer-and-meezan-bank-transform-international-payment-withdrawals-in-pakistan-with-new-partnership/ 2026-09-18 -->, and an HBL route where the transfer is "in real-time and within seconds", available around the clock <!-- source: https://www.payoneer.com/resources/business/payoneer-partners-with-hbl-bank-to-enable-real-time-withdrawals-for-pakistani-customers/ 2026-09-18 -->. The wallet route runs through JazzCash, which Payoneer describes as instant and open from as little as $1 <!-- source: https://www.payoneer.com/resources/how-to-use-payoneer/jazzcash-and-payoneer-team-up-to-make-freelance-payments-easy/ 2026-09-18 -->; JazzCash says the same from its side, that the wallet receives international freelance payments and remittances <!-- source: https://www.jazzcash.com.pk/store-money/freelance-digital-account 2026-09-18 -->.
+If a global platform offers a bank or wallet payout, Payoneer is the piece that completes it. Its partnership pages describe withdrawals landing "directly to local Pakistani bank accounts in PKR" with conversion from USD <!-- source: https://www.payoneer.com/resources/payoneer-and-meezan-bank-transform-international-payment-withdrawals-in-pakistan-with-new-partnership/ 2026-09-18 -->, and an HBL route where the transfer is "in real-time and within seconds", available around the clock <!-- source: https://www.payoneer.com/resources/business/payoneer-partners-with-hbl-bank-to-enable-real-time-withdrawals-for-pakistani-customers/ 2026-09-18 -->. The wallet route runs through JazzCash, which Payoneer describes as instant and open from as little as $1 <!-- source: https://www.payoneer.com/resources/how-to-use-payoneer/jazzcash-and-payoneer-team-up-to-make-freelance-payments-easy/ 2026-09-18 -->; JazzCash says the same from its side, that the wallet receives international freelance payments and remittances <!-- source: https://www.jazzcash.com.pk/store-money/freelance-digital-account 2026-09-18 -->.
 
 Timing and cost are published only in general terms: withdrawals typically reach a local bank within one to three business days, fees vary by withdrawal type and are shown before you confirm, and there is no setup or monthly fee <!-- source: https://www.payoneer.com/withdraw-funds/ 2026-09-18 -->. No percentage specific to a Pakistani account is published, so read the figure on the withdrawal screen rather than one from a forum.
 
@@ -92,7 +102,7 @@ DareBay has no exclusion list, so nothing about a Pakistani account is checked a
 
 The limitation matters more here than elsewhere. The balance leaves as USDT on TON or as Telegram Stars: no Payoneer route, no payout into a Pakistani bank or a JazzCash wallet. Stars are not a second way to get money either, since Telegram's own terms call them virtual items and say you "may not sell, withdraw, transfer or use Stars in your personal balance for any other purpose than those explicitly outlined in these Terms" <!-- source: https://telegram.org/tos/stars 2026-09-18 -->. The rail here is a TON wallet and nothing else, and the interface is English, Russian and Ukrainian, with no Urdu version.
 
-So if you would rather be paid into a bank or a mobile wallet, Whop Content Rewards is the platform on this page that says it does that for Pakistan, with the options chosen by country rather than by you <!-- source: https://docs.whop.com/manage-your-business/manage-payouts/set-up-payouts 2026-09-18 -->; our [Whop Content Rewards review](/en/earnings/whop-content-rewards-review) covers how its campaigns run. If you would rather stay on a crypto wallet with no PayPal in the chain and on a network other than TON, Reach.cat's payout screen offers USDT on ERC20, BEP20 or Solana <!-- source: https://reach.cat/dashboard/creator/earnings 2026-09-18 -->; just do not read its landing page's "No KYC. No ID check." as the whole rule, because its terms effective 13 September 2026 require identity verification through iDenfy once payout requests pass $500 <!-- source: https://reach.cat/terms 2026-09-18 -->, and it names no countries. The wider field is compared in our [clipping platform comparison](/en/earnings/best-clipping-platforms).
+So if you would rather be paid into a bank or a mobile wallet, Whop Content Rewards is the global platform on this page that says it does that for Pakistan, with the options chosen by country rather than by you <!-- source: https://docs.whop.com/manage-your-business/manage-payouts/set-up-payouts 2026-09-18 -->; our [Whop Content Rewards review](/en/earnings/whop-content-rewards-review) covers how its campaigns run, and Tsunami is the rupee-priced alternative <!-- source: https://sunaami.com/for-creators 2026-09-19 -->. If you would rather stay on a crypto wallet with no PayPal in the chain and on a network other than TON, Reach.cat's payout screen offers USDT on ERC20, BEP20 or Solana <!-- source: https://reach.cat/dashboard/creator/earnings 2026-09-18 -->; just do not read its landing page's "No KYC. No ID check." as the whole rule, because its terms effective 13 September 2026 require identity verification through iDenfy once payout requests pass $500 <!-- source: https://reach.cat/terms 2026-09-18 -->, and it names no countries. The wider field is compared in our [clipping platform comparison](/en/earnings/best-clipping-platforms).
 
 <LMethod />
 
@@ -112,7 +122,7 @@ Yes, and it is the route most bank-bound clipping payouts would travel on. Payon
 
 ### Can a clipping payout reach a JazzCash wallet?
 
-Not straight from the platforms on this page, but through Payoneer it can: Payoneer describes instant transfers into JazzCash from as little as $1 <!-- source: https://www.payoneer.com/resources/how-to-use-payoneer/jazzcash-and-payoneer-team-up-to-make-freelance-payments-easy/ 2026-09-18 -->, and JazzCash says its wallet receives international freelance payments and remittances <!-- source: https://www.jazzcash.com.pk/store-money/freelance-digital-account 2026-09-18 -->. A platform paying only in USDT, DareBay included, does not reach that wallet by itself.
+One platform here says so: Tsunami names JazzCash among its rails once a campaign reaches Rs 2,000 <!-- source: https://sunaami.com/for-creators 2026-09-19 -->, and the brand pays, not the platform <!-- source: https://sunaami.com/faq 2026-09-19 -->. From the global boards it arrives through Payoneer, which describes the move into JazzCash as instant and open from as little as $1 <!-- source: https://www.payoneer.com/resources/how-to-use-payoneer/jazzcash-and-payoneer-team-up-to-make-freelance-payments-easy/ 2026-09-18 -->, and JazzCash says its wallet receives international freelance payments and remittances <!-- source: https://www.jazzcash.com.pk/store-money/freelance-digital-account 2026-09-18 -->. A platform paying only in USDT, DareBay included, does not reach that wallet by itself.
 
 ### Is USDT legal in Pakistan?
 

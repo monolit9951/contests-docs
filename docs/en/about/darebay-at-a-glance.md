@@ -82,6 +82,10 @@ No. Payment tracks the views of one specific clip, so a new account with no foll
 
 Yes, and in every other country: there is no exclusion list. Clippers from Russia, Belarus, Ukraine, Kazakhstan and the rest of CIS, where the community is largest, are paid the same way as everyone else, in USDT on TON or Telegram Stars.
 
+### Which countries does DareBay pay to: India, Pakistan, Nigeria, Egypt?
+
+DareBay keeps no list of excluded countries, so an account from India, Pakistan, Nigeria, Kenya, Ghana or anywhere else can take a task with no follower count and no application. What decides whether the money reaches you is the rail, not the country list: a balance leaves only as USDT on the TON network, from a 10 USDT request with the 10% withdrawal fee, and a person checks each request. Where the law closes crypto to residents, as in Egypt, Algeria and Iraq, that balance has no lawful way out, and we say so on the country pages: [India](/en/earnings/clipping-platforms-that-pay-in-india), [Pakistan](/en/earnings/clipping-platforms-that-pay-in-pakistan), [Nigeria, Kenya and Ghana](/en/earnings/clipping-platforms-that-pay-in-nigeria-and-kenya), [Egypt and Arab countries](/en/earnings/clipping-platforms-that-pay-in-egypt-and-arab-countries), and [platforms that pay without PayPal or Stripe](/en/earnings/clipping-platforms-that-pay-without-paypal-or-stripe).
+
 ### Is the budget guaranteed?
 
 In a wallet-backed contest the organizer's budget is locked on the platform before the start and the platform pays after the count. In a manual-payout contest the organizer pays directly; the card says which kind the contest is.

@@ -1,12 +1,13 @@
 ---
 title: "Clipping platforms that pay in Egypt and Arab countries"
 description: Which clipping platforms pay in Egypt, Morocco, Algeria, Iraq, Saudi Arabia and the UAE, what each regulator says about crypto, and how the money lands.
-provenance: { snapshot_date: "2026-09-18", source: "darebay-prod" }
+provenance: { snapshot_date: "2026-09-19", source: "darebay-prod" }
 numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_max_per_work_typical, ppv_max_per_work_band_high]
 seo: true
 landing: true
 sources: visible
 hero:
+  updated: "2026-09-19"
   kicker: "Payouts by country · 2026"
   lede: "A PayPal payout from a platform reaches Morocco, Saudi Arabia and the UAE, and does not reach Egypt, Algeria or Iraq: those three are absent from PayPal's own list of countries eligible to receive a payout. Stripe serves one country of the six. That is why the answer to \"will they pay me here\" splits the Arab world in two, and why the second question — what the regulator in your country says about crypto — decides the rest."
   secondary: "The six-country table"
@@ -14,7 +15,7 @@ hero:
   takeaways:
     - "<b>Morocco, Saudi Arabia and the UAE are on PayPal's payout list.</b> Egypt, Algeria and Iraq are not, so a platform that pays through PayPal cannot send money there at all."
     - "<b>Stripe covers the UAE and nothing else here.</b> Vyro pays only through PayPal or Stripe, and its own page names Egypt, Algeria and Iraq as unsupported."
-    - "<b>The three countries without a fiat rail are the three with the strictest crypto rules.</b> Algeria prohibits holding virtual assets by law, Egypt's central bank calls dealing in them criminalized, Iraq's central bank closed the banking and wallet channel."
+    - "<b>DareBay's only cash rail is USDT on the TON network, so a balance has no withdrawal route to Egypt, Algeria or Iraq.</b> Algeria prohibits holding virtual assets by law, Egypt's central bank calls dealing in them criminalized, Iraq's central bank closed the banking and wallet channel. No country is excluded; 10% comes off a withdrawal request of at least 10 USDT."
     - "<b>Whop lists Iraq as sanctioned</b> and lists Egypt, Morocco, Algeria, Saudi Arabia and the UAE among its payout countries."
 compare:
   ids: [whop, vyro, content-rewards, clipping-net, vues, reach-cat, prime-oracles, clipping-io, darebay]
@@ -55,7 +56,7 @@ On tax, Law No. 6 of 2025, in the Official Gazette of 21 February 2025, taxes tu
 
 ## InstaPay and Vodafone Cash: a domestic rail has edges
 
-InstaPay runs on the Instant Payment Network, which the Central Bank of Egypt describes as "a national network linking all operating banks within the Arab Republic of Egypt", with limits of 70,000 EGP per transaction and 400,000 EGP per month per bank. Money from abroad enters through a separate service, IPN International Remittance, working "by partnering with local banks, money transfer operators, and exchange houses". <!-- source: https://www.cbe.org.eg/en/payment-systems-and-services/instant-payment-network 2026-09-18 --> An InstaPay address therefore receives a remittance that already crossed the border through a registered institution; it is not an address a campaign platform can select. Vodafone Cash describes depositing and withdrawing through Vodafone stores, dealers, Fawry, Aman and Basata branches and ATMs, and no inbound international route. <!-- source: https://web.vodafone.com.eg/en/vodafone-cash 2026-09-18 --> That is an absence of a statement rather than a refusal, but it leaves nothing published to rely on.
+InstaPay runs on the Instant Payment Network, which the Central Bank of Egypt describes as "a national network linking all operating banks within the Arab Republic of Egypt", with limits of 70,000 EGP per transaction and 400,000 EGP per month per bank. Money from abroad enters through a separate service, IPN International Remittance, working "by partnering with local banks, money transfer operators, and exchange houses". <!-- source: https://www.cbe.org.eg/en/payment-systems-and-services/instant-payment-network 2026-09-18 --> An InstaPay address therefore receives a remittance that already crossed the border through a registered institution; none of the nine platforms in the table offers it, and Wusul, the one board below that names it, does not publish how it sends one. Vodafone Cash describes depositing and withdrawing through Vodafone stores, dealers, Fawry, Aman and Basata branches and ATMs, and no inbound international route. <!-- source: https://web.vodafone.com.eg/en/vodafone-cash 2026-09-18 --> That is an absence of a statement rather than a refusal, but it leaves nothing published to rely on.
 
 ## Where a USDT payout runs into the law
 
@@ -89,9 +90,17 @@ Telegram's own terms describe Stars as "virtual items that allow users to purcha
 
 ## Nine platforms, read from their own pages
 
-Only Whop publishes both a sanctions list and a payout-country list: it names Egypt, Morocco, Algeria, Saudi Arabia and the UAE among its payout countries and excludes Iraq. <!-- source: https://docs.whop.com/manage-your-business/manage-payouts/set-up-payouts 2026-09-18 --> Clipping.net publishes no country list and pays by PayPal or USDC and USDT on Ethereum only. <!-- source: https://clipping.net/docs/clippers/payments 2026-09-18 --> Reach.cat publishes none either and pays to a crypto wallet; the only Arab country it names anywhere is Morocco, in a testimonial. <!-- source: https://reach.cat/become-a-clipper/ 2026-09-18 --> Its app's payout screen also offers a bank transfer by IBAN <!-- source: https://reach.cat/dashboard/creator/earnings 2026-09-18 -->, and its terms effective 13 September 2026 require identity verification through iDenfy once payout requests pass $500. <!-- source: https://reach.cat/terms 2026-09-18 --> On Vues the brand funds each payout, so the method depends on the campaign.
+Only Whop publishes both a sanctions list and a payout-country list: it names Egypt, Morocco, Algeria, Saudi Arabia and the UAE among its payout countries and excludes Iraq. <!-- source: https://docs.whop.com/manage-your-business/manage-payouts/set-up-payouts 2026-09-18 --> Clipping.net publishes no country list and pays by PayPal or USDC and USDT on Ethereum only. <!-- source: https://clipping.net/docs/clippers/payments 2026-09-18 --> Reach.cat publishes none either and pays to a crypto wallet; the only Arab country it names anywhere is Morocco, in a testimonial. <!-- source: https://reach.cat/become-a-clipper/ 2026-09-18 --> Its app's payout screen also offers a bank transfer by IBAN <!-- source: https://reach.cat/dashboard/creator/earnings 2026-09-18 -->, and its terms effective 13 September 2026 require identity verification through iDenfy once payout requests pass $500. <!-- source: https://reach.cat/terms 2026-09-18 --> On Vues the brand funds each payout, so the method depends on the campaign. DareBay publishes no exclusion list either, and pays on one rail, USDT on the TON network, out of a request of at least 10 USDT with 10% taken off, each one checked by a person; in Egypt, Algeria and Iraq that rail runs into the rules quoted above.
 
-One regional platform belongs here although it is not in the table: Nashr, an Arabic-only pay-per-view marketplace in Saudi Arabia, whose terms state that withdrawal goes to a Saudi bank account or a supported digital wallet, minimum 100 riyals. <!-- source: https://nashrapp.com/terms 2026-09-18 --> Usable in Riyadh, of no help in Cairo, Casablanca or Algiers. No Egyptian, Emirati, Moroccan, Algerian or Iraqi equivalent was found with its own site and published terms.
+Three Arabic-language boards belong here although none is in the table; none is registered in Egypt, the UAE, Morocco, Algeria or Iraq. Nashr is Saudi, Wusul is run from Estonia by Camaran Group OÜ on terms its own page flags as a template pending legal review <!-- source: https://www.wusulclips.com/en/terms 2026-09-19 -->, Clip2Earn by BAKCHICH SAS of Marseille, represented in Tunisia <!-- source: https://www.clip2earn.money/en/terms 2026-09-19 -->.
+
+| Board | What a clip earns | Rails | Minimum | What it does not publish |
+|---|---|---|---|---|
+| **Nashr**, CR 7053909912 | 2 riyals per 1,000 views on four of its six active campaigns, 3 and 8 on the other two <!-- source: https://nashrapp.com/discover 2026-09-19 --> | A Saudi bank account or wallet in the terms, IBAN or PayPal in the FAQ; 15% comes off the creator's earnings at withdrawal <!-- source: https://nashrapp.com/about 2026-09-19 --> | 100 riyals, 3–5 working days — in the FAQ, not the terms <!-- source: https://nashrapp.com/earn 2026-09-19 --> | No excluded-country list; eligibility runs through Saudi majority age and Riyadh courts <!-- source: https://nashrapp.com/terms 2026-09-19 --> |
+| **Wusul** | $80 to $300 per 100,000 verified views, its own band <!-- source: https://www.wusulclips.com/en/blog/how-much-do-arabic-clippers-earn 2026-09-19 --> | Instapay in Egypt, PayPal and USDT elsewhere <!-- source: https://www.wusulclips.com/en/about 2026-09-19 --> | Set per campaign <!-- source: https://www.wusulclips.com/en/blog/payouts-instapay-egp 2026-09-19 -->; below 1,000 views a clip earns nothing, and payment follows within 30 days of a campaign closing <!-- source: https://www.wusulclips.com/en/clipper-terms 2026-09-19 --> | No country list, no cap per clip <!-- source: https://www.wusulclips.com/en/clipper-terms 2026-09-19 --> |
+| **Clip2Earn** | €0.09 and €0.15 per 1,000 views on live briefs, free to join, no follower minimum <!-- source: https://www.clip2earn.money/en/creators 2026-09-19 --> | "PayPal, Crypto, or Bank Transfer" on its wallet card, no network or bank country named; every payout it displays went to a Tunisian city <!-- source: https://www.clip2earn.money/en/creators 2026-09-19 --> | Not published | Clipper-side terms, payout timing, identity checks; the terms it publishes name France and Tunisia as sale territories <!-- source: https://www.clip2earn.money/en/terms 2026-09-19 --> |
+
+One line of that table is addressed to Cairo: Wusul's Instapay in pounds, with no open campaign on the day it was read. <!-- source: https://www.wusulclips.com/en/for-clippers 2026-09-19 --> Nashr stays usable in Riyadh, of no help in Cairo, Casablanca or Algiers; Clip2Earn does not say which of its three methods reaches Egypt.
 
 <LCompare />
 
@@ -113,7 +122,7 @@ Two separate answers. A platform cannot send you a PayPal payout: Egypt is absen
 
 ### Can a platform pay straight into InstaPay or Vodafone Cash?
 
-No. The Central Bank of Egypt describes the Instant Payment Network as linking banks inside Egypt; money from abroad enters through IPN International Remittance, via partner banks, money transfer operators and exchange houses. Vodafone Cash's own page states no inbound international route.
+None of the nine platforms in the table does. The Central Bank of Egypt describes the Instant Payment Network as linking banks inside Egypt; money from abroad enters through IPN International Remittance, via partner banks, money transfer operators and exchange houses. Vodafone Cash's own page states no inbound international route. Wusul, a board outside the table, states that it pays Egyptian clippers by Instapay in pounds and does not publish how the transfer is sent.
 
 ### Do clippers in Morocco and Algeria actually get paid?
 
@@ -133,4 +142,4 @@ There is a published regime that may apply: Law No. 6 of 2025 taxes turnover fro
 
 ### Do I need English to take a clipping brief?
 
-For DareBay, you need to read the brief in the language it is written in: the interface is English, Russian and Ukrainian, with no Arabic version, and each task card is written in its organizer's language, most often Russian. The work itself is editing and posting. Nashr is the one platform here with an Arabic-only interface, and it pays only to Saudi accounts.
+For DareBay, you need to read the brief in the language it is written in: the interface is English, Russian and Ukrainian, with no Arabic version, and each task card is written in its organizer's language, most often Russian. The work itself is editing and posting. Nashr's interface is Arabic only; Wusul publishes a full Arabic version beside its English one.

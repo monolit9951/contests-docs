@@ -1,20 +1,21 @@
 ---
 title: "Clipping platforms that pay in India: UPI, USDT and tax"
 description: "Nine clipping platforms and what each pays an Indian clipper: UPI or USDT, minimum payout, PAN and purpose code, 30% VDA tax. Sources dated 2026."
-provenance: { snapshot_date: "2026-09-18", source: "darebay-prod" }
+provenance: { snapshot_date: "2026-09-19", source: "darebay-prod" }
 numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_max_per_work_band_high]
 seo: true
 landing: true
 sources: visible
 hero:
+  updated: "2026-09-19"
   kicker: "Payouts into India · 2026"
-  lede: "Three India-only boards pay rupees straight to a UPI ID; the global boards pay dollars, and the rail they hand you decides whether the money is usable. Whop lists India among its payout countries, Vyro leaves India off its unsupported list, and Clipping.net, Vues and Reach.cat name no countries at all. Here is what each one's own pages say, what an Indian individual can actually open, and what the RBI and the tax department say about the rest."
+  lede: "India's own boards pay rupees straight to a UPI ID; the global boards pay dollars, and the rail they hand you decides whether the money is usable. Whop lists India among its payout countries, Vyro leaves India off its unsupported list, and Clipping.net, Vues and Reach.cat name no countries at all. Here is what each one's own pages say, what an Indian individual can actually open, and what the RBI and the tax department say about the rest."
   secondary: "Platform table"
   takeaways:
     - "<b>Rupees or dollars is the real fork.</b> ClipGrow, Wondeed and ClipConnect quote in ₹ and settle to a UPI ID; the global boards quote in $ and settle through PayPal, a card rail or a crypto wallet."
     - "<b>Stripe is not an option for an individual here:</b> Stripe is invite-only in India and the account has to be a registered business, not a person, which narrows Vyro's two rails to one."
     - "<b>UPI does not reach across the border for work.</b> The one live UPI corridor, with Singapore, is limited to person-to-person transfers for maintenance of relatives and gifts."
-    - "<b>USDT is taxed, and the paperwork is yours.</b> The Income Tax Department publishes a flat 30% on gains from virtual digital assets under Section 115BBH, declared in Schedule VDA, plus a 1% TDS on a transfer."
+    - "<b>DareBay settles in USDT on TON, not to a UPI ID, and USDT is taxed.</b> The Income Tax Department publishes a flat 30% on gains from virtual digital assets under Section 115BBH, declared in Schedule VDA, plus a 1% TDS on a transfer."
 compare:
   ids: [clipgrow, wondeed, clipconnect-india, whop, vyro, clipping-net, vues, reach-cat, darebay]
   columns: [india, rate, payoutMethods, minPayout, fee, followers]
@@ -31,7 +32,7 @@ cta:
 
 ## Which platforms name India, and which stay silent
 
-Nine boards, three answers. **ClipGrow, Wondeed and ClipConnect India** are built for one country: rupee campaigns and UPI payouts, stated on the front page <!-- source: https://clipgrow.in/ 2026-09-18 --> <!-- source: https://www.wondeed.com/ 2026-09-18 --> <!-- source: https://clipconnect.in/ 2026-09-18 -->. **Whop Content Rewards** puts India in its list of payout countries and warns that the options differ by country <!-- source: https://docs.whop.com/manage-your-business/manage-payouts/set-up-payouts 2026-09-18 -->. **Vyro** works the other way round: it publishes a list of unsupported countries, and India is not on it, so by its own rule the platform is available <!-- source: https://vyro.com/help/getting-started/what-countries-are-supported 2026-09-18 -->.
+Nine boards, three answers, and four more boards below. **ClipGrow, Wondeed and ClipConnect India** are built for one country: rupee campaigns and UPI payouts, stated on the front page <!-- source: https://clipgrow.in/ 2026-09-18 --> <!-- source: https://www.wondeed.com/ 2026-09-18 --> <!-- source: https://clipconnect.in/ 2026-09-18 -->. **Whop Content Rewards** puts India in its list of payout countries and warns that the options differ by country <!-- source: https://docs.whop.com/manage-your-business/manage-payouts/set-up-payouts 2026-09-18 -->. **Vyro** works the other way round: it publishes a list of unsupported countries, and India is not on it, so by its own rule the platform is available <!-- source: https://vyro.com/help/getting-started/what-countries-are-supported 2026-09-18 -->.
 
 Then the silence. **Clipping.net** requires only that you be "a legal resident in the territories where we operate" and never names those territories <!-- source: https://clipping.net/policies/clipper-terms-and-conditions 2026-09-18 -->. **Vues** sets no country rule and says payouts pass "provider screening" <!-- source: https://vues.app/terms 2026-09-18 -->. **Reach.cat** claims 149+ countries and lists none of them <!-- source: https://reach.cat/become-a-clipper/ 2026-09-18 -->. **DareBay** is the inverse case: no exclusion list at all, so India is in by default rather than by name.
 
@@ -39,13 +40,23 @@ There is a way to ask this that ignores the map entirely — which rail does the
 
 <LCompare />
 
-## The rupee boards: UPI, ₹500 and a weekly cycle
+## The first three rupee boards: UPI, ₹500 and a weekly cycle
 
 What the table cannot show is who carries the tax. ClipGrow's terms put it on you twice over: "ClipGrow is not an employer… You are responsible for your own taxes and your own compliance with the law", and "Any tax on your earnings is yours to declare and pay" <!-- source: https://clipgrow.in/terms 2026-09-18 -->. Wondeed does the opposite and deducts first: its GST page says clippers above the TDS threshold under Section 194-O have tax deducted before payout, with certificates that reconcile against Form 26AS <!-- source: https://www.wondeed.com/gst 2026-09-18 -->. ClipConnect asks for KYC and UPI details at sign-up <!-- source: https://clipconnect.in/ 2026-09-18 -->. All three are 18+, and Wondeed is open to Indian residents only <!-- source: https://www.wondeed.com/terms 2026-09-18 -->.
 
 Read the rate twice. Wondeed's home page works a campaign at ₹90 per 1,000 verified views, while its clipper page prints a tier card of ₹5, ₹7 and ₹10 <!-- source: https://www.wondeed.com/clippers 2026-09-18 -->. ClipConnect advertises ₹50–₹300 per 1,000 on the front page and ₹10–₹100 inside its own earnings guide <!-- source: https://clipconnect.in/how-to-earn-money-clipping-videos 2026-09-18 -->. ClipGrow's clipper page says payouts run every Sunday, its terms say a monthly cycle <!-- source: https://clipgrow.in/for-clippers 2026-09-18 -->. The campaign card, not the marketing page, is the number you are paid on.
 
-Below these three sits a second group of India-first boards still collecting sign-ups. They name UPI as the rail but publish no rate card, minimum or terms page, so there is nothing to compare.
+## Four more UPI boards, and where ₹500 stops being the rule
+
+| Platform | How it pays | Rails | Minimum | What it does not publish |
+|---|---|---|---|---|
+| **INDclipping** | ₹30–₹100 per 1,000 verified views, nothing released until a campaign's approved views reach 5,000 <!-- source: https://www.indclipping.com/pricing 2026-09-19 --> | UPI or NEFT/IMPS in 24–48 hours; 0% from clippers, 8% from brands, TDS where the law requires <!-- source: https://www.indclipping.com/terms 2026-09-19 --> | ₹500 after that release | Its operator: only "the operator of INDclipping" |
+| **Cluvi**, by TE tech | ₹25 to ₹10,000 per 1,000 views, set per campaign <!-- source: https://www.cluvi.io/faqs 2026-09-19 --> | UPI or bank, 5–7 business days in the FAQ and "monthly" in the terms, after Aadhaar or basic verification <!-- source: https://www.cluvi.io/terms-of-service 2026-09-19 --> | "from ₹1 up to ₹10,00,000 per request" | The threshold those terms require |
+| **Dashrize** | about ₹5 per 1,000 verified views in its own llms.txt, ₹1–₹3 on its sample cards <!-- source: https://dashrize.com/llms.txt 2026-09-19 --> | UPI within an hour on a Friday, bank in 1–2 days | ₹500 in the wallet on payout day <!-- source: https://dashrize.com/ 2026-09-19 --> | An operator; sign-up is a waitlist wanting an invite code <!-- source: https://dashrize.com/register?role=clipper 2026-09-19 --> |
+| **ClipAdda**, LoudlabsX LLP | "(Valid Views ÷ 1,000,000) × CPM", so "100K views pays ₹10" on a ₹100 CPM <!-- source: https://www.clipadda.com/discover-campaigns 2026-09-19 -->, while its front page says that clip "pays you ₹10,000" <!-- source: https://www.clipadda.com/ 2026-09-19 --> | weekly by UPI or bank after KYC; only views "from real Indian audiences" count <!-- source: https://www.clipadda.com/faq 2026-09-19 --> | Not published | Its fee <!-- source: https://www.clipadda.com/terms-of-service 2026-09-19 -->; its Sign Up link led to a 404 <!-- source: https://www.clipadda.com/ 2026-09-19 --> |
+| **DareBay** | $1.00–$2.00 per 1,000 counted views, up to $500 a clip, 0% off the task payout, 10% inside the withdrawal request | USDT on the TON network: no UPI ID, no IFSC, no rupee leg | a request of 10 USDT | A date: a person checks each request |
+
+Two waitlist boards publish numbers anyway: KANMITO's calculator is footed "₹20 per 1,000 verified views · Paid via UPI", with /terms a 404 <!-- source: https://www.kanmito.com/ 2026-09-19 -->, and Reachr answers "UPI or bank transfer within 0–4 working days" on the only page it has <!-- source: https://www.reachr.in/ 2026-09-19 -->.
 
 ## PayPal, Stripe, Payoneer and Wise: what an Indian individual can open
 
@@ -82,7 +93,7 @@ Through an Indian lens, DareBay is a dollar board with a wallet rail. Open tasks
 
 Two limits worth stating plainly. The money rail is USDT on the TON network, and what happens to it next is governed by the sections above, not by the platform. Telegram Stars are the other withdrawal method and they are not a way to receive money: Telegram's terms say "You may not sell, withdraw, transfer or use Stars in your personal balance for any other purpose than those explicitly outlined in these Terms", and a Star balance is forfeit if the account is lost <!-- source: https://telegram.org/tos/stars 2026-09-18 -->. The interface is English, Russian and Ukrainian; there is no Hindi version.
 
-So when is another board the better answer? If you want rupees in your bank and no virtual digital asset in the chain, ClipGrow, Wondeed and ClipConnect settle to UPI and leave you an ordinary income question instead of a Schedule VDA one, and Wondeed deducts TDS for you. If you want a bank or PayPal route, Whop lists India. If you already hold a wallet and want no bank in the loop, Reach.cat and DareBay pay into one. Rate belongs last in that order: [how much clipping pays](/en/earnings/how-much-clipping-pays) covers it, and [the platform comparison](/en/earnings/best-clipping-platforms) has the full field.
+So when is another board the better answer? If you want rupees in your bank and no virtual digital asset in the chain, ClipGrow, Wondeed and ClipConnect settle to UPI and leave you an ordinary income question instead of a Schedule VDA one, and Wondeed and INDclipping deduct TDS for you. If you want a bank or PayPal route, Whop lists India. If you already hold a wallet and want no bank in the loop, Reach.cat and DareBay pay into one. Rate belongs last in that order: [how much clipping pays](/en/earnings/how-much-clipping-pays) covers it, and [the platform comparison](/en/earnings/best-clipping-platforms) has the full field.
 
 <LMethod />
 

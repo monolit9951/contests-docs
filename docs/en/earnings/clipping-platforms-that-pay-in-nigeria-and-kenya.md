@@ -1,12 +1,13 @@
 ---
 title: "Clipping platforms that pay in Nigeria, Kenya and Ghana"
 description: "Which clipping platforms pay Nigerian, Kenyan and Ghanaian clippers, and how the money lands: PayPal via Paga, M-PESA, MoMo, USDT. Sourced and dated."
-provenance: { snapshot_date: "2026-09-18", source: "darebay-prod" }
+provenance: { snapshot_date: "2026-09-19", source: "darebay-prod" }
 numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_max_per_work_band_high]
 seo: true
 landing: true
 sources: visible
 hero:
+  updated: "2026-09-19"
   kicker: "Payout access · Nigeria, Kenya, Ghana · 2026"
   lede: "PayPal's own payout list settles the question before any rate card does: Kenya is on it, Nigeria and Ghana are not. So a platform whose single rail is PayPal can pay a clipper in Nairobi and cannot pay one in Lagos or Accra, whatever its landing page claims about country counts. Below: what each rail reaches, what each platform states about these three countries, and what the CBN, the CBK and the Bank of Ghana have published about a stablecoin payout."
   secondary: "Country table"
@@ -14,7 +15,7 @@ hero:
     - "<b>PayPal splits the three countries in two.</b> PayPal's payout-eligibility table lists Kenya with the full send, receive and withdraw feature set; Nigeria and Ghana are absent from it altogether."
     - "<b>Nigeria got a personal PayPal route in 2026, through Paga.</b> Paga advertises receiving international payments into the wallet and withdrawing in naira. That is a person receiving money, not a platform sending a payout."
     - "<b>Kenya is the one country here with a direct card-free bridge.</b> Safaricom runs a PayPal-to-M-PESA transfer with Thunes, in US dollars, for Kenyan M-PESA users on Android."
-    - "<b>Stripe and Wise are not the fallback.</b> Stripe lists Nigeria, Kenya and Ghana only as \"Extended network\", and Wise files NGN, KES and GHS among currencies you can only send to."
+    - "<b>DareBay pays the same way in all three.</b> No country list to check and no naira, shilling or cedi leg: the balance leaves as USDT on the TON network, on a request from 10 USDT with a 10% fee taken inside it."
 compare:
   ids: [darebay, whop, vyro, reach-cat, clipping-net, vues, cliptocash]
   columns: [nigeria, kenya, payoutMethods, minPayout, fee]
@@ -59,6 +60,19 @@ So a Kenyan clipper has the widest menu of the three. Whop lists Kenya among its
 
 MTN Ghana describes Mobile Money as a service that lets you "send and receive money, pay bills, receive money from abroad as well as access Loans and savings" <!-- source: https://mtn.com.gh/momo/ 2026-09-18 -->, and Ghana appears on MTN's list of countries where you can receive international funds into a MoMo wallet <!-- source: https://momo.mtn.com/receiving-countries/ 2026-09-18 -->. The wallet is ready; the question is which platform reaches it. Two of the better-known boards do not. Ghana is absent from PayPal's payout table alongside Nigeria <!-- source: https://developer.paypal.com/payouts/supported-features 2026-09-18 -->, and Ghana is named outright on Vyro's unsupported-countries list, where Vyro says that in a restricted region "you won't be able to use Vyro or receive payouts" <!-- source: https://vyro.com/help/getting-started/what-countries-are-supported 2026-09-18 -->. Whop carries Ghana in its payout countries <!-- source: https://docs.whop.com/manage-your-business/manage-payouts/set-up-payouts 2026-09-18 -->.
 
+## The boards built for Lagos and Abuja, and what Nairobi has
+
+Three boards name Nigeria first among the markets they are built for; the last row sets DareBay against the same fields.
+
+| Platform | How it pays | Rails | Minimum | What it does not publish |
+|---|---|---|---|---|
+| **ClipperFC**, Lagos | "(Total Views ÷ 1,000) × Rate per 1k views", with the brand setting the rate, ₦500 per 1,000 marked an "Example rate", and a 15% platform fee off creator earnings; views are self-reported with screenshots an admin verifies <!-- source: https://clipperfc.com/how-it-works/clipping 2026-09-19 --> <!-- source: https://clipperfc.com/ 2026-09-19 --> | bank (NUBAN), PayPal or a BTC wallet, 1–3 business days after review, creator payout fee "None" <!-- source: https://app.clipperfc.com/legal/terms 2026-09-19 --> <!-- source: https://clipperfc.com/for-brands 2026-09-19 --> | Not published | how a PayPal payout reaches creators it places "across all 36 Nigerian states", a view threshold, a per-clip cap, a follower minimum, an ID check, or an operator name behind "based in Lagos, Nigeria" <!-- source: https://clipperfc.com/guides 2026-09-19 --> <!-- source: https://app.clipperfc.com/legal/privacy 2026-09-19 --> |
+| **ClippaPay**, Abuja | pays for views checked by AI scanning and human review, on content "reviewed daily" <!-- source: https://clippapay.com/ 2026-09-19 --> | bank transfer or a USDT wallet | wallet balance above ₦1,000 <!-- source: https://clippapay.com/ 2026-09-19 --> | any rate per 1,000, and terms outside the dashboard login; its Play listing is filed under the developer name UleinsonTech Solutions <!-- source: https://play.google.com/store/apps/details?id=com.clippadigitalhubltd.clippapayapp 2026-09-19 --> |
+| **ClipToCash** | not paying yet: "We're onboarding in waves", with $0.50–$2.00 per 1,000 flagged "Illustrative rates" <!-- source: https://cliptocash.io/ 2026-09-19 --> | promises a local bank account or a stablecoin wallet | Not published | a launch date, a fee, an operator name or a terms page <!-- source: https://cliptocash.io/ 2026-09-19 --> |
+| **DareBay** | $1.00–$2.00 per 1,000 counted views, up to $500 per clip, nothing taken from the task budget, then 10% deducted inside the withdrawal request | USDT on the TON network only, no bank or mobile-money leg, no country list | request from 10 USDT | a settlement time: a person checks every request by hand |
+
+Nairobi has no equivalent with published terms: skycontentrewards.com quotes shilling rates per 1,000 views and an M-PESA payout, but names no operator and publishes no terms, no minimum and no fee <!-- source: https://www.skycontentrewards.com/ 2026-09-19 -->.
+
 ## Naira, shillings and cedis on Stripe and Wise
 
 The two services people reach for next do not close the gap. Stripe's availability page flags Nigeria, Kenya and Ghana as "Extended network" entries rather than supported countries, each pointing at a partner <!-- source: https://stripe.com/global 2026-09-18 -->, so a platform paying out through Stripe is not paying into these three the way it pays into a listed country.
@@ -90,7 +104,7 @@ So pick by what you can actually receive:
 - **You are in Kenya and PayPal-to-M-PESA already works for you.** Take the PayPal-paying boards: Whop lists Kenya, and the Safaricom bridge turns dollars into shillings without a stablecoin step.
 - **You want money in a local bank account, not a wallet.** Whop names bank accounts and mobile wallets among its rails in over 200 countries <!-- source: https://docs.whop.com/manage-your-business/manage-payouts/set-up-payouts 2026-09-18 -->. DareBay offers no local bank rail on balance withdrawals.
 - **You are in Nigeria or Ghana with no bank-facing option.** Reach.cat pays to your own wallet with no PayPal step: its payout screen offers USDT on ERC20, BEP20 or Solana, or a bank transfer by IBAN <!-- source: https://reach.cat/dashboard/creator/earnings 2026-09-18 -->. Its landing page says "No KYC. No ID check." <!-- source: https://reach.cat/become-a-clipper/ 2026-09-18 -->, but its terms effective 13 September 2026 require identity verification through iDenfy once payout requests pass $500 <!-- source: https://reach.cat/terms 2026-09-18 -->. Clipping.net pays by PayPal or by USDC and USDT on Ethereum only, with the method fixed by the campaign <!-- source: https://clipping.net/docs/clippers/payments 2026-09-18 -->; Vues publishes no country list and makes payouts subject to provider screening <!-- source: https://vues.app/terms 2026-09-18 -->.
-- **You want a platform built for the region.** ClipToCash targets Nigeria, Ghana and Kenya with local bank and stablecoin payouts, but is not paying yet: its FAQ answers the launch question with "We're onboarding in waves" and invites you to a waitlist <!-- source: https://cliptocash.io/ 2026-09-18 -->. Mind the namesake — cliptocash.com is a different, live platform under French law paying through Stripe or Whop <!-- source: https://cliptocash.com/legal/terms 2026-09-18 -->. Abuja-based ClippaPay says you can withdraw once your wallet passes ₦1,000, to a bank or a USDT wallet, but publishes no rate card <!-- source: https://clippapay.com/ 2026-09-18 -->.
+- **You want a platform built for the region.** The naira boards sit in the table above; ClipToCash, still a waitlist, now names South Africa as a fourth country beside Nigeria, Ghana and Kenya <!-- source: https://cliptocash.io/ 2026-09-19 -->. Mind the namesake — cliptocash.com is a different, live platform under French law, paying through Stripe or Whop every Monday <!-- source: https://cliptocash.com/legal/terms 2026-09-19 -->.
 
 For the wider field, see [the best clipping platforms](/en/earnings/best-clipping-platforms).
 

@@ -53,7 +53,23 @@ Live tasks sit in the [clip earnings catalogue](/en/earn/clips): the rate, the t
 - [Whop Content Rewards review](/en/earnings/whop-content-rewards-review) - how campaigns work, what they pay, where they cannot pay, what to use instead.
 - [Clipping.net alternatives](/en/earnings/clipping-net-alternatives) - seven alternatives across four axes: threshold and cap, budget, countries, followers.
 - [Vyro review](/en/earnings/vyro-review) - the 5,000-view threshold, the cap in views, unsupported countries, and when Vyro beats DareBay.
+- [Prime Oracles review](/en/earnings/prime-oracles-review) - who it serves, who its terms bar, the crypto and card rails, and what it does not publish.
+- [Vues review](/en/earnings/vues-review) - the brand pays, not Vues; three versions of the payout rails; what its pages say two ways.
+- [Reach.cat review](/en/earnings/reach-cat-review) - "No KYC" on the landing page, an ID check after $500 in the terms, and the payout path.
+- [ClipGrow review](/en/earnings/clipgrow-review) - the Kerala agency board: rupee rates, the per-clip cap, three payout schedules.
+- [Is Wondeed legit?](/en/earnings/is-wondeed-legit) - what its own pages show: the rate card, UPI timing, TDS, and what is not published.
+- [Wusul review](/en/earnings/wusul-review) - the Arabic clipping board: InstaPay in Egypt, draft terms, and whether a campaign is open.
 - [DareBay at a glance](/en/about/darebay-at-a-glance) - the fact sheet: rates, fees, payouts, countries.
+
+## Where platforms pay, country by country
+
+- [India](/en/earnings/clipping-platforms-that-pay-in-india) - the UPI boards against the dollar boards, and what the tax department says about USDT.
+- [Pakistan](/en/earnings/clipping-platforms-that-pay-in-pakistan) - no PayPal, no Stripe: Payoneer into JazzCash, a rupee board, or a wallet.
+- [Nigeria, Kenya and Ghana](/en/earnings/clipping-platforms-that-pay-in-nigeria-and-kenya) - PayPal reaches Nairobi but not Lagos; naira boards and M-PESA.
+- [Egypt and Arab countries](/en/earnings/clipping-platforms-that-pay-in-egypt-and-arab-countries) - InstaPay, Vodafone Cash, and where crypto is closed by law.
+- [Bangladesh and Nepal](/en/earnings/clipping-platforms-that-pay-in-bangladesh-and-nepal) - Payoneer into bKash, Khalti, and two central banks that close crypto.
+- [Indonesia and the Philippines](/en/earnings/clipping-platforms-that-pay-in-indonesia-and-the-philippines) - ten rupiah boards, GCash and Maya, OJK and the BSP.
+- [Platforms that pay without PayPal or Stripe](/en/earnings/clipping-platforms-that-pay-without-paypal-or-stripe) - the rail behind each "crypto" line: coin, network, ID check.
 
 ## Where to start
 

@@ -60,6 +60,7 @@ numbers_used: [ppv_cpm_min, ppv_cpm_median, ppv_cpm_max, ppv_min_views_threshold
 - [Whop Content Rewards: обзор](/zarabotok/whop-content-rewards-obzor) - как устроены кампании, сколько платят, куда не платят и что взять вместо.
 - [Аналоги Clipping.net](/zarabotok/analogi-clipping-net) - семь альтернатив по четырём осям: порог и потолок, бюджет, страны, подписчики.
 - [Vyro: обзор платформы](/zarabotok/vyro-obzor-platformy) - порог 5000, потолок в просмотрах, закрытые страны и когда Vyro, а когда DareBay.
+- [Prime Oracles: обзор](/zarabotok/prime-oracles-obzor) - кого обслуживает, кому закрыт по условиям, крипта и карты, чего не публикует.
 - [DareBay в цифрах](/o-proekte/darebay-v-tsifrakh) - карточка фактов: ставки, комиссии, выплаты, страны.
 
 ## С чего начать

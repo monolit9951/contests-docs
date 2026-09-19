@@ -3,7 +3,7 @@
 > ⚙️ **Сгенерировано** из `docs/.vitepress/registry.ts`. Руками не править —
 > `node --experimental-strip-types scripts/print-addresses.mjs > ADDRESSES.md`.
 
-Страниц: **85** · адресов: **220** · редиректов со старых адресов: **92**
+Страниц: **87** · адресов: **223** · редиректов со старых адресов: **92**
 
 Страница объявляет только те языки, на которых она действительно существует: той,
 которой нет на языке, в сайтмапе этой локали и в hreflang нет вообще. Русская версия
@@ -59,6 +59,8 @@
 | — *(новая)* | `/en/earnings/is-wondeed-legit` | `is-wondeed-legit` |
 | — *(новая)* | `/en/earnings/vues-review` | `vues-review` |
 | — *(новая)* | `/en/earnings/reach-cat-review` | `reach-cat-review` |
+| — *(новая)* | `/zarabotok/prime-oracles-obzor` | `prime-oracles-review` |
+| — *(новая)* | `/en/earnings/wusul-review` | `wusul-review` |
 
 ## Брендам — `/brendam/`
 

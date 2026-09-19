@@ -914,6 +914,21 @@
       }
     },
     {
+      "id": "prime-oracles-review",
+      "hub": "earnings",
+      "slugs": {
+        "ru": "prime-oracles-obzor",
+        "en": "prime-oracles-review"
+      }
+    },
+    {
+      "id": "wusul-review",
+      "hub": "earnings",
+      "slugs": {
+        "en": "wusul-review"
+      }
+    },
+    {
       "id": "about-author",
       "hub": "about",
       "slugs": {

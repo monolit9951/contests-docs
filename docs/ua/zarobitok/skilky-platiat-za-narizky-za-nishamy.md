@@ -57,7 +57,7 @@ cta:
 | Vyro | $1.00–$2.00 (кампанії $1000–$2000 за 1 млн) <!-- source: https://vyro.com/campaigns 2026-09-04 --> | 5000 переглядів на пост <!-- source: https://vyro.com/help/earnings-and-payments/how-many-views-do-i-need-before-i-can-start-earning 2026-09-04 --> | 1 млн зарахованих переглядів на ролик, зазвичай $500–$2000 <!-- source: https://vyro.com/help/earnings-and-payments/whats-the-most-i-can-earn-per-clip 2026-09-04 --> | [vyro.com/campaigns](https://vyro.com/campaigns) |
 | Vues | на кожній картці в застосунку; приклад на сайті $3.00 <!-- source: https://vues.app 2026-09-04 --> | на ролик немає за її власною порівняльною таблицею; кампанія може задати мінімальну виплату за пост <!-- source: https://vues.app/blog/best-clipping-platforms-that-pay-crypto 2026-09-18 --> | на пост і на профіль, задає кампанія, суми лише в застосунку <!-- source: https://vues.app/blog/how-cpm-payouts-work 2026-09-18 --> | [vues.app](https://vues.app) |
 | Klipni | у рублях; приклад на сайті 50 ₽ за 1000 <!-- source: https://klipni.com 2026-09-04 --> | не публікує | ліміт на пост задає кампанія <!-- source: https://klipni.com 2026-09-04 --> | [klipni.com](https://klipni.com) |
-| DareBay | $1–$10 за 1000 переглядів | задає завдання | до $500 на ролик | живі дані платформи і рішення 17.09 |
+| DareBay | $1–$10 за 1000 переглядів | задає завдання | до $500 на ролик | живі дані платформи, snapshot 2026-08-23; смуга ставок оновлена 2026-09-20 |
 
 Поріг і стеля у Vues і Klipni живуть усередині кампаній, тому за публічною сторінкою виплату наперед не порахувати. Комісії, мінімуми виведення і країни виплат тих самих майданчиків зібрані в [добірці майданчиків для нарізчиків](/ua/zarobitok/naikrashchi-platformy-dlia-zarobitku-na-narizkakh).
 

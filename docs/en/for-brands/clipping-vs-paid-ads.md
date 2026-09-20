@@ -31,7 +31,7 @@ cta:
 
 ## The table: what a thousand costs
 
-Outside figures were read on 2026-09-04 from public benchmark, agency and rate-card pages; ours is live platform data (snapshot 2026-08-23; rate band updated 2026-09-20). Dollar CPMs are English-speaking markets, rouble CPMs Russian platforms, nothing converted. Read the third column first.
+Outside figures were read on 2026-09-04 from public benchmark, agency and rate-card pages; ours is live platform data (snapshot: 2026-08-23; rate band updated 2026-09-20). Dollar CPMs are English-speaking markets, rouble CPMs Russian platforms, nothing converted. Read the third column first.
 
 | Channel | CPM per 1,000 | What you pay for | Who makes the creative |
 |---|---|---|---|

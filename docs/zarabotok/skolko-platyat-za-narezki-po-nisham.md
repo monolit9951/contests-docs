@@ -57,7 +57,7 @@ cta:
 | Vyro | $1.00–$2.00 (кампании $1000–$2000 за 1 млн) <!-- source: https://vyro.com/campaigns 2026-09-04 --> | 5000 просмотров на пост <!-- source: https://vyro.com/help/earnings-and-payments/how-many-views-do-i-need-before-i-can-start-earning 2026-09-04 --> | 1 млн засчитанных просмотров на ролик, обычно $500–$2000 <!-- source: https://vyro.com/help/earnings-and-payments/whats-the-most-i-can-earn-per-clip 2026-09-04 --> | [vyro.com/campaigns](https://vyro.com/campaigns) |
 | Vues | на каждой карточке в приложении; пример на сайте $3.00 <!-- source: https://vues.app 2026-09-04 --> | на ролик нет по её собственной сравнительной таблице; кампания может задать минимальную выплату за пост <!-- source: https://vues.app/blog/best-clipping-platforms-that-pay-crypto 2026-09-18 --> | на пост и на профиль, задаёт кампания, суммы только в приложении <!-- source: https://vues.app/blog/how-cpm-payouts-work 2026-09-18 --> | [vues.app](https://vues.app) |
 | Klipni | в рублях; пример на сайте 50 ₽ за 1000 <!-- source: https://klipni.com 2026-09-04 --> | не публикует | лимит на пост задаёт кампания <!-- source: https://klipni.com 2026-09-04 --> | [klipni.com](https://klipni.com) |
-| DareBay | $1–$10 за 1000 просмотров | задаёт задание | до $500 на ролик | живые данные платформы и решение 17.09 |
+| DareBay | $1–$10 за 1000 просмотров | задаёт задание | до $500 на ролик | живые данные платформы, snapshot 2026-08-23; полоса ставок обновлена 2026-09-20 |
 
 Порог и потолок у Vues и Klipni живут внутри кампаний, поэтому по публичной странице выплату заранее не посчитать. Комиссии, минимумы вывода и страны выплат тех же площадок собраны в [подборке площадок для нарезчиков](/zarabotok/luchshie-platformy-dlya-zarabotka-na-narezkah).
 

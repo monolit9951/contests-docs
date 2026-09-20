@@ -1,6 +1,6 @@
 ---
 title: "Clipping platforms that pay in Egypt and Arab countries"
-description: Which clipping platforms pay in Egypt, Morocco, Algeria, Iraq, Saudi Arabia and the UAE, what each regulator says about crypto, and how the money lands.
+description: "Which clipping platforms pay in Egypt, Morocco, Algeria, Iraq, Saudi Arabia and the UAE, what each regulator says about crypto, and how the money lands."
 provenance: { snapshot_date: "2026-09-19", source: "darebay-prod" }
 numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_max_per_work_typical, ppv_max_per_work_band_high]
 seo: true

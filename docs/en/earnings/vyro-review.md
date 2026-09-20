@@ -29,7 +29,7 @@ hero:
   lede: "Vyro is a MrBeast company built by Beast Industries, and the clipping marketplace where MrBeast himself, Mark Rober and large studios run campaigns. Big names do not settle what actually reaches a clipper, so this review takes the three numbers that decide your income, how campaigns work, which countries are shut out, and one table where Vyro sits next to DareBay."
   takeaways:
     - "<b>The 5,000-view threshold applies to every post</b> <!-- source: https://vyro.com/help/earnings-and-payments/how-many-views-do-i-need-before-i-can-start-earning 2026-09-05 -->: a clip at 4,900 views earns nothing, no matter how much the campaign has gathered in total."
-    - "<b>Live campaigns pay $1–$10 per 1,000 views</b> <!-- source: https://vyro.com/campaigns 2026-09-02 -->, shown on the card per 1M, which looks grander than it is; one clip is paid for at most 1 million eligible views <!-- source: https://vyro.com/help/earnings-and-payments/whats-the-most-i-can-earn-per-clip 2026-09-05 -->."
+    - "<b>Live campaigns pay $1–$2 per 1,000 views</b> <!-- source: https://vyro.com/campaigns 2026-09-02 -->, shown on the card per 1M, which looks grander than it is; one clip is paid for at most 1 million eligible views <!-- source: https://vyro.com/help/earnings-and-payments/whats-the-most-i-can-earn-per-clip 2026-09-05 -->."
     - "<b>70 countries and territories are blocked by the payment processor</b> <!-- source: https://vyro.com/help/getting-started/what-countries-are-supported 2026-09-05 -->: Russia, Belarus, Ukraine, Uzbekistan, Armenia, Georgia, Moldova and Turkey are on the list, Kazakhstan is not, so for many in CIS the question closes before sign-up."
     - "<b>Money becomes available only after the campaign ends</b>, and then the wait continues: about 7–10 more days of review <!-- source: https://vyro.com/help/earnings-and-payments/when-will-i-receive-my-earnings 2026-09-05 -->, then cash-outs from $10 once every 7 days via PayPal or Stripe <!-- source: https://vyro.com/help/earnings-and-payments/how-can-i-withdraw-my-earnings 2026-09-05 -->."
 cta:
@@ -82,7 +82,7 @@ Do not route around the list with a borrowed PayPal: the terms require legal res
 
 | Axis | Vyro | DareBay |
 |---|---|---|
-| Rate | $1–$10 per 1,000 views, shown per 1M <!-- source: https://vyro.com/campaigns 2026-09-02 --> | $1.00 to $10.00 per 1,000 views on open tasks |
+| Rate | $1–$2 per 1,000 views, shown per 1M <!-- source: https://vyro.com/campaigns 2026-09-02 --> | $1.00 to $10.00 per 1,000 views on open tasks |
 | Threshold | 5,000 views per post <!-- source: https://vyro.com/help/earnings-and-payments/how-many-views-do-i-need-before-i-can-start-earning 2026-09-05 --> | set by the task, not deducted |
 | Cap per clip | 1 million eligible views, usually $500–$2,000 <!-- source: https://vyro.com/help/earnings-and-payments/whats-the-most-i-can-earn-per-clip 2026-09-05 --> | up to $500 per clip |
 | Countries | 70 blocked, Russia, Belarus and Ukraine included <!-- source: https://vyro.com/help/getting-started/what-countries-are-supported 2026-09-05 --> | no country list, largest community in CIS |

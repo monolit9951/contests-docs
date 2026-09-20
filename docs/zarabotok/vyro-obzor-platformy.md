@@ -29,7 +29,7 @@ hero:
   lede: "Vyro это площадка нарезок компании MrBeast, построенная Beast Industries, и кампании здесь запускают сам MrBeast, Mark Rober и крупные студии. Громкие имена не отменяют вопроса, что реально дойдёт до тебя: ниже три числа, которые решают доход, как устроены кампании, какие страны закрыты, и одна таблица, где Vyro стоит рядом с DareBay."
   takeaways:
     - "<b>Порог 5000 просмотров считается на каждый пост</b> <!-- source: https://vyro.com/help/earnings-and-payments/how-many-views-do-i-need-before-i-can-start-earning 2026-09-05 -->: ролик на 4900 просмотров не приносит ничего, сколько бы ни набрала кампания в сумме."
-    - "<b>Ставки в живых кампаниях $1–$10 за 1000 просмотров</b> <!-- source: https://vyro.com/campaigns 2026-09-02 -->, хотя на карточке они показаны за 1 млн и выглядят внушительнее; один ролик оплачивается максимум за 1 млн засчитанных просмотров <!-- source: https://vyro.com/help/earnings-and-payments/whats-the-most-i-can-earn-per-clip 2026-09-05 -->."
+    - "<b>Ставки в живых кампаниях $1–$2 за 1000 просмотров</b> <!-- source: https://vyro.com/campaigns 2026-09-02 -->, хотя на карточке они показаны за 1 млн и выглядят внушительнее; один ролик оплачивается максимум за 1 млн засчитанных просмотров <!-- source: https://vyro.com/help/earnings-and-payments/whats-the-most-i-can-earn-per-clip 2026-09-05 -->."
     - "<b>70 стран и территорий закрыты платёжным провайдером</b> <!-- source: https://vyro.com/help/getting-started/what-countries-are-supported 2026-09-05 -->: Россия, Беларусь, Украина, Узбекистан, Армения, Грузия, Молдова и Турция в списке, Казахстана в нём нет, так что для многих в СНГ вопрос закрывается ещё до регистрации."
     - "<b>Деньги доступны только после конца кампании,</b> и ждать придётся дольше: ещё 7–10 дней проверки <!-- source: https://vyro.com/help/earnings-and-payments/when-will-i-receive-my-earnings 2026-09-05 -->, потом вывод от $10 раз в 7 дней через PayPal или Stripe <!-- source: https://vyro.com/help/earnings-and-payments/how-can-i-withdraw-my-earnings 2026-09-05 -->."
 cta:
@@ -82,7 +82,7 @@ Vyro показывает ставку за миллион просмотров:
 
 | Ось | Vyro | DareBay |
 |---|---|---|
-| Ставка | $1–$10 за 1000 просмотров, на карточке за 1 млн <!-- source: https://vyro.com/campaigns 2026-09-02 --> | от $1.00 до $10.00 за 1000 просмотров в открытых заданиях |
+| Ставка | $1–$2 за 1000 просмотров, на карточке за 1 млн <!-- source: https://vyro.com/campaigns 2026-09-02 --> | от $1.00 до $10.00 за 1000 просмотров в открытых заданиях |
 | Порог | 5000 просмотров на каждый пост <!-- source: https://vyro.com/help/earnings-and-payments/how-many-views-do-i-need-before-i-can-start-earning 2026-09-05 --> | задаёт задание, не вычитается |
 | Потолок на ролик | 1 млн засчитанных просмотров, обычно $500–$2,000 <!-- source: https://vyro.com/help/earnings-and-payments/whats-the-most-i-can-earn-per-clip 2026-09-05 --> | типично $100, в крупных кампаниях до $500 |
 | Страны | 70 закрыты, включая Россию, Беларусь и Украину <!-- source: https://vyro.com/help/getting-started/what-countries-are-supported 2026-09-05 --> | без списка стран, самое большое сообщество из СНГ |

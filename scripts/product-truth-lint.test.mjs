@@ -344,6 +344,15 @@ test("a decided rate-band target licenses the target range and still rejects wid
   assert(rulesWithIntent("Rates run $1 to $10 per 1,000 views.", intentWithout("rate-band")).has("ppv-live-rate-range"));
 });
 
+test("Arabic false claims about withdrawal fail and their true neighbours pass", () => {
+  // Written and independently reviewed by Arabic-speaking agents on 2026-09-20; every sentence is a page-style line.
+  const cases = JSON.parse(readFileSync(new URL("./product-truth-lint.ar-cases.json", import.meta.url), "utf8"));
+  for (const [rule, { must_match, must_not_match }] of Object.entries(cases)) {
+    for (const line of must_match) assert(rules(line).has(rule), `${rule} should flag: ${line}`);
+    for (const line of must_not_match) assert(!rules(line).has(rule), `${rule} should not flag: ${line}`);
+  }
+});
+
 test("live smart-contract escrow claims and paraphrases fail", () => {
   assert(rules("The budget is held in an on-chain escrow.").has("live-on-chain-escrow"));
   assert(rules("The prize is secured by a blockchain smart contract.").has("live-on-chain-escrow"));

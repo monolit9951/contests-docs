@@ -32,7 +32,7 @@ The cap per clip sets the lower bound on count: with the $100 cap used in the ex
 
 Middle row: 40,000 / 1,000 × $1.00 = **$40.00** per clip, and 25 clips make $1,000.00. Bottom row: 20,000 / 1,000 × $1.00 = **$20.00**, fifty of them. Ten capped clips in a row is a rarity, not a plan. At $10 each clip needs a tenth of the views, but the cap is reached at 10,000, so the top row does not change.
 
-The only deduction comes at withdrawal: 10% of the amount you request, taken inside the request, so a thousand on the balance pays out 900 USDT, and a round thousand in the wallet takes about 1,112 USDT on the balance. Recalculate any layout for your own rate and threshold in the [clipping earnings calculator](/en/earnings/clipping-earnings-calculator), which shows both figures.
+The only deduction comes at withdrawal: 10% of the amount you request (a request starts at 10 USDT), taken inside the request, so a thousand on the balance pays out 900 USDT, and a round thousand in the wallet takes about 1,112 USDT on the balance. Recalculate any layout for your own rate and threshold in the [clipping earnings calculator](/en/earnings/clipping-earnings-calculator), which shows both figures.
 
 ## Why the per-clip cap pushes you toward volume
 

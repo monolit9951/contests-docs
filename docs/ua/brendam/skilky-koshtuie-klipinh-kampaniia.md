@@ -1,6 +1,6 @@
 ---
 title: "Скільки коштує кліпінг-кампанія: бюджет на нарізчиків"
-description: "Запуск конкурсу безкоштовний, комісія 0%, бюджет іде за ставкою від $1 до $10 за 1000 переглядів. Розрахунок для $200, $1 000 і $5 000 і як не переплатити."
+description: "Запуск конкурсу безкоштовний, комісія 0%, бюджет іде за ставкою від $1 до $10 за 1000 переглядів. Розрахунок для $200, $1 000 та $5 000 — і як не переплатити."
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [contest_create_usdt_price, commission_crypto, commission_fiat, ppv_cpm_band_low, ppv_cpm_band_high, ppv_cpm_median, ppv_default_min_views_threshold, ppv_min_views_threshold_live, ppv_max_per_work_typical]
 seo: true

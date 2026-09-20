@@ -1,6 +1,6 @@
 ---
 title: "How pay-per-view works: how views are counted and paid"
-description: "The platform reads the site's counter, views / 1,000 × rate is the payout, the threshold is not deducted, caps up to $500 per clip, withdrawals from 10 USDT."
+description: "How pay-per-view works: the platform reads the counter, payout = views / 1,000 × rate, threshold not deducted, caps to $500 per clip, withdrawals from 10 USDT."
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_cpm_median, ppv_min_views_threshold_live, ppv_default_min_views_threshold, ppv_max_per_work_typical]
 seo: true

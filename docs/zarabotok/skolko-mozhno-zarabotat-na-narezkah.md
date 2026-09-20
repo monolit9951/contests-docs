@@ -1,6 +1,6 @@
 ---
 title: "Сколько можно заработать на нарезках: ставка за 1000 просмотров"
-description: "Сколько можно заработать на нарезках: открытые задания платят $1–10 за 1000 просмотров, до $500 за ролик, вывод от 10 USDT. Формула и как читать ставку."
+description: "Сколько можно заработать на нарезках: открытые задания платят $1–10 за 1000 просмотров, до $500 за ролик, подписчики не нужны. Формула и как читать ставку."
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_cpm_min, ppv_cpm_max, ppv_cpm_median, ppv_min_views_threshold_live, ppv_max_per_work_typical, ppv_max_per_work_band_high]
 seo: true

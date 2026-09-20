@@ -1,9 +1,10 @@
 {
   "schemaVersion": 1,
-  "decidedAt": "2026-09-18",
-  "source": "darebay-ceo/docs/decisions.md 2026-09-18",
+  "decidedAt": "2026-09-20",
+  "source": "darebay-ceo/docs/decisions.md 2026-09-20 (фаундер: привлекательность прежде точности — полоса ставок $1–10 за 1000 просмотров как цель продукта, платформу подведём под неё)",
   "supersedes": [
-    "2026-09-17 withdrawal-free"
+    "2026-09-17 withdrawal-free",
+    "2026-09-18 rate-band matches-live [1, 2, 500]"
   ],
   "claims": [
     {
@@ -68,18 +69,38 @@
     {
       "id": "rate-band",
       "claim": {
-        "ru": "Ставка - $1-2 за 1000 просмотров, потолок на один ролик - до $500.",
-        "en": "Rates run $1-2 per 1000 views, with a cap of up to $500 per clip.",
-        "uk": "Ставка - $1-2 за 1000 переглядів, стеля на один ролик - до $500."
+        "ru": "Ставка - $1-10 за 1000 просмотров, потолок на один ролик - до $500.",
+        "en": "Rates run $1-10 per 1000 views, with a cap of up to $500 per clip.",
+        "uk": "Ставка - $1-10 за 1000 переглядів, стеля на один ролик - до $500."
+      },
+      "liveTruth": [
+        "ppv.stable.bands.cpm.high"
+      ],
+      "target": [
+        10
+      ],
+      "status": "pending-product-change",
+      "decision": "founder-approved",
+      "note": "Live top rate on 2026-09-20 is $5.94 (two open tasks, $1.19 and $5.94); the reviewed stable band still reads 1-2 because the truth pack has not been recomputed since 2026-08-23. The founder decided on 2026-09-20 that pages print the target band $1-10 (the fleet ladder rounds 5.94 outward to 10) and that the product will be kept inside it.",
+      "pages": [
+        "docs/zarabotok/kak-rabotaet-oplata-za-prosmotry.md",
+        "docs/en/earnings/how-pay-per-view-works.md",
+        "docs/ua/zarobitok/yak-pratsiuie-oplata-za-perehliady.md"
+      ]
+    },
+    {
+      "id": "rate-floor-and-cap",
+      "claim": {
+        "ru": "Нижняя граница ставки - $1 за 1000 просмотров, потолок на один ролик - до $500.",
+        "en": "The rate floor is $1 per 1000 views and the cap is up to $500 per clip.",
+        "uk": "Нижня межа ставки - $1 за 1000 переглядів, стеля на один ролик - до $500."
       },
       "liveTruth": [
         "ppv.stable.bands.cpm.low",
-        "ppv.stable.bands.cpm.high",
         "ppv.stable.bands.maxPerWork.high"
       ],
       "target": [
         1,
-        2,
         500
       ],
       "status": "matches-live",

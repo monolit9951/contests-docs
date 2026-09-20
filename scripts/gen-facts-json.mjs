@@ -234,7 +234,11 @@ export function buildFacts({ truth, intent, snapshot, now }) {
     )
   }
 
-  const cpm = truth.ppv.stable.bands.cpm
+  // The founder-decided target band (product-intent.json#rate-band, pending) replaces the
+  // reviewed edge it names, exactly as the withdrawal fee above; the live reading stays in the note.
+  const cpmHighIntent = intentIndex?.byPath?.get('ppv.stable.bands.cpm.high')
+  const cpmTargeted = Boolean(cpmHighIntent && cpmHighIntent.status === 'pending-product-change' && typeof cpmHighIntent.target === 'number' && cpmHighIntent.target !== truth.ppv.stable.bands.cpm.high)
+  const cpm = { ...truth.ppv.stable.bands.cpm, high: cpmTargeted ? cpmHighIntent.target : truth.ppv.stable.bands.cpm.high }
   const capBand = truth.ppv.stable.bands.maxPerWork
   const threshold = truth.ppv.stable.defaultMinimumViews
   const thresholdBand = truth.ppv.stable.bands.minViewsThreshold
@@ -266,9 +270,9 @@ export function buildFacts({ truth, intent, snapshot, now }) {
           en: `${range} per 1,000 views (open tasks)`,
         }[locale]
       }),
-      source: 'product-truth.json#ppv.stable.bands.cpm',
-      asOf: truthAsOf,
-      note: `Reviewed stable band; ${observedRate}. A task's exact rate is printed on its card and cannot change after the start.`,
+      source: cpmTargeted ? `product-intent.json#${cpmHighIntent.id}` : 'product-truth.json#ppv.stable.bands.cpm',
+      asOf: cpmTargeted ? cpmHighIntent.decidedAt : truthAsOf,
+      note: `${cpmTargeted ? `Target band decided ${cpmHighIntent.decidedAt} (product-intent.json#${cpmHighIntent.id}); the reviewed live band is ${rate(truth.ppv.stable.bands.cpm.low)}\u2013${rate(truth.ppv.stable.bands.cpm.high)}` : 'Reviewed stable band'}; ${observedRate}. A task's exact rate is printed on its card and cannot change after the start.`,
     },
     {
       id: 'cap-per-clip',

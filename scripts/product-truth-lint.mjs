@@ -664,9 +664,9 @@ function amountsIn(window, offset) {
   return found;
 }
 
-function ppvCapClaims(line, file, lineNumber, truth, declaration, out) {
+function ppvCapClaims(line, file, lineNumber, truth, declaration, out, intent = EMPTY_INTENT_INDEX) {
   const typical = volatileFact(truth, "maxPerWorkTypical");
-  const bounds = stableBand(truth, typical.band);
+  const bounds = effectiveBand(truth, intent, typical.band);
   const amounts = new Map();
   CAP_SUBJECT.lastIndex = 0;
   for (const match of line.matchAll(CAP_SUBJECT)) {
@@ -690,16 +690,37 @@ function ppvCapClaims(line, file, lineNumber, truth, declaration, out) {
   }
 }
 
-function ppvRateRangeClaims(line, file, lineNumber, truth, declaration, out) {
+// The PPV bands may be widened by a founder-decided target the same way a percentage may
+// (2026-09-20: «привлекательность важнее точности — платформу подведём под цифры»). A
+// `pending-product-change` record on `ppv.stable.bands.<band>.low|high` replaces that edge of the
+// reviewed band for every page; a `matches-live` record changes nothing. The live snapshot in
+// `product-truth.json` stays what the backend does today and is never edited to make a page pass.
+function effectiveBand(truth, intent, name) {
+  const base = stableBand(truth, name);
+  const band = { low: base.low, high: base.high, records: [] };
+  for (const edge of ["low", "high"]) {
+    const record = intent?.byPath?.get(`ppv.stable.bands.${name}.${edge}`);
+    if (record && record.status === "pending-product-change" && typeof record.target === "number" && record.target !== base[edge]) {
+      band[edge] = record.target;
+      band.records.push(record);
+    }
+  }
+  return band;
+}
+
+function ppvRateRangeClaims(line, file, lineNumber, truth, declaration, out, intent = EMPTY_INTENT_INDEX, allow = () => {}) {
   const minimum = volatileFact(truth, "cpmMinimum");
   const maximum = volatileFact(truth, "cpmMaximum");
-  const bounds = stableBand(truth, minimum.band);
+  const bounds = effectiveBand(truth, intent, minimum.band);
   for (const pattern of CPM_RANGE_PATTERNS) {
     pattern.lastIndex = 0;
     for (const match of line.matchAll(pattern)) {
       const low = Number(match[1].replace(",", "."));
       const high = Number(match[2].replace(",", "."));
-      if (low === bounds.low && high === bounds.high) continue;
+      if (low === bounds.low && high === bounds.high) {
+        for (const record of bounds.records) allow(record, "ppv-live-rate-range", file, lineNumber, match[0].trim());
+        continue;
+      }
       if (low < bounds.low || high > bounds.high || low > high) {
         addViolation(out, "ppv-live-rate-range", file, lineNumber,
           `claims ${low}-${high} per 1000 views, outside the reviewed stable band ${bounds.low}-${bounds.high}`);
@@ -713,9 +734,9 @@ function ppvRateRangeClaims(line, file, lineNumber, truth, declaration, out) {
   }
 }
 
-function numericPpvClaims(line, file, lineNumber, truth, declaration, out) {
-  ppvRateRangeClaims(line, file, lineNumber, truth, declaration, out);
-  ppvCapClaims(line, file, lineNumber, truth, declaration, out);
+function numericPpvClaims(line, file, lineNumber, truth, declaration, out, intent = EMPTY_INTENT_INDEX, allow = () => {}) {
+  ppvRateRangeClaims(line, file, lineNumber, truth, declaration, out, intent, allow);
+  ppvCapClaims(line, file, lineNumber, truth, declaration, out, intent);
 }
 
 // `options.intent` is the parsed `data/product-intent.json` (or `null` to judge the text against
@@ -738,7 +759,7 @@ export function lintText(text, file, truth, declaration = pageDeclaration(text),
     const lineNumber = index + 1;
     numericPercentClaims(line, file, lineNumber, truth, intent, violations, allow);
     numericMinimumClaims(line, file, lineNumber, truth, intent, violations, allow);
-    numericPpvClaims(line, file, lineNumber, truth, declaration, violations);
+    numericPpvClaims(line, file, lineNumber, truth, declaration, violations, intent, allow);
     for (const rule of CLAIM_RULES) {
       for (const pattern of rule.patterns) {
         const match = pattern.exec(line);

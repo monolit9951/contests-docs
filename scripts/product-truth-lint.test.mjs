@@ -250,8 +250,8 @@ test("a decided target relaxes its own field only", () => {
 
 test("the committed intent file agrees with the reviewed snapshot", () => {
   assert.deepEqual(validateProductIntent(intent, truth, { root }), []);
-  assert.equal(intent.decidedAt, "2026-09-18");
-  assert.deepEqual(intent.supersedes, ["2026-09-17 withdrawal-free"]);
+  assert.equal(intent.decidedAt, "2026-09-20");
+  assert.deepEqual(intent.supersedes, ["2026-09-17 withdrawal-free", "2026-09-18 rate-band matches-live [1, 2, 500]"]);
   assert.deepEqual(validateProductIntent(DECIDED_FREE, truth, { root }), []);
 });
 
@@ -330,6 +330,18 @@ test("instant, straight-away and localized payout paraphrases fail", () => {
   assert(rules("Winners receive instant payouts.").has("automatic-payout"));
   assert(rules("When the contest ends, winners get paid straight away.").has("automatic-payout"));
   assert(rules("После окончания конкурса победителю сразу отправляют деньги.").has("automatic-payout"));
+});
+
+test("a decided rate-band target licenses the target range and still rejects wider ones", () => {
+  // product-intent.json#rate-band (2026-09-20) sets the top of the band to $10 while the live band stays 1-2.
+  assert(!rules("Rates run $1 to $10 per 1,000 views.").has("ppv-live-rate-range"));
+  assert(!rules("Ставки от $1 до $10 за 1000 просмотров.").has("ppv-live-rate-range"));
+  assert(rules("Rates run $1 to $20 per 1,000 views.").has("ppv-live-rate-range"));
+  assert(rules("Rates run $0.50 to $10 per 1,000 views.").has("ppv-live-rate-range"));
+  // The old reviewed spread is now a volatile live reading and needs a declaration like any other.
+  assert(rules("Rates run $1 to $2 per 1,000 views.").has("ppv-live-rate-range"));
+  // Without the record the live band rules alone.
+  assert(rulesWithIntent("Rates run $1 to $10 per 1,000 views.", intentWithout("rate-band")).has("ppv-live-rate-range"));
 });
 
 test("live smart-contract escrow claims and paraphrases fail", () => {
@@ -505,7 +517,9 @@ test("a per-1000-views rate beside the word cap is not read as a cap", () => {
 
 console.log("product_truth_lint: publishable rate spreads");
 test("the stable rate band is publishable while the live spread needs a declaration", () => {
-  assert.deepEqual(lintText("Rates across live contests run from $1.00 to $2.00 per 1000 views.", "fixture.md", truth), []);
+  // Since 2026-09-20 the publishable band is the founder-decided target (product-intent.json#rate-band): $1-$10.
+  assert.deepEqual(lintText("Rates across live contests run from $1.00 to $10.00 per 1000 views.", "fixture.md", truth), []);
+  assert(rules("Rates across live contests run from $1.00 to $2.00 per 1000 views.").has("ppv-live-rate-range"));
   assert(rules("Rates across live contests run from $1.00 to $1.50 per 1000 views.").has("ppv-live-rate-range"));
   assert.deepEqual(lintText(
     `${DECLARED}Rates across live contests run from $1.00 to $1.50 per 1000 views.`, "fixture.md", truth), []);
@@ -515,7 +529,8 @@ test("a rate spread outside the stable band fails even on a declared page", () =
   const found = lintText(
     `${DECLARED}Rates across live contests run from $0.01 to $2.00 per 1000 views.`, "fixture.md", truth);
   assert.equal(found.length, 1);
-  assert.match(found[0].message, /outside the reviewed stable band 1-2/);
+  // The message names the band in force: the founder-decided target top (10) since 2026-09-20, the live floor (1).
+  assert.match(found[0].message, /outside the reviewed stable band 1-10/);
 });
 
 test("declarations are read from front matter and merged for generated aggregates", () => {

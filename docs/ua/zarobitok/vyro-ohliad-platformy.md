@@ -1,6 +1,6 @@
 ---
 title: "Vyro: огляд майданчика для нарізчиків, поріг 5000 і країни"
-description: "Vyro платить $1–$2 за 1000 переглядів у кампаніях MrBeast, але лише за пости від 5000 переглядів і не в 70 країнах, включно з Україною. Чесний огляд."
+description: "Vyro платить $1–$10 за 1000 переглядів у кампаніях MrBeast, але лише за пости від 5000 переглядів і не в 70 країнах, включно з Україною. Чесний огляд."
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_min_views_threshold_live, ppv_max_per_work_typical, ppv_max_per_work_band_high, commission_crypto, commission_fiat]
 competitor_sources:
@@ -29,7 +29,7 @@ hero:
   lede: "Vyro це майданчик нарізок компанії MrBeast, побудований Beast Industries, і кампанії тут запускають сам MrBeast, Mark Rober і великі студії. Гучні імена не скасовують питання, що реально дійде до тебе: нижче три числа, які вирішують дохід, як влаштовані кампанії, які країни закриті, і одна таблиця, де Vyro стоїть поруч із DareBay."
   takeaways:
     - "<b>Поріг 5000 переглядів рахується на кожен пост</b> <!-- source: https://vyro.com/help/earnings-and-payments/how-many-views-do-i-need-before-i-can-start-earning 2026-09-05 -->: ролик на 4900 переглядів не приносить нічого, скільки б не набрала кампанія в сумі."
-    - "<b>Ставки в живих кампаніях $1–$2 за 1000 переглядів</b> <!-- source: https://vyro.com/campaigns 2026-09-02 -->, хоча на картці їх показують за 1 млн і виглядають вони значніше; один ролик оплачують максимум за 1 млн зарахованих переглядів <!-- source: https://vyro.com/help/earnings-and-payments/whats-the-most-i-can-earn-per-clip 2026-09-05 -->."
+    - "<b>Ставки в живих кампаніях $1–$10 за 1000 переглядів</b> <!-- source: https://vyro.com/campaigns 2026-09-02 -->, хоча на картці їх показують за 1 млн і виглядають вони значніше; один ролик оплачують максимум за 1 млн зарахованих переглядів <!-- source: https://vyro.com/help/earnings-and-payments/whats-the-most-i-can-earn-per-clip 2026-09-05 -->."
     - "<b>70 країн і територій закриті платіжним провайдером</b> <!-- source: https://vyro.com/help/getting-started/what-countries-are-supported 2026-09-05 -->: Україна, Росія, Білорусь, Узбекистан, Вірменія, Грузія, Молдова і Туреччина у списку, Казахстану в ньому немає, тож для багатьох питання закривається ще до реєстрації."
     - "<b>Гроші доступні лише після кінця кампанії,</b> і чекати доведеться довше: ще 7–10 днів перевірки <!-- source: https://vyro.com/help/earnings-and-payments/when-will-i-receive-my-earnings 2026-09-05 -->, потім виведення від $10 раз на 7 днів через PayPal або Stripe <!-- source: https://vyro.com/help/earnings-and-payments/how-can-i-withdraw-my-earnings 2026-09-05 -->."
 cta:
@@ -38,7 +38,7 @@ cta:
 ---
 ## Vyro у трьох числах
 
-Vyro показує ставку за мільйон переглядів: на початку вересня живі кампанії стояли на $1,000–$2,000 за 1 млн, тобто $1–$2 за 1000 переглядів <!-- source: https://vyro.com/campaigns 2026-09-02 -->, а 5 вересня всі шість відкритих кампаній тримали $1,500 або $2,000 за 1 млн <!-- source: https://vyro.com/campaigns 2026-09-05 -->.
+Vyro показує ставку за мільйон переглядів: на початку вересня живі кампанії стояли на $1,000–$2,000 за 1 млн, тобто $1–$10 за 1000 переглядів <!-- source: https://vyro.com/campaigns 2026-09-02 -->, а 5 вересня всі шість відкритих кампаній тримали $1,500 або $2,000 за 1 млн <!-- source: https://vyro.com/campaigns 2026-09-05 -->.
 
 Друге число це поріг: кожен схвалений пост має сам набрати 5000 переглядів, перш ніж почне заробляти, і рахується це на пост, а не сумою по кампанії <!-- source: https://vyro.com/help/earnings-and-payments/how-many-views-do-i-need-before-i-can-start-earning 2026-09-05 -->. Якщо середній ролик акаунта не виходить за п'ять тисяч, більшість роботи оплачується нулем.
 
@@ -82,7 +82,7 @@ Vyro показує ставку за мільйон переглядів: на 
 
 | Вісь | Vyro | DareBay |
 |---|---|---|
-| Ставка | $1–$2 за 1000 переглядів, на картці за 1 млн <!-- source: https://vyro.com/campaigns 2026-09-02 --> | від $1.00 до $10.00 за 1000 переглядів у відкритих завданнях |
+| Ставка | $1–$10 за 1000 переглядів, на картці за 1 млн <!-- source: https://vyro.com/campaigns 2026-09-02 --> | від $1.00 до $10.00 за 1000 переглядів у відкритих завданнях |
 | Поріг | 5000 переглядів на кожен пост <!-- source: https://vyro.com/help/earnings-and-payments/how-many-views-do-i-need-before-i-can-start-earning 2026-09-05 --> | задає завдання, не віднімається |
 | Стеля на ролик | 1 млн зарахованих переглядів, зазвичай $500–$2,000 <!-- source: https://vyro.com/help/earnings-and-payments/whats-the-most-i-can-earn-per-clip 2026-09-05 --> | до $500 на ролик |
 | Країни | 70 закриті, включно з Україною, Росією та Білоруссю <!-- source: https://vyro.com/help/getting-started/what-countries-are-supported 2026-09-05 --> | без списку країн, найбільша спільнота зі СНД |

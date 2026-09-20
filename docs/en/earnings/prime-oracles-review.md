@@ -81,7 +81,7 @@ What remains is its own counters: on 19 September 2026 they showed $22,674 paid 
 
 ## Where Prime Oracles fits better than DareBay, and where it does not
 
-DareBay's side of the ledger: nothing is taken from a task payout, a withdrawal costs 10% of the request deducted inside a request of at least 10 USDT, and the only cash rail is USDT on the TON network. Every request is checked by a person, so no settlement time is promised, and there is no country exclusion list, no follower minimum and no application. The interface is English, Russian and Ukrainian. Open tasks pay $1.00 to $2.00 per 1,000 views, the cap per clip is typically $100 and runs to $500, and the task sets its own threshold: [how withdrawals work](/en/help/darebay-withdrawals), [what DareBay charges](/en/help/what-commission), [DareBay at a glance](/en/about/darebay-at-a-glance).
+DareBay's side of the ledger: nothing is taken from a task payout, a withdrawal costs 10% of the request deducted inside a request of at least 10 USDT, and the only cash rail is USDT on the TON network. Every request is checked by a person, so no settlement time is promised, and there is no country exclusion list, no follower minimum and no application. The interface is English, Russian and Ukrainian. Open tasks pay $1.00 to $10.00 per 1,000 views, the cap per clip is typically $100 and runs to $500, and the task sets its own threshold: [how withdrawals work](/en/help/darebay-withdrawals), [what DareBay charges](/en/help/what-commission), [DareBay at a glance](/en/about/darebay-at-a-glance).
 
 Prime Oracles is the better fit when:
 

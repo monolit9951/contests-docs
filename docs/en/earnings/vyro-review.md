@@ -1,6 +1,6 @@
 ---
 title: "Vyro clipping review: rates, 5,000-view threshold, countries"
-description: "Vyro pays $1–$10 per 1,000 views on MrBeast campaigns, but only on posts past 5,000 views and not in 70 countries, Russia and Ukraine included. Honest review."
+description: "Vyro pays $1–$2 per 1,000 views on MrBeast campaigns, but only on posts past 5,000 views and not in 70 countries, Russia and Ukraine included. Honest review."
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_min_views_threshold_live, ppv_max_per_work_typical, ppv_max_per_work_band_high, commission_crypto, commission_fiat]
 competitor_sources:
@@ -38,7 +38,7 @@ cta:
 ---
 ## Vyro in three numbers
 
-Vyro quotes rates per million views: in early September live campaigns stood at $1,000–$2,000 per 1M, which is $1–$10 per 1,000 views <!-- source: https://vyro.com/campaigns 2026-09-02 -->, and on 5 September the six open campaigns showed $1,500 or $2,000 per 1M <!-- source: https://vyro.com/campaigns 2026-09-05 -->.
+Vyro quotes rates per million views: in early September live campaigns stood at $1,000–$2,000 per 1M, which is $1–$2 per 1,000 views <!-- source: https://vyro.com/campaigns 2026-09-02 -->, and on 5 September the six open campaigns showed $1,500 or $2,000 per 1M <!-- source: https://vyro.com/campaigns 2026-09-05 -->.
 
 The second number is the threshold: each approved post must reach 5,000 views on its own before it earns anything, not cumulatively across the campaign <!-- source: https://vyro.com/help/earnings-and-payments/how-many-views-do-i-need-before-i-can-start-earning 2026-09-05 -->. If your average clip does not clear five thousand, most of your work pays zero.
 

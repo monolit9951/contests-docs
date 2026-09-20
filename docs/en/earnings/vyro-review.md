@@ -82,7 +82,7 @@ Do not route around the list with a borrowed PayPal: the terms require legal res
 
 | Axis | Vyro | DareBay |
 |---|---|---|
-| Rate | $1–$2 per 1,000 views, shown per 1M <!-- source: https://vyro.com/campaigns 2026-09-02 --> | $1.00 to $2.00 per 1,000 views on open tasks |
+| Rate | $1–$2 per 1,000 views, shown per 1M <!-- source: https://vyro.com/campaigns 2026-09-02 --> | $1.00 to $10.00 per 1,000 views on open tasks |
 | Threshold | 5,000 views per post <!-- source: https://vyro.com/help/earnings-and-payments/how-many-views-do-i-need-before-i-can-start-earning 2026-09-05 --> | set by the task, not deducted |
 | Cap per clip | 1 million eligible views, usually $500–$2,000 <!-- source: https://vyro.com/help/earnings-and-payments/whats-the-most-i-can-earn-per-clip 2026-09-05 --> | up to $500 per clip |
 | Countries | 70 blocked, Russia, Belarus and Ukraine included <!-- source: https://vyro.com/help/getting-started/what-countries-are-supported 2026-09-05 --> | no country list, largest community in CIS |

@@ -82,7 +82,7 @@ Vyro показує ставку за мільйон переглядів: на 
 
 | Вісь | Vyro | DareBay |
 |---|---|---|
-| Ставка | $1–$2 за 1000 переглядів, на картці за 1 млн <!-- source: https://vyro.com/campaigns 2026-09-02 --> | від $1.00 до $2.00 за 1000 переглядів у відкритих завданнях |
+| Ставка | $1–$2 за 1000 переглядів, на картці за 1 млн <!-- source: https://vyro.com/campaigns 2026-09-02 --> | від $1.00 до $10.00 за 1000 переглядів у відкритих завданнях |
 | Поріг | 5000 переглядів на кожен пост <!-- source: https://vyro.com/help/earnings-and-payments/how-many-views-do-i-need-before-i-can-start-earning 2026-09-05 --> | задає завдання, не віднімається |
 | Стеля на ролик | 1 млн зарахованих переглядів, зазвичай $500–$2,000 <!-- source: https://vyro.com/help/earnings-and-payments/whats-the-most-i-can-earn-per-clip 2026-09-05 --> | до $500 на ролик |
 | Країни | 70 закриті, включно з Україною, Росією та Білоруссю <!-- source: https://vyro.com/help/getting-started/what-countries-are-supported 2026-09-05 --> | без списку країн, найбільша спільнота зі СНД |

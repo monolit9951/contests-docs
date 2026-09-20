@@ -10,7 +10,7 @@ hero:
   lede: "There is no pile of DareBay reviews, and we are not about to invent one: the platform is young, and reviews of earning platforms mostly record the reviewer's own luck. What works better takes ten minutes and asks you to trust nobody, us included. Here is exactly what to open and what to look at."
   takeaways:
     - "<b>Few reviews, and for a young platform that is the honest state of things:</b> the live talk happens in DareBay's Telegram channel rather than on review sites, and hundreds of glowing reviews would be a reason to worry."
-    - "<b>Open contests pay $1.00 to $2.00 per 1000 views,</b> and the rate, threshold, cap and publishing site stand on the card before you submit: you decide on figures, not on strangers."
+    - "<b>Open contests pay $1.00 to $10.00 per 1000 views,</b> and the rate, threshold, cap and publishing site stand on the card before you submit: you decide on figures, not on strangers."
     - "<b>Nothing moves once a contest is live:</b> the rate and the threshold stay exactly as written after your clip is up, the cap per clip can only be raised, and a wallet-backed budget is charged from the organizer before you start."
     - "<b>The last step is plain too:</b> withdrawal to your wallet from a 10 USDT request, the amount to receive shown before you confirm, checked and sent by the team, with no date promised."
 cta:
@@ -47,7 +47,7 @@ DareBay is a marketplace for content tasks. Someone posts a task with a budget, 
 | "Hidden fees" | None hidden: the contest fee is 0% and nothing is taken from the task budget; the one fee is 10% of a withdrawal request, 10 USDT minimum, deducted inside the request with the amount to receive shown before you confirm | [DareBay fees](/en/help/what-commission) |
 | "Payouts take forever" | Requests are handled by the team and no settlement date is promised | Withdrawal form |
 | "Nobody is behind it" | A named founder, Ruslan Bei, answers in person | [@ruslanbwork](https://t.me/ruslanbwork) |
-| "Nobody knows what it pays" | Open contests pay $1.00 to $2.00 per 1000 views, printed on every card | [Contest catalogue](/en/earn/clips) |
+| "Nobody knows what it pays" | Open contests pay $1.00 to $10.00 per 1000 views, printed on every card | [Contest catalogue](/en/earn/clips) |
 
 ## Reading the figures quoted here
 

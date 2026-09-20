@@ -1,6 +1,6 @@
 ---
 title: Clipping as a job - what clipping jobs involve and pay
-description: "What clipping jobs involve: piecework paid per view, $1–2 per 1,000 views, up to $500 per clip, withdrawable from 10 USDT. No followers, no portfolio."
+description: "What clipping jobs involve: piecework paid per view, $1–10 per 1,000 views, up to $500 per clip, withdrawable from 10 USDT. No followers, no portfolio."
 provenance: { snapshot_date: "2026-09-20", source: "darebay-prod" }
 numbers_used: [ppv_cpm_min, ppv_cpm_median, ppv_cpm_max, ppv_min_views_threshold_live]
 seo: true
@@ -9,7 +9,7 @@ hero:
   kicker: "Clipper guide · 2026"
   lede: "A clipper is paid for the reach of one video, not for the size of a channel, so zero followers and an empty portfolio are a normal place to start. Here is the craft without the varnish: what goes into one clip, how long it takes, why the income swings, and the route from a first contest to first money."
   takeaways:
-    - "<b>Reach pays here, not your follower count:</b> open contests run from $1.00 to $2.00 per 1000 views of one specific video, whatever the size of your channel."
+    - "<b>Reach pays here, not your follower count:</b> open contests run from $1.00 to $10.00 per 1000 views of one specific video, whatever the size of your channel."
     - "<b>The threshold on the card is never subtracted:</b> clear it and the whole counter is paid, so 12,000 views at $1.00 per 1000 is 12,000 / 1000 × $1.00 = $12.00."
     - "<b>The cap per submission is set by the buyer,</b> up to $500 in open contests; your next clip starts its own count from scratch."
     - "<b>Your first clip takes a couple of hours,</b> later ones 20 to 40 minutes; all you need is a DareBay account, an open account on the contest's site and any editing app."
@@ -18,7 +18,7 @@ cta:
   lede: "No application, no portfolio, no follower count to clear. Open the DareBay catalogue, pick a brief whose numbers you have checked on the card, and send in your first clip as a link."
 ---
 
-You can earn from clips with no followers and nothing to show, because clipping is piecework paid per view. A clipper takes a brief on the platform, cuts a short vertical video out of somebody else's footage, publishes it on the contest's site - TikTok, YouTube, Instagram or another site named in the brief - and sends the link. After that, reach pays: rates across open contests run from **$1.00**<!-- baseline: ppv_cpm_min --> to **$2.00 per 1000 views**<!-- baseline: ppv_cpm_max -->, and nothing open right now pays below that floor. A portfolio and years of practice buy you nothing here: you are paid for the views of one specific video, not for the size of your channel. In a wallet-backed contest the budget is frozen on the platform before you take the brief, the contest commission is 0%, and taking part is free.
+You can earn from clips with no followers and nothing to show, because clipping is piecework paid per view. A clipper takes a brief on the platform, cuts a short vertical video out of somebody else's footage, publishes it on the contest's site - TikTok, YouTube, Instagram or another site named in the brief - and sends the link. After that, reach pays: rates across open contests run from **$1.00**<!-- baseline: ppv_cpm_min --> to **$10.00 per 1000 views**<!-- baseline: ppv_cpm_max -->, and nothing open right now pays below that floor. A portfolio and years of practice buy you nothing here: you are paid for the views of one specific video, not for the size of your channel. In a wallet-backed contest the budget is frozen on the platform before you take the brief, the contest commission is 0%, and taking part is free.
 
 This is piecework, not passive income. Below: what the job actually asks of you, what the result depends on, and one route from zero - first contest, first submission, first money.
 
@@ -40,7 +40,7 @@ Budget a couple of hours for your first job, and most of that time goes not on e
 
 The result rides on more than the edit:
 
-- **Which contest you choose.** Between the low and the high rate there is a factor of two ($1.00<!-- baseline: ppv_cpm_min --> against $2.00<!-- baseline: ppv_cpm_max --> per 1000 views). The same piece of work is worth different money in different contests.
+- **Which contest you choose.** Between the low and the high rate there is a factor of ten ($1.00<!-- baseline: ppv_cpm_min --> against $10.00<!-- baseline: ppv_cpm_max --> per 1000 views). The same piece of work is worth different money in different contests.
 - **The first seconds.** The site hands out impressions on retention: a weak opening cancels out a good edit in the second half.
 - **Matching the brief.** Submissions go through moderation, and an off-topic video never reaches the budget split.
 - **Luck.** Reach is decided by the site's algorithm, not by the platform and not by the buyer.

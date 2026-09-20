@@ -1,6 +1,6 @@
 ---
 title: "Clipping on X (Twitter): how X pays and how DareBay fits"
-description: "X pays clippers through its Premium-only creator programme. DareBay does not count X views, but the same clip on TikTok, Reels or Shorts earns $1–$2 per 1,000."
+description: "X pays clippers through its Premium-only creator programme. DareBay does not count X views, but the same clip on TikTok, Reels or Shorts earns $1–$10 per 1,000."
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_min_views_threshold_live, ppv_max_per_work_typical]
 seo: true
@@ -11,7 +11,7 @@ hero:
   takeaways:
     - "<b>X pays out of its own pocket, by its own rules.</b> It takes a paid subscription, an audience of verified accounts and original posts; there is no rate per 1,000 views on X, and you learn the sum when the payout lands."
     - "<b>DareBay does not count views on X.</b> Tasks count a clip only on TikTok, Instagram Reels, YouTube Shorts and Facebook Reels, so the task copy goes there and the X copy runs separately."
-    - "<b>One edit, two streams.</b> The clip goes to TikTok, Reels or Shorts for a task at $1–$2 per 1,000 views, while its copy on X works for the X programme."
+    - "<b>One edit, two streams.</b> The clip goes to TikTok, Reels or Shorts for a task at $1–$10 per 1,000 views, while its copy on X works for the X programme."
     - "<b>The text hook decides more than the edit.</b> On X a video is opened from a feed of text, so the first line of the post and the first second of the clip are one unit, and a quote beats a summary."
 cta:
   title: "Put the same edit to work twice"
@@ -41,7 +41,7 @@ Formats that gain steadily on X:
 
 DareBay tasks count views only on TikTok, Instagram Reels, YouTube Shorts and Facebook Reels: a link to an X post is not accepted, and views on X never enter the calculation. Combining still works: the same clip is published twice, on TikTok, in Reels or in Shorts for a task that pays a rate per view, and on X for the network's own programme, as long as the task's terms do not demand exclusivity.
 
-A buyer publishes a task, hands over materials and sets a rate per 1,000 views; in open tasks it runs from $1 to $2. A clip takes part once you have sent the link and a moderator has checked the terms. The view threshold is set by each task - check the card in the catalog - and it is not deducted: clear it and the whole counter is paid. The cap per clip runs up to $500. Formula: views / 1,000 × rate, never above the cap. A hypothetical example: 20,000 / 1,000 × $1.00 = **$20.00**. Put your own numbers into the [clipping earnings calculator](/en/earnings/clipping-earnings-calculator).
+A buyer publishes a task, hands over materials and sets a rate per 1,000 views; in open tasks it runs from $1 to $10. A clip takes part once you have sent the link and a moderator has checked the terms. The view threshold is set by each task - check the card in the catalog - and it is not deducted: clear it and the whole counter is paid. The cap per clip runs up to $500. Formula: views / 1,000 × rate, never above the cap. A hypothetical example: 20,000 / 1,000 × $1.00 = **$20.00**. Put your own numbers into the [clipping earnings calculator](/en/earnings/clipping-earnings-calculator).
 
 | Stream | Who pays | For what | Where to publish |
 |---|---|---|---|

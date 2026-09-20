@@ -19,7 +19,8 @@ const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 const UA_PAGE = join(ROOT, 'docs', 'ua', 'pro-proekt', 'darebay-u-tsyfrakh.md')
 
 const inputs = readInputs({ root: ROOT })
-const document = buildFacts({ ...inputs, now: new Date('2026-09-17T12:00:00Z') })
+// `now` must not precede any input: the founder decision of 2026-09-20 dates the rate band, the catalogue reading is the same day.
+const document = buildFacts({ ...inputs, now: new Date('2026-09-20T23:00:00Z') })
 const byId = new Map(document.facts.map((fact) => [fact.id, fact]))
 const uaPage = readFileSync(UA_PAGE, 'utf8')
 
@@ -53,10 +54,19 @@ describe('machine-readable fact card', () => {
    */
   it('reads every number from the committed data files', () => {
     const { truth, intent, snapshot } = inputs
+    // The top of the band follows the founder-decided target while product-intent.json#rate-band is
+    // pending (2026-09-20); the floor is the reviewed live value.
+    const rateBand = (intent?.claims ?? []).find((claim) => claim.id === 'rate-band')
+    const targetTop = rateBand && rateBand.status === 'pending-product-change' && Array.isArray(rateBand.target)
+      ? rateBand.target[rateBand.liveTruth.indexOf('ppv.stable.bands.cpm.high')]
+      : truth.ppv.stable.bands.cpm.high
     expect(byId.get('rate-per-1000-views').value).toEqual({
       min: truth.ppv.stable.bands.cpm.low,
-      max: truth.ppv.stable.bands.cpm.high,
+      max: targetTop,
     })
+    expect(byId.get('rate-per-1000-views').source).toBe(
+      targetTop === truth.ppv.stable.bands.cpm.high ? 'product-truth.json#ppv.stable.bands.cpm' : 'product-intent.json#rate-band'
+    )
     expect(byId.get('cap-per-clip').value).toBe(truth.ppv.stable.bands.maxPerWork.high)
     expect(byId.get('view-threshold').value).toBe(truth.ppv.stable.defaultMinimumViews.value)
     expect(byId.get('contest-creation-fee').value).toBe(truth.contest.creationCommissionPercent)

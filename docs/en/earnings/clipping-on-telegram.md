@@ -17,7 +17,7 @@ hero:
   lede: "Clip money on Telegram arrives by three different routes, because Telegram does not count short-video views the way TikTok does. All three are below with terms and figures: a channel earning a share of Telegram's ad revenue, DareBay tasks you take without leaving the messenger, and clipping services sold through a portfolio channel. One works from day one with no audience."
   takeaways:
     - "<b>Telegram hands channels a share of its ad revenue.</b> The owner of a public channel with at least 1,000 subscribers keeps 50% of the revenue from ads shown in it <!-- source: https://telegram.org/blog/monetization-for-channels 2026-09-04 -->, collected in Toncoin through Fragment."
-    - "<b>Take the task in Telegram, post the clip on TikTok, Reels, Shorts or Facebook Reels.</b> Only views there are counted, and they pay $1–$2 per 1,000, up to $500 per clip, with the threshold printed on the task card."
+    - "<b>Take the task in Telegram, post the clip on TikTok, Reels, Shorts or Facebook Reels.</b> Only views there are counted, and they pay $1–$10 per 1,000, up to $500 per clip, with the threshold printed on the task card."
     - "<b>Stars are a way to receive what you earned, not a way to cash out.</b> Under Telegram's terms, Stars on a personal balance cannot be sold or turned into cash and are spent inside the messenger. If it is money you want, pick USDT on the TON network."
     - "<b>Other people's clips and casino ads shut both routes at once.</b> A task rejects a reposted clip, and Telegram Ads does not accept ads for real-money gambling <!-- source: https://ads.telegram.org/guidelines 2026-09-04 -->."
 cta:
@@ -32,7 +32,7 @@ cta:
 | Route | Who pays, and for what | What you need to start | How the money arrives |
 |---|---|---|---|
 | Your own channel | Telegram: 50% of the revenue from ads in the channel <!-- source: https://telegram.org/blog/monetization-for-channels 2026-09-04 -->, Stars for reactions and paid subscriptions | A public channel with at least 1,000 subscribers <!-- source: https://telegram.org/blog/monetization-for-channels 2026-09-04 -->, rights to the footage | Toncoin through Fragment, Stars on the channel balance |
-| DareBay tasks | The task buyer: $1–$2 per 1,000 counted views on TikTok, Reels, Shorts or Facebook Reels | An account on the posting site, no followers needed | The DareBay wallet, then USDT on the TON network or Telegram Stars |
+| DareBay tasks | The task buyer: $1–$10 per 1,000 counted views on TikTok, Reels, Shorts or Facebook Reels | An account on the posting site, no followers needed | The DareBay wallet, then USDT on the TON network or Telegram Stars |
 | Clipping services | A streamer or brand directly: a fixed fee per clip or per batch | A portfolio channel and a clear price | However you agree, the platform is not part of the deal |
 
 The first route pays for an audience you already have; the second pays for the reach of one clip and works from day one. How tasks differ from the platforms' own creator programmes is in [what TikTok pays for views](/en/earnings/tiktok-view-payouts). The third is pure negotiation, with the channel as a shop window: where to find those buyers is in [where to find clipping work](/en/earnings/where-to-find-clipping-work).
@@ -47,7 +47,7 @@ DareBay has two equal front doors and one account: the website and Telegram (the
 4. Send the link to the task; without it the submission does not take part. A moderator checks the terms, and the platform reads views from the site's public counter several times a day.
 5. Once the submission is approved, press "Claim now": what has accrued is locked into the wallet, and fresh amounts mature for 24 hours.
 
-Open tasks pay from $1 to $2 per 1,000 views. The threshold per clip is set by the task and the cap per submission runs up to $500; the formula is views / 1,000 × rate, never above the cap, with the threshold not deducted. A hypothetical clip with 20,000 views at $1.00 makes `20,000 / 1,000 × $1.00 = $20.00`. Put your own numbers into the [clipping earnings calculator](/en/earnings/clipping-earnings-calculator).
+Open tasks pay from $1 to $10 per 1,000 views. The threshold per clip is set by the task and the cap per submission runs up to $500; the formula is views / 1,000 × rate, never above the cap, with the threshold not deducted. A hypothetical clip with 20,000 views at $1.00 makes `20,000 / 1,000 × $1.00 = $20.00`. Put your own numbers into the [clipping earnings calculator](/en/earnings/clipping-earnings-calculator).
 
 Money leaves the wallet by two routes. A withdrawal request from 10 USDT to a wallet on the TON network: the fee is 10% of the request, deducted inside it, and the team handles processing. Or "get it in Stars": the amount arrives as Telegram Stars, and that is not a cash withdrawal, because under Telegram's terms Stars on a personal balance cannot be sold or transferred. The request procedure is in [DareBay withdrawals](/en/help/darebay-withdrawals).
 

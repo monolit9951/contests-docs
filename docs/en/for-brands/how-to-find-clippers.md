@@ -11,7 +11,7 @@ hero:
   takeaways:
     - "<b>Clippers come from four places.</b> A post in your chat and Discord, freelance boards, your own clip channel with a team, or a pay-per-view platform where creators take the task themselves."
     - "<b>Six things and a clipper starts the same day.</b> Access to recordings, rights, a hashtag, a format, a rate and a steady flow of material."
-    - "<b>Open DareBay tasks pay $1.00 to $2.00 per 1000 views.</b> You set the threshold and the cap per clip yourself, so you pay for reach and not for the hours someone spent editing."
+    - "<b>Open DareBay tasks pay $1.00 to $10.00 per 1000 views.</b> You set the threshold and the cap per clip yourself, so you pay for reach and not for the hours someone spent editing."
     - "<b>A wallet-backed budget is locked on the platform before launch.</b> It is spent only on counted views, and whatever the clips did not earn comes back to you."
 cta:
   title: "Post the task tonight, creators pick it up themselves"
@@ -54,7 +54,7 @@ A good clipper starts the same day if six things are in place.
 
 A flat fee per clip is fair while clips perform evenly. Once one gets 200 thousand views and another 300, the first creator feels cheated and you overpaid. Pay per view removes the argument: earnings grow with reach, and you pay for the result.
 
-On DareBay, across open tasks the rate currently runs from $1.00 to $2.00 per 1000 views. The threshold is yours to set, with a system default of 1000 views: a clip below it costs nothing. The cap per submission is yours too, up to $500, and protects the budget from a single viral clip. A wallet-backed budget is locked on the platform before launch and is spent only on counted views; the remainder returns to you. Views are read from the site's public counter, and fraud is filtered out (platform data, snapshot 2026-08-23).
+On DareBay, across open tasks the rate currently runs from $1.00 to $10.00 per 1000 views. The threshold is yours to set, with a system default of 1000 views: a clip below it costs nothing. The cap per submission is yours too, up to $500, and protects the budget from a single viral clip. A wallet-backed budget is locked on the platform before launch and is spent only on counted views; the remainder returns to you. Views are read from the site's public counter, and fraud is filtered out (platform data, snapshot 2026-08-23).
 
 A hypothetical example: a clip got 20 000 views at $1.00.
 

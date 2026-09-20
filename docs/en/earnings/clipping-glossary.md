@@ -9,7 +9,7 @@ hero:
   kicker: "Glossary · 2026"
   lede: "Opened a task card and met CPM, threshold, cap and claim now in one breath? Every one of them is here in a sentence or two, taken from DareBay task cards, payout rules and clipper chats, so you read terms like someone who has clipped for years. Each term has its own anchor, so 'what is CPM' is answered with a link. Figures come from the platform's data as of 23 August 2026."
   takeaways:
-    - "<b>CPM here means the rate for 1,000 counted views.</b> Across open DareBay tasks it runs from $1 to $2, and it has nothing to do with the price of an ad."
+    - "<b>CPM here means the rate for 1,000 counted views.</b> Across open DareBay tasks it runs from $1 to $10, and it has nothing to do with the price of an ad."
     - "<b>Threshold and cap hold a clip from both ends.</b> Clear the threshold on the card and nothing is subtracted for it; the cap (up to $500 in open tasks) closes the amount from above."
     - "<b>You are paid for counted views, not for the figure in your stats.</b> The platform's counter reads the site's public counter, and inflated views are filtered at moderation."
     - "<b>Withdrawal and Stars are two different doors.</b> A withdrawal request starts from 10 USDT and goes to your wallet; getting it in Stars stays inside Telegram."
@@ -43,7 +43,7 @@ glossary:
   - { id: "offer", term: "Offer", definition: "An advertiser's proposition: the product, the target action and the price for it. An offer task pays not only for views but also a fixed fee per accepted clip and a share of sales through your link or promo code, all on one card." }
   - { id: "ppv", term: "Pay per view (PPV)", definition: "The model where the buyer pays for a clip's counted views rather than for the fact of posting. The DareBay formula: views / 1000 × rate, but never more than the cap per video." }
   - { id: "random-selection", term: "Random selection", definition: "The RANDOM selection type: the system shuffles the eligible entries with ACTIVE status using a saved seed and picks the winner. Likes do not change the odds; there is no top by reactions." }
-  - { id: "rate-per-1000", term: "Rate per 1,000 views", definition: "The price the buyer pays for every thousand counted views; it sits on the card before you submit and does not change after launch. Across open tasks the rates run from $1 to $2 per 1000 views, and the payout is views / 1000 × rate." }
+  - { id: "rate-per-1000", term: "Rate per 1,000 views", definition: "The price the buyer pays for every thousand counted views; it sits on the card before you submit and does not change after launch. Across open tasks the rates run from $1 to $10 per 1000 views, and the payout is views / 1000 × rate." }
   - { id: "reach", term: "Reach", definition: "The number of unique viewers who saw the clip. A pay-per-view task counts not reach but the clip's view counter: that is what gets multiplied by the rate." }
   - { id: "rejected-work", term: "Rejected work", definition: "A moderator's decision that the work does not meet the terms: wrong site, missing hashtag, broken requirements or inflated views. A rejected work takes no part in the calculation, and the number of rejected works is shown on the task card." }
   - { id: "s2s-postback", term: "S2S postback", definition: "A server-to-server notification of a conversion: the advertiser's tracker tells the platform that a sign-up or a purchase came through the link with your code. That is how a sale is tied to a specific clipper without cookies or screenshots." }

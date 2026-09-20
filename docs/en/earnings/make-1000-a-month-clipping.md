@@ -1,6 +1,6 @@
 ---
 title: "How to make $1,000 a month clipping: the arithmetic"
-description: "How to make $1,000 a month clipping: at $1 per 1,000 views that is a million counted views, at $2 half a million. Three layouts by clip count, a weekly system and withdrawals from 10 USDT."
+description: "How to make $1,000 a month clipping: at $1 per 1,000 views that is a million counted views, at $10 a hundred thousand. Three layouts by clip count, a weekly system and withdrawals from 10 USDT."
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_cpm_median, ppv_min_views_threshold_live, ppv_max_per_work_typical]
 seo: true
@@ -20,7 +20,7 @@ cta:
 
 ## The arithmetic of a thousand
 
-The payout formula does not change with scale: views / 1,000 × rate, never above the cap per clip. Open tasks pay $1 to $2 per 1,000 views, and the threshold is set by the task, counted on every clip separately. So a thousand at $1 is a million counted views a month, half a million at $2.
+The payout formula does not change with scale: views / 1,000 × rate, never above the cap per clip. Open tasks pay $1 to $10 per 1,000 views, and the threshold is set by the task, counted on every clip separately. So a thousand at $1 is a million counted views a month, a hundred thousand at $10.
 
 The cap per clip sets the lower bound on count: with the $100 cap used in the example, fewer than ten clips cannot make a thousand at any reach, while a task capped at $500 needs as few as two. Three hypothetical layouts at $1 and a $100 cap:
 
@@ -30,7 +30,7 @@ The cap per clip sets the lower bound on count: with the $100 cap used in the ex
 | Twenty-five mid-size | 25 | 40,000 | $40.00 | 6–7 |
 | Fifty steady | 50 | 20,000 | $20.00 | 12–13 |
 
-Middle row: 40,000 / 1,000 × $1.00 = **$40.00** per clip, and 25 clips make $1,000.00. Bottom row: 20,000 / 1,000 × $1.00 = **$20.00**, fifty of them. Ten capped clips in a row is a rarity, not a plan. At $2 each clip needs half the views, but the cap is reached at 50,000, so the top row does not change.
+Middle row: 40,000 / 1,000 × $1.00 = **$40.00** per clip, and 25 clips make $1,000.00. Bottom row: 20,000 / 1,000 × $1.00 = **$20.00**, fifty of them. Ten capped clips in a row is a rarity, not a plan. At $10 each clip needs a tenth of the views, but the cap is reached at 10,000, so the top row does not change.
 
 The only deduction comes at withdrawal: 10% of the amount you request, taken inside the request, so a thousand on the balance pays out 900 USDT, and a round thousand in the wallet takes about 1,112 USDT on the balance. Recalculate any layout for your own rate and threshold in the [clipping earnings calculator](/en/earnings/clipping-earnings-calculator), which shows both figures.
 

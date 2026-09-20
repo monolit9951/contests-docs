@@ -68,7 +68,7 @@ There is no single best platform; it depends on where you live and what you clip
 
 ### Which clipping platform pays the most per 1,000 views?
 
-The highest advertised rates are not the highest net pay. Whop campaigns run from $0.05 to $10 per 1,000, with $1 the most common rate <!-- source: https://contentrewards.com/discover 2026-09-18 -->, but its terms take 10% of CPM payouts; Vyro pays $1–$2 per 1,000 only after 5,000 views per post; Clipping.net quotes $0.20–$0.75 per 1,000. Sort the table by the rate column, then read the fee, threshold and cap columns for the same row.
+The highest advertised rates are not the highest net pay. Whop campaigns run from $0.05 to $10 per 1,000, with $1 the most common rate <!-- source: https://contentrewards.com/discover 2026-09-18 -->, but its terms take 10% of CPM payouts; Vyro pays $1–$10 per 1,000 only after 5,000 views per post; Clipping.net quotes $0.20–$0.75 per 1,000. Sort the table by the rate column, then read the fee, threshold and cap columns for the same row.
 
 ### Do I need followers to join a clipping platform?
 

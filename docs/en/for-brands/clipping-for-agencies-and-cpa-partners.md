@@ -11,7 +11,7 @@ hero:
   takeaways:
     - "<b>One upload, the whole network.</b> Terms, materials and ready-made clips with built-in uniqueization go in once; creators pick the offer up themselves, and the platform hands every one of them a link and a promo code."
     - "<b>Conversions arrive by S2S postback</b> from the advertiser's or network's tracker and land on a named creator and a named clip, so there are no spreadsheets to reconcile: the platform credits the fixed fee and the sales share."
-    - "<b>Three ways an agency earns on this:</b> a markup on the per-view rate, a management retainer, or a clips-plus-traffic package. Open tasks pay creators $1.00 to $2.00 per 1,000 views, and your margin sits on top."
+    - "<b>Three ways an agency earns on this:</b> a markup on the per-view rate, a management retainer, or a clips-plus-traffic package. Open tasks pay creators $1.00 to $10.00 per 1,000 views, and your margin sits on top."
     - "<b>Anti-fraud comes with the pipeline:</b> incentivized, bot and pop traffic is filtered out before anything is credited, and a refund takes the share back from the creator's balance rather than the client's budget."
 cta:
   title: "Hand the offer to the network, let the platform keep score"
@@ -66,7 +66,7 @@ The economics of every model come down to one formula: the price to the client p
 
 > price to client = creators' rate × (1 + markup)
 
-A hypothetical example. Client budget $2,000, creators' rate $1.00 per 1,000 views (open tasks currently pay $1.00 to $2.00 per 1,000 views), agency markup say 25%. The price to the client is $1.25 per 1,000, and the budget buys 2,000 / 1.25 × 1,000 = 1,600,000 counted views. Creators receive 1,600,000 / 1,000 × $1.00 = **$1,600.00**, the agency keeps **$400.00**, and creating the task costs nothing. The view threshold you set on the task cuts off clips with no reach, and the cap per work (up to $500) spreads the sum across many clips by different creators. On an offer the sales share comes on top: it is counted from confirmed conversions, not from views, so it is not part of the reach budget. Platform figures from the 2026-08-23 snapshot; the markup is illustrative.
+A hypothetical example. Client budget $2,000, creators' rate $1.00 per 1,000 views (open tasks currently pay $1.00 to $10.00 per 1,000 views), agency markup say 25%. The price to the client is $1.25 per 1,000, and the budget buys 2,000 / 1.25 × 1,000 = 1,600,000 counted views. Creators receive 1,600,000 / 1,000 × $1.00 = **$1,600.00**, the agency keeps **$400.00**, and creating the task costs nothing. The view threshold you set on the task cuts off clips with no reach, and the cap per work (up to $500) spreads the sum across many clips by different creators. On an offer the sales share comes on top: it is counted from confirmed conversions, not from views, so it is not part of the reach budget. Platform figures from the 2026-08-23 snapshot; the markup is illustrative.
 
 Put your own budget, rate and cap into the calculator:
 

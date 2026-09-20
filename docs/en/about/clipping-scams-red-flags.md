@@ -59,7 +59,7 @@ DareBay as the example:
 | Payouts handled by people | A person verifies the details; slower, but honest | Handled by the team on request, no promised timing |
 | A withdrawal fee | Comes out of what you earned, never up front | 10% of the request on DareBay, deducted inside it, with the amount to receive shown before you confirm; 0% on the contest payout, 10 USDT minimum request |
 
-A fresh DareBay accrual matures for 24 hours before "Claim now" locks it in: a second pass over the counter, not a hold on your money. Open DareBay tasks pay from $1 to $2 per 1,000 views: modest next to advertising promises, and the sign of a real budget.
+A fresh DareBay accrual matures for 24 hours before "Claim now" locks it in: a second pass over the counter, not a hold on your money. Open DareBay tasks pay from $1 to $10 per 1,000 views: modest next to advertising promises, and the sign of a real budget.
 
 ## If you have already been caught
 

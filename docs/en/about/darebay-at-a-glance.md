@@ -1,6 +1,6 @@
 ---
 title: "DareBay at a glance: rates, fees, payouts and countries"
-description: DareBay pays $1.00 to $2.00 per 1,000 views, 0% contest fee, withdrawals to your wallet from 10 USDT, worldwide. Every figure on one page, sourced and dated.
+description: DareBay pays $1.00 to $10.00 per 1,000 views, 0% contest fee, withdrawals to your wallet from 10 USDT, worldwide. Every figure on one page, sourced and dated.
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_min_views_threshold_live, ppv_max_per_work_typical, ppv_max_per_work_band_high, commission_fiat, commission_crypto]
 seo: true
@@ -12,7 +12,7 @@ hero:
   secondary: "See the fields"
   secondaryHref: "#facts"
   takeaways:
-    - "<b>$1.00 to $2.00 per 1,000 views in open contests.</b> The exact rate is printed on the task card, so you read it before you submit."
+    - "<b>$1.00 to $10.00 per 1,000 views in open contests.</b> The exact rate is printed on the task card, so you read it before you submit."
     - "<b>No followers, no portfolio, no application.</b> An account opened this morning can take a brief on the same terms as anyone else."
     - "<b>Pays worldwide, with no country shut out.</b> The community is largest in CIS, and clippers from anywhere are paid the same way."
     - "<b>Wallet-backed contests lock the budget on the platform before the start.</b> In a manual-payout contest the organizer pays directly, and the card says which kind it is."
@@ -32,7 +32,7 @@ Two kinds of contest exist. In a **wallet-backed contest** the organizer's budge
 
 | Field | Value | Source | As of |
 | --- | --- | --- | --- |
-| Rate per 1,000 views | $1.00–$2.00 per 1,000 views (open tasks) | platform rules | 2026-08-23 |
+| Rate per 1,000 views | $1.00–$10.00 per 1,000 views (open tasks) | product decision | 2026-09-20 |
 | Cap per clip | up to $500 per clip | platform rules | 2026-08-23 |
 | View threshold | set per task (system default 1,000 views) | platform rules | 2026-08-23 |
 | Contest creation fee | 0% | platform rules | 2026-08-23 |
@@ -56,7 +56,7 @@ The same card in machine-readable form lives at [/data/darebay-facts.json](/data
 
 ## How the money moves
 
-Every task card fixes three numbers before you start: the rate per 1,000 counted views, the view threshold a clip has to clear, and the cap on what one clip can earn. Open contests currently pay from $1.00 to $2.00 per 1,000 views, the view threshold is set by each task - check the card in the catalog - and the cap per clip runs up to $500. The rate and the threshold do not change after launch; the cap per clip can only be raised.
+Every task card fixes three numbers before you start: the rate per 1,000 counted views, the view threshold a clip has to clear, and the cap on what one clip can earn. Open contests currently pay from $1.00 to $10.00 per 1,000 views, the view threshold is set by each task - check the card in the catalog - and the cap per clip runs up to $500. The rate and the threshold do not change after launch; the cap per clip can only be raised.
 
 Views are read from the public counter of the published video by the platform, not typed in by either side. A clip with suspicious dynamics goes on hold for a manual check. After the count, the amount is credited to your DareBay balance in full: the platform takes nothing from the task budget or from your earnings. The only fee a clipper pays is 10% when withdrawing the balance, deducted inside a request from 10 USDT; the form shows the amount to receive before you confirm, and once you submit the request the team checks the details and sends the transfer. Payout rails are USDT on the TON network and Telegram Stars; a contest can additionally name a card, a bank transfer or a gift as its reward method.
 
@@ -72,7 +72,7 @@ If you list clipping platforms, you can reuse every field on this page with a li
 
 ### How much does DareBay pay per 1,000 views?
 
-Open contests pay from $1.00 to $2.00 per 1,000 counted views. The rate is set by the organizer and printed on the task card; it is not changed after the contest opens.
+Open contests pay from $1.00 to $10.00 per 1,000 counted views. The rate is set by the organizer and printed on the task card; it is not changed after the contest opens.
 
 ### Do I need followers to earn on DareBay?
 

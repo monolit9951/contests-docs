@@ -1,6 +1,6 @@
 ---
 title: "How much clipping pays: the rate per 1000 views on DareBay"
-description: "Open tasks pay from $1.00 to $2.00 per 1000 views, up to $500 per clip, and the threshold is set by the task. The payout formula and how to read the rate."
+description: "Open tasks pay from $1.00 to $10.00 per 1000 views, up to $500 per clip, and the threshold is set by the task. The payout formula and how to read the rate."
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_cpm_min, ppv_cpm_max, ppv_cpm_median, ppv_min_views_threshold_live, ppv_max_per_work_typical, ppv_max_per_work_band_high]
 seo: true
@@ -10,7 +10,7 @@ hero:
   lede: "You can put a price on a clip before you open the editor, because the rate, the threshold and the cap are printed on the task card. Below is the arithmetic of one submission, what open tasks pay for a thousand views, and why your follower count never enters the formula."
   takeaways:
     - "<b>One formula for everyone.</b> Views / 1000 × rate, never above the cap on one submission; the threshold opens the count and is not deducted from it."
-    - "<b>Open tasks pay from $1.00 to $2.00 per 1000 views.</b> The buyer names the rate, it stands on the card before you submit, and it does not move after the start."
+    - "<b>Open tasks pay from $1.00 to $10.00 per 1000 views.</b> The buyer names the rate, it stands on the card before you submit, and it does not move after the start."
     - "<b>The threshold is set by the task, and the cap runs up to $500 per clip.</b> You see both on the card before you take the task."
     - "<b>No followers required.</b> The counter of one specific clip is what gets paid, so a fresh account and a veteran work at the same rate."
 cta:
@@ -24,7 +24,7 @@ A clipper's earnings come from three numbers, all set by the buyer when creating
 
 | Parameter | Value across open tasks | What it means for your figure |
 |---|---|---|
-| Rate | from $1.00 to $2.00 per 1000 views | The price of a thousand views; the typical rate is $1.00 |
+| Rate | from $1.00 to $10.00 per 1000 views | The price of a thousand views; the typical rate is $1.00 |
 | View threshold | Set by the task | The admission condition; the exact figure is on the card in the catalog |
 | Cap per submission | Up to $500 per clip | The most one clip can earn |
 
@@ -32,16 +32,16 @@ Every figure on this page comes from the platform's own data (snapshot: 2026-08-
 
 ## What DareBay pays per 1000 views and how to read the rate
 
-A thousand views across open DareBay tasks pays from **$1.00** to **$2.00**: nothing open right now pays below the floor, and the top of the spread is exactly twice it. The most common rate is the floor itself, **$1.00 per 1000 views**, so a rate close to **$2.00** is generous by the platform's standards. There is no single "price of a view": the buyer names the rate, not DareBay, and builds it out of the task budget, the value of an audience in their niche and the competition for clippers.
+A thousand views across open DareBay tasks pays from **$1.00** to **$10.00**: nothing open right now pays below the floor, and the top of the spread is exactly ten times it. The most common rate is the floor itself, **$1.00 per 1000 views**, so a rate close to **$10.00** is generous by the platform's standards. There is no single "price of a view": the buyer names the rate, not DareBay, and builds it out of the task budget, the value of an audience in their niche and the competition for clippers.
 
 The gap shows up best on the same reach. A submission with 20,000 views:
 
 | Task rate | Payout for 20,000 views |
 |---|---|
 | $1.00 per 1000 views | 20,000 / 1000 × $1.00 = **$20.00** |
-| $2.00 per 1000 views | 20,000 / 1000 × $2.00 = **$40.00** |
+| $10.00 per 1000 views | 20,000 / 1000 × $10.00 = **$200.00** |
 
-Same reach, same edit, a result that differs twofold, which is why the rate on the card is the first thing to read when picking a task. Three rules for reading it:
+Same reach, same edit, a result that differs tenfold, which is why the rate on the card is the first thing to read when picking a task. Three rules for reading it:
 
 1. **The rate stands on the card and does not move.** The buyer has no tool for changing it mid-flight, and the calculation runs on the figure recorded in the task.
 2. **The rate does not depend on the site.** The task names the site, stats are counted for TikTok, YouTube, Instagram and the other sites named in the task, and the price of a thousand views is the one on the card everywhere.
@@ -63,7 +63,7 @@ All 40,000 views went into the maths, not 39,000: the threshold opens the count 
 
 A clipper does not move the rate or the cap. Two things are in your hands: which task you take, and how much reach the clip earns.
 
-1. **The choice of task.** Between the low and high ends of open tasks there is a factor of two for the same thousand views, decided before any editing.
+1. **The choice of task.** Between the low and high ends of open tasks there is a factor of ten for the same thousand views, decided before any editing.
 2. **The reach of the individual clip.** Up to the cap the payout grows linearly: every further thousand views is worth exactly the task rate.
 3. **Clearing the threshold.** A submission short of the threshold printed on the card takes no part in the split at all; the hook in the first seconds decides it.
 4. **How many tasks you submit to.** The cap limits one submission, not how many tasks you enter: the next clip starts with a cap of its own.
@@ -92,7 +92,7 @@ No. There is no follower threshold on DareBay at sign-up, at submission or in th
 
 ### What counts as a normal rate?
 
-The reference point is the floor across open tasks, **$1.00 per 1000 views**: nothing pays below it right now, it is also the most common rate, and the top of the spread is **$2.00**. Read the rate together with the threshold and the cap: a task with a high rate and a high threshold can turn out worse than a floor-rate task with a low threshold if clips in that subject rarely take off.
+The reference point is the floor across open tasks, **$1.00 per 1000 views**: nothing pays below it right now, it is also the most common rate, and the top of the spread is **$10.00**. Read the rate together with the threshold and the cap: a task with a high rate and a high threshold can turn out worse than a floor-rate task with a low threshold if clips in that subject rarely take off.
 
 ### Can the rate change after I submit?
 

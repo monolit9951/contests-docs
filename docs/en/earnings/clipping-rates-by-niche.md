@@ -1,6 +1,6 @@
 ---
 title: "Clipping rates by niche and platform: the 2026 benchmark"
-description: "DareBay pays $1–$2 per 1,000 views; elsewhere the rate follows the niche, from cents in music to dollars in fintech. Every outside figure is sourced and dated."
+description: "DareBay pays $1–$10 per 1,000 views; elsewhere the rate follows the niche, from cents in music to dollars in fintech. Every outside figure is sourced and dated."
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_min_views_threshold_live, ppv_max_per_work_typical]
 competitor_sources:
@@ -21,7 +21,7 @@ hero:
   lede: "Before you spend an evening on an edit you want one number: what 1,000 views is really worth in your niche. Here it is across eight niches, six platforms and four social networks, read from the platforms' own public pages and dated, with DareBay's band from live platform data. Next to every rate stands the thing that eats it: the threshold, the cap and rejected clips."
   takeaways:
     - "<b>Your niche decides more than your platform does.</b> On ClipRadar's live board music averages $0.35 per 1,000 while tech averages $6.60 <!-- source: https://clipradar.co/rates 2026-09-04 -->: nearly twenty times the money for the same edit."
-    - "<b>The typical advertised rate on the market is $2.00 per 1,000</b> <!-- source: https://clipradar.co/rates 2026-09-04 -->; DareBay's $1–$2 band sits inside it, and the rate printed on a task card is the same whatever the niche."
+    - "<b>The typical advertised rate on the market is $2.00 per 1,000</b> <!-- source: https://clipradar.co/rates 2026-09-04 -->; DareBay's $1–$10 band spans it, and the rate printed on a task card is the same whatever the niche."
     - "<b>A big rate is not a big payout.</b> Vyro's 5,000-view threshold per post <!-- source: https://vyro.com/help/earnings-and-payments/how-many-views-do-i-need-before-i-can-start-earning 2026-09-04 --> and Whop campaigns capped at $400–$600 per video <!-- source: https://contentrewards.com/discover 2026-09-04 --> cut what reaches you harder than any gap between rates."
     - "<b>Count the payout, not the rate.</b> The same clip at 100,000 views earns $100 at $1 with no threshold, and only $50 at $3 with a threshold and a $50 cap. The formula is right below."
 cta:
@@ -31,7 +31,7 @@ cta:
 
 ## Rates by niche
 
-The rate per 1,000 views depends on who is buying the views far more than on the platform or the network. ClipRadar's live board tracks advertised rates across 2,098 campaigns on 18 platforms <!-- source: https://clipradar.co/rates 2026-09-04 -->: "average" is the mean rate of the niche and "high" is the third-highest live rate, so a niche with a couple of freak offers can show an average above its high. Our own figure is a single one: DareBay's open-task band of $1–$2 per 1,000 views, identical for every niche, because the buyer of the task sets the rate, not the niche.
+The rate per 1,000 views depends on who is buying the views far more than on the platform or the network. ClipRadar's live board tracks advertised rates across 2,098 campaigns on 18 platforms <!-- source: https://clipradar.co/rates 2026-09-04 -->: "average" is the mean rate of the niche and "high" is the third-highest live rate, so a niche with a couple of freak offers can show an average above its high. Our own figure is a single one: DareBay's open-task band of $1–$10 per 1,000 views, identical for every niche, because the buyer of the task sets the rate, not the niche.
 
 | Niche | Rate range per 1,000 | Where it shows up | What moves the rate |
 |---|---|---|---|
@@ -44,7 +44,7 @@ The rate per 1,000 views depends on who is buying the views far more than on the
 | Sports | sports average $2.14, high $2.10; fitness $1.69 and $4.00 <!-- source: https://clipradar.co/rates 2026-09-04 --> | Whop and Clipping.net, 46 live campaigns in total <!-- source: https://clipradar.co/rates 2026-09-04 --> | Broadcast rights limit the footage: few campaigns, above-average rate |
 | Motivation and lifestyle | no separate row; the neighbouring Influencer and Entertainment average $1.31 and $1.52 <!-- source: https://clipradar.co/rates 2026-09-04 --> | Whop, Vues, DareBay tasks | Cheap footage that is easy to copy: buyers add thresholds and caps instead of raising the rate |
 
-DareBay's band lands in the middle of the table: above music and streamers, below fintech and apps. But on DareBay the rate is not tied to a niche: the buyer sets it and prints it on the task card next to the threshold and the cap, so compare card against card, not niche against niche.
+DareBay's band spans the table: its floor is above music and streamers, its top above fintech and apps. But on DareBay the rate is not tied to a niche: the buyer sets it and prints it on the task card next to the threshold and the cap, so compare card against card, not niche against niche.
 
 ## Advertised rates by platform
 
@@ -57,7 +57,7 @@ A platform does not pay the rate, the campaign buyer does, but each platform dra
 | Vyro | $1.00–$2.00 (campaigns quote $1,000–$2,000 per 1M) <!-- source: https://vyro.com/campaigns 2026-09-04 --> | 5,000 views per post <!-- source: https://vyro.com/help/earnings-and-payments/how-many-views-do-i-need-before-i-can-start-earning 2026-09-04 --> | 1M eligible views per clip, usually $500–$2,000 <!-- source: https://vyro.com/help/earnings-and-payments/whats-the-most-i-can-earn-per-clip 2026-09-04 --> | [vyro.com/campaigns](https://vyro.com/campaigns) |
 | Vues | on each brief in the app; site example $3.00 <!-- source: https://vues.app 2026-09-04 --> | none per clip in its own comparison table; a campaign can set a minimum payout per post <!-- source: https://vues.app/blog/best-clipping-platforms-that-pay-crypto 2026-09-18 --> | per post and per profile, set by the campaign, amounts only in the app <!-- source: https://vues.app/blog/how-cpm-payouts-work 2026-09-18 --> | [vues.app](https://vues.app) |
 | Klipni | in rubles; site example 50 ₽ per 1,000 <!-- source: https://klipni.com 2026-09-04 --> | not published | per-post limit set by each campaign <!-- source: https://klipni.com 2026-09-04 --> | [klipni.com](https://klipni.com) |
-| DareBay | $1–$2 per 1,000 views | set by the task, on the card | up to $500 per clip | live platform data, snapshot 2026-08-23 |
+| DareBay | $1–$10 per 1,000 views | set by the task, on the card | up to $500 per clip | live platform data, snapshot 2026-08-23 |
 
 Vues and Klipni keep thresholds and caps inside their campaigns, so a payout cannot be worked out from the public page alone. Fees, minimum payouts and payout countries for the same platforms are collected in [the clipping platforms roundup](/en/earnings/best-clipping-platforms).
 

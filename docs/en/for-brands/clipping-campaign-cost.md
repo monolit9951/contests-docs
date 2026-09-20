@@ -1,6 +1,6 @@
 ---
 title: "Clipping campaign cost: what a clipper budget buys"
-description: "Launching is free and the contest fee is 0%: the budget is rate times paid views at $1 to $2 per 1,000 views. Worked numbers for $200, $1,000 and $5,000."
+description: "Launching is free and the contest fee is 0%: the budget is rate times paid views at $1 to $10 per 1,000 views. Worked numbers for $200, $1,000 and $5,000."
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [contest_create_usdt_price, commission_crypto, commission_fiat, ppv_cpm_band_low, ppv_cpm_band_high, ppv_cpm_median, ppv_default_min_views_threshold, ppv_min_views_threshold_live, ppv_max_per_work_typical]
 seo: true
@@ -10,7 +10,7 @@ hero:
   lede: "A campaign with clippers costs exactly as many views as you decide to buy: there is no fixed part, launching is free, and the whole budget goes to counted views at the rate you chose. The unspent part of a wallet-backed budget comes back to your balance. Below are three budgets worked through the platform's own formula, from a first test to a full campaign."
   takeaways:
     - "<b>You pay for the pool and nothing else:</b> creating the contest is free, the contest fee is 0% and a top-up costs nothing, so every dollar of the pool reaches the clippers."
-    - "<b>The budget is rate × paid views, and the rate is yours to set.</b> Open tasks currently pay $1 to $2 per 1,000 views, with $1 the typical rate."
+    - "<b>The budget is rate × paid views, and the rate is yours to set.</b> Open tasks currently pay $1 to $10 per 1,000 views, with $1 the typical rate."
     - "<b>$1,000 at $1 buys 1,000,000 paid views,</b> or as few as two clips at the $500 cap the platform allows. That is arithmetic, not a forecast: put your own figure into the calculator below."
     - "<b>Overspending is hard:</b> the budget, a pause and the cap per clip hold the spend, clips under the threshold cost you nothing, and a wallet-backed remainder returns to your balance."
 cta:
@@ -30,21 +30,21 @@ Accruals stop when the budget you set runs out, and the wallet-backed pool is lo
 
 ## Three budgets: what $200, $1,000 and $5,000 buy
 
-Three budgets at both ends of the open-task band, $1 and $2 per 1,000 views, with a $100 cap in the example (the platform allows up to $500). The creator column is an assumption, not data: one creator brings 20,000 views, two clips of 10,000.
+Three budgets at both ends of the open-task band, $1 and $10 per 1,000 views, with a $100 cap in the example (the platform allows up to $500). The creator column is an assumption, not data: one creator brings 20,000 views, two clips of 10,000.
 
-| Pool | Paid views at $1 | Paid views at $2 | Clips at the $100 cap | Creators, rough guide, at $1 / $2 |
+| Pool | Paid views at $1 | Paid views at $10 | Clips at the $100 cap | Creators, rough guide, at $1 / $10 |
 |---|---:|---:|---:|---:|
-| $200 | 200,000 | 100,000 | 2 | 10 / 5 |
-| $1,000 | 1,000,000 | 500,000 | 10 | 50 / 25 |
-| $5,000 | 5,000,000 | 2,500,000 | 50 | 250 / 125 |
+| $200 | 200,000 | 20,000 | 2 | 10 / 1 |
+| $1,000 | 1,000,000 | 100,000 | 10 | 50 / 5 |
+| $5,000 | 5,000,000 | 500,000 | 50 | 250 / 25 |
 
-$200 at $1 is 200,000 paid views: enough to test a task, but gone after two clips at the cap, so a small pool wants a lower cap. $1,000 is a campaign: a million views at $1 or half a million at $2 and a few dozen creators. $5,000 buys five million views at $1, and the cap now works for quantity: fifty clips at the maximum or hundreds of smaller ones.
+$200 at $1 is 200,000 paid views: enough to test a task, but gone after two clips at the cap, so a small pool wants a lower cap. $1,000 is a campaign: a million views at $1 or 100,000 at $10, and from five to fifty creators. $5,000 buys five million views at $1, and the cap now works for quantity: fifty clips at the maximum or hundreds of smaller ones.
 
 There is nothing to add for the launch: creating the contest is free. This is arithmetic, not a promise: real views depend on the task, the materials and the number of creators. The [earnings calculator](/en/earnings/clipping-earnings-calculator) shows the same formula from the creator's side.
 
 ## Choosing the rate, the threshold and the cap
 
-**The rate.** Open tasks currently sit between $1 and $2 per 1,000 views, with $1 typical. A rate below the band fails to attract creators because a clipper compares tasks in the feed on that one number and takes the one that pays more for the same clip. The rate is fixed from launch, so an under-priced task is fixed only by a new one; check yours in the [platform comparison](/en/earnings/best-clipping-platforms).
+**The rate.** Open tasks currently sit between $1 and $10 per 1,000 views, with $1 typical. A rate below the band fails to attract creators because a clipper compares tasks in the feed on that one number and takes the one that pays more for the same clip. The rate is fixed from launch, so an under-priced task is fixed only by a new one; check yours in the [platform comparison](/en/earnings/best-clipping-platforms).
 
 **The threshold.** The system default is 1,000 views, and above that the figure is yours to set. It drops clips without a minimum audience at no cost to you, but gives no discount: a clip that clears it is paid in full.
 

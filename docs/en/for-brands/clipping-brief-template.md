@@ -10,7 +10,7 @@ hero:
   lede: "A good brief saves you the private chat with every single creator: a clipper reads it once and knows what to cut, and you know in advance what you are paying for and what you can turn down. Copy the template, fill in ten fields with the notes below, run the checklist and publish."
   takeaways:
     - "<b>Ten fields answer the questions before anyone asks them:</b> goal, materials, format, platforms, hashtag, must-haves, banned content, rate with threshold and cap, deadline, acceptance."
-    - "<b>Three numbers decide who takes the task: rate, threshold and cap.</b> Open tasks pay $1 to $2 per 1,000 views, the view threshold is set by each task and the cap per clip runs up to $500."
+    - "<b>Three numbers decide who takes the task: rate, threshold and cap.</b> Open tasks pay $1 to $10 per 1,000 views, the view threshold is set by each task and the cap per clip runs up to $500."
     - "<b>A clip enters the task only through the link the creator sends.</b> A moderator checks it against your terms and fake views are filtered out, so the brief is your acceptance tool: what is not in it cannot be demanded later."
     - "<b>Five phrasings bring you the wrong clips:</b> a vague goal, no bans, no example, 'like our competitor' and a deadline with no date. Each one is rewritten below."
 cta:
@@ -51,7 +51,7 @@ HOW WORK IS ACCEPTED: (published link, moderator check, what gets rejected)
 
 **Not allowed.** The list a clip is rejected for: other people's clips, promises of income, shock content, music without rights, naming competitors. A ban missing from the brief cannot be applied afterwards.
 
-**Rate, threshold, cap.** The three numbers on the card: open tasks pay $1 to $2 per 1,000 views, the threshold defaults to 1,000 and is then set by each task, and the cap per clip runs up to $500. What each number buys: [clipping campaign cost](/en/for-brands/clipping-campaign-cost). Your rate from the creator's side: [earnings calculator](/en/earnings/clipping-earnings-calculator); what they compare you with: [platform comparison](/en/earnings/best-clipping-platforms).
+**Rate, threshold, cap.** The three numbers on the card: open tasks pay $1 to $10 per 1,000 views, the threshold defaults to 1,000 and is then set by each task, and the cap per clip runs up to $500. What each number buys: [clipping campaign cost](/en/for-brands/clipping-campaign-cost). Your rate from the creator's side: [earnings calculator](/en/earnings/clipping-earnings-calculator); what they compare you with: [platform comparison](/en/earnings/best-clipping-platforms).
 
 **Deadline.** Date, time and time zone: "by the end of the week" means something else to a clipper elsewhere.
 

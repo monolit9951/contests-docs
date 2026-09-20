@@ -25,7 +25,7 @@
       },
       "calc": {
         "rateMin": 1,
-        "rateMax": 2,
+        "rateMax": 10,
         "cap": 500,
         "threshold": 1000,
         "fee": 10,
@@ -34,14 +34,14 @@
       "fields": {
         "rate": {
           "text": {
-            "en": "$1.00–$2.00 per 1,000 views (open contests)",
-            "ru": "$1.00–$2.00 за 1000 просмотров (открытые конкурсы)",
-            "uk": "$1.00–$2.00 за 1000 переглядів (відкриті конкурси)"
+            "en": "$1.00–$10.00 per 1,000 views (open contests)",
+            "ru": "$1.00–$10.00 за 1000 просмотров (открытые конкурсы)",
+            "uk": "$1.00–$10.00 за 1000 переглядів (відкриті конкурси)"
           },
           "value": 1,
           "source": {
             "url": "https://darebay.com/en/earnings/how-much-clipping-pays",
-            "date": "2026-08-23"
+            "date": "2026-09-20"
           }
         },
         "threshold": {

@@ -1,6 +1,6 @@
 ---
 title: "Clipping vs paid ads: what a thousand views cost in 2026"
-description: "Clips on DareBay cost $1–$2 per 1,000 counted views; Meta, TikTok and YouTube ads charge several times more per 1,000 impressions, creative not included."
+description: "Clips on DareBay cost $1–$10 per 1,000 counted views; Meta, TikTok and YouTube ads charge several times more per 1,000 impressions, creative not included."
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_min_views_threshold_live, ppv_max_per_work_typical, contest_create_usdt_price, commission_crypto, commission_fiat]
 competitor_sources:
@@ -20,13 +20,13 @@ hero:
   kicker: "Comparison · 2026"
   lede: "A thousand counted views of a clip costs you less than a thousand ad impressions, and the table below settles the 'ads or clips' argument in figures: Meta, TikTok Ads, YouTube, VK Ads and Yandex Direct against DareBay. Outside CPMs come from dated public benchmarks and rate cards, our figure from live platform data, and beside every number stands what it actually buys you."
   takeaways:
-    - "<b>A clip view costs less than an ad impression.</b> Meta averages $13.48 per 1,000 impressions <!-- source: https://www.adamigo.ai/blog/meta-ads-cpm-benchmarks-by-industry-2026 2026-09-04 -->, TikTok Ads $5–$12 <!-- source: https://www.admetrics.io/en/post/tiktok-ads-costs-complete-2026-pricing-guide 2026-09-04 -->, clips on DareBay run $1–$2 per 1,000 counted views."
+    - "<b>A clip view costs less than an ad impression.</b> Meta averages $13.48 per 1,000 impressions <!-- source: https://www.adamigo.ai/blog/meta-ads-cpm-benchmarks-by-industry-2026 2026-09-04 -->, TikTok Ads $5–$12 <!-- source: https://www.admetrics.io/en/post/tiktok-ads-costs-complete-2026-pricing-guide 2026-09-04 -->, clips on DareBay run $1–$10 per 1,000 counted views."
     - "<b>You pay for a watched clip, not for a banner flashing past.</b> An impression counts the moment the ad renders on a screen; a clip view is read from the network's public counter and paid only above the threshold named in the task."
     - "<b>The creative is already in the price.</b> With ads you pay for the shoot and the edit separately; with clips the clippers make them, and the videos stay on their accounts collecting views after the campaign."
     - "<b>Ads are sharper, clips are cheaper.</b> Targeting, speed and the pixel stay with ads; price per view, viewer trust and paying by result stay with clips. The setup that works: test with clips, scale with ads."
 cta:
   title: "Find your own cost per view, not the market average"
-  lede: "Create a task with a $1–$2 rate per 1,000 views, a threshold and a cap. In a wallet-backed task the budget is locked on the platform before the start, goes to clippers only for counted views, and whatever is left over comes back to you."
+  lede: "Create a task with a $1–$10 rate per 1,000 views, a threshold and a cap. In a wallet-backed task the budget is locked on the platform before the start, goes to clippers only for counted views, and whatever is left over comes back to you."
 ---
 
 ## The table: what a thousand costs
@@ -40,7 +40,7 @@ Outside figures were read on 2026-09-04 from public benchmark, agency and rate-c
 | YouTube Ads | $5–$10, Shorts around $4 <!-- source: https://www.storegrowers.com/youtube-ads-benchmarks/ 2026-09-04 -->; $4–$10 in another guide <!-- source: https://megadigital.ai/en/blog/youtube-ads-cost/ 2026-09-04 --> | an impression around a video | you or your agency |
 | VK Ads | 30–70 ₽ broad, 60–150 ₽ interests, 80–250 ₽ retargeting <!-- source: https://www.cossa.ru/zaley_cash/349828/ 2026-09-04 -->; about 30 ₽ on average <!-- source: https://www.directline.pro/blog/skolko-stoit-reklama-v-vk/ 2026-09-04 --> | a feed, clips or stories impression | you or your agency |
 | Yandex Direct | video network: minimum bid from 5 ₽ before VAT, fixed vCPM Premium 500 ₽ <!-- source: https://yandex.ru/adv/prices 2026-09-04 -->; video and pre-rolls 200–2,000 ₽ (agency range) <!-- source: https://rosedigital.ru/uslugi/stoimost-pokazov-v-yandeks-direkt 2026-09-04 --> | an impression or viewable impression (vCPM) | you or your agency |
-| Clips on DareBay | $1–$2 per 1,000 views on open tasks | a counted view on the creator's account above the threshold you set, up to the cap you set (up to $500 per clip) | clippers, included |
+| Clips on DareBay | $1–$10 per 1,000 views on open tasks | a counted view on the creator's account above the threshold you set, up to the cap you set (up to $500 per clip) | clippers, included |
 
 ## What each dollar buys
 
@@ -59,7 +59,7 @@ Honestly: four jobs stay with paid ads.
 
 ## Where clips win
 
-- **Price per view.** $1–$2 per 1,000 counted views against dollar CPMs from $5 on TikTok and YouTube and a $13.48 Meta average <!-- source: https://www.adamigo.ai/blog/meta-ads-cpm-benchmarks-by-industry-2026 2026-09-04 -->, for a view rather than an impression.
+- **Price per view.** $1–$10 per 1,000 counted views against dollar CPMs from $5 on TikTok and YouTube and a $13.48 Meta average <!-- source: https://www.adamigo.ai/blog/meta-ads-cpm-benchmarks-by-industry-2026 2026-09-04 -->, for a view rather than an impression.
 - **Creative for free.** Creators edit their own clips; on tasks with ready-made videos the platform hands them files with built-in uniqueness, so nobody edits.
 - **Trust.** A person's account, no sponsored label, no banner blindness.
 - **The long tail.** Ads stop with the budget; clips stay up and keep collecting views.
@@ -68,7 +68,7 @@ Honestly: four jobs stay with paid ads.
 
 ## How to combine them
 
-The working setup is a sequence. Clips first: a task with your materials, a $1–$2 rate per 1,000, a threshold, a cap and a test budget. A week later you have dozens of clips from different creators and the network's statistics on which hooks and formats earn views without an auction.
+The working setup is a sequence. Clips first: a task with your materials, a $1–$10 rate per 1,000, a threshold, a cap and a test budget. A week later you have dozens of clips from different creators and the network's statistics on which hooks and formats earn views without an auction.
 
 Ads second: scale the winners where targeting and speed matter. A creator's clip goes into an ad only with their consent; the format, the first three seconds and the copy carry over freely. Writing the task: [commissioning clips for a campaign](/en/for-brands/commission-clips-for-a-campaign); terms for buyers: [/en/for-business](/en/for-business).
 

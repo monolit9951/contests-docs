@@ -12,7 +12,7 @@ hero:
   takeaways:
     - "<b>Klipni is for Russia only.</b> Ruble payouts reach a card through self-employed or sole-trader status. The fee is 5%, there is no floor on payouts, and VK Clips are counted."
     - "<b>DareBay is worldwide.</b> No country restrictions, USDT on TON or Telegram Stars, no tax status and no application; the community is largest in CIS, and offer tasks add a fixed fee per clip, a share of sales and ready-made unique videos."
-    - "<b>Both print the rate before you edit.</b> Klipni shows examples of 50 rubles per 1,000 views, DareBay's open contests run from $1.00 to $2.00 per 1,000, and either way the number is on the card."
+    - "<b>Both print the rate before you edit.</b> Klipni shows examples of 50 rubles per 1,000 views, DareBay's open contests run from $1.00 to $10.00 per 1,000, and either way the number is on the card."
     - "<b>Both take the budget in advance.</b> Klipni by prepaid invoice, DareBay by locking it in wallet-backed contests and labelling the manual ones."
 compare:
   ids: [darebay, klipni]
@@ -31,7 +31,7 @@ cta:
 
 If you are in Russia, registered as self-employed or willing to register in the app, and you prefer rubles on a card, Klipni is a straightforward option: a 5% fee on approved payouts, any balance can be cashed out, money within five business days, and VK Clips counted alongside YouTube Shorts, TikTok and Instagram Reels. The brand pays the budget in advance, so a campaign is funded before it starts.
 
-If you are outside Russia, do not want a tax status just to clip, or need to be paid in USDT, DareBay covers that: it pays worldwide with no country list, including all of CIS, in USDT on TON or Telegram Stars, with no application and no followers. Open contests pay from $1.00 to $2.00 per 1,000 counted views, up to $500 per clip, with 0% taken from contest payouts and 10% on withdrawal to your wallet, from 10 USDT.
+If you are outside Russia, do not want a tax status just to clip, or need to be paid in USDT, DareBay covers that: it pays worldwide with no country list, including all of CIS, in USDT on TON or Telegram Stars, with no application and no followers. Open contests pay from $1.00 to $10.00 per 1,000 counted views, up to $500 per clip, with 0% taken from contest payouts and 10% on withdrawal to your wallet, from 10 USDT.
 
 <LCompare />
 
@@ -63,7 +63,7 @@ On Klipni 5% is deducted from an approved payout, there is no minimum, and the m
 
 ### Which pays more, DareBay or Klipni?
 
-Both print the rate on the campaign card, and it differs per campaign. Klipni shows examples of 50 rubles per 1,000 views; DareBay's open contests run from $1.00 to $2.00 per 1,000. Compare the specific campaign, the fee and the threshold, not an average rate.
+Both print the rate on the campaign card, and it differs per campaign. Klipni shows examples of 50 rubles per 1,000 views; DareBay's open contests run from $1.00 to $10.00 per 1,000. Compare the specific campaign, the fee and the threshold, not an average rate.
 
 ### Do I need self-employed status?
 

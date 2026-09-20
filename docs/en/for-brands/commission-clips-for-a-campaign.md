@@ -27,17 +27,17 @@ You set the terms of the offer yourself when creating the contest. Clippers see 
 
 | Parameter | Who sets it and typical values | What it is for |
 |-----------|--------------------------------|----------------|
-| Rate per 1000 views | set by the buyer (across open contests $1.00 - $2.00 per 1000 views) | Defines what a clipper gets for every thousand counted views |
+| Rate per 1000 views | set by the buyer (across open contests $1.00 - $10.00 per 1000 views) | Defines what a clipper gets for every thousand counted views |
 | View threshold | set by the buyer and printed on the task card (system default 1000) | Submissions below the threshold take no part in the split and cost you nothing |
 | Cap per submission | set by the buyer | Limits the maximum payout to one creator so a single video cannot eat the whole budget |
 | Total budget | set by the buyer | The full amount held on the platform |
 | Task and publishing site | set by the buyer | The brief, and which of TikTok, YouTube, Instagram or the other sites named in the task the video goes on |
 
-The rate of **$1.00 to $2.00 per 1000 views** reflects the range across open contests, and the view threshold is set by each task rather than by the platform: the system default is 1000 views, and above that the buyer sets whatever threshold they like (platform data, snapshot: 2026-08-23). More on the threshold: [how pay-per-view works](/en/earnings/how-pay-per-view-works).
+The rate of **$1.00 to $10.00 per 1000 views** reflects the range across open contests, and the view threshold is set by each task rather than by the platform: the system default is 1000 views, and above that the buyer sets whatever threshold they like (platform data, snapshot: 2026-08-23). More on the threshold: [how pay-per-view works](/en/earnings/how-pay-per-view-works).
 
 ## What to weigh up: a checklist for the buyer
 
-1. **The rate.** A high rate brings in more clippers and burns the budget faster; a low rate saves budget but gets picked up slowly. The range across open contests: $1.00 - $2.00 per 1000 views.
+1. **The rate.** A high rate brings in more clippers and burns the budget faster; a low rate saves budget but gets picked up slowly. The range across open contests: $1.00 - $10.00 per 1000 views.
 2. **The threshold.** It protects the budget from submissions with a handful of views: anything below it costs you nothing. The threshold is set by each task and printed on its card.
 3. **The cap.** It stops one video that went viral from taking the whole budget. Pick it so the same money buys videos from several creators.
 4. **The task.** The more concrete the result you describe (format, style, key moments), the closer the work lands to what you wanted. Clippers pick the tasks they understand on the first read.

@@ -1,6 +1,6 @@
 ---
 title: Where to find clipping work and clipping jobs for beginners
-description: "Where clipping jobs are posted: streamers direct, brands through selection, and the DareBay board - $1–2 per 1,000 views, up to $500 per clip, no application."
+description: "Where clipping jobs are posted: streamers direct, brands through selection, and the DareBay board - $1–10 per 1,000 views, up to $500 per clip, no application."
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_cpm_min, ppv_cpm_median, ppv_cpm_max, ppv_min_views_threshold_live]
 seo: true
@@ -10,7 +10,7 @@ hero:
   lede: "Three places hand out clipping work, and they differ less in the rate than in where the money sits while you edit. Here is how each one compares on pay and risk, where the source footage comes from, and how to take a brief on the DareBay board with no application, no interview and no portfolio."
   takeaways:
     - "<b>Work comes from three pockets:</b> a streamer out of their own income, a brand or agency through selection, or an intermediary that holds the money first."
-    - "<b>Open DareBay contests pay $1.00 to $2.00 per 1000 views,</b> and you never haggle: the rate and the threshold stand on the card before you submit and do not change after launch."
+    - "<b>Open DareBay contests pay $1.00 to $10.00 per 1000 views,</b> and you never haggle: the rate and the threshold stand on the card before you submit and do not change after launch."
     - "<b>The threshold is set by the brief,</b> and nobody deducts it: clear the mark and the whole counter goes into the maths; caps run up to $500 per clip."
     - "<b>Footage comes with the brief or from public sources:</b> the streamer's VODs, the author's own videos, the brand's material. Somebody else's clip or edit will not pass."
 cta:
@@ -18,7 +18,7 @@ cta:
   lede: "No application, no interview, no contractor rating to build up first. The rate, the threshold and the cap are set before you arrive, so you cut the clip, publish it on the site the brief names and send the link. After that, the maths runs on the rate and threshold fixed at the start."
 ---
 
-The safest work is the work somebody already paid for. It comes from three places: a streamer directly, with the rate settled in DMs; a brand or the agency running a channel, through selection with an application and work samples; or an intermediary platform with a fixed rate - on DareBay that is the open contest board, where you take a brief yourself, with no application, no interview and no portfolio review. Open contests pay **$1.00 to $2.00 per 1000 views**, and nothing open right now pays below that floor. The threshold is **set by each brief**: from that mark a submission enters the maths, while the maximum payout for one submission is whatever the buyer named, up to $500 per clip. They set the rate, the threshold and the cap at contest creation, all three stand on the card before you submit, and the rate and threshold do not change after launch. For a clipper, entry costs nothing.
+The safest work is the work somebody already paid for. It comes from three places: a streamer directly, with the rate settled in DMs; a brand or the agency running a channel, through selection with an application and work samples; or an intermediary platform with a fixed rate - on DareBay that is the open contest board, where you take a brief yourself, with no application, no interview and no portfolio review. Open contests pay **$1.00 to $10.00 per 1000 views**, and nothing open right now pays below that floor. The threshold is **set by each brief**: from that mark a submission enters the maths, while the maximum payout for one submission is whatever the buyer named, up to $500 per clip. They set the rate, the threshold and the cap at contest creation, all three stand on the card before you submit, and the rate and threshold do not change after launch. For a clipper, entry costs nothing.
 
 Every figure on this page comes from the platform's own data (snapshot: 2026-08-23) and counts only open contests - the ones a clipper can take right now.
 

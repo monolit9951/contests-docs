@@ -11,7 +11,7 @@ hero:
   takeaways:
     - "<b>Crypto gets watched in the feed, not on a landing page:</b> explainers, news clips, product tutorials and AMA cuts collect views with no ad account and no sponsored label."
     - "<b>The rules in your brief are what protect the project:</b> no promises of returns, no signals, a disclaimer in every clip, official links only, no third-party referral links."
-    - "<b>Clippers receive USDT to a TON wallet and you pay for reach:</b> the rate in open tasks runs $1 to $2 per 1,000 views, launching is free and the contest fee is 0%."
+    - "<b>Clippers receive USDT to a TON wallet and you pay for reach:</b> the rate in open tasks runs $1 to $10 per 1,000 views, launching is free and the contest fee is 0%."
     - "<b>Your community already explains the product for free:</b> a pay-per-view task turns the active members of your chat into creators paid honestly by the counter."
 cta:
   title: "Launch the task, get clips within days"
@@ -46,7 +46,7 @@ A clip that breaks any of the six is rejected in the selection window and is not
 
 For a crypto project the money side is already in USDT: the budget is funded in USDT and creators receive USDT to a wallet on the TON network. You set a rate per 1,000 views, a threshold, a cap per clip and a budget; the platform reads views from the site's public counter, reconciles several times a day and filters out inflated views.
 
-In open tasks rates currently run from $1 to $2 per 1,000 views. The view threshold is set by each task, with a system default of 1,000 views: a clip below it costs nothing, a clip above it is paid for its whole counter. The cap per clip runs up to $500: a viral clip gets the maximum, the rest goes to other creators. A hypothetical calculation:
+In open tasks rates currently run from $1 to $10 per 1,000 views. The view threshold is set by each task, with a system default of 1,000 views: a clip below it costs nothing, a clip above it is paid for its whole counter. The cap per clip runs up to $500: a viral clip gets the maximum, the rest goes to other creators. A hypothetical calculation:
 
 > 20,000 / 1,000 × $1.00 = **$20.00**
 

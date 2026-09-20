@@ -1,6 +1,6 @@
 ---
 title: "Clipping earnings calculator: what you can make per month"
-description: "Set views per clip, clips per week and a $1 to $2 rate per 1,000 views: a monthly figure with the threshold, a $500 cap per clip and the sum on hand."
+description: "Set views per clip, clips per week and a $1 to $10 rate per 1,000 views: a monthly figure with the threshold, a $500 cap per clip and the sum on hand."
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_cpm_median, ppv_min_views_threshold_live, ppv_max_per_work_typical]
 seo: true
@@ -10,7 +10,7 @@ hero:
   kicker: "Calculator · 2026"
   lede: "Three sliders instead of back-of-the-envelope guesses: views per clip, clips per week and the rate. From there the calculator runs the same formula the platform pays by, applies the threshold and the cap, and shows what reaches your wallet after the 10% withdrawal fee. Not a range off somebody else's screenshot. Your numbers."
   takeaways:
-    - "<b>One formula, and you can run it before you edit:</b> views / 1,000 × rate, never above the cap per clip. Open tasks pay $1 to $2 per 1,000 views."
+    - "<b>One formula, and you can run it before you edit:</b> views / 1,000 × rate, never above the cap per clip. Open tasks pay $1 to $10 per 1,000 views."
     - "<b>The threshold is a gate, not a deduction:</b> the task sets it, a clip below it earns nothing, and a clip that clears it is paid for every view from the first."
     - "<b>The cap runs up to $500 per clip,</b> so ten steady clips beat one viral hit: the number grows with the count of clips, not with luck."
     - "<b>Nothing is taken until you withdraw:</b> every accrual lands on your balance in full, a withdrawal request from 10 USDT carries a 10% fee inside it, and the team checks the details and sends it."
@@ -23,7 +23,7 @@ cta:
 
 ## How to read the result
 
-The calculator runs the formula the platform pays by: views / 1,000 × rate, never more than the cap per clip. Three sliders set the input: views on one clip, clips per week, and the rate per 1,000 views. The rate slider stops where open tasks stop, between $1 and $2, in quarter-dollar steps.
+The calculator runs the formula the platform pays by: views / 1,000 × rate, never more than the cap per clip. Three sliders set the input: views on one clip, clips per week, and the rate per 1,000 views. The rate slider stops where open tasks stop, between $1 and $10, in quarter-dollar steps.
 
 The four figures on the right are the output. **Per clip** is the payout for one clip after the cap; if the clip hits the cap, a badge says so. **Per week** multiplies that by the number of clips, and **per month** is four straight weeks. **On hand** is 10% less than the accrual: it is what reaches your wallet after the withdrawal fee, which comes out of the amount you request rather than being added on top, and the minimum request is 10 USDT.
 
@@ -33,21 +33,21 @@ The threshold is built in too: a clip under the threshold returns zero, and a cl
 
 Three workloads through the formula with a $500 cap per clip: a start on one channel, a steady pace, and a small team's load.
 
-| Scenario | Per clip at $1 | Per clip at $2 | Per month at $1 | Per month at $2 |
+| Scenario | Per clip at $1 | Per clip at $10 | Per month at $1 | Per month at $10 |
 |---|---:|---:|---:|---:|
-| 5 clips a week at 10,000 views | $10.00 | $20.00 | $200.00 | $400.00 |
-| 10 clips a week at 30,000 views | $30.00 | $60.00 | $1,200.00 | $2,400.00 |
-| 20 clips a week at 100,000 views | $100.00 | $200.00 | $8,000.00 | $16,000.00 |
+| 5 clips a week at 10,000 views | $10.00 | $100.00 | $200.00 | $2,000.00 |
+| 10 clips a week at 30,000 views | $30.00 | $300.00 | $1,200.00 | $12,000.00 |
+| 20 clips a week at 100,000 views | $100.00 | $500.00, capped | $8,000.00 | $40,000.00 |
 
-First scenario: 10,000 / 1,000 × $1.00 = **$10.00** per clip, five clips make $50.00 a week and $200.00 a month, and $180.00 of it reaches your wallet after the 10% withdrawal fee. Second: 30,000 / 1,000 × $1.00 = **$30.00**, ten clips make $300.00 a week and $1,200.00 a month, $1,080.00 on hand; at $2 everything doubles, to $2,400.00 and $2,160.00 on hand.
+First scenario: 10,000 / 1,000 × $1.00 = **$10.00** per clip, five clips make $50.00 a week and $200.00 a month, and $180.00 of it reaches your wallet after the 10% withdrawal fee. Second: 30,000 / 1,000 × $1.00 = **$30.00**, ten clips make $300.00 a week and $1,200.00 a month, $1,080.00 on hand; at $10 everything is ten times over, to $12,000.00 and $10,800.00 on hand.
 
-The third scenario shows how far away the cap is. 100,000 / 1,000 × $1.00 = **$100.00**, a fifth of a $500 cap, and twenty clips make $8,000.00 a month, $7,200.00 on hand; at $2 the same clip earns $200.00 and the month $16,000.00, $14,400.00 on hand. A $500 cap only starts to bite above 500,000 views at $1, or 250,000 at $2, and the next clip starts its own count from scratch.
+The third scenario shows where the cap sits. 100,000 / 1,000 × $1.00 = **$100.00**, a fifth of a $500 cap, and twenty clips make $8,000.00 a month, $7,200.00 on hand; at $10 the formula gives $1,000.00 for the same clip, the cap holds it at $500.00, and the month is $40,000.00, $36,000.00 on hand. A $500 cap only starts to bite above 500,000 views at $1, or 50,000 at $10, and the next clip starts its own count from scratch.
 
 This is the arithmetic of the formula, not a forecast: a real month is made of the tasks you took and the clips that cleared moderation and the threshold.
 
 ## What moves the number
 
-**Views matter more than the rate.** The rate spread in open tasks is a factor of two; the spread between a 5,000-view clip and a 50,000-view clip is a factor of ten. The typical rate is $1, and chasing $2 only pays off where the subject is yours: someone else's niche at a high rate gets fewer views than your own at a low one.
+**Views and the rate both move the number.** The rate spread in open tasks is a factor of ten, and so is the spread between a 5,000-view clip and a 50,000-view clip. The typical rate is $1, and chasing $10 only pays off where the subject is yours: someone else's niche at a high rate gets fewer views than your own at a low one.
 
 **The cap is per clip, not per author.** Up to $500 is the most one clip can earn, so the number grows with the count of clips, not with one viral hit: two clips at 600,000 views at $1 make $1,000.00, one clip at 1,200,000 makes $500.00.
 
@@ -69,7 +69,7 @@ The big figure is the accrual by the formula over four weeks; the "on hand" line
 
 ### How many clips does it take to reach the withdrawal minimum?
 
-The minimum request is 10 USDT, which pays out 9 USDT after the 10% fee. At $1 one clip at 10,000 views gets you there, or two at 5,000; at $2 one clip at 5,000 is enough. Clips under the task's threshold do not count toward that sum.
+The minimum request is 10 USDT, which pays out 9 USDT after the 10% fee. At $1 one clip at 10,000 views gets you there, or two at 5,000; at $10 one clip at 1,000 is enough. Clips under the task's threshold do not count toward that sum.
 
 ### Can I calculate several tasks with different rates?
 

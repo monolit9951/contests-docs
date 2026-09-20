@@ -31,7 +31,7 @@ cta:
 
 | Parameter | Value | What it means |
 |---|---|---|
-| Rate | from $1.00 to $2.00 per 1000 views across open tasks | The typical rate is $1.00; the buyer names their own |
+| Rate | from $1.00 to $10.00 per 1000 views across open tasks | The typical rate is $1.00; the buyer names their own |
 | View threshold | Set by the buyer on the card | The entry condition: below it a clip earns nothing, above it the whole counter is paid |
 | Cap per submission | Up to $500 in open tasks | The most one submission can earn |
 | Site | Set by the task | Stats are collected for TikTok, YouTube, Instagram and the other sites named in the task |

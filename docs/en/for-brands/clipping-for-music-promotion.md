@@ -1,6 +1,6 @@
 ---
 title: "Clipping for music promotion: promote a song with clippers"
-description: "Artists and labels pay clippers per view on clips around a track: $1 to $2 per 1,000 views, a threshold and a cap per clip. Formats, brief, rights, metrics."
+description: "Artists and labels pay clippers per view on clips around a track: $1 to $10 per 1,000 views, a threshold and a cap per clip. Formats, brief, rights, metrics."
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_min_views_threshold_live, ppv_max_per_work_typical, contest_create_usdt_price, commission_crypto, commission_fiat]
 seo: true
@@ -10,8 +10,8 @@ hero:
   lede: "A track starts to travel when dozens of people post to it, not when one label account does. Here is how to get those clips from clippers and pay only for counted views: the formats artists and labels ask for, what goes into the brief, how the payout is worked out and what to measure after release week."
   takeaways:
     - "<b>Five formats do the work around a track:</b> sound under a clip, lip sync, dance, concert footage, video teaser. Write each one into the brief and you can insist on it."
-    - "<b>You pay for views of a clip, never for uses of the sound:</b> the platform reads the clip's public counter, and open tasks pay $1 to $2 per 1,000 views."
-    - "<b>Release week can be costed before it starts:</b> 300,000 counted views at a $2.00 rate is 300,000 / 1,000 × $2.00 = $600.00, and launching the contest is free."
+    - "<b>You pay for views of a clip, never for uses of the sound:</b> the platform reads the clip's public counter, and open tasks pay $1 to $10 per 1,000 views."
+    - "<b>Release week can be costed before it starts:</b> 300,000 counted views at a $10.00 rate is 300,000 / 1,000 × $10.00 = $3,000.00, and launching the contest is free."
     - "<b>The rights to the track never leave you,</b> the clips go out on clippers' own TikTok, Reels and Shorts accounts, and growth in sound uses is read on the platform itself."
 cta:
   title: "Put the snippet in front of clippers"
@@ -48,15 +48,15 @@ Rate, threshold and cap go into separate fields; everything above maps onto the 
 
 Labels count uses of a sound, but the platform counts views of a clip: it reads the public counter of the clip whose link the creator sent. Other people's clips under your sound cost you nothing.
 
-You set three numbers. Open tasks currently pay $1 to $2 per 1,000 views, and music tends to sit at the top of the band because a clip to a sound is quick to shoot. The threshold is yours to set, with a system default of 1,000 views, and it drops clips with no reach at no cost. The cap per clip is yours too, up to $500, and it stops one viral clip from taking the budget.
+You set three numbers. Open tasks currently pay $1 to $10 per 1,000 views, and music tends to sit at the top of the band because a clip to a sound is quick to shoot. The threshold is yours to set, with a system default of 1,000 views, and it drops clips with no reach at no cost. The cap per clip is yours too, up to $500, and it stops one viral clip from taking the budget.
 
-A hypothetical example: a clip reaches 25,000 views at a $2.00 rate.
+A hypothetical example: a clip reaches 8,000 views at a $10.00 rate.
 
-> 25,000 / 1,000 × $2.00 = **$50.00**
+> 8,000 / 1,000 × $10.00 = **$80.00**
 
-A clip with 80,000 views would give $160.00, but with a $100 cap set on the task the creator gets $100.
+A clip with 80,000 views would give $800.00, but with a $100 cap set on the task the creator gets $100.
 
-A release-week budget is a scenario, not a forecast. Say the target is 300,000 counted views in seven days at $2.00: 300,000 / 1,000 × $2.00 = **$600.00**, and that is the whole cost: creating the contest is free and the contest fee is 0%. With a $100 cap set on the task that is at least six clips, in practice dozens. A wallet-backed budget is locked on the platform before the start, spent only on counted views, and the remainder comes back. Other budgets: [clipping campaign cost](/en/for-brands/clipping-campaign-cost).
+A release-week budget is a scenario, not a forecast. Say the target is 300,000 counted views in seven days at $10.00: 300,000 / 1,000 × $10.00 = **$3,000.00**, and that is the whole cost: creating the contest is free and the contest fee is 0%. With a $100 cap set on the task that is at least thirty clips, in practice dozens. A wallet-backed budget is locked on the platform before the start, spent only on counted views, and the remainder comes back. Other budgets: [clipping campaign cost](/en/for-brands/clipping-campaign-cost).
 
 <LBudget />
 

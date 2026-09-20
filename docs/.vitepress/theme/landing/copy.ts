@@ -173,7 +173,7 @@ export const LANDING_COPY: Record<Locale, LandingCopy> = {
     budgetViews: 'Paid views this budget buys',
     budgetClips: 'Clips at the cap to spend it all',
     budgetCpm: 'Cost per 1,000 views',
-    budgetNote: 'Contest fee 0%: the whole budget goes to creators. Launching is free; the budget is locked on the platform before the start.',
+    budgetNote: 'Contest fee 0%: the whole budget goes to creators. Launching is free; in a wallet-backed contest the budget is locked on the platform before the start.',
     glossaryTitle: 'Terms',
   },
   ru: {
@@ -225,7 +225,7 @@ export const LANDING_COPY: Record<Locale, LandingCopy> = {
     budgetViews: 'Оплаченных просмотров на этот бюджет',
     budgetClips: 'Роликов на потолке, чтобы потратить всё',
     budgetCpm: 'Цена за 1000 просмотров',
-    budgetNote: 'Комиссия конкурса 0%: весь бюджет уходит авторам. Запуск бесплатный, бюджет заблокирован на платформе до старта.',
+    budgetNote: 'Комиссия конкурса 0%: весь бюджет уходит авторам. Запуск бесплатный; в кошельковом конкурсе бюджет заблокирован на платформе до старта.',
     glossaryTitle: 'Термины',
   },
   uk: {
@@ -277,7 +277,7 @@ export const LANDING_COPY: Record<Locale, LandingCopy> = {
     budgetViews: 'Оплачених переглядів на цей бюджет',
     budgetClips: 'Роликів на стелі, щоб витратити все',
     budgetCpm: 'Ціна за 1000 переглядів',
-    budgetNote: 'Комісія конкурсу 0%: увесь бюджет іде авторам. Запуск безкоштовний, бюджет заблоковано на платформі до старту.',
+    budgetNote: 'Комісія конкурсу 0%: увесь бюджет іде авторам. Запуск безкоштовний; у гаманцевому конкурсі бюджет заблоковано на платформі до старту.',
     glossaryTitle: 'Терміни',
   },
 }

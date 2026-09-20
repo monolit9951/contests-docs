@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-18T00:00:00.000Z",
+  "generatedAt": "2026-09-20T17:05:11.773Z",
   "url": "https://darebay.com/data/darebay-facts.json",
   "operator": "Ruslan Bei",
   "sources": {
@@ -15,8 +15,8 @@
     "liveCatalogue": {
       "file": "data/contests-snapshot.json",
       "endpoint": "https://darebay.com/api/contests",
-      "fetchedAt": "2026-09-17T21:04:06.211Z",
-      "openTasks": 1
+      "fetchedAt": "2026-09-20T17:05:11.773Z",
+      "openTasks": 2
     }
   },
   "facts": [
@@ -39,7 +39,7 @@
       },
       "source": "product-truth.json#ppv.stable.bands.cpm",
       "asOf": "2026-08-23",
-      "note": "Reviewed stable band; 1 open listed task in the live catalogue on 2026-09-17 pays $2.00 per 1,000 views. A task's exact rate is printed on its card and cannot change after the start."
+      "note": "Reviewed stable band; 2 open listed tasks in the live catalogue on 2026-09-20 pay $1.19–$5.94 per 1,000 views. A task's exact rate is printed on its card and cannot change after the start."
     },
     {
       "id": "cap-per-clip",
@@ -57,7 +57,7 @@
       },
       "source": "product-truth.json#ppv.stable.bands.maxPerWork.high",
       "asOf": "2026-08-23",
-      "note": "The highest cap a task may set, founder-approved in product-intent.json#rate-band; highest cap among 1 open listed task in the live catalogue on 2026-09-17: $500. After the start a cap may only be raised."
+      "note": "The highest cap a task may set, founder-approved in product-intent.json#rate-band; highest cap among 2 open listed tasks in the live catalogue on 2026-09-20: $100. After the start a cap may only be raised."
     },
     {
       "id": "view-threshold",
@@ -75,7 +75,7 @@
       },
       "source": "product-truth.json#ppv.stable.defaultMinimumViews.value",
       "asOf": "2026-08-23",
-      "note": "The system default a task starts from; a task may set any threshold inside the reviewed band 1–2,000 views. Thresholds among 1 open listed task in the live catalogue on 2026-09-17: 1."
+      "note": "The system default a task starts from; a task may set any threshold inside the reviewed band 1–2,000 views. Thresholds among 2 open listed tasks in the live catalogue on 2026-09-20: 1000."
     },
     {
       "id": "contest-creation-fee",

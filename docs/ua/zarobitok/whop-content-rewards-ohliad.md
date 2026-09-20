@@ -1,20 +1,19 @@
 ---
 title: "Whop Content Rewards: огляд майданчика очима нарізчика"
 description: "Whop Content Rewards це найбільший майданчик кампаній для нарізчиків, але не для всіх країн: ставки, комісія, строки виплат, санкційний список і альтернативи."
-provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
+provenance: { snapshot_date: "2026-09-20", source: "darebay-prod" }
 numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_min_views_threshold_live, ppv_max_per_work_typical, commission_crypto, commission_fiat]
 competitor_sources:
-  - { platform: "Whop Content Rewards", url: "https://contentrewards.com/discover", date: "2026-09-02" }
-  - { platform: "Whop Content Rewards", url: "https://contentrewards.com/discover", date: "2026-09-05" }
-  - { platform: "Whop Content Rewards", url: "https://contentrewards.com/creators", date: "2026-09-02" }
-  - { platform: "Whop Content Rewards", url: "https://contentrewards.com/creators", date: "2026-09-05" }
-  - { platform: "Whop Content Rewards", url: "https://contentrewards.com/brand", date: "2026-09-05" }
-  - { platform: "Whop Content Rewards", url: "https://contentrewards.com/terms", date: "2026-09-05" }
-  - { platform: "Whop Content Rewards", url: "https://contentrewards.com/", date: "2026-09-05" }
-  - { platform: "Whop", url: "https://docs.whop.com/memberships-and-access/third-party-apps/content-rewards", date: "2026-09-02" }
-  - { platform: "Whop", url: "https://docs.whop.com/memberships-and-access/third-party-apps/content-rewards", date: "2026-09-05" }
+  - { platform: "Whop Content Rewards", url: "https://contentrewards.com/discover", date: "2026-09-18" }
+  - { platform: "Whop Content Rewards", url: "https://contentrewards.com/creators", date: "2026-09-18" }
+  - { platform: "Whop Content Rewards", url: "https://contentrewards.com/terms", date: "2026-09-18" }
+  - { platform: "Whop Content Rewards", url: "https://contentrewards.com/changelog", date: "2026-09-18" }
+  - { platform: "Whop Content Rewards", url: "https://contentrewards.com/pricing/creators", date: "2026-09-18" }
+  - { platform: "Whop Content Rewards", url: "https://contentrewards.com/", date: "2026-09-18" }
+  - { platform: "Whop", url: "https://docs.whop.com/memberships-and-access/third-party-apps/content-rewards", date: "2026-09-18" }
   - { platform: "Whop", url: "https://docs.whop.com/trust-and-safety/trust-safety-overview/sanctioned-countries", date: "2026-09-18" }
   - { platform: "Whop", url: "https://docs.whop.com/manage-your-business/manage-payouts/set-up-payouts", date: "2026-09-18" }
+  - { platform: "Whop", url: "https://docs.whop.com/manage-your-business/manage-payouts/payout-methods", date: "2026-09-18" }
   - { platform: "Klipni", url: "https://klipni.com/creators", date: "2026-09-02" }
   - { platform: "Klipni", url: "https://klipni.com/legal/terms", date: "2026-09-02" }
   - { platform: "Vyro", url: "https://vyro.com/campaigns", date: "2026-09-02" }
@@ -29,61 +28,65 @@ hero:
   kicker: "Огляд · 2026"
   lede: "Перш ніж різати для Whop Content Rewards, дізнайся, скільки зі ставки дійде до тебе і коли: тут будова кампанії, сенс кожного числа на картці, комісія, строки виплат і країни, куди Whop не платить. Кожна цифра знята з публічних сторінок Whop і датована, а для закритих країн названо майданчики без списку країн."
   takeaways:
-    - "<b>Whop це найбільша вітрина кампаній для нарізчиків, і обирати там є з чого.</b> Десятки живих кампаній, бюджет до $238 000 на одній картці <!-- source: https://contentrewards.com/discover 2026-09-05 -->, ставки $0.50–$5 за 1000 переглядів <!-- source: https://contentrewards.com/discover 2026-09-02 -->."
-    - "<b>Ставка на картці це не сума на руки, рахуй виплату.</b> Умови беруть 10% з CPM-виплат <!-- source: https://contentrewards.com/terms 2026-09-05 -->, FAQ для авторів показує сходинки від 25% до 7% <!-- source: https://contentrewards.com/creators 2026-09-02 -->, а ролик нижче мінімальної виплати за відео до перевірки навіть не доходить."
-    - "<b>Грошей чекати приблизно десять днів після схвалення.</b> Ролик заробляє 7 днів, потім ще холд 3 дні <!-- source: https://contentrewards.com/creators 2026-09-02 -->; виведення на банк, PayPal, мобільний гаманець або в крипту у 200+ країн."
-    - "<b>В Україну Whop платить, крім шести регіонів зі свого санкційного списку</b> <!-- source: https://docs.whop.com/trust-and-safety/trust-safety-overview/sanctioned-countries 2026-09-18 -->: там, як і в Росії та Білорусі, ні акаунта, ні виплат, і VPN не рятує. Для них є майданчики без списку країн, DareBay серед них."
+    - "<b>Content Rewards переїхав на власний сайт, але Whop лишився під ним.</b> Кампанії, перевірка роликів і антифрод на contentrewards.com, а вхід, перевірка особи і виведення й далі у Whop та за правилами Whop."
+    - "<b>Ставка на картці це не сума на руки, рахуй виплату.</b> З кожної CPM-виплати майданчик бере фіксовані 10%, сходинок більше немає, а ролик нижче мінімальної виплати кампанії не оплатять зовсім."
+    - "<b>Грошей чекати приблизно десять днів після схвалення.</b> Ролик заробляє 7 днів, потім ще холд 3 дні; далі ти сам переводиш гроші на баланс Whop, і йдуть вони вже за строками Whop."
+    - "<b>В Україну Whop платить, крім шести регіонів зі свого санкційного списку</b>: там, як і в Росії та Білорусі, ні акаунта, ні виплат, і VPN не рятує. Для них є майданчики без списку країн, DareBay серед них."
 cta:
   title: "Whop не платить у твою країну? На DareBay списку країн немає"
   lede: "DareBay платить по всьому світу в USDT на гаманець: ставка, поріг і стеля стоять на картці завдання до подачі, підписники і заявка не потрібні, а найбільше авторів тут якраз із СНД."
 ---
 ## Що таке Content Rewards і як влаштована кампанія
 
-Content Rewards це застосунок усередині Whop, через який бренди, подкасти, ігрові студії та автори курсів купують перегляди в нарізчиків; сам майданчик пише про понад мільйон авторів <!-- source: https://contentrewards.com/ 2026-09-05 -->.
+Content Rewards це біржа нарізок і UGC, через яку бренди, подкасти, ігрові студії та автори курсів купують перегляди в нарізчиків. Стара версія живе всередині Whop, і довідка Whop досі описує її як застосунок <!-- source: https://docs.whop.com/memberships-and-access/third-party-apps/content-rewards 2026-09-18 -->, але реліз V2 від 19 серпня 2026 перебудував майданчик в окремі застосунки для брендів і авторів <!-- source: https://contentrewards.com/changelog 2026-09-18 -->, а умови для авторів від 3 вересня укладаються вже з Content Rewards Inc із Делаверу, і версію всередині Whop вони називають попередньою <!-- source: https://contentrewards.com/terms 2026-09-18 -->. Сам майданчик пише про понад мільйон авторів і $20 млн виплат <!-- source: https://contentrewards.com/creators 2026-09-18 -->.
 
-Кампанія збирається з одних полів: тип, Clipping або UGC, бюджет, ставка за 1000 переглядів, мінімальна виплата за відео, максимум на відео, за бажання фікс за схвалений ролик, соцмережі і вимоги до ролика <!-- source: https://docs.whop.com/memberships-and-access/third-party-apps/content-rewards 2026-09-05 -->. Мінімальний бюджет бренду $1,000 <!-- source: https://contentrewards.com/brand 2026-09-05 -->; гроші вносяться до запуску, і Whop тримає їх під кампанію, поки автори їх не заробили <!-- source: https://contentrewards.com/brand 2026-09-05 -->.
+Whop нікуди не подівся: за ним вхід в акаунт, перевірка особи, бюджети брендів, рух грошей і виведення, а за Content Rewards кампанії, заявки, перевірка переглядів, прапорці накрутки і твій баланс; якщо Whop забанить або доступ зникне, вивести гроші може не вийти <!-- source: https://contentrewards.com/terms 2026-09-18 -->.
 
-Одні кампанії приймають усіх, інші спершу просять заявку <!-- source: https://contentrewards.com/creators 2026-09-02 -->. Публікувати можна в Instagram, Facebook, TikTok, YouTube і X <!-- source: https://contentrewards.com/terms 2026-09-05 -->, вік від 18 років <!-- source: https://contentrewards.com/terms 2026-09-05 -->, мінімуму підписників майданчик не публікує <!-- source: https://contentrewards.com/creators 2026-09-02 -->.
+Кампанія платить одним із трьох способів: CPM за 1000 переглядів, фікс за кожен схвалений пост або ретейнер за цикл <!-- source: https://contentrewards.com/creators 2026-09-18 -->. Мінімальний бюджет $1,000 для будь-якого типу, а ставку, мінімум і максимум на ролик задає сама кампанія <!-- source: https://contentrewards.com/terms 2026-09-18 -->; бюджет вноситься до запуску і тримається під кампанію, поки автори його не заробили <!-- source: https://contentrewards.com/ 2026-09-18 -->.
+
+Одні кампанії приймають усіх, інші спершу просять заявку, у день перевірки 4 з 50 <!-- source: https://contentrewards.com/discover 2026-09-18 -->. Публікувати можна в Instagram, Facebook, TikTok, YouTube і X, вік від 18 років <!-- source: https://contentrewards.com/terms 2026-09-18 -->, мінімуму підписників майданчик не публікує <!-- source: https://contentrewards.com/creators 2026-09-18 -->.
 
 ## Скільки платять і як це читати
 
-Ставку задає кожна кампанія: у живих кампаніях розкид $0.50–$5 за 1000 переглядів <!-- source: https://contentrewards.com/discover 2026-09-02 -->. У день перевірки більшість карток стояли на $1 за 1000, серед них Yomi Denzel з бюджетом $238 000; Call of Duty платив $1.75, CEO Podcast $3 <!-- source: https://contentrewards.com/discover 2026-09-05 -->. Картка показує ще три числа.
+Ставку задає кожна кампанія: у день перевірки 50 кампаній на вітрині Discover платили від $0.05 до $10 за 1000 переглядів, найчастіше $1 (17 карток із 50); Call of Duty давав $1.75, а найбільший бюджет, $248 000, стояв у Yomi Denzel <!-- source: https://contentrewards.com/discover 2026-09-18 -->. Картка показує ще три числа.
 
-| Поле картки | Що пише Whop | Що це означає |
+| Поле картки | Що пише майданчик | Що це означає |
 |---|---|---|
-| Бюджет | від $1,000 <!-- source: https://contentrewards.com/brand 2026-09-05 -->, на вітрині до $238 000 <!-- source: https://contentrewards.com/discover 2026-09-05 --> | Скінчився залишок, кампанія не платить |
-| Максимум на відео | задає кампанія; на картках UGC $400 і $600 <!-- source: https://contentrewards.com/discover 2026-09-05 --> | Вище нього ролик не заробляє <!-- source: https://contentrewards.com/creators 2026-09-05 --> |
-| Мінімальна виплата за відео | єдиного порогу немає, бренд задає свою <!-- source: https://docs.whop.com/memberships-and-access/third-party-apps/content-rewards 2026-09-02 --> | Нижче неї ролик не йде на перевірку |
-| Комісія з автора | 10% за умовами <!-- source: https://contentrewards.com/terms 2026-09-05 -->; у FAQ сходинки 25% до $1,000 заробітку, 20% до $2,500, 12.5% до $5,000, далі 7% <!-- source: https://contentrewards.com/creators 2026-09-05 --> | Уточни в підтримці, що діє |
+| Бюджет | від $1,000 <!-- source: https://contentrewards.com/terms 2026-09-18 -->, на вітрині до $248 000 <!-- source: https://contentrewards.com/discover 2026-09-18 --> | Скінчився залишок, кампанія не платить |
+| Максимум на відео | задає кампанія; на картках $400 і $600 <!-- source: https://contentrewards.com/discover 2026-09-18 --> | Вище нього ролик не заробляє <!-- source: https://contentrewards.com/creators 2026-09-18 --> |
+| Мінімальна виплата за відео | єдиного порогу немає, бренд задає свою всередині кампанії <!-- source: https://contentrewards.com/terms 2026-09-18 --> | Нижче неї ролик не оплатять |
+| Комісія з автора | фіксовані 10% з кожної CPM-виплати, скільки б ти не заробив; за пост і ретейнер 10% за бюджету до $5,000 і 0% («Premium») від $5,000 <!-- source: https://contentrewards.com/terms 2026-09-18 --> | Рахуй суму одразу за вирахуванням 10% |
 
-Рахуй виплату, а не ставку: 30 000 переглядів по $1 за 1000 це 30 000 / 1000 × $1 = $30 до вирахувань, $27 після 10% за умовами і $22.50 за сходинкою 25% для новачка.
+Рахуй виплату, а не ставку: 30 000 переглядів по $1 за 1000 це 30 000 / 1000 × $1 = $30 до вирахувань і $27 після комісії.
 
 ## Виплати і країни
 
-Нарахування накопичуються в гаманці Whop. На CPM-кампанії ролик заробляє 7 днів з моменту схвалення, потім виплата тримається ще 3 дні <!-- source: https://contentrewards.com/creators 2026-09-02 -->; умови кажуть про розрахунок приблизно через 10 днів після схвалення <!-- source: https://contentrewards.com/terms 2026-09-05 -->. З гаманця гроші йдуть на банк, PayPal, мобільний гаманець або в крипту, Whop називає понад 200 країн <!-- source: https://contentrewards.com/creators 2026-09-02 -->; нижньої межі виведення немає, за саме виведення Whop не бере <!-- source: https://contentrewards.com/creators 2026-09-02 -->.
+Нарахування накопичуються в гаманці Content Rewards. На CPM-кампанії ролик заробляє 7 днів після схвалення, потім виплата тримається ще 3 дні, тобто розрахунок приблизно через 10 днів <!-- source: https://contentrewards.com/terms 2026-09-18 -->.
 
-У санкційному списку Whop стоять Росія та Білорусь, а також Іран, Сирія, Куба та інші <!-- source: https://docs.whop.com/trust-and-safety/trust-safety-overview/sanctioned-countries 2026-09-18 -->: автор звідти не може ні завести акаунт, ні отримати виплату <!-- source: https://docs.whop.com/trust-and-safety/trust-safety-overview/sanctioned-countries 2026-09-18 -->. Україна стоїть у ньому лише шістьма регіонами: Крим, Севастополь, Донецька, Луганська, Запорізька та Херсонська області <!-- source: https://docs.whop.com/trust-and-safety/trust-safety-overview/sanctioned-countries 2026-09-18 -->. Казахстану, Узбекистану, Киргизстану, Вірменії, Грузії та Молдови в списку немає <!-- source: https://docs.whop.com/trust-and-safety/trust-safety-overview/sanctioned-countries 2026-09-18 -->, і на сторінці налаштування виплат Whop називає їх та Україну серед країн, куди виводить гроші <!-- source: https://docs.whop.com/manage-your-business/manage-payouts/set-up-payouts 2026-09-18 -->, а акаунт, що потрапив під санкції, Whop може призупинити <!-- source: https://docs.whop.com/trust-and-safety/trust-safety-overview/sanctioned-countries 2026-09-18 -->.
+Далі гроші йдуть двома кроками. Перший: із гаманця Content Rewards на баланс Whop, без мінімуму і без плати, «хоч $3, хоч $3,000» <!-- source: https://contentrewards.com/pricing/creators 2026-09-18 -->. Другий: з балансу Whop на банк, мобільний гаманець або в крипту в понад 200 країн, стандартно до 5 робочих днів <!-- source: https://docs.whop.com/manage-your-business/manage-payouts/payout-methods 2026-09-18 -->, за умовами Content Rewards приблизно 3–5 робочих днів або миттєво за комісію Whop <!-- source: https://contentrewards.com/terms 2026-09-18 -->. Про мінімум сторінки розходяться: у Content Rewards його немає <!-- source: https://contentrewards.com/creators 2026-09-18 -->, а інструкція Whop називає поріг виведення $10 «якщо застосовно» <!-- source: https://docs.whop.com/manage-your-business/manage-payouts/set-up-payouts 2026-09-18 -->.
+
+Свого списку країн Content Rewards не публікує, лише звіряє авторів із санкційними списками і може утримати виплату <!-- source: https://contentrewards.com/terms 2026-09-18 -->; вирішує список Whop, через який іде кожне виведення. У санкційному списку Whop стоять Росія та Білорусь, а також Іран, Сирія, Куба та інші <!-- source: https://docs.whop.com/trust-and-safety/trust-safety-overview/sanctioned-countries 2026-09-18 -->: автор звідти не може ні завести акаунт, ні отримати виплату <!-- source: https://docs.whop.com/trust-and-safety/trust-safety-overview/sanctioned-countries 2026-09-18 -->. Україна стоїть у ньому лише шістьма регіонами: Крим, Севастополь, Донецька, Луганська, Запорізька та Херсонська області <!-- source: https://docs.whop.com/trust-and-safety/trust-safety-overview/sanctioned-countries 2026-09-18 -->. Казахстану, Узбекистану, Киргизстану, Вірменії, Грузії та Молдови в списку немає <!-- source: https://docs.whop.com/trust-and-safety/trust-safety-overview/sanctioned-countries 2026-09-18 -->, і на сторінці налаштування виплат Whop називає їх та Україну серед країн, куди виводить гроші <!-- source: https://docs.whop.com/manage-your-business/manage-payouts/set-up-payouts 2026-09-18 -->, а акаунт, що потрапив під санкції, Whop може призупинити <!-- source: https://docs.whop.com/trust-and-safety/trust-safety-overview/sanctioned-countries 2026-09-18 -->.
 
 ## Кому Whop підходить
 
-- Нарізчику зі США, Європи, Латинської Америки чи Азії, який хоче обирати з десятків живих кампаній.
-- Тому, хто вміє працювати за вимогами бренду, аж до «40% аудиторії зі США, Великої Британії та Канади», як просить одна з кампаній <!-- source: https://contentrewards.com/discover 2026-09-05 -->.
-- Авторам без камери: на вітрині є UGC-кампанії зі слайдшоу <!-- source: https://contentrewards.com/discover 2026-09-05 -->.
-- Тому, хто цінує захист від чужої накрутки: кожна заявка отримує оцінку ймовірності ботів до схвалення <!-- source: https://contentrewards.com/brand 2026-09-05 -->, а купівля переглядів це перманентний бан <!-- source: https://contentrewards.com/terms 2026-09-05 -->.
+- Нарізчику зі США, Європи, Латинської Америки чи Азії, якому потрібен вибір: 50 кампаній на вітрині, бюджети до $248 000 <!-- source: https://contentrewards.com/discover 2026-09-18 -->.
+- Тому, хто вміє працювати за вимогами бренду, аж до «40% аудиторії зі США, Великої Британії та Канади», як просить одна з кампаній <!-- source: https://contentrewards.com/discover 2026-09-18 -->.
+- Авторам без камери: на вітрині є кампанії зі слайдшоу <!-- source: https://contentrewards.com/discover 2026-09-18 -->.
+- Тому, хто цінує захист від чужої накрутки: кожна заявка отримує Bot Score, оцінку ризику накрутки від 0 до 100 від стороннього антифрод-провайдера, а купівля переглядів це перманентний бан <!-- source: https://contentrewards.com/terms 2026-09-18 -->.
 
 ## Де він програє
 
 - Країни. Росія та Білорусь закриті повністю, Україна шістьма регіонами, і VPN не допомагає: перед виплатою стоїть перевірка особи.
-- Комісія. 10% за умовами <!-- source: https://contentrewards.com/terms 2026-09-05 --> проти сходинок від 25% у FAQ <!-- source: https://contentrewards.com/creators 2026-09-02 -->: майданчик сам називає різні цифри.
-- Мінімальна виплата за відео. Ролик нижче неї не потрапляє в чергу <!-- source: https://docs.whop.com/memberships-and-access/third-party-apps/content-rewards 2026-09-02 -->, і його перегляди згорають.
-- Ручне схвалення брендом. Без рішення людини нічого не платиться <!-- source: https://contentrewards.com/brand 2026-09-05 -->, відмова означає нуль, а нараховану, але не виплачену суму Whop може відкликати при відхиленні після схвалення або підтвердженому прапорці накрутки <!-- source: https://contentrewards.com/terms 2026-09-05 -->.
-- Конкуренція і залишок. На одній кампанії 2,4 тисячі авторів, у Eneba лишилося $206 з $3 000 <!-- source: https://contentrewards.com/discover 2026-09-05 -->: ставка нічого не гарантує, якщо бюджет розібрано.
+- Комісія. Фіксовані 10% з кожної CPM-виплати, хоч би якого розміру була кампанія <!-- source: https://contentrewards.com/terms 2026-09-18 -->: сходинок більше немає <!-- source: https://contentrewards.com/creators 2026-09-18 -->.
+- Мінімальна виплата за відео. Ролик, який до неї не дотягнув, не оплатять <!-- source: https://contentrewards.com/terms 2026-09-18 -->, і його перегляди згорають.
+- Ручне схвалення брендом. Автоматично не схвалюється нічого <!-- source: https://contentrewards.com/creators 2026-09-18 -->, відмова означає нуль, а нараховану, але не розраховану суму можуть відкликати при відхиленні після схвалення або підтвердженому прапорці накрутки <!-- source: https://contentrewards.com/terms 2026-09-18 -->.
+- Конкуренція і залишок. На одній кампанії 2888 авторів, у Double Coverage Podcast лишилося $27 з $43 615 <!-- source: https://contentrewards.com/discover 2026-09-18 -->: ставка нічого не гарантує, якщо бюджет розібрано.
 
 ## Як виглядає робочий день на Whop
 
-Ранок починається з вітрини Discover, де кампанії відсортовані за залишком бюджету, ставкою або кількістю авторів <!-- source: https://contentrewards.com/discover 2026-09-05 -->. Відкриваєш картку, читаєш чотири числа і вимоги, які всюди різні: Call of Duty не приймає сирий геймплей, Bible BFF лише свої шаблони, WatchMeWin лише аудиторію Латвії <!-- source: https://contentrewards.com/discover 2026-09-05 -->.
+Ранок починається з вітрини Discover, відсортованої за залишком бюджету, ставкою або кількістю авторів <!-- source: https://contentrewards.com/creators 2026-09-18 -->. Відкриваєш картку, читаєш чотири числа і вимоги, які всюди різні: Call of Duty не приймає сирий геймплей, Scroll The Bible дає готові шаблони <!-- source: https://contentrewards.com/discover 2026-09-18 -->.
 
-Далі монтаж з матеріалів кампанії, публікація на підключеному акаунті і подача посилання. Ролик збирає перегляди до мінімальної виплати і лише тоді потрапляє в чергу <!-- source: https://docs.whop.com/memberships-and-access/third-party-apps/content-rewards 2026-09-02 -->; Whop присвоює заявці оцінку ймовірності ботів, а схвалює чи відхиляє ролик бренд <!-- source: https://contentrewards.com/brand 2026-09-05 -->. Після схвалення тиждень заробітку, три дні холду, потім сума в гаманці <!-- source: https://contentrewards.com/creators 2026-09-02 -->. Вечір іде на перевірку залишків: кампанія, яка платила вранці, до ночі може закритися.
+Далі монтаж з матеріалів кампанії, публікація на підключеному акаунті і подача посилання протягом 30 хвилин <!-- source: https://contentrewards.com/creators 2026-09-18 -->. Bot Score заявці ставить Content Rewards, а схвалює чи відхиляє ролик модератор бренду <!-- source: https://contentrewards.com/terms 2026-09-18 -->. Після схвалення тиждень заробітку, три дні холду, потім сума в гаманці Content Rewards до переказу на баланс Whop <!-- source: https://contentrewards.com/terms 2026-09-18 -->. Вечір іде на перевірку залишків: кампанія, яка платила вранці, до ночі може закритися.
 
 ## Альтернативи, якщо Whop не платить у твою країну
 
@@ -99,16 +102,16 @@ DareBay працює без списку країн: замовник публі
 
 ### Whop Content Rewards справді платить чи це скам?
 
-Платить: за майданчиком юрособа в Делавері <!-- source: https://contentrewards.com/terms 2026-09-05 -->, бренд вносить бюджет до старту <!-- source: https://contentrewards.com/brand 2026-09-05 -->, умови описують строки розрахунку і правила відкликання виплат <!-- source: https://contentrewards.com/terms 2026-09-05 -->. Скарги у відгуках зазвичай про відхилені ролики, мінімальну виплату, комісію і закриті країни.
+Платить: за майданчиком юрособа в Делавері, а умови описують комісію, строки розрахунку і відкликання виплат <!-- source: https://contentrewards.com/terms 2026-09-18 -->; бренд вносить бюджет до старту <!-- source: https://contentrewards.com/ 2026-09-18 -->. Чого сторінки майданчика за тебе не вирішать, так це чи платить Whop у твою країну, тож санкційний список читай першим.
 
 ### Як швидко Whop виплачує гроші?
 
-На CPM ролик заробляє 7 днів після схвалення, потім 3 дні холду <!-- source: https://contentrewards.com/creators 2026-09-02 -->, умови кажуть про розрахунок приблизно через 10 днів <!-- source: https://contentrewards.com/terms 2026-09-05 -->. Додай перевірку брендом і переказ із гаманця: від подачі ролика до грошей на рахунку минає помітно більше десяти днів.
+На CPM ролик заробляє 7 днів після схвалення, потім 3 дні холду, тобто розрахунок приблизно через 10 днів <!-- source: https://contentrewards.com/pricing/creators 2026-09-18 -->. Далі йде плече Whop, приблизно 3–5 робочих днів за умовами <!-- source: https://contentrewards.com/terms 2026-09-18 -->. Додай перевірку брендом: від подачі ролика до грошей на рахунку минає помітно більше десяти днів.
 
 ### Чому ролик на Whop відхиляють, хоча перегляди є?
 
-Бо схвалює бренд, а не лічильник: невідповідність формату, шаблону, мові чи аудиторії це відмова <!-- source: https://contentrewards.com/brand 2026-09-05 -->. Друга причина в оцінці ймовірності ботів: за прапорця виплата тримається на перевірці <!-- source: https://contentrewards.com/brand 2026-09-05 -->. Третя: ролик не дійшов до мінімальної виплати за відео <!-- source: https://docs.whop.com/memberships-and-access/third-party-apps/content-rewards 2026-09-02 -->.
+Бо схвалює людина, а не лічильник: автоматично не проходить нічого, а звичайні причини відмови це не той майданчик, відсутність тегів чи позначки про рекламу, перевикористаний ролик і пост, змінений або видалений після подачі <!-- source: https://contentrewards.com/creators 2026-09-18 -->. Друга причина в Bot Score: за прапорця виплата тримається на перевірці <!-- source: https://contentrewards.com/terms 2026-09-18 -->. Третя: ролик не дійшов до мінімальної виплати за відео <!-- source: https://contentrewards.com/terms 2026-09-18 -->.
 
 ### Чи допоможе VPN, якщо моя країна в санкційному списку Whop?
 
-Ні. Умови вимагають, щоб автор не перебував у санкційній юрисдикції <!-- source: https://contentrewards.com/terms 2026-09-05 -->, перед виплатами проходить перевірка особи <!-- source: https://contentrewards.com/terms 2026-09-05 -->, а акаунт під санкціями Whop може призупинити <!-- source: https://docs.whop.com/trust-and-safety/trust-safety-overview/sanctioned-countries 2026-09-18 -->. Якщо ти в одному з шести закритих регіонів України, бери майданчик, який платить туди відкрито.
+Ні. Умови вимагають, щоб автор не перебував у санкційній юрисдикції <!-- source: https://contentrewards.com/terms 2026-09-18 -->, під час налаштування виведення Whop просить завантажити документ <!-- source: https://docs.whop.com/manage-your-business/manage-payouts/set-up-payouts 2026-09-18 -->, а акаунт під санкціями Whop може призупинити <!-- source: https://docs.whop.com/trust-and-safety/trust-safety-overview/sanctioned-countries 2026-09-18 -->. Якщо ти в одному з шести закритих регіонів України, бери майданчик, який платить туди відкрито.

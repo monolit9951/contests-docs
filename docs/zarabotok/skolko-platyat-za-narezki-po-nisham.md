@@ -5,12 +5,14 @@ provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_min_views_threshold_live, ppv_max_per_work_typical]
 competitor_sources:
   - { platform: "ClipRadar", url: "https://clipradar.co/rates", date: "2026-09-04" }
-  - { platform: "Whop Content Rewards", url: "https://contentrewards.com/discover", date: "2026-09-04" }
+  - { platform: "Whop Content Rewards", url: "https://contentrewards.com/discover", date: "2026-09-18" }
   - { platform: "Clipping.net", url: "https://clipping.net/clip", date: "2026-09-04" }
   - { platform: "Vyro", url: "https://vyro.com/campaigns", date: "2026-09-04" }
   - { platform: "Vyro", url: "https://vyro.com/help/earnings-and-payments/how-many-views-do-i-need-before-i-can-start-earning", date: "2026-09-04" }
   - { platform: "Vyro", url: "https://vyro.com/help/earnings-and-payments/whats-the-most-i-can-earn-per-clip", date: "2026-09-04" }
   - { platform: "Vues", url: "https://vues.app", date: "2026-09-04" }
+  - { platform: "Vues", url: "https://vues.app/blog/best-clipping-platforms-that-pay-crypto", date: "2026-09-18" }
+  - { platform: "Vues", url: "https://vues.app/blog/how-cpm-payouts-work", date: "2026-09-18" }
   - { platform: "Klipni", url: "https://klipni.com", date: "2026-09-04" }
 seo: true
 landing: true
@@ -37,7 +39,7 @@ cta:
 | Подкасты и интервью | в среднем $1.18, верх $3.00 <!-- source: https://clipradar.co/rates 2026-09-04 --> | Whop: Double Coverage Podcast по $2 <!-- source: https://contentrewards.com/discover 2026-09-04 --> | Длинный исходник и субтитры отсекают часть конкурентов; платят за узнаваемость гостя |
 | Крипта и финтех | финансы в среднем $2.57, верх $9.00; крипта верх $6.00, среднее искажено единичными офферами <!-- source: https://clipradar.co/rates 2026-09-04 --> | Vues: Polymarket и крипто-казино, пример на сайте $3.00 <!-- source: https://vues.app 2026-09-04 -->; Clipping.net: баунти Stake по $3.00 при пороге 10 000 <!-- source: https://clipping.net/clip 2026-09-04 --> | Одна регистрация окупает тысячи просмотров; жёсткая модерация и ограничения по странам |
 | Приложения и SaaS | технологии в среднем $6.60, верх $8.00 <!-- source: https://clipradar.co/rates 2026-09-04 --> | Whop: слайдшоу для приложений по $1 с потолком $400–$600 на видео <!-- source: https://contentrewards.com/discover 2026-09-04 --> | Платят за установки: ставка выше средней, потолок на ролик жёсткий, формат задан |
-| Курсы и инфобиз | образование в среднем $1.01, верх $2.00 <!-- source: https://clipradar.co/rates 2026-09-04 --> | Whop: кампания Yomi Denzel по $1 с бюджетом $238 000 <!-- source: https://contentrewards.com/discover 2026-09-04 --> | Ставка средняя, зато бюджеты большие и долгие; отбор роликов строже |
+| Курсы и инфобиз | образование в среднем $1.01, верх $2.00 <!-- source: https://clipradar.co/rates 2026-09-04 --> | Whop: кампания Yomi Denzel по $1 с бюджетом $248 000 <!-- source: https://contentrewards.com/discover 2026-09-18 --> | Ставка средняя, зато бюджеты большие и долгие; отбор роликов строже |
 | Музыка и липсинк | в среднем $0.35 при 1406 кампаниях, верх $5.00 <!-- source: https://clipradar.co/rates 2026-09-04 --> | Clipping.net: Drake по $0.40 при пороге 100 000 <!-- source: https://clipping.net/clip 2026-09-04 -->; Whop | Самая массовая ниша: платят за охват, а не за продажи |
 | Спорт | спорт в среднем $2.14, верх $2.10; фитнес $1.69 и $4.00 <!-- source: https://clipradar.co/rates 2026-09-04 --> | Whop и Clipping.net, всего 46 живых кампаний <!-- source: https://clipradar.co/rates 2026-09-04 --> | Права на трансляции ограничивают исходник: кампаний мало, ставка выше средней |
 | Мотивация и лайфстайл | отдельной строки нет; соседние Influencer $1.31 и Entertainment $1.52 <!-- source: https://clipradar.co/rates 2026-09-04 --> | Whop, Vues, задания DareBay | Дешёвый исходник легко копируется: заказчики ставят пороги и потолки, а не поднимают ставку |
@@ -50,10 +52,10 @@ cta:
 
 | Площадка | Ставка за 1000 | Порог | Потолок | Источник |
 |---|---|---|---|---|
-| Whop Content Rewards | $0.50–$2 на карточках витрины <!-- source: https://contentrewards.com/discover 2026-09-04 -->; по ClipRadar в среднем $3.25, верх $25 <!-- source: https://clipradar.co/rates 2026-09-04 --> | общего нет, задаёт кампания | в примерах $400–$600 на видео <!-- source: https://contentrewards.com/discover 2026-09-04 --> | [contentrewards.com/discover](https://contentrewards.com/discover) |
+| Whop Content Rewards | $0.05–$10 в 50 кампаниях на витрине, чаще всего $1 <!-- source: https://contentrewards.com/discover 2026-09-18 -->; по ClipRadar в среднем $3.25, верх $25 <!-- source: https://clipradar.co/rates 2026-09-04 --> | общего нет, задаёт кампания | в примерах $400–$600 на видео <!-- source: https://contentrewards.com/discover 2026-09-04 --> | [contentrewards.com/discover](https://contentrewards.com/discover) |
 | Clipping.net | $0.40–$3.00 (карточки $40 и $300 за 100 000) <!-- source: https://clipping.net/clip 2026-09-04 --> | 10 000–100 000 просмотров на кампанию, у отдельных 500 000 <!-- source: https://clipping.net/clip 2026-09-04 --> | не публикует | [clipping.net/clip](https://clipping.net/clip) |
 | Vyro | $1.00–$2.00 (кампании $1000–$2000 за 1 млн) <!-- source: https://vyro.com/campaigns 2026-09-04 --> | 5000 просмотров на пост <!-- source: https://vyro.com/help/earnings-and-payments/how-many-views-do-i-need-before-i-can-start-earning 2026-09-04 --> | 1 млн засчитанных просмотров на ролик, обычно $500–$2000 <!-- source: https://vyro.com/help/earnings-and-payments/whats-the-most-i-can-earn-per-clip 2026-09-04 --> | [vyro.com/campaigns](https://vyro.com/campaigns) |
-| Vues | на каждой карточке в приложении; пример на сайте $3.00 <!-- source: https://vues.app 2026-09-04 --> | не публикует | не публикует | [vues.app](https://vues.app) |
+| Vues | на каждой карточке в приложении; пример на сайте $3.00 <!-- source: https://vues.app 2026-09-04 --> | на ролик нет по её собственной сравнительной таблице; кампания может задать минимальную выплату за пост <!-- source: https://vues.app/blog/best-clipping-platforms-that-pay-crypto 2026-09-18 --> | на пост и на профиль, задаёт кампания, суммы только в приложении <!-- source: https://vues.app/blog/how-cpm-payouts-work 2026-09-18 --> | [vues.app](https://vues.app) |
 | Klipni | в рублях; пример на сайте 50 ₽ за 1000 <!-- source: https://klipni.com 2026-09-04 --> | не публикует | лимит на пост задаёт кампания <!-- source: https://klipni.com 2026-09-04 --> | [klipni.com](https://klipni.com) |
 | DareBay | $1–$2 за 1000 просмотров | задаёт задание | до $500 на ролик | живые данные платформы и решение 17.09 |
 
@@ -85,9 +87,9 @@ cta:
 
 ## Как строили бенчмарк
 
-Чужие цифры сняты 2026-09-04 с публичных страниц площадок и переписаны как есть, без усреднения между источниками; наши взяты из снапшота живых данных DareBay от 2026-08-23. Ставки по нишам и соцсетям взяты с доски ClipRadar, которая пересчитывает 2098 кампаний с 18 площадок с шагом до пяти минут; «типичная ставка» там это взвешенный по просмотрам квантиль 82%, а верх это третья по величине живая ставка, отсюда среднее выше верха у спорта и крипты <!-- source: https://clipradar.co/rates 2026-09-04 -->. Ставки площадок взяты с их витрин и справок.
+Чужие цифры сняты 2026-09-04, а строки Whop Content Rewards и Vues перечитаны 2026-09-18, с публичных страниц площадок и переписаны как есть, без усреднения между источниками; наши взяты из снапшота живых данных DareBay от 2026-08-23. Ставки по нишам и соцсетям взяты с доски ClipRadar, которая пересчитывает 2098 кампаний с 18 площадок с шагом до пяти минут; «типичная ставка» там это взвешенный по просмотрам квантиль 82%, а верх это третья по величине живая ставка, отсюда среднее выше верха у спорта и крипты <!-- source: https://clipradar.co/rates 2026-09-04 -->. Ставки площадок взяты с их витрин и справок.
 
-Что не вошло: сравнение Paid2Clip отвечало ошибкой 503; страница Whop Content Rewards на whop.com ставок не содержит, поэтому цифры Whop взяты с витрины contentrewards.com; пороги Vues и Klipni и потолки Clipping.net и Vues не опубликованы. Ни одна чужая цифра не додумана: где источника нет, стоит «не публикует». Все ставки рекламируемые, а не заработанные: что дойдёт до тебя, решают порог, потолок, модерация и остаток бюджета.
+Что не вошло: сравнение Paid2Clip отвечало ошибкой 503; страница Whop Content Rewards на whop.com ставок не содержит, поэтому цифры Whop взяты с витрины contentrewards.com; пороги Klipni и потолки Clipping.net не опубликованы, а суммы Vues видны только в приложении. Ни одна чужая цифра не додумана: где источника нет, стоит «не публикует». Все ставки рекламируемые, а не заработанные: что дойдёт до тебя, решают порог, потолок, модерация и остаток бюджета.
 
 ## Частые вопросы
 
@@ -105,4 +107,4 @@ cta:
 
 ### Насколько свежие цифры в таблицах?
 
-Чужие сняты 2026-09-04, и доска ClipRadar пересчитывается с шагом до пяти минут, так что её значения плывут каждый день; наши из снапшота 2026-08-23. Перед тем как брать кампанию, открой её карточку: выплата считается по ставке на ней, а не по бенчмарку.
+Чужие сняты 2026-09-04, строки Whop Content Rewards и Vues 2026-09-18, а доска ClipRadar пересчитывается с шагом до пяти минут, так что её значения плывут каждый день; наши из снапшота 2026-08-23. Перед тем как брать кампанию, открой её карточку: выплата считается по ставке на ней, а не по бенчмарку.

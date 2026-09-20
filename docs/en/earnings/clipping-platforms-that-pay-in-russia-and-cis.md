@@ -1,6 +1,6 @@
 ---
 title: "Clipping platforms that pay in Russia and CIS: who pays where"
-description: DareBay, Prime Oracles and Klipni say they pay in Russia and CIS; Whop bars Russia and Belarus, Vyro also Ukraine; four list no countries. Their own words, dated.
+description: "DareBay, Prime Oracles and Klipni pay in Russia and CIS; Whop bars Russia and Belarus, Vyro also Ukraine; four name no countries. Their own words, dated."
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_min_views_threshold_live, ppv_max_per_work_typical, ppv_max_per_work_band_high]
 seo: true

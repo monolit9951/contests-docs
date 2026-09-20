@@ -1,6 +1,6 @@
 ---
 title: What streamer clips pay and how to start
-description: "Streamer clips pay $1–10 per 1,000 views, up to $500 per clip, withdrawals from 10 USDT. What to cut from a stream, what rights the brief grants and how to submit your first clip."
+description: "Streamer clips pay $1–10 per 1,000 views, up to $500 per clip, withdrawals from 10 USDT. What to cut from a stream, the rights the brief grants, how to submit."
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_cpm_min, ppv_cpm_median, ppv_cpm_max, ppv_min_views_threshold_live]
 seo: true
@@ -20,7 +20,7 @@ cta:
 
 Streamer clips on DareBay pay **$1.00 to $10.00 per 1000 views** of one specific video, and nothing open right now pays below that floor. Followers play no part in it: what is counted is the reach of your clip, not the size of the account it went out on. The streamer's name matters less than the numbers on the card, because the same clip is worth ten times as much in a contest at the top of the band as at the floor rate. The cap on a single submission is named by the buyer at contest creation. Entry costs a clipper nothing and the contest commission is 0%. In a wallet-backed contest the budget is frozen on the platform before you take the brief, and the rate and the cap stand on the card before you submit: you know in advance what you are playing for.
 
-Every figure on this page comes from the platform's own data (snapshot: 2026-08-23) and counts only open contests - the ones a clipper can take right now.
+Every figure on this page comes from the platform's own data (snapshot: 2026-08-23; rate band updated 2026-09-20) and counts only open contests - the ones a clipper can take right now.
 
 ## What gets cut from a broadcast, and why it travels
 

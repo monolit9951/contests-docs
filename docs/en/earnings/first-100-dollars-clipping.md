@@ -1,6 +1,6 @@
 ---
 title: "Your first $100 from clipping: a 30-day plan"
-description: "Your first $100 from clipping: 100,000 counted views at $1 per 1,000, or 10,000 at $10. A 30-day week-by-week plan, starter tasks, rookie mistakes and your first withdrawal."
+description: "Your first $100 from clipping: 100,000 counted views at $1 per 1,000 or 10,000 at $10. A 30-day plan by week, starter tasks, rookie mistakes, first withdrawal."
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_cpm_median, ppv_min_views_threshold_live, ppv_default_min_views_threshold, ppv_max_per_work_typical]
 seo: true

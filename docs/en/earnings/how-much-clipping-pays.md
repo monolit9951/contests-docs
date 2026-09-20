@@ -28,7 +28,7 @@ A clipper's earnings come from three numbers, all set by the buyer when creating
 | View threshold | Set by the task | The admission condition; the exact figure is on the card in the catalog |
 | Cap per submission | Up to $500 per clip | The most one clip can earn |
 
-Every figure on this page comes from the platform's own data (snapshot: 2026-08-23) and counts only open tasks.
+Every figure on this page comes from the platform's own data (snapshot: 2026-08-23; rate band updated 2026-09-20) and counts only open tasks.
 
 ## What DareBay pays per 1000 views and how to read the rate
 

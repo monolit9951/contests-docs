@@ -1,6 +1,6 @@
 ---
 title: "How to make $1,000 a month clipping: the arithmetic"
-description: "How to make $1,000 a month clipping: at $1 per 1,000 views that is a million counted views, at $10 a hundred thousand. Three layouts by clip count, a weekly system and withdrawals from 10 USDT."
+description: "Make $1,000 a month clipping: a million views at $1 per 1,000 or 100,000 at $10. Three layouts by clip count, a weekly system, withdrawals from 10 USDT."
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_cpm_median, ppv_min_views_threshold_live, ppv_max_per_work_typical]
 seo: true

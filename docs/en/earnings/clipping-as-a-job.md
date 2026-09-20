@@ -22,7 +22,7 @@ You can earn from clips with no followers and nothing to show, because clipping 
 
 This is piecework, not passive income. Below: what the job actually asks of you, what the result depends on, and one route from zero - first contest, first submission, first money.
 
-Every DareBay figure on this page comes from the platform's own data (snapshot: 2026-08-23) and counts only open contests - the ones a clipper can take right now.
+Every DareBay figure on this page comes from the platform's own data (snapshot: 2026-08-23; rate band updated 2026-09-20) and counts only open contests - the ones a clipper can take right now.
 
 The words this page uses - hook, threshold, cap, counted views - are explained in the [clipping glossary](/en/earnings/clipping-glossary).
 

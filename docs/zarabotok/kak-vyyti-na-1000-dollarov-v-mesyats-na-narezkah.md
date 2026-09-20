@@ -1,6 +1,6 @@
 ---
 title: "Как выйти на 1000 долларов в месяц на нарезках: расчёт"
-description: "1000 долларов в месяц на нарезках: при $1 за 1000 просмотров это миллион просмотров, при $10 сто тысяч. Три раскладки по роликам, план на неделю и вывод от 10 USDT."
+description: "1000 долларов в месяц на нарезках: при $1 за 1000 просмотров это миллион, при $10 — сто тысяч. Три раскладки по роликам, план на неделю, вывод от 10 USDT."
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_cpm_median, ppv_min_views_threshold_live, ppv_max_per_work_typical]
 seo: true

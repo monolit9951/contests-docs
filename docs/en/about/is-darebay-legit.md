@@ -1,6 +1,6 @@
 ---
 title: Is DareBay legit? The terms, the fees and who runs it
-description: "Is DareBay legit? Contest terms are fixed on the card before you edit, the contest fee is 0%, you withdraw to your wallet from 10 USDT, and a named operator answers."
+description: "Is DareBay legit? Terms are fixed on the task card before you edit, the contest fee is 0%, withdrawals to your wallet from 10 USDT, a named operator answers."
 provenance: { snapshot_date: "2026-08-15", source: "darebay-prod-config" }
 numbers_used: []
 seo: true

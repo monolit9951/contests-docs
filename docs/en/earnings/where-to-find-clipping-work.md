@@ -20,7 +20,7 @@ cta:
 
 The safest work is the work somebody already paid for. It comes from three places: a streamer directly, with the rate settled in DMs; a brand or the agency running a channel, through selection with an application and work samples; or an intermediary platform with a fixed rate - on DareBay that is the open contest board, where you take a brief yourself, with no application, no interview and no portfolio review. Open contests pay **$1.00 to $10.00 per 1000 views**, and nothing open right now pays below that floor. The threshold is **set by each brief**: from that mark a submission enters the maths, while the maximum payout for one submission is whatever the buyer named, up to $500 per clip. They set the rate, the threshold and the cap at contest creation, all three stand on the card before you submit, and the rate and threshold do not change after launch. For a clipper, entry costs nothing.
 
-Every figure on this page comes from the platform's own data (snapshot: 2026-08-23) and counts only open contests - the ones a clipper can take right now.
+Every figure on this page comes from the platform's own data (snapshot: 2026-08-23; rate band updated 2026-09-20) and counts only open contests - the ones a clipper can take right now.
 
 ## Who pays for clips, and out of whose pocket
 

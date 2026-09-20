@@ -1,6 +1,6 @@
 ---
 title: "Калькулятор заработка на нарезках: сколько выйдет в месяц"
-description: "Калькулятор заработка на нарезках: просмотры, число роликов и ставка $1–10 за 1000 просмотров дают сумму в месяц с учётом порога и потолка. Вывод на кошелёк от 10 USDT."
+description: "Калькулятор заработка на нарезках: просмотры, число роликов и ставка $1–10 за 1000 дают сумму в месяц с учётом порога и потолка. Вывод на кошелёк от 10 USDT."
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_cpm_median, ppv_min_views_threshold_live, ppv_max_per_work_typical]
 seo: true

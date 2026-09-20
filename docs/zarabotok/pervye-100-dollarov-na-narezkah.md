@@ -1,6 +1,6 @@
 ---
 title: "Первые 100 долларов на нарезках: план на 30 дней"
-description: "Первые 100 долларов на нарезках: 100 000 засчитанных просмотров при $1 за 1000 или 10 000 при $10. План на 30 дней по неделям, задания для старта, ошибки и вывод от 10 USDT."
+description: "Первые 100 долларов на нарезках: 100 000 засчитанных просмотров при $1 за 1000 или 10 000 при $10. План на 30 дней, задания для старта, первый вывод."
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_cpm_median, ppv_min_views_threshold_live, ppv_default_min_views_threshold, ppv_max_per_work_typical]
 seo: true

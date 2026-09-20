@@ -1,6 +1,6 @@
 ---
 title: "How pay-per-view works: how views are counted and paid"
-description: "How pay-per-view works: the platform reads the site's counter, views / 1,000 × rate sets the payout, the threshold is not deducted, caps run up to $500 per clip, withdrawals from 10 USDT."
+description: "The platform reads the site's counter, views / 1,000 × rate is the payout, the threshold is not deducted, caps up to $500 per clip, withdrawals from 10 USDT."
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_cpm_median, ppv_min_views_threshold_live, ppv_default_min_views_threshold, ppv_max_per_work_typical]
 seo: true
@@ -36,7 +36,7 @@ cta:
 | Cap per submission | Up to $500 in open tasks | The most one submission can earn |
 | Site | Set by the task | Stats are collected for TikTok, YouTube, Instagram and the other sites named in the task |
 
-All three numbers are fixed at creation and stand on the card before you submit. Every figure on this page comes from the platform's own data (snapshot: 2026-08-23) and counts only open tasks.
+All three numbers are fixed at creation and stand on the card before you submit. Every figure on this page comes from the platform's own data (snapshot: 2026-08-23; rate band updated 2026-09-20) and counts only open tasks.
 
 ## Where the view figure comes from and who confirms it
 

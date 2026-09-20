@@ -1,6 +1,6 @@
 ---
 title: "Сколько стоит клиппинг-кампания: бюджет на нарезчиков"
-description: "Запуск конкурса бесплатный, комиссия конкурса 0%, бюджет уходит по ставке от $1 до $10 за 1000 просмотров. Расчёт для $200, $1 000 и $5 000 и как не переплатить."
+description: "Запуск конкурса бесплатный, комиссия 0%, бюджет уходит по ставке от $1 до $10 за 1000 просмотров. Расчёт для $200, $1 000 и $5 000 и как не переплатить."
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [contest_create_usdt_price, commission_crypto, commission_fiat, ppv_cpm_band_low, ppv_cpm_band_high, ppv_cpm_median, ppv_default_min_views_threshold, ppv_min_views_threshold_live, ppv_max_per_work_typical]
 seo: true

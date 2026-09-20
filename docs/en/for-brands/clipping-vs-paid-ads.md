@@ -31,7 +31,7 @@ cta:
 
 ## The table: what a thousand costs
 
-Outside figures were read on 2026-09-04 from public benchmark, agency and rate-card pages; ours is live platform data (snapshot 2026-08-23). Dollar CPMs are English-speaking markets, rouble CPMs Russian platforms, nothing converted. Read the third column first.
+Outside figures were read on 2026-09-04 from public benchmark, agency and rate-card pages; ours is live platform data (snapshot 2026-08-23; rate band updated 2026-09-20). Dollar CPMs are English-speaking markets, rouble CPMs Russian platforms, nothing converted. Read the third column first.
 
 | Channel | CPM per 1,000 | What you pay for | Who makes the creative |
 |---|---|---|---|
@@ -74,7 +74,7 @@ Ads second: scale the winners where targeting and speed matter. A creator's clip
 
 ## How the comparison was built
 
-Outside CPMs are copied as they stand, in the source's currency, without averaging: Meta and TikTok benchmarks, agency guides for YouTube and VK Ads, Yandex's official 2026 rate card. Triple Whale and click.ru did not open, so their figures are not used; the Rose Digital page carries no date. Ours is DareBay's open-task rate band from the 2026-08-23 snapshot.
+Outside CPMs are copied as they stand, in the source's currency, without averaging: Meta and TikTok benchmarks, agency guides for YouTube and VK Ads, Yandex's official 2026 rate card. Triple Whale and click.ru did not open, so their figures are not used; the Rose Digital page carries no date. Ours is DareBay's open-task rate band from the 2026-08-23 snapshot (rate band updated 2026-09-20).
 
 What cannot be compared head-on:
 

@@ -1,6 +1,6 @@
 ---
 title: "Clipping for agencies and CPA partners: offers at scale"
-description: "Run an offer through DareBay's creator network: a tracked link and promo code per creator, S2S postback conversions, fees and sales share credited by the platform."
+description: "Run an offer through DareBay's creator network: a tracked link and promo code per creator, S2S postback conversions, fees and sales share paid by the platform."
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_min_views_threshold_live, ppv_max_per_work_typical, contest_create_usdt_price, commission_crypto, commission_fiat]
 seo: true
@@ -66,7 +66,7 @@ The economics of every model come down to one formula: the price to the client p
 
 > price to client = creators' rate × (1 + markup)
 
-A hypothetical example. Client budget $2,000, creators' rate $1.00 per 1,000 views (open tasks currently pay $1.00 to $10.00 per 1,000 views), agency markup say 25%. The price to the client is $1.25 per 1,000, and the budget buys 2,000 / 1.25 × 1,000 = 1,600,000 counted views. Creators receive 1,600,000 / 1,000 × $1.00 = **$1,600.00**, the agency keeps **$400.00**, and creating the task costs nothing. The view threshold you set on the task cuts off clips with no reach, and the cap per work (up to $500) spreads the sum across many clips by different creators. On an offer the sales share comes on top: it is counted from confirmed conversions, not from views, so it is not part of the reach budget. Platform figures from the 2026-08-23 snapshot; the markup is illustrative.
+A hypothetical example. Client budget $2,000, creators' rate $1.00 per 1,000 views (open tasks currently pay $1.00 to $10.00 per 1,000 views), agency markup say 25%. The price to the client is $1.25 per 1,000, and the budget buys 2,000 / 1.25 × 1,000 = 1,600,000 counted views. Creators receive 1,600,000 / 1,000 × $1.00 = **$1,600.00**, the agency keeps **$400.00**, and creating the task costs nothing. The view threshold you set on the task cuts off clips with no reach, and the cap per work (up to $500) spreads the sum across many clips by different creators. On an offer the sales share comes on top: it is counted from confirmed conversions, not from views, so it is not part of the reach budget. Platform figures from the 2026-08-23 snapshot (rate band updated 2026-09-20); the markup is illustrative.
 
 Put your own budget, rate and cap into the calculator:
 

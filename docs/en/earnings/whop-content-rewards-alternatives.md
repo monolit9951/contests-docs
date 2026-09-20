@@ -54,7 +54,7 @@ The sanctioned list is not the only filter, either: Whop publishes a separate li
 
 **You want the lowest fee.** Klipni takes 5% of each approved payout; Vues publishes no fee rate and its pages disagree: its homepage puts its cut on the brand, its referral page illustrates a 10% fee on each clipper cash-out <!-- source: https://vues.app/affiliate 2026-09-18 -->; Reach.cat bills brands 10% on top of the budget <!-- source: https://reach.cat/blog/reach-cat-pricing-brands-2026/ 2026-09-18 -->, while its terms cite "approximately 10% on all CPM-based payouts" <!-- source: https://reach.cat/terms 2026-09-18 -->; DareBay takes 0% on contest payouts and 10% when you withdraw your balance to your wallet. Clipping.net and Vyro do not publish a clipper fee, which is a reason to ask before you clip.
 
-**You want the most campaigns after Whop.** Vyro carries campaigns from the largest US creators at $1–$10 per 1,000 views, with a 5,000-view minimum per post. Clipping.net runs streamer and celebrity campaigns at $0.20–$0.75 per 1,000 with a 1,000-view minimum per post. Use both, and keep Whop if it can pay you.
+**You want the most campaigns after Whop.** Vyro carries campaigns from the largest US creators at $1–$2 per 1,000 views, with a 5,000-view minimum per post. Clipping.net runs streamer and celebrity campaigns at $0.20–$0.75 per 1,000 with a 1,000-view minimum per post. Use both, and keep Whop if it can pay you.
 
 <LMethod />
 

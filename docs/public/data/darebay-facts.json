@@ -10,7 +10,7 @@
     },
     "productIntent": {
       "file": "data/product-intent.json",
-      "decidedAt": "2026-09-18"
+      "decidedAt": "2026-09-20"
     },
     "liveCatalogue": {
       "file": "data/contests-snapshot.json",
@@ -24,7 +24,7 @@
       "id": "rate-per-1000-views",
       "value": {
         "min": 1,
-        "max": 2
+        "max": 10
       },
       "unit": "usd_per_1000_views",
       "labels": {
@@ -34,14 +34,14 @@
         "ar": "السعر لكل 1,000 مشاهدة"
       },
       "text": {
-        "ru": "$1.00–$2.00 за 1000 просмотров (открытые конкурсы)",
-        "uk": "$1.00–$2.00 за 1000 переглядів (відкриті конкурси)",
-        "en": "$1.00–$2.00 per 1,000 views (open tasks)",
-        "ar": "$1.00–$2.00 لكل 1,000 مشاهدة (المهام المفتوحة)"
+        "ru": "$1.00–$10.00 за 1000 просмотров (открытые конкурсы)",
+        "uk": "$1.00–$10.00 за 1000 переглядів (відкриті конкурси)",
+        "en": "$1.00–$10.00 per 1,000 views (open tasks)",
+        "ar": "$1.00–$10.00 لكل 1,000 مشاهدة (المهام المفتوحة)"
       },
-      "source": "product-truth.json#ppv.stable.bands.cpm",
-      "asOf": "2026-08-23",
-      "note": "Reviewed stable band; 2 open listed tasks in the live catalogue on 2026-09-20 pay $1.19–$5.94 per 1,000 views. A task's exact rate is printed on its card and cannot change after the start."
+      "source": "product-intent.json#rate-band",
+      "asOf": "2026-09-20",
+      "note": "Target band decided 2026-09-20 (product-intent.json#rate-band); the reviewed live band is $1.00–$2.00; 2 open listed tasks in the live catalogue on 2026-09-20 pay $1.19–$5.94 per 1,000 views. A task's exact rate is printed on its card and cannot change after the start."
     },
     {
       "id": "cap-per-clip",

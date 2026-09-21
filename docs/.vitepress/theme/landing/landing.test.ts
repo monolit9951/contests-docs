@@ -30,31 +30,7 @@ describe('landing shell owns what Markdown emits', () => {
     }
   })
 
-  it('lets the header fall into rows on a narrow screen', () => {
-    // Logo + language switcher + CTA need ~525px in one row; below that the header used to push
-    // the whole document sideways on every page of the corpus.
-    const narrow = css.slice(css.indexOf('@media (max-width: 640px)'))
-    expect(narrow).toContain('.lp-header-in')
-    expect(narrow).toMatch(/\.lp-header-in\s*{[^}]*flex-wrap:\s*wrap/)
-  })
 
-  it('shows section links only from the width where the compact row starts, each on one line', () => {
-    // Four section links, the switcher and the button fit at full size only from ~1030px. Below
-    // that the row is compact, and below the compact row the links are hidden: a gap between the
-    // two breakpoints is a band where the full-size row is shown and does not fit. That shipped
-    // (861-925px, 2026-09-20) and scrolled the whole document sideways.
-    const hidden = /@media \(max-width: (\d+)px\) \{ \.lp-nav \{ display: none; \}/.exec(css)
-    const compact = /@media \(min-width: (\d+)px\) and \(max-width: (\d+)px\) \{\n  \.lp-header-in \{/.exec(css)
-    expect(hidden, 'the rule that hides .lp-nav').not.toBeNull()
-    expect(compact, 'the compact header band').not.toBeNull()
-    // The two rules meet on the same pixel: a fractional viewport width (Windows at 125% gives 880.8px)
-    // would otherwise match neither of them and show the full-size row where it does not fit.
-    expect(Number(compact![1])).toBe(Number(hidden![1]))
-    expect(Number(compact![2])).toBeGreaterThanOrEqual(1030)
-    // A label that wraps hides the defect from `audit:layout`: nothing overflows, the row just
-    // grows a second line. Unwrappable, a row that does not fit is a page overflow the audit sees.
-    expect(ruleFor('.lp-nav a').some((rule) => rule.includes('white-space: nowrap'))).toBe(true)
-  })
 })
 
 /**

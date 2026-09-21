@@ -13,64 +13,8 @@ The amount is worked out by the system: an independent counter reads the publish
 
 Live tasks sit in the [clip earnings catalogue](/en/earn/clips): the rate, the threshold, the cap and the publishing site are all on the contest card before you submit, and taking part costs a clipper nothing. The contest names the site - view stats are counted for TikTok, YouTube, Instagram and the other sites named in the task.
 
-## The money: what a clip is worth
-
-- [How much clipping pays](/en/earnings/how-much-clipping-pays) - the formula built from rate, views and cap, worked through on a floor-rate task, the rate reference per 1000 views: what open tasks pay from and to, where the spread comes from, and why followers are not part of it.
-- [Clipping earnings calculator](/en/earnings/clipping-earnings-calculator) - views, clips per week and rate: the monthly figure with the threshold and the cap applied, down to the sum on hand after withdrawal.
-- [Clipping rates by niche](/en/earnings/clipping-rates-by-niche) - a dated benchmark of rates by niche, platform and social network.
-- [Your first $100 clipping](/en/earnings/first-100-dollars-clipping) - what it is in views, a 30-day plan week by week, which tasks to take first.
-- [Make $1,000 a month clipping](/en/earnings/make-1000-a-month-clipping) - the arithmetic of a thousand under a per-clip cap, a weekly system, what breaks the plan.
-- [Taxes for clippers](/en/earnings/taxes-for-clippers) - what counts as income, status options by country, ten minutes of bookkeeping a month.
-
-## The mechanics: counting and paying
-
-- [How pay-per-view works](/en/earnings/how-pay-per-view-works) - the chain from a frozen budget to money on your balance: who reads the counter, why the threshold is not deducted, what happens to suspicious growth, the reward methods, and what happens to an unspent budget.
-- [Why clips get rejected](/en/earnings/why-clips-get-rejected) - ten rejection reasons, six "views but no payout" situations and a submission checklist.
-
-## The job: from zero to a finished clip
-
-- [Clipping as a job](/en/earnings/clipping-as-a-job) - what one clip involves, how long it takes, why the income is irregular, and the route from signing up to the first money.
-- [Where to find clipping work](/en/earnings/where-to-find-clipping-work) - the open brief board, how a direct deal differs from working through an intermediary, and what to do when no source footage is attached.
-- [Clipping glossary](/en/earnings/clipping-glossary) - fifty-odd terms from rate and threshold to offer and uniqueization, with the pairs people mix up most.
-- [Account warm-up and shadowban](/en/earnings/account-warm-up-and-shadowban) - a seven-day plan, the signs of a shadowban, what to do when views drop.
-
-## Niches: streamers and platforms
-
-- [What streamer clips pay](/en/earnings/streamer-clip-rates) - what gets cut out of a broadcast, what it is worth at the contest rate, and what rights the brief itself grants.
-- [What TikTok pays for views](/en/earnings/tiktok-view-payouts) - a platform creator programme against a contest on an intermediary: what TikTok and YouTube require, across six axes of comparison.
-- [Clipping on X](/en/earnings/clipping-on-x-twitter) - how X itself pays and how the same clip earns in pay-per-view tasks.
-- [Earning on VK Clips](/en/earnings/earning-on-vk-clips) - the VK creator programme and how it combines with tasks on TikTok, Reels and Shorts.
-- [Clipping on Telegram](/en/earnings/clipping-on-telegram) - a clip channel, DareBay tasks inside Telegram, payouts in Stars.
-
-## Platforms compared, with numbers
-
-- [Best clipping platforms in 2026](/en/earnings/best-clipping-platforms) - nine platforms in one table: rate, threshold, cap, fee, payout, countries.
-- [Whop Content Rewards alternatives](/en/earnings/whop-content-rewards-alternatives) - where to go when Whop cannot pay you.
-- [DareBay vs Whop](/en/earnings/darebay-vs-whop) - the two platforms field by field.
-- [DareBay vs Klipni](/en/earnings/darebay-vs-klipni) - rubles and tax status against USDT and worldwide.
-- [Clipping platforms that pay in Russia and CIS](/en/earnings/clipping-platforms-that-pay-in-russia-and-cis) - country by country, in the platforms' own words.
-- [How to choose a clipping platform](/en/earnings/how-to-choose-a-clipping-platform) - nine questions before your first clip.
-- [Whop Content Rewards review](/en/earnings/whop-content-rewards-review) - how campaigns work, what they pay, where they cannot pay, what to use instead.
-- [Clipping.net alternatives](/en/earnings/clipping-net-alternatives) - seven alternatives across four axes: threshold and cap, budget, countries, followers.
-- [Vyro review](/en/earnings/vyro-review) - the 5,000-view threshold, the cap in views, unsupported countries, and when Vyro beats DareBay.
-- [Prime Oracles review](/en/earnings/prime-oracles-review) - who it serves, who its terms bar, the crypto and card rails, and what it does not publish.
-- [Vues review](/en/earnings/vues-review) - the brand pays, not Vues; three versions of the payout rails; what its pages say two ways.
-- [Reach.cat review](/en/earnings/reach-cat-review) - "No KYC" on the landing page, an ID check after $500 in the terms, and the payout path.
-- [ClipGrow review](/en/earnings/clipgrow-review) - the Kerala agency board: rupee rates, the per-clip cap, three payout schedules.
-- [Is Wondeed legit?](/en/earnings/is-wondeed-legit) - what its own pages show: the rate card, UPI timing, TDS, and what is not published.
-- [Wusul review](/en/earnings/wusul-review) - the Arabic clipping board: InstaPay in Egypt, draft terms, and whether a campaign is open.
-- [DareBay at a glance](/en/about/darebay-at-a-glance) - the fact sheet: rates, fees, payouts, countries.
-
-## Where platforms pay, country by country
-
-- [India](/en/earnings/clipping-platforms-that-pay-in-india) - the UPI boards against the dollar boards, and what the tax department says about USDT.
-- [Pakistan](/en/earnings/clipping-platforms-that-pay-in-pakistan) - no PayPal, no Stripe: Payoneer into JazzCash, a rupee board, or a wallet.
-- [Nigeria, Kenya and Ghana](/en/earnings/clipping-platforms-that-pay-in-nigeria-and-kenya) - PayPal reaches Nairobi but not Lagos; naira boards and M-PESA.
-- [Egypt and Arab countries](/en/earnings/clipping-platforms-that-pay-in-egypt-and-arab-countries) - InstaPay, Vodafone Cash, and where crypto is closed by law.
-- [Bangladesh and Nepal](/en/earnings/clipping-platforms-that-pay-in-bangladesh-and-nepal) - Payoneer into bKash, Khalti, and two central banks that close crypto.
-- [Indonesia and the Philippines](/en/earnings/clipping-platforms-that-pay-in-indonesia-and-the-philippines) - ten rupiah boards, GCash and Maya, OJK and the BSP.
-- [Platforms that pay without PayPal or Stripe](/en/earnings/clipping-platforms-that-pay-without-paypal-or-stripe) - the rail behind each "crypto" line: coin, network, ID check.
-
 ## Where to start
 
 If this is your first time in the section, the route is short. [Clipping as a job](/en/earnings/clipping-as-a-job) - what the work is as a whole and what it asks of you. [How much you can earn from clips](/en/earnings/how-much-clipping-pays) - how to work out your own figure before you open the editor. [Where to find clipping work](/en/earnings/where-to-find-clipping-work) - where the first brief comes from and what to read on the card.
+
+- [DareBay at a glance](/en/about/darebay-at-a-glance) - the fact sheet: rates, fees, payouts, countries.

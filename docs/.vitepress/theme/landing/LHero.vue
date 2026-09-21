@@ -1,10 +1,7 @@
 <script setup lang="ts">
 // Answer-first hero. The H1 is rendered HERE from the frontmatter title; the
 // Markdown H1 is stripped by the covered-heading rule (dist gate: one h1).
-// Two shapes: comparison pages carry `hero.takeaways` and get the two-column
-// hero; every other page gets the compact one: section breadcrumb, title,
-// the description as lede, the byline, the CTA into the open-task catalogue (the business page on
-// a page of the brands section, whose reader is the one funding the task).
+// One reading column keeps long titles readable; the directory gets a wider introduction.
 import { useData } from 'vitepress'
 import { computed } from 'vue'
 import type { DareBayThemeConfig } from '../../chrome'
@@ -22,9 +19,8 @@ const brands = computed(() => hub.value?.id === 'brands')
 const primaryHref = computed(() => (brands.value ? theme.value.darebayCta.businessUrl : theme.value.darebayCta.tasksUrl))
 const primaryLabel = computed(() => hero.value.primary ?? (brands.value ? copy.value.bizCtaPrimary : copy.value.ctaPrimary))
 const isHub = computed(() => Boolean(frontmatter.value.isHub))
-const compact = computed(() => !hero.value.takeaways?.length)
 const kicker = computed(() => hero.value.kicker ?? hub.value?.title ?? '')
-const crumbHref = computed(() => (!isHub.value && !hero.value.kicker && hub.value?.path ? hub.value.path : null))
+const crumbHref = computed(() => (!isHub.value && hub.value?.path ? hub.value.path : null))
 const updated = computed(() => hero.value.updated ?? (frontmatter.value.compare ? DATA.snapshot : (frontmatter.value.updated as string | null) ?? null))
 const title = computed(() => String(frontmatter.value.title ?? ''))
 const lede = computed(() => hero.value.lede ?? String(frontmatter.value.description ?? ''))
@@ -43,20 +39,21 @@ const showByline = computed(
 </script>
 
 <template>
-  <section class="lp-hero" :class="{ 'lp-hero--compact': compact, 'lp-hero--hub': isHub }">
+  <section class="lp-hero" :class="{ 'lp-hero--hub': isHub }">
     <div class="lp-container lp-hero-in">
       <div>
         <div class="lp-hero-meta">
-          <a v-if="crumbHref" class="lp-kicker" :href="crumbHref">{{ kicker }}</a>
+          <a v-if="crumbHref" class="lp-breadcrumb" :href="crumbHref"><span aria-hidden="true">←</span> {{ hub?.title }}</a>
           <span v-else-if="kicker" class="lp-kicker">{{ kicker }}</span>
+          <span v-if="crumbHref && hero.kicker" class="lp-kicker">{{ hero.kicker }}</span>
           <span v-if="updated" class="lp-updated">{{ copy.updated }} <b><time :datetime="updated">{{ updated }}</time></b></span>
           <a v-if="showByline && theme.authorLink" class="lp-updated lp-byline" :href="theme.authorLink.path" rel="author">{{ copy.byline }} <b>{{ theme.authorLink.name }}</b></a>
         </div>
         <h1>{{ title }}</h1>
         <p v-if="lede" class="lp-lede">{{ lede }}</p>
-        <div class="lp-hero-ctas">
-          <a class="lp-btn lp-btn-primary" :href="primaryHref" target="_self">{{ primaryLabel }}</a>
-          <a v-if="hero.secondary" class="lp-btn lp-btn-ghost" :href="secondaryHref">{{ hero.secondary }}</a>
+        <div v-if="!isHub" class="lp-hero-ctas">
+          <a class="lp-hero-action" :href="primaryHref" target="_self">{{ primaryLabel }}</a>
+          <a v-if="hero.secondary" class="lp-hero-action lp-hero-action--secondary" :href="secondaryHref">{{ hero.secondary }} <span aria-hidden="true">↓</span></a>
         </div>
       </div>
       <aside v-if="hero.takeaways?.length" class="lp-takeaways" :aria-label="copy.keyTakeaways">

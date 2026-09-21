@@ -38,6 +38,7 @@ import { fileURLToPath } from 'node:url'
 import { FACT_IDS, FACTS_PUBLIC_PATH } from './gen-facts-json.mjs'
 import { parseHreflangCluster, sameHreflangMap } from './hreflang-cluster.mjs'
 import { readLocalSitemapTree } from './sitemap-tree.mjs'
+import { appHtmlArtifactPath, expectedHtmlLocale } from './url-gate-locale.mjs'
 
 const HERE = dirname(fileURLToPath(import.meta.url))
 const CONTENT_ROOT = resolve(HERE, '..')
@@ -58,6 +59,12 @@ const { PAGES, HUBS, LOCALES, ROOT_LOCALE, pagePath, localesOf, hubIndexPath, re
 )
 const { contestCanonicalForLocale } = await import(
     join(APP_ROOT, 'scripts', 'contest-seo-locales.mjs')
+)
+const { splitLocalePath: splitAppLocalePath } = await import(
+    join(APP_ROOT, 'src', 'domain', 'i18n', 'localeRoute.ts')
+)
+const { routeFile: appRouteFile } = await import(
+    join(APP_ROOT, 'scripts', 'seo-routes.mjs')
 )
 
 const APP_DIST = join(APP_ROOT, 'dist')
@@ -238,9 +245,15 @@ const sitemapUrls = (file) => {
 const contentUrls = PAGES.flatMap((page) => localesOf(page).map((lang) => pagePath(page, lang)))
 const contentUrlSet = new Set(contentUrls)
 
-/** The declared tree an address belongs to, read off its prefix; the root tree for anything else. */
-const axisOfPath = (url) =>
-    LOCALES.find((axis) => axis.prefix && (url === axis.prefix || url.startsWith(`${axis.prefix}/`))) ?? ROOT_LOCALE
+// The app owns its language axis, including app-only locales such as Polish.
+// Content ownership is exact registry membership, not a shared URL prefix:
+// `/ar/earnings/` belongs to docs while `/en/tasks` belongs to the application.
+const axisOfPath = (url) => expectedHtmlLocale(url, {
+    contentPaths: contentUrlSet,
+    contentLocales: LOCALES,
+    contentRootLocale: ROOT_LOCALE,
+    splitAppLocalePath,
+})
 const appUrls = [
     ...sitemapUrls('sitemap.xml'),
     ...sitemapUrls('sitemap-contests.xml'),
@@ -574,11 +587,7 @@ for (const page of PAGES.filter((entry) => localesOf(entry).some((language) => e
 // from the retired-route parser: `/index.html` uses nginx variables for query
 // preservation and is not a retired route with a literal target.
 for (const canonical of new Set(appUrls)) {
-    const raw = canonical === '/'
-        ? '/index.html'
-        : canonical === '/ua' || canonical === '/en'
-          ? `${canonical}/index.html`
-          : `${canonical}.html`
+    const raw = appHtmlArtifactPath(canonical, { splitAppLocalePath, routeFile: appRouteFile })
     const first = await head(raw)
     if (first.status !== 301 || first.location !== canonical) {
         fail('7-app-html', `${raw} -> ${first.status} ${first.location}, ожидался 301 ${canonical}`)

@@ -293,8 +293,8 @@ const LOGO_ID = `${ENTITY_ORIGIN}/#logo`
 // application's copy, byte for byte: they change in both repositories or not at all. The contact
 // block below it (`email`, `contactPoint`, `areaServed`, `knowsAbout`, 2026-09-21) is outside that
 // slice: the application's node is given the same values in the same release wave, and nothing
-// compares them, so a change here is a change there. `availableLanguage` lists every language this
-// corpus is written in (`locales.test.ts`) plus the application's Polish.
+// compares them, so a change here is a change there. Interface translations do not establish
+// which languages customer support handles; publish only the documented contact details.
 export const ORGANIZATION = {
   '@type': 'Organization',
   '@id': ORG_ID,
@@ -318,7 +318,6 @@ export const ORGANIZATION = {
     '@type': 'ContactPoint',
     contactType: 'customer support',
     email: 'support@darebay.com',
-    availableLanguage: ['en', 'ru', 'uk', 'ar', 'pl'],
   },
   areaServed: 'Worldwide',
   knowsAbout: [
@@ -653,8 +652,12 @@ export default defineConfig({
       }),
   },
   cleanUrls: true,
+  // The custom sticky header replaces VPNav; hydrated hash navigation must measure it.
+  scrollOffset: { selector: '.lp-header', padding: 24 },
 
   markdown: {
+    // The article outline is part of the server-rendered page, including with JavaScript off.
+    headers: { level: [2] },
     config(md) {
       installCoveredHeadingRule(md)
       installTableWrapRule(md)

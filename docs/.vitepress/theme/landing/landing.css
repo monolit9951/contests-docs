@@ -5,6 +5,10 @@
    one site. Everything is prefixed `lp-`; nothing here touches the docs theme.
    ============================================================================ */
 
+/* VitePress reserves a 320px body even when a classic scrollbar leaves less
+   content space. Let the landing layout use the actual available width. */
+body:has(.lp) { min-width: 0; }
+
 .lp {
   --lp-bg: #07090d;
   --lp-band: #0b0d12;
@@ -32,36 +36,25 @@
   background: var(--lp-bg);
   color: var(--lp-text);
   font-family: var(--lp-body);
-  font-size: 17px;
-  line-height: 1.6;
+  font-size: 16px;
+  line-height: 1.8;
   -webkit-font-smoothing: antialiased;
   min-height: 100vh;
 }
 .lp.lp-world-cyan { --lp-accent: #46d4ff; --lp-accent-deep: #1fb6e8; --lp-on-accent: #05222e; }
 .lp * { box-sizing: border-box; }
 .lp a { color: inherit; text-decoration: none; }
-.lp a:focus-visible, .lp button:focus-visible { outline: 2px solid var(--lp-accent); outline-offset: 3px; border-radius: 4px; }
+.lp a:focus-visible, .lp button:focus-visible, .lp input:focus-visible, .lp summary:focus-visible { outline: 2px solid var(--lp-accent); outline-offset: 3px; border-radius: 4px; }
 
 .lp-container { width: min(100% - 40px, var(--lp-container)); margin-inline: auto; }
 .lp-kicker { font-family: var(--lp-body); font-weight: 700; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--lp-accent); }
-.lp-h2 { font-family: var(--lp-display); font-weight: 600; font-size: clamp(1.55rem, 2.6vw, 2.25rem); line-height: 1.15; letter-spacing: -0.01em; margin: 0 0 14px; text-wrap: balance; }
+.lp-h2 { font-family: var(--lp-display); font-weight: 600; font-size: clamp(1.3rem, 2.2vw, 1.8rem); line-height: 1.3; letter-spacing: -0.01em; margin: 0 0 14px; text-wrap: balance; }
 .lp-h3 { font-family: var(--lp-display); font-weight: 500; font-size: 1.15rem; line-height: 1.3; margin: 0 0 10px; }
 .lp-muted { color: var(--lp-muted); }
 .lp-num { font-variant-numeric: tabular-nums; }
 .lp-money { color: var(--lp-gold); font-weight: 700; font-variant-numeric: tabular-nums; }
 
-/* ---- header ---------------------------------------------------------- */
-.lp-header { position: sticky; top: 0; z-index: 40; backdrop-filter: blur(14px); background: rgba(7, 9, 13, 0.78); border-bottom: 1px solid var(--lp-line); }
-.lp-header-in { display: flex; align-items: center; gap: 22px; height: 64px; }
-.lp-logo { font-family: var(--lp-display); font-weight: 700; font-size: 18px; letter-spacing: 0.02em; display: inline-flex; align-items: center; gap: 10px; }
-.lp-logo i { width: 10px; height: 10px; border-radius: 50%; background: var(--lp-accent); box-shadow: 0 0 18px var(--lp-accent); }
-.lp-nav { display: flex; gap: 18px; margin-inline-start: 8px; }
-.lp-nav a { color: var(--lp-muted); font-weight: 600; font-size: 14px; padding: 6px 2px; white-space: nowrap; }
-.lp-nav a:hover { color: var(--lp-text); }
-.lp-header-right { margin-inline-start: auto; display: flex; align-items: center; gap: 12px; }
-.lp-lang { display: flex; gap: 2px; border: 1px solid var(--lp-line-2); border-radius: 999px; padding: 3px; }
-.lp-lang a, .lp-lang span { font-size: 12px; font-weight: 700; padding: 5px 10px; border-radius: 999px; color: var(--lp-muted); }
-.lp-lang span { background: var(--lp-panel-2); color: var(--lp-text); }
+/* ---- shared actions ---------------------------------------------------- */
 .lp .lp-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; font-weight: 700; font-size: 15px; padding: 12px 20px; border-radius: 999px; border: 1px solid transparent; transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease; white-space: nowrap; }
 .lp .lp-btn-primary { background: var(--lp-accent); color: var(--lp-on-accent); box-shadow: 0 0 0 0 rgba(200, 245, 66, 0); }
 .lp .lp-btn-primary:hover, .lp .lp-btn-primary:focus-visible { color: var(--lp-on-accent); }
@@ -69,86 +62,72 @@
 .lp .lp-btn-ghost { border-color: var(--lp-line-2); color: var(--lp-text); background: transparent; }
 .lp .lp-btn-ghost:hover { background: var(--lp-panel); }
 .lp .lp-btn-sm { padding: 8px 14px; font-size: 13px; }
-@media (max-width: 880px) { .lp-nav { display: none; } .lp-header-in { gap: 12px; } }
-/* Between the tablet header and the full one the row is compact. At full size it needs 972px of
-   container (measured in Chromium with the shipped fonts, Ukrainian labels, a page translated into
-   all four trees: logo 121 + sections 346 + switcher 291 + button 150 + gaps), so with four section
-   links it fits only from a ~1030px window up. Below that "О проекте" broke onto a second line
-   and the whole document scrolled sideways (943px of header in an 821px container at 861px). The
-   three-link header already overflowed from 861px to about 925px once the switcher gained its
-   fourth language (on production at 900px: a 893px document in a 885px viewport).
-   The sizes below are the phone header's own (16px logo, 11px switcher, 12px button): 798px at the
-   worst, which leaves 28px at the 881px edge and 52px at the 1080px one WITH a classic 15px
-   scrollbar - the layout viewport is narrower than the width a media query sees. A section link
-   never wraps (`nowrap` above): a row that does not fit must show up in `audit:layout` as page
-   overflow, not pass as a two-line label. The button stays where it is, last in the row. */
-@media (min-width: 880px) and (max-width: 1079px) {
-  .lp-header-in { gap: 10px; }
-  .lp-logo { font-size: 16px; gap: 8px; }
-  .lp-nav { gap: 10px; margin-inline-start: 0; }
-  .lp-nav a { font-size: 13px; padding-inline: 0; }
-  .lp-header-right { gap: 8px; }
-  .lp-lang a, .lp-lang span { font-size: 11px; padding: 5px 6px; }
-  .lp .lp-header .lp-btn-sm { padding: 8px 10px; font-size: 12px; }
-}
-/* Phones: the header falls into rows instead of running off the screen. Logo, language switcher
-   and CTA need ~525px in a single row, so below that only the left edge was visible — and the
-   WHOLE document scrolled sideways with it (measured: 545px document in a 390px viewport, on all
-   201 addresses of the corpus; broken at every width up to ~585px). `display: contents` lifts the
-   right-hand group's children into the same flex line, so the button sits beside the logo and the
-   switcher takes the second row whole — a layout that does not depend on how long the labels are
-   in any language, down to 320px. */
-@media (max-width: 640px) {
-  .lp-header-in { flex-wrap: wrap; align-items: center; height: auto; min-height: 56px; padding-top: 8px; padding-bottom: 8px; row-gap: 8px; column-gap: 10px; }
-  .lp-logo { font-size: 16px; order: 1; }
-  .lp-header-right { display: contents; }
-  .lp-header-right > .lp-btn { order: 2; margin-inline-start: auto; }
-  .lp-lang { order: 3; width: 100%; justify-content: center; }
-  .lp-lang a, .lp-lang span { font-size: 11px; padding: 5px 9px; }
-  .lp .lp-btn-sm { padding: 8px 12px; font-size: 12px; }
-  /* The header is taller now; without this an anchor jump hides the heading under it. */
-  .lp-content :is(h2, h3):not(.lp-bleed *) { scroll-margin-top: 108px; }
-}
-
-/* ---- hero ------------------------------------------------------------- */
-.lp-hero { position: relative; overflow: hidden; padding: 84px 0 56px; }
-.lp-hero::before { content: ''; position: absolute; inset: -40% -10% auto -10%; height: 120%; background:
-  radial-gradient(60% 55% at 20% 30%, color-mix(in srgb, var(--lp-accent) 22%, transparent) 0%, transparent 60%),
-  radial-gradient(45% 45% at 80% 10%, color-mix(in srgb, var(--lp-blue) 26%, transparent) 0%, transparent 60%);
-  pointer-events: none; }
-.lp-hero-in { position: relative; display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.9fr); gap: 48px; align-items: center; }
-.lp-hero-meta { display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; margin-bottom: 18px; }
-.lp-updated { font-size: 13px; color: var(--lp-muted); display: inline-flex; gap: 8px; align-items: center; }
-.lp-updated b { color: var(--lp-text); font-weight: 700; }
-.lp-hero-meta a.lp-byline:hover b { text-decoration: underline; text-underline-offset: 3px; }
-.lp-hero h1 { font-family: var(--lp-display); font-weight: 700; font-size: clamp(2rem, 4.6vw, 3.9rem); line-height: 1.06; letter-spacing: -0.02em; margin: 0 0 22px; text-wrap: balance; }
+/* ---- editorial hero and article frame ---------------------------------- */
+.lp-hero { position: relative; padding: 48px 0 28px; }
+.lp-hero-in { position: relative; display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px; min-width: 0; }
+.lp-hero-meta { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; margin-bottom: 20px; }
+.lp-hero-meta .lp-kicker { font-size: 10px; letter-spacing: .08em; }
+.lp-breadcrumb { display: inline-flex; align-items: center; gap: 8px; color: var(--lp-accent) !important; font-size: 13px; font-weight: 700; }
+.lp-breadcrumb:hover { text-decoration: underline; text-underline-offset: 4px; }
+[dir='rtl'] .lp-breadcrumb > span { transform: scaleX(-1); }
+.lp-updated { font-size: 12px; color: var(--lp-muted); display: inline-flex; gap: 5px; align-items: center; }
+.lp-updated b { color: var(--lp-muted); font-weight: 500; }
+.lp-hero-meta a.lp-byline:hover b { color: var(--lp-text); text-decoration: underline; text-underline-offset: 3px; }
+.lp-hero h1 { font-family: var(--lp-display); font-weight: 600; font-size: clamp(1.65rem, 3.15vw, 2.6rem); line-height: 1.23; letter-spacing: -.035em; margin: 0 0 20px; text-wrap: balance; overflow-wrap: break-word; }
 .lp-hero h1 em { font-style: normal; color: var(--lp-accent); }
-.lp-lede { font-size: clamp(1.05rem, 1.4vw, 1.25rem); line-height: 1.55; color: var(--lp-muted); max-width: 62ch; margin: 0 0 28px; }
+.lp-lede { font-size: 17px; line-height: 1.7; color: var(--lp-muted); max-width: 70ch; margin: 0; }
 .lp-lede b { color: var(--lp-text); }
-.lp-hero-ctas { display: flex; flex-wrap: wrap; gap: 12px; }
-.lp-takeaways { background: var(--lp-panel); border: 1px solid var(--lp-line); border-radius: 22px; padding: 22px 24px; }
-.lp-takeaways .lp-kicker { margin-bottom: 12px; display: block; }
-.lp-takeaways ol { margin: 0; padding: 0; list-style: none; display: grid; gap: 12px; }
-.lp-takeaways li { display: grid; grid-template-columns: 26px minmax(0, 1fr); gap: 10px; font-size: 15px; line-height: 1.5; }
+.lp-hero-ctas { display: flex; flex-wrap: wrap; gap: 8px 24px; margin-top: 16px; }
+.lp .lp-hero-action { display: inline-flex; align-items: center; gap: 10px; min-height: 36px; font-size: 13px; font-weight: 700; color: var(--lp-accent); }
+.lp .lp-hero-action--secondary { color: var(--lp-muted); }
+.lp-hero-action:hover { text-decoration: underline; text-underline-offset: 4px; }
+.lp-takeaways { background: linear-gradient(120deg, color-mix(in srgb, var(--lp-accent) 7%, var(--lp-panel)), var(--lp-panel)); border: 1px solid color-mix(in srgb, var(--lp-accent) 17%, var(--lp-line)); border-radius: 16px; padding: 22px 24px; }
+.lp-takeaways .lp-kicker { margin-bottom: 14px; display: block; font-size: 11px; letter-spacing: .09em; }
+.lp-takeaways ol { margin: 0; padding: 0; list-style: none; display: grid; gap: 12px; counter-reset: tk; }
+.lp-takeaways li { display: grid; grid-template-columns: 22px minmax(0, 1fr); gap: 10px; font-size: 14px; line-height: 1.65; color: rgba(245,247,250,.82); }
 .lp-takeaways li > span { display: block; min-width: 0; }
-.lp-takeaways li::before { content: counter(tk); counter-increment: tk; font-family: var(--lp-display); font-size: 12px; font-weight: 600; color: var(--lp-accent); padding-top: 3px; }
-.lp-takeaways ol { counter-reset: tk; }
+.lp-takeaways li::before { content: counter(tk, decimal-leading-zero); counter-increment: tk; font-family: var(--lp-body); font-size: 11px; font-weight: 700; color: var(--lp-accent); padding-top: 2px; }
 .lp-takeaways li b { color: var(--lp-text); }
-@media (max-width: 900px) { .lp-hero { padding: 48px 0 36px; } .lp-hero-in { grid-template-columns: 1fr; gap: 28px; } }
+.lp-hero--hub { padding: 56px 0 32px; background: radial-gradient(ellipse at 85% 0, rgba(200,245,66,.06), transparent 55%); }
+.lp-hero--hub .lp-hero-in { max-width: var(--lp-container); }
+.lp-hero--hub h1 { max-width: 26ch; font-size: clamp(1.8rem, 3.7vw, 3.05rem); }
+.lp-hero--hub .lp-lede { max-width: 74ch; }
+.lp-reader { display: grid; grid-template-columns: minmax(0, 1fr) 240px; column-gap: 64px; align-items: start; }
+.lp-reader-hero { grid-column: 1; grid-row: 1; min-width: 0; }
+.lp-reader .lp-hero-in { width: 100%; max-width: var(--lp-prose); margin-inline: 0; }
+.lp-reader-outline { grid-column: 2; grid-row: 1 / span 2; margin-top: 52px; }
+.lp-reader-content { grid-column: 1; grid-row: 2; min-width: 0; }
+.lp-reader--no-outline { grid-template-columns: minmax(0, 1fr); max-width: 920px; }
+.lp-reader--no-outline .lp-hero-in { max-width: none; }
+@media (max-width: 1119px) {
+  .lp-reader { display: block; max-width: 900px; }
+  .lp-reader .lp-hero-in { max-width: none; }
+  .lp-reader-outline { margin: 0 0 24px; }
+}
+@media (max-width: 640px) {
+  .lp-hero, .lp-hero--hub { padding: 30px 0 24px; }
+  .lp-hero-meta { gap: 8px 12px; margin-bottom: 16px; }
+  .lp-hero h1 { line-height: 1.3; letter-spacing: -.025em; margin-bottom: 16px; }
+  .lp-lede { font-size: 15px; line-height: 1.7; }
+  .lp-takeaways { padding: 18px; border-radius: 14px; }
+  .lp-takeaways li { font-size: 13px; }
+}
 
 /* ---- content flow ------------------------------------------------------ */
 /* VitePress wraps the page's Markdown in its own div, so prose is matched by
    element, not by nesting depth; anything inside a landing component
    (`.lp-bleed`) is excluded and styles itself. */
-.lp-content { padding: 24px 0 0; }
+.lp-content { padding: 8px 0 0; }
 .lp-content :is(h2, h3, h4, p, ul, ol, blockquote, hr):not(.lp-bleed *) { width: min(100% - 40px, var(--lp-prose)); margin-inline: auto; }
 .lp-content .lp-bleed { width: min(100% - 40px, var(--lp-container)); margin-inline: auto; }
-.lp-content h2:not(.lp-bleed *) { font-family: var(--lp-display); font-weight: 600; font-size: clamp(1.55rem, 2.6vw, 2.25rem); line-height: 1.15; letter-spacing: -0.01em; margin-top: 72px; margin-bottom: 16px; text-wrap: balance; scroll-margin-top: 80px; }
-.lp-content h3:not(.lp-bleed *) { font-family: var(--lp-body); font-weight: 800; font-size: 1.15rem; margin-top: 34px; margin-bottom: 8px; scroll-margin-top: 80px; }
+.lp-content h2:not(.lp-bleed *) { font-family: var(--lp-display); font-weight: 600; font-size: clamp(1.3rem, 2.2vw, 1.8rem); line-height: 1.3; letter-spacing: -0.01em; margin-top: 48px; margin-bottom: 16px; text-wrap: balance; scroll-margin-top: 96px; }
+.lp-content h3:not(.lp-bleed *) { font-family: var(--lp-body); font-weight: 800; font-size: 1.15rem; margin-top: 34px; margin-bottom: 8px; scroll-margin-top: 96px; }
 .lp-content p:not(.lp-bleed *) { margin-top: 0; margin-bottom: 16px; color: rgba(245, 247, 250, 0.86); }
 .lp-content p:not(.lp-bleed *) strong { color: var(--lp-text); }
 .lp-content :is(ul, ol):not(.lp-bleed *) { margin-top: 0; margin-bottom: 16px; padding-inline-start: 22px; color: rgba(245, 247, 250, 0.86); }
 .lp-content :is(ul, ol):not(.lp-bleed *) li { margin-bottom: 6px; }
+.lp-content ul:not(.lp-bleed *) { list-style: disc; }
+.lp-content ol:not(.lp-bleed *) { list-style: decimal; }
 .lp-content a:not(.lp-btn):not(.lp-bleed *) { color: var(--lp-accent); text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--lp-accent) 40%, transparent); text-underline-offset: 3px; }
 .lp-content blockquote:not(.lp-bleed *) { border-inline-start: 3px solid var(--lp-accent); margin-top: 8px; margin-bottom: 20px; padding-block: 6px; padding-inline: 18px 0; color: var(--lp-muted); }
 /* Markdown tables. The scroll box is the WRAPPER (`installTableWrapRule`), never the table
@@ -176,21 +155,20 @@
 .lp-content div[class*="language-"] > button.copy.copied::before { background-color: var(--lp-accent); -webkit-mask-image: var(--lp-icon-check); mask-image: var(--lp-icon-check); }
 /* Inline code in prose reads as a chip, not as bare monospace. */
 .lp-content :is(p, li, td):not(.lp-bleed *) code { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; font-size: 0.88em; padding: 2px 6px; border-radius: 6px; border: 1px solid var(--lp-line); background: var(--lp-panel); color: var(--lp-text); overflow-wrap: anywhere; }
-/* FAQ: `## …questions` then `### question` + answer; questions read as an accordion-like list */
-.lp-content h2:not(.lp-bleed *) ~ h3:not(.lp-bleed *) { border-top: 1px solid var(--lp-line); padding-top: 18px; margin-top: 22px; font-family: var(--lp-display); font-weight: 500; font-size: 1.05rem; }
 .lp-content .header-anchor { display: none; }
 
 /* ---- section wrapper --------------------------------------------------- */
-.lp-section { padding: 64px 0 8px; }
+.lp-section { padding: 40px 0 8px; scroll-margin-top: 96px; }
 .lp-section-head { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 12px 24px; margin-bottom: 22px; }
 .lp-section-head p { margin: 0; color: var(--lp-muted); max-width: 64ch; }
 
 /* ---- compare table ----------------------------------------------------- */
 .lp-table-wrap { border: 1px solid var(--lp-line); border-radius: 22px; background: var(--lp-panel); overflow: hidden; }
 .lp-table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.lp-table-scroll:focus-visible { outline: 2px solid var(--lp-accent); outline-offset: -3px; }
 .lp-table { border-collapse: separate; border-spacing: 0; width: 100%; min-width: 980px; font-size: 14px; }
 .lp-table th { position: sticky; top: 0; z-index: 2; background: var(--lp-panel-2); color: var(--lp-muted); font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700; text-align: start; padding: 14px 14px; border-bottom: 1px solid var(--lp-line-2); white-space: nowrap; }
-.lp-table th button { all: unset; cursor: pointer; display: inline-flex; gap: 6px; align-items: center; }
+.lp-table th button { all: unset; min-height: 28px; cursor: pointer; display: inline-flex; gap: 6px; align-items: center; }
 .lp-table th button::after { content: '↕'; opacity: 0.5; font-size: 11px; }
 .lp-table th.is-sorted button::after { content: '↓'; opacity: 1; color: var(--lp-accent); }
 .lp-table th.is-sorted.desc button::after { content: '↑'; }
@@ -266,7 +244,7 @@
 .lp-calc { background: var(--lp-panel); border: 1px solid var(--lp-line); border-radius: 22px; padding: 26px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 24px; align-items: center; }
 @media (max-width: 860px) { .lp-calc { grid-template-columns: 1fr; } }
 .lp-calc label { display: block; font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--lp-faint); font-weight: 700; margin: 12px 0 6px; }
-.lp-calc input[type='range'] { width: 100%; accent-color: var(--lp-accent); }
+.lp-calc input[type='range'] { min-height: 32px; width: 100%; accent-color: var(--lp-accent); }
 .lp-calc .lp-calc-val { font-family: var(--lp-body); font-weight: 700; font-size: 15px; }
 .lp-calc-out { text-align: center; border-inline-start: 1px solid var(--lp-line); padding-inline-start: 24px; }
 @media (max-width: 860px) { .lp-calc-out { border-inline-start: 0; padding-inline-start: 0; border-top: 1px solid var(--lp-line); padding-top: 18px; } }
@@ -302,23 +280,14 @@
 
 @media (prefers-reduced-motion: reduce) { .lp * { transition: none !important; } }
 
-/* ---- compact hero (articles, hubs, legal) ------------------------------ */
-.lp-hero--compact { padding: 56px 0 24px; }
-.lp-hero--compact .lp-hero-in { grid-template-columns: minmax(0, 1fr); }
-.lp-hero--compact h1 { font-size: clamp(1.75rem, 3.4vw, 2.9rem); max-width: 24ch; }
-.lp-hero--compact .lp-lede { font-size: 1.08rem; margin-bottom: 22px; }
-.lp-hero--hub h1 { max-width: 20ch; }
-.lp-hero-meta a.lp-kicker:hover { text-decoration: underline; text-underline-offset: 3px; }
-@media (max-width: 900px) { .lp-hero--compact { padding: 36px 0 16px; } }
-
 /* ---- section cards: hub index + "more in this section" --------------------- */
 .lp-related { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
 @media (max-width: 900px) { .lp-related { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 560px) { .lp-related { grid-template-columns: 1fr; } }
 .lp-related--hub { margin: 12px auto 8px; }
 .lp .lp-card--link { display: flex; flex-direction: column; gap: 8px; padding: 20px 22px; color: var(--lp-text); text-decoration: none; }
-.lp .lp-card--link:hover { border-color: color-mix(in srgb, var(--lp-accent) 45%, transparent); }
-.lp .lp-card--link h3 { font-family: var(--lp-body); font-weight: 800; font-size: 1.05rem; line-height: 1.3; margin: 0; }
+.lp .lp-card--link:hover { background: var(--lp-panel-2); border-color: color-mix(in srgb, var(--lp-accent) 45%, transparent); }
+.lp .lp-card--link h3 { text-wrap: pretty; font-family: var(--lp-body); font-weight: 800; font-size: 1.05rem; line-height: 1.3; margin: 0; }
 .lp .lp-card--link p { margin: 0; color: var(--lp-muted); font-size: 14px; line-height: 1.45; }
 .lp-content .lp-related--hub { width: min(100% - 40px, var(--lp-container)); }
 
@@ -399,3 +368,35 @@
 .lp:lang(ar), .lp:lang(ar) * { letter-spacing: normal !important; }
 .lp:lang(ar) :is(.lp-hero h1, .lp-h2, .lp-cta h2, .lp-notfound h1),
 .lp:lang(ar) .lp-content h2:not(.lp-bleed *) { line-height: 1.35; }
+
+/* The article grid owns outer gutters once; prose, tables and tools keep the same start edge. */
+.lp-reader .lp-content :is(h2, h3, h4, p, ul, ol, blockquote, hr):not(.lp-bleed *),
+.lp-reader .lp-content div[class*="language-"]:not(.lp-bleed *),
+.lp-reader .lp-content .db-sources { width: min(100%, var(--lp-prose)); margin-inline: 0; }
+.lp-reader .lp-content :is(.lp-bleed, .lp-md-table) { width: 100%; margin-inline: 0; }
+.lp-reader .lp-content .db-sources :is(h2, ol) { width: auto; }
+.lp-content :is(h2, h3, h4, p, li) { overflow-wrap: break-word; }
+.lp-reader-content > div > :first-child { margin-top: 0; }
+.lp-hub-context { margin-top: 64px; padding-top: 36px; border-top: 1px solid var(--lp-line); }
+.lp-recommendations { margin-top: 64px; padding-top: 36px; border-top: 1px solid var(--lp-line); }
+.lp-recommendations .lp-h2 { font-size: clamp(1.2rem, 2vw, 1.6rem); margin: 0; }
+.lp .lp-more-link { font-size: 13px; color: var(--lp-accent); font-weight: 700; display: inline-flex; align-items: center; gap: 12px; min-height: 44px; }
+.lp-card-topic { color: var(--lp-accent); text-transform: uppercase; font-size: 10px; letter-spacing: .08em; font-weight: 700; margin-bottom: 8px; }
+.lp-recommendations .lp-card { border-radius: 16px; }
+.lp-recommendations .lp-card p { font-size: 13px; line-height: 1.65; }
+.lp-cta { margin-top: 64px; }
+.lp-cta h2 { font-size: clamp(1.4rem, 2.5vw, 2rem); line-height: 1.35; }
+.lp-footer nav a { padding-block: 10px; }
+@media (max-width: 640px) {
+  .lp { font-size: 15px; }
+  .lp-container { width: calc(100% - 32px); }
+  .lp-content h2:not(.lp-bleed *) { margin-top: 36px; font-size: 1.35rem; }
+  .lp-section { padding-top: 28px; }
+  .lp-hub-context, .lp-recommendations { margin-top: 40px; padding-top: 28px; }
+  .lp-calc { padding: 20px 16px; border-radius: 16px; }
+  .lp-calc-rows { grid-template-columns: 1fr; }
+  .lp-table-wrap { border-radius: 14px; }
+  .lp-cta { padding: 32px 0 40px; margin-top: 40px; }
+  .lp-cta-actions { display: grid; grid-template-columns: 1fr; }
+  .lp-cta-actions .lp-btn { white-space: normal; text-align: center; }
+}

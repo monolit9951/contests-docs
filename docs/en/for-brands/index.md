@@ -26,19 +26,9 @@ Set the contest up on [darebay.com](https://darebay.com); the formats and terms 
 
 Said up front: the amount is calculated automatically, but the payout to creators is fulfilled by the team with no promised date, and a suspicious submission goes on hold rather than vanishing silently.
 
-## Pages in this section
-
-Three pages, three buyer questions: cost and counting, setting a contest up by hand, and why come here instead of hiring directly.
-
-<HubIndex hub="brands" />
-
 ## Where to next
 
 - [Terms for business](/en/for-business) - formats, prices and guarantees
 - [What commission DareBay charges](/en/help/what-commission) - terms per operation
 - [Payout guarantee](/en/about/payout-guarantee) - what backs the payout to creators
 - [Earning on DareBay](/en/earnings/) - the same mechanics from the clipper's side
-
-## By vertical and by task
-
-Every vertical has its own page with the numbers and the brief that work for it: [games](/en/for-brands/clipping-for-games), [music](/en/for-brands/clipping-for-music-promotion), [podcasts](/en/for-brands/clipping-for-podcasts), [crypto projects](/en/for-brands/clipping-for-crypto-projects) and [agencies and CPA partners](/en/for-brands/clipping-for-agencies-and-cpa-partners). The mechanics are covered step by step: [how to pay clippers per view](/en/for-brands/paying-clippers-per-view), [how to set up a clipping contest](/en/for-brands/set-up-a-clipping-contest), [how to commission clips for a campaign](/en/for-brands/commission-clips-for-a-campaign), [what a campaign costs](/en/for-brands/clipping-campaign-cost), [clipping vs paid ads](/en/for-brands/clipping-vs-paid-ads), a [brief template](/en/for-brands/clipping-brief-template) and [four ways to find clippers](/en/for-brands/how-to-find-clippers).

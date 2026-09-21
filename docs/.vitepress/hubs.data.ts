@@ -17,7 +17,7 @@ import { readFileSync, existsSync } from 'node:fs'
 import { join, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
-import { PAGES, HUBS, LOCALES, pagePath, sourceFile, localesOf, type HubId, type Locale } from './registry'
+import { PAGES, HUBS, LOCALES, pagePath, sourceFile, localesOf, type HubId } from './registry'
 
 const DOCS = join(dirname(fileURLToPath(import.meta.url)), '..')
 
@@ -50,7 +50,7 @@ export default {
     // Rebuild the hub lists when any page's frontmatter changes, not just when
     // the registry does — otherwise a retitled article keeps its old label on
     // the hub until someone touches this file.
-    watch: ['../**/*.md'],
+    watch: ['../**/*.md', '../content-pages.json'],
     load(): HubData {
         const out: HubData = {}
 

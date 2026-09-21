@@ -54,12 +54,12 @@ const stateClass = (s?: string) => (s === 'yes' ? 'lp-chip lp-chip-good' : s ===
       </div>
     </div>
     <div class="lp-table-wrap">
-      <div class="lp-table-scroll">
+      <div class="lp-table-scroll" role="region" :aria-label="cfg.title ?? copy.compareTitle" tabindex="0">
         <table class="lp-table">
           <thead>
             <tr>
               <th scope="col">{{ copy.platform }}</th>
-              <th v-for="c in columns" :key="c" scope="col" :class="{ 'is-sorted': sortKey === c, desc: sortKey === c && desc }">
+              <th v-for="c in columns" :key="c" scope="col" :aria-sort="sortKey === c ? (desc ? 'descending' : 'ascending') : 'none'" :class="{ 'is-sorted': sortKey === c, desc: sortKey === c && desc }">
                 <button type="button" @click="toggle(c)">{{ copy.columns[c] ?? c }}</button>
               </th>
             </tr>

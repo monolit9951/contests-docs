@@ -121,12 +121,15 @@ describe('the fact card speaks every known language', () => {
   })
 })
 
-// The Organization node names where a reader writes and in which languages they are answered. A
-// tree whose language is missing from that list tells a directory or an assistant that its own
-// readers have nobody to write to.
-describe('the Organization node offers support in every known language', () => {
-  it('lists every language of the corpus on its contact point', () => {
-    expect(ORGANIZATION.contactPoint.availableLanguage).toEqual(expect.arrayContaining([...KNOWN_LOCALES]))
+// A translated interface proves neither the language nor staffing of customer
+// support. Keep the documented contact without inventing a language promise.
+describe('the Organization node publishes its documented support contact', () => {
+  it('declares a customer support email without inferring languages from the corpus', () => {
+    expect(ORGANIZATION.contactPoint).toEqual({
+      '@type': 'ContactPoint',
+      contactType: 'customer support',
+      email: ORGANIZATION.email,
+    })
   })
 
   it('publishes one support address, on the node and on its contact point', () => {

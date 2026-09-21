@@ -10,13 +10,15 @@
 
 import { createServer } from 'node:http'
 import { spawn } from 'node:child_process'
-import { existsSync, readFileSync, readdirSync } from 'node:fs'
-import { dirname, join, normalize } from 'node:path'
-import { fileURLToPath } from 'node:url'
+import { existsSync, mkdtempSync, readFileSync, readdirSync, rmSync, statSync } from 'node:fs'
+import { dirname, join, normalize, resolve, sep } from 'node:path'
+import { tmpdir } from 'node:os'
+import { fileURLToPath, pathToFileURL } from 'node:url'
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..')
 const DIST = join(ROOT, 'docs', '.vitepress', 'dist')
-const { PAGES, localesOf, pagePath } = await import(join(ROOT, 'docs', '.vitepress', 'registry.ts'))
+const { PAGES, localesOf, pagePath } = await import(pathToFileURL(join(ROOT, 'docs', '.vitepress', 'registry.ts')).href)
+export { PAGES, localesOf, pagePath }
 
 const puppeteerCache = join(process.env.HOME ?? '', '.cache', 'puppeteer', 'chrome')
 const CHROME_CANDIDATES = [
@@ -29,14 +31,12 @@ const CHROME_CANDIDATES = [
     : []),
 ].filter(Boolean)
 
-// Above the phone the header is a single row in three sizes (landing.css): without section links
-// up to 880px, compact with them at 881-1079px, full size from 1080px. Until 2026-09-21 only the two
-// ends were opened, and the middle broke unseen: when the switcher gained its fourth language the
-// row stopped fitting between 861px and about 925px, on production, with this audit green. 900 is
-// just inside the compact row, 1024 is a tablet held sideways, 1080 is the first width of the
-// full-size row, where it is tightest. A label added to the header shows up at these widths first.
+// Keep the historical middle widths: the old header broke between phone and desktop while
+// both extremes passed. Include narrow phones and portrait tablets as independent layouts.
 const VIEWPORTS = [
+  { name: 'small-phone', width: 320, height: 740, mobile: true },
   { name: 'phone', width: 390, height: 844, mobile: true },
+  { name: 'portrait-tablet', width: 768, height: 1024, mobile: false },
   { name: 'compact', width: 900, height: 1000, mobile: false },
   { name: 'tablet', width: 1024, height: 768, mobile: false },
   { name: 'laptop', width: 1080, height: 1000, mobile: false },
@@ -44,7 +44,7 @@ const VIEWPORTS = [
 ]
 
 // Runs inside the page. Returns only defects a reader would see.
-const PROBE = `(() => {
+export const PROBE = `(() => {
   const findings = []
   const describe = (el) => {
     if (!el) return '?'
@@ -53,6 +53,17 @@ const PROBE = `(() => {
   }
   const label = (el) => (el.textContent || '').replace(/\\s+/g, ' ').trim().slice(0, 60)
   const root = document.documentElement
+  const hiddenByClosedDetails = (el) => {
+    for (let ancestor = el; ancestor; ancestor = ancestor.parentElement) {
+      if (ancestor.tagName !== 'DETAILS' || ancestor.open) continue
+      // Chromium may return text Range rectangles for the unpainted contents of a closed
+      // native disclosure. Only its first direct summary remains rendered; nested closed
+      // disclosures must satisfy the same condition at every level.
+      const summary = Array.from(ancestor.children).find((child) => child.tagName === 'SUMMARY')
+      if (!summary?.contains(el)) return true
+    }
+    return false
+  }
 
   // A wide box only widens the page when nothing on the way up clips or scrolls it.
   if (root.scrollWidth > root.clientWidth + 1) {
@@ -75,6 +86,7 @@ const PROBE = `(() => {
     const walker = document.createTreeWalker(header, NodeFilter.SHOW_TEXT)
     for (let node = walker.nextNode(); node; node = walker.nextNode()) {
       if (!(node.textContent || '').trim()) continue
+      if (hiddenByClosedDetails(node.parentElement)) continue
       const range = document.createRange()
       range.selectNodeContents(node)
       const lines = new Set(Array.from(range.getClientRects()).filter((box) => box.width > 0 && box.height > 0).map((box) => Math.round(box.top)))
@@ -121,21 +133,20 @@ const PROBE = `(() => {
   return findings
 })()`
 
-const paths = PAGES.flatMap((page) => localesOf(page).map((locale) => pagePath(page, locale)))
+export const paths = PAGES.flatMap((page) => localesOf(page).map((locale) => pagePath(page, locale)))
 const auditedPaths = new Set(paths)
 
 const MIME = { '.html': 'text/html; charset=utf-8', '.css': 'text/css', '.js': 'text/javascript', '.json': 'application/json', '.svg': 'image/svg+xml', '.png': 'image/png', '.woff2': 'font/woff2', '.xml': 'application/xml', '.txt': 'text/plain; charset=utf-8' }
-const missing = new Set()
-const serve = () => new Promise((resolve) => {
+const serve = (missing) => new Promise((resolve, reject) => {
   const server = createServer((request, response) => {
     const url = new URL(request.url, 'http://localhost')
     const base = normalize(join(DIST, decodeURIComponent(url.pathname)))
-    if (!base.startsWith(DIST)) { response.writeHead(403).end(); return }
+    if (base !== DIST && !base.startsWith(DIST + sep)) { response.writeHead(403).end(); return }
     // `cleanUrls` means a page address carries no extension while the build writes `.html`.
     // Serving only the literal path answered 404 for every leaf page, and an audit that reads
     // 404 documents reports no defects at all — which is how this file first passed on a build
     // whose tables were deliberately broken.
-    const file = [base, `${base}.html`, join(base, 'index.html')].find((candidate) => existsSync(candidate) && !candidate.endsWith('/'))
+    const file = [base, `${base}.html`, join(base, 'index.html')].find((candidate) => existsSync(candidate) && statSync(candidate).isFile())
     // Only a page address that cannot be served is a defect. The page's own beacons (the
     // analytics POST, for one) have no document here by design.
     if (!file) { if (auditedPaths.has(url.pathname)) missing.add(url.pathname); response.writeHead(404).end(); return }
@@ -143,13 +154,14 @@ const serve = () => new Promise((resolve) => {
     response.writeHead(200, { 'content-type': MIME[extension] ?? 'application/octet-stream' })
     response.end(readFileSync(file))
   })
+  server.once('error', reject)
   server.listen(0, '127.0.0.1', () => resolve({ server, port: server.address().port }))
 })
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms))
 
 async function connect(port) {
-  const target = await (await fetch(`http://127.0.0.1:${port}/json/new?about:blank`, { method: 'PUT' })).json()
+  const target = await (await fetch(`http://127.0.0.1:${port}/json/new?about:blank`, { method: 'PUT', signal: AbortSignal.timeout(5000) })).json()
   const socket = new WebSocket(target.webSocketDebuggerUrl)
   const pending = new Map()
   const events = []
@@ -159,58 +171,155 @@ async function connect(port) {
     if (message.id && pending.has(message.id)) { pending.get(message.id)(message); pending.delete(message.id) }
     else if (message.method) events.push(message)
   })
-  await new Promise((resolve) => socket.addEventListener('open', resolve, { once: true }))
+  await new Promise((resolve, reject) => {
+    const timer = setTimeout(() => { socket.close(); reject(new Error('Chromium socket timed out')) }, 5000)
+    socket.addEventListener('open', () => { clearTimeout(timer); resolve() }, { once: true })
+    socket.addEventListener('error', () => { clearTimeout(timer); reject(new Error('Chromium socket failed')) }, { once: true })
+  })
   const send = (method, params = {}) => new Promise((resolve, reject) => {
     const id = ++sequence
-    pending.set(id, (message) => (message.error ? reject(new Error(`${method}: ${message.error.message}`)) : resolve(message.result)))
+    const timer = setTimeout(() => { pending.delete(id); reject(new Error(`${method}: timed out`)) }, 10000)
+    pending.set(id, (message) => {
+      clearTimeout(timer)
+      if (message.error) reject(new Error(`${method}: ${message.error.message}`))
+      else resolve(message.result)
+    })
     socket.send(JSON.stringify({ id, method, params }))
   })
   return { socket, send, events }
 }
 
-const binary = CHROME_CANDIDATES.find((candidate) => existsSync(candidate))
-if (!binary) {
-  console.error('layout-audit: no Chromium found. Set CHROME=/path/to/chrome (CI images have none).')
-  process.exit(2)
-}
-if (!existsSync(join(DIST, 'sitemap-content.xml'))) {
-  console.error('layout-audit: no build to read. Run `DOCS_ENV=prod npm run docs:build` first.')
-  process.exit(2)
-}
-
-const { server, port } = await serve()
-const debugPort = 9222 + (process.pid % 500)
-const chrome = spawn(binary, ['--headless=new', '--no-sandbox', '--disable-gpu', '--disable-dev-shm-usage', `--remote-debugging-port=${debugPort}`, 'about:blank'], { stdio: 'ignore' })
-await sleep(2500)
-
-const failures = []
-const { socket, send, events } = await connect(debugPort)
-await send('Page.enable')
-
-for (const viewport of VIEWPORTS) {
-  await send('Emulation.setDeviceMetricsOverride', { width: viewport.width, height: viewport.height, deviceScaleFactor: 1, mobile: viewport.mobile })
-  for (const path of paths) {
-    events.length = 0
-    await send('Page.navigate', { url: `http://127.0.0.1:${port}${path}` })
-    for (let waited = 0; waited < 8000 && !events.some((event) => event.method === 'Page.loadEventFired'); waited += 120) await sleep(120)
-    await sleep(350)
-    const result = await send('Runtime.evaluate', { expression: PROBE, returnByValue: true })
-    const findings = result.result?.value
-    if (!Array.isArray(findings)) { failures.push(`[probe] ${viewport.name} ${path}: ${JSON.stringify(result).slice(0, 160)}`); continue }
-    for (const finding of findings) failures.push(`[${finding.kind}] ${viewport.name} ${path}: ${finding.detail}`)
+// Shared with the bounded interaction audit; one static server and CDP implementation.
+// A private Chrome profile and OS-assigned debug port keep parallel audit sessions isolated.
+export async function openAuditBrowser() {
+  if (process.env.CHROME && !existsSync(process.env.CHROME)) throw new Error(`CHROME does not exist: ${process.env.CHROME}`)
+  const binary = CHROME_CANDIDATES.find((candidate) => existsSync(candidate))
+  if (!binary) throw new Error('no Chromium found. Set CHROME=/path/to/chrome (CI images have none).')
+  if (!existsSync(join(DIST, 'sitemap-content.xml'))) throw new Error('no build to read. Run `DOCS_ENV=prod npm run docs:build` first.')
+  const missing = new Set()
+  const { server, port } = await serve(missing)
+  const profile = mkdtempSync(join(tmpdir(), 'docs-ui-audit-'))
+  const chrome = spawn(binary, ['--headless=new', '--no-sandbox', '--disable-gpu', '--disable-dev-shm-usage', '--remote-debugging-port=0', `--user-data-dir=${profile}`, 'about:blank'], { stdio: 'ignore' })
+  let socket, spawnError, stopBrowser
+  chrome.once('error', (error) => { spawnError = error })
+  const close = async () => {
+    if (chrome.exitCode === null && chrome.signalCode === null && !spawnError) {
+      const stopped = new Promise((resolve) => chrome.once('exit', resolve))
+      if (stopBrowser) await stopBrowser().catch(() => {})
+      const exited = await Promise.race([stopped.then(() => true), sleep(2000).then(() => false)])
+      if (!exited) {
+        chrome.kill()
+        await Promise.race([stopped, sleep(2000)])
+      }
+    }
+    socket?.close()
+    server.close()
+    // Chrome's child processes can finish an atomic Preferences write after the main process
+    // exits. Re-enumerate the private directory on ENOTEMPTY, rather than retrying only rmdir.
+    for (let attempt = 0; ; attempt++) {
+      try { rmSync(profile, { recursive: true, force: true }); break }
+      catch (error) {
+        if (error.code !== 'ENOTEMPTY' || attempt >= 10) throw error
+        await sleep(100)
+      }
+    }
   }
-  console.log(`layout audit: ${viewport.name} ${viewport.width}px, ${paths.length} pages`)
+  try {
+    const activePort = join(profile, 'DevToolsActivePort')
+    for (let waited = 0; waited < 10000 && !existsSync(activePort) && !spawnError && chrome.exitCode === null; waited += 100) await sleep(100)
+    if (spawnError) throw spawnError
+    if (!existsSync(activePort)) throw new Error('Chromium did not start its debugging endpoint')
+    const connection = await connect(Number(readFileSync(activePort, 'utf8').split('\n')[0]))
+    socket = connection.socket
+    const { send, events } = connection
+    stopBrowser = () => send('Browser.close')
+    await send('Page.enable')
+    const evaluate = async (expression) => {
+      const result = await send('Runtime.evaluate', { expression, returnByValue: true, awaitPromise: true })
+      if (result.exceptionDetails) throw new Error(result.exceptionDetails.exception?.description ?? result.exceptionDetails.text)
+      return result.result?.value
+    }
+    const waitFor = async (expression, timeout = 8000) => {
+      const deadline = Date.now() + timeout
+      while (Date.now() < deadline) {
+        if (await evaluate(expression)) return
+        await sleep(100)
+      }
+      throw new Error(`condition timed out: ${expression.slice(0, 180)}`)
+    }
+    let viewport
+    const emulate = async (next) => {
+      viewport = next
+      await send('Emulation.setDeviceMetricsOverride', { width: next.width, height: next.height, deviceScaleFactor: 1, mobile: next.mobile })
+    }
+    const navigate = async (path, { settle = 'interactive' } = {}) => {
+      if (!auditedPaths.has(path)) throw new Error(`unregistered audit path: ${path}`)
+      events.length = 0
+      const navigation = await send('Page.navigate', { url: `http://127.0.0.1:${port}${path}` })
+      if (navigation.errorText) throw new Error(`navigation failed: ${navigation.errorText}`)
+      for (let waited = 0; waited < 8000 && !events.some((event) => event.method === 'Page.loadEventFired'); waited += 100) await sleep(100)
+      if (!events.some((event) => event.method === 'Page.loadEventFired')) throw new Error('page load timed out')
+      if (settle === 'layout') {
+        // The layout probe reads SSR content and CSS geometry. Wait for actual font layout
+        // and two painted frames rather than spending 350ms on every corpus page. Keep the
+        // interaction audit's default delay: it also needs hydrated event handlers.
+        await evaluate(`new Promise((resolve, reject) => {
+          const timer = setTimeout(() => reject(new Error('fonts and paint readiness timed out')), 8000)
+          document.fonts.ready.then(() => {
+            requestAnimationFrame(() => requestAnimationFrame(() => {
+              clearTimeout(timer)
+              resolve(true)
+            }))
+          }, (error) => { clearTimeout(timer); reject(error) })
+        })`)
+      } else await sleep(350)
+      // innerWidth measures the CSS layout viewport; clientWidth can be 15px narrower
+      // when desktop Chromium reserves space for its vertical scrollbar.
+      const measured = await evaluate('({ width: innerWidth, clientWidth: document.documentElement.clientWidth, scrollWidth: document.documentElement.scrollWidth, content: !!document.querySelector("#main-content") })')
+      if (missing.has(path) || !measured?.content) throw new Error('build did not serve the page shell')
+      if (measured.width !== viewport?.width) throw new Error(`viewport is ${measured.width}px; expected ${viewport?.width}px (document clientWidth=${measured.clientWidth}px, scrollWidth=${measured.scrollWidth}px)`)
+    }
+    return { send, evaluate, waitFor, emulate, navigate, close, missing }
+  } catch (error) {
+    await close()
+    throw error
+  }
 }
 
-socket.close()
-chrome.kill()
-server.close()
-
-for (const path of missing) failures.push(`[not-served] ${path}: the build has no document at this address`)
-
-if (failures.length) {
-  console.error(`layout audit failed: ${failures.length}`)
-  for (const failure of failures) console.error(`  ${failure}`)
-  process.exit(1)
+async function main() {
+  const args = process.argv.slice(2)
+  if (args.some((arg) => !arg.startsWith('--paths=')) || args.length > 1) throw new Error('usage: layout-audit.mjs [--paths=/path,/another-path]')
+  const selected = args.length ? [...new Set(args[0].slice('--paths='.length).split(','))] : paths
+  if (!selected.length || selected.some((path) => !auditedPaths.has(path))) throw new Error('--paths must contain registered page paths')
+  const browser = await openAuditBrowser()
+  const failures = []
+  try {
+    for (const viewport of VIEWPORTS) {
+      const firstFailure = failures.length
+      await browser.emulate(viewport)
+      for (const path of selected) {
+        try {
+          await browser.navigate(path, { settle: 'layout' })
+          const findings = await browser.evaluate(PROBE)
+          if (!Array.isArray(findings)) throw new Error('probe did not return findings')
+          for (const finding of findings) failures.push(`[${finding.kind}] ${viewport.name} ${path}: ${finding.detail}`)
+        } catch (error) { failures.push(`[probe] ${viewport.name} ${path}: ${error.message}`) }
+      }
+      console.log(`layout audit: ${viewport.name} ${viewport.width}px, ${selected.length} pages`)
+      for (const failure of failures.slice(firstFailure)) console.error(`  ${failure}`)
+    }
+  } finally { await browser.close() }
+  for (const path of browser.missing) {
+    const failure = `[not-served] ${path}: the build has no document at this address`
+    failures.push(failure)
+    console.error(`  ${failure}`)
+  }
+  if (failures.length) {
+    console.error(`layout audit failed: ${failures.length}`)
+    process.exitCode = 1
+  } else console.log(`layout audit: ${selected.length} pages × ${VIEWPORTS.length} viewports, 0 findings`)
 }
-console.log(`layout audit: ${paths.length} pages × ${VIEWPORTS.length} viewports, 0 findings`)
+
+if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
+  main().catch((error) => { console.error(`layout audit failed: ${error.message}`); process.exitCode = 1 })
+}

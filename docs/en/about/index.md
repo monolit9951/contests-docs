@@ -56,12 +56,6 @@ If a number is wrong, or something stopped matching how the platform actually be
 to the [DareBay Telegram channel](https://t.me/darebay_app). It is the fastest route: the
 channel is read by the same people who edit these pages.
 
-## Pages in this section
-
-Direct answers to what people ask about the platform before they trust it with money.
-
-<HubIndex hub="about" />
-
 ## Where to next
 
 - [How pay-per-view works](/en/earnings/how-pay-per-view-works)

@@ -18,11 +18,3 @@ description: "Замовити нарізки з оплатою за перег�
 
 Готові запустити - [сторінка для бізнесу](/ua/for-business) відповідає на питання про ціни
 та умови, а конкурс збирається просто на [darebay.com](https://darebay.com).
-
-## Сторінки розділу
-
-<HubIndex hub="brands" />
-
-## За вертикалями і за кроками
-
-У кожної вертикалі своя сторінка з числами і завданням, які в ній працюють: [ігри](/ua/brendam/narizky-dlia-prosuvannia-ihor), [музика](/ua/brendam/narizky-dlia-prosuvannia-muzyky), [подкасти](/ua/brendam/narizky-dlia-podkastiv), [крипто-проєкти](/ua/brendam/narizky-dlia-krypto-proiektiv) та [агенції і CPA-партнери](/ua/brendam/klipinh-dlia-ahentsii-i-cpa-partneriv). Механіка розібрана по кроках: [як платити нарізальникам за перегляди](/ua/brendam/yak-platyty-narizalnykam-za-perehliady), [як створити конкурс](/ua/brendam/yak-stvoryty-konkurs-dlia-narizalnykiv), [як замовити нарізки для просування](/ua/brendam/yak-zamovyty-narizky-dlia-prosuvannia), [скільки коштує кампанія](/ua/brendam/skilky-koshtuie-klipinh-kampaniia), [нарізки чи реклама](/ua/brendam/narizky-chy-reklama-shcho-deshevshe), [шаблон завдання](/ua/brendam/shablon-zavdannia-dlia-narizchykiv) і [де знайти нарізчиків](/ua/brendam/de-znaity-narizchykiv-dlia-svoho-kontentu).

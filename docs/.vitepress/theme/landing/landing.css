@@ -82,7 +82,7 @@
    scrollbar - the layout viewport is narrower than the width a media query sees. A section link
    never wraps (`nowrap` above): a row that does not fit must show up in `audit:layout` as page
    overflow, not pass as a two-line label. The button stays where it is, last in the row. */
-@media (min-width: 881px) and (max-width: 1079px) {
+@media (min-width: 880px) and (max-width: 1079px) {
   .lp-header-in { gap: 10px; }
   .lp-logo { font-size: 16px; gap: 8px; }
   .lp-nav { gap: 10px; margin-inline-start: 0; }
@@ -285,6 +285,10 @@
 .lp-footer { border-top: 1px solid var(--lp-line); padding: 28px 0 40px; color: var(--lp-faint); font-size: 13px; }
 .lp-footer-in { display: flex; flex-wrap: wrap; gap: 12px 24px; justify-content: space-between; }
 .lp-footer a { color: var(--lp-muted); }
+/* Footer links wrap as whole items: without this the only break opportunity is the space inside
+   «О проекте» / «Про проєкт», and a narrow phone splits the last link in the middle. */
+.lp-footer nav { display: flex; flex-wrap: wrap; row-gap: 6px; }
+.lp-footer nav a { white-space: nowrap; }
 
 /* ---- fact sheet --------------------------------------------------------------- */
 .lp-facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }

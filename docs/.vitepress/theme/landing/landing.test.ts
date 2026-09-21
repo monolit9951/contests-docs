@@ -47,7 +47,9 @@ describe('landing shell owns what Markdown emits', () => {
     const compact = /@media \(min-width: (\d+)px\) and \(max-width: (\d+)px\) \{\n  \.lp-header-in \{/.exec(css)
     expect(hidden, 'the rule that hides .lp-nav').not.toBeNull()
     expect(compact, 'the compact header band').not.toBeNull()
-    expect(Number(compact![1])).toBe(Number(hidden![1]) + 1)
+    // The two rules meet on the same pixel: a fractional viewport width (Windows at 125% gives 880.8px)
+    // would otherwise match neither of them and show the full-size row where it does not fit.
+    expect(Number(compact![1])).toBe(Number(hidden![1]))
     expect(Number(compact![2])).toBeGreaterThanOrEqual(1030)
     // A label that wraps hides the defect from `audit:layout`: nothing overflows, the row just
     // grows a second line. Unwrappable, a row that does not fit is a page overflow the audit sees.

@@ -43,7 +43,8 @@ const valuesOf = (id) => {
   const fact = facts.get(id)
   if (id === 'rate-per-1000-views') return [Number(/per_(\d+)_views/.exec(fact.unit)[1]), fact.value.min, fact.value.max]
   // The fee line also names the smallest request it applies to.
-  if (id === 'withdrawal-fee') return [fact.value, facts.get('withdrawal-minimum').value]
+  // A 0% fee is printed in words (gen-facts-json.mjs), so it puts no digit on the line.
+  if (id === 'withdrawal-fee') return [...(fact.value === 0 ? [] : [fact.value]), facts.get('withdrawal-minimum').value]
   return typeof fact.value === 'number' ? [fact.value] : []
 }
 

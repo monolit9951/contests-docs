@@ -9,10 +9,10 @@ hero:
   kicker: "Guide · 2026"
   lede: "You can put a price on a clip before you open the editor, because the rate, the threshold and the cap are printed on the task card. Below is the arithmetic of one submission, what open tasks pay for a thousand views, and why your follower count never enters the formula."
   takeaways:
-    - "<b>One formula for everyone.</b> Views / 1000 × rate, never above the cap on one submission; the threshold opens the count and is not deducted from it."
-    - "<b>Open tasks pay from $1.00 to $10.00 per 1000 views.</b> The buyer names the rate, it stands on the card before you submit, and it does not move after the start."
-    - "<b>The threshold is set by the task, and the cap runs up to $500 per clip.</b> You see both on the card before you take the task."
-    - "<b>No followers required.</b> The counter of one specific clip is what gets paid, so a fresh account and a veteran work at the same rate."
+    - "<b>One formula for everyone.</b> Views / 1000 × rate, never above the cap on one submission."
+    - "<b>Open tasks pay from $1.00 to $10.00 per 1000 views.</b> The rate is on the card and cannot change after the start."
+    - "<b>The cap runs up to $500 per clip.</b> The task sets the threshold, which is not deducted from your views."
+    - "<b>No followers required.</b> A new account earns the same rate as a veteran."
 cta:
   title: "Do the maths first, then take the task"
   lede: "The rate, the threshold and the cap sit on every open DareBay card before you submit, and the payout follows the formula rather than anyone's decision after the fact. Pick the task that fits your reach."
@@ -29,6 +29,10 @@ A clipper's earnings come from three numbers, all set by the buyer when creating
 | Cap per submission | Up to $500 per clip | The most one clip can earn |
 
 Every figure on this page comes from the platform's own data (snapshot: 2026-08-23; rate band updated 2026-09-20) and counts only open tasks.
+
+Set your own views and rate to see what one clip pays, up to the cap.
+
+<LCalc />
 
 ## What DareBay pays per 1000 views and how to read the rate
 

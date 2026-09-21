@@ -9,10 +9,10 @@ hero:
   kicker: "Guide · 2026"
   lede: "You post the clip, and from that point nobody gets to argue about the numbers. In a wallet-backed task the budget is locked on the platform before you start, the platform reads the public counter at your link, a formula turns those views into money, and the team sends the transfer. Here is the whole chain step by step, with the threshold, the cap and an example in dollars."
   takeaways:
-    - "<b>The platform reads the views, not a person:</b> an independent counter takes the site's public figure at the link you sent, so neither side can nudge it up or down."
-    - "<b>The threshold is not a deduction:</b> clear the threshold printed on the task card and you are paid on the whole counter from the very first view."
-    - "<b>One formula for everybody:</b> views / 1000 × rate, never above the cap on one submission (up to $500 in open tasks), and neither the buyer nor support can replay it in someone's favour."
-    - "<b>Code counts, the money is already on the platform:</b> a wallet-backed budget is frozen before you start, the calculation is on the record, and you withdraw to your wallet from 10 USDT."
+    - "<b>The platform reads the views, not a person:</b> an independent counter takes the site's public figure at your link."
+    - "<b>The threshold is not a deduction:</b> clear it and all your views count, from the very first one."
+    - "<b>One formula for everybody:</b> views / 1000 × rate, never above the cap (up to $500)."
+    - "<b>Code counts, the money is already on the platform:</b> wallet-backed budgets are frozen before you start; withdrawals start at 10 USDT."
 cta:
   title: "Pick a task where the maths is open before you start"
   lede: "Rate, threshold and cap are set before anyone opens an editor, the platform reads your counter, and the result is recorded against your name. Choose a task for the site you already post on, publish the clip and send the link."

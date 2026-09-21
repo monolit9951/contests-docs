@@ -9,10 +9,10 @@ hero:
   kicker: "Guide · 2026"
   lede: "Clipping is an honest trade: a buyer pays for the reach your clip brought in, and on a real platform you never pay anybody for anything. The fraud lives in particular sites and the «managers» who work out of direct messages. Here are nine tells you can read before you cut a single clip, plus a ten-minute check that needs no sign-up."
   takeaways:
-    - "<b>Money only ever moves towards you.</b> A request to pay for access, an «unlock» or a quicker payout gives the platform away in its first message, and there are no exceptions."
-    - "<b>The terms are written before the work, not after it.</b> The rate per 1,000 views, the view threshold and the per-clip cap belong on the task before you submit; if they are «discussed later», the sum will not be set in your favour."
-    - "<b>The budget should be sitting with the platform.</b> A site that merely introduces the two sides leaves the buyer paying when and if the mood takes them; Whop, Klipni and DareBay's wallet-backed tasks keep the budget on the platform."
-    - "<b>A threshold, a cap and a withdrawal the team processes are not flags.</b> On DareBay each task prints its own threshold, the cap runs up to $500 per clip, and a withdrawal to your wallet from 10 USDT is filed by you and processed by the team: that is what a live economy with real money looks like."
+    - "<b>Money only ever moves towards you.</b> A request to pay for access or faster payouts is a scam."
+    - "<b>The terms are written before the work, not after it.</b> Rate, threshold and cap belong on the task before you submit."
+    - "<b>The budget should be sitting with the platform.</b> Whop, Klipni and DareBay's wallet-backed tasks keep the budget on the platform."
+    - "<b>A threshold, a cap and team-processed withdrawals are not flags.</b> DareBay's per-clip cap runs up to $500; withdrawals start at 10 USDT."
 cta:
   title: "Run DareBay through the same nine"
   lede: "Rate, threshold, cap and funding mode are all open on the card before you take the task, a wallet-backed budget stays on the platform, payouts go worldwide with no exclusion list, and nobody here will ask you to pay for access."

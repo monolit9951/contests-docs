@@ -10,10 +10,10 @@ hero:
   lede: "Whop Content Rewards is the biggest clipping marketplace, and it will not pay everyone who clips for it: Russia and Belarus sit on its sanctioned list, its terms take 10% of CPM payouts, and campaigns need a $1,000 brand budget. Seven platforms take those clippers instead, lined up here on the same fields, every figure read off the platform's own page."
   secondary: "Compare the alternatives"
   takeaways:
-    - "<b>If Whop cannot pay you</b> (Russia, Belarus, six regions of Ukraine), you are not out of options: DareBay pays worldwide with no country list, Prime Oracles covers Russia, Belarus and Kazakhstan, Klipni is Russia-only. Vyro excludes Russia, Belarus, all of Ukraine and more."
-    - "<b>Read the fee before you cut anything.</b> Klipni takes 5%, Vues' and Reach.cat's own pages disagree on who pays the fee, and DareBay takes 0% on contest payouts and 10% on withdrawal, from 10 USDT."
-    - "<b>Budgets run dry everywhere, so hold two platforms open, not one.</b> Vyro and Clipping.net carry the large streamer and creator campaigns worth keeping next to Whop."
-    - "<b>An editor is not a marketplace:</b> OpusClip, Klap and Submagic help you cut the clip, and none of them pays you for its views."
+    - "<b>DareBay has no country list; Whop blocks Russia and Belarus.</b> Prime Oracles covers Russia, Belarus and Kazakhstan; Klipni is Russia-only."
+    - "<b>Read the fee before you cut anything.</b> DareBay takes 0% on contest payouts, 10% on withdrawals (minimum 10 USDT)."
+    - "<b>Budgets run out everywhere, so keep two platforms open.</b> Vyro and Clipping.net carry the large streamer and creator campaigns."
+    - "<b>An editor is not a marketplace:</b> OpusClip, Klap and Submagic help you cut clips; none pays for views."
 compare:
   ids: [darebay, vyro, clipping-net, vues, reach-cat, prime-oracles, klipni]
   columns: [rate, threshold, cap, fee, minPayout, payoutMethods, cis, followers, escrow]

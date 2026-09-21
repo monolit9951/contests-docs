@@ -10,11 +10,11 @@ hero:
   lede: "Nine platforms that pay clippers for views, lined up on the fields you feel in the payout: rate per 1,000 views, threshold, cap, fee on payout, minimum payout, payout methods and countries. Every competitor figure is taken from that platform's own pages and dated; DareBay's come from live platform data. Sort any column and pick by what matters to you."
   secondary: "Jump to the table"
   takeaways:
-    - "<b>Whop Content Rewards has the most campaigns</b> and holds the budget against each one, but it does not register or pay clippers in Russia, Belarus or six regions of Ukraine. Read the country list before you count on it."
-    - "<b>The headline CPM is not what reaches your hands.</b> Whop's terms take 10% of CPM payouts, Vyro pays only after 5,000 views per post, Clipping.net quotes $0.20–$0.75 per 1,000. Read fee, threshold and cap as one number."
-    - "<b>Where you live can decide more than the rate does.</b> DareBay pays worldwide with no exclusion list (USDT on TON, Telegram Stars) and its community is largest in CIS; Prime Oracles covers Russia, Belarus and Kazakhstan; Klipni is Russia-only. Whop excludes Russia, Belarus and six regions of Ukraine; Vyro excludes all three countries."
-    - "<b>Ask who is holding the money before you start editing.</b> Whop, Klipni, Prime Oracles and DareBay's wallet-backed contests lock the budget before clips are posted; Vues states that it does not custody funds."
-    - "<b>Sign up on two or three platforms and keep working.</b> Campaigns run out of budget, so a steady supply of briefs beats the single highest rate on the board."
+    - "<b>Whop Content Rewards has the most campaigns; DareBay pays worldwide.</b> Whop does not pay in Russia, Belarus or six regions of Ukraine."
+    - "<b>The headline CPM is not what reaches your hands.</b> Whop takes 10% of CPM payouts; Vyro needs 5,000 views per post."
+    - "<b>Where you live can decide more than the rate does.</b> DareBay pays in USDT on TON; Vyro excludes Russia, Belarus and Ukraine."
+    - "<b>Ask who is holding the money before you start editing.</b> Whop, Klipni, Prime Oracles and DareBay's wallet-backed contests hold the budget upfront."
+    - "<b>Sign up on two or three platforms and keep working.</b> Campaigns run out of budget, so steady work beats the highest rate."
 compare:
   ids: [whop, vyro, darebay, clipping-net, vues, reach-cat, prime-oracles, klipni, clipping-io]
   columns: [rate, threshold, cap, fee, minPayout, payoutMethods, cis, followers, escrow]
@@ -64,7 +64,7 @@ If you want more than a rate per view, look at what a task adds on top. DareBay'
 
 ### What is the best clipping platform in 2026?
 
-There is no single best platform; it depends on where you live and what you clip. For US and EU clippers who want the widest choice of campaigns, Whop Content Rewards and Vyro have the most supply. DareBay pays in every country with no exclusion list, which matters most for clippers in Russia and Belarus, where neither Whop nor Vyro pays, and in Ukraine, which Vyro excludes and Whop closes in six regions. Compare the fee, cap and minimum payout, not only the rate.
+There is no single best platform; it depends on where you live and what you clip. For US and EU clippers who want the widest choice of campaigns, Whop Content Rewards and Vyro have the most supply. DareBay has no country exclusion list, which matters most for clippers in Russia and Belarus, where neither Whop nor Vyro pays, and in Ukraine, which Vyro excludes and Whop closes in six regions. Compare the fee, cap and minimum payout, not only the rate.
 
 ### Which clipping platform pays the most per 1,000 views?
 

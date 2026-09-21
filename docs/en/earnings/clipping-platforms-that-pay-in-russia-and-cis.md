@@ -11,8 +11,8 @@ hero:
   lede: "Three platforms will pay into Russia and the CIS, two keep exclusion lists, and four never say either way. Long before the rate matters, that is the question: can the money reach you at all. Whop's sanctioned list shuts out Russia and Belarus, Vyro's unsupported list adds Ukraine and four more countries, so here is what each platform's own pages state, country by country."
   secondary: "Country table"
   takeaways:
-    - "<b>Two platforms keep exclusion lists:</b> Whop Content Rewards blocks Russia and Belarus, and of Ukraine only six regions (Crimea, Sevastopol, Donetsk, Luhansk, Zaporizhzhia, Kherson); Vyro blocks Russia, Belarus, Ukraine, Uzbekistan, Armenia, Georgia and Moldova."
-    - "<b>Three pay here and put it in writing:</b> DareBay (worldwide with no exclusion list, community largest in CIS; USDT on TON or Telegram Stars), Prime Oracles (ten CIS states named; USDT, USDC or TON), Klipni (Russia only; rubles, self-employed status required)."
+    - "<b>DareBay, Prime Oracles and Klipni say they pay in Russia:</b> DareBay worldwide, Prime Oracles in ten CIS states, Klipni in Russia only."
+    - "<b>Whop and Vyro both block Russia and Belarus:</b> in Ukraine, Whop blocks six regions and Vyro blocks the whole country."
     - "<b>Four publish no country list at all:</b> Clipping.net, Vues, Reach.cat and Clipping.io; ask their support before your first clip."
     - "<b>Kazakhstan is on neither exclusion list:</b> Whop names it among its payout countries; Vyro leaves it off its unsupported list."
 compare:
@@ -61,7 +61,7 @@ Klipbait, a Russian- and Ukrainian-language front end for Western campaigns, des
 - Read the platform's own country page or terms, not a forum post; lists change and the platform's page is what its payout partner enforces.
 - Check the payout rail you can actually receive: PayPal and Stripe are unavailable to many clippers in the region, USDT on TON or Tron and Telegram Stars are not.
 - Check whether a tax status is required (Klipni) and whether identity verification is demanded before withdrawal (Whop, and Reach.cat once payout requests pass $500 <!-- source: https://reach.cat/terms 2026-09-18 -->).
-- Prefer a platform that locks the budget before you post: DareBay's wallet-backed contests, Prime Oracles' frozen reward balance and Klipni's prepaid budgets do; Vues states that it does not custody funds.
+- Prefer a platform that holds the budget before you post: DareBay's wallet-backed contests and Prime Oracles' frozen reward balance do, and Klipni's budgets are prepaid by invoice; Vues states that it does not custody funds.
 
 Other regions have their own version of this page: there is one for [India](/en/earnings/clipping-platforms-that-pay-in-india), one for [Pakistan](/en/earnings/clipping-platforms-that-pay-in-pakistan), one for [Bangladesh and Nepal](/en/earnings/clipping-platforms-that-pay-in-bangladesh-and-nepal), one for [Indonesia and the Philippines](/en/earnings/clipping-platforms-that-pay-in-indonesia-and-the-philippines), one for [Nigeria, Kenya and Ghana](/en/earnings/clipping-platforms-that-pay-in-nigeria-and-kenya) and one for [Egypt and the Arab countries](/en/earnings/clipping-platforms-that-pay-in-egypt-and-arab-countries), each read country by country, while [clipping platforms that pay without PayPal or Stripe](/en/earnings/clipping-platforms-that-pay-without-paypal-or-stripe) answers the same worry without a border in it.
 

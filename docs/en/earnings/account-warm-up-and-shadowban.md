@@ -11,10 +11,10 @@ hero:
   kicker: "Guide · 2026"
   lede: "Your first clip from a new account often starts from zero distribution, and not because it is weak: the platform does not yet know who to show it to. A week of warm-up gives it that data. Here is the plan day by day, the signs and causes of a shadowban, what to do when views drop, and where all of it runs into the task threshold that the money sits behind."
   takeaways:
-    - "<b>Warm-up is data for the algorithm, not a trick.</b> A week of behaving like an ordinary viewer on one topic tells the platform whose feed your first clips belong in, instead of nobody's."
-    - "<b>A shadowban is a symptom, not a verdict.</b> Reach to new viewers drops after duplicates, re-uploads, bought views and mass actions; the platforms never use the word, but that is what the restrictions are handed out for."
-    - "<b>The order of fixes: pause, clear duplicates, new material.</b> A new account is the last resort, only if reach has not come back after the pause, and the old one stays alive until its task clips are paid."
-    - "<b>A task does not forgive fake views.</b> Bought views will not carry a clip past the task's view threshold: the submission goes on hold, moderation removes it in full, and the money you spent on bots is already gone."
+    - "<b>Warm-up is data for the algorithm, not a trick.</b> For a week, behave like an ordinary viewer on one topic."
+    - "<b>A shadowban is a symptom, not a verdict.</b> Reach drops after duplicates, re-uploads, bought views and mass actions."
+    - "<b>The order of fixes: pause, clear duplicates, new material.</b> A new account is the last resort, if reach does not return."
+    - "<b>A task does not forgive fake views.</b> Bought views put the submission on hold, and moderation removes it."
 cta:
   title: "Account warm? Take your first task"
   lede: "A DareBay task card names its site before the start, so you can warm the account on exactly the topic you plan to clip. A week by the plan above, then one clip, one link, and a counter the platform reads for you."

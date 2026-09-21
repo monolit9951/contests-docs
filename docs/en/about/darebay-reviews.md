@@ -9,10 +9,10 @@ hero:
   kicker: "About DareBay · 2026"
   lede: "There is no pile of DareBay reviews, and we are not about to invent one: the platform is young, and reviews of earning platforms mostly record the reviewer's own luck. What works better takes ten minutes and asks you to trust nobody, us included. Here is exactly what to open and what to look at."
   takeaways:
-    - "<b>Few reviews, and for a young platform that is the honest state of things:</b> the live talk happens in DareBay's Telegram channel rather than on review sites, and hundreds of glowing reviews would be a reason to worry."
-    - "<b>Open contests pay $1.00 to $10.00 per 1000 views,</b> and the rate, threshold, cap and publishing site stand on the card before you submit: you decide on figures, not on strangers."
-    - "<b>Nothing moves once a contest is live:</b> the rate and the threshold stay exactly as written after your clip is up, the cap per clip can only be raised, and a wallet-backed budget is charged from the organizer before you start."
-    - "<b>The last step is plain too:</b> withdrawal to your wallet from a 10 USDT request, the amount to receive shown before you confirm, checked and sent by the team, with no date promised."
+    - "<b>DareBay has few reviews because the platform is young:</b> the live discussion is in its Telegram channel, not on review sites."
+    - "<b>Open contests pay $1.00 to $10.00 per 1000 views,</b> and the card shows rate, threshold, cap and site before you submit."
+    - "<b>Nothing moves once a contest is live:</b> the rate and threshold stay fixed; the cap can only be raised."
+    - "<b>The last step is plain too:</b> withdrawal from 10 USDT, sent by the team, with no date promised."
 cta:
   title: "Skip the reviews and check for yourself"
   lede: "Open the contest catalogue, read one card from top to bottom, look at the withdrawal form before you confirm anything, and write to the founder. That walk through the product tells you more about DareBay than any testimonial could."

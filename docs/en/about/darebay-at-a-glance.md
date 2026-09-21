@@ -12,10 +12,10 @@ hero:
   secondary: "See the fields"
   secondaryHref: "#facts"
   takeaways:
-    - "<b>$1.00 to $10.00 per 1,000 views in open contests.</b> The exact rate is printed on the task card, so you read it before you submit."
+    - "<b>$1.00 to $10.00 per 1,000 views in open contests.</b> The exact rate is printed on the task card before you submit."
     - "<b>No followers, no portfolio, no application.</b> An account opened this morning can take a brief on the same terms as anyone else."
     - "<b>Pays worldwide, with no country shut out.</b> The community is largest in CIS, and clippers from anywhere are paid the same way."
-    - "<b>Wallet-backed contests lock the budget on the platform before the start.</b> In a manual-payout contest the organizer pays directly, and the card says which kind it is."
+    - "<b>Wallet-backed contests lock the budget before the start.</b> In manual-payout contests the organizer pays directly; the card says which kind."
     - "<b>Withdrawals to your wallet from 10 USDT.</b> You are paid in USDT on TON or in Telegram Stars."
 cta:
   title: "Start with one brief, not an application"

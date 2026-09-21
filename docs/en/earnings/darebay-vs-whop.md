@@ -10,10 +10,10 @@ hero:
   lede: "If Whop Content Rewards cannot pay you because you are in Russia or Belarus, the choice is already made for you: DareBay pays clippers there and worldwide. If Whop is open to you, there is a real trade-off: more campaigns on that side, no followers and no application on this one. Below is every field where the two differ, with the source for each number."
   secondary: "See the table"
   takeaways:
-    - "<b>Whop wins on choice:</b> the most campaigns anywhere, budgets from $1,000, rates from $0.05 to $10 per 1,000 views, 17 of 50 at $1, and payouts in 200+ countries through Whop."
-    - "<b>DareBay wins on access and on what the task hands you:</b> no country list at all, so it pays where Whop cannot; offer tasks add a fixed fee per accepted clip, a share of the orders your promo code brings and ready-made unique videos."
-    - "<b>The fee bites in different places:</b> Whop's terms take a flat 10% of CPM payouts, and its FAQ says the same; DareBay takes 0% from a contest payout and 10% when you withdraw to your wallet, from a 10 USDT request."
-    - "<b>Both hold the money</b> in their main mode: Whop keeps the brand's budget against the campaign, DareBay locks the organizer's budget on the platform in a wallet-backed contest; DareBay also runs manual-payout contests where the organizer pays directly."
+    - "<b>Whop wins on choice, DareBay on access:</b> Whop has the most campaigns, at $0.05 to $10 per 1,000 views."
+    - "<b>DareBay has no country list at all:</b> it pays in Russia and Belarus, where Whop cannot."
+    - "<b>Both take 10%, at different points:</b> Whop on CPM payouts, DareBay on withdrawals (minimum 10 USDT)."
+    - "<b>Both hold the money in their main mode:</b> DareBay in wallet-backed contests; in manual-payout contests the organizer pays you directly."
 compare:
   ids: [darebay, whop]
   columns: [rate, threshold, cap, fee, minPayout, payoutMethods, cis, followers, escrow, networks, verification]

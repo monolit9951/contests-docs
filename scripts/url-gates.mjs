@@ -438,6 +438,23 @@ for (const file of CONTENT_ROOT_FILES) {
     }
 }
 
+// The same rule for everything else this container serves as text. Until 2026-09-21 only llms.txt
+// named its encoding: pages went out as a bare `text/html` and the content sitemap as a bare
+// `text/xml`. `<meta charset>` rescues a browser, not a crawler or an assistant that trusts the
+// header, and the Arabic tree has no Latin reading to be mistaken for. JSON is left out on
+// purpose: it is UTF-8 by definition and takes no charset parameter. The localized 404 documents
+// are held to the same header in gate 7.
+for (const url of contentUrls) {
+    const contentType = (await head(url)).headers.get('content-type') ?? ''
+    if (!/^text\/html;\s*charset=utf-8$/i.test(contentType)) fail('5-charset', `${url}: content-type: ${contentType}`)
+}
+{
+    const contentType = (await head('/sitemap-content.xml')).headers.get('content-type') ?? ''
+    if (!/^text\/xml;\s*charset=utf-8$/i.test(contentType)) {
+        fail('5-charset', `/sitemap-content.xml: content-type: ${contentType}`)
+    }
+}
+
 {
     const key = 'f54f4783c3e2566c84087cd19b829ddc'
     const res = await body(`/${key}.txt`)
@@ -481,6 +498,8 @@ for (const [junk, axis] of [
     }
     if (!/noindex/i.test(res.headers.get('x-robots-tag') ?? '')) fail('7-404', `${junk}: нет X-Robots-Tag`)
     if (!/no-store/i.test(res.headers.get('cache-control') ?? '')) fail('7-404', `${junk}: 404 можно закешировать`)
+    const contentType = res.headers.get('content-type') ?? ''
+    if (!/^text\/html;\s*charset=utf-8$/i.test(contentType)) fail('7-404', `${junk}: content-type: ${contentType}`)
 }
 
 // Clean URLs are the only 200 form. VitePress writes .html files, but exposing
@@ -680,6 +699,31 @@ for (const canonical of new Set(appUrls)) {
         }
     }
     if (!checked) fail('10-switcher', 'ни одной ссылки переключателя не найдено — селектор устарел?')
+}
+
+// The same for the section links beside it: the header's `.lp-nav` and the footer's `<nav>` print
+// `NAV_HUBS` (config.ts), each section only where its index exists in that tree. A tree may have
+// pages under a section and no index there (Arabic has its fact card under About and no About
+// index), and a section link printed anyway is a 404 on every page of that tree. `chrome.test.ts`
+// holds the rule on the config; this holds the shipped markup. Only site-relative links are
+// probed: the footer's product and Telegram links leave this container.
+{
+    let checked = 0
+    for (const url of contentUrls) {
+        const res = await body(url)
+        if (res.status !== 200) continue
+        const chrome = [
+            res.text.match(/<nav\b[^>]*class="lp-nav"[\s\S]*?<\/nav>/)?.[0] ?? '',
+            res.text.match(/<footer\b[^>]*class="lp-footer"[\s\S]*?<\/footer>/)?.[0] ?? '',
+        ].join('\n')
+        const links = [...chrome.matchAll(/<a [^>]*href="(\/[^"]*)"/g)].map((m) => m[1])
+        for (const href of new Set(links)) {
+            checked += 1
+            const probe = await head(href)
+            if (probe.status !== 200) fail('10-sections', `${url}: раздел -> ${href} -> ${probe.status}`)
+        }
+    }
+    if (!checked) fail('10-sections', 'ни одной ссылки разделов не найдено: селектор устарел?')
 }
 
 // ---- 11. the app and content pages describe one stable brand entity --------

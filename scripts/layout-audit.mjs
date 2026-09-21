@@ -29,8 +29,17 @@ const CHROME_CANDIDATES = [
     : []),
 ].filter(Boolean)
 
+// Above the phone the header is a single row in three sizes (landing.css): without section links
+// up to 880px, compact with them at 881-1079px, full size from 1080px. Until 2026-09-21 only the two
+// ends were opened, and the middle broke unseen: when the switcher gained its fourth language the
+// row stopped fitting between 861px and about 925px, on production, with this audit green. 900 is
+// just inside the compact row, 1024 is a tablet held sideways, 1080 is the first width of the
+// full-size row, where it is tightest. A label added to the header shows up at these widths first.
 const VIEWPORTS = [
   { name: 'phone', width: 390, height: 844, mobile: true },
+  { name: 'compact', width: 900, height: 1000, mobile: false },
+  { name: 'tablet', width: 1024, height: 768, mobile: false },
+  { name: 'laptop', width: 1080, height: 1000, mobile: false },
   { name: 'desktop', width: 1440, height: 1000, mobile: false },
 ]
 
@@ -56,6 +65,20 @@ const PROBE = `(() => {
         if (getComputedStyle(p).overflowX !== 'visible') clipped = true
       }
       if (!clipped) findings.push({ kind: 'page-overflow-x', detail: describe(el) + ' reaches x=' + Math.round(box.right) + ' in a ' + root.clientWidth + 'px viewport ("' + label(el) + '")' })
+    }
+  }
+
+  // Every label in the site header is one line, at every width: a section link or a language
+  // name broken onto a second line is a row that does not fit, and nothing overflows to say so.
+  const header = document.querySelector('.lp-header')
+  if (header) {
+    const walker = document.createTreeWalker(header, NodeFilter.SHOW_TEXT)
+    for (let node = walker.nextNode(); node; node = walker.nextNode()) {
+      if (!(node.textContent || '').trim()) continue
+      const range = document.createRange()
+      range.selectNodeContents(node)
+      const lines = new Set(Array.from(range.getClientRects()).filter((box) => box.width > 0 && box.height > 0).map((box) => Math.round(box.top)))
+      if (lines.size > 1) findings.push({ kind: 'header-wrap', detail: describe(node.parentElement) + ' breaks onto ' + lines.size + ' lines ("' + label(node.parentElement) + '")' })
     }
   }
 

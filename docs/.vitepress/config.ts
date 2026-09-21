@@ -135,10 +135,28 @@ const contentHomeForLocale = (lang: Locale) => {
   return home
 }
 
-// The sections the header offers, in this order, each only where its index page exists in the
-// reader's language. A tree may open with one section (Arabic starts with earnings alone); linking
-// the other two would put 404s in the header of every page of it.
-const NAV_HUBS: readonly HubId[] = ['earnings', 'brands', 'help']
+// The sections the header and the footer offer, in this order, each only where its index page
+// exists in the reader's language. A tree may open with one section (Arabic starts with earnings
+// alone); linking the others would put 404s in the header of every page of it, and no gate follows
+// header links: `chrome.test.ts` holds the rule instead.
+//
+// "О проекте" closes the list (2026-09-21): the section that says who runs the platform and where
+// its numbers come from is linked from every page, in the header and in the footer. The product
+// CTA is appended after these in `themeForLocale` and stays last.
+export const NAV_HUBS: readonly HubId[] = ['earnings', 'brands', 'help', 'about']
+
+/**
+ * The section links of one tree. `indexPath` is the registry's `hubIndexPath`; it is a parameter so
+ * the skipping rule can be held on a manifest that is not the live one (`chrome.test.ts`).
+ */
+export const navSections = (
+  lang: Locale,
+  indexPath: (hub: HubId, language: Locale) => string | null = hubIndexPath,
+): { text: string; link: string }[] =>
+  NAV_HUBS.flatMap((hub) => {
+    const link = indexPath(hub, lang)
+    return link ? [{ text: HUB_TITLES[lang][hub], link }] : []
+  })
 
 // Order in the sidebar. "О проекте" is first on purpose: earnings is a subject where the
 // reader's first question — and Google's — is who is behind the page and where the
@@ -172,10 +190,7 @@ export const themeForLocale = (lang: Locale): DareBayThemeConfig => {
     // server-rendered and hydrated logo always share this exact href. No DOM rewrite.
     logoLink: contentHomeForLocale(lang),
     nav: [
-      ...NAV_HUBS.flatMap((hub) => {
-        const link = hubIndexPath(hub, lang)
-        return link ? [{ text: HUB_TITLES[lang][hub], link }] : []
-      }),
+      ...navSections(lang),
       // The CTA link is styled separately via CSS — see the `:last-child` rules under
       // "The CTA" in custom.css. It must stay LAST in this array: the gradient-pill
       // styling keys off `:last-child`, and so does the rule that keeps it visible on
@@ -273,7 +288,14 @@ const LOGO_ID = `${ENTITY_ORIGIN}/#logo`
 // The entity, described the way a model or a directory would describe it: what
 // it is, who founded it, when, and every public profile it actually runs. The
 // same profiles must exist on the app's Organization node (contests-frontend).
-const ORGANIZATION = {
+//
+// `name`, `url`, `logo` and `sameAs` are the slice `url-gates.mjs` gate 11 compares with the
+// application's copy, byte for byte: they change in both repositories or not at all. The contact
+// block below it (`email`, `contactPoint`, `areaServed`, `knowsAbout`, 2026-09-21) is outside that
+// slice: the application's node is given the same values in the same release wave, and nothing
+// compares them, so a change here is a change there. `availableLanguage` lists every language this
+// corpus is written in (`locales.test.ts`) plus the application's Polish.
+export const ORGANIZATION = {
   '@type': 'Organization',
   '@id': ORG_ID,
   name: 'DareBay',
@@ -290,6 +312,22 @@ const ORGANIZATION = {
     'https://www.tiktok.com/@darebay.com',
     'https://www.linkedin.com/company/darebay',
     'https://www.youtube.com/@darebay',
+  ],
+  email: 'support@darebay.com',
+  contactPoint: {
+    '@type': 'ContactPoint',
+    contactType: 'customer support',
+    email: 'support@darebay.com',
+    availableLanguage: ['en', 'ru', 'uk', 'ar', 'pl'],
+  },
+  areaServed: 'Worldwide',
+  knowsAbout: [
+    'short-form video clipping',
+    'pay-per-view creator tasks',
+    'user-generated content campaigns',
+    'creator payouts in USDT',
+    'TikTok, YouTube Shorts and Instagram Reels distribution',
+    'view verification and anti-fraud for creator campaigns',
   ],
 }
 

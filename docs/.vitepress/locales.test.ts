@@ -16,6 +16,7 @@ import siteConfig, {
   LOCALE_DESCRIPTIONS,
   LOCALE_LABELS,
   OG_LOCALE,
+  ORGANIZATION,
   OVERVIEW,
 } from './config'
 import { businessUrlForLocale, productUrlForLocale, tasksUrlForLocale } from './links'
@@ -120,6 +121,20 @@ describe('the fact card speaks every known language', () => {
   })
 })
 
+// The Organization node names where a reader writes and in which languages they are answered. A
+// tree whose language is missing from that list tells a directory or an assistant that its own
+// readers have nobody to write to.
+describe('the Organization node offers support in every known language', () => {
+  it('lists every language of the corpus on its contact point', () => {
+    expect(ORGANIZATION.contactPoint.availableLanguage).toEqual(expect.arrayContaining([...KNOWN_LOCALES]))
+  })
+
+  it('publishes one support address, on the node and on its contact point', () => {
+    expect(ORGANIZATION.email).toMatch(/^[a-z]+@darebay\.com$/)
+    expect(ORGANIZATION.contactPoint.email).toBe(ORGANIZATION.email)
+  })
+})
+
 describe('product links of a tree lead into the application tree it is sent to', () => {
   it('sends Arabic readers to the English application, every other tree to its own', () => {
     const expected: Record<Locale, string> = {
@@ -170,5 +185,32 @@ describe('the content container has a location for every known tree', () => {
     expect(tree).toContain(notFound)
     expect(tree).toContain(`@slash_${language};`)
     expect(block(`location @slash_${language}`), `@slash_${language}`).toContain(notFound)
+  })
+})
+
+// Encoding is a response header, not only a `<meta charset>`: a crawler or an assistant that trusts
+// HTTP reads a bare `text/html` as Latin-1. Until 2026-09-21 only `/llms.txt` declared a charset
+// (the directive sat inside that one location), so every page and the content sitemap went out
+// without one, and the Arabic tree turned that from a nicety into a defect. It belongs at the
+// `server` level, where every location inherits it; the served header itself is probed by
+// url-gates `5-charset`.
+describe('the content container declares UTF-8 for every text response', () => {
+  const nginx = readFileSync(new URL('../../nginx.conf', import.meta.url), 'utf8')
+  // Contents of `server { … }` are indented by four spaces, a location's by eight.
+  const charsets = [...nginx.matchAll(/^( *)charset\s+([^;]+);/gm)].map((match) => ({
+    level: match[1].length === 4 ? 'server' : 'location',
+    value: match[2].trim(),
+  }))
+
+  it('sets the charset at the server level, and no location overrides it with another one', () => {
+    expect(charsets).toContainEqual({ level: 'server', value: 'utf-8' })
+    expect(charsets.filter(({ value }) => value !== 'utf-8')).toEqual([])
+  })
+
+  it('covers pages, the XML sitemap and llms.txt', () => {
+    // nginx always processes text/html; a declared `charset_types` REPLACES the rest of its default.
+    const declared = nginx.match(/^ *charset_types\s+([^;]+);/m)?.[1].trim().split(/\s+/)
+    const covered = ['text/html', ...(declared ?? ['text/xml', 'text/plain', 'application/javascript'])]
+    expect(covered).toEqual(expect.arrayContaining(['text/html', 'text/xml', 'text/plain']))
   })
 })

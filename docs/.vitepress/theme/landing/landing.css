@@ -56,7 +56,7 @@
 .lp-logo { font-family: var(--lp-display); font-weight: 700; font-size: 18px; letter-spacing: 0.02em; display: inline-flex; align-items: center; gap: 10px; }
 .lp-logo i { width: 10px; height: 10px; border-radius: 50%; background: var(--lp-accent); box-shadow: 0 0 18px var(--lp-accent); }
 .lp-nav { display: flex; gap: 18px; margin-inline-start: 8px; }
-.lp-nav a { color: var(--lp-muted); font-weight: 600; font-size: 14px; padding: 6px 2px; }
+.lp-nav a { color: var(--lp-muted); font-weight: 600; font-size: 14px; padding: 6px 2px; white-space: nowrap; }
 .lp-nav a:hover { color: var(--lp-text); }
 .lp-header-right { margin-inline-start: auto; display: flex; align-items: center; gap: 12px; }
 .lp-lang { display: flex; gap: 2px; border: 1px solid var(--lp-line-2); border-radius: 999px; padding: 3px; }
@@ -69,7 +69,28 @@
 .lp .lp-btn-ghost { border-color: var(--lp-line-2); color: var(--lp-text); background: transparent; }
 .lp .lp-btn-ghost:hover { background: var(--lp-panel); }
 .lp .lp-btn-sm { padding: 8px 14px; font-size: 13px; }
-@media (max-width: 860px) { .lp-nav { display: none; } .lp-header-in { gap: 12px; } }
+@media (max-width: 880px) { .lp-nav { display: none; } .lp-header-in { gap: 12px; } }
+/* Between the tablet header and the full one the row is compact. At full size it needs 972px of
+   container (measured in Chromium with the shipped fonts, Ukrainian labels, a page translated into
+   all four trees: logo 121 + sections 346 + switcher 291 + button 150 + gaps), so with four section
+   links it fits only from a ~1030px window up. Below that "О проекте" broke onto a second line
+   and the whole document scrolled sideways (943px of header in an 821px container at 861px). The
+   three-link header already overflowed from 861px to about 925px once the switcher gained its
+   fourth language (on production at 900px: a 893px document in a 885px viewport).
+   The sizes below are the phone header's own (16px logo, 11px switcher, 12px button): 798px at the
+   worst, which leaves 28px at the 881px edge and 52px at the 1080px one WITH a classic 15px
+   scrollbar - the layout viewport is narrower than the width a media query sees. A section link
+   never wraps (`nowrap` above): a row that does not fit must show up in `audit:layout` as page
+   overflow, not pass as a two-line label. The button stays where it is, last in the row. */
+@media (min-width: 881px) and (max-width: 1079px) {
+  .lp-header-in { gap: 10px; }
+  .lp-logo { font-size: 16px; gap: 8px; }
+  .lp-nav { gap: 10px; margin-inline-start: 0; }
+  .lp-nav a { font-size: 13px; padding-inline: 0; }
+  .lp-header-right { gap: 8px; }
+  .lp-lang a, .lp-lang span { font-size: 11px; padding: 5px 6px; }
+  .lp .lp-header .lp-btn-sm { padding: 8px 10px; font-size: 12px; }
+}
 /* Phones: the header falls into rows instead of running off the screen. Logo, language switcher
    and CTA need ~525px in a single row, so below that only the left edge was visible — and the
    WHOLE document scrolled sideways with it (measured: 545px document in a 390px viewport, on all

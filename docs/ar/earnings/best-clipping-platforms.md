@@ -16,7 +16,7 @@ hero:
     - "<b>اسأل من يحتفظ بالمال قبل أن تفتح برنامج المونتاج.</b> Whop وKlipni وPrime Oracles ومسابقات DareBay الممولة من المحفظة تحجز الميزانية قبل نشر المقاطع؛ وتنص Vues على أنها لا تحتفظ بالأموال لديها."
     - "<b>سجّل في منصتين أو ثلاث وواصل العمل.</b> ميزانيات الحملات تنفد، ومصدر ثابت للمهام خير من أعلى سعر على اللوحة وحده."
 compare:
-  ids: [whop, vyro, darebay, clipping-net, vues, reach-cat, prime-oracles, klipni, clipping-io]
+  ids: [whop, vyro, darebay, clipping-net, vues, reach-cat, prime-oracles, clipping-io]
   columns: [rate, threshold, cap, fee, minPayout, payoutMethods, cis, followers, escrow]
   highlight: darebay
 method:

@@ -15,7 +15,7 @@ hero:
     - "<b>الميزانيات تنفد في كل مكان، فاعمل على منصتين لا على واحدة.</b> وفي Vyro وClipping.net حملات كبار صنّاع البث المباشر وصنّاع المحتوى، وهي حملات تستحق أن تبقى إلى جانب Whop."
     - "<b>برنامج المونتاج ليس سوقًا:</b> OpusClip وKlap وSubmagic تساعدك على قصّ المقطع، ولا يدفع لك أي منها مقابل مشاهداته."
 compare:
-  ids: [darebay, vyro, clipping-net, vues, reach-cat, prime-oracles, klipni]
+  ids: [darebay, vyro, clipping-net, vues, reach-cat, prime-oracles]
   columns: [rate, threshold, cap, fee, minPayout, payoutMethods, cis, followers, escrow]
   highlight: darebay
   title: "البدائل جنبًا إلى جنب"

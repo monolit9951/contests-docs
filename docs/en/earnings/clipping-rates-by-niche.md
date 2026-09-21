@@ -13,17 +13,18 @@ competitor_sources:
   - { platform: "Vues", url: "https://vues.app", date: "2026-09-04" }
   - { platform: "Vues", url: "https://vues.app/blog/best-clipping-platforms-that-pay-crypto", date: "2026-09-18" }
   - { platform: "Vues", url: "https://vues.app/blog/how-cpm-payouts-work", date: "2026-09-18" }
-  - { platform: "Klipni", url: "https://klipni.com", date: "2026-09-04" }
+  - { platform: "Klipni", url: "https://klipni.com/calculator", date: "2026-09-21" }
+  - { platform: "Klipni", url: "https://klipni.com/legal/terms", date: "2026-09-21" }
 seo: true
 landing: true
 hero:
   kicker: "Benchmark · 2026"
   lede: "Before you spend an evening on an edit you want one number: what 1,000 views is really worth in your niche. Here it is across eight niches, six platforms and four social networks, read from the platforms' own public pages and dated, with DareBay's band from live platform data. Next to every rate stands the thing that eats it: the threshold, the cap and rejected clips."
   takeaways:
-    - "<b>Your niche decides more than your platform does.</b> On ClipRadar's live board music averages $0.35 per 1,000 while tech averages $6.60 <!-- source: https://clipradar.co/rates 2026-09-04 -->: nearly twenty times the money for the same edit."
-    - "<b>The typical advertised rate on the market is $2.00 per 1,000</b> <!-- source: https://clipradar.co/rates 2026-09-04 -->; DareBay's $1–$10 band spans it, and the rate printed on a task card is the same whatever the niche."
-    - "<b>A big rate is not a big payout.</b> Vyro's 5,000-view threshold per post <!-- source: https://vyro.com/help/earnings-and-payments/how-many-views-do-i-need-before-i-can-start-earning 2026-09-04 --> and Whop campaigns capped at $400–$600 per video <!-- source: https://contentrewards.com/discover 2026-09-04 --> cut what reaches you harder than any gap between rates."
-    - "<b>Count the payout, not the rate.</b> The same clip at 100,000 views earns $100 at $1 with no threshold, and only $50 at $3 with a threshold and a $50 cap. The formula is right below."
+    - "<b>Your niche decides more than your platform does.</b> On ClipRadar's board music averages $0.35 per 1,000 views, tech $6.60."
+    - "<b>The typical advertised market rate is $2.00 per 1,000.</b> DareBay's $1–$10 band spans it and is the same for every niche."
+    - "<b>A big rate is not a big payout.</b> Vyro's 5,000-view threshold and Whop's $400–$600 caps cut what reaches you."
+    - "<b>Count the payout, not the rate, at 100,000 views.</b> $1 with no threshold earns $100; $3 under a $50 cap, $50."
 cta:
   title: "See what the rate is worth before you edit"
   lede: "Compare card against card, not niche against niche: every DareBay task prints what it pays for 1,000 views, where the payout starts and where it stops, and the payout does not depend on which country you live in."
@@ -52,11 +53,11 @@ A platform does not pay the rate, the campaign buyer does, but each platform dra
 
 | Platform | Rate per 1,000 | Threshold | Cap | Source |
 |---|---|---|---|---|
-| Whop Content Rewards | $0.05–$10 across the 50 campaigns on the board, most at $1 <!-- source: https://contentrewards.com/discover 2026-09-18 -->; ClipRadar average $3.25, high $25 <!-- source: https://clipradar.co/rates 2026-09-04 --> | none platform-wide, set per campaign | $400–$600 per video in the examples <!-- source: https://contentrewards.com/discover 2026-09-04 --> | [contentrewards.com/discover](https://contentrewards.com/discover) |
+| Whop Content Rewards | $0.05–$10 across the 50 campaigns on the first page of the board, most at $1 <!-- source: https://contentrewards.com/discover 2026-09-18 -->; ClipRadar average $3.25, high $25 <!-- source: https://clipradar.co/rates 2026-09-04 --> | none platform-wide, set per campaign | $400–$600 per video in the examples <!-- source: https://contentrewards.com/discover 2026-09-04 --> | [contentrewards.com/discover](https://contentrewards.com/discover) |
 | Clipping.net | $0.40–$3.00 (cards quote $40 and $300 per 100,000) <!-- source: https://clipping.net/clip 2026-09-04 --> | 10,000–100,000 views per campaign, 500,000 on some <!-- source: https://clipping.net/clip 2026-09-04 --> | not published | [clipping.net/clip](https://clipping.net/clip) |
 | Vyro | $1.00–$2.00 (campaigns quote $1,000–$2,000 per 1M) <!-- source: https://vyro.com/campaigns 2026-09-04 --> | 5,000 views per post <!-- source: https://vyro.com/help/earnings-and-payments/how-many-views-do-i-need-before-i-can-start-earning 2026-09-04 --> | 1M eligible views per clip, usually $500–$2,000 <!-- source: https://vyro.com/help/earnings-and-payments/whats-the-most-i-can-earn-per-clip 2026-09-04 --> | [vyro.com/campaigns](https://vyro.com/campaigns) |
 | Vues | on each brief in the app; site example $3.00 <!-- source: https://vues.app 2026-09-04 --> | none per clip in its own comparison table; a campaign can set a minimum payout per post <!-- source: https://vues.app/blog/best-clipping-platforms-that-pay-crypto 2026-09-18 --> | per post and per profile, set by the campaign, amounts only in the app <!-- source: https://vues.app/blog/how-cpm-payouts-work 2026-09-18 --> | [vues.app](https://vues.app) |
-| Klipni | in rubles; site example 50 ₽ per 1,000 <!-- source: https://klipni.com 2026-09-04 --> | not published | per-post limit set by each campaign <!-- source: https://klipni.com 2026-09-04 --> | [klipni.com](https://klipni.com) |
+| Klipni | in rubles, set per campaign; the platform's own calculator defaults to 30 ₽ per 1,000, presets 20–60 ₽ <!-- source: https://klipni.com/calculator 2026-09-21 --> | none platform-wide, set per campaign <!-- source: https://klipni.com/legal/terms 2026-09-21 --> | cap per clip set by each campaign <!-- source: https://klipni.com/calculator 2026-09-21 --> | [klipni.com](https://klipni.com) |
 | DareBay | $1–$10 per 1,000 views | set by the task, on the card | up to $500 per clip | live platform data, snapshot 2026-08-23; rate band updated 2026-09-20 |
 
 Vues and Klipni keep thresholds and caps inside their campaigns, so a payout cannot be worked out from the public page alone. Fees, minimum payouts and payout countries for the same platforms are collected in [the clipping platforms roundup](/en/earnings/best-clipping-platforms).
@@ -87,9 +88,9 @@ On DareBay all three numbers are printed on the task card. The view threshold is
 
 ## How we built the benchmark
 
-Competitor figures were read on 2026-09-04, and the Whop Content Rewards and Vues rows re-read on 2026-09-18, from the platforms' public pages and copied as they stand, without averaging across sources; ours come from the DareBay live-data snapshot of 2026-08-23 (rate band updated 2026-09-20). Niche and network rates come from ClipRadar's board, which recomputes 2,098 campaigns from 18 platforms as often as every five minutes; its "typical rate" is a view-weighted 82% quantile and its high is the third-highest live rate, which is why sports and crypto show an average above the high <!-- source: https://clipradar.co/rates 2026-09-04 -->. Platform rates come from their storefronts and help pages.
+Competitor figures were read on 2026-09-04, the Whop Content Rewards and Vues rows re-read on 2026-09-18 and the Klipni row on 2026-09-21, from the platforms' public pages and copied as they stand, without averaging across sources; ours come from the DareBay live-data snapshot of 2026-08-23 (rate band updated 2026-09-20). Niche and network rates come from ClipRadar's board, which recomputes 2,098 campaigns from 18 platforms as often as every five minutes; its "typical rate" is a view-weighted 82% quantile and its high is the third-highest live rate, which is why sports and crypto show an average above the high <!-- source: https://clipradar.co/rates 2026-09-04 -->. Platform rates come from their storefronts and help pages.
 
-What is missing: Paid2Clip's comparison answered with a 503 error; the Whop Content Rewards page on whop.com carries no rates, so the Whop figures come from the contentrewards.com storefront; the Klipni thresholds and the Clipping.net caps are not published, and the Vues amounts are shown only in the app. No outside figure was invented: where there is no source, the table says "not published". Every rate is advertised, not earned: what reaches you is decided by the threshold, the cap, moderation and what is left of the budget.
+What is missing: Paid2Clip's comparison answered with a 503 error; the Whop Content Rewards page on whop.com carries no rates, so the Whop figures come from the contentrewards.com storefront; Klipni has no platform-wide threshold because each campaign sets its own, the Clipping.net caps are not published, and the Vues amounts are shown only in the app. No outside figure was invented: where there is no source, the table says "not published". Every rate is advertised, not earned: what reaches you is decided by the threshold, the cap, moderation and what is left of the budget.
 
 ## Frequently asked questions
 
@@ -107,4 +108,4 @@ No. With a $50 ceiling per clip the triple rate earns $50 on 100,000 views, whil
 
 ### How fresh are the figures in these tables?
 
-Competitor figures were read on 2026-09-04 and the Whop Content Rewards and Vues rows on 2026-09-18, and ClipRadar recomputes its board as often as every five minutes, so its values drift daily; ours come from the 2026-08-23 snapshot (rate band updated 2026-09-20). Before taking a campaign open its card: the payout runs on the rate printed there, not on a benchmark.
+Competitor figures were read on 2026-09-04, the Whop Content Rewards and Vues rows on 2026-09-18 and the Klipni row on 2026-09-21, and ClipRadar recomputes its board as often as every five minutes, so its values drift daily; ours come from the 2026-08-23 snapshot (rate band updated 2026-09-20). Before taking a campaign open its card: the payout runs on the rate printed there, not on a benchmark.

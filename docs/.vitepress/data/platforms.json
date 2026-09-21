@@ -1717,8 +1717,8 @@
       "id": "klipni",
       "name": "Klipni (Клипни)",
       "url": "https://klipni.com/",
-      "kind": "Russian clipping platform",
-      "operator": "ИП Семенов Б. В., Russia",
+      "kind": "Russian clipping and UGC campaign platform",
+      "operator": "a sole trader registered in Russia (named on its About page and in its offers); Russian law",
       "bestFor": {
         "en": "Russian self-employed clippers paid in rubles",
         "ru": "самозанятые нарезчики из России с выплатами в рублях",
@@ -1726,33 +1726,34 @@
         "ar": "صنّاع المقاطع أصحاب صفة العمل الحر في روسيا، ممن يتقاضون بالروبل"
       },
       "summary": {
-        "en": "A Russian platform: brands buy a subscription and fund CPM campaigns in rubles, clippers need Russian self-employed (НПД) tax status, pay a 5% fee on approved payouts and withdraw any amount to a bank card within five business days.",
-        "ru": "Российская платформа: бренды покупают подписку и финансируют CPM-кампании в рублях, нарезчику нужен статус самозанятого, комиссия 5% с одобренных выплат, вывод любой суммы на карту до пяти рабочих дней.",
-        "uk": "Російська платформа: бренди купують підписку та фінансують CPM-кампанії в рублях, нарізчику потрібен російський статус самозайнятого, комісія 5% зі схвалених виплат, виведення будь-якої суми на картку до п'яти робочих днів.",
-        "ar": "منصة روسية: العلامات التجارية تشتري اشتراكًا وتموّل حملات محسوبة لكل 1,000 مشاهدة بالروبل، وصانع المقاطع يحتاج إلى صفة العمل الحر المسجَّلة في روسيا (НПД)، ويدفع عمولة 5% على الدفعات المقبولة، ويسحب أي مبلغ إلى بطاقة بنكية خلال خمسة أيام عمل."
+        "en": "A Russian platform: brands pay a subscription from 4,900 ₽ a month and fund CPM campaigns in rubles on top of it. A clipper needs Russian self-employed or sole-trader tax status, pays a 5% fee on approved payouts and can cash out any positive balance to a bank account, within five business days once the bank accepts the payout. It has apps in the App Store and RuStore.",
+        "ru": "Российская платформа: бренды платят подписку от 4 900 ₽ в месяц и отдельно вносят бюджет CPM-кампаний в рублях. Нарезчику нужен статус самозанятого или ИП в России; комиссия 5% с одобренной выплаты, вывести можно любую сумму на банковский счёт, до пяти рабочих дней после того, как выплату принял банк. Есть приложения в App Store и RuStore.",
+        "uk": "Російська платформа: бренди платять підписку від 4 900 ₽ на місяць і окремо вносять бюджет CPM-кампаній у рублях. Нарізчику потрібен російський статус самозайнятого або ІП; комісія 5% зі схваленої виплати, вивести можна будь-яку суму на банківський рахунок, до п'яти робочих днів після того, як виплату прийняв банк. Є застосунки в App Store і RuStore.",
+        "ar": "منصة روسية: العلامات التجارية تدفع اشتراكًا يبدأ من 4,900 ₽ شهريًا، وتموّل فوقه حملات محسوبة لكل 1,000 مشاهدة بالروبل. ويحتاج صانع المقاطع إلى صفة العمل الحر أو المشروع الفردي المسجَّلة في روسيا، ويدفع عمولة 5% على الدفعات المقبولة، ويستطيع سحب أي مبلغ موجب إلى حساب بنكي خلال خمسة أيام عمل من قبول البنك للدفعة. ولها تطبيقان في App Store وRuStore."
       },
       "fields": {
         "rate": {
           "text": {
-            "en": "set per campaign in rubles; site examples 50 ₽ per 1,000 views",
-            "ru": "задаёт кампания в рублях; примеры на сайте 50 ₽ за 1000 просмотров",
-            "uk": "задає кампанія в рублях; приклади на сайті 50 ₽ за 1000 переглядів",
-            "ar": "تحدده الحملة بالروبل؛ وأمثلة الموقع 50 ₽ لكل 1,000 مشاهدة"
+            "en": "set per campaign, in rubles; their calculator defaults to 30 ₽ per 1,000 views, with presets from 20 to 60 ₽",
+            "ru": "задаёт кампания, в рублях; в их калькуляторе по умолчанию 30 ₽ за 1000 просмотров, пресеты 20–60 ₽",
+            "uk": "задає кампанія, в рублях; у їхньому калькуляторі за замовчуванням 30 ₽ за 1000 переглядів, пресети 20–60 ₽",
+            "ar": "تحدده الحملة بالروبل؛ والقيمة الافتراضية في حاسبتها 30 ₽ لكل 1,000 مشاهدة، مع خيارات جاهزة من 20 إلى 60 ₽"
           },
           "source": {
-            "url": "https://klipni.com/creators",
-            "date": "2026-09-02"
+            "url": "https://klipni.com/calculator",
+            "date": "2026-09-21"
           }
         },
         "threshold": {
           "text": {
-            "en": "",
-            "ru": "",
-            "uk": ""
+            "en": "set per campaign; no platform-wide threshold is published",
+            "ru": "задаёт кампания; общего порога площадка не публикует",
+            "uk": "задає кампанія; загального порога майданчик не публікує",
+            "ar": "تحدده الحملة؛ ولا حد مشاهدات معلن على مستوى المنصة"
           },
           "source": {
-            "url": "https://klipni.com/creators",
-            "date": "2026-09-02"
+            "url": "https://klipni.com/legal/terms",
+            "date": "2026-09-21"
           }
         },
         "cap": {
@@ -1764,7 +1765,7 @@
           },
           "source": {
             "url": "https://klipni.com/creators",
-            "date": "2026-09-02"
+            "date": "2026-09-21"
           }
         },
         "fee": {
@@ -1777,7 +1778,7 @@
           "value": 5,
           "source": {
             "url": "https://klipni.com/creators",
-            "date": "2026-09-02"
+            "date": "2026-09-21"
           }
         },
         "minPayout": {
@@ -1790,19 +1791,19 @@
           "value": 0,
           "source": {
             "url": "https://klipni.com/creators",
-            "date": "2026-09-02"
+            "date": "2026-09-21"
           }
         },
         "payoutMethods": {
           "text": {
-            "en": "bank card via self-employed status, within five business days after the bank accepts the payout",
-            "ru": "на карту через статус самозанятого, до пяти рабочих дней после принятия выплаты банком",
-            "uk": "на картку через статус самозайнятого, до п'яти робочих днів після прийняття виплати банком",
-            "ar": "إلى بطاقة بنكية عبر صفة العمل الحر، خلال خمسة أيام عمل بعد قبول البنك للدفعة"
+            "en": "rubles to the bank details of a self-employed person or sole trader in Russia; after the hold period each campaign sets, within five business days once the bank accepts the payout",
+            "ru": "рубли на банковские реквизиты самозанятого или ИП в России; после холда, который задаёт кампания, до пяти рабочих дней с момента, когда выплату принял банк",
+            "uk": "рублі на банківські реквізити самозайнятого або ІП в Росії; після холду, який задає кампанія, до п'яти робочих днів з моменту, коли виплату прийняв банк",
+            "ar": "بالروبل إلى الحساب البنكي لصاحب صفة العمل الحر أو المشروع الفردي في روسيا؛ بعد فترة حجز تحددها كل حملة، ثم خلال خمسة أيام عمل من قبول البنك للدفعة"
           },
           "source": {
             "url": "https://klipni.com/legal/terms",
-            "date": "2026-09-02"
+            "date": "2026-09-21"
           }
         },
         "cis": {
@@ -1815,44 +1816,45 @@
           "state": "partial",
           "source": {
             "url": "https://klipni.com/legal/terms",
-            "date": "2026-09-02"
+            "date": "2026-09-21"
           }
         },
         "followers": {
           "text": {
-            "en": "no follower requirement; self-employed status registered in the app; every video moderated",
-            "ru": "подписчики не нужны; самозанятость оформляется в приложении; каждый ролик проходит модерацию",
-            "uk": "підписники не потрібні; самозайнятість оформлюється в застосунку; кожен ролик проходить модерацію",
-            "ar": "لا يلزم متابعون؛ وصفة العمل الحر تُسجَّل داخل التطبيق؛ وكل فيديو يمر على المراجعة"
+            "en": "no platform-wide follower minimum, though a campaign can set one; self-employed or sole-trader status is required; account ownership is verified",
+            "ru": "общего минимума подписчиков нет, но кампания может его задать; нужен статус самозанятого или ИП; владение аккаунтом подтверждается",
+            "uk": "загального мінімуму підписників немає, але кампанія може його задати; потрібен статус самозайнятого або ІП; володіння акаунтом підтверджується",
+            "ar": "لا حد أدنى للمتابعين على مستوى المنصة، وإن كان للحملة أن تضع واحدًا؛ وتلزم صفة العمل الحر أو المشروع الفردي؛ ويُتحقق من ملكية الحساب"
           },
           "state": "no",
           "source": {
-            "url": "https://klipni.com/creators",
-            "date": "2026-09-02"
+            "url": "https://klipni.com/legal/terms",
+            "date": "2026-09-21"
           }
         },
         "escrow": {
           "text": {
-            "en": "yes: the budget is prepaid by invoice and stays the advertiser's property until spent; unused balance refundable",
-            "ru": "да: бюджет вносится заранее по счёту и остаётся деньгами рекламодателя до расходования; остаток возвращается",
-            "uk": "так: бюджет вноситься заздалегідь за рахунком і лишається грошима рекламодавця до витрачання; залишок повертається",
-            "ar": "نعم: الميزانية تُدفع مقدّمًا بفاتورة وتبقى مال المعلن حتى تُنفَق؛ والمتبقي منها قابل للاسترداد"
+            "en": "yes: the brand prepays the budget by invoice and the campaign reaches authors once the payment arrives; its advertiser terms call the balance shown in the brand's dashboard an accounting figure, not an escrow account; the unspent part is refundable",
+            "ru": "да: бренд оплачивает бюджет заранее по счёту, и кампания уходит авторам после оплаты; по оферте остаток в кабинете это учётный показатель, а не эскроу-счёт; неизрасходованное возвращают",
+            "uk": "так: бренд оплачує бюджет заздалегідь за рахунком, і кампанія стає доступною авторам після оплати; за офертою залишок у кабінеті це обліковий показник, а не ескроу-рахунок; невитрачене повертають",
+            "ar": "نعم: العلامة التجارية تدفع الميزانية مقدّمًا بفاتورة، ولا تصل الحملة إلى صنّاع المحتوى إلا بعد وصول الدفعة؛ وتنص شروطها للمعلنين على أن الرصيد الظاهر في لوحة المعلن رقم محاسبي لا حساب ضمان؛ وما لم يُنفَق قابل للاسترداد"
           },
           "state": "yes",
           "source": {
             "url": "https://klipni.com/legal/advertiser",
-            "date": "2026-09-02"
+            "date": "2026-09-21"
           }
         },
         "networks": {
           "text": {
-            "en": "YouTube Shorts, TikTok, Instagram Reels, VK Clips",
-            "ru": "YouTube Shorts, TikTok, Instagram Reels, VK Клипы",
-            "uk": "YouTube Shorts, TikTok, Instagram Reels, VK Кліпи"
+            "en": "VK Clips, YouTube Shorts, TikTok, Instagram Reels, Threads, Likee; each campaign names the networks it accepts",
+            "ru": "VK Клипы, YouTube Shorts, TikTok, Instagram Reels, Threads, Likee; доступные площадки указывает кампания",
+            "uk": "VK Кліпи, YouTube Shorts, TikTok, Instagram Reels, Threads, Likee; доступні майданчики вказує кампанія",
+            "ar": "VK Clips وYouTube Shorts وTikTok وInstagram Reels وThreads وLikee؛ وكل حملة تحدد المنصات التي تقبلها"
           },
           "source": {
-            "url": "https://klipni.com/creators",
-            "date": "2026-09-02"
+            "url": "https://klipni.com/about",
+            "date": "2026-09-21"
           }
         },
         "verification": {
@@ -1863,7 +1865,7 @@
           },
           "source": {
             "url": "https://klipni.com/",
-            "date": "2026-09-02"
+            "date": "2026-09-21"
           }
         },
         "india": {
@@ -1952,44 +1954,48 @@
         "en": [
           "Low 5% fee and no minimum withdrawal",
           "Prepaid budgets, campaigns are funded before they run",
-          "Counts VK Clips as well as the global networks"
+          "Counts VK Clips, Threads and Likee as well as the global networks",
+          "Rubles to a self-employed person's bank account; apps in the App Store and RuStore"
         ],
         "ru": [
           "Низкая комиссия 5% и нет минимума на вывод",
           "Бюджеты предоплачены, кампания оплачена до запуска",
-          "Считает VK Клипы вместе с мировыми площадками"
+          "Считает VK Клипы, Threads и Likee вместе с мировыми площадками",
+          "Рубли на банковский счёт самозанятого; приложения в App Store и RuStore"
         ],
         "uk": [
           "Низька комісія 5% і немає мінімуму на виведення",
           "Бюджети передплачені, кампанія оплачена до запуску",
-          "Рахує VK Кліпи разом зі світовими майданчиками"
+          "Рахує VK Кліпи, Threads і Likee разом зі світовими майданчиками",
+          "Рублі на банківський рахунок самозайнятого; застосунки в App Store і RuStore"
         ],
         "ar": [
           "عمولة منخفضة 5%، ولا حد أدنى للسحب",
           "ميزانيات مدفوعة مقدّمًا، والحملة ممولة قبل أن تعمل",
-          "تحتسب VK Clips إلى جانب المنصات العالمية"
+          "تحتسب VK Clips وThreads وLikee إلى جانب المنصات العالمية",
+          "الدفع بالروبل إلى الحساب البنكي لصاحب صفة العمل الحر؛ ولها تطبيقان في App Store وRuStore"
         ]
       },
       "cons": {
         "en": [
-          "Requires Russian self-employed tax status, so it is effectively Russia-only",
-          "Rates in rubles and set per campaign; no view threshold published",
-          "No public social channels"
+          "Requires Russian self-employed or sole-trader tax status, so it is effectively Russia-only",
+          "Rates are in rubles and differ per campaign; no single rate and no platform-wide view threshold is published",
+          "After approval the money sits in a hold period whose length each campaign sets"
         ],
         "ru": [
-          "Нужен статус самозанятого в РФ, фактически только для России",
-          "Ставки в рублях и по кампаниям; порог просмотров не опубликован",
-          "Нет публичных соцканалов"
+          "Нужен статус самозанятого или ИП в РФ, фактически только для России",
+          "Ставки в рублях и свои у каждой кампании; единой ставки и общего порога просмотров площадка не публикует",
+          "После одобрения ролика деньги проходят холд, длину которого задаёт кампания"
         ],
         "uk": [
-          "Потрібен російський статус самозайнятого, фактично лише для Росії",
-          "Ставки в рублях і за кампаніями; поріг переглядів не опубліковано",
-          "Немає публічних соцканалів"
+          "Потрібен російський статус самозайнятого або ІП, фактично лише для Росії",
+          "Ставки в рублях і свої в кожної кампанії; єдиної ставки й загального порога переглядів майданчик не публікує",
+          "Після схвалення ролика гроші проходять холд, тривалість якого задає кампанія"
         ],
         "ar": [
           "تشترط صفة العمل الحر المسجَّلة في روسيا، فهي عمليًا لروسيا وحدها",
-          "الأسعار بالروبل وتحددها كل حملة؛ وحد المشاهدات غير معلن",
-          "لا قنوات تواصل اجتماعي عامة"
+          "الأسعار بالروبل وتختلف من حملة إلى أخرى؛ ولا سعر موحَّد معلن ولا حد مشاهدات على مستوى المنصة",
+          "بعد قبول المقطع يبقى المبلغ في فترة حجز تحدد مدتها كل حملة"
         ]
       }
     },

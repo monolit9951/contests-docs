@@ -53,7 +53,7 @@ So a Whop account is still part of the deal. If Whop bans you or you lose access
 
 A campaign pays in one of three ways: CPM per 1,000 views, a flat amount per approved post, or a retainer paid per cycle for an agreed set of deliverables <!-- source: https://contentrewards.com/creators 2026-09-18 -->. Every type needs a brand budget of at least $1,000 <!-- source: https://contentrewards.com/terms 2026-09-18 -->, paid in before launch and kept against the campaign until creators earn it <!-- source: https://contentrewards.com/ 2026-09-18 -->. The creator page groups the work into clipping, music, logo and UGC campaigns <!-- source: https://contentrewards.com/creators 2026-09-18 -->.
 
-On 18 September all 50 campaigns the Discover board listed paid per 1,000 views. Rates spread between $0.05 on a logo campaign and $10 on a trading firm's campaign; 17 of the 50 paid $1, and the Call of Duty: Modern Warfare 4 campaign paid $1.75 <!-- source: https://contentrewards.com/discover 2026-09-18 -->. A card carries more than the rate:
+On 18 September the first page of the Discover board showed 50 campaigns, and every one of them paid per 1,000 views; the board is paginated, so those 50 are its first page and not the whole catalogue <!-- source: https://contentrewards.com/discover 2026-09-21 -->. On that page rates spread between $0.05 on a logo campaign and $10 on a trading firm's campaign; 17 of the 50 paid $1, and the Call of Duty: Modern Warfare 4 campaign paid $1.75 <!-- source: https://contentrewards.com/discover 2026-09-18 -->. A card carries more than the rate:
 
 | On the card | Example from the board | What it means for you |
 |---|---|---|
@@ -88,7 +88,7 @@ That payout list is a second filter, and it does not mirror the sanctioned one: 
 
 ## Who Content Rewards suits
 
-- A clipper Whop can pay who wants choice: 50 campaigns on the board on the day we checked, with budgets up to $248,000 <!-- source: https://contentrewards.com/discover 2026-09-18 -->.
+- A clipper Whop can pay who wants choice: 50 campaigns on the first page of the board alone on the day we checked, with budgets up to $248,000 <!-- source: https://contentrewards.com/discover 2026-09-18 -->.
 - Someone who can meet a brand's audience rules, down to a "40% tier 1 audience" with the USA, UK and Canada first <!-- source: https://contentrewards.com/discover 2026-09-18 -->.
 - Creators without a camera: slideshow campaigns such as PixelSurf AI's chat-style slides and Elo Cooking's recipes <!-- source: https://contentrewards.com/discover 2026-09-18 -->.
 - Anyone who wants fraud screening with a person at the end: every submission gets a 0–100 Bot Score from a third-party provider, a person makes every final decision, and buying views is a permanent ban <!-- source: https://contentrewards.com/terms 2026-09-18 -->.

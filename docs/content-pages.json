@@ -939,6 +939,13 @@
       }
     },
     {
+      "id": "klipni-review",
+      "hub": "earnings",
+      "slugs": {
+        "ru": "klipni-obzor"
+      }
+    },
+    {
       "id": "wusul-review",
       "hub": "earnings",
       "slugs": {

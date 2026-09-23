@@ -1,4 +1,7 @@
-import DefaultTheme from 'vitepress/theme'
+// Without fonts: the stock theme's Inter is never used here (custom.css sets
+// --vp-font-family-base to Manrope, landing.css uses Manrope and Unbounded), yet the
+// full theme made VitePress preload its 68 KB inter-roman-latin on every page.
+import DefaultTheme from 'vitepress/theme-without-fonts'
 import type { Theme } from 'vitepress'
 import { useData, useRouter } from 'vitepress'
 import { createStaticVNode, defineComponent, h, nextTick, onMounted, ref, watch } from 'vue'

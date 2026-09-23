@@ -19,6 +19,7 @@ const {
   pagePath,
   sourceFile,
 } = await import(join(DOCS, '.vitepress', 'registry.ts'))
+const { fontPreloadHrefs } = await import(join(DOCS, '.vitepress', 'headAssets.ts'))
 
 const hostname = process.env.DOCS_ENV === 'prod' ? ORIGIN : 'https://dev.darebay.com'
 const dates = JSON.parse(readFileSync(join(DOCS, 'page-dates.json'), 'utf8'))
@@ -33,6 +34,11 @@ const htmlPath = (publicPath) => {
 }
 const attr = (tag, name) => tag.match(new RegExp(`\\b${name}="([^"]*)"`))?.[1]
 const tags = (html, tagName) => [...html.matchAll(new RegExp(`<${tagName}\\b[^>]*>`, 'gi'))].map((match) => match[0])
+
+// config.ts strips VitePress's `/vp-icons.css` link because the file is empty (headAssets.ts).
+// Should it ever carry icon rules, every page must link it again, so the gate follows the file.
+const vpIconsPath = join(DIST, 'vp-icons.css')
+const vpIconsHasRules = existsSync(vpIconsPath) && readFileSync(vpIconsPath, 'utf8').trim() !== ''
 
 const expectedUrls = new Map()
 const idsByPath = new Map()
@@ -94,6 +100,22 @@ for (const page of PAGES) {
     }
     if (twitterImageAlt.length !== 1 || attr(twitterImageAlt[0], 'content') !== expectedImageAlt) {
       fail('social-image-alt', `${path}: expected exactly one twitter:image:alt matching the page title`)
+    }
+
+    // Exactly the fonts this language paints first (FONT_PRELOADS): a preload the page never
+    // renders costs the reader bandwidth, a missing one costs the headline a late swap. That
+    // includes the stock theme's Inter, which no page uses.
+    const fontPreloads = tags(html, 'link')
+      .filter((tag) => attr(tag, 'rel') === 'preload' && attr(tag, 'as') === 'font')
+      .map((tag) => attr(tag, 'href'))
+      .sort()
+    const expectedFontPreloads = fontPreloadHrefs(locale).sort()
+    if (fontPreloads.join(' ') !== expectedFontPreloads.join(' ')) {
+      fail('font-preload', `${path}: [${fontPreloads.join(', ')}] != [${expectedFontPreloads.join(', ')}]`)
+    }
+    const linksVpIcons = tags(html, 'link').some((tag) => attr(tag, 'href') === '/vp-icons.css')
+    if (linksVpIcons !== vpIconsHasRules) {
+      fail('vp-icons', `${path}: ${vpIconsHasRules ? 'vp-icons.css has rules but is not linked' : 'links the empty render-blocking vp-icons.css'}`)
     }
 
     const actualAlternates = new Map(
@@ -216,6 +238,11 @@ for (const { from, target, fragment } of anchorLinks) {
   if (!ids) continue // external or non-page target; addresses are covered by the URL gates
   if (!ids.has(fragment)) fail('anchor-target', `${from} -> ${target}#${fragment}: no such id on the target page`)
 }
+
+// The theme is imported without fonts: Inter must not come back through another import.
+const interFiles = readdirSync(join(DIST, 'content-assets'), { recursive: true })
+  .filter((file) => /(?:^|\/)inter-[^/]*\.woff2$/.test(String(file)))
+if (interFiles.length) fail('inter-font', `unused Inter files ship: ${interFiles.join(', ')}`)
 
 const sitemapPath = join(DIST, 'sitemap-content.xml')
 if (!existsSync(sitemapPath)) fail('sitemap-exists', sitemapPath)

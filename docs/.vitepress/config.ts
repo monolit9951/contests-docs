@@ -7,6 +7,7 @@ import { CHROME_COPY, type AuthorLink, type DareBayThemeConfig } from './chrome'
 import { installCoveredHeadingRule } from './coveredHeading'
 import { installTableWrapRule } from './tableWrap'
 import { installSourcesRule } from './sources'
+import { fontPreloadTags, stripVpIconsLink } from './headAssets'
 import PAGE_DATES from '../page-dates.json'
 import PLATFORMS from './data/platforms.json'
 
@@ -860,9 +861,10 @@ export default defineConfig({
       }
     )
     // Every page renders through the landing shell now: the display face is a
-    // site-wide dependency (self-hosted next to Manrope).
+    // site-wide dependency (self-hosted next to Manrope). The preloads follow the
+    // page's language — see FONT_PRELOADS in headAssets.ts.
     pageData.frontmatter.head.push(
-      ['link', { rel: 'preload', href: '/content-assets/fonts/unbounded-var-latin.woff2', as: 'font', type: 'font/woff2', crossorigin: '' }],
+      ...fontPreloadTags(found.lang),
       ['link', { rel: 'stylesheet', href: '/content-assets/fonts/unbounded.css' }]
     )
     // Section context for the shell: breadcrumb kicker in the hero, "more in
@@ -963,9 +965,12 @@ export default defineConfig({
     // Google Fonts on purpose: it is unreachable for part of the RU audience, who were left on
     // fallback fonts. These docs kept requesting fonts.googleapis.com, so on the only pages of
     // ours that actually rank, part of the readers paid for a render-blocking request to nowhere.
-    ['link', { rel: 'preload', href: '/content-assets/fonts/manrope-400-cyrillic.woff2', as: 'font', type: 'font/woff2', crossorigin: '' }],
+    // The Manrope preload is per page, in the page's language (FONT_PRELOADS in headAssets.ts).
     ['link', { rel: 'stylesheet', href: '/content-assets/fonts/manrope.css' }],
   ],
+
+  // Drops VitePress's empty render-blocking /vp-icons.css link (see headAssets.ts).
+  transformHtml: (html) => stripVpIconsLink(html),
 
   themeConfig: {
     logo: { src: '/content-assets/logo.svg', alt: 'DareBay' },

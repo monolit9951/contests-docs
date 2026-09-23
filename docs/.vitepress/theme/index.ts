@@ -89,7 +89,7 @@ let firstRender = true
 const DocsLayout = defineComponent({
   name: 'DareBayDocsLayout',
   setup() {
-    const { page, frontmatter, site } = useData()
+    const { page, frontmatter } = useData()
     const router = useRouter()
 
     // Fail-static (failStatic.ts): only for the render that hydrates the server's HTML, and only
@@ -102,7 +102,7 @@ const DocsLayout = defineComponent({
       firstRender = false
       if (shouldKeepServedPage(served, { isNotFound: page.value.isNotFound, path: router.route.path })) {
         servedVNode = createStaticVNode(served.html, served.nodeCount)
-        servedMetadata = servedPageMetadata(document, site.value.head)
+        servedMetadata = servedPageMetadata(document)
         keptPath = router.route.path
         restoreServedHead(document, served)
       }

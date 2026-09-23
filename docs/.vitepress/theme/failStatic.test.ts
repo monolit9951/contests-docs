@@ -175,7 +175,7 @@ describe('page metadata removed after a kept page', () => {
             'link[rel="canonical"]',
             'link[rel="alternate"][hreflang]',
             'script[type="application/ld+json"]',
-            'meta[property^="og:"]',
+            'meta[property^="og:"]:not([property="og:site_name"])',
             'meta[property^="article:"]',
             'meta[name^="twitter:"]',
         ].join(', '))
@@ -201,6 +201,19 @@ describe('page metadata removed after a kept page', () => {
                     && Object.entries(attrs).every(([key, value]) => tagAttrs[key] === value))
                 expect(present, `${locale}: ${name} ${JSON.stringify(attrs)}`).toBe(true)
             }
+        }
+    })
+
+    it('never covers a site-wide head tag: the client does not manage those, so a removed one stays gone', () => {
+        // The client site data ships `head: []` (VitePress 1.6), so nothing re-adds a site tag the
+        // first navigation after a kept page removed. og:site_name shares the page og: prefix.
+        const siteHead = [
+            ...(siteConfig.head ?? []),
+            ...Object.values(siteConfig.locales ?? {}).flatMap((locale) => locale.head ?? []),
+        ]
+        expect(siteHead.some(([name, attrs]) => name === 'meta' && attrs.property === 'og:site_name')).toBe(true)
+        for (const tag of siteHead) {
+            expect(isPageMetadataTag(tag), JSON.stringify(tag)).toBe(false)
         }
     })
 })

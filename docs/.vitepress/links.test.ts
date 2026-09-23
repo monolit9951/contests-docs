@@ -13,6 +13,12 @@ describe('sourceAnchor: our own site versus somebody else’s', () => {
     // A look-alike host is somebody else's site.
     expect(sourceAnchor('https://darebay.com.evil.example/x', 'ru').rel).toBe('nofollow noopener')
     expect(sourceAnchor('https://notdarebay.com/x', 'ru').rel).toBe('nofollow noopener')
+    // A subdomain is another origin (siteHost.ts): cited like any other site, never made relative.
+    expect(sourceAnchor('https://dev.darebay.com/en/', 'en')).toEqual({
+      href: 'https://dev.darebay.com/en/',
+      rel: 'nofollow noopener',
+      target: '_blank',
+    })
   })
 
   it('turns a darebay.com docs page into a relative link to its version in the reader’s language', () => {
@@ -37,7 +43,7 @@ describe('sourceAnchor: our own site versus somebody else’s', () => {
   })
 
   it('never marks one of our own addresses nofollow or opens it in a new tab', () => {
-    for (const url of ['/anything/unknown', 'https://darebay.com/pl/tasks', 'https://darebay.com/o-proekte/', '//darebay.com/en/earnings/']) {
+    for (const url of ['/anything/unknown', 'https://darebay.com/pl/tasks', 'https://darebay.com/o-proekte/', '//darebay.com/en/earnings/', 'HTTPS://WWW.DAREBAY.COM/en/help/what-commission', 'https://darebay.com./tasks']) {
       const anchor = sourceAnchor(url, 'en')
       expect(anchor.rel).toBeUndefined()
       expect(anchor.target).not.toBe('_blank')

@@ -21,8 +21,12 @@
 //     `editorialAnchors`), never the header menu, the language switcher, the page's own outline or
 //     the hub's catalogue.
 
-/** The site's own host. Its subdomains are ours too: a nofollow to dev.darebay.com is as wrong. */
-export const SITE_HOST = 'darebay.com'
+// Which hosts are ours is `siteHost.ts`, shared with the helper that renders the links
+// (`links.ts`), so the gate can never demand an attribute the helper cannot produce: darebay.com
+// and www.darebay.com. A subdomain (the noindex dev.darebay.com preview) is another origin.
+import { isSiteHost, SITE_HOST } from '../docs/.vitepress/siteHost.ts'
+
+export { SITE_HOST }
 
 /**
  * The floor the gate holds every content page to. Two, not three: the related block recommends
@@ -65,14 +69,9 @@ export function anchorsOf(html) {
   }))
 }
 
-const isSiteHost = (hostname) => {
-  const host = hostname.toLowerCase().replace(/\.$/, '')
-  return host === SITE_HOST || host.endsWith(`.${SITE_HOST}`)
-}
-
 /**
  * Whether a link stays on darebay.com: any relative reference (`/x`, `x`, `#x`, `?x`) or an
- * absolute http(s) URL on darebay.com or a subdomain of it. `mailto:`, `tel:` and every other
+ * absolute http(s) URL on darebay.com or www.darebay.com. `mailto:`, `tel:` and every other
  * scheme are not page links and are never internal.
  */
 export function isInternalHref(href) {

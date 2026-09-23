@@ -1,4 +1,5 @@
 import { appPathFor, appSectionOf, localesOf, pagePath, PAGES, type Locale } from './registry'
+import { isSiteHost, SITE_HOST } from './siteHost'
 
 // Single source of truth for the outbound links the docs site owns: the product itself, the
 // business page, the Telegram channel and the founder's own Telegram. The product has one explicit
@@ -45,9 +46,10 @@ export const businessUrlForLocale = (locale: Locale): string => `${HOMEPAGE}${ap
 // every EN page cited the RUSSIAN "DareBay in numbers" because that is the address the data had.
 //
 // So one helper decides, and every template asks it:
-//   * darebay.com (or a relative address) is our own site: a plain relative link in the READER'S
-//     language — the same page's version in that language when the registry has one, the address
-//     as written when it does not. No nofollow, no new tab.
+//   * darebay.com, www.darebay.com or a relative address is our own site (`siteHost.ts`, the same
+//     rule the gate below applies): a plain relative link in the READER'S language — the same
+//     page's version in that language when the registry has one, the address as written when it
+//     does not. No nofollow, no new tab.
 //   * anything else is a citation of somebody else's page: `nofollow noopener` in a new tab, as
 //     before.
 // `scripts/internal-links.mjs` (run by `check:dist`) fails the build on any nofollow link that
@@ -61,12 +63,10 @@ export interface SourceAnchor {
   readonly target?: string
 }
 
-const SITE_HOST = new URL(HOMEPAGE).hostname
-
 /**
  * The address of a link on our own site, origin removed (`/en/help/what-commission`), or null for
  * any other site. Relative references are ours by definition; an absolute one is ours on
- * darebay.com or www.darebay.com over http(s).
+ * darebay.com or www.darebay.com over http(s) (`isSiteHost`). A subdomain is another origin.
  */
 export const sitePathOf = (url: string): string | null => {
   const value = url.trim()
@@ -75,7 +75,7 @@ export const sitePathOf = (url: string): string | null => {
   try {
     const parsed = new URL(value.startsWith('//') ? `https:${value}` : value)
     if (parsed.protocol !== 'https:' && parsed.protocol !== 'http:') return null
-    if (parsed.hostname.replace(/^www\./, '') !== SITE_HOST) return null
+    if (!isSiteHost(parsed.hostname)) return null
     return `${parsed.pathname}${parsed.search}${parsed.hash}`
   } catch {
     return null

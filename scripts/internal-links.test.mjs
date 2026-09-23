@@ -10,6 +10,9 @@ import {
   isInternalHref,
   sitePathOf,
 } from './internal-links.mjs'
+import { sourceAnchor } from '../docs/.vitepress/links.ts'
+import { KNOWN_LOCALES } from '../docs/.vitepress/registry.ts'
+import { DATA } from '../docs/.vitepress/theme/landing/platforms.ts'
 
 // A trimmed article in the landing shell: header menus, hero, outline, body, sources, related
 // cards, CTA, footer — the regions the link gates have to tell apart.
@@ -31,15 +34,64 @@ const article = ({ body = '', related = [] } = {}) => `<!DOCTYPE html><html><bod
 </body></html>`
 
 describe('which links stay on darebay.com', () => {
-  it('treats every relative reference and every darebay.com host as internal', () => {
-    for (const href of ['/x', 'x', '#a', '?q=1', '', 'https://darebay.com/x', 'http://www.darebay.com', 'https://dev.darebay.com/en/', '//darebay.com/x', 'HTTPS://DAREBAY.COM/X']) {
+  it('treats every relative reference and darebay.com or www.darebay.com as internal', () => {
+    for (const href of ['/x', 'x', '#a', '?q=1', '', 'https://darebay.com/x', 'http://www.darebay.com', 'https://darebay.com./x', '//darebay.com/x', 'HTTPS://DAREBAY.COM/X']) {
       expect(isInternalHref(href), href).toBe(true)
     }
   })
 
-  it('treats other hosts, other schemes and a missing href as not internal', () => {
-    for (const href of ['https://darebay.com.evil.example/x', 'https://notdarebay.com/', '//example.com/x', 'mailto:hello@darebay.com', 'tel:+1', 'javascript:void(0)', undefined]) {
+  it('treats other hosts, subdomains, other schemes and a missing href as not internal', () => {
+    // A subdomain is another origin (dev.darebay.com is the noindex preview): the helper cites it
+    // like any other site, so the gate must not demand a followed link to it.
+    for (const href of ['https://dev.darebay.com/en/', 'https://api.darebay.com/x', 'https://darebay.com.evil.example/x', 'https://notdarebay.com/', '//example.com/x', 'mailto:hello@darebay.com', 'tel:+1', 'javascript:void(0)', undefined]) {
       expect(isInternalHref(href), String(href)).toBe(false)
+    }
+  })
+})
+
+describe('the helper and the gate agree on which hosts are ours', () => {
+  // `sourceAnchor` (links.ts) decides how a template renders a link; this gate decides which
+  // rendered links fail the build. They read one rule (siteHost.ts). These pin the consequence: a
+  // URL is internal to the gate exactly when the helper renders it followed, so no source the
+  // data can hold makes the helper emit a link the gate rejects.
+  const urls = [
+    'https://darebay.com/en/help/what-commission',
+    'https://www.darebay.com/o-proekte/darebay-v-tsifrakh',
+    'HTTPS://DAREBAY.COM/EN',
+    'https://darebay.com./tasks',
+    '//darebay.com/en/earnings/',
+    '/o-proekte/',
+    'https://dev.darebay.com/en/',
+    'https://api.darebay.com/x',
+    'https://darebay.com.evil.example/x',
+    'https://notdarebay.com/',
+    'https://whop.com/terms',
+    'mailto:hello@darebay.com',
+  ]
+
+  it('calls a URL internal exactly when the helper renders it as a followed link', () => {
+    for (const url of urls) {
+      for (const locale of KNOWN_LOCALES) {
+        expect(isInternalHref(url), `${url} on ${locale}`).toBe(sourceAnchor(url, locale).rel === undefined)
+      }
+    }
+  })
+
+  it('never flags an anchor the helper renders, for these URLs and every source of the comparison data', () => {
+    const sources = [
+      ...urls,
+      ...DATA.platforms.flatMap((platform) => [
+        platform.url,
+        ...Object.values(platform.home ?? {}),
+        ...Object.values(platform.fields).flatMap((field) => (field.source?.url ? [field.source.url] : [])),
+      ]),
+    ]
+    for (const url of sources) {
+      for (const locale of KNOWN_LOCALES) {
+        const { href, rel, target } = sourceAnchor(url, locale)
+        const tag = `<a href="${href}"${rel ? ` rel="${rel}"` : ''}${target ? ` target="${target}"` : ''}>x</a>`
+        expect(internalNofollowAnchors(tag), `${url} on ${locale}`).toEqual([])
+      }
     }
   })
 })

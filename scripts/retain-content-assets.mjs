@@ -583,6 +583,55 @@ async function selfTest() {
             () => merge({ base: missing, baseRevision: release3, dist: dist5, releaseSha: shaOf(5), releaseEpoch: T4 }),
             /base manifest lists .*Page0002/,
         )
+        // The base manifest must be the one its own release wrote, and every
+        // entry must be well formed: the next build trusts its retiredAt.
+        const rewriteManifest = (edit) => {
+            const image = imageOf(dist3, m3.out)
+            const file = join(image, RETENTION_MANIFEST_NAME)
+            const manifest = JSON.parse(readFileSync(file, 'utf8'))
+            writeFileSync(file, typeof edit === 'string' ? edit : JSON.stringify(edit(manifest)))
+            return image
+        }
+        const mergeOn = (image) => () =>
+            merge({ base: image, baseRevision: release3, dist: dist5, releaseSha: shaOf(5), releaseEpoch: T4 })
+        throws(
+            mergeOn(rewriteManifest((manifest) => ({ ...manifest, releaseSha: shaOf(9) }))),
+            /base manifest was written by release 9{40}, the base is 3{40}/,
+        )
+        throws(
+            mergeOn(rewriteManifest((manifest) => {
+                delete manifest.releaseSha
+                return manifest
+            })),
+            /base manifest was written by release undefined/,
+        )
+        throws(mergeOn(rewriteManifest('{"schema":')), /is not JSON/)
+        throws(mergeOn(rewriteManifest((manifest) => ({ ...manifest, schema: 2 }))), /unknown shape \(schema 2\)/)
+        throws(mergeOn(rewriteManifest((manifest) => ({ ...manifest, retained: [] }))), /unknown shape/)
+        for (const [label, damage] of [
+            ['retiredAt 0', (entry) => ({ ...entry, retiredAt: 0 })],
+            ['retiredAt as a string', (entry) => ({ ...entry, retiredAt: String(entry.retiredAt) })],
+            ['sha256 not hex', (entry) => ({ ...entry, sha256: 'x' })],
+            ['negative size', (entry) => ({ ...entry, bytes: -1 })],
+            ['no entry', () => null],
+        ]) {
+            throws(
+                mergeOn(rewriteManifest((manifest) => {
+                    manifest.retained[PAGE_2] = damage(manifest.retained[PAGE_2])
+                    return manifest
+                })),
+                /base manifest entry content-assets\/zarabotok_x\.md\.Page0002\.lean\.js is malformed/,
+                label,
+            )
+        }
+        throws(
+            mergeOn(rewriteManifest((manifest) => {
+                manifest.retained['content-assets/logo.svg'] = manifest.retained[PAGE_2]
+                return manifest
+            })),
+            /base manifest entry content-assets\/logo\.svg is malformed/,
+            'a stable name is never a retained entry',
+        )
         throws(
             () => merge({ base: image3, baseRevision: release3, dist: dist5, releaseSha: shaOf(5), releaseEpoch: 0 }),
             /--release-epoch/,
@@ -599,7 +648,8 @@ async function selfTest() {
     }
     console.log(
         'retain-content-assets: self-test passed (nginx regex, genesis, carry-over, chain, window, purge, cap, ' +
-            'identical and conflicting overlap, mtime, determinism, untouched dist, tampered base)',
+            'identical and conflicting overlap, mtime, determinism, untouched dist, tampered base, ' +
+            'base manifest provenance and shape)',
     )
 }
 

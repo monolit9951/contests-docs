@@ -137,9 +137,14 @@ export const paths = PAGES.flatMap((page) => localesOf(page).map((locale) => pag
 const auditedPaths = new Set(paths)
 
 const MIME = { '.html': 'text/html; charset=utf-8', '.css': 'text/css', '.js': 'text/javascript', '.json': 'application/json', '.svg': 'image/svg+xml', '.png': 'image/png', '.woff2': 'font/woff2', '.xml': 'application/xml', '.txt': 'text/plain; charset=utf-8' }
-const serve = (missing) => new Promise((resolve, reject) => {
+// `notFoundPage` answers an unknown page address with VitePress's own 404.html (status 404), the
+// way `vitepress preview` does, for the fail-static audit's real-404 checks. Off by default: the
+// layout audit reports an unknown page address instead.
+const serve = (missing, { notFoundPage = false } = {}) => new Promise((resolve, reject) => {
   const server = createServer((request, response) => {
-    const url = new URL(request.url, 'http://localhost')
+    // Parsed against an explicit origin: a request line of `//hub/page` would otherwise read as a
+    // protocol-relative host. Repeated slashes then merge in `normalize`, as nginx's merge_slashes does.
+    const url = new URL(`http://localhost${request.url}`)
     const base = normalize(join(DIST, decodeURIComponent(url.pathname)))
     if (base !== DIST && !base.startsWith(DIST + sep)) { response.writeHead(403).end(); return }
     // `cleanUrls` means a page address carries no extension while the build writes `.html`.
@@ -149,7 +154,13 @@ const serve = (missing) => new Promise((resolve, reject) => {
     const file = [base, `${base}.html`, join(base, 'index.html')].find((candidate) => existsSync(candidate) && statSync(candidate).isFile())
     // Only a page address that cannot be served is a defect. The page's own beacons (the
     // analytics POST, for one) have no document here by design.
-    if (!file) { if (auditedPaths.has(url.pathname)) missing.add(url.pathname); response.writeHead(404).end(); return }
+    if (!file) {
+      if (auditedPaths.has(url.pathname)) missing.add(url.pathname)
+      if (notFoundPage && !/\.[a-z0-9]+$/i.test(url.pathname)) {
+        response.writeHead(404, { 'content-type': MIME['.html'] }).end(readFileSync(join(DIST, '404.html')))
+      } else response.writeHead(404).end()
+      return
+    }
     const extension = file.slice(file.lastIndexOf('.'))
     response.writeHead(200, { 'content-type': MIME[extension] ?? 'application/octet-stream' })
     response.end(readFileSync(file))
@@ -191,13 +202,13 @@ async function connect(port) {
 
 // Shared with the bounded interaction audit; one static server and CDP implementation.
 // A private Chrome profile and OS-assigned debug port keep parallel audit sessions isolated.
-export async function openAuditBrowser() {
+export async function openAuditBrowser({ notFoundPage = false } = {}) {
   if (process.env.CHROME && !existsSync(process.env.CHROME)) throw new Error(`CHROME does not exist: ${process.env.CHROME}`)
   const binary = CHROME_CANDIDATES.find((candidate) => existsSync(candidate))
   if (!binary) throw new Error('no Chromium found. Set CHROME=/path/to/chrome (CI images have none).')
   if (!existsSync(join(DIST, 'sitemap-content.xml'))) throw new Error('no build to read. Run `DOCS_ENV=prod npm run docs:build` first.')
   const missing = new Set()
-  const { server, port } = await serve(missing)
+  const { server, port } = await serve(missing, { notFoundPage })
   const profile = mkdtempSync(join(tmpdir(), 'docs-ui-audit-'))
   const chrome = spawn(binary, ['--headless=new', '--no-sandbox', '--disable-gpu', '--disable-dev-shm-usage', '--remote-debugging-port=0', `--user-data-dir=${profile}`, 'about:blank'], { stdio: 'ignore' })
   let socket, spawnError, stopBrowser
@@ -279,7 +290,7 @@ export async function openAuditBrowser() {
       if (missing.has(path) || !measured?.content) throw new Error('build did not serve the page shell')
       if (measured.width !== viewport?.width) throw new Error(`viewport is ${measured.width}px; expected ${viewport?.width}px (document clientWidth=${measured.clientWidth}px, scrollWidth=${measured.scrollWidth}px)`)
     }
-    return { send, evaluate, waitFor, emulate, navigate, close, missing }
+    return { send, evaluate, waitFor, emulate, navigate, close, missing, origin: `http://127.0.0.1:${port}` }
   } catch (error) {
     await close()
     throw error

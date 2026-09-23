@@ -71,6 +71,14 @@ the script cannot find one. Screenshot checks in a bare `--window-size` browser 
 without device emulation the layout viewport is not the window width, and every page looks like it
 overflows. Emulate the device (`Emulation.setDeviceMetricsOverride`) or measure, as the script does.
 
+Changes to the fail-static fallback (`theme/failStatic.ts`, `theme/routing.ts`, the `DocsLayout`
+wiring in `theme/index.ts`) and every VitePress version change also require
+`npm run audit:failstatic` against a current production build (same browser requirement). It blocks
+the page chunks in a real browser and checks that the served article keeps its title, description
+and DOM instead of turning into a soft 404, that a real 404 stays a 404, and that client navigation
+works afterwards. `failStatic.test.ts` pins the VitePress client internals the fallback relies on;
+when it fails after a bump, re-derive the wiring rather than updating the patterns.
+
 When narrowing a failure, use the current scripts from `package.json` (`check:registry`,
 `check:dist`, generators and URL gates). The candidate lint plus production build is authoritative
 for the content/build contract; the scope-specific integration checks above remain required.

@@ -18,7 +18,8 @@ import {
 
 // The browser half (static vnode hydration, the head restore after useUpdateHead, removing the
 // served metadata on the next navigation) is exercised in a real browser with the page chunks
-// blocked; these are the rules that decide it, held against the code they depend on.
+// blocked by `npm run audit:failstatic` (scripts/fail-static-audit.mjs); these are the rules that
+// decide it, held against the code they depend on, VitePress's own client included.
 
 const ELEMENT = 1
 const TEXT = 3
@@ -146,6 +147,50 @@ describe('restoreServedHead', () => {
         restoreServedHead(doc, { ...served, description: null })
 
         expect(meta!.content).toBe('Not Found')
+    })
+})
+
+describe('the VitePress client fail-static is built on', () => {
+    // package.json allows any 1.x from 1.6.3, so a lockfile bump can change these while every
+    // other gate stays green and articles quietly turn back into soft 404s. Read the installed
+    // client the way headAssets.test.ts pins the vp-icons literal. When one of these fails, the
+    // theme's fail-static wiring (index.ts DocsLayout) must be re-derived, and audit:failstatic run.
+    const client = (file: string) =>
+        readFileSync(new URL(`../../../node_modules/vitepress/dist/client/${file}`, import.meta.url), 'utf8')
+    const app = client('app/index.js')
+    const router = client('app/router.js')
+    const head = client('app/composables/head.js')
+    const shared = client('shared.js')
+
+    it('evaluates the theme before it creates the app, so the served page is read untouched', () => {
+        expect(app).toMatch(/^import RawTheme from '@theme\/index';$/m)
+    })
+
+    it('rewrites the head for the resolved route and only then mounts, so the restore runs after it', () => {
+        expect(app).toMatch(
+            /router\.go\(\)\.then\(\(\) => \{\s*(?:\/\/[^\n]*\s*)*useUpdateHead\(router\.route, data\.site\);\s*app\.mount\('#app'\);/,
+        )
+    })
+
+    it("falls back to the theme's NotFound with fresh 404 data, on the path it tried", () => {
+        expect(app).toMatch(/\}, Theme\.NotFound\);/)
+        // A new object on every failure: DocsLayout's watcher on route.data sees each one.
+        expect(router).toMatch(
+            /route\.path = inBrowser \? pendingPath : withBase\(pendingPath\);\s*route\.component = fallbackComponent \? markRaw\(fallbackComponent\) : null;[\s\S]{0,400}?route\.data = \{ \.\.\.notFoundPageData, relativePath \};/,
+        )
+        expect(shared).toMatch(/export const notFoundPageData = \{[\s\S]*?isNotFound: true\s*\};/)
+    })
+
+    it("asks onBeforeRouteChange about the document's own first route (routing.ts)", () => {
+        expect(router).toMatch(
+            /async function go\(href = inBrowser \? location\.href : '\/'\) \{\s*href = normalizeHref\(href\);\s*if \(\(await router\.onBeforeRouteChange\?\.\(href\)\) === false\)/,
+        )
+    })
+
+    it('writes the title from the route data, and skips only the first head-tag update in production', () => {
+        expect(head).toMatch(/watchEffect\(\(\) => \{\s*const pageData = route\.data;/)
+        expect(head).toMatch(/document\.title = title;/)
+        expect(head).toMatch(/if \(import\.meta\.env\.PROD && isFirstUpdate\) \{/)
     })
 })
 

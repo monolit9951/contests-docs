@@ -48,19 +48,28 @@ const {
 const failures = []
 const fail = (check, detail) => failures.push(`${check}: ${detail}`)
 
-// Routes the application answers on, from src/app/routers/appRouter.tsx in
-// contests-frontend plus the locale prefixes. Kept here rather than imported
-// because the two repos build independently. Gates 5a and 7 both need it.
+// Top-level segments the application answers on, in lower case: every first
+// segment of the `routes:map` block in contests-frontend nginx.conf (public
+// sections, app-only screens and retired addresses: src/app/routers/appRouter.tsx
+// and scripts/seo-routes.mjs there), its hand-written locations (/about, /login,
+// /tiktok, /health, /fonts/, the /ko and /ja 410s), the locale prefixes and the
+// backend paths of the host. Kept here rather than imported because the two
+// repos build independently. Gates 5a and 7 both need it, and it is the only
+// guard for the app-only screens: they are in no sitemap, so url-gates gate 2
+// never requests them.
 const SPA_SEGMENTS = new Set([
-    'ua', 'en', 'ru', 'pl',
+    'ua', 'en', 'ru', 'pl', 'ko', 'ja',
     'feed', 'lenta', 'strichka',
     'contests', 'zadaniya', 'zavdannya', 'tasks',
     'store', 'magazin', 'kramnytsia',
     'topusers', 'reyting', 'reitynh', 'top',
     'how-it-works', 'kak-eto-rabotaet', 'yak-tse-pratsiuie',
-    'business', 'dlya-biznesa', 'for-business',
-    'u', 'profile', 'cabinet', 'portal', 'chat', 'join',
+    'business', 'dlya-biznesa', 'dlia-biznesu', 'for-business',
+    'earn', 'partners', 'recruit', 'terms', 'privacy',
+    'u', 'profile', 'cabinet', 'portal', 'chat', 'join', 'publishing',
     'contestscreate', 'choosewinner', 'coinmanagementcenter',
+    'oauth-success', 'account-claim',
+    'about', 'login', 'tiktok', 'health', 'fonts',
     'api', 'assets', 'admin', 'oauth2', 'ws', 'images-bucket',
 ])
 
@@ -190,9 +199,9 @@ for (const entry of PAGES) {
 //     an application segment, at the root or under the /ru alias (which the
 //     application strips onto the root path). APP_ROUTES alone would be vacuous
 //     for the /ru prefixes, since it has no /ru entries, hence SPA_SEGMENTS.
-//     The authoritative guard is url-gates.mjs gate 2, which requests every
-//     application sitemap address through the composed host routing; this one
-//     only catches the obvious collision without the application build.
+//     url-gates.mjs gate 2 requests every application sitemap address through
+//     the composed host routing, but the app-only screens are in no sitemap:
+//     for them this list is the guard.
 // ---------------------------------------------------------------------------
 {
     const sources = Object.keys(redirectMap())

@@ -440,6 +440,23 @@ fetch_and_prove_candidate() {
   }
 }
 
+# The candidate image carries the hashed assets of the release it was built on
+# (scripts/retain-content-assets.mjs, label org.darebay.content.retention-base).
+# Crawlers still render HTML of the RUNNING release after the swap, so the base
+# must be exactly that release. A genesis build, an image built before a manual
+# rollback or on any other base would drop the running release's assets: refuse
+# it before anything in production changes. The CD run is then simply repeated.
+assert_candidate_retains_running_release() {
+  local retention_base running_revision
+  retention_base=$(docker image inspect --format '{{index .Config.Labels "org.darebay.content.retention-base"}}' "$CANDIDATE_IMAGE_ID")
+  running_revision=$(docker image inspect --format '{{index .Config.Labels "org.opencontainers.image.revision"}}' "$OLD_IMAGE_ID")
+  if ! valid_sha "$retention_base" || ! valid_sha "$running_revision" || [[ $retention_base != "$running_revision" ]]; then
+    echo "deploy-content-transaction: candidate retains assets of '${retention_base}', not of the running release '${running_revision}'; refusing" >&2
+    return 1
+  fi
+  echo "deploy-content-transaction: candidate retains the assets of running release $running_revision"
+}
+
 snapshot_previous_routes() {
   PREVIOUS_SNIPPET="${STAGING_DIRECTORY}/previous-darebay-content.conf"
   install -m 0600 "$HOST_SNIPPET" "$PREVIOUS_SNIPPET"
@@ -868,6 +885,7 @@ execute_transaction() {
   pin_current_image
   assert_registry_latest_matches_running
   fetch_and_prove_candidate
+  assert_candidate_retains_running_release
   snapshot_previous_routes
   capture_old_readiness
   persist_recovery_journal
@@ -933,6 +951,7 @@ self_test_case() {
     pin_current_image() { record pin; fail_here pin; ROLLBACK_READY=1; }
     assert_registry_latest_matches_running() { record latest-old; fail_here latest-old; }
     fetch_and_prove_candidate() { record candidate; fail_here candidate; }
+    assert_candidate_retains_running_release() { record retention; fail_here retention; }
     snapshot_previous_routes() { record snapshot; fail_here snapshot; PREVIOUS_SNIPPET_READY=1; }
     capture_old_readiness() { record old-http; fail_here old-http; }
     persist_recovery_journal() { record journal; fail_here journal; JOURNAL_ACTIVE=1; }
@@ -973,6 +992,32 @@ self_test_case() {
   if [[ $status -ne $expected_status || $actual != "$expected_events" ]]; then
     echo "deploy-content-transaction self-test failed: fail=$fail_at status=$status events=$actual" >&2
     echo "  expected status=$expected_status events=$expected_events" >&2
+    return 1
+  fi
+}
+
+self_test_retention_case() {
+  local stub_base=$1 stub_revision=$2 expected_status=$3 status
+  set +e
+  (
+    set -Eeuo pipefail
+    CANDIDATE_IMAGE_ID='sha256:cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc'
+    OLD_IMAGE_ID='sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'
+    docker() {
+      [[ $1 == image && $2 == inspect && $3 == --format ]]
+      case "$4|$5" in
+        *org.darebay.content.retention-base*"|$CANDIDATE_IMAGE_ID") printf '%s\n' "$stub_base" ;;
+        *org.opencontainers.image.revision*"|$OLD_IMAGE_ID") printf '%s\n' "$stub_revision" ;;
+        *) return 1 ;;
+      esac
+    }
+    assert_candidate_retains_running_release
+  ) >/dev/null 2>&1
+  status=$?
+  set -e
+  if [[ $status -ne $expected_status ]]; then
+    echo "deploy-content-transaction retention self-test failed: base=${stub_base:-<empty>} running=${stub_revision:-<empty>} status=$status" >&2
+    echo "  expected status=$expected_status" >&2
     return 1
   fi
 }
@@ -1045,7 +1090,7 @@ self_test() {
   ! managed_snippet_contract "$unmanaged_sample"
   rm -rf -- "$snippet_test_directory"
 
-  local prefix='lock,tip,auth,recover,secure-host,pin,latest-old,candidate,snapshot,old-http,journal'
+  local prefix='lock,tip,auth,recover,secure-host,pin,latest-old,candidate,retention,snapshot,old-http,journal'
   local mutated="${prefix},tip,phase-container_pending,stale,tip,up,verify,tip"
   local routed="${mutated},phase-routes_pending,install,host-sni,tip"
   local success="${routed},phase-registry_pending,push-latest,tip,phase-committed,cleanup-auth,clear-journal,cleanup-images"
@@ -1055,6 +1100,15 @@ self_test() {
   self_test_case recover 1 'lock,tip,auth,recover,cleanup-auth,cleanup-images'
   self_test_case latest-old 1 'lock,tip,auth,recover,secure-host,pin,latest-old,cleanup-auth,cleanup-images'
   self_test_case candidate 1 'lock,tip,auth,recover,secure-host,pin,latest-old,candidate,cleanup-auth,cleanup-images'
+  self_test_case retention 1 'lock,tip,auth,recover,secure-host,pin,latest-old,candidate,retention,cleanup-auth,cleanup-images'
+  local running_release='0123456789abcdef0123456789abcdef01234567'
+  self_test_retention_case "$running_release" "$running_release" 0
+  self_test_retention_case genesis "$running_release" 1
+  self_test_retention_case 'fedcba9876543210fedcba9876543210fedcba98' "$running_release" 1
+  self_test_retention_case '' "$running_release" 1
+  self_test_retention_case '<no value>' "$running_release" 1
+  self_test_retention_case "$running_release" '' 1
+  self_test_retention_case "$running_release" development 1
   self_test_case tip2 1 "${prefix},tip,cleanup-auth,clear-journal,cleanup-images"
   self_test_case phase-container_pending 1 "${prefix},tip,phase-container_pending,cleanup-auth,clear-journal,cleanup-images"
   self_test_case stale 1 "${prefix},tip,phase-container_pending,stale,rollback-container,cleanup-auth,clear-journal,cleanup-images"

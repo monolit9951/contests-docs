@@ -3,7 +3,8 @@
 ## Indexation model
 
 - Guarded on-box development builds use `DOCS_ENV=dev`, the dev hostname and
-  `noindex`.
+  `noindex`. Like every image build they name their asset-retention base
+  explicitly (genesis, see "Hashed asset retention").
 - `release` CD uses `DOCS_ENV=prod`; production HTML is indexable and canonical
   URLs use `https://darebay.com`.
 - Promotion from `develop` to `release` is the publication boundary. IndexNow
@@ -42,7 +43,9 @@ and no second cleanup session racing the deployment.
    rollback tag, and prove registry `latest` still names that running image;
 2. log in with the workflow's ephemeral Docker credentials, pull the candidate
    by immutable manifest digest, and prove write access by idempotently pushing
-   its exact commit-SHA tag before changing production;
+   its exact commit-SHA tag before changing production; refuse the candidate
+   unless its `org.darebay.content.retention-base` label equals the running
+   image's revision (see "Hashed asset retention");
 3. re-read `release` immediately before cleanup/activation, retag the exact
    local candidate as `latest`, and recreate only `docs` with `--pull never`;
 4. require the direct container release marker to equal the exact commit SHA,
@@ -67,6 +70,55 @@ unexpected commands between the file move and nginx reload, not just a failed
 Post-deploy probes verify every generated hub/locale prefix, root artifacts,
 the JSON manifest headers/body, clean-URL redirects, the release identity and
 the frontend-owned root IndexNow key.
+
+## Hashed asset retention
+
+Crawlers render HTML hours or days after fetching it, and a page chunk missing
+at that moment is what VitePress turns into its 404 view. So each image also
+serves the hashed `/content-assets/` files that recent releases retired.
+`scripts/content-asset-policy.mjs` holds the whole policy:
+
+- window: 14 days from the retiring release's commit time (`RELEASE_EPOCH`);
+- cap: 256 MiB of raw retained bytes; above it the oldest retirements go first;
+- hashed names: the regex of nginx.conf's immutable location (the self-test
+  fails if they drift). Stable names (fonts, `logo.svg`) are never retained;
+- manifest: `/usr/share/nginx/content-assets-retention.json`, outside the web
+  root `/usr/share/nginx/html`, so nginx never serves it. It lists every
+  retained path with its retirement time, sha256 and size.
+
+Release CD resolves `contestvibe/contests-docs:latest` to one manifest digest
+and reads its `org.opencontainers.image.revision`. The Docker build stage
+mounts that image read-only and runs `scripts/retain-content-assets.mjs` after
+`npm run docs:build`: it checks the base serves the revision it claims, carries
+the base's retained files (keeping their retirement time), retires the base's
+files this build no longer has, applies the window and the cap, and writes to
+`/app/retained`. The dist that `check:dist` verified is never modified. Retained
+files keep the base file's mtime, so nginx's ETag and Last-Modified for a hashed
+name stay stable across releases. A name present in both the base and the new
+build with different bytes fails the build: clients cache it as `immutable`.
+The runtime image carries `org.darebay.content.retention-base=<base revision>`.
+
+The deploy transaction refuses a candidate whose retention base is not the
+running release (a genesis image, one built before a manual rollback, or on any
+other base), before any production mutation. Rerun CD in that case.
+
+Non-production builds (local, `DOCS_ENV=dev`, `npm run check:image`) start a
+new chain on the bare runtime base: pass
+`RETENTION_BASE=nginx:alpine@sha256:4a73073bd557c65b759505da037898b61f1be6cbcc3c2c3aeac22d2a470c1752`,
+`RETENTION_BASE_REVISION=genesis` and `RELEASE_EPOCH=$(git show -s --format=%ct HEAD)`
+to `make build_app`; none of the three has a default. A genesis image never
+reaches production because of the transaction check. `npm run check:image --
+--chain` builds on the committed release instead and probes a retained file.
+
+Emergency purge (old JavaScript must stop being served, e.g. a client-side
+security fix): build the next release with `RETENTION_WINDOW_DAYS=0`. In release
+CD that means adding `RETENTION_WINDOW_DAYS=0` to the `make build_app` call of
+the "Build immutable release candidate" step for that one release and removing
+it in the next; `make` passes the build argument only when it is set, and only
+`retain-content-assets.mjs` consumes it. The purge image retains nothing (its
+manifest records `windowDays: 0`), and the chain restarts empty from it.
+Hashed names outside the window, or that never existed, keep answering 410 with
+`max-age=600`.
 
 ## Rollback
 

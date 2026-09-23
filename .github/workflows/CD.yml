@@ -119,9 +119,47 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
-      - name: Build immutable release candidate
+      # The candidate carries the hashed assets that recent releases retired, read
+      # from the committed release image (scripts/retain-content-assets.mjs). Pin
+      # that base by manifest digest and take its revision from the image itself.
+      # The concurrency group and the stale-run guards keep this `latest` equal to
+      # the running release; the host transaction re-checks it before any mutation
+      # (assert_candidate_retains_running_release) and refuses any other base.
+      - name: Resolve the committed release as the asset-retention base
+        id: retention_base
         run: |
+          set -Eeuo pipefail
+          base_ref="${IMAGE_REPOSITORY}:latest"
+          docker pull "$base_ref"
+          mapfile -t base_digests < <(
+            docker image inspect --format '{{range .RepoDigests}}{{println .}}{{end}}' "$base_ref" |
+              awk -F@ -v repository="$IMAGE_REPOSITORY" '$1 == repository { print $2 }'
+          )
+          if [[ ${#base_digests[@]} -ne 1 || ! ${base_digests[0]} =~ ^sha256:[a-f0-9]{64}$ ]]; then
+            echo "could not resolve one immutable manifest digest for $base_ref" >&2
+            exit 1
+          fi
+          base_image="${IMAGE_REPOSITORY}@${base_digests[0]}"
+          revision="$(docker image inspect --format '{{index .Config.Labels "org.opencontainers.image.revision"}}' "$base_image")"
+          if [[ ! $revision =~ ^[a-f0-9]{40}$ ]]; then
+            echo "committed release $base_image has no 40-hex revision label: ${revision:-<empty>}" >&2
+            exit 1
+          fi
+          echo "asset-retention base: $base_image (release $revision)"
+          printf 'image=%s\nrevision=%s\n' "$base_image" "$revision" >> "$GITHUB_OUTPUT"
+
+      - name: Build immutable release candidate
+        env:
+          RETENTION_BASE: ${{ steps.retention_base.outputs.image }}
+          RETENTION_BASE_REVISION: ${{ steps.retention_base.outputs.revision }}
+        run: |
+          set -Eeuo pipefail
+          # Commit time, not build time: retirement ages stay reproducible.
+          release_epoch="$(git show -s --format=%ct "$GITHUB_SHA")"
           make build_app VERSION="${GITHUB_SHA}" RELEASE_SHA="${GITHUB_SHA}" \
+            RETENTION_BASE="${RETENTION_BASE}" \
+            RETENTION_BASE_REVISION="${RETENTION_BASE_REVISION}" \
+            RELEASE_EPOCH="${release_epoch}" \
             GOOGLE_SITE_VERIFICATION="${{ secrets.GOOGLE_SITE_VERIFICATION }}" \
             YANDEX_VERIFICATION="${{ secrets.YANDEX_VERIFICATION }}"
 

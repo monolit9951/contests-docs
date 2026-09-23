@@ -14,7 +14,7 @@
     "prebuild": "npm run gen:dates && npm run gen:facts && npm run check:registry && npm run gen:manifest && npm run gen:release-marker && npm run check:truth && npm run gen:redirects",
     "docs:build": "npm run prebuild && vitepress build docs && node --experimental-strip-types --no-warnings scripts/finalize-dist.mjs && npm run check:dist",
     "docs:preview": "vitepress preview docs",
-    "test": "vitest run && node --experimental-strip-types --no-warnings scripts/anti_doorway_lint.test.mjs && node scripts/product-truth-lint.test.mjs && npm run check:truth && bash deploy/install-host-nginx-snippet.sh --self-test && bash deploy/deploy-content-transaction.sh --self-test",
+    "test": "vitest run && node --experimental-strip-types --no-warnings scripts/anti_doorway_lint.test.mjs && node scripts/product-truth-lint.test.mjs && npm run check:truth && bash deploy/install-host-nginx-snippet.sh --self-test && bash deploy/deploy-content-transaction.sh --self-test && node scripts/retain-content-assets.mjs --self-test",
     "check:registry": "node --experimental-strip-types --no-warnings scripts/check-registry.mjs",
     "check:truth": "npm run gen:llms --silent && node scripts/product-truth-lint.mjs",
     "check:dist": "node --experimental-strip-types --no-warnings scripts/dist-seo-gates.mjs",

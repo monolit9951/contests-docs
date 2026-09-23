@@ -1,5 +1,6 @@
 import { readFileSync } from 'node:fs'
 import { describe, expect, it } from 'vitest'
+import { RETENTION_MANIFEST_PATH } from './content-asset-policy.mjs'
 
 const workflow = readFileSync(new URL('../.github/workflows/CD.yml', import.meta.url), 'utf8')
 const lintWorkflow = readFileSync(new URL('../.github/workflows/lint.yml', import.meta.url), 'utf8')
@@ -7,6 +8,8 @@ const gitignore = readFileSync(new URL('../.gitignore', import.meta.url), 'utf8'
 const dockerignore = readFileSync(new URL('../.dockerignore', import.meta.url), 'utf8')
 const transaction = readFileSync(new URL('../deploy/deploy-content-transaction.sh', import.meta.url), 'utf8')
 const installer = readFileSync(new URL('../deploy/install-host-nginx-snippet.sh', import.meta.url), 'utf8')
+const dockerfile = readFileSync(new URL('../Dockerfile', import.meta.url), 'utf8')
+const makefile = readFileSync(new URL('../Makefile', import.meta.url), 'utf8')
 const pinnedSshAction = 'appleboy/ssh-action@0ff4204d59e8e51228ff73bce53f80d53301dee2'
 
 const functionBody = (source, name, nextName) => source.slice(
@@ -46,6 +49,32 @@ describe('release delivery contract', () => {
     expect(candidatePush).toBeGreaterThan(build)
     expect(workflow).not.toMatch(/make build_app VERSION=(?:"?)latest/)
     expect(workflow).not.toMatch(/make push_app VERSION=(?:"?)latest/)
+  })
+
+  it('builds on the digest-pinned committed release as the asset-retention base', () => {
+    const login = workflow.indexOf('uses: docker/login-action@')
+    const resolve = namedStep(workflow, 'Resolve the committed release as the asset-retention base')
+    const buildStep = namedStep(workflow, 'Build immutable release candidate')
+    expect(login).toBeGreaterThanOrEqual(0)
+    expect(workflow.indexOf(resolve)).toBeGreaterThan(login)
+    expect(workflow.indexOf(resolve)).toBeLessThan(workflow.indexOf('make build_app'))
+    expect(resolve).toContain('id: retention_base')
+    expect(resolve).toContain('base_ref="${IMAGE_REPOSITORY}:latest"')
+    expect(resolve).toContain('base_image="${IMAGE_REPOSITORY}@${base_digests[0]}"')
+    expect(resolve).toContain("[[ ${#base_digests[@]} -ne 1 || ! ${base_digests[0]} =~ ^sha256:[a-f0-9]{64}$ ]]")
+    expect(resolve).toContain('{{index .Config.Labels "org.opencontainers.image.revision"}}')
+    expect(resolve).toContain('[[ ! $revision =~ ^[a-f0-9]{40}$ ]]')
+    expect(buildStep).toContain('RETENTION_BASE: ${{ steps.retention_base.outputs.image }}')
+    expect(buildStep).toContain('RETENTION_BASE_REVISION: ${{ steps.retention_base.outputs.revision }}')
+    expect(buildStep).toContain('release_epoch="$(git show -s --format=%ct "$GITHUB_SHA")"')
+    for (const assignment of [
+      'RETENTION_BASE="${RETENTION_BASE}"',
+      'RETENTION_BASE_REVISION="${RETENTION_BASE_REVISION}"',
+      'RELEASE_EPOCH="${release_epoch}"',
+    ]) {
+      expect(buildStep).toContain(assignment)
+    }
+    expect(workflow).not.toMatch(/RETENTION_BASE_REVISION=\S*genesis/)
   })
 
   it('rejects stale jobs before build, before publication, after publication and after transfer', () => {
@@ -125,6 +154,24 @@ describe('release delivery contract', () => {
     expect(transaction).toContain('ephemeral Docker registry credentials are required')
     expect(transaction).toContain('docker --config "$AUTH_DIRECTORY" push "$CANDIDATE_TAG"')
     expect(transaction).toContain('[[ $confirmed_id == "$CANDIDATE_IMAGE_ID" ]]')
+  })
+
+  it('refuses a candidate that does not carry the running release assets before any mutation', () => {
+    const execute = functionBody(transaction, 'execute_transaction', 'self_test_case')
+    const candidate = execute.indexOf('\n  fetch_and_prove_candidate\n')
+    const retention = execute.indexOf('\n  assert_candidate_retains_running_release\n')
+    const firstMutation = execute.indexOf('\n  set_recovery_phase container_pending\n')
+    expect(candidate).toBeGreaterThanOrEqual(0)
+    expect(retention).toBeGreaterThan(candidate)
+    expect(firstMutation).toBeGreaterThan(retention)
+    const check = functionBody(transaction, 'assert_candidate_retains_running_release', 'snapshot_previous_routes')
+    expect(transaction.indexOf('fetch_and_prove_candidate() {'))
+      .toBeLessThan(transaction.indexOf('assert_candidate_retains_running_release() {'))
+    expect(check).toContain('{{index .Config.Labels "org.darebay.content.retention-base"}}\' "$CANDIDATE_IMAGE_ID"')
+    expect(check).toContain('{{index .Config.Labels "org.opencontainers.image.revision"}}\' "$OLD_IMAGE_ID"')
+    expect(check).toContain('if ! valid_sha "$retention_base" || ! valid_sha "$running_revision" || [[ $retention_base != "$running_revision" ]]; then')
+    expect(transaction).toContain("self_test_case retention 1 'lock,tip,auth,recover,secure-host,pin,latest-old,candidate,retention,cleanup-auth,cleanup-images'")
+    expect(transaction).toContain('self_test_retention_case genesis "$running_release" 1')
   })
 
   it('commits registry latest only after marker, release-tip and host-route checks', () => {
@@ -225,6 +272,64 @@ describe('release delivery contract', () => {
     expect(persist).toBeLessThan(containerPhase)
     expect(containerPhase).toBeLessThan(routesPhase)
     expect(routesPhase).toBeLessThan(registryPhase)
+  })
+})
+
+describe('asset retention build contract', () => {
+  const stage = (name) => dockerfile.indexOf(name)
+
+  it('reads a required, read-only retention base after the verified docs build', () => {
+    expect(dockerfile).toMatch(/^ARG RETENTION_BASE$/m)
+    expect(dockerfile).toMatch(/^ARG RETENTION_BASE_REVISION$/m)
+    expect(dockerfile).toMatch(/^ARG RELEASE_EPOCH$/m)
+    const baseStage = stage('FROM ${RETENTION_BASE} AS retention-base')
+    const buildStage = stage(' AS build\n')
+    const docsBuild = stage('    npm run docs:build\n')
+    const merge = stage('RUN --mount=type=bind,from=retention-base,source=/usr/share/nginx,target=/retention-base,ro')
+    const runtime = stage('\nFROM nginx:alpine@sha256:')
+    expect(baseStage).toBeGreaterThan(stage('ARG RETENTION_BASE\n'))
+    expect(buildStage).toBeGreaterThan(baseStage)
+    expect(merge).toBeGreaterThan(docsBuild)
+    expect(runtime).toBeGreaterThan(merge)
+    const mergeStep = dockerfile.slice(merge, runtime)
+    for (const flag of [
+      '--base /retention-base',
+      '--base-revision "$RETENTION_BASE_REVISION"',
+      '--dist docs/.vitepress/dist',
+      '--release-sha "$RELEASE_SHA"',
+      '--release-epoch "$RELEASE_EPOCH"',
+      '--window-days "$RETENTION_WINDOW_DAYS"',
+      '--out /app/retained',
+    ]) {
+      expect(mergeStep).toContain(flag)
+    }
+  })
+
+  it('ships retained assets beside the dist, the manifest outside the web root, and the base label', () => {
+    const runtime = dockerfile.slice(dockerfile.indexOf('\nFROM nginx:alpine@sha256:'))
+    const dist = runtime.indexOf('COPY --from=build /app/docs/.vitepress/dist /usr/share/nginx/html\n')
+    const retained = runtime.indexOf('COPY --from=build /app/retained/content-assets /usr/share/nginx/html/content-assets\n')
+    const manifest = runtime.indexOf(`COPY --from=build /app/retained/content-assets-retention.json ${RETENTION_MANIFEST_PATH}\n`)
+    const chmod = runtime.indexOf('RUN chmod -R a+rX /usr/share/nginx/html')
+    expect(dist).toBeGreaterThanOrEqual(0)
+    expect(retained).toBeGreaterThan(dist)
+    expect(manifest).toBeGreaterThan(dist)
+    expect(chmod).toBeGreaterThan(retained)
+    expect(chmod).toBeGreaterThan(manifest)
+    expect(RETENTION_MANIFEST_PATH.startsWith('/usr/share/nginx/html/')).toBe(false)
+    expect(runtime).toMatch(/^ARG RETENTION_BASE_REVISION$/m)
+    expect(runtime).toContain('LABEL org.darebay.content.retention-base=$RETENTION_BASE_REVISION')
+  })
+
+  it('makes every image build name its retention base explicitly', () => {
+    const build = makefile.slice(makefile.indexOf('build_app:'), makefile.indexOf('push_app:'))
+    for (const variable of ['RETENTION_BASE', 'RETENTION_BASE_REVISION', 'RELEASE_EPOCH']) {
+      expect(build).toContain(`$(if $(${variable}),,$(error ${variable} is required`)
+      expect(build).toContain(`--build-arg ${variable}=$(${variable})`)
+    }
+    expect(build).toContain('$(if $(RETENTION_WINDOW_DAYS),--build-arg RETENTION_WINDOW_DAYS=$(RETENTION_WINDOW_DAYS))')
+    expect(makefile).not.toMatch(/^RETENTION_BASE\S* \?=/m)
+    expect(makefile).not.toMatch(/^RELEASE_EPOCH \?=/m)
   })
 })
 

@@ -35,6 +35,7 @@ import { existsSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'no
 import { tmpdir } from 'node:os'
 import { join, dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { HASHED_ASSET_SUFFIX_SOURCE, isHashedContentAsset } from './content-asset-policy.mjs'
 import { FACT_IDS, FACTS_PUBLIC_PATH } from './gen-facts-json.mjs'
 import { parseHreflangCluster, sameHreflangMap } from './hreflang-cluster.mjs'
 import { readLocalSitemapTree } from './sitemap-tree.mjs'
@@ -651,16 +652,28 @@ for (const canonical of new Set(appUrls)) {
         }
     }
 
+    // The hashed-name rule is content-asset-policy.mjs's, the one nginx.conf and
+    // the retention merge use.
     const contentPage = await body(SAMPLE_CONTENT_PATH)
     const hashed = contentPage.text.match(
-        /(?:href|src)="(\/content-assets\/[^"?]+\.[A-Za-z0-9_-]{8}(?:\.lean)?\.(?:js|mjs|css|woff2?|png|jpe?g|svg|webp))"/
+        new RegExp(`(?:href|src)="(/content-assets/[^"?]+${HASHED_ASSET_SUFFIX_SOURCE})"`)
     )?.[1]
-    if (!hashed) fail('8-cache', 'не найден content-addressed asset для проверки cache policy')
+    if (!hashed || !isHashedContentAsset(hashed)) fail('8-cache', 'не найден content-addressed asset для проверки cache policy')
     else {
         const response = await head(hashed)
         const cache = response.headers.get('cache-control') ?? ''
         if (response.status !== 200 || !/max-age=31536000/i.test(cache) || !/immutable/i.test(cache)) {
             fail('8-cache', `${hashed}: status=${response.status}, cache-control=${cache}`)
+        }
+    }
+    // A hashed name no build or retained release ever had: 410, cached briefly,
+    // never cached as immutable and never the SPA shell.
+    {
+        const expired = '/content-assets/app.AAAAAAAA.js'
+        const response = await head(expired)
+        const cache = response.headers.get('cache-control') ?? ''
+        if (response.status !== 410 || !/max-age=600/i.test(cache) || /immutable/i.test(cache)) {
+            fail('8-cache', `${expired}: status=${response.status}, cache-control=${cache}, ожидался 410 max-age=600`)
         }
     }
     for (const stable of [

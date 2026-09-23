@@ -4,6 +4,7 @@
 import { existsSync, readdirSync, readFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { internalNofollowAnchors } from './internal-links.mjs'
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..')
 const DOCS = join(ROOT, 'docs')
@@ -244,6 +245,15 @@ const interFiles = readdirSync(join(DIST, 'content-assets'), { recursive: true }
   .filter((file) => /(?:^|\/)inter-[^/]*\.woff2$/.test(String(file)))
 if (interFiles.length) fail('inter-font', `unused Inter files ship: ${interFiles.join(', ')}`)
 
+// `internal-nofollow`: no shipped HTML file — content page, hub, 404 — carries a nofollow link to
+// darebay.com (scripts/internal-links.mjs). Our own pages are linked through `sourceAnchor`
+// (links.ts); a nofollow on one of them discards the signal the whole corpus exists to build.
+for (const file of readdirSync(DIST, { recursive: true }).map(String).filter((name) => name.endsWith('.html'))) {
+  for (const anchor of internalNofollowAnchors(readFileSync(join(DIST, file), 'utf8'))) {
+    fail('internal-nofollow', `${file}: ${anchor.tag}`)
+  }
+}
+
 const sitemapPath = join(DIST, 'sitemap-content.xml')
 if (!existsSync(sitemapPath)) fail('sitemap-exists', sitemapPath)
 else {
@@ -310,3 +320,4 @@ if (failures.length) {
   process.exit(1)
 }
 console.log(`dist SEO gates: ${expectedUrls.size} localized URLs, ${PAGES.length} semantic pages, 0 findings`)
+console.log('internal links: 0 nofollow to darebay.com')

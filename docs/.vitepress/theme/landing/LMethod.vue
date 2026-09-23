@@ -3,11 +3,13 @@
 // full list of source pages with the date each number was taken.
 import { useData } from 'vitepress'
 import { computed } from 'vue'
+import { sourceAnchor, sourceLabel } from '../../links'
 import { LANDING_COPY, localeOf } from './copy'
 import { DEFAULT_COLUMNS, pick, sourcesOf, DATA } from './platforms'
 
 const { frontmatter, lang } = useData()
-const copy = computed(() => LANDING_COPY[localeOf(lang.value)])
+const loc = computed(() => localeOf(lang.value))
+const copy = computed(() => LANDING_COPY[loc.value])
 const paragraphs = computed(() => (frontmatter.value.method ?? []) as string[])
 const cfg = computed(() => (frontmatter.value.compare ?? {}) as { ids?: string[]; columns?: string[] })
 const ids = computed(() => cfg.value.ids ?? [])
@@ -28,7 +30,7 @@ const sources = computed(() => pick(ids.value).flatMap((p) => sourcesOf(p, colum
       <div>
         <span class="lp-kicker" style="display:block;margin-bottom:10px">{{ copy.sources }}</span>
         <ul>
-          <li v-for="s in sources" :key="s.name + s.url"><span><b style="color:var(--lp-text)">{{ s.name }}</b> · <a :href="s.url" target="_blank" rel="nofollow noopener">{{ s.url.replace(/^https?:\/\/(www\.)?/, '') }}</a></span><time :datetime="s.date">{{ s.date }}</time></li>
+          <li v-for="s in sources" :key="s.name + s.url"><span><b style="color:var(--lp-text)">{{ s.name }}</b> · <a v-bind="sourceAnchor(s.url, loc)">{{ sourceLabel(s.url, loc) }}</a></span><time :datetime="s.date">{{ s.date }}</time></li>
         </ul>
       </div>
     </div>

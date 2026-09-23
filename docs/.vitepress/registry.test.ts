@@ -14,6 +14,7 @@ import {
     alternateLocalesOf,
     appLocaleOf,
     appPathFor,
+    appSectionOf,
     createRegistry,
     hreflangCluster,
     hubIndexPath,
@@ -694,6 +695,34 @@ describe('registry: product links from the Arabic tree lead into the English app
         const dark = createRegistry(withoutArabic([untranslated('earnings-hub')]))
         expect(dark.appLinkTarget('/ar/tasks')).toBeNull()
         expect(dark.resolveLocalizedLink('/ar/tasks')).toBe('/ar/tasks')
+    })
+})
+
+describe('registry: reading an application address back (appSectionOf)', () => {
+    it('is the inverse of appPathFor for every docs language and section', () => {
+        // Every route the dead-link allowance knows reads back as a section...
+        const sections = APP_ROUTES.map((route) => appSectionOf(route))
+        expect(sections).not.toContain(null)
+        // ...and that section, written for any language, reads back as itself.
+        for (const language of KNOWN_LOCALES) {
+            for (const section of new Set(sections)) expect(appSectionOf(appPathFor(language, section!))).toBe(section)
+            expect(appSectionOf(appPathFor(language, ''))).toBe('')
+        }
+    })
+
+    it('tolerates one trailing slash, a query and a fragment', () => {
+        expect(appSectionOf('/en/')).toBe('')
+        expect(appSectionOf('/ua/tasks/')).toBe('tasks')
+        expect(appSectionOf('/tasks?type=clips#list')).toBe('tasks')
+    })
+
+    it('knows no other address', () => {
+        // A docs page, a tree the application has but the docs do not route to, an Arabic path.
+        expect(appSectionOf('/o-proekte/darebay-v-tsifrakh')).toBeNull()
+        expect(appSectionOf('/en/earnings/')).toBeNull()
+        expect(appSectionOf('/pl/tasks')).toBeNull()
+        expect(appSectionOf('/ar/tasks')).toBeNull()
+        expect(appSectionOf('/tasks/some-task')).toBeNull()
     })
 })
 

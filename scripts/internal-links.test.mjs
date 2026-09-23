@@ -1,0 +1,68 @@
+import { describe, expect, it } from 'vitest'
+import { anchorsOf, internalNofollowAnchors, isInternalHref } from './internal-links.mjs'
+
+// A trimmed article in the landing shell: header menus, hero, outline, body, sources, related
+// cards, CTA, footer — the regions the link gates have to tell apart.
+const article = ({ body = '', related = [] } = {}) => `<!DOCTYPE html><html><body>
+<header class="lp-header"><a class="lp-skip" href="#main-content">skip</a><a class="lp-logo" href="/zarabotok/">DareBay</a>
+<nav class="lp-nav"><a href="/brendam/">Brands</a></nav>
+<nav class="lp-language-options"><a href="/en/for-brands/clipping-vs-paid-ads">EN</a></nav>
+<a href="https://darebay.com/" class="lp-header-cta" target="_self">App</a></header>
+<main id="main-content"><section class="lp-hero"><a href="/brendam/" class="lp-breadcrumb">Brands</a>
+<a href="/o-proekte/kto-pishet-i-otkuda-tsifry" class="lp-updated lp-byline" rel="author">Author</a>
+<a href="https://darebay.com/for-business" class="lp-hero-action" target="_self">Launch</a></section>
+<aside class="lp-outline"><a href="#one" class="lp-outline-link" target="_self">One</a></aside>
+<div class="lp-content"><h2 id="one"><a class="header-anchor" href="#one">#</a>One</h2>${body}</div>
+<section id="related"><a class="lp-more-link" href="/brendam/">All</a>${related.map((href) => `<a class="lp-card lp-card--link" href="${href}">x</a>`).join('')}</section>
+</main>
+<section class="lp-cta"><a class="lp-btn lp-btn-primary" href="https://darebay.com/for-business" target="_self">Go</a></section>
+<footer><a href="https://darebay.com/" target="_self">Home</a><nav><a href="/zarabotok/">Earn</a></nav></footer>
+<script>window.__VP_SITE_DATA__=JSON.parse("{\\"message\\":\\"<a href=\\\\\\"https://darebay.com/\\\\\\" rel=\\\\\\"nofollow\\\\\\">x</a>\\"}")</script>
+</body></html>`
+
+describe('which links stay on darebay.com', () => {
+  it('treats every relative reference and every darebay.com host as internal', () => {
+    for (const href of ['/x', 'x', '#a', '?q=1', '', 'https://darebay.com/x', 'http://www.darebay.com', 'https://dev.darebay.com/en/', '//darebay.com/x', 'HTTPS://DAREBAY.COM/X']) {
+      expect(isInternalHref(href), href).toBe(true)
+    }
+  })
+
+  it('treats other hosts, other schemes and a missing href as not internal', () => {
+    for (const href of ['https://darebay.com.evil.example/x', 'https://notdarebay.com/', '//example.com/x', 'mailto:hello@darebay.com', 'tel:+1', 'javascript:void(0)', undefined]) {
+      expect(isInternalHref(href), String(href)).toBe(false)
+    }
+  })
+})
+
+describe('internal nofollow', () => {
+  it('flags the anchors the comparison templates used to render for our own pages', () => {
+    const html = `<ul><li><a href="https://darebay.com/en/help/what-commission" target="_blank" rel="nofollow noopener">darebay.com/en/help/what-commission</a></li>
+<li><a class="lp-src" href="/o-proekte/darebay-v-tsifrakh" rel="NOFOLLOW">1</a></li>
+<li><a href='https://www.darebay.com/en' rel='noopener nofollow'>DareBay</a></li></ul>`
+    expect(internalNofollowAnchors(html).map((anchor) => anchor.href)).toEqual([
+      'https://darebay.com/en/help/what-commission',
+      '/o-proekte/darebay-v-tsifrakh',
+      'https://www.darebay.com/en',
+    ])
+  })
+
+  it('accepts an unfollowed citation of another site and a followed link to our own', () => {
+    const html = `<a href="https://whop.com/terms" target="_blank" rel="nofollow noopener">whop.com</a>
+<a href="/en/about/darebay-at-a-glance">darebay.com/en/about/darebay-at-a-glance</a>
+<a href="https://darebay.com/en" target="_self">DareBay</a>
+<a href="https://t.me/darebay_app" target="_blank" rel="noreferrer">Telegram</a>`
+    expect(internalNofollowAnchors(html)).toEqual([])
+  })
+
+  it('does not read links out of scripts or comments', () => {
+    expect(internalNofollowAnchors(article())).toEqual([])
+    expect(internalNofollowAnchors('<!-- <a href="/x" rel="nofollow">x</a> -->')).toEqual([])
+  })
+})
+
+describe('anchorsOf', () => {
+  it('reads attributes in any quoting and decodes entities', () => {
+    const [anchor] = anchorsOf(`<a class=lp-src href='/x?a=1&amp;b=2' rel="nofollow  noopener">`)
+    expect(anchor).toMatchObject({ href: '/x?a=1&b=2', rel: ['nofollow', 'noopener'], classes: ['lp-src'] })
+  })
+})

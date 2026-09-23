@@ -427,6 +427,25 @@ export const appPathFor = (language: Locale, section: AppSection | ''): string =
 }
 
 /**
+ * The inverse of `appPathFor`: the section an origin-less path names in ANY application tree the
+ * docs send readers to — `''` for a tree's home (`/`, `/ua`, `/en`), `'tasks'` for `/ua/tasks` —
+ * or null when the path is not such an address. It is how a link written as a full address in one
+ * tree (`https://darebay.com/en` in the comparison data) is re-aimed at the reader's own tree
+ * (`sourceAnchor` in links.ts). Query and fragment are ignored; one trailing slash is tolerated.
+ */
+export const appSectionOf = (path: string): AppSection | '' | null => {
+    const clean = path.replace(/[?#].*$/, '').replace(/\/$/, '')
+    const prefixes = [...new Set(KNOWN_LOCALES.map((language) => LOCALE_SHAPES[appLocaleOf(language)].prefix))]
+    for (const prefix of prefixes) {
+        if (clean === prefix) return ''
+        if (!clean.startsWith(`${prefix}/`)) continue
+        const section = clean.slice(prefix.length + 1)
+        if ((APP_SECTIONS as readonly string[]).includes(section)) return section as AppSection
+    }
+    return null
+}
+
+/**
  * Files the content build writes to the ROOT of its output, which therefore
  * need their own route on the host: with routing by hub prefix, anything not
  * under a hub falls through to the application and 404s.

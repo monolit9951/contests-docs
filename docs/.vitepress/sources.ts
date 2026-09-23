@@ -1,4 +1,5 @@
 import { LANDING_COPY } from './theme/landing/copy.ts'
+import { sitePathOf, sourceAnchor } from './links'
 import { localeOfSourcePath, type Locale } from './registry'
 
 /**
@@ -215,12 +216,21 @@ export const sourceRefHtml = (number: number): string =>
  * outbound links. No `target` because VitePress routes every same-origin `<a>` without one
  * client-side and these are all cross-origin, so the attribute would only take the reader's tab
  * away from the article they were checking.
+ *
+ * A citation of one of OUR pages is not an outbound link and must not be marked as one: it goes
+ * through `sourceAnchor` (links.ts) like every source the comparison templates render — relative,
+ * in the page's language, followed. No page cites itself today; this keeps the first one that does
+ * from shipping a nofollow that `check:dist` would then reject.
  */
-export function sourceItemHtml(ref: SourceRef): string {
+export function sourceItemHtml(ref: SourceRef, locale: Locale): string {
   const host = escapeText(ref.host)
+  const own = sitePathOf(ref.url) === null ? null : sourceAnchor(ref.url, locale)
+  const target = own?.target ? ` target="${escapeAttribute(own.target)}"` : ''
   const name = ref.competitor
     ? host
-    : `<a href="${escapeAttribute(ref.url)}" rel="nofollow noopener">${host}</a>`
+    : own
+      ? `<a href="${escapeAttribute(own.href)}"${target}>${host}</a>`
+      : `<a href="${escapeAttribute(ref.url)}" rel="nofollow noopener">${host}</a>`
   return `<li id="src-${ref.number}">${name} — ${escapeText(ref.date)}</li>`
 }
 
@@ -234,7 +244,7 @@ export function sourceItemHtml(ref: SourceRef): string {
  * machinery, and the numbering here has to line up with `src-N` ids, not with a slug.
  */
 export function sourcesSectionHtml(refs: readonly SourceRef[], locale: Locale): string {
-  const items = refs.map((ref) => sourceItemHtml(ref)).join('\n')
+  const items = refs.map((ref) => sourceItemHtml(ref, locale)).join('\n')
   return [
     `<section class="db-sources" id="db-sources">`,
     `<h2>${escapeText(sourcesHeading(locale))}</h2>`,

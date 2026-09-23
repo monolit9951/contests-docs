@@ -3,6 +3,7 @@
 // reader (or a model) can compare without re-reading prose.
 import { useData } from 'vitepress'
 import { computed } from 'vue'
+import { sourceAnchor } from '../../links'
 import { appLocaleOf } from '../../registry'
 import { LANDING_COPY, localeOf } from './copy'
 import { bidiAttrs, pick, sourcesOf, text, textLang } from './platforms'
@@ -36,7 +37,7 @@ const hostSources = (p: Parameters<typeof sourcesOf>[0]) => {
             <span class="lp-rank">{{ String(i + 1).padStart(2, '0') }}</span>
             <h3>
               <a v-if="p.id === highlight" :href="p.home?.[appLoc] ?? p.url" target="_self">{{ p.name }}</a>
-              <a v-else :href="p.url" target="_blank" rel="nofollow noopener">{{ p.name }}</a>
+              <a v-else v-bind="sourceAnchor(p.url, loc)">{{ p.name }}</a>
             </h3>
           </div>
           <span v-if="p.bestFor?.[loc]" class="lp-chip" :class="{ 'lp-chip-accent': p.id === highlight }">{{ copy.bestFor }}: {{ p.bestFor[loc] }}</span>
@@ -60,7 +61,7 @@ const hostSources = (p: Parameters<typeof sourcesOf>[0]) => {
           <div><div class="lp-kicker" style="margin-bottom:6px;color:var(--lp-bad)">{{ copy.cons }}</div><ul class="lp-cons"><li v-for="(x, k) in p.cons?.[loc] ?? []" :key="k">{{ x }}</li></ul></div>
         </div>
         <div class="lp-card-foot">
-          <span class="lp-srcs">{{ copy.sources }}: <template v-for="(s, k) in hostSources(p)" :key="s.url"><a :href="s.url" target="_blank" rel="nofollow noopener" :title="s.date">{{ s.host }}</a><span v-if="k < hostSources(p).length - 1">, </span></template> · {{ copy.updated }} {{ hostSources(p)[0]?.date }}</span>
+          <span class="lp-srcs">{{ copy.sources }}: <template v-for="(s, k) in hostSources(p)" :key="s.url"><a v-bind="sourceAnchor(s.url, loc)" :title="s.date">{{ s.host }}</a><span v-if="k < hostSources(p).length - 1">, </span></template> · {{ copy.updated }} {{ hostSources(p)[0]?.date }}</span>
           <a v-if="p.id === highlight" class="lp-btn lp-btn-primary lp-btn-sm" :href="p.home?.[appLoc] ?? p.url" target="_self">{{ copy.ctaPrimary }}</a>
         </div>
       </article>

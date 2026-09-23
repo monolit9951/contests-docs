@@ -4,6 +4,7 @@
 // server-rendered order is the page's editorial order.
 import { useData } from 'vitepress'
 import { computed, ref } from 'vue'
+import { sourceAnchor } from '../../links'
 import { appLocaleOf } from '../../registry'
 import { LANDING_COPY, localeOf } from './copy'
 import { DEFAULT_COLUMNS, bidiAttrs, pick, sourceIndex, text, textLang, type Platform } from './platforms'
@@ -68,7 +69,7 @@ const stateClass = (s?: string) => (s === 'yes' ? 'lp-chip lp-chip-good' : s ===
             <tr v-for="p in sorted" :key="p.id" :class="{ 'is-us': p.id === highlight }">
               <td class="lp-cell-name">
                 <a v-if="p.id === highlight" :href="p.home?.[appLoc] ?? p.url" target="_self">{{ p.name }}</a>
-                <a v-else :href="p.url" target="_blank" rel="nofollow noopener">{{ p.name }}</a>
+                <a v-else v-bind="sourceAnchor(p.url, loc)">{{ p.name }}</a>
                 <small v-if="p.bestFor?.[loc]">{{ p.bestFor[loc] }}</small>
               </td>
               <td v-for="c in columns" :key="c">
@@ -78,7 +79,7 @@ const stateClass = (s?: string) => (s === 'yes' ? 'lp-chip lp-chip-good' : s ===
                 <template v-else-if="text(p, c, loc)">
                   <span v-if="p.fields[c]?.state" :class="stateClass(p.fields[c].state)" style="margin-inline-end:6px">{{ copy.cis[p.fields[c].state!] }}</span>
                   <span v-bind="bidiAttrs(textLang(p, c, loc), loc)" :class="{ 'lp-money': c === 'rate' || c === 'cap' || c === 'minPayout' }">{{ text(p, c, loc) }}</span>
-                  <a v-if="p.fields[c]?.source?.url" class="lp-src" :href="p.fields[c].source!.url" target="_blank" rel="nofollow noopener" :title="p.fields[c].source!.date">{{ sourceIndex(p, p.fields[c].source!.url, columns) }}</a>
+                  <a v-if="p.fields[c]?.source?.url" class="lp-src" v-bind="sourceAnchor(p.fields[c].source!.url, loc)" :title="p.fields[c].source!.date">{{ sourceIndex(p, p.fields[c].source!.url, columns) }}</a>
                 </template>
                 <span v-else class="lp-na">{{ copy.notPublished }}</span>
               </td>

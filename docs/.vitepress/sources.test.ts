@@ -80,6 +80,25 @@ describe('source comments with the flag', () => {
     expect(html).not.toContain('href="https://clipping.net/clip"')
   })
 
+  it('links a citation of our own page as an internal link in the page language, never nofollow', () => {
+    // A self-citation is not an outbound link. It is re-aimed at the reader's version of the page
+    // and carries neither `nofollow` nor `target` — `check:dist` fails the build on an internal
+    // nofollow, so the first page to cite darebay.com must not ship one.
+    const OWN = '<!-- source: https://darebay.com/en/help/what-commission 2026-09-04 -->'
+
+    const ru = render(`Комиссия ${OWN}.`, { path: 'pomoshch/example.md' })
+    expect(ru).toContain('<li id="src-1"><a href="/pomoshch/kakaya-komissiya">darebay.com</a> — 2026-09-04</li>')
+    expect(ru).not.toContain('nofollow')
+
+    const en = render(`Fee ${OWN}.`, { path: 'en/help/example.md' })
+    expect(en).toContain('<li id="src-1"><a href="/en/help/what-commission">darebay.com</a> — 2026-09-04</li>')
+
+    // An application address has no docs page behind it: relative, in the reader's application
+    // tree, and `_self` so the docs router does not swallow it.
+    const app = render(`Tasks <!-- source: https://darebay.com/en/tasks 2026-09-04 -->.`, { path: 'ua/dopomoha/a.md' })
+    expect(app).toContain('<li id="src-1"><a href="/ua/tasks" target="_self">darebay.com</a> — 2026-09-04</li>')
+  })
+
   it('gives a duplicated URL one number and one list entry', () => {
     // The same URL twice, the second time with a later re-check date: one number, the first date.
     const later = '<!-- source: https://clipping.net/clip 2026-09-11 -->'

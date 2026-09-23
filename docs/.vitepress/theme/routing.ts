@@ -5,3 +5,26 @@ import { CONTENT_SEGMENTS } from '../registry'
 /** A path this container serves: a content hub, in any declared locale (see registry.ts). */
 export const isContentPathname = (pathname: string, segments: readonly string[] = CONTENT_SEGMENTS): boolean =>
     segments.some((segment) => pathname === `/${segment}` || pathname.startsWith(`/${segment}/`))
+
+/**
+ * Whether a client route change to `to` must leave for the application (a real page load)
+ * instead of being routed by VitePress. Anything outside the content hubs is the application.
+ *
+ * Never on the first route change of a document: that one is the document's own load
+ * (VitePress's client entry calls `router.go()` with the current address), and "leaving" for
+ * the address the browser has just loaded reloads the page, which does the same again — a
+ * reload loop. It happens only where this container answers an address outside its hubs,
+ * `vitepress preview` serving 404.html for any unknown path (the host never routes such an
+ * address here in production), and there VitePress's 404 view is the right answer.
+ */
+export const leavesForApplication = (
+    to: string,
+    base: string,
+    firstRoute: boolean,
+    segments?: readonly string[],
+): boolean => {
+    if (firstRoute) return false
+    let pathname: string
+    try { pathname = new URL(to, base).pathname } catch { return false }
+    return !isContentPathname(pathname, segments)
+}

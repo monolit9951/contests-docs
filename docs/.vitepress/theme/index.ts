@@ -13,7 +13,7 @@ import {
   servedPageMetadata,
   shouldKeepServedPage,
 } from './failStatic'
-import { isContentPathname } from './routing'
+import { leavesForApplication } from './routing'
 import HubIndex from './HubIndex.vue'
 import LandingLayout from './landing/LandingLayout.vue'
 import LCompare from './landing/LCompare.vue'
@@ -221,16 +221,14 @@ export default {
     // click used to render THIS site's 404 with the product's URL in the
     // address bar (seen by the founder on 2026-09-03 after clicking a landing
     // CTA to `/en`). Anything outside the hub prefixes the content container
-    // owns is the application: leave the SPA and load it for real.
-    const isContentPath = (to: string) => {
-      let pathname: string
-      try { pathname = new URL(to, window.location.origin).pathname } catch { return true }
-      return isContentPathname(pathname)
-    }
-
+    // owns is the application: leave the SPA and load it for real — except on
+    // the document's own first route, which would reload forever (routing.ts).
+    let firstRoute = true
     const originalBefore = router.onBeforeRouteChange
     router.onBeforeRouteChange = (to) => {
-      if (!isContentPath(to)) {
+      const leave = leavesForApplication(to, window.location.origin, firstRoute)
+      firstRoute = false
+      if (leave) {
         window.location.assign(to)
         return false
       }

@@ -16,7 +16,9 @@ const ids = computed(() => cfg.value.ids ?? [])
 // Same columns the table above renders, so a per-country source is listed exactly on the pages
 // that print the country column and nowhere else.
 const columns = computed(() => cfg.value.columns ?? DEFAULT_COLUMNS)
-const sources = computed(() => pick(ids.value).flatMap((p) => sourcesOf(p, columns.value).map((s) => ({ name: p.name, ...s }))))
+// In the reader's language: two citations that open one address here are listed once, and the
+// table's superscripts (`sourceIndex` with the same locale) count the same list.
+const sources = computed(() => pick(ids.value).flatMap((p) => sourcesOf(p, columns.value, loc.value).map((s) => ({ name: p.name, ...s }))))
 </script>
 
 <template>

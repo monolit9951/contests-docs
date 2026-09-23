@@ -2,6 +2,7 @@
 // every locale, so a number is refreshed in one place and cannot disagree
 // between pages. Each field carries its own source URL and date.
 import raw from '../../data/platforms.json'
+import { sourceAnchor } from '../../links'
 import { textDirectionOf, type Locale } from '../../registry'
 
 export type Localized = Record<Locale, string>
@@ -67,21 +68,38 @@ export const textLang = (p: Platform, field: string, lang: Locale): Locale =>
  */
 export const bidiAttrs = (valueLang: Locale, pageLang: Locale): { lang?: Locale; dir?: 'ltr' | 'rtl' } =>
   textDirectionOf(valueLang) === textDirectionOf(pageLang) ? {} : { lang: valueLang, dir: textDirectionOf(valueLang) }
+/** What a source opens on a page in `locale`, or its url as written when no page is named. */
+const addressOf = (url: string, locale?: Locale): string => (locale === undefined ? url : sourceAnchor(url, locale).href)
 /**
- * One entry per source url of a platform, in the order its fields declare them.
+ * One entry per source of a platform, in the order its fields declare them.
  *
  * `shown` is the fields the calling page renders; it only ever admits regional columns, never
  * removes anything else, so a page that shows none of them gets the list it got before regional
  * columns existed.
+ *
+ * `locale` is the language of the page that prints the list. Two sources are one entry when they
+ * open the same address there: our own pages are cited in whichever language a number was read
+ * in, and `sourceAnchor` sends the reader to their own version, so on an English page the Russian
+ * "DareBay in numbers" and its English original both open /en/about/darebay-at-a-glance — listed
+ * separately, one address was printed twice. The entry kept is the first field's, exactly as when
+ * two fields cite one url. Without `locale` the key is the url as written.
  */
-export const sourcesOf = (p: Platform, shown: readonly string[] = []): Source[] => {
+export const sourcesOf = (p: Platform, shown: readonly string[] = [], locale?: Locale): Source[] => {
   const seen = new Map<string, Source>()
   for (const [key, f] of Object.entries(p.fields)) {
     if (REGION_FIELDS.includes(key) && !shown.includes(key)) continue
-    if (f.source?.url && !seen.has(f.source.url)) seen.set(f.source.url, f.source)
+    if (!f.source?.url) continue
+    const address = addressOf(f.source.url, locale)
+    if (!seen.has(address)) seen.set(address, f.source)
   }
   return [...seen.values()]
 }
-/** stable index of a source url inside a platform, for superscript references */
-export const sourceIndex = (p: Platform, url: string, shown: readonly string[] = []): number =>
-  sourcesOf(p, shown).findIndex((s) => s.url === url) + 1
+/**
+ * Stable index of a source inside a platform, for superscript references: the number of the entry
+ * of `sourcesOf(p, shown, locale)` that opens the same address, so a table cell and the list it
+ * points at always agree.
+ */
+export const sourceIndex = (p: Platform, url: string, shown: readonly string[] = [], locale?: Locale): number => {
+  const address = addressOf(url, locale)
+  return sourcesOf(p, shown, locale).findIndex((s) => addressOf(s.url, locale) === address) + 1
+}

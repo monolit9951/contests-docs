@@ -79,7 +79,7 @@ const stateClass = (s?: string) => (s === 'yes' ? 'lp-chip lp-chip-good' : s ===
                 <template v-else-if="text(p, c, loc)">
                   <span v-if="p.fields[c]?.state" :class="stateClass(p.fields[c].state)" style="margin-inline-end:6px">{{ copy.cis[p.fields[c].state!] }}</span>
                   <span v-bind="bidiAttrs(textLang(p, c, loc), loc)" :class="{ 'lp-money': c === 'rate' || c === 'cap' || c === 'minPayout' }">{{ text(p, c, loc) }}</span>
-                  <a v-if="p.fields[c]?.source?.url" class="lp-src" v-bind="sourceAnchor(p.fields[c].source!.url, loc)" :title="p.fields[c].source!.date">{{ sourceIndex(p, p.fields[c].source!.url, columns) }}</a>
+                  <a v-if="p.fields[c]?.source?.url" class="lp-src" v-bind="sourceAnchor(p.fields[c].source!.url, loc)" :title="p.fields[c].source!.date">{{ sourceIndex(p, p.fields[c].source!.url, columns, loc) }}</a>
                 </template>
                 <span v-else class="lp-na">{{ copy.notPublished }}</span>
               </td>

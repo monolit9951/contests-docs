@@ -98,6 +98,11 @@ const DocsLayout = defineComponent({
     let servedVNode: VNode | null = null
     let servedMetadata: Element[] = []
     let keptPath: string | null = null
+    // Set when this document reloads the kept address (below). The route watcher further down
+    // fires for the same popstate, and its page view would be one nobody gets: a phantom view
+    // carrying the exact docs_not_found + client_error pair of a kept first load. The reloaded
+    // document reports the view; the one on screen now is flushed by pagehide, as it is.
+    let reloading = false
     if (firstRender) {
       firstRender = false
       if (shouldKeepServedPage(served, { isNotFound: page.value.isNotFound, path: router.route.path })) {
@@ -126,6 +131,9 @@ const DocsLayout = defineComponent({
             servedVNode = createStaticVNode(served.html, served.nodeCount)
             keepServed.value = true
             void nextTick(() => restoreServedHead(document, served))
+            // Before onPageReady can run: it waits for nextTick, and this watcher runs in the same
+            // flush as the path change that schedules it.
+            reloading = true
             window.location.reload()
             return
           }
@@ -142,6 +150,7 @@ const DocsLayout = defineComponent({
     }
 
     const onPageReady = () => {
+      if (reloading) return
       startDocsPage()
       trackDocsEvent(DocsEvent.PageView)
       // A url that 404s is either a link the content fleet shipped broken or an

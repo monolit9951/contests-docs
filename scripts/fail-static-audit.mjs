@@ -298,6 +298,19 @@ try {
     await sleep(700)
     const back = await snapshot()
     expectServed(back, kept, ARTICLE)
+    // Two views of the kept address: the kept load and the reload. The old document, already on
+    // its way out, must not report one of its own: it would carry the exact docs_not_found and
+    // client_error pair of a kept first load, the series the post-deploy query counts.
+    const { events } = await recorded()
+    const keptView = firstView(events)
+    const views = new Set(events
+      .filter((event) => event.eventId === 'docs_page_view' && event.page === keptView.page)
+      .map((event) => event.pageViewId))
+    expectThat(views.size === 2, `${ARTICLE}: ${views.size} page views, expected the kept load and the reload: ${show([...views])}`)
+    const signals = events.filter((event) => event.eventId === 'docs_not_found'
+      || (event.eventId === 'client_error' && event.meta?.message === KEPT_STATIC))
+    expectThat(signals.every((event) => event.pageViewId === keptView.pageViewId),
+      `a not-found or kept signal outside the kept load: ${show(signals)}`)
   })
 
   for (const path of ['/definitely-missing-page', '/zarabotok/definitely-missing-page']) {

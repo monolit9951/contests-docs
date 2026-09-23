@@ -6,9 +6,11 @@ import {
     CONTENT_ROOT_FILES,
     HUBS,
     KNOWN_LOCALES,
+    LEGACY_ROUTE_PREFIXES,
     LOCALES,
     PAGES,
     ROOT_LOCALE,
+    ROOT_LOCALE_LEGACY_ALIAS,
     alternateLocalesOf,
     appLocaleOf,
     appPathFor,
@@ -289,10 +291,20 @@ describe('hub index duplicates', () => {
             PAGES.flatMap((entry) => LOCALES.map((axis) => pagePath(entry, axis.language)).filter(Boolean)),
         )
         const emitted = [...conf.matchAll(/location = (\S+)index \{ return 301 (\S+)\$is_args/g)]
-        expect(emitted.length).toBe(hubs.length)
-        for (const [, source, target] of emitted) {
+        const ofLiveHubs = emitted.filter(([, source]) => hubs.includes(source))
+        expect(ofLiveHubs.length).toBe(hubs.length)
+        for (const [, source, target] of ofLiveHubs) {
             expect(source).toBe(target)
             expect(live.has(target), `${target} is not a live address`).toBe(true)
+        }
+        // Every other `<dir>index` in the file is the file name of a RETIRED directory (a legacy
+        // spelling derived in registry.ts, e.g. `/docs/ru/faq/index`, a GSC 404): it lands exactly
+        // where its directory lands (a live page, or the application route an orphan names), and
+        // never on a live hub's file name.
+        const map = redirectMap()
+        for (const [, source, target] of emitted.filter(([, source]) => !hubs.includes(source))) {
+            expect(map[source], `${source}index`).toBe(target)
+            expect(live.has(target) || APP_ROUTES.includes(target), `${source}index -> ${target} is not live`).toBe(true)
         }
     })
 })
@@ -314,6 +326,159 @@ describe('retired docs sitemap', () => {
         expect(conf).not.toContain('location = /docs/sitemap.xml.html')
         // Page addresses keep theirs.
         expect(conf).toContain('location = /docs/faq/fees.html {')
+    })
+
+    it('gets no base-less twin either: /sitemap.xml belongs to the application', () => {
+        expect(redirectMap()['/sitemap.xml']).toBeUndefined()
+        expect(conf).not.toContain('location = /sitemap.xml ')
+    })
+})
+
+// ---------------------------------------------------------------------------
+// Legacy spellings of content addresses.
+//
+// WHY THIS EXISTS. GSC (2026-09-23) reported `/faq/fees` and
+// `/ru/faq/illegal-content` as soft 404s and a dozen more `/faq/*`,
+// `/getting-started/*`, `/ru/<hub>/*` and `/docs/ru/faq/index` addresses as 404s
+// or two-hop chains. Every one of them is another SPELLING of an address the
+// registry already knew: the base-less twin of a `/docs/...` source (VitePress
+// inlined nav and sidebar links without the base while base was '/docs/'), the
+// root tree under its legacy `/ru` alias, or a directory's file name. The
+// registry derives those spellings and the host prefixes that route them here;
+// these tests hold the addresses that were actually reported, the rules that
+// produce them, and the refusals that keep a derived rule from ever shadowing a
+// live page.
+// ---------------------------------------------------------------------------
+
+describe('legacy spellings of content addresses', () => {
+    const map = redirectMap()
+    const live = new Set(PAGES.flatMap((entry) => localesOf(entry).map((language) => pagePath(entry, language)!)))
+
+    it('lands every reported spelling on its page in one hop', () => {
+        const cases: Array<[string, string]> = [
+            ['/faq/fees', '/pomoshch/kakaya-komissiya'],
+            ['/faq/', '/pomoshch/'],
+            ['/getting-started/submit-a-work', '/pomoshch/kak-otpravit-rabotu'],
+            ['/ru/faq/illegal-content', '/pomoshch/zapreshchennyy-kontent'],
+            ['/ru/kak-rabotaet/', '/earn'],
+            ['/ru/blog/', '/zarabotok/'],
+            ['/ru/o-proekte', '/o-proekte/'],
+            ['/ru/zarabotok', '/zarabotok/'],
+            ['/ru/zarabotok/porog-prosmotrov-dlya-vyplaty', '/zarabotok/kak-rabotaet-oplata-za-prosmotry'],
+            ['/ru/zarabotok/rabota-narezchikom', '/zarabotok/rabota-narezchikom'],
+            ['/docs/ru/faq/index', '/pomoshch/'],
+        ]
+        for (const [from, to] of cases) expect(map[from], from).toBe(to)
+        for (const [from, to] of cases) expect(map[to], `${from} -> ${to} chains onward`).toBeUndefined()
+    })
+
+    it('never claims a live page, the application home or a root file', () => {
+        for (const path of ['/', '/ru', '/ru/', '/legal/', '/legal/terms', '/legal/privacy', '/sitemap.xml']) {
+            expect(map[path], path).toBeUndefined()
+        }
+        // A root-level leaf of the old tree keeps its /docs spelling only: its bare twin would take
+        // a whole root address from the application for a spelling nobody holds.
+        expect(map['/docs/skolko-platyat-novichku']).toBeDefined()
+        expect(map['/skolko-platyat-novichku']).toBeUndefined()
+        for (const from of Object.keys(map)) expect(live.has(from), `${from} is a live page`).toBe(false)
+    })
+
+    it('gives every retired /docs directory address its base-less twin, onto the same target', () => {
+        for (const [from, to] of Object.entries(map)) {
+            // `<dir>index` names are themselves derived (rule c); their twins come from the twin
+            // directory (`/faq/index` from `/faq/`), not from a second pass over the file names.
+            if (!from.startsWith('/docs/') || from.endsWith('/index')) continue
+            const twin = from.slice('/docs'.length)
+            if (!twin.slice(1).includes('/') || /\.[A-Za-z0-9]+$/.test(twin)) continue
+            if (twin === `${ROOT_LOCALE_LEGACY_ALIAS}/`) continue
+            // `/legal/*` is served identically in both trees: the twin IS the page.
+            if (twin === to) expect(live.has(twin), twin).toBe(true)
+            else expect(map[twin], twin).toBe(to)
+        }
+    })
+
+    it('answers every root-tree page and root-tree retired address under the /ru alias', () => {
+        for (const entry of PAGES) {
+            const path = pagePath(entry, ROOT_LOCALE.language)
+            if (path === null) continue
+            expect(map[`${ROOT_LOCALE_LEGACY_ALIAS}${path}`], path).toBe(path)
+            if (path.endsWith('/')) expect(map[`${ROOT_LOCALE_LEGACY_ALIAS}${path.slice(0, -1)}`], path).toBe(path)
+        }
+        for (const [from, to] of Object.entries(map)) {
+            if (!from.startsWith('/zarabotok/')) continue
+            expect(map[`${ROOT_LOCALE_LEGACY_ALIAS}${from}`], from).toBe(to)
+        }
+    })
+
+    it('routes exactly the prefixes its sources need, and no application segment', () => {
+        // Each prefix is taken away from the application by the host snippet. A new one appearing
+        // here is a routing decision, so the list is spelled out rather than derived again.
+        expect(LEGACY_ROUTE_PREFIXES).toEqual([
+            '/faq',
+            '/getting-started',
+            '/platformy',
+            '/ru/blog',
+            '/ru/brendam',
+            '/ru/faq',
+            '/ru/getting-started',
+            '/ru/kak-rabotaet',
+            '/ru/legal',
+            '/ru/o-proekte',
+            '/ru/platformy',
+            '/ru/pomoshch',
+            '/ru/zarabotok',
+        ])
+        const sources = Object.keys(map)
+        for (const prefix of LEGACY_ROUTE_PREFIXES) {
+            expect(
+                sources.some((from) => from === prefix || from.startsWith(`${prefix}/`)),
+                `${prefix} owns no source`,
+            ).toBe(true)
+        }
+        // `/kak-rabotaet/` never existed on this site and stays the application's 404
+        // (coordinator decision 2026-09-23 #6): no source, so no prefix.
+        expect(sources.some((from) => from.startsWith('/kak-rabotaet'))).toBe(false)
+    })
+
+    it('ships one exact rule per spelling, the slash form of a leaf included', () => {
+        const conf = readFileSync(new URL('../../redirects.conf', import.meta.url), 'utf8')
+        const args = [...conf.matchAll(/^location = (\S+) \{/gm)].map((match) => match[1])
+        // A duplicate exact location is a hard nginx error: the container would not boot.
+        expect(args.length).toBe(new Set(args).size)
+        for (const from of Object.keys(map)) expect(args, from).toContain(from)
+        // Once `/ru/zarabotok/` is routed here, its leaves' slash spelling must still land in one
+        // hop: the container's @slash_ru handler would look for a file that does not exist.
+        expect(conf).toContain(
+            'location = /ru/zarabotok/rabota-narezchikom/ { return 301 /zarabotok/rabota-narezchikom$is_args$args; }',
+        )
+        expect(conf).toContain('location = /faq/fees/ { return 301 /pomoshch/kakaya-komissiya$is_args$args; }')
+        expect(conf).toContain('location = /ru/o-proekte { return 301 /o-proekte/$is_args$args; }')
+        expect(conf).toContain('location = /ru/o-proekte/ { return 301 /o-proekte/$is_args$args; }')
+        // A file name with a slash was never an address.
+        expect(conf).not.toContain('location = /docs/ru/faq/index/ ')
+        for (const target of live) expect(args, `${target} is live`).not.toContain(target)
+    })
+
+    // The refusals, on in-memory manifests: the live one by definition contains no collision.
+    const withRetired = (extra: string) => {
+        const helpHub = PAGES.find((page) => page.hub === 'help' && page.slugs.ru === '')!
+        return manifestWith(
+            PAGES.map((page) => (page.id === helpHub.id ? { ...page, retired: [...(page.retired ?? []), extra] } : page)),
+        )
+    }
+
+    it('refuses a derived spelling that would shadow a live page', () => {
+        // `/docs/zarabotok/rabota-narezchikom` retired onto the help hub would derive the twin
+        // `/zarabotok/rabota-narezchikom`, which is a live page of its own.
+        expect(() => createRegistry(withRetired('/docs/zarabotok/rabota-narezchikom'))).toThrow(
+            /would shadow the live page/,
+        )
+    })
+
+    it('refuses a derived spelling that already redirects somewhere else', () => {
+        expect(() => createRegistry(withRetired('/docs/zarabotok/porog-prosmotrov-dlya-vyplaty'))).toThrow(
+            /already redirects to \/zarabotok\/kak-rabotaet-oplata-za-prosmotry/,
+        )
     })
 })
 

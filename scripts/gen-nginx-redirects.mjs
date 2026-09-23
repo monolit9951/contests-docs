@@ -10,6 +10,18 @@
 // registry means every source resolves to its FINAL target by construction, and
 // `check-registry.mjs` proves no target is itself a source.
 //
+// The map holds more than the recorded `retired` lists: `redirectMap()` also
+// derives the legacy SPELLINGS of those addresses (the /docs-stripped twins such
+// as `/faq/fees`, the `/ru/...` alias of every root-tree address, `<dir>index`
+// file names). The host routes their prefixes here (`LEGACY_ROUTE_PREFIXES`), so
+// each of them is answered by this file in one hop.
+//
+// Every emitted `location =` argument is unique: two spellings may produce the
+// same address (the bare form of `/ru/zarabotok/` and the source `/ru/zarabotok`),
+// which is written once, and the generator throws if the two would disagree on
+// the target or if an emitted address is a live page. A duplicate exact location
+// is also a hard nginx error, so this keeps the container bootable.
+//
 //   node --experimental-strip-types scripts/gen-nginx-redirects.mjs
 
 import { writeFileSync } from 'node:fs'
@@ -21,12 +33,26 @@ const { redirectMap, PAGES, localesOf, pagePath } = await import(join(HERE, '..'
 
 const map = redirectMap()
 const lines = []
+const live = new Set(PAGES.flatMap((entry) => localesOf(entry).map((language) => pagePath(entry, language))))
+const emitted = new Map()
+const emit = (from, to) => {
+    const known = emitted.get(from)
+    if (known !== undefined) {
+        if (known !== to) throw new Error(`gen-nginx-redirects: ${from} would redirect to both ${known} and ${to}`)
+        return
+    }
+    if (live.has(from)) throw new Error(`gen-nginx-redirects: ${from} is a live page, not a redirect source`)
+    emitted.set(from, to)
+    lines.push(`location = ${from} { return 301 ${to}$is_args$args; }`)
+}
 
 lines.push('# ⚙️ GENERATED — do not edit.')
 lines.push('#   node --experimental-strip-types scripts/gen-nginx-redirects.mjs')
 lines.push('#')
 lines.push('# Every address the content site used to answer on, mapped onto the address it')
 lines.push('# answers on now, plus the hub file names that were never addresses at all.')
+lines.push('# Includes the legacy spellings the registry derives: /docs-stripped twins')
+lines.push('# (/faq/fees), the /ru alias of the root tree (/ru/o-proekte) and <dir>index names.')
 lines.push('# Source of truth: docs/.vitepress/registry.ts.')
 lines.push('#')
 lines.push('# These rules are PERMANENT. A 301 costs one line and holds an old address for')
@@ -43,17 +69,26 @@ lines.push('')
 const FILE_ADDRESS = /\.[A-Za-z0-9]+$/
 for (const from of Object.keys(map).sort((a, b) => b.length - a.length)) {
     const to = map[from]
-    lines.push(`location = ${from} { return 301 ${to}$is_args$args; }`)
+    emit(from, to)
     // VitePress with cleanUrls answered on both `/foo` and `/foo.html`, and the
     // old EN tree was linked with the extension in places, so both forms are
     // live addresses that must land somewhere.
     if (!from.endsWith('/')) {
-        if (!FILE_ADDRESS.test(from)) lines.push(`location = ${from}.html { return 301 ${to}$is_args$args; }`)
+        if (!FILE_ADDRESS.test(from)) {
+            emit(`${from}.html`, to)
+            // The trailing-slash spelling of a leaf. Without it the container's
+            // @slash_* handler looks for `<leaf>.html` on disk, finds none for a
+            // retired address and answers 404; and once the host routes
+            // `/ru/<hub>/` here, `/ru/<hub>/<leaf>/` (two hops onto a 200 through
+            // the application's /ru strip until now) would turn into exactly that
+            // 404. A `<dir>index` file name keeps no slash form, like the hubs'
+            // own `<hub>/index/` below.
+            if (!from.endsWith('/index')) emit(`${from}/`, to)
+        }
     }
-    // A trailing-slash variant of a leaf address was reachable too (nginx's
-    // try_files `$uri/` would have found the directory), so it redirects rather
-    // than 404s.
-    else if (from !== '/docs/') lines.push(`location = ${from.slice(0, -1)} { return 301 ${to}$is_args$args; }`)
+    // The bare form of a directory address was reachable too (nginx's try_files
+    // `$uri/` would have found the directory), so it redirects rather than 404s.
+    else if (from !== '/docs/') emit(from.slice(0, -1), to)
 }
 
 // `/<hub>/index` is a file name, not an address. VitePress writes each hub to
@@ -77,7 +112,7 @@ for (const hub of PAGES.flatMap((entry) =>
         .filter((language) => entry.slugs[language] === '')
         .map((language) => pagePath(entry, language))
 ).sort()) {
-    lines.push(`location = ${hub}index { return 301 ${hub}$is_args$args; }`)
+    emit(`${hub}index`, hub)
 }
 
 // Unknown addresses under the retired prefix intentionally fall through to a
@@ -87,7 +122,7 @@ for (const hub of PAGES.flatMap((entry) =>
 lines.push('')
 // Bare `/docs` used to 301 onto `/docs/`, which served the manifesto — so it
 // lands where `/docs/` lands, in ONE hop rather than two.
-lines.push(`location = /docs { return 301 ${map['/docs/'] ?? '/o-proekte/'}$is_args$args; }`)
+emit('/docs', map['/docs/'] ?? '/o-proekte/')
 lines.push('')
 
 const target = join(HERE, '..', 'redirects.conf')

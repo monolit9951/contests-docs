@@ -21,6 +21,8 @@ import contentManifest from '../content-pages.json' with { type: 'json' }
 //   * the content sitemap and canonical HTML hreflang
 //   * the nginx `location` list (which prefixes the content container serves)
 //   * the 301 map from every retired address        (redirectMap)
+//   * the legacy spellings of those addresses and the host prefixes that
+//     route them to this container                  (LEGACY_ROUTE_PREFIXES)
 //
 // TWO RULES THAT ARE NOT NEGOTIABLE.
 //
@@ -305,6 +307,30 @@ export const ORPHAN_REDIRECTS: Readonly<Record<string, string>> = {
     // days of the 2026-09-18 nginx baseline and got a 404 every time.
     '/docs/sitemap.xml': '/sitemap-content.xml',
 }
+
+/**
+ * The root tree's legacy alias: `/ru/<path>` is `/<path>` spelled with the
+ * language segment the site carried before Russian moved to the root.
+ *
+ * The application strips it blindly (contests-frontend nginx.conf, the `^/ru/`
+ * regex next to `location = /ru/`) and 301s onto the bare path. For a content
+ * address that bare path is a second hop at best (`/ru/o-proekte` -> `/o-proekte`
+ * -> `/o-proekte/`) and a 404 at worst (`/ru/faq/illegal-content` ->
+ * `/faq/illegal-content`). So every content address under the alias is
+ * answered by THIS container, in one hop (`redirectMap`), and the host routes
+ * those prefixes here (`LEGACY_ROUTE_PREFIXES`). `/ru` and `/ru/` themselves
+ * stay the application's: they land on its home page.
+ */
+export const ROOT_LOCALE_LEGACY_ALIAS = '/ru'
+
+/** The tree the whole site lived under until the 2026-08 migration. */
+const RETIRED_DOCS_BASE = '/docs'
+
+/**
+ * An address with a file extension (`/docs/sitemap.xml`) was only ever served
+ * under its own name, unlike a page, so no other spelling of it is derived.
+ */
+const FILE_ADDRESS = /\.[A-Za-z0-9]+$/
 
 /**
  * Retired addresses that have NO file behind them because they are already
@@ -691,7 +717,8 @@ export const createRegistry = (input: unknown) => {
         pagePath(entry, retiredLocale(old)) ?? pagePath(entry, xDefaultLocaleOf(entry))!
 
     /**
-     * Old address → new address, one hop each.
+     * Recorded old address → new address, one hop each: every page's `retired`
+     * list plus `ORPHAN_REDIRECTS`.
      *
      * ⚠️ The eight redirects added in July (the EN-tree removal) pointed at
      * `/docs/ru/...`, which this migration then moves again. Chaining them would
@@ -700,13 +727,141 @@ export const createRegistry = (input: unknown) => {
      * their FINAL address here rather than layered on top — which is why entries
      * like `/docs/faq/fees` sit in the `retired` list of the page they now serve.
      */
-    const redirectMap = (): Record<string, string> => {
+    const recordedRedirects = (): Record<string, string> => {
         const map: Record<string, string> = { ...ORPHAN_REDIRECTS }
         for (const entry of PAGES) {
             for (const old of entry.retired ?? []) map[old] = redirectTarget(entry, old)
         }
         return map
     }
+
+    /**
+     * Other SPELLINGS of addresses that are already redirected or live, each
+     * onto the SAME final target. Derived, never recorded: a spelling rule
+     * written down address by address is the list that goes stale.
+     *
+     *  (a) The base-less twin of every `/docs/<dir>/...` source: `/faq/fees` for
+     *      `/docs/faq/fees`, `/ru/faq/illegal-content` for
+     *      `/docs/ru/faq/illegal-content`. While base was '/docs/' (2026-04-16
+     *      to 2026-08-03) VitePress inlined the nav and sidebar links of every
+     *      page WITHOUT the base into `__VP_SITE_DATA__`, and crawlers still
+     *      ask for exactly those spellings (GSC, 2026-09-23: soft 404 and 404).
+     *      Only sources with a directory component: a root-level leaf such as
+     *      `/docs/skolko-platyat-novichku` would take a bare root address from
+     *      the application, and nobody holds its twin. A twin that IS its own
+     *      target (`/legal/terms`, served identically in both trees) is the
+     *      live page and is skipped.
+     *  (b) The root tree under `ROOT_LOCALE_LEGACY_ALIAS`: `/ru` + every
+     *      root-locale page (and a hub's bare `/ru/<segment>`), and `/ru` +
+     *      every recorded root-tree source outside `/docs`. The application's
+     *      blind strip made these two hops or a 404.
+     *  (c) `<dir>index` for every directory-shaped source except `/docs/`: the
+     *      file name VitePress wrote the directory to, which the old container
+     *      answered as a duplicate (`/docs/ru/faq/index`, GSC 404). The live
+     *      hubs' own file names are emitted by gen-nginx-redirects.mjs.
+     *
+     * Fails closed: a spelling that is a live page, or that already redirects
+     * somewhere else, throws. A derived rule never silently wins over data.
+     */
+    const legacySpellings = (recorded: Readonly<Record<string, string>>): Record<string, string> => {
+        const live = new Map<string, string>()
+        for (const entry of PAGES) {
+            for (const language of localesOf(entry)) live.set(pagePath(entry, language)!, `${entry.id} [${language}]`)
+        }
+        const derived: Record<string, string> = {}
+        const add = (from: string, to: string, rule: string) => {
+            if (live.has(from)) {
+                throw new Error(`registry: ${rule} spelling ${from} -> ${to} would shadow the live page ${live.get(from)}`)
+            }
+            const known = recorded[from] ?? derived[from]
+            if (known !== undefined && known !== to) {
+                throw new Error(`registry: ${rule} spelling ${from} -> ${to}, but ${from} already redirects to ${known}`)
+            }
+            if (recorded[from] === undefined) derived[from] = to
+        }
+
+        // (a) Base-less twins of the retired /docs tree.
+        for (const [from, to] of Object.entries(recorded)) {
+            if (!from.startsWith(`${RETIRED_DOCS_BASE}/`)) continue
+            const rest = from.slice(RETIRED_DOCS_BASE.length)
+            if (!rest.slice(1).includes('/') || FILE_ADDRESS.test(rest)) continue
+            // `/docs/ru/` -> `/ru/` is the alias root, which the application owns.
+            if (rest === `${ROOT_LOCALE_LEGACY_ALIAS}/` || rest === to) continue
+            add(rest, to, 'base-less')
+        }
+
+        // (b) The root tree under its legacy alias.
+        const alias = ROOT_LOCALE_LEGACY_ALIAS
+        for (const entry of PAGES) {
+            const path = pagePath(entry, ROOT_LOCALE.language)
+            if (path === null) continue
+            add(`${alias}${path}`, path, 'root-alias')
+            if (path.endsWith('/')) add(`${alias}${path.slice(0, -1)}`, path, 'root-alias')
+        }
+        for (const [from, to] of Object.entries(recorded)) {
+            if (from === RETIRED_DOCS_BASE || from.startsWith(`${RETIRED_DOCS_BASE}/`)) continue
+            if (from.startsWith(`${alias}/`) || retiredLocale(from) !== ROOT_LOCALE.language) continue
+            add(`${alias}${from}`, to, 'root-alias')
+        }
+
+        // (c) The file name of every retired directory.
+        for (const [from, to] of Object.entries({ ...recorded, ...derived })) {
+            if (!from.endsWith('/') || from === `${RETIRED_DOCS_BASE}/`) continue
+            add(`${from}index`, to, 'file-name')
+        }
+        return derived
+    }
+
+    // Built once, when the registry is created, so a colliding spelling fails the
+    // import itself: no generator or gate can run on a map that would shadow a page.
+    const REDIRECTS: Readonly<Record<string, string>> = (() => {
+        const recorded = recordedRedirects()
+        return { ...recorded, ...legacySpellings(recorded) }
+    })()
+
+    /**
+     * Old address → new address, one hop each: the recorded addresses first, then
+     * their derived legacy spellings. What redirects.conf, the url gates and the
+     * live probes all read. A fresh copy per call, so no caller can edit the map
+     * the others see.
+     */
+    const redirectMap = (): Record<string, string> => ({ ...REDIRECTS })
+
+    const isUnder = (path: string, prefix: string) => path === prefix || path.startsWith(`${prefix}/`)
+    const LANGUAGE_SEGMENTS = new Set([ROOT_LOCALE_LEGACY_ALIAS, ...LOCALES.map((axis) => axis.prefix).filter(Boolean)])
+
+    /**
+     * Host prefixes that are NOT content hubs but still belong to this
+     * container, because redirect sources live under them: the first segment
+     * of every redirect source outside `/docs` and `CONTENT_SEGMENTS`, or the
+     * first two for a source under a language segment (`/ru/<segment>` under
+     * the root tree's legacy alias; `/ua/<segment>` and the like, should a tree
+     * ever retire a whole section). A language segment alone is never claimed:
+     * it is a whole application tree.
+     *
+     * Each one is taken away from the application by the host snippet
+     * (gen-host-nginx.mjs), so it is derived from the sources that need it and
+     * from nothing else: a prefix with no source would hand the application's
+     * namespace to a container with nothing to say there. The container answers
+     * every known spelling under it with one 301 and anything else with its
+     * localized 404, the status the application gave these addresses anyway.
+     */
+    const LEGACY_ROUTE_PREFIXES: readonly string[] = [
+        ...new Set(
+            Object.keys(REDIRECTS)
+                .filter(
+                    (from) =>
+                        !isUnder(from, RETIRED_DOCS_BASE) &&
+                        !CONTENT_SEGMENTS.some((segment) => isUnder(from, `/${segment}`)),
+                )
+                .map((from) => {
+                    const [first, second] = from.split('/').filter(Boolean)
+                    if (!LANGUAGE_SEGMENTS.has(`/${first}`)) return `/${first}`
+                    if (!second) throw new Error(`registry: ${from} would claim the whole /${first} tree`)
+                    return `/${first}/${second}`
+                }),
+        ),
+    ].sort()
 
     /**
      * Resolves a link written for a locale onto an address that EXISTS.
@@ -763,6 +918,7 @@ export const createRegistry = (input: unknown) => {
         PAGES,
         APP_ROUTES,
         CONTENT_SEGMENTS,
+        LEGACY_ROUTE_PREFIXES,
         localeAxis,
         localesOf,
         pagePath,
@@ -793,6 +949,7 @@ export const {
     PAGES,
     APP_ROUTES,
     CONTENT_SEGMENTS,
+    LEGACY_ROUTE_PREFIXES,
     localeAxis,
     localesOf,
     pagePath,

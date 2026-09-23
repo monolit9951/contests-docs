@@ -10,9 +10,8 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..')
 const expectedSha = process.argv[2]
 if (!expectedSha || !/^[a-f0-9]{7,40}$/i.test(expectedSha)) throw new Error('usage: probe-live-routing.mjs <git-sha>')
 const expectedManifest = JSON.parse(readFileSync(join(ROOT, 'docs', 'content-pages.json'), 'utf8'))
-const { CONTENT_ROOT_FILES, CONTENT_SEGMENTS, PAGES, localesOf, pagePath } = await import(
-  join(ROOT, 'docs', '.vitepress', 'registry.ts')
-)
+const { CONTENT_ROOT_FILES, CONTENT_SEGMENTS, LEGACY_ROUTE_PREFIXES, PAGES, localesOf, pagePath, redirectMap } =
+  await import(join(ROOT, 'docs', '.vitepress', 'registry.ts'))
 const origin = 'https://darebay.com'
 const failures = []
 const fail = (detail) => failures.push(detail)
@@ -86,6 +85,36 @@ if (leaf) {
   }
 }
 
+// One legacy spelling per legacy host prefix (/faq, /ru/o-proekte, ...): exactly
+// one 301 onto the mapped target, and that target answers 200. Before the
+// generated snippet routes a prefix here, the application answers it with a
+// 404 or a second hop through its /ru strip, so this fails until the snippet
+// is installed. Real leaves are preferred over `<dir>index` names and directory
+// forms, so the probe reads like the addresses crawlers actually hold.
+const redirects = redirectMap()
+const rank = (path) => (path.endsWith('/') ? 2 : path.endsWith('/index') ? 1 : 0)
+for (const prefix of LEGACY_ROUTE_PREFIXES) {
+  const under = Object.keys(redirects)
+    .filter((from) => from === prefix || from.startsWith(`${prefix}/`))
+    .sort((a, b) => rank(a) - rank(b) || a.localeCompare(b))
+  const from = under[0]
+  if (!from) {
+    fail(`no redirect source for legacy host prefix ${prefix}`)
+    continue
+  }
+  const expected = redirects[from]
+  const first = await request(from, 'HEAD')
+  if (!first) continue
+  const location = first.headers.get('location')
+  const landed = location ? new URL(location, origin).pathname : null
+  if (first.status !== 301 || landed !== expected) {
+    fail(`${from}: expected one 301 to ${expected}, got HTTP ${first.status} ${location ?? ''}`.trim())
+    continue
+  }
+  const second = await request(expected, 'HEAD')
+  if (second && second.status !== 200) fail(`${from} -> ${expected}: HTTP ${second.status}, expected 200 in one hop`)
+}
+
 // Guard the root key owned by the frontend while replacing the content snippet.
 const indexNowKey = 'f54f4783c3e2566c84087cd19b829ddc'
 const keyResponse = await request(`/${indexNowKey}.txt`)
@@ -101,4 +130,7 @@ if (failures.length) {
   for (const failure of failures) console.error(`  ${failure}`)
   process.exit(1)
 }
-console.log(`live routing probes: ${CONTENT_SEGMENTS.length} prefixes, ${CONTENT_ROOT_FILES.length} root files, manifest JSON OK`)
+console.log(
+  `live routing probes: ${CONTENT_SEGMENTS.length} prefixes, ${LEGACY_ROUTE_PREFIXES.length} legacy prefixes, ` +
+    `${CONTENT_ROOT_FILES.length} root files, manifest JSON OK`,
+)

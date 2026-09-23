@@ -13,9 +13,8 @@ import { join, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 const HERE = dirname(fileURLToPath(import.meta.url))
-const { PAGES, HUBS, ORPHAN_REDIRECTS, pagePath, localesOf, redirectMap, xDefaultLocaleOf } = await import(
-    join(HERE, '..', 'docs', '.vitepress', 'registry.ts')
-)
+const { PAGES, HUBS, ORPHAN_REDIRECTS, LEGACY_ROUTE_PREFIXES, pagePath, localesOf, redirectMap, xDefaultLocaleOf } =
+    await import(join(HERE, '..', 'docs', '.vitepress', 'registry.ts'))
 
 const HUB_TITLES = {
     earnings: 'Заработок',
@@ -46,6 +45,15 @@ const total = PAGES.length
 const urls = PAGES.reduce((n, e) => n + localesOf(e).length, 0)
 const redirects = Object.keys(redirectMap()).length
 out.push(`Страниц: **${total}** · адресов: **${urls}** · редиректов со старых адресов: **${redirects}**`)
+out.push('')
+// The table below lists the RECORDED retired addresses. The rest of the redirect count are the
+// spellings registry.ts derives from them, which no human approves one by one, so they are
+// counted here rather than listed.
+const recorded = Object.keys(ORPHAN_REDIRECTS).length + PAGES.reduce((n, e) => n + (e.retired ?? []).length, 0)
+out.push(`Из них **${redirects - recorded}** — производные написания тех же адресов: без \`/docs\``)
+out.push('(`/faq/fees`), под старым префиксом корневой локали `/ru` (`/ru/o-proekte`) и имя файла')
+out.push('`<раздел>/index`. Они выводятся в `registry.ts`, ведут туда же, куда исходный адрес, и ради')
+out.push(`них хост отдаёт контенту ещё ${LEGACY_ROUTE_PREFIXES.length} префиксов: ${LEGACY_ROUTE_PREFIXES.map((p) => `\`${p}\``).join(', ')}.`)
 out.push('')
 out.push('Страница объявляет только те языки, на которых она действительно существует: той,')
 out.push('которой нет на языке, в сайтмапе этой локали и в hreflang нет вообще. Русская версия')

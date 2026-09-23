@@ -15,12 +15,22 @@
 // The snippet is `include`d from inside the `server` block of the HTTPS vhost,
 // BEFORE `location / {}`. nginx matches the longest `^~` prefix regardless of
 // order, so placement only matters relative to regex locations.
+//
+// PROXY LINES ONLY. The CD transaction installs this file only if every line is
+// a comment, a `location =`/`location ^~` opener, a closing brace or one of the
+// fixed proxy directives (`safe_managed_snippet_syntax` in
+// deploy/install-host-nginx-snippet.sh and deploy/deploy-content-transaction.sh).
+// A `return` here would abort the whole content release, so every redirect
+// lives in the container's generated redirects.conf and this file only decides
+// which container is asked.
 
 import { join, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 const HERE = dirname(fileURLToPath(import.meta.url))
-const { CONTENT_SEGMENTS, CONTENT_ROOT_FILES } = await import(join(HERE, '..', 'docs', '.vitepress', 'registry.ts'))
+const { CONTENT_SEGMENTS, CONTENT_ROOT_FILES, LEGACY_ROUTE_PREFIXES } = await import(
+    join(HERE, '..', 'docs', '.vitepress', 'registry.ts')
+)
 
 const UPSTREAM = 'http://127.0.0.1:3002'
 
@@ -65,6 +75,22 @@ for (const segment of CONTENT_SEGMENTS) {
     out.push('}')
     out.push('')
 }
+
+out.push('# Legacy address families that belong to the content site but are not hubs:')
+out.push('# base-less spellings of the retired /docs tree (/faq/fees) and the /ru alias of')
+out.push('# the root tree (/ru/o-proekte). The container answers every known spelling with')
+out.push('# ONE 301 from its generated redirects.conf and anything else with a real')
+out.push('# localized 404. Derived from the redirect sources (LEGACY_ROUTE_PREFIXES in')
+out.push('# registry.ts): a prefix appears here only while a source lives under it.')
+for (const prefix of LEGACY_ROUTE_PREFIXES) {
+    out.push(`location = ${prefix} {`)
+    out.push(proxy())
+    out.push('}')
+    out.push(`location ^~ ${prefix}/ {`)
+    out.push(proxy())
+    out.push('}')
+}
+out.push('')
 
 out.push('# Static assets of the content build. A distinct prefix and NOT /assets/,')
 out.push("# which the application's bundles already own — see `assetsDir` in config.ts.")

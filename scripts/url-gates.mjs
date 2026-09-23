@@ -54,9 +54,18 @@ const PORT_APP = PORT_HOST + 1
 const PORT_CONTENT = PORT_HOST + 2
 const ORIGIN = `http://127.0.0.1:${PORT_HOST}`
 
-const { PAGES, HUBS, LOCALES, ROOT_LOCALE, pagePath, localesOf, hubIndexPath, redirectMap, CONTENT_ROOT_FILES } = await import(
-    join(CONTENT_ROOT, 'docs', '.vitepress', 'registry.ts')
-)
+const {
+    PAGES,
+    HUBS,
+    LOCALES,
+    ROOT_LOCALE,
+    pagePath,
+    localesOf,
+    hubIndexPath,
+    redirectMap,
+    CONTENT_ROOT_FILES,
+    LEGACY_ROUTE_PREFIXES,
+} = await import(join(CONTENT_ROOT, 'docs', '.vitepress', 'registry.ts'))
 const { contestCanonicalForLocale } = await import(
     join(APP_ROOT, 'scripts', 'contest-seo-locales.mjs')
 )
@@ -291,6 +300,24 @@ for (const [from, to] of Object.entries({ ...redirectMap(), ...appRedirects })) 
     else if (second.status !== 200) fail('1-redirect', `${from} -> ${first.location} -> ${second.status}`)
 }
 
+// The legacy host prefixes (/faq, /ru/<hub>, ...) reach the content container, not the
+// application: the slash spelling of one leaf under each lands on the same target in one hop.
+// A leaf's slash form is emitted by gen-nginx-redirects; without it `/ru/<hub>/<leaf>/` would
+// hit the container's @slash_ru handler, which only knows files that exist on disk.
+{
+    const map = redirectMap()
+    for (const prefix of LEGACY_ROUTE_PREFIXES) {
+        const leaf = Object.keys(map)
+            .filter((from) => from.startsWith(`${prefix}/`) && !from.endsWith('/') && !from.endsWith('/index'))
+            .sort()[0]
+        if (!leaf) continue
+        const res = await head(`${leaf}/`)
+        if (res.status !== 301 || res.location !== map[leaf]) {
+            fail('1-legacy-slash', `${leaf}/ -> ${res.status} ${res.location}, ожидался 301 ${map[leaf]}`)
+        }
+    }
+}
+
 // Redirects preserve attribution parameters without multiplying public HTML
 // forms. Probe one content migration through the actual generated nginx file.
 {
@@ -496,6 +523,13 @@ for (const [junk, axis] of [
     ...LOCALES.map((locale) => [`${hubIndexPath('earnings', locale.language)}nope-nothing-here`, locale]),
     ...sectionsWithoutIndex,
     ['/docs/nope-nothing-here', ROOT_LOCALE],
+    // A legacy host prefix is taken from the application only to answer its known spellings;
+    // anything else under it is this container's own localized 404, never a soft redirect. The
+    // bare and /ru spellings are the root tree's; a prefix under a tree's own segment, its tree's.
+    ...LEGACY_ROUTE_PREFIXES.map((prefix) => [
+        `${prefix}/nope-nothing-here`,
+        LOCALES.find((axis) => axis.prefix && prefix.startsWith(`${axis.prefix}/`)) ?? ROOT_LOCALE,
+    ]),
 ]) {
     const language = axis.language
     const res = await body(junk)

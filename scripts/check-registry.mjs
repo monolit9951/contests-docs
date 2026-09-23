@@ -31,6 +31,9 @@ const {
     ORPHAN_REDIRECTS,
     APP_ROUTES,
     CONTENT_ROOT_FILES,
+    CONTENT_SEGMENTS,
+    LEGACY_ROUTE_PREFIXES,
+    ROOT_LOCALE_LEGACY_ALIAS,
     appLinkTarget,
     hubIndexPath,
     pagePath,
@@ -44,6 +47,22 @@ const {
 
 const failures = []
 const fail = (check, detail) => failures.push(`${check}: ${detail}`)
+
+// Routes the application answers on, from src/app/routers/appRouter.tsx in
+// contests-frontend plus the locale prefixes. Kept here rather than imported
+// because the two repos build independently. Gates 5a and 7 both need it.
+const SPA_SEGMENTS = new Set([
+    'ua', 'en', 'ru', 'pl',
+    'feed', 'lenta', 'strichka',
+    'contests', 'zadaniya', 'zavdannya', 'tasks',
+    'store', 'magazin', 'kramnytsia',
+    'topusers', 'reyting', 'reitynh', 'top',
+    'how-it-works', 'kak-eto-rabotaet', 'yak-tse-pratsiuie',
+    'business', 'dlya-biznesa', 'for-business',
+    'u', 'profile', 'cabinet', 'portal', 'chat', 'join',
+    'contestscreate', 'choosewinner', 'coinmanagementcenter',
+    'api', 'assets', 'admin', 'oauth2', 'ws', 'images-bucket',
+])
 
 if (CONTENT_MANIFEST_SCHEMA_VERSION !== 1) {
     fail('manifest-schema', `expected 1, got ${CONTENT_MANIFEST_SCHEMA_VERSION}`)
@@ -148,6 +167,54 @@ for (const entry of PAGES) {
     for (const [from, to] of Object.entries(map)) {
         if (from === to) fail('self-redirect', from)
         if (sources.has(to)) fail('redirect-chain', `${from} -> ${to}, and ${to} redirects onward`)
+    }
+}
+
+// ---------------------------------------------------------------------------
+// 5a. Every redirect source reaches this container, and every legacy host
+//     prefix earns its place.
+//
+//     A rule in redirects.conf answers only what the host sends here: `/docs`,
+//     a content hub, or a LEGACY_ROUTE_PREFIX (the base-less and /ru spellings
+//     derived in registry.ts). A source outside all three is a 301 that no
+//     request can ever reach. The reverse holds too: a legacy prefix with no
+//     source under it would take a namespace away from the application for a
+//     container with nothing to say there.
+//
+//     The application side of the same boundary: a legacy prefix must not name
+//     an application segment, at the root or under the /ru alias (which the
+//     application strips onto the root path). APP_ROUTES alone would be vacuous
+//     for the /ru prefixes, since it has no /ru entries, hence SPA_SEGMENTS.
+//     The authoritative guard is url-gates.mjs gate 2, which requests every
+//     application sitemap address through the composed host routing; this one
+//     only catches the obvious collision without the application build.
+// ---------------------------------------------------------------------------
+{
+    const sources = Object.keys(redirectMap())
+    const isUnder = (path, prefix) => path === prefix || path.startsWith(`${prefix}/`)
+    const routedHere = (path) =>
+        isUnder(path, '/docs') ||
+        CONTENT_SEGMENTS.some((segment) => isUnder(path, `/${segment}`)) ||
+        LEGACY_ROUTE_PREFIXES.some((prefix) => isUnder(path, prefix))
+    for (const from of sources) {
+        if (!routedHere(from)) fail('redirect-not-routed', `${from}: the host never sends it to this container`)
+    }
+    const languageSegments = new Set([ROOT_LOCALE_LEGACY_ALIAS, ...LOCALES.map((axis) => axis.prefix).filter(Boolean)])
+    const appSections = new Set(
+        APP_ROUTES.map((route) => route.split('/').filter(Boolean)).map((parts) =>
+            languageSegments.has(`/${parts[0]}`) ? parts[1] : parts[0],
+        ),
+    )
+    for (const prefix of LEGACY_ROUTE_PREFIXES) {
+        if (!sources.some((from) => isUnder(from, prefix))) fail('legacy-prefix-empty', `${prefix} owns no redirect source`)
+        const segments = prefix.split('/').filter(Boolean)
+        const tail = languageSegments.has(`/${segments[0]}`) ? segments[1] : segments[0]
+        if (tail === undefined || SPA_SEGMENTS.has(tail.toLowerCase()) || appSections.has(tail)) {
+            fail('legacy-prefix-shadows-app-route', `${prefix} names an application segment`)
+        }
+        if (CONTENT_SEGMENTS.some((segment) => isUnder(prefix, `/${segment}`))) {
+            fail('legacy-prefix-inside-hub', `${prefix} is already routed as a content hub`)
+        }
     }
 }
 
@@ -383,22 +450,6 @@ for (const entry of PAGES) {
 //    check can be exhaustive rather than best-effort.
 // ---------------------------------------------------------------------------
 {
-    // Routes the application answers on, from src/app/routers/appRouter.tsx in
-    // contests-frontend plus the locale prefixes. Kept here rather than
-    // imported because the two repos build independently.
-    const SPA_SEGMENTS = new Set([
-        'ua', 'en', 'ru', 'pl',
-        'feed', 'lenta', 'strichka',
-        'contests', 'zadaniya', 'zavdannya', 'tasks',
-        'store', 'magazin', 'kramnytsia',
-        'topusers', 'reyting', 'reitynh', 'top',
-        'how-it-works', 'kak-eto-rabotaet', 'yak-tse-pratsiuie',
-        'business', 'dlya-biznesa', 'for-business',
-        'u', 'profile', 'cabinet', 'portal', 'chat', 'join',
-        'contestscreate', 'choosewinner', 'coinmanagementcenter',
-        'api', 'assets', 'admin', 'oauth2', 'ws', 'images-bucket',
-    ])
-
     const seen = new Map()
     for (const [hubId, byLocale] of Object.entries(HUBS)) {
         for (const [lang, segment] of Object.entries(byLocale)) {
@@ -458,4 +509,7 @@ if (failures.length) {
     process.exit(1)
 }
 
-console.log(`✓ реестр цел: ${pages} semantic pages, ${urls} URLs, ${redirects} redirects, 0 findings`)
+console.log(
+    `✓ реестр цел: ${pages} semantic pages, ${urls} URLs, ${redirects} redirects, ` +
+        `${LEGACY_ROUTE_PREFIXES.length} legacy host prefixes, 0 findings`,
+)

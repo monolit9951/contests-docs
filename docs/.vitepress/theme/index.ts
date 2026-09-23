@@ -1,12 +1,20 @@
 import DefaultTheme from 'vitepress/theme'
 import type { Theme } from 'vitepress'
 import { useData, useRouter } from 'vitepress'
-import { defineComponent, h, nextTick, onMounted, watch } from 'vue'
+import { createStaticVNode, defineComponent, h, nextTick, onMounted, ref, watch } from 'vue'
+import type { VNode } from 'vue'
 import type { DareBayThemeConfig } from '../chrome'
 import { DocsEvent, installDocsAnalytics, startDocsPage, trackDocsEvent } from './analytics'
 import { flushEngagement, startPageEngagement } from './engagement'
+import {
+  KEPT_STATIC_MESSAGE,
+  captureServedPage,
+  restoreServedHead,
+  servedPageMetadata,
+  shouldKeepServedPage,
+} from './failStatic'
+import { isContentPathname } from './routing'
 import HubIndex from './HubIndex.vue'
-import { CONTENT_SEGMENTS } from '../registry'
 import LandingLayout from './landing/LandingLayout.vue'
 import LCompare from './landing/LCompare.vue'
 import LPlatforms from './landing/LPlatforms.vue'
@@ -59,6 +67,11 @@ const PlatformCta = defineComponent({
   },
 })
 
+// Read while this module is evaluated: app.js imports the theme statically, so this runs
+// before VitePress creates the app, loads the page chunk and rewrites the head. See failStatic.ts.
+const served = typeof document === 'undefined' ? null : captureServedPage(document)
+let firstRender = true
+
 /**
  * The layout is where the per-page instrumentation lives, because it is the
  * first place the page data is real.
@@ -73,8 +86,57 @@ const PlatformCta = defineComponent({
 const DocsLayout = defineComponent({
   name: 'DareBayDocsLayout',
   setup() {
-    const { page, frontmatter } = useData()
+    const { page, frontmatter, site } = useData()
     const router = useRouter()
+
+    // Fail-static (failStatic.ts): only for the render that hydrates the server's HTML, and only
+    // when the router could not load this page. The static vnode adopts the served DOM as it is;
+    // the head gets back the title and description `useUpdateHead` has just replaced.
+    let servedVNode: VNode | null = null
+    let servedMetadata: Element[] = []
+    let keptPath: string | null = null
+    if (firstRender) {
+      firstRender = false
+      if (shouldKeepServedPage(served, { isNotFound: page.value.isNotFound, path: router.route.path })) {
+        servedVNode = createStaticVNode(served.html, served.nodeCount)
+        servedMetadata = servedPageMetadata(document, site.value.head)
+        keptPath = router.route.path
+        restoreServedHead(document, served)
+      }
+    }
+    const keepServed = ref(servedVNode !== null)
+    if (keptPath !== null && served) {
+      watch(
+        () => router.route.data,
+        () => {
+          if (router.route.path === keptPath && page.value.isNotFound) {
+            // This document can never load the kept page: a browser keeps a failed module import
+            // in its module map and does not fetch that URL again. Still on it (a same-page link
+            // with a query): stay served, and undo the head rewrite once VitePress has made it.
+            if (keepServed.value) {
+              void nextTick(() => restoreServedHead(document, served))
+              return
+            }
+            // Back on it after a client navigation (history back, a link to it): the router would
+            // show the 404 view for an article that exists. Load the address for real, and keep
+            // the served article and its title on screen until the browser leaves.
+            servedVNode = createStaticVNode(served.html, served.nodeCount)
+            keepServed.value = true
+            void nextTick(() => restoreServedHead(document, served))
+            window.location.reload()
+            return
+          }
+          // Anything else the router resolves renders normally. The served page's canonical,
+          // hreflang, JSON-LD and share cards were never registered with VitePress's head
+          // manager, so they go now instead of sitting next to the ones it writes for the new page.
+          if (keepServed.value) {
+            keepServed.value = false
+            for (const element of servedMetadata) element.remove()
+            servedMetadata = []
+          }
+        },
+      )
+    }
 
     const onPageReady = () => {
       startDocsPage()
@@ -86,6 +148,12 @@ const DocsLayout = defineComponent({
         let referrerHost = ''
         try { referrerHost = document.referrer ? new URL(document.referrer).hostname : '' } catch { /* invalid referrer */ }
         trackDocsEvent(DocsEvent.NotFound, { referrerHost })
+        // The same docs_not_found as before, so the series stays comparable; this one says the
+        // reader (or a crawler's renderer) got the served article anyway. `message` is the one
+        // property client_error is allowed to carry: no new analytics contract.
+        if (keepServed.value) {
+          trackDocsEvent(DocsEvent.ClientError, { message: KEPT_STATIC_MESSAGE }, { dedupeKey: KEPT_STATIC_MESSAGE })
+        }
       }
       startPageEngagement()
     }
@@ -117,9 +185,11 @@ const DocsLayout = defineComponent({
     // stock VitePress layout as an escape hatch. The instrumentation above is
     // the same for both, so analytics do not depend on which shell rendered.
     return () =>
-      frontmatter.value.landing === false
-        ? h(DefaultTheme.Layout, null, { 'doc-footer-before': () => h(PlatformCta) })
-        : h(LandingLayout)
+      keepServed.value && servedVNode
+        ? servedVNode
+        : frontmatter.value.landing === false
+          ? h(DefaultTheme.Layout, null, { 'doc-footer-before': () => h(PlatformCta) })
+          : h(LandingLayout)
   },
 })
 
@@ -155,7 +225,7 @@ export default {
     const isContentPath = (to: string) => {
       let pathname: string
       try { pathname = new URL(to, window.location.origin).pathname } catch { return true }
-      return CONTENT_SEGMENTS.some((segment) => pathname === `/${segment}` || pathname.startsWith(`/${segment}/`))
+      return isContentPathname(pathname)
     }
 
     const originalBefore = router.onBeforeRouteChange

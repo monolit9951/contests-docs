@@ -405,9 +405,14 @@ export const appPathFor = (language: Locale, section: AppSection | ''): string =
  * need their own route on the host: with routing by hub prefix, anything not
  * under a hub falls through to the application and 404s.
  *
- * `vp-icons.css` and `hashmap.json` are VitePress's own — the first is loaded by
- * every page, the second by its client router — and both are easy to forget
- * precisely because nothing links to them in the markup a human reads.
+ * `vp-icons.css` and `hashmap.json` are VitePress's own, and both are easy to
+ * forget precisely because nothing links to them in the markup a human reads.
+ * `hashmap.json` is fetched by the client router. VitePress writes `vp-icons.css`
+ * on every build, but current pages do not link it while it is empty (config.ts
+ * `transformHtml`, see headAssets.ts; the dist gate `vp-icons` holds both ways).
+ * It stays routed all the same: HTML of earlier releases still in caches links
+ * it, and a non-empty icons file would be linked again. Unused-looking is not
+ * unused here: do not drop it.
  */
 export const CONTENT_ROOT_FILES: readonly string[] = [
     '/sitemap-content.xml',

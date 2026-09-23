@@ -29,7 +29,9 @@ import { join, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 const HERE = dirname(fileURLToPath(import.meta.url))
-const { redirectMap, PAGES, localesOf, pagePath } = await import(join(HERE, '..', 'docs', '.vitepress', 'registry.ts'))
+const { redirectMap, PAGES, LEGACY_ROUTE_PREFIXES, localesOf, pagePath } = await import(
+    join(HERE, '..', 'docs', '.vitepress', 'registry.ts')
+)
 
 const map = redirectMap()
 const lines = []
@@ -75,7 +77,14 @@ for (const from of Object.keys(map).sort((a, b) => b.length - a.length)) {
     // live addresses that must land somewhere.
     if (!from.endsWith('/')) {
         if (!FILE_ADDRESS.test(from)) {
-            emit(`${from}.html`, to)
+            // Except for a source that IS a legacy host prefix (`/ru/o-proekte`,
+            // the bare /ru spelling of a hub): the host routes it here only as
+            // `location = <prefix>` (gen-host-nginx.mjs), so `<prefix>.html` would
+            // never reach this file. It was never an address either: the hub was
+            // written to `<hub>/index.html`, and a live hub's own `/<hub>.html`
+            // is not routed here. scripts/gen-host-nginx.test.mjs holds every
+            // `location =` of the shipped file to the generated host routes.
+            if (!LEGACY_ROUTE_PREFIXES.includes(from)) emit(`${from}.html`, to)
             // The trailing-slash spelling of a leaf. Without it the container's
             // @slash_* handler looks for `<leaf>.html` on disk, finds none for a
             // retired address and answers 404; and once the host routes

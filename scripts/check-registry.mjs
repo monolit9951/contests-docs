@@ -177,9 +177,14 @@ for (const entry of PAGES) {
 //     A rule in redirects.conf answers only what the host sends here: `/docs`,
 //     a content hub, or a LEGACY_ROUTE_PREFIX (the base-less and /ru spellings
 //     derived in registry.ts). A source outside all three is a 301 that no
-//     request can ever reach. The reverse holds too: a legacy prefix with no
-//     source under it would take a namespace away from the application for a
-//     container with nothing to say there.
+//     request can ever reach. The spellings gen-nginx-redirects adds to each
+//     source (`.html`, slash and bare forms) are held to the same rule by
+//     scripts/gen-host-nginx.test.mjs, against both generated artifacts, since
+//     this gate runs before redirects.conf is regenerated.
+//
+//     The reverse holds too: a legacy prefix with no source under it would
+//     take a namespace away from the application for a container with nothing
+//     to say there.
 //
 //     The application side of the same boundary: a legacy prefix must not name
 //     an application segment, at the root or under the /ru alias (which the

@@ -43,8 +43,17 @@ describe('generated host snippet', () => {
   for (const script of ['install-host-nginx-snippet.sh', 'deploy-content-transaction.sh']) {
     it(`passes the managed-snippet contract of ${script}`, () => {
       expect(accepts(script, snippet)).toBe(true)
-      // The contract is not vacuous: a redirect in the host snippet is refused.
-      expect(accepts(script, `${snippet}location ^~ /x/ {\n    return 301 /y;\n}\n`)).toBe(false)
+      // The contract is not vacuous: a redirect in the host snippet is refused. The line goes
+      // INSIDE an existing proxy block, so openers, braces and proxy_pass lines stay balanced
+      // and the `return` itself is the only thing the contract can object to; the same
+      // insertion of a comment passes, which proves the mutation site is not the reason.
+      const withLine = (line) => {
+        const anchor = '    proxy_read_timeout  60;\n'
+        expect(snippet).toContain(anchor)
+        return snippet.replace(anchor, `${anchor}    ${line}\n`)
+      }
+      expect(accepts(script, withLine('# a comment is allowed anywhere'))).toBe(true)
+      expect(accepts(script, withLine('return 301 /y;'))).toBe(false)
     })
   }
 
@@ -55,6 +64,31 @@ describe('generated host snippet', () => {
       expect(snippet).toContain(`location ^~ ${prefix}/ {`)
     }
     expect(snippet).not.toMatch(/^\s*return\b/m)
+  })
+
+  it('routes every exact rule of the shipped redirects.conf to the content container', () => {
+    // A rule the host never sends here is a 301 no request can reach: the address keeps
+    // whatever the application answers for it. Checked against the two GENERATED artifacts as
+    // they ship (the snippet CD installs, the redirects.conf the image copies), so a spelling
+    // the redirect generator adds on top of the registry's sources (`.html`, slash and bare
+    // forms) is held to the host routes too, not only the sources check-registry sees.
+    const exact = new Set()
+    const prefixes = []
+    for (const [, kind, path] of snippet.matchAll(/^location (=|\^~) (\S+) \{$/gm)) {
+      if (kind === '=') exact.add(path)
+      else prefixes.push(path)
+    }
+    const routed = (from) => exact.has(from) || prefixes.some((prefix) => from.startsWith(prefix))
+    const conf = readFileSync(join(ROOT, 'redirects.conf'), 'utf8')
+    const rules = [...conf.matchAll(/^location = (\S+) \{/gm)].map((match) => match[1])
+    expect(rules.length).toBeGreaterThan(0)
+    expect(rules.filter((from) => !routed(from))).toEqual([])
+    // Not vacuous: a legacy prefix is routed exactly and as `<prefix>/`, never as
+    // `<prefix>.html`, which therefore gets no rule (gen-nginx-redirects.mjs).
+    expect(routed('/ru/o-proekte')).toBe(true)
+    expect(routed('/ru/o-proekte/manifest')).toBe(true)
+    expect(routed('/ru/o-proekte.html')).toBe(false)
+    expect(rules).not.toContain('/ru/o-proekte.html')
   })
 
   it('declares every location once', () => {

@@ -459,6 +459,25 @@ describe('legacy spellings of content addresses', () => {
         for (const target of live) expect(args, `${target} is live`).not.toContain(target)
     })
 
+    it('ships every rule with the target the registry names today', () => {
+        // The image copies the COMMITTED redirects.conf (Dockerfile `COPY redirects.conf`): the copy
+        // `docs:build` regenerates stays in the build stage. A registry change merged without
+        // `npm run gen:redirects` would ship yesterday's targets, and a check on the source
+        // arguments alone lets that through. So every rule is traced back to the address it spells
+        // (the source itself, its `.html`, slash or bare form, or a live hub's file name) and must
+        // carry that address's target from the registry as it is now.
+        const conf = readFileSync(new URL('../../redirects.conf', import.meta.url), 'utf8')
+        const rules = [...conf.matchAll(/^location = (\S+) \{ return 301 (\S+)\$is_args\$args; \}$/gm)]
+        expect(rules.length).toBe([...conf.matchAll(/^location /gm)].length)
+        const hubOf = (from: string) => (from.endsWith('/index') ? from.slice(0, -'index'.length) : '')
+        const spelled = (from: string): string | undefined =>
+            map[from] ??
+            (live.has(hubOf(from)) ? hubOf(from) : undefined) ??
+            (from.endsWith('.html') ? map[from.slice(0, -'.html'.length)] : undefined) ??
+            (from.endsWith('/') ? map[from.slice(0, -1)] : map[`${from}/`])
+        for (const [, from, to] of rules) expect(to, from).toBe(spelled(from))
+    })
+
     // The refusals, on in-memory manifests: the live one by definition contains no collision.
     const withRetired = (extra: string) => {
         const helpHub = PAGES.find((page) => page.hub === 'help' && page.slugs.ru === '')!

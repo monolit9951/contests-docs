@@ -31,9 +31,14 @@
 //   2. A hashed file of the base that this build no longer has is retired now
 //      (retiredAt = release epoch). One the base itself retained keeps its
 //      retiredAt from the base manifest.
-//   3. A name present in both the base and this build must carry the same
-//      bytes. Identical: nothing to retain. Different: the build fails, since
-//      clients hold the old bytes as `immutable` for a year.
+//   3. A name present in both the base and this build is current: it is never
+//      retained or copied, so the dist's bytes are what the image serves. A name
+//      the base still RETAINS (inside the window) must come back byte-identical,
+//      or the build fails: crawlers render old HTML against exactly those bytes.
+//      Any other name whose bytes changed under the same hash (a toolchain that
+//      rewrites chunks after hashing, as VitePress does for page chunks) is
+//      listed as a warning and deployed as it was before retention. The
+//      emergency purge (window 0) retains nothing, so it also gets past rule 3.
 //   4. Keep what retired less than the window ago, then drop the oldest
 //      retirements (then by path) until the raw bytes fit the cap.
 //   5. Copy the kept files with the base file's mtime, so nginx's ETag and
@@ -178,6 +183,7 @@ export function retainContentAssets({
     windowDays = RETENTION_WINDOW_DAYS,
     maxBytes = MAX_RETAINED_BYTES,
     log = console.log,
+    warn = console.warn,
 }) {
     if (!base || !dist || !out) fail('--base, --dist and --out are required')
     if (!Number.isSafeInteger(releaseEpoch) || releaseEpoch <= 0) {
@@ -223,6 +229,7 @@ export function retainContentAssets({
     const stats = {
         current: { files: 0, bytes: 0 },
         unchanged: { files: 0, bytes: 0 },
+        rehashed: { files: 0, bytes: 0 },
         revived: { files: 0, bytes: 0 },
         retired: { files: 0, bytes: 0 },
         carried: { files: 0, bytes: 0 },
@@ -236,8 +243,15 @@ export function retainContentAssets({
     }
     for (const file of buildFiles.values()) count('current', statSync(file).size)
 
+    // Younger than the window: a zero-day window keeps nothing (the purge). A
+    // base built from a later commit than this one can hold retirements "in the
+    // future"; they count as age 0, so the purge still drops them.
+    const windowSeconds = windowDays * DAY_SECONDS
+    const insideWindow = (retiredAt) => Math.max(0, releaseEpoch - retiredAt) < windowSeconds
+
     const candidates = []
     const conflicts = []
+    const rehashed = []
     for (const path of [...baseFiles.keys()].sort()) {
         const file = baseFiles.get(path)
         const bytes = statSync(file).size
@@ -248,8 +262,13 @@ export function retainContentAssets({
         }
         const current = buildFiles.get(path)
         if (current) {
-            if (sha256File(current) !== sha256) conflicts.push(path)
-            else count(record ? 'revived' : 'unchanged', bytes)
+            // Current in this build: never retained, never copied over the dist.
+            if (sha256File(current) === sha256) count(record ? 'revived' : 'unchanged', bytes)
+            else if (record && insideWindow(record.retiredAt)) conflicts.push(path)
+            else {
+                rehashed.push(path)
+                count('rehashed', bytes)
+            }
             continue
         }
         const retiredAt = record ? record.retiredAt : releaseEpoch
@@ -258,16 +277,23 @@ export function retainContentAssets({
     }
     if (conflicts.length > 0) {
         fail(
-            `${conflicts.length} hashed name(s) carry different bytes in the base and in this build ` +
-                `(clients cache them as immutable): ${conflicts.slice(0, 10).join(', ')}`,
+            `${conflicts.length} hashed name(s) the base retains come back with different bytes ` +
+                `(crawlers render old HTML against the retained bytes): ${conflicts.slice(0, 10).join(', ')}. ` +
+                'If the new bytes are intended, build this release with RETENTION_WINDOW_DAYS=0 (DEPLOY_NOTES.md)',
+        )
+    }
+    if (rehashed.length > 0) {
+        warn(
+            `retain-content-assets: warning: ${rehashed.length} hashed name(s) have different bytes in the base ` +
+                `and in this build; this build's bytes are served, as before retention: ` +
+                rehashed.slice(0, 10).join(', ') +
+                (rehashed.length > 10 ? `, ... (${rehashed.length - 10} more)` : ''),
         )
     }
 
-    // Younger than the window: a zero-day window keeps nothing (the purge).
-    const windowSeconds = windowDays * DAY_SECONDS
     const kept = []
     for (const candidate of candidates) {
-        if (releaseEpoch - candidate.retiredAt < windowSeconds) kept.push(candidate)
+        if (insideWindow(candidate.retiredAt)) kept.push(candidate)
         else count('prunedWindow', candidate.bytes)
     }
     kept.sort((a, b) => a.retiredAt - b.retiredAt || byPath(a, b))
@@ -321,6 +347,7 @@ export function retainContentAssets({
     )
     line('current', 'current', 'hashed assets of this build')
     line('unchanged', 'unchanged', 'same name and bytes in the base and this build')
+    line('rehashed', 'rehashed', 'same name, other bytes: this build wins (warning above)')
     line('revived', 'revived', 'retained by the base, current again')
     line('retired', 'retired', 'current in the base, gone from this build')
     line('carried', 'carried', 'retained by the base, still gone')
@@ -338,6 +365,7 @@ async function selfTest() {
     const HERE = dirname(fileURLToPath(import.meta.url))
     const root = mkdtempSync(join(tmpdir(), 'retain-content-assets-'))
     const quiet = () => {}
+    const warnings = []
     const DAY = DAY_SECONDS
     const T0 = 1_780_000_000
     const shaOf = (n) => String(n).repeat(40).slice(0, 40)
@@ -375,7 +403,7 @@ async function selfTest() {
     }
     const merge = (options) => {
         const out = join(root, `out-${serial++}`)
-        const result = retainContentAssets({ out, log: quiet, ...options })
+        const result = retainContentAssets({ out, log: quiet, warn: (message) => warnings.push(message), ...options })
         return { out, ...result }
     }
     const treeDigest = (directory) => {
@@ -517,18 +545,49 @@ async function selfTest() {
         equal(m4.stats.revived.files, 1)
         deepStrictEqual(Object.keys(m4.manifest.retained), [THEME_1, PAGE_1_FULL, PAGE_2])
 
-        // Conflicting overlap: the same hashed name with other bytes fails, for
-        // a retained file and for a file current in both releases.
+        // Conflicting overlap. A name the base still retains that comes back
+        // with other bytes fails the build: crawlers render old HTML against the
+        // retained bytes. The purge (window 0) retains nothing and gets past it;
+        // the new bytes are then simply current.
         const dist4Conflict = writeDist(release4, { [A]: 'app-1', [THEME_2]: 'theme-2', [PAGE_3]: 'page-3', [PAGE_1]: 'other' })
         throws(
             () => merge({ base: image3, baseRevision: release3, dist: dist4Conflict, releaseSha: release4, releaseEpoch: T4 }),
-            /1 hashed name\(s\) carry different bytes.*zarabotok_x\.md\.Page0001\.lean\.js/,
+            /1 hashed name\(s\) the base retains come back with different bytes.*zarabotok_x\.md\.Page0001\.lean\.js.*RETENTION_WINDOW_DAYS=0/,
         )
+        warnings.length = 0
+        const conflictPurge = merge({ base: image3, baseRevision: release3, dist: dist4Conflict, releaseSha: release4, releaseEpoch: T4, windowDays: 0 })
+        deepStrictEqual(conflictPurge.manifest.retained, {})
+        ok(!existsSync(join(conflictPurge.out, ...PAGE_1.split('/'))), 'the dist copy is never overwritten')
+        equal(conflictPurge.stats.rehashed.files, 1)
+        equal(warnings.length, 1)
+        ok(warnings[0].includes(PAGE_1), 'the rehashed name is listed in the build log')
+        // Outside the window the retained record has expired: the same name with
+        // new bytes is a warning, not a failure, and is not retained.
+        warnings.length = 0
+        const expiredConflict = merge({
+            base: image3,
+            baseRevision: release3,
+            dist: writeDist(shaOf(5), { [A]: 'app-1', [THEME_2]: 'theme-2', [PAGE_3]: 'page-3', [PAGE_1]: 'other' }),
+            releaseSha: shaOf(5),
+            releaseEpoch: T2 + RETENTION_WINDOW_DAYS * DAY,
+        })
+        deepStrictEqual(Object.keys(expiredConflict.manifest.retained), [PAGE_2])
+        equal(expiredConflict.stats.rehashed.files, 1)
+        ok(warnings.length === 1 && warnings[0].includes(PAGE_1))
+        // A name current in both releases whose bytes changed under the same hash
+        // (a toolchain that rewrites chunks after hashing) deploys as it did
+        // before retention: the build's bytes win and the build log lists it.
         const dist4Changed = writeDist(release4, { [A]: 'app-2', [THEME_2]: 'theme-2', [PAGE_3]: 'page-3' })
-        throws(
-            () => merge({ base: image3, baseRevision: release3, dist: dist4Changed, releaseSha: release4, releaseEpoch: T4 }),
-            /app\.AAAAAAAA\.js/,
-        )
+        warnings.length = 0
+        const changed = merge({ base: image3, baseRevision: release3, dist: dist4Changed, releaseSha: release4, releaseEpoch: T4 })
+        ok(!Object.hasOwn(changed.manifest.retained, A), 'a current file is never listed as retained')
+        ok(!existsSync(join(changed.out, ...A.split('/'))), 'the dist copy is never overwritten')
+        deepStrictEqual(Object.keys(changed.manifest.retained), [THEME_1, PAGE_1_FULL, PAGE_1, PAGE_2])
+        equal(changed.stats.rehashed.files, 1)
+        equal(changed.stats.unchanged.files, 2, 'theme-2 and page-3 are the same files')
+        equal(warnings.length, 1)
+        ok(/1 hashed name\(s\) have different bytes.*app\.AAAAAAAA\.js/.test(warnings[0]), warnings[0])
+        equal(m4.stats.rehashed.files, 0)
 
         // Window pruning: exactly 14 days after release 2, its retirements go;
         // release 3's stay. A zero-day window is the emergency purge.
@@ -542,6 +601,15 @@ async function selfTest() {
         const purge = merge({ base: image3, baseRevision: release3, dist: dist5, releaseSha: shaOf(5), releaseEpoch: T5, windowDays: 0 })
         deepStrictEqual(purge.manifest.retained, {})
         equal(purge.manifest.windowDays, 0)
+        // A base from a later commit than this build (retirements "in the
+        // future"): the default window keeps them with their retiredAt, and the
+        // purge still drops them.
+        const backdated = T2 - DAY
+        const early = merge({ base: image3, baseRevision: release3, dist: dist5, releaseSha: shaOf(5), releaseEpoch: backdated })
+        deepStrictEqual(Object.keys(early.manifest.retained), [THEME_1, PAGE_1_FULL, PAGE_1, PAGE_2])
+        equal(early.manifest.retained[PAGE_2].retiredAt, T3)
+        const earlyPurge = merge({ base: image3, baseRevision: release3, dist: dist5, releaseSha: shaOf(5), releaseEpoch: backdated, windowDays: 0 })
+        deepStrictEqual(earlyPurge.manifest.retained, {}, 'the purge purges retirements newer than the build too')
         equal(parseWindowDays(''), RETENTION_WINDOW_DAYS)
         equal(parseWindowDays('0'), 0)
         throws(() => parseWindowDays('-1'), RetentionError)
@@ -648,7 +716,7 @@ async function selfTest() {
     }
     console.log(
         'retain-content-assets: self-test passed (nginx regex, genesis, carry-over, chain, window, purge, cap, ' +
-            'identical and conflicting overlap, mtime, determinism, untouched dist, tampered base, ' +
+            'identical, rehashed and conflicting overlap, mtime, determinism, untouched dist, tampered base, ' +
             'base manifest provenance and shape)',
     )
 }

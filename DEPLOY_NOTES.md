@@ -94,8 +94,17 @@ the base's retained files (keeping their retirement time), retires the base's
 files this build no longer has, applies the window and the cap, and writes to
 `/app/retained`. The dist that `check:dist` verified is never modified. Retained
 files keep the base file's mtime, so nginx's ETag and Last-Modified for a hashed
-name stay stable across releases. A name present in both the base and the new
-build with different bytes fails the build: clients cache it as `immutable`.
+name stay stable across releases. A name the new build also has is current: it
+is never retained or copied, so the build's own bytes are served. Two cases of
+the same hashed name with other bytes:
+
+- the base still retains the name (inside the window): the build fails, because
+  crawlers render old HTML against exactly the retained bytes;
+- the name is current in both the base and the build (a toolchain that rewrites
+  chunks after hashing, as VitePress does for page chunks in `generateBundle`):
+  the build log prints a warning with the names and the build's bytes are
+  served, as before retention.
+
 The runtime image carries `org.darebay.content.retention-base=<base revision>`.
 
 The deploy transaction refuses a candidate whose retention base is not the
@@ -119,6 +128,12 @@ it in the next; `make` passes the build argument only when it is set, and only
 manifest records `windowDays: 0`), and the chain restarts empty from it.
 Hashed names outside the window, or that never existed, keep answering 410 with
 `max-age=600`.
+
+The same one-release purge is the way past a build that failed because a
+retained name came back with other bytes: first find why a hashed name changed
+its bytes (the failure lists up to ten names), then, if the new bytes are
+intended, build that release with `RETENTION_WINDOW_DAYS=0`. Nothing is retained
+then, so nothing conflicts, and the next release retains again as usual.
 
 ## Rollback
 

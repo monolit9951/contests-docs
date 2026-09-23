@@ -86,9 +86,9 @@ COPY redirects.conf /etc/nginx/snippets/redirects.conf
 # both behind the host and when the container is hit directly on localhost:3002.
 COPY --from=build /app/docs/.vitepress/dist /usr/share/nginx/html
 # Retired hashed assets of recent releases, with their original mtimes (stable ETag
-# and Last-Modified). The merge refused any name the dist also has with other bytes
-# and skipped identical ones, so nothing here overwrites the dist. The manifest sits
-# outside the web root: nginx cannot serve it, and the next build reads it back.
+# and Last-Modified). The merge never copies a name the dist also has (the dist's
+# bytes are served), so nothing here overwrites the dist. The manifest sits outside
+# the web root: nginx cannot serve it, and the next build reads it back.
 COPY --from=build /app/retained/content-assets /usr/share/nginx/html/content-assets
 COPY --from=build /app/retained/content-assets-retention.json /usr/share/nginx/content-assets-retention.json
 

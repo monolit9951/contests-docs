@@ -181,6 +181,12 @@ describe('the VitePress client fail-static is built on', () => {
         expect(shared).toMatch(/export const notFoundPageData = \{[\s\S]*?isNotFound: true\s*\};/)
     })
 
+    it('awaits enhanceApp before the first router.go(), which only then reads location.href (index.ts)', () => {
+        const createApp = app.slice(app.indexOf('export async function createApp()'))
+        expect(createApp.slice(0, createApp.indexOf('return { app, router, data };'))).toMatch(/await Theme\.enhanceApp\(\{/)
+        expect(app).toMatch(/createApp\(\)\.then\(\(\{ app, router, data \}\) => \{\s*(?:\/\/[^\n]*\s*)*router\.go\(\)\.then/)
+    })
+
     it("asks onBeforeRouteChange about the document's own first route (routing.ts)", () => {
         expect(router).toMatch(
             /async function go\(href = inBrowser \? location\.href : '\/'\) \{\s*href = normalizeHref\(href\);\s*if \(\(await router\.onBeforeRouteChange\?\.\(href\)\) === false\)/,

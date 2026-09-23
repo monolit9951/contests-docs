@@ -16,7 +16,7 @@ import {
   servedPageMetadata,
   shouldKeepServedPage,
 } from './failStatic'
-import { leavesForApplication } from './routing'
+import { leavesForApplication, mergeSlashes } from './routing'
 import HubIndex from './HubIndex.vue'
 import LandingLayout from './landing/LandingLayout.vue'
 import LCompare from './landing/LCompare.vue'
@@ -226,6 +226,14 @@ export default {
     app.component('LGlossary', LGlossary)
 
     if (typeof window === 'undefined') return
+
+    // The address the server answered for, before the router reads it: createApp awaits this
+    // hook and only then calls router.go(), which takes location.href (failStatic.test.ts pins
+    // both). Otherwise `//zarabotok/page` renders the 404 view under the article's canonical.
+    const merged = mergeSlashes(window.location.pathname)
+    if (merged !== window.location.pathname) {
+      history.replaceState(history.state, '', merged + window.location.search + window.location.hash)
+    }
 
     // VitePress intercepts EVERY same-origin `<a>` click without a `target`
     // attribute and routes it client-side. The product lives on the same

@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { CONTENT_SEGMENTS, PAGES, localesOf, pagePath } from '../registry'
-import { isContentPathname, leavesForApplication } from './routing'
+import { isContentPathname, leavesForApplication, mergeSlashes } from './routing'
 
 const ORIGIN = 'https://darebay.com'
 
@@ -27,6 +27,30 @@ describe('isContentPathname', () => {
         for (const path of ['/', '/en', '/ua', '/tasks', '/definitely-missing-page', '/zarabotokx', `/${CONTENT_SEGMENTS[0]}x/page`]) {
             expect(isContentPathname(path), path).toBe(false)
         }
+    })
+})
+
+describe('mergeSlashes', () => {
+    it('merges each run of slashes, the way nginx matched the address it served', () => {
+        expect(mergeSlashes('//zarabotok/zarabotok-na-vk-klipah')).toBe('/zarabotok/zarabotok-na-vk-klipah')
+        expect(mergeSlashes('/zarabotok//zarabotok-na-vk-klipah')).toBe('/zarabotok/zarabotok-na-vk-klipah')
+        expect(mergeSlashes('///ua///zarobitok//')).toBe('/ua/zarobitok/')
+    })
+
+    it('leaves every published address as it is', () => {
+        for (const page of PAGES) {
+            for (const locale of localesOf(page)) {
+                const path = pagePath(page, locale)!
+                expect(mergeSlashes(path), path).toBe(path)
+            }
+        }
+    })
+
+    it('gives the router a path, not a protocol-relative host', () => {
+        // VitePress parses addresses against a fake host (router.js): `//x/y` would be host x.
+        expect(new URL('//zarabotok/zarabotok-na-vk-klipah', 'http://a.com').pathname).toBe('/zarabotok-na-vk-klipah')
+        expect(new URL(mergeSlashes('//zarabotok/zarabotok-na-vk-klipah'), 'http://a.com').pathname)
+            .toBe('/zarabotok/zarabotok-na-vk-klipah')
     })
 })
 

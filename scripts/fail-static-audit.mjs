@@ -313,6 +313,21 @@ try {
       `a not-found or kept signal outside the kept load: ${show(signals)}`)
   })
 
+  // nginx merges repeated slashes and serves the article, canonical included, for both spellings.
+  // VitePress alone routes neither (a leading // reads as a host): routing.ts mergeSlashes.
+  for (const path of [`/${ARTICLE}`, ARTICLE.replace(/^(\/[^/]+\/)/, '$1/')]) {
+    await test(`repeated slashes hydrate the article they are served: ${path}`, async () => {
+      await fresh()
+      await load(path)
+      await mounted(path)
+      const live = await snapshot()
+      expectThat(live.path === ARTICLE, `${path}: the address is still ${live.path}`)
+      expectServed(live, await evaluate(served(ARTICLE)), path)
+      expectThat(live.sameH1, `${path}: hydration replaced the served h1`)
+      expectNoNotFound((await recorded()).events, path)
+    })
+  }
+
   for (const path of ['/definitely-missing-page', '/zarabotok/definitely-missing-page']) {
     await test(`a real 404 stays a 404, in one document load: ${path}`, async () => {
       await fresh()

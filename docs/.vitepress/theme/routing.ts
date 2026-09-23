@@ -2,6 +2,14 @@
 
 import { CONTENT_SEGMENTS } from '../registry'
 
+/**
+ * The address with each run of slashes merged into one: the path nginx matched (merge_slashes)
+ * when it served this document for `//zarabotok/page` or `/zarabotok//page`, canonical included.
+ * VitePress routes neither spelling. It reads a leading `//` as a protocol-relative host (it would
+ * route `/page` and draw its 404 view over the article) and has no page for `hub//page`.
+ */
+export const mergeSlashes = (pathname: string): string => pathname.replace(/\/{2,}/g, '/')
+
 /** A path this container serves: a content hub, in any declared locale (see registry.ts). */
 export const isContentPathname = (pathname: string, segments: readonly string[] = CONTENT_SEGMENTS): boolean =>
     segments.some((segment) => pathname === `/${segment}` || pathname.startsWith(`/${segment}/`))

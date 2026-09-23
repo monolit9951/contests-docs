@@ -364,7 +364,8 @@ const author = (language: Locale) => ({
 
 // The WebSite node is ONE entity published by two renderers, the application and this build, and
 // `url-gates.mjs` gate 11 requires the two copies to be identical. Its languages are therefore the
-// ones the application's copy declares (contests-frontend `metadata.ts` and `prerender.mjs`), not
+// ones the application's copy declares (contests-frontend `metadata.ts` and `prerender.mjs`, both
+// reading src/shared/lib/seo/identityGraph.json; Polish joined it on 2026-09-21), not
 // this build's list of trees: deriving them from the manifest would make declaring a docs tree
 // (Arabic) break parity until the application shipped the same change. Each page states its own
 // language in its own node (`inLanguage` on the Article / CollectionPage / WebPage below).
@@ -373,7 +374,7 @@ const WEBSITE = {
   '@id': WEBSITE_ID,
   name: 'DareBay',
   url: `${ENTITY_ORIGIN}/`,
-  inLanguage: ['ru', 'uk', 'en'],
+  inLanguage: ['ru', 'uk', 'en', 'pl'],
   publisher: { '@id': ORG_ID },
 }
 

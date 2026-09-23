@@ -4,7 +4,7 @@
 import { existsSync, readdirSync, readFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { internalNofollowAnchors } from './internal-links.mjs'
+import { MIN_INBOUND, inboundSources, inboundVerdict, internalNofollowAnchors } from './internal-links.mjs'
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..')
 const DOCS = join(ROOT, 'docs')
@@ -44,6 +44,8 @@ const vpIconsHasRules = existsSync(vpIconsPath) && readFileSync(vpIconsPath, 'ut
 const expectedUrls = new Map()
 const idsByPath = new Map()
 const anchorLinks = []
+// Content pages (hub indexes excluded) with their built HTML, for the `inbound-links` gate.
+const leafPages = []
 const decodeFragment = (value) => { try { return decodeURIComponent(value) } catch { return value } }
 for (const page of PAGES) {
   for (const locale of localesOf(page)) {
@@ -56,6 +58,7 @@ for (const page of PAGES) {
       continue
     }
     const html = readFileSync(file, 'utf8')
+    if (page.slugs[locale] !== '') leafPages.push({ path, html, group: `${page.hub}/${locale}` })
 
     // The page's anchors and the links aiming at them; checked as `anchor-target` after the loop.
     idsByPath.set(path, new Set([...html.matchAll(/\bid="([^"]+)"/g)].map((match) => decodeFragment(match[1]))))
@@ -245,12 +248,42 @@ const interFiles = readdirSync(join(DIST, 'content-assets'), { recursive: true }
   .filter((file) => /(?:^|\/)inter-[^/]*\.woff2$/.test(String(file)))
 if (interFiles.length) fail('inter-font', `unused Inter files ship: ${interFiles.join(', ')}`)
 
+// Internal link equity (scripts/internal-links.mjs explains both rules).
+//
 // `internal-nofollow`: no shipped HTML file — content page, hub, 404 — carries a nofollow link to
-// darebay.com (scripts/internal-links.mjs). Our own pages are linked through `sourceAnchor`
-// (links.ts); a nofollow on one of them discards the signal the whole corpus exists to build.
+// darebay.com. Our own pages are linked through `sourceAnchor` (links.ts); a nofollow on one of
+// them discards the signal the whole corpus exists to build.
 for (const file of readdirSync(DIST, { recursive: true }).map(String).filter((name) => name.endsWith('.html'))) {
   for (const anchor of internalNofollowAnchors(readFileSync(join(DIST, file), 'utf8'))) {
     fail('internal-nofollow', `${file}: ${anchor.tag}`)
+  }
+}
+
+// `inbound-links`: every content page is recommended or cited by at least MIN_INBOUND other
+// content pages — body links, comparison sources, "more in this section" cards; never the menus,
+// the language switcher, the page's own outline or its hub's catalogue. The floor drops only where
+// the registry itself makes it unreachable: a section with n pages in a language can recommend a
+// page from at most n - 1 others. Those pages are printed below on every build, with the reason.
+const groupSizes = new Map()
+for (const page of PAGES) {
+  for (const locale of localesOf(page)) {
+    if (page.slugs[locale] === '') continue
+    const group = `${page.hub}/${locale}`
+    groupSizes.set(group, (groupSizes.get(group) ?? 0) + 1)
+  }
+}
+const inbound = inboundSources(leafPages, leafPages.map(({ path }) => path))
+const inboundResult = inboundVerdict(
+  leafPages.map(({ path, group }) => ({ path, group, groupSize: groupSizes.get(group) })),
+  inbound,
+)
+for (const { path, group, groupSize, count, floor } of inboundResult.failures) {
+  fail('inbound-links', `${path}: linked from ${count} other content page(s), needs ${floor} (${group} has ${groupSize} pages)`)
+}
+if (inboundResult.exempt.length) {
+  console.log(`inbound links: ${inboundResult.exempt.length} page(s) below ${MIN_INBOUND}, held to a lower floor because their section is too small in that language:`)
+  for (const { path, group, groupSize, count, floor } of inboundResult.exempt) {
+    console.log(`  ${path}: ${count} (floor ${floor}: ${group} has ${groupSize} page(s), so "more in this section" can recommend it from at most ${groupSize - 1})`)
   }
 }
 
@@ -320,4 +353,4 @@ if (failures.length) {
   process.exit(1)
 }
 console.log(`dist SEO gates: ${expectedUrls.size} localized URLs, ${PAGES.length} semantic pages, 0 findings`)
-console.log('internal links: 0 nofollow to darebay.com')
+console.log(`internal links: 0 nofollow to darebay.com; ${leafPages.length} content pages linked from >= ${MIN_INBOUND} others or their section's maximum`)

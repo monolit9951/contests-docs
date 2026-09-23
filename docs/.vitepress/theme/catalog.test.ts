@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import hubLoader from '../hubs.data'
 import { HUBS, KNOWN_LOCALES, LOCALES, PAGES, pagePath, type HubId } from '../registry'
-import { CATALOG_COPY, TOPICS, TOPIC_LABELS, featuredPages, filterCatalog, groupCatalog, rankedRelated, topicFor } from './catalog'
+import { CATALOG_COPY, TOPICS, TOPIC_LABELS, featuredPages, filterCatalog, groupCatalog, rankedRelated, relatedPlan, relatedScore, topicFor } from './catalog'
 
 const hubs = hubLoader.load()
 
@@ -96,5 +96,62 @@ describe('related article relevance', () => {
     expect(rankedRelated([pages[0]], 'earnings-calculator', 3)).toEqual([pages[0]])
     expect(rankedRelated(pages, 'earnings-whop-review', 0)).toEqual([])
     expect(rankedRelated([], 'earnings-calculator')).toEqual([])
+  })
+
+  // The old contract was "ties by hub order": among equally relevant candidates the first ones of
+  // the (alphabetical) hub list won on every page, and the last ones were recommended by nobody —
+  // /brendam/narezki-ili-reklama-chto-deshevle had no related link at all. Ties are now spread over
+  // the whole list; relevance itself is unchanged.
+  it('spreads equally relevant candidates instead of recommending the first ones everywhere', () => {
+    // Eight pages of one topic sharing no id word: every candidate ties on every page.
+    const pages = ['p1', 'p2', 'p3', 'p4', 'p5', 'p6', 'p7', 'p8'].map((id) => ({ id }))
+    const inbound = new Map(pages.map((page) => [page.id, 0]))
+    for (const page of pages) for (const pick of rankedRelated(pages, page.id)) inbound.set(pick.id, inbound.get(pick.id)! + 1)
+    // By hub order p5…p8 would get nothing and p1 seven picks.
+    expect(Math.min(...inbound.values())).toBeGreaterThanOrEqual(2)
+    expect(Math.max(...inbound.values())).toBeLessThanOrEqual(4)
+    // Deterministic: the SSR build and the browser compute the same cards.
+    expect(pages.map((page) => rankedRelated([...pages], page.id))).toEqual(pages.map((page) => rankedRelated(pages, page.id)))
+  })
+
+  it('never trades relevance for balance on the real hubs, and starves fewer pages than hub order', () => {
+    const byHubOrder = <T extends { id: string }>(pages: readonly T[], currentId: string): T[] =>
+      pages.filter((page) => page.id !== currentId)
+        .map((page, index) => ({ page, index, score: relatedScore(currentId, page.id) }))
+        .sort((a, b) => b.score - a.score || a.index - b.index)
+        .slice(0, 3).map(({ page }) => page)
+    let starvedBefore = 0
+    let starvedAfter = 0
+    for (const hub of Object.keys(HUBS) as HubId[]) {
+      for (const { language } of LOCALES) {
+        const pages = hubs[hub][language]
+        const before = new Map(pages.map((page) => [page.id, 0]))
+        const after = new Map(pages.map((page) => [page.id, 0]))
+        for (const page of pages) {
+          const old = byHubOrder(pages, page.id)
+          const picks = rankedRelated(pages, page.id)
+          // Same relevance, pick for pick: only equally relevant candidates were exchanged.
+          expect(picks.map((pick) => relatedScore(page.id, pick.id)), `${hub}/${language} ${page.id}`)
+            .toEqual(old.map((pick) => relatedScore(page.id, pick.id)))
+          for (const pick of old) before.set(pick.id, before.get(pick.id)! + 1)
+          for (const pick of picks) after.set(pick.id, after.get(pick.id)! + 1)
+        }
+        starvedBefore += [...before.values()].filter((count) => count === 0).length
+        starvedAfter += [...after.values()].filter((count) => count === 0).length
+      }
+    }
+    expect(starvedAfter).toBeLessThan(starvedBefore)
+  })
+
+  it('plans every page of a list together and ranks an outsider against that plan', () => {
+    const pages = ['p1', 'p2', 'p3', 'p4'].map((id) => ({ id }))
+    const plan = relatedPlan(pages, 2)
+    expect([...plan.keys()]).toEqual(['p1', 'p2', 'p3', 'p4'])
+    for (const page of pages) expect(rankedRelated(pages, page.id, 2)).toEqual(plan.get(page.id))
+    // A page outside the list (no plan of its own) is sent to the least recommended candidates.
+    const counts = new Map(pages.map((page) => [page.id, 0]))
+    for (const picks of plan.values()) for (const pick of picks) counts.set(pick.id, counts.get(pick.id)! + 1)
+    const [first] = rankedRelated(pages, 'outsider', 2)
+    expect(counts.get(first.id)).toBe(Math.min(...counts.values()))
   })
 })

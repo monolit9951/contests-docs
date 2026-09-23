@@ -70,12 +70,68 @@ export function groupCatalog<T extends { id: string }>(pages: readonly T[]): { t
   })
 }
 
-/** Same-topic articles first, then semantic overlap, with stable input ordering. */
-export function rankedRelated<T extends { id: string }>(pages: readonly T[], currentId: string, max = 3): T[] {
-  const currentTopic = topicFor(currentId)
-  const tokens = new Set(currentId.split('-').filter((token) => !['earnings', 'brands', 'help', 'about', 'legal', 'clipping', 'clips', 'review', 'reviews', 'alternatives', 'platforms', 'darebay', 'vs', 'the', 'a', 'to', 'and', 'is'].includes(token)))
+// Words of a page id too common to say anything about its subject.
+const GENERIC_ID_TOKENS = new Set(['earnings', 'brands', 'help', 'about', 'legal', 'clipping', 'clips', 'review', 'reviews', 'alternatives', 'platforms', 'darebay', 'vs', 'the', 'a', 'to', 'and', 'is'])
+
+/** How related a candidate is to the current page: same topic (+100), then one point per shared id word. */
+export function relatedScore(currentId: string, candidateId: string): number {
+  const tokens = new Set(currentId.split('-').filter((token) => !GENERIC_ID_TOKENS.has(token)))
+  return (topicFor(candidateId) === topicFor(currentId) ? 100 : 0) + candidateId.split('-').filter((token) => tokens.has(token)).length
+}
+
+/**
+ * Every other page of the list, most relevant first. Relevance always decides. Among EQUAL
+ * relevance the page recommended fewer times so far (`inbound`) goes first, and only then the
+ * input order.
+ */
+function rankCandidates<T extends { id: string }>(pages: readonly T[], currentId: string, inbound: ReadonlyMap<string, number>): T[] {
   return pages.filter((page) => page.id !== currentId)
-    .map((page, index) => ({ page, index, score: (topicFor(page.id) === currentTopic ? 100 : 0) + page.id.split('-').filter((token) => tokens.has(token)).length }))
-    .sort((a, b) => b.score - a.score || a.index - b.index)
-    .slice(0, Math.max(0, max)).map(({ page }) => page)
+    .map((page, index) => ({ page, index, score: relatedScore(currentId, page.id), load: inbound.get(page.id) ?? 0 }))
+    .sort((a, b) => b.score - a.score || a.load - b.load || a.index - b.index)
+    .map(({ page }) => page)
+}
+
+const plans = new WeakMap<readonly { id: string }[], Map<number, Map<string, { id: string }[]>>>()
+
+/**
+ * The related picks of EVERY page of one list (one hub in one language), decided together.
+ *
+ * Ranking each page alone broke ties by input order — the hub's alphabetical order — so wherever
+ * several candidates were equally relevant the same first ones won on every page, and a late
+ * article was recommended by nobody (/brendam/narezki-ili-reklama-chto-deshevle: zero related
+ * links, only its hub). Here the pages are walked in input order and every pick is counted, so a
+ * tie goes to the candidate recommended least so far. Relevance is untouched: a less relevant page
+ * never displaces a more relevant one; the balance only chooses among equals.
+ *
+ * Deterministic: the same list gives the same plan in the SSR build and in the browser, so
+ * hydration never swaps a card.
+ */
+export function relatedPlan<T extends { id: string }>(pages: readonly T[], max = 3): Map<string, T[]> {
+  const limit = Math.max(0, max)
+  const cached = plans.get(pages)?.get(limit)
+  if (cached) return cached as Map<string, T[]>
+  const inbound = new Map<string, number>()
+  const plan = new Map<string, T[]>()
+  for (const page of pages) {
+    const picks = rankCandidates(pages, page.id, inbound).slice(0, limit)
+    for (const pick of picks) inbound.set(pick.id, (inbound.get(pick.id) ?? 0) + 1)
+    plan.set(page.id, picks)
+  }
+  if (!plans.has(pages)) plans.set(pages, new Map())
+  plans.get(pages)!.set(limit, plan)
+  return plan
+}
+
+/**
+ * Same-topic articles first, then semantic overlap; ties balanced across the whole list
+ * (`relatedPlan`). A page outside the list — nothing to balance it against — is ranked against
+ * the finished plan's counts, so it too leans towards the pages recommended least.
+ */
+export function rankedRelated<T extends { id: string }>(pages: readonly T[], currentId: string, max = 3): T[] {
+  const plan = relatedPlan(pages, max)
+  const planned = plan.get(currentId)
+  if (planned) return [...planned]
+  const inbound = new Map<string, number>()
+  for (const picks of plan.values()) for (const pick of picks) inbound.set(pick.id, (inbound.get(pick.id) ?? 0) + 1)
+  return rankCandidates(pages, currentId, inbound).slice(0, Math.max(0, max))
 }

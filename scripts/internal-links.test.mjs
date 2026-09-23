@@ -1,5 +1,15 @@
 import { describe, expect, it } from 'vitest'
-import { anchorsOf, internalNofollowAnchors, isInternalHref } from './internal-links.mjs'
+import {
+  MIN_INBOUND,
+  anchorsOf,
+  editorialAnchors,
+  inboundFloor,
+  inboundSources,
+  inboundVerdict,
+  internalNofollowAnchors,
+  isInternalHref,
+  sitePathOf,
+} from './internal-links.mjs'
 
 // A trimmed article in the landing shell: header menus, hero, outline, body, sources, related
 // cards, CTA, footer — the regions the link gates have to tell apart.
@@ -64,5 +74,83 @@ describe('anchorsOf', () => {
   it('reads attributes in any quoting and decodes entities', () => {
     const [anchor] = anchorsOf(`<a class=lp-src href='/x?a=1&amp;b=2' rel="nofollow  noopener">`)
     expect(anchor).toMatchObject({ href: '/x?a=1&b=2', rel: ['nofollow', 'noopener'], classes: ['lp-src'] })
+  })
+})
+
+describe('editorial links', () => {
+  it('keeps body links, sources and related cards, and drops every piece of page chrome', () => {
+    const html = article({
+      body: '<p><a href="/brendam/skolko-stoit-klipping-kampaniya">cost</a> <a class="lp-src" href="/en/about/darebay-at-a-glance">1</a></p>',
+      related: ['/brendam/narezki-dlya-podkastov'],
+    })
+    expect(editorialAnchors(html).map((anchor) => anchor.href)).toEqual([
+      '/brendam/skolko-stoit-klipping-kampaniya',
+      '/en/about/darebay-at-a-glance',
+      '/brendam/narezki-dlya-podkastov',
+    ])
+  })
+
+  it('finds nothing in a document without <main>', () => {
+    expect(editorialAnchors('<header><a href="/x">x</a></header>')).toEqual([])
+  })
+})
+
+describe('sitePathOf', () => {
+  it('spells an internal target the way the registry spells page paths', () => {
+    expect(sitePathOf('https://darebay.com/en/help/what-commission?x=1#fees')).toBe('/en/help/what-commission')
+    expect(sitePathOf('/zarabotok/index.html')).toBe('/zarabotok/')
+    expect(sitePathOf('/zarabotok/kak-delat-narezki.html')).toBe('/zarabotok/kak-delat-narezki')
+    expect(sitePathOf('kak-delat-narezki', '/zarabotok/other')).toBe('/zarabotok/kak-delat-narezki')
+    expect(sitePathOf('/ar/%D8%A7')).toBe('/ar/ا')
+    expect(sitePathOf('https://whop.com/x')).toBeNull()
+  })
+})
+
+describe('inbound links', () => {
+  const pages = ['/a/one', '/a/two', '/a/three', '/b/']
+
+  it('counts distinct other content pages, not links, and never the page itself', () => {
+    const documents = [
+      { path: '/a/one', html: article({ body: '<a href="/a/two">x</a><a href="/a/two#y">again</a><a href="/a/one">self</a>', related: ['/a/two'] }) },
+      { path: '/a/two', html: article({ related: ['/a/three', '/b'] }) },
+      { path: '/a/three', html: article({ body: '<a href="https://darebay.com/a/two">abs</a>' }) },
+    ]
+    const inbound = inboundSources(documents, pages)
+    expect([...inbound.get('/a/two')].sort()).toEqual(['/a/one', '/a/three'])
+    expect([...inbound.get('/a/three')]).toEqual(['/a/two'])
+    expect([...inbound.get('/a/one')]).toEqual([])
+    // A trailing-slash variant reaches the page it names.
+    expect([...inbound.get('/b/')]).toEqual(['/a/two'])
+  })
+
+  it('holds a page to what its section can deliver, and no lower', () => {
+    expect(MIN_INBOUND).toBe(2)
+    expect([1, 2, 3, 12].map((size) => inboundFloor(size))).toEqual([0, 1, 2, 2])
+    expect(inboundFloor(0)).toBe(0)
+  })
+
+  it('fails a starved page, reports an exempt one, passes the rest', () => {
+    const inbound = new Map([
+      ['/big/starved', new Set(['/big/x'])],
+      ['/big/fine', new Set(['/big/x', '/big/y'])],
+      ['/solo/only', new Set()],
+      ['/pair/one', new Set(['/pair/two'])],
+      ['/pair/two', new Set()],
+    ])
+    const verdict = inboundVerdict([
+      { path: '/big/starved', group: 'big/ru', groupSize: 12 },
+      { path: '/big/fine', group: 'big/ru', groupSize: 12 },
+      { path: '/solo/only', group: 'solo/ar', groupSize: 1 },
+      { path: '/pair/one', group: 'pair/en', groupSize: 2 },
+      { path: '/pair/two', group: 'pair/en', groupSize: 2 },
+    ], inbound)
+    expect(verdict.failures).toEqual([
+      { path: '/big/starved', group: 'big/ru', groupSize: 12, count: 1, floor: 2 },
+      { path: '/pair/two', group: 'pair/en', groupSize: 2, count: 0, floor: 1 },
+    ])
+    expect(verdict.exempt).toEqual([
+      { path: '/solo/only', group: 'solo/ar', groupSize: 1, count: 0, floor: 0 },
+      { path: '/pair/one', group: 'pair/en', groupSize: 2, count: 1, floor: 1 },
+    ])
   })
 })

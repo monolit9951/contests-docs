@@ -691,8 +691,11 @@ for (const canonical of new Set(appUrls)) {
             fail('9-ugc', `${contest}: canonical ${declared}`)
         }
         // A prefixed page is either an approved translated document (self
-        // canonical, indexable) or an interface-only copy (root canonical,
-        // noindex). The frontend's strict locale registry is the shared policy.
+        // canonical) or an interface-only copy (canonical to the source
+        // document). Both are indexable: since 2026-09-23 an interface-only copy
+        // is canonical-only, because noindex next to a cross-document canonical
+        // sends two contradicting signals (founder directive 2026-09-18). The
+        // frontend's strict locale registry is the shared policy.
         for (const [language, prefix] of [['uk', '/ua'], ['en', '/en']]) {
             const res = await body(`${prefix}${contest}`)
             if (res.status !== 200) fail('9-ugc', `${prefix}: карточка конкурса -> ${res.status}`)
@@ -702,12 +705,11 @@ for (const canonical of new Set(appUrls)) {
                 fail('9-ugc', `${prefix}${contest}: canonical ${localCanonical}, ожидался ${expected}`)
             }
             const robots = tag(res.text, /<meta[^>]+name="robots"[^>]+content="([^"]+)"/g)[0] ?? ''
+            const headerRobots = res.headers.get('x-robots-tag') ?? ''
             const selfCanonical = expected === `https://darebay.com${prefix}${contest}`
-            if (selfCanonical && /noindex/i.test(robots)) {
-                fail('9-ugc', `${prefix}${contest}: одобренный перевод помечен noindex`)
-            }
-            if (!selfCanonical && !/noindex/i.test(robots)) {
-                fail('9-ugc', `${prefix}${contest}: интерфейсная копия не помечена noindex`)
+            if (/noindex/i.test(robots) || /noindex/i.test(headerRobots)) {
+                const kind = selfCanonical ? 'одобренный перевод' : 'интерфейсная копия'
+                fail('9-ugc', `${prefix}${contest}: ${kind} помечена noindex`)
             }
         }
     }

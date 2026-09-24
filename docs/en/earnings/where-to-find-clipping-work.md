@@ -94,7 +94,7 @@ Signing up is open, and taking a brief needs no agency, no manager and no contra
 
 ## Compare platforms and check the figures
 
-DareBay is not the only place that pays for clips, and it should be chosen by the numbers rather than the pitch. [Best clipping platforms](/en/earnings/best-clipping-platforms) puts nine platforms side by side on the same fields: rate per 1000 views, threshold, cap per clip, fee on payout, minimum payout and whether they pay in Russia and CIS. DareBay's own figures - rate, threshold, cap, fees and payout methods - are collected with a source and a date in [DareBay at a glance](/en/about/darebay-at-a-glance).
+DareBay is not the only place that pays for clips, and it should be chosen by the numbers rather than the pitch. [Best clipping platforms](/en/earnings/best-clipping-platforms) puts the platforms we rank side by side on the same fields: rate per 1000 views, threshold, cap per clip, fee on payout, minimum payout and whether they pay in Russia and CIS. DareBay's own figures - rate, threshold, cap, fees and payout methods - are collected with a source and a date in [DareBay at a glance](/en/about/darebay-at-a-glance).
 
 ## Frequently asked questions
 

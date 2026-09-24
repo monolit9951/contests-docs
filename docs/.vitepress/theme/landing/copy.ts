@@ -61,6 +61,7 @@ export interface LandingCopy {
 
 const columns = {
   en: {
+    cpm: '$ per 1,000 views',
     rate: 'Rate per 1,000 views',
     threshold: 'View threshold',
     cap: 'Cap per clip',
@@ -82,6 +83,7 @@ const columns = {
     philippines: 'Pays in the Philippines',
   },
   ru: {
+    cpm: '$ за 1000 просмотров',
     rate: 'Ставка за 1000',
     threshold: 'Порог просмотров',
     cap: 'Потолок на ролик',
@@ -103,6 +105,7 @@ const columns = {
     philippines: 'Платит на Филиппины',
   },
   uk: {
+    cpm: '$ за 1000 переглядів',
     rate: 'Ставка за 1000',
     threshold: 'Поріг переглядів',
     cap: 'Стеля на ролик',
@@ -125,6 +128,7 @@ const columns = {
   },
   // The platform is the grammatical subject (المنصة, feminine), hence تدفع.
   ar: {
+    cpm: 'بالدولار لكل 1,000 مشاهدة',
     rate: 'السعر لكل 1,000 مشاهدة',
     threshold: 'حد المشاهدات',
     cap: 'الحد الأقصى لكل مقطع',

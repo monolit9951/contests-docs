@@ -5,12 +5,14 @@ import { useData } from 'vitepress'
 import { computed } from 'vue'
 import { sourceAnchor, sourceLabel } from '../../links'
 import { LANDING_COPY, localeOf } from './copy'
-import { DEFAULT_COLUMNS, pick, sourcesOf, DATA } from './platforms'
+import { DEFAULT_COLUMNS, comparisonUpdated, pick, sourcesOf } from './platforms'
 
 const { frontmatter, lang } = useData()
 const loc = computed(() => localeOf(lang.value))
 const copy = computed(() => LANDING_COPY[loc.value])
 const paragraphs = computed(() => (frontmatter.value.method ?? []) as string[])
+// The same date the hero prints: a page whose figures were re-read (`hero.updated`) says so here too.
+const updated = computed(() => comparisonUpdated(frontmatter.value))
 const cfg = computed(() => (frontmatter.value.compare ?? {}) as { ids?: string[]; columns?: string[] })
 const ids = computed(() => cfg.value.ids ?? [])
 // Same columns the table above renders, so a per-country source is listed exactly on the pages
@@ -27,7 +29,7 @@ const sources = computed(() => pick(ids.value).flatMap((p) => sourcesOf(p, colum
     <div class="lp-method">
       <div>
         <p v-for="(t, i) in paragraphs" :key="i">{{ t }}</p>
-        <p class="lp-muted" style="font-size:13px">{{ copy.snapshotNote }} {{ copy.updated }}: <time :datetime="DATA.snapshot">{{ DATA.snapshot }}</time>.</p>
+        <p class="lp-muted" style="font-size:13px">{{ copy.snapshotNote }} {{ copy.updated }}: <time :datetime="updated">{{ updated }}</time>.</p>
       </div>
       <div>
         <span class="lp-kicker" style="display:block;margin-bottom:10px">{{ copy.sources }}</span>

@@ -53,6 +53,13 @@ export const DEFAULT_COLUMNS = ['rate', 'threshold', 'cap', 'fee', 'minPayout', 
 export const REGION_FIELDS: readonly string[] = ['india', 'pakistan', 'bangladesh', 'nigeria', 'kenya', 'mena', 'indonesia', 'philippines']
 
 export const DATA = raw as PlatformsData
+/**
+ * The "Updated" date a comparison page prints: its own `hero.updated` when its figures were re-read
+ * after the catalog snapshot, otherwise the snapshot itself. The hero and "how this comparison was
+ * built" both show it, so the two can never disagree on one page.
+ */
+export const comparisonUpdated = (frontmatter: { hero?: { updated?: string } | null }): string =>
+  frontmatter.hero?.updated ?? DATA.snapshot
 export const byId = (id: string): Platform | undefined => DATA.platforms.find((p) => p.id === id)
 export const pick = (ids: string[]): Platform[] => ids.map(byId).filter((p): p is Platform => Boolean(p))
 export const text = (p: Platform, field: string, lang: Locale): string => p.fields[field]?.text?.[lang] ?? p.fields[field]?.text?.en ?? ''

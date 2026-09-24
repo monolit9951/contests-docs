@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { LANDING_COPY } from './copy'
-import { DATA, DEFAULT_COLUMNS, REGION_FIELDS, bidiAttrs, byId, sourceIndex, sourcesOf, text, textLang } from './platforms'
+import { DATA, DEFAULT_COLUMNS, REGION_FIELDS, bidiAttrs, byId, comparisonUpdated, sourceIndex, sourcesOf, text, textLang } from './platforms'
 import { sourceAnchor } from '../../links'
 import { KNOWN_LOCALES } from '../../registry'
 
@@ -184,6 +184,50 @@ describe('the platforms every regional page compares', () => {
       expect(field.source?.url).toMatch(/^https:\/\/darebay\.com\//)
       if (field.state === 'partial') expect(field.text?.en, `darebay.${key}`).toContain('USDT on TON')
     }
+  })
+})
+
+describe('the compact dollars-per-1,000-views column', () => {
+  // `cpm` restates a platform's published rate as a short cell ("$1–$3", "₹30–₹70 (≈$0.31–$0.73)")
+  // for the pages that ask for it in `compare.columns`. The long `rate` text stays the source of the
+  // wording; this cell only has to be present, sourced and honest about what is not published.
+  it('has a heading in every interface locale', () => {
+    for (const locale of LOCALES) expect(LANDING_COPY[locale].columns.cpm, locale).toBeTruthy()
+  })
+
+  it('exists on every platform, with the page and date it restates', () => {
+    for (const platform of DATA.platforms) {
+      const field = platform.fields.cpm
+      expect(field, platform.id).toBeDefined()
+      expect(typeof field.text?.en, platform.id).toBe('string')
+      expect(field.source?.url, platform.id).toMatch(/^https:\/\//)
+      expect(field.source?.date, platform.id).toMatch(/^\d{4}-\d{2}-\d{2}$/)
+    }
+  })
+
+  it('sorts only on a number the platform published', () => {
+    // An empty cell prints "not published"; a sortable value behind it would rank a guess.
+    for (const platform of DATA.platforms) {
+      const field = platform.fields.cpm
+      if (!field.text?.en) expect(field.value ?? null, platform.id).toBeNull()
+      if (typeof field.value === 'number') expect(field.value, platform.id).toBeGreaterThan(0)
+    }
+  })
+
+  it('is opt-in, not one of the columns a page gets by default', () => {
+    expect(DEFAULT_COLUMNS).not.toContain('cpm')
+  })
+})
+
+describe('the date a comparison page prints as updated', () => {
+  it('is the page\'s own re-read date when it has one', () => {
+    expect(comparisonUpdated({ hero: { updated: '2026-09-24' } })).toBe('2026-09-24')
+  })
+
+  it('falls back to the catalog snapshot otherwise', () => {
+    expect(comparisonUpdated({})).toBe(DATA.snapshot)
+    expect(comparisonUpdated({ hero: {} })).toBe(DATA.snapshot)
+    expect(comparisonUpdated({ hero: null })).toBe(DATA.snapshot)
   })
 })
 

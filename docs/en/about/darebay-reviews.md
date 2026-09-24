@@ -57,7 +57,7 @@ What you will not find here is an income projection. Nobody can tell you what a 
 
 ## DareBay's numbers, and the other platforms
 
-Where reviews fail, a like-for-like comparison helps. [DareBay at a glance](/en/about/darebay-at-a-glance) collects the rate, threshold, cap, fees, minimum withdrawal and payout methods, each with a source and a date. And in [best clipping platforms](/en/earnings/best-clipping-platforms) DareBay stands next to eight other platforms, every competitor figure taken from its own page.
+Where reviews fail, a like-for-like comparison helps. [DareBay at a glance](/en/about/darebay-at-a-glance) collects the rate, threshold, cap, fees, minimum withdrawal and payout methods, each with a source and a date. And in [best clipping platforms](/en/earnings/best-clipping-platforms) DareBay stands next to the other clipping platforms, every competitor figure taken from its own page.
 
 ## Frequently asked questions
 

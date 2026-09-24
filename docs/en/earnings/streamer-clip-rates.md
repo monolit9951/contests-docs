@@ -87,7 +87,7 @@ The permission works within the boundaries of the brief. A broadcast by an outsi
 
 ## Streamer rates next to other platforms
 
-The $1.00 to $10.00 per 1000 views band is DareBay's open contests, and it is best read alongside the fee, threshold and cap of the other platforms. [Best clipping platforms](/en/earnings/best-clipping-platforms) compares nine of them on exactly those fields, payout countries included. Every DareBay figure with its source and date is in [DareBay at a glance](/en/about/darebay-at-a-glance). Read the rate together with the fee on payout, the threshold and the minimum payout: two platforms quoting the same $2.00 per 1000 views can put different amounts in your hands. On DareBay the contest fee is 0%, and withdrawal to your wallet takes 10% inside a request from 10 USDT: a 100 USDT request pays out 90 USDT, shown in the form before you confirm.
+The $1.00 to $10.00 per 1000 views band is DareBay's open contests, and it is best read alongside the fee, threshold and cap of the other platforms. [Best clipping platforms](/en/earnings/best-clipping-platforms) compares them on exactly those fields, payout countries included. Every DareBay figure with its source and date is in [DareBay at a glance](/en/about/darebay-at-a-glance). Read the rate together with the fee on payout, the threshold and the minimum payout: two platforms quoting the same $2.00 per 1000 views can put different amounts in your hands. On DareBay the contest fee is 0%, and withdrawal to your wallet takes 10% inside a request from 10 USDT: a 100 USDT request pays out 90 USDT, shown in the form before you confirm.
 
 ## Frequently asked questions
 

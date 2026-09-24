@@ -125,7 +125,7 @@ A first job rarely takes off, and that is normal: its purpose is to show you the
 
 ## Other platforms and the DareBay fact sheet
 
-A clipper is better off registered on two or three platforms: campaigns run out of budget, and a supply of briefs matters more than one high rate. How DareBay compares with eight others on rate, threshold, cap, fee and payout countries is in [best clipping platforms](/en/earnings/best-clipping-platforms). Every DareBay figure, from the rate to the withdrawal terms, stands with a source and a date in [DareBay at a glance](/en/about/darebay-at-a-glance). The first things to check on any platform are whether it pays in your country, what fee it takes from the payout and from which threshold it counts views: a headline rate without those three fields says nothing.
+A clipper is better off registered on two or three platforms: campaigns run out of budget, and a supply of briefs matters more than one high rate. How DareBay compares with the other clipping platforms on rate, threshold, cap, fee and payout countries is in [best clipping platforms](/en/earnings/best-clipping-platforms). Every DareBay figure, from the rate to the withdrawal terms, stands with a source and a date in [DareBay at a glance](/en/about/darebay-at-a-glance). The first things to check on any platform are whether it pays in your country, what fee it takes from the payout and from which threshold it counts views: a headline rate without those three fields says nothing.
 
 ## Frequently asked questions
 

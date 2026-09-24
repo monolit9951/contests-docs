@@ -1,6 +1,6 @@
 ---
 title: "Клипни (klipni.com): обзор платформы, отзывы, ставки и выплаты"
-description: "Клипни это российская платформа, где бренды платят рублями за просмотры: ставку задаёт кампания, комиссия 5%, выплата только самозанятым и ИП. Что в отзывах."
+description: "Клипни это российская платформа: бренды платят рублями за просмотры, ставку задаёт кампания, комиссия 5%, выплата только самозанятым и ИП. Отзывов почти нет."
 provenance: { snapshot_date: "2026-09-21", source: "darebay-prod" }
 numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_default_min_views_threshold, ppv_max_per_work_band_high, commission_crypto, commission_fiat]
 seo: true

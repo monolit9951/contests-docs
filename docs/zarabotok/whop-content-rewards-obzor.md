@@ -1,6 +1,6 @@
 ---
 title: "Whop Content Rewards в 2026: обзор, комиссия 10% и выплаты"
-description: "С августа 2026 Content Rewards живёт на своём сайте, вывод идёт через Whop. Ставки $0.05–$10 за 1000, комиссия 10%, расчёт ~10 дней, РФ и Беларусь закрыты."
+description: "С августа 2026 Content Rewards на своём сайте, вывод через Whop. Ставки $0.05–$10 за 1000 просмотров, комиссия 10%, расчёт около 10 дней, РФ и Беларусь закрыты."
 provenance: { snapshot_date: "2026-09-20", source: "darebay-prod" }
 numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_min_views_threshold_live, ppv_max_per_work_typical, commission_crypto, commission_fiat]
 competitor_sources:
@@ -106,7 +106,7 @@ DareBay работает без списка стран: заказчик пуб
 
 Платит: за площадкой юрлицо в Делавэре, а условия описывают комиссию, сроки расчёта и отзыв выплат <!-- source: https://contentrewards.com/terms 2026-09-18 -->; бренд вносит бюджет до старта <!-- source: https://contentrewards.com/ 2026-09-18 -->. Чего страницы площадки за тебя не решат, так это платит ли Whop в твою страну, поэтому санкционный список читай первым.
 
-### Почему Content Rewards больше нет внутри Whop?
+### Куда переехал Content Rewards и что осталось в Whop?
 
 Релиз V2 от 19 августа 2026 года перестроил площадку в отдельные приложения для брендов и для авторов, и живёт она теперь на своём сайте contentrewards.com <!-- source: https://contentrewards.com/changelog 2026-09-18 -->. Условия для авторов с 3 сентября заключаются с Content Rewards Inc из Делавэра, а версию внутри Whop они называют прежней <!-- source: https://contentrewards.com/terms 2026-09-18 -->. Whop при этом остался под капотом: через него идут вход в аккаунт, проверка личности и вывод денег <!-- source: https://contentrewards.com/terms 2026-09-18 -->.
 

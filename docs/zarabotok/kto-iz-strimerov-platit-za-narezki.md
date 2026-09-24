@@ -1,6 +1,6 @@
 ---
 title: "Кто из стримеров платит за нарезки: список 2026 со ставками"
-description: "Мелстрой платит в среднем 20$ за 100 000 просмотров, Эвелон 15$, Злой 25$, T2x2 рублями. Новые правила Мелстроя, куда сдавать ролик и кто закрыл выплаты."
+description: "Кто из стримеров платит за нарезки: Мелстрой в среднем 20$ за 100 000 просмотров, Эвелон 15$, ещё Злой и T2x2. Правила Мелстроя с 12.09 и куда сдавать ролик."
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_min_views_threshold_live, ppv_max_per_work_typical, ppv_max_per_work_band_high]
 competitor_sources:

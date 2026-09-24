@@ -1,6 +1,6 @@
 ---
 title: "Prime Oracles: обзор, отзывы, выплаты и комиссия 10%"
-description: "Prime Oracles это маркетплейс и задания на нарезки от ИП из Грузии: $0.02–$8 за 1000 просмотров, вывод от $5 в крипте, комиссия 10%. Кому нельзя и чего нет."
+description: "Prime Oracles (Прайм Ораклс) это доска заданий на нарезки: $0.02–$8 за 1000 просмотров, вывод в USDT, USDC или TON от $5, комиссия 10%. Отзывы и аналоги."
 provenance: { snapshot_date: "2026-09-19", source: "darebay-prod" }
 numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_min_views_threshold_live, ppv_max_per_work_typical, ppv_max_per_work_band_high, commission_crypto, commission_fiat]
 seo: true
@@ -131,6 +131,14 @@ Prime Oracles выигрывает в таких случаях:
 ### Нужен ли KYC на Prime Oracles?
 
 При регистрации нет: по соглашению нужны почта, имя или псевдоним и пароль. Дальше по требованию, триггеры опубликованы. На канале Garna KYC обязателен всегда.
+
+### Нужна ли самозанятость для работы в Prime Oracles?
+
+Для регистрации нет: по пункту 3.2 соглашения нужны только почта, имя (можно псевдоним) и пароль. Налоговый статус пункт 11.1 оставляет на тебе: для России он называет самозанятого или ИП и обязывает оформить регистрацию самостоятельно и за свой счёт, если её требует закон твоей страны <!-- source: https://www.primeoracles.com/terms-agreement 2026-09-24 -->. Что это значит для нарезчика из России, разобрано в [налогах и самозанятости нарезчика](/zarabotok/nalogi-i-samozanyatost-narezchika).
+
+### Какой у Prime Oracles официальный сайт и есть ли приложение?
+
+Сайт площадки primeoracles.com, адрес без www переводит на www.primeoracles.com. С главной ведут ссылки на её Telegram-канал t.me/primeoracles, Instagram и YouTube, а ссылок на App Store или Google Play 24 сентября 2026 года там не было <!-- source: https://www.primeoracles.com/ 2026-09-24 -->. Из ЕС, Великобритании и США сайт может не открыться: по пункту 19.1 соглашения площадка ставит там геоблокировку <!-- source: https://www.primeoracles.com/terms-agreement 2026-09-24 -->.
 
 ### Какие есть аналоги Prime Oracles?
 

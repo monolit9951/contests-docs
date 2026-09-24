@@ -1,6 +1,6 @@
 ---
-title: "Заработок на VK Клипах: как платит VK и как добрать за просмотры"
-description: "VK платит авторам клипов долей рекламной выручки через партнёрскую программу VK Видео с порогом входа по подписчикам. DareBay просмотры в VK не считает."
+title: "Заработок на VK Клипах: сколько платит партнёрская программа VK"
+description: "VK платит за клипы не за просмотры: автору идёт 50–80% рекламного дохода по партнёрской программе VK Видео, вход от 1000 подписчиков. Как добрать заданиями."
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_min_views_threshold_live, ppv_max_per_work_typical]
 competitor_sources:

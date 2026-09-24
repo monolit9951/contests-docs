@@ -1,6 +1,6 @@
 ---
 title: "Аналоги Whop в России и СНГ: семь площадок для нарезчиков"
-description: "Семь альтернатив Whop Content Rewards для нарезчиков из России и СНГ, которых закрывает его санкционный список: ставка, порог, потолок, комиссия, страны."
+description: "Чем заменить Whop Content Rewards в России и СНГ: DareBay, Prime Oracles, Klipni и ещё четыре площадки. Ставка, порог, потолок, комиссия и кому они платят."
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_min_views_threshold_live, ppv_max_per_work_typical, ppv_max_per_work_band_high]
 seo: true

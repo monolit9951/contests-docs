@@ -107,6 +107,7 @@ seo: true
 ## Куда дальше
 
 - [Монетизация TikTok в России](/zarabotok/skolko-platyat-za-prosmotry-v-tiktok) - партнёрка площадки против конкурса у посредника
+- [Заработок на Reels](/zarabotok/zarabotok-na-reels-instagram) - сколько приносит рилс в конкурсе и почему фотопост не считается
 - [Как делать нарезки](/zarabotok/kak-delat-narezki) - выбор момента, вертикальный кадр, субтитры
 - [Как работает оплата за просмотры](/zarabotok/kak-rabotaet-oplata-za-prosmotry) - цепочка от бюджета конкурса до выплаты
 - [Сколько можно заработать на нарезках](/zarabotok/skolko-mozhno-zarabotat-na-narezkah) - справочник по ставке

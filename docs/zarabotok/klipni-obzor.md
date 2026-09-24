@@ -1,6 +1,6 @@
 ---
-title: "Клипни (Klipni): обзор и отзывы, ставки, комиссия и выплаты"
-description: "Клипни: обзор и отзывы. Платит рублями самозанятым из России: ставку задаёт кампания, комиссия 5%, перевод после холда до пяти рабочих дней. Отзывов почти нет."
+title: "Клипни (klipni.com): обзор платформы, отзывы, ставки и выплаты"
+description: "Клипни это российская платформа, где бренды платят рублями за просмотры: ставку задаёт кампания, комиссия 5%, выплата только самозанятым и ИП. Что в отзывах."
 provenance: { snapshot_date: "2026-09-21", source: "darebay-prod" }
 numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_default_min_views_threshold, ppv_max_per_work_band_high, commission_crypto, commission_fiat]
 seo: true

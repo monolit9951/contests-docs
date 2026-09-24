@@ -144,6 +144,26 @@ interface AuthenticatedAnalyticsPayload extends AnalyticsPayload {
 let memoryIdentity: BrowserIdentity | undefined
 let memoryFirstTouch: StoredFirstTouch | undefined
 let memorySession: SessionContext | undefined
+
+// Another tab (the app or other docs pages) writes the shared keys on every
+// analytics call, and a page restored from the back-forward cache missed every
+// write while frozen. As in the app (contests-frontend session.ts), this tab then
+// keeps its copies only while the actor still owns the identity in memory, and
+// otherwise reads what the browser holds now: an anonymous or foreign copy is
+// the stale kind that would carry a visit into another account.
+const SHARED_STORAGE_KEYS: ReadonlySet<string> = new Set([
+    IDENTITY_STORAGE_KEY, SESSION_STORAGE_KEY, FIRST_TOUCH_STORAGE_KEY,
+])
+let sharedCopiesStale = false
+const settleStaleCopies = (boundary: string): void => {
+    if (!sharedCopiesStale) return
+    sharedCopiesStale = false
+    if (memoryIdentity?.ownerBoundary === boundary) return
+    memoryIdentity = undefined
+    memoryFirstTouch = undefined
+    memorySession = undefined
+}
+
 const memoryOutbox = new Map<string, AnalyticsPayload>()
 export interface DocsPageContext {
     pageViewId: string
@@ -268,13 +288,25 @@ const resetIdentityState = (): void => {
     safeRemove(SESSION_STORAGE_KEY)
 }
 
+// Judged by the stored copy, not this tab's memory, as in the app (contests-frontend
+// session.ts): another tab can have signed an account in on the identity, or rotated
+// it away, while this one kept an older copy. Claiming that copy would put a second
+// account on the identity and on the visit that goes on with it.
+const isClaimable = (identity: BrowserIdentity, boundary: string): boolean => {
+    const stored = parseJson<BrowserIdentity>(safeGet(IDENTITY_STORAGE_KEY))
+    return !stored
+        || (stored.id === identity.id && (!stored.ownerBoundary || stored.ownerBoundary === boundary))
+}
+
 const identityForBoundary = (boundary: string): BrowserIdentity => {
+    settleStaleCopies(boundary)
     const existing = readIdentity()
     const anonymous = boundary === 'anonymous'
     if (!existing) {
         return writeIdentity({ id: randomId(), ...(!anonymous && { ownerBoundary: boundary }) })
     }
-    if (!existing.ownerBoundary && !anonymous && !boundary.startsWith('impersonated:')) {
+    if (!existing.ownerBoundary && !anonymous && !boundary.startsWith('impersonated:')
+        && isClaimable(existing, boundary)) {
         return writeIdentity({ ...existing, ownerBoundary: boundary })
     }
     const crossed = existing.ownerBoundary ? existing.ownerBoundary !== boundary : !anonymous
@@ -322,10 +354,14 @@ const getSession = (): SessionContext => {
     const actor = actorContext()
     const identity = identityForBoundary(actor.boundary)
     const parsed = memorySession ?? parseJson<SessionContext>(safeGet(SESSION_STORAGE_KEY))
+    // Signing in keeps the visit, as in the app (contests-frontend session.ts),
+    // when the account could claim this anonymous identity: the pages before the
+    // login and the account's pages after it are one visit.
+    const signingIn = parsed?.actorBoundary === 'anonymous' && identity.ownerBoundary === actor.boundary
     if (parsed?.id && parsed.anonymousId && parsed.firstTouch?.landingPage && parsed.sessionTouch?.landingPage
-        && parsed.actorBoundary === actor.boundary && parsed.anonymousId === identity.id
+        && (parsed.actorBoundary === actor.boundary || signingIn) && parsed.anonymousId === identity.id
         && now - parsed.lastSeenAt < IDLE_ROTATE_MS) {
-        const refreshed = { ...parsed, lastSeenAt: now }
+        const refreshed = { ...parsed, actorBoundary: actor.boundary, lastSeenAt: now }
         memorySession = refreshed
         safeSet(SESSION_STORAGE_KEY, JSON.stringify(refreshed))
         return refreshed
@@ -468,9 +504,12 @@ const acknowledge = (eventKey: string): void => {
 const credentialsFor = (
     payload: AnalyticsPayload,
 ): Pick<AuthenticatedAnalyticsPayload, 'authToken' | 'initData'> => {
-    // Credentials are attached only in memory at send time. If a shared
-    // browser switched actor after enqueue, the old event remains anonymous
-    // instead of being attributed to the new account.
+    // Credentials are attached only in memory at send time, and only while the
+    // event's session is still current. Signing in keeps the session, so an
+    // undelivered event of that session, from any tab, goes out as the account's:
+    // the account has claimed this browser identity. Signing out or switching
+    // accounts rotates the identity and the session, and the old event stays
+    // anonymous instead of being attributed to the new account.
     if (getSession().id !== payload.sessionId) return {}
     return {
         authToken: bounded(safeGet(TOKEN_STORAGE_KEY), 4096),
@@ -638,6 +677,12 @@ export const installDocsAnalytics = (): void => {
         if (exit) trackDocsEvent(exit, { targetUrl: anchor.href })
     }, { capture: true })
     window.addEventListener('online', () => void flushDocsOutbox())
+    window.addEventListener('storage', (event) => {
+        if (event.key === null || SHARED_STORAGE_KEYS.has(event.key)) sharedCopiesStale = true
+    })
+    window.addEventListener('pageshow', (event) => {
+        if (event.persisted) sharedCopiesStale = true
+    })
     void flushDocsOutbox()
 }
 
@@ -645,6 +690,7 @@ export const resetDocsAnalyticsForTests = (): void => {
     memoryIdentity = undefined
     memoryFirstTouch = undefined
     memorySession = undefined
+    sharedCopiesStale = false
     memoryOutbox.clear()
     currentPageContext = undefined
     recentSends.clear()

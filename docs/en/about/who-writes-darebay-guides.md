@@ -9,14 +9,14 @@ seo: true
 # Who writes the DareBay guides and where the numbers come from
 
 You are reading the people who build DareBay: the earning section is written by the platform team
-and signed by its founder, Ruslan Bei, who is answerable for it. Nobody here is studying the market
+and signed by its founder, Ruslan, who is answerable for it. Nobody here is studying the market
 from the outside. The same people watch every day how views are counted and how payouts leave, so
 what is written down is how the product actually works. That position has a strong side and a weak
 side, and both are named below.
 
 ## Who the author is
 
-**Ruslan Bei** is the founder of DareBay. He owns the product, the task terms and every figure in
+**Ruslan** is the founder of DareBay. He owns the product, the task terms and every figure in
 this section. You can reach him directly: Telegram [@ruslanbwork](https://t.me/ruslanbwork), email
 partners@darebay.com.
 

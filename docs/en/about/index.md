@@ -14,7 +14,7 @@ product, not a website plus a separate app.
 
 ## Who is behind it
 
-The project was founded by **Ruslan Bei**, who runs the product and writes the code. You can
+The project was founded by **Ruslan**, who runs the product and writes the code. You can
 talk to him directly: [@ruslanbwork](https://t.me/ruslanbwork) on Telegram.
 
 Worth saying out loud: the money-making space is full of faceless platforms with no address

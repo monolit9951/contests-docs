@@ -6,11 +6,11 @@ description: The DareBay rules. What we promise, what we expect from you, and wh
 # Terms of Use
 
 **Effective date:** 7 May 2026
-**Last updated:** 4 August 2026
+**Last updated:** 25 September 2026
 
 These Terms govern your use of **darebay.com**,
 the DareBay web app, our APIs and related services (together, the
-**"Service"**). The Service is run by **Ruslan Bei**, an individual
+**"Service"**). The Service is run by **Ruslan**, an individual
 based in Europe, trading under the name
 **DareBay** (the **"Operator"**, "we", "us"). Registration of a UK
 private limited company (UK Ltd) is planned;
@@ -427,7 +427,7 @@ the change takes effect means you agree to it.
 | General | hello@darebay.com |
 | Legal and disputes | legal@darebay.com |
 | Privacy | privacy@darebay.com |
-| Operator | Ruslan Bei (sole operator), trading as DareBay |
+| Operator | Ruslan (sole operator), trading as DareBay |
 | Postal address | Provided on written request to **legal@darebay.com** |
 
 ---

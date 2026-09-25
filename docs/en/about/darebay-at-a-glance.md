@@ -62,7 +62,7 @@ Views are read from the public counter of the published video by the platform, n
 
 ## Who is behind it
 
-DareBay was founded by Ruslan Bei and launched in 2026. The platform runs a public Telegram channel and a creators' chat, a TikTok account, a LinkedIn company page and a YouTube channel; the founder answers directly in Telegram. Terms of use and the privacy policy are published in the legal section, and the numbers on this page are regenerated from the platform's data rather than written by hand.
+DareBay was founded by Ruslan and launched in 2026. The platform runs a public Telegram channel and a creators' chat, a TikTok account, a LinkedIn company page and a YouTube channel; the founder answers directly in Telegram. Terms of use and the privacy policy are published in the legal section, and the numbers on this page are regenerated from the platform's data rather than written by hand.
 
 ## For comparison sites and aggregators
 

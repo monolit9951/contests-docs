@@ -46,7 +46,7 @@ DareBay is a marketplace for content tasks. Someone posts a task with a budget, 
 | "They understate the views" | Nobody types the figure in: the platform reads the public counter of the publishing site | Your clip and the card |
 | "Hidden fees" | None hidden: the contest fee is 0% and nothing is taken from the task budget; the one fee is 10% of a withdrawal request, 10 USDT minimum, deducted inside the request with the amount to receive shown before you confirm | [DareBay fees](/en/help/what-commission) |
 | "Payouts take forever" | Requests are handled by the team and no settlement date is promised | Withdrawal form |
-| "Nobody is behind it" | A named founder, Ruslan Bei, answers in person | [@ruslanbwork](https://t.me/ruslanbwork) |
+| "Nobody is behind it" | The founder, Ruslan, answers in person | [@ruslanbwork](https://t.me/ruslanbwork) |
 | "Nobody knows what it pays" | Open contests pay $1.00 to $10.00 per 1000 views, printed on every card | [Contest catalogue](/en/earn/clips) |
 
 ## Reading the figures quoted here

@@ -80,7 +80,7 @@ const WORDING = {
     en: 'worldwide, no country list',
     ar: 'العالم كله، دون قائمة دول',
   },
-  operator: 'Ruslan Bei',
+  operator: 'Ruslan',
 }
 
 /**

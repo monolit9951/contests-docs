@@ -22,7 +22,7 @@ Fraud in this niche is not creative. It reuses the same five moves, and they are
 | Pay to get paid | A transfer to an outside wallet to "unlock" or "verify" a prize | Never. The only fee is 10% of a withdrawal request, deducted inside it, and the form shows the amount to receive before you confirm; nothing is paid up front |
 | Money for nothing | Income for signing up, clicking or inviting friends | Payment follows a result: counted views, votes, or a judged decision. No result, no money |
 | Terms that move | The rate or the rules change once the work is done | The rate and the threshold are fixed when the contest is created. After launch the buyer can change the cap per submission (never below what a clip has already earned), move the deadline or top up the budget |
-| Nobody to ask | No name, no address, no human | The platform is run by Ruslan Bei under his own name, reachable at [@ruslanbwork](https://t.me/ruslanbwork) |
+| Nobody to ask | No name, no address, no human | The platform is run by its founder, Ruslan, reachable at [@ruslanbwork](https://t.me/ruslanbwork) |
 
 ## Where the money actually sits
 

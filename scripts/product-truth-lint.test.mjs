@@ -577,13 +577,6 @@ test("a transfer promised at contest close fails", () => {
   assert(rules("At the end of the contest, the money goes to the winner.").has("contest-close-auto-transfer"));
 });
 
-test("the founder's Latin name is Ruslan Bei, across a line wrap and in a question", () => {
-  assert(rules("The project was founded by **Ruslan Bey**.").has("founder-name-latin"));
-  assert(rules("signed by its founder, Ruslan\nBey, who is answerable for it.").has("founder-name-latin"));
-  assert(rules("### Who is Ruslan Bey?").has("founder-name-latin"));
-  assert.deepEqual(lintText("Founded by **Ruslan Bei** (Руслан Бей).\nBeyond the byline, nothing changes.", "fixture.md", truth), []);
-});
-
 console.log("product_truth_lint: Russian and Ukrainian wordings");
 
 // `\b` never matched beside a Cyrillic letter, so until 2026-09-17 every Russian and Ukrainian

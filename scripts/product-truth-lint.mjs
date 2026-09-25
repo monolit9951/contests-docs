@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+import { createHash } from "node:crypto";
 import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
 import { dirname, join, relative, resolve } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
@@ -464,14 +465,37 @@ const CLAIM_RULES = [
       /(?<![\p{L}\p{N}])(?:крипта|криптовалюта|гаманець|USDT)[^.\n]{0,45}8\s*%/iu,
     ],
   },
-  {
-    // The founder's name in Latin script is Ruslan Bei, as on the legal pages (founder,
-    // 2026-09-15). A Markdown wrap can split the name, and an FAQ question still publishes it.
-    id: "founder-name-latin",
-    includeQuestions: true,
-    patterns: [/\bRuslan\s+Bey\b/i, /^\W*Bey\b/],
-  },
 ];
+
+// The founder is named by first name only on every public page: Ruslan, Руслан (founder,
+// 2026-09-25). This repository is public, so the rule keeps no plain-text copy of the surname: it
+// hashes the word written right after the first name and compares digests, one per spelling and
+// case form. The whole text is searched rather than line by line, because a Markdown wrap can
+// split the name, and FAQ questions are searched too; emphasis marks between the two words do not
+// hide the surname.
+const FOUNDER_FIRST_NAME_THEN_WORD =
+  /(?<![\p{L}\p{N}])(?:Ruslan|Руслан\p{Ll}{0,3})[*_]*(?:[^\S\n]+|[^\S\n]*\n[^\S\n]*)[*_]*(\p{L}+)/giu;
+const FOUNDER_SURNAME_SHA256 = new Set([
+  "98970d1a1b801acf6d91f9edbd010914a577dfd71a00527d08f765eae0436304",
+  "16125286d427ff5bc259e9a610f655ed842751d305a248ed17d6bbdde188b32d",
+  "83252e838016af8a4fb1b0b235814de292fcbdcfecc3d99c5887b001507c0cac",
+  "6fb39f7d6e1772a2e129b879ef2e84543ec02e0aff38bbe01e1c497eacd62302",
+  "47070c841000b57db6b01b7cda08ee0723ba4c5ab0b81ec6abc22441712f0289",
+  "6a68950e51e7f635889dd920b7e1883b50a27d20196b51f4df729d9b5103065c",
+  "83b0c6c5691fb82ddb647f44661485b24afd97468e5cdddf047f247b125ed36b",
+  "9746861acfcafe8d3ad2ed47ec5c8d477e55c511621e19048dede4850747b032",
+  "19291a28f22c62f606b298828e566753f20ce118cb770fd59079a53aa11a1bbf",
+  "95d0d20a795c2a78bef996ed0ff955fb5f112acc6b63a1305a77ba98e9727f50",
+]);
+
+function founderSurnameClaims(text, file, out) {
+  for (const match of text.matchAll(FOUNDER_FIRST_NAME_THEN_WORD)) {
+    const digest = createHash("sha256").update(match[1].toLowerCase()).digest("hex");
+    if (!FOUNDER_SURNAME_SHA256.has(digest)) continue;
+    addViolation(out, "founder-surname", file, text.slice(0, match.index).split("\n").length,
+      "names the founder by surname; public pages use the first name only");
+  }
+}
 
 function markdownFiles(dir) {
   const files = [];
@@ -780,7 +804,8 @@ export function lintText(text, file, truth, declaration = pageDeclaration(text),
       file: allowedFile, line, claim, message: intentMessage(record),
     });
   };
-  const lines = stripFencedCode(text).split("\n");
+  const body = stripFencedCode(text);
+  const lines = body.split("\n");
   lines.forEach((line, index) => {
     const lineNumber = index + 1;
     numericPercentClaims(line, file, lineNumber, truth, intent, violations, allow);
@@ -790,7 +815,7 @@ export function lintText(text, file, truth, declaration = pageDeclaration(text),
       for (const pattern of rule.patterns) {
         const match = pattern.exec(line);
         pattern.lastIndex = 0;
-        if (!match || (isQuestion(line) && !rule.includeQuestions)) continue;
+        if (!match || isQuestion(line)) continue;
         if (rule.allowNegated && isNegated(line, match.index, lines[index - 1] || "")) continue;
         if (rule.allowWalletQualified && isWalletQualified(line, lines[index - 1] || "")) continue;
         const intended = intent.byId.get(rule.intentId);
@@ -804,6 +829,7 @@ export function lintText(text, file, truth, declaration = pageDeclaration(text),
       }
     }
   });
+  founderSurnameClaims(body, file, violations);
   return violations;
 }
 

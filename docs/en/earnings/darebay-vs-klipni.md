@@ -97,7 +97,7 @@ Yes. Its About page lists six official channels: Instagram, Threads, a Telegram 
 
 ### Who runs each platform?
 
-Klipni is operated by a sole trader registered in Russia and says it has been running since 2025; the registration details are printed on its About page, and we do not repeat them <!-- source: https://klipni.com/about 2026-09-21 -->. DareBay was founded by Ruslan Bei, who is named on its legal pages.
+Klipni is operated by a sole trader registered in Russia and says it has been running since 2025; the registration details are printed on its About page, and we do not repeat them <!-- source: https://klipni.com/about 2026-09-21 -->. DareBay was founded by Ruslan, who is named as its operator on its legal pages.
 
 ### Can I work on both?
 

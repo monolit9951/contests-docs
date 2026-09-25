@@ -332,12 +332,13 @@ export const ORGANIZATION = {
 }
 
 // Byline in the page's own script: Latin on English pages, Cyrillic on Russian
-// and Ukrainian. The Person node is one entity across the app and the corpus, so
-// its `name` is the Latin spelling on every page (founder, 2026-09-15; app parity
-// gate 11-entity) and the Cyrillic form is the alternateName. Arabic pages keep
-// the Latin spelling: no Arabic transcription of the name has been approved, and
-// an invented one would be a third spelling of one person.
-export const AUTHOR_NAME: Record<Locale, string> = { ru: 'Руслан Бей', uk: 'Руслан Бей', en: 'Ruslan Bei', ar: 'Ruslan Bei' }
+// and Ukrainian. The founder is named by first name only, with no surname and no
+// registration details (founder, 2026-09-25). The Person node is one entity across
+// the app and the corpus, so its `name` is the Latin spelling on every page (app
+// parity gate 11-entity) and the Cyrillic form is the alternateName. Arabic pages
+// keep the Latin spelling: no Arabic transcription of the name has been approved,
+// and an invented one would be a third spelling of one person.
+export const AUTHOR_NAME: Record<Locale, string> = { ru: 'Руслан', uk: 'Руслан', en: 'Ruslan', ar: 'Ruslan' }
 
 // The author page is a manifest entry like any other, so its address is derived
 // and the byline, the Person node and the sidebar can never point three ways.

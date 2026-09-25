@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "generatedAt": "2026-09-20T17:05:11.773Z",
   "url": "https://darebay.com/data/darebay-facts.json",
-  "operator": "Ruslan Bei",
+  "operator": "Ruslan",
   "sources": {
     "productTruth": {
       "file": "data/product-truth.json",

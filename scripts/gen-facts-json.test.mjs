@@ -31,7 +31,7 @@ describe('machine-readable fact card', () => {
     expect(FACT_IDS).toHaveLength(11)
     expect(document.schemaVersion).toBe(1)
     expect(document.generatedAt).toMatch(/^\d{4}-\d{2}-\d{2}T/)
-    expect(document.operator).toBe('Ruslan Bei')
+    expect(document.operator).toBe('Ruslan')
   })
 
   it('gives every field a source, a reading date and a label in every language', () => {

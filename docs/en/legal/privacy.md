@@ -6,7 +6,7 @@ description: What data DareBay collects, why, how long it keeps it, and how to m
 # Privacy Policy
 
 **Effective date:** 7 May 2026
-**Last updated:** 7 May 2026
+**Last updated:** 25 September 2026
 
 This policy describes how **DareBay** ("DareBay", "we", "us",
 the "Service") collects, uses and protects your personal data
@@ -18,7 +18,7 @@ what is needed, keep it only as long as needed, and never
 sell it. The details follow.
 
 **The data controller** within the meaning of the EU and UK data
-protection regulations (EU GDPR and UK GDPR) is **Ruslan Bei**, the
+protection regulations (EU GDPR and UK GDPR) is **Ruslan**, the
 sole operator described in [section 1](#_1-who-we-are). We
 apply the standards of the **EU GDPR**, the **UK GDPR**, the **UK Data
 Protection Act 2018**, and of the personal data protection laws of the
@@ -32,7 +32,7 @@ If you only have time for one section, read
 
 ## 1. Who we are
 
-DareBay is run by **Ruslan Bei**, an individual based in
+DareBay is run by **Ruslan**, an individual based in
 Europe, acting as the sole operator of the Service. Registration of a
 UK private limited company (UK Ltd) is
 planned; after registration this section will be updated with the company
@@ -41,7 +41,7 @@ address, and the operator role will pass to that company.
 
 | | |
 |---|---|
-| **Operator (data controller)** | Ruslan Bei, an individual trading under the name **DareBay** |
+| **Operator (data controller)** | Ruslan, an individual trading under the name **DareBay** |
 | **Region of operation** | Europe |
 | **Future legal entity** | UK private limited company (registration in progress) |
 | **General contact** | hello@darebay.com |
@@ -433,7 +433,7 @@ the change takes effect means you accept it.
 |---|---|
 | General privacy questions | privacy@darebay.com |
 | Data protection contact | dpo@darebay.com |
-| Operator | Ruslan Bei (sole operator), trading as DareBay |
+| Operator | Ruslan (sole operator), trading as DareBay |
 | Postal address | Provided on written request to **privacy@darebay.com** |
 
 Email is the fastest channel; we handle all privacy requests

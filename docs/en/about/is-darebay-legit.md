@@ -37,7 +37,7 @@ Nothing is ever a separate transfer, and nothing is ever sent in advance. The fu
 
 ## Who answers when something breaks
 
-The product is built and run by **Ruslan Bei**, who writes the code and answers in public at [@ruslanbwork](https://t.me/ruslanbwork). Corrections to these pages go to the [DareBay Telegram channel](https://t.me/darebay_app) and reach the people who edit them.
+The product is built and run by **Ruslan**, who writes the code and answers in public at [@ruslanbwork](https://t.me/ruslanbwork). Corrections to these pages go to the [DareBay Telegram channel](https://t.me/darebay_app) and reach the people who edit them.
 
 The same account works on darebay.com and inside Telegram. They are two doors into one product, not a website plus a lookalike app.
 

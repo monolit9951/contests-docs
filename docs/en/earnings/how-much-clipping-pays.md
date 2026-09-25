@@ -1,34 +1,34 @@
 ---
 title: "How much clipping pays: the rate per 1000 views on DareBay"
-description: "Open tasks pay from $1.00 to $10.00 per 1000 views, up to $500 per clip, and the threshold is set by the task. The payout formula and how to read the rate."
+description: "DareBay tasks pay $1.00 to $10.00 per 1000 views, set by each task, up to $500 per clip, and need no followers. The payout formula and how to read the rate."
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_cpm_min, ppv_cpm_max, ppv_cpm_median, ppv_min_views_threshold_live, ppv_max_per_work_typical, ppv_max_per_work_band_high]
 seo: true
 landing: true
 hero:
   kicker: "Guide · 2026"
-  lede: "You can put a price on a clip before you open the editor, because the rate, the threshold and the cap are printed on the task card. Below is the arithmetic of one submission, what open tasks pay for a thousand views, and why your follower count never enters the formula."
+  lede: "You can put a price on a clip before you open the editor, because the rate, the threshold and any cap are printed on the task card. Below is the arithmetic of one submission, what DareBay tasks pay for a thousand views (up to $10.00), and why your follower count never enters the formula."
   takeaways:
     - "<b>One formula for everyone.</b> Views / 1000 × rate, never above the cap on one submission."
-    - "<b>Open tasks pay from $1.00 to $10.00 per 1000 views.</b> The rate is on the card and cannot change after the start."
+    - "<b>DareBay tasks pay from $1.00 up to $10.00 per 1000 views, set by each task.</b> The rate is on the card and cannot change after the start."
     - "<b>The cap runs up to $500 per clip.</b> The task sets the threshold, which is not deducted from your views."
     - "<b>No followers required.</b> A new account earns the same rate as a veteran."
 cta:
   title: "Do the maths first, then take the task"
-  lede: "The rate, the threshold and the cap sit on every open DareBay card before you submit, and the payout follows the formula rather than anyone's decision after the fact. Pick the task that fits your reach."
+  lede: "The rate, the threshold and any cap sit on every DareBay task card before you submit, so you can work out the payout from the formula before you start. Pick the task that fits your reach."
 ---
 
 ## Three numbers on the card: rate, threshold, cap
 
-A clipper's earnings come from three numbers, all set by the buyer when creating the task: the rate per 1000 views, the view threshold and the cap on a single submission. The rate and the threshold do not change after launch; the cap per clip can only be raised, so you decide whether to take the task knowing the formula; the fourth number, the views your clip collects, is the only one that depends on you.
+A clipper's earnings come from three numbers, all set by the buyer when creating the task: the rate per 1000 views, the view threshold and, if the task has one, the cap on a single submission. The rate and the threshold do not change after launch; the cap per clip can only be raised, so you decide whether to take the task knowing the formula; the fourth number, the views your clip collects, is the only one that depends on you.
 
-| Parameter | Value across open tasks | What it means for your figure |
+| Parameter | Value on DareBay tasks | What it means for your figure |
 |---|---|---|
-| Rate | from $1.00 to $10.00 per 1000 views | The price of a thousand views; the typical rate is $1.00 |
-| View threshold | Set by the task | The admission condition; the exact figure is on the card in the catalog |
+| Rate | from $1.00 to $10.00 per 1000 views | The price of a thousand views; each task sets its own |
+| View threshold | Set by the task (system default 1000 views) | The admission condition; the exact figure is on the card in the catalog |
 | Cap per submission | Up to $500 per clip | The most one clip can earn |
 
-Every figure on this page comes from the platform's own data (snapshot: 2026-08-23; rate band updated 2026-09-20) and counts only open tasks.
+DareBay set this rate band on 20 September 2026.
 
 Set your own views and rate to see what one clip pays, up to the cap.
 
@@ -36,7 +36,7 @@ Set your own views and rate to see what one clip pays, up to the cap.
 
 ## What DareBay pays per 1000 views and how to read the rate
 
-A thousand views across open DareBay tasks pays from **$1.00** to **$10.00**: nothing open right now pays below the floor, and the top of the spread is exactly ten times it. The most common rate is the floor itself, **$1.00 per 1000 views**, so a rate close to **$10.00** is generous by the platform's standards. There is no single "price of a view": the buyer names the rate, not DareBay, and builds it out of the task budget, the value of an audience in their niche and the competition for clippers.
+A thousand views on a DareBay task pays from **$1.00** up to **$10.00**, set by each task. There is no single "price of a view": the buyer names the rate, not DareBay, and builds it out of the task budget, the value of an audience in their niche and the competition for clippers.
 
 The gap shows up best on the same reach. A submission with 20,000 views:
 
@@ -49,7 +49,7 @@ Same reach, same edit, a result that differs tenfold, which is why the rate on t
 
 1. **The rate stands on the card and does not move.** The buyer has no tool for changing it mid-flight, and the calculation runs on the figure recorded in the task.
 2. **The rate does not depend on the site.** The task names the site, stats are counted for TikTok, YouTube, Instagram and the other sites named in the task, and the price of a thousand views is the one on the card everywhere.
-3. **The rate has a system limit.** The platform's validator refuses a task with a rate above a hard limit, which rules out a stray zero and an unpayable rate posted to collect submissions; the real ceiling is set by the market.
+3. **The rate has a system limit.** The platform's validator refuses a task with a rate above a hard limit, which rules out an unpayable rate posted to collect submissions.
 
 How this sits against the platforms' own creator programmes is covered in [what TikTok pays for views](/en/earnings/tiktok-view-payouts).
 
@@ -67,7 +67,7 @@ All 40,000 views went into the maths, not 39,000: the threshold opens the count 
 
 A clipper does not move the rate or the cap. Two things are in your hands: which task you take, and how much reach the clip earns.
 
-1. **The choice of task.** Between the low and high ends of open tasks there is a factor of ten for the same thousand views, decided before any editing.
+1. **The choice of task.** Between the $1.00 floor and the $10.00 top of DareBay's band there is a factor of ten for the same thousand views, decided before any editing.
 2. **The reach of the individual clip.** Up to the cap the payout grows linearly: every further thousand views is worth exactly the task rate.
 3. **Clearing the threshold.** A submission short of the threshold printed on the card takes no part in the split at all; the hook in the first seconds decides it.
 4. **How many tasks you submit to.** The cap limits one submission, not how many tasks you enter: the next clip starts with a cap of its own.
@@ -96,7 +96,7 @@ No. There is no follower threshold on DareBay at sign-up, at submission or in th
 
 ### What counts as a normal rate?
 
-The reference point is the floor across open tasks, **$1.00 per 1000 views**: nothing pays below it right now, it is also the most common rate, and the top of the spread is **$10.00**. Read the rate together with the threshold and the cap: a task with a high rate and a high threshold can turn out worse than a floor-rate task with a low threshold if clips in that subject rarely take off.
+On DareBay a normal rate is anywhere from **$1.00** to **$10.00 per 1000 views**, set by each task. Read the rate together with the threshold and the cap: a task with a high rate and a high threshold can turn out worse than a floor-rate task with a low threshold if clips in that subject rarely take off.
 
 ### Can the rate change after I submit?
 
@@ -104,7 +104,7 @@ No. The rate is fixed on the task card, the buyer has no tool for moving it mid-
 
 ### What is the most one submission can earn?
 
-Exactly what the buyer set as the cap in that task: the figure is open on the card before you submit, and caps run **up to $500 per clip**. The cap exists so a budget is shared between several authors instead of going entirely to one viral clip, and it applies to the submission, not to the author.
+Exactly what the buyer set as the cap in that task, if it set one: the figure is open on the card before you submit, and caps run **up to $500 per clip**. The cap exists so a budget is shared between several authors instead of going entirely to one viral clip, and it applies to the submission, not to the author.
 
 ### Does the rate depend on the site: TikTok, YouTube or Instagram?
 

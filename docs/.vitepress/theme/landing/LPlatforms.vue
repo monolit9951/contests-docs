@@ -47,8 +47,9 @@ const hostSources = (p: Parameters<typeof sourcesOf>[0]) => {
           <div v-for="f in fields" :key="f">
             <dt>{{ copy.columns[f] ?? f }}</dt>
             <dd>
+              <!-- `{{ ' ' }}` is text, not spacing: see the note in LCompare.vue. -->
               <template v-if="text(p, f, loc)">
-                <span v-if="p.fields[f]?.state" :class="p.fields[f].state === 'yes' ? 'lp-chip lp-chip-good' : p.fields[f].state === 'no' ? 'lp-chip lp-chip-bad' : 'lp-chip lp-chip-warn'" style="margin-inline-end:6px">{{ copy.cis[p.fields[f].state!] }}</span>
+                <template v-if="p.fields[f]?.state"><span :class="p.fields[f].state === 'yes' ? 'lp-chip lp-chip-good' : p.fields[f].state === 'no' ? 'lp-chip lp-chip-bad' : 'lp-chip lp-chip-warn'" style="margin-inline-end:2px">{{ copy.cis[p.fields[f].state!] }}</span>{{ ' ' }}</template>
                 <span v-bind="bidiAttrs(textLang(p, f, loc), loc)" :class="{ 'lp-money': f === 'rate' }">{{ text(p, f, loc) }}</span>
               </template>
               <span v-else-if="p.fields[f]?.state" :class="p.fields[f].state === 'yes' ? 'lp-chip lp-chip-good' : p.fields[f].state === 'no' ? 'lp-chip lp-chip-bad' : 'lp-chip'">{{ copy.cis[p.fields[f].state!] }}</span>
@@ -62,7 +63,7 @@ const hostSources = (p: Parameters<typeof sourcesOf>[0]) => {
         </div>
         <div class="lp-card-foot">
           <span class="lp-srcs">{{ copy.sources }}: <template v-for="(s, k) in hostSources(p)" :key="s.url"><a v-bind="sourceAnchor(s.url, loc)" :title="s.date">{{ s.host }}</a><span v-if="k < hostSources(p).length - 1">, </span></template> · {{ copy.updated }} {{ hostSources(p)[0]?.date }}</span>
-          <a v-if="p.id === highlight" class="lp-btn lp-btn-primary lp-btn-sm" :href="p.home?.[appLoc] ?? p.url" target="_self">{{ copy.ctaPrimary }}</a>
+          <template v-if="p.id === highlight">{{ ' ' }}<a class="lp-btn lp-btn-primary lp-btn-sm" :href="p.home?.[appLoc] ?? p.url" target="_self">{{ copy.ctaPrimary }}</a></template>
         </div>
       </article>
     </div>

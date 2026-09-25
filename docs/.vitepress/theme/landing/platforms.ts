@@ -52,6 +52,22 @@ export const DEFAULT_COLUMNS = ['rate', 'threshold', 'cap', 'fee', 'minPayout', 
  */
 export const REGION_FIELDS: readonly string[] = ['india', 'pakistan', 'bangladesh', 'nigeria', 'kenya', 'mena', 'indonesia', 'philippines']
 
+/**
+ * Page-only columns: the same opt-in as REGION_FIELDS for the source roll-up, without its other
+ * promise. A regional column exists on every platform (the per-country tests hold each one to a
+ * state, a source and English text); a page-only column exists on the platforms of the page that
+ * asked for it. `payoutSpeed` — when the money arrives, as a short phrase, with the typical days as
+ * `value` where the platform states them — was read for the English roundup of 21 platforms. No
+ * other comparison page prints that column, and its source would otherwise be a row in their "how
+ * this comparison was built" for a claim they never make.
+ *
+ * Keep this in sync with the `columns` labels in `copy.ts`, as for REGION_FIELDS.
+ */
+export const PAGE_ONLY_FIELDS: readonly string[] = ['payoutSpeed']
+
+/** A column whose source is cited only by a page that renders it: a regional or a page-only one. */
+export const optIn = (key: string): boolean => REGION_FIELDS.includes(key) || PAGE_ONLY_FIELDS.includes(key)
+
 export const DATA = raw as PlatformsData
 /**
  * The "Updated" date a comparison page prints: its own `hero.updated` when its figures were re-read
@@ -80,9 +96,9 @@ const addressOf = (url: string, locale?: Locale): string => (locale === undefine
 /**
  * One entry per source of a platform, in the order its fields declare them.
  *
- * `shown` is the fields the calling page renders; it only ever admits regional columns, never
- * removes anything else, so a page that shows none of them gets the list it got before regional
- * columns existed.
+ * `shown` is the fields the calling page renders; it only ever admits regional and page-only
+ * columns, never removes anything else, so a page that shows none of them gets the list it got
+ * before either existed.
  *
  * `locale` is the language of the page that prints the list. Two sources are one entry when they
  * open the same address there: our own pages are cited in whichever language a number was read
@@ -94,7 +110,7 @@ const addressOf = (url: string, locale?: Locale): string => (locale === undefine
 export const sourcesOf = (p: Platform, shown: readonly string[] = [], locale?: Locale): Source[] => {
   const seen = new Map<string, Source>()
   for (const [key, f] of Object.entries(p.fields)) {
-    if (REGION_FIELDS.includes(key) && !shown.includes(key)) continue
+    if (optIn(key) && !shown.includes(key)) continue
     if (!f.source?.url) continue
     const address = addressOf(f.source.url, locale)
     if (!seen.has(address)) seen.set(address, f.source)
@@ -110,3 +126,19 @@ export const sourceIndex = (p: Platform, url: string, shown: readonly string[] =
   const address = addressOf(url, locale)
   return sourcesOf(p, shown, locale).findIndex((s) => addressOf(s.url, locale) === address) + 1
 }
+/**
+ * The source list of "How this comparison was built" (`LMethod`): every source of every platform on
+ * the page, platform by platform, each numbered within its platform. `n` is the number the table
+ * prints in that platform's row (`sourceIndex` with the same columns and language: both count the
+ * same `sourcesOf` list), so "[3]" in the ClipGrow row is "ClipGrow [3]" here. The list printed no
+ * numbers until 2026-09-24, and a table "[3]" read as text pointed at nothing, or at the article's
+ * own "[3]" in its Sources list, which is a different source. The count restarts per platform
+ * because the table numbers each platform's own sources; one running count down the list would
+ * disagree with every row after the first.
+ */
+export const methodSources = (
+  platforms: readonly Platform[],
+  shown: readonly string[],
+  locale: Locale
+): (Source & { name: string; n: number })[] =>
+  platforms.flatMap((p) => sourcesOf(p, shown, locale).map((s, k) => ({ name: p.name, n: k + 1, ...s })))

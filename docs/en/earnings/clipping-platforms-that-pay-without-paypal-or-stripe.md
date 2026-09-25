@@ -7,7 +7,7 @@ seo: true
 landing: true
 sources: visible
 hero:
-  updated: "2026-09-18"
+  updated: "2026-09-25"
   kicker: "Payout rails · 2026"
   lede: "PayPal lists 93 countries it can send a payout to and Stripe lists 51 countries it operates in, so for a large part of the world the question is not which campaign pays best but whether the money has a road to travel on at all. This page sorts clipping platforms by the road: card and bank, USDT and which network it runs on, Telegram Stars, and what each one asks for before it releases anything."
   secondary: "Rail matrix"
@@ -22,12 +22,12 @@ compare:
   highlight: darebay
   title: "Payout methods, minimums and fees as each platform publishes them"
 method:
-  - "Every rail, network, minimum and fee below was read on 2026-09-18 from the platform's own help page, documentation or terms, and from the published pages of PayPal, Stripe, Tether, TON and Telegram. Numbered references at the end of the article name the page and the day it was read."
+  - "Every rail, network, minimum and fee below was read on 2026-09-18 from the platform's own help page, documentation or terms, and from the published pages of PayPal, Stripe, Tether, TON and Telegram; the platforms' table cells were read again on 2026-09-24. Numbered references at the end of the article name the page and the day it was read."
   - "\"Not published\" means the platform states the figure nowhere on its public pages. It is not a zero and not a no: it is a question for that platform's support before you cut the first clip, and on a payout rail it is the most expensive kind of blank."
-  - "DareBay's own figures come from its live configuration snapshot and its help pages, not from marketing copy. Where a platform's marketing page and its terms disagree, the terms are quoted and the disagreement is named."
+  - "DareBay's own figures come from its own public pages, its terms and help pages, not from marketing copy. Where a platform's marketing page and its terms disagree, the terms are quoted and the disagreement is named."
 cta:
   title: "One rail, printed before you start"
-  lede: "DareBay pays a credited balance out in USDT on the TON network or in Telegram Stars, and publishes no country list at all. A request starts at 10 USDT, the form shows the fee and the amount to receive before you confirm, and the team checks every request by hand. Take a task off the open board - there is no application and nobody counts your followers."
+  lede: "DareBay pays a credited balance out in USDT on the TON network, or you receive the payout in Telegram Stars, and it publishes no country list at all. A request starts at 10 USDT, the form shows the fee and the amount to receive before you confirm, and the team checks every request by hand. Take a task off the board - there is no application and nobody counts your followers."
 ---
 
 ## The rail decides, not the country
@@ -54,23 +54,23 @@ The table carries what the data card below does not: whether a rail exists, whic
 
 | Platform | PayPal | Stripe | Bank or card | Crypto: coin and network | ID check before payout |
 |---|---|---|---|---|---|
-| DareBay | no | no | per-contest reward only | USDT on TON | no |
-| Reach.cat | not in the app's payout screen; one of its agency pages lists it <!-- source: https://reach.cat/clipping-agencies/ 2026-09-18 --> | no | bank transfer by IBAN in the app's payout screen <!-- source: https://reach.cat/dashboard/creator/earnings 2026-09-18 --> | USDT on ERC20, BEP20 or Solana in the app; its landing page says "USDT or SOL" <!-- source: https://reach.cat/become-a-clipper/ 2026-09-18 --> | its landing page says none; its terms effective 13 September 2026 require one through iDenfy once payout requests pass $500 <!-- source: https://reach.cat/terms 2026-09-18 --> |
-| Prime Oracles | no | no | USD to cards and bank accounts through its partner Garna, described in its agreement <!-- source: https://www.primeoracles.com/terms-agreement 2026-09-19 --> | USDT on Tron, BNB Smart Chain or Solana; USDC on Ethereum or Solana; TON <!-- source: https://www.primeoracles.com/terms-agreement 2026-09-19 --> | Garna's own ID check for cards and bank; terms require consent to verification <!-- source: https://www.primeoracles.com/terms-agreement 2026-09-18 --> |
+| DareBay | no | no | per-contest reward only | USDT on TON | where the law requires it, per its terms<!-- source: https://darebay.com/en/legal/terms 2026-09-24 --> |
+| Reach.cat | its agency page lists it<!-- source: https://reach.cat/clipping-agencies/ 2026-09-24 -->; its blog says no<!-- source: https://reach.cat/blog/best-clipping-platforms/ 2026-09-24 --> | no | "very soon" per its creator FAQ<!-- source: https://reach.cat/creator 2026-09-24 -->, though its agency page lists it<!-- source: https://reach.cat/clipping-agencies/ 2026-09-24 --> | USDT; its clipper page says "USDT or SOL"<!-- source: https://reach.cat/become-a-clipper/ 2026-09-24 --> | its landing page says none<!-- source: https://reach.cat/become-a-clipper/ 2026-09-24 -->; its terms require one through iDenfy once total payout requests pass $500<!-- source: https://reach.cat/terms 2026-09-24 --> |
+| Prime Oracles | no | no | USD through Garna (Cyprus) to a verified Garna account, described in its agreement <!-- source: https://www.primeoracles.com/terms-agreement 2026-09-24 --> | USDT on Tron, BNB Smart Chain or Solana; USDC on Ethereum or Solana; TON <!-- source: https://www.primeoracles.com/terms-agreement 2026-09-24 --> | Garna's own KYC, to a verified Garna account; terms require consent to verification <!-- source: https://www.primeoracles.com/terms-agreement 2026-09-24 --> |
 | Klipni | no | no | bank details, Russian tax status required <!-- source: https://klipni.com/legal/terms 2026-09-18 --> | no | tax status, verified in-app |
 | Clipping.net | yes | no | no | USDC and USDT, Ethereum mainnet only <!-- source: https://clipping.net/docs/clippers/payments 2026-09-18 --> | not published |
 | Vues | yes | no | whatever the brand offers | USDT; its iOS app names ERC-20 <!-- source: https://vues.app/ios 2026-09-18 --> | may be required, per its terms <!-- source: https://vues.app/terms 2026-09-18 --> |
-| Whop Content Rewards | yes | yes | bank account or mobile wallet <!-- source: https://contentrewards.com/creators 2026-09-18 --> | "crypto", coin and network not published | yes, including a document upload <!-- source: https://docs.whop.com/manage-your-business/manage-payouts/set-up-payouts 2026-09-18 --> |
+| Whop Content Rewards | its Content Rewards FAQ lists it<!-- source: https://contentrewards.com/creators 2026-09-18 -->, but Whop's docs tie PayPal payouts to PayPal purchases<!-- source: https://docs.whop.com/manage-your-business/manage-payouts/payout-methods 2026-09-24 --> | not published | bank account or mobile wallet <!-- source: https://contentrewards.com/creators 2026-09-18 --> | "crypto", coin and network not published | yes, including a document upload <!-- source: https://docs.whop.com/manage-your-business/manage-payouts/set-up-payouts 2026-09-18 --> |
 | Vyro | yes | yes | no <!-- source: https://vyro.com/help/earnings-and-payments/how-can-i-withdraw-my-earnings 2026-09-18 --> | no | not published |
 | Clipping.io | not published | not published | not published | not published <!-- source: https://www.clipping.io/ 2026-09-18 --> | not published |
 
 <LCompare />
 
-**Whop** casts the widest net: its documentation lists over 200 payout countries, Pakistan, Bangladesh, Egypt, Ghana, Nepal and India among them, and adds that "different payout options will be available depending on the country". Nigeria is absent although Whop's sanctions page does not name it <!-- source: https://docs.whop.com/trust-and-safety/trust-safety-overview/sanctioned-countries 2026-09-18 --> — clearing a sanctions check and having a road are different things. Withdrawal timing, withdrawal fees and identity checks belong to Whop, not to Content Rewards, which charges its own flat 10% creator fee on a CPM payout. <!-- source: https://contentrewards.com/terms 2026-09-18 -->
+**Whop** casts the widest net: its documentation lists over 200 payout countries, Pakistan, Bangladesh, Egypt, Ghana, Nepal and India among them, and adds that "different payout options will be available depending on the country"<!-- source: https://docs.whop.com/manage-your-business/manage-payouts/set-up-payouts 2026-09-18 -->. Nigeria is absent although Whop's sanctions page does not name it <!-- source: https://docs.whop.com/trust-and-safety/trust-safety-overview/sanctioned-countries 2026-09-18 --> — clearing a sanctions check and having a road are different things. Withdrawal timing, withdrawal fees and identity checks belong to Whop, not to Content Rewards, whose terms take 10% of a CPM payout. <!-- source: https://contentrewards.com/terms 2026-09-18 -->
 
 **Vues** reads as a crypto-and-PayPal platform on its homepage, but its terms move the obligation: "The Brand - not Vues - is responsible for paying the Clipper", and Vues "does not own, custody, receive, convert, exchange, or transmit the funds". <!-- source: https://vues.app/terms 2026-09-18 --> The [Vues review](/en/earnings/vues-review) sets that clause against its homepage, its iPhone app and its blog.
 
-**[Prime Oracles](/en/earnings/prime-oracles-review)** is geographically inverted: its terms state that services "are not provided to residents or nationals of the European Union, the United Kingdom, the United States of America". The same agreement prints the rails: USDT on Tron, BNB Smart Chain or Solana, USDC on Ethereum or Solana, TON on its own network, a 10% withdrawal fee, a minimum of $5 to $12 by network and a card route through its partner Garna <!-- source: https://www.primeoracles.com/terms-agreement 2026-09-19 -->. **Klipni** is the local-rail case: bank details, a Russian tax status, a 5% cut. India's rupee boards are the UPI version of that case, and two of them have full reviews: [ClipGrow](/en/earnings/clipgrow-review) and [Wondeed](/en/earnings/is-wondeed-legit).
+**[Prime Oracles](/en/earnings/prime-oracles-review)** is geographically inverted: its terms state that services "are not provided to residents or nationals of the European Union, the United Kingdom, the United States of America". The same agreement prints the rails: USDT on Tron, BNB Smart Chain or Solana, USDC on Ethereum or Solana, TON on its own network, a 10% withdrawal fee, a minimum of $5 to $12 by network and USD through Garna (Cyprus) to a verified Garna account <!-- source: https://www.primeoracles.com/terms-agreement 2026-09-24 -->. **Klipni** is the local-rail case: bank details, a Russian tax status, a 5% cut. India's rupee boards are the UPI version of that case, and two of them have full reviews: [ClipGrow](/en/earnings/clipgrow-review) and [Wondeed](/en/earnings/is-wondeed-legit).
 
 ## USDT is a coin plus a network, and both have to match
 
@@ -92,14 +92,14 @@ A cash-out path exists and belongs to a different holder: a channel or bot accru
 
 The obvious substitutes are not options here. Payoneer says it can "receive payments from clients in 190+ countries and territories" <!-- source: https://www.payoneer.com/receiving-accounts/ 2026-09-18 --> and Wise publishes a per-country list of where it can send. <!-- source: https://wise.com/help/articles/2571942/what-countriesregions-can-i-send-to 2026-09-18 --> Neither is named as a payout method by a single platform on this page.
 
-What exists instead is an ordinary bank transfer, each time with a condition: Whop's setup ends in identity verification, Klipni's needs a Russian tax status, Reach.cat's payout screen takes an IBAN while its terms add an identity check once payout requests pass $500 <!-- source: https://reach.cat/terms 2026-09-18 -->, and a Vues brand opens what it chooses.
+What exists instead is an ordinary bank transfer, each time with a condition: Whop's setup ends in identity verification, Klipni's needs a Russian tax status, Reach.cat promises bank transfer "very soon" <!-- source: https://reach.cat/creator 2026-09-24 --> while its terms add an identity check once total payout requests pass $500 <!-- source: https://reach.cat/terms 2026-09-24 -->, and a Vues brand opens what it chooses.
 
 ## Four things to check in your wallet before the first clip
 
 1. **Which rail the platform sends on, in writing.** A campaign card naming "crypto" is not a network, and a homepage is not the terms.
 2. **Whether your wallet holds that exact chain.** An address from another network looks valid and the transfer is unrecoverable.
 3. **Custodial or self-custodial, and whether it opens where you live.** Wallet in Telegram splits the two - "In a custodial wallet, we protect your crypto and manage the keys for you"; in a self-custodial one "you hold your own private keys (called a seed phrase)... if you lose your seed phrase, there's no way to recover it" - and states it "is not available in every country". <!-- source: https://wallet.tg/ 2026-09-18 -->
-4. **What is demanded before the first payout.** Whop's setup ends in "Complete the KYC setup - fill in your details, link your bank, and upload ID"; Reach.cat's landing page says "No KYC. No ID check." <!-- source: https://reach.cat/become-a-clipper/ 2026-09-18 -->, but its terms effective 13 September 2026 require identity verification through iDenfy once payout requests pass $500 <!-- source: https://reach.cat/terms 2026-09-18 --> - the check comes later, not never. The [Reach.cat review](/en/earnings/reach-cat-review) reads the rest of its landing pages against those terms.
+4. **What is demanded before the first payout.** Whop's setup ends in "Complete the KYC setup - fill in your details, link your bank, and upload ID"<!-- source: https://docs.whop.com/manage-your-business/manage-payouts/set-up-payouts 2026-09-18 -->; Reach.cat's landing page says "No KYC. No ID check." <!-- source: https://reach.cat/become-a-clipper/ 2026-09-24 -->, but its terms effective 13 September 2026 require identity verification through iDenfy once total payout requests pass $500 <!-- source: https://reach.cat/terms 2026-09-24 --> - the check comes later, not never. The [Reach.cat review](/en/earnings/reach-cat-review) reads the rest of its landing pages against those terms.
 
 ## Fake details and borrowed accounts end the same way
 
@@ -109,16 +109,16 @@ PayPal lists among its Restricted Activities "Provide false, inaccurate or misle
 
 ## When another platform suits you better than DareBay
 
-DareBay pays a credited balance out in USDT on the TON network or in Telegram Stars, publishes no country list, and asks for no followers, application or tax status. Entering is free and nothing is taken from a task budget; withdrawing a credited balance carries 10%, deducted inside a request that starts at 10 USDT, and the team checks every request by hand with no promised settlement time. Detail: [withdrawals](/en/help/darebay-withdrawals), [fees](/en/help/what-commission), [the wallet page](/en/help/paying-with-crypto).
+DareBay pays a credited balance out in USDT on the TON network, or you receive the payout in Telegram Stars; it publishes no country list and asks for no followers, application or tax status. Entering is free and nothing is taken from a task budget; withdrawing a credited balance carries 10%, deducted inside a request that starts at 10 USDT, and the team checks every request by hand with no promised settlement time. Detail: [withdrawals](/en/help/darebay-withdrawals), [fees](/en/help/what-commission), [the wallet page](/en/help/paying-with-crypto).
 
 So others fit better in four situations:
 
-- **You need dollars in a bank account or on PayPal.** DareBay's wizard offers neither. Whop reaches a bank account, a mobile wallet or crypto; Reach.cat's payout screen takes an IBAN <!-- source: https://reach.cat/dashboard/creator/earnings 2026-09-18 -->; Vyro and Clipping.net pay by PayPal.
-- **You need a chain other than TON.** Prime Oracles names Tron, BNB Smart Chain, Solana and Ethereum; Reach.cat's payout screen offers ERC20, BEP20 or Solana; Clipping.net uses Ethereum mainnet.
-- **You want a smaller floor or a machine-handled release.** DareBay's floor is 10 USDT and a person reviews every request; Prime Oracles sets its floor between $5 and $12 depending on the network, and Reach.cat's payout screen shows $5 for USDT.
+- **You need dollars in a bank account or on PayPal.** DareBay's wizard offers neither. Whop reaches a bank account, a mobile wallet or crypto; Reach.cat's creator FAQ says bank transfer is coming "very soon" <!-- source: https://reach.cat/creator 2026-09-24 -->; Vyro and Clipping.net pay by PayPal.
+- **You need a chain other than TON.** Prime Oracles names Tron, BNB Smart Chain, Solana and Ethereum; Reach.cat pays USDT, and its clipper page says "USDT or SOL" without naming a chain <!-- source: https://reach.cat/become-a-clipper/ 2026-09-24 -->; Clipping.net uses Ethereum mainnet.
+- **You want a smaller floor or a machine-handled release.** DareBay's floor is 10 USDT and a person reviews every request; Prime Oracles sets its floor between $5 and $12 depending on the network, and Reach.cat publishes no minimum amount.
 - **You want more live campaigns at once.** Whop and Vyro carry more, and a clipper tied to one board waits when its budgets drain.
 
-The trade is visible: those rails come with a country list, an identity check or both - Whop asks for a document before paying out, Reach.cat's terms once payout requests pass $500. DareBay's comes with one chain and a manual review.
+The trade is visible: those rails come with a country list, an identity check or both - Whop asks for a document before paying out, Reach.cat's terms once total payout requests pass $500. DareBay's comes with one chain, a manual review and, per its terms, identity verification where the law requires it<!-- source: https://darebay.com/en/legal/terms 2026-09-24 -->.
 
 <LMethod />
 
@@ -126,11 +126,11 @@ The trade is visible: those rails come with a country list, an identity check or
 
 ### Which clipping platforms pay without PayPal or Stripe?
 
-Four of the nine here use neither: DareBay (USDT on TON or Telegram Stars), Reach.cat (USDT on ERC20, BEP20 or Solana, or a bank transfer by IBAN in its payout screen, though one of its agency pages also names PayPal), Prime Oracles (USDT, USDC or TON on five chains) and Klipni (bank details, Russian tax status). Whop and Vues add a non-PayPal option alongside PayPal; Vyro offers only PayPal or Stripe.
+Four of the nine here use neither: DareBay (USDT on TON, or the payout received in Telegram Stars), Reach.cat (USDT, with bank transfer "very soon" per its creator FAQ<!-- source: https://reach.cat/creator 2026-09-24 -->, though one of its agency pages lists bank transfer and PayPal<!-- source: https://reach.cat/clipping-agencies/ 2026-09-24 -->), Prime Oracles (USDT, USDC or TON on five chains) and Klipni (bank details, Russian tax status). Whop pays through its balance to a bank, a mobile wallet or crypto, and its docs tie PayPal payouts to PayPal purchases<!-- source: https://docs.whop.com/manage-your-business/manage-payouts/payout-methods 2026-09-24 -->; Vues adds a non-PayPal option alongside PayPal; Vyro offers only PayPal or Stripe.
 
 ### How do I withdraw from Whop if PayPal is not offered in my country?
 
-Whop's documentation says the methods shown to you depend on your country, and names a bank account, a mobile wallet and crypto besides PayPal. Which ones appear is decided at withdrawal time, after identity verification.
+Whop's documentation says the methods shown to you depend on your country and names a bank account, a mobile wallet and crypto; it ties PayPal payouts to PayPal purchases<!-- source: https://docs.whop.com/manage-your-business/manage-payouts/payout-methods 2026-09-24 -->. Which ones appear is decided at withdrawal time, after identity verification.
 
 ### In which countries does Whop support payouts?
 
@@ -138,7 +138,7 @@ Whop's payout documentation lists over 200 countries, Pakistan, Bangladesh, Egyp
 
 ### Should I use ERC-20 or TRC20 for a USDT payout?
 
-The platform decides which chains it sends on, and you supply an address on one of them. Clipping.net sends USDT on Ethereum mainnet only; Prime Oracles sends USDT on Tron, BNB Smart Chain or Solana; Reach.cat's payout screen offers ERC20, BEP20 or Solana; DareBay uses TON.
+The platform decides which chains it sends on, and you supply an address on one of them. Clipping.net sends USDT on Ethereum mainnet only; Prime Oracles sends USDT on Tron, BNB Smart Chain or Solana; Reach.cat pays USDT, and its clipper page says "USDT or SOL" without naming a chain<!-- source: https://reach.cat/become-a-clipper/ 2026-09-24 -->; DareBay uses TON.
 
 ### Can I cash out Telegram Stars?
 
@@ -146,7 +146,7 @@ Not from a personal balance: Telegram's terms say Stars there may not be sold, w
 
 ### Do I need ID verification to get paid for clipping?
 
-That depends on the rail. Whop's payout setup asks you to upload an identity document and Prime Oracles' terms require consent to verification. Reach.cat's landing page says "No KYC. No ID check.", but its terms effective 13 September 2026 require identity verification through iDenfy once payout requests pass $500 <!-- source: https://reach.cat/terms 2026-09-18 -->. DareBay asks for none, though its team reviews each request by hand.
+That depends on the rail. Whop's payout setup asks you to upload an identity document and Prime Oracles' terms require consent to verification. Reach.cat's landing page says "No ID check."<!-- source: https://reach.cat/become-a-clipper/ 2026-09-24 -->, but its terms effective 13 September 2026 require identity verification through iDenfy once total payout requests pass $500<!-- source: https://reach.cat/terms 2026-09-24 -->. DareBay's terms say identity verification applies where the law requires it<!-- source: https://darebay.com/en/legal/terms 2026-09-24 -->, and its team reviews each withdrawal request by hand<!-- source: https://darebay.com/en/help/darebay-withdrawals 2026-09-24 -->.
 
 ### Does Payoneer or Wise work with clipping platforms?
 

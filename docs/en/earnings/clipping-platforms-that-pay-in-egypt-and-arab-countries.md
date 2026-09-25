@@ -7,7 +7,7 @@ seo: true
 landing: true
 sources: visible
 hero:
-  updated: "2026-09-19"
+  updated: "2026-09-25"
   kicker: "Payouts by country · 2026"
   lede: "A PayPal payout from a platform reaches Morocco, Saudi Arabia and the UAE, and does not reach Egypt, Algeria or Iraq: those three are absent from PayPal's own list of countries eligible to receive a payout. Stripe serves one country of the six. That is why the answer to \"will they pay me here\" splits the Arab world in two, and why the second question — what the regulator in your country says about crypto — decides the rest."
   secondary: "The six-country table"
@@ -18,16 +18,16 @@ hero:
     - "<b>DareBay's only cash rail is USDT on the TON network, so a balance has no withdrawal route to Egypt, Algeria or Iraq.</b> Algeria prohibits holding virtual assets by law, Egypt's central bank calls dealing in them criminalized, Iraq's central bank closed the banking and wallet channel. No country is excluded; 10% comes off a withdrawal request of at least 10 USDT."
     - "<b>Whop lists Iraq as sanctioned</b> and lists Egypt, Morocco, Algeria, Saudi Arabia and the UAE among its payout countries."
 compare:
-  ids: [whop, vyro, content-rewards, clipping-net, vues, reach-cat, prime-oracles, clipping-io, darebay]
+  ids: [whop, vyro, clipping-net, vues, reach-cat, prime-oracles, clipping-io, darebay]
   columns: [mena, payoutMethods, minPayout, fee]
   highlight: darebay
-  title: "What nine platforms state about Egypt and the Arab world"
+  title: "What eight platforms state about Egypt and the Arab world"
 method:
   - "Country rows come from the regulator's own publication: a central bank statement, a rulebook article, or the text of a law in the official gazette, each cited with the number, the article and the date it carries. Where a rule exists only in Arabic or French, the number and the date identify the same text a reader can open."
   - "Payment-rail rows come from the operator's own pages, read on 18 September 2026: PayPal's eligible-payout-country table and consumer fee schedule, Stripe's availability and cross-border payout documentation, Wise's own country lists, and the published pages of local banks and wallets. Rates and lists change; the date next to each source is the day it was read."
   - "\"Not published\" means the platform or the operator states nothing on the subject anywhere on its public pages. It is not the same as a refusal, and this page never converts one into the other. Where a claim could not be traced to an official publication that answers a citation check, the claim is left out rather than softened."
 cta:
-  title: "If your country allows it, the board is open"
+  title: "If your country allows USDT, take a DareBay task"
   lede: "DareBay has no exclusion list and no application: you pick a task, post the clip and the platform counts the views. It has one money rail, USDT on the TON network, so it fits only where receiving USDT does not conflict with your local law. Where it does, the platforms with a bank or PayPal rail above are the honest answer."
 ---
 
@@ -56,7 +56,7 @@ On tax, Law No. 6 of 2025, in the Official Gazette of 21 February 2025, taxes tu
 
 ## InstaPay and Vodafone Cash: a domestic rail has edges
 
-InstaPay runs on the Instant Payment Network, which the Central Bank of Egypt describes as "a national network linking all operating banks within the Arab Republic of Egypt", with limits of 70,000 EGP per transaction and 400,000 EGP per month per bank. Money from abroad enters through a separate service, IPN International Remittance, working "by partnering with local banks, money transfer operators, and exchange houses". <!-- source: https://www.cbe.org.eg/en/payment-systems-and-services/instant-payment-network 2026-09-18 --> An InstaPay address therefore receives a remittance that already crossed the border through a registered institution; none of the nine platforms in the table offers it, and Wusul, the one board below that names it, does not publish how it sends one. Vodafone Cash describes depositing and withdrawing through Vodafone stores, dealers, Fawry, Aman and Basata branches and ATMs, and no inbound international route. <!-- source: https://web.vodafone.com.eg/en/vodafone-cash 2026-09-18 --> That is an absence of a statement rather than a refusal, but it leaves nothing published to rely on.
+InstaPay runs on the Instant Payment Network, which the Central Bank of Egypt describes as "a national network linking all operating banks within the Arab Republic of Egypt", with limits of 70,000 EGP per transaction and 400,000 EGP per month per bank. Money from abroad enters through a separate service, IPN International Remittance, working "by partnering with local banks, money transfer operators, and exchange houses". <!-- source: https://www.cbe.org.eg/en/payment-systems-and-services/instant-payment-network 2026-09-18 --> An InstaPay address therefore receives a remittance that already crossed the border through a registered institution; none of the eight platforms in the table offers it, and Wusul, the one board below that names it, does not publish how it sends one. Vodafone Cash describes depositing and withdrawing through Vodafone stores, dealers, Fawry, Aman and Basata branches and ATMs, and no inbound international route. <!-- source: https://web.vodafone.com.eg/en/vodafone-cash 2026-09-18 --> That is an absence of a statement rather than a refusal, but it leaves nothing published to rely on.
 
 ## Where a USDT payout runs into the law
 
@@ -88,9 +88,9 @@ The reason is worth stating precisely: the European Union's Iraq regulation is a
 
 Telegram's own terms describe Stars as "virtual items that allow users to purchase digital goods and services from bots and mini apps inside the Telegram ecosystem", and for a personal balance the wording is explicit: "You may not sell, withdraw, transfer or use Stars in your personal balance for any other purpose than those explicitly outlined in these Terms." <!-- source: https://telegram.org/tos/stars 2026-09-18 --> Turning Stars into money belongs to channel and bot owners, is processed by Fragment 21 days after a balance accrues, and Telegram states that "Fragment may be unable to issue rewards for certain users or in certain countries". <!-- source: https://telegram.org/tos/content-creator-rewards 2026-09-18 --> Stars are purchasing power inside Telegram, not a payout that arrives as money.
 
-## Nine platforms, read from their own pages
+## Eight platforms, read from their own pages
 
-Only Whop publishes both a sanctions list and a payout-country list: it names Egypt, Morocco, Algeria, Saudi Arabia and the UAE among its payout countries and excludes Iraq. <!-- source: https://docs.whop.com/manage-your-business/manage-payouts/set-up-payouts 2026-09-18 --> Clipping.net publishes no country list and pays by PayPal or USDC and USDT on Ethereum only. <!-- source: https://clipping.net/docs/clippers/payments 2026-09-18 --> Reach.cat publishes none either and pays to a crypto wallet; the only Arab country it names anywhere is Morocco, in a testimonial. <!-- source: https://reach.cat/become-a-clipper/ 2026-09-18 --> Its app's payout screen also offers a bank transfer by IBAN <!-- source: https://reach.cat/dashboard/creator/earnings 2026-09-18 -->, and its terms effective 13 September 2026 require identity verification through iDenfy once payout requests pass $500. <!-- source: https://reach.cat/terms 2026-09-18 --> On Vues the brand funds each payout, so the method depends on the campaign. DareBay publishes no exclusion list either, and pays on one rail, USDT on the TON network, out of a request of at least 10 USDT with 10% taken off, each one checked by a person; in Egypt, Algeria and Iraq that rail runs into the rules quoted above.
+Only Whop publishes both a sanctions list and a payout-country list: it names Egypt, Morocco, Algeria, Saudi Arabia and the UAE among its payout countries and excludes Iraq. <!-- source: https://docs.whop.com/manage-your-business/manage-payouts/set-up-payouts 2026-09-18 --> Clipping.net publishes no country list and pays by PayPal or USDC and USDT on Ethereum only. <!-- source: https://clipping.net/docs/clippers/payments 2026-09-18 --> Reach.cat publishes none either and pays to a crypto wallet; the only Arab country it names anywhere is Morocco, in a testimonial. <!-- source: https://reach.cat/become-a-clipper/ 2026-09-24 --> Its creator FAQ says bank transfer is coming "very soon" <!-- source: https://reach.cat/creator 2026-09-24 -->, and its terms effective 13 September 2026 require identity verification through iDenfy once total payout requests pass $500. <!-- source: https://reach.cat/terms 2026-09-24 --> On Vues the brand funds each payout, so the method depends on the campaign. DareBay publishes no exclusion list either, and pays on one rail, USDT on the TON network, out of a request of at least 10 USDT with 10% taken off, each one checked by a person; in Egypt, Algeria and Iraq that rail runs into the rules quoted above.
 
 Three Arabic-language boards belong here although none is in the table; none is registered in Egypt, the UAE, Morocco, Algeria or Iraq. Nashr is Saudi, Wusul is run from Estonia by Camaran Group OÜ on terms its own page flags as a template pending legal review <!-- source: https://www.wusulclips.com/en/terms 2026-09-19 -->, Clip2Earn by BAKCHICH SAS of Marseille, represented in Tunisia <!-- source: https://www.clip2earn.money/en/terms 2026-09-19 -->.
 
@@ -104,7 +104,7 @@ One line of that table is addressed to Cairo: Wusul's Instapay in pounds, with n
 
 <LCompare />
 
-DareBay is last in that table because it publishes no exclusion list, so every country here is included, and because it has one money rail: USDT on the TON network, plus Telegram Stars. Entering is free and the contest fee is 0%; the only charge a clipper pays is 10% on a withdrawal, deducted inside a request of at least 10 USDT, checked by hand, with no settlement time promised. Open tasks pay $1 to $10 per 1,000 counted views with up to $500 for one clip, the task sets the view threshold, and no followers or application are needed; the terms are on [how DareBay withdrawals work](/en/help/darebay-withdrawals). The interface is English, Russian and Ukrainian — there is no Arabic version, and each task card is written in its organizer's language, most often Russian.
+DareBay is last in that table because it publishes no exclusion list, so every country here is included, and because it has one money rail, USDT on the TON network; Telegram Stars, the other way to receive a payout, are not money. Entering is free and the contest fee is 0%; the only charge a clipper pays is 10% on a withdrawal, deducted inside a request of at least 10 USDT, checked by hand, with no settlement time promised. Its tasks pay $1 to $10 per 1,000 counted views, set by each task, with up to $500 for one clip, the task sets the view threshold, and no followers or application are needed; the terms are on [how DareBay withdrawals work](/en/help/darebay-withdrawals). The interface is in English, Russian, Ukrainian and Polish — there is no Arabic version, and each task card is written in its organizer's language, most often Russian.
 
 That single rail is also the honest limit. In Egypt, Algeria and Iraq a USDT payout runs into what the regulators quoted above have published: a criminal prohibition on holding virtual assets in Algeria, activity the Central Bank of Egypt describes as criminalized, and a closed banking and wallet channel with no legal protection in Iraq. A DareBay balance has no withdrawal route to those three countries today (an individual task can name a card or a bank transfer as its reward, if its organizer sets one), so the platforms with a bank or PayPal rail above are the answer.
 
@@ -122,7 +122,7 @@ Two separate answers. A platform cannot send you a PayPal payout: Egypt is absen
 
 ### Can a platform pay straight into InstaPay or Vodafone Cash?
 
-None of the nine platforms in the table does. The Central Bank of Egypt describes the Instant Payment Network as linking banks inside Egypt; money from abroad enters through IPN International Remittance, via partner banks, money transfer operators and exchange houses. Vodafone Cash's own page states no inbound international route. Wusul, a board outside the table, states that it pays Egyptian clippers by Instapay in pounds and does not publish how the transfer is sent.
+None of the eight platforms in the table does. The Central Bank of Egypt describes the Instant Payment Network as linking banks inside Egypt; money from abroad enters through IPN International Remittance, via partner banks, money transfer operators and exchange houses. Vodafone Cash's own page states no inbound international route. Wusul, a board outside the table, states that it pays Egyptian clippers by Instapay in pounds and does not publish how the transfer is sent.
 
 ### Do clippers in Morocco and Algeria actually get paid?
 
@@ -142,4 +142,4 @@ There is a published regime that may apply: Law No. 6 of 2025 taxes turnover fro
 
 ### Do I need English to take a clipping brief?
 
-For DareBay, you need to read the brief in the language it is written in: the interface is English, Russian and Ukrainian, with no Arabic version, and each task card is written in its organizer's language, most often Russian. The work itself is editing and posting. Nashr's interface is Arabic only; Wusul publishes a full Arabic version beside its English one.
+For DareBay, you need to read the brief in the language it is written in: the interface is in English, Russian, Ukrainian and Polish, with no Arabic version, and each task card is written in its organizer's language, most often Russian. The work itself is editing and posting. Nashr's interface is Arabic only; Wusul publishes a full Arabic version beside its English one.

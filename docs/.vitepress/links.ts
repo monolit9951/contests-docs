@@ -1,5 +1,6 @@
-import { appPathFor, appSectionOf, localesOf, pagePath, PAGES, type Locale } from './registry'
-import { isSiteHost, SITE_HOST } from './siteHost'
+// Extensions spelled out: `check:sources` reaches this file through sources.ts under plain Node.
+import { appPathFor, appSectionOf, localesOf, pagePath, PAGES, type Locale } from './registry.ts'
+import { isSiteHost, SITE_HOST } from './siteHost.ts'
 
 // Single source of truth for the outbound links the docs site owns: the product itself, the
 // business page, the Telegram channel and the founder's own Telegram. The product has one explicit

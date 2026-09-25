@@ -7,7 +7,7 @@ seo: true
 landing: true
 sources: visible
 hero:
-  updated: "2026-09-19"
+  updated: "2026-09-25"
   kicker: "Payout access · Nigeria, Kenya, Ghana · 2026"
   lede: "PayPal's own payout list settles the question before any rate card does: Kenya is on it, Nigeria and Ghana are not. So a platform whose single rail is PayPal can pay a clipper in Nairobi and cannot pay one in Lagos or Accra, whatever its landing page claims about country counts. Below: what each rail reaches, what each platform states about these three countries, and what the CBN, the CBK and the Bank of Ghana have published about a stablecoin payout."
   secondary: "Country table"
@@ -22,12 +22,12 @@ compare:
   highlight: darebay
   title: "What each platform states about Nigeria, Kenya and Ghana"
 method:
-  - "Country statements are read off each platform's own supported-country page, payout documentation, terms or FAQ on 18 September 2026; the Kenya column also carries what a platform says about Ghana, because most of them treat the two together or name neither."
+  - "Country statements are read off each platform's own supported-country page, payout documentation, terms or FAQ on 18 September 2026, and the table cells again on 24 September 2026; the Kenya column also carries what a platform says about Ghana, because most of them treat the two together or name neither."
   - "Rails, thresholds and fees come from the same pages. \"Not published\" means the platform states no figure anywhere on its public pages — it is not an estimate, and it is not zero."
-  - "Payment-service availability comes from PayPal's, Stripe's and Wise's own reference pages, and the regulatory lines from the CBN, SEC Nigeria, the Nigeria Revenue Service, the CBK, the KRA and the Bank of Ghana. DareBay's own figures come from its live data snapshot and help pages."
+  - "Payment-service availability comes from PayPal's, Stripe's and Wise's own reference pages, and the regulatory lines from the CBN, SEC Nigeria, the Nigeria Revenue Service, the CBK, the KRA and the Bank of Ghana. DareBay's own figures come from its own public pages."
 cta:
   title: "Paid the same way in Lagos, Nairobi and Accra"
-  lede: "DareBay has no country list to check yourself against and no PayPal dependency to trip over: the balance leaves as USDT on the TON network, on a request from 10 USDT with a 10% fee taken inside it. Take a task off the open board, post the clip on your own account, and the platform counts the views."
+  lede: "DareBay has no country list to check yourself against and no PayPal dependency to trip over: the balance leaves as USDT on the TON network, on a request from 10 USDT with a 10% fee taken inside it. Take a task off the board, post the clip on your own account, and the platform counts the views."
 ---
 
 ## A PayPal payout reaches Nairobi but not Lagos or Accra
@@ -95,15 +95,15 @@ Tax, briefly — the detail is on [taxes for clippers](/en/earnings/taxes-for-cl
 
 ## A DareBay payout in Lagos, Nairobi and Accra — and when another platform fits better
 
-DareBay has no separate Nigeria, Kenya and Ghana answer, because it has no country list: it pays worldwide with no exclusion list, on the same rail everywhere. The money leaves as USDT on the TON network. A withdrawal request starts at 10 USDT, a 10% fee is deducted inside the request, and the team checks the details by hand before sending, so no settlement time is promised — mechanics on the [withdrawals page](/en/help/darebay-withdrawals). Nothing is taken from the task budget, so that 10% is the only charge a clipper pays. Open tasks pay $1.00–$10.00 per 1,000 counted views, up to $500 per clip; see [how much clipping pays](/en/earnings/how-much-clipping-pays). No followers, no portfolio, no application.
+DareBay has no separate Nigeria, Kenya and Ghana answer, because it has no country list: only people on sanctions lists are barred, and every clipper is paid on the same rail. The money leaves as USDT on the TON network. A withdrawal request starts at 10 USDT, a 10% fee is deducted inside the request, and the team checks the details by hand before sending, so no settlement time is promised — mechanics on the [withdrawals page](/en/help/darebay-withdrawals). Nothing is taken from the task budget, so that 10% is the only charge a clipper pays. Its tasks pay $1.00–$10.00 per 1,000 counted views, set by each task, up to $500 per clip; see [how much clipping pays](/en/earnings/how-much-clipping-pays). No followers, no portfolio, no application.
 
 The second rail, Telegram Stars, is not a way to get money out. Telegram's terms describe Stars as virtual items for buying digital goods and services from bots and mini apps inside Telegram, and state that you "may not sell, withdraw, transfer or use Stars in your personal balance for any other purpose" than those set out in the terms <!-- source: https://telegram.org/tos/stars 2026-09-18 -->. For a clipper in Lagos, Nairobi or Accra who wants spendable money, the rail is USDT on TON.
 
 So pick by what you can actually receive:
 
-- **You are in Kenya and PayPal-to-M-PESA already works for you.** Take the PayPal-paying boards: Whop lists Kenya, and the Safaricom bridge turns dollars into shillings without a stablecoin step.
+- **You are in Kenya and PayPal-to-M-PESA already works for you.** Take a board that pays by PayPal, and the Safaricom bridge turns dollars into shillings without a stablecoin step; Whop lists Kenya among its payout countries<!-- source: https://docs.whop.com/manage-your-business/manage-payouts/set-up-payouts 2026-09-18 -->, but its docs tie PayPal payouts to PayPal purchases<!-- source: https://docs.whop.com/manage-your-business/manage-payouts/payout-methods 2026-09-24 -->.
 - **You want money in a local bank account, not a wallet.** Whop names bank accounts and mobile wallets among its rails in over 200 countries <!-- source: https://docs.whop.com/manage-your-business/manage-payouts/set-up-payouts 2026-09-18 -->. DareBay offers no local bank rail on balance withdrawals.
-- **You are in Nigeria or Ghana with no bank-facing option.** Reach.cat pays to your own wallet with no PayPal step: its payout screen offers USDT on ERC20, BEP20 or Solana, or a bank transfer by IBAN <!-- source: https://reach.cat/dashboard/creator/earnings 2026-09-18 -->. Its landing page says "No KYC. No ID check." <!-- source: https://reach.cat/become-a-clipper/ 2026-09-18 -->, but its terms effective 13 September 2026 require identity verification through iDenfy once payout requests pass $500 <!-- source: https://reach.cat/terms 2026-09-18 -->. Clipping.net pays by PayPal or by USDC and USDT on Ethereum only, with the method fixed by the campaign <!-- source: https://clipping.net/docs/clippers/payments 2026-09-18 -->; Vues publishes no country list and makes payouts subject to provider screening <!-- source: https://vues.app/terms 2026-09-18 -->.
+- **You are in Nigeria or Ghana with no bank-facing option.** Reach.cat pays to your own wallet with no PayPal step: it pays in USDT, and its creator FAQ says bank transfer is coming "very soon" <!-- source: https://reach.cat/creator 2026-09-24 -->. Its landing page says "No KYC. No ID check." <!-- source: https://reach.cat/become-a-clipper/ 2026-09-24 -->, but its terms effective 13 September 2026 require identity verification through iDenfy once total payout requests pass $500 <!-- source: https://reach.cat/terms 2026-09-24 -->. Clipping.net pays by PayPal or by USDC and USDT on Ethereum only, with the method fixed by the campaign <!-- source: https://clipping.net/docs/clippers/payments 2026-09-18 -->; Vues publishes no country list and makes payouts subject to provider screening <!-- source: https://vues.app/terms 2026-09-18 -->.
 - **You want a platform built for the region.** The naira boards sit in the table above; ClipToCash, still a waitlist, now names South Africa as a fourth country beside Nigeria, Ghana and Kenya <!-- source: https://cliptocash.io/ 2026-09-19 -->. Mind the namesake — cliptocash.com is a different, live platform under French law, paying through Stripe or Whop every Monday <!-- source: https://cliptocash.com/legal/terms 2026-09-19 -->.
 
 For the wider field, see [the best clipping platforms](/en/earnings/best-clipping-platforms).

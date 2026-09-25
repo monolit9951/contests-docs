@@ -64,18 +64,17 @@ describe('source comments with the flag', () => {
   it('numbers references in first-citation order and appends the list', () => {
     const html = render(`First ${TELEGRAM} then ${TAX}.`)
 
-    expect(html).toContain('First <sup class="src-ref"><a href="#src-1">1</a></sup>')
-    expect(html).toContain('then <sup class="src-ref"><a href="#src-2">2</a></sup>')
+    expect(html).toContain('First<sup class="src-ref">&#8202;<a href="#src-1">[1]</a></sup> then<sup class="src-ref">&#8202;<a href="#src-2">[2]</a></sup>.')
     expect(html).not.toContain('<!-- source:')
-    expect(html).toContain('<li id="src-1"><a href="https://telegram.org/blog/monetization-for-channels" rel="nofollow noopener">telegram.org</a> — 2026-09-04</li>')
-    expect(html).toContain('<li id="src-2"><a href="https://npd.nalog.ru/" rel="nofollow noopener">npd.nalog.ru</a> — 2026-09-04</li>')
+    expect(html).toContain('<li id="src-1"><span class="src-n">[1]</span> <a href="https://telegram.org/blog/monetization-for-channels" rel="nofollow noopener">telegram.org/blog/monetization-for-channels</a> — 2026-09-04</li>')
+    expect(html).toContain('<li id="src-2"><span class="src-n">[2]</span> <a href="https://npd.nalog.ru/" rel="nofollow noopener">npd.nalog.ru/</a> — 2026-09-04</li>')
   })
 
   it('renders a competitor platform as plain text with no link at all', () => {
     const html = render(`Their own terms say so ${CLIPPING_NET}.`)
 
-    expect(html).toContain('<sup class="src-ref"><a href="#src-1">1</a></sup>')
-    expect(html).toContain('<li id="src-1">clipping.net — 2026-09-05</li>')
+    expect(html).toContain('<sup class="src-ref">&#8202;<a href="#src-1">[1]</a></sup>')
+    expect(html).toContain('<li id="src-1"><span class="src-n">[1]</span> clipping.net/clip — 2026-09-05</li>')
     // Not merely nofollow: the competitor's URL must not appear as an href anywhere.
     expect(html).not.toContain('href="https://clipping.net/clip"')
   })
@@ -87,16 +86,16 @@ describe('source comments with the flag', () => {
     const OWN = '<!-- source: https://darebay.com/en/help/what-commission 2026-09-04 -->'
 
     const ru = render(`Комиссия ${OWN}.`, { path: 'pomoshch/example.md' })
-    expect(ru).toContain('<li id="src-1"><a href="/pomoshch/kakaya-komissiya">darebay.com</a> — 2026-09-04</li>')
+    expect(ru).toContain('<li id="src-1"><span class="src-n">[1]</span> <a href="/pomoshch/kakaya-komissiya">darebay.com/pomoshch/kakaya-komissiya</a> — 2026-09-04</li>')
     expect(ru).not.toContain('nofollow')
 
     const en = render(`Fee ${OWN}.`, { path: 'en/help/example.md' })
-    expect(en).toContain('<li id="src-1"><a href="/en/help/what-commission">darebay.com</a> — 2026-09-04</li>')
+    expect(en).toContain('<li id="src-1"><span class="src-n">[1]</span> <a href="/en/help/what-commission">darebay.com/en/help/what-commission</a> — 2026-09-04</li>')
 
     // An application address has no docs page behind it: relative, in the reader's application
     // tree, and `_self` so the docs router does not swallow it.
     const app = render(`Tasks <!-- source: https://darebay.com/en/tasks 2026-09-04 -->.`, { path: 'ua/dopomoha/a.md' })
-    expect(app).toContain('<li id="src-1"><a href="/ua/tasks" target="_self">darebay.com</a> — 2026-09-04</li>')
+    expect(app).toContain('<li id="src-1"><span class="src-n">[1]</span> <a href="/ua/tasks" target="_self">darebay.com/ua/tasks</a> — 2026-09-04</li>')
   })
 
   it('gives a duplicated URL one number and one list entry', () => {
@@ -105,7 +104,7 @@ describe('source comments with the flag', () => {
     const html = render(`A ${CLIPPING_NET} B ${later} C ${TAX}.`)
 
     expect(html.match(/href="#src-1"/g)).toHaveLength(2)
-    expect(html).toContain('<li id="src-1">clipping.net — 2026-09-05</li>')
+    expect(html).toContain('<li id="src-1"><span class="src-n">[1]</span> clipping.net/clip — 2026-09-05</li>')
     expect(html).not.toContain('2026-09-11')
     expect(html.match(/<li id="src-/g)).toHaveLength(2)
     expect(html).toContain('<li id="src-2">')
@@ -116,8 +115,8 @@ describe('source comments with the flag', () => {
       ['| a | b |', '|---|---|', `| c ${TELEGRAM} | d |`, '', CLIPPING_NET, '', 'End.'].join('\n')
     )
 
-    expect(html).toContain('<td>c <sup class="src-ref"><a href="#src-1">1</a></sup></td>')
-    expect(html).toContain('<sup class="src-ref"><a href="#src-2">2</a></sup>')
+    expect(html).toContain('<td>c<sup class="src-ref">&#8202;<a href="#src-1">[1]</a></sup></td>')
+    expect(html).toContain('<sup class="src-ref">&#8202;<a href="#src-2">[2]</a></sup>')
     expect(html).not.toContain('<!-- source:')
   })
 

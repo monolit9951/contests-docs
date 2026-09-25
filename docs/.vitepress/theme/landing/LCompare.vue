@@ -4,7 +4,7 @@
 // server-rendered order is the page's editorial order.
 import { useData } from 'vitepress'
 import { computed, ref } from 'vue'
-import { sourceAnchor } from '../../links'
+import { sourceAnchor, sourceLabel } from '../../links'
 import { appLocaleOf } from '../../registry'
 import { LANDING_COPY, localeOf } from './copy'
 import { DEFAULT_COLUMNS, bidiAttrs, pick, sourceIndex, text, textLang, type Platform } from './platforms'
@@ -43,7 +43,30 @@ const toggle = (key: string) => {
   if (sortKey.value === key) desc.value = !desc.value
   else { sortKey.value = key; desc.value = false }
 }
-const stateClass = (s?: string) => (s === 'yes' ? 'lp-chip lp-chip-good' : s === 'no' ? 'lp-chip lp-chip-bad' : s === 'partial' ? 'lp-chip lp-chip-warn' : 'lp-chip')
+// A chip's colour says whether its state helps the clipper. In most columns "yes" does (it pays
+// here, it holds the budget), but in "Followers required" a "yes" is the barrier: without this
+// the one board that demands followers read green and every board that needs none, red.
+const INVERTED = new Set(['followers'])
+const stateClass = (s?: string, c?: string) => {
+  const good = INVERTED.has(c ?? '') ? 'no' : 'yes'
+  const bad = INVERTED.has(c ?? '') ? 'yes' : 'no'
+  return s === good ? 'lp-chip lp-chip-good' : s === bad ? 'lp-chip lp-chip-bad' : s === 'partial' ? 'lp-chip lp-chip-warn' : 'lp-chip'
+}
+// A cell's source marker is `<sup class="lp-ref">` holding a hair space (&#8202;) and a bracketed
+// number, the same shape as the article markers (`sourceRefHtml` in sources.ts): the cell's text
+// reads "$1–$10 [1]" when copied or extracted, never "$1–$101". The number is the platform's own
+// source number, the one "How this comparison was built" prints after its name (`methodSources`);
+// its title names the address and the date, for a pointer and for assistive tech.
+//
+// Every cell whose field has a source carries the marker, whatever the cell prints: a figure, a
+// chip alone, or "not published". "Not published" is a claim about a competitor too, and the page
+// it was checked on is its source; before 2026-09-24 those cells were the table's only unsourced
+// claims, while "How this comparison was built" listed their pages all the same.
+//
+// The `{{ ' ' }}` below are text, not spacing. Vue drops the whitespace between two elements on
+// separate lines, so the chip ran into the value ("yesyes: the budget is held…") and the name into
+// its "best for" line ("Whop Content RewardsUS/EU clippers…") for anyone reading the page as text.
+// `check:dist` (extracted-text gate) fails the build if a pair like that comes back.
 </script>
 
 <template>
@@ -70,18 +93,16 @@ const stateClass = (s?: string) => (s === 'yes' ? 'lp-chip lp-chip-good' : s ===
               <td class="lp-cell-name">
                 <a v-if="p.id === highlight" :href="p.home?.[appLoc] ?? p.url" target="_self">{{ p.name }}</a>
                 <a v-else v-bind="sourceAnchor(p.url, loc)">{{ p.name }}</a>
-                <small v-if="p.bestFor?.[loc]">{{ p.bestFor[loc] }}</small>
+                <template v-if="p.bestFor?.[loc]">{{ ' ' }}<small>{{ p.bestFor[loc] }}</small></template>
               </td>
               <td v-for="c in columns" :key="c">
-                <template v-if="p.fields[c]?.state && !text(p, c, loc)">
-                  <span :class="stateClass(p.fields[c].state)">{{ copy.cis[p.fields[c].state!] }}</span>
-                </template>
+                <span v-if="p.fields[c]?.state && !text(p, c, loc)" :class="stateClass(p.fields[c].state, c)">{{ copy.cis[p.fields[c].state!] }}</span>
                 <template v-else-if="text(p, c, loc)">
-                  <span v-if="p.fields[c]?.state" :class="stateClass(p.fields[c].state)" style="margin-inline-end:6px">{{ copy.cis[p.fields[c].state!] }}</span>
+                  <template v-if="p.fields[c]?.state"><span :class="stateClass(p.fields[c].state, c)" style="margin-inline-end:2px">{{ copy.cis[p.fields[c].state!] }}</span>{{ ' ' }}</template>
                   <span v-bind="bidiAttrs(textLang(p, c, loc), loc)" :class="{ 'lp-money': c === 'cpm' || c === 'rate' || c === 'cap' || c === 'minPayout' }">{{ text(p, c, loc) }}</span>
-                  <a v-if="p.fields[c]?.source?.url" class="lp-src" v-bind="sourceAnchor(p.fields[c].source!.url, loc)" :title="p.fields[c].source!.date">{{ sourceIndex(p, p.fields[c].source!.url, columns, loc) }}</a>
                 </template>
                 <span v-else class="lp-na">{{ copy.notPublished }}</span>
+                <sup v-if="p.fields[c]?.source?.url" class="lp-ref">&#8202;<a class="lp-src" v-bind="sourceAnchor(p.fields[c].source!.url, loc)" :title="`${sourceLabel(p.fields[c].source!.url, loc)} · ${p.fields[c].source!.date}`">[{{ sourceIndex(p, p.fields[c].source!.url, columns, loc) }}]</a></sup>
               </td>
             </tr>
           </tbody>

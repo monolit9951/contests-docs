@@ -4,6 +4,7 @@
 import { existsSync, readdirSync, readFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { gluedTextFindings, sourceMarkerFindings, tableNumberingFindings } from './extracted-text.mjs'
 import { MIN_INBOUND, inboundSources, inboundVerdict, internalNofollowAnchors } from './internal-links.mjs'
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..')
@@ -66,6 +67,14 @@ for (const page of PAGES) {
       const [, target, fragment] = match
       if (target === '' || target.startsWith('/')) anchorLinks.push({ from: path, target: target || path, fragment: decodeFragment(fragment) })
     }
+
+    // The page as text, the way it is copied, read aloud or quoted (scripts/extracted-text.mjs):
+    // every source marker is " [n]" apart from its figure, every table number is the one "How this
+    // comparison was built" lists under that platform, and no two words of a table, a card, a
+    // source list or a calculator run together across an element.
+    for (const finding of sourceMarkerFindings(html)) fail('source-marker', `${path}: ${finding}`)
+    for (const finding of tableNumberingFindings(html)) fail('table-number', `${path}: ${finding}`)
+    for (const finding of gluedTextFindings(html)) fail('glued-text', `${path}: ${finding}`)
 
     const h1Tags = tags(html, 'h1')
     if (h1Tags.length !== 1) fail('h1-count', `${path}: ${h1Tags.length}`)

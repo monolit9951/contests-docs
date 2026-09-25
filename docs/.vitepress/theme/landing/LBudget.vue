@@ -27,18 +27,18 @@ const money = (n: number) => '$' + n.toLocaleString('en-US', { minimumFractionDi
     <div class="lp-calc">
       <div>
         <label for="lpb-budget">{{ copy.budgetBudget }}: <span class="lp-calc-val lp-num">{{ fmt(budget) }}</span></label>
-        <input id="lpb-budget" type="range" min="100" max="20000" step="50" v-model.number="budget" />
+        <input id="lpb-budget" type="range" min="100" max="20000" step="50" v-model.number="budget" />{{ ' ' }}
         <label for="lpb-rate">{{ copy.calcRate }}: <span class="lp-calc-val lp-money">{{ money(rate) }}</span></label>
-        <input id="lpb-rate" type="range" :min="calc.rateMin" :max="Math.max(calc.rateMax, 5)" step="0.25" v-model.number="rate" />
+        <input id="lpb-rate" type="range" :min="calc.rateMin" :max="Math.max(calc.rateMax, 5)" step="0.25" v-model.number="rate" />{{ ' ' }}
         <label for="lpb-cap">{{ copy.calcCap }}: <span class="lp-calc-val lp-money">{{ money(cap) }}</span></label>
-        <input id="lpb-cap" type="range" min="10" max="500" step="10" v-model.number="cap" />
+        <input id="lpb-cap" type="range" min="10" max="500" step="10" v-model.number="cap" />{{ ' ' }}
       </div>
       <div class="lp-calc-out">
         <div class="lp-kicker">{{ copy.budgetViews }}</div>
         <div class="lp-big lp-num">{{ fmt(views) }}</div>
         <div class="lp-calc-rows">
-          <div><span class="lp-kicker">{{ copy.budgetClips }}</span><b>{{ fmt(clipsAtCap) }}</b></div>
-          <div><span class="lp-kicker">{{ copy.budgetCpm }}</span><b>{{ money(rate) }}</b></div>
+          <div><span class="lp-kicker">{{ copy.budgetClips }}</span>{{ ' ' }}<b>{{ fmt(clipsAtCap) }}</b></div>
+          <div><span class="lp-kicker">{{ copy.budgetCpm }}</span>{{ ' ' }}<b>{{ money(rate) }}</b></div>
         </div>
         <p>{{ copy.budgetNote }}</p>
       </div>

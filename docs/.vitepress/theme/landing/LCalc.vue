@@ -23,9 +23,9 @@ const money = (n: number) => '$' + n.toFixed(2)
     <div class="lp-calc">
       <div>
         <label for="lp-views">{{ copy.calcViews }}: <span class="lp-calc-val lp-num">{{ fmt(views) }}</span></label>
-        <input id="lp-views" type="range" min="2000" max="500000" step="1000" v-model.number="views" />
+        <input id="lp-views" type="range" min="2000" max="500000" step="1000" v-model.number="views" />{{ ' ' }}
         <label for="lp-rate">{{ copy.calcRate }}: <span class="lp-calc-val lp-money">{{ money(rate) }}</span></label>
-        <input id="lp-rate" type="range" :min="calc.rateMin" :max="calc.rateMax" step="0.25" v-model.number="rate" />
+        <input id="lp-rate" type="range" :min="calc.rateMin" :max="calc.rateMax" step="0.25" v-model.number="rate" />{{ ' ' }}
         <label>{{ copy.calcCap }}: <span class="lp-calc-val lp-money">{{ money(calc.cap) }}</span></label>
       </div>
       <div class="lp-calc-out">

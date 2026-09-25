@@ -182,7 +182,10 @@ body:has(.lp) { min-width: 0; }
 .lp-table tr.is-us td.lp-cell-name { background: color-mix(in srgb, var(--lp-accent) 12%, var(--lp-panel)); }
 .lp-table td .lp-money { display: inline; }
 .lp-table td .lp-na { color: var(--lp-muted); }
-.lp-table td .lp-src { display: inline-block; margin-inline-start: 4px; color: var(--lp-faint); font-size: 11px; text-decoration: none; vertical-align: super; }
+/* A cell's source marker, `<sup class="lp-ref">` around a hair space and the `[n]` link (LCompare.vue).
+   The sup is raised and never wraps away from the figure it follows; the link only takes the colour. */
+.lp-table td .lp-ref { margin-inline-start: 3px; font-size: 11px; line-height: 0; vertical-align: super; white-space: nowrap; }
+.lp-table td .lp-src { color: var(--lp-faint); text-decoration: none; }
 .lp-table td .lp-src:hover { color: var(--lp-accent); }
 .lp-chip { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 700; padding: 3px 9px; border-radius: 999px; border: 1px solid var(--lp-line-2); color: var(--lp-text); }
 .lp .lp-chip-accent { background: var(--lp-accent); color: var(--lp-on-accent); border-color: transparent; }
@@ -208,10 +211,12 @@ body:has(.lp) { min-width: 0; }
 .lp-card-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 16px; margin: 4px 0; }
 .lp-card-grid div { border-top: 1px solid var(--lp-line); padding-top: 8px; }
 .lp-card-grid dt { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--lp-faint); font-weight: 700; margin: 0 0 3px; }
-.lp-card-grid dd { margin: 0; font-size: 14px; line-height: 1.4; }
+/* A card's two columns are ~120px each on a 320px phone: one long word ("профинансированными") pushed the
+   whole page sideways. Break such a word only when it cannot fit. */
+.lp-card-grid dd { margin: 0; font-size: 14px; line-height: 1.4; overflow-wrap: anywhere; }
 .lp-card-pc { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; font-size: 14px; }
 .lp-card-pc ul { margin: 0; padding-inline-start: 18px; }
-.lp-card-pc li { margin-bottom: 4px; }
+.lp-card-pc li { margin-bottom: 4px; overflow-wrap: anywhere; }
 .lp-card-pc .lp-pros li::marker { color: var(--lp-good); }
 .lp-card-pc .lp-cons li::marker { color: var(--lp-bad); }
 .lp-card-foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; margin-top: auto; padding-top: 6px; }
@@ -232,7 +237,7 @@ body:has(.lp) { min-width: 0; }
    separator and the jump target need saying. `scroll-margin-top` is not decoration: without it a
    reader who taps a reference number lands with the item they wanted hidden under the sticky
    header, which is the one thing this block exists to avoid. */
-.lp-content .src-ref { font-size: 11px; line-height: 0; vertical-align: super; margin-inline-start: 2px; }
+.lp-content .src-ref { font-size: 11px; line-height: 0; vertical-align: super; margin-inline-start: 1px; white-space: nowrap; }
 .lp-content .src-ref a:not(.lp-bleed *) { color: var(--lp-faint); text-decoration: none; font-variant-numeric: tabular-nums; }
 .lp-content .src-ref a:hover { color: var(--lp-accent); }
 .lp-content .db-sources { width: min(100% - 40px, var(--lp-prose)); margin: 64px auto 0; border-top: 1px solid var(--lp-line); padding-top: 8px; }
@@ -241,7 +246,9 @@ body:has(.lp) { min-width: 0; }
    an already-narrow box indents both 20px from their own separator. Same specificity, later rule. */
 .lp-content .db-sources :is(h2, ol) { width: auto; margin-inline: 0; }
 .lp-content .db-sources h2 { margin-top: 24px; font-size: 1.15rem; }
-.lp-content .db-sources ol { font-size: 13.5px; color: var(--lp-muted); }
+/* Each item prints its own "[3]" as text (`sourceItemHtml`): the CSS marker would print it twice.
+   Same specificity as the generic `.lp-content ol` rules above, later in the file. */
+.lp-content .db-sources ol { font-size: 13.5px; color: var(--lp-muted); list-style: none; padding-inline-start: 0; }
 .lp-content .db-sources li { scroll-margin-top: 108px; overflow-wrap: anywhere; }
 
 /* ---- calculator ---------------------------------------------------------- */
@@ -310,7 +317,7 @@ body:has(.lp) { min-width: 0; }
 .lp-calc-rows div { border: 1px solid var(--lp-line); border-radius: 14px; padding: 10px 12px; }
 .lp-calc-rows .lp-kicker { display: block; margin-bottom: 4px; }
 .lp-calc-rows b { font-family: var(--lp-display); font-size: 1.15rem; color: var(--lp-gold); font-variant-numeric: tabular-nums; }
-.lp-calc-badge { display: inline-block; margin-inline-start: 8px; padding: 2px 8px; border-radius: 999px; font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; background: color-mix(in srgb, var(--lp-accent) 18%, transparent); color: var(--lp-accent); }
+.lp-calc-badge { display: inline-block; margin-inline-start: 4px; padding: 2px 8px; border-radius: 999px; font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; background: color-mix(in srgb, var(--lp-accent) 18%, transparent); color: var(--lp-accent); }
 .lp-calc-net { margin-top: 12px; font-size: 14px; color: var(--lp-muted); }
 .lp-calc-net b { color: var(--lp-text); font-variant-numeric: tabular-nums; }
 .lp .lp-glossary { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin: 0; }
@@ -345,9 +352,11 @@ body:has(.lp) { min-width: 0; }
 [dir='rtl'] .lp-card-foot .lp-srcs a,
 [dir='rtl'] .lp-content .db-sources li > a,
 [dir='rtl'] .lp-content :is(p, li, td, th):not(.lp-bleed *) code { direction: ltr; unicode-bidi: isolate; }
-/* Source markers are isolated in the page's own direction: a superscript `3` after `10%` must
-   stay a separate token that FOLLOWS the figure, not become the last digit of `10%3`. */
-[dir='rtl'] .lp :is(.lp-src, .src-ref) { unicode-bidi: isolate; }
+/* Source numbers are isolated in the page's own direction: a superscript `[3]` after `10%` must
+   stay a separate token that FOLLOWS the figure, not become part of it. For a marker the isolate is
+   the whole `<sup>`, the hair space in front of the brackets included; `.src-n` is the same number
+   where a list entry names it (the article's Sources list, "How this comparison was built"). */
+[dir='rtl'] .lp :is(.lp-ref, .src-ref, .src-n) { unicode-bidi: isolate; }
 /* A code block is code: always left to right, whatever the page. Its copy button stays in the
    block's own top-right corner through `inset-inline-end` above. */
 [dir='rtl'] .lp-content div[class*="language-"] { direction: ltr; }

@@ -7,7 +7,7 @@ seo: true
 landing: true
 sources: visible
 hero:
-  updated: "2026-09-19"
+  updated: "2026-09-25"
   kicker: "Payouts into India · 2026"
   lede: "India's own boards pay rupees straight to a UPI ID; the global boards pay dollars, and the rail they hand you decides whether the money is usable. Whop lists India among its payout countries, Vyro leaves India off its unsupported list, and Clipping.net, Vues and Reach.cat name no countries at all. Here is what each one's own pages say, what an Indian individual can actually open, and what the RBI and the tax department say about the rest."
   secondary: "Platform table"
@@ -22,7 +22,7 @@ compare:
   highlight: darebay
   title: "Rupee boards first, then the global ones: what each says about India"
 method:
-  - "Every figure in the table is read off the platform's own pages on 2026-09-18: its country or sanctions page, its clipper page, its terms and its pricing. Where a platform publishes two different numbers for the same thing, the table takes the page written for clippers and this article names the disagreement."
+  - "Every figure in the table is read off the platform's own pages on 2026-09-18: its country or sanctions page, its clipper page, its terms and its pricing; the platforms' table cells were read again on 2026-09-24. Where a platform publishes two different numbers for the same thing, the table takes the page written for clippers and this article names the disagreement."
   - "'Not published' means the platform states it nowhere on its public pages, and is not a guess about what happens after sign-up. Three of the nine name no countries at all, which is a fact about their pages, not a promise about India."
   - "Everything about Indian law, tax and payment rails is quoted from the RBI, the Ministry of Finance, the Income Tax Department or the payment service's own India pages, with the reading date on each. Nothing here is tax advice: thresholds and forms change, and a chartered accountant is the right place to take your own numbers."
 cta:
@@ -89,11 +89,11 @@ Tax is the part that changes your arithmetic. The Income Tax Department's filing
 
 ## Where DareBay fits in India, and where another board fits better
 
-Through an Indian lens, DareBay is a dollar board with a wallet rail. Open tasks pay from $1.00 to $10.00 per 1,000 counted views, one clip can earn up to $500 depending on the cap the task sets, and the rate is printed on the card before you take the brief. Creating or topping up a task budget carries a 0% fee, so nothing is taken from what a clip earns; the single charge a clipper meets is 10% on a withdrawal request, deducted inside the request, with a minimum request of 10 USDT. Every request is checked by a person before it is sent, so no settlement time is promised. There is no application, no follower minimum and no portfolio review.
+Through an Indian lens, DareBay is a dollar board with a wallet rail. Its tasks pay from $1.00 to $10.00 per 1,000 counted views, set by each task; one clip can earn up to $500 depending on the cap the task sets, and the rate is printed on the card before you take the brief. Creating or topping up a task budget carries a 0% fee, so nothing is taken from what a clip earns; the single charge a clipper meets is 10% on a withdrawal request, deducted inside the request, with a minimum request of 10 USDT. Every request is checked by a person before it is sent, so no settlement time is promised. There is no application, no follower minimum and no portfolio review.
 
-Two limits worth stating plainly. The money rail is USDT on the TON network, and what happens to it next is governed by the sections above, not by the platform. Telegram Stars are the other withdrawal method and they are not a way to receive money: Telegram's terms say "You may not sell, withdraw, transfer or use Stars in your personal balance for any other purpose than those explicitly outlined in these Terms", and a Star balance is forfeit if the account is lost <!-- source: https://telegram.org/tos/stars 2026-09-18 -->. The interface is English, Russian and Ukrainian; there is no Hindi version.
+Two limits worth stating plainly. The money rail is USDT on the TON network, and what happens to it next is governed by the sections above, not by the platform. You can also receive the payout in Telegram Stars, but that is not a way to get money out: Telegram's terms say "You may not sell, withdraw, transfer or use Stars in your personal balance for any other purpose than those explicitly outlined in these Terms", and a Star balance is forfeit if the account is lost <!-- source: https://telegram.org/tos/stars 2026-09-18 -->. The interface is in English, Russian, Ukrainian and Polish; there is no Hindi version.
 
-So when is another board the better answer? If you want rupees in your bank and no virtual digital asset in the chain, ClipGrow, Wondeed and ClipConnect settle to UPI and leave you an ordinary income question instead of a Schedule VDA one, and Wondeed and INDclipping deduct TDS for you. If you want a bank or PayPal route, Whop lists India. If you already hold a wallet and want no bank in the loop, Reach.cat and DareBay pay into one. Rate belongs last in that order: [how much clipping pays](/en/earnings/how-much-clipping-pays) covers it, and [the platform comparison](/en/earnings/best-clipping-platforms) has the full field.
+So when is another board the better answer? If you want rupees in your bank and no virtual digital asset in the chain, ClipGrow, Wondeed and ClipConnect settle to UPI and leave you an ordinary income question instead of a Schedule VDA one, and Wondeed and INDclipping deduct TDS for you. If you want a bank route, Whop lists India among its payout countries<!-- source: https://docs.whop.com/manage-your-business/manage-payouts/set-up-payouts 2026-09-18 -->, but a PayPal route is not assured: its docs tie PayPal payouts to PayPal purchases<!-- source: https://docs.whop.com/manage-your-business/manage-payouts/payout-methods 2026-09-24 -->. If you already hold a wallet and want no bank in the loop, Reach.cat and DareBay pay into one. Rate belongs last in that order: [how much clipping pays](/en/earnings/how-much-clipping-pays) covers it, and [the platform comparison](/en/earnings/best-clipping-platforms) has the full field.
 
 <LMethod />
 
@@ -101,7 +101,7 @@ So when is another board the better answer? If you want rupees in your bank and 
 
 ### Does Whop Content Rewards pay clippers in India?
 
-India appears on Whop's published list of payout countries, and Whop notes that the options differ by country <!-- source: https://docs.whop.com/manage-your-business/manage-payouts/set-up-payouts 2026-09-18 -->. Earnings first move from the Content Rewards wallet to your Whop balance <!-- source: https://contentrewards.com/pricing/creators 2026-09-18 -->, and its creator FAQ describes sending money on from there to a bank account, PayPal, a mobile wallet or crypto across 200+ countries <!-- source: https://contentrewards.com/creators 2026-09-18 -->. Which of those rails appears in India is not published, so confirm yours before your first clip.
+India appears on Whop's published list of payout countries, and Whop notes that the options differ by country<!-- source: https://docs.whop.com/manage-your-business/manage-payouts/set-up-payouts 2026-09-18 -->. Earnings first move from the Content Rewards wallet to your Whop balance<!-- source: https://contentrewards.com/pricing/creators 2026-09-18 -->, and its creator FAQ describes sending money on from there to a bank account, PayPal, a mobile wallet or crypto across 200+ countries<!-- source: https://contentrewards.com/creators 2026-09-18 -->, though Whop's own docs tie PayPal payouts to PayPal purchases<!-- source: https://docs.whop.com/manage-your-business/manage-payouts/payout-methods 2026-09-24 -->. Which of those rails appears in India is not published, so confirm yours before your first clip.
 
 ### Can a clipping platform send money straight to my UPI from abroad?
 

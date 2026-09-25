@@ -30,7 +30,7 @@ const DOCS = join(ROOT, 'docs')
 // The citation regex and the competitor list come from the renderer, not from a copy: a script
 // that matched a different comment shape than the build would either probe URLs no reader sees or
 // bless a page whose markers it never looked at.
-const { SOURCE_COMMENT, hostOf, isCompetitorHost } = await import(join(DOCS, '.vitepress', 'sources.ts'))
+const { SOURCE_COMMENT, hostOf, sourceLinkClass } = await import(join(DOCS, '.vitepress', 'sources.ts'))
 
 export const TIMEOUT_MS = 10_000
 const CONCURRENCY = 6
@@ -181,11 +181,37 @@ export const report = (state, entry) =>
   [
     `${state} ${entry.url}`,
     `    ${entry.detail}`,
-    `    ${isCompetitorHost(hostOf(entry.url)) ? 'competitor' : 'source'} ${hostOf(entry.url)}` +
+    `    ${sourceLinkClass(entry.url)} ${hostOf(entry.url)}` +
       ` · cited ${[...entry.dates].sort().join(', ')}${entry.rendered ? '' : ' · frontmatter only, not rendered'}`,
     `    pages: ${[...entry.pages].join(', ')}`,
     '',
   ].join('\n')
+
+const HOST_CLASS_LABELS = {
+  competitor: 'named, no link (competitor)',
+  source: 'linked, nofollow (source)',
+  own: 'linked as our own page (own)',
+}
+
+/**
+ * Every host the checked pages cite, grouped the way their Sources list prints it.
+ *
+ * Printed on every run, not only for the dead and the moved: the class is decided by
+ * `COMPETITOR_SOURCE_HOSTS` in sources.ts, and a clipping board missing from that list is not an
+ * error anything can detect. It is only visible as a board's host in the "linked" row, which is
+ * where an editor looks before putting `sources: visible` on a page.
+ */
+export function hostClasses(entries) {
+  const byClass = { competitor: new Set(), source: new Set(), own: new Set() }
+  for (const { url } of entries) byClass[sourceLinkClass(url)].add(hostOf(url))
+  return Object.fromEntries(Object.entries(byClass).map(([kind, hosts]) => [kind, [...hosts].sort()]))
+}
+
+export const hostReport = (entries) =>
+  Object.entries(hostClasses(entries))
+    .filter(([, hosts]) => hosts.length)
+    .map(([kind, hosts]) => `${HOST_CLASS_LABELS[kind]}: ${hosts.join(', ')}`)
+    .join('\n')
 
 async function runCli(argv) {
   const pages = selectPages(argv)
@@ -203,6 +229,7 @@ async function runCli(argv) {
 
   for (const entry of dead) console.log(report('DEAD', entry))
   for (const entry of redirected) console.log(report('REDIRECT', entry))
+  console.log(`hosts cited on these pages, as their Sources list prints them:\n${hostReport(checked)}\n`)
   console.log(
     `check:sources: ${checked.length - dead.length - redirected.length} ok, ${redirected.length} redirected, ${dead.length} dead`
   )

@@ -33,11 +33,11 @@ const fill = (text: string, values: Record<string, string | number>) => text.rep
     <div class="lp-calc">
       <div>
         <label for="lpp-views">{{ copy.calcViews }}: <span class="lp-calc-val lp-num">{{ fmt(views) }}</span></label>
-        <input id="lpp-views" type="range" min="1000" max="500000" step="1000" v-model.number="views" />
+        <input id="lpp-views" type="range" min="1000" max="500000" step="1000" v-model.number="views" />{{ ' ' }}
         <label for="lpp-clips">{{ copy.calcClipsPerWeek }}: <span class="lp-calc-val lp-num">{{ clips }}</span></label>
-        <input id="lpp-clips" type="range" min="1" max="30" step="1" v-model.number="clips" />
+        <input id="lpp-clips" type="range" min="1" max="30" step="1" v-model.number="clips" />{{ ' ' }}
         <label for="lpp-rate">{{ copy.calcRate }}: <span class="lp-calc-val lp-money">{{ money(rate) }}</span></label>
-        <input id="lpp-rate" type="range" :min="calc.rateMin" :max="calc.rateMax" step="0.25" v-model.number="rate" />
+        <input id="lpp-rate" type="range" :min="calc.rateMin" :max="calc.rateMax" step="0.25" v-model.number="rate" />{{ ' ' }}
         <label>{{ copy.calcCap }}: <span class="lp-calc-val lp-money">{{ money(calc.cap) }}</span></label>
         <p class="lp-calc-net">{{ fill(copy.calcThresholdNote, { threshold: fmt(calc.threshold) }) }}</p>
       </div>
@@ -45,11 +45,13 @@ const fill = (text: string, values: Record<string, string | number>) => text.rep
         <div class="lp-kicker">{{ copy.calcPerMonth }}</div>
         <div class="lp-big">{{ money(perMonth) }}</div>
         <div class="lp-calc-rows">
-          <div><span class="lp-kicker">{{ copy.calcPerClip }}</span><b>{{ money(perClip) }}</b><span v-if="capped" class="lp-calc-badge">{{ copy.calcCapped }}</span></div>
-          <div><span class="lp-kicker">{{ copy.calcPerWeek }}</span><b>{{ money(perWeek) }}</b></div>
+          <div><span class="lp-kicker">{{ copy.calcPerClip }}</span>{{ ' ' }}<b>{{ money(perClip) }}</b><template v-if="capped">{{ ' ' }}<span class="lp-calc-badge">{{ copy.calcCapped }}</span></template></div>
+          <div><span class="lp-kicker">{{ copy.calcPerWeek }}</span>{{ ' ' }}<b>{{ money(perWeek) }}</b></div>
         </div>
-        <!-- Target product (founder, 2026-09-17): no withdrawal fee, so the net row states that instead of a 0% deduction. -->
-        <p class="lp-calc-net"><template v-if="calc.fee > 0">{{ fill(copy.calcNet, { fee: calc.fee }) }}: <b>{{ money(net) }}</b>. </template><template v-else>{{ copy.calcNetFree }}: <b>{{ money(net) }}</b>. </template>{{ fill(copy.calcMinPayout, { min: calc.minPayout }) }}.</p>
+        <!-- The withdrawal fee is 10% (decision 2026-09-18); data/product-intent.json lists the 0% target
+             of 2026-09-17 as superseded. The row that said "no withdrawal fee" went with it: it could only
+             print a claim the product-truth lint forbids. With no fee there is simply no net row. -->
+        <p class="lp-calc-net"><template v-if="calc.fee > 0">{{ fill(copy.calcNet, { fee: calc.fee }) }}: <b>{{ money(net) }}</b>. </template>{{ fill(copy.calcMinPayout, { min: calc.minPayout }) }}.</p>
         <p>{{ copy.calcNote }}</p>
       </div>
     </div>

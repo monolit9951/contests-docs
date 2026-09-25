@@ -7,13 +7,13 @@ seo: true
 landing: true
 sources: visible
 hero:
-  updated: "2026-09-19"
+  updated: "2026-09-25"
   kicker: "Platform review · 2026"
-  lede: "Prime Oracles is a digital-goods marketplace with a rewards board for short video, and on 19 September 2026 it carried 20 open rewards paying $0.02 to $8.00 per 1,000 views. It is owned by a sole trader registered in Tbilisi, Georgia; it pays USDT, USDC or TON, with a withdrawal floor the agreement puts at 5 to 12 USD depending on the network, and takes 10% when you withdraw. Its terms also describe US-dollar withdrawals to cards through Garna in Cyprus, but it does not publish whether that route is open to an ordinary account. Residents and citizens of the EU, the UK and the United States are not served. It publishes no settlement time and no list of served countries; below is what its own documents said on 19 September 2026."
+  lede: "Prime Oracles is a digital-goods marketplace with a rewards board for short video, and on 19 September 2026 it carried 20 open rewards paying $0.02 to $8.00 per 1,000 views. It is owned by a sole trader registered in Tbilisi, Georgia; it pays USDT, USDC or TON, with a withdrawal floor the agreement puts at 5 to 12 USD depending on the network, and takes 10% when you withdraw. Its terms also describe USD through Garna (Cyprus) to a verified Garna account. Residents and citizens of the EU, the UK and the United States are not served. It publishes no settlement time and no list of served countries; below is what its own documents said on 19 and 24 September 2026."
   secondary: "Comparison table"
   takeaways:
     - "<b>The operator is a sole trader, not a company.</b> A sole trader registered in Georgia, with an address in Tbilisi; the name and tax ID are printed in the header of its user agreement. Georgian law applies, disputes go to the courts of Tbilisi, and all three documents carry the edition of 1 June 2026."
-    - "<b>The fee is published and it is 10%.</b> Taken at withdrawal from what you earned, 0% to create a task, network fees on top; for the Garna card route described in the terms, the agreement does not publish what Garna charges."
+    - "<b>The fee is published and it is 10%.</b> Taken at withdrawal from what you earned, 0% to create a task, network fees on top; for the USD channel through Garna described in the terms, the agreement does not publish what Garna charges."
     - "<b>One video, one payout.</b> You choose the moment to submit, and if the clip keeps growing after the payout there is nothing more to collect for it."
     - "<b>Residents and citizens of the EU, the UK and the USA are not served</b>, and access is geo-blocked. The tax clause names ten CIS states and Ukraine is not among them; no page lists the countries it does serve."
 compare:
@@ -24,10 +24,10 @@ compare:
 method:
   - "Prime Oracles builds its pages in the browser. The user agreement, the privacy policy and the AML/KYC policy were read on 2026-09-19 at their public addresses /terms-agreement, /privacy-policy and /aml-policy; all three stand in the edition of 1 June 2026, and clause 22.5 gives the Russian version precedence over any translation, so Russian wording is quoted where it is the binding text."
   - "The rewards board, the reward cards, the About, communities and marketplace pages and the platform's own Telegram channel were read as published. Everything this page says about Prime Oracles comes from those published sources; screens inside an account were not used."
-  - "Reviews on third-party sites were used only as a list of the questions people ask, and not one sentence from them is repeated as fact. Garna's own pages cover the card rail. DareBay's figures come from its help pages and live data snapshot, not from this comparison."
+  - "Reviews on third-party sites were used only as a list of the questions people ask, and not one sentence from them is repeated as fact. Garna's own pages cover where money can go from a Garna account. DareBay's figures come from its own public pages, not from this comparison."
 cta:
   title: "One page of rules, readable before the first clip"
-  lede: "DareBay takes nothing from a task payout. A withdrawal costs 10% of the request, deducted inside a request of at least 10 USDT, and the only cash rail is USDT on the TON network. A person checks every request, so no settlement time is promised. The rate, the view threshold and the cap are printed on every task card."
+  lede: "DareBay, our platform, keeps no country list, while Prime Oracles bars the EU, the UK and the US and does not name Ukraine: on DareBay only people on sanctions lists are barred. Nothing is taken from a task payout; the only fee is 10% of what you withdraw, and withdrawals start at 10 USDT. The rate, the view threshold and any cap are printed on every task card."
 ---
 ## What Prime Oracles is, and who runs it
 
@@ -55,7 +55,7 @@ The agreement prints the table of rails: USDT on Tron (TRC-20), BNB Smart Chain 
 
 The fee is published in the agreement itself: "Получение вознаграждения Креатором — 10% от суммы вывода", 10% of the withdrawal for a creator, against "Создание Награды (активация) — 0%" for posting a task <!-- source: https://www.primeoracles.com/terms-agreement 2026-09-19 -->. The same 10% appears in the home-page FAQ <!-- source: https://www.primeoracles.com/ 2026-09-19 --> and on the About page <!-- source: https://www.primeoracles.com/about 2026-09-19 -->.
 
-The card rail is written into the agreement. Clause 9.4 provides for withdrawal "в долларах США (USD) через платёжного партнёра Garna (Кипр)", in US dollars through the payment partner Garna in Cyprus, and says KYC on that channel is performed by Garna alone <!-- source: https://www.primeoracles.com/terms-agreement 2026-09-19 -->. What Garna charges on its own side the agreement does not publish. Neither does the platform publish whether the channel is open to an ordinary clipper, so check your own account before you count on it. Garna's own page says "Garna is not a financial institution" and that its fintech services come from certified partners <!-- source: https://garna.io/en/for-contractors 2026-09-19 -->; its user agreement promises payment "within 10 (ten) banking days" and bars withdrawals to Crimea, Cuba, the so-called DPR and LPR, Iran, North Korea and Syria. Russia, Belarus and Kazakhstan are not on that list, but the next paragraph of the same agreement closes the service to anyone located in a country under a comprehensive embargo or financial sanctions of the UN Security Council, the EU, the UK or the US, and Garna does not name those countries <!-- source: https://app.garna.io/api/documents/agreement?lang=en 2026-09-19 -->. From a Garna account the money can move on to "your bank in USD, local currencies, debit cards, PayPal, Payoneer, or crypto wallets" <!-- source: https://garna.io/en/for-contractors 2026-09-19 -->, which is what the route is worth to a clipper who turns out to have it.
+The US-dollar channel is written into the agreement. Clause 9.4 provides for withdrawal "в долларах США (USD) через платёжного партнёра Garna (Кипр)", in US dollars through the payment partner Garna in Cyprus, says KYC on that channel is performed by Garna alone, and requires a verified Garna account to use it <!-- source: https://www.primeoracles.com/terms-agreement 2026-09-19 -->. What Garna charges on its own side the agreement does not publish. Garna's own page says "Garna is not a financial institution" and that its fintech services come from certified partners <!-- source: https://garna.io/en/for-contractors 2026-09-19 -->; its user agreement promises payment "within 10 (ten) banking days" and bars withdrawals to Crimea, Cuba, the so-called DPR and LPR, Iran, North Korea and Syria. Russia, Belarus and Kazakhstan are not on that list, but the next paragraph of the same agreement closes the service to anyone located in a country under a comprehensive embargo or financial sanctions of the UN Security Council, the EU, the UK or the US, and Garna does not name those countries <!-- source: https://app.garna.io/api/documents/agreement?lang=en 2026-09-19 -->. From a Garna account the money can move on to "your bank in USD, local currencies, debit cards, PayPal, Payoneer, or crypto wallets" <!-- source: https://garna.io/en/for-contractors 2026-09-19 -->, which is what the route is worth to a clipper who turns out to have it.
 
 No timing is promised to a clipper. The home page says "Вывод средств — автоматический", calling the withdrawal automatic <!-- source: https://www.primeoracles.com/ 2026-09-19 -->, but no document says how long the money takes to travel from a request to a wallet. Money can be frozen "до 30 (тридцати) календарных дней", up to thirty calendar days; a customer is asked to review a submission within 48 hours, and after seven days of silence the platform may decide it instead <!-- source: https://www.primeoracles.com/terms-agreement 2026-09-19 -->.
 
@@ -71,7 +71,7 @@ No passport is asked for at sign-up: clause 3.2 asks for "Действующий
 
 ## What Prime Oracles does not publish
 
-Any settlement time for a clipper, either from an approved submission to a credited balance or from a withdrawal request to money arriving. A list of the countries it serves, and any answer on whether it pays to Ukraine. Whether the Garna card channel is open to an ordinary account. The size of network fees, and what Garna charges on its own side. A team page: the About page says only "The platform is built by professionals in cybersecurity, fintech, and media" <!-- source: https://www.primeoracles.com/about 2026-09-19 -->. An archive of finished tasks, and what to do if a withdrawal request is not approved.
+Any settlement time for a clipper, either from an approved submission to a credited balance or from a withdrawal request to money arriving. A list of the countries it serves, and any answer on whether it pays to Ukraine. The size of network fees, and what Garna charges on its own side. A team page: the About page says only "The platform is built by professionals in cybersecurity, fintech, and media" <!-- source: https://www.primeoracles.com/about 2026-09-19 -->. An archive of finished tasks, and what to do if a withdrawal request is not approved.
 
 ## Reviews: where they live, and what could be verified
 
@@ -81,17 +81,17 @@ What remains is its own counters: on 19 September 2026 they showed $22,674 paid 
 
 ## Where Prime Oracles fits better than DareBay, and where it does not
 
-DareBay's side of the ledger: nothing is taken from a task payout, a withdrawal costs 10% of the request deducted inside a request of at least 10 USDT, and the only cash rail is USDT on the TON network. Every request is checked by a person, so no settlement time is promised, and there is no country exclusion list, no follower minimum and no application. The interface is English, Russian and Ukrainian. Open tasks pay $1.00 to $10.00 per 1,000 views, the cap per clip is typically $100 and runs to $500, and the task sets its own threshold: [how withdrawals work](/en/help/darebay-withdrawals), [what DareBay charges](/en/help/what-commission), [DareBay at a glance](/en/about/darebay-at-a-glance).
+DareBay's side of the ledger: nothing is taken from a task payout, a withdrawal costs 10% of the request deducted inside a request of at least 10 USDT, and the only cash rail is USDT on the TON network. Every request is checked by a person, so no settlement time is promised, and there is no country exclusion list, no follower minimum and no application. The interface is in English, Russian, Ukrainian and Polish. Its tasks pay $1.00 to $10.00 per 1,000 views, set by each task, with a cap of up to $500 per clip, and the task sets its own threshold: [how withdrawals work](/en/help/darebay-withdrawals), [what DareBay charges](/en/help/what-commission), [DareBay at a glance](/en/about/darebay-at-a-glance).
 
 Prime Oracles is the better fit when:
 
-- **You need a card or a bank account, and the Garna channel is open in your account.** The agreement describes US-dollar payouts to cards and accounts through Garna, but the platform does not publish whether that route is open to an ordinary account, and Garna's own agreement closes its service to countries under UN, EU, UK or US financial sanctions without naming them. DareBay has one rail and it is crypto.
+- **You want US dollars rather than crypto and can hold a verified Garna account.** The agreement offers USD through Garna (Cyprus) to a verified Garna account, and Garna's own agreement closes its service to countries under UN, EU, UK or US financial sanctions without naming them. DareBay has one rail and it is crypto.
 - **Your wallet is not on TON, or you want a lower floor.** Five chains, and a withdrawal floor the agreement puts at 5 to 12 USD depending on the network, against 10 USDT.
 - **You want to see your own country written into the document.** Clause 11.1 names ten CIS states by name.
 - **You want every task's budget frozen, not some of them.** The reward balance is frozen at activation in all cases <!-- source: https://www.primeoracles.com/terms-agreement 2026-09-19 -->; on DareBay that is how a wallet-backed task works, while a manual-payout task is labelled on the card.
 - **You want a second income stream in the same account.** A digital-goods marketplace with escrow, with products listed from $5 to $499 <!-- source: https://www.primeoracles.com/marketplace 2026-09-19 -->.
 
-The other side of it: residents and citizens of the EU, the UK and the US are barred and geo-blocked, Ukraine is not among the named countries, one video is paid once, the customer approves every payout, funds can be frozen for up to 30 days, and the card route is in the terms while the platform does not publish whether an ordinary account can use it. The wider field is ranked in [the best clipping platforms](/en/earnings/best-clipping-platforms) and sorted by rail in [clipping platforms that pay without PayPal or Stripe](/en/earnings/clipping-platforms-that-pay-without-paypal-or-stripe); if your country is the question, see [clipping platforms that pay in Russia and CIS](/en/earnings/clipping-platforms-that-pay-in-russia-and-cis), and if Whop is closed to you as well, [Whop Content Rewards alternatives](/en/earnings/whop-content-rewards-alternatives) and [DareBay vs Whop](/en/earnings/darebay-vs-whop).
+The other side of it: residents and citizens of the EU, the UK and the US are barred and geo-blocked, Ukraine is not among the named countries, one video is paid once, the customer approves every payout, funds can be frozen for up to 30 days, and the USD route through Garna needs a verified Garna account. The wider field is ranked in [the best clipping platforms](/en/earnings/best-clipping-platforms) and sorted by rail in [clipping platforms that pay without PayPal or Stripe](/en/earnings/clipping-platforms-that-pay-without-paypal-or-stripe); if your country is the question, see [clipping platforms that pay in Russia and CIS](/en/earnings/clipping-platforms-that-pay-in-russia-and-cis), and if Whop is closed to you as well, [Whop Content Rewards alternatives](/en/earnings/whop-content-rewards-alternatives) and [DareBay vs Whop](/en/earnings/darebay-vs-whop).
 
 <LMethod />
 
@@ -111,11 +111,11 @@ Its counters on 19 September 2026 showed $22,674 paid out, and the customer's re
 
 ### How do you withdraw money from Prime Oracles?
 
-In USDT, USDC or TON to a wallet: the agreement puts the minimum at 5 to 12 USD depending on the network. US-dollar withdrawal to a card or bank account through Garna is described in the terms and needs a verified Garna account with KYC. Whether that route is open to an ordinary account is not published, so check it in your own account.
+In USDT, USDC or TON to a wallet: the agreement puts the minimum at 5 to 12 USD depending on the network. The terms also offer USD through Garna (Cyprus) to a verified Garna account, with KYC done by Garna.
 
 ### What fee does Prime Oracles charge?
 
-10% of the withdrawal amount, charged on what you earned, with 0% to create a task and network fees on top. What Garna charges on its own side of the card route is not published in the agreement.
+10% of the withdrawal amount, charged on what you earned, with 0% to create a task and network fees on top. What Garna charges on its own side of the USD channel is not published in the agreement.
 
 ### Which countries can use Prime Oracles?
 
@@ -123,8 +123,8 @@ There is no list of served countries, only a bar: residents and citizens of the 
 
 ### Does Prime Oracles require KYC?
 
-Not at sign-up: the agreement asks for an email, a name or a pseudonym and a password. After that it is conditional, and the triggers are published. On the Garna card channel KYC is always required, and Garna performs it.
+Not at sign-up: the agreement asks for an email, a name or a pseudonym and a password. After that it is conditional, and the triggers are published. On the Garna USD channel KYC is always required, and Garna performs it.
 
 ### What are the alternatives to Prime Oracles?
 
-DareBay pays with no country list, in USDT on the TON network: requests from 10 USDT, 10% taken at withdrawal, with the rate and the cap printed on the task card. The rest are compared in [the best clipping platforms](/en/earnings/best-clipping-platforms) and in [Whop Content Rewards alternatives](/en/earnings/whop-content-rewards-alternatives).
+DareBay pays with no country list, in USDT on the TON network: requests from 10 USDT, 10% taken at withdrawal, with the rate and any cap printed on the task card. The rest are compared in [the best clipping platforms](/en/earnings/best-clipping-platforms) and in [Whop Content Rewards alternatives](/en/earnings/whop-content-rewards-alternatives).

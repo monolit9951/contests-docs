@@ -14,7 +14,7 @@ Entering a contest is free. The current fee to create or top up a contest is 0%;
 
 ## How to request a withdrawal
 
-1. **Wait for an available balance.** While a contest or its result is still being finalized, funds may remain frozen.
+1. **Wait for an available balance.** While a contest or its result is still being finalized, funds may remain frozen. Where a contest shows Claim now, you can move what a clip has earned to your balance before the contest ends; that clip then stops earning.
 2. **Open the withdrawal form.** Enter an amount of at least 10 USDT and choose an available method.
 3. **Review the calculation.** Before confirmation, the form shows the requested amount, the 10% fee and the amount to receive.
 4. **Submit the request.** The team checks the details manually and sends the transfer. Follow its status in DareBay.
@@ -29,7 +29,7 @@ Always rely on the methods shown in your request form. Never send money to an ex
 
 ## How long it takes
 
-The contest must first finish and pass the relevant result checks. After the reward reaches the available balance, the user submits a separate withdrawal request. The team handles that request, so timing depends on detail checks and the chosen method; instant or automatic settlement is not guaranteed.
+Unless you used Claim now, the contest must first finish and pass the relevant result checks. After the reward or the claimed amount reaches the available balance, the user submits a separate withdrawal request. The team handles that request, so timing depends on detail checks and the chosen method; instant or automatic settlement is not guaranteed.
 
 If the status does not change for an unusual amount of time, check the payout details and contact support@darebay.com with the request identifier. Do not create duplicate requests or transfer the fee separately.
 

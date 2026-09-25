@@ -1,6 +1,6 @@
 ---
 title: "Whop Content Rewards в 2026: обзор, комиссия 10% и выплаты"
-description: "С августа 2026 Content Rewards на своём сайте, вывод через Whop. Ставки $0.05–$10 за 1000 просмотров, комиссия 10%, расчёт около 10 дней, РФ и Беларусь закрыты."
+description: "С августа 2026 Content Rewards на своём сайте, вывод через Whop. Комиссия 10%, расчёт около 10 дней, РФ и Беларусь закрыты."
 provenance: { snapshot_date: "2026-09-20", source: "darebay-prod" }
 numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_min_views_threshold_live, ppv_max_per_work_typical, commission_crypto, commission_fiat]
 competitor_sources:

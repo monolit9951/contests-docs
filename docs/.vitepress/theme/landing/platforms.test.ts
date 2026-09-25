@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { LANDING_COPY } from './copy'
-import { DATA, DEFAULT_COLUMNS, REGION_FIELDS, bidiAttrs, byId, comparisonUpdated, sourceIndex, sourcesOf, text, textLang } from './platforms'
+import { DATA, DEFAULT_COLUMNS, REGION_FIELDS, bidiAttrs, byId, comparisonUpdated, optIn, sourceIndex, sourcesOf, text, textLang } from './platforms'
 import { sourceAnchor } from '../../links'
 import { KNOWN_LOCALES } from '../../registry'
 
@@ -110,14 +110,27 @@ describe('source roll-up stays scoped to what a page shows', () => {
 
 describe('a page lists each address its reader opens once', () => {
   // Our own pages are cited in whichever language a number was read in, and `sourceAnchor` sends the
-  // reader to their own version. So two different urls can open one address on one page: DareBay's
-  // threshold cites the Russian "DareBay in numbers", its country columns cite the English version,
-  // and on an English regional page both open /en/about/darebay-at-a-glance. The list printed that
+  // reader to their own version. So two different urls can open one address on one page: a field
+  // that cites the Russian "DareBay in numbers" and a country column that cites the English version
+  // both open /en/about/darebay-at-a-glance on an English regional page. The list printed that
   // address twice with two dates.
   const opens = (url: string, locale: (typeof LOCALES)[number]) => sourceAnchor(url, locale).href
 
   it('merges the Russian and English "DareBay in numbers" on an English page with a country column', () => {
-    const darebay = byId('darebay')!
+    // Since 2026-09-25 DareBay's threshold cites the English rate page and its India column cites the
+    // terms, so no field of the data file pairs the Russian and the English "DareBay in numbers" any
+    // more: the case is set up on a copy of DareBay's entry.
+    const real = byId('darebay')!
+    const russian = { url: 'https://darebay.com/o-proekte/darebay-v-tsifrakh', date: real.fields.threshold.source!.date }
+    const english = { url: 'https://darebay.com/en/about/darebay-at-a-glance', date: '2026-09-18' }
+    const darebay = {
+      ...real,
+      fields: {
+        ...real.fields,
+        threshold: { ...real.fields.threshold, source: russian },
+        india: { ...real.fields.india, source: english },
+      },
+    }
     const glance = sourcesOf(darebay, ['india'], 'en').filter((s) => opens(s.url, 'en') === '/en/about/darebay-at-a-glance')
     expect(glance).toHaveLength(1)
     // The entry kept is the first field's, as when two fields cite one url.
@@ -138,7 +151,8 @@ describe('a page lists each address its reader opens once', () => {
           const addresses = sourcesOf(platform, shown, locale).map((s) => opens(s.url, locale))
           expect(new Set(addresses).size, `${platform.id} on ${locale}`).toBe(addresses.length)
           for (const [key, field] of Object.entries(platform.fields)) {
-            if (!field.source?.url || (REGION_FIELDS.includes(key) && !shown.includes(key))) continue
+            // A cell the page does not render has no number: a regional or page-only column it does not show.
+            if (!field.source?.url || (optIn(key) && !shown.includes(key))) continue
             const index = sourceIndex(platform, field.source.url, shown, locale)
             expect(addresses[index - 1], `${platform.id}.${key} on ${locale}`).toBe(opens(field.source.url, locale))
           }
@@ -169,8 +183,10 @@ describe('the platforms every regional page compares', () => {
     }
   })
 
-  it('never claims DareBay pays somewhere without the worldwide statement behind it', () => {
-    // DareBay excludes no country, so every regional cell says so and cites a darebay.com page.
+  it('never claims DareBay pays somewhere without the no-country-list statement behind it', () => {
+    // DareBay excludes no country, so every regional cell says so ("no country list" since
+    // 2026-09-25, "no exclusion list" in the cells the regional pass has not reworded yet) and cites
+    // a darebay.com page.
     // Until 2026-09-18 every cell was also required to read plain "yes". That stopped being true
     // for regions whose regulator bars or criminalizes dealing in crypto (Egypt, Algeria and Iraq
     // in `mena`; Bangladesh and Nepal, whose central banks do not permit crypto transactions, in
@@ -180,7 +196,7 @@ describe('the platforms every regional page compares', () => {
     for (const key of REGION_FIELDS) {
       const field = darebay.fields[key]
       expect(['yes', 'partial'], `darebay.${key}`).toContain(field.state)
-      expect(field.text?.en).toContain('no exclusion list')
+      expect(field.text?.en, `darebay.${key}`).toMatch(/\bno (?:exclusion|country) list\b/)
       expect(field.source?.url).toMatch(/^https:\/\/darebay\.com\//)
       if (field.state === 'partial') expect(field.text?.en, `darebay.${key}`).toContain('USDT on TON')
     }

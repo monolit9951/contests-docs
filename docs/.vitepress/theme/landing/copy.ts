@@ -1,6 +1,7 @@
 // UI strings of the landing shell and components, per locale. Product facts are
 // NOT here (they live in data/platforms.json with sources); only labels.
-import { KNOWN_LOCALES, ROOT_LOCALE, type Locale } from '../../registry'
+// Extension spelled out: `check:sources` reaches this file through sources.ts under plain Node.
+import { KNOWN_LOCALES, ROOT_LOCALE, type Locale } from '../../registry.ts'
 
 export interface LandingCopy {
   updated: string
@@ -46,7 +47,6 @@ export interface LandingCopy {
   calcPerWeek: string
   calcPerMonth: string
   calcNet: string
-  calcNetFree: string
   calcThresholdNote: string
   calcCapped: string
   calcMinPayout: string
@@ -68,6 +68,7 @@ const columns = {
     fee: 'Fee on payout',
     minPayout: 'Minimum payout',
     payoutMethods: 'Payout methods',
+    payoutSpeed: 'Payout speed',
     cis: 'Pays in Russia / CIS',
     followers: 'Followers required',
     escrow: 'Budget locked upfront',
@@ -90,6 +91,7 @@ const columns = {
     fee: 'Комиссия с выплаты',
     minPayout: 'Минимум вывода',
     payoutMethods: 'Способы выплаты',
+    payoutSpeed: 'Скорость выплаты',
     cis: 'Платит в РФ / СНГ',
     followers: 'Нужны подписчики',
     escrow: 'Бюджет заблокирован заранее',
@@ -112,6 +114,7 @@ const columns = {
     fee: 'Комісія з виплати',
     minPayout: 'Мінімум виведення',
     payoutMethods: 'Способи виплати',
+    payoutSpeed: 'Швидкість виплати',
     cis: 'Платить в Україну / СНД',
     followers: 'Потрібні підписники',
     escrow: 'Бюджет заблоковано заздалегідь',
@@ -135,6 +138,7 @@ const columns = {
     fee: 'العمولة من الدفعة',
     minPayout: 'الحد الأدنى للسحب',
     payoutMethods: 'طرق الدفع',
+    payoutSpeed: 'سرعة الدفع',
     cis: 'تدفع في روسيا ورابطة الدول المستقلة',
     followers: 'هل يلزم متابعون',
     escrow: 'الميزانية محجوزة مسبقًا',
@@ -155,10 +159,10 @@ export const LANDING_COPY: Record<Locale, LandingCopy> = {
   en: {
     updated: 'Updated',
     byline: 'By',
-    snapshotNote: 'Competitor figures are taken from each platform’s own public pages on the date shown; DareBay figures come from live platform data.',
+    snapshotNote: 'Competitor figures are taken from each platform’s own public pages on the date shown.',
     keyTakeaways: 'Key takeaways',
     compareTitle: 'Side by side',
-    compareNote: 'Click a column to sort. A superscript number links to the source page.',
+    compareNote: 'Click a column to sort. A number in brackets opens its source page, listed under the same number for that platform in “How this comparison was built”.',
     platform: 'Platform',
     us: 'DareBay',
     bestFor: 'Best for',
@@ -172,9 +176,9 @@ export const LANDING_COPY: Record<Locale, LandingCopy> = {
     calcRate: 'Rate per 1,000 views',
     calcCap: 'Cap per clip',
     calcOut: 'Payout for this clip',
-    calcNote: 'Formula: rate × views ÷ 1,000, never above the cap. Rates and caps come from the live open contests.',
+    calcNote: 'Formula: rate × views ÷ 1,000, never above the cap. Each task sets its own rate and, if it has one, its cap.',
     ctaTitle: 'Take a brief and get paid per view',
-    ctaLede: 'No followers, no application. The budget is locked on the platform before you start; views are counted independently.',
+    ctaLede: 'No followers, no application. In a wallet-backed task the budget is locked on the platform before you start; views are counted independently.',
     ctaPrimary: 'Open the tasks →',
     ctaSecondary: 'Telegram channel',
     bizCtaTitle: 'Creators make the clips and you pay per view',
@@ -193,7 +197,6 @@ export const LANDING_COPY: Record<Locale, LandingCopy> = {
     calcPerWeek: 'Per week',
     calcPerMonth: 'Per month, four weeks',
     calcNet: 'On hand after the {fee}% withdrawal fee',
-    calcNetFree: 'To your wallet, no withdrawal fee',
     calcThresholdNote: 'Below the view threshold of {threshold} a clip earns nothing; once past it, every view from the first one counts.',
     calcCapped: 'at the cap',
     calcMinPayout: 'Minimum withdrawal {min} USDT',
@@ -208,10 +211,10 @@ export const LANDING_COPY: Record<Locale, LandingCopy> = {
   ru: {
     updated: 'Обновлено',
     byline: 'Автор:',
-    snapshotNote: 'Цифры площадок сняты с их публичных страниц в указанную дату; цифры DareBay берутся из живых данных платформы.',
+    snapshotNote: 'Цифры площадок сняты с их публичных страниц в указанную дату.',
     keyTakeaways: 'Главное',
     compareTitle: 'Площадки рядом',
-    compareNote: 'Нажми на колонку, чтобы отсортировать. Цифра сверху ведёт на страницу-источник.',
+    compareNote: 'Нажми на колонку, чтобы отсортировать. Номер в скобках открывает страницу-источник; в блоке «Как строили сравнение» она стоит под тем же номером у этой площадки.',
     platform: 'Площадка',
     us: 'DareBay',
     bestFor: 'Кому подходит',
@@ -225,9 +228,9 @@ export const LANDING_COPY: Record<Locale, LandingCopy> = {
     calcRate: 'Ставка за 1000',
     calcCap: 'Потолок на ролик',
     calcOut: 'Выплата за этот ролик',
-    calcNote: 'Формула: ставка × просмотры ÷ 1000, но не выше потолка. Ставки и потолки взяты из открытых конкурсов.',
+    calcNote: 'Формула: ставка × просмотры ÷ 1000, но не выше потолка. Ставку и потолок, если он есть, задаёт каждое задание.',
     ctaTitle: 'Возьми задание и получай за просмотры',
-    ctaLede: 'Подписчики и заявка не нужны. Бюджет лежит на платформе до старта, просмотры считаются независимо.',
+    ctaLede: 'Подписчики и заявка не нужны. В кошельковом задании бюджет лежит на платформе до старта, просмотры считаются независимо.',
     ctaPrimary: 'Открыть задания →',
     ctaSecondary: 'Канал в Telegram',
     bizCtaTitle: 'Ролики о продукте сделают авторы, а вы платите за просмотры',
@@ -246,7 +249,6 @@ export const LANDING_COPY: Record<Locale, LandingCopy> = {
     calcPerWeek: 'В неделю',
     calcPerMonth: 'В месяц, четыре недели',
     calcNet: 'На руки после комиссии вывода {fee}%',
-    calcNetFree: 'На кошелёк без комиссии за вывод',
     calcThresholdNote: 'Ниже порога {threshold} просмотров ролик не оплачивается; после порога считаются все просмотры с первого.',
     calcCapped: 'упёрся в потолок',
     calcMinPayout: 'Минимальный вывод {min} USDT',
@@ -261,10 +263,10 @@ export const LANDING_COPY: Record<Locale, LandingCopy> = {
   uk: {
     updated: 'Оновлено',
     byline: 'Автор:',
-    snapshotNote: 'Цифри майданчиків зняті з їхніх публічних сторінок у вказану дату; цифри DareBay беруться з живих даних платформи.',
+    snapshotNote: 'Цифри майданчиків зняті з їхніх публічних сторінок у вказану дату.',
     keyTakeaways: 'Головне',
     compareTitle: 'Майданчики поруч',
-    compareNote: 'Натисни на колонку, щоб відсортувати. Цифра зверху веде на сторінку-джерело.',
+    compareNote: 'Натисни на колонку, щоб відсортувати. Номер у дужках відкриває сторінку-джерело; у блоці «Як будували порівняння» вона стоїть під тим самим номером у цього майданчика.',
     platform: 'Майданчик',
     us: 'DareBay',
     bestFor: 'Кому підходить',
@@ -278,9 +280,9 @@ export const LANDING_COPY: Record<Locale, LandingCopy> = {
     calcRate: 'Ставка за 1000',
     calcCap: 'Стеля на ролик',
     calcOut: 'Виплата за цей ролик',
-    calcNote: 'Формула: ставка × перегляди ÷ 1000, але не вище стелі. Ставки та стелі взяті з відкритих конкурсів.',
+    calcNote: 'Формула: ставка × перегляди ÷ 1000, але не вище стелі. Ставку і стелю, якщо вона є, задає кожне завдання.',
     ctaTitle: 'Візьми завдання й отримуй за перегляди',
-    ctaLede: 'Підписники та заявка не потрібні. Бюджет лежить на платформі до старту, перегляди рахуються незалежно.',
+    ctaLede: 'Підписники та заявка не потрібні. У гаманцевому завданні бюджет лежить на платформі до старту, перегляди рахуються незалежно.',
     ctaPrimary: 'Відкрити завдання →',
     ctaSecondary: 'Канал у Telegram',
     bizCtaTitle: 'Ролики про продукт зроблять автори, а ви платите за перегляди',
@@ -299,7 +301,6 @@ export const LANDING_COPY: Record<Locale, LandingCopy> = {
     calcPerWeek: 'На тиждень',
     calcPerMonth: 'На місяць, чотири тижні',
     calcNet: 'На руки після комісії виводу {fee}%',
-    calcNetFree: 'На гаманець без комісії за виведення',
     calcThresholdNote: 'Нижче порога {threshold} переглядів ролик не оплачується; після порога рахуються всі перегляди з першого.',
     calcCapped: 'вперся в стелю',
     calcMinPayout: 'Мінімальний вивід {min} USDT',
@@ -319,10 +320,10 @@ export const LANDING_COPY: Record<Locale, LandingCopy> = {
   ar: {
     updated: 'آخر تحديث',
     byline: 'بقلم',
-    snapshotNote: 'أرقام المنصات الأخرى مأخوذة من صفحاتها العامة في التاريخ المذكور، وأرقام DareBay من بيانات المنصة الحية.',
+    snapshotNote: 'أرقام المنصات الأخرى مأخوذة من صفحاتها العامة في التاريخ المذكور.',
     keyTakeaways: 'أهم النقاط',
     compareTitle: 'مقارنة جنبًا إلى جنب',
-    compareNote: 'انقر على عمود لترتيب الجدول. الرقم الصغير أعلى القيمة يقود إلى صفحة المصدر.',
+    compareNote: 'انقر على عمود لترتيب الجدول. الرقم بين القوسين يفتح صفحة المصدر، وتجدها بالرقم نفسه تحت اسم المنصة في قسم «كيف أُعدّت هذه المقارنة».',
     platform: 'المنصة',
     us: 'DareBay',
     bestFor: 'لمن تناسب',
@@ -336,9 +337,9 @@ export const LANDING_COPY: Record<Locale, LandingCopy> = {
     calcRate: 'السعر لكل 1,000 مشاهدة',
     calcCap: 'الحد الأقصى لكل مقطع',
     calcOut: 'المبلغ المستحق عن هذا المقطع',
-    calcNote: 'المعادلة: السعر × المشاهدات ÷ 1,000، دون تجاوز الحد الأقصى. الأسعار والحدود القصوى مأخوذة من المسابقات المفتوحة حاليًا.',
+    calcNote: 'المعادلة: السعر × المشاهدات ÷ 1,000، دون تجاوز الحد الأقصى. كل مهمة تحدد سعرها، وحدّها الأقصى إن وُجد.',
     ctaTitle: 'خذ مهمة واحصل على أجر مقابل المشاهدات',
-    ctaLede: 'لا حاجة إلى متابعين ولا إلى طلب انضمام. الميزانية محجوزة على المنصة قبل أن تبدأ، والمشاهدات يحتسبها عدّاد مستقل. واجهة المنصة بالإنجليزية.',
+    ctaLede: 'لا حاجة إلى متابعين ولا إلى طلب انضمام. في المهمة الممولة من المحفظة تُحجز الميزانية على المنصة قبل أن تبدأ، والمشاهدات يحتسبها عدّاد مستقل. واجهة المنصة بالإنجليزية.',
     ctaPrimary: 'افتح المهام ←',
     ctaSecondary: 'قناة Telegram',
     bizCtaTitle: 'صنّاع المحتوى يُعدّون المقاطع وأنت تدفع مقابل المشاهدات',
@@ -357,7 +358,6 @@ export const LANDING_COPY: Record<Locale, LandingCopy> = {
     calcPerWeek: 'أسبوعيًا',
     calcPerMonth: 'شهريًا (أربعة أسابيع)',
     calcNet: 'الصافي بعد عمولة السحب {fee}%',
-    calcNetFree: 'إلى محفظتك دون عمولة سحب',
     calcThresholdNote: 'تحت حد {threshold} مشاهدة لا يُدفع للمقطع شيء، وبعد تجاوزه تُحتسب كل المشاهدات من الأولى.',
     calcCapped: 'بلغ الحد الأقصى',
     calcMinPayout: 'الحد الأدنى للسحب {min} USDT',

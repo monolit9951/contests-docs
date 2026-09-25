@@ -1,6 +1,9 @@
+// Explicit `.ts` extensions here and in everything this file imports: `check:sources` loads it with
+// plain `node --experimental-strip-types`, whose resolver adds none. Vite and Vitest do add them,
+// which is why the build and the tests stayed green while the manual tool could not start.
 import { LANDING_COPY } from './theme/landing/copy.ts'
-import { sitePathOf, sourceAnchor } from './links'
-import { localeOfSourcePath, type Locale } from './registry'
+import { sitePathOf, sourceAnchor, sourceLabel } from './links.ts'
+import { localeOfSourcePath, type Locale } from './registry.ts'
 
 /**
  * Visible source references — the opt-in half of the citation trail.
@@ -42,23 +45,30 @@ const SOURCE_COMMENT_OPENER = /<!--\s*source:/g
  *
  * A visible source list is an outbound-link surface, and these hosts are the platforms these
  * pages compete against for the same queries. Naming them keeps the claim checkable — a reader
- * can type the host in and read the same terms page we read. Linking them would hand a
+ * can type the address in and read the same terms page we read. Linking them would hand a
  * competitor the link equity of every page that quotes its own fine print against it, on a
  * corpus whose whole point is to rank above them. So a competitor source renders as plain text:
- * same host, same date, same number, no `<a>`.
+ * same address, same date, same number, no `<a>`.
  *
  * Seeded from the comparison registry (`data/platforms.json`: whop / Whop Content Rewards, vyro,
  * clipping-net, vues, reach-cat, klipni, prime-oracles, clipping-io) plus `clipradar.co`, the
  * clipping-campaign rate board that aggregates the same offers across 18 platforms. Whop is two
  * entries because the product and its docs answer on different hosts.
  * Extended 2026-09-18 with the regional marketplaces the per-country pages cite: ClipGrow, Wondeed
+ * and ClipConnect (India), both Cliptocash namesakes (.io for Africa, .com under French law),
+ * ClippaPay (Nigeria), Klipbait (CIS) and Nashr (Saudi Arabia).
+ * Extended again 2026-09-18 with the five Indonesian rupiah boards: Ternak Klip, Clippo, TryBuzzer, Konten.com, AyoKlip.
  * Extended 2026-09-19 with the local boards answer engines name per country: Dashrize, INDclipping, ClipAdda, Cluvi,
  * KANMITO and Reachr (India), Tsunami at sunaami.com (Pakistan), ClipperFC and Sky Kenya (Nigeria, Kenya), Wusul and
  * Clip2Earn (Arab countries); and, for the Indonesia and Philippines page, Clipink, Wefluence, Catrova, Indoclip,
  * Ternak Buzzer, Vouched and ClipFarm.
- * and ClipConnect (India), both Cliptocash namesakes (.io for Africa, .com under French law),
- * ClippaPay (Nigeria), Klipbait (CIS) and Nashr (Saudi Arabia).
- * Extended again 2026-09-18 with the five Indonesian rupiah boards: Ternak Klip, Clippo, TryBuzzer, Konten.com, AyoKlip.
+ * Extended 2026-09-24 for the English roundup of 21 platforms (`en/earnings/best-clipping-platforms`), so its trail can
+ * be made visible without a live link to any board it names: Clipster, Ssemble, FindClout, Cut.Pro and Promote.fun from
+ * its table (every other host of those 21 platforms was already here), and SideShift, Lumina Clippers, ClipFarm's
+ * clipfarm.biz and Earnable (tryearnable.com), which its prose cites. Plus ClipAffiliates (clipaffiliates.com), the
+ * board its section on other roundups names. A board added to `platforms.json` or cited only in prose is added here by
+ * hand; `check:sources` prints each host of the pages it checks with the class this list gives it, so one missing from
+ * here shows up as "linked".
  *
  * Matched by host, so `docs.whop.com` and `www.vyro.com` need no entry of their own. A trailing
  * `.*` means "this brand under any TLD" — `klipni.*` and `vues.*` are one small platform each and
@@ -107,6 +117,16 @@ export const COMPETITOR_SOURCE_HOSTS: readonly string[] = [
   'ternakbuzzer.id',
   'vouched.ph',
   'clipfarm.ph',
+  'clipster.gg',
+  'ssemble.com',
+  'findclout.com',
+  'cut.pro',
+  'promote.fun',
+  'sideshift.app',
+  'luminaclippers.com',
+  'clipfarm.biz',
+  'tryearnable.com',
+  'clipaffiliates.com',
 ]
 
 /** The host as a reader would say it — what `LPlatforms.vue` already prints for the same sources. */
@@ -140,6 +160,19 @@ export function isCompetitorHost(hostname: string): boolean {
 }
 
 /**
+ * How the Sources list prints a citation of this URL: `competitor` is named with no link at all,
+ * `own` is one of our pages (an internal link in the reader's language), `source` is anybody else's
+ * page (a `nofollow` link). `sourceItemHtml` renders exactly these three; `check:sources` prints each
+ * host with its class, which is how an editor spots a clipping board that is about to be linked.
+ */
+export type SourceLinkClass = 'competitor' | 'own' | 'source'
+
+export function sourceLinkClass(url: string): SourceLinkClass {
+  if (isCompetitorHost(hostOf(url))) return 'competitor'
+  return sitePathOf(url) === null ? 'source' : 'own'
+}
+
+/**
  * The locale a page's sources speak, from its path.
  *
  * The same rule the rest of the site uses, from the registry's one table of locale directories:
@@ -160,10 +193,8 @@ export interface SourceRef {
   /** 1-based, in the order the page first cites the URL. */
   readonly number: number
   readonly url: string
-  readonly host: string
   /** The date the claim was snapped, from the comment that introduced this URL. */
   readonly date: string
-  readonly competitor: boolean
 }
 
 /**
@@ -181,14 +212,7 @@ class SourceIndex {
   number(url: string, date: string): number {
     const known = this.byUrl.get(url)
     if (known) return known.number
-    const host = hostOf(url)
-    const ref: SourceRef = {
-      number: this.byUrl.size + 1,
-      url,
-      host,
-      date,
-      competitor: isCompetitorHost(host),
-    }
+    const ref: SourceRef = { number: this.byUrl.size + 1, url, date }
     this.byUrl.set(url, ref)
     return ref.number
   }
@@ -204,12 +228,36 @@ const escapeAttribute = (value: string): string =>
 const escapeText = (value: string): string =>
   value.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
 
-/** The marker that replaces the comment, pointing at the list item below. */
+/**
+ * The marker that replaces the comment, pointing at the list item below.
+ *
+ * A hair space and a bracketed number, both inside the `<sup>`. The raised position is only
+ * paint: copied, read aloud or extracted by an answer engine, a bare `1` after a figure becomes
+ * its last digit — "$1–$4 per 1,000 views1", "10%1". The marker's text is " [1]", its space a
+ * U+200A, so the figure keeps its own digits. LCompare.vue renders the same shape.
+ *
+ * The marker is set right after the claim. Editors write `claim <!-- source: … -->` with a space,
+ * and that space was a line-break point outside the marker: at phone width "[11]" wrapped alone
+ * onto the next line, and extracted text read "views  [1]", two gaps. So `installSourcesRule`
+ * drops the spaces in front of the comment, the hair space inside the `<sup>` takes their place,
+ * and `white-space: nowrap` on the `<sup>` (landing.css) keeps the marker whole.
+ */
 export const sourceRefHtml = (number: number): string =>
-  `<sup class="src-ref"><a href="#src-${number}">${number}</a></sup>`
+  `<sup class="src-ref">&#8202;<a href="#src-${number}">[${number}]</a></sup>`
 
 /**
  * One list item.
+ *
+ * It opens with its own number as text, `<span class="src-n">[3]</span>`, the same "[3]" the marker
+ * in the article prints. The number used to exist only as the list's CSS marker, and copied text,
+ * `innerText`, `textContent` and every HTML-to-text extractor drop that marker: an answer engine
+ * read "[3]" in a sentence and then an unnumbered list of hosts, in which one host can be items 2,
+ * 10, 11 and 12. landing.css turns the CSS marker off, so the number is not printed twice.
+ *
+ * It names the address, not the host (`sourceLabel`, what "How this comparison was built" prints):
+ * `facebook.com/business/help/1049081556813520`, not a fourth `facebook.com`. Two pages of one site
+ * are two sources, and a reader, or a model, told only the host could not say which page a number
+ * came from. A competitor's address is printed as text all the same, still with no link.
  *
  * `rel="nofollow noopener"` and no `target`: these are citations, not recommendations, and a
  * source list is exactly where an automated link audit would otherwise find dozens of followed
@@ -223,15 +271,17 @@ export const sourceRefHtml = (number: number): string =>
  * from shipping a nofollow that `check:dist` would then reject.
  */
 export function sourceItemHtml(ref: SourceRef, locale: Locale): string {
-  const host = escapeText(ref.host)
-  const own = sitePathOf(ref.url) === null ? null : sourceAnchor(ref.url, locale)
+  const label = escapeText(sourceLabel(ref.url, locale))
+  const kind = sourceLinkClass(ref.url)
+  const own = kind === 'own' ? sourceAnchor(ref.url, locale) : null
   const target = own?.target ? ` target="${escapeAttribute(own.target)}"` : ''
-  const name = ref.competitor
-    ? host
-    : own
-      ? `<a href="${escapeAttribute(own.href)}"${target}>${host}</a>`
-      : `<a href="${escapeAttribute(ref.url)}" rel="nofollow noopener">${host}</a>`
-  return `<li id="src-${ref.number}">${name} — ${escapeText(ref.date)}</li>`
+  const name =
+    kind === 'competitor'
+      ? label
+      : own
+        ? `<a href="${escapeAttribute(own.href)}"${target}>${label}</a>`
+        : `<a href="${escapeAttribute(ref.url)}" rel="nofollow noopener">${label}</a>`
+  return `<li id="src-${ref.number}"><span class="src-n">[${ref.number}]</span> ${name} — ${escapeText(ref.date)}</li>`
 }
 
 /**
@@ -314,11 +364,16 @@ export function installSourcesRule(md: MarkdownRenderer): void {
         continue
       }
       if (token.type !== 'inline' || !token.children) continue
-      for (const child of token.children) {
-        if (child.type !== 'html_inline') continue
-        child.content = rewriteComments(child.content, index)
+      token.children.forEach((child, position, children) => {
+        if (child.type !== 'html_inline') return
+        const marked = rewriteComments(child.content, index)
+        // One `html_inline` is one comment, so a changed token was a citation: the marker goes
+        // right after the claim, and the spaces written before the comment go (`sourceRefHtml`).
+        const before = children[position - 1]
+        if (marked !== child.content && before?.type === 'text') before.content = before.content.replace(/[ \t]+$/, '')
+        child.content = marked
         assertNoMalformedComment(child.content, env)
-      }
+      })
     }
 
     const refs = index.refs

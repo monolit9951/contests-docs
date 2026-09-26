@@ -6,6 +6,7 @@ import { businessUrlForLocale, FOUNDER_TELEGRAM, productUrlForLocale, tasksUrlFo
 import { CHROME_COPY, type AuthorLink, type DareBayThemeConfig } from './chrome'
 import { installCoveredHeadingRule } from './coveredHeading'
 import { installTableWrapRule } from './tableWrap'
+import { installCommentSpacingRule, stripComments } from './commentSpacing'
 import { installSourcesRule } from './sources'
 import { fontPreloadTags, stripVpIconsLink } from './headAssets'
 import PAGE_DATES from '../page-dates.json'
@@ -382,12 +383,15 @@ const WEBSITE = {
 // the hamza an editor may drop (أسئلة / اسئلة), and on the singular سؤال.
 const FAQ_HEADING = /вопрос|питання|question|أسئلة|اسئلة|سؤال/i
 
+// Comments go the way `installCommentSpacingRule` takes them off the page: "claim <!-- source: … -->."
+// answers "claim.", not "claim .".
 const stripMarkdown = (text: string) =>
-  text
-    .replace(/\[([^\]]+)\]\([^)]*\)/g, '$1')
-    .replace(/\*\*([^*]+)\*\*/g, '$1')
-    .replace(/`([^`]+)`/g, '$1')
-    .replace(/<!--[\s\S]*?-->/g, '')
+  stripComments(
+    text
+      .replace(/\[([^\]]+)\]\([^)]*\)/g, '$1')
+      .replace(/\*\*([^*]+)\*\*/g, '$1')
+      .replace(/`([^`]+)`/g, '$1')
+  )
     .replace(/\s+/g, ' ')
     .trim()
 
@@ -665,6 +669,9 @@ export default defineConfig({
     config(md) {
       installCoveredHeadingRule(md)
       installTableWrapRule(md)
+      // Drops the space an editor left in front of a comment that punctuation follows, on every
+      // page — see commentSpacing.ts. Before the sources rule, whose markers it leaves as they were.
+      installCommentSpacingRule(md)
       // Paints the `<!-- source: URL DATE -->` citation trail of a page whose frontmatter says
       // `sources: visible`, and only such a page — see sources.ts. Installed last because it is
       // the only rule here that appends to the article body, and the block it appends belongs

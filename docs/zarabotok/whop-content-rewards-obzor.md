@@ -1,6 +1,6 @@
 ---
-title: "Whop Content Rewards в 2026: обзор, комиссия 10% и выплаты"
-description: "С августа 2026 Content Rewards на своём сайте, вывод через Whop. Комиссия 10%, расчёт около 10 дней, РФ и Беларусь закрыты."
+title: "Whop Content Rewards: обзор 2026, комиссия, платит ли в Россию"
+description: "Как платит Whop Content Rewards: комиссия 10%, расчёт около 10 дней, вывод через Whop. Россия и Беларусь закрыты: ниже площадки, которые платят туда."
 provenance: { snapshot_date: "2026-09-20", source: "darebay-prod" }
 numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_min_views_threshold_live, ppv_max_per_work_typical, commission_crypto, commission_fiat]
 competitor_sources:
@@ -97,7 +97,7 @@ Whop никуда не делся: за ним вход в аккаунт, пр�
 - **Klipni**: российская площадка, оплата в рублях, нужен статус самозанятого, комиссия 5% с одобренной выплаты, минимума на вывод нет, на карту до пяти рабочих дней <!-- source: https://klipni.com/creators 2026-09-02 --> <!-- source: https://klipni.com/legal/terms 2026-09-02 -->.
 - **Vyro**: площадка MrBeast, кампании крупных американских авторов по $1–$2 за 1000 просмотров <!-- source: https://vyro.com/campaigns 2026-09-02 -->, порог 5000 просмотров на пост <!-- source: https://vyro.com/help/earnings-and-payments/how-many-views-do-i-need-before-i-can-start-earning 2026-09-02 -->, но Россия, Беларусь, Украина, Узбекистан, Армения, Грузия и Молдова не поддерживаются <!-- source: https://vyro.com/help/getting-started/what-countries-are-supported 2026-09-02 -->.
 
-Семь площадок по одним полям собраны в [аналогах Whop](/zarabotok/analogi-whop-v-rossii), общий рейтинг в [подборке площадок](/zarabotok/luchshie-platformy-dlya-zarabotka-na-narezkah).
+Семь площадок по одним полям собраны в [аналогах Whop](/zarabotok/analogi-whop-v-rossii), общее сравнение в [подборке площадок](/zarabotok/luchshie-platformy-dlya-zarabotka-na-narezkah).
 
 ## Частые вопросы
 

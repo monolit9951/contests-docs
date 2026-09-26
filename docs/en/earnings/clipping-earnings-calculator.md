@@ -1,6 +1,6 @@
 ---
-title: "Clipping earnings calculator: what you can make per month"
-description: "Set views per clip, clips per week and a $1 to $10 rate per 1,000 views: a monthly figure with the threshold, a $500 cap per clip and the sum on hand."
+title: "Clipping earnings calculator: how much can you make a month?"
+description: "Free clipping calculator: enter views per clip, clips per week and a $1 to $10 rate per 1,000 views to see your monthly earnings, up to $500 per clip."
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_cpm_median, ppv_min_views_threshold_live, ppv_max_per_work_typical]
 seo: true

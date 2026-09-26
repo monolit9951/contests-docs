@@ -1,5 +1,5 @@
 ---
-title: "Vyro clipping review: rates, 5,000-view threshold, countries"
+title: "Vyro review 2026: is Vyro legit, and what MrBeast clips pay"
 description: "Vyro pays $1–$2 per 1,000 views on MrBeast campaigns, but only on posts past 5,000 views and not in 70 countries, Russia and Ukraine included. Honest review."
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_min_views_threshold_live, ppv_max_per_work_typical, ppv_max_per_work_band_high, commission_crypto, commission_fiat]

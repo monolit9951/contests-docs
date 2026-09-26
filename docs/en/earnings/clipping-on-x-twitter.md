@@ -7,10 +7,10 @@ seo: true
 landing: true
 hero:
   kicker: "Guide · 2026"
-  lede: "One edit can earn twice: on X through the network's own rewards programme, and under a task where the rate is known before you publish. Here is how X decides what it pays, which clips gain there, and how to add the second stream without cutting anything new. No promises, and no third-party numbers that cannot be checked."
+  lede: "One edit can earn twice: on X through the network's own rewards programme, and under a task where the rate is known before you publish. Here is how X decides what it pays, which clips gain there, and how to add the second stream without cutting anything new. No third-party numbers that cannot be checked."
   takeaways:
     - "<b>X pays from its own revenue, by its own rules.</b> A paid subscription is required; there is no rate per 1,000 views."
-    - "<b>DareBay's clip tasks do not count views on X.</b> They count views on TikTok, Instagram Reels, YouTube Shorts and Facebook Reels, as each task states."
+    - "<b>DareBay's clip tasks count views on TikTok, Instagram Reels, YouTube Shorts and Facebook Reels.</b> The task clip goes on the platform its card names, and a copy goes to X."
     - "<b>One edit, two streams.</b> DareBay tasks pay $1–$10 per 1,000 views, set by each task<!-- source: https://darebay.com/en/earnings/how-much-clipping-pays 2026-09-24 -->; the X copy runs separately."
     - "<b>The text hook decides more than the edit.</b> On X people open a video because of the post's first line."
 cta:
@@ -39,16 +39,16 @@ Formats that gain steadily on X:
 
 ## Two income streams from one clip
 
-DareBay's clip tasks count views on TikTok, Instagram Reels, YouTube Shorts and Facebook Reels, as each task states: a clip task does not accept a link to an X post, and views on X do not enter its calculation. Combining still works: the same clip is published twice, on TikTok, in Reels or in Shorts for a task that pays a rate per view, and on X for the network's own programme, as long as the task's terms do not demand exclusivity.
+DareBay's clip tasks count views on TikTok, Instagram Reels, YouTube Shorts and Facebook Reels, as each task states, and a link to an X post is not accepted. So the same clip is published twice: on TikTok, in Reels or in Shorts for a task that pays a rate per view, and on X for the network's own programme, as long as the task's terms do not demand exclusivity.
 
-A buyer publishes a task, hands over materials and sets a rate per 1,000 views, from $1 to $10. A clip takes part once you have sent the link and a moderator has checked the terms. The view threshold is set by each task - check the card in the catalog - and it is not deducted: clear it and the whole counter is paid. The cap per clip runs up to $500. Formula: views / 1,000 × rate, never above the cap. A hypothetical example: 20,000 / 1,000 × $1.00 = **$20.00**. Put your own numbers into the [clipping earnings calculator](/en/earnings/clipping-earnings-calculator).
+A buyer publishes a task, hands over materials and sets a rate per 1,000 views, from $1 to $10. A clip takes part once you have sent the link and a moderator has checked the terms; from there the calculation is automatic. The view threshold is set by each task - check the card in the catalog - and it is not deducted: clear it and the whole counter is paid. The cap per clip runs up to $500. Formula: views / 1,000 × rate, never above the cap. A hypothetical example: 20,000 / 1,000 × $1.00 = **$20.00**. Your earnings reach your balance automatically when a wallet-backed task ends. DareBay takes 0% of task payouts and 10% only when you withdraw: request a withdrawal from 10 USDT and the platform does the rest. Put your own numbers into the [clipping earnings calculator](/en/earnings/clipping-earnings-calculator).
 
 | Stream | Who pays | For what | Where to publish |
 |---|---|---|---|
 | DareBay clip task | The buyer; a wallet-backed task locks its budget before the start<!-- source: https://darebay.com/en/about/payout-guarantee 2026-09-24 --> | Clip views at the card rate, up to any cap | TikTok, Instagram Reels, YouTube Shorts or Facebook Reels, as the task states |
 | X programme | X itself | Verified users' impressions and reactions on original posts | X only, as native video |
 
-The order that works: the task first, because the rate is known and money starts with the first clip over the threshold; X is added once the account has a verified audience. How views are read on the counted platforms: [what TikTok pays for views](/en/earnings/tiktok-view-payouts); terms by country: the [ranking of clipping platforms](/en/earnings/best-clipping-platforms).
+The order that works: the task first, because the rate is known and money starts with the first clip over the threshold; X is added once the account has a verified audience. How views are read on the counted platforms: [what TikTok pays for views](/en/earnings/tiktok-view-payouts); terms by country: the [comparison of clipping platforms](/en/earnings/best-clipping-platforms).
 
 ## An account for X: where to start
 

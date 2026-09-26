@@ -1,6 +1,6 @@
 ---
-title: "Content Rewards review: the Whop clipping app, now standalone"
-description: "Content Rewards now runs on its own site, with Whop kept for sign-in, KYC and withdrawals. Its flat 10% fee, payout timing and closed countries, dated."
+title: "Is Whop Content Rewards legit? 2026 review: fees and payouts"
+description: "Whop Content Rewards, reviewed for clippers: is it legit, what its flat 10% fee leaves you, how long payouts take and which countries it won't pay. Dated."
 provenance: { snapshot_date: "2026-09-18", source: "darebay-prod" }
 numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_min_views_threshold_live, ppv_max_per_work_typical, commission_crypto, commission_fiat]
 competitor_sources:
@@ -119,7 +119,7 @@ Other boards for the countries Whop closes:
 - **Vyro**: a clipping board that calls itself a MrBeast company, paying $1–$2 per 1,000 views, shown as $1,000–$2,000 per million <!-- source: https://vyro.com/campaigns 2026-09-18 -->, once a post passes 5,000 views <!-- source: https://vyro.com/help/earnings-and-payments/how-many-views-do-i-need-before-i-can-start-earning 2026-09-18 -->; Russia, Belarus, Ukraine, Uzbekistan, Armenia, Georgia and Moldova are on its unsupported list <!-- source: https://vyro.com/help/getting-started/what-countries-are-supported 2026-09-18 -->.
 - **Clipping.net**: 1,000 views per post and usually 25,000 per campaign before earnings release, paid by PayPal or USDC/USDT on Ethereum mainnet only <!-- source: https://clipping.net/docs/clippers/payments 2026-09-18 -->, when the sponsor closes a cycle; the terms ask for residence "in the territories where we operate" and name none <!-- source: https://clipping.net/policies/clipper-terms-and-conditions 2026-09-18 -->.
 
-Seven platforms on the same fields: [Whop alternatives](/en/earnings/whop-content-rewards-alternatives); the full ranking: [the best clipping platforms](/en/earnings/best-clipping-platforms).
+Seven platforms on the same fields: [Whop alternatives](/en/earnings/whop-content-rewards-alternatives); the full comparison: [the best clipping platforms](/en/earnings/best-clipping-platforms).
 
 ## Frequently asked questions
 

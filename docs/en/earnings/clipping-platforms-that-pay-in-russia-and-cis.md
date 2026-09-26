@@ -1,6 +1,6 @@
 ---
-title: "Clipping platforms that pay in Russia and CIS: who pays where"
-description: "DareBay and Prime Oracles say they pay in Russia and CIS, Klipni in Russia only; Whop bars Russia and Belarus, Vyro those plus Ukraine; four list none. Dated."
+title: "Clipping platforms that pay in Russia, Ukraine and CIS (2026)"
+description: "Can a clipper in Russia, Ukraine or Kazakhstan get paid? DareBay pays across CIS, Klipni in Russia, Prime Oracles in ten CIS states; Vyro and Whop bar Russia."
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_min_views_threshold_live, ppv_max_per_work_typical, ppv_max_per_work_band_high]
 seo: true
@@ -12,8 +12,8 @@ hero:
   lede: "Three platforms will pay into Russia and the CIS, two keep exclusion lists, and four never say either way. Long before the rate matters, that is the question: can the money reach you at all. Whop's sanctioned list shuts out Russia and Belarus, Vyro's unsupported list adds Ukraine and four more countries, so here is what each platform's own pages state, country by country."
   secondary: "Country table"
   takeaways:
-    - "<b>DareBay, Klipni and Prime Oracles say they pay in Russia:</b> DareBay across CIS with no country list, Prime Oracles in ten CIS states, Klipni in Russia only."
-    - "<b>Whop and Vyro both block Russia and Belarus:</b> in Ukraine, Whop blocks six regions and Vyro blocks the whole country."
+    - "<b>DareBay, Klipni and Prime Oracles say they pay in Russia:</b> DareBay across CIS with no country list, Klipni in Russia only, Prime Oracles in ten CIS states."
+    - "<b>Vyro and Whop both block Russia and Belarus:</b> in Ukraine, Vyro blocks the whole country and Whop six regions."
     - "<b>Four publish no country list at all:</b> Clipping.net, Vues, Reach.cat and Clipping.io; ask their support before your first clip."
     - "<b>Kazakhstan is on neither exclusion list:</b> Whop names it among its payout countries; Vyro leaves it off its unsupported list."
 compare:
@@ -27,7 +27,7 @@ method:
   - "Payout rails and minimums come from the same pages. DareBay's figures come from its own public pages."
 cta:
   title: "Your country is not on any list here"
-  lede: "DareBay keeps no country list: only people on sanctions lists are barred, so it pays clippers in Russia, Belarus, Ukraine, Kazakhstan and the rest of CIS, in USDT on TON, or you receive the payout in Telegram Stars; its community is largest in the CIS. Sign up, take a task off the board and post where the brief says. Nobody checks your follower count on the way in."
+  lede: "DareBay keeps no country list: only people on sanctions lists are barred, so it pays clippers in Russia, Belarus, Ukraine, Kazakhstan and the rest of CIS, in USDT on TON, or you receive the payout in Telegram Stars. Sign up, take a task off the board and post where the brief says. Nobody checks your follower count on the way in."
 ---
 
 ## Country by country, in the platforms' own words
@@ -85,7 +85,7 @@ DareBay and Prime Oracles state that they pay in Kazakhstan, and Whop lists Kaza
 
 ### Can I get paid in USDT?
 
-Yes, on several platforms: DareBay pays USDT on TON, Prime Oracles USDT on Tron, BNB Smart Chain or Solana, Reach.cat USDT (its clipper page says "USDT or SOL" without naming a chain<!-- source: https://reach.cat/become-a-clipper/ 2026-09-24 -->), Clipping.net USDT or USDC on Ethereum, Vues USDT among other rails.
+Yes, on several platforms: Clipping.net pays USDT or USDC on Ethereum, DareBay USDT on TON, Prime Oracles USDT on Tron, BNB Smart Chain or Solana, Reach.cat USDT (its clipper page says "USDT or SOL" without naming a chain<!-- source: https://reach.cat/become-a-clipper/ 2026-09-24 -->), Vues USDT among other rails.
 
 ### Do I need a tax status or KYC?
 

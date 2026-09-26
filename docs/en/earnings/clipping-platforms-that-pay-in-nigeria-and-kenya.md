@@ -1,6 +1,6 @@
 ---
-title: "Clipping platforms that pay in Nigeria, Kenya and Ghana"
-description: "Which clipping platforms pay Nigerian, Kenyan and Ghanaian clippers, and how the money lands: PayPal via Paga, M-PESA, MoMo, USDT. Sourced and dated."
+title: "Clipping platforms that pay in Nigeria, Kenya and Ghana (2026)"
+description: "Get paid for clipping in Nigeria, Kenya or Ghana: which platforms pay there and how the money lands, from M-PESA and MoMo to PayPal via Paga and USDT."
 provenance: { snapshot_date: "2026-09-19", source: "darebay-prod" }
 numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_max_per_work_band_high]
 seo: true

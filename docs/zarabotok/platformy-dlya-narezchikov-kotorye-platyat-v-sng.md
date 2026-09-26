@@ -1,6 +1,6 @@
 ---
-title: Платформы для нарезчиков, которые платят в Россию и СНГ
-description: В Россию и СНГ прямо платят DareBay, Klipni и Prime Oracles; Whop закрыт для России и Беларуси, Vyro и для Украины; четыре стран не называют. Словами площадок.
+title: "Платформы для нарезчиков, которые платят в Россию и СНГ (2026)"
+description: "Кто платит нарезчикам из России и СНГ в 2026: DareBay, Klipni и Prime Oracles. Vyro закрыт для РФ, Беларуси и Украины, Whop для РФ и Беларуси."
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_min_views_threshold_live, ppv_max_per_work_typical, ppv_max_per_work_band_high]
 seo: true
@@ -80,7 +80,7 @@ DareBay и Prime Oracles пишут, что платят в Казахстан, 
 
 ### Можно ли получать в USDT?
 
-Да, на нескольких площадках: DareBay платит USDT в TON, Prime Oracles USDT в Tron, BNB Smart Chain или Solana, Reach.cat USDT (страница для нарезчиков пишет «USDT or SOL», не называя сети<!-- source: https://reach.cat/become-a-clipper/ 2026-09-24 -->), Clipping.net USDT или USDC в Ethereum, Vues USDT среди прочих способов.
+Да, на нескольких площадках: Clipping.net платит USDT или USDC в Ethereum, DareBay USDT в TON, Prime Oracles USDT в Tron, BNB Smart Chain или Solana, Reach.cat USDT (страница для нарезчиков пишет «USDT or SOL», не называя сети<!-- source: https://reach.cat/become-a-clipper/ 2026-09-24 -->), Vues USDT среди прочих способов.
 
 ### Нужен ли налоговый статус или проверка личности?
 

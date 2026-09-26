@@ -18,7 +18,7 @@ seo: true
 landing: true
 hero:
   kicker: "Comparison · 2026"
-  lede: "A thousand counted views of a clip costs you less than a thousand ad impressions, and the table below settles the 'ads or clips' argument in figures: Meta, TikTok Ads, YouTube, VK Ads and Yandex Direct against DareBay. Outside CPMs come from dated public benchmarks and rate cards, our figure from live platform data, and beside every number stands what it actually buys you."
+  lede: "A thousand counted views of a clip costs you less than a thousand ad impressions, and the table below settles the 'ads or clips' argument in figures: Meta, TikTok Ads, YouTube, VK Ads and Yandex Direct against DareBay. Outside CPMs come from dated public benchmarks and rate cards, DareBay's figures from its own public pages, and beside every number stands what it actually buys you."
   takeaways:
     - "<b>A clip view costs less than an ad impression.</b> Meta averages $13.48 per 1,000 impressions <!-- source: https://www.adamigo.ai/blog/meta-ads-cpm-benchmarks-by-industry-2026 2026-09-04 -->, TikTok Ads $5–$12 <!-- source: https://www.admetrics.io/en/post/tiktok-ads-costs-complete-2026-pricing-guide 2026-09-04 -->, clips on DareBay run $1–$10 per 1,000 counted views."
     - "<b>You pay for a watched clip, not for a banner flashing past.</b> An impression counts the moment the ad renders on a screen; a clip view is read from the network's public counter and paid only above the threshold named in the task."
@@ -31,7 +31,7 @@ cta:
 
 ## The table: what a thousand costs
 
-Outside figures were read on 2026-09-04 from public benchmark, agency and rate-card pages; ours is live platform data (snapshot: 2026-08-23; rate band updated 2026-09-20). Dollar CPMs are English-speaking markets, rouble CPMs Russian platforms, nothing converted. Read the third column first.
+Outside figures were read on 2026-09-04 from public benchmark, agency and rate-card pages; DareBay's figures come from its own public pages. Dollar CPMs are English-speaking markets, rouble CPMs Russian platforms, nothing converted. Read the third column first.
 
 | Channel | CPM per 1,000 | What you pay for | Who makes the creative |
 |---|---|---|---|
@@ -40,7 +40,7 @@ Outside figures were read on 2026-09-04 from public benchmark, agency and rate-c
 | YouTube Ads | $5–$10, Shorts around $4 <!-- source: https://www.storegrowers.com/youtube-ads-benchmarks/ 2026-09-04 -->; $4–$10 in another guide <!-- source: https://megadigital.ai/en/blog/youtube-ads-cost/ 2026-09-04 --> | an impression around a video | you or your agency |
 | VK Ads | 30–70 ₽ broad, 60–150 ₽ interests, 80–250 ₽ retargeting <!-- source: https://www.cossa.ru/zaley_cash/349828/ 2026-09-04 -->; about 30 ₽ on average <!-- source: https://www.directline.pro/blog/skolko-stoit-reklama-v-vk/ 2026-09-04 --> | a feed, clips or stories impression | you or your agency |
 | Yandex Direct | video network: minimum bid from 5 ₽ before VAT, fixed vCPM Premium 500 ₽ <!-- source: https://yandex.ru/adv/prices 2026-09-04 -->; video and pre-rolls 200–2,000 ₽ (agency range) <!-- source: https://rosedigital.ru/uslugi/stoimost-pokazov-v-yandeks-direkt 2026-09-04 --> | an impression or viewable impression (vCPM) | you or your agency |
-| Clips on DareBay | $1–$10 per 1,000 views on open tasks | a counted view on the creator's account above the threshold you set, up to the cap you set (up to $500 per clip) | clippers, included |
+| Clips on DareBay | $1–$10 per 1,000 views, set by each task<!-- source: https://darebay.com/en/earnings/how-much-clipping-pays 2026-09-24 --> | a counted view on the creator's account above the threshold you set, up to the cap you set (up to $500 per clip)<!-- source: https://darebay.com/en/earnings/how-much-clipping-pays 2026-09-24 --> | clippers, included |
 
 ## What each dollar buys
 
@@ -64,7 +64,7 @@ Honestly: four jobs stay with paid ads.
 - **Trust.** A person's account, no sponsored label, no banner blindness.
 - **The long tail.** Ads stop with the budget; clips stay up and keep collecting views.
 - **Pay for results.** You pay for views above the threshold on the card by formula, not for intent: 20,000 / 1,000 × $1.00 = **$20.00** for a clip, never more than the cap you set.
-- **The budget is locked and spent as it happens.** On a wallet-backed task the budget sits on the platform before the start, goes out per counted view, and the remainder comes back. Launching a task is free, the contest commission is 0%. Rate, threshold and cap: [how to pay clippers per view](/en/for-brands/paying-clippers-per-view); the full budget maths: [what a clipping campaign costs](/en/for-brands/clipping-campaign-cost).
+- **A wallet-backed budget is locked and spent as it happens.** It sits on the platform before the start, goes out per counted view, and the remainder comes back<!-- source: https://darebay.com/en/about/payout-guarantee 2026-09-24 -->. Launching a task is free, the contest commission is 0%. Rate, threshold and cap: [how to pay clippers per view](/en/for-brands/paying-clippers-per-view); the full budget maths: [what a clipping campaign costs](/en/for-brands/clipping-campaign-cost).
 
 ## How to combine them
 
@@ -74,13 +74,13 @@ Ads second: scale the winners where targeting and speed matter. A creator's clip
 
 ## How the comparison was built
 
-Outside CPMs are copied as they stand, in the source's currency, without averaging: Meta and TikTok benchmarks, agency guides for YouTube and VK Ads, Yandex's official 2026 rate card. Triple Whale and click.ru did not open, so their figures are not used; the Rose Digital page carries no date. Ours is DareBay's open-task rate band from the 2026-08-23 snapshot (rate band updated 2026-09-20).
+Outside CPMs are copied as they stand, in the source's currency, without averaging: Meta and TikTok benchmarks, agency guides for YouTube and VK Ads, Yandex's official 2026 rate card. Triple Whale and click.ru did not open, so their figures are not used; the Rose Digital page carries no date. DareBay's figures come from its own public pages: $1–$10 per 1,000 views, set by each task, and up to $500 per clip<!-- source: https://darebay.com/en/earnings/how-much-clipping-pays 2026-09-24 -->.
 
 What cannot be compared head-on:
 
 - **An impression is not a view.** Ad CPM counts ad appearances; DareBay pays for clip views from the public counter, only above the threshold.
 - **Reach is not conversion.** Neither number says how many viewers bought; ads measure that with a pixel, clips with tagged links and promo codes.
-- **Different markets.** Dollar CPMs are the priciest English-speaking markets, rouble CPMs Russian platforms; on DareBay one rate covers creators anywhere.
+- **Different markets.** Dollar CPMs are the priciest English-speaking markets, rouble CPMs Russian platforms; on DareBay a task pays the same rate to every creator who takes it, and there is no country list: only people on sanctions lists are barred<!-- source: https://darebay.com/en/legal/terms 2026-09-24 -->.
 - **CPM is media only.** Creative, management and testing sit outside the benchmarks and inside the price of clips.
 
 ## Frequently asked questions

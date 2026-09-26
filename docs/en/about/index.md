@@ -41,10 +41,10 @@ Withdrawing an already credited balance is a separate operation with a minimum, 
 
 ## Where the numbers come from
 
-Every figure in this section is taken from the platform's own data, not from estimates or
-someone else's article. Pages carrying numbers record the date of the data snapshot in their
-source, and state it in the text. When a snapshot goes stale the page is rewritten whole,
-not patched one number at a time.
+DareBay's figures come from its own public pages, not from estimates or someone else's
+article. Pages carrying numbers record in their source the date each figure was checked, and
+state it in the text. When a figure changes the page is rewritten whole, not patched one
+number at a time.
 
 We do not promise a specific income and we do not publish other people's results as our own.
 What a creator earns is set by the views their video gets: the views it pulls are the money

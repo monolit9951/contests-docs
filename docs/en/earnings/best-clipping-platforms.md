@@ -38,7 +38,7 @@ DareBay, our platform, keeps no country list<!-- source: https://darebay.com/en/
 
 **Global boards**
 
-- **Choose DareBay if** you have no followers or clip from anywhere in CIS: on our platform a brand-new account can take a task with no application<!-- source: https://darebay.com/en/earnings/how-much-clipping-pays 2026-09-24 -->, and CIS clippers are paid like everyone else<!-- source: https://darebay.com/en/legal/terms 2026-09-24 -->.
+- **Choose DareBay if** you have no followers or clip from Russia, Belarus or elsewhere in CIS: on our platform a brand-new account can take a task with no application<!-- source: https://darebay.com/en/earnings/how-much-clipping-pays 2026-09-24 -->, and CIS clippers are paid like everyone else<!-- source: https://darebay.com/en/legal/terms 2026-09-24 -->.
 - **Choose Whop Content Rewards if** you want your earnings in a bank account or mobile wallet: withdrawals go through Whop, which supports bank, mobile-wallet and crypto payouts in over 200 countries<!-- source: https://docs.whop.com/manage-your-business/manage-payouts/payout-methods 2026-09-24 -->.
 - **Choose Vyro if** your clips regularly pass 5,000 views: each approved post starts earning only once it reaches that mark<!-- source: https://vyro.com/help/earnings-and-payments/how-many-views-do-i-need-before-i-can-start-earning 2026-09-24 -->.
 - **Choose Promote.fun if** you want your earnings as USDC on Solana and can wait until a campaign ends: that is the payout its home page describes<!-- source: https://www.promote.fun/ 2026-09-24 -->.

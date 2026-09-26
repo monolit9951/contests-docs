@@ -28,7 +28,7 @@ method:
   - "A platform row repeats what that platform publishes about these two countries. \"Not stated\" means its public pages say nothing, which is not the same as a refusal. DareBay's own terms come from its help pages, not from this comparison."
 cta:
   title: "Take a task where a USDT payout is lawful"
-  lede: "DareBay publishes no country list and asks for no followers or application, and each task prints its rate on the card. Its only cash rail is USDT on the TON network, and a payout received in Telegram Stars is not money, so in Bangladesh and Nepal, where the central banks do not permit crypto transactions, it is not a way to be paid today. Elsewhere that rail works; here, the bank rails above are the honest answer."
+  lede: "DareBay keeps no country list (only people on sanctions lists are barred) and asks for no followers or application, and each task prints its rate on the card. Its only cash rail is USDT on the TON network, and a payout received in Telegram Stars is not money, so in Bangladesh and Nepal, where the central banks do not permit crypto transactions, it is not a way to be paid today. Elsewhere that rail works; here, the bank rails above are the honest answer."
 ---
 
 A clipper in Dhaka or Kathmandu has two questions: does a platform's money reach this country, and does it arrive on a rail the central bank accepts. Here the second question removes more options than the first. Platforms are ranked on [the best clipping platforms](/en/earnings/best-clipping-platforms), rates are on [how much clipping pays](/en/earnings/how-much-clipping-pays), and the neighbouring markets have their own pages on [Pakistan](/en/earnings/clipping-platforms-that-pay-in-pakistan) and [India](/en/earnings/clipping-platforms-that-pay-in-india).
@@ -88,7 +88,7 @@ Read the table by rail. Whop puts both countries on its payout list <!-- source:
 
 ## DareBay in Bangladesh and Nepal: no money route today
 
-DareBay publishes no exclusion list and asks for no followers or application. It takes 0% from a task budget and nothing from what a clip earns; the one charge on a clipper is 10% of a withdrawal, deducted inside a request of at least 10 USDT and checked by a person before it is sent ([DareBay withdrawals](/en/help/darebay-withdrawals), [DareBay fees](/en/help/what-commission)).
+DareBay keeps no country list (only people on sanctions lists are barred) and asks for no followers or application. It takes 0% from a task budget and nothing from what a clip earns; the one charge on a clipper is 10% of a withdrawal, deducted inside a request of at least 10 USDT and checked by a person before it is sent ([DareBay withdrawals](/en/help/darebay-withdrawals), [DareBay fees](/en/help/what-commission)).
 
 The limit is the rail: a balance leaves as USDT on the TON network, or you receive the payout in Telegram Stars. Bangladesh Bank says transactions to obtain virtual assets are not permitted and Nepal Rastra Bank calls crypto transactions illegal, so a DareBay balance has no withdrawal route into either country today; a single task can set a card or a bank transfer as its prize if its organizer decides so. Stars are not money: Telegram's terms call them "virtual items" and bar selling or withdrawing a personal Star balance <!-- source: https://telegram.org/tos/stars 2026-09-18 -->. The interface is in English, Russian, Ukrainian and Polish; there is no Bangla or Nepali version.
 

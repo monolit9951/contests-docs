@@ -9,20 +9,20 @@ hero:
   kicker: "Clipper guide · 2026"
   lede: "A clipper is paid for the reach of one video, not for the size of a channel, so zero followers and an empty portfolio are a normal place to start. Here is the craft without the varnish: what goes into one clip, how long it takes, why the income swings, and the route from a first contest to first money."
   takeaways:
-    - "<b>Reach pays here, not your follower count:</b> open contests run from $1.00 to $10.00 per 1000 views of one specific video, whatever the size of your channel."
+    - "<b>Reach pays here, not your follower count:</b> each task sets its rate, from $1.00 to $10.00 per 1000 views of one specific video, whatever the size of your channel."
     - "<b>The threshold on the card is never subtracted:</b> clear it and the whole counter is paid, so 12,000 views at $1.00 per 1000 is 12,000 / 1000 × $1.00 = $12.00."
-    - "<b>The cap per submission is set by the buyer,</b> up to $500 in open contests; your next clip starts its own count from scratch."
+    - "<b>The cap per submission is set by the buyer,</b> up to $500 per clip; your next clip starts its own count from scratch."
     - "<b>Your first clip takes a couple of hours,</b> later ones 20 to 40 minutes; all you need is a DareBay account, an open account on the contest's site and any editing app."
 cta:
-  title: "Your first brief is on the board today"
+  title: "Take your first brief from the board"
   lede: "No application, no portfolio, no follower count to clear. Open the DareBay catalogue, pick a brief whose numbers you have checked on the card, and send in your first clip as a link."
 ---
 
-You can earn from clips with no followers and nothing to show, because clipping is piecework paid per view. A clipper takes a brief on the platform, cuts a short vertical video out of somebody else's footage, publishes it on the contest's site - TikTok, YouTube, Instagram or another site named in the brief - and sends the link. After that, reach pays: rates across open contests run from **$1.00**<!-- baseline: ppv_cpm_min --> to **$10.00 per 1000 views**<!-- baseline: ppv_cpm_max -->, and nothing open right now pays below that floor. A portfolio and years of practice buy you nothing here: you are paid for the views of one specific video, not for the size of your channel. In a wallet-backed contest the budget is frozen on the platform before you take the brief, the contest commission is 0%, and taking part is free.
+You can earn from clips with no followers and nothing to show, because clipping is piecework paid per view. A clipper takes a brief on the platform, cuts a short vertical video out of somebody else's footage, publishes it on the contest's site - TikTok, YouTube, Instagram or another site named in the brief - and sends the link. After that, reach pays: each task sets its rate, from **$1.00**<!-- baseline: ppv_cpm_min --> to **$10.00 per 1000 views**<!-- baseline: ppv_cpm_max -->. A portfolio and years of practice buy you nothing here: you are paid for the views of one specific video, not for the size of your channel. In a wallet-backed contest the budget is frozen on the platform before you take the brief, the contest commission is 0%, and taking part is free.
 
 This is piecework, not passive income. Below: what the job actually asks of you, what the result depends on, and one route from zero - first contest, first submission, first money.
 
-Every DareBay figure on this page comes from the platform's own data (snapshot: 2026-08-23; rate band updated 2026-09-20) and counts only open contests - the ones a clipper can take right now.
+DareBay's figures on this page come from its own public pages, and DareBay set its rate band on 20 September 2026<!-- source: https://darebay.com/en/earnings/how-much-clipping-pays 2026-09-24 -->.
 
 The words this page uses - hook, threshold, cap, counted views - are explained in the [clipping glossary](/en/earnings/clipping-glossary).
 
@@ -55,7 +55,7 @@ Three arrangements share the name "clipping job", and they differ most at the do
 |---|---|---|---|---|---|
 | Hired hourly or fixed-price (Upwork) | The client, via the marketplace | Accepted application; portfolio advised for getting hired<!-- source: https://support.upwork.com/hc/en-us/articles/211067578-How-to-get-started-as-a-freelancer-on-Upwork 2026-09-20 -->; proposals are sent with Connects, $0.15 each<!-- source: https://support.upwork.com/hc/en-us/articles/211062898-Understanding-and-using-Connects 2026-09-20 --> | Negotiated, above a $3.00/hour or $5.00 fixed-price floor<!-- source: https://support.upwork.com/hc/en-us/articles/211062988-What-are-the-minimum-hourly-and-fixed-price-rates-on-Upwork 2026-09-20 --> | 0% to 15% per contract, fixed before you accept<!-- source: https://support.upwork.com/hc/en-us/articles/211062538-Learn-about-the-Freelancer-Service-Fee 2026-09-20 --> | Hourly: 10 days after the week's Sunday close<!-- source: https://support.upwork.com/hc/en-us/articles/211063698-How-to-manage-the-weekly-billing-cycle 2026-09-20 -->; fixed-price: up to 14 days' review, then a five-day hold<!-- source: https://support.upwork.com/hc/en-us/articles/211063718-How-payments-for-milestones-and-fixed-price-contracts-work 2026-09-20 --> |
 | A per-gig service you sell (Fiverr) | The client, via the marketplace | A published Gig; identity verification may be required, sometimes for a fee<!-- source: https://help.fiverr.com/hc/en-us/articles/6348992414097-Verifying-your-identity-as-a-new-freelancer 2026-09-20 --> | You set it, from a $5 "minimum starting price"<!-- source: https://help.fiverr.com/hc/en-us/articles/360010451397-Creating-a-Gig 2026-09-20 -->; hourly needs "Level One and above"<!-- source: https://help.fiverr.com/hc/en-us/articles/27516246556945-Hourly-work-for-freelancers 2026-09-20 --> | You earn "80% of the purchase amount"<!-- source: https://help.fiverr.com/hc/en-us/articles/9234443621137-Your-earnings-page 2026-09-20 --> | Order completes, then a 14-day clearing period<!-- source: https://help.fiverr.com/hc/en-us/articles/34069565843985-How-Fiverr-works-for-freelancers 2026-09-20 --> |
-| A task paid per view (DareBay) | The buyer's contest budget, via the platform | An account, an open account on the contest's site; no followers, application or portfolio | A rate per 1000 views, threshold and cap printed on the card | 0% from the contest payout; withdrawal has its own [fee](/en/help/what-commission) and starts at 10 USDT | The system counts the views; a person checks each withdrawal request, and no deadline is promised |
+| A task paid per view (DareBay) | The buyer's contest budget, via the platform | An account, an open account on the contest's site; no followers, application or portfolio | A rate per 1000 views, threshold and any cap, printed on the card | 0% from the contest payout; withdrawal has its own [fee](/en/help/what-commission) and starts at 10 USDT | The system counts the views; a person checks each withdrawal request, and no deadline is promised |
 
 For a beginner with nothing to show, the difference is the entry price: both marketplace routes want something before you may compete. A per-view task asks for an account and nothing else, and it promises nothing - a clip below the threshold pays nothing.
 
@@ -85,7 +85,7 @@ That is where the shape of the income comes from. One video takes 3000 views and
 
 The threshold is not subtracted, though: once a submission clears it, the whole counter goes into the maths. A video with 12,000 views at $1.00<!-- baseline: ppv_cpm_median --> per 1000 brings 12,000 / 1000 * $1.00 = **$12.00** - all 12,000 count, not the remainder above the bar.
 
-The cap on a single submission is set by the buyer at contest creation: that is how they insure the budget against one viral video taking everything. You see your own contest's value on the card before you submit, and in live contests caps sit around the hundred-dollar mark. It works per submission, not per author: your next clip is counted against its own cap from scratch. A cap is a limit in the mechanic, not a plan for the month.
+The cap on a single submission is set by the buyer at contest creation: that is how they insure the budget against one viral video taking everything. A task that sets a cap shows it on the card before you submit, and caps run up to $500 per clip. It works per submission, not per author: your next clip is counted against its own cap from scratch. A cap is a limit in the mechanic, not a plan for the month.
 
 Silence for a beginner often comes from the account itself: platforms show a fresh profile cautiously and the first clips may stay in the hundreds of views; how that works and what to do is in [TikTok shadowban and account warm-up](/en/earnings/account-warm-up-and-shadowban).
 
@@ -107,7 +107,7 @@ The site is set by the contest. The platform reads the published view counter on
 **The first contest**
 
 1. **Sign up at [DareBay](https://darebay.com).** Free, with no audience requirements and no channel review.
-2. **Choose a brief, not a rate.** The card shows the rate, the threshold, the cap, the deadlines and the requirements before you submit. The highest rate is useless on a subject you do not know: on familiar ground a clip comes together faster and holds a viewer better.
+2. **Choose a brief, not a rate.** The card shows the rate, the threshold, any cap, the deadlines and the requirements before you submit. The highest rate is useless on a subject you do not know: on familiar ground a clip comes together faster and holds a viewer better.
 3. **Read the terms in full.** The site, the format, the length, whether footage is attached to the brief (if not, you pick the source yourself), and whether a hashtag or a mention is required.
 
 **The first submission**
@@ -119,7 +119,7 @@ The site is set by the contest. The platform reads the published view counter on
 **The first money**
 
 7. **Clear the threshold.** A submission with reach below the threshold takes no part in the budget split. The threshold is printed on the contest card and is never deducted.
-8. **Wait for the results.** The calculation is automatic: an independent counter reads the published view counter on the site and works out the payout at the contest rate. There is moderation and there are basic checks, and a submission with suspicious growth goes on hold. Paying the money out can be handled by hand, and the platform promises no specific deadline.
+8. **Wait for the results.** The system does the maths: an independent counter reads the published view counter on the site and works out the payout at the contest rate. There is moderation and there are basic checks, and a submission with suspicious growth goes on hold. A wallet-backed contest credits your earnings when it ends, or earlier with Claim now where the contest shows it (that clip then stops earning), and in a manual-payout contest the organizer pays you directly. The team checks and sends every withdrawal, and the platform promises no specific deadline<!-- source: https://darebay.com/en/help/darebay-withdrawals 2026-09-24 -->.
 
 A first job rarely takes off, and that is normal: its purpose is to show you the whole route and give you a reference point. By the second or third it becomes visible which subjects and which contests work for you, and from there you pick briefs deliberately.
 

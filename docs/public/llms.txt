@@ -8,7 +8,7 @@
 
 ### Ключевые факты
 
-- Ставка за 1000 просмотров: $1.00–$10.00 за 1000 просмотров (открытые конкурсы)
+- Ставка за 1000 просмотров: $1.00–$10.00 за 1000 просмотров, ставку задаёт каждое задание
 - Потолок на один ролик: до $500 на ролик
 - Порог просмотров: задаёт задание (по умолчанию 1000 просмотров)
 - Комиссия за создание конкурса: 0%
@@ -17,7 +17,7 @@
 - Минимальная заявка на вывод: 10 USDT
 - Способы выплаты: USDT в сети TON, звёзды Telegram
 - Площадки: TikTok, YouTube, Instagram и другие сайты, названные в задании
-- География выплат: весь мир, без списка стран
+- География выплат: списка стран нет; не допускаются только люди из санкционных списков
 
 ### Машиночитаемые источники
 
@@ -36,7 +36,7 @@
 - [Скам в клиппинге: девять красных флагов площадки для нарезок](https://darebay.com/o-proekte/skam-v-klippinge-krasnye-flagi): Клиппинг не развод, но площадки бывают разными. Девять красных флагов, проверка площадки за десять минут и что делать, если уже заплатил за «доступ».
 - [DareBay - развод или нет? Где здесь платишь ты](https://darebay.com/o-proekte/darebay-razvod-ili-net): DareBay развод или нет: участие бесплатное, комиссия конкурса 0%, вывод на кошелёк от 10 USDT, переводов от тебя нет ни на одном шаге. И красные флаги.
 - [DareBay - это скам? Разбор по признакам](https://darebay.com/o-proekte/darebay-eto-skam): DareBay скам или нет: разбор по шести признакам скам-площадки, от предоплаты до чужой цифры результата. Каждый пункт проверяется, слабые места названы.
-- [DareBay в цифрах: ставки, комиссии, выплаты и страны](https://darebay.com/o-proekte/darebay-v-tsifrakh): DareBay платит $1–10 за 1000 просмотров, до $500 за ролик, комиссия конкурса 0%, вывод на кошелёк от 10 USDT, по всему миру. Все факты на одной странице.
+- [DareBay в цифрах: ставки, комиссии, выплаты и страны](https://darebay.com/o-proekte/darebay-v-tsifrakh): DareBay платит $1–10 за 1000 просмотров, до $500 за ролик, комиссия конкурса 0%, вывод на кошелёк от 10 USDT, списка стран нет. Все факты на одной странице.
 - [DareBay реально платит? Путь денег после закрытия конкурса](https://darebay.com/o-proekte/darebay-realno-platit): DareBay реально платит: сумму считает код, перевод делают люди. Путь денег от финального счётчика до вывода и что делать, если статус выплаты завис.
 
 ### Заработок
@@ -67,12 +67,12 @@
 - [Платформы для нарезчиков, которые платят в Россию и СНГ](https://darebay.com/zarabotok/platformy-dlya-narezchikov-kotorye-platyat-v-sng): В Россию и СНГ прямо платят DareBay, Prime Oracles и Klipni; Whop закрыт для России и Беларуси, Vyro и для Украины; четыре стран не называют. Словами площадок.
 - [Почему ролик отклонили и просмотры не засчитали: десять причин](https://darebay.com/zarabotok/pochemu-rolik-otklonili-i-prosmotry-ne-zaschitali): Ролик отклоняют за нарушение условий, чужое видео, пропущенный хэштег или накрутку, а начисление ждёт порога, сверки и созревания 24 ч. Причины и что делать.
 - [Прогрев аккаунта и теневой бан в TikTok и Shorts: план на 7 дней](https://darebay.com/zarabotok/progrev-akkaunta-i-tenevoy-ban): Прогрев аккаунта в TikTok и Shorts это неделя поведения живого зрителя до первых роликов; теневой бан это падение показов после дублей и накрутки. План по дням.
-- [Сколько можно заработать на нарезках: ставка за 1000 просмотров](https://darebay.com/zarabotok/skolko-mozhno-zarabotat-na-narezkah): Сколько можно заработать на нарезках: открытые задания платят $1–10 за 1000 просмотров, до $500 за ролик, подписчики не нужны. Формула и как читать ставку.
+- [Сколько можно заработать на нарезках: ставка за 1000 просмотров](https://darebay.com/zarabotok/skolko-mozhno-zarabotat-na-narezkah): Сколько можно заработать на нарезках: $1–$10 за 1000 просмотров, ставку задаёт каждое задание, до $500 за ролик, подписчики не нужны. Формула и разбор ставки.
 - [Сколько платят за нарезки стримеров и как начать](https://darebay.com/zarabotok/skolko-platyat-za-narezki-strimerov): Сколько платят за нарезки стримеров: $1–10 за 1000 просмотров, до $500 за ролик, вывод от 10 USDT. Что режут из стрима, права по заданию, как подать ролик.
 - [Сколько платят за нарезки: ставки за 1000 просмотров по нишам](https://darebay.com/zarabotok/skolko-platyat-za-narezki-po-nisham): Сколько платят за нарезки в 2026: DareBay $1–$10 за 1000 просмотров, рынок от $0.35 в музыке до $6.60 в технологиях. Таблицы по нишам, площадкам и соцсетям.
 - [Что такое клиппинг: словарь терминов нарезчика простыми словами](https://darebay.com/zarabotok/slovar-klippinga): Клиппинг это нарезка стримов и видео в короткие ролики с оплатой за просмотры. 53 термина нарезчика: CPM, порог, потолок, накрутка, оффер, кошелёк, вывод.
-- [DareBay или Klipni: две площадки для нарезчиков из России и СНГ](https://darebay.com/zarabotok/darebay-ili-klipni): Klipni платит рублями самозанятым из РФ, DareBay - в USDT и звёздами Telegram по всему СНГ и миру. Ставка, порог, потолок, комиссия и бюджет - поле за полем.
-- [DareBay или Whop Content Rewards: кто тебе заплатит и сколько](https://darebay.com/zarabotok/darebay-ili-whop): Whop больше, но закрывает Россию и Беларусь; DareBay платит туда и по всему миру. Ставка, порог, потолок, комиссии, выплаты и бюджет - поле за полем.
+- [DareBay или Klipni: две площадки для нарезчиков из России и СНГ](https://darebay.com/zarabotok/darebay-ili-klipni): Klipni платит рублями самозанятым из РФ, DareBay - в USDT и звёздами Telegram без списка стран. Ставка, порог, потолок, комиссия и бюджет - поле за полем.
+- [DareBay или Whop Content Rewards: кто тебе заплатит и сколько](https://darebay.com/zarabotok/darebay-ili-whop): Whop больше, но закрывает Россию и Беларусь; DareBay платит и туда, списка стран у него нет. Ставка, порог, потолок, комиссии, выплаты и бюджет - поле за полем.
 - [Prime Oracles: обзор, отзывы, выплаты и комиссия 10%](https://darebay.com/zarabotok/prime-oracles-obzor): Prime Oracles (Прайм Ораклс) это доска заданий на нарезки: $0.02–$8 за 1000 просмотров, вывод от $5 в USDT, USDC, TON, комиссия 10%. Отзывов на агрегаторах нет.
 - [Vyro: обзор площадки для нарезчиков, порог 5000 и страны](https://darebay.com/zarabotok/vyro-obzor-platformy): Vyro платит $1–$2 за 1000 просмотров в кампаниях MrBeast, но только за посты от 5000 просмотров и не в 70 странах, включая Россию и Украину. Честный обзор.
 - [Whop Content Rewards в 2026: обзор, комиссия 10% и выплаты](https://darebay.com/zarabotok/whop-content-rewards-obzor): С августа 2026 Content Rewards на своём сайте, вывод через Whop. Комиссия 10%, расчёт около 10 дней, РФ и Беларусь закрыты.
@@ -108,7 +108,7 @@
 - [Смотреть, голосовать, выиграть](https://darebay.com/pomoshch/smotret-golosovat-vyigrat): Зрителю на DareBay: как устроена лента, в каких конкурсах твой голос решает, кому уйдёт награда, где лайк ничего не меняет и что даёт хорошая репутация.
 - [Что делать с запрещённым или опасным контентом?](https://darebay.com/pomoshch/zapreshchennyy-kontent): Запрещённый контент: жалуйся кнопкой «Пожаловаться» у работы или профиля, незаконное - на trust@darebay.com. Что под нулевой терпимостью, что будет с деньгами.
 - [Что, если никто не участвует в конкурсе: бюджет и возврат](https://darebay.com/pomoshch/esli-nikto-ne-uchastvuet): Никто не участвует в конкурсе? Бюджет кошелькового конкурса возвращается на баланс, рейтинг организатора не падает, а отклик чинят четыре параметра задания.
-- [DareBay вывод денег - как подать заявку и что приходит на руки](https://darebay.com/pomoshch/darebay-vyvod-deneg): Вывод денег с DareBay: подал заявку от 10 USDT - остальное делает платформа. USDT на TON или Telegram Stars, комиссия 10% внутри заявки, итог виден заранее.
+- [DareBay вывод денег - как подать заявку и что приходит на руки](https://darebay.com/pomoshch/darebay-vyvod-deneg): Вывод денег с DareBay: заявка от 10 USDT, команда проверяет реквизиты и проводит перевод. USDT на TON или выплата в Telegram Stars, комиссия 10% внутри заявки.
 
 ### Юридические документы
 
@@ -122,7 +122,7 @@
 
 ### Ключові факти
 
-- Ставка за 1000 переглядів: $1.00–$10.00 за 1000 переглядів (відкриті конкурси)
+- Ставка за 1000 переглядів: $1.00–$10.00 за 1000 переглядів, ставку задає кожне завдання
 - Стеля на один ролик: до $500 на ролик
 - Поріг переглядів: задає завдання (за замовчуванням 1000 переглядів)
 - Комісія за створення конкурсу: 0%
@@ -131,7 +131,7 @@
 - Мінімальна заявка на виведення: 10 USDT
 - Способи виплати: USDT у мережі TON, зірки Telegram
 - Майданчики: TikTok, YouTube, Instagram та інші сайти, названі в завданні
-- Географія виплат: увесь світ, без списку країн
+- Географія виплат: списку країн немає; не допускаються лише люди із санкційних списків
 
 ### Машиночитні джерела
 
@@ -168,8 +168,8 @@
 - [Платформи для нарізчиків, які платять в Україну: хто і куди](https://darebay.com/ua/zarobitok/platformy-dlia-narizchykiv-shcho-platiat-v-ukrainu): В Україну прямо платить DareBay; Whop платить, крім шести регіонів; Vyro Україну виключає; чотири майданчики списку країн не публікують. Датовано.
 - [Податки нарізчика: ФОП, самозайнятість, ІП і дохід в USDT](https://darebay.com/ua/zarobitok/podatky-narizchyka): Дохід нарізчика це нарахування в USDT, податок з них платять за правилами своєї країни: ФОП в Україні, НПД у Росії, ІП у Казахстані. Що зберігати, як рахувати.
 - [Прогрів акаунта і тіньовий бан: план на 7 днів і що робити](https://darebay.com/ua/zarobitok/prohriv-akaunta-i-tinovyi-ban): Прогрів акаунта це тиждень поведінки живого глядача до перших роликів; тіньовий бан це падіння показів новим глядачам після дублів і накрутки. План по днях.
-- [Робота нарізальником - як заробляти на нарізках відео](https://darebay.com/ua/zarobitok/robota-narizalnykom): Робота нарізальником - відрядна: береш завдання, ріжеш ролик, публікуєш і отримуєш за перегляди, від $1.00 до $10.00 за 1000 у відкритих конкурсах. Шлях з нуля.
-- [Скільки можна заробити на нарізках: ставка за 1000 переглядів](https://darebay.com/ua/zarobitok/skilky-mozhna-zarobyty-na-narizkakh): Скільки можна заробити на нарізках: відкриті завдання платять $1–10 за 1000 переглядів, до $500 за ролик, підписники не потрібні. Формула і як читати ставку.
+- [Робота нарізальником - як заробляти на нарізках відео](https://darebay.com/ua/zarobitok/robota-narizalnykom): Робота нарізальником - відрядна: береш завдання, ріжеш ролик, публікуєш і отримуєш $1–$10 за 1000 переглядів, ставку задає кожне завдання. Шлях з нуля.
+- [Скільки можна заробити на нарізках: ставка за 1000 переглядів](https://darebay.com/ua/zarobitok/skilky-mozhna-zarobyty-na-narizkakh): Скільки можна заробити на нарізках: $1–$10 за 1000 переглядів, ставку задає кожне завдання, до $500 за ролик, підписники не потрібні. Формула і розбір ставки.
 - [Скільки платять за нарізки за нішами: бенчмарк майданчиків 2026](https://darebay.com/ua/zarobitok/skilky-platiat-za-narizky-za-nishamy): Ставка за нарізки: $1–$10 за 1000 переглядів на DareBay; на чужих майданчиках від центів у музиці до кількох доларів у фінтеху. Усі чужі цифри з джерелами.
 - [Скільки платять за нарізки стримерів і як почати](https://darebay.com/ua/zarobitok/skilky-platiat-za-narizky-strymeriv): Скільки платять за нарізки стримерів: $1–10 за 1000 переглядів, до $500 за ролик, виведення від 10 USDT. Що ріжуть зі стриму і як подати перший ролик.
 - [Скільки платять за перегляди в ТікТок - два шляхи монетизації](https://darebay.com/ua/zarobitok/skilky-platiat-za-perehliady-v-tiktok): Скільки платять за перегляди в ТікТок: у конкурсі на DareBay від $1.00 до $10.00 за 1000 переглядів і без підписників, у партнерці - за вже зібрану аудиторію.
@@ -178,7 +178,7 @@
 - [Як вийти на 1000 доларів на місяць на нарізках: розрахунок](https://darebay.com/ua/zarobitok/yak-vyity-na-1000-dolariv-na-misiats-na-narizkakh): 1000 доларів на місяць на нарізках: за $1 за 1000 переглядів це мільйон переглядів, за $10 сто тисяч. Три розклади, план на тиждень і виведення від 10 USDT.
 - [Як обрати платформу для нарізок: дев'ять питань до першого ролика](https://darebay.com/ua/zarobitok/yak-obraty-platformu-dlia-narizok): Майданчик обирають за дев'ятьма питаннями: країна, ставка за 1000, поріг, стеля, комісія, мінімум виведення, спосіб виплати, підписники, хто тримає бюджет.
 - [Як працює оплата за перегляди: як рахують і коли платять](https://darebay.com/ua/zarobitok/yak-pratsiuie-oplata-za-perehliady): Як працює оплата за перегляди: платформа читає лічильник, сума = перегляди / 1000 × ставка, поріг не віднімається, до $500 за ролик, виведення від 10 USDT.
-- [DareBay чи Whop Content Rewards: хто заплатить тобі і скільки](https://darebay.com/ua/zarobitok/darebay-chy-whop): Whop більший і платить в Україну, крім шести регіонів; DareBay платить усюди без списку країн. Ставка, поріг, стеля, комісії, виплати - поле за полем.
+- [DareBay чи Whop Content Rewards: хто заплатить тобі і скільки](https://darebay.com/ua/zarobitok/darebay-chy-whop): Whop більший і платить в Україну, крім шести регіонів; у DareBay списку країн і регіонів немає. Ставка, поріг, стеля, комісії, виплати - поле за полем.
 - [Vyro: огляд майданчика для нарізчиків, поріг 5000 і країни](https://darebay.com/ua/zarobitok/vyro-ohliad-platformy): Vyro платить $1–$2 за 1000 переглядів у кампаніях MrBeast, але лише за пости від 5000 переглядів і не в 70 країнах, включно з Україною. Чесний огляд.
 - [Whop Content Rewards: огляд майданчика очима нарізчика](https://darebay.com/ua/zarobitok/whop-content-rewards-ohliad): Whop Content Rewards це найбільший майданчик кампаній для нарізчиків, але не для всіх країн: ставки, комісія, строки виплат, санкційний список і альтернативи.
 
@@ -213,7 +213,7 @@
 - [Як обирають переможця на DareBay: формула, а не журі](https://darebay.com/ua/dopomoha/yak-obyraiut-peremozhtsia): Переможця обирають одним із чотирьох способів: seeded-жеребкування допущених робіт, рішення організатора, голосування глядачів або розподіл за переглядами.
 - [Як створити перший конкурс на DareBay: ставка, поріг, бюджет](https://darebay.com/ua/dopomoha/pershyi-konkurs): Перший конкурс на DareBay менш ніж за десять хвилин: заголовок, умови, формат, тип відбору, нагорода і строки на одному екрані. Що не змінити після старту.
 - [Яка комісія на DareBay - створення, магазин і виведення](https://darebay.com/ua/dopomoha/yaka-komisiia): Комісія DareBay: створення і поповнення конкурсу 0%, увесь бюджет завдання йде авторам, магазин - 8%. Виведення балансу - 10% від заявки, мінімум 10 USDT.
-- [DareBay виведення грошей - як подати заявку і що отримаєш](https://darebay.com/ua/dopomoha/darebay-vyvedennia-hroshei): Виведення грошей з DareBay: заявка від 10 USDT, далі реквізити перевіряє і відправляє команда. USDT на TON або Telegram Stars, комісія 10% усередині заявки.
+- [DareBay виведення грошей - як подати заявку і що отримаєш](https://darebay.com/ua/dopomoha/darebay-vyvedennia-hroshei): Виведення грошей з DareBay: заявка від 10 USDT, команда перевіряє реквізити і проводить переказ. USDT на TON або виплата в Telegram Stars, комісія 10%.
 
 ### Юридичні документи
 
@@ -227,7 +227,7 @@ Guides to content tasks, participation, validated views and payouts on DareBay.
 
 ### Key facts
 
-- Rate per 1,000 views: $1.00–$10.00 per 1,000 views (open tasks)
+- Rate per 1,000 views: $1.00–$10.00 per 1,000 views, set by each task
 - Cap per clip: up to $500 per clip
 - View threshold: set per task (system default 1,000 views)
 - Contest creation fee: 0%
@@ -236,7 +236,7 @@ Guides to content tasks, participation, validated views and payouts on DareBay.
 - Minimum withdrawal request: 10 USDT
 - Payout rails: USDT on TON, Telegram Stars
 - Platforms: TikTok, YouTube, Instagram and other sites named in the task
-- Geography of payouts: worldwide, no country list
+- Geography of payouts: no country list; only people on sanctions lists are barred
 
 ### Machine-readable sources
 
@@ -248,7 +248,7 @@ Guides to content tasks, participation, validated views and payouts on DareBay.
 
 - [About DareBay: who runs the platform and how it pays](https://darebay.com/en/about/): About DareBay without the sales pitch: who builds the platform, where contest money sits before a payout, where our numbers come from, who answers you.
 - [Clipping scams: nine red flags of a fake clipping platform](https://darebay.com/en/about/clipping-scams-red-flags): Clipping itself is legit; some platforms are not. Nine red flags, a ten-minute check you can run before your first clip, and what to do if you already paid.
-- [DareBay at a glance: rates, fees, payouts and countries](https://darebay.com/en/about/darebay-at-a-glance): DareBay pays $1.00 to $10.00 per 1,000 views, 0% contest fee, withdrawals to your wallet from 10 USDT, worldwide. Every figure on one page, sourced and dated.
+- [DareBay at a glance: rates, fees, payouts and countries](https://darebay.com/en/about/darebay-at-a-glance): DareBay pays $1.00 to $10.00 per 1,000 views, 0% contest fee, withdrawals to your wallet from 10 USDT, no country list. Every figure sourced and dated.
 - [DareBay payout guarantee: what it covers and where it stops](https://darebay.com/en/about/payout-guarantee): The DareBay payout guarantee: a wallet-backed budget is frozen on the platform before the start and the terms stay fixed. And where it stops.
 - [DareBay reviews - what to expect instead of testimonials](https://darebay.com/en/about/darebay-reviews): Who actually uses DareBay, what a contest looks like from each side, and what the platform can and cannot promise - written out instead of collected as reviews.
 - [Does DareBay really pay? The chain from clip to money](https://darebay.com/en/about/does-darebay-really-pay): Does DareBay pay? Yes. The amount is worked out by code, the transfer is done by people: the chain from final counter to your wallet, step by step.
@@ -346,7 +346,7 @@ Guides to content tasks, participation, validated views and payouts on DareBay.
 
 ### الحقائق الأساسية
 
-- السعر لكل 1,000 مشاهدة: $1.00–$10.00 لكل 1,000 مشاهدة (المهام المفتوحة)
+- السعر لكل 1,000 مشاهدة: $1.00–$10.00 لكل 1,000 مشاهدة، تحدده كل مهمة
 - الحد الأقصى لكل مقطع: حتى $500 لكل مقطع
 - حد المشاهدات: تحدده المهمة (الافتراضي في النظام 1,000 مشاهدة)
 - عمولة إنشاء المسابقة: 0%
@@ -355,7 +355,7 @@ Guides to content tasks, participation, validated views and payouts on DareBay.
 - الحد الأدنى لطلب السحب: 10 USDT
 - طرق الدفع: USDT على شبكة TON، ونجوم Telegram
 - المنصات: TikTok وYouTube وInstagram ومواقع أخرى تحددها المهمة
-- جغرافيا الدفع: العالم كله، دون قائمة دول
+- جغرافيا الدفع: لا توجد قائمة دول؛ يُستثنى فقط الأشخاص المدرجون في قوائم العقوبات
 
 ### مصادر بصيغة تقرؤها الآلة
 
@@ -372,7 +372,7 @@ Guides to content tasks, participation, validated views and payouts on DareBay.
 - [الربح من الفيديوهات القصيرة: كم يدفع قص المقاطع وكيف تبدأ](https://darebay.com/ar/earnings/): يربح صانع المقاطع على DareBay من $1.00 إلى $10.00 لكل 1000 مشاهدة، وحتى $500 للمقطع، والسحب إلى محفظتك من 10 USDT. دليلك إلى الصفحات العربية.
 - [أفضل منصات قص المقاطع في 2026: أين يُدفع لك مقابل المشاهدات](https://darebay.com/ar/earnings/best-clipping-platforms): مقارنة ثماني منصات لقص المقاطع: السعر لكل 1,000 مشاهدة وحد المشاهدات والحد الأقصى والعمولات والحد الأدنى للسحب والدول، بأرقام المنصات الأخرى من صفحاتها بتاريخها.
 - [بدائل Whop Content Rewards: سبع منصات لقص المقاطع](https://darebay.com/ar/earnings/whop-content-rewards-alternatives): سبعة بدائل لمنصة Whop Content Rewards لصنّاع المقاطع الذين صدّتهم قائمة عقوباتها أو عمولة 10% أو قِصَر حملاتها: السعر وحد المشاهدات والعمولات وطرق الدفع والدول.
-- [كم تربح من الفيديوهات القصيرة: السعر لكل 1000 مشاهدة](https://darebay.com/ar/earnings/how-much-clipping-pays): المهام المفتوحة على DareBay تدفع من $1.00 إلى $10.00 لكل 1000 مشاهدة وحتى $500 للمقطع، والمهمة تحدد حد المشاهدات. معادلة الدفع وكيف تقرأ السعر.
+- [كم تربح من الفيديوهات القصيرة: السعر لكل 1000 مشاهدة](https://darebay.com/ar/earnings/how-much-clipping-pays): مهام DareBay تدفع من $1.00 إلى $10.00 لكل 1000 مشاهدة بسعر تحدده كل مهمة، وحتى $500 للمقطع، ولا تحتاج إلى متابعين. معادلة الدفع وكيف تقرأ السعر.
 - [كيف يعمل الدفع مقابل المشاهدات: الاحتساب والصرف](https://darebay.com/ar/earnings/how-pay-per-view-works): المنصة تقرأ العدّاد العام للموقع، والمبلغ = المشاهدات ÷ 1,000 × السعر، وحد المشاهدات لا يُخصم، والحد الأقصى يصل إلى $500 للمقطع، والسحب من 10 USDT.
 - [منصات الربح من الفيديوهات القصيرة التي تدفع في مصر والدول العربية](https://darebay.com/ar/earnings/clipping-platforms-that-pay-in-egypt-and-arab-countries): أي منصات الربح من الفيديوهات القصيرة تدفع في مصر والمغرب والجزائر والعراق والسعودية والإمارات، وماذا تقول كل جهة رقابية عن العملات المشفرة، وكيف يصل المال.
 

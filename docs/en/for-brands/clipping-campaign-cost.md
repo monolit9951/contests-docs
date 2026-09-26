@@ -10,7 +10,7 @@ hero:
   lede: "A campaign with clippers costs exactly as many views as you decide to buy: there is no fixed part, launching is free, and the whole budget goes to counted views at the rate you chose. The unspent part of a wallet-backed budget comes back to your balance. Below are three budgets worked through the platform's own formula, from a first test to a full campaign."
   takeaways:
     - "<b>You pay for the pool and nothing else:</b> creating the contest is free, the contest fee is 0% and a top-up costs nothing, so every dollar of the pool reaches the clippers."
-    - "<b>The budget is rate × paid views, and the rate is yours to set.</b> Open tasks currently pay $1 to $10 per 1,000 views, with $1 the typical rate."
+    - "<b>The budget is rate × paid views, and the rate is yours to set.</b> You set it per task, from $1 to $10 per 1,000 views, so the same pool buys ten times as many views at $1 as at $10."
     - "<b>$1,000 at $1 buys 1,000,000 paid views,</b> or as few as two clips at the $500 cap the platform allows. That is arithmetic, not a forecast: put your own figure into the calculator below."
     - "<b>Overspending is hard:</b> the budget, a pause and the cap per clip hold the spend, clips under the threshold cost you nothing, and a wallet-backed remainder returns to your balance."
 cta:
@@ -30,7 +30,7 @@ Accruals stop when the budget you set runs out, and the wallet-backed pool is lo
 
 ## Three budgets: what $200, $1,000 and $5,000 buy
 
-Three budgets at both ends of the open-task band, $1 and $10 per 1,000 views, with a $100 cap in the example (the platform allows up to $500). The creator column is an assumption, not data: one creator brings 20,000 views, two clips of 10,000.
+Three budgets at both ends of the rate band, $1 and $10 per 1,000 views, with a $100 cap in the example (the platform allows up to $500). The creator column is an assumption, not data: one creator brings 20,000 views, two clips of 10,000.
 
 | Pool | Paid views at $1 | Paid views at $10 | Clips at the $100 cap | Creators, rough guide, at $1 / $10 |
 |---|---:|---:|---:|---:|
@@ -44,9 +44,9 @@ There is nothing to add for the launch: creating the contest is free. This is ar
 
 ## Choosing the rate, the threshold and the cap
 
-**The rate.** Open tasks currently sit between $1 and $10 per 1,000 views, with $1 typical. A rate below the band fails to attract creators because a clipper compares tasks in the feed on that one number and takes the one that pays more for the same clip. The rate is fixed from launch, so an under-priced task is fixed only by a new one; check yours in the [platform comparison](/en/earnings/best-clipping-platforms).
+**The rate.** You set it per task, from $1 to $10 per 1,000 views<!-- source: https://darebay.com/en/earnings/how-much-clipping-pays 2026-09-24 -->. A lower rate draws fewer creators, because a clipper compares tasks in the feed on that one number and takes the one that pays more for the same clip. The rate is fixed from launch, so an under-priced task is fixed only by a new one; check yours in the [platform comparison](/en/earnings/best-clipping-platforms).
 
-**The threshold.** The system default is 1,000 views, and above that the figure is yours to set. It drops clips without a minimum audience at no cost to you, but gives no discount: a clip that clears it is paid in full.
+**The threshold.** You set it per task as well (system default 1,000 views)<!-- source: https://darebay.com/en/earnings/how-much-clipping-pays 2026-09-24 -->. It drops clips without a minimum audience at no cost to you, but gives no discount: a clip that clears it is paid in full.
 
 **The cap.** A sensible band is 5-50% of the pool. For $200, a cap of half the pool means two clips take everything, so take the lower end. For $5,000, a $100 cap is 2% of the pool and keeps the distribution even: a viral clip takes its maximum, the rest spreads across other creators. The cap is the only one of the three you can raise after the start, so getting it wrong is cheaper than getting the rate wrong. Form walkthrough: [how to set up a contest](/en/for-brands/set-up-a-clipping-contest).
 
@@ -66,7 +66,7 @@ One pool covers creator payouts and the platform's work, and launching is free: 
 
 **A pause.** A task can be paused: new submissions stop while the task stays open, a brake for when clips come in faster than expected.
 
-**A small test budget.** Launch the first task at $200 with the cap at the lower end and the typical rate, look at the average clip and the share of rejected work, then scale: a budget can be topped up but not reduced. Clips under the threshold and rejected work cost nothing, and the unspent part of a wallet-backed budget returns to your balance.
+**A small test budget.** Launch the first task at $200 with the cap at the lower end and the rate you would keep at scale, look at the average clip and the share of rejected work, then scale: a budget can be topped up but not reduced. Clips under the threshold and rejected work cost nothing, and the unspent part of a wallet-backed budget returns to your balance.
 
 Still choosing between a contest and hiring creators one by one? The comparison: [how to commission clips](/en/for-brands/commission-clips-for-a-campaign); the formats for business are on the [business page](/en/for-business).
 

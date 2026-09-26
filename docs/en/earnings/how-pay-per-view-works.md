@@ -20,23 +20,23 @@ cta:
 
 ## The full chain: budget to payout
 
-1. **The buyer sets the terms and funds the budget.** The buyer names the rate, the threshold and the cap; in wallet-backed mode the budget is frozen on the platform until the task ends, while direct-payment tasks change step 6 only.
+1. **The buyer sets the terms and funds the budget.** The buyer names the rate, the threshold and any cap; in wallet-backed mode the budget is frozen on the platform until the task ends, while direct-payment tasks change step 6 only.
 2. **The clipper publishes the clip and sends the link.** You publish on the site named in the terms, and a submission enters the task only through the link you send: there is no import by hashtag.
 3. **A moderator checks the terms, the platform reads the views.** Nobody types the figure in by hand: an independent counter reads the published view counter on the site. A submission with suspicious growth goes on hold, which is a pause, not a removal.
 4. **The formula sets the amount.** At the end the system works out the payout for each submission: `views / 1000 × rate`. The threshold is an entry condition, not a deduction, and the cap limits one submission.
-5. **The amount is recorded against the author.** The platform creates a credit with a status that the buyer cannot recompute or erase. Once a submission is approved, the credit can be locked in with "Claim now": the button opens when the whole credited amount is 24 hours old, so on a clip that is still gathering views the clock starts again.
+5. **The amount is recorded against the author.** The platform creates a credit with a status that the buyer cannot recompute or erase. Where the task shows "Claim now", the credit on an approved submission can be locked in before the end, which stops that clip earning: the button opens when the whole credited amount is 24 hours old, so on a clip that is still gathering views the clock starts again.
 6. **An undistributed remainder goes back to the buyer.** In a wallet-backed task the platform holds the budget and returns the unspent part to the buyer's balance; with direct payment there is nothing to return.
 
 ## Task parameters: rate, threshold, cap, site
 
 | Parameter | Value | What it means |
 |---|---|---|
-| Rate | from $1.00 to $10.00 per 1000 views across open tasks | The typical rate is $1.00; the buyer names their own |
-| View threshold | Set by the buyer on the card | The entry condition: below it a clip earns nothing, above it the whole counter is paid |
-| Cap per submission | Up to $500 in open tasks | The most one submission can earn |
+| Rate | from $1.00 to $10.00 per 1000 views, set by each task | The buyer names it when creating the task |
+| View threshold | Set by the buyer on the card (system default 1000 views) | The entry condition: below it a clip earns nothing, above it the whole counter is paid |
+| Cap per submission | Up to $500, set by each task; a task may set none | The most one submission can earn |
 | Site | Set by the task | Stats are collected for TikTok, YouTube, Instagram and the other sites named in the task |
 
-All three numbers are fixed at creation and stand on the card before you submit. Every figure on this page comes from the platform's own data (snapshot: 2026-08-23; rate band updated 2026-09-20) and counts only open tasks.
+The rate and the threshold are fixed at creation, a cap can only be raised later, and the card shows each of them before you submit. DareBay's figures come from its own public pages<!-- source: https://darebay.com/en/earnings/how-much-clipping-pays 2026-09-24 -->.
 
 ## Where the view figure comes from and who confirms it
 
@@ -77,11 +77,11 @@ The platform takes the number the site's public counter shows and does no dedupl
 
 A submission whose growth pattern looks suspicious is flagged and goes on hold: crediting for it is paused pending review. It is a pause followed by a moderation decision with three possible outcomes: the submission goes through and the whole counter goes into the maths; it stays on hold, and once the review period runs out a payout for it is possible; or moderation rejects it, and there is no money for it. Buying views is therefore a bad bet: you pay for them up front, while a payout on that submission is guaranteed by nothing.
 
-## The calculation is automatic, the transfer is done by the team
+## The system calculates, the team sends the transfer
 
 **The system computes.** The formula is deterministic: the same views at the same rate give the same amount, and the result is recorded as a credit with a status you can see in the task.
 
-**A person executes.** A transfer to your payout details and a balance withdrawal are handled by the team: a person checks the details and sends the money, so between "the amount is recorded" and "the money is in your hands" there is a step that depends on people, not on code. DareBay does not claim a standard like "paid within N hours" and does not promise an instant transfer. The support is different: a wallet-backed task budget is already frozen on the platform, the calculation is already recorded in a status, and it cannot be replayed in anyone's favour. Taking part costs a clipper nothing; withdrawing a balance is a separate operation, see [what fees does DareBay charge](/en/help/what-commission).
+**A person executes.** A transfer to your payout details and a balance withdrawal are handled by the team: a person checks the details and sends the money, so between "the amount is recorded" and "the money is in your hands" there is a step that depends on people, not on code. DareBay does not claim a standard like "paid within N hours" and names no fixed time for a transfer<!-- source: https://darebay.com/en/legal/terms 2026-09-24 -->. The support is different: a wallet-backed task budget is already frozen on the platform, the calculation is already recorded in a status, and it cannot be replayed in anyone's favour. Taking part costs a clipper nothing; withdrawing a balance is a separate operation, see [what fees does DareBay charge](/en/help/what-commission).
 
 ## What happens to an unspent budget
 
@@ -91,11 +91,11 @@ A PPV task budget is spent against the views actually earned, so there is nearly
 
 ### When does the money arrive?
 
-The calculation starts at the end of the task and produces a credit with a status; once a submission is approved, the credit can be locked in with "Claim now": the button opens when the whole credited amount is 24 hours old, so on a clip that is still growing the clock starts again. Execution is handled by the team, so DareBay promises no fixed period; a submission on hold is decided separately, up to and including a payout on timeout.
+A wallet-backed task credits your earnings when it ends: the calculation runs then and produces a credit with a status. Where the task shows "Claim now", an approved submission can be credited earlier, and that clip stops earning; the button opens when the whole credited amount is 24 hours old, so on a clip that is still growing the clock starts again. The team checks and sends every withdrawal, so DareBay promises no fixed period<!-- source: https://darebay.com/en/help/darebay-withdrawals 2026-09-24 -->; a submission on hold is decided separately, up to and including a payout on timeout.
 
 ### What payout methods are available?
 
-The withdrawal wizard offers USDT to an external wallet on the TON network and Telegram Stars: the minimum withdrawal is 10 USDT, the fee is 10% of the requested amount, deducted inside the request with the amount to receive shown before you confirm, and the team handles processing. In tasks with direct payment the organizer pays you themselves, in Stars or to a TON wallet; the platform never asks you to send money in advance to "activate" a payout. Details: [withdrawing money from DareBay](/en/help/darebay-withdrawals).
+The withdrawal wizard offers USDT to an external wallet on the TON network, or you can receive the payout in Telegram Stars: the minimum withdrawal is 10 USDT, the fee is 10% of the requested amount, deducted inside the request with the amount to receive shown before you confirm, and the team handles processing. In tasks with direct payment the organizer pays you themselves, by the method the task sets; the platform never asks you to send money in advance to "activate" a payout. Details: [withdrawing money from DareBay](/en/help/darebay-withdrawals).
 
 ### Can I submit more than one clip?
 

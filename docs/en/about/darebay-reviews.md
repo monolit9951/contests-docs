@@ -10,7 +10,7 @@ hero:
   lede: "There is no pile of DareBay reviews, and we are not about to invent one: the platform is young, and reviews of earning platforms mostly record the reviewer's own luck. What works better takes ten minutes and asks you to trust nobody, us included. Here is exactly what to open and what to look at."
   takeaways:
     - "<b>DareBay has few reviews because the platform is young:</b> the live discussion is in its Telegram channel, not on review sites."
-    - "<b>Open contests pay $1.00 to $10.00 per 1000 views,</b> and the card shows rate, threshold, cap and site before you submit."
+    - "<b>DareBay tasks pay $1–$10 per 1,000 views, set by each task,</b> and the card shows rate, threshold, cap and site before you submit."
     - "<b>Nothing moves once a contest is live:</b> the rate and threshold stay fixed; the cap can only be raised."
     - "<b>The last step is plain too:</b> withdrawal from 10 USDT, sent by the team, with no date promised."
 cta:
@@ -18,7 +18,7 @@ cta:
   lede: "Open the contest catalogue, read one card from top to bottom, look at the withdrawal form before you confirm anything, and write to the founder. That walk through the product tells you more about DareBay than any testimonial could."
 ---
 
-Good news first: you do not need reviews to judge DareBay, because everything a review would claim about it is open to check. There are few of them anyway: the platform is young, and the live discussion is in the [DareBay Telegram channel](https://t.me/darebay_app), not on review sites. Reviews of an earning platform also mostly report the reviewer's own luck: winners write glowing ones, people whose clip missed the threshold write furious ones. So this page sets out what you would be signing up for and where to check it in ten minutes: the open contest catalogue, one task card read in full, the withdrawal form and the named operator behind the project.
+Good news first: you do not need reviews to judge DareBay, because everything a review would claim about it is open to check. There are few of them anyway: the platform is young, and the live discussion is in the [DareBay Telegram channel](https://t.me/darebay_app), not on review sites. Reviews of an earning platform also mostly report the reviewer's own luck: winners write glowing ones, people whose clip missed the threshold write furious ones. So this page sets out what you would be signing up for and where to check it in ten minutes: the contest catalogue, one task card read in full, the withdrawal form and the named operator behind the project.
 
 DareBay is a marketplace for content tasks. Someone posts a task with a budget, creators make their own clips, and the reward follows the reach those clips get. The platform stands in the middle as intermediary and guarantor.
 
@@ -34,7 +34,7 @@ DareBay is a marketplace for content tasks. Someone posts a task with a budget, 
 
 **The upside is that the terms hold.** The rate and the threshold are recorded at creation and cannot be rewritten once your clip is up. In a wallet-backed contest the budget is charged from the organizer before you take the task.
 
-**The friction is at the end.** Calculation is automatic; getting the money out is a request with a fee and a minimum, handled by the team. No settlement deadline is promised, so if a predictable payout date is a hard requirement for you, this is the part to weigh.
+**The friction is at the end.** The platform counts the views and works out the sum; getting the money out is a request with a fee and a minimum, handled by the team. No settlement deadline is promised, so if a predictable payout date is a hard requirement for you, this is the part to weigh.
 
 **Support is a person, not a queue number.** The product is run by a named operator who answers on Telegram. That is a genuine advantage over faceless platforms and not a substitute for the mechanics above.
 
@@ -44,14 +44,14 @@ DareBay is a marketplace for content tasks. Someone posts a task with a budget, 
 |---|---|---|
 | "They never pay" | A wallet-backed budget is charged from the organizer before the start; the mode is on the card | Contest card |
 | "They understate the views" | Nobody types the figure in: the platform reads the public counter of the publishing site | Your clip and the card |
-| "Hidden fees" | None hidden: the contest fee is 0% and nothing is taken from the task budget; the one fee is 10% of a withdrawal request, 10 USDT minimum, deducted inside the request with the amount to receive shown before you confirm | [DareBay fees](/en/help/what-commission) |
+| "Hidden fees" | None hidden: 0% on contest payouts and nothing is taken from the task budget; the one fee is 10% of what you withdraw, deducted inside the request with the amount to receive shown before you confirm, and withdrawals start at 10 USDT<!-- source: https://darebay.com/en/help/what-commission 2026-09-24 --> | [DareBay fees](/en/help/what-commission) |
 | "Payouts take forever" | Requests are handled by the team and no settlement date is promised | Withdrawal form |
 | "Nobody is behind it" | The founder, Ruslan, answers in person | [@ruslanbwork](https://t.me/ruslanbwork) |
-| "Nobody knows what it pays" | Open contests pay $1.00 to $10.00 per 1000 views, printed on every card | [Contest catalogue](/en/earn/clips) |
+| "Nobody knows what it pays" | $1–$10 per 1,000 views, set by each task and printed on its card<!-- source: https://darebay.com/en/earnings/how-much-clipping-pays 2026-09-24 --> | [Contest catalogue](/en/earn/clips) |
 
 ## Reading the figures quoted here
 
-Every figure in this section is read from the platform's own data and dated in the page source, not lifted from someone else's article. Rates and thresholds are live medians across running contests, so they move. When a snapshot goes stale the page is rewritten rather than patched one number at a time.
+DareBay's figures come from its own public pages and are dated in the page source, not lifted from someone else's article. The rate and the view threshold are set by each task, so the figure that binds you is the one on the card you open. When a figure changes, the page is rewritten rather than patched one number at a time.
 
 What you will not find here is an income projection. Nobody can tell you what a clip will do before it is published, and a page that tries is selling something.
 
@@ -75,7 +75,7 @@ Yes. There is no audience requirement anywhere in the product. Payment follows t
 
 ### Are the source materials provided with the task?
 
-Sometimes. A buyer can attach material to a task, and across the contests running today none of them have. Read the contest terms: if nothing is attached, you pick the source yourself.
+Sometimes. A buyer can attach material to a task, and an offer task can hand you ready-made videos with built-in uniqueization, so there is nothing to edit. Read the contest terms: if nothing is attached, you pick the source yourself.
 
 ### Is DareBay a scam?
 

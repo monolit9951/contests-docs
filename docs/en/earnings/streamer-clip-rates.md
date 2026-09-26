@@ -7,20 +7,20 @@ seo: true
 landing: true
 hero:
   kicker: "Clipper guide · 2026"
-  lede: "The footage is already shot and the emotion is in it: your job is to find the moment and build the vertical. You are paid for the reach of your clip, not the size of your channel. Here is what open contests pay, how the payout is worked out and where it stops, what rights a streamer's brief grants over the broadcast, and the route from picking a contest to sending the link."
+  lede: "The footage is already shot and the emotion is in it: your job is to find the moment and build the vertical. You are paid for the reach of your clip, not the size of your channel. Here is what a DareBay streamer contest pays, how the payout is worked out and where it stops, what rights a streamer's brief grants over the broadcast, and the route from picking a contest to sending the link."
   takeaways:
-    - "<b>Open contests pay $1.00 to $10.00 per 1000 views.</b> The spread is tenfold, so the same clip is worth ten times as much at the top of the band: read the numbers on the card, not the streamer's name."
+    - "<b>Each contest sets its rate, from $1.00 to $10.00 per 1000 views.</b> The spread is tenfold, so the same clip is worth ten times as much at the top of the band: read the numbers on the card, not the streamer's name."
     - "<b>Payout = views / 1000 × rate, never above the cap on one submission.</b> You can run it before you edit: 20,000 views at $1.00 is 20,000 / 1000 × $1.00 = $20.00."
-    - "<b>Clear the threshold on the card and the whole counter is paid, not the part above the bar.</b> Caps across open contests run up to $500 per submission, and both numbers are on the card before you submit."
+    - "<b>Clear the threshold on the card and the whole counter is paid, not the part above the bar.</b> A contest can cap one submission at up to $500, and the threshold and any cap are on the card before you submit."
     - "<b>The brief is your permission to cut the broadcast, so there is nobody to ask.</b> The boundaries sit in the contest terms, the clip goes in by link, and a hashtag is only needed where the brief says so."
 cta:
   title: "Pick a streamer contest by its numbers, not by the name"
-  lede: "The catalogue prints rate, threshold, cap, site and deadline on every streamer brief. Filter for pay-per-view, take the one that suits the reach you already get, cut a single moment out of the broadcast, publish it and send the link."
+  lede: "The catalogue prints rate, threshold, any cap, site and deadline on every streamer brief. Filter for pay-per-view, take the one that suits the reach you already get, cut a single moment out of the broadcast, publish it and send the link."
 ---
 
-Streamer clips on DareBay pay **$1.00 to $10.00 per 1000 views** of one specific video, and nothing open right now pays below that floor. Followers play no part in it: what is counted is the reach of your clip, not the size of the account it went out on. The streamer's name matters less than the numbers on the card, because the same clip is worth ten times as much in a contest at the top of the band as at the floor rate. The cap on a single submission is named by the buyer at contest creation. Entry costs a clipper nothing and the contest commission is 0%. In a wallet-backed contest the budget is frozen on the platform before you take the brief, and the rate and the cap stand on the card before you submit: you know in advance what you are playing for.
+Streamer clips on DareBay pay **$1.00 to $10.00 per 1000 views** of one specific video, at the rate each contest sets<!-- source: https://darebay.com/en/earnings/how-much-clipping-pays 2026-09-24 -->. Followers play no part in it: what is counted is the reach of your clip, not the size of the account it went out on. The streamer's name matters less than the numbers on the card, because the same clip is worth ten times as much in a contest at the top of the band as at the floor rate. Any cap on a single submission, up to $500, is named by the buyer at contest creation. Entry costs a clipper nothing and the contest commission is 0%. In a wallet-backed contest the budget is frozen on the platform before you take the brief, and the rate and any cap stand on the card before you submit: you know in advance what you are playing for.
 
-Every figure on this page comes from the platform's own data (snapshot: 2026-08-23; rate band updated 2026-09-20) and counts only open contests - the ones a clipper can take right now.
+DareBay's figures on this page come from its own public pages, and DareBay set its rate band on 20 September 2026<!-- source: https://darebay.com/en/earnings/how-much-clipping-pays 2026-09-24 -->.
 
 ## What gets cut from a broadcast, and why it travels
 
@@ -40,10 +40,10 @@ Turning a moment into a finished video - the vertical frame, the hook, subtitles
 
 | Parameter | Value | What it means for you |
 |-----------|-------|-----------------------|
-| Rate, minimum | $1.00 per 1000 views | The floor across open contests; it is also the typical rate |
+| Rate, minimum | $1.00 per 1000 views | The floor of the band; each contest sets its own rate |
 | Rate, maximum | $10.00 per 1000 views | The top of the band |
-| View threshold | Set by the contest | From that mark a submission joins the budget split |
-| Cap on one submission | Set by the buyer | The maximum payout for a single submission; it stands on the card before you submit |
+| View threshold | Set by the contest (system default 1000 views) | From that mark a submission joins the budget split |
+| Cap on one submission | Set by the buyer, up to $500 | The maximum payout for a single submission; where a contest sets one, it stands on the card before you submit |
 
 The spread of rates between contests is tenfold, so a contest is chosen by the numbers on the card, not by the streamer's name. The buyer fixes the rate and the threshold at contest creation and does not move them after launch; the cap per clip can only be raised, never dropped below what a clip has already earned.
 
@@ -55,7 +55,7 @@ At the floor rate of $1.00 per 1000 views:
 - 120,000 views: 120,000 / 1000 * $1.00 = **$120.00**
 - 300,000 views: 300,000 / 1000 * $1.00 = **$300.00**, but where the formula runs above the contest cap, the payout for that submission stops at the cap
 
-A cap is a mechanic for sharing a budget, not a verdict on your work: without one, a single viral video would take the whole contest budget and leave the other clippers nothing. The buyer sets it at contest creation: across open contests the cap runs up to $500 per submission. The higher the rate, the sooner a submission runs into it: in a contest at $10.00 per 1000 views that happens ten times as early in views as at $1.00 per 1000, so a $500 cap is reached at 50,000 views instead of 500,000. So the rate and the cap are read together.
+A cap is a mechanic for sharing a budget, not a verdict on your work: without one, a single viral video would take the whole contest budget and leave the other clippers nothing. Where a contest has one, the buyer sets it at creation, up to $500 per clip. The higher the rate, the sooner a submission runs into it: in a contest at $10.00 per 1000 views that happens ten times as early in views as at $1.00 per 1000, so a $500 cap is reached at 50,000 views instead of 500,000. So the rate and the cap are read together.
 
 ## Rights to the source: what a streamer's brief allows
 
@@ -73,7 +73,7 @@ The permission works within the boundaries of the brief. A broadcast by an outsi
 
 ## From picking a contest to sending the link
 
-1. **Pick a contest.** Open the [clip contest catalogue](/en/earn/clips) and filter for briefs paying per view. The card shows the rate, the threshold, the cap, the budget, the site and the deadline.
+1. **Pick a contest.** Open the [clip contest catalogue](/en/earn/clips) and filter for briefs paying per view. The card shows the rate, the threshold, any cap, the budget, the site and the deadline.
 
 2. **Read the terms in full.** Which material is allowed, whether footage is attached to the brief, where to publish, and the date entries close. If nothing is attached, you pick the source yourself within the brief.
 
@@ -83,11 +83,11 @@ The permission works within the boundaries of the brief. A broadcast by an outsi
 
 5. **Send the link to the published video.** A submission enters the contest through the link you sent: without that step it takes no part in the budget split, however many views it collects. A hashtag is only needed where the brief says so.
 
-6. **Wait for the count.** An independent counter reads the published view counter on the site - nobody types figures in by hand, neither you nor the buyer. The calculation is automatic; there is moderation and there are basic checks, and a submission with suspicious growth goes on hold. Paying the money out can be handled by hand, so the platform promises no transfer deadline.
+6. **Wait for the count.** An independent counter reads the published view counter on the site - nobody types figures in by hand, neither you nor the buyer. The system does the maths; there is moderation and there are basic checks, and a submission with suspicious growth goes on hold. A wallet-backed contest credits your earnings when it ends, or earlier with Claim now where the contest shows it (that clip then stops earning); in a manual-payout contest the organizer pays you directly. The team checks and sends every withdrawal, with no fixed time<!-- source: https://darebay.com/en/help/darebay-withdrawals 2026-09-24 -->.
 
 ## Streamer rates next to other platforms
 
-The $1.00 to $10.00 per 1000 views band is DareBay's open contests, and it is best read alongside the fee, threshold and cap of the other platforms. [Best clipping platforms](/en/earnings/best-clipping-platforms) compares them on exactly those fields, payout countries included. Every DareBay figure with its source and date is in [DareBay at a glance](/en/about/darebay-at-a-glance). Read the rate together with the fee on payout, the threshold and the minimum payout: two platforms quoting the same $2.00 per 1000 views can put different amounts in your hands. On DareBay the contest fee is 0%, and withdrawal to your wallet takes 10% inside a request from 10 USDT: a 100 USDT request pays out 90 USDT, shown in the form before you confirm.
+DareBay's band of $1.00 to $10.00 per 1000 views, set by each contest, is best read alongside the fee, threshold and cap of the other platforms. [Best clipping platforms](/en/earnings/best-clipping-platforms) compares them on exactly those fields, payout countries included. Every DareBay figure with its source and date is in [DareBay at a glance](/en/about/darebay-at-a-glance). Read the rate together with the fee on payout, the threshold and the minimum payout: two platforms quoting the same $2.00 per 1000 views can put different amounts in your hands. DareBay takes 0% from contest payouts; you pay 10% of what you withdraw (a 100 USDT request pays out 90 USDT, shown in the form before you confirm), and withdrawals start at 10 USDT<!-- source: https://darebay.com/en/help/what-commission 2026-09-24 -->.
 
 ## Frequently asked questions
 
@@ -97,7 +97,7 @@ The brief itself is the permission: a clip contest is created by a buyer who wan
 
 ### Do all streamers pay the same?
 
-No. Every buyer picks their own rate and cap at contest creation, which is why open contests sit anywhere between $1.00 and $10.00 per 1000 views. Both numbers are open on the card before you submit.
+No. Every buyer picks their own rate, and any cap, at contest creation, which is why DareBay contests range from $1.00 to $10.00 per 1000 views. Both are on the card before you submit.
 
 ### Does the video description need a hashtag?
 

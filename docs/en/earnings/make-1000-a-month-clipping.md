@@ -7,10 +7,10 @@ seo: true
 landing: true
 hero:
   kicker: "Guide · 2026"
-  lede: "A thousand a month is built from the clips you finish, not from one viral hit: the cap per clip (up to $500 in open tasks) cannot be out-reached. Here is the arithmetic of that thousand, three layouts by number of submissions, a week you can actually run, and the things that usually break the plan, each with its own way out. Every scenario is hypothetical."
+  lede: "A thousand a month is built from the clips you finish, not from one viral hit: the cap per clip (up to $500, set by each task) cannot be out-reached. Here is the arithmetic of that thousand, three layouts by number of submissions, a week you can actually run, and the things that usually break the plan, each with its own way out. Every scenario is hypothetical."
   takeaways:
     - "<b>$1,000 at $1 is a million counted views, and more than one way to collect them:</b> 10 clips at 100,000 views, 25 at 40,000 or 50 at 20,000. Three layouts, none of them a promise."
-    - "<b>The cap per clip is set by the task, up to $500 in open tasks.</b> The thousand is still built from accepted work, not from a lucky video: a steady run of clips beats one viral hit."
+    - "<b>The cap per clip is set by the task, up to $500.</b> The thousand is still built from accepted work, not from a lucky video: a steady run of clips beats one viral hit."
     - "<b>You grow the count honestly, inside the task rules:</b> several submissions in one task when the terms allow it, different clips on different accounts and sites, ready-made setups with uniqueization."
     - "<b>Four things break the plan, and each one needs a spare task behind it:</b> rejected clips, view fraud by neighbours in the task, an exhausted fund and a paused task."
 cta:
@@ -20,7 +20,7 @@ cta:
 
 ## The arithmetic of a thousand
 
-The payout formula does not change with scale: views / 1,000 × rate, never above the cap per clip. Open tasks pay $1 to $10 per 1,000 views, and the threshold is set by the task, counted on every clip separately. So a thousand at $1 is a million counted views a month, a hundred thousand at $10.
+The payout formula does not change with scale: views / 1,000 × rate, never above the cap per clip. On DareBay the rate is $1–$10 per 1,000 views, set by each task, and so is the view threshold (system default 1,000 views), counted on every clip separately<!-- source: https://darebay.com/en/earnings/how-much-clipping-pays 2026-09-24 -->. So a thousand at $1 is a million counted views a month, a hundred thousand at $10.
 
 The cap per clip sets the lower bound on count: with the $100 cap used in the example, fewer than ten clips cannot make a thousand at any reach, while a task capped at $500 needs as few as two. Three hypothetical layouts at $1 and a $100 cap:
 
@@ -40,7 +40,7 @@ The cap sits on one submission inside one task. A clip with a million views at $
 
 - **Several submissions in one task.** Unless the terms limit submissions per author, every new clip comes with its own link, counter, threshold and cap. Copies of one clip are a duplicate that moderation removes.
 - **Different clips on different accounts and sites.** The task names the site, TikTok, Reels or Shorts; different clips from different connected accounts are different submissions, while the same clip on two accounts is a duplicate.
-- **Ready-made setups with uniqueization.** On offer tasks the platform hands out finished videos with built-in uniqueization: every clipper gets their own copy, plus a fixed fee per accepted clip and a share of sales.
+- **Ready-made setups with uniqueization.** An offer task can hand out finished videos with built-in uniqueization, so every clipper gets their own copy, and can add a fixed fee per accepted clip and a share of sales.
 - **Several tasks in parallel.** The cap is counted inside a task, so three tasks on your topic are three independent funds.
 
 Caps, fees and payout countries across platforms: [the best clipping platforms](/en/earnings/best-clipping-platforms).
@@ -54,7 +54,7 @@ The 25-clip layout is six or seven submissions a week, and at that pace the sche
 | Monday | Two or three tasks, cards reread, source footage gathered |
 | Tuesday, Wednesday | Editing batch: the week's clips in two days on one template |
 | Thursday to Sunday | Posting, one or two clips a day, link sent as soon as each goes live |
-| Every day | Cabinet check: statuses, last sync, "Claim now" on clips whose counter has stopped |
+| Every day | Cabinet check: statuses, last sync, "Claim now", where a task shows it, on clips whose counter has stopped |
 | Sunday | Bookkeeping: task, link, date, views, status, accrual per submission |
 
 Bookkeeping is the only way to see your real average reach by topic and task. After a month it shows which tasks produce clips above the threshold and which eat time. The first month, week by week, is on [your first $100 from clipping](/en/earnings/first-100-dollars-clipping).
@@ -68,9 +68,9 @@ Bookkeeping is the only way to see your real average reach by topic and task. Af
 
 ## How clipping compares with other ways to earn
 
-The YouTube and TikTok partner programmes pay out of advertising revenue: the rate depends on the viewer's country and topic, and you learn it after the payout; you also have to get in first, since the programmes set entry requirements on audience. A pay-per-view task is the reverse: rate, threshold and cap are printed before the start, no followers are required, the clip is counted by the site's counter. Details in [what TikTok pays for views](/en/earnings/tiktok-view-payouts).
+The YouTube and TikTok partner programmes pay out of advertising revenue: the rate depends on the viewer's country and topic, and you learn it after the payout; you also have to get in first, since the programmes set entry requirements on audience. A pay-per-view task is the reverse: rate, threshold and any cap are printed before the start, no followers are required, the clip is counted by the site's counter. Details in [what TikTok pays for views](/en/earnings/tiktok-view-payouts).
 
-The flip side: a partner programme has no cap on one video and does not end with a fund, while a task is limited per clip and by the buyer's budget. Both can live on one profile; reading the rate and the cap on a card is explained in [how much clipping pays](/en/earnings/how-much-clipping-pays).
+The flip side: a partner programme has no cap on one video and does not end with a fund, while a task can cap each clip and is limited by the buyer's budget. Both can live on one profile; reading the rate and the cap on a card is explained in [how much clipping pays](/en/earnings/how-much-clipping-pays).
 
 ## Common questions
 
@@ -84,8 +84,8 @@ Yes, if they are different clips and every account is connected to the task and 
 
 ### What happens to the plan when a task's fund is exhausted?
 
-Submissions accepted before that are paid on their own counters; new ones in that task no longer earn, though posting is still allowed. The time it ran out is on the card, and the next batch moves to another open task on the same topic.
+Submissions accepted before that are paid on their own counters; new ones in that task no longer earn, though posting is still allowed. The time it ran out is on the card, and the next batch moves to another task on the same topic that still has budget.
 
 ### Clipping tasks or a site's partner programme: which is steadier?
 
-What is known in advance. In a task the rate, threshold and cap are printed before the start but the fund is finite; in a programme there is no limit per video, but you learn the rate after the payout and pass the entry requirements first.
+What is known in advance. In a task the rate, threshold and any cap are printed before the start but the fund is finite; in a programme there is no limit per video, but you learn the rate after the payout and pass the entry requirements first.

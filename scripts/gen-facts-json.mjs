@@ -19,10 +19,12 @@
 //                                   resolution rule is the one `scripts/product-truth-lint.mjs`
 //                                   applies in `effectiveWithdrawalFee`, replicated below because
 //                                   that function is module-private there.
-//   * `data/contests-snapshot.json` — the live catalogue reading written by `facts:refresh`. It
-//                                   corroborates the bands (what tasks actually pay today) and is
-//                                   the source of the open-task count. The BUILD never fetches:
-//                                   see the header of `scripts/facts-refresh.mjs`.
+//   * `data/contests-snapshot.json` — the live catalogue reading written by `facts:refresh`. It is
+//                                   cited under `sources.liveCatalogue` and dates `generatedAt`;
+//                                   no field or note quotes its task count or rates, because the
+//                                   founder retired task counts and today's rates from DareBay's
+//                                   copy (2026-09-25). The BUILD never fetches: see the header of
+//                                   `scripts/facts-refresh.mjs`.
 //
 // The only hand-written product statements are the three in `WORDING` — payout rails, platforms
 // and geography have no number behind them. Everything numeric is read from the data files, so a
@@ -74,11 +76,11 @@ const WORDING = {
     ar: 'TikTok وYouTube وInstagram ومواقع أخرى تحددها المهمة',
   },
   geography: {
-    value: 'worldwide',
-    ru: 'весь мир, без списка стран',
-    uk: 'увесь світ, без списку країн',
-    en: 'worldwide, no country list',
-    ar: 'العالم كله، دون قائمة دول',
+    value: 'no-country-list',
+    ru: 'списка стран нет; не допускаются только люди из санкционных списков',
+    uk: 'списку країн немає; не допускаються лише люди із санкційних списків',
+    en: 'no country list; only people on sanctions lists are barred',
+    ar: 'لا توجد قائمة دول؛ يُستثنى فقط الأشخاص المدرجون في قوائم العقوبات',
   },
   operator: 'Ruslan',
 }
@@ -267,7 +269,7 @@ export function buildFacts({ truth, intent, snapshot, now }) {
   }
 
   // The founder-decided target band (product-intent.json#rate-band, pending) replaces the
-  // reviewed edge it names, exactly as the withdrawal fee above; the live reading stays in the note.
+  // reviewed edge it names, exactly as the withdrawal fee above; the note names the decision.
   const cpmHighIntent = intentIndex?.byPath?.get('ppv.stable.bands.cpm.high')
   const cpmTargeted = Boolean(cpmHighIntent && cpmHighIntent.status === 'pending-product-change' && typeof cpmHighIntent.target === 'number' && cpmHighIntent.target !== truth.ppv.stable.bands.cpm.high)
   const cpm = { ...truth.ppv.stable.bands.cpm, high: cpmTargeted ? cpmHighIntent.target : truth.ppv.stable.bands.cpm.high }
@@ -276,17 +278,6 @@ export function buildFacts({ truth, intent, snapshot, now }) {
   const thresholdBand = truth.ppv.stable.bands.minViewsThreshold
   const fee = effectiveWithdrawalFee(truth, intentIndex)
   const truthAsOf = truth.verifiedAt
-  const liveAsOf = dateOf(snapshot.fetchedAt)
-  const open = snapshot.counts.open
-  const openTasks = `${open} open listed ${open === 1 ? 'task' : 'tasks'} in the live catalogue on ${liveAsOf}`
-  const pay = open === 1 ? 'pays' : 'pay'
-
-  const observedRate =
-    snapshot.ppv.rateMin === null
-      ? `${openTasks}: no rate published`
-      : snapshot.ppv.rateMin === snapshot.ppv.rateMax
-        ? `${openTasks} ${pay} ${rate(snapshot.ppv.rateMin)} per 1,000 views`
-        : `${openTasks} ${pay} ${rate(snapshot.ppv.rateMin)}\u2013${rate(snapshot.ppv.rateMax)} per 1,000 views`
 
   const facts = [
     {
@@ -297,15 +288,15 @@ export function buildFacts({ truth, intent, snapshot, now }) {
       text: localized((locale) => {
         const range = `${rate(cpm.low)}–${rate(cpm.high)}`
         return {
-          ru: `${range} за 1000 просмотров (открытые конкурсы)`,
-          uk: `${range} за 1000 переглядів (відкриті конкурси)`,
-          en: `${range} per 1,000 views (open tasks)`,
-          ar: `${range} لكل 1,000 مشاهدة (المهام المفتوحة)`,
+          ru: `${range} за 1000 просмотров, ставку задаёт каждое задание`,
+          uk: `${range} за 1000 переглядів, ставку задає кожне завдання`,
+          en: `${range} per 1,000 views, set by each task`,
+          ar: `${range} لكل 1,000 مشاهدة، تحدده كل مهمة`,
         }[locale]
       }),
       source: cpmTargeted ? `product-intent.json#${cpmHighIntent.id}` : 'product-truth.json#ppv.stable.bands.cpm',
       asOf: cpmTargeted ? cpmHighIntent.decidedAt : truthAsOf,
-      note: `${cpmTargeted ? `Target band decided ${cpmHighIntent.decidedAt} (product-intent.json#${cpmHighIntent.id}); the reviewed live band is ${rate(truth.ppv.stable.bands.cpm.low)}\u2013${rate(truth.ppv.stable.bands.cpm.high)}` : 'Reviewed stable band'}; ${observedRate}. A task's exact rate is printed on its card and cannot change after the start.`,
+      note: `${cpmTargeted ? `Band decided ${cpmHighIntent.decidedAt} (product-intent.json#${cpmHighIntent.id})` : 'Reviewed stable band'}. Each task sets its own rate inside it; the exact rate is printed on the task card and cannot change after the start.`,
     },
     {
       id: 'cap-per-clip',
@@ -322,8 +313,7 @@ export function buildFacts({ truth, intent, snapshot, now }) {
       asOf: truthAsOf,
       note:
         `The highest cap a task may set, founder-approved in product-intent.json#rate-band; ` +
-        `highest cap among ${openTasks}: ${snapshot.ppv.capMax === null ? 'none published' : money(snapshot.ppv.capMax)}. ` +
-        `After the start a cap may only be raised.`,
+        `each task sets its own cap, and a task may set none. After the start a cap may only be raised.`,
     },
     {
       id: 'view-threshold',
@@ -340,8 +330,7 @@ export function buildFacts({ truth, intent, snapshot, now }) {
       asOf: truthAsOf,
       note:
         `The system default a task starts from; a task may set any threshold inside the reviewed band ` +
-        `${group(thresholdBand.low, 'en')}\u2013${group(thresholdBand.high, 'en')} views. Thresholds among ${openTasks}: ` +
-        `${snapshot.ppv.viewThresholds.length ? snapshot.ppv.viewThresholds.join(', ') : 'none published'}.`,
+        `${group(thresholdBand.low, 'en')}\u2013${group(thresholdBand.high, 'en')} views.`,
     },
     {
       id: 'contest-creation-fee',
@@ -416,7 +405,7 @@ export function buildFacts({ truth, intent, snapshot, now }) {
       text: localized((locale) => WORDING.rails[locale]),
       source: 'product-truth.json#withdrawal.wizardMethods',
       asOf: truthAsOf,
-      note: 'Balance withdrawal rails. A single task may additionally award a card payout, a bank transfer or a gift.',
+      note: 'USDT on TON, or the payout received in Telegram Stars. A single task may additionally award a card payout, a bank transfer or a gift.',
     },
     {
       id: 'platforms',
@@ -434,7 +423,10 @@ export function buildFacts({ truth, intent, snapshot, now }) {
       text: localized((locale) => WORDING.geography[locale]),
       source: 'gen-facts-json.mjs#WORDING.geography',
       asOf: WORDING.reviewedAt,
-      note: 'No exclusion list: clippers from any country are paid the same way.',
+      note:
+        'No country list: only people on UK, EU or UN sanctions lists are barred. The balance leaves only as ' +
+        'USDT on TON, so where the law closes crypto to residents (Bangladesh, Nepal, Egypt, Algeria and Iraq, ' +
+        'for example) there is no lawful cash-out route.',
     },
   ]
 
@@ -456,7 +448,6 @@ export function buildFacts({ truth, intent, snapshot, now }) {
         file: 'data/contests-snapshot.json',
         endpoint: snapshot.source.endpoint,
         fetchedAt: snapshot.fetchedAt,
-        openTasks: open,
       },
     },
     facts,

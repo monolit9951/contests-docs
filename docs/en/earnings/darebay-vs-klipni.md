@@ -15,7 +15,7 @@ hero:
     - "<b>DareBay keeps no country list; Klipni suits self-employed clippers in Russia.</b> USDT on TON with no tax status versus rubles to a bank account."
     - "<b>Neither platform has one rate.</b> DareBay's tasks pay $1.00–$10.00 per 1,000 views, set by each task; Klipni's pages give guide figures of 30 to 300 rubles per 1,000."
     - "<b>DareBay takes nothing from a task payout; Klipni takes 5% of each approved payout.</b> DareBay's only fee is 10% of what you withdraw, and withdrawals start at 10 USDT; Klipni sets no floor."
-    - "<b>Both ask for the budget in advance.</b> DareBay locks it in wallet-backed contests; Klipni takes prepayment unless agreed otherwise in writing, and its terms call the balance an accounting figure, not escrow."
+    - "<b>Both can take the budget up front.</b> DareBay locks it in wallet-backed contests and labels manual-payout ones; Klipni takes prepayment unless agreed otherwise in writing, and its terms call the balance an accounting figure, not escrow."
 compare:
   ids: [darebay, klipni]
   columns: [rate, threshold, cap, fee, minPayout, payoutMethods, cis, followers, escrow, networks, verification]
@@ -26,12 +26,12 @@ method:
   - "Where a figure is not published, the cell says so. We do not convert rubles to dollars: each platform's rate is shown in its own currency. Klipni's counts of creators, campaigns and views are its own counters, quoted as the platform's figures."
 cta:
   title: "Clip without a tax status, get paid in USDT"
-  lede: "DareBay keeps no country list: only people on sanctions lists are barred, and its community is largest in CIS. The rate sits on the card before you submit, and in a wallet-backed contest the budget is locked on the platform before the start."
+  lede: "DareBay keeps no country list: only people on sanctions lists are barred, and its community is largest in CIS. The rate sits on the card before you submit, and a wallet-backed contest locks its budget on the platform before the start."
 ---
 
 ## The short answer
 
-DareBay suits you if you clip from Russia, Belarus, Ukraine, Kazakhstan or elsewhere in CIS, do not want a tax status just to clip, or want to be paid in USDT: it keeps no country list and asks for no status. Klipni suits you if you live in Russia, are registered as self-employed or as a sole trader, and want rubles in a bank account: it pays only authors with self-employed or sole-trader status<!-- source: https://klipni.com/legal/terms 2026-09-21 -->.
+DareBay suits you if you clip from Russia, Belarus, Ukraine, Kazakhstan or elsewhere in CIS, do not want a tax status just to clip, or want to be paid in USDT: it keeps no country list and asks for no tax status. Klipni suits you if you live in Russia, are registered as self-employed or as a sole trader, and want rubles in a bank account: it pays only authors with self-employed or sole-trader status<!-- source: https://klipni.com/legal/terms 2026-09-21 -->.
 
 DareBay deducts nothing from a task payout and takes 10% of what you withdraw; withdrawals start at 10 USDT. Klipni deducts 5% from an approved payout and sets no floor on the amount<!-- source: https://klipni.com/creators 2026-09-21 -->. DareBay counts TikTok, YouTube Shorts, Instagram Reels and Facebook Reels as each task states; Klipni counts VK Clips, YouTube Shorts, TikTok, Instagram Reels, Threads and Likee<!-- source: https://klipni.com/about 2026-09-21 -->.
 
@@ -51,7 +51,7 @@ The figure of 50 rubles per 1,000 views sits on Klipni's home page inside a mock
 - **A 5% fee** on approved payouts and no floor on the amount <!-- source: https://klipni.com/creators 2026-09-21 -->, while DareBay takes 10% of what you withdraw, and withdrawals start at 10 USDT.
 - **VK Clips, Threads and Likee** count alongside the global networks <!-- source: https://klipni.com/about 2026-09-21 -->, which matters for a Russian audience; DareBay's clip tasks count TikTok, YouTube Shorts, Instagram Reels and Facebook Reels, as each task states.
 - **Apps in the App Store and RuStore:** campaigns, submissions and payout requests from a phone <!-- source: https://klipni.com/creators 2026-09-21 -->. DareBay opens on the web and inside Telegram.
-- **A community in plain sight:** on 21 September 2026 Klipni's Telegram channel had 1.2K subscribers <!-- source: https://t.me/s/klipni_official 2026-09-21 -->, its creators' chat had 1,394 members <!-- source: https://t.me/klipni_squad 2026-09-21 -->, and the platform's own counter showed more than 11,700 creators <!-- source: https://klipni.com/about 2026-09-21 -->. DareBay posts its news in its own Telegram channel; most of its clippers are in CIS.
+- **A community in plain sight:** on 21 September 2026 Klipni's Telegram channel had 1.2K subscribers <!-- source: https://t.me/s/klipni_official 2026-09-21 -->, its creators' chat had 1,394 members <!-- source: https://t.me/klipni_squad 2026-09-21 -->, and the platform's own counter showed more than 11,700 creators <!-- source: https://klipni.com/about 2026-09-21 -->. DareBay posts its news in its own Telegram channel, and its community is largest in CIS.
 - **Brands on a subscription** from 4,900 rubles a month with no platform cut from the budget: the money deposited goes to creators in full <!-- source: https://klipni.com/pricing 2026-09-21 -->. DareBay also charges 0% to create or top up a contest.
 
 ## Where DareBay is stronger
@@ -65,9 +65,9 @@ The figure of 50 rubles per 1,000 views sits on Klipni's home page inside a mock
 
 ## What reaches your hands
 
-On Klipni 5% is deducted from an approved payout, there is no floor, the accrual then waits out a hold period whose length the campaign sets, and the transfer to your bank details takes up to five business days once the bank accepts it <!-- source: https://klipni.com/legal/terms 2026-09-21 -->. On DareBay nothing is deducted from a contest payout, the amount is credited to your balance after the count, and the only fee is 10% of what you withdraw to your wallet, deducted inside the request; withdrawals start at 10 USDT, a 100 USDT request pays out 90 USDT, and the form shows the amount to receive before you confirm. A person checks each request, so no settlement time is promised.
+On Klipni 5% is deducted from an approved payout, there is no floor, the accrual then waits out a hold period whose length the campaign sets, and the transfer to your bank details takes up to five business days once the bank accepts it <!-- source: https://klipni.com/legal/terms 2026-09-21 -->. On DareBay nothing is deducted from a contest payout, the amount is credited to your balance when a wallet-backed task ends, or earlier with Claim now where the task shows it (that clip then stops earning) <!-- source: https://darebay.com/en/help/darebay-withdrawals 2026-09-24 -->, and the only fee is 10% of what you withdraw, deducted inside the request; withdrawals start at 10 USDT, a 100 USDT request pays out 90 USDT, and the form shows the amount to receive before you confirm. A person checks each request, so no settlement time is promised.
 
-Klipni sets the view threshold and the cap per clip in each campaign and publishes no platform-wide figure for either <!-- source: https://klipni.com/legal/terms 2026-09-21 -->; on DareBay the view threshold is set by each task - check the card in the catalog - and the cap per clip runs up to $500.
+Klipni sets the view threshold and the cap per clip in each campaign and publishes no platform-wide figure for either <!-- source: https://klipni.com/legal/terms 2026-09-21 -->; on DareBay the view threshold is set by each task (system default 1,000 views) - check the card in the catalog - and the cap per clip runs up to $500.
 
 <LCalc />
 
@@ -89,7 +89,7 @@ Klipni does not say so directly: it publishes no country list. Its About page na
 
 ### Which platform takes the budget in advance?
 
-Both, and neither runs an escrow account. Klipni takes prepayment from the brand by invoice, shows the campaign to authors once the payment arrives and refunds what is unspent; its advertiser terms call the balance in the brand's dashboard an accounting figure <!-- source: https://klipni.com/legal/advertiser 2026-09-21 -->. DareBay locks the organizer's budget in a wallet-backed contest before the start and keeps it on the platform as an intermediary and guarantor; in a manual-payout contest the organizer pays, and the card says so.
+Both can, and neither runs an escrow account. Klipni takes prepayment from the brand by invoice, shows the campaign to authors once the payment arrives and refunds what is unspent; its advertiser terms call the balance in the brand's dashboard an accounting figure <!-- source: https://klipni.com/legal/advertiser 2026-09-21 -->. DareBay locks the organizer's budget in a wallet-backed contest before the start and keeps it on the platform as an intermediary and guarantor; in a manual-payout contest the organizer pays, and the card says so.
 
 ### Does Klipni have social channels and an app?
 

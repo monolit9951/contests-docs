@@ -11,14 +11,14 @@ hero:
   takeaways:
     - "<b>One upload, the whole network.</b> Terms, materials and ready-made clips with built-in uniqueization go in once; creators pick the offer up themselves, and the platform hands every one of them a link and a promo code."
     - "<b>Conversions arrive by S2S postback</b> from the advertiser's or network's tracker and land on a named creator and a named clip, so there are no spreadsheets to reconcile: the platform credits the fixed fee and the sales share."
-    - "<b>Three ways an agency earns on this:</b> a markup on the per-view rate, a management retainer, or a clips-plus-traffic package. Open tasks pay creators $1.00 to $10.00 per 1,000 views, and your margin sits on top."
+    - "<b>Three ways an agency earns on this:</b> a markup on the per-view rate, a management retainer, or a clips-plus-traffic package. Creators earn $1.00 to $10.00 per 1,000 views, set by each task, and your margin sits on top."
     - "<b>Anti-fraud comes with the pipeline:</b> incentivized, bot and pop traffic is filtered out before anything is credited, and a refund takes the share back from the creator's balance rather than the client's budget."
 cta:
   title: "Hand the offer to the network, let the platform keep score"
-  lede: "Creating a task is free, the fee is 0%. A wallet-backed budget is locked on the platform, goes out only on counted views and confirmed conversions, and whatever is left comes back to your balance. The report per creator, clip and link is assembled for you."
+  lede: "Creating a task is free, and the platform takes 0% from task payouts. A wallet-backed budget is locked on the platform, goes out only on counted views and confirmed conversions, and whatever is left comes back to your balance. The report per creator, clip and link is assembled for you."
 ---
 
-For an agency or a CPA partner DareBay is a creator network you do not have to recruit: the offer and the budget live on the platform, and tracked links, promo codes, postbacks, anti-fraud, accruals and reports come with it. You keep the client, the offer terms and the clip selection. Everything between a click and a payout is counted without manual work, and the figures for each creator and each clip are waiting in the cabinet.
+For an agency or a CPA partner DareBay is a creator network you do not have to recruit: the offer and the budget live on the platform, and tracked links, promo codes, postbacks, anti-fraud, accruals and reports come with it. You keep the client, the offer terms and the clip selection. Everything between a click and a payout is counted for you, and the figures for each creator and each clip are waiting in the cabinet.
 
 ## How an offer works on the platform
 
@@ -55,7 +55,7 @@ Client campaigns never mix: every task and offer has its own budget, terms, list
 - **Conversions counted by postback.** Every action is tied to a creator and a clip; duplicates, cancelled and refunded orders are not paid.
 - **Moderation.** A work takes part after the link is submitted and checked against the terms; clips that do not match the offer are rejected before anything is credited.
 - **Anti-fraud.** Incentivized, bot and pop traffic is banned: such clicks and actions are filtered out, and repeat violations close the creator's access to offers.
-- **Creator payouts.** The wallet-backed budget is locked on the platform and goes out on counted views and confirmed conversions. Creators receive USDT to a wallet or Telegram Stars; the agency never settles with them directly.
+- **Creator payouts.** The wallet-backed budget is locked on the platform and goes out on counted views and confirmed conversions. Creators are paid in USDT on TON or receive the payout in Telegram Stars; the agency never settles with them directly.
 - **Ready-made clips with uniqueization.** One setup approved by the client spreads across dozens of accounts, creators need no editing, and the copies differ from one another.
 
 How this looks from the brand's and the affiliate network's side is on the [partners page](/en/partners); traffic partners come in through the [traffic section](/en/earn/traffic).
@@ -66,7 +66,7 @@ The economics of every model come down to one formula: the price to the client p
 
 > price to client = creators' rate × (1 + markup)
 
-A hypothetical example. Client budget $2,000, creators' rate $1.00 per 1,000 views (open tasks currently pay $1.00 to $10.00 per 1,000 views), agency markup say 25%. The price to the client is $1.25 per 1,000, and the budget buys 2,000 / 1.25 × 1,000 = 1,600,000 counted views. Creators receive 1,600,000 / 1,000 × $1.00 = **$1,600.00**, the agency keeps **$400.00**, and creating the task costs nothing. The view threshold you set on the task cuts off clips with no reach, and the cap per work (up to $500) spreads the sum across many clips by different creators. On an offer the sales share comes on top: it is counted from confirmed conversions, not from views, so it is not part of the reach budget. Platform figures from the 2026-08-23 snapshot (rate band updated 2026-09-20); the markup is illustrative.
+A hypothetical example. Client budget $2,000, creators' rate $1.00 per 1,000 views (each task sets its rate from $1.00 to $10.00 per 1,000 views<!-- source: https://darebay.com/en/earnings/how-much-clipping-pays 2026-09-24 -->), agency markup say 25%. The price to the client is $1.25 per 1,000, and the budget buys 2,000 / 1.25 × 1,000 = 1,600,000 counted views. Creators receive 1,600,000 / 1,000 × $1.00 = **$1,600.00**, the agency keeps **$400.00**, and creating the task costs nothing. The view threshold you set on the task cuts off clips with no reach, and the cap per work (up to $500) spreads the sum across many clips by different creators. On an offer the sales share comes on top: it is counted from confirmed conversions, not from views, so it is not part of the reach budget. DareBay's figures come from its own public pages; the markup is illustrative.
 
 Put your own budget, rate and cap into the calculator:
 
@@ -75,9 +75,9 @@ Put your own budget, rate and cap into the calculator:
 ## How to start
 
 1. **Collect the offer and the materials from the client.** The target action, payout terms, creative restrictions, footage or the product to film; for a network, the tracker link and the postback parameters.
-2. **Create the task or the offer.** From the agency's or the client's account: platforms, rate per 1,000 views, fee per clip, sales share, threshold, cap, budget. Creating a task is free, the fee is 0%. Step by step: [Set up a clipping contest](/en/for-brands/set-up-a-clipping-contest).
+2. **Create the task or the offer.** From the agency's or the client's account: platforms, rate per 1,000 views, fee per clip, sales share, threshold, cap, budget. Creating a task is free, and the platform takes 0% from task payouts<!-- source: https://darebay.com/en/help/what-commission 2026-09-24 -->. Step by step: [Set up a clipping contest](/en/for-brands/set-up-a-clipping-contest).
 3. **Connect the postback.** Put the platform's postback URL into the advertiser's tracker, send a test conversion and check it in the cabinet log.
-4. **Fund the budget.** The sum is locked on the platform before the start.
+4. **Fund the budget.** A wallet-backed budget is locked on the platform before the start<!-- source: https://darebay.com/en/about/payout-guarantee 2026-09-24 -->.
 5. **Accept works and watch conversions.** Reject clips that break the terms; views, conversions and accruals are counted by the platform.
 6. **Report to the client.** Links, counted views, conversions and sums per creator come from the campaign. What the campaign price is made of and how the remainder is returned: [How to pay clippers per view](/en/for-brands/paying-clippers-per-view) and [Clipping campaign cost](/en/for-brands/clipping-campaign-cost). Other business formats: [the business page](/en/for-business).
 
@@ -93,7 +93,7 @@ Any tracker that can send an S2S postback to a URL with parameters: the platform
 
 ### Who pays the creators on an offer, the agency or the platform?
 
-The platform: creators get the fixed fee and the sales share credited to their balance, payouts come from the offer budget, and the advertiser or the network settles with the platform under the offer terms. If the agency runs an ordinary pay-per-view task, creators are paid by the formula from the agency's own budget, which is locked on the platform at launch. If a client needs its own settlement terms with creators, contact the founder on Telegram: [@ruslanbwork](https://t.me/ruslanbwork).
+The platform: creators get the fixed fee and the sales share credited to their balance, payouts come from the offer budget, and the advertiser or the network settles with the platform under the offer terms. If the agency runs an ordinary pay-per-view task, creators are paid by the formula from the agency's own wallet-backed budget, which is locked on the platform at launch. If a client needs its own settlement terms with creators, contact the founder on Telegram: [@ruslanbwork](https://t.me/ruslanbwork).
 
 ### What happens to incentivized traffic?
 

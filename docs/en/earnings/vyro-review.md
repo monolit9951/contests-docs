@@ -34,7 +34,7 @@ hero:
     - "<b>Money becomes available only after the campaign ends</b>, and then the wait continues: about 7–10 more days of review <!-- source: https://vyro.com/help/earnings-and-payments/when-will-i-receive-my-earnings 2026-09-05 -->, then cash-outs from $10 once every 7 days via PayPal or Stripe <!-- source: https://vyro.com/help/earnings-and-payments/how-can-i-withdraw-my-earnings 2026-09-05 -->."
 cta:
   title: "Vyro shut your country out? DareBay keeps no list"
-  lede: "There is no country list here, the threshold is set by the task, and the rate and the cap (up to $500 per clip) are printed on the card before you submit. You get paid in USDT on TON or in Telegram Stars."
+  lede: "There is no country list here: only people on sanctions lists are barred. Each task sets its rate ($1–$10 per 1,000 views), its threshold and any cap (up to $500 per clip), and you see all of them before you submit. You get paid in USDT on TON, or receive the payout in Telegram Stars."
 ---
 ## Vyro in three numbers
 
@@ -44,7 +44,7 @@ The second number is the threshold: each approved post must reach 5,000 views on
 
 The third is the cap: one clip is paid for at most 1 million eligible views, typically $500–$2,000, and each campaign prints its own maximum <!-- source: https://vyro.com/help/earnings-and-payments/whats-the-most-i-can-earn-per-clip 2026-09-05 -->. The cap touches only a viral clip; the threshold touches every one.
 
-A hypothetical 20,000-view clip on Vyro at $2,000 per 1M: 20,000 / 1,000 × $2.00 = $40.00. A 4,000-view clip on Vyro earns $0. On DareBay: 20,000 / 1,000 × $1.00 = **$20.00** at the floor of open tasks, the threshold is not deducted and the cap per clip is far off; the 4,000-view clip is paid too: 4,000 / 1,000 × $1.00 = $4.00. The rate matters less than the share of clips that gets paid.
+A hypothetical 20,000-view clip on Vyro at $2,000 per 1M: 20,000 / 1,000 × $2.00 = $40.00. A 4,000-view clip on Vyro earns $0. On DareBay, where each task sets its rate within $1–$10 per 1,000 views, take the bottom of that band: 20,000 / 1,000 × $1.00 = **$20.00**, and the threshold is not deducted; under the system default threshold of 1,000 views, the 4,000-view clip is paid too: 4,000 / 1,000 × $1.00 = $4.00<!-- source: https://darebay.com/en/earnings/how-much-clipping-pays 2026-09-24 -->. The rate matters less than the share of clips that gets paid.
 
 ## Campaigns: what they look like and how to get in
 
@@ -82,14 +82,14 @@ Do not route around the list with a borrowed PayPal: the terms require legal res
 
 | Axis | Vyro | DareBay |
 |---|---|---|
-| Rate | $1–$2 per 1,000 views, shown per 1M <!-- source: https://vyro.com/campaigns 2026-09-02 --> | $1.00 to $10.00 per 1,000 views on open tasks |
-| Threshold | 5,000 views per post <!-- source: https://vyro.com/help/earnings-and-payments/how-many-views-do-i-need-before-i-can-start-earning 2026-09-05 --> | set by the task, not deducted |
+| Rate | $1–$2 per 1,000 views, shown per 1M <!-- source: https://vyro.com/campaigns 2026-09-02 --> | $1–$10 per 1,000 views, set by each task<!-- source: https://darebay.com/en/earnings/how-much-clipping-pays 2026-09-24 --> |
+| Threshold | 5,000 views per post <!-- source: https://vyro.com/help/earnings-and-payments/how-many-views-do-i-need-before-i-can-start-earning 2026-09-05 --> | set per task (system default 1,000 views), not deducted<!-- source: https://darebay.com/en/earnings/how-much-clipping-pays 2026-09-24 --> |
 | Cap per clip | 1 million eligible views, usually $500–$2,000 <!-- source: https://vyro.com/help/earnings-and-payments/whats-the-most-i-can-earn-per-clip 2026-09-05 --> | up to $500 per clip |
 | Countries | 70 blocked, Russia, Belarus and Ukraine included <!-- source: https://vyro.com/help/getting-started/what-countries-are-supported 2026-09-05 --> | no country list, largest community in CIS |
-| Payouts | after campaign end plus 7–10 days; from $10 once every 7 days via PayPal or Stripe <!-- source: https://vyro.com/help/earnings-and-payments/how-can-i-withdraw-my-earnings 2026-09-05 --> | 0% on contest payouts, 10% on withdrawal; withdrawals from 10 USDT, in USDT on TON or Telegram Stars, handled by the team |
-| Budget at the platform | funded upfront by the brand, unused part refunded <!-- source: https://vyro.com/for-brands 2026-09-05 --> | in wallet-backed tasks the budget is locked on the platform before the start; in manual tasks the organizer pays directly |
+| Payouts | after campaign end plus 7–10 days; from $10 once every 7 days via PayPal or Stripe <!-- source: https://vyro.com/help/earnings-and-payments/how-can-i-withdraw-my-earnings 2026-09-05 --> | 0% on contest payouts; 10% of what you withdraw, and withdrawals start at 10 USDT<!-- source: https://darebay.com/en/help/what-commission 2026-09-24 -->; USDT on TON, or receive the payout in Telegram Stars; a wallet-backed task credits earnings when it ends, or earlier with Claim now where a task shows it (that clip then stops earning); the team checks and sends every withdrawal, with no fixed time<!-- source: https://darebay.com/en/help/darebay-withdrawals 2026-09-24 --> |
+| Budget at the platform | funded upfront by the brand, unused part refunded <!-- source: https://vyro.com/for-brands 2026-09-05 --> | wallet-backed tasks lock the budget on the platform before the start; in manual-payout tasks the organizer pays directly<!-- source: https://darebay.com/en/about/payout-guarantee 2026-09-24 --> |
 
-Choose Vyro if you are in an open country, your posts regularly clear 5,000 views and you have PayPal or Stripe. Choose DareBay if your country is on Vyro's list, your posts sit between two and five thousand views, you want USDT or Telegram Stars, or you want more than a rate per view: offer tasks add a fixed fee per accepted clip, a share of sales and ready-made videos with built-in uniqueness. The platforms we rank, from Whop and Vyro to the regional boards, are in the [best clipping platforms ranking](/en/earnings/best-clipping-platforms), Whop next to DareBay in [DareBay vs Whop](/en/earnings/darebay-vs-whop), our dated figures on [DareBay at a glance](/en/about/darebay-at-a-glance).
+Choose Vyro if you are in an open country, your posts regularly clear 5,000 views and you have PayPal or Stripe. Choose DareBay if your country is on Vyro's list, your posts sit between one and five thousand views (DareBay's threshold is set per task, with a system default of 1,000 views<!-- source: https://darebay.com/en/earnings/how-much-clipping-pays 2026-09-24 -->), you want USDT or Telegram Stars, or you want more than a rate per view: offer tasks can add a fixed fee per accepted clip and a share of sales, and hand you ready-made videos with built-in uniqueization. The platforms we rank, from Whop and Vyro to the regional boards, are in the [best clipping platforms ranking](/en/earnings/best-clipping-platforms), Whop next to DareBay in [DareBay vs Whop](/en/earnings/darebay-vs-whop), our dated figures on [DareBay at a glance](/en/about/darebay-at-a-glance).
 
 ## Frequently asked questions
 
@@ -103,7 +103,7 @@ Two. A post earns after 5,000 views of its own, per clip. Cash-outs start at $10
 
 ### Does Vyro work in Russia, Ukraine or Kazakhstan?
 
-Russia, Belarus and Ukraine are on the unsupported list with Uzbekistan, Armenia, Georgia and Moldova. Kazakhstan is not, and unlisted countries can use the platform if they meet the other requirements. DareBay pays in all of them; it has no list.
+Russia, Belarus and Ukraine are on the unsupported list with Uzbekistan, Armenia, Georgia and Moldova. Kazakhstan is not, and unlisted countries can use the platform if they meet the other requirements. DareBay pays in all of them: it keeps no country list, and only people on sanctions lists are barred<!-- source: https://darebay.com/en/legal/terms 2026-09-24 -->.
 
 ### What happens to views after a Vyro campaign's budget runs out?
 

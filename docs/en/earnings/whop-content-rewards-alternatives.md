@@ -11,7 +11,7 @@ hero:
   secondary: "Compare the alternatives"
   takeaways:
     - "<b>DareBay has no country list; Whop blocks Russia and Belarus.</b> Prime Oracles covers Russia, Belarus and Kazakhstan; Klipni is Russia-only."
-    - "<b>Read the fee before you cut anything.</b> DareBay takes 0% on contest payouts, 10% on withdrawals (minimum 10 USDT)."
+    - "<b>Read the fee before you cut anything.</b> DareBay takes 0% on contest payouts and 10% of what you withdraw; withdrawals start at 10 USDT."
     - "<b>Budgets run out everywhere, so keep two platforms open.</b> Vyro and Clipping.net carry the large streamer and creator campaigns."
     - "<b>An editor is not a marketplace:</b> OpusClip, Klap and Submagic help you cut clips; none pays for views."
 compare:
@@ -21,11 +21,11 @@ compare:
   title: "The alternatives side by side"
 method:
   - "The alternatives are the campaign-based clipping platforms with public terms that were live on the check date. ClipAffiliates was suspended that day and is not included; Clipping.io publishes almost no terms and is left out of this list, though it appears in the full ranking."
-  - "Every figure was read from the platform's own page on the date next to it; a blank means the platform does not publish that figure. DareBay's figures come from the live platform data snapshot."
+  - "Every figure was read from the platform's own page on the date next to it; a blank means the platform does not publish that figure. DareBay's figures come from its own public pages."
   - "Order is editorial: alternatives that state their fee, hold the budget and pay in more countries come first."
 cta:
   title: "Clip where Whop cannot pay you"
-  lede: "DareBay keeps no country list, so the places Whop is closed in are still open to you. There are no followers to gather and no application to wait on, and in a wallet-backed contest the budget is locked on the platform before the start."
+  lede: "DareBay keeps no country list: only people on sanctions lists are barred, so clippers in Russia and Belarus, where Whop is closed, are paid too. There are no followers to gather and no application to wait on, and a wallet-backed contest locks its budget on the platform before the start."
 ---
 
 ## Why clippers look beyond Whop Content Rewards
@@ -52,7 +52,7 @@ Vues and Reach.cat each have a full review that reads the platform's terms again
 
 ## Choose the alternative by your situation
 
-**You are in a country Whop excludes.** DareBay has no exclusion list: it pays worldwide in USDT on TON or Telegram Stars, with no follower requirement and the budget locked on the platform in wallet-backed contests, and its community is largest in Russia, Ukraine and CIS. Prime Oracles serves Russia, Belarus and Kazakhstan in USDT or USDC from $5. Klipni pays in rubles but requires Russian self-employed status. Vyro is not an option: its unsupported list includes Russia, Belarus, Ukraine, Uzbekistan, Armenia, Georgia and Moldova.
+**You are in a country Whop excludes.** DareBay keeps no country list: only people on sanctions lists are barred<!-- source: https://darebay.com/en/legal/terms 2026-09-24 -->, and its community is largest in Russia, Ukraine and CIS. It needs no followers, a wallet-backed contest locks its budget on the platform before the start, and you are paid in USDT on TON, or receive the payout in Telegram Stars<!-- source: https://darebay.com/en/help/darebay-withdrawals 2026-09-24 -->, so check that you can receive USDT where you live. Prime Oracles serves Russia, Belarus and Kazakhstan in USDT or USDC from $5. Klipni pays in rubles but requires Russian self-employed status. Vyro is not an option: its unsupported list includes Russia, Belarus, Ukraine, Uzbekistan, Armenia, Georgia and Moldova.
 
 **You want the lowest fee.** Klipni takes 5% of each approved payout; Vues publishes no fee rate and its pages disagree: its homepage puts its cut on the brand, its referral page illustrates a 10% fee on each clipper cash-out <!-- source: https://vues.app/affiliate 2026-09-18 -->; Reach.cat bills brands 10% on top of the budget <!-- source: https://reach.cat/blog/reach-cat-pricing-brands-2026/ 2026-09-18 -->, while its terms cite "approximately 10% on all CPM-based payouts" <!-- source: https://reach.cat/terms 2026-09-18 -->; DareBay takes 0% on contest payouts and 10% when you withdraw your balance to your wallet. Clipping.net and Vyro do not publish a clipper fee, which is a reason to ask before you clip.
 
@@ -76,7 +76,7 @@ Yes. Nothing on Whop's pages forbids clipping for other marketplaces, and campai
 
 ### Is DareBay a Whop alternative?
 
-Yes, for any country, and especially where Whop cannot pay: pay-per-view tasks with the rate, threshold and cap printed on the card, no follower requirement, no country restrictions, and in wallet-backed contests the budget is locked on the platform before the start. Offer tasks add a fixed fee per accepted clip and a share of sales, and hand you ready-made videos with built-in uniqueization. It has fewer open contests than Whop.
+Yes, especially where Whop cannot pay: DareBay keeps no country list, and only people on sanctions lists are barred<!-- source: https://darebay.com/en/legal/terms 2026-09-24 -->. Its pay-per-view tasks pay $1–$10 per 1,000 views, set by each task, and up to $500 per clip, with no follower requirement<!-- source: https://darebay.com/en/earnings/how-much-clipping-pays 2026-09-24 -->, and a wallet-backed contest locks its budget on the platform before the start<!-- source: https://darebay.com/en/about/payout-guarantee 2026-09-24 -->. Offer tasks can add a fixed fee per accepted clip and a share of sales, and hand you ready-made videos with built-in uniqueization. It is a young platform, with fewer campaigns than the biggest boards so far.
 
 ### What happened to ClipAffiliates?
 

@@ -76,10 +76,8 @@ describe('machine-readable fact card', () => {
     expect(byId.get('withdrawal-minimum').value).toBe(truth.withdrawal.minimumGrossAmount)
     expect(byId.get('withdrawal-minimum').unit).toBe(truth.withdrawal.minimumCurrency)
     expect(byId.get('payout-rails').value).toEqual(truth.withdrawal.wizardMethods)
-    // The snapshot is corroboration, not a second source of truth: it must be cited, and the
-    // open-task count is the one number the card takes from it.
+    // The snapshot is corroboration, not a second source of truth: it must be cited, and nothing counted in it is published.
     expect(document.sources.liveCatalogue.fetchedAt).toBe(snapshot.fetchedAt)
-    expect(document.sources.liveCatalogue.openTasks).toBe(snapshot.counts.open)
     expect(document.sources.productIntent.decidedAt).toBe(intent.decidedAt)
   })
 

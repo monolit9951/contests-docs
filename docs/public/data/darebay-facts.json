@@ -15,8 +15,7 @@
     "liveCatalogue": {
       "file": "data/contests-snapshot.json",
       "endpoint": "https://darebay.com/api/contests",
-      "fetchedAt": "2026-09-20T17:05:11.773Z",
-      "openTasks": 2
+      "fetchedAt": "2026-09-20T17:05:11.773Z"
     }
   },
   "facts": [
@@ -34,14 +33,14 @@
         "ar": "السعر لكل 1,000 مشاهدة"
       },
       "text": {
-        "ru": "$1.00–$10.00 за 1000 просмотров (открытые конкурсы)",
-        "uk": "$1.00–$10.00 за 1000 переглядів (відкриті конкурси)",
-        "en": "$1.00–$10.00 per 1,000 views (open tasks)",
-        "ar": "$1.00–$10.00 لكل 1,000 مشاهدة (المهام المفتوحة)"
+        "ru": "$1.00–$10.00 за 1000 просмотров, ставку задаёт каждое задание",
+        "uk": "$1.00–$10.00 за 1000 переглядів, ставку задає кожне завдання",
+        "en": "$1.00–$10.00 per 1,000 views, set by each task",
+        "ar": "$1.00–$10.00 لكل 1,000 مشاهدة، تحدده كل مهمة"
       },
       "source": "product-intent.json#rate-band",
       "asOf": "2026-09-20",
-      "note": "Target band decided 2026-09-20 (product-intent.json#rate-band); the reviewed live band is $1.00–$2.00; 2 open listed tasks in the live catalogue on 2026-09-20 pay $1.19–$5.94 per 1,000 views. A task's exact rate is printed on its card and cannot change after the start."
+      "note": "Band decided 2026-09-20 (product-intent.json#rate-band). Each task sets its own rate inside it; the exact rate is printed on the task card and cannot change after the start."
     },
     {
       "id": "cap-per-clip",
@@ -61,7 +60,7 @@
       },
       "source": "product-truth.json#ppv.stable.bands.maxPerWork.high",
       "asOf": "2026-08-23",
-      "note": "The highest cap a task may set, founder-approved in product-intent.json#rate-band; highest cap among 2 open listed tasks in the live catalogue on 2026-09-20: $100. After the start a cap may only be raised."
+      "note": "The highest cap a task may set, founder-approved in product-intent.json#rate-band; each task sets its own cap, and a task may set none. After the start a cap may only be raised."
     },
     {
       "id": "view-threshold",
@@ -81,7 +80,7 @@
       },
       "source": "product-truth.json#ppv.stable.defaultMinimumViews.value",
       "asOf": "2026-08-23",
-      "note": "The system default a task starts from; a task may set any threshold inside the reviewed band 1–2,000 views. Thresholds among 2 open listed tasks in the live catalogue on 2026-09-20: 1000."
+      "note": "The system default a task starts from; a task may set any threshold inside the reviewed band 1–2,000 views."
     },
     {
       "id": "contest-creation-fee",
@@ -200,7 +199,7 @@
       },
       "source": "product-truth.json#withdrawal.wizardMethods",
       "asOf": "2026-08-23",
-      "note": "Balance withdrawal rails. A single task may additionally award a card payout, a bank transfer or a gift."
+      "note": "USDT on TON, or the payout received in Telegram Stars. A single task may additionally award a card payout, a bank transfer or a gift."
     },
     {
       "id": "platforms",
@@ -227,7 +226,7 @@
     },
     {
       "id": "geography",
-      "value": "worldwide",
+      "value": "no-country-list",
       "labels": {
         "ru": "География выплат",
         "uk": "Географія виплат",
@@ -235,14 +234,14 @@
         "ar": "جغرافيا الدفع"
       },
       "text": {
-        "ru": "весь мир, без списка стран",
-        "uk": "увесь світ, без списку країн",
-        "en": "worldwide, no country list",
-        "ar": "العالم كله، دون قائمة دول"
+        "ru": "списка стран нет; не допускаются только люди из санкционных списков",
+        "uk": "списку країн немає; не допускаються лише люди із санкційних списків",
+        "en": "no country list; only people on sanctions lists are barred",
+        "ar": "لا توجد قائمة دول؛ يُستثنى فقط الأشخاص المدرجون في قوائم العقوبات"
       },
       "source": "gen-facts-json.mjs#WORDING.geography",
       "asOf": "2026-09-17",
-      "note": "No exclusion list: clippers from any country are paid the same way."
+      "note": "No country list: only people on UK, EU or UN sanctions lists are barred. The balance leaves only as USDT on TON, so where the law closes crypto to residents (Bangladesh, Nepal, Egypt, Algeria and Iraq, for example) there is no lawful cash-out route."
     }
   ]
 }

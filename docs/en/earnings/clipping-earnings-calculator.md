@@ -10,24 +10,24 @@ hero:
   kicker: "Calculator · 2026"
   lede: "Three sliders instead of back-of-the-envelope guesses: views per clip, clips per week and the rate. From there the calculator runs the same formula the platform pays by, applies the threshold and the cap, and shows what reaches your wallet after the 10% withdrawal fee. Not a range off somebody else's screenshot. Your numbers."
   takeaways:
-    - "<b>One formula, and you can run it before you edit:</b> views / 1,000 × rate, never above the cap per clip. Open tasks pay $1 to $10 per 1,000 views."
+    - "<b>One formula, and you can run it before you edit:</b> views / 1,000 × rate, never above the cap per clip. DareBay tasks pay $1 to $10 per 1,000 views, set by each task."
     - "<b>The threshold is a gate, not a deduction:</b> the task sets it, a clip below it earns nothing, and a clip that clears it is paid for every view from the first."
     - "<b>The cap runs up to $500 per clip,</b> so ten steady clips beat one viral hit: the number grows with the count of clips, not with luck."
-    - "<b>Nothing is taken until you withdraw:</b> every accrual lands on your balance in full, a withdrawal request from 10 USDT carries a 10% fee inside it, and the team checks the details and sends it."
+    - "<b>Nothing is taken until you withdraw:</b> every accrual lands on your balance in full, you pay 10% of what you withdraw, withdrawals start at 10 USDT, and the team checks the details and sends each one."
 cta:
   title: "Like the number? Go and earn it"
-  lede: "The figures you just dragged into place exist on live task cards, visible before you open the editor, and nobody checks your follower count at the door. Cut the clip, publish it, send the link, and the platform does the counting from there."
+  lede: "Every task card shows its rate, threshold and any cap before you open the editor, so you can run these numbers on a real task, and nobody checks your follower count at the door. Cut the clip, publish it, send the link, and the platform does the counting from there."
 ---
 
 <LCalcPro />
 
 ## How to read the result
 
-The calculator runs the formula the platform pays by: views / 1,000 × rate, never more than the cap per clip. Three sliders set the input: views on one clip, clips per week, and the rate per 1,000 views. The rate slider stops where open tasks stop, between $1 and $10, in quarter-dollar steps.
+The calculator runs the formula the platform pays by: views / 1,000 × rate, never more than the cap per clip. Three sliders set the input: views on one clip, clips per week, and the rate per 1,000 views. The rate slider covers DareBay's rate band, $1 to $10 per 1,000 views<!-- source: https://darebay.com/en/earnings/how-much-clipping-pays 2026-09-24 -->, in quarter-dollar steps.
 
 The four figures on the right are the output. **Per clip** is the payout for one clip after the cap; if the clip hits the cap, a badge says so. **Per week** multiplies that by the number of clips, and **per month** is four straight weeks. **On hand** is 10% less than the accrual: it is what reaches your wallet after the withdrawal fee, which comes out of the amount you request rather than being added on top, and the minimum request is 10 USDT.
 
-The threshold is built in too: a clip under the threshold returns zero, and a clip that clears it is paid for every view from the first one. The exact rate, threshold and cap are printed on every task card - check the card in the catalog; the calculator starts from the system default threshold of 1,000 views and a cap of $500 per clip.
+The threshold is built in too: a clip under the threshold returns zero, and a clip that clears it is paid for every view from the first one. Every task card prints its exact rate and threshold, and its cap if it sets one - check the card in the catalog; the calculator starts from the system default threshold of 1,000 views and a cap of $500 per clip.
 
 ## Three scenarios
 
@@ -47,9 +47,9 @@ This is the arithmetic of the formula, not a forecast: a real month is made of t
 
 ## What moves the number
 
-**Views and the rate both move the number.** The rate spread in open tasks is a factor of ten, and so is the spread between a 5,000-view clip and a 50,000-view clip. The typical rate is $1, and chasing $10 only pays off where the subject is yours: someone else's niche at a high rate gets fewer views than your own at a low one.
+**Views and the rate both move the number.** The rate a task sets runs from $1 to $10, a factor of ten, and the same factor separates a 5,000-view clip from a 50,000-view clip. Chasing $10 only pays off where the subject is yours: someone else's niche at a high rate gets fewer views than your own at a low one.
 
-**The cap is per clip, not per author.** Up to $500 is the most one clip can earn, so the number grows with the count of clips, not with one viral hit: two clips at 600,000 views at $1 make $1,000.00, one clip at 1,200,000 makes $500.00.
+**The cap is per clip, not per author.** Where a task sets a cap, up to $500, that is the most one clip can earn, so the number grows with the count of clips, not with one viral hit: at a $500 cap, two clips at 600,000 views at $1 make $1,000.00, one clip at 1,200,000 makes $500.00.
 
 **The view threshold.** A clip below the threshold on the task card does not enter the maths at all, so the first seconds decide more than the length or the edit. The threshold is not subtracted: clear it and you are paid for every view from the first.
 
@@ -57,7 +57,7 @@ This is the arithmetic of the formula, not a forecast: a real month is made of t
 
 ## How to get paid
 
-Accruals on approved clips build up in your DareBay wallet, and there are two steps between them and money in hand. First, the "Claim now" button on the task card: once a clip is approved, it locks in what has been credited so far, and the clip stops earning in that task; fresh accruals mature for 24 hours, then the button unlocks by itself. Second, a withdrawal request: the minimum request is 10 USDT, the fee is 10% of the requested amount (a personal rate may apply), and the team checks the details and sends it; the form shows the exact rate and the amount to receive before you confirm. The money arrives as USDT to a wallet on the TON network or as Telegram Stars.
+A wallet-backed task credits what your approved clips earned to your DareBay balance when it ends, or earlier where the task card shows the "Claim now" button: once a clip is approved, pressing it locks in what has been credited so far, and the clip stops earning in that task<!-- source: https://darebay.com/en/help/darebay-withdrawals 2026-09-24 -->; fresh accruals mature for 24 hours before the button unlocks. In a manual-payout task the organizer pays you directly instead. From the balance, you file a withdrawal request: the minimum request is 10 USDT, the fee is 10% of the requested amount (a personal rate may apply), and the team checks the details and sends it, with no fixed time; the form shows the exact rate and the amount to receive before you confirm. The money arrives as USDT to a wallet on the TON network, or you receive the payout in Telegram Stars.
 
 The inputs are covered in [how much clipping pays](/en/earnings/how-much-clipping-pays); the charges in [what commission DareBay charges](/en/help/what-commission) and [DareBay withdrawals](/en/help/darebay-withdrawals). For other platforms' rate, threshold and cap, see [the best clipping platforms](/en/earnings/best-clipping-platforms) or the fact sheet [DareBay at a glance](/en/about/darebay-at-a-glance).
 
@@ -73,7 +73,7 @@ The minimum request is 10 USDT, which pays out 9 USDT after the 10% fee. At $1 o
 
 ### Can I calculate several tasks with different rates?
 
-The calculator handles one task: one rate, one threshold, one cap. Run each separately and add them up; the cap applies inside each task, and each task prints its own three numbers on the card.
+The calculator handles one task: one rate, one threshold, one cap. Run each separately and add them up; the cap applies inside each task, and each task card shows its own rate, threshold and any cap.
 
 ### Does a rejected clip count toward the total?
 

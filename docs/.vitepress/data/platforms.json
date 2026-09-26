@@ -194,7 +194,7 @@
         },
         "bangladesh": {
           "text": {
-            "en": "no exclusion list, but the only money rail is USDT on TON, and Bangladesh Bank and Nepal Rastra Bank do not permit crypto transactions, so there the balance has no withdrawal route"
+            "en": "no country list, only people on sanctions lists are barred, but the only money rail is USDT on TON, and Bangladesh Bank and Nepal Rastra Bank do not permit crypto transactions, so there the balance has no withdrawal route"
           },
           "state": "partial",
           "source": {
@@ -224,8 +224,8 @@
         },
         "mena": {
           "text": {
-            "en": "no exclusion list, but the only money rail is USDT on TON: the regulators in Egypt, Algeria and Iraq bar or criminalize dealing in crypto, so there the balance has no withdrawal route; elsewhere, check the regulator row above",
-            "ar": "لا قائمة استبعاد، لكن قناة الدفع النقدية الوحيدة هي USDT على شبكة TON: الجهات الرقابية في مصر والجزائر والعراق تحظر التعامل في العملات المشفرة أو تجرّمه، فلا مسار هناك لسحب الرصيد؛ وفي غيرها راجع صف الجهة الرقابية أعلاه"
+            "en": "no country list, only people on sanctions lists are barred, but the only money rail is USDT on TON: the regulators in Egypt, Algeria and Iraq bar or criminalize dealing in crypto, so there the balance has no withdrawal route; elsewhere, check the regulator row above",
+            "ar": "لا توجد قائمة دول؛ يُستثنى فقط الأشخاص المدرجون في قوائم العقوبات، لكن قناة الدفع النقدية الوحيدة هي USDT على شبكة TON: الجهات الرقابية في مصر والجزائر والعراق تحظر التعامل في العملات المشفرة أو تجرّمه، فلا مسار هناك لسحب الرصيد؛ وفي غيرها راجع صف الجهة الرقابية أعلاه"
           },
           "state": "partial",
           "source": {
@@ -235,22 +235,22 @@
         },
         "indonesia": {
           "text": {
-            "en": "worldwide, no exclusion list: any country is paid the same way, in USDT on TON or Telegram Stars"
+            "en": "no country list, only people on sanctions lists are barred; USDT on TON, or the payout received in Telegram Stars"
           },
           "state": "yes",
           "source": {
-            "url": "https://darebay.com/en/about/darebay-at-a-glance",
-            "date": "2026-09-18"
+            "url": "https://darebay.com/en/legal/terms",
+            "date": "2026-09-24"
           }
         },
         "philippines": {
           "text": {
-            "en": "worldwide, no exclusion list: any country is paid the same way, in USDT on TON or Telegram Stars"
+            "en": "no country list, only people on sanctions lists are barred; USDT on TON, or the payout received in Telegram Stars"
           },
           "state": "yes",
           "source": {
-            "url": "https://darebay.com/en/about/darebay-at-a-glance",
-            "date": "2026-09-18"
+            "url": "https://darebay.com/en/legal/terms",
+            "date": "2026-09-24"
           }
         },
         "cpm": {

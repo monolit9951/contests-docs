@@ -35,7 +35,7 @@ hero:
     - "<b>Russia and Belarus stay closed.</b> Whop's sanctioned list names them and six Ukrainian regions, while the rest of Ukraine and Kazakhstan are on its payout list. Where Whop cannot pay, DareBay has no country list."
 cta:
   title: "Whop cannot pay your country? DareBay has no country list"
-  lede: "DareBay pays worldwide in USDT to your wallet, and every task card states the pay rate, the view threshold and the ceiling on a single clip before you submit. Nobody screens your follower count and nobody reviews an application, so the weekend you spend editing is not spent on a maybe."
+  lede: "Clippers in Russia and Belarus, where Whop cannot pay, are paid here: only people on sanctions lists are barred. You get USDT on TON in your wallet, or receive the payout in Telegram Stars. Every task card states the pay rate ($1–$10 per 1,000 views), the view threshold and any ceiling on a single clip (up to $500) before you submit. Nobody screens your follower count and nobody reviews an application, so the weekend you spend editing is not spent on a maybe."
 ---
 ## What Content Rewards is today, and what stays on Whop
 
@@ -109,9 +109,9 @@ The Bot Score runs first, then a brand moderator approves or rejects <!-- source
 
 ## When DareBay is the better choice
 
-DareBay fits the clipper Whop cannot pay, and anyone who would rather not have a second company between the clip and the money. It has no country list: you post the clip on your own account, send the link, the platform counts the views, and your balance leaves in USDT on TON to your wallet or in Telegram Stars. Open tasks pay from $1 to $10 per 1,000 views, the view threshold is set by each task, and the cap runs up to $500 per clip, all three on the card before you submit. The fee on the task payout is 0%; a balance withdrawal costs 10% of the request, from a 10 USDT minimum request, and the team checks every request by hand. Hypothetically: 20,000 / 1,000 × $1.00 = **$20.00**, never above the cap the task printed. Field by field: [DareBay vs Whop](/en/earnings/darebay-vs-whop); every figure: [fact sheet](/en/about/darebay-at-a-glance).
+DareBay fits the clipper Whop cannot pay, and anyone who would rather not have a second company between the clip and the money. It keeps no country list: only people on sanctions lists are barred <!-- source: https://darebay.com/en/legal/terms 2026-09-24 -->. You post the clip on your own account, send the link, the platform counts the views, and your balance leaves in USDT on TON to your wallet, or you receive the payout in Telegram Stars <!-- source: https://darebay.com/en/help/darebay-withdrawals 2026-09-24 -->. The rate is $1–$10 per 1,000 views, set by each task, the view threshold is set per task (system default 1,000 views), and a task can cap each clip at up to $500, all on the card before you submit <!-- source: https://darebay.com/en/earnings/how-much-clipping-pays 2026-09-24 -->. The fee on the task payout is 0%; you pay 10% of what you withdraw, and withdrawals start at 10 USDT <!-- source: https://darebay.com/en/help/what-commission 2026-09-24 -->. The team checks and sends every withdrawal by hand, with no fixed time <!-- source: https://darebay.com/en/help/darebay-withdrawals 2026-09-24 -->. Hypothetically: 20,000 / 1,000 × $1.00 = **$20.00**, never above the task's cap if it sets one. Field by field: [DareBay vs Whop](/en/earnings/darebay-vs-whop); every figure: [fact sheet](/en/about/darebay-at-a-glance).
 
-Content Rewards is the better choice when Whop can pay you and volume matters: its board carries far more campaigns than DareBay's open tasks, some paying $3, $5 or $10 per 1,000 views <!-- source: https://contentrewards.com/discover 2026-09-18 -->.
+Content Rewards is the better choice when Whop can pay you and volume matters: DareBay is a young platform, with fewer campaigns than the biggest boards so far, and Content Rewards' board carries far more, some paying $3, $5 or $10 per 1,000 views <!-- source: https://contentrewards.com/discover 2026-09-18 -->.
 
 Other boards for the countries Whop closes:
 

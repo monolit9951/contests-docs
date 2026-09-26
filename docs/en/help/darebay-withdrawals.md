@@ -23,7 +23,7 @@ For example, a 10 USDT request has a 1 USDT fee and a 9 USDT amount to receive, 
 
 ## Available methods
 
-The balance-withdrawal wizard supports Telegram Stars and USDT to an external wallet on TON. A card, bank transfer, Telegram gift or physical item can instead be the reward method defined by a particular contest and may be fulfilled separately; do not treat those as automatic balance-withdrawal rails.
+The withdrawal wizard sends your balance as USDT to an external wallet on TON, or you can receive the payout in Telegram Stars, which stay inside Telegram. A card, bank transfer, Telegram gift or physical item can instead be the reward method defined by a particular contest and may be fulfilled separately; do not treat those as automatic balance-withdrawal rails.
 
 Always rely on the methods shown in your request form. Never send money to an external address to “activate”, “verify” or “speed up” a payout.
 

@@ -11,7 +11,7 @@ hero:
   takeaways:
     - "<b>Clippers come from four places.</b> A post in your chat and Discord, freelance boards, your own clip channel with a team, or a pay-per-view platform where creators take the task themselves."
     - "<b>Six things and a clipper starts the same day.</b> Access to recordings, rights, a hashtag, a format, a rate and a steady flow of material."
-    - "<b>Open DareBay tasks pay $1.00 to $10.00 per 1000 views.</b> You set the threshold and the cap per clip yourself, so you pay for reach and not for the hours someone spent editing."
+    - "<b>On DareBay you set the rate, from $1.00 to $10.00 per 1000 views.</b><!-- source: https://darebay.com/en/earnings/how-much-clipping-pays 2026-09-24 --> The threshold and the cap per clip are yours too, so you pay for reach and not for the hours someone spent editing."
     - "<b>A wallet-backed budget is locked on the platform before launch.</b> It is spent only on counted views, and whatever the clips did not earn comes back to you."
 cta:
   title: "Post the task tonight, creators pick it up themselves"
@@ -54,7 +54,7 @@ A good clipper starts the same day if six things are in place.
 
 A flat fee per clip is fair while clips perform evenly. Once one gets 200 thousand views and another 300, the first creator feels cheated and you overpaid. Pay per view removes the argument: earnings grow with reach, and you pay for the result.
 
-On DareBay, across open tasks the rate currently runs from $1.00 to $10.00 per 1000 views. The threshold is yours to set, with a system default of 1000 views: a clip below it costs nothing. The cap per submission is yours too, up to $500, and protects the budget from a single viral clip. A wallet-backed budget is locked on the platform before launch and is spent only on counted views; the remainder returns to you. Views are read from the site's public counter, and fraud is filtered out (platform data, snapshot 2026-08-23).
+On DareBay you set your task's rate, from $1.00 to $10.00 per 1000 views. The threshold is yours to set, with a system default of 1000 views: a clip below it costs nothing. The cap per submission is yours too, up to $500, and protects the budget from a single viral clip<!-- source: https://darebay.com/en/earnings/how-much-clipping-pays 2026-09-24 -->. A wallet-backed budget is locked on the platform before launch and is spent only on counted views; the remainder returns to you<!-- source: https://darebay.com/en/about/payout-guarantee 2026-09-24 -->. Views are read from the site's public counter, and fraud is filtered out.
 
 A hypothetical example: a clip got 20 000 views at $1.00.
 
@@ -69,7 +69,7 @@ The threshold is not deducted: clear it and the whole counter is paid. At 150 00
 3. **Set the budget.** Rate per 1000 views, threshold, cap, total. Contest creation is free, the contest fee is 0%, topping up is 0%.
 4. **Publish.** The task appears in the feed and creators take it. Step by step: [how to set up a clipping contest](/en/for-brands/set-up-a-clipping-contest); other formats are on the [business page](/en/for-business).
 5. **Accept links.** A submission counts only after its link is sent and a moderator checks it against the terms; unfit clips are rejected and unpaid.
-6. **Payout.** Each creator's amount follows the formula from counted views and comes out of the budget the platform has held since launch.
+6. **Payout.** Each creator's amount follows the formula from counted views and comes out of the wallet-backed budget the platform has held since launch.
 
 ## What to do with the finished clips
 
@@ -83,11 +83,11 @@ The threshold is not deducted: clear it and the whole counter is paid. At 150 00
 
 ### Do I need a big channel for clippers to take my content?
 
-No. A clipper cares about the material and the terms, not your channel size. A task on the platform is seen by creators worldwide, the largest community being in the CIS, and taken by those who like the rate and format.
+No. A clipper cares about the material and the terms, not your channel size. DareBay keeps no country list: only people on sanctions lists are barred<!-- source: https://darebay.com/en/legal/terms 2026-09-24 -->. Its community is largest in the CIS, and your task is taken by whoever likes the rate and format.
 
 ### Can I pay clippers directly, without the platform wallet?
 
-No: your task runs on a wallet-backed budget, locked on the platform at launch, and creators are paid from it by the formula. If you need a different payment setup, message the founder on Telegram: [@ruslanbwork](https://t.me/ruslanbwork).
+On a task you create yourself, no: it is wallet-backed, so its budget is locked on the platform before the start and goes to clippers per counted view<!-- source: https://darebay.com/en/about/payout-guarantee 2026-09-24 -->. If you need another payment scheme, message the founder on Telegram: [@ruslanbwork](https://t.me/ruslanbwork).
 
 ### What if a clipper posted a clip but never sent the link?
 

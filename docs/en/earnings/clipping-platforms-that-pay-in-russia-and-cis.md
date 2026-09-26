@@ -26,7 +26,7 @@ method:
   - "Payout rails and minimums come from the same pages. DareBay's figures come from its own public pages."
 cta:
   title: "Your country is not on any list here"
-  lede: "DareBay publishes no exclusion list because there is none: only people on sanctions lists are barred, so it pays clippers in Russia, Belarus, Ukraine, Kazakhstan and the rest of CIS, in USDT on TON, or you receive the payout in Telegram Stars; its community is largest in the CIS. Sign up, take a task off the board and post where the brief says. Nobody checks your follower count on the way in."
+  lede: "DareBay keeps no country list: only people on sanctions lists are barred, so it pays clippers in Russia, Belarus, Ukraine, Kazakhstan and the rest of CIS, in USDT on TON, or you receive the payout in Telegram Stars; its community is largest in the CIS. Sign up, take a task off the board and post where the brief says. Nobody checks your follower count on the way in."
 ---
 
 ## Country by country, in the platforms' own words
@@ -47,7 +47,7 @@ Klipbait, a Russian- and Ukrainian-language front end for Western campaigns, des
 
 ## How the money actually reaches you
 
-**DareBay** credits your balance after the count and pays withdrawals in USDT on the TON network, or you can receive the payout in Telegram Stars; a withdrawal request is at least 10 USDT and carries a 10% fee, deducted inside it; submit it once and the team handles the check and the transfer. Individual contests can add a card, a bank transfer or a gift as the reward. No tax status, follower count or application is needed to take a brief.
+**DareBay** credits a clip's earnings to your balance when a wallet-backed task ends, or earlier with Claim now where the task shows it, after which that clip stops earning <!-- source: https://darebay.com/en/help/darebay-withdrawals 2026-09-24 -->. It pays withdrawals in USDT on the TON network, or you can receive the payout in Telegram Stars; a withdrawal request is at least 10 USDT and carries a 10% fee, deducted inside it; submit it once and the team handles the check and the transfer. Individual contests can add a card, a bank transfer or a gift as the reward. No tax status, follower count or application is needed to take a brief.
 
 **[Prime Oracles](/en/earnings/prime-oracles-review)** pays USDT on Tron, BNB Smart Chain or Solana, USDC on Ethereum or Solana, or TON, from $5 to $12 by network, after the customer approves each payout by hand. Its agreement publishes a 10% withdrawal fee and describes USD through Garna (Cyprus) to a verified Garna account <!-- source: https://www.primeoracles.com/terms-agreement 2026-09-24 -->.
 

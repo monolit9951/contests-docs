@@ -13,31 +13,31 @@ One task can put your product into dozens of clips in a few days, and your budge
 ## The model: the buyer creates a contest, clippers take the task
 
 On DareBay the buyer does not hunt for a contractor and does not haggle. You create a PPV contest
-(pay-per-view) with a task and terms. The budget is charged and held on
+(pay-per-view) with a task and terms. The wallet-backed budget is charged and held on
 the platform; clippers find the contest in the feed, publish their videos and send in the links.
 The submitted link is what enters a video into the contest - nothing is imported by hashtag. The
 view figure is read from the published view counter on the site each video went out on. Amounts for
 submissions above the threshold are calculated by formula and recorded as credits or obligations,
-and the unearned remainder returns to your balance; fulfilment can be
-handled by the team. The full mechanic step by step: [how pay-per-view works](/en/earnings/how-pay-per-view-works).
+and the unearned remainder returns to your balance; the team checks and sends
+every withdrawal, with no fixed time. The full mechanic step by step: [how pay-per-view works](/en/earnings/how-pay-per-view-works).
 
 ## The parameters the buyer sets
 
 You set the terms of the offer yourself when creating the contest. Clippers see every parameter on the card before they submit, so there is nothing to argue about afterwards.
 
-| Parameter | Who sets it and typical values | What it is for |
+| Parameter | Who sets it and the range | What it is for |
 |-----------|--------------------------------|----------------|
-| Rate per 1000 views | set by the buyer (across open contests $1.00 - $10.00 per 1000 views) | Defines what a clipper gets for every thousand counted views |
+| Rate per 1000 views | set by the buyer, from $1.00 to $10.00 per 1000 views<!-- source: https://darebay.com/en/earnings/how-much-clipping-pays 2026-09-24 --> | Defines what a clipper gets for every thousand counted views |
 | View threshold | set by the buyer and printed on the task card (system default 1000) | Submissions below the threshold take no part in the split and cost you nothing |
-| Cap per submission | set by the buyer | Limits the maximum payout to one creator so a single video cannot eat the whole budget |
-| Total budget | set by the buyer | The full amount held on the platform |
+| Cap per submission | set by the buyer, up to $500 per clip, or no cap<!-- source: https://darebay.com/en/earnings/how-much-clipping-pays 2026-09-24 --> | Limits the payout for one clip so a single video cannot eat the whole budget |
+| Total budget | set by the buyer | The full amount, held on the platform in a wallet-backed contest |
 | Task and publishing site | set by the buyer | The brief, and which of TikTok, YouTube, Instagram or the other sites named in the task the video goes on |
 
-The rate of **$1.00 to $10.00 per 1000 views** reflects the range across open contests, and the view threshold is set by each task rather than by the platform: the system default is 1000 views, and above that the buyer sets whatever threshold they like (platform data, snapshot: 2026-08-23). More on the threshold: [how pay-per-view works](/en/earnings/how-pay-per-view-works).
+Each task sets its own rate, from **$1.00 to $10.00 per 1000 views**, and its own view threshold rather than a platform-wide one: the system default is 1000 views, and the buyer can change it<!-- source: https://darebay.com/en/earnings/how-much-clipping-pays 2026-09-24 -->. More on the threshold: [how pay-per-view works](/en/earnings/how-pay-per-view-works).
 
 ## What to weigh up: a checklist for the buyer
 
-1. **The rate.** A high rate brings in more clippers and burns the budget faster; a low rate saves budget but gets picked up slowly. The range across open contests: $1.00 - $10.00 per 1000 views.
+1. **The rate.** A high rate brings in more clippers and burns the budget faster; a low rate saves budget but gets picked up slowly. You set it from $1.00 to $10.00 per 1000 views.
 2. **The threshold.** It protects the budget from submissions with a handful of views: anything below it costs you nothing. The threshold is set by each task and printed on its card.
 3. **The cap.** It stops one video that went viral from taking the whole budget. Pick it so the same money buys videos from several creators.
 4. **The task.** The more concrete the result you describe (format, style, key moments), the closer the work lands to what you wanted. Clippers pick the tasks they understand on the first read.
@@ -65,8 +65,9 @@ auditable obligation, and fulfilment follows payout details and statuses and is 
 ## Reach and access
 
 Many Western UGC platforms restrict registration or payment rails for creators in Russia and the
-CIS. DareBay is open across the region and runs in English. A contest defines its reward method:
-USDT on TON, a card, bank transfer, Telegram Stars, a gift or an item. Fulfilment follows the
+CIS. DareBay is open across the region and runs in English. Clippers are paid in USDT on TON, or
+receive the payout in Telegram Stars; in a prize contest the organizer may also pay by card, bank
+transfer or gift when the contest sets it<!-- source: https://darebay.com/en/help/darebay-withdrawals 2026-09-24 -->. Fulfilment follows the
 available payout details and statuses and is done by the team.
 
 ## Frequently asked questions
@@ -86,8 +87,8 @@ There is nothing to do: if the budget is not spent in full (few participants, su
 ### Where are the clippers?
 
 Across Russia and the CIS. Sign-up is open and the platform runs in English. Each contest defines
-its reward method, while the product shows the available payout details and status; fulfilment can
-be manual.
+its reward method, while the product shows the available payout details and status; the team checks
+and sends every withdrawal.
 
 ### How many clippers will take the task?
 
@@ -95,7 +96,7 @@ There is no limit on participants: everyone your terms suit can submit. What dec
 
 ### Can a contest be cancelled after it is created?
 
-No, and that is the point of the guarantee: the budget stays with the contest until it ends, and you cannot change your mind and take the money back. Cancellation is possible only right after creation, while there is not a single submission. What the clippers do not earn comes back to you at the end in any case.
+No, and that is the point of the guarantee: a wallet-backed budget stays with the contest until it ends, and you cannot change your mind and take the money back. Cancellation is possible only right after creation, while there is not a single submission. What the clippers do not earn comes back to you at the end in any case.
 
 ### Do I have to review the clippers' work by hand?
 

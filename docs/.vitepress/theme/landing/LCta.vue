@@ -9,7 +9,7 @@ const copy = computed(() => LANDING_COPY[localeOf(lang.value)])
 const cta = computed(() => (frontmatter.value.cta ?? {}) as { title?: string; lede?: string })
 // The brands section is read by a business deciding whether to fund a task, so both buttons lead
 // there: the business page and the founder's Telegram. Every other section keeps the open-task
-// catalogue and the channel.
+// catalogue and the community room of the page's language (the Telegram channel or Discord).
 const brands = computed(() => (frontmatter.value.sectionHub as { id?: string } | undefined)?.id === 'brands')
 const actions = computed(() =>
   brands.value
@@ -26,8 +26,8 @@ const actions = computed(() =>
         lede: copy.value.ctaLede,
         primaryHref: theme.value.darebayCta.tasksUrl,
         primary: copy.value.ctaPrimary,
-        secondaryHref: theme.value.darebayCta.telegramUrl,
-        secondary: copy.value.ctaSecondary,
+        secondaryHref: theme.value.darebayCta.communityUrl,
+        secondary: theme.value.darebayCta.communityLabel,
       },
 )
 </script>

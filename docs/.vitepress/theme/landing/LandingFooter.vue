@@ -12,7 +12,7 @@ const links = computed(() => (theme.value.nav ?? []).slice(0, -1) as { text: str
 <template>
   <footer class="lp-footer">
     <div class="lp-container lp-footer-in">
-      <div>© DareBay · <a :href="theme.darebayCta.productUrl" target="_self">{{ copy.footerHome }}</a> · <a :href="theme.darebayCta.telegramUrl" target="_blank" rel="noreferrer">{{ copy.footerTelegram }}</a></div>
+      <div>© DareBay · <a :href="theme.darebayCta.productUrl" target="_self">{{ copy.footerHome }}</a> · <a :href="theme.darebayCta.communityUrl" target="_blank" rel="noreferrer">{{ theme.darebayCta.communityName }}</a></div>
       <nav :aria-label="theme.navLabel"><a v-for="l in links" :key="l.link" :href="l.link" style="margin-inline-start:16px">{{ l.text }}</a></nav>
     </div>
   </footer>

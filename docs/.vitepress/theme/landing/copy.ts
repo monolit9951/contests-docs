@@ -29,7 +29,6 @@ export interface LandingCopy {
   ctaTitle: string
   ctaLede: string
   ctaPrimary: string
-  ctaSecondary: string
   /** The same block on a page of the brands section: a business, not a creator, reads it. */
   bizCtaTitle: string
   bizCtaLede: string
@@ -38,7 +37,6 @@ export interface LandingCopy {
   columns: Record<string, string>
   cis: { yes: string; no: string; partial: string; unknown: string }
   footerHome: string
-  footerTelegram: string
   related: string
   hubAll: string
   calcProTitle: string
@@ -180,7 +178,6 @@ export const LANDING_COPY: Record<Locale, LandingCopy> = {
     ctaTitle: 'Take a brief and get paid per view',
     ctaLede: 'No followers, no application. In a wallet-backed task the budget is locked on the platform before you start; views are counted independently.',
     ctaPrimary: 'Open the tasks →',
-    ctaSecondary: 'Telegram channel',
     bizCtaTitle: 'Creators make the clips and you pay per view',
     bizCtaLede: 'You set the rate, threshold and cap before launch, and the budget goes only to views on clips that cleared the threshold. Questions before you launch? Ask the founder on Telegram.',
     bizCtaPrimary: 'Discuss a launch →',
@@ -188,7 +185,6 @@ export const LANDING_COPY: Record<Locale, LandingCopy> = {
     columns: columns.en,
     cis: { yes: 'yes', no: 'no', partial: 'partly', unknown: 'not stated' },
     footerHome: 'darebay.com',
-    footerTelegram: 'Telegram',
     related: 'More in this section',
     hubAll: 'All pages',
     calcProTitle: 'Clipping earnings calculator',
@@ -232,7 +228,6 @@ export const LANDING_COPY: Record<Locale, LandingCopy> = {
     ctaTitle: 'Возьми задание и получай за просмотры',
     ctaLede: 'Подписчики и заявка не нужны. В кошельковом задании бюджет лежит на платформе до старта, просмотры считаются независимо.',
     ctaPrimary: 'Открыть задания →',
-    ctaSecondary: 'Канал в Telegram',
     bizCtaTitle: 'Ролики о продукте сделают авторы, а вы платите за просмотры',
     bizCtaLede: 'Ставку, порог и потолок на ролик вы задаёте до старта, а бюджет тратится только на просмотры роликов, которые взяли порог. Вопросы до запуска можно задать основателю в Telegram.',
     bizCtaPrimary: 'Обсудить запуск →',
@@ -240,7 +235,6 @@ export const LANDING_COPY: Record<Locale, LandingCopy> = {
     columns: columns.ru,
     cis: { yes: 'да', no: 'нет', partial: 'частично', unknown: 'не указано' },
     footerHome: 'darebay.com',
-    footerTelegram: 'Telegram',
     related: 'Ещё в этом разделе',
     hubAll: 'Все страницы',
     calcProTitle: 'Калькулятор заработка на нарезках',
@@ -284,7 +278,6 @@ export const LANDING_COPY: Record<Locale, LandingCopy> = {
     ctaTitle: 'Візьми завдання й отримуй за перегляди',
     ctaLede: 'Підписники та заявка не потрібні. У гаманцевому завданні бюджет лежить на платформі до старту, перегляди рахуються незалежно.',
     ctaPrimary: 'Відкрити завдання →',
-    ctaSecondary: 'Канал у Telegram',
     bizCtaTitle: 'Ролики про продукт зроблять автори, а ви платите за перегляди',
     bizCtaLede: 'Ставку, поріг і стелю на ролик ви задаєте до старту, а бюджет іде лише на перегляди роликів, які взяли поріг. Питання до запуску можна поставити засновнику в Telegram.',
     bizCtaPrimary: 'Обговорити запуск →',
@@ -292,7 +285,6 @@ export const LANDING_COPY: Record<Locale, LandingCopy> = {
     columns: columns.uk,
     cis: { yes: 'так', no: 'ні', partial: 'частково', unknown: 'не вказано' },
     footerHome: 'darebay.com',
-    footerTelegram: 'Telegram',
     related: 'Ще в цьому розділі',
     hubAll: 'Усі сторінки',
     calcProTitle: 'Калькулятор заробітку на нарізках',
@@ -341,7 +333,6 @@ export const LANDING_COPY: Record<Locale, LandingCopy> = {
     ctaTitle: 'خذ مهمة واحصل على أجر مقابل المشاهدات',
     ctaLede: 'لا حاجة إلى متابعين ولا إلى طلب انضمام. في المهمة الممولة من المحفظة تُحجز الميزانية على المنصة قبل أن تبدأ، والمشاهدات يحتسبها عدّاد مستقل. واجهة المنصة بالإنجليزية.',
     ctaPrimary: 'افتح المهام ←',
-    ctaSecondary: 'قناة Telegram',
     bizCtaTitle: 'صنّاع المحتوى يُعدّون المقاطع وأنت تدفع مقابل المشاهدات',
     bizCtaLede: 'تحدد السعر وحد المشاهدات والحد الأقصى لكل مقطع قبل الإطلاق، ولا تُنفق الميزانية إلا على مشاهدات المقاطع التي تجاوزت الحد. لديك أسئلة قبل الإطلاق؟ اسأل المؤسس على Telegram. واجهة المنصة بالإنجليزية.',
     bizCtaPrimary: 'ناقش إطلاق حملتك ←',
@@ -349,7 +340,6 @@ export const LANDING_COPY: Record<Locale, LandingCopy> = {
     columns: columns.ar,
     cis: { yes: 'نعم', no: 'لا', partial: 'جزئيًا', unknown: 'غير مذكور' },
     footerHome: 'darebay.com',
-    footerTelegram: 'Telegram',
     related: 'المزيد في هذا القسم',
     hubAll: 'كل الصفحات',
     calcProTitle: 'حاسبة الأرباح من المقاطع',

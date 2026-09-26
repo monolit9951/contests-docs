@@ -58,11 +58,11 @@ const PlatformCta = defineComponent({
             'a',
             {
               class: 'db-cta-btn db-cta-btn-ghost',
-              href: cta.telegramUrl,
+              href: cta.communityUrl,
               target: '_blank',
               rel: 'noreferrer',
             },
-            cta.telegramLabel,
+            cta.communityLabel,
           ),
         ]),
       ])

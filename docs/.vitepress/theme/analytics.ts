@@ -21,6 +21,7 @@ export const DocsEvent = {
     PageView: 'docs_page_view',
     ExitToSite: 'docs_exit_to_site',
     ExitToTelegram: 'docs_exit_to_telegram',
+    ExitToDiscord: 'docs_exit_to_discord',
     ExitExternal: 'docs_exit_external',
     ReadDepth: 'docs_read_depth',
     ReadTime: 'docs_read_time',
@@ -36,6 +37,7 @@ const EVENT_KINDS: Record<DocsEventId, EventKind> = {
     [DocsEvent.PageView]: 'page_view',
     [DocsEvent.ExitToSite]: 'interaction',
     [DocsEvent.ExitToTelegram]: 'interaction',
+    [DocsEvent.ExitToDiscord]: 'interaction',
     [DocsEvent.ExitExternal]: 'interaction',
     [DocsEvent.ReadDepth]: 'engagement',
     [DocsEvent.ReadTime]: 'engagement',
@@ -48,6 +50,7 @@ const EVENT_META_KEYS: Record<DocsEventId, readonly string[]> = {
     [DocsEvent.PageView]: [],
     [DocsEvent.ExitToSite]: [],
     [DocsEvent.ExitToTelegram]: [],
+    [DocsEvent.ExitToDiscord]: [],
     [DocsEvent.ExitExternal]: [],
     [DocsEvent.ReadDepth]: ['depth'],
     [DocsEvent.ReadTime]: ['engagedMs', 'maxDepth', 'sequence', 'reason'],
@@ -651,6 +654,9 @@ export const trackDocsEvent = (
     if (!options.deferFlush) void flushDocsOutbox()
 }
 
+/** An invite or a server page: the English-speaking community's room (links.ts). */
+const DISCORD_HOSTS: ReadonlySet<string> = new Set(['discord.gg', 'discord.com', 'www.discord.com'])
+
 export const classifyExitFrom = (href: string | null, currentUrl: string): DocsEventId | null => {
     if (!href || href.startsWith('#')) return null
     if (href.startsWith('tg://')) return DocsEvent.ExitToTelegram
@@ -658,6 +664,7 @@ export const classifyExitFrom = (href: string | null, currentUrl: string): DocsE
         const url = new URL(href, currentUrl)
         if (url.protocol !== 'http:' && url.protocol !== 'https:') return null
         if (url.hostname === 't.me' || url.hostname === 'telegram.me') return DocsEvent.ExitToTelegram
+        if (DISCORD_HOSTS.has(url.hostname)) return DocsEvent.ExitToDiscord
         const currentHost = new URL(currentUrl).hostname
         if (url.hostname !== 'darebay.com' && url.hostname !== currentHost) return DocsEvent.ExitExternal
         return isContentPath(url.pathname) ? null : DocsEvent.ExitToSite

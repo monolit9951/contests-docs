@@ -17,6 +17,14 @@ import { isSiteHost, SITE_HOST } from './siteHost.ts'
 // in product surfaces, not in a docs "follow us" slot.
 export const HOMEPAGE = 'https://darebay.com'
 export const TELEGRAM = 'https://t.me/darebay_app'
+/** The Discord server «DareBay · Creators»: its permanent invite, the same one the app uses. */
+export const DISCORD = 'https://discord.gg/unCNzuhcHP'
+
+// The community is one room per language (founder, 2026-09-26): Russian and Ukrainian readers follow
+// the Telegram channel, everyone else joins the Discord server. Which room a locale names is declared
+// next to its copy (`CHROME_COPY[locale].community`), so a label can never point at the other room.
+export type CommunityPlatform = 'telegram' | 'discord'
+export const COMMUNITY_URL: Record<CommunityPlatform, string> = { telegram: TELEGRAM, discord: DISCORD }
 /** The founder's personal Telegram: the contact a brand is sent to, and `Person.sameAs`. */
 export const FOUNDER_TELEGRAM = 'https://t.me/ruslanbwork'
 

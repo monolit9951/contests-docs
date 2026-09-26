@@ -11,7 +11,8 @@ Before you take a contest you ask two things: how much it pays, and who is
 behind it. The card answers the first; the badge and the ratings answer the
 second. A badge means a person or a company checked against documents, and the
 ratings show how that account behaved in earlier contests. The platform records
-the budget, result and payout status, and fulfilment is done by the team.
+the budget, result and payout status, and in a wallet-backed contest the reward
+reaches the winner's balance automatically.
 
 ## Verification levels
 
@@ -29,8 +30,8 @@ does not by itself change a fee: current terms depend on the operation and are
 listed [here](/en/help/what-commission).
 
 A contest without a badge has its budget and obligation recorded in the same way.
-The badge answers a different question - who wrote the task and what their track
-record looks like - and does not promise an automatic payout.
+The badge answers a different question: who wrote the task and what their track
+record looks like.
 
 ## Dual ratings
 
@@ -43,8 +44,8 @@ Every DareBay account carries **two ratings**:
   organizers?
 
 Both ratings are visible on your profile. They cannot be bought, and they are not
-erased by creating a new account: an account with no history looks suspicious all
-by itself.
+erased by creating a new account: a fresh account simply starts with no history,
+and the first honest contests are what build it.
 
 ## What a low rating means in practice
 

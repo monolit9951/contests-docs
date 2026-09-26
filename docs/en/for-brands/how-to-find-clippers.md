@@ -83,7 +83,7 @@ The threshold is not deducted: clear it and the whole counter is paid. At 150 00
 
 ### Do I need a big channel for clippers to take my content?
 
-No. A clipper cares about the material and the terms, not your channel size. DareBay keeps no country list: only people on sanctions lists are barred<!-- source: https://darebay.com/en/legal/terms 2026-09-24 -->. Its community is largest in the CIS, and your task is taken by whoever likes the rate and format.
+No. A clipper cares about the material and the terms, not your channel size. DareBay keeps no country list: only people on sanctions lists are barred<!-- source: https://darebay.com/en/legal/terms 2026-09-24 -->. Your task is taken by whoever likes the rate and format.
 
 ### Can I pay clippers directly, without the platform wallet?
 
@@ -91,7 +91,7 @@ On a task you create yourself, no: it is wallet-backed, so its budget is locked 
 
 ### What if a clipper posted a clip but never sent the link?
 
-A submission counts only after its link is sent; the platform does not collect clips by hashtag. Remind the creator while the task is open: without a link the clip is not counted.
+A submission counts once its link is sent, so your budget goes only to clips sent in for your task. Remind the creator while the task is open: the link is what brings the clip into the count.
 
 ### Who owns the clips, and can I post them on my own channel?
 

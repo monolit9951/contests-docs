@@ -44,7 +44,7 @@ closed to checking or answers with an error, the table says so, and the platform
 guesswork.
 
 DareBay in those tables is a participant like any other. It sits in the same columns with the same
-fields, and where it loses, that is visible. Links to other platforms are not advertising: nobody
+fields, sourced and dated by the same rules. Links to other platforms are not advertising: nobody
 pays for a place in a comparison, and the order of rows is not for sale.
 
 ## What the section never promises
@@ -59,7 +59,7 @@ that page, it is an error in the text, not a new term.
 
 ## Language and terms
 
-The texts are written in plain language, without sales hooks. Established words do not change from
+The texts are written in plain language. Established words do not change from
 page to page: the people who cut clips are clippers; what they take on is a task; the balance on the
 platform where a task's money sits and where the reward arrives is the wallet. The payment method is
 never presented as the main reason to work on the platform.

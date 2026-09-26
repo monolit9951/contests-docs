@@ -58,9 +58,9 @@ posting and waiting gets you nothing. A hashtag is required where the task expli
 and it is mandatory if you are submitting anonymously - in that case the tag in the description is
 what shows the video was made for this task.
 
-After that the platform's independent counter reads the published view counter on the site you posted
-on. Neither you nor the buyer types that figure in by hand. Moderation can still reject a
-submission that breaks the task terms.
+After that the calculation is automatic: the platform's independent counter reads the published
+view counter on the site you posted on, and neither you nor the buyer types that figure in by hand.
+Moderation can still reject a submission that breaks the task terms.
 
 ### Contests where you upload the work
 
@@ -92,10 +92,12 @@ happens next is decided by the selection type:
 
 You get a notification, and the platform records what you are owed with a status you can follow.
 In a wallet-backed contest that money left the organizer's balance back when the contest was
-created, so nothing depends on their goodwill at this point. Fulfilment itself can be processed by
-hand and carries no promised date. Entry is free, while [withdrawal](/en/help/darebay-withdrawals)
-is a separate request with a minimum, a fee and processing by the team; the form shows the method
-available to you. For an **ITEM** prize the organizer gets in touch to arrange the handover.
+created, so nothing depends on their goodwill at this point: the reward reaches your balance
+automatically when the contest ends. Entry is free, and a
+[withdrawal](/en/help/darebay-withdrawals) takes one request from 10 USDT: 10% comes off inside
+the request, the form shows the amount to receive and the method available to you before you
+confirm, and the platform does the rest. For an **ITEM** prize the organizer gets in touch to
+arrange the handover.
 
 ## 6. If you do not win
 

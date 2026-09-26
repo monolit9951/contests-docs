@@ -90,4 +90,4 @@ Check whose sound it is. If the platform muted your track over rights, ask your 
 
 ### Does this work for an independent artist without a label?
 
-Yes. Launching is free, you set the budget, and spend follows counted views only, so a small pool with a low cap is enough for a first release. Creators worldwide see the task; the largest community is in the CIS.
+Yes. Launching is free, you set the budget, and spend follows counted views only, so a small pool with a low cap is enough for a first release. Creators worldwide see the task.

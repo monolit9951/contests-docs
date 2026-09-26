@@ -62,6 +62,6 @@ Not to take part. A contest defines its own reward method, which can be USDT on 
 ## Where to next
 
 - [Is DareBay a scam?](/en/about/is-darebay-a-scam) - the platform checked against the standard fraud patterns
-- [Does DareBay really pay?](/en/about/does-darebay-really-pay) - the payout chain and where it can stall
+- [Does DareBay really pay?](/en/about/does-darebay-really-pay) - the chain from clip to money, step by step
 - [The payout guarantee](/en/about/payout-guarantee) - what is actually guaranteed
 - [DareBay withdrawals](/en/help/darebay-withdrawals) - the request, the fee and the available methods

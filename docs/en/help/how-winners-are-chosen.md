@@ -13,8 +13,8 @@ picks it at creation and cannot switch it mid-run.
 
 Whichever type a contest uses, the budget is recorded against it from publication, and in a
 wallet-backed contest it is charged from the organizer at that moment. After the result is
-confirmed, the platform stores a credit or obligation; fulfilment is done by the team and no
-settlement date is promised.
+confirmed, the platform records the credit or obligation with a status you can follow, and in a
+wallet-backed contest the reward reaches each winner's balance automatically.
 
 ## Seeded draw among eligible active works (RANDOM)
 
@@ -54,10 +54,10 @@ like (one vote per account per contest). The top of the vote count wins.
 
 ## Oracle-attested pay per view (ORACLE_ATTESTED_POOL)
 
-Nobody picks a winner. The platform's independent counter reads the published view counter on the site
-each video was posted on, then applies the contest's rate per 1000 views, its view threshold and
-its cap per submission. Every submission over the threshold is paid by formula, so several people
-can be "the winner" at once.
+Nobody picks a winner, and the calculation is automatic. The platform's independent counter reads
+the published view counter on the site each video was posted on, then applies the contest's rate
+per 1000 views, its view threshold and its cap per submission; nobody types figures in by hand.
+Every submission over the threshold is paid by formula, so several people can be "the winner" at once.
 
 - **Good for:** buying reach rather than one hero video.
 - **Feels like:** a rate card, not a competition.

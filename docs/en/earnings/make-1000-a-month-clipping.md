@@ -12,7 +12,7 @@ hero:
     - "<b>$1,000 at $1 is a million counted views, and more than one way to collect them:</b> 10 clips at 100,000 views, 25 at 40,000 or 50 at 20,000. Three layouts, none of them a promise."
     - "<b>The cap per clip is set by the task, up to $500.</b> The thousand is still built from accepted work, not from a lucky video: a steady run of clips beats one viral hit."
     - "<b>You grow the count honestly, inside the task rules:</b> several submissions in one task when the terms allow it, different clips on different accounts and sites, ready-made setups with uniqueization."
-    - "<b>Four things break the plan, and each one needs a spare task behind it:</b> rejected clips, view fraud by neighbours in the task, an exhausted fund and a paused task."
+    - "<b>Three things break the plan, and each one needs a spare task behind it:</b> rejected clips, an exhausted fund and a paused task."
 cta:
   title: "Lay your own thousand out over a month"
   lede: "Pick two or three DareBay tasks on your topic, run your real average reach through the arithmetic above, and see how many clips a month it actually asks for. Keep a spare task going, so a fund that runs dry costs you a batch and not the month."
@@ -62,7 +62,6 @@ Bookkeeping is the only way to see your real average reach by topic and task. Af
 ## What breaks the plan
 
 - **Rejections.** In the 25-clip layout every rejected clip is $40 out of the plan. Almost all are avoided by reading the card before posting: site, hashtag, dates, your own footage, an open profile. The checklist is in [why clips get rejected](/en/earnings/why-clips-get-rejected).
-- **View fraud by neighbours in the task.** Other authors' inflated clips burn through the fund faster than honest ones until moderation filters them out. The fund can run out earlier than you counted on.
 - **An exhausted fund.** The "Pool exhausted" status means posting is still allowed but there is nothing left to pay with. That is why a layout has two or three tasks, and the next batch goes where the fund is open.
 - **A paused task.** A task is paused or closes entries before you finish the batch. Submissions already sent are counted on their own counters; the rest of the batch moves to another task on the same topic.
 

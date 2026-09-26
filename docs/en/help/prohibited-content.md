@@ -39,8 +39,7 @@ and the rules for entering work are in [Submit your work](/en/help/submit-your-w
 ## What happens next
 
 - **The report goes into the queue straight away.** Zero-tolerance categories
-  jump it. We do not publish a response time, but these are read by a person and
-  not by a ticket robot.
+  jump it, and every report is read by a person, not by a ticket robot.
 - **Violation confirmed:** the content is removed and the account banned,
   with no "three strikes" here. A [wallet-backed budget](/en/about/payout-guarantee) held for the
   affected contest goes back to the organizer, and is withheld if the organizer

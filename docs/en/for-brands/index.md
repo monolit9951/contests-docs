@@ -15,7 +15,7 @@ Set the contest up on [darebay.com](https://darebay.com); the formats and terms 
 
 ## Short answers to the questions brands ask first
 
-- **How you pay clippers.** One task with a rate per 1000 views: each clipper who sends in a link is credited by formula for the views the clip got, up to the cap per submission. Fulfilment is done by the team, with no promised date: [how to pay clippers per view](/en/for-brands/paying-clippers-per-view).
+- **How you pay clippers.** One task with a rate per 1000 views: each clipper who sends in a link is credited by formula for the views the clip got, up to the cap per submission, so you never settle with creators one by one: [how to pay clippers per view](/en/for-brands/paying-clippers-per-view).
 - **What it costs.** Only the prize budget you set yourself: creating the contest is free. The contest commission is 0%, and there is no separate charge for topping up the budget.
 - **Who holds the budget.** The platform. A contest you publish yourself has its budget locked on DareBay from that moment, so creators know the money is real, and whatever they did not earn comes back to your balance.
 - **What if nobody shows up.** A wallet-backed budget goes only to views that happened: no submissions, or none over the threshold, means nothing to pay for.
@@ -24,7 +24,7 @@ Set the contest up on [darebay.com](https://darebay.com); the formats and terms 
 - **CPA offers.** For results rather than reach, a task can pay clippers on a CPA basis: a fixed amount per accepted clip plus a share of the sales it brings, set out in the task before anyone starts.
 - **Why this beats private arrangements.** One task instead of a chat with a dozen creators, and no view figure ever arrives as a screenshot: [how to commission clips for a campaign](/en/for-brands/commission-clips-for-a-campaign).
 
-Said up front: the amount is calculated automatically, but the payout to creators is fulfilled by the team with no promised date, and a suspicious submission goes on hold rather than vanishing silently.
+Once the contest is live, the rest runs without you: the calculation is automatic and nobody types figures in by hand, and in a wallet-backed contest each creator's earnings reach their balance automatically when the contest ends.
 
 ## Where to next
 

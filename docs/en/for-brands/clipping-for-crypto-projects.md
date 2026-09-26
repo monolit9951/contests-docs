@@ -74,7 +74,7 @@ A crypto project already has people who explain the product in the chat for free
 
 Publish the task, then post in your Telegram and Discord with a link and two lines: the rate per 1,000 views and what is banned. Give ambassadors their own tag on the link, so you see clicks per creator, and materials ahead of everyone else. Leave tokens out of the reward: the platform counts views and pays for them from the USDT budget, and a token promise in the brief would break your own rule one.
 
-The community is the first circle, not the ceiling: creators worldwide see the task, with the largest community in the CIS; more ways to gather them are on [how to find clippers](/en/for-brands/how-to-find-clippers). Projects that live in Telegram have the [Telegram projects vertical](/en/for-business/telegram), wallets and exchanges with a mobile app the [apps vertical](/en/for-business/apps).
+The community is the first circle, not the ceiling: creators worldwide see the task; more ways to gather them are on [how to find clippers](/en/for-brands/how-to-find-clippers). Projects that live in Telegram have the [Telegram projects vertical](/en/for-business/telegram), wallets and exchanges with a mobile app the [apps vertical](/en/for-business/apps).
 
 ## What to measure
 

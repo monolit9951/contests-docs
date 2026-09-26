@@ -53,9 +53,9 @@ One of four selection types:
   when quality is subjective and you trust your own taste.
 - **VIEWER_VOTING**: the community votes and the top of the tally wins. Good if
   you want the contest to be about the community.
-- **ORACLE_ATTESTED_POOL**: nobody picks. The counted views of every submission
-  that cleared the threshold feed the pay-per-view formula, and the budget is
-  split by the result.
+- **ORACLE_ATTESTED_POOL**: nobody picks, and the calculation is automatic. The
+  counted views of every submission that cleared the threshold feed the
+  pay-per-view formula, and the budget is split by the result.
 
 The selection type is locked in at creation: once published, it cannot be
 changed.
@@ -66,9 +66,8 @@ A prize is either **MONEY** (a wallet payout in USDT on TON, a bank card, a bank
 transfer, Telegram Stars, Telegram gifts) or **ITEM** (a thing, described in
 text: "a signed vinyl record", "concert tickets"). You can set several prize
 places (1st, 2nd, 3rd) and several winners in one place.
-The contest defines the reward method. This does not mean that a credited balance can be
-withdrawn automatically through every method in that list: fulfilment is done by the team, and the
-balance-withdrawal wizard shows its available rails separately.
+The contest defines the reward method. A credited balance is withdrawn separately,
+through the rails the balance-withdrawal wizard shows.
 
 A wallet-backed money prize is locked the moment you publish: it leaves your balance and
 belongs to the result until the contest ends. You cannot pull it back, which is

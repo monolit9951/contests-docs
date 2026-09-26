@@ -95,6 +95,6 @@ One is enough to test the formats and the rate. Regularity matters more than vol
 
 The clip lives on the clipper's account, so agree with the guest before release, not after. Topics the guest has closed go into the brief's bans: a clip with them is rejected and not paid.
 
-### How do I get clicks to the full episode if the platform counts only views?
+### How do I get clicks to the full episode as well as views?
 
 Make the episode link a required caption field and give each creator a tag. The platform counts the views; clicks show up in your analytics by tag, so you see which format brings listeners.

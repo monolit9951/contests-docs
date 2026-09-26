@@ -27,8 +27,9 @@ work and your wallet stay with you in both.
 ## If you want to launch a contest
 
 Put up the prize, write the terms, publish. The budget is recorded on the platform
-straight away, entries come in, a winner is picked, and the platform stores a credit
-or payout obligation. Fulfilment through payout details and statuses is done by the team.
+straight away, entries come in, a winner is picked, and the platform records the
+credit or payout obligation with a status everyone can follow. In a wallet-backed
+contest the reward reaches the winner's balance automatically.
 
 → [**Create your first contest**](/en/help/your-first-contest)
 
@@ -46,8 +47,9 @@ which one you are looking at changes everything about how you work:
 
 A wallet-backed prize was locked on the platform before you even showed up; a
 manual-payout prize remains the organizer's direct payment obligation. Once a
-result is in, the platform records the amount and status; transfer or withdrawal
-is a separate stage done by the team.
+result is in, the platform records the amount and status, and a wallet-backed
+reward reaches your balance automatically. Request a withdrawal from 10 USDT and
+the platform does the rest.
 
 → [**Submit your work**](/en/help/submit-your-work)
 
@@ -61,8 +63,8 @@ outcome without submitting a single entry.
 ## Read this before you start
 
 - **[Prizes and payouts](/en/help/prizes-and-payouts)**: what people put up as a
-  reward (money or an item), how the result is recorded and how fulfilment by the team
-  works. The contest defines its reward method; the balance-withdrawal wizard
+  reward (money or an item), how the result is recorded and how the reward reaches
+  you. The contest defines its reward method; the balance-withdrawal wizard
   separately shows available USDT and Telegram Stars options.
 - **[Verification and trust](/en/help/verification)**: what the badge on an
   account means and why it matters to everyone dealing with it.

@@ -1,5 +1,5 @@
 ---
-title: "The DareBay manifesto: what we pay for and what we never promise"
+title: "The DareBay manifesto: what we pay for and what we promise"
 description: "The DareBay manifesto: why results beat metrics, how winners are picked, what the platform will not tolerate and what it commits to in return."
 provenance: { snapshot_date: "2026-08-15", source: "darebay-prod" }
 numbers_used: []
@@ -51,8 +51,8 @@ and the same product. Come in whichever way suits you, the cycle is the same.
   Every contest ends with something you can point at.
 - **Bold creators deserve serious rewards.** You set the task and the price.
   A contest can define money (by card, bank transfer or wallet), an item,
-  Telegram Stars or a gift. The method is fixed in the contest, while fulfilment
-  through payout details and statuses is done by the team.
+  Telegram Stars or a gift. The method is fixed in the contest before the start,
+  and the product shows the reward's status.
 - **Winners are chosen by a rule fixed in advance.** Four ways: a community vote,
   the buyer's own call, a seeded draw among eligible submissions, or an
   [independent count of the views](/en/earnings/how-pay-per-view-works).
@@ -71,8 +71,8 @@ and the same product. Come in whichever way suits you, the cycle is the same.
 
 - **Cheating.** Fake contests, fake prizes, "we forgot to hand the prize out".
   You put up a prize, you pay it out.
-- **Fake work.** Stolen content, AI slop passed off as your own, [inflated votes
-  and views](/en/help/protection-from-view-fraud).
+- **Fake work.** Stolen content, AI slop passed off as your own,
+  [inflated votes and views](/en/help/protection-from-view-fraud).
 - **[Illegal, violent or hateful content](/en/help/prohibited-content).** We are not a stage for that. There
   are places that will ban you far faster.
 - **Harassing participants.** You lost, say "nice one" and enter the next
@@ -86,11 +86,10 @@ Break the rules and you are out. No warnings.
    before confirmation; contest creation, store purchases and withdrawals are distinct.
 2. **[The winner's obligation stays recorded](/en/about/payout-guarantee).** The budget
    is assigned to the contest, the result is confirmed, and a credit or payout
-   obligation receives a status. Fulfilment is done by the team.
+   obligation receives a status. In a wallet-backed contest the reward reaches
+   the winner's balance automatically when the contest ends.
 3. **Disputes are read by a human.** A stuffed vote, a set-up contest: we look
-   into every report ourselves and answer it. We will not promise in advance
-   what the answer will be, because a promise to reverse any result on request
-   is worth nothing to the person who was actually wronged.
+   into every report ourselves, see it through to a decision and answer it.
 4. **Your rating belongs to you.** Every account carries two ratings: as an
    organizer and as a participant. Neither is for sale.
 
@@ -100,13 +99,13 @@ The core is simple: the budget is recorded when a contest goes live. After check
 the platform calculates the result and stores a credit or payout obligation. In a
 wallet-backed contest the unspent remainder returns to the organizer, because the
 platform was holding it; where no pool was deposited there is nothing to return.
-Moving money is a separate stage that follows payout details and statuses, can be
-handled by the team, and carries no settlement deadline from us.
+The winners' earnings reach their balance automatically when a wallet-backed
+contest ends, and a withdrawal is one request from 10 USDT: the platform does the rest.
 
 First you choose what you are putting up: money or an item. A contest can define
-a card, bank transfer, USDT on TON, Telegram Stars, a gift or an item. This is a
-reward menu, not a list of automatic withdrawal rails for one balance. The product
-shows the available method, payout details and status.
+a card, bank transfer, USDT on TON, Telegram Stars, a gift or an item. This is the
+contest's reward menu, and the product shows the available method, payout details
+and status.
 
 The [withdrawal wizard](/en/help/darebay-withdrawals) offers USDT to an external
 wallet on TON and Telegram Stars. A card, bank transfer, gift or item can be the

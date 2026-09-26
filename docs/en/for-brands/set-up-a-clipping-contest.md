@@ -34,15 +34,15 @@ The full budget is charged when the contest is created, and DareBay holds it as 
 
 ### 5. Clippers publish and send links
 
-Once the contest is live, creators take the task, produce the video and publish it on the site your terms name - statistics are collected today for TikTok, YouTube, Instagram and the other sites named in the task - then send DareBay the link. **A submission enters the contest only when that link arrives.** Nothing is imported by hashtag, so ask for a tag only if you actually want one in the description; it is separately required from anyone submitting anonymously.
+Once the contest is live, creators take the task, produce the video and publish it on the site your terms name - statistics are collected today for TikTok, YouTube, Instagram and the other sites named in the task - then send DareBay the link. **A submission enters the contest when that link arrives**, so the calculation covers exactly the videos creators sent in for your task. Ask for a tag only if you actually want one in the description; it is separately required from anyone submitting anonymously.
 
 ### 6. The counter is read
 
-The platform's independent counter reads the published view counter on the site each video went out on. Neither you nor the creator types the number in, and neither can adjust it. On top of that there is moderation: a submission with suspicious view dynamics is flagged and goes on hold pending review instead of going straight into your bill. That is a real check rather than a promise that every manipulated view gets identified. More on that: [how pay-per-view works](/en/earnings/how-pay-per-view-works).
+The platform's independent counter reads the published view counter on the site each video went out on. Neither you nor the creator types the number in, and neither can adjust it. On top of that there is moderation: a submission with suspicious view dynamics is flagged and goes on hold pending review instead of going straight into your bill. More on that: [how pay-per-view works](/en/earnings/how-pay-per-view-works).
 
 ### 7. The formula determines each amount
 
-The platform records each obligation using `views / 1000 * rate`. Submissions below the threshold take no part, and submissions above the cap receive the cap. Payout fulfilment then runs through payout details and statuses as a separate step by the team; a transfer immediately after counting is not promised.
+The calculation is automatic: the platform works out each amount with `views / 1000 * rate`, and nobody types figures in by hand. Submissions below the threshold take no part, and submissions above the cap receive the cap. In a wallet-backed contest the earnings reach each creator's balance automatically when the contest ends, and you do not have to approve each payout.
 
 ### 8. The unearned budget comes back
 
@@ -83,7 +83,7 @@ No. Entry is free, with no deposits and no follower requirements. To be paid, a 
 
 ### Should I attach source material to the task?
 
-You can, and it is worth considering. Across the contests running today, none have material attached, so clippers are sourcing their own footage. Attaching yours narrows what comes back to what you actually wanted, at the cost of writing a tighter brief.
+You can, and it is worth considering. Without material, clippers source their own footage; attaching yours narrows what comes back to what you actually wanted, at the cost of writing a tighter brief.
 
 ### How do clippers find out about the contest?
 
@@ -95,4 +95,4 @@ The contest goes straight into the public catalogue on [DareBay](https://darebay
 - [Terms for business](/en/for-business) - formats, pricing and guarantees
 - [How pay-per-view works](/en/earnings/how-pay-per-view-works) - the full chain from budget to payout, how the threshold works and why it exists
 - [What fees does DareBay charge?](/en/help/what-commission) - contest, store and withdrawal terms
-- [The payout guarantee](/en/about/payout-guarantee) - what is guaranteed to a clipper, and what is not
+- [The payout guarantee](/en/about/payout-guarantee) - what is guaranteed to a clipper and how it works

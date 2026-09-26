@@ -22,7 +22,7 @@ The current top-up and withdrawal methods are listed right on those screens in t
 
 ## The network matters more than the address
 
-The only supported network is TON. An address copied from a wallet on another network looks perfectly valid, but a transfer sent to it goes nowhere, and there is nowhere to recover it from: neither the platform nor support can do anything about it.
+The only supported network is TON. An address copied from a wallet on another network looks perfectly valid, but a transfer sent to it goes nowhere, and there is nowhere to recover it from: a blockchain transfer cannot be reversed by anyone.
 
 So before your first withdrawal, check the network specifically, not just the address, and send a small test amount if you are unsure. The terms and the request procedure are on [withdrawals](/en/help/darebay-withdrawals).
 
@@ -32,7 +32,7 @@ Which other clipping platforms pay in crypto, and on which network each of them 
 
 COINS are the platform's internal game currency. They live inside the product, never leave it and do not convert into USDT: the withdrawable balance is denominated in USDT. If you expect accumulated COINS to land in your wallet one day, do not: they are not built for that.
 
-## Crypto here is a payment rail, not a guarantee
+## Crypto is the rail, DareBay is the guarantor
 
 The word "crypto" is often read as "smart contract", so let us be direct: on-chain escrow plays no part in this scheme. The budget of a wallet-backed contest is frozen on the platform side, and the payout is secured by an intermediary and guarantor, not by code on a blockchain. USDT is the rail the money arrives and leaves on, nothing more.
 
@@ -40,7 +40,7 @@ What exactly protects the payout and why it works without a blockchain is covere
 
 ## Do you have to pay with crypto
 
-No. The terms of a contest can name a card, a bank transfer, Telegram Stars, a Telegram gift or an item. Those are reward methods of that particular contest, not withdrawal rails for the balance: the withdrawal wizard offers USDT to an external wallet and Telegram Stars, and the team handles the request.
+No. The terms of a contest can name a card, a bank transfer, Telegram Stars, a Telegram gift or an item. Those are reward methods of that particular contest, not withdrawal rails for the balance: the withdrawal wizard offers USDT to an external wallet and Telegram Stars. Request a withdrawal from 10 USDT and the platform does the rest.
 
 ---
 

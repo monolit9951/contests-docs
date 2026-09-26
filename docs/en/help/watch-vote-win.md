@@ -50,5 +50,4 @@ cases.
 
 ---
 
-→ Ready for more: **[submit your work](/en/help/submit-your-work)** or **[run a
-contest](/en/help/your-first-contest)**.
+→ Ready for more: **[submit your work](/en/help/submit-your-work)** or **[run a contest](/en/help/your-first-contest)**.

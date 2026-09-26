@@ -43,7 +43,7 @@ Accepted clip, growing counter, flat amount. Six causes, none a reason to redo t
 | A lower figure than on the site | Views update several times a day, see "Last sync"; fresh earnings mature for 24 h | Nothing, the sync catches up |
 | "Per-work cap reached" | The cap on one submission is full: views keep coming, money does not | A new clip has its own cap |
 | "Pool exhausted" | Other clips used up the task fund; posting is still allowed, paying is not | Check "Fund exhausted at", take another task |
-| "Under review", "Payout stopped by a flag" | The clip is being checked; accrual pauses until a person decides | Wait, no duplicates; if it drags on, ask support |
+| "Under review", "Payout stopped by a flag" | The clip is being checked; accrual pauses until it has been looked at | Wait, no duplicates; questions go to support |
 | "Stats appear after the first sync", "Video unavailable" | Views not confirmed: no sync yet, or the clip or profile is closed | Open both, wait for the next sync |
 
 Say 20,000 views at $1.00 per 1000: `20,000 / 1000 × $1.00 = $20.00`, credited in full unless the task caps a clip below that. Threshold mechanics and the route of the money to your wallet: [how pay-per-view works](/en/earnings/how-pay-per-view-works).
@@ -66,7 +66,7 @@ Both routes, step by step: [submit your work](/en/help/submit-your-work).
 
 Reread the terms and the rejection reason in your cabinet, point by point: half of all disputes end here. Sure the clip qualifies? Write to the organizer from the task, briefly, with facts; no answer or a debatable reason, write to support. Attach links to the submission and the clip, the task id, screenshots of the caption with hashtag and date and of the site's stats, the repost link for a spike dispute, the task materials for "Someone else's video".
 
-A person does the review, no deadline is promised, and the outcome is guaranteed in neither direction. A flag is a pause, not a verdict; its outcomes are in [protection from view fraud](/en/help/protection-from-view-fraud).
+Every dispute that reaches support is read by a person and answered. A flag is a pause, not a verdict; its outcomes are in [protection from view fraud](/en/help/protection-from-view-fraud).
 
 ## Frequently asked questions
 
@@ -80,7 +80,7 @@ A rejected submission cannot be edited: a fixed clip is a new post and a new sub
 
 ### How long does a review take?
 
-No fixed term: a review is a pause until a person decides; the status shows on the task card. Stuck for long? Write to support with the task id and submission link; do not create a second one.
+A review is a pause, not a verdict: accrual waits while the clip is looked at, and the status shows on the task card throughout. A flagged clip that stays on hold can still be paid once the review window has run out. Questions about a specific review go to support with the task id and submission link; do not create a second submission.
 
 ### Why does my cabinet show fewer views than TikTok?
 

@@ -1,6 +1,6 @@
 ---
 title: "Earning on VK Clips: how VK pays and how DareBay fits"
-description: "VK pays clip creators a share of ad revenue through its VK Video partner programme, mostly to a Russian-speaking audience. DareBay does not count VK views."
+description: "VK Clips pay a share of ad revenue through the VK Video partner programme; DareBay pays $1–$10 per 1,000 views for the same edit on TikTok, Reels or Shorts."
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_min_views_threshold_live, ppv_max_per_work_typical]
 competitor_sources:
@@ -17,7 +17,7 @@ hero:
   takeaways:
     - "<b>VK runs no separate pay-per-view for clips: they are monetized through the VK Video partner programme.</b> A creator gets 50 to 80% of the platform's ad income from their videos <!-- source: https://vk.company/ru/press/releases/11856/ 2026-09-04 -->, and clip views count toward that monetization <!-- source: https://vk.company/ru/press/releases/11895/ 2026-09-04 -->."
     - "<b>Entry from 1 September 2026: 1,000 subscribers and 500 watch hours over 90 days</b> <!-- source: https://vk.company/ru/press/releases/12381/ 2026-09-04 -->; VK publishes no rate per 1,000 clip views, so a clip's income is known only after the payout."
-    - "<b>DareBay does not count VK views.</b> Tasks count only TikTok, Instagram Reels, YouTube Shorts and Facebook Reels, and there the $1–$10 per 1,000 views rate is printed on the card before you publish."
+    - "<b>DareBay pays for the TikTok, Reels and Shorts copy.</b> Its tasks count views on TikTok, Instagram Reels, YouTube Shorts and Facebook Reels, not on VK, and the $1–$10 per 1,000 views rate is printed on the card before you publish."
     - "<b>Region decides whether VK is worth your time at all.</b> Its audience is Russia and the CIS, it is blocked in Ukraine, and this page is a reference for readers where VK is open, not a reason to move your audience."
 cta:
   title: "One edit, two places to earn from it"
@@ -42,11 +42,11 @@ They do not suit anyone who needs a rate known before publishing (VK pays a shar
 
 ## Combining VK with pay-per-view tasks
 
-DareBay does not treat VK as a platform: a link to a VK clip is not accepted, and views there never enter a payout. Tasks count views only on TikTok, Instagram Reels, YouTube Shorts and Facebook Reels. So the combination is one edit, two publications: the copy for the task goes to the platform on the card, the VK copy lives for VK's programme.
+DareBay tasks count views on TikTok, Instagram Reels, YouTube Shorts and Facebook Reels, and a link to a VK clip is not accepted. So the combination is one edit, two publications: the copy for the task goes to the platform on the card, the VK copy lives for VK's programme.
 
-Before publishing on DareBay you know the rate per 1,000 views ($1 to $10, set by each task), the threshold at which a clip enters the payout (set by the task, system default 1,000 views; not deducted: clear it and all views are paid) and the cap per clip (up to $500, where the task sets one)<!-- source: https://darebay.com/en/earnings/how-much-clipping-pays 2026-09-24 -->. The maths: views / 1,000 × rate, never above the cap. A hypothetical example: 20,000 / 1,000 × $1.00 = **$20.00**. A submission takes part after you send the link, a moderator checks the terms, and a wallet-backed task credits the earnings to your wallet when it ends, or earlier with "Claim now" where the task shows it<!-- source: https://darebay.com/en/help/darebay-withdrawals 2026-09-24 -->. Put your own numbers into the [clipping earnings calculator](/en/earnings/clipping-earnings-calculator); how the counted platforms read views is covered in [what TikTok pays for views](/en/earnings/tiktok-view-payouts).
+Before publishing on DareBay you know the rate per 1,000 views ($1 to $10, set by each task), the threshold at which a clip enters the payout (set by the task, system default 1,000 views; not deducted: clear it and all views are paid) and the cap per clip (up to $500, where the task sets one)<!-- source: https://darebay.com/en/earnings/how-much-clipping-pays 2026-09-24 -->. The maths: views / 1,000 × rate, never above the cap. A hypothetical example: 20,000 / 1,000 × $1.00 = **$20.00**. A submission takes part after you send the link, a moderator checks the terms, and a wallet-backed task credits the earnings to your balance when it ends, or earlier with "Claim now" where the task shows it<!-- source: https://darebay.com/en/help/darebay-withdrawals 2026-09-24 -->. Put your own numbers into the [clipping earnings calculator](/en/earnings/clipping-earnings-calculator); how the counted platforms read views is covered in [what TikTok pays for views](/en/earnings/tiktok-view-payouts).
 
-On availability, honestly. For a creator in Russia some counted platforms work with restrictions: access to Instagram is limited, TikTok restricted new uploads from Russia for years after 2022, and Google's ad systems there are suspended. DareBay keeps no country list, barring only people on sanctions lists, so clippers in Russia and the rest of the CIS are paid like everyone else<!-- source: https://darebay.com/en/legal/terms 2026-09-24 -->. The clip still has to be published where the counter is open to the platform and without breaking local rules; if a card's platform is restricted where you are, pick a task for one where you can publish. Terms by country are in the [ranking of clipping platforms](/en/earnings/best-clipping-platforms).
+On availability, honestly. For a creator in Russia some counted platforms work with restrictions: access to Instagram is limited, TikTok restricted new uploads from Russia for years after 2022, and Google's ad systems there are suspended. DareBay keeps no country list, barring only people on sanctions lists, so clippers in Russia and the rest of the CIS are paid like everyone else<!-- source: https://darebay.com/en/legal/terms 2026-09-24 -->. The clip still has to be published where the counter is open to the platform and without breaking local rules; if a card's platform is restricted where you are, pick a task for one where you can publish. Terms by country are in the [platform comparison](/en/earnings/best-clipping-platforms).
 
 ## Preparing a clip for VK
 

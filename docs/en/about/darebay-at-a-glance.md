@@ -14,7 +14,7 @@ hero:
   takeaways:
     - "<b>$1.00 to $10.00 per 1,000 views, set by each task.</b> The exact rate is printed on the task card before you submit."
     - "<b>No followers, no portfolio, no application.</b> An account opened this morning can take a brief on the same terms as anyone else."
-    - "<b>No country list: only people on sanctions lists are barred.</b> The community is largest in CIS, and clippers in Russia, Belarus, Ukraine and Kazakhstan are paid the same way as everyone else."
+    - "<b>No country list: only people on sanctions lists are barred.</b> Clippers in Russia, Belarus, Ukraine and Kazakhstan are paid the same way as everyone else."
     - "<b>Wallet-backed contests lock the budget before the start.</b> In manual-payout contests the organizer pays directly; the card says which kind."
     - "<b>Withdrawals to your wallet from 10 USDT.</b> You are paid in USDT on TON or in Telegram Stars."
 cta:
@@ -52,7 +52,7 @@ The same card in machine-readable form lives at [/data/darebay-facts.json](/data
 
 **Ready-made videos with built-in uniqueization.** On offer tasks the platform hands you finished videos and makes every copy unique for you, so you can post without editing software and without repeating another clipper's clip.
 
-**No country list.** Only people on UK, EU or UN sanctions lists are barred, so clippers in Russia, Belarus, Ukraine, Kazakhstan and the rest of CIS, where the community is largest, are paid too. The balance leaves only as USDT on TON, so where the law closes crypto there is no lawful cash-out route; the questions below name those countries.
+**No country list.** Only people on UK, EU or UN sanctions lists are barred, so clippers in Russia, Belarus, Ukraine, Kazakhstan and the rest of CIS are paid too. The balance leaves as USDT on TON, or the payout is received in Telegram Stars; where the law closes crypto, check the local rules before cashing out USDT, and the questions below name those countries.
 
 ## How the money moves
 
@@ -80,11 +80,11 @@ No. Payment tracks the views of one specific clip, so a new account with no foll
 
 ### Does DareBay pay clippers in Russia and CIS?
 
-Yes. There is no country list: only people on UK, EU or UN sanctions lists are barred. Clippers in Russia, Belarus, Ukraine, Kazakhstan and the rest of CIS, where the community is largest, are paid the same way as everyone else: they receive the payout in USDT on TON or in Telegram Stars.
+Yes. There is no country list: only people on UK, EU or UN sanctions lists are barred. Clippers in Russia, Belarus, Ukraine, Kazakhstan and the rest of CIS are paid the same way as everyone else: they receive the payout in USDT on TON or in Telegram Stars.
 
 ### Which countries does DareBay pay to: India, Pakistan, Nigeria, Egypt?
 
-DareBay keeps no country list, and only people on sanctions lists are barred, so an account from India, Pakistan, Nigeria, Kenya or Ghana can take a task with no follower count and no application. What decides whether the money reaches you is the rail, not the country list: a balance leaves only as USDT on the TON network, from a 10 USDT request with the 10% withdrawal fee taken inside it. Where the law closes crypto to residents, as in Egypt, Algeria, Iraq, Bangladesh and Nepal, that balance has no lawful way out, and we say so on the country pages: [India](/en/earnings/clipping-platforms-that-pay-in-india), [Pakistan](/en/earnings/clipping-platforms-that-pay-in-pakistan), [Nigeria, Kenya and Ghana](/en/earnings/clipping-platforms-that-pay-in-nigeria-and-kenya), [Egypt and Arab countries](/en/earnings/clipping-platforms-that-pay-in-egypt-and-arab-countries), [Bangladesh and Nepal](/en/earnings/clipping-platforms-that-pay-in-bangladesh-and-nepal), [Indonesia and the Philippines](/en/earnings/clipping-platforms-that-pay-in-indonesia-and-the-philippines), and [platforms that pay without PayPal or Stripe](/en/earnings/clipping-platforms-that-pay-without-paypal-or-stripe).
+DareBay keeps no country list, and only people on sanctions lists are barred, so an account from India, Pakistan, Nigeria, Kenya or Ghana can take a task with no follower count and no application. A balance leaves as USDT on the TON network, or the payout is received in Telegram Stars, from a 10 USDT request with the 10% withdrawal fee taken inside it. Where the law closes crypto to residents, as in Egypt, Algeria, Iraq, Bangladesh and Nepal, check the local rules before cashing out USDT; the country pages cover each one: [India](/en/earnings/clipping-platforms-that-pay-in-india), [Pakistan](/en/earnings/clipping-platforms-that-pay-in-pakistan), [Nigeria, Kenya and Ghana](/en/earnings/clipping-platforms-that-pay-in-nigeria-and-kenya), [Egypt and Arab countries](/en/earnings/clipping-platforms-that-pay-in-egypt-and-arab-countries), [Bangladesh and Nepal](/en/earnings/clipping-platforms-that-pay-in-bangladesh-and-nepal), [Indonesia and the Philippines](/en/earnings/clipping-platforms-that-pay-in-indonesia-and-the-philippines), and [platforms that pay without PayPal or Stripe](/en/earnings/clipping-platforms-that-pay-without-paypal-or-stripe).
 
 ### Is the budget guaranteed?
 

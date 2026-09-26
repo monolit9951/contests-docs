@@ -26,7 +26,7 @@ method:
   - "Where a figure is not published, the cell says so. We do not convert rubles to dollars: each platform's rate is shown in its own currency. Klipni's counts of creators, campaigns and views are its own counters, quoted as the platform's figures."
 cta:
   title: "Clip without a tax status, get paid in USDT"
-  lede: "DareBay keeps no country list: only people on sanctions lists are barred, and its community is largest in CIS. The rate sits on the card before you submit, and a wallet-backed contest locks its budget on the platform before the start."
+  lede: "DareBay keeps no country list: only people on sanctions lists are barred. The rate sits on the card before you submit, and a wallet-backed contest locks its budget on the platform before the start."
 ---
 
 ## The short answer

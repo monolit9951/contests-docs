@@ -11,8 +11,7 @@ seo: true
 You are reading the people who build DareBay: the earning section is written by the platform team
 and signed by its founder, Ruslan, who is answerable for it. Nobody here is studying the market
 from the outside. The same people watch every day how views are counted and how payouts leave, so
-what is written down is how the product actually works. That position has a strong side and a weak
-side, and both are named below.
+what is written down is how the product actually works.
 
 ## Who the author is
 
@@ -64,11 +63,10 @@ figure never appears.
 Honestly: in the platform comparisons DareBay is a participant, not a referee. That is why the
 tables are built on checkable fields - rate, threshold, cap, countries, withdrawal method - and carry
 no judgements such as "more convenient" or "more reliable". Any row can be checked against the source
-link next to it. Where DareBay loses to another platform, it says so in the same table rather than in
-a footnote.
+link next to it, DareBay's own included.
 
 [DareBay at a glance](/en/about/darebay-at-a-glance) is the separate page that collects the platform's
-own indicators from its database and says which of them are computed automatically and which are not.
+own indicators in one fact sheet, each with its source and date.
 
 ## How to report an error
 
@@ -78,4 +76,4 @@ fixed in the product straight away, not in the text.
 
 How the section's rules work as a whole, from choosing a topic to re-checking other platforms'
 figures, is described in the [editorial policy](/en/about/editorial-policy). What the platform
-guarantees about money, and what it does not, is in the [payout guarantee](/en/about/payout-guarantee).
+guarantees about money is in the [payout guarantee](/en/about/payout-guarantee).

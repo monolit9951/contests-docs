@@ -24,10 +24,10 @@ compare:
 method:
   - "reach.cat builds most of its pages in the browser. The text of its terms (effective 13 September 2026), its creator terms (updated the same day), its privacy policy and its creator, brand and agency pages was read on 2026-09-18 from the code those addresses load; its static landing pages, blog and Telegram channel were read as published."
   - "Screens inside the app, such as the payout screen and the 'How payout works' panel, are described as they appeared on 2026-09-18 and labelled that way: they show what the app displays, not a published rule."
-  - "Where a landing page and the terms disagree, both are quoted with their source and the terms are treated as the binding text. Reviews on third-party sites were used only to find the questions clippers ask. DareBay's figures come from its help pages and live data snapshot."
+  - "Where a landing page and the terms disagree, both are quoted with their source and the terms are treated as the binding text. Reviews on third-party sites were used only to find the questions clippers ask. DareBay's figures come from its own public pages."
 cta:
   title: "A payout rule you can read before the first clip"
-  lede: "DareBay takes nothing from a task budget. A withdrawal costs 10% of the request, deducted inside a request of at least 10 USDT, and leaves in USDT on TON or as Telegram Stars; the team checks each request by hand. The rate, the view threshold and the cap are printed on every task card."
+  lede: "On DareBay the rate ($1–$10 per 1,000 views), the view threshold and any cap sit on the task card before your first clip, and contest payouts carry a 0% fee. You pay 10% of what you withdraw, withdrawals start at 10 USDT, and the money leaves in USDT on TON, or you receive the payout in Telegram Stars; the team checks and sends every withdrawal."
 ---
 ## The company behind Reach.cat
 
@@ -88,17 +88,17 @@ The comparisons at reach.cat/blog place Reach.cat first. Its About page calls th
 
 ## Reasons to choose Reach.cat over DareBay
 
-For comparison, DareBay's side of the ledger: a task budget carries no fee, and withdrawing a balance costs 10% of the request, deducted inside it, with requests from 10 USDT. The money leaves in USDT on TON or as Telegram Stars, virtual items that Telegram's terms say you "may not sell, withdraw, transfer" outside its own uses <!-- source: https://telegram.org/tos/stars 2026-09-18 -->. Every request is checked by a person and no settlement time is promised: [the withdrawal rules](/en/help/darebay-withdrawals), [the fee list](/en/help/what-commission).
+For comparison, DareBay's side of the ledger: 0% on contest payouts; 10% of what you withdraw, and withdrawals start at 10 USDT <!-- source: https://darebay.com/en/help/what-commission 2026-09-24 -->. The money leaves in USDT on TON, or you receive the payout in Telegram Stars, virtual items that Telegram's terms say you "may not sell, withdraw, transfer" outside its own uses <!-- source: https://telegram.org/tos/stars 2026-09-18 -->. The team checks and sends every withdrawal, with no fixed time <!-- source: https://darebay.com/en/help/darebay-withdrawals 2026-09-24 -->: [the withdrawal rules](/en/help/darebay-withdrawals), [the fee list](/en/help/what-commission).
 
 Reach.cat is the better fit when:
 
-- **Your wallet is not on TON, or you want a bank.** Its payout screen offers USDT on Ethereum, BNB Smart Chain or Solana, or a bank transfer by IBAN; DareBay's withdrawal form offers USDT on TON or Stars.
+- **Your wallet is not on TON, or you want a bank.** Its payout screen offers USDT on Ethereum, BNB Smart Chain or Solana, or a bank transfer by IBAN; a DareBay balance leaves in USDT on TON, or you receive the payout in Telegram Stars.
 - **You want a stated payout window.** A 3-day hold, then 3–5 business days after the request, per the app and the creator terms; DareBay promises no settlement time.
 - **You cash out small amounts.** The payout screen shows $5 for USDT; a DareBay request starts at 10 USDT.
 - **You want the whole USDT payout.** The payout screen shows no deduction on USDT, where DareBay takes 10% inside the request; the terms, though, cite "approximately 10%" on CPM payouts.
 - **You clip in French.** The site has French and Catalan versions <!-- source: https://reach.cat/fr 2026-09-18 -->, and the weekly recap lists French-language campaigns such as "Le Code des Grands - la newsletter qui décrypte les milliardaires" <!-- source: https://t.me/reachdotcat/343 2026-09-18 -->.
 
-The trade is the rule set: an ID check past $500, the 60-day rule and final fraud rulings on one side; on DareBay, no country list and, in wallet-backed tasks, a budget locked on the platform before the start. The wider field is ranked in [the best clipping platforms](/en/earnings/best-clipping-platforms), and [clipping platforms that pay without PayPal or Stripe](/en/earnings/clipping-platforms-that-pay-without-paypal-or-stripe) compares them by the rail the money leaves on.
+The trade is the rule set: an ID check past $500, the 60-day rule and final fraud rulings on one side; on DareBay, no country list (only people on sanctions lists are barred), identity verification where the law requires it <!-- source: https://darebay.com/en/legal/terms 2026-09-24 --> and, in wallet-backed tasks, a budget locked on the platform before the start <!-- source: https://darebay.com/en/about/payout-guarantee 2026-09-24 -->. The wider field is ranked in [the best clipping platforms](/en/earnings/best-clipping-platforms), and [clipping platforms that pay without PayPal or Stripe](/en/earnings/clipping-platforms-that-pay-without-paypal-or-stripe) compares them by the rail the money leaves on.
 
 <LMethod />
 

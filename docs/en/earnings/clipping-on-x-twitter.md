@@ -11,7 +11,7 @@ hero:
   takeaways:
     - "<b>X pays from its own revenue, by its own rules.</b> A paid subscription is required; there is no rate per 1,000 views."
     - "<b>DareBay's clip tasks do not count views on X.</b> They count views on TikTok, Instagram Reels, YouTube Shorts and Facebook Reels, as each task states."
-    - "<b>One edit, two streams.</b> DareBay tasks pay $1–$10 per 1,000 views; the X copy runs separately."
+    - "<b>One edit, two streams.</b> DareBay tasks pay $1–$10 per 1,000 views, set by each task<!-- source: https://darebay.com/en/earnings/how-much-clipping-pays 2026-09-24 -->; the X copy runs separately."
     - "<b>The text hook decides more than the edit.</b> On X people open a video because of the post's first line."
 cta:
   title: "Put the same edit to work twice"
@@ -45,7 +45,7 @@ A buyer publishes a task, hands over materials and sets a rate per 1,000 views, 
 
 | Stream | Who pays | For what | Where to publish |
 |---|---|---|---|
-| DareBay clip task | The buyer; in wallet-backed mode the budget is locked before the start | Clip views at the card rate, up to any cap | TikTok, Instagram Reels, YouTube Shorts or Facebook Reels, as the task states |
+| DareBay clip task | The buyer; a wallet-backed task locks its budget before the start<!-- source: https://darebay.com/en/about/payout-guarantee 2026-09-24 --> | Clip views at the card rate, up to any cap | TikTok, Instagram Reels, YouTube Shorts or Facebook Reels, as the task states |
 | X programme | X itself | Verified users' impressions and reactions on original posts | X only, as native video |
 
 The order that works: the task first, because the rate is known and money starts with the first clip over the threshold; X is added once the account has a verified audience. How views are read on the counted platforms: [what TikTok pays for views](/en/earnings/tiktok-view-payouts); terms by country: the [ranking of clipping platforms](/en/earnings/best-clipping-platforms).
@@ -75,7 +75,7 @@ Not in a clip task: it accepts links and counts views on TikTok, Instagram Reels
 
 ### Is Premium mandatory before a clip on X earns anything?
 
-For the X programme, yes: without an active subscription the application is not accepted. DareBay tasks need neither a subscription nor followers: you are paid for the views of one clip at the rate on the card.
+For the X programme, yes: without an active subscription the application is not accepted. DareBay tasks ask for no subscription and no followers<!-- source: https://darebay.com/en/earnings/how-much-clipping-pays 2026-09-24 -->: you are paid for the views of one clip at the rate on the card.
 
 ### Can I post on X the same clip that went to TikTok for a task?
 

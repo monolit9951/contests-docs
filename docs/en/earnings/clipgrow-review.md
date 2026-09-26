@@ -36,10 +36,10 @@ compare:
   title: "ClipGrow next to two Indian boards and DareBay"
 method:
   - "ClipGrow was read on 18 September 2026 from its own pages: the home and clipper pages as a browser renders them, the brand page, the terms, privacy and data-deletion pages dated 23 August 2026, the four campaign pages in its sitemap and its guides. Campaign numbers move every week and are dated wherever they appear."
-  - "Wondeed and ClipConnect India were read from their own pages the same day; DareBay's figures come from its live data and help pages. Rupee amounts are not converted to dollars, and where ClipGrow's pages disagree with each other the article quotes every version instead of picking one."
+  - "Wondeed and ClipConnect India were read from their own pages the same day; DareBay's figures come from its own public pages. Rupee amounts are not converted to dollars, and where ClipGrow's pages disagree with each other the article quotes every version instead of picking one."
 cta:
   title: "Clipping outside India, or on TikTok? DareBay has no country list"
-  lede: "Every open task prints its rate, view threshold and cap per clip before you post. You send the link to your clip, with no account to connect and no follower count to meet, and payouts leave in USDT on TON or as Telegram Stars, with 10% taken inside each withdrawal request from 10 USDT."
+  lede: "Each task sets its rate, from $1 to $10 per 1,000 views, plus its view threshold and any cap per clip, and shows them before you post. You send the link to your clip, with no account to connect and no follower count to meet. DareBay takes 0% from contest payouts; you pay 10% of what you withdraw, withdrawals start at 10 USDT, and the money goes out in USDT on TON, or you receive the payout in Telegram Stars."
 ---
 
 ## What ClipGrow is and who runs it
@@ -103,7 +103,7 @@ ClipGrow is the better choice when:
 - you want nothing deducted from what you earn: ClipGrow takes 0% from clippers, while DareBay takes 0% from a task budget but 10% of each withdrawal request, deducted inside it, with requests starting at 10 USDT;
 - you already run an Instagram Professional account and post Reels.
 
-DareBay is the better choice when you live outside India or have no UPI, since it publishes no country list; when you post on TikTok, which ClipGrow does not count; when you would rather send a link than switch to a Professional account and wait for a tester invitation, because DareBay reads the view counter of the published video itself; and when a clip might travel far: open DareBay tasks pay $1.00–$10.00 per 1,000 views with a cap of up to $500 per clip, set against ₹2,000 on ClipGrow's live campaigns. Compare each in its own currency. There is no application and no follower minimum on either side, and on DareBay every withdrawal request is checked by a person, so no settlement time is promised.
+DareBay is the better choice when you live outside India or have no UPI, since it publishes no country list; when you post on TikTok, which ClipGrow does not count; when you would rather send a link than switch to a Professional account and wait for a tester invitation, because DareBay reads the view counter of the published video itself; and when a clip might travel far: DareBay tasks pay $1.00–$10.00 per 1,000 views, set by each task, with a cap of up to $500 per clip <!-- source: https://darebay.com/en/earnings/how-much-clipping-pays 2026-09-24 -->, compared with ₹2,000 on ClipGrow's live campaigns. Compare each in its own currency. There is no application and no follower minimum on either side, and on DareBay every withdrawal request is checked by a person, so no settlement time is promised.
 
 ## Alternatives to ClipGrow in India
 

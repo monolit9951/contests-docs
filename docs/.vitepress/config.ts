@@ -258,7 +258,6 @@ function hubSection(hubId: HubId, lang: Locale) {
   return { text: HUB_TITLES[lang][hubId], collapsed: false, items }
 }
 
-
 // ---------------------------------------------------------------------------
 // Structured data, DERIVED from the page.
 //
@@ -436,7 +435,7 @@ function structuredData(
   hub: HubId,
   dates?: PageDates,
   compare?: { name: string; url: string }[],
-  extras: { glossary?: { id: string; term: string; definition: string }[]; app?: boolean } = {}
+  extras: { glossary?: { id: string; term: string; definition: string }[]; app?: boolean; unranked?: boolean } = {}
 ) {
   const file = join(DOCS_DIR, relativePath)
   const raw = existsSync(file) ? readFileSync(file, 'utf8') : ''
@@ -597,6 +596,8 @@ function structuredData(
       '@type': 'ItemList',
       '@id': `${url}#platforms`,
       name: title,
+      // `compare.ranked: false`: A to Z, not a ranking, and the markup says so.
+      ...(extras.unranked ? { itemListOrder: 'https://schema.org/ItemListUnordered' } : {}),
       numberOfItems: compare.length,
       itemListElement: compare.map((item, index) => ({
         '@type': 'ListItem',
@@ -860,6 +861,7 @@ export default defineConfig({
             )
           : undefined,
         app: pageData.frontmatter.app === true,
+        unranked: (pageData.frontmatter.compare as { ranked?: boolean } | undefined)?.ranked === false,
       }
     )
     // Every page renders through the landing shell now: the display face is a

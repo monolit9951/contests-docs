@@ -14,7 +14,7 @@ const loc = computed(() => localeOf(lang.value))
 // DareBay's card links into the product, in the application tree this reader is sent to.
 const appLoc = computed(() => appLocaleOf(loc.value))
 const copy = computed(() => LANDING_COPY[loc.value])
-const cfg = computed(() => (frontmatter.value.cards ?? frontmatter.value.compare ?? {}) as { ids?: string[]; highlight?: string; fields?: string[] })
+const cfg = computed(() => (frontmatter.value.cards ?? frontmatter.value.compare ?? {}) as { ids?: string[]; highlight?: string; fields?: string[]; ranked?: boolean })
 const rows = computed(() => pick(cfg.value.ids ?? []))
 const fields = computed(() => cfg.value.fields ?? CARD_FIELDS)
 const highlight = computed(() => cfg.value.highlight ?? 'darebay')
@@ -34,7 +34,7 @@ const hostSources = (p: Parameters<typeof sourcesOf>[0]) => {
       <article v-for="(p, i) in rows" :key="p.id" class="lp-card" :class="{ 'is-us': p.id === highlight }" :id="'platform-' + p.id">
         <div class="lp-card-head">
           <div>
-            <span class="lp-rank">{{ String(i + 1).padStart(2, '0') }}</span>
+            <span v-if="cfg.ranked !== false" class="lp-rank">{{ String(i + 1).padStart(2, '0') }}</span>
             <h3>
               <a v-if="p.id === highlight" :href="p.home?.[appLoc] ?? p.url" target="_self">{{ p.name }}</a>
               <a v-else v-bind="sourceAnchor(p.url, loc)">{{ p.name }}</a>

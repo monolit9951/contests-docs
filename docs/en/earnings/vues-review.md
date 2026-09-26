@@ -24,10 +24,10 @@ compare:
 method:
   - "Every statement about Vues was read on 2026-09-18 from vues.app itself: the terms and privacy policy last updated on 20 July 2026, the homepage, the brands page, the campaign directory and its per-brand pages, the iOS app page, the referral page, the creator sign-in page and the posts of its own blog. The company name comes from the seller field of its App Store listing."
   - "Where two Vues pages say different things, both are quoted with their source and the terms are treated as the binding text. A statement from its blog is attributed to the blog, not presented as a rule."
-  - "Numbered references at the end of the article name each page and the day it was read. DareBay's own figures come from its help pages and live data snapshot, not from this comparison."
+  - "Numbered references at the end of the article name each page and the day it was read. DareBay's figures come from its own public pages, not from this comparison."
 cta:
   title: "Know who is paying before you post"
-  lede: "On DareBay a wallet-backed task has its budget locked on the platform before it opens, and the task card says which kind of task it is. Nothing is taken from a task budget; a withdrawal costs 10% of the request, from 10 USDT, in USDT on TON or Telegram Stars, and the team checks every request by hand."
+  lede: "On DareBay a wallet-backed task has its budget locked on the platform before it opens, and the task card says which kind of task it is. Contest payouts carry a 0% fee; you pay 10% of what you withdraw, and withdrawals start at 10 USDT. The team checks and sends every withdrawal in USDT on TON, or you receive the payout in Telegram Stars."
 ---
 ## Who is behind Vues and who owes you the money
 
@@ -86,16 +86,16 @@ Against an automated fraud decision the privacy policy offers one route: "you ma
 
 ## Where Vues is the better pick than DareBay
 
-DareBay takes nothing from a task budget. A withdrawal costs 10% of the request, deducted inside a request of at least 10 USDT, and leaves either in USDT on the TON network or as Telegram Stars, which Telegram's terms describe as virtual items you "may not sell, withdraw, transfer" outside Telegram's own uses <!-- source: https://telegram.org/tos/stars 2026-09-18 -->. The team checks every request by hand, so no settlement time is promised: [how withdrawals work](/en/help/darebay-withdrawals), [what DareBay charges](/en/help/what-commission).
+DareBay takes 0% from contest payouts. You pay 10% of what you withdraw, and withdrawals start at 10 USDT <!-- source: https://darebay.com/en/help/what-commission 2026-09-24 -->; the balance leaves in USDT on the TON network, or you receive the payout in Telegram Stars, which Telegram's terms describe as virtual items you "may not sell, withdraw, transfer" outside Telegram's own uses <!-- source: https://telegram.org/tos/stars 2026-09-18 -->. The team checks and sends every withdrawal, so no fixed time is promised <!-- source: https://darebay.com/en/help/darebay-withdrawals 2026-09-24 -->: [how withdrawals work](/en/help/darebay-withdrawals), [what DareBay charges](/en/help/what-commission).
 
 Vues fits better in these cases:
 
-- **You want PayPal, a bank transfer or USDT on a chain other than TON.** Vues' homepage lists PayPal and bank transfer and its app pays USDT on ERC-20; DareBay's withdrawal form offers USDT on TON or Stars and nothing else.
+- **You want PayPal, a bank transfer or USDT on a chain other than TON.** Vues' homepage lists PayPal and bank transfer and its app pays USDT on ERC-20; a DareBay balance leaves in USDT on TON, or you receive the payout in Telegram Stars; a card or bank transfer comes only from a prize contest that names it as the reward <!-- source: https://darebay.com/en/help/prizes-and-payouts 2026-09-24 -->.
 - **You want no view floor on a clip.** Vues' own table lists none; on DareBay each task sets its threshold.
 - **You clip crypto, betting or prediction-market content and want many funded programs to choose from.** Vues shows 18 organizations, the largest with six-figure payout totals, and says more run privately.
 - **You work from an iPhone.** Its app submits a clip straight from the TikTok, Instagram, YouTube or X share sheet <!-- source: https://vues.app/ios 2026-09-18 -->.
 
-The other side of the ledger is custody. On DareBay a wallet-backed task has its budget locked on the platform before the start, and a manual-payout task, where the organizer pays directly, is labelled on the card. On Vues the brand keeps the money until it authorizes your payout. The wider field is ranked in [the best clipping platforms](/en/earnings/best-clipping-platforms), and [clipping platforms that pay without PayPal or Stripe](/en/earnings/clipping-platforms-that-pay-without-paypal-or-stripe) sorts them by the rail the money leaves on.
+The other side of the ledger is custody. On DareBay a wallet-backed task has its budget locked on the platform before the start, and a manual-payout task, where the organizer pays directly, is labelled on the card <!-- source: https://darebay.com/en/about/payout-guarantee 2026-09-24 -->. On Vues the brand keeps the money until it authorizes your payout. The wider field is ranked in [the best clipping platforms](/en/earnings/best-clipping-platforms), and [clipping platforms that pay without PayPal or Stripe](/en/earnings/clipping-platforms-that-pay-without-paypal-or-stripe) sorts them by the rail the money leaves on.
 
 <LMethod />
 

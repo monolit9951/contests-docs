@@ -38,10 +38,10 @@ compare:
   title: "Wondeed next to ClipGrow and DareBay"
 method:
   - "Wondeed was read on 18 September 2026 from its own pages: home, clippers, brands, pricing, FAQ, trust, terms, privacy, refund, GST, grievance, help centre, creator guide, about and press. Tabs that only appear in a browser were read from the scripts those pages load."
-  - "Indian law is quoted from the Income Tax Department, TRACES, the Union Budget memorandum and MeitY. Review sites and forums served only to find the questions readers ask; no rating or complaint is repeated here. Rupee amounts are not converted to dollars, and DareBay's figures come from its live data and help pages."
+  - "Indian law is quoted from the Income Tax Department, TRACES, the Union Budget memorandum and MeitY. Review sites and forums served only to find the questions readers ask; no rating or complaint is repeated here. Rupee amounts are not converted to dollars, and DareBay's figures come from its own public pages."
 cta:
   title: "A new account on the same terms as everyone: DareBay has no country list"
-  lede: "An account opened today takes a task on the same terms as anyone else, with the rate, the view threshold and the cap per clip printed on the card. You send the link to your clip; payouts leave in USDT on TON or as Telegram Stars, and each withdrawal request, from 10 USDT, carries a 10% fee deducted inside it."
+  lede: "An account opened today takes a task on the same terms as anyone else, with the rate, the view threshold and any cap per clip printed on the card. You send the link to your clip. DareBay takes 0% on contest payouts and 10% of what you withdraw; withdrawals start at 10 USDT and leave as USDT on TON, or you receive the payout in Telegram Stars."
 ---
 
 ## Who is behind Wondeed
@@ -107,7 +107,7 @@ Wondeed is the better pick when:
 - you want a published clock and tax deducted for you, whereas DareBay has each withdrawal request checked by a person and promises no settlement time;
 - you want no platform cut: Wondeed takes 0% from clippers, and DareBay takes nothing from a task budget but 10% of each withdrawal request, deducted inside it, with requests from 10 USDT.
 
-DareBay is the better pick when you are not an Indian resident, since it keeps no country list; when you are new, because a Wondeed beginner starts at Tier 1 on ₹5 per 1,000 views, three campaigns and a 14-day window, while a new DareBay account takes a task on the same terms as anyone, with no application or follower count; when you post on TikTok, which Wondeed calls "planned but not available yet" <!-- source: https://www.wondeed.com/help 2026-09-18 -->, or prefer to submit a link rather than connect an account; and when the rate decides it: open DareBay tasks pay $1.00–$10.00 per 1,000 views with a cap of up to $500 per clip, next to Wondeed's ₹5–₹10, each in its own currency. The same questions about ClipGrow are answered in the [ClipGrow review](/en/earnings/clipgrow-review); [the platform comparison](/en/earnings/best-clipping-platforms) ranks the global boards, and [how much clipping pays](/en/earnings/how-much-clipping-pays) covers the per-view arithmetic.
+DareBay is the better pick when you are not an Indian resident, since it keeps no country list; when you are new, because a Wondeed beginner starts at Tier 1 on ₹5 per 1,000 views, three campaigns and a 14-day window, while a new DareBay account takes a task on the same terms as anyone, with no application or follower count; when you post on TikTok, which Wondeed calls "planned but not available yet" <!-- source: https://www.wondeed.com/help 2026-09-18 -->, or prefer to submit a link rather than connect an account; and when the rate decides it: DareBay tasks pay $1.00–$10.00 per 1,000 views, set by each task, with a cap of up to $500 per clip <!-- source: https://darebay.com/en/earnings/how-much-clipping-pays 2026-09-24 -->, next to Wondeed's ₹5–₹10, each in its own currency. The same questions about ClipGrow are answered in the [ClipGrow review](/en/earnings/clipgrow-review); [the platform comparison](/en/earnings/best-clipping-platforms) ranks the global boards, and [how much clipping pays](/en/earnings/how-much-clipping-pays) covers the per-view arithmetic.
 
 <LMethod />
 

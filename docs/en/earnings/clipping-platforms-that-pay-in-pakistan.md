@@ -14,7 +14,7 @@ hero:
   takeaways:
     - "<b>Two rails from abroad, not five.</b> Payoneer withdraws to a Pakistani bank in PKR and into a JazzCash wallet from $1; a crypto wallet needs neither. One rupee board lists JazzCash among its rails, the brand paying. PayPal, Stripe and Wise are unavailable here."
     - "<b>Vyro is closed and Klipni is unreachable.</b> Vyro names Pakistan on its unsupported list and pays only by PayPal or Stripe; Klipni pays only authors holding Russian self-employed tax status."
-    - "<b>DareBay's rail is USDT on TON.</b> It publishes no exclusion list and asks for no follower count, but there is no Payoneer or JazzCash step: a withdrawal request starts at 10 USDT, with 10% deducted inside it."
+    - "<b>DareBay's rail is USDT on TON.</b> It keeps no country list (only people on sanctions lists are barred) and asks for no follower count, but there is no Payoneer or JazzCash step: a withdrawal request starts at 10 USDT, with 10% deducted inside it."
     - "<b>The USDT question has no single answer yet.</b> The State Bank's 2026 circular replaced the 2018 prohibition for banks dealing with licensed providers, PVARA licenses the businesses, and neither publishes a rule covering a private individual."
 compare:
   ids: [whop, darebay, reach-cat, prime-oracles, clipping-net, vues, clipping-io, vyro, klipni]
@@ -27,7 +27,7 @@ method:
   - "DareBay's own figures come from its own public pages, not from this comparison."
 cta:
   title: "No country list means Pakistan is not on one"
-  lede: "DareBay publishes no exclusion list because it has none, and it asks for no follower count, no portfolio and no application before you take a task. Every task carries its rate on the card; the money leaves as USDT on the TON network, so it needs a wallet rather than a bank."
+  lede: "DareBay keeps no country list, and only people on sanctions lists are barred; it asks for no follower count, no portfolio and no application before you take a task. Every task carries its rate on the card; the money leaves as USDT on the TON network, so it needs a wallet rather than a bank."
 ---
 
 ## A PayPal line on the campaign card is where it ends here
@@ -56,7 +56,7 @@ The question on any campaign card is therefore narrow: does this platform hand m
 | Platform | What that means for a clipper in Pakistan |
 |---|---|
 | Whop Content Rewards | Listed for payouts and sanctioned nowhere, paying to "your bank account, mobile wallet, or crypto wallet" by country; a payout will not land in a dollar account where the country uses another currency <!-- source: https://docs.whop.com/manage-your-business/manage-payouts/payout-methods 2026-09-18 -->, so expect PKR. |
-| DareBay | No exclusion list, so no country is checked at the door; the money leaves as USDT on TON into a wallet, not a Pakistani bank or JazzCash account, on a withdrawal request of at least 10 USDT with 10% deducted inside it. |
+| DareBay | No country list, so Pakistan is not excluded: only people on sanctions lists are barred <!-- source: https://darebay.com/en/legal/terms 2026-09-24 -->; the money leaves as USDT on TON into a wallet, not a Pakistani bank or JazzCash account, on a withdrawal request of at least 10 USDT with 10% deducted inside it. |
 | Reach.cat | A crypto-wallet board with no PayPal step, though not an anonymous one: its landing page says "No KYC. No ID check. No bank account needed" <!-- source: https://reach.cat/become-a-clipper/ 2026-09-24 -->, while its terms effective 13 September 2026 require identity verification through iDenfy once total payout requests pass $500 <!-- source: https://reach.cat/terms 2026-09-24 -->. It pays in USDT, and its creator FAQ says bank transfer is coming "very soon" <!-- source: https://reach.cat/creator 2026-09-24 -->. It claims 149+ countries but lists none. |
 | Prime Oracles | Bars EU, UK and US residents "or any jurisdiction in which the use of cryptocurrency services is restricted or prohibited under applicable law" <!-- source: https://www.primeoracles.com/terms-agreement 2026-09-18 --> — a clause that names no country and points back at your own rules. |
 | Clipping.net | Requires residence "in the territories where we operate" without listing them <!-- source: https://clipping.net/policies/clipper-terms-and-conditions 2026-09-18 -->, and half its rails are PayPal. |
@@ -98,7 +98,7 @@ What neither body publishes is a rule about you: nothing in the circular or on P
 
 ## Where DareBay fits here, and where it does not
 
-DareBay has no exclusion list, so no account is turned away for being in Pakistan, and no follower count, portfolio or application stands between you and a task. Its tasks pay $1.00 to $10.00 per 1,000 counted views, set by each task, with a cap of up to $500 on a single clip, and the view threshold is printed on the card before you start. Nothing is taken from a task budget or from what a clip earns; the one charge a clipper meets is 10% on a withdrawal, deducted inside a request of at least 10 USDT, with the amount to receive shown before you confirm. A person checks every request, so no settlement time is promised — see [DareBay withdrawals](/en/help/darebay-withdrawals) and [what fees DareBay charges](/en/help/what-commission).
+DareBay keeps no country list, so no account is turned away for being in Pakistan; only people on sanctions lists are barred <!-- source: https://darebay.com/en/legal/terms 2026-09-24 -->. No follower count, portfolio or application stands between you and a task. Its tasks pay $1.00 to $10.00 per 1,000 counted views, set by each task, with a cap of up to $500 on a single clip, and the view threshold is printed on the card before you start. Nothing is taken from a task budget or from what a clip earns; the one charge a clipper meets is 10% on a withdrawal, deducted inside a request of at least 10 USDT, with the amount to receive shown before you confirm. A person checks every request, so no settlement time is promised — see [DareBay withdrawals](/en/help/darebay-withdrawals) and [what fees DareBay charges](/en/help/what-commission).
 
 The limitation matters more here than elsewhere. The balance leaves as USDT on TON, or you receive the payout in Telegram Stars: no Payoneer route, no payout into a Pakistani bank or a JazzCash wallet. Stars are not a second way to get money either, since Telegram's own terms call them virtual items and say you "may not sell, withdraw, transfer or use Stars in your personal balance for any other purpose than those explicitly outlined in these Terms" <!-- source: https://telegram.org/tos/stars 2026-09-18 -->. The rail here is a TON wallet and nothing else, and the interface is in English, Russian, Ukrainian and Polish, with no Urdu version.
 

@@ -20,10 +20,10 @@ hero:
 method:
   - "Everything here about Wusul was read on 19 September 2026 from its own public pages: the home page, the campaign board, the clipper and brand pages, the leaderboard, the contact page, all five legal pages, the comparison pages and the blog, in the English and Arabic locales. Each page was fetched as raw HTML and read with the scripts stripped out, so every quotation is text the page displays."
   - "Wusul serves the whole application's interface strings inside every public page, including screens that live behind /dashboard, a path its robots.txt disallows. None of those strings is quoted here, even where they contradict the marketing; where a published equivalent exists, the published one is used instead."
-  - "\"Not published\" means no statement on the subject appears anywhere on those pages. It is not a refusal, and this page does not turn one into the other. DareBay's own figures come from its help pages."
+  - "\"Not published\" means no statement on the subject appears anywhere on those pages. It is not a refusal, and this page does not turn one into the other. DareBay's figures come from its own public pages."
 cta:
-  title: "One rail, printed before you start"
-  lede: "DareBay takes nothing out of a task payout. A withdrawal costs 10% of the request, deducted inside a request of at least 10 USDT, and leaves in USDT on the TON network, the only cash rail there is, so it fits only where receiving USDT does not conflict with your local law; in Egypt, Algeria and Iraq a balance has no withdrawal route today. Every request is checked by a person and no settlement time is promised. There is no country list, no follower minimum and no application."
+  title: "$1–$10 per 1,000 views, printed before you start"
+  lede: "DareBay tasks pay $1–$10 per 1,000 views, set by each task, and up to $500 per clip; there is no country list, no follower minimum and no application. The platform takes nothing out of a task payout; the only fee is 10% of what you withdraw, and withdrawals start at 10 USDT. A balance leaves only as USDT on the TON network, so where the law closes crypto, as in Egypt, Algeria and Iraq, there is no lawful cash-out route. Every request is checked by a person and no settlement time is promised."
 ---
 ## Who runs Wusul
 
@@ -67,13 +67,13 @@ The clipper terms leave it to you: "Choose whichever method works where you bank
 
 ## Who should pick Wusul over DareBay, and who should not
 
-DareBay's side: it takes nothing out of a task payout, a withdrawal costs 10% of the request and is deducted inside a request of at least 10 USDT, the one cash rail is USDT on the TON network, and each request is checked by a person with no settlement time promised — [how withdrawals work](/en/help/darebay-withdrawals), [the fees](/en/help/what-commission).
+DareBay's side: its tasks pay $1–$10 per 1,000 views, set by each task, and up to $500 per clip <!-- source: https://darebay.com/en/earnings/how-much-clipping-pays 2026-09-24 -->. It takes nothing out of a task payout, the only fee is 10% of what you withdraw and withdrawals start at 10 USDT, you are paid in USDT on the TON network or in Telegram Stars, and each request is checked by a person with no settlement time promised — [how withdrawals work](/en/help/darebay-withdrawals), [the fees](/en/help/what-commission).
 
 Wusul fits better when:
 
-- **You are in Egypt and need pounds in an account.** Its clipper terms list "Instapay, PayPal, and USDT" <!-- source: https://www.wusulclips.com/en/clipper-terms 2026-09-19 -->, and its about page puts Instapay on the Egyptian side of that split <!-- source: https://www.wusulclips.com/en/about 2026-09-19 -->; no page says who sends that transfer, or from where. In Egypt, Algeria and Iraq a DareBay balance has no withdrawal route today, as [the country page](/en/earnings/clipping-platforms-that-pay-in-egypt-and-arab-countries) shows regulator by regulator.
-- **You want to work in Arabic.** Wusul runs a full right-to-left Arabic locale; DareBay's interface is English, Russian and Ukrainian.
-- **Your wallet is not on TON.** Its payout block names USDT on Tron (TRC-20), USDT and USDC on Ethereum (ERC-20) <!-- source: https://www.wusulclips.com/en 2026-09-19 -->; DareBay offers nothing else.
+- **You are in Egypt and need pounds in an account.** Its clipper terms list "Instapay, PayPal, and USDT" <!-- source: https://www.wusulclips.com/en/clipper-terms 2026-09-19 -->, and its about page puts Instapay on the Egyptian side of that split <!-- source: https://www.wusulclips.com/en/about 2026-09-19 -->; no page says who sends that transfer, or from where. In Egypt, Algeria and Iraq, where the law closes crypto, a DareBay balance has no lawful cash-out route, as [the country page](/en/earnings/clipping-platforms-that-pay-in-egypt-and-arab-countries) shows regulator by regulator.
+- **You want to work in Arabic.** Wusul runs a full right-to-left Arabic locale; DareBay's interface is in English, Russian, Ukrainian and Polish.
+- **Your wallet is not on TON.** Its payout block names USDT on Tron (TRC-20), USDT and USDC on Ethereum (ERC-20) <!-- source: https://www.wusulclips.com/en 2026-09-19 -->; a DareBay balance leaves only as USDT on TON.
 - **You want no platform cut on the way out.** "Wusul takes its cut from the brand's campaign budget, not from your earnings" <!-- source: https://www.wusulclips.com/en/for-clippers 2026-09-19 -->, and it publishes no fee of its own on the way out, though its clipper terms leave you "any fees charged by your payout provider" <!-- source: https://www.wusulclips.com/en/clipper-terms 2026-09-19 -->; DareBay's 10% comes out inside the request.
 
 It is the worse choice if the money matters this week: no campaign is open, the leaderboard is empty, the rules an undated template with a stand-in contact, nobody named as holding a budget — where a wallet-backed DareBay task locks its budget before it starts. Neither publishes a country list or asks for followers or an application, so those are not advantages either <!-- source: https://www.wusulclips.com/en/compare/wusul-vs-clipping-net 2026-09-19 -->.
@@ -104,4 +104,4 @@ One thousand views on a clip: clips that miss it "earn nothing for that submissi
 
 ### What are the alternatives if Wusul has nothing open?
 
-[The Egypt and Arab countries page](/en/earnings/clipping-platforms-that-pay-in-egypt-and-arab-countries) sorts the boards by the rail that reaches your country. DareBay has no exclusion list and an open board, but one cash rail in USDT on TON, so in Egypt, Algeria and Iraq a balance has no withdrawal route today.
+[The Egypt and Arab countries page](/en/earnings/clipping-platforms-that-pay-in-egypt-and-arab-countries) sorts the boards by the rail that reaches your country. DareBay keeps no country list: only people on sanctions lists are barred<!-- source: https://darebay.com/en/legal/terms 2026-09-24 -->. Its tasks pay $1–$10 per 1,000 views, set by each task, with no followers or application needed<!-- source: https://darebay.com/en/earnings/how-much-clipping-pays 2026-09-24 -->, but a balance leaves only as USDT on TON, so in Egypt, Algeria and Iraq, where the law closes crypto, there is no lawful cash-out route.

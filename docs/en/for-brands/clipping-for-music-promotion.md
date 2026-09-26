@@ -10,7 +10,7 @@ hero:
   lede: "A track starts to travel when dozens of people post to it, not when one label account does. Here is how to get those clips from clippers and pay only for counted views: the formats artists and labels ask for, what goes into the brief, how the payout is worked out and what to measure after release week."
   takeaways:
     - "<b>Five formats do the work around a track:</b> sound under a clip, lip sync, dance, concert footage, video teaser. Write each one into the brief and you can insist on it."
-    - "<b>You pay for views of a clip, never for uses of the sound:</b> the platform reads the clip's public counter, and open tasks pay $1 to $10 per 1,000 views."
+    - "<b>You pay for views of a clip, never for uses of the sound:</b> the platform reads the clip's public counter, and the rate runs $1 to $10 per 1,000 views."
     - "<b>Release week can be costed before it starts:</b> 300,000 counted views at a $10.00 rate is 300,000 / 1,000 × $10.00 = $3,000.00, and launching the contest is free."
     - "<b>The rights to the track never leave you,</b> the clips go out on clippers' own TikTok, Reels and Shorts accounts, and growth in sound uses is read on the platform itself."
 cta:
@@ -48,7 +48,7 @@ Rate, threshold and cap go into separate fields; everything above maps onto the 
 
 Labels count uses of a sound, but the platform counts views of a clip: it reads the public counter of the clip whose link the creator sent. Other people's clips under your sound cost you nothing.
 
-You set three numbers. Open tasks currently pay $1 to $10 per 1,000 views, and music tends to sit at the top of the band because a clip to a sound is quick to shoot. The threshold is yours to set, with a system default of 1,000 views, and it drops clips with no reach at no cost. The cap per clip is yours too, up to $500, and it stops one viral clip from taking the budget.
+You set three numbers. The rate runs $1 to $10 per 1,000 views, and music tends to sit at the top of the band because a clip to a sound is quick to shoot. The threshold is yours to set, with a system default of 1,000 views, and it drops clips with no reach at no cost. The cap per clip is yours too, up to $500, and it stops one viral clip from taking the budget.
 
 A hypothetical example: a clip reaches 8,000 views at a $10.00 rate.
 

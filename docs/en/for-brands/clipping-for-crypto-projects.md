@@ -11,7 +11,7 @@ hero:
   takeaways:
     - "<b>Crypto gets watched in the feed, not on a landing page:</b> explainers, news clips, product tutorials and AMA cuts collect views with no ad account and no sponsored label."
     - "<b>The rules in your brief are what protect the project:</b> no promises of returns, no signals, a disclaimer in every clip, official links only, no third-party referral links."
-    - "<b>Clippers receive USDT to a TON wallet and you pay for reach:</b> the rate in open tasks runs $1 to $10 per 1,000 views, launching is free and the contest fee is 0%."
+    - "<b>Clippers receive USDT to a TON wallet and you pay for reach:</b> you set the rate from $1 to $10 per 1,000 views, launching is free and the contest fee is 0%."
     - "<b>Your community already explains the product for free:</b> a pay-per-view task turns the active members of your chat into creators paid honestly by the counter."
 cta:
   title: "Launch the task, get clips within days"
@@ -46,13 +46,13 @@ A clip that breaks any of the six is rejected in the selection window and is not
 
 For a crypto project the money side is already in USDT: the budget is funded in USDT and creators receive USDT to a wallet on the TON network. You set a rate per 1,000 views, a threshold, a cap per clip and a budget; the platform reads views from the site's public counter, reconciles several times a day and filters out inflated views.
 
-In open tasks rates currently run from $1 to $10 per 1,000 views. The view threshold is set by each task, with a system default of 1,000 views: a clip below it costs nothing, a clip above it is paid for its whole counter. The cap per clip runs up to $500: a viral clip gets the maximum, the rest goes to other creators. A hypothetical calculation:
+You set the rate from $1 to $10 per 1,000 views. The view threshold is set by each task, with a system default of 1,000 views: a clip below it costs nothing, a clip above it is paid for its whole counter. The cap per clip runs up to $500: a viral clip gets the maximum, the rest goes to other creators. A hypothetical calculation:
 
 > 20,000 / 1,000 × $1.00 = **$20.00**
 
 Creating a contest is free, the contest fee is 0% and topping up the budget is 0%: the pool goes to creators in full. In a wallet-backed task the budget is locked on the platform before launch, spent on counted views, and the remainder returns to your balance.
 
-Once a submission is approved, the creator can lock in what it has earned and withdraw USDT to their TON wallet from a 10 USDT request: the 10% withdrawal fee comes out of that request, never out of your budget, and the team handles processing. The full campaign cost is on the [clipping campaign cost](/en/for-brands/clipping-campaign-cost) page.
+Once a submission is approved, the creator can lock in what it has earned and withdraw USDT to their TON wallet from a 10 USDT request: the 10% withdrawal fee comes out of that request, never out of your budget, and the creator sees the amount to receive before confirming. The full campaign cost is on the [clipping campaign cost](/en/for-brands/clipping-campaign-cost) page.
 
 ## Two formats: the explainer and the product tutorial
 
@@ -72,7 +72,7 @@ Shoot the tutorial on a test account without real funds, so nobody's balances en
 
 A crypto project already has people who explain the product in the chat for free. A pay-per-view task turns them into clippers: they know the product, and a public view counter gives them honest pay instead of one-off "activity" rewards.
 
-Publish the task, then post in your Telegram and Discord with a link and two lines: the rate per 1,000 views and what is banned. Give ambassadors their own tag on the link, so you see clicks per creator, and materials ahead of everyone else. Do not promise them tokens for clips: the platform counts and pays only USDT for views, and a token promise in the brief breaks your own rule one.
+Publish the task, then post in your Telegram and Discord with a link and two lines: the rate per 1,000 views and what is banned. Give ambassadors their own tag on the link, so you see clicks per creator, and materials ahead of everyone else. Leave tokens out of the reward: the platform counts views and pays for them from the USDT budget, and a token promise in the brief would break your own rule one.
 
 The community is the first circle, not the ceiling: creators worldwide see the task, with the largest community in the CIS; more ways to gather them are on [how to find clippers](/en/for-brands/how-to-find-clippers). Projects that live in Telegram have the [Telegram projects vertical](/en/for-business/telegram), wallets and exchanges with a mobile app the [apps vertical](/en/for-business/apps).
 
@@ -82,7 +82,7 @@ The community is the first circle, not the ceiling: creators worldwide see the t
 
 **Rejections.** Track which of the six rules you reject for most often; if it is signals and forecasts, the creators did not see the ban, so move it to the first line of the brief.
 
-**Clicks by tag.** A tag per creator shows who brought sign-ups, a promo code shows deposits. The platform counts views only; the rest lives in your own analytics and decides whom to invite to the next task first.
+**Clicks by tag.** A tag per creator shows who brought sign-ups, a promo code shows deposits. The platform counts the views; sign-ups and deposits live in your own analytics and decide whom to invite to the next task first.
 
 The setup order is in [how to set up a contest](/en/for-brands/set-up-a-clipping-contest), the business terms on the [business page](/en/for-business).
 

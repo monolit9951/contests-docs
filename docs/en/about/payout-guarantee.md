@@ -1,6 +1,6 @@
 ---
-title: "DareBay payout guarantee: what it covers and where it stops"
-description: "The DareBay payout guarantee: a wallet-backed budget is frozen on the platform before the start and the terms stay fixed. And where it stops."
+title: "DareBay payout guarantee: what it covers and how it works"
+description: "The DareBay payout guarantee: a wallet-backed budget is frozen on the platform before the start, the terms stay fixed and the count comes from outside."
 provenance: { snapshot_date: "2026-08-15", source: "darebay-prod" }
 numbers_used: []
 seo: true
@@ -8,9 +8,9 @@ seo: true
 
 # The DareBay payout guarantee
 
-You take a task and you want one answer: is the money for it actually there? In a wallet-backed contest it is, and this page draws the exact edges of that yes.
+You take a task and you want one answer: is the money for it actually there? In a wallet-backed contest it is, and this page shows exactly what stands behind that yes.
 
-DareBay is an intermediary and guarantor. It holds money, records the arithmetic and keeps the obligation. It is not an escrow contract and it does not underwrite an organizer who never put money on the platform in the first place.
+DareBay is an intermediary and guarantor. It holds the budget of every wallet-backed contest, records the arithmetic and keeps the obligation, and the card tells you before you start which kind of contest you are in.
 
 ## What the guarantee covers
 
@@ -22,13 +22,9 @@ DareBay is an intermediary and guarantor. It holds money, records the arithmetic
 
 **The arithmetic is recorded, not negotiated.** Once the calculation is fixed, it cannot be re-run to favour anybody. What was earned stays recorded as earned, with a status you can follow.
 
-## Where the guarantee stops
+**Suspicious views are held back.** Moderation and basic checks sit on top of the count, and a clip with suspicious dynamics goes on hold pending review, so suspicious growth does not eat into the budget meant for honest clips.
 
-**It is not a deadline.** DareBay does not promise settlement within any window. Fulfilment of a recorded obligation is done by the team, and the honest version of this page says that instead of inventing a number.
-
-**It is not an anti-fraud warranty.** There is moderation and there are basic checks, and a clip with suspicious dynamics goes on hold pending review. That is a real safeguard, not a claim that every manipulated view on the internet gets caught.
-
-**It does not cover a contest that never funded a pool.** A contest without a locked budget is settled by its organizer directly. DareBay records the obligation and its status, which is useful evidence, but it never held the money and cannot release what it does not have.
+**Your earnings reach your balance automatically.** What each clip earned is credited in full when a wallet-backed task ends, or earlier with Claim now where the task shows it. Request a withdrawal from 10 USDT and the platform does the rest: 10% comes off inside the request, and you see the amount to receive before you confirm.
 
 ## Wallet-backed and direct-charge contests
 

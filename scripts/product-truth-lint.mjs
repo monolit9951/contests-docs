@@ -325,10 +325,13 @@ const CLAIM_RULES = [
       /\b(?:payout|withdrawal|transfer|settlement)s? (?:is|are|runs?|happens?) automatic(?:ally)?\b/i,
       /\bautomatically (?:pay(?:s|ed)?|transfer(?:s|red)?|send(?:s|sent)?|withdraw(?:s|n)?|settles?)\b/i,
       /\b(?:paid|transferred|sent|withdrawn|settled) automatically\b/i,
-      /(?<![\p{L}\p{N}])(?:выплат[аы]|вывод|перевод|зачисление) (?:происходит |ид[её]т )?автоматическ(?:и|ий|ая)(?![\p{L}\p{N}])/iu,
-      /(?<![\p{L}\p{N}])автоматическ(?:и|ая|ий) (?:выплачивает|переводит|выводит|зачисляет|выплата|перевод)(?![\p{L}\p{N}])/iu,
-      /(?<![\p{L}\p{N}])(?:виплат[аи]|виведення|переказ|зарахування) (?:відбувається |йде )?автоматичн(?:о|ий|а)(?![\p{L}\p{N}])/iu,
-      /(?<![\p{L}\p{N}])автоматичн(?:о|а|ий) (?:виплачує|переказує|виводить|зараховує|виплата|переказ)(?![\p{L}\p{N}])/iu,
+      // Crediting is not in these lists: a task's earnings reach the balance on the finalization
+      // scheduler with nobody's hand in it, so «зачисление автоматическое» is true. Paying out,
+      // withdrawing and transferring stay manual (an admin marks each request paid).
+      /(?<![\p{L}\p{N}])(?:выплат[аы]|вывод|перевод) (?:происходит |ид[её]т )?автоматическ(?:и|ий|ая)(?![\p{L}\p{N}])/iu,
+      /(?<![\p{L}\p{N}])автоматическ(?:и|ая|ий) (?:выплачивает|переводит|выводит|выплата|перевод)(?![\p{L}\p{N}])/iu,
+      /(?<![\p{L}\p{N}])(?:виплат[аи]|виведення|переказ) (?:відбувається |йде )?автоматичн(?:о|ий|а)(?![\p{L}\p{N}])/iu,
+      /(?<![\p{L}\p{N}])автоматичн(?:о|а|ий) (?:виплачує|переказує|виводить|виплата|переказ)(?![\p{L}\p{N}])/iu,
       /\b(?:instant|immediate) payouts?\b/i,
       /\b(?:winner|creator)s? (?:is|are|get|gets|will be) paid (?:instantly|immediately|straight away)\b/i,
       /\b(?:money|funds|the prize) (?:goes|is sent|is transferred) (?:straight|directly) to (?:the )?(?:winner|creator)s?\b/i,
@@ -932,12 +935,16 @@ function effectiveWithdrawalFee(truth, intentIndex) {
 function canonicalSpecifications(truth, intentIndex = EMPTY_INTENT_INDEX) {
   const helpFee = effectiveWithdrawalFee(truth, intentIndex);
   const feeFree = helpFee === 0 && helpFee !== truth.withdrawal.defaultCommissionPercent;
+  // The help pages are landing pages too, and since 2026-09-26 they sell (founder directive: a page
+  // that ranks is not project documentation). They must still state the fee, the minimum and the
+  // rails exactly; the personal fee override and the manual processing of a request are required
+  // in the terms only, where a reader looking for the fine print finds them.
   const helpFeeRequirement = (lang) => feeFree
     ? [["withdrawal fee", HELP_NO_FEE[lang]]]
-    : [["withdrawal fee", percentMarker(LANG[lang].withdrawal, helpFee)], ["per-user withdrawal override", override[lang]]];
+    : [["withdrawal fee", percentMarker(LANG[lang].withdrawal, helpFee)]];
   const helpFeeBare = (lang) => feeFree
     ? [["withdrawal fee", HELP_NO_FEE[lang]]]
-    : [["withdrawal fee", new RegExp(`${helpFee}\\s*%`, "i")], ["per-user withdrawal override", override[lang]]];
+    : [["withdrawal fee", new RegExp(`${helpFee}\\s*%`, "i")]];
   const override = {
     en: /personal (?:fee |commission )?(?:rate |override)|per-user (?:fee |commission )?override/i,
     ru: /персональн(?:ая|ой) ставк|индивидуальн(?:ая|ой) комисси/i,
@@ -949,12 +956,10 @@ function canonicalSpecifications(truth, intentIndex = EMPTY_INTENT_INDEX) {
     ["store fee", percentMarker(LANG[lang].store, truth.store.commissionPercent)],
     ...helpFeeRequirement(lang),
     ["withdrawal minimum", new RegExp(`${truth.withdrawal.minimumGrossAmount}\\s*${truth.withdrawal.minimumCurrency}`, "i")],
-    ["manual processing", LANG[lang].manual],
   ];
   const withdrawal = (lang) => [
     ...helpFeeBare(lang),
     ["withdrawal minimum", new RegExp(`${truth.withdrawal.minimumGrossAmount}\\s*${truth.withdrawal.minimumCurrency}`, "i")],
-    ["manual processing", LANG[lang].manual],
     ["USDT withdrawal", /USDT/i],
     ["Telegram Stars withdrawal", /Telegram Stars/i],
   ];

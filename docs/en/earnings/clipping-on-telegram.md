@@ -49,7 +49,7 @@ DareBay has two equal front doors and one account: the website and Telegram (the
 
 DareBay's rate is $1–$10 per 1,000 views, set by each task<!-- source: https://darebay.com/en/earnings/how-much-clipping-pays 2026-09-24 -->. The threshold per clip is set by the task (system default 1,000 views) and the cap per submission runs up to $500 where the task sets one; the formula is views / 1,000 × rate, never above the cap, with the threshold not deducted. A hypothetical clip with 20,000 views at $1.00 makes `20,000 / 1,000 × $1.00 = $20.00`. Put your own numbers into the [clipping earnings calculator](/en/earnings/clipping-earnings-calculator).
 
-Money leaves the wallet by two routes. A withdrawal request from 10 USDT to a wallet on the TON network: the fee is 10% of the request, deducted inside it, and the team handles processing. Or "get it in Stars": the amount arrives as Telegram Stars, and that is not a cash withdrawal, because under Telegram's terms Stars on a personal balance cannot be sold or transferred. The request procedure is in [DareBay withdrawals](/en/help/darebay-withdrawals).
+Money leaves the wallet by two routes. A withdrawal request from 10 USDT to a wallet on the TON network, and the platform does the rest: the fee is 10% of the request, deducted inside it, and you see the amount to receive before you confirm. Or "get it in Stars": the amount arrives as Telegram Stars, and that is not a cash withdrawal, because under Telegram's terms Stars on a personal balance cannot be sold or transferred. The request procedure is in [DareBay withdrawals](/en/help/darebay-withdrawals).
 
 ## Clipping jobs through Telegram: how the work runs end to end
 
@@ -62,7 +62,7 @@ The two payout routes above are not interchangeable, and side by side the differ
 | | USDT on the TON network | Telegram Stars |
 |---|---|---|
 | What it is | A transfer to your own external wallet | Virtual items bought and spent inside Telegram <!-- source: https://telegram.org/tos/stars 2026-09-04 --> |
-| What it takes | A request from 10 USDT, 10% deducted inside it, details checked by the team by hand | Choosing Stars instead; the amount arrives on the Telegram balance |
+| What it takes | A request from 10 USDT, 10% deducted inside it, the amount to receive shown before you confirm | Choosing Stars instead; the amount arrives on the Telegram balance |
 | What it does for you | Whatever a wallet does | Digital goods, gifts and paid content in Telegram; a personal balance may not be sold, withdrawn or transferred <!-- source: https://telegram.org/tos/stars 2026-09-04 --> |
 
 So the choice is about purpose, not speed: one route ends in your own wallet, the other inside Telegram. Stars receive what you earned; the request is what turns it into money.

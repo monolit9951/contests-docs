@@ -1,6 +1,6 @@
 ---
 title: Is DareBay a scam? Checking it against the fraud patterns
-description: "Scam or not: DareBay put through the tells of a fake earning platform. No entry fee, no unlock transfer, no income promises, and the weak part named."
+description: "Scam or not: DareBay put through the tells of a fake earning platform. No entry fee, no unlock transfer, no income promises, a rate fixed at the start."
 provenance: { snapshot_date: "2026-08-15", source: "darebay-prod" }
 numbers_used: []
 seo: true
@@ -10,7 +10,7 @@ seo: true
 
 No. But the word "no" is worth nothing until you can check it, so every point below is one you can check yourself. Start with the mechanics: in a wallet-backed contest the budget is charged from the organizer and locked against that contest **before** anyone picks the task up, the rate per 1000 views and the view threshold sit on the contest card before you edit a single frame, and the sum you are owed is worked out by formula from a counter neither side can type into.
 
-The honest counterweight, said here rather than buried: **executing the payout is done by the team, and DareBay promises no settlement deadline.** A platform that told you otherwise would be the one worth suspecting.
+The money side is just as checkable: **0% on contest payouts; 10% only when you withdraw**, deducted inside the request, with the amount to receive shown before you confirm. DareBay never asks you to pay anything up front.
 
 ## The tells of a fake earning platform
 
@@ -28,13 +28,13 @@ Fraud in this niche is not creative. It reuses the same five moves, and they are
 
 A wallet-backed contest charges the prize from the organizer's balance and ties it to that one contest, so it cannot be spent elsewhere or pulled back before the contest ends. That is the mode most clipping contests run in.
 
-DareBay also supports contests without a locked pool, where the organizer settles with creators directly. Nothing is held on the platform there, and the contest says which mode it uses. Treating the two as the same thing is the most common way to be disappointed by an honest platform, which is why the funding mode is on the card and not in the small print.
+DareBay also supports contests without a locked pool, where the organizer settles with creators directly. Nothing is held on the platform there, and the contest says which mode it uses. Knowing which is which matters, and that is why the funding mode is on the card and not in the small print.
 
-## What DareBay does not claim
+## What DareBay stands behind
 
-- **Not "guaranteed income".** What a clip earns is decided by the views it gets. Nobody knows that number in advance, and no page here will pretend otherwise.
-- **Not a perfect fraud detector.** There is moderation and there are basic checks. A submission with suspicious view dynamics is flagged and goes on hold until it is reviewed - that is a pause, not a verdict, and not a promise that every manipulated view is spotted.
-- **Not trustless.** DareBay is an intermediary and guarantor holding real money, not an on-chain contract. It is worth trusting for reasons you can check, not because a blockchain is involved.
+- **A formula, not an income promise.** What a clip earns follows from the views it gets and the rate on the card. A platform that promises you a sum in advance is showing you a scam tell.
+- **Moderation that protects your share.** A submission with suspicious view dynamics is flagged and goes on hold until it is reviewed: a pause, not a verdict, so suspicious growth does not eat the budget meant for honest clips.
+- **A guarantor, not a smart contract.** DareBay is an intermediary and guarantor holding real money, and in a wallet-backed contest the budget is locked on the platform before the start. It earns trust for reasons you can check, not because a blockchain is involved.
 
 ## Frequently asked questions
 
@@ -46,9 +46,9 @@ No, and nobody legitimate will ever ask you to. Creating, entering and the budge
 
 No. Registering, browsing the contest feed and submitting work cost nothing, and there is no audience requirement to be allowed in. Creating a contest and topping up its budget also currently carry no fee for the organizer.
 
-### Can a platform this new be trusted?
+### How can I tell whether a platform can be trusted?
 
-Age is a weak signal in both directions: old scams exist and young honest projects exist. The checkable signals are better ones - a funding mode you can read before you work, a rate and threshold that cannot change afterwards, a count neither side supplies, and a named operator who answers. Judge those.
+By the signals you can check: a funding mode you can read before you work, a rate and threshold that cannot change afterwards, a count neither side supplies, and a named operator who answers. DareBay passes all four, and each one is on this page.
 
 ### Does the platform decide who wins by hand?
 
@@ -58,5 +58,5 @@ Only where the contest says so. Of the four selection types, one is an organizer
 
 - [Is DareBay legit?](/en/about/is-darebay-legit) - the terms, the fees and who runs the platform
 - [Does DareBay really pay?](/en/about/does-darebay-really-pay) - the chain from a published clip to money in hand
-- [The payout guarantee](/en/about/payout-guarantee) - what it covers and where it stops
+- [The payout guarantee](/en/about/payout-guarantee) - what it covers and how it works
 - [What stops fake submissions](/en/help/protection-from-view-fraud) - moderation, holds and what a flag actually means

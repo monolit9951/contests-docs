@@ -15,14 +15,15 @@ hero:
     - "<b>Budgets run out everywhere, so keep two platforms open.</b> Vyro and Clipping.net carry the large streamer and creator campaigns."
     - "<b>An editor is not a marketplace:</b> OpusClip, Klap and Submagic help you cut clips; none pays for views."
 compare:
-  ids: [darebay, vyro, clipping-net, vues, reach-cat, prime-oracles, klipni]
+  ids: [clipping-net, darebay, klipni, prime-oracles, reach-cat, vues, vyro]
   columns: [rate, threshold, cap, fee, minPayout, payoutMethods, cis, followers, escrow]
-  highlight: darebay
+  highlight: none
+  ranked: false
   title: "The alternatives side by side"
 method:
   - "The alternatives are the campaign-based clipping platforms with public terms that were live on the check date. ClipAffiliates was suspended that day and is not included; Clipping.io publishes almost no terms and is left out of this list, though it appears in the full ranking."
   - "Every figure was read from the platform's own page on the date next to it; a blank means the platform does not publish that figure. DareBay's figures come from its own public pages."
-  - "Order is editorial: alternatives that state their fee, hold the budget and pay in more countries come first."
+  - "Order is alphabetical by platform name."
 cta:
   title: "Clip where Whop cannot pay you"
   lede: "DareBay keeps no country list: only people on sanctions lists are barred, so clippers in Russia and Belarus, where Whop is closed, are paid too. There are no followers to gather and no application to wait on, and a wallet-backed contest locks its budget on the platform before the start."
@@ -68,7 +69,7 @@ Yes. DareBay pays clippers in Russia, Belarus, Ukraine, Kazakhstan and the rest 
 
 ### Which Whop alternative has the lowest fee?
 
-Klipni publishes a 5% fee on approved payouts. Vues and Reach.cat give no single answer: each one's own pages disagree on whether its cut comes from the brand or from the clipper's payout <!-- source: https://vues.app/affiliate 2026-09-18 --> <!-- source: https://reach.cat/terms 2026-09-18 -->. DareBay charges 0% on contest payouts and 10% on balance withdrawals: requests start at 10 USDT and the team checks the details before sending. Clipping.net and Vyro do not publish a clipper fee.
+Klipni publishes a 5% fee on approved payouts. Vues and Reach.cat give no single answer: each one's own pages disagree on whether its cut comes from the brand or from the clipper's payout <!-- source: https://vues.app/affiliate 2026-09-18 --> <!-- source: https://reach.cat/terms 2026-09-18 -->. DareBay charges 0% on contest payouts and 10% only when you withdraw: requests start at 10 USDT, and you see the amount to receive before you confirm. Clipping.net and Vyro do not publish a clipper fee.
 
 ### Can I use Whop and another platform at the same time?
 
@@ -76,7 +77,7 @@ Yes. Nothing on Whop's pages forbids clipping for other marketplaces, and campai
 
 ### Is DareBay a Whop alternative?
 
-Yes, especially where Whop cannot pay: DareBay keeps no country list, and only people on sanctions lists are barred<!-- source: https://darebay.com/en/legal/terms 2026-09-24 -->. Its pay-per-view tasks pay $1–$10 per 1,000 views, set by each task, and up to $500 per clip, with no follower requirement<!-- source: https://darebay.com/en/earnings/how-much-clipping-pays 2026-09-24 -->, and a wallet-backed contest locks its budget on the platform before the start<!-- source: https://darebay.com/en/about/payout-guarantee 2026-09-24 -->. Offer tasks can add a fixed fee per accepted clip and a share of sales, and hand you ready-made videos with built-in uniqueization. It is a young platform, with fewer campaigns than the biggest boards so far.
+Yes, especially where Whop cannot pay: DareBay keeps no country list, and only people on sanctions lists are barred<!-- source: https://darebay.com/en/legal/terms 2026-09-24 -->. Its pay-per-view tasks pay $1–$10 per 1,000 views, set by each task, and up to $500 per clip, with no follower requirement<!-- source: https://darebay.com/en/earnings/how-much-clipping-pays 2026-09-24 -->, and a wallet-backed contest locks its budget on the platform before the start<!-- source: https://darebay.com/en/about/payout-guarantee 2026-09-24 -->. Offer tasks can add a fixed fee per accepted clip and a share of sales, and hand you ready-made videos with built-in uniqueization.
 
 ### What happened to ClipAffiliates?
 

@@ -15,9 +15,10 @@ hero:
     - "<b>Списку країн немає взагалі:</b> Clipping.net, Vues, Reach.cat і Clipping.io про географію мовчать, тож питай їхню підтримку до першого ролика."
     - "<b>Не для України:</b> Klipni вимагає російський статус самозайнятого, а податковий пункт угоди Prime Oracles називає десять держав СНД, України серед них немає."
 compare:
-  ids: [darebay, reach-cat, clipping-net, vues, prime-oracles, whop, vyro, klipni, clipping-io]
+  ids: [clipping-io, clipping-net, darebay, klipni, prime-oracles, reach-cat, vues, vyro, whop]
   columns: [cis, payoutMethods, minPayout, fee, followers, escrow]
-  highlight: darebay
+  highlight: none
+  ranked: false
   title: "Доступ до виплат і способи, майданчик за майданчиком"
 method:
   - "Твердження про країни взяті зі сторінки санкційних країн, сторінки непідтримуваних країн, умов або FAQ кожного майданчика у вказану дату; «не публікує» означає, що майданчик ніде на відкритих сторінках країн не перелічує."

@@ -13,7 +13,7 @@ hero:
     - "<b>One formula, and you can run it before you edit:</b> views / 1,000 × rate, never above the cap per clip. DareBay tasks pay $1 to $10 per 1,000 views, set by each task."
     - "<b>The threshold is a gate, not a deduction:</b> the task sets it, a clip below it earns nothing, and a clip that clears it is paid for every view from the first."
     - "<b>The cap runs up to $500 per clip,</b> so ten steady clips beat one viral hit: the number grows with the count of clips, not with luck."
-    - "<b>Nothing is taken until you withdraw:</b> every accrual lands on your balance in full, you pay 10% of what you withdraw, withdrawals start at 10 USDT, and the team checks the details and sends each one."
+    - "<b>Nothing is taken until you withdraw:</b> every accrual lands on your balance in full and 10% comes off only when you withdraw: request from 10 USDT, and the platform does the rest."
 cta:
   title: "Like the number? Go and earn it"
   lede: "Every task card shows its rate, threshold and any cap before you open the editor, so you can run these numbers on a real task, and nobody checks your follower count at the door. Cut the clip, publish it, send the link, and the platform does the counting from there."
@@ -57,7 +57,7 @@ This is the arithmetic of the formula, not a forecast: a real month is made of t
 
 ## How to get paid
 
-A wallet-backed task credits what your approved clips earned to your DareBay balance when it ends, or earlier where the task card shows the "Claim now" button: once a clip is approved, pressing it locks in what has been credited so far, and the clip stops earning in that task<!-- source: https://darebay.com/en/help/darebay-withdrawals 2026-09-24 -->; fresh accruals mature for 24 hours before the button unlocks. In a manual-payout task the organizer pays you directly instead. From the balance, you file a withdrawal request: the minimum request is 10 USDT, the fee is 10% of the requested amount (a personal rate may apply), and the team checks the details and sends it, with no fixed time; the form shows the exact rate and the amount to receive before you confirm. The money arrives as USDT to a wallet on the TON network, or you receive the payout in Telegram Stars.
+A wallet-backed task credits what your approved clips earned to your DareBay balance when it ends, or earlier where the task card shows the "Claim now" button: once a clip is approved, pressing it locks in what has been credited so far, and the clip stops earning in that task<!-- source: https://darebay.com/en/help/darebay-withdrawals 2026-09-24 -->; fresh accruals mature for 24 hours before the button unlocks. In a manual-payout task the organizer pays you directly instead. From the balance, you file a withdrawal request and the platform does the rest: the minimum request is 10 USDT, the fee is 10% of the requested amount (a personal rate may apply), and the form shows the exact rate and the amount to receive before you confirm. Every request is checked before it goes out, so the money reaches the right wallet. The money arrives as USDT to a wallet on the TON network, or you receive the payout in Telegram Stars.
 
 The inputs are covered in [how much clipping pays](/en/earnings/how-much-clipping-pays); the charges in [what commission DareBay charges](/en/help/what-commission) and [DareBay withdrawals](/en/help/darebay-withdrawals). For other platforms' rate, threshold and cap, see [the best clipping platforms](/en/earnings/best-clipping-platforms) or the fact sheet [DareBay at a glance](/en/about/darebay-at-a-glance).
 

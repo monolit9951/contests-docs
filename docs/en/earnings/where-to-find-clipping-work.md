@@ -46,7 +46,7 @@ How you get the work matters more than the rate itself: it decides who holds the
 | Are followers required | They usually look at the contractor's audience | They look at rating and portfolio | No: payment tracks the reach of one specific submission |
 | Is the rate visible in advance | However you agree it, and it can drift in the chat | In the job description, but haggling downwards is normal | The rate, the threshold and any cap stand on the card before you submit; the rate and threshold do not change after launch |
 
-An intermediary has a price of its own. The rules are the same for everyone: you cannot haggle the rate up, and the terms are set by the buyer at contest creation. The amount is worked out by formula, but the team checks and sends every withdrawal, and we promise no fixed time for it<!-- source: https://darebay.com/en/help/darebay-withdrawals 2026-09-24 -->. In exchange, you never have to prove your own view count or negotiate it after publication.
+An intermediary runs one set of rules for everyone: nobody haggles the rate, and the terms are set by the buyer at contest creation. The calculation is automatic: the platform's own counter reads the public view counter at your link and works out the sum, and nobody types figures in by hand. So you never have to prove your own view count or negotiate it after publication.
 
 ## Clipping jobs for beginners: where they are actually posted
 
@@ -84,13 +84,13 @@ What one finished clip involves from there is in [clipping as a job](/en/earning
 3. Read the card in full: the rate per 1000 views, the threshold, any cap per submission, the total budget, the deadline, the publishing site and any attached footage.
 4. Edit the video and publish it on your own account on the site the contest named. Counters are read for TikTok, YouTube, Instagram and the other sites named in the brief.
 5. Send DareBay the link to the published video - that link is how the work enters the contest. A hashtag is only needed where the brief spells it out, and for an anonymous submission.
-6. From there the contest mechanic runs: the view counter is read, the amount is worked out by formula, and an undistributed wallet-backed budget remainder goes back to the buyer.
+6. From there the contest mechanic runs: the view counter is read, the amount is worked out by formula, your earnings reach your balance automatically when a wallet-backed contest ends, or earlier with Claim now where the card shows it, and any undistributed remainder of its budget goes back to the buyer.
 
 How the counting is built, what the threshold does and when the money arrives is in [how pay-per-view works](/en/earnings/how-pay-per-view-works).
 
 ## Taking work across borders
 
-Signing up is open, and taking a brief needs no agency, no manager and no contract with a brand: a contest is taken off the board on terms that are already fixed. DareBay keeps no country list: only people on sanctions lists are barred, so clippers in Russia, Belarus, Ukraine, Kazakhstan and the rest of CIS are paid like everyone else<!-- source: https://darebay.com/en/legal/terms 2026-09-24 -->. The reward method is set by the contest terms, and the balance-withdrawal wizard shows the options available to you. Requests are handled by the team, so there are no promises of a transfer "within minutes" here, and there will not be.
+Signing up is open, and taking a brief needs no agency, no manager and no contract with a brand: a contest is taken off the board on terms that are already fixed. DareBay keeps no country list: only people on sanctions lists are barred, so clippers in Russia, Belarus, Ukraine, Kazakhstan and the rest of CIS are paid like everyone else<!-- source: https://darebay.com/en/legal/terms 2026-09-24 -->. The reward method is set by the contest terms, and the balance-withdrawal wizard shows the options available to you: request a withdrawal from 10 USDT and the platform does the rest.
 
 ## Compare platforms and check the figures
 

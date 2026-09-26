@@ -12,14 +12,15 @@ hero:
   lede: "Three platforms will pay into Russia and the CIS, two keep exclusion lists, and four never say either way. Long before the rate matters, that is the question: can the money reach you at all. Whop's sanctioned list shuts out Russia and Belarus, Vyro's unsupported list adds Ukraine and four more countries, so here is what each platform's own pages state, country by country."
   secondary: "Country table"
   takeaways:
-    - "<b>DareBay, Prime Oracles and Klipni say they pay in Russia:</b> DareBay across CIS with no country list, Prime Oracles in ten CIS states, Klipni in Russia only."
+    - "<b>DareBay, Klipni and Prime Oracles say they pay in Russia:</b> DareBay across CIS with no country list, Prime Oracles in ten CIS states, Klipni in Russia only."
     - "<b>Whop and Vyro both block Russia and Belarus:</b> in Ukraine, Whop blocks six regions and Vyro blocks the whole country."
     - "<b>Four publish no country list at all:</b> Clipping.net, Vues, Reach.cat and Clipping.io; ask their support before your first clip."
     - "<b>Kazakhstan is on neither exclusion list:</b> Whop names it among its payout countries; Vyro leaves it off its unsupported list."
 compare:
-  ids: [darebay, prime-oracles, klipni, klipbait, reach-cat, clipping-net, vues, whop, vyro, clipping-io]
+  ids: [clipping-io, clipping-net, darebay, klipbait, klipni, prime-oracles, reach-cat, vues, vyro, whop]
   columns: [cis, payoutMethods, minPayout, fee, followers, escrow]
-  highlight: darebay
+  highlight: none
+  ranked: false
   title: "Payout access and rails, platform by platform"
 method:
   - "Country statements come from each platform's own sanctioned-country page, unsupported-country page, terms or FAQ, read on the date shown; 'not published' means the platform lists no countries anywhere on its public pages."
@@ -47,7 +48,7 @@ Klipbait, a Russian- and Ukrainian-language front end for Western campaigns, des
 
 ## How the money actually reaches you
 
-**DareBay** credits a clip's earnings to your balance when a wallet-backed task ends, or earlier with Claim now where the task shows it, after which that clip stops earning <!-- source: https://darebay.com/en/help/darebay-withdrawals 2026-09-24 -->. It pays withdrawals in USDT on the TON network, or you can receive the payout in Telegram Stars; a withdrawal request is at least 10 USDT and carries a 10% fee, deducted inside it; submit it once and the team handles the check and the transfer. Individual contests can add a card, a bank transfer or a gift as the reward. No tax status, follower count or application is needed to take a brief.
+**DareBay** credits a clip's earnings to your balance when a wallet-backed task ends, or earlier with Claim now where the task shows it, after which that clip stops earning <!-- source: https://darebay.com/en/help/darebay-withdrawals 2026-09-24 -->. It pays withdrawals in USDT on the TON network, or you can receive the payout in Telegram Stars; a withdrawal request is at least 10 USDT and carries a 10% fee, deducted inside it; submit it once and the platform does the rest, showing the amount to receive before you confirm. Individual contests can add a card, a bank transfer or a gift as the reward. No tax status, follower count or application is needed to take a brief.
 
 **[Prime Oracles](/en/earnings/prime-oracles-review)** pays USDT on Tron, BNB Smart Chain or Solana, USDC on Ethereum or Solana, or TON, from $5 to $12 by network, after the customer approves each payout by hand. Its agreement publishes a 10% withdrawal fee and describes USD through Garna (Cyprus) to a verified Garna account <!-- source: https://www.primeoracles.com/terms-agreement 2026-09-24 -->.
 

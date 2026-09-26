@@ -68,7 +68,7 @@ glossary:
   - { id: "viewer-voting", term: "Viewer voting", definition: "The VIEWER_VOTING selection type: the winner is chosen by viewers' votes for the entries, not by a view counter. One of four selection types on DareBay, visible on the card before you submit." }
   - { id: "wallet", term: "Wallet", definition: "Your balance on DareBay. A wallet-backed task credits your earnings here when it ends, or earlier with Claim now where the task shows it; from here you withdraw USDT to an external wallet on TON, or receive the payout in Telegram Stars." }
   - { id: "watch-time", term: "Watch time (retention)", definition: "The share of a clip the viewer watched to the end. The main signal for recommendations: a clip with high retention gets shown further, and views grow without followers." }
-  - { id: "withdrawal-fee", term: "Withdrawal fee", definition: "A charge for moving money from the balance to a wallet. On DareBay it is 10% of the requested amount, deducted inside the request; a personal rate may apply, and the form shows the exact rate and the amount to receive before you confirm. A person processes the request, so the platform promises no settlement time." }
+  - { id: "withdrawal-fee", term: "Withdrawal fee", definition: "A charge for moving money from the balance to a wallet. On DareBay it is 10% of the requested amount, deducted inside the request, while contest payouts themselves carry 0%; a personal rate may apply, and the form shows the exact rate and the amount to receive before you confirm." }
 ---
 
 Read a task card without stumbling and you stop guessing what it will pay you: CPM or per thousand, threshold or cap, claim now or withdrawal. This glossary collects 52 terms from DareBay task cards, payout rules and clipper chats, each explained in a sentence or two.
@@ -97,7 +97,7 @@ A pay-per-view task pays one thing: the rate per 1000 counted views, up to any c
 
 ### Withdrawal and Stars
 
-A withdrawal is a request for USDT on the TON network: from 10 USDT, with a 10% fee deducted inside the request, handled by the team. Stars are the second route in the same wizard: the amount goes out as Telegram Stars and stays inside Telegram, so it is not a withdrawal. Both routes draw on the available balance, which a wallet-backed task credits when it ends, or earlier with Claim now where the task shows it<!-- source: https://darebay.com/en/help/darebay-withdrawals 2026-09-24 -->; details on the [withdrawals page](/en/help/darebay-withdrawals).
+A withdrawal is a request for USDT on the TON network: file it from 10 USDT and the platform does the rest, with a 10% fee deducted inside the request. Stars are the second route in the same wizard: the amount goes out as Telegram Stars and stays inside Telegram, so it is not a withdrawal. Both routes draw on the available balance, which a wallet-backed task credits when it ends, or earlier with Claim now where the task shows it<!-- source: https://darebay.com/en/help/darebay-withdrawals 2026-09-24 -->; details on the [withdrawals page](/en/help/darebay-withdrawals).
 
 ## Frequently asked questions
 

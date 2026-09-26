@@ -83,7 +83,9 @@ The permission works within the boundaries of the brief. A broadcast by an outsi
 
 5. **Send the link to the published video.** A submission enters the contest through the link you sent: without that step it takes no part in the budget split, however many views it collects. A hashtag is only needed where the brief says so.
 
-6. **Wait for the count.** An independent counter reads the published view counter on the site - nobody types figures in by hand, neither you nor the buyer. The system does the maths; there is moderation and there are basic checks, and a submission with suspicious growth goes on hold. A wallet-backed contest credits your earnings when it ends, or earlier with Claim now where the contest shows it (that clip then stops earning); in a manual-payout contest the organizer pays you directly. The team checks and sends every withdrawal, with no fixed time<!-- source: https://darebay.com/en/help/darebay-withdrawals 2026-09-24 -->.
+6. **Wait for the count.** An independent counter reads the published view counter on the site - nobody types figures in by hand, neither you nor the buyer. The calculation is automatic; there is moderation and there are basic checks, and a submission with suspicious growth goes on hold.
+
+7. **Collect the money.** A wallet-backed contest credits your earnings when it ends, or earlier with Claim now where the contest shows it (that clip then stops earning)<!-- source: https://darebay.com/en/help/darebay-withdrawals 2026-09-24 -->; in a manual-payout contest the organizer pays you directly. From 10 USDT you request a withdrawal and the platform does the rest.
 
 ## Streamer rates next to other platforms
 

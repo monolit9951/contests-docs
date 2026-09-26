@@ -16,7 +16,7 @@ hero:
     - "<b>PayPal and Stripe reach neither country.</b> Neither is on PayPal's payout table or Stripe's country list, and Nepal's PayPal site is built for sending and paying only."
     - "<b>Payoneer into bKash is the route Bangladesh publishes.</b> bKash lists BDT 1,000 to 250,000 per transfer and Payoneer's 3% plus $1, with no 2.5% remittance bonus on top."
     - "<b>Both central banks close the crypto door.</b> Bangladesh Bank says transactions to obtain virtual assets are not permitted; Nepal Rastra Bank calls crypto transactions illegal, stablecoins included."
-    - "<b>A DareBay balance cashes out only as USDT on the TON network, so it has no lawful route into either country.</b> A request of at least 10 USDT has 10% deducted; Whop names both countries for a local-currency bank account."
+    - "<b>DareBay keeps no country list and pays in USDT on the TON network or Telegram Stars; both central banks restrict crypto, so check the local rules before you cash out USDT.</b> A withdrawal starts at 10 USDT with 10% taken inside the request; Whop names both countries for a local-currency bank account."
 compare:
   ids: [whop, darebay, vyro, reach-cat, clipping-net, vues, prime-oracles, clipping-io]
   columns: [bangladesh, payoutMethods, minPayout, fee]
@@ -88,9 +88,9 @@ Read the table by rail. Whop puts both countries on its payout list <!-- source:
 
 ## DareBay in Bangladesh and Nepal: no money route today
 
-DareBay keeps no country list (only people on sanctions lists are barred) and asks for no followers or application. It takes 0% from a task budget and nothing from what a clip earns; the one charge on a clipper is 10% of a withdrawal, deducted inside a request of at least 10 USDT and checked by a person before it is sent ([DareBay withdrawals](/en/help/darebay-withdrawals), [DareBay fees](/en/help/what-commission)).
+DareBay keeps no country list (only people on sanctions lists are barred) and asks for no followers or application. It takes 0% from a task budget and nothing from what a clip earns; the one charge on a clipper is 10% of a withdrawal, deducted inside a request of at least 10 USDT, with the amount to receive shown before you confirm ([DareBay withdrawals](/en/help/darebay-withdrawals), [DareBay fees](/en/help/what-commission)).
 
-The limit is the rail: a balance leaves as USDT on the TON network, or you receive the payout in Telegram Stars. Bangladesh Bank says transactions to obtain virtual assets are not permitted and Nepal Rastra Bank calls crypto transactions illegal, so a DareBay balance has no withdrawal route into either country today; a single task can set a card or a bank transfer as its prize if its organizer decides so. Stars are not money: Telegram's terms call them "virtual items" and bar selling or withdrawing a personal Star balance <!-- source: https://telegram.org/tos/stars 2026-09-18 -->. The interface is in English, Russian, Ukrainian and Polish; there is no Bangla or Nepali version.
+A DareBay balance leaves as USDT on the TON network, or you receive the payout in Telegram Stars, and a single task can set a card or a bank transfer as its prize if its organizer decides so. Bangladesh Bank says transactions to obtain virtual assets are not permitted and Nepal Rastra Bank calls crypto transactions illegal, so check the local rules before you cash out USDT. Stars are not money: Telegram's terms call them "virtual items" and bar selling or withdrawing a personal Star balance <!-- source: https://telegram.org/tos/stars 2026-09-18 -->. The interface is in English, Russian, Ukrainian and Polish.
 
 The answer here is a fiat rail: Whop, which lists both countries for payouts to a local-currency bank account, or in Bangladesh the Payoneer to bKash route that bKash itself describes.
 

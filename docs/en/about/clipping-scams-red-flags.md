@@ -11,8 +11,8 @@ hero:
   takeaways:
     - "<b>Money only ever moves towards you.</b> A request to pay for access or faster payouts is a scam."
     - "<b>The terms are written before the work, not after it.</b> Rate, threshold and cap belong on the task before you submit."
-    - "<b>The budget should be sitting with the platform.</b> DareBay's wallet-backed tasks, Whop and Klipni keep the budget on the platform."
-    - "<b>A threshold, a cap and team-processed withdrawals are not flags.</b> DareBay's per-clip cap runs up to $500; withdrawals start at 10 USDT."
+    - "<b>The budget should be sitting with the platform.</b> DareBay's wallet-backed tasks, Klipni and Whop keep the budget on the platform."
+    - "<b>A threshold, a cap and a withdrawal fee are not flags.</b> DareBay's per-clip cap runs up to $500; withdrawals start at 10 USDT, with 10% taken inside the request."
 cta:
   title: "Run DareBay through the same nine"
   lede: "Rate, threshold, cap and funding mode are all open on the card before you take the task, and a wallet-backed budget stays on the platform. There is no country list: only people on sanctions lists are barred. And nobody here will ask you to pay for access."
@@ -23,7 +23,7 @@ The question usually follows one strange platform, and the model is not to blame
 ## Nine red flags
 
 1. **Pay to get in, or an "unlock fee".** An honest platform earns from the buyer's budget, not yours. A deposit or a transfer to "activate" a payout is money in the wrong direction; a real withdrawal fee comes out of what you earned, never in advance.
-2. **The budget does not sit with the platform.** If the money stays with the buyer, they pay when they choose. DareBay's wallet-backed tasks lock the budget before the start<!-- source: https://darebay.com/en/about/payout-guarantee 2026-09-24 -->, and Whop and Klipni say they hold a campaign's budget until spent; Vues says it does not custody campaign funds, so the brand pays.
+2. **The budget does not sit with the platform.** If the money stays with the buyer, they pay when they choose. DareBay's wallet-backed tasks lock the budget before the start<!-- source: https://darebay.com/en/about/payout-guarantee 2026-09-24 -->, and Klipni and Whop say they hold a campaign's budget until spent; Vues says it does not custody campaign funds, so the brand pays.
 3. **Rate, threshold and cap not written in advance.** Three numbers define a clip's economics: what 1,000 views pay, where counting starts, the most one clip earns. Missing one? Your sum is set after the views are in, not in your favour.
 4. **No public list of payout countries.** Where a platform pays must be public before you register, or you work a week and get refused. A restriction list is normal; its absence is the flag. DareBay publishes its rule instead of a country list: only people on UK, EU or UN sanctions lists are barred<!-- source: https://darebay.com/en/legal/terms 2026-09-24 -->, and the balance leaves only as USDT on TON, so where the law closes crypto there is no lawful cash-out route. Its largest community is in the CIS, where clippers in Russia, Belarus, Ukraine and Kazakhstan are paid<!-- source: https://darebay.com/en/legal/terms 2026-09-24 -->.
 5. **Promised sums with no formula.** A real sum comes from numbers: views / 1,000 × rate, never above the cap. Example: 20,000 views at $1.00 give 20,000 / 1,000 × $1.00 = **$20.00**; the cap the task printed stops a clip there and no further. "Hundreds a week" is advertising, not a term.
@@ -56,7 +56,6 @@ DareBay as the example:
 | A view threshold | Filters out clips not worth paying for; past it the whole counter is paid | Set by the task and printed on its card, system default 1,000 views |
 | A per-clip cap | Stops one clip eating a budget meant for dozens | Set by the task, up to $500 per clip |
 | Moderation | Filters fake views and rule-breaking clips, protecting your share | Counts once the link is sent; a moderator checks it |
-| Payouts handled by people | A person verifies the details; slower, but honest | Handled by the team on request, no promised timing |
 | A withdrawal fee | Comes out of what you earned, never up front | 10% of the request on DareBay, deducted inside it, with the amount to receive shown before you confirm; 0% on the contest payout, 10 USDT minimum request |
 
 Where a DareBay task shows "Claim now", a fresh accrual matures for 24 hours before the button locks it in: a second pass over the counter, not a hold on your money. On DareBay the rate is $1–$10 per 1,000 views, set by each task<!-- source: https://darebay.com/en/earnings/how-much-clipping-pays 2026-09-24 -->: modest next to advertising promises, and the sign of a real budget.

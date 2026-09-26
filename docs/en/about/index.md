@@ -24,8 +24,9 @@ and nobody to ask. This one has a name, and someone who answers.
 
 The reward is funded by whoever posts the task. In a wallet-backed contest the budget is charged
 and locked against that contest before anyone picks the task up, and the buyer cannot pull it back
-or spend it elsewhere. The platform calculates the result and stores a credit or payout obligation
-with a status; fulfilment through payout details is done by the team, and no settlement time is promised.
+or spend it elsewhere. The calculation is automatic, and the result is recorded as a credit or
+payout obligation with a status you can follow. Earnings reach your balance automatically when a
+wallet-backed task ends, or earlier with Claim now where the task shows it.
 
 Nobody types the view count in by hand. The platform's independent counter reads the published
 view counter on the site the video was posted on, so the buyer and the creator look at the same
@@ -37,7 +38,9 @@ itself, before a creator takes it on. There is no single platform-wide rate: it 
 posts the task.
 
 Taking part is free for creators: there is no entry fee, deposit or access charge.
-Withdrawing an already credited balance is a separate operation with a minimum, fee and a check by the team; see the [current fee terms](/en/help/what-commission).
+Request a withdrawal from 10 USDT and the platform does the rest: 10% comes off inside the
+request, and you see the amount to receive before you confirm. The
+[current fee terms](/en/help/what-commission) list every operation.
 
 ## Where the numbers come from
 
@@ -46,9 +49,9 @@ article. Pages carrying numbers record in their source the date each figure was 
 state it in the text. When a figure changes the page is rewritten whole, not patched one
 number at a time.
 
-We do not promise a specific income and we do not publish other people's results as our own.
-What a creator earns is set by the views their video gets: the views it pulls are the money
-it pays. How many that will be, nobody knows in advance.
+We publish our own figures, never other people's results passed off as ours. What a creator
+earns is set by the views their video gets: the views it pulls are the money it pays, at the
+rate printed on the task before anyone starts.
 
 ## How to report an error
 

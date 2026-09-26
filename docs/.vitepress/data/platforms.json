@@ -194,7 +194,7 @@
         },
         "bangladesh": {
           "text": {
-            "en": "no country list, only people on sanctions lists are barred, but the only money rail is USDT on TON, and Bangladesh Bank and Nepal Rastra Bank do not permit crypto transactions, so there the balance has no withdrawal route"
+            "en": "no country list, only people on sanctions lists are barred; USDT on TON or Telegram Stars, and Bangladesh Bank and Nepal Rastra Bank do not permit crypto transactions, so check the local rules before you cash out USDT"
           },
           "state": "partial",
           "source": {
@@ -224,8 +224,8 @@
         },
         "mena": {
           "text": {
-            "en": "no country list, only people on sanctions lists are barred, but the only money rail is USDT on TON: the regulators in Egypt, Algeria and Iraq bar or criminalize dealing in crypto, so there the balance has no withdrawal route; elsewhere, check the regulator row above",
-            "ar": "لا توجد قائمة دول؛ يُستثنى فقط الأشخاص المدرجون في قوائم العقوبات، لكن قناة الدفع النقدية الوحيدة هي USDT على شبكة TON: الجهات الرقابية في مصر والجزائر والعراق تحظر التعامل في العملات المشفرة أو تجرّمه، فلا مسار هناك لسحب الرصيد؛ وفي غيرها راجع صف الجهة الرقابية أعلاه"
+            "en": "no country list, only people on sanctions lists are barred; USDT on TON or Telegram Stars, and the regulators in Egypt, Algeria and Iraq bar or criminalize dealing in crypto, so check the regulator row above before you cash out USDT",
+            "ar": "لا توجد قائمة دول؛ يُستثنى فقط الأشخاص المدرجون في قوائم العقوبات؛ الدفع بعملة USDT على شبكة TON أو بنجوم Telegram، والجهات الرقابية في مصر والجزائر والعراق تحظر التعامل في العملات المشفرة أو تجرّمه، فراجع صف الجهة الرقابية أعلاه قبل سحب USDT"
           },
           "state": "partial",
           "source": {
@@ -265,7 +265,7 @@
         },
         "payoutSpeed": {
           "text": {
-            "en": "credited when a wallet-backed task ends, or earlier with Claim now; withdrawals are sent by the team"
+            "en": "credited automatically when a wallet-backed task ends, or earlier with Claim now; withdraw from 10 USDT"
           },
           "source": {
             "url": "https://darebay.com/en/help/darebay-withdrawals",
@@ -305,22 +305,22 @@
       },
       "cons": {
         "en": [
-          "Young platform: fewer campaigns than the biggest boards so far",
+          "Payouts in USDT on TON or Telegram Stars; no PayPal or bank withdrawal",
           "10% fee on balance withdrawals; nothing is taken from contest payouts",
           "Manual-payout contests depend on the organizer paying"
         ],
         "ru": [
-          "Молодая площадка: кампаний пока меньше, чем на крупнейших витринах",
+          "Выплаты в USDT в сети TON или звёздами Telegram; вывода на PayPal или в банк нет",
           "Комиссия 10% при выводе баланса; с выплат конкурса ничего не берут",
           "В ручном конкурсе выплата зависит от организатора"
         ],
         "uk": [
-          "Молодий майданчик: кампаній поки менше, ніж на найбільших вітринах",
+          "Виплати в USDT у мережі TON або зірками Telegram; виведення на PayPal чи в банк немає",
           "Комісія 10% при виведенні балансу; з виплат конкурсу нічого не беруть",
           "У ручному конкурсі виплата залежить від організатора"
         ],
         "ar": [
-          "منصة حديثة العهد: حملاتها حتى الآن أقل مما في أكبر لوحات الحملات",
+          "الدفع بعملة USDT على شبكة TON أو بنجوم Telegram؛ لا سحب إلى PayPal أو البنك",
           "عمولة 10% على سحب الرصيد؛ ولا يُقتطع شيء من دفعات المسابقات",
           "مسابقة الدفع اليدوي تتوقف على أن يدفع المنظِّم"
         ]

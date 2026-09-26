@@ -8,7 +8,7 @@ seo: true
 
 # What fees DareBay charges
 
-Every DareBay charge is tied to an operation rather than to your account, and the whole list fits in one paragraph. Creating a contest and topping up its budget currently carry a **0% fee** for fiat, USDT and COINS, and nothing is taken from the prize budget or from a contest payout. The only fee on what a clipper earns comes when taking an available balance out: **10% of the requested amount**, deducted inside the request, with a **10 USDT minimum** request, and the team checks the details manually before the money goes anywhere. A personal fee override may apply, and the form shows the exact rate and the amount to receive before you confirm. A store purchase is a separate flow and carries an **8% fee**.
+Every DareBay charge is tied to an operation rather than to your account, and the whole list fits in one paragraph. Creating a contest and topping up its budget currently carry a **0% fee** for fiat, USDT and COINS, and nothing is taken from the prize budget or from a contest payout. The only fee on what a clipper earns comes when taking an available balance out: **10% of the requested amount**, deducted inside the request, with a **10 USDT minimum** request, and the form shows the amount to receive before you confirm. A store purchase is a separate flow and carries an **8% fee**.
 
 Entering a contest remains free. There is no charge to register, submit work or be included in the results.
 
@@ -25,7 +25,9 @@ Before confirmation, the form shows the requested amount, the fee and the amount
 
 ## How withdrawals are processed
 
-A withdrawal is a separate step after a reward has been credited to the available balance. The user submits a request and the team handles the rest. DareBay therefore does not promise an automatic transfer or settlement “within minutes”. The product shows the request status; if it is delayed, contact support@darebay.com.
+Your earnings reach your balance automatically when a wallet-backed task ends, or earlier with Claim now where the task shows it. Request a withdrawal from 10 USDT and the platform does the rest: 10% comes off inside the request, and you see the amount to receive before you confirm.
+
+The product shows the status of every request, and questions about one go to support@darebay.com.
 
 Never send a separate payment to “unlock” a prize. The legitimate fee is calculated inside the withdrawal form and deducted from the requested amount; it is not an advance transfer to somebody else's address.
 
@@ -47,9 +49,9 @@ Entering is free. The 10% fee applies only when a user withdraws an available ba
 
 Yes: contest results determine what is credited, and the platform takes nothing from that reward. A separate 10% fee applies to a later withdrawal, so a 100 USDT request pays out 90 USDT; the form shows the amount to receive before you confirm.
 
-### Is the payout automatic?
+### What happens after I request a withdrawal?
 
-No. Withdrawal requests are checked manually by the team before they are sent. Do not rely on promises of instant settlement; the status in DareBay is the source for a specific request.
+Nothing more is needed from you: the platform checks the details and sends the transfer, and the status in DareBay shows where your request is.
 
 ### Where do these terms come from?
 
@@ -57,4 +59,4 @@ These are the platform's rules, and the form repeats them before confirmation; f
 
 ## In short
 
-Contest creation and top-ups are currently free for organizers, and entering is free for creators. The store fee is 8%. Withdrawing an available balance has a 10 USDT minimum and a 10% fee, and the team handles the requests. See [how withdrawals work](/en/help/darebay-withdrawals), [prizes and payouts](/en/help/prizes-and-payouts), and [how DareBay secures payouts](/en/about/payout-guarantee).
+Contest creation and top-ups are currently free for organizers, and entering is free for creators. The store fee is 8%. Withdrawing an available balance has a 10 USDT minimum and a 10% fee deducted inside the request, and the platform does the rest. See [how withdrawals work](/en/help/darebay-withdrawals), [prizes and payouts](/en/help/prizes-and-payouts), and [how DareBay secures payouts](/en/about/payout-guarantee).

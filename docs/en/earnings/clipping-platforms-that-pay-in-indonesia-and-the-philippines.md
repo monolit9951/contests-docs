@@ -15,7 +15,7 @@ hero:
   takeaways:
     - "<b>Indonesia pays itself in rupiah.</b> Ten local boards publish terms and none names a rail outside Indonesia's wallets and banks; three of the ten print no rate at all."
     - "<b>The one Manila board that publishes GCash and Maya terms has no campaign open.</b> Until it does, pesos arrive from a global platform through PayPal or Payoneer, at GCash's 1% PayPal cash-in."
-    - "<b>DareBay pays neither rupiah nor pesos.</b> Its one cash rail is USDT on the TON network, a withdrawal request starts at 10 USDT and 10% is taken inside it; there is no DANA, GoPay or GCash route."
+    - "<b>DareBay is open in both countries, with no country list.</b> It pays in USDT on the TON network: a withdrawal request starts at 10 USDT and 10% is taken inside it, and only people on sanctions lists are barred."
     - "<b>The two countries' regulators answer differently.</b> Bank Indonesia says virtual currency is not a legal means of payment; the Philippine SEC says its crypto rules do not prohibit trading, while the BSP keeps new licences frozen."
 compare:
   ids: [ternak-klip, clippo, trybuzzer, konten-com, ayoklip, whop, vyro, reach-cat, clipping-net, vues, darebay]
@@ -28,7 +28,7 @@ method:
   - "\"Not published\" means a platform or a payment company says nothing on the point anywhere public. Nothing here is legal or tax advice, and no route around a rule is described: where a rule and a payout rail meet, the page quotes the rule and stops."
 cta:
   title: "Open in both countries, on one rail"
-  lede: "DareBay keeps no country list: only people on sanctions lists are barred, so a clipper in Surabaya or Cebu takes a task on the same terms as anyone else. Its one money rail is USDT on the TON network. If your wallet is ready and you have read what your regulator says above, pick a task, post the clip and let the platform count the views."
+  lede: "DareBay keeps no country list: only people on sanctions lists are barred, so a clipper in Surabaya or Cebu takes a task on the same terms as anyone else. It pays in USDT on the TON network. If your wallet is ready and you have read what your regulator says above, pick a task, post the clip and let the platform count the views."
 ---
 
 Two questions decide clipping here: will a platform pay you at all, and what does its rail become once the money lands? Platforms answer the first, payment companies and regulators the second. For a country-blind ranking see [the best clipping platforms](/en/earnings/best-clipping-platforms); for what a thousand views is worth, [how much clipping pays](/en/earnings/how-much-clipping-pays).
@@ -52,7 +52,7 @@ Six more local boards publish payout terms, five Indonesian and one Philippine, 
 | **Indoclip** | CPM on views checked in 1 to 3 working days <!-- source: https://indoclip.id/ 2026-09-19 --> | DANA, GoPay, OVO or ShopeePay <!-- source: https://indoclip.id/ 2026-09-19 --> | Not published | The rate or the fee; its terms keep a right to adjust a reward <!-- source: https://indoclip.id/terms 2026-09-19 --> |
 | **Ternak Buzzer**, not TryBuzzer or Ternak Klip | On each campaign's terms, after a view check it calls final <!-- source: https://ternakbuzzer.id/terms-of-service 2026-09-19 --> | An e-wallet or a bank transfer after approval <!-- source: https://ternakbuzzer.id/cara-kerja 2026-09-19 --> | Not published | The rate, the operator, the size of its fee |
 | **Vouched** (Manila, pre-launch) | A fixed rate per 1,000 eligible verified views, or a pool share <!-- source: https://www.vouched.ph/how-it-works/creators 2026-09-19 --> | GCash or Maya, a bank account in a later clause <!-- source: https://www.vouched.ph/terms 2026-09-19 --> | None; the floor is what the transfer costs <!-- source: https://www.vouched.ph/terms 2026-09-19 --> | Its operating company, or any delivery time |
-| **DareBay** | $1.00 to $10.00 per 1,000 counted views, set by each task | USDT on the TON network, or the payout received in Telegram Stars; the balance has no rupiah, DANA, GoPay or GCash route | 10 USDT per request, 10% taken inside it | A settlement time: a person checks every request |
+| **DareBay** | $1.00 to $10.00 per 1,000 counted views, set by each task | USDT on the TON network, or the payout received in Telegram Stars | 10 USDT per request, 10% taken inside it | Nothing from this table: its rate, rails, minimum and fee are all published |
 
 ## Rupiah boards built in Indonesia, and who they are open to
 
@@ -108,9 +108,9 @@ Indonesia taxes individuals progressively: the first bracket now runs to Rp60 mi
 
 The Philippine BIR requires anyone earning through electronic platforms to register the activity. <!-- source: https://bir-cdn.bir.gov.ph/local/pdf/RMC%20No.%2060-2020.pdf 2026-09-18 --> A self-employed person with gross receipts within ₱3,000,000 a year may choose an 8% tax on receipts above ₱250,000 instead of the graduated rates, and must choose it again each year. <!-- source: https://bir-cdn.bir.gov.ph/local/pdf/RMO_No.%2023-2018_digest.pdf 2026-09-18 --> Neither tax authority was found to publish how a payment received in a stablecoin is valued; that is a question for a local tax adviser.
 
-## When a rupiah board or a GCash route beats DareBay
+## A rupiah board, a GCash route or DareBay: which fits you
 
-DareBay keeps no country list: only people on sanctions lists are barred <!-- source: https://darebay.com/en/legal/terms 2026-09-24 -->, so both countries are in, and it has one money rail: USDT on the TON network. You can also receive the payout in Telegram Stars, but Stars are not cash: "You may not sell, withdraw, transfer or use Stars in your personal balance" beyond what Telegram's terms allow. <!-- source: https://telegram.org/tos/stars 2026-09-18 --> Nothing is taken from a task budget; the one charge a clipper meets is 10% of the amount withdrawn, withdrawals start at 10 USDT, and a person checks each request, so no settlement time is promised. The rate is set by each task and printed on its card, from $1.00 to $10.00 per 1,000 counted views. The interface is in English, Russian, Ukrainian and Polish, with no Indonesian or Tagalog version, and a balance has no rupiah, GCash or bank route.
+DareBay keeps no country list: only people on sanctions lists are barred <!-- source: https://darebay.com/en/legal/terms 2026-09-24 -->, so both countries are in, and it pays in USDT on the TON network. You can also receive the payout in Telegram Stars, but Stars are not cash: "You may not sell, withdraw, transfer or use Stars in your personal balance" beyond what Telegram's terms allow. <!-- source: https://telegram.org/tos/stars 2026-09-18 --> Nothing is taken from a task budget; the one charge a clipper meets is 10% of the amount withdrawn, withdrawals start at 10 USDT, and you see the amount to receive before you confirm. The rate is set by each task and printed on its card, from $1.00 to $10.00 per 1,000 counted views, and no followers or application are needed: a brand-new account can take a task. The interface is in English, Russian, Ukrainian and Polish.
 
 So a rupiah board is the better answer for an Indonesian resident who wants rupiah in DANA or GoPay with no crypto in the chain; Clippo even withholds the income tax. In Manila, while the local board has no brief to take, a global board paying by PayPal or Payoneer is better when the money must end up in GCash. DareBay fits a clipper who already holds a TON wallet, falls outside the rupiah boards' residency rules and has read the regulators above. The rails, platform by platform, are in [clipping platforms that pay without PayPal or Stripe](/en/earnings/clipping-platforms-that-pay-without-paypal-or-stripe).
 

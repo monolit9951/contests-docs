@@ -424,9 +424,9 @@ export function buildFacts({ truth, intent, snapshot, now }) {
       source: 'gen-facts-json.mjs#WORDING.geography',
       asOf: WORDING.reviewedAt,
       note:
-        'No country list: only people on UK, EU or UN sanctions lists are barred. The balance leaves only as ' +
-        'USDT on TON, so where the law closes crypto to residents (Bangladesh, Nepal, Egypt, Algeria and Iraq, ' +
-        'for example) there is no lawful cash-out route.',
+        'No country list: only people on UK, EU or UN sanctions lists are barred. The balance leaves as USDT on ' +
+        'TON, or the payout is received in Telegram Stars; where the law closes crypto to residents (Bangladesh, ' +
+        'Nepal, Egypt, Algeria and Iraq, for example), check the local rules before cashing out USDT.',
     },
   ]
 

@@ -781,7 +781,7 @@ test("a help page stating no withdrawal fee passes only under the pending intent
   }
 });
 
-test("removing the personal withdrawal override from a canonical page fails", () => {
+test("removing the personal withdrawal override from the terms fails", () => {
   const fixture = mkdtempSync(join(tmpdir(), "product-truth-override-"));
   const canonicalFiles = [
     "docs/pomoshch/kakaya-komissiya.md", "docs/en/help/what-commission.md", "docs/ua/dopomoha/yaka-komisiia.md",
@@ -794,10 +794,11 @@ test("removing the personal withdrawal override from a canonical page fails", ()
       mkdirSync(dirname(target), { recursive: true });
       writeFileSync(target, readFileSync(join(root, file), "utf8"));
     }
-    const target = join(fixture, "docs/en/help/darebay-withdrawals.md");
-    writeFileSync(target, readFileSync(target, "utf8").replaceAll("A personal fee override may apply; ", ""));
+    // Since 2026-09-26 the help pages need not mention the override; the terms still must.
+    const target = join(fixture, "docs/en/legal/terms.md");
+    writeFileSync(target, readFileSync(target, "utf8").replaceAll(/;? ?a personal fee override may apply/g, ""));
     assert(checkCanonicalPages(fixture, truth).some((item) =>
-      item.file === "docs/en/help/darebay-withdrawals.md" && /per-user withdrawal override/.test(item.message)));
+      item.file === "docs/en/legal/terms.md" && /per-user withdrawal override/.test(item.message)));
   } finally {
     rmSync(fixture, { recursive: true, force: true });
   }

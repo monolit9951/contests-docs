@@ -17,9 +17,9 @@ On DareBay the buyer does not hunt for a contractor and does not haggle. You cre
 the platform; clippers find the contest in the feed, publish their videos and send in the links.
 The submitted link is what enters a video into the contest - nothing is imported by hashtag. The
 view figure is read from the published view counter on the site each video went out on. Amounts for
-submissions above the threshold are calculated by formula and recorded as credits or obligations,
-and the unearned remainder returns to your balance; the team checks and sends
-every withdrawal, with no fixed time. The full mechanic step by step: [how pay-per-view works](/en/earnings/how-pay-per-view-works).
+submissions above the threshold are calculated automatically by formula and recorded as credits or
+obligations, and the unearned remainder returns to your balance. The full mechanic step by step:
+[how pay-per-view works](/en/earnings/how-pay-per-view-works).
 
 ## The parameters the buyer sets
 
@@ -55,26 +55,26 @@ DareBay works as an intermediary and guarantor between the buyer and the clipper
 
 - **A wallet-backed budget is charged up front.** The money leaves your balance when the contest is created. It cannot be taken back before the end, and the clipper can see the payment is already on the platform. That is why a funded task gets picked up faster than a promise to pay later.
 - **The view figure comes from outside both of you.** It is read from the published view counter on the site each video went out on. Neither the buyer nor the clipper types it in, so there is no number to argue about at the end.
-- **Suspicious activity goes on hold, not straight onto your bill.** Moderation and basic checks sit on top of the count, and a submission with suspicious view dynamics is flagged and paused pending review. This is a real safeguard and not a claim that every manipulated view is identified.
+- **Suspicious activity goes on hold, not straight onto your bill.** Moderation and basic checks sit on top of the count, and a submission with suspicious view dynamics is flagged and paused pending review, so suspicious growth does not run up your bill.
 - **The split follows counted results.** The payout is worked out by formula, without the buyer touching it. Neither side can nudge the result.
 
 You also keep a lever of your own: during the selection window you reject work that does not meet
 the task, and a rejected submission is paid nothing. Each creator's amount is recorded as an
-auditable obligation, and fulfilment follows payout details and statuses and is done by the team.
+auditable obligation with a status you can follow.
 
 ## Reach and access
 
 Many Western UGC platforms restrict registration or payment rails for creators in Russia and the
-CIS. DareBay is open across the region and runs in English. Clippers are paid in USDT on TON, or
-receive the payout in Telegram Stars; in a prize contest the organizer may also pay by card, bank
-transfer or gift when the contest sets it<!-- source: https://darebay.com/en/help/darebay-withdrawals 2026-09-24 -->. Fulfilment follows the
-available payout details and statuses and is done by the team.
+CIS. DareBay is open across the region and runs in English, and there is no country list: only
+people on sanctions lists are barred. Clippers are paid in USDT on TON, or receive the payout in
+Telegram Stars; in a prize contest the organizer may also pay by card, bank transfer or gift when
+the contest sets it<!-- source: https://darebay.com/en/help/darebay-withdrawals 2026-09-24 -->.
 
 ## Frequently asked questions
 
 ### How do I protect myself from bought views?
 
-Three things stack, and it is worth knowing the limit of each. The view figure is read from the published view counter on the site the video went out on, so neither party supplies it. Moderation flags suspicious view dynamics and puts that submission on hold pending review, which pauses the accrual rather than approving it. And you can reject work that does not meet the task during the selection window, which pays it nothing. What DareBay will not claim is that every manipulated view gets identified.
+Three protections stack. The view figure is read from the published view counter on the site the video went out on, so neither party supplies it. Moderation flags suspicious view dynamics and puts that submission on hold pending review, which pauses the accrual rather than approving it. And you can reject work that does not meet the task during the selection window, which pays it nothing.
 
 ### What is the commission?
 
@@ -86,9 +86,10 @@ There is nothing to do: if the budget is not spent in full (few participants, su
 
 ### Where are the clippers?
 
-Across Russia and the CIS. Sign-up is open and the platform runs in English. Each contest defines
-its reward method, while the product shows the available payout details and status; the team checks
-and sends every withdrawal.
+Across Russia and the CIS, and there is no country list: only people on sanctions lists are barred.
+Sign-up is open, no followers or application are needed, and the platform runs in English. Each
+contest defines its reward method, and the product shows the payout details and the status of every
+request.
 
 ### How many clippers will take the task?
 
@@ -100,7 +101,7 @@ No, and that is the point of the guarantee: a wallet-backed budget stays with th
 
 ### Do I have to review the clippers' work by hand?
 
-You accept the work yourself: during the selection window you reject anything that does not match the task, and a rejected submission is paid nothing. The views are counted without you.
+You accept the work yourself: during the selection window you reject anything that does not match the task, and a rejected submission is paid nothing. The views are counted and the sums worked out automatically, without you.
 
 ## Where to next
 

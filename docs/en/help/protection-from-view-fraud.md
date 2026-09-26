@@ -7,13 +7,12 @@ numbers_used: []
 
 # Protection from view fraud and fake submissions
 
-Nobody rewrites your result by hand: the view figure is supplied by neither the buyer nor you. The
-platform reads the published counter on the site the video went out on, and the work is tied to the
-contest by the URL you submitted. **The checks on top of that** are moderation and a hold, which is
-a real safeguard and not a claim that every manipulated view on the internet gets spotted.
+The calculation is automatic: the platform's own counter reads the public view counter at your
+link and works out the sum; nobody types figures in by hand, neither the buyer nor you. The work is
+tied to the contest by the URL you submitted, and **the checks on top of that** are moderation and
+a hold, a real safeguard for everyone who plays fair.
 
-Anyone who tells you a platform detects all inflation is guessing. What DareBay can state is what
-it does.
+Here is exactly what DareBay does.
 
 ## Where the view figure comes from
 
@@ -21,13 +20,12 @@ The platform's independent counter reads the published view counter on the site 
 on, using the link you submitted. Both sides look at the same public number and neither types it
 in by hand.
 
-What follows honestly from that, and what does not:
+What that gives you:
 
-- **It follows** that the figure is public, checkable on the site itself, and out of reach of both
-  the buyer and the participant.
-- **It does not follow** that the platform re-derives its own estimate of "real" views on top of
-  the counter. It does not. Whatever the site counts is what enters the calculation once the
-  threshold is cleared.
+- **A public figure.** It is checkable on the site itself and out of reach of both the buyer and
+  the participant.
+- **No hidden adjustment.** The platform does not swap the counter for an estimate of "real" views
+  of its own: whatever the site counts is what enters the calculation once the threshold is cleared.
 
 Screenshots prove nothing here, and neither does anybody's word. Only the counter on the published
 video is read.
@@ -42,9 +40,8 @@ pauses until it has been looked at. That is a pause, not a verdict, and there ar
    out a payout on it is still possible.
 3. **Moderation rejects it.** It takes no part in the budget split and earns nothing.
 
-So the argument against buying views is not that punishment is certain. It is the arithmetic of
-the bet: you pay for the views up front, out of your own pocket, and the payout on that submission
-is guaranteed by nothing and can sit frozen until a human has looked at it.
+So buying views is a losing bet: you pay for the views up front, out of your own pocket, and the
+payout on that submission is guaranteed by nothing and can sit frozen until it has been reviewed.
 
 Swapping the link does not help either. A submission belongs to the contest through the URL you
 sent, and that is the video that gets read.
@@ -66,8 +63,8 @@ Spotted something the checks did not catch? A report is settled before the winne
 which means before any money moves. Filing reports against everybody on principle damages the
 organizer rating, so it is not a free move.
 
-What is deliberately not promised: that a result already recorded will be reopened and rewritten
-on request. Reports are read and answered by a person, and the answer is not decided in advance.
+A result already recorded stays recorded: it is not reopened and rewritten on request. Reports are
+read and answered by a person, and the answer is not decided in advance.
 
 ## Why cheating is a poor trade
 

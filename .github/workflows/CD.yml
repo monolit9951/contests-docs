@@ -156,9 +156,13 @@ jobs:
           set -Eeuo pipefail
           # Commit time, not build time: retirement ages stay reproducible.
           release_epoch="$(git show -s --format=%ct "$GITHUB_SHA")"
+          # One-release emergency purge (DEPLOY_NOTES.md): chunks retired on
+          # 23-25.09 still carry text the site no longer publishes. Remove this
+          # line in the next release.
           make build_app VERSION="${GITHUB_SHA}" RELEASE_SHA="${GITHUB_SHA}" \
             RETENTION_BASE="${RETENTION_BASE}" \
             RETENTION_BASE_REVISION="${RETENTION_BASE_REVISION}" \
+            RETENTION_WINDOW_DAYS=0 \
             RELEASE_EPOCH="${release_epoch}" \
             GOOGLE_SITE_VERIFICATION="${{ secrets.GOOGLE_SITE_VERIFICATION }}" \
             YANDEX_VERIFICATION="${{ secrets.YANDEX_VERIFICATION }}"

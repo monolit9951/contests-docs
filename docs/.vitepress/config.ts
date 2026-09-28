@@ -17,7 +17,7 @@ import { installCoveredHeadingRule } from './coveredHeading'
 import { installTableWrapRule } from './tableWrap'
 import { installCommentSpacingRule, stripComments } from './commentSpacing'
 import { installSourcesRule } from './sources'
-import { fontPreloadTags, stripVpIconsLink } from './headAssets'
+import { fontPreloadTags, inlineStylesheets, stripVpIconsLink } from './headAssets'
 import PAGE_DATES from '../page-dates.json'
 import PLATFORMS from './data/platforms.json'
 
@@ -892,7 +892,8 @@ export default defineConfig({
     )
     // Every page renders through the landing shell now: the display face is a
     // site-wide dependency (self-hosted next to Manrope). The preloads follow the
-    // page's language — see FONT_PRELOADS in headAssets.ts.
+    // page's language — see FONT_PRELOADS in headAssets.ts. The build moves the
+    // stylesheet's rules inline (`inlineStylesheets`); `docs:dev` keeps the link.
     pageData.frontmatter.head.push(
       ...fontPreloadTags(found.lang),
       ['link', { rel: 'stylesheet', href: '/content-assets/fonts/unbounded.css' }]
@@ -996,11 +997,14 @@ export default defineConfig({
     // fallback fonts. These docs kept requesting fonts.googleapis.com, so on the only pages of
     // ours that actually rank, part of the readers paid for a render-blocking request to nowhere.
     // The Manrope preload is per page, in the page's language (FONT_PRELOADS in headAssets.ts).
+    // The build moves this stylesheet's rules inline (`inlineStylesheets`); `docs:dev` keeps the link.
     ['link', { rel: 'stylesheet', href: '/content-assets/fonts/manrope.css' }],
   ],
 
-  // Drops VitePress's empty render-blocking /vp-icons.css link (see headAssets.ts).
-  transformHtml: (html) => stripVpIconsLink(html),
+  // Drops VitePress's empty render-blocking /vp-icons.css link and ends every page's head with the
+  // CSS bundle and the @font-face rules instead of linking them (see headAssets.ts).
+  transformHtml: (html, _id, ctx) =>
+    inlineStylesheets(stripVpIconsLink(html), (href) => readFileSync(join(ctx.siteConfig.outDir, href), 'utf8')),
 
   themeConfig: {
     logo: { src: '/content-assets/logo.svg', alt: 'DareBay' },

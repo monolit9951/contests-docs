@@ -21,7 +21,7 @@ const {
   pagePath,
   sourceFile,
 } = await import(join(DOCS, '.vitepress', 'registry.ts'))
-const { fontPreloadHrefs } = await import(join(DOCS, '.vitepress', 'headAssets.ts'))
+const { ABSOLUTE_URL, FONT_FACE_STYLESHEETS, HEAD_END, REQUEST_TAG, cssUrls, fontPreloadHrefs } = await import(join(DOCS, '.vitepress', 'headAssets.ts'))
 
 const hostname = process.env.DOCS_ENV === 'prod' ? ORIGIN : 'https://dev.darebay.com'
 const dates = JSON.parse(readFileSync(join(DOCS, 'page-dates.json'), 'utf8'))
@@ -38,9 +38,34 @@ const attr = (tag, name) => tag.match(new RegExp(`\\b${name}="([^"]*)"`))?.[1]
 const tags = (html, tagName) => [...html.matchAll(new RegExp(`<${tagName}\\b[^>]*>`, 'gi'))].map((match) => match[0])
 
 // config.ts strips VitePress's `/vp-icons.css` link because the file is empty (headAssets.ts).
-// Should it ever carry icon rules, every page must link it again, so the gate follows the file.
+// Should it ever carry icon rules, the build fails here: they belong inline with the bundle
+// (inlineStylesheets), because the `inline-css` gate below allows no linked stylesheet at all.
 const vpIconsPath = join(DIST, 'vp-icons.css')
 const vpIconsHasRules = existsSync(vpIconsPath) && readFileSync(vpIconsPath, 'utf8').trim() !== ''
+if (vpIconsHasRules) fail('vp-icons', 'vp-icons.css has rules: inline them with the bundle (inlineStylesheets in headAssets.ts)')
+
+// Every page carries the CSS bundle and the @font-face files at the end of its head, followed only by
+// the tags that start requests (inlineStylesheets in headAssets.ts): a linked stylesheet is the request
+// the TSPU leaves hanging, and a blank page. The built files are what each page must hold, byte for
+// byte, so a stale or partial copy fails too. Inline, a relative url() would resolve against the page's
+// address and an @import would be a request again.
+const bundleFiles = readdirSync(join(DIST, 'content-assets')).filter((name) => /^style\.[\w-]+\.css$/.test(name))
+if (bundleFiles.length !== 1) fail('inline-css', `expected one CSS bundle in content-assets, found [${bundleFiles.join(', ')}]`)
+const inlineTexts = [
+  ...bundleFiles.map((name) => readFileSync(join(DIST, 'content-assets', name), 'utf8')),
+  FONT_FACE_STYLESHEETS.map((href) => readFileSync(join(DIST, href), 'utf8')).join('\n'),
+]
+for (const text of inlineTexts) {
+  if (/@import/i.test(text)) fail('inline-css', 'an inlined stylesheet has an @import')
+  for (const target of cssUrls(text)) {
+    if (!ABSOLUTE_URL.test(target)) fail('inline-css', `an inlined stylesheet has a relative url(${target})`)
+  }
+}
+const inlineStyles = inlineTexts.map((text) => `<style>${text}</style>`).join('')
+// Markup only, for the scans below that look for ids and links: the inlined CSS holds SVG in data:
+// urls and attribute selectors, and neither is part of the page.
+// One pass, the way a browser reads raw text: "<style" inside a script is text of that script.
+const markupOf = (html) => html.replace(/<(script|style)\b[^>]*>[\s\S]*?<\/\1\s*>/gi, '')
 
 const expectedUrls = new Map()
 const idsByPath = new Map()
@@ -64,8 +89,9 @@ for (const page of PAGES) {
     if (page.slugs[locale] !== '') leafPages.push({ path, html, group: `${page.hub}/${locale}` })
 
     // The page's anchors and the links aiming at them; checked as `anchor-target` after the loop.
-    idsByPath.set(path, new Set([...html.matchAll(/\bid="([^"]+)"/g)].map((match) => decodeFragment(match[1]))))
-    for (const match of html.matchAll(/\bhref="([^"#]*)#([^"]+)"/g)) {
+    const markup = markupOf(html)
+    idsByPath.set(path, new Set([...markup.matchAll(/\bid="([^"]+)"/g)].map((match) => decodeFragment(match[1]))))
+    for (const match of markup.matchAll(/\bhref="([^"#]*)#([^"]+)"/g)) {
       const [, target, fragment] = match
       if (target === '' || target.startsWith('/')) anchorLinks.push({ from: path, target: target || path, fragment: decodeFragment(fragment) })
     }
@@ -129,9 +155,17 @@ for (const page of PAGES) {
     if (fontPreloads.join(' ') !== expectedFontPreloads.join(' ')) {
       fail('font-preload', `${path}: [${fontPreloads.join(', ')}] != [${expectedFontPreloads.join(', ')}]`)
     }
-    const linksVpIcons = tags(html, 'link').some((tag) => attr(tag, 'href') === '/vp-icons.css')
-    if (linksVpIcons !== vpIconsHasRules) {
-      fail('vp-icons', `${path}: ${vpIconsHasRules ? 'vp-icons.css has rules but is not linked' : 'links the empty render-blocking vp-icons.css'}`)
+    // vp-icons.css included (see vpIconsHasRules above): no page links any stylesheet.
+    const linkedStylesheets = tags(markupOf(html), 'link').filter((tag) => /\bstylesheet\b/.test(attr(tag, 'rel') ?? ''))
+    if (linkedStylesheets.length) fail('inline-css', `${path}: links ${linkedStylesheets.map((tag) => attr(tag, 'href')).join(', ')}`)
+    // Behind every meta tag, the canonical, hreflang and JSON-LD (link unfurlers read only the first
+    // kilobytes of a page), and in front of every tag that starts a request.
+    const markupHeadEnds = markupOf(html).split('</head>').length - 1
+    const stylesAt = html.indexOf(inlineStyles)
+    const headEnd = html.indexOf(HEAD_END)
+    const afterStyles = stylesAt < 0 || headEnd < stylesAt ? null : html.slice(stylesAt + inlineStyles.length, headEnd).replace(REQUEST_TAG, '')
+    if (markupHeadEnds !== 1 || afterStyles === null || afterStyles.trim() !== '' || html.indexOf(inlineStyles, stylesAt + 1) >= 0) {
+      fail('inline-css', `${path}: the head does not end with the CSS bundle and the @font-face rules, then the request tags`)
     }
 
     const actualAlternates = new Map(

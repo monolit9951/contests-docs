@@ -1,10 +1,11 @@
-import { existsSync, readFileSync, readdirSync } from 'node:fs'
+import { existsSync, mkdirSync, mkdtempSync, readFileSync, readdirSync, rmSync, writeFileSync } from 'node:fs'
+import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import type { PageData } from 'vitepress'
 import { describe, expect, it } from 'vitest'
 import siteConfig from './config'
-import { FONT_DIR, FONT_PRELOADS, VP_ICONS_LINK, fontPreloadHrefs, stripVpIconsLink } from './headAssets'
+import { ABSOLUTE_URL, FONT_DIR, FONT_FACE_STYLESHEETS, FONT_PRELOADS, HEAD_END, STYLE_BUNDLE_LINK, VP_ICONS_LINK, cssUrls, fontPreloadHrefs, inlineStylesheets, stripVpIconsLink } from './headAssets'
 import { KNOWN_LOCALES, LOCALES, PAGES, localesOf, sourceFile, type Locale } from './registry'
 
 const DOCS = fileURLToPath(new URL('..', import.meta.url))
@@ -112,5 +113,153 @@ describe('the empty vp-icons.css link', () => {
     it('is stripped by the config, not by a post-build patch', () => {
         const html = `<head>\n${vitepressLine}\n</head>`
         expect(siteConfig.transformHtml!(html, 'x.html', {} as never)).toBe('<head>\n</head>')
+    })
+})
+
+describe('stylesheets inside the document', () => {
+    // The literal VitePress renders for its CSS bundle (node build, renderPage), with the site's base '/'.
+    const bundleLine = (() => {
+        const dir = join(ROOT, 'node_modules', 'vitepress', 'dist', 'node')
+        for (const file of readdirSync(dir).filter((name) => name.endsWith('.js'))) {
+            const line = readFileSync(join(dir, file), 'utf8')
+                .split('\n')
+                .find((text) => text.includes('<link rel="preload stylesheet" href="${siteData.base}${cssChunk.fileName}" as="style">'))
+            if (line) {
+                return line
+                    .slice(line.indexOf('<link'), line.indexOf('as="style">') + 'as="style">'.length)
+                    .replace('${siteData.base}', siteConfig.base ?? '/')
+                    .replace('${cssChunk.fileName}', 'content-assets/style.CS7UsR-a.css')
+            }
+        }
+        return undefined
+    })()
+    const bundle = '/content-assets/style.CS7UsR-a.css'
+    const [manrope, unbounded] = FONT_FACE_STYLESHEETS
+    const files: Record<string, string> = {
+        [bundle]: '.lp{color:#fff}.price::before{content:"$& $1 $$"}',
+        [manrope]: "@font-face{font-family:'Manrope';src:url(/content-assets/fonts/manrope-400-latin.woff2)}",
+        [unbounded]: "@font-face{font-family:'Unbounded';src:url(/content-assets/fonts/unbounded-var-latin.woff2)}",
+    }
+    const read = (href: string) => {
+        if (!(href in files)) throw new Error(`unexpected read ${href}`)
+        return files[href]
+    }
+    // The shape of a built page's head: the bundle link where renderPage writes it, the app script and
+    // its module preloads after it, the site head's Manrope link, the page head's font preloads and
+    // Unbounded link among its metadata, and a description whose text holds a literal "</head>".
+    const page = (bundleLink: string) => [
+        '<!DOCTYPE html>',
+        '<html lang="en" dir="ltr">',
+        '  <head>',
+        '    <meta name="description" content="Why a </head> in a description is harmless">',
+        '    <meta name="generator" content="VitePress v1.6.4">',
+        `    ${bundleLink}`,
+        '    <script type="module" src="/content-assets/app.Bb-cdalk.js"></script>',
+        '    <link rel="modulepreload" href="/content-assets/chunks/theme.D-pNR7i0.js">',
+        '    <meta name="robots" content="index, follow">',
+        `    <link rel="stylesheet" href="${manrope}">`,
+        '    <link rel="preload" href="/content-assets/fonts/manrope-400-latin.woff2" as="font" type="font/woff2" crossorigin="">',
+        `    <link rel="stylesheet" href="${unbounded}">`,
+        '    <link rel="canonical" href="https://darebay.com/en/earnings/example">',
+        '  </head>',
+        '  <body>',
+        '    <div id="app"><p>&lt;/head&gt; in the text</p></div>',
+        '  </body>',
+        '</html>',
+    ].join('\n')
+    const styles = `<style>${files[bundle]}</style><style>${files[manrope]}\n${files[unbounded]}</style>`
+    const inlined = [
+        '<!DOCTYPE html>',
+        '<html lang="en" dir="ltr">',
+        '  <head>',
+        '    <meta name="description" content="Why a </head> in a description is harmless">',
+        '    <meta name="generator" content="VitePress v1.6.4">',
+        '    <meta name="robots" content="index, follow">',
+        '    <link rel="canonical" href="https://darebay.com/en/earnings/example">',
+        `    ${styles}`,
+        '    <script type="module" src="/content-assets/app.Bb-cdalk.js"></script>',
+        '    <link rel="modulepreload" href="/content-assets/chunks/theme.D-pNR7i0.js">',
+        '    <link rel="preload" href="/content-assets/fonts/manrope-400-latin.woff2" as="font" type="font/woff2" crossorigin="">',
+        '  </head>',
+        '  <body>',
+        '    <div id="app"><p>&lt;/head&gt; in the text</p></div>',
+        '  </body>',
+        '</html>',
+    ].join('\n')
+
+    it('still matches the bundle link this VitePress version writes', () => {
+        expect(bundleLine).toBeDefined()
+        expect(bundleLine!).toMatch(STYLE_BUNDLE_LINK)
+    })
+
+    it('drops the three links, puts the styles after every meta tag and the request tags after the styles, and nothing else changes', () => {
+        expect(inlineStylesheets(page(bundleLine!), read)).toBe(inlined)
+    })
+
+    it('copies "$&" and "$1" in the CSS as text, not as replacement patterns', () => {
+        expect(inlineStylesheets(page(bundleLine!), read)).toContain('content:"$& $1 $$"')
+    })
+
+    it('refuses a file that would close the <style> element early', () => {
+        const broken = (href: string) => (href === manrope ? '@font-face{}</style><script>' : read(href))
+        expect(() => inlineStylesheets(page(bundleLine!), broken)).toThrow(/manrope\.css/)
+    })
+
+    it('refuses a document whose head does not end the way renderPage writes it', () => {
+        expect(() => inlineStylesheets(page(bundleLine!).replace(HEAD_END, '\n</head><body>'), read)).toThrow(/end of <head>/)
+    })
+
+    it('leaves a document without the bundle link as it is, reading nothing', () => {
+        const html = page('<link rel="icon" href="/content-assets/favicon.svg">')
+        expect(inlineStylesheets(html, () => { throw new Error('read') })).toBe(html)
+    })
+
+    it('reads the built files from the output directory through the config', () => {
+        const outDir = mkdtempSync(join(tmpdir(), 'docs-inline-css-'))
+        try {
+            for (const [href, text] of Object.entries(files)) {
+                mkdirSync(join(outDir, href, '..'), { recursive: true })
+                writeFileSync(join(outDir, href), text)
+            }
+            const html = siteConfig.transformHtml!(page(bundleLine!), 'x.html', { siteConfig: { outDir } } as never) as string
+            expect(html).toBe(inlined)
+        } finally {
+            rmSync(outDir, { recursive: true, force: true })
+        }
+    })
+
+    it('keeps both @font-face links in the config heads, for docs:dev, which runs no transformHtml', () => {
+        const linked = (head: [string, Record<string, string>][]) =>
+            head.filter(([name, attrs]) => name === 'link' && attrs.rel === 'stylesheet').map(([, attrs]) => attrs.href)
+        expect(linked((siteConfig.head ?? []) as [string, Record<string, string>][])).toEqual([manrope])
+        for (const language of LOCALES.map((axis) => axis.language) as Locale[]) {
+            const entry = PAGES.find((candidate) => localesOf(candidate).includes(language))!
+            const pageData = {
+                relativePath: sourceFile(entry, language)!,
+                title: 'Title',
+                description: 'Description',
+                headers: [],
+                frontmatter: { title: 'Title', description: 'Description' },
+            } as unknown as PageData
+            void siteConfig.transformPageData!(pageData, {} as never)
+            expect(linked(pageData.frontmatter.head as [string, Record<string, string>][]), language).toEqual([unbounded])
+        }
+    })
+
+    it('reads every url() form and tells the ones that mean the same inside a page', () => {
+        const css = `a{b:url("data:image/svg+xml,<svg fill='red'/>")}c{d:url( '/x.woff2' )}e{f:url(x.png)}`
+            + 'g{h:url(#a)}i{j:url(%23b)}k{l:url(https://x.test/y)}'
+        expect(cssUrls(css)).toEqual(["data:image/svg+xml,<svg fill='red'/>", '/x.woff2', 'x.png', '#a', '%23b', 'https://x.test/y'])
+        expect(cssUrls(css).filter((target) => !ABSOLUTE_URL.test(target))).toEqual(['x.png'])
+    })
+
+    it('names @font-face files that exist and hold only urls that survive inlining', () => {
+        for (const href of FONT_FACE_STYLESHEETS) {
+            const path = join(DOCS, 'public', href)
+            expect(existsSync(path), href).toBe(true)
+            const text = readFileSync(path, 'utf8')
+            expect(text, href).not.toMatch(/@import/i)
+            for (const target of cssUrls(text)) expect(target, href).toMatch(ABSOLUTE_URL)
+        }
     })
 })

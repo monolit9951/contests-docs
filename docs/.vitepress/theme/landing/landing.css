@@ -176,6 +176,9 @@ body:has(.lp) { min-width: 0; }
 .lp-table tr:last-child td { border-bottom: 0; }
 .lp-table td.lp-cell-name { font-weight: 700; white-space: normal; min-width: 150px; max-width: 220px; }
 .lp-table td.lp-cell-name small { display: block; font-weight: 500; color: var(--lp-muted); font-size: 12px; margin-top: 2px; }
+/* Our review of the platform (`reviewPath`): the row's own link, under the name that opens the platform's site. */
+.lp .lp-review a { color: var(--lp-accent); font-weight: 700; text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--lp-accent) 40%, transparent); text-underline-offset: 3px; }
+.lp-table td.lp-cell-name small.lp-review { margin-top: 6px; }
 .lp-table .lp-cell-name, .lp-table th:first-child { position: sticky; inset-inline-start: 0; background: var(--lp-panel); z-index: 1; box-shadow: 1px 0 0 var(--lp-line); }
 .lp-table th:first-child { background: var(--lp-panel-2); z-index: 3; }
 .lp-table tr.is-us td { background: color-mix(in srgb, var(--lp-accent) 7%, transparent); }
@@ -222,6 +225,7 @@ body:has(.lp) { min-width: 0; }
 .lp-card-foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; margin-top: auto; padding-top: 6px; }
 .lp-card-foot .lp-srcs { font-size: 12px; color: var(--lp-faint); }
 .lp-card-foot .lp-srcs a { color: var(--lp-muted); text-decoration: underline; text-underline-offset: 2px; }
+.lp-card-foot .lp-review { font-size: 13px; }
 
 /* ---- methodology + sources --------------------------------------------- */
 .lp-method { background: var(--lp-band); border: 1px solid var(--lp-line); border-radius: 22px; padding: 28px; display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 28px; }

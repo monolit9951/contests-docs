@@ -6,10 +6,10 @@ import { useData } from 'vitepress'
 import { computed, ref } from 'vue'
 import { sourceAnchor, sourceLabel } from '../../links'
 import { appLocaleOf } from '../../registry'
-import { LANDING_COPY, localeOf } from './copy'
-import { DEFAULT_COLUMNS, bidiAttrs, pick, sourceIndex, text, textLang, type Platform } from './platforms'
+import { LANDING_COPY, localeOf, reviewLabel } from './copy'
+import { DEFAULT_COLUMNS, bidiAttrs, pick, reviewPath, sourceIndex, text, textLang, type Platform } from './platforms'
 
-const { frontmatter, lang } = useData()
+const { frontmatter, lang, page } = useData()
 const loc = computed(() => localeOf(lang.value))
 // DareBay's own row links into the product, in the application tree this reader is sent to.
 const appLoc = computed(() => appLocaleOf(loc.value))
@@ -18,6 +18,8 @@ const cfg = computed(() => (frontmatter.value.compare ?? {}) as { ids?: string[]
 const columns = computed(() => cfg.value.columns ?? DEFAULT_COLUMNS)
 const rows = computed(() => pick(cfg.value.ids ?? []))
 const highlight = computed(() => cfg.value.highlight ?? 'darebay')
+// The row's second link: our own review of the platform, when this language has one (`reviewPath`).
+const review = (p: Platform) => reviewPath(p, loc.value, page.value.relativePath)
 
 const sortKey = ref<string | null>(null)
 const desc = ref(false)
@@ -94,6 +96,7 @@ const stateClass = (s?: string, c?: string) => {
                 <a v-if="p.id === highlight" :href="p.home?.[appLoc] ?? p.url" target="_self">{{ p.name }}</a>
                 <a v-else v-bind="sourceAnchor(p.url, loc)">{{ p.name }}</a>
                 <template v-if="p.bestFor?.[loc]">{{ ' ' }}<small>{{ p.bestFor[loc] }}</small></template>
+                <template v-if="review(p)">{{ ' ' }}<small class="lp-review"><a :href="review(p)!">{{ reviewLabel(loc, p.name) }}</a></small></template>
               </td>
               <td v-for="c in columns" :key="c">
                 <span v-if="p.fields[c]?.state && !text(p, c, loc)" :class="stateClass(p.fields[c].state, c)">{{ copy.cis[p.fields[c].state!] }}</span>

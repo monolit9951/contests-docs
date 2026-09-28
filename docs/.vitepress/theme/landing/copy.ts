@@ -18,6 +18,8 @@ export interface LandingCopy {
   pros: string
   cons: string
   sources: string
+  /** A table row's or card's link to our own review of the platform; `{name}` is its name (`reviewLabel`). */
+  review: string
   notPublished: string
   methodTitle: string
   calcTitle: string
@@ -167,6 +169,7 @@ export const LANDING_COPY: Record<Locale, LandingCopy> = {
     pros: 'Strong points',
     cons: 'Watch out for',
     sources: 'Sources',
+    review: '{name} review →',
     notPublished: 'not published',
     methodTitle: 'How this comparison was built',
     calcTitle: 'What a clip pays on DareBay',
@@ -217,6 +220,7 @@ export const LANDING_COPY: Record<Locale, LandingCopy> = {
     pros: 'Сильные стороны',
     cons: 'На что смотреть',
     sources: 'Источники',
+    review: 'Обзор {name} →',
     notPublished: 'не публикует',
     methodTitle: 'Как строили сравнение',
     calcTitle: 'Сколько платит один ролик на DareBay',
@@ -267,6 +271,7 @@ export const LANDING_COPY: Record<Locale, LandingCopy> = {
     pros: 'Сильні сторони',
     cons: 'На що зважати',
     sources: 'Джерела',
+    review: 'Огляд {name} →',
     notPublished: 'не публікує',
     methodTitle: 'Як будували порівняння',
     calcTitle: 'Скільки платить один ролик на DareBay',
@@ -322,6 +327,7 @@ export const LANDING_COPY: Record<Locale, LandingCopy> = {
     pros: 'نقاط القوة',
     cons: 'ما يجب الانتباه إليه',
     sources: 'المصادر',
+    review: 'مراجعة {name} ←',
     notPublished: 'غير معلن',
     methodTitle: 'كيف أُعدّت هذه المقارنة',
     calcTitle: 'كم يدفع مقطع واحد على DareBay',
@@ -380,3 +386,8 @@ export const NUMBER_LOCALE: Record<Locale, string> = {
  */
 export const localeOf = (lang: string): Locale =>
   (KNOWN_LOCALES as readonly string[]).includes(lang) ? (lang as Locale) : ROOT_LOCALE.language
+
+/** The text of a link to our review of the platform called `name`, on a page in `locale`. */
+export const reviewLabel = (locale: Locale, name: string): string =>
+  // A function, not a string: a replacement string would read a "$&" or "$$" in the name as a pattern.
+  LANDING_COPY[locale].review.replace('{name}', () => name)

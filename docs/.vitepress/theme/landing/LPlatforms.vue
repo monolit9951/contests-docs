@@ -5,11 +5,11 @@ import { useData } from 'vitepress'
 import { computed } from 'vue'
 import { sourceAnchor } from '../../links'
 import { appLocaleOf } from '../../registry'
-import { LANDING_COPY, localeOf } from './copy'
-import { bidiAttrs, pick, sourcesOf, text, textLang } from './platforms'
+import { LANDING_COPY, localeOf, reviewLabel } from './copy'
+import { bidiAttrs, pick, reviewPath, sourcesOf, text, textLang, type Platform } from './platforms'
 
 const CARD_FIELDS = ['rate', 'threshold', 'cap', 'fee', 'minPayout', 'payoutMethods', 'cis', 'escrow']
-const { frontmatter, lang } = useData()
+const { frontmatter, lang, page } = useData()
 const loc = computed(() => localeOf(lang.value))
 // DareBay's card links into the product, in the application tree this reader is sent to.
 const appLoc = computed(() => appLocaleOf(loc.value))
@@ -18,6 +18,8 @@ const cfg = computed(() => (frontmatter.value.cards ?? frontmatter.value.compare
 const rows = computed(() => pick(cfg.value.ids ?? []))
 const fields = computed(() => cfg.value.fields ?? CARD_FIELDS)
 const highlight = computed(() => cfg.value.highlight ?? 'darebay')
+// The card's link to our own review of the platform, when this language has one (`reviewPath`).
+const review = (p: Platform) => reviewPath(p, loc.value, page.value.relativePath)
 const host = (u: string) => { try { return new URL(u).hostname.replace(/^www\./, '') } catch { return u } }
 // One link per source host: a platform documented across ten pages of one site is one source to the reader.
 // Scoped to the fields this card prints, so a per-country source only appears under a card showing it.
@@ -64,6 +66,7 @@ const hostSources = (p: Parameters<typeof sourcesOf>[0]) => {
         <div class="lp-card-foot">
           <span class="lp-srcs">{{ copy.sources }}: <template v-for="(s, k) in hostSources(p)" :key="s.url"><a v-bind="sourceAnchor(s.url, loc)" :title="s.date">{{ s.host }}</a><span v-if="k < hostSources(p).length - 1">, </span></template> · {{ copy.updated }} {{ hostSources(p)[0]?.date }}</span>
           <template v-if="p.id === highlight">{{ ' ' }}<a class="lp-btn lp-btn-primary lp-btn-sm" :href="p.home?.[appLoc] ?? p.url" target="_self">{{ copy.ctaPrimary }}</a></template>
+          <template v-else-if="review(p)">{{ ' ' }}<span class="lp-review"><a :href="review(p)!">{{ reviewLabel(loc, p.name) }}</a></span></template>
         </div>
       </article>
     </div>

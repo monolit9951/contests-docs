@@ -45,6 +45,8 @@ const vpIconsHasRules = existsSync(vpIconsPath) && readFileSync(vpIconsPath, 'ut
 const expectedUrls = new Map()
 const idsByPath = new Map()
 const anchorLinks = []
+// Each table row's or card's link to our review of the platform (reviewPath); checked as `review-link` after the loop.
+const reviewLinks = []
 // Content pages (hub indexes excluded) with their built HTML, for the `inbound-links` gate.
 const leafPages = []
 const decodeFragment = (value) => { try { return decodeURIComponent(value) } catch { return value } }
@@ -67,6 +69,7 @@ for (const page of PAGES) {
       const [, target, fragment] = match
       if (target === '' || target.startsWith('/')) anchorLinks.push({ from: path, target: target || path, fragment: decodeFragment(fragment) })
     }
+    for (const match of html.matchAll(/class="lp-review"><a href="([^"]*)"/g)) reviewLinks.push({ from: path, locale, target: match[1] })
 
     // The page as text, the way it is copied, read aloud or quoted (scripts/extracted-text.mjs):
     // every source marker is " [n]" apart from its figure, every table number is the one "How this
@@ -250,6 +253,13 @@ for (const { from, target, fragment } of anchorLinks) {
   const ids = idsByPath.get(target)
   if (!ids) continue // external or non-page target; addresses are covered by the URL gates
   if (!ids.has(fragment)) fail('anchor-target', `${from} -> ${target}#${fragment}: no such id on the target page`)
+}
+
+// A review link opens a page of the manifest in the reader's own language, and never the page it is on.
+const localeByPath = new Map([...expectedUrls.values()].map(({ path, locale }) => [path, locale]))
+for (const { from, locale, target } of reviewLinks) {
+  if (target === from) fail('review-link', `${from}: links to itself`)
+  else if (localeByPath.get(target) !== locale) fail('review-link', `${from} -> ${target}: not a ${locale} page of the manifest`)
 }
 
 // The theme is imported without fonts: Inter must not come back through another import.

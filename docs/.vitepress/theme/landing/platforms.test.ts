@@ -1,8 +1,8 @@
 import { describe, expect, it } from 'vitest'
-import { LANDING_COPY } from './copy'
-import { DATA, DEFAULT_COLUMNS, REGION_FIELDS, bidiAttrs, byId, comparisonUpdated, optIn, sourceIndex, sourcesOf, text, textLang } from './platforms'
+import { LANDING_COPY, reviewLabel } from './copy'
+import { DATA, DEFAULT_COLUMNS, REGION_FIELDS, bidiAttrs, byId, comparisonUpdated, optIn, reviewPath, sourceIndex, sourcesOf, text, textLang } from './platforms'
 import { sourceAnchor } from '../../links'
-import { KNOWN_LOCALES } from '../../registry'
+import { KNOWN_LOCALES, LOCALES as LIVE_LOCALES, PAGES, pagePath, sourceFile } from '../../registry'
 
 /**
  * One data file feeds every comparison page, so a field added for one page is a field every other
@@ -266,5 +266,55 @@ describe('a value shown in a page of another writing direction', () => {
     // Left-to-right trees keep their markup: an English fallback in a Russian table is not marked.
     expect(bidiAttrs('en', 'ru')).toEqual({})
     expect(bidiAttrs('en', 'en')).toEqual({})
+  })
+})
+
+describe('a platform\'s link to our own review of it', () => {
+  const reviewed = DATA.platforms.filter((p) => p.review !== undefined)
+  const entryOf = (id: string) => PAGES.find((e) => e.id === id)
+
+  it('names a page of the content manifest, never an address', () => {
+    expect(reviewed.length).toBeGreaterThan(0)
+    for (const p of reviewed) expect(entryOf(p.review!), `${p.id} → ${p.review}`).toBeDefined()
+  })
+
+  it('goes to the review in the reader\'s own language, and nowhere when that language has none', () => {
+    for (const p of reviewed) {
+      for (const { language } of LIVE_LOCALES) {
+        expect(reviewPath(p, language), `${p.id} in ${language}`).toBe(pagePath(entryOf(p.review!)!, language))
+      }
+    }
+    // A page the manifest declares in one language: its link exists there and only there.
+    const vues = byId('vues')!
+    const english = pagePath(entryOf(vues.review!)!, 'en')
+    expect(english).not.toBeNull()
+    expect(reviewPath(vues, 'en')).toBe(english)
+    for (const language of ['ru', 'uk', 'ar'] as const) expect(reviewPath(vues, language), language).toBeNull()
+  })
+
+  it('is left out on the review itself, which would otherwise link to its own address', () => {
+    for (const p of reviewed) {
+      for (const { language } of LIVE_LOCALES) {
+        const file = sourceFile(entryOf(p.review!)!, language)
+        if (file === null) continue
+        expect(reviewPath(p, language, file), `${p.id} on ${file}`).toBeNull()
+        expect(reviewPath(p, language, 'en/earnings/best-clipping-platforms.md')).toBe(pagePath(entryOf(p.review!)!, language))
+      }
+    }
+  })
+
+  it('is absent for a platform we have not reviewed', () => {
+    for (const p of DATA.platforms.filter((x) => x.review === undefined)) {
+      for (const { language } of LIVE_LOCALES) expect(reviewPath(p, language)).toBeNull()
+    }
+  })
+
+  it('names the platform in its text in every interface language', () => {
+    for (const locale of LOCALES) {
+      expect(LANDING_COPY[locale].review, locale).toContain('{name}')
+      expect(reviewLabel(locale, 'Vues'), locale).toContain('Vues')
+      expect(reviewLabel(locale, 'Vues'), locale).not.toContain('{name}')
+      expect(reviewLabel(locale, 'A$&B$$'), locale).toContain('A$&B$$')
+    }
   })
 })

@@ -330,6 +330,7 @@
       "id": "whop",
       "name": "Whop Content Rewards",
       "url": "https://contentrewards.com/",
+      "review": "earnings-whop-review",
       "kind": "clipping and UGC campaign marketplace",
       "operator": "Content Rewards Inc (Delaware, US); sign-in, KYC and withdrawals through Whop",
       "bestFor": {
@@ -632,6 +633,7 @@
       "id": "vyro",
       "name": "Vyro",
       "url": "https://vyro.com/",
+      "review": "earnings-vyro-review",
       "kind": "clipping marketplace (Beast Industries)",
       "operator": "Beast Industries (MrBeast)",
       "bestFor": {
@@ -1235,6 +1237,7 @@
       "id": "vues",
       "name": "Vues",
       "url": "https://vues.app/",
+      "review": "vues-review",
       "kind": "clipping marketplace",
       "operator": "Vues Technology LLC (its App Store listing); its terms name only \"Vues\", under Delaware law",
       "bestFor": {
@@ -1533,6 +1536,7 @@
       "id": "reach-cat",
       "name": "Reach.cat",
       "url": "https://reach.cat/",
+      "review": "reach-cat-review",
       "kind": "CPM campaign marketplace",
       "operator": "REACH MARKETING NETWORK - FZCO, Dubai Silicon Oasis, UAE (its terms and privacy policy); UAE law",
       "bestFor": {
@@ -1834,6 +1838,7 @@
       "id": "klipni",
       "name": "Klipni (Клипни)",
       "url": "https://klipni.com/",
+      "review": "klipni-review",
       "kind": "Russian clipping and UGC campaign platform",
       "operator": "a sole trader registered in Russia (named on its About page and in its offers); Russian law",
       "bestFor": {
@@ -2139,6 +2144,7 @@
       "id": "prime-oracles",
       "name": "Prime Oracles",
       "url": "https://www.primeoracles.com/",
+      "review": "prime-oracles-review",
       "kind": "Russian-language content marketplace with reward campaigns",
       "operator": "a sole trader registered in Tbilisi, Georgia (named in its user agreement); Georgian law",
       "bestFor": {
@@ -2726,6 +2732,7 @@
       "id": "clipgrow",
       "name": "ClipGrow",
       "url": "https://clipgrow.in/",
+      "review": "clipgrow-review",
       "kind": "performance clipping agency (India)",
       "founded": "not published",
       "operator": "not published; terms and privacy say only \"operated from Kerala, India\"",
@@ -2969,6 +2976,7 @@
       "id": "wondeed",
       "name": "Wondeed",
       "url": "https://www.wondeed.com/",
+      "review": "is-wondeed-legit",
       "kind": "performance clipping marketplace (India)",
       "founded": "2025 (per its press page)",
       "operator": "not published; terms say \"operated by Wondeed\" and the GST page lists the GSTIN as \"To be updated\"",

@@ -3,7 +3,7 @@
 // between pages. Each field carries its own source URL and date.
 import raw from '../../data/platforms.json'
 import { sourceAnchor } from '../../links'
-import { textDirectionOf, type Locale } from '../../registry'
+import { PAGES, pagePath, sourceFile, textDirectionOf, type Locale } from '../../registry'
 
 export type Localized = Record<Locale, string>
 export interface Source { url: string; date: string }
@@ -20,6 +20,8 @@ export interface Platform {
   id: string
   name: string
   url: string
+  /** `id` in docs/content-pages.json of our own review of this platform (see `reviewPath`). */
+  review?: string
   home?: Partial<Localized>
   kind: string
   founded?: string
@@ -78,6 +80,25 @@ export const comparisonUpdated = (frontmatter: { hero?: { updated?: string } | n
   frontmatter.hero?.updated ?? DATA.snapshot
 export const byId = (id: string): Platform | undefined => DATA.platforms.find((p) => p.id === id)
 export const pick = (ids: string[]): Platform[] => ids.map(byId).filter((p): p is Platform => Boolean(p))
+/**
+ * Where our own review of a platform lives for a reader of `locale`: its site path, or null when we
+ * have no review of it in that language, or when `currentFile` (the page's `relativePath`) is that
+ * review.
+ *
+ * A platform's name in a table or on a card opens the platform's own site, as a source. Until
+ * 2026-09-28 that was the only link a row carried, so the review pages were reached from almost
+ * nowhere: the listicle and every country page named Vues, Wondeed or Prime Oracles in their tables
+ * without one link to the page about it, and search engines ranked those listicles for the
+ * platform's name instead of the review. `review` names the page by its manifest id, so the address
+ * stays derived from docs/content-pages.json like every other content link, and a language the review
+ * is not written in gets no link rather than one into another language's tree.
+ */
+export const reviewPath = (p: Platform, locale: Locale, currentFile?: string): string | null => {
+  const entry = p.review === undefined ? undefined : PAGES.find((e) => e.id === p.review)
+  if (!entry) return null
+  if (currentFile !== undefined && sourceFile(entry, locale) === currentFile) return null
+  return pagePath(entry, locale)
+}
 export const text = (p: Platform, field: string, lang: Locale): string => p.fields[field]?.text?.[lang] ?? p.fields[field]?.text?.en ?? ''
 /** The language `text()` answered in: the page's own when the field has it, English when it fell back. */
 export const textLang = (p: Platform, field: string, lang: Locale): Locale =>

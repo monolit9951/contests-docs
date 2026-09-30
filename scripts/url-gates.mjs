@@ -40,6 +40,7 @@ import { FACT_IDS, FACTS_PUBLIC_PATH } from './gen-facts-json.mjs'
 import { parseHreflangCluster, sameHreflangMap } from './hreflang-cluster.mjs'
 import { readLocalSitemapTree } from './sitemap-tree.mjs'
 import { appHtmlArtifactPath, expectedHtmlLocale } from './url-gate-locale.mjs'
+import { containerServer as wireContainerServer } from './url-gate-wiring.mjs'
 
 const HERE = dirname(fileURLToPath(import.meta.url))
 const CONTENT_ROOT = resolve(HERE, '..')
@@ -94,16 +95,17 @@ for (const [what, path] of [['app dist', APP_DIST], ['content dist', CONTENT_DIS
 const work = mkdtempSync(join(tmpdir(), 'url-gates-'))
 
 // Each container config is used AS SHIPPED — rewriting it here would be testing
-// a config that does not exist anywhere. Only runtime wiring is patched:
-// listen/root, Docker's `backend` service DNS, and the cache directory. The
-// directives and routing logic under test remain byte-for-byte shipped.
+// a config that does not exist anywhere. Only runtime wiring is patched
+// (url-gate-wiring.mjs): listen/root, Docker's `backend` service DNS, and the
+// cache directory. The directives and routing logic under test remain
+// byte-for-byte shipped.
 const containerServer = (confPath, root, port) =>
-    readFileSync(confPath, 'utf8')
-        .replace(/listen\s+80;/, `listen ${port};`)
-        .replace(/root\s+\/usr\/share\/nginx\/html;/, `root ${root};`)
-        .replaceAll('http://backend:8080', 'http://127.0.0.1:65534')
-        .replaceAll('/var/cache/nginx/seo-validation', join(work, 'seo-validation'))
-        .replace(/include\s+\/etc\/nginx\/snippets\/redirects\.conf;/, `include ${join(CONTENT_ROOT, 'redirects.conf')};`)
+    wireContainerServer(readFileSync(confPath, 'utf8'), {
+        port,
+        root,
+        cacheDir: join(work, 'seo-validation'),
+        redirectsPath: join(CONTENT_ROOT, 'redirects.conf'),
+    })
 
 const hostSnippet = execFileSync(
     'node',

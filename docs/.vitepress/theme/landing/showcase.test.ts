@@ -267,6 +267,15 @@ describe('Russian display lines', () => {
     expect(headingHtml('A content-farm <b>', 'en')).toBe('A content-farm &lt;b&gt;')
   })
 
+  it('keeps the short words, quotes and punctuation bound to a compound inside its unit', () => {
+    // `.lp-nw` is an inline-block, a line-break point on both sides even next to a no-break space: the
+    // W2 H1 read «Работа на | контент-заводе | : вакансии» on a phone (review 2026-09-30).
+    expect(headingHtml('Работа на контент-заводе: вакансии и старт', 'ru')).toBe('Работа <span class="lp-nw">на\u00a0контент-заводе:</span> вакансии и\u00a0старт')
+    expect(headingHtml('Что такое «ИИ-контент-завод»?', 'ru')).toBe('Что\u00a0такое <span class="lp-nw">«ИИ-контент-завод»?</span>')
+    expect(headingHtml('Нарезки (для крипто-проектов), и всё', 'ru')).toBe('Нарезки <span class="lp-nw">(для\u00a0крипто-проектов),</span> и\u00a0всё')
+    expect(headingHtml('Сколько стоит клиппинг-кампания: бюджет', 'ru')).toBe('Сколько стоит <span class="lp-nw">клиппинг-кампания:</span> бюджет')
+  })
+
   it('writes a day the way the page’s language does, ISO for machines and other languages', () => {
     expect(formatDay('2026-09-30', 'ru')).toBe('30.09.2026')
     expect(formatDay('2026-09-30', 'uk')).toBe('30.09.2026')

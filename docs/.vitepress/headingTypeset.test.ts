@@ -25,6 +25,17 @@ describe('Russian heading typesetting', () => {
     expect(headers.map((header) => header.slug)).toEqual(['кто-платит-за-ролики-контент-завода-и-для-кого'])
   })
 
+  it('keeps the short words and the punctuation bound to a compound inside its unit', () => {
+    // The unit is an inline-block, a line-break point on both sides even next to a no-break space: a phone
+    // hung «работать на | контент-заводе» and opened a line on the «?» (review 2026-09-30).
+    expect(render('### Сколько получает руководитель контент-завода?', 'kontent-zavod/a.md').html).toContain(
+      '>Сколько получает руководитель <span class="lp-nw">контент-завода?</span> <a class="header-anchor"',
+    )
+    expect(render('## Можно ли работать на контент-заводе удалённо?', 'kontent-zavod/a.md').html).toContain(
+      `>Можно ли работать <span class="lp-nw">на${NBSP}контент-заводе</span> удалённо? <a class="header-anchor"`,
+    )
+  })
+
   it('leaves other languages and inline markup alone', () => {
     expect(render('## A content-farm for you', 'en/content-farm/a.md').html).toContain('>A content-farm for you <a class="header-anchor"')
     expect(render('### Сколько `стоит` в месяц?', 'instrumenty/a.md').html).toContain(`>Сколько <code>стоит</code> в${NBSP}месяц? <a class="header-anchor"`)

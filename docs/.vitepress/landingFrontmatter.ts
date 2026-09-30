@@ -8,6 +8,7 @@
 //
 // The API itself is documented for authors in the page contract of the showcase landings; the
 // rules are the ones below.
+import { stripComments } from './commentSpacing'
 import { isCtaKey, localizedSitePath } from './links'
 import type { Locale } from './registry'
 import { ART, ICON_NAMES } from './theme/landing/art'
@@ -48,16 +49,23 @@ export function landingArt(frontmatter: Fields, { isHub, hub }: { readonly isHub
  * conjunction with the word after it (`keepShortWords`): «Запусти завод на | DareBay» read as a
  * mistake. Applied to the page data at build time, so the Markdown source (what the linters read)
  * stays as written and no browser runs any of it.
+ *
+ * The texts also lose their comments (`stripComments`), with the spaces written in front of one that
+ * punctuation follows. A citation in `hero.takeaways` (`claim <!-- source: URL DATE -->.`) is checked
+ * from the source by `check:sources`, but the hero prints its takeaways as raw HTML, so the space
+ * before the comment reached the page: «опыт от года .», "every post : a clip" (review 2026-09-30).
+ * The Markdown body gets the same treatment from commentSpacing.ts and the Vue compiler.
  */
 export function keepLandingFigures(frontmatter: Fields, locale: Locale = 'en'): void {
-  const fix = (holder: Fields, keys: readonly string[], typeset: (text: string) => string = keepFigures) => {
+  const text = (value: string) => keepFigures(stripComments(value))
+  const fix = (holder: Fields, keys: readonly string[], typeset: (value: string) => string = text) => {
     for (const key of keys) {
       const value = holder[key]
       if (typeof value === 'string') holder[key] = typeset(value)
       else if (Array.isArray(value)) holder[key] = value.map((item) => (typeof item === 'string' ? typeset(item) : item))
     }
   }
-  const title = (text: string) => keepShortWords(keepFigures(text), locale)
+  const title = (value: string) => keepShortWords(text(value), locale)
   if (isRecord(frontmatter.hero)) fix(frontmatter.hero, ['lede', 'note', 'proof', 'takeaways'])
   for (const block of ['flow', 'features', 'setup', 'cta']) {
     const value = frontmatter[block]

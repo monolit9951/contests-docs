@@ -193,6 +193,26 @@ describe('keepLandingFigures', () => {
     expect(page.hero.kicker).toBe('Контент-завод')
   })
 
+  it('drops the comments of the blocks’ texts, with the space written before one that punctuation follows', () => {
+    // The hero prints its takeaways as raw HTML: «опыт от года <!-- source -->.» read «опыт от года .» (2026-09-30).
+    const page = showcase() as Record<string, any>
+    page.hero.takeaways = [
+      '<b>В штат берут с опытом.</b> Просят опыт от года <!-- source: https://hh.ru/search/vacancy 2026-09-29 -->.',
+      '<b>The threshold applies to every post</b> <!-- source: https://vyro.com/help 2026-09-05 -->: a clip at 4,900 views earns nothing',
+      'Meta averages $13.48 <!-- source: https://example.com/a 2026-09-04 --> <!-- source: https://example.com/b 2026-09-04 -->, TikTok less',
+      'A claim <!-- source: https://example.com/c 2026-09-04 --> and the next word',
+    ]
+    page.cta.lede = 'Вывод от 10 USDT <!-- source: https://darebay.com/wallet 2026-09-29 -->.'
+    keepLandingFigures(page, 'ru')
+    expect(page.hero.takeaways).toEqual([
+      '<b>В штат берут с опытом.</b> Просят опыт от года.',
+      '<b>The threshold applies to every post</b>: a clip at 4,900 views earns nothing',
+      'Meta averages $13.48, TikTok less',
+      'A claim  and the next word',
+    ])
+    expect(page.cta.lede).toBe('Вывод от 10\u00a0USDT.')
+  })
+
   it('binds a Russian block title’s short words to the next one, and leaves other languages and texts alone', () => {
     const ru = showcase() as Record<string, any>
     ru.cta.title = 'Запусти завод на DareBay'

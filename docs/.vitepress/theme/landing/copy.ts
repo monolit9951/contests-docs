@@ -427,14 +427,22 @@ export const formatDay = (date: string, locale: Locale): string =>
 // («контент- | завод») read as mistakes in a heading. Display only: the page's title, its snippet
 // and its Markdown source stay as written.
 const SHORT_WORD = /(?<=^|[\s(«"\u00a0])(в|во|на|и|с|со|к|ко|о|об|у|по|за|от|до|из|а|но|не|для|без|при|или|что|как)\s+(?=\S)/giu
-const COMPOUND = /[\p{L}\d]+(?:-[\p{L}\d]+)+/gu
+/**
+ * A hyphenated compound with everything that must not part from it: the unit `.lp-nw` keeps whole.
+ * The span is an inline-block (landing.css), and an atomic inline is a line-break opportunity on both
+ * of its sides, even next to a no-break space. So the unit takes in the words bound to the compound by
+ * a no-break space (`keepShortWords`) and the quote, bracket or punctuation around it. Without them a
+ * phone set «Работа на | контент-заводе», the preposition hanging, and «контент-заводе | : вакансии»,
+ * a line opening on the colon (review 2026-09-30).
+ */
+export const COMPOUND = /(?:[«(]?[\p{L}\d]+\u00a0)*[«(]?[\p{L}\d]+(?:-[\p{L}\d]+)+[»).,:;!?…]*/gu
 const escapeHtml = (text: string): string => text.replace(/[&<>"]/g, (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[char]!)
 
 /** A Russian line with each short preposition or conjunction bound to the next word by a no-break space. */
 export const keepShortWords = (text: string, locale: Locale): string =>
   locale === 'ru' ? text.replace(SHORT_WORD, (_, word: string) => `${word}\u00a0`) : text
 
-/** A heading as HTML: escaped, and in Russian with its short words bound and its compounds unbroken (`.lp-nw`). */
+/** A heading as HTML: escaped, and in Russian with its short words bound and each compound unbroken with what binds to it (`COMPOUND`, `.lp-nw`). */
 export const headingHtml = (text: string, locale: Locale): string =>
   locale === 'ru' ? escapeHtml(keepShortWords(text, locale)).replace(COMPOUND, '<span class="lp-nw">$&</span>') : escapeHtml(text)
 

@@ -84,7 +84,8 @@ body:has(.lp) { min-width: 0; }
 .lp-hero h1 em { font-style: normal; color: var(--lp-accent); }
 /* A compound kept on one line (headingHtml, headingTypeset.ts): one unit that moves to the next line
    whole, and breaks at its hyphen only when it is wider than the line itself («сервисы-уникализаторы»
-   in a phone's H2), where `nowrap` pushed the page sideways. */
+   in a phone's H2), where `nowrap` pushed the page sideways. The unit carries the short words and the
+   punctuation bound to the compound (copy.ts `COMPOUND`): the box itself is a break point on both sides. */
 .lp-nw { display: inline-block; max-width: 100%; }
 .lp-lede { font-size: 17px; line-height: 1.7; color: var(--lp-muted); max-width: 70ch; margin: 0; }
 .lp-lede b { color: var(--lp-text); }

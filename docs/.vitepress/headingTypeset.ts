@@ -3,10 +3,11 @@
 // A heading that leaves a short preposition or conjunction at a line's end («Кто платит за ролики
 // контент- | завода?», «…для | рилс») reads as a mistake (review 2026-09-30). The same rule as the
 // hero's H1 (`headingHtml` in theme/landing/copy.ts): a short word is bound to the next one by a
-// no-break space, and a hyphenated compound stays on one line (`.lp-nw`). Display only, and applied
-// after the anchor rule, so every heading keeps the id and the outline title it had; the Markdown
-// source, which the linters and the FAQPage answers read, stays as written.
-import { keepShortWords } from './theme/landing/copy.ts'
+// no-break space, and a hyphenated compound stays on one line together with the short words and the
+// punctuation bound to it (`.lp-nw`, `COMPOUND`). Display only, and applied after the anchor rule, so
+// every heading keeps the id and the outline title it had; the Markdown source, which the linters and
+// the FAQPage answers read, stays as written.
+import { COMPOUND, keepShortWords } from './theme/landing/copy.ts'
 import { localeFromPath } from './sources.ts'
 
 interface HeadingToken {
@@ -25,9 +26,7 @@ interface MarkdownParser {
   readonly core: { readonly ruler: { push(name: string, rule: (state: HeadingState) => void): void } }
 }
 
-const COMPOUND = /[\p{L}\d]+(?:-[\p{L}\d]+)+/gu
-
-/** One text token as the tokens it becomes: short words bound, each compound wrapped unbreakable. */
+/** One text token as the tokens it becomes: short words bound, each compound wrapped unbreakable with what binds to it (`COMPOUND`). */
 function typeset(token: HeadingToken, Token: HeadingState['Token']): HeadingToken[] {
   const text = keepShortWords(token.content, 'ru')
   const out: HeadingToken[] = []

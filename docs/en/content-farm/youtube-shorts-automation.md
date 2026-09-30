@@ -45,6 +45,8 @@ The same page spells out what does monetize: if you use automated tools or templ
 
 The working rule: automate the production and keep a person on the idea. YouTube's own examples of AI use that can monetize are a unique character and storyline you invented, AI-edited scripts and a generated background visual<!-- source: https://support.google.com/youtube/answer/1311392 2026-09-29 -->. A series with a recurring character and a new plot in every Short fits that; a hundred slideshows with swapped text does not.
 
+Voice, avatar and footage tools for faceless clips, with free plans and commercial-use terms, are picked in [AI tools for faceless Reels](/en/tools/best-ai-tools-for-reels).
+
 ## What YPP still pays for Shorts
 
 Every application goes through a review that typically takes about a month<!-- source: https://support.google.com/youtube/answer/72851 2026-09-29 -->. From February 1, 2027, the entry bar for new creators doubles, and earning from Shorts gets a monthly test of its own<!-- source: https://support.google.com/youtube/answer/12843009 2026-09-29 -->:

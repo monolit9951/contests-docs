@@ -116,12 +116,18 @@
 - [ИИ-контент-завод на нейросетях и n8n: что работает в 2026](https://darebay.com/kontent-zavod/ii-kontent-zavod): ИИ-контент-завод: нейросети пишут сценарий, озвучивают и монтируют, n8n связывает шаги. Что режут YouTube и TikTok, как маркировать ИИ и кто платит.
 - [Как создать контент-завод для Reels, Shorts и TikTok с нуля](https://darebay.com/kontent-zavod/kak-sozdat-kontent-zavod): Как создать контент-завод или контент-ферму с нуля: ниша, исходники, живые аккаунты, своя версия ролика на каждый, график и оплата за просмотры.
 - [Команда нарезчиков: как собрать, распределить роли и доли](https://darebay.com/kontent-zavod/komanda-narezchikov): Как собрать команду нарезчиков: пять ролей от поиска моментов до проверки, три схемы долей, чьи аккаунты, учёт и выплата каждому на свой кошелёк.
+- [Работа на контент-заводе: вакансии и старт без собеседования](https://darebay.com/kontent-zavod/rabota-na-kontent-zavode): Вакансии контент-завода: сценарист, креатор, монтажёр, нарезчик, публикатор и руководитель, оклады на hh.ru и сдельная работа за просмотры без собеседования.
+- [УБТ-трафик с TikTok и Reels: контент-завод под офферы](https://darebay.com/kontent-zavod/ubt-trafik): УБТ-трафик это условно бесплатный трафик из TikTok, Reels и Shorts на оффер. Как устроен арбитраж УБТ, что запрещено и где хватает задания DareBay.
 - [Что такое контент-завод и чем он отличается от контент-фермы](https://darebay.com/kontent-zavod/chto-takoe-kontent-zavod): Контент-завод это конвейер коротких роликов для многих площадок и аккаунтов. Три значения термина, отличие от контент-фермы, граница с накруткой и кто платит.
 
 ### Инструменты
 
 - [Нейросети и сервисы для рилс и шортсов: каталог 2026](https://darebay.com/instrumenty/): Нейросети и сервисы для рилс и шортсов по этапам: монтаж, ИИ-нарезка, субтитры, озвучка, уникализация. Цены на 29.09.2026 и оплата из России.
+- [Автоматические субтитры для рилс и шортсов: сервисы и стили](https://darebay.com/instrumenty/avtosubtitry-dlya-rils): Автоматические субтитры к видео для рилс и шортсов: Edits, CapCut, Captions, Submagic, VEED, Vizard, Мовавика и Рилс Босс. Цены, стили, русская речь.
+- [Автопостинг и отложенный постинг в TikTok, Reels и Shorts](https://darebay.com/instrumenty/avtoposting-i-otlozhennyy-posting): Как бесплатно запланировать ролик в TikTok, Reels и Shorts и какой сервис автопостинга взять для нескольких аккаунтов: SMMplanner, Postmypost, LiveDune.
+- [Антидетект-браузеры и облачные телефоны: что это и цены 2026](https://darebay.com/instrumenty/antidetekt-brauzery): Что такое антидетект-браузер и облачный телефон, кто ими пользуется, цены AdsPower, Dolphin{anty}, GoLogin, Octo и GeeLark и чего они не решают.
 - [Нейросети для нарезки видео на шортсы: сервисы и цены](https://darebay.com/instrumenty/neyroseti-dlya-narezki-video): Нейросети для нарезки видео на шортсы: OpusClip, Vizard, Klap, MnogoReels и Рилс Босс. Цена часа исходника, бесплатные минуты, русская речь, оплата из России.
+- [Нейросети для создания видео: что доступно из России в 2026](https://darebay.com/instrumenty/neyroseti-dlya-sozdaniya-video): Нейросети для создания видео из России в 2026: Kandinsky и Шедеврум бесплатно для себя, Kling и Runway за доллары, Veo нет в России и Беларуси, Sora закрыта.
 - [Озвучка текста и видео нейросетью: что работает из России](https://darebay.com/instrumenty/ozvuchka-video-neyrosetyu): Нейросеть для озвучки текста и видео из России вместо ElevenLabs: Звукограм, GenVoice, TTSMaker и SpeechKit. Цены на 29.09.2026, лимиты и метка ИИ.
 - [Уникализатор видео: что работает в 2026, замер DareBay](https://darebay.com/instrumenty/unikalizator-video): Уникализация видео для TikTok и Reels по замеру DareBay: цвет, шум, скорость и метаданные ролик не меняют, а новая раскладка кадра и новый голос меняют.
 - [CapCut в России: как оплатить Pro и чем заменить](https://darebay.com/instrumenty/capcut-v-rossii): Как оплатить CapCut Pro из России в 2026 году, почему подписка может не включиться даже после оплаты и какими редакторами заменить CapCut без подписки.
@@ -353,6 +359,7 @@ Guides to content tasks, participation, validated views and payouts on DareBay.
 ### Content farm
 
 - [Content farm for TikTok, Reels and Shorts, paid per view](https://darebay.com/en/content-farm/): Your content farm already has a buyer: DareBay tasks pay per counted view on TikTok, Reels and Shorts, and offer tasks give each account its own clip version.
+- [How many TikTok accounts can you have? Limits and rules](https://darebay.com/en/content-farm/multiple-tiktok-accounts): Multiple TikTok accounts are allowed with no published cap, but each needs its own email or phone. Rules on reposts, automation and bans, as of September 2026.
 - [How to build a TikTok content farm in 2026, step by step](https://darebay.com/en/content-farm/how-to-build-a-tiktok-content-farm): How to build a TikTok content farm: pick a niche, source clips, warm up accounts, give each its own version, post on schedule and get paid per view.
 - [How to start a clipping agency: clippers, accounts, margins](https://darebay.com/en/content-farm/how-to-start-a-clipping-agency): How to start a clipping agency: where paid campaigns come from, five roles on the team, who owns the accounts, three ways to pay clippers, margin formulas.
 - [What is a content farm? The short-video kind that gets paid](https://darebay.com/en/content-farm/what-is-a-content-farm): A content farm mass-produces content to capture traffic. What the term means in 2026, what TikTok, YouTube and Instagram penalize, and the kind that gets paid.
@@ -361,8 +368,12 @@ Guides to content tasks, participation, validated views and payouts on DareBay.
 ### Tools
 
 - [Tools for Reels, Shorts and TikTok, picked for clippers](https://darebay.com/en/tools/): Editing, AI clipping, caption, voice and scheduling tools for Reels, Shorts and TikTok by stage, with free plans and prices as of September 29, 2026.
+- [Antidetect browsers and cloud phones: uses and 2026 prices](https://darebay.com/en/tools/antidetect-browsers-explained): What antidetect browsers and cloud phones do, who uses them, what AdsPower, Dolphin{anty}, GoLogin, Multilogin, Octo and GeeLark cost, and what they can't fix.
+- [Auto caption apps for Reels and Shorts, compared](https://darebay.com/en/tools/auto-caption-apps): Auto caption apps for Reels, Shorts and TikTok compared: free Edits, Adobe Premiere and YouTube Create, plus Captions, Kapwing, Submagic, VEED and Vizard.
+- [Best AI tools for faceless Reels: voice, avatars, AI video](https://darebay.com/en/tools/best-ai-tools-for-reels): AI tools for faceless Reels, Shorts and TikTok in 2026: ElevenLabs and TTSMaker voices, HeyGen avatars, Kling AI and Runway footage, hooks and AI labels.
 - [CapCut alternatives in 2026: free editors with no watermark](https://darebay.com/en/tools/capcut-alternatives): Free CapCut alternatives with no watermark in 2026: VN, Edits and Adobe Premiere on phones, Clipchamp on PC, plus CapCut Pro prices by country.
 - [OpusClip alternatives for clippers: cost, watermark, limits](https://darebay.com/en/tools/opus-clip-alternatives): OpusClip alternatives for clippers: Vizard, Klap, 2short.ai, Choppity, quso.ai and Spikes Studio compared by cost per hour of footage, free plan and watermark.
+- [Schedulers for multiple TikTok, Reels and Shorts accounts](https://darebay.com/en/tools/multi-account-schedulers): How to schedule TikTok, Reels and Shorts across many accounts: native limits, TikTok bulk upload, and what Later, Metricool, Publer and SocialPilot charge.
 
 ### Legal
 

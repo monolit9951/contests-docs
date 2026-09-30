@@ -1023,6 +1023,27 @@
       }
     },
     {
+      "id": "farm-ubt",
+      "hub": "farm",
+      "slugs": {
+        "ru": "ubt-trafik"
+      }
+    },
+    {
+      "id": "farm-jobs",
+      "hub": "farm",
+      "slugs": {
+        "ru": "rabota-na-kontent-zavode"
+      }
+    },
+    {
+      "id": "farm-multi-accounts",
+      "hub": "farm",
+      "slugs": {
+        "en": "multiple-tiktok-accounts"
+      }
+    },
+    {
       "id": "tools-hub",
       "hub": "tools",
       "slugs": {
@@ -1058,6 +1079,44 @@
       "hub": "tools",
       "slugs": {
         "ru": "ozvuchka-video-neyrosetyu"
+      }
+    },
+    {
+      "id": "tools-auto-captions",
+      "hub": "tools",
+      "slugs": {
+        "ru": "avtosubtitry-dlya-rils",
+        "en": "auto-caption-apps"
+      }
+    },
+    {
+      "id": "tools-scheduling",
+      "hub": "tools",
+      "slugs": {
+        "ru": "avtoposting-i-otlozhennyy-posting",
+        "en": "multi-account-schedulers"
+      }
+    },
+    {
+      "id": "tools-ai-video",
+      "hub": "tools",
+      "slugs": {
+        "ru": "neyroseti-dlya-sozdaniya-video"
+      }
+    },
+    {
+      "id": "tools-best-ai",
+      "hub": "tools",
+      "slugs": {
+        "en": "best-ai-tools-for-reels"
+      }
+    },
+    {
+      "id": "tools-multi-account",
+      "hub": "tools",
+      "slugs": {
+        "ru": "antidetekt-brauzery",
+        "en": "antidetect-browsers-explained"
       }
     }
   ]

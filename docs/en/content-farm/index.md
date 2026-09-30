@@ -68,21 +68,21 @@ features:
       text: "A personal link to the offer, with clicks from real people and every confirmed sale in view."
       to: "traffic"
       label: "Terms for traffic partners →"
-    - icon: "persona"
-      title: "Ready personas"
-      text: "In publishing tasks the name, bio, photos and post plan are done; post them as is or make them yours."
-      to: "signup"
-      label: "Sign up →"
     - icon: "setup"
-      title: "Setups and ready clips"
-      text: "In offer tasks: footage, an avatar, a video guide and platform instructions, with no editing needed."
+      title: "A setup for each account"
+      text: "In offer tasks: footage, an avatar, a video guide and step-by-step instructions for the platform."
       href: "/en/earnings/clipping-glossary#setup"
       label: "What a setup includes →"
+    - icon: "video"
+      title: "Ready clips"
+      text: "In offer tasks DareBay hands out ready clips, a separate version for every account, with no editing needed."
+      href: "/en/about/darebay-at-a-glance"
+      label: "DareBay at a glance →"
     - icon: "copies"
       title: "Version builder"
       text: "Inside a task it turns the original into a version for each account; you pick the layout and edit strength."
-      href: "/en/about/darebay-at-a-glance"
-      label: "DareBay at a glance →"
+      href: "/en/content-farm/how-to-build-a-tiktok-content-farm"
+      label: "Versions, step by step →"
     - icon: "accounts"
       title: "Many accounts, one task"
       text: "Up to 20 accounts per person across all platforms; new clips are pulled in and counted on their own."
@@ -160,13 +160,12 @@ Agency and course prices differ from seller to seller, so the table compares who
 
 ## Farm models: what you do and what pays
 
-A farm can run on clips from footage, ready clips, personas or offer traffic, and the models mix freely. The rate, the threshold and the other terms of each come from the task. Ready clips and personas suit faceless pages, since nobody has to appear on camera, and AI-made clips fit a task unless it says otherwise, labeled as AI wherever the platform asks.
+A farm can run on clips from footage, ready clips or offer traffic, and the models mix freely. The rate, the threshold and the other terms of each come from the task. Ready clips suit faceless pages, since nobody has to appear on camera, and AI-made clips fit a task unless it says otherwise, labeled as AI wherever the platform asks.
 
 | Model | What you do | What pays | What DareBay gives you |
 |---|---|---|---|
 | Clips from footage | cut footage into short clips to the task's terms | counted views | the rate, the threshold, and footage when the buyer attaches it |
 | Ready clips | post the clips you are given from your own accounts | counted views | ready clips on offer tasks, a unique version for each account |
-| Personas | run ready-made personas, one account each | confirmed sales through your link | name, bio, photos, a post plan and a personal link |
 | Offer traffic | bring buyers within the offer's rules | a share of paid orders | a personal link and promo code |
 
 Terms for offer traffic are on the page for [traffic partners](/en/earn/traffic), and terms for crews on the page for [teams and agencies](/en/earn/teams). Roles, margins and payouts for a crew are in [how to start a clipping agency](/en/content-farm/how-to-start-a-clipping-agency), what automated Shorts can still earn is in [YouTube Shorts automation](/en/content-farm/youtube-shorts-automation), and the [clipping earnings calculator](/en/earnings/clipping-earnings-calculator) turns views per clip into a monthly figure.

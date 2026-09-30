@@ -52,7 +52,7 @@ Keep QA away from whoever edited the clip. On DareBay offer tasks that hand out 
 
 DareBay matches each clip's author against the connected social account and ties every account to one member, so owners should connect their accounts before the first task clip. Write down each account's owner on day one: payouts follow the owner, and so does the account if someone leaves.
 
-- **No shared passwords.** A YouTube channel owner can give a clipper the Editor role: they upload and publish but cannot delete the channel or published content or manage permissions, and never need the owner's Google password<!-- source: https://support.google.com/youtube/answer/9481328 2026-09-29 -->. Editor (Limited) adds one limit: no revenue data<!-- source: https://support.google.com/youtube/answer/9481328 2026-09-29 -->.
+- **No shared passwords.** A YouTube channel owner can give a clipper the Editor role: they upload and publish but cannot delete the channel or published content or manage permissions, and never need the owner's Google password<!-- source: https://support.google.com/youtube/answer/9481328 2026-09-29 -->. Editor (Limited) adds one limit: no revenue data<!-- source: https://support.google.com/youtube/answer/9481328 2026-09-29 -->. Shared antidetect-browser profiles don't change who owns an account; see [what antidetect browsers cost and don't fix](/en/tools/antidetect-browsers-explained).
 - **No swapping out restricted accounts.** TikTok allows several accounts, but not to deceive others or break the rules: if one is restricted or banned, you may not create or use another to get around it, and buying or selling followers or engagement for financial gain counts as spam<!-- source: https://www.tiktok.com/safety/en/policies-and-engagement/integrity-authenticity 2026-09-29 -->.
 - **One version per account.** On DareBay tasks a version is posted once, on one account: platforms cut the reach of repeats, and a task's moderation can take a copy down. Warm up new accounts first with the [account warm-up guide](/en/earnings/account-warm-up-and-shadowban).
 - **Live accounts only.** DareBay pays for real views; empty placeholder accounts and botted views earn nothing.
@@ -81,7 +81,7 @@ With own accounts nothing is split: the lead earns 10% of each invited clipper's
 
 ## Tracking who earned what
 
-The platform counts the views: each member's dashboard shows clips, statuses, counted views and earnings per task, and on per-sale tasks each persona's link shows clicks from real people and sales. The lead copies this into a weekly sheet, one row per clip: member, account, campaign, status, views, earnings, share owed, date paid. With one set of numbers, splits rarely turn into arguments.
+The platform counts the views: each member's dashboard shows clips, statuses, counted views and earnings per task, and on per-sale tasks each member's personal link shows clicks from real people and sales. The lead copies this into a weekly sheet, one row per clip: member, account, campaign, status, views, earnings, share owed, date paid. With one set of numbers, splits rarely turn into arguments.
 
 ## Running the agency on DareBay
 

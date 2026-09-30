@@ -3,9 +3,9 @@
 > ⚙️ **Сгенерировано** из `docs/.vitepress/registry.ts`. Руками не править —
 > `node --experimental-strip-types scripts/print-addresses.mjs > ADDRESSES.md`.
 
-Страниц: **98** · адресов: **250** · редиректов со старых адресов: **267**
+Страниц: **106** · адресов: **261** · редиректов со старых адресов: **273**
 
-Из них **175** — производные написания тех же адресов: без `/docs`
+Из них **181** — производные написания тех же адресов: без `/docs`
 (`/faq/fees`), под старым префиксом корневой локали `/ru` (`/ru/o-proekte`) и имя файла
 `<раздел>/index`. Они выводятся в `registry.ts`, ведут туда же, куда исходный адрес, и ради
 них хост отдаёт контенту ещё 15 префиксов: `/faq`, `/getting-started`, `/platformy`, `/ru/blog`, `/ru/brendam`, `/ru/faq`, `/ru/getting-started`, `/ru/instrumenty`, `/ru/kak-rabotaet`, `/ru/kontent-zavod`, `/ru/legal`, `/ru/o-proekte`, `/ru/platformy`, `/ru/pomoshch`, `/ru/zarabotok`.
@@ -114,6 +114,9 @@
 | — *(новая)* | `/kontent-zavod/kak-sozdat-kontent-zavod` | `farm-how-to-build` |
 | — *(новая)* | `/kontent-zavod/ii-kontent-zavod` | `farm-ai` |
 | — *(новая)* | `/kontent-zavod/komanda-narezchikov` | `farm-team` |
+| — *(новая)* | `/kontent-zavod/ubt-trafik` | `farm-ubt` |
+| — *(новая)* | `/kontent-zavod/rabota-na-kontent-zavode` | `farm-jobs` |
+| — *(новая)* | `/en/content-farm/multiple-tiktok-accounts` | `farm-multi-accounts` |
 
 ## Инструменты — `/instrumenty/`
 
@@ -124,6 +127,11 @@
 | — *(новая)* | `/instrumenty/unikalizator-video` | `tools-uniqualizer` |
 | — *(новая)* | `/instrumenty/capcut-v-rossii` | `tools-capcut` |
 | — *(новая)* | `/instrumenty/ozvuchka-video-neyrosetyu` | `tools-voiceover` |
+| — *(новая)* | `/instrumenty/avtosubtitry-dlya-rils` | `tools-auto-captions` |
+| — *(новая)* | `/instrumenty/avtoposting-i-otlozhennyy-posting` | `tools-scheduling` |
+| — *(новая)* | `/instrumenty/neyroseti-dlya-sozdaniya-video` | `tools-ai-video` |
+| — *(новая)* | `/en/tools/best-ai-tools-for-reels` | `tools-best-ai` |
+| — *(новая)* | `/instrumenty/antidetekt-brauzery` | `tools-multi-account` |
 
 ## О проекте — `/o-proekte/`
 

@@ -100,7 +100,7 @@ Silence for a beginner often comes from the account itself: platforms show a fre
 
 Not needed: followers, account seniority, a portfolio, membership of a site's creator programme, an invitation or an entry fee.
 
-Any editing app works for a first clip: [free CapCut alternatives with no watermark](/en/tools/capcut-alternatives) lists the ones that export clean on a phone or a PC.
+Any editing app works for a first clip: [free CapCut alternatives with no watermark](/en/tools/capcut-alternatives) lists the ones that export clean on a phone or a PC. If you work without a face on camera, [AI voice and footage tools for faceless clips](/en/tools/best-ai-tools-for-reels) are picked with the plan limits that matter for paid clips.
 
 The site is set by the contest. The platform reads the published view counter on TikTok, YouTube, Instagram and the other sites named in the brief. Instagram needs a video with views: a photo post has no such metric and does not go into the maths.
 

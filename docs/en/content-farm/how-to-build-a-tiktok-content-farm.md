@@ -24,7 +24,7 @@ One person with one phone can run it. Each of the seven steps below notes what D
 
 ## The minimum kit for a new farm
 
-No rack of phones or paid software: most of the kit is free or comes with the tasks.
+No rack of phones or paid software: most of the kit is free or comes with the tasks, and [AI tools for faceless clips](/en/tools/best-ai-tools-for-reels) cover voice and footage.
 
 | What you need | Minimum to start | What DareBay covers |
 |---|---|---|
@@ -52,7 +52,7 @@ A farm burns through material: three accounts at a clip a day is 21 clips a week
 
 ### Open and warm up the accounts
 
-Start with three accounts on one theme, one each on TikTok, Instagram Reels and YouTube Shorts: a small farm that fits on one phone. TikTok allows multiple accounts as long as they don't deceive people or break its rules, and counts using automation to run many accounts or send repetitive content as spam<!-- source: https://www.tiktok.com/safety/en/policies-and-engagement/integrity-authenticity 2026-09-29 -->. Warm up each new account before its first task clip, following the day-by-day [account warm-up guide](/en/earnings/account-warm-up-and-shadowban).
+Start with three accounts on one theme, one each on TikTok, Instagram Reels and YouTube Shorts: a small farm that fits on one phone. TikTok allows multiple accounts as long as they don't deceive people or break its rules, and counts using automation to run many accounts or send repetitive content as spam<!-- source: https://www.tiktok.com/safety/en/policies-and-engagement/integrity-authenticity 2026-09-29 -->. Logins, repost rules and how one ban can reach every account are covered in [TikTok's rules for multiple accounts](/en/content-farm/multiple-tiktok-accounts). Warm up each new account before its first task clip, following the day-by-day [account warm-up guide](/en/earnings/account-warm-up-and-shadowban).
 
 **DareBay:** no followers needed, since each clip is paid for its own views. Connect up to 20 accounts per person to one task; new clips are picked up automatically and the platform counts the views.
 
@@ -64,7 +64,7 @@ This step separates a content farm from spam. The same file on two accounts is a
 
 ### Keep a posting schedule
 
-Post one or two clips a day per account, at roughly the same hours, only on the account's theme. With several accounts, native schedulers help: TikTok Studio on the web lets you schedule posts ahead of time<!-- source: https://www.tiktok.com/creator-academy/article/tool-web-creation-intro 2026-09-29 -->, and YouTube Studio can set a private video to go public at a chosen time<!-- source: https://support.google.com/youtube/answer/1270709 2026-09-29 -->.
+Post one or two clips a day per account, at roughly the same hours, only on the account's theme. With several accounts, native schedulers help: TikTok Studio on the web lets you schedule posts ahead of time<!-- source: https://www.tiktok.com/creator-academy/article/tool-web-creation-intro 2026-09-29 -->, and YouTube Studio can set a private video to go public at a chosen time<!-- source: https://support.google.com/youtube/answer/1270709 2026-09-29 -->. Tools that schedule across many accounts at once are compared in [schedulers for multiple TikTok, Reels and Shorts accounts](/en/tools/multi-account-schedulers).
 
 **DareBay:** with connected accounts, new clips are pulled into the task on their own, so there is no link to send.
 

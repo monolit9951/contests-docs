@@ -305,6 +305,7 @@
         "en": "iPhone and Android; you log in with an Instagram account"
       },
       "review": {
+        "ru": "/instrumenty/avtosubtitry-dlya-rils",
         "en": "/en/tools/capcut-alternatives"
       },
       "affiliate": null,
@@ -752,6 +753,10 @@
         "ru": "Оплата картой, выпущенной вне России",
         "en": "Runs in a browser"
       },
+      "review": {
+        "ru": "/instrumenty/avtosubtitry-dlya-rils",
+        "en": "/en/tools/auto-caption-apps"
+      },
       "affiliate": {
         "program": "Submagic Affiliate",
         "commission": "30% recurring for life",
@@ -803,6 +808,9 @@
       "availability": {
         "en": "iPhone app; the prices shown are the iOS plans"
       },
+      "review": {
+        "en": "/en/tools/auto-caption-apps"
+      },
       "affiliate": null,
       "darebay": {
         "own": false
@@ -841,6 +849,10 @@
       "availability": {
         "ru": "Оплата картой, выпущенной вне России",
         "en": "Runs in a browser"
+      },
+      "review": {
+        "ru": "/instrumenty/avtosubtitry-dlya-rils",
+        "en": "/en/tools/auto-caption-apps"
       },
       "affiliate": {
         "program": "VEED Affiliate (Impact)",
@@ -893,6 +905,10 @@
         "ru": "Работает в браузере",
         "en": "Runs in a browser"
       },
+      "review": {
+        "ru": "/instrumenty/avtosubtitry-dlya-rils",
+        "en": "/en/tools/auto-caption-apps"
+      },
       "affiliate": null,
       "darebay": {
         "own": false
@@ -940,7 +956,8 @@
         "en": "Runs in a browser; access is restricted in some countries, listed in its help center"
       },
       "review": {
-        "ru": "/instrumenty/ozvuchka-video-neyrosetyu"
+        "ru": "/instrumenty/ozvuchka-video-neyrosetyu",
+        "en": "/en/tools/best-ai-tools-for-reels"
       },
       "affiliate": {
         "program": "ElevenLabs Affiliate (PartnerStack)",
@@ -1047,7 +1064,8 @@
         "en": "Runs in a browser; the free tier needs no payment"
       },
       "review": {
-        "ru": "/instrumenty/ozvuchka-video-neyrosetyu"
+        "ru": "/instrumenty/ozvuchka-video-neyrosetyu",
+        "en": "/en/tools/best-ai-tools-for-reels"
       },
       "affiliate": null,
       "darebay": {
@@ -1094,6 +1112,9 @@
       "availability": {
         "ru": "Оплата картой, выпущенной вне России",
         "en": "Runs in a browser"
+      },
+      "review": {
+        "en": "/en/tools/best-ai-tools-for-reels"
       },
       "affiliate": {
         "program": "HeyGen Social Creator Program",
@@ -1149,6 +1170,10 @@
       "availability": {
         "ru": "Оплата картой, выпущенной вне России",
         "en": "Browser, iOS and Android"
+      },
+      "review": {
+        "ru": "/instrumenty/neyroseti-dlya-sozdaniya-video",
+        "en": "/en/tools/best-ai-tools-for-reels"
       },
       "affiliate": {
         "program": "Kling AI Affiliate Program (Impact)",
@@ -1210,6 +1235,9 @@
         "ru": "Gemini недоступен в России и Беларуси; работает в Казахстане, Узбекистане, Кыргызстане, Армении, Азербайджане, Грузии, Молдове, Таджикистане, Туркменистане и Украине",
         "en": "Gemini app on the web, iOS and Android, plus Google Flow; plan prices vary by country"
       },
+      "review": {
+        "ru": "/instrumenty/neyroseti-dlya-sozdaniya-video"
+      },
       "affiliate": null,
       "darebay": {
         "own": false
@@ -1256,6 +1284,10 @@
       "availability": {
         "ru": "Оплата картой, выпущенной вне России",
         "en": "Browser, iOS and Android"
+      },
+      "review": {
+        "ru": "/instrumenty/neyroseti-dlya-sozdaniya-video",
+        "en": "/en/tools/best-ai-tools-for-reels"
       },
       "affiliate": null,
       "darebay": {
@@ -1348,6 +1380,9 @@
       "availability": {
         "ru": "Сервис Яндекса, оплата в рублях; коммерческое использование без согласования с сервисом только в Про"
       },
+      "review": {
+        "ru": "/instrumenty/neyroseti-dlya-sozdaniya-video"
+      },
       "affiliate": null,
       "darebay": {
         "own": false
@@ -1393,6 +1428,9 @@
       },
       "availability": {
         "ru": "Сервис Сбера: сайт GigaChat, боты в Telegram и MAX; коммерческое использование по отдельному платному договору со Сбером"
+      },
+      "review": {
+        "ru": "/instrumenty/neyroseti-dlya-sozdaniya-video"
       },
       "affiliate": null,
       "darebay": {
@@ -1577,6 +1615,9 @@
       "availability": {
         "ru": "Российский сервис, цены в рублях"
       },
+      "review": {
+        "ru": "/instrumenty/avtoposting-i-otlozhennyy-posting"
+      },
       "affiliate": {
         "program": "SMMplanner partner program",
         "commission": "10% per referred user",
@@ -1630,6 +1671,9 @@
       "availability": {
         "ru": "Цены в рублях, тенге и долларах",
         "en": "Runs in a browser; prices in USD, RUB or KZT"
+      },
+      "review": {
+        "ru": "/instrumenty/avtoposting-i-otlozhennyy-posting"
       },
       "affiliate": {
         "program": "Postmypost partner program",
@@ -1690,6 +1734,10 @@
         "ru": "Оплата картой, выпущенной вне России",
         "en": "Browser, iOS and Android apps"
       },
+      "review": {
+        "ru": "/instrumenty/avtoposting-i-otlozhennyy-posting",
+        "en": "/en/tools/multi-account-schedulers"
+      },
       "affiliate": {
         "program": "Metricool Affiliate",
         "commission": "25% of subscriptions up to $100 per user; 50% up to $300 after 200 paid sign-ups",
@@ -1740,6 +1788,9 @@
       },
       "availability": {
         "en": "Runs in a browser; prices in USD"
+      },
+      "review": {
+        "en": "/en/tools/multi-account-schedulers"
       },
       "affiliate": {
         "program": "Repurpose.io Affiliate",
@@ -1838,6 +1889,9 @@
       "availability": {
         "ru": "Работает в браузере",
         "en": "Runs in a browser"
+      },
+      "review": {
+        "en": "/en/tools/best-ai-tools-for-reels"
       },
       "affiliate": null,
       "darebay": {
@@ -1943,6 +1997,9 @@
       "availability": {
         "ru": "Оплата из любой страны; из России цены в рублях"
       },
+      "review": {
+        "ru": "/instrumenty/avtoposting-i-otlozhennyy-posting"
+      },
       "affiliate": {
         "program": "LiveDune referral program",
         "commission": "30% for the first 6 months, 15% for the next 6, 7.5% for 2 more years",
@@ -2032,6 +2089,10 @@
         "ru": "Цены в долларах, рублях, евро и реалах",
         "en": "Prices in USD, RUB, EUR or BRL"
       },
+      "review": {
+        "ru": "/instrumenty/antidetekt-brauzery",
+        "en": "/en/tools/antidetect-browsers-explained"
+      },
       "affiliate": {
         "program": "Dolphin{anty} affiliate program",
         "commission": "15% of referral spending",
@@ -2083,6 +2144,10 @@
         "ru": "Принимает карты, PayPal и криптовалюту (USDT, BTC, ETH, USDC)",
         "en": "Cards, PayPal, Alipay or crypto"
       },
+      "review": {
+        "ru": "/instrumenty/antidetekt-brauzery",
+        "en": "/en/tools/antidetect-browsers-explained"
+      },
       "affiliate": {
         "program": "AdsPower referral program",
         "commission": "up to 30% of the referral's subscription fee",
@@ -2129,6 +2194,10 @@
         "ru": "Принимает карты и криптовалюту: USDT, BTC, ETH, TON и другие",
         "en": "Cards or crypto (USDT, BTC, ETH, TON and more)"
       },
+      "review": {
+        "ru": "/instrumenty/antidetekt-brauzery",
+        "en": "/en/tools/antidetect-browsers-explained"
+      },
       "affiliate": {
         "program": "Octo Browser referral program",
         "commission": "15% of every payment for 360 days after sign-up",
@@ -2174,6 +2243,10 @@
       "availability": {
         "ru": "Принимает карты, PayPal, Skrill, Capitalist и другие способы",
         "en": "Cards, PayPal, Skrill, Capitalist and more"
+      },
+      "review": {
+        "ru": "/instrumenty/antidetekt-brauzery",
+        "en": "/en/tools/antidetect-browsers-explained"
       },
       "affiliate": {
         "program": "GeeLark referral program",

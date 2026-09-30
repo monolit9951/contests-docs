@@ -37,7 +37,7 @@ Formats that gain steadily on X:
 - a thread of clips from one stream, hook first;
 - a vertical clip with subtitles, since sound is off by default.
 
-Apps that add captions and reframe clips to vertical are compared in the [tools catalog](/en/tools/).
+Apps that add captions and reframe clips to vertical are compared in the [tools catalog](/en/tools/); for captions alone, free and paid [auto caption apps](/en/tools/auto-caption-apps) are compared by price, watermark and language.
 
 ## Two income streams from one clip
 

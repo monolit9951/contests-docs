@@ -14,10 +14,12 @@ import {
 } from './links'
 import { CHROME_COPY, type AuthorLink, type DareBayThemeConfig } from './chrome'
 import { installCoveredHeadingRule } from './coveredHeading'
-import { installTableWrapRule } from './tableWrap'
+import { installTableLabelRule, installTableWrapRule } from './tableWrap'
+import { installHeadingTypesetRule } from './headingTypeset'
 import { installCommentSpacingRule, stripComments } from './commentSpacing'
 import { installSourcesRule } from './sources'
 import { fontPreloadTags, inlineStylesheets, stripVpIconsLink } from './headAssets'
+import { keepLandingFigures, landingArt, landingProblems, placementProblems, placesCatalog, sourceProblems, usesPageBlocks } from './landingFrontmatter'
 import PAGE_DATES from '../page-dates.json'
 import PLATFORMS from './data/platforms.json'
 
@@ -122,21 +124,27 @@ const OG_IMAGE = 'https://darebay.com/og-default.jpg'
 // `ar_EG` or `ar_SA` would claim one market for all of them.
 export const OG_LOCALE: Record<Locale, string> = { ru: 'ru_RU', uk: 'uk_UA', en: 'en_US', ar: 'ar_AR' }
 
-// Nav and sidebar, built from the registry.
+// The nav, built from the registry.
 //
-// They used to be a hand-written list of `/ru/...` links plus a `ruZone()` helper that
+// It used to be a hand-written list of `/ru/...` links plus a `ruZone()` helper that
 // scanned a directory. Both encoded the old layout, and the hand-written half was already
-// stale: it named five earnings articles when ten had shipped. Deriving them means a page
+// stale: it named five earnings articles when ten had shipped. Deriving it means a page
 // that exists is a page that is linked — the cheapest ranking asset we have, and the one
 // that rots fastest when a human owns it.
+//
+// No sidebar (2026-09-30). The stock one rendered on no page (every page renders through the
+// landing shell, which lists a section in its hub catalogue and its "more in this section"
+// cards), yet VitePress inlined all four trees' sidebars into the site data of every document:
+// 9.7 KB at gzip level 1 on each of the 250 pages, and growing with every article. On
+// /instrumenty/ that was the difference between 88 KB and 77 KB on the wire against the 85 KB
+// ceiling a stalling Russian connection still delivers (scripts/showcase-weight.mjs).
 export const HUB_TITLES: Record<Locale, Record<HubId, string>> = {
-  ru: { about: 'О проекте', earnings: 'Заработок', brands: 'Брендам', help: 'Помощь', legal: 'Юридические документы' },
-  uk: { about: 'Про проєкт', earnings: 'Заробіток', brands: 'Брендам', help: 'Допомога', legal: 'Юридичні документи' },
-  en: { about: 'About', earnings: 'Earning', brands: 'For brands', help: 'Help', legal: 'Legal' },
-  ar: { about: 'عن المشروع', earnings: 'الربح', brands: 'للعلامات التجارية', help: 'المساعدة', legal: 'الوثائق القانونية' },
+  ru: { about: 'О проекте', earnings: 'Заработок', brands: 'Брендам', help: 'Помощь', farm: 'Контент-завод', tools: 'Инструменты', legal: 'Юридические документы' },
+  uk: { about: 'Про проєкт', earnings: 'Заробіток', brands: 'Брендам', help: 'Допомога', farm: 'Контент-завод', tools: 'Інструменти', legal: 'Юридичні документи' },
+  en: { about: 'About', earnings: 'Earning', brands: 'For brands', help: 'Help', farm: 'Content farm', tools: 'Tools', legal: 'Legal' },
+  ar: { about: 'عن المشروع', earnings: 'الربح', brands: 'للعلامات التجارية', help: 'المساعدة', farm: 'مزرعة المحتوى', tools: 'الأدوات', legal: 'الوثائق القانونية' },
 }
 
-export const OVERVIEW: Record<Locale, string> = { ru: 'Обзор', uk: 'Огляд', en: 'Overview', ar: 'نظرة عامة' }
 
 // A tree's home is its earnings hub: the logo leads there, and so does the 404. A declared locale
 // without one is refused by `check-registry.mjs` (`locale-without-home`) before the build gets here.
@@ -154,7 +162,15 @@ const contentHomeForLocale = (lang: Locale) => {
 // "О проекте" closes the list (2026-09-21): the section that says who runs the platform and where
 // its numbers come from is linked from every page, in the header and in the footer. The product
 // CTA is appended after these in `themeForLocale` and stays last.
-export const NAV_HUBS: readonly HubId[] = ['earnings', 'brands', 'help', 'about']
+//
+// The content-farm and tools sections (founder, 2026-09-29) go in front of it. The desktop row
+// starts at 1120px (`LandingHeader.vue`), its labels never wrap, and a row that does not fit pushes
+// the product button off the screen: `npm run audit:ui` checks exactly that at 1120px in every
+// tree. Measured on 2026-09-29 with a classic scrollbar, the six Russian labels leave 77px before
+// the language menu and the six English ones 234px, so a seventh Russian section does not fit
+// without shorter labels. A tree without an index of a section (Ukrainian and Arabic have none of
+// these two at launch) is simply not offered it.
+export const NAV_HUBS: readonly HubId[] = ['earnings', 'brands', 'help', 'farm', 'tools', 'about']
 
 /**
  * The section links of one tree. `indexPath` is the registry's `hubIndexPath`; it is a parameter so
@@ -169,10 +185,11 @@ export const navSections = (
     return link ? [{ text: HUB_TITLES[lang][hub], link }] : []
   })
 
-// Order in the sidebar. "О проекте" is first on purpose: earnings is a subject where the
-// reader's first question — and Google's — is who is behind the page and where the
-// numbers come from, and that answer has to be one click from every article.
-const SIDEBAR_ORDER: HubId[] = ['about', 'earnings', 'brands', 'help', 'legal']
+// The accent of a section's pages (`.lp-world-cyan` in landing.css). The content-farm section keeps
+// the site's lime; the tools section reads cyan so a reader can tell the two landings apart at a
+// glance. Buttons stay lime in every world (`--lp-action`): colour marks the section, not the action.
+// A page may still set `world` itself.
+export const HUB_WORLD: Partial<Record<HubId, 'cyan'>> = { tools: 'cyan' }
 
 const pageTitle = (file: string, fallback: string) => {
   const full = join(DOCS_DIR, file)
@@ -190,15 +207,15 @@ const COMMUNITY_ICON: Record<CommunityPlatform, string> = {
 }
 
 /**
- * Nav and sidebar for ONE locale.
+ * The chrome of ONE locale: nav, labels, product and community links.
  *
- * They used to be built once from the root locale and reused on every tree, so
+ * The nav used to be built once from the root locale and reused on every tree, so
  * the header on `/ua/` carried Russian labels pointing at Russian addresses:
  * a reader who switched language was thrown straight back out of it by the very
  * first thing they clicked.
  *
- * A section with no pages in this language is dropped entirely rather than shown
- * empty — the same rule as everywhere else here.
+ * A section with no index in this language is dropped entirely rather than linked
+ * to a 404 — the same rule as everywhere else here.
  */
 
 export const themeForLocale = (lang: Locale): DareBayThemeConfig => {
@@ -218,7 +235,6 @@ export const themeForLocale = (lang: Locale): DareBayThemeConfig => {
       // phones while the other nav items collapse into the hamburger.
       { text: copy.navCta, link: productUrl },
     ],
-    sidebar: SIDEBAR_ORDER.map((hubId) => hubSection(hubId, lang)).filter((section) => section.items.length),
     notFound: copy.notFound,
     darkModeSwitchLabel: copy.darkModeSwitchLabel,
     lightModeSwitchTitle: copy.lightModeSwitchTitle,
@@ -252,29 +268,9 @@ export const themeForLocale = (lang: Locale): DareBayThemeConfig => {
       communityUrl,
       communityName: copy.community.footerLabel,
       businessUrl: businessUrlForLocale(lang),
-      founderUrl: FOUNDER_TELEGRAM,
     },
     authorLink: authorLinkForLocale(lang),
   }
-}
-
-function hubSection(hubId: HubId, lang: Locale) {
-  const entries = PAGES.filter((e) => e.hub === hubId && localesOf(e).includes(lang))
-  const items = entries
-    .map((entry) => ({
-      text:
-        entry.slugs[lang] === ''
-          ? OVERVIEW[lang]
-          : pageTitle(sourceFile(entry, lang)!, entry.id),
-      link: pagePath(entry, lang)!,
-      isIndex: entry.slugs[lang] === '',
-    }))
-    // Index first, then alphabetical IN THIS LANGUAGE — the same order the hub
-    // page itself renders (see hubs.data.ts, which already collates by `lang`).
-    // A fixed 'ru' collator here sorted Ukrainian titles by Russian rules.
-    .sort((a, b) => (a.isIndex ? -1 : b.isIndex ? 1 : a.text.localeCompare(b.text, lang)))
-    .map(({ text, link }) => ({ text, link }))
-  return { text: HUB_TITLES[lang][hubId], collapsed: false, items }
 }
 
 // ---------------------------------------------------------------------------
@@ -360,7 +356,7 @@ export const ORGANIZATION = {
 export const AUTHOR_NAME: Record<Locale, string> = { ru: 'Руслан', uk: 'Руслан', en: 'Ruslan', ar: 'Ruslan' }
 
 // The author page is a manifest entry like any other, so its address is derived
-// and the byline, the Person node and the sidebar can never point three ways.
+// and the byline and the Person node can never point two ways.
 const authorPathForLocale = (language: Locale): string | null => {
   const entry = PAGES.find((page) => page.id === 'about-author')
   return entry ? pagePath(entry, language) : null
@@ -688,6 +684,12 @@ export default defineConfig({
     config(md) {
       installCoveredHeadingRule(md)
       installTableWrapRule(md)
+      // A phone reads a table of three or more columns as a stack of row cards (landing.css): each
+      // cell carries its column's name, see tableWrap.ts.
+      installTableLabelRule(md)
+      // Russian headings keep a short word with the next and a compound on one line, after the
+      // anchor rule has made their ids (headingTypeset.ts).
+      installHeadingTypesetRule(md)
       // Drops the space an editor left in front of a comment that punctuation follows, on every
       // page — see commentSpacing.ts. Before the sources rule, whose markers it leaves as they were.
       installCommentSpacingRule(md)
@@ -853,6 +855,33 @@ export default defineConfig({
           ).map((e) => ({ title: pageTitle(sourceFile(e, found.lang)!, e.id), path: pagePath(e, found.lang)! }))
         : []
     const isArticle = !isHub && found.entry.hub !== 'legal'
+
+    // The landing blocks read their content from the frontmatter, where no dead-link check looks:
+    // a wrong key or path fails the build here instead of shipping a dead button (landingFrontmatter.ts).
+    const sourcePath = join(DOCS_DIR, pageData.relativePath)
+    const source = existsSync(sourcePath) ? readFileSync(sourcePath, 'utf8') : ''
+    const landing = [
+      ...landingProblems(pageData.frontmatter, { isHub, locale: found.lang }),
+      ...placementProblems(pageData.frontmatter, source, { isHub }),
+      ...sourceProblems(source, found.lang),
+    ]
+    if (landing.length) {
+      throw new Error(`config: docs/${pageData.relativePath}:\n  ${landing.join('\n  ')}`)
+    }
+    keepLandingFigures(pageData.frontmatter, found.lang)
+    // The blocks a page imports itself (LFlow, LFeatures, LSetup, like LTools) read no `vitepress`,
+    // so they learn the page's language from its data (landingFrontmatter.ts `PAGE_BLOCKS`).
+    if (usesPageBlocks(pageData.frontmatter)) pageData.frontmatter.locale = found.lang
+    const world = HUB_WORLD[found.entry.hub]
+    if (world) pageData.frontmatter.world ??= world
+    // A showcase hub lists its section once: where its Markdown places `<LCatalog />`, or after the
+    // Markdown when it does not (LandingLayout.vue).
+    if (isHub && pageData.frontmatter.showcase === true) pageData.frontmatter.catalogInline = placesCatalog(source)
+    // The pictures a page shows (its hero drawing, its tile icons) travel as page data: only the pages
+    // that show one carry it, and the theme chunk every page downloads carries none.
+    const art = landingArt(pageData.frontmatter, { isHub, hub: found.entry.hub })
+    if (art) pageData.frontmatter.art = art
+    else delete pageData.frontmatter.art
 
     // Comparison landings: the compared platforms, from the same data file the
     // table renders, so markup and visible table cannot disagree.

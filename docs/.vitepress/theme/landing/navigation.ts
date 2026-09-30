@@ -1,10 +1,14 @@
 import type { Locale } from '../../registry'
 
-export const NAVIGATION_COPY: Record<Locale, { site: string; contents: string }> = {
-  ru: { site: 'На сайт', contents: 'В статье' },
-  uk: { site: 'На сайт', contents: 'У статті' },
-  en: { site: 'Open site', contents: 'In this article' },
-  ar: { site: 'إلى الموقع', contents: 'في هذا المقال' },
+/**
+ * The header button's short label on a narrow screen: the product site, or on a showcase landing the
+ * task catalogue (LandingHeader.vue); and the article outline's label.
+ */
+export const NAVIGATION_COPY: Record<Locale, { site: string; tasks: string; contents: string }> = {
+  ru: { site: 'На сайт', tasks: 'Задания', contents: 'В статье' },
+  uk: { site: 'На сайт', tasks: 'Завдання', contents: 'У статті' },
+  en: { site: 'Open site', tasks: 'Tasks', contents: 'In this article' },
+  ar: { site: 'إلى الموقع', tasks: 'المهام', contents: 'في هذا المقال' },
 }
 
 /** The source path is stable during SSR; a section is current only at its path boundary. */

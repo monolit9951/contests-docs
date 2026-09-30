@@ -60,7 +60,7 @@ Honestly: four jobs stay with paid ads.
 ## Where clips win
 
 - **Price per view.** $1–$10 per 1,000 counted views against dollar CPMs from $5 on TikTok and YouTube and a $13.48 Meta average <!-- source: https://www.adamigo.ai/blog/meta-ads-cpm-benchmarks-by-industry-2026 2026-09-04 -->, for a view rather than an impression.
-- **Creative for free.** Creators edit their own clips; on tasks with ready-made videos the platform hands them files with built-in uniqueness, so nobody edits.
+- **Creative for free.** Creators edit their own clips; on tasks with ready-made videos the platform hands them files with built-in uniqueization, so nobody edits.
 - **Trust.** A person's account, no sponsored label, no banner blindness.
 - **The long tail.** Ads stop with the budget; clips stay up and keep collecting views.
 - **Pay for results.** You pay for views above the threshold on the card by formula, not for intent: 20,000 / 1,000 × $1.00 = **$20.00** for a clip, never more than the cap you set.

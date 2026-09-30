@@ -1,7 +1,7 @@
 // Explicit `.ts` extensions here and in everything this file imports: `check:sources` loads it with
 // plain `node --experimental-strip-types`, whose resolver adds none. Vite and Vitest do add them,
 // which is why the build and the tests stayed green while the manual tool could not start.
-import { LANDING_COPY } from './theme/landing/copy.ts'
+import { LANDING_COPY, formatDay } from './theme/landing/copy.ts'
 import { sitePathOf, sourceAnchor, sourceLabel } from './links.ts'
 import { localeOfSourcePath, type Locale } from './registry.ts'
 
@@ -269,6 +269,14 @@ export const sourceRefHtml = (number: number): string =>
  * through `sourceAnchor` (links.ts) like every source the comparison templates render — relative,
  * in the page's language, followed. No page cites itself today; this keeps the first one that does
  * from shipping a nofollow that `check:dist` would then reject.
+ *
+ * The day follows the address after a comma, as a `<time>`: `[3] telegram.org/blog/…, 04.09.2026`.
+ * It used to follow a dash, «— 2026-09-04», and Russian copy is written without «—» and «–»
+ * (BRIEF 2026-09-29): every Russian page with visible sources printed one per source, 23 on a
+ * single article. Russian and Ukrainian readers get the day as they write it, `04.09.2026`, as in
+ * the hero's "updated" (`formatDay`); the `datetime` keeps the ISO day for machines. The address and its day share one box, so the
+ * number keeps a column of its own and never stands alone on a line above a long address
+ * (landing.css `.db-sources`).
  */
 export function sourceItemHtml(ref: SourceRef, locale: Locale): string {
   const label = escapeText(sourceLabel(ref.url, locale))
@@ -281,7 +289,8 @@ export function sourceItemHtml(ref: SourceRef, locale: Locale): string {
       : own
         ? `<a href="${escapeAttribute(own.href)}"${target}>${label}</a>`
         : `<a href="${escapeAttribute(ref.url)}" rel="nofollow noopener">${label}</a>`
-  return `<li id="src-${ref.number}"><span class="src-n">[${ref.number}]</span> ${name} — ${escapeText(ref.date)}</li>`
+  const date = `<time datetime="${escapeAttribute(ref.date)}">${escapeText(formatDay(ref.date, locale))}</time>`
+  return `<li id="src-${ref.number}"><span class="src-n">[${ref.number}]</span> <span>${name}, ${date}</span></li>`
 }
 
 /**

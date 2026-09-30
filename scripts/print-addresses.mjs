@@ -20,6 +20,8 @@ const HUB_TITLES = {
     earnings: 'Заработок',
     brands: 'Брендам',
     help: 'Помощь',
+    farm: 'Контент-завод',
+    tools: 'Инструменты',
     about: 'О проекте',
     legal: 'Правовое',
 }

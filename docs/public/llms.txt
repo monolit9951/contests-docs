@@ -70,7 +70,7 @@
 - [Сколько можно заработать на нарезках: ставка за 1000 просмотров](https://darebay.com/zarabotok/skolko-mozhno-zarabotat-na-narezkah): Сколько можно заработать на нарезках: $1–$10 за 1000 просмотров, ставку задаёт каждое задание, до $500 за ролик, подписчики не нужны. Формула и разбор ставки.
 - [Сколько платят за нарезки стримеров и как начать](https://darebay.com/zarabotok/skolko-platyat-za-narezki-strimerov): Сколько платят за нарезки стримеров: $1–10 за 1000 просмотров, до $500 за ролик, вывод от 10 USDT. Что режут из стрима, права по заданию, как подать ролик.
 - [Сколько платят за нарезки: ставки за 1000 просмотров по нишам](https://darebay.com/zarabotok/skolko-platyat-za-narezki-po-nisham): Сколько платят за нарезки в 2026: DareBay $1–$10 за 1000 просмотров, рынок от $0.35 в музыке до $6.60 в технологиях. Таблицы по нишам, площадкам и соцсетям.
-- [Что такое клиппинг: словарь терминов нарезчика простыми словами](https://darebay.com/zarabotok/slovar-klippinga): Клиппинг это нарезка стримов и видео в короткие ролики с оплатой за просмотры. 53 термина нарезчика: CPM, порог, потолок, накрутка, оффер, кошелёк, вывод.
+- [Что такое клиппинг: словарь терминов нарезчика простыми словами](https://darebay.com/zarabotok/slovar-klippinga): Клиппинг это нарезка стримов и видео в короткие ролики с оплатой за просмотры. 57 терминов нарезчика: CPM, порог, потолок, накрутка, оффер, кошелёк, вывод.
 - [DareBay или Клипни: две площадки для нарезчиков из России и СНГ](https://darebay.com/zarabotok/darebay-ili-klipni): Клипни (Klipni) платит рублями самозанятым из РФ, DareBay - в USDT и звёздами Telegram без списка стран. Ставка, порог, потолок, комиссия и бюджет - поле за полем.
 - [DareBay или Whop Content Rewards: кто тебе заплатит и сколько](https://darebay.com/zarabotok/darebay-ili-whop): Whop больше, но закрывает Россию и Беларусь; DareBay платит и туда, списка стран у него нет. Ставка, порог, потолок, комиссии, выплаты и бюджет - поле за полем.
 - [Prime Oracles (Прайм Ораклс): отзывы 2026, выплаты и комиссия](https://darebay.com/zarabotok/prime-oracles-obzor): Prime Oracles (Прайм Ораклс, primeoracles.com): сколько платят за 1000 просмотров ($0.02–$8), вывод от $5 в USDT, USDC и TON, комиссия 10% и что с отзывами.
@@ -109,6 +109,22 @@
 - [Что делать с запрещённым или опасным контентом?](https://darebay.com/pomoshch/zapreshchennyy-kontent): Запрещённый контент: жалуйся кнопкой «Пожаловаться» у работы или профиля, незаконное - на trust@darebay.com. Что под нулевой терпимостью, что будет с деньгами.
 - [Что, если никто не участвует в конкурсе: бюджет и возврат](https://darebay.com/pomoshch/esli-nikto-ne-uchastvuet): Никто не участвует в конкурсе? Бюджет кошелькового конкурса возвращается на баланс, рейтинг организатора не падает, а отклик чинят четыре параметра задания.
 - [DareBay вывод денег - как подать заявку и что приходит на руки](https://darebay.com/pomoshch/darebay-vyvod-deneg): Вывод денег с DareBay: подал заявку от 10 USDT - остальное делает платформа. USDT на TON или выплата в Telegram Stars, комиссия 10% внутри заявки.
+
+### Контент-завод
+
+- [Контент-завод на DareBay: всё уже есть, поможем настроить](https://darebay.com/kontent-zavod/): Контент-завод, он же контент-ферма: задания DareBay платят за засчитанные просмотры в TikTok, Reels и Shorts, а в заданиях под офферы есть готовые ролики.
+- [ИИ-контент-завод на нейросетях и n8n: что работает в 2026](https://darebay.com/kontent-zavod/ii-kontent-zavod): ИИ-контент-завод: нейросети пишут сценарий, озвучивают и монтируют, n8n связывает шаги. Что режут YouTube и TikTok, как маркировать ИИ и кто платит.
+- [Как создать контент-завод для Reels, Shorts и TikTok с нуля](https://darebay.com/kontent-zavod/kak-sozdat-kontent-zavod): Как создать контент-завод или контент-ферму с нуля: ниша, исходники, живые аккаунты, своя версия ролика на каждый, график и оплата за просмотры.
+- [Команда нарезчиков: как собрать, распределить роли и доли](https://darebay.com/kontent-zavod/komanda-narezchikov): Как собрать команду нарезчиков: пять ролей от поиска моментов до проверки, три схемы долей, чьи аккаунты, учёт и выплата каждому на свой кошелёк.
+- [Что такое контент-завод и чем он отличается от контент-фермы](https://darebay.com/kontent-zavod/chto-takoe-kontent-zavod): Контент-завод это конвейер коротких роликов для многих площадок и аккаунтов. Три значения термина, отличие от контент-фермы, граница с накруткой и кто платит.
+
+### Инструменты
+
+- [Нейросети и сервисы для рилс и шортсов: каталог 2026](https://darebay.com/instrumenty/): Нейросети и сервисы для рилс и шортсов по этапам: монтаж, ИИ-нарезка, субтитры, озвучка, уникализация. Цены на 29.09.2026 и оплата из России.
+- [Нейросети для нарезки видео на шортсы: сервисы и цены](https://darebay.com/instrumenty/neyroseti-dlya-narezki-video): Нейросети для нарезки видео на шортсы: OpusClip, Vizard, Klap, MnogoReels и Рилс Босс. Цена часа исходника, бесплатные минуты, русская речь, оплата из России.
+- [Озвучка текста и видео нейросетью: что работает из России](https://darebay.com/instrumenty/ozvuchka-video-neyrosetyu): Нейросеть для озвучки текста и видео из России вместо ElevenLabs: Звукограм, GenVoice, TTSMaker и SpeechKit. Цены на 29.09.2026, лимиты и метка ИИ.
+- [Уникализатор видео: что работает в 2026, замер DareBay](https://darebay.com/instrumenty/unikalizator-video): Уникализация видео для TikTok и Reels по замеру DareBay: цвет, шум, скорость и метаданные ролик не меняют, а новая раскладка кадра и новый голос меняют.
+- [CapCut в России: как оплатить Pro и чем заменить](https://darebay.com/instrumenty/capcut-v-rossii): Как оплатить CapCut Pro из России в 2026 году, почему подписка может не включиться даже после оплаты и какими редакторами заменить CapCut без подписки.
 
 ### Юридические документы
 
@@ -267,7 +283,7 @@ Guides to content tasks, participation, validated views and payouts on DareBay.
 - [ClipGrow review 2026: rates, payout days, alternatives](https://darebay.com/en/earnings/clipgrow-review): ClipGrow review: what a campaign pays, how Instagram views are verified, which payout day applies, who funds the pool, and the alternatives in India.
 - [Clipping as a job - what clipping jobs involve and pay](https://darebay.com/en/earnings/clipping-as-a-job): What clipping jobs involve: piecework paid per view, $1–10 per 1,000 views, up to $500 per clip, withdrawable from 10 USDT. No followers, no portfolio.
 - [Clipping earnings calculator: how much can you make a month?](https://darebay.com/en/earnings/clipping-earnings-calculator): Free clipping calculator: enter views per clip, clips per week and a $1 to $10 rate per 1,000 views to see your monthly earnings, up to $500 per clip.
-- [Clipping glossary: the terms every clipper should know](https://darebay.com/en/earnings/clipping-glossary): Clipping is cutting streams and videos into short clips that earn per view. 52 clipper terms: CPM, threshold, cap, counted views, offers, wallet, withdrawal.
+- [Clipping glossary: the terms every clipper should know](https://darebay.com/en/earnings/clipping-glossary): Clipping is cutting streams and videos into short clips that earn per view. 53 clipper terms: CPM, threshold, cap, counted views, offers, wallet, withdrawal.
 - [Clipping on Telegram: clipping jobs, DareBay tasks and Stars](https://darebay.com/en/earnings/clipping-on-telegram): Clipping work through Telegram: take a DareBay task with no application, send the link there, get paid in USDT on TON or Stars, and spot fake job channels.
 - [Clipping on X (Twitter): how X pays and how DareBay fits](https://darebay.com/en/earnings/clipping-on-x-twitter): X pays clippers through its Premium-only creator programme. DareBay's clip tasks count TikTok, Reels and Shorts, where the same clip earns $1–$10 per 1,000.
 - [Clipping platforms that pay in Bangladesh and Nepal](https://darebay.com/en/earnings/clipping-platforms-that-pay-in-bangladesh-and-nepal): PayPal and Stripe skip Bangladesh; Bangladesh Bank bars crypto. Which clipping platforms still pay, via Payoneer to bKash or a bank, and how Nepal differs.
@@ -333,6 +349,20 @@ Guides to content tasks, participation, validated views and payouts on DareBay.
 - [Watch, vote, win: how DareBay viewers take part](https://darebay.com/en/help/watch-vote-win): The viewer's side of DareBay: how the feed works, which contests your vote actually decides, where a like changes nothing, and what a clean record buys you.
 - [What if nobody enters your contest: budget and refund](https://darebay.com/en/help/if-nobody-enters): Nobody entered? A wallet-backed budget returns to your balance in full, the 0% fee on creation and top-ups leaves nothing to refund, and your rating holds.
 - [What to do about prohibited or dangerous content?](https://darebay.com/en/help/prohibited-content): Prohibited content on DareBay: where to report a work, a comment or a profile, which categories carry zero tolerance, and what a confirmed violation costs.
+
+### Content farm
+
+- [Content farm for TikTok, Reels and Shorts, paid per view](https://darebay.com/en/content-farm/): Your content farm already has a buyer: DareBay tasks pay per counted view on TikTok, Reels and Shorts, and offer tasks give each account its own clip version.
+- [How to build a TikTok content farm in 2026, step by step](https://darebay.com/en/content-farm/how-to-build-a-tiktok-content-farm): How to build a TikTok content farm: pick a niche, source clips, warm up accounts, give each its own version, post on schedule and get paid per view.
+- [How to start a clipping agency: clippers, accounts, margins](https://darebay.com/en/content-farm/how-to-start-a-clipping-agency): How to start a clipping agency: where paid campaigns come from, five roles on the team, who owns the accounts, three ways to pay clippers, margin formulas.
+- [What is a content farm? The short-video kind that gets paid](https://darebay.com/en/content-farm/what-is-a-content-farm): A content farm mass-produces content to capture traffic. What the term means in 2026, what TikTok, YouTube and Instagram penalize, and the kind that gets paid.
+- [YouTube Shorts automation after July 2026: what still pays](https://darebay.com/en/content-farm/youtube-shorts-automation): YouTube Shorts automation after the July 2026 policy clarification: what YPP still pays for, when AI needs a label, and per-view tasks that skip YPP.
+
+### Tools
+
+- [Tools for Reels, Shorts and TikTok, picked for clippers](https://darebay.com/en/tools/): Editing, AI clipping, caption, voice and scheduling tools for Reels, Shorts and TikTok by stage, with free plans and prices as of September 29, 2026.
+- [CapCut alternatives in 2026: free editors with no watermark](https://darebay.com/en/tools/capcut-alternatives): Free CapCut alternatives with no watermark in 2026: VN, Edits and Adobe Premiere on phones, Clipchamp on PC, plus CapCut Pro prices by country.
+- [OpusClip alternatives for clippers: cost, watermark, limits](https://darebay.com/en/tools/opus-clip-alternatives): OpusClip alternatives for clippers: Vizard, Klap, 2short.ai, Choppity, quso.ai and Spikes Studio compared by cost per hour of footage, free plan and watermark.
 
 ### Legal
 

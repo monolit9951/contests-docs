@@ -46,7 +46,7 @@ import contentManifest from '../content-pages.json' with { type: 'json' }
 //     pages already are.
 
 export type Locale = 'ru' | 'uk' | 'en' | 'ar'
-export type HubId = 'earnings' | 'brands' | 'help' | 'about' | 'legal'
+export type HubId = 'earnings' | 'brands' | 'help' | 'farm' | 'tools' | 'about' | 'legal'
 export type TextDirection = 'ltr' | 'rtl'
 
 export interface LocaleAxis {
@@ -180,7 +180,7 @@ interface ContentManifest {
     readonly pages: readonly RegistryEntry[]
 }
 
-const HUB_ORDER: readonly HubId[] = ['earnings', 'brands', 'help', 'about', 'legal']
+const HUB_ORDER: readonly HubId[] = ['earnings', 'brands', 'help', 'farm', 'tools', 'about', 'legal']
 const isRecord = (value: unknown): value is Record<string, unknown> =>
     typeof value === 'object' && value !== null && !Array.isArray(value)
 const assertKeys = (value: Record<string, unknown>, required: readonly string[], optional: readonly string[], label: string) => {

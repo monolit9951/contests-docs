@@ -30,7 +30,7 @@ The organizer takes a clip down, and the form demands a reason. Four common ones
 6. **Timing.** Posted before the task started or after submissions closed; views after the final data collection do not count either. Post inside the "Starts" and "Until" window.
 7. **Duplicates of one clip.** The same clip on two accounts or twice in one task: the extra copy is skipped or removed, and a run of copies looks like dodging the cap. One clip, one submission.
 8. **Prohibited content.** The clip breaks the [prohibited content](/en/help/prohibited-content) rules or the site's own. These are not restored, so check the material before posting.
-9. **Fake views.** "Fake views": one sync tick delivered almost all the growth, bought traffic, an account farm. The clip is flagged, the payout stops, moderation can remove it. Honest spike? Send the organizer the source link.
+9. **Fake views.** "Fake views": one sync tick delivered almost all the growth, bought traffic, a grid of empty or bot accounts. The clip is flagged, the payout stops, moderation can remove it. Honest spike? Send the organizer the source link. The line between a content farm of live accounts and an engagement farm is drawn in [how a content farm differs from an engagement farm](/en/content-farm/what-is-a-content-farm).
 10. **Link to a private or deleted video.** "Video unavailable": deleted, hidden, private or blocked by the site, so no counter can be read. Keep the clip public until the payout; restore it if deleted by accident.
 
 ## Views but no payout

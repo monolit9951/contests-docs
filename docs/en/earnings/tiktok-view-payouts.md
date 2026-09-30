@@ -28,7 +28,7 @@ The video has to qualify too: longer than a minute, original, not a duet and not
 
 **YouTube Partner Program.** Getting in today: 1000 subscribers plus either 4000 valid public watch hours over the last 12 months, or 10 million valid Shorts views over the last 90 days. From 1 February 2027 the bar rises for new applications: 8000 hours over 365 days or 20 million Shorts views over 90 days, and to receive a share of ad and subscription revenue for Shorts a channel has to hold 10 million valid Shorts views over a rolling 90 days. Anyone already accepted into the programme is not affected by the change.
 
-A separate point on geography: because Google's ad systems are suspended in Russia, new connections to the YouTube Partner Program from there are unavailable. Kazakhstan, Armenia and Georgia are on the list of available countries. YouTube does not publish its rate either - it depends on ad auctions and shifts month to month.
+A separate point on geography: because Google's ad systems are suspended in Russia, new connections to the YouTube Partner Program from there are unavailable. Kazakhstan, Armenia and Georgia are on the list of available countries. YouTube does not publish its rate either - it depends on ad auctions and shifts month to month. What an automated, AI-made Shorts channel can still monetize under YouTube's July 2026 clarification is covered in [YouTube Shorts automation after July 2026](/en/content-farm/youtube-shorts-automation).
 
 The common denominator of both programmes: build the audience first, find out what you are paid afterwards.
 

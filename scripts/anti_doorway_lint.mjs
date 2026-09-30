@@ -86,7 +86,10 @@ export const FAQ_ECHO_LIMIT = 3
  * по требованию домашнего стиля и ничего не говорят об интенте. */
 export const HEADING_ECHO_LIMIT = 3
 
-const FLEET_HUBS = new Set(['earnings', 'brands', 'help', 'about'])
+// Гейтируемые хабы. Контент-завод и инструменты (2026-09-29) пишут сессии, а не флот, но правила
+// те же: без них страницы новых хабов молча уходили бы в otherzone, мимо провенанса, дублей,
+// пересказа, эха и капа волны, хотя в CAP_TOTAL считаются всё равно.
+const FLEET_HUBS = new Set(['earnings', 'brands', 'help', 'farm', 'tools', 'about'])
 const escapeRegExp = (text) => text.replace(/[.*+?^${}()|[\]\\/]/g, '\\$&')
 /** Каталог локали внутри docs/: '' у корневой, `ua/`, `en/`, `ar/` у остальных — как в `sourceFile`. */
 const localeDir = (axis) => (axis.vitepressKey === 'root' ? '' : `${axis.vitepressKey}/`)

@@ -538,7 +538,7 @@ console.log("anti_doorway_lint: ратчет не распространяетс
 // это для КАЖДОГО объявленного дерева, так что арабское попадёт под гейт в день объявления.
 console.log("anti_doorway_lint: гейтируемые каталоги выводятся из объявленных деревьев");
 {
-  const fleet = ["earnings", "brands", "help", "about"];
+  const fleet = ["earnings", "brands", "help", "farm", "tools", "about"];
   for (const axis of LOCALES) {
     const dir = axis.vitepressKey === "root" ? "" : `${axis.vitepressKey}/`;
     for (const hub of fleet) {

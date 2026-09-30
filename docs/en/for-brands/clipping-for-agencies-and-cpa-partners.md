@@ -58,7 +58,7 @@ Client campaigns never mix: every task and offer has its own budget, terms, list
 - **Creator payouts.** The wallet-backed budget is locked on the platform and goes out on counted views and confirmed conversions. Creators are paid in USDT on TON or receive the payout in Telegram Stars; the agency never settles with them directly.
 - **Ready-made clips with uniqueization.** One setup approved by the client spreads across dozens of accounts, creators need no editing, and the copies differ from one another.
 
-How this looks from the brand's and the affiliate network's side is on the [partners page](/en/partners); traffic partners come in through the [traffic section](/en/earn/traffic).
+How this looks from the brand's and the affiliate network's side is on the [partners page](/en/partners); traffic partners come in through the [traffic section](/en/earn/traffic). If your agency runs its own clippers and accounts, [how to start a clipping agency](/en/content-farm/how-to-start-a-clipping-agency) covers roles, pay splits and margins.
 
 ## How to do the maths
 

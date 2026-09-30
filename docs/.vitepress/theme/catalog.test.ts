@@ -62,6 +62,37 @@ describe('catalog search and topics', () => {
     expect(filterCatalog(pages, '', 'all')).toEqual(pages)
   })
 
+  // The content-farm and tools hubs (2026-09-29) have no id-prefix fallback of their own: an
+  // unclassified article of theirs lands in "Getting started", which describes almost none of them.
+  // So their groups are an editorial decision spelled out here, like the routing prefixes in
+  // registry.test.ts, and an article registered in those hubs without a group fails.
+  const FARM_AND_TOOLS_GROUPS: Record<string, string> = {
+    'farm-what-is': 'basics',
+    'farm-how-to-build': 'basics',
+    'farm-team': 'team',
+    'farm-jobs': 'team',
+    'farm-ai': 'ai',
+    'farm-ubt': 'accounts',
+    'farm-multi-accounts': 'accounts',
+    'tools-capcut': 'editing',
+    'tools-auto-captions': 'editing',
+    'tools-uniqualizer': 'editing',
+    'tools-ai-clipping': 'ai',
+    'tools-voiceover': 'ai',
+    'tools-ai-video': 'ai',
+    'tools-best-ai': 'ai',
+    'tools-scheduling': 'accounts',
+    'tools-multi-account': 'accounts',
+  }
+
+  it('files every article of the content-farm and tools hubs under its own subject', () => {
+    for (const [id, topic] of Object.entries(FARM_AND_TOOLS_GROUPS)) expect(topicFor(id), id).toBe(topic)
+    const registered = PAGES.filter(
+      (page) => (page.hub === 'farm' || page.hub === 'tools') && Object.values(page.slugs).some((slug) => slug !== ''),
+    )
+    for (const page of registered) expect(Object.keys(FARM_AND_TOOLS_GROUPS), page.id).toContain(page.id)
+  })
+
   it('keeps a newly registered article discoverable before editorial classification', () => {
     const newPage = { id: 'new-article', title: 'New guide', description: 'A new subject' }
     expect(groupCatalog([newPage]).flatMap((group) => group.pages)).toEqual([newPage])
@@ -88,6 +119,14 @@ describe('related article relevance', () => {
     expect(result.every((page) => topicFor(page.id) === topicFor(current))).toBe(true)
     expect(result.some((page) => page.id === current)).toBe(false)
     for (const page of result) expect(pages).toContain(page)
+  })
+
+  // Page ids mostly open with the word of their hub (`farm-ai`, `tools-capcut`). Counted as a shared
+  // subject, it would add the same point to nearly every sibling and say nothing about the subject.
+  it('does not count the hub word of an id as a shared subject', () => {
+    for (const hub of Object.keys(HUBS)) {
+      expect(relatedScore(`${hub}-alpha`, `${hub}-beta`), hub).toBe(relatedScore('alpha', 'beta'))
+    }
   })
 
   it('prefers semantic overlap within a topic and has a stable bounded fallback', () => {

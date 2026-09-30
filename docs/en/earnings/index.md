@@ -17,6 +17,6 @@ Live tasks sit in the [clip earnings catalogue](/en/earn/clips): the rate, the t
 
 ## Where to start
 
-If this is your first time in the section, the route is short. [Clipping as a job](/en/earnings/clipping-as-a-job) - what the work is as a whole and what it asks of you. [How much you can earn from clips](/en/earnings/how-much-clipping-pays) - how to work out your own figure before you open the editor. [Where to find clipping work](/en/earnings/where-to-find-clipping-work) - where the first brief comes from and what to read on the card.
+If this is your first time in the section, the route is short. [Clipping as a job](/en/earnings/clipping-as-a-job) - what the work is as a whole and what it asks of you. [How much you can earn from clips](/en/earnings/how-much-clipping-pays) - how to work out your own figure before you open the editor. [Where to find clipping work](/en/earnings/where-to-find-clipping-work) - where the first brief comes from and what to read on the card. When you get to the edit, [tools for Reels, Shorts and TikTok](/en/tools/) lists editors, AI clippers and caption apps with prices, and once you run several accounts, the [content farm](/en/content-farm/) page shows how they get paid per view.
 
 - [DareBay at a glance](/en/about/darebay-at-a-glance) - the fact sheet: rates, fees, payouts, countries.

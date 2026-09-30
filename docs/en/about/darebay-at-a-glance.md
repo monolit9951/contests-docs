@@ -50,7 +50,7 @@ The same card in machine-readable form lives at [/data/darebay-facts.json](/data
 
 **Better offers.** Besides the rate per 1,000 views, an offer task can pay a fixed fee for every accepted clip and a share of the orders your promo code brings in, all on the same task card.
 
-**Ready-made videos with built-in uniqueization.** On offer tasks the platform hands you finished videos and makes every copy unique for you, so you can post without editing software and without repeating another clipper's clip.
+**Ready-made videos with built-in uniqueization.** On offer tasks the platform hands you finished videos and makes every copy unique for you, so you can post without editing software and without repeating another clipper's clip. How ready clips and a few live accounts add up to a [content farm paid per view](/en/content-farm/) has its own section, and editors, AI clippers and caption apps for cutting your own clips are compared in the [tools catalog](/en/tools/).
 
 **No country list.** Only people on UK, EU or UN sanctions lists are barred, so clippers in Russia, Belarus, Ukraine, Kazakhstan and the rest of CIS are paid too. The balance leaves as USDT on TON, or the payout is received in Telegram Stars; where the law closes crypto, check the local rules before cashing out USDT, and the questions below name those countries.
 

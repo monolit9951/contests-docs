@@ -6,7 +6,6 @@ import type { Theme } from 'vitepress'
 import { useData, useRouter } from 'vitepress'
 import { createStaticVNode, defineComponent, h, nextTick, onMounted, ref, watch } from 'vue'
 import type { VNode } from 'vue'
-import type { DareBayThemeConfig } from '../chrome'
 import { DocsEvent, installDocsAnalytics, startDocsPage, trackDocsEvent } from './analytics'
 import { flushEngagement, startPageEngagement } from './engagement'
 import {
@@ -23,52 +22,14 @@ import LCompare from './landing/LCompare.vue'
 import LPlatforms from './landing/LPlatforms.vue'
 import LMethod from './landing/LMethod.vue'
 import LCalc from './landing/LCalc.vue'
-import LFacts from './landing/LFacts.vue'
 import LRelated from './landing/LRelated.vue'
 import LCalcPro from './landing/LCalcPro.vue'
 import LBudget from './landing/LBudget.vue'
 import LGlossary from './landing/LGlossary.vue'
+import LCatalog from './landing/LCatalog.vue'
 import './landing/landing.css'
 import { installWebVitals } from './vitals'
 import './custom.css'
-
-// Every page ends with a way out of the docs and into the product. Readers arrive on a
-// content page straight from search, read to the bottom, and used to find nothing there
-// but links to more docs pages — the only exit was the header CTA they had already
-// scrolled past (and which phones hid inside the hamburger entirely). Injected from the
-// theme rather than written into Markdown so it also covers every page the content fleet
-// ships next, without producers having to remember it. Copy and links come from the same
-// locale themeConfig as the nav/footer, so SSR and client-side locale changes cannot drift.
-const PlatformCta = defineComponent({
-  name: 'DareBayPlatformCta',
-  setup() {
-    const { theme } = useData<DareBayThemeConfig>()
-
-    return () => {
-      const cta = theme.value.darebayCta
-
-      return h('aside', { class: 'db-cta' }, [
-        h('div', { class: 'db-cta-copy' }, [
-          h('p', { class: 'db-cta-title' }, cta.title),
-          h('p', { class: 'db-cta-lede' }, cta.lede),
-        ]),
-        h('div', { class: 'db-cta-actions' }, [
-          h('a', { class: 'db-cta-btn db-cta-btn-primary', href: cta.tasksUrl, target: '_self' }, cta.productLabel),
-          h(
-            'a',
-            {
-              class: 'db-cta-btn db-cta-btn-ghost',
-              href: cta.communityUrl,
-              target: '_blank',
-              rel: 'noreferrer',
-            },
-            cta.communityLabel,
-          ),
-        ]),
-      ])
-    }
-  },
-})
 
 // Read while this module is evaluated: app.js imports the theme statically, so this runs
 // before VitePress creates the app, loads the page chunk and rewrites the head. See failStatic.ts.
@@ -190,17 +151,16 @@ const DocsLayout = defineComponent({
       () => void nextTick(onPageReady),
     )
 
-    // `doc-footer-before` sits between the article and the prev/next pager, so the last
-    // thing a reader meets is the product — not another sideways link deeper into the docs.
-    // Every page renders through the landing shell (founder directive
-    // 2026-09-03: the old docs format is retired). `landing: false` keeps the
-    // stock VitePress layout as an escape hatch. The instrumentation above is
-    // the same for both, so analytics do not depend on which shell rendered.
+    // Every page renders through the landing shell (founder directive 2026-09-03: the old docs
+    // format is retired), and the shell ends every page with the product CTA band (LCta.vue).
+    // `landing: false` keeps the stock VitePress layout as a bare escape hatch; no page uses it
+    // (2026-09-29), so its old injected CTA box is gone with its styles. The instrumentation above
+    // is the same for both, so analytics do not depend on which shell rendered.
     return () =>
       keepServed.value && servedVNode
         ? servedVNode
         : frontmatter.value.landing === false
-          ? h(DefaultTheme.Layout, null, { 'doc-footer-before': () => h(PlatformCta) })
+          ? h(DefaultTheme.Layout)
           : h(LandingLayout)
   },
 })
@@ -219,11 +179,17 @@ export default {
     app.component('LPlatforms', LPlatforms)
     app.component('LMethod', LMethod)
     app.component('LCalc', LCalc)
-    app.component('LFacts', LFacts)
     app.component('LRelated', LRelated)
     app.component('LCalcPro', LCalcPro)
     app.component('LBudget', LBudget)
     app.component('LGlossary', LGlossary)
+    // The section catalogue of a showcase hub index, which the layout itself also renders
+    // (LandingLayout.vue): prerendered like the rest.
+    app.component('LCatalog', LCatalog)
+    // Not the other landing blocks: the two or four pages that show LFlow, LFeatures, LSetup or
+    // LTools import them in their own `<script setup>` (LTools with its catalogue,
+    // tools.<locale>.data.ts), so none of them weighs on this chunk every page downloads, and the
+    // build refuses a page that places one without importing it (`sourceProblems`).
 
     if (typeof window === 'undefined') return
 

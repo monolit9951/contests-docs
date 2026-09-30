@@ -1,0 +1,2489 @@
+{
+  "checkedAt": "2026-09-29",
+  "categories": [
+    {
+      "id": "editing",
+      "label": {
+        "ru": "Монтаж",
+        "en": "Editing"
+      },
+      "lede": {
+        "ru": "Редактор собирает вертикальный кадр 9:16, режет ролик и накладывает текст и звук. Бесплатные редакторы есть и для телефона, и для компьютера; смотри, на каком тарифе остаётся водяной знак.",
+        "en": "An editor builds the 9:16 frame, trims the clip and adds text and sound. Free editors run on phones and computers; check which plan still leaves a watermark."
+      }
+    },
+    {
+      "id": "ai-clipping",
+      "label": {
+        "ru": "ИИ-нарезка",
+        "en": "AI clipping"
+      },
+      "lede": {
+        "ru": "Нейросеть находит сильные моменты в длинной записи и режет их на вертикальные клипы с субтитрами. Тарифы считают минуты исходника или готовые клипы, поэтому сравнивай, сколько часов записи даёт месяц.",
+        "en": "AI clippers find the strongest moments in a long recording and cut them into captioned vertical clips. Plans count minutes of footage or finished clips, so compare how many hours a month you get."
+      }
+    },
+    {
+      "id": "captions",
+      "label": {
+        "ru": "Субтитры",
+        "en": "Captions"
+      },
+      "lede": {
+        "ru": "Крупные субтитры держат зрителя, который смотрит без звука. Эти сервисы расставляют их сами; на бесплатном тарифе проверь, нет ли водяного знака.",
+        "en": "Big captions keep viewers who watch with the sound off. These tools write them for you; on a free plan, check whether exports carry a watermark."
+      }
+    },
+    {
+      "id": "voice-avatars",
+      "label": {
+        "ru": "Озвучка и аватары",
+        "en": "Voice and avatars"
+      },
+      "lede": {
+        "ru": "Голос за кадром и говорящий аватар для роликов без съёмки. Для оплачиваемых заданий проверяй, разрешает ли тариф коммерческое использование.",
+        "en": "A voiceover or a talking avatar for clips you don't film yourself. For paid work, check that your plan allows commercial use."
+      }
+    },
+    {
+      "id": "ai-video",
+      "label": {
+        "ru": "ИИ-видео",
+        "en": "AI video"
+      },
+      "lede": {
+        "ru": "Короткие сцены по текстовому описанию или картинке. Реалистичный ролик от нейросети помечай меткой ИИ там, где её требует площадка.",
+        "en": "Short scenes generated from a text prompt or an image. Label realistic AI footage wherever the platform asks for it."
+      }
+    },
+    {
+      "id": "uniqueization",
+      "label": {
+        "ru": "Уникализация",
+        "en": "Unique versions"
+      },
+      "lede": {
+        "ru": "Своя версия ролика на каждый аккаунт. По замеру DareBay цвет, фильтры и шум ролик почти не меняют, а новая раскладка кадра и новая озвучка меняют. Прав на чужое видео уникализация не даёт.",
+        "en": "A separate version of a clip for every account. In DareBay's own test, color, filters and noise barely changed a clip, while a new layout and a new voiceover did. None of it gives you rights to someone else's video."
+      }
+    },
+    {
+      "id": "publishing",
+      "label": {
+        "ru": "Публикация и планировщики",
+        "en": "Publishing and schedulers"
+      },
+      "lede": {
+        "ru": "Отложенная публикация и несколько аккаунтов в одном окне. Список площадок у каждого сервиса свой, поэтому до оплаты проверь, есть ли там TikTok, Reels и Shorts.",
+        "en": "Scheduled posting and several accounts in one place. Supported platforms differ from tool to tool, so check for TikTok, Reels and Shorts before you pay."
+      }
+    },
+    {
+      "id": "analytics-hooks",
+      "label": {
+        "ru": "Тренды, хуки и аналитика",
+        "en": "Trends, hooks and analytics"
+      },
+      "lede": {
+        "ru": "Где искать идею для следующего ролика и что смотреть после публикации: тренды, генераторы первой фразы и статистика аккаунтов.",
+        "en": "Where to find the next idea and what to check after posting: trend tools, hook generators and account stats."
+      }
+    },
+    {
+      "id": "multi-account",
+      "label": {
+        "ru": "Мультиаккаунт",
+        "en": "Multi-account"
+      },
+      "lede": {
+        "ru": "Антидетект-браузеры, облачные телефоны и мобильные прокси держат рабочие профили раздельно, ими пользуются агентства и SMM-команды. Оригинальности роликам они не добавляют, а накрутка не оплачивается.",
+        "en": "Antidetect browsers, cloud phones and mobile proxies keep work profiles apart; agencies and social media teams use them. They add nothing to a clip's originality, and botted views aren't paid."
+      },
+      "hold": "F1: founder decision on multi-account tools pending (BRIEF §8.3); in RU also V9 (legal check) for mobile proxies. landing-tools-spec §5.3"
+    }
+  ],
+  "tools": [
+    {
+      "id": "capcut",
+      "category": "editing",
+      "name": "CapCut",
+      "url": "https://www.capcut.com/",
+      "whatFor": {
+        "ru": "Монтаж на телефоне, в браузере и на компьютере: шаблоны, автосубтитры, озвучка текста",
+        "en": "Edit on phone, web or desktop: templates, auto captions, text to speech"
+      },
+      "priceFrom": {
+        "ru": "Цена Pro зависит от региона, устройства и акций, её показывают в приложении",
+        "en": "Pro price depends on region, device and promotions; the app shows it"
+      },
+      "priceBadge": {
+        "ru": "Бесплатно, есть Pro",
+        "en": "Free, paid Pro"
+      },
+      "priceCheckedAt": "2026-09-29",
+      "freeTier": {
+        "ru": "Бесплатная версия есть; экспорт в 4K, ролики без водяных знаков и ИИ-инструменты входят в Pro",
+        "en": "Free version; 4K export, no watermarks and AI tools are part of Pro"
+      },
+      "availability": {
+        "ru": "Бесплатная версия работает. По справке CapCut, Pro может отключаться у аккаунтов, созданных в России, даже после оплаты; App Store и Google Play в России оплату не принимают",
+        "en": "Phone, browser and desktop. CapCut's help center says Pro may be disabled for accounts created in China, India or Russia, regardless of payment"
+      },
+      "review": {
+        "ru": "/instrumenty/capcut-v-rossii",
+        "en": "/en/tools/capcut-alternatives"
+      },
+      "affiliate": {
+        "program": "CapCut Affiliate Program (Impact)",
+        "commission": "up to 35% recurring, up to $15,000",
+        "cookie": null,
+        "payout": "via Impact",
+        "url": "https://www.capcut.com/partners/affiliate-program",
+        "limits": "only CapCut Pro subscribers from US, UK, Germany and France qualify; approval in Impact",
+        "checkedAt": "2026-09-29"
+      },
+      "darebay": {
+        "own": false
+      },
+      "source": {
+        "url": "https://www.capcut.com/help/how-much-does-capcut-pro-cost",
+        "date": "2026-09-29"
+      },
+      "sources": [
+        {
+          "field": "availability.ru, freeTier",
+          "url": "https://www.capcut.com/ru-by/help/capcut-pro-benefits-not-working-after-purchase",
+          "date": "2026-09-29"
+        },
+        {
+          "field": "availability (App Store RU)",
+          "url": "https://support.apple.com/en-us/126891",
+          "date": "2026-09-29"
+        },
+        {
+          "field": "availability (Google Play RU)",
+          "url": "https://support.google.com/googleplay/android-developer/answer/11950272",
+          "date": "2026-09-29"
+        },
+        {
+          "field": "affiliate",
+          "url": "https://www.capcut.com/partners/affiliate-program",
+          "date": "2026-09-29"
+        }
+      ]
+    },
+    {
+      "id": "vn",
+      "category": "editing",
+      "name": "VN",
+      "url": "https://www.vlognow.me/",
+      "whatFor": {
+        "ru": "Бесплатный редактор для телефона и компьютера: шаблоны, автосубтитры, озвучка текста",
+        "en": "Free editor for phone and desktop: templates, auto captions, text to speech"
+      },
+      "priceFrom": {
+        "ru": "Бесплатно",
+        "en": "Free"
+      },
+      "priceBadge": {
+        "ru": "Бесплатно",
+        "en": "Free"
+      },
+      "priceCheckedAt": "2026-09-29",
+      "freeTier": {
+        "ru": "Монтаж и шаблоны без водяных знаков",
+        "en": "Editing and templates with no watermarks"
+      },
+      "availability": {
+        "ru": "Версии для iOS, Android (в том числе APK с сайта), macOS и Windows",
+        "en": "iOS, Android (also an APK from VN's site), Mac and Windows"
+      },
+      "review": {
+        "ru": "/instrumenty/capcut-v-rossii",
+        "en": "/en/tools/capcut-alternatives"
+      },
+      "affiliate": null,
+      "darebay": {
+        "own": false
+      },
+      "source": {
+        "url": "https://www.vlognow.me/",
+        "date": "2026-09-29"
+      }
+    },
+    {
+      "id": "inshot",
+      "category": "editing",
+      "name": "InShot",
+      "url": "https://inshot.com/",
+      "locales": [
+        "en"
+      ],
+      "whatFor": {
+        "en": "Simple phone editing: trims, transitions, music, auto captions"
+      },
+      "priceFrom": {
+        "en": "Pro from $4.99/month, $19.99/year or $49.99 lifetime (US App Store)"
+      },
+      "priceBadge": {
+        "en": "from $4.99/mo"
+      },
+      "pay": {
+        "en": "app-store"
+      },
+      "priceCheckedAt": "2026-09-29",
+      "freeTier": {
+        "en": "Free version shows ads and the InShot logo; a subscription removes both"
+      },
+      "availability": {
+        "en": "iOS and Android; Pro is an in-app purchase"
+      },
+      "review": {
+        "en": "/en/tools/capcut-alternatives"
+      },
+      "affiliate": null,
+      "darebay": {
+        "own": false
+      },
+      "source": {
+        "url": "https://apps.apple.com/us/app/inshot-video-editor/id997362197",
+        "date": "2026-09-29",
+        "owner": "App Store listing by the developer"
+      },
+      "sources": [
+        {
+          "field": "freeTier (logo and ads removal with subscription)",
+          "url": "https://inshot.cc/terms/terms.html",
+          "date": "2026-09-29"
+        },
+        {
+          "field": "platforms, features",
+          "url": "https://inshot.com/",
+          "date": "2026-09-29"
+        },
+        {
+          "field": "availability.ru",
+          "url": "https://support.apple.com/en-us/126891",
+          "date": "2026-09-29"
+        },
+        {
+          "field": "platforms (App Store, Google Play, AppGallery)",
+          "url": "https://inshot.com/",
+          "date": "2026-09-29"
+        }
+      ]
+    },
+    {
+      "id": "edits",
+      "category": "editing",
+      "name": "Edits",
+      "displayName": {
+        "ru": "Edits от Instagram",
+        "en": "Edits by Instagram"
+      },
+      "mono": "E",
+      "url": "https://creators.instagram.com/edits/",
+      "whatFor": {
+        "ru": "Бесплатный редактор рилс от Instagram: таймлайн, зелёный экран, субтитры, статистика роликов",
+        "en": "Instagram's free reels editor: timeline, green screen, captions, reel insights"
+      },
+      "priceFrom": {
+        "ru": "Бесплатно",
+        "en": "Free"
+      },
+      "priceBadge": {
+        "ru": "Бесплатно",
+        "en": "Free"
+      },
+      "priceCheckedAt": "2026-09-29",
+      "freeTier": {
+        "ru": "Экспорт до 4K без водяного знака",
+        "en": "Exports up to 4K with no watermark"
+      },
+      "availability": {
+        "ru": "Только телефон (iOS и Android), вход через аккаунт Instagram; в российском App Store приложение есть",
+        "en": "iPhone and Android; you log in with an Instagram account"
+      },
+      "review": {
+        "en": "/en/tools/capcut-alternatives"
+      },
+      "affiliate": null,
+      "darebay": {
+        "own": false
+      },
+      "source": {
+        "url": "https://creators.instagram.com/edits/",
+        "date": "2026-09-29"
+      },
+      "sources": [
+        {
+          "field": "price, 4K no watermark",
+          "url": "https://apps.apple.com/us/app/edits-video-editor/id6738967378",
+          "date": "2026-09-29"
+        },
+        {
+          "field": "availability.ru (RU storefront listing resolves)",
+          "url": "https://apps.apple.com/ru/app/edits-video-editor/id6738967378",
+          "date": "2026-09-29"
+        },
+        {
+          "field": "platforms (iOS and Android)",
+          "url": "https://creators.instagram.com/edits/",
+          "date": "2026-09-29"
+        }
+      ]
+    },
+    {
+      "id": "davinci-resolve",
+      "category": "editing",
+      "name": "DaVinci Resolve",
+      "url": "https://www.blackmagicdesign.com/products/davinciresolve",
+      "whatFor": {
+        "ru": "Профессиональный монтаж, цвет и звук на компьютере; бесплатной версии хватает для рилс",
+        "en": "Pro-grade editing, color and audio on desktop; the free version covers reels"
+      },
+      "priceFrom": {
+        "ru": "Studio $295 разово",
+        "en": "Studio $295 one-time"
+      },
+      "priceBadge": {
+        "ru": "Бесплатно или $295",
+        "en": "Free or $295"
+      },
+      "priceCheckedAt": "2026-09-29",
+      "freeTier": {
+        "ru": "Бесплатная версия: до Ultra HD 3840×2160 и 60 кадров в секунду",
+        "en": "Free version: up to Ultra HD 3840×2160 at 60 fps"
+      },
+      "availability": {
+        "ru": "Бесплатной версии хватает для рилс, она скачивается с сайта производителя; Studio продаётся разово",
+        "en": "Mac, Windows and Linux; the free version downloads from Blackmagic Design's site"
+      },
+      "review": {
+        "ru": "/instrumenty/capcut-v-rossii",
+        "en": "/en/tools/capcut-alternatives"
+      },
+      "affiliate": null,
+      "darebay": {
+        "own": false
+      },
+      "source": {
+        "url": "https://www.blackmagicdesign.com/products/davinciresolve",
+        "date": "2026-09-29"
+      }
+    },
+    {
+      "id": "movavika",
+      "category": "editing",
+      "name": "Movavika Video",
+      "displayName": {
+        "ru": "Мовавика Видео",
+        "en": "Movavika Video (formerly Movavi)"
+      },
+      "url": "https://www.movavika.ru/videoeditor/",
+      "locales": [
+        "ru"
+      ],
+      "whatFor": {
+        "ru": "Простой монтаж на компьютере: шаблоны, автокадрирование, субтитры с подсветкой слов"
+      },
+      "priceFrom": {
+        "ru": "От 790 ₽ в месяц (Лайт, с водяным знаком); без водяного знака от 1 090 ₽ в месяц или 2 990 ₽ за год (Видео Плюс, со скидкой)"
+      },
+      "priceBadge": {
+        "ru": "от 790 ₽/мес"
+      },
+      "pay": {
+        "ru": "rub"
+      },
+      "priceCheckedAt": "2026-09-29",
+      "freeTier": {
+        "ru": "Бесплатная версия: водяной знак и ролики до 60 секунд; 7 дней подписки бесплатно"
+      },
+      "availability": {
+        "ru": "Российская компания, оплата в рублях"
+      },
+      "review": {
+        "ru": "/instrumenty/capcut-v-rossii"
+      },
+      "affiliate": null,
+      "darebay": {
+        "own": false
+      },
+      "source": {
+        "url": "https://www.movavika.ru/video-editor-plus/buynow.html",
+        "date": "2026-09-29"
+      },
+      "sources": [
+        {
+          "field": "freeTier, version 27.0.1 (29.09.2026)",
+          "url": "https://www.movavika.ru/videoeditor/",
+          "date": "2026-09-29"
+        }
+      ]
+    },
+    {
+      "id": "opusclip",
+      "category": "ai-clipping",
+      "name": "OpusClip",
+      "url": "https://www.opus.pro/",
+      "whatFor": {
+        "ru": "Режет длинное видео на вертикальные клипы, ставит субтитры и оценку виральности",
+        "en": "Turns long videos into vertical clips with captions and a virality score"
+      },
+      "priceFrom": {
+        "ru": "Starter $15 в месяц (только помесячно, 150 кредитов); Pro $29 в месяц или $14,5 в месяц при оплате за год",
+        "en": "Starter $15/month (monthly only, 150 credits); Pro $29/month or $14.50/month billed yearly"
+      },
+      "priceBadge": {
+        "ru": "от $14,5/мес",
+        "en": "from $14.50/mo"
+      },
+      "pay": {
+        "ru": "foreign-card",
+        "en": "foreign-card"
+      },
+      "priceCheckedAt": "2026-09-29",
+      "freeTier": {
+        "ru": "60 кредитов в месяц, клипы до 1080p с водяным знаком, скачать можно в течение 3 дней",
+        "en": "60 credits a month, clips up to 1080p with a watermark, exportable for 3 days"
+      },
+      "availability": {
+        "ru": "Оплата картой, выпущенной вне России",
+        "en": "Browser and iOS app; the Android app is out in 8 countries, English only"
+      },
+      "review": {
+        "ru": "/instrumenty/neyroseti-dlya-narezki-video",
+        "en": "/en/tools/opus-clip-alternatives"
+      },
+      "affiliate": {
+        "program": "OpusClip Affiliate",
+        "commission": "25% recurring for the first year of each new subscriber",
+        "cookie": null,
+        "payout": "PayPal only, USD, on the 15th of each month",
+        "url": "https://www.opus.pro/affiliate",
+        "limits": "approval about a week; account deactivated if no traffic within 6 months",
+        "checkedAt": "2026-09-29"
+      },
+      "darebay": {
+        "own": false
+      },
+      "source": {
+        "url": "https://www.opus.pro/pricing",
+        "date": "2026-09-29"
+      },
+      "sources": [
+        {
+          "field": "affiliate",
+          "url": "https://www.opus.pro/affiliate",
+          "date": "2026-09-29"
+        },
+        {
+          "field": "platforms, availability.en (iOS app)",
+          "url": "https://help.opus.pro/docs/article/does-opusclip-have-a-mobile-app",
+          "date": "2026-09-29"
+        },
+        {
+          "field": "platforms, availability.en (Android app: US, UK, Canada, Australia, Germany, France, Spain, Brazil; English only)",
+          "url": "https://help.opus.pro/docs/article/android-app-supported-unsupported-features",
+          "date": "2026-09-29"
+        }
+      ]
+    },
+    {
+      "id": "vizard",
+      "category": "ai-clipping",
+      "name": "Vizard",
+      "url": "https://vizard.ai/",
+      "whatFor": {
+        "ru": "ИИ-нарезка длинных видео на клипы с субтитрами и публикацией по расписанию",
+        "en": "AI clipping of long videos with captions and scheduled posting"
+      },
+      "priceFrom": {
+        "ru": "Creator $29 в месяц или $14,5 в месяц при оплате за год ($174), 600 кредитов, 1 кредит = 1 минута видео",
+        "en": "Creator $29/month or $14.50/month billed yearly ($174), 600 credits, 1 credit = 1 minute of video"
+      },
+      "priceBadge": {
+        "ru": "от $14,5/мес",
+        "en": "from $14.50/mo"
+      },
+      "pay": {
+        "ru": "foreign-card",
+        "en": "foreign-card"
+      },
+      "priceCheckedAt": "2026-09-29",
+      "freeTier": {
+        "ru": "60 кредитов в месяц, экспорт 720p, хранение 3 дня; без водяного знака только в Creator",
+        "en": "60 credits a month, 720p export, 3-day storage; no watermark only on Creator"
+      },
+      "availability": {
+        "ru": "Оплата через Stripe или PayPal, нужна карта, выпущенная вне России",
+        "en": "Browser, plus iOS and Android apps"
+      },
+      "review": {
+        "ru": "/instrumenty/neyroseti-dlya-narezki-video",
+        "en": "/en/tools/opus-clip-alternatives"
+      },
+      "affiliate": {
+        "program": "Vizard Affiliate (Rewardful)",
+        "commission": "25% of the paid subscription amount",
+        "cookie": "60 days",
+        "payout": null,
+        "url": "https://vizard.ai/affiliate",
+        "limits": null,
+        "checkedAt": "2026-09-29"
+      },
+      "darebay": {
+        "own": false
+      },
+      "source": {
+        "url": "https://vizard.ai/pricing",
+        "date": "2026-09-29"
+      },
+      "sources": [
+        {
+          "field": "priceFrom (plan data behind the pricing page)",
+          "url": "https://elb-api.vizard.ai/hvizard-server-front/api/v1/subscription/list",
+          "date": "2026-09-29"
+        },
+        {
+          "field": "affiliate",
+          "url": "https://vizard.ai/affiliate",
+          "date": "2026-09-29"
+        },
+        {
+          "field": "platforms, availability.en (App Store)",
+          "url": "https://apps.apple.com/us/app/vizard-ai-video-clip-maker/id6748490660",
+          "date": "2026-09-29"
+        },
+        {
+          "field": "platforms, availability.en (Google Play)",
+          "url": "https://play.google.com/store/apps/details?id=ai.vizard.android",
+          "date": "2026-09-29"
+        }
+      ]
+    },
+    {
+      "id": "klap",
+      "category": "ai-clipping",
+      "name": "Klap",
+      "url": "https://klap.app/",
+      "whatFor": {
+        "ru": "Делает из длинного видео вертикальные клипы и публикует их в соцсети",
+        "en": "Turns long videos into vertical clips and posts them to socials"
+      },
+      "priceFrom": {
+        "ru": "Basic $14 в месяц при оплате за год (100 клипов в месяц)",
+        "en": "Basic $14/month billed yearly (100 clips a month)"
+      },
+      "priceBadge": {
+        "ru": "от $14/мес",
+        "en": "from $14/mo"
+      },
+      "pay": {
+        "ru": "foreign-card",
+        "en": "foreign-card"
+      },
+      "priceCheckedAt": "2026-09-29",
+      "freeTier": {
+        "ru": "Один ролик на пробу без карты",
+        "en": "One video free to try, no card needed"
+      },
+      "availability": {
+        "ru": "Оплата картой, выпущенной вне России",
+        "en": "Runs in a browser"
+      },
+      "review": {
+        "ru": "/instrumenty/neyroseti-dlya-narezki-video",
+        "en": "/en/tools/opus-clip-alternatives"
+      },
+      "affiliate": {
+        "program": "Klap Affiliate",
+        "commission": "30% recurring for life",
+        "cookie": null,
+        "payout": "PayPal, from $20",
+        "url": "https://klap.app/affiliate",
+        "limits": null,
+        "checkedAt": "2026-09-29"
+      },
+      "darebay": {
+        "own": false
+      },
+      "source": {
+        "url": "https://klap.app/pricing",
+        "date": "2026-09-29"
+      },
+      "sources": [
+        {
+          "field": "affiliate",
+          "url": "https://klap.app/affiliate",
+          "date": "2026-09-29"
+        },
+        {
+          "field": "freeTier",
+          "url": "https://klap.app/",
+          "date": "2026-09-29"
+        }
+      ]
+    },
+    {
+      "id": "reels-boss",
+      "category": "ai-clipping",
+      "name": "Reels Boss",
+      "displayName": {
+        "ru": "Рилс Босс"
+      },
+      "url": "https://reels-boss.io/",
+      "locales": [
+        "ru"
+      ],
+      "whatFor": {
+        "ru": "Российский сервис: из одного длинного видео десятки рилс и шортсов с субтитрами"
+      },
+      "priceFrom": {
+        "ru": "Про 3 490 ₽ в месяц или 2 270 ₽ в месяц при оплате за год (27 240 ₽)"
+      },
+      "priceBadge": {
+        "ru": "от 2 270 ₽/мес"
+      },
+      "pay": {
+        "ru": "rub"
+      },
+      "priceCheckedAt": "2026-09-29",
+      "freeTier": {
+        "ru": "Первые 5 роликов бесплатно или 20 кредитов без карты"
+      },
+      "availability": {
+        "ru": "Оплата российскими картами и СБП: Visa, Mastercard, МИР, СБП"
+      },
+      "review": {
+        "ru": "/instrumenty/neyroseti-dlya-narezki-video"
+      },
+      "affiliate": {
+        "program": "Reels Boss partner program",
+        "commission": "35% of the first payment + 20 to 35% of renewals by tier",
+        "cookie": "12 months",
+        "payout": "from 3,000 RUB via SBP, card or invoice; 30-day hold",
+        "url": "https://reels-boss.io/affiliate-program",
+        "limits": null,
+        "checkedAt": "2026-09-29"
+      },
+      "darebay": {
+        "own": false
+      },
+      "source": {
+        "url": "https://reels-boss.io/pricing",
+        "date": "2026-09-29"
+      },
+      "sources": [
+        {
+          "field": "affiliate",
+          "url": "https://reels-boss.io/affiliate-program",
+          "date": "2026-09-29"
+        }
+      ]
+    },
+    {
+      "id": "mnogoreels",
+      "category": "ai-clipping",
+      "name": "MnogoReels",
+      "url": "https://mnogo-reels.ru/",
+      "locales": [
+        "ru"
+      ],
+      "whatFor": {
+        "ru": "Российский сервис ИИ-нарезки: подкаст или эфир превращается в пачку рилс с субтитрами"
+      },
+      "priceFrom": {
+        "ru": "Автор 2 900 ₽ в месяц (500 кредитов, 1 кредит = 1 минута видео); при оплате за год скидка 50 %"
+      },
+      "priceBadge": {
+        "ru": "Автор 2 900 ₽/мес"
+      },
+      "pay": {
+        "ru": "rub"
+      },
+      "priceCheckedAt": "2026-09-29",
+      "freeTier": {
+        "ru": "60 кредитов в месяц (около часа исходника), экспорт 720p; без водяного знака только на платном тарифе"
+      },
+      "availability": {
+        "ru": "Оплата картами российских банков (МИР, Visa, Mastercard) и зарубежными картами"
+      },
+      "review": {
+        "ru": "/instrumenty/neyroseti-dlya-narezki-video"
+      },
+      "affiliate": null,
+      "darebay": {
+        "own": false
+      },
+      "source": {
+        "url": "https://mnogo-reels.ru/",
+        "date": "2026-09-29"
+      }
+    },
+    {
+      "id": "submagic",
+      "category": "captions",
+      "name": "Submagic",
+      "url": "https://www.submagic.co/",
+      "whatFor": {
+        "ru": "Анимированные субтитры, хук-заголовки и удаление пауз для шортсов",
+        "en": "Animated captions, hook titles and silence removal for shorts"
+      },
+      "priceFrom": {
+        "ru": "Starter $19 в месяц или $12 в месяц при оплате за год (15 видео до 2 минут)",
+        "en": "Starter $19/month or $12/month billed yearly (15 videos up to 2 minutes)"
+      },
+      "priceBadge": {
+        "ru": "от $12/мес",
+        "en": "from $12/mo"
+      },
+      "pay": {
+        "ru": "foreign-card",
+        "en": "foreign-card"
+      },
+      "priceCheckedAt": "2026-09-29",
+      "freeTier": {
+        "ru": "Бесплатного тарифа нет, попробовать можно без карты",
+        "en": "No free plan; you can start without a card"
+      },
+      "availability": {
+        "ru": "Оплата картой, выпущенной вне России",
+        "en": "Runs in a browser"
+      },
+      "affiliate": {
+        "program": "Submagic Affiliate",
+        "commission": "30% recurring for life",
+        "cookie": null,
+        "payout": "PayPal only, on the 7th, minimum $50",
+        "url": "https://www.submagic.co/affiliate",
+        "limits": "paid ads not allowed",
+        "checkedAt": "2026-09-29"
+      },
+      "darebay": {
+        "own": false
+      },
+      "source": {
+        "url": "https://www.submagic.co/pricing",
+        "date": "2026-09-29"
+      },
+      "sources": [
+        {
+          "field": "affiliate",
+          "url": "https://www.submagic.co/affiliate",
+          "date": "2026-09-29"
+        }
+      ]
+    },
+    {
+      "id": "captions-app",
+      "category": "captions",
+      "name": "Captions",
+      "url": "https://captions.ai/",
+      "locales": [
+        "en"
+      ],
+      "whatFor": {
+        "en": "Mobile app: captions in 100+ languages, AI editing, translation and voiceover"
+      },
+      "priceFrom": {
+        "en": "Max $24.99/month (iOS prices)"
+      },
+      "priceBadge": {
+        "en": "Max $24.99/mo"
+      },
+      "pay": {
+        "en": "app-store"
+      },
+      "priceCheckedAt": "2026-09-29",
+      "freeTier": {
+        "en": "Free plan without AI credits"
+      },
+      "availability": {
+        "en": "iPhone app; the prices shown are the iOS plans"
+      },
+      "affiliate": null,
+      "darebay": {
+        "own": false
+      },
+      "source": {
+        "url": "https://captions.ai/pricing",
+        "date": "2026-09-29"
+      }
+    },
+    {
+      "id": "veed",
+      "category": "captions",
+      "name": "VEED",
+      "url": "https://www.veed.io/",
+      "whatFor": {
+        "ru": "Онлайн-редактор: автосубтитры, перевод, удаление шума прямо в браузере",
+        "en": "Browser editor: auto subtitles, translation, noise removal"
+      },
+      "priceFrom": {
+        "ru": "Creator €129 в год за пользователя (оплата за год, цена для ЕС)",
+        "en": "Creator €129/year per user (billed yearly, EU price)"
+      },
+      "priceBadge": {
+        "ru": "Creator €129/год",
+        "en": "Creator €129/yr"
+      },
+      "pay": {
+        "ru": "foreign-card",
+        "en": "foreign-card"
+      },
+      "priceCheckedAt": "2026-09-29",
+      "freeTier": {
+        "ru": "Бесплатный план: водяной знак в углу видео",
+        "en": "Free plan: watermark in the corner of videos"
+      },
+      "availability": {
+        "ru": "Оплата картой, выпущенной вне России",
+        "en": "Runs in a browser"
+      },
+      "affiliate": {
+        "program": "VEED Affiliate (Impact)",
+        "commission": "20% initial + 20% recurring, bonuses up to 50%",
+        "cookie": null,
+        "payout": "via Impact: ACH/EFT, PayPal or wire",
+        "url": "https://www.veed.io/affiliate",
+        "limits": null,
+        "checkedAt": "2026-09-29"
+      },
+      "darebay": {
+        "own": false
+      },
+      "source": {
+        "url": "https://www.veed.io/pricing",
+        "date": "2026-09-29"
+      },
+      "sources": [
+        {
+          "field": "affiliate",
+          "url": "https://www.veed.io/affiliate",
+          "date": "2026-09-29"
+        }
+      ]
+    },
+    {
+      "id": "vizard-subtitles",
+      "category": "captions",
+      "name": "Vizard auto subtitle generator",
+      "displayName": {
+        "ru": "Vizard: генератор субтитров"
+      },
+      "mono": "V",
+      "url": "https://vizard.ai/tools/auto-subtitle-generator-online",
+      "whatFor": {
+        "ru": "Бесплатные анимированные субтитры в браузере: 50+ языков, перевод на 180+",
+        "en": "Free animated subtitles in the browser: 50+ languages, translation to 180+"
+      },
+      "priceFrom": {
+        "ru": "Бесплатно",
+        "en": "Free"
+      },
+      "priceBadge": {
+        "ru": "Бесплатно",
+        "en": "Free"
+      },
+      "priceCheckedAt": "2026-09-29",
+      "freeTier": null,
+      "availability": {
+        "ru": "Работает в браузере",
+        "en": "Runs in a browser"
+      },
+      "affiliate": null,
+      "darebay": {
+        "own": false
+      },
+      "source": {
+        "url": "https://vizard.ai/ru/tools/auto-subtitle-generator-online",
+        "date": "2026-09-29"
+      },
+      "sources": [
+        {
+          "field": "en",
+          "url": "https://vizard.ai/tools/auto-subtitle-generator-online",
+          "date": "2026-09-29"
+        }
+      ]
+    },
+    {
+      "id": "elevenlabs",
+      "category": "voice-avatars",
+      "name": "ElevenLabs",
+      "url": "https://elevenlabs.io/",
+      "whatFor": {
+        "ru": "Озвучка текста и клонирование голоса, дубляж на другие языки",
+        "en": "Text to speech, voice cloning and dubbing"
+      },
+      "priceFrom": {
+        "ru": "Starter $6 в месяц (30 тыс. кредитов, коммерческая лицензия)",
+        "en": "Starter $6/month (30k credits, commercial license)"
+      },
+      "priceBadge": {
+        "ru": "от $6/мес",
+        "en": "from $6/mo"
+      },
+      "pay": {
+        "ru": "unavailable",
+        "en": "foreign-card"
+      },
+      "priceCheckedAt": "2026-09-29",
+      "freeTier": {
+        "ru": "10 тыс. кредитов в месяц",
+        "en": "10k credits a month"
+      },
+      "availability": {
+        "ru": "Сервис блокирует доступ из России и Беларуси; в Казахстане, Узбекистане и других странах СНГ ограничения нет",
+        "en": "Runs in a browser; access is restricted in some countries, listed in its help center"
+      },
+      "review": {
+        "ru": "/instrumenty/ozvuchka-video-neyrosetyu"
+      },
+      "affiliate": {
+        "program": "ElevenLabs Affiliate (PartnerStack)",
+        "commission": "up to 22% over 12 months",
+        "cookie": null,
+        "payout": "PartnerStack",
+        "url": "https://elevenlabs.io/affiliates",
+        "limits": "traffic from Russia cannot convert (service blocked)",
+        "checkedAt": "2026-09-29"
+      },
+      "darebay": {
+        "own": false
+      },
+      "source": {
+        "url": "https://elevenlabs.io/pricing",
+        "date": "2026-09-29"
+      },
+      "sources": [
+        {
+          "field": "availability",
+          "url": "https://help.elevenlabs.io/hc/en-us/articles/22497891312401",
+          "date": "2026-09-29"
+        },
+        {
+          "field": "affiliate",
+          "url": "https://elevenlabs.io/affiliates",
+          "date": "2026-09-29"
+        }
+      ]
+    },
+    {
+      "id": "zvukogram",
+      "category": "voice-avatars",
+      "name": "Zvukogram",
+      "displayName": {
+        "ru": "Звукограм"
+      },
+      "url": "https://zvukogram.com/",
+      "locales": [
+        "ru"
+      ],
+      "whatFor": {
+        "ru": "Озвучка текста нейроголосами: 140+ русских голосов, клонирование голоса, транскрибация"
+      },
+      "priceFrom": {
+        "ru": "Пакеты от 150 ₽ (1 токен = 1 ₽; от 1 токена за 1000 знаков обычным голосом, от 5 премиум)"
+      },
+      "priceBadge": {
+        "ru": "пакеты от 150 ₽"
+      },
+      "pay": {
+        "ru": "rub"
+      },
+      "priceCheckedAt": "2026-09-29",
+      "freeTier": {
+        "ru": "10 токенов при регистрации: 2 000 знаков премиум-голосом или 10 000 обычным"
+      },
+      "availability": {
+        "ru": "Работает в России, оплата российскими картами"
+      },
+      "review": {
+        "ru": "/instrumenty/ozvuchka-video-neyrosetyu"
+      },
+      "affiliate": null,
+      "darebay": {
+        "own": false
+      },
+      "source": {
+        "url": "https://zvukogram.com/index.php?r=site/offers",
+        "date": "2026-09-29"
+      },
+      "sources": [
+        {
+          "field": "availability, voices",
+          "url": "https://zvukogram.com/",
+          "date": "2026-09-29"
+        }
+      ]
+    },
+    {
+      "id": "ttsmaker",
+      "category": "voice-avatars",
+      "name": "TTSMaker",
+      "url": "https://ttsmaker.com/",
+      "whatFor": {
+        "ru": "Бесплатная озвучка текста в браузере, есть русские голоса и выгрузка субтитров SRT",
+        "en": "Free text to speech in the browser, 100+ languages, SRT export"
+      },
+      "priceFrom": {
+        "ru": "Lite $9,99 в месяц при оплате за год ($13,99 помесячно)",
+        "en": "Lite $9.99/month billed yearly ($13.99 monthly)"
+      },
+      "priceBadge": {
+        "ru": "Бесплатно, от $9,99",
+        "en": "Free, from $9.99/mo"
+      },
+      "priceCheckedAt": "2026-09-29",
+      "freeTier": {
+        "ru": "20 000 знаков в неделю, до 500 знаков за раз, коммерческое использование разрешено",
+        "en": "20,000 characters a week, up to 500 per conversion, commercial use allowed"
+      },
+      "availability": {
+        "ru": "Бесплатный режим без оплаты; Pro оплачивается картой, выпущенной вне России",
+        "en": "Runs in a browser; the free tier needs no payment"
+      },
+      "review": {
+        "ru": "/instrumenty/ozvuchka-video-neyrosetyu"
+      },
+      "affiliate": null,
+      "darebay": {
+        "own": false
+      },
+      "source": {
+        "url": "https://pro.ttsmaker.com/pricing",
+        "date": "2026-09-29"
+      },
+      "sources": [
+        {
+          "field": "freeTier, languages",
+          "url": "https://ttsmaker.com/",
+          "date": "2026-09-29"
+        }
+      ]
+    },
+    {
+      "id": "heygen",
+      "category": "voice-avatars",
+      "name": "HeyGen",
+      "url": "https://www.heygen.com/",
+      "whatFor": {
+        "ru": "ИИ-аватары и говорящие видео без съёмки, перевод и клонирование голоса",
+        "en": "AI avatars and talking videos without filming, translation and voice cloning"
+      },
+      "priceFrom": {
+        "ru": "Creator $29 в месяц",
+        "en": "Creator $29/month"
+      },
+      "priceBadge": {
+        "ru": "от $29/мес",
+        "en": "from $29/mo"
+      },
+      "pay": {
+        "ru": "foreign-card",
+        "en": "foreign-card"
+      },
+      "priceCheckedAt": "2026-09-29",
+      "freeTier": {
+        "ru": "3 видео в месяц до 1 минуты; снятие водяного знака в платных планах",
+        "en": "3 videos a month up to 1 minute; watermark removal on paid plans"
+      },
+      "availability": {
+        "ru": "Оплата картой, выпущенной вне России",
+        "en": "Runs in a browser"
+      },
+      "affiliate": {
+        "program": "HeyGen Social Creator Program",
+        "commission": "35% recurring for 3 months (50% promo until 31.10.2026)",
+        "cookie": "30 days",
+        "payout": "PayPal, minimum $100, 60-day verification",
+        "url": "https://www.heygen.com/geniverse/social-creator-program",
+        "limits": "original video content only; no SEO/blog-only promotion, paid search or self-referrals; 5K+ followers",
+        "usableForDocs": false,
+        "checkedAt": "2026-09-29"
+      },
+      "darebay": {
+        "own": false
+      },
+      "source": {
+        "url": "https://www.heygen.com/pricing",
+        "date": "2026-09-29"
+      },
+      "sources": [
+        {
+          "field": "affiliate",
+          "url": "https://www.heygen.com/geniverse/social-creator-program",
+          "date": "2026-09-29"
+        }
+      ]
+    },
+    {
+      "id": "kling",
+      "category": "ai-video",
+      "name": "Kling AI",
+      "url": "https://kling.ai/",
+      "whatFor": {
+        "ru": "Генерация видео из текста и картинок, со звуком и синхронизацией губ",
+        "en": "Text and image to video with native audio and lip sync"
+      },
+      "priceFrom": {
+        "ru": "Standard $6,99 за первый месяц, дальше $8,80 в месяц (прайс $10; 660 кредитов; акция до 31.12.2026)",
+        "en": "Standard $6.99 for the first month, then $8.80/month (list $10; 660 credits; offer until Dec 31, 2026)"
+      },
+      "priceBadge": {
+        "ru": "от $6,99/мес",
+        "en": "from $6.99/mo"
+      },
+      "pay": {
+        "ru": "foreign-card",
+        "en": "foreign-card"
+      },
+      "priceCheckedAt": "2026-09-29",
+      "freeTier": {
+        "ru": "Бесплатные кредиты новым пользователям и ежемесячно за вход; водяной знак снимается в платных планах",
+        "en": "Free credits for new users and a monthly login allowance; watermark removal on paid plans"
+      },
+      "availability": {
+        "ru": "Оплата картой, выпущенной вне России",
+        "en": "Browser, iOS and Android"
+      },
+      "affiliate": {
+        "program": "Kling AI Affiliate Program (Impact)",
+        "commission": null,
+        "cookie": null,
+        "payout": "via Impact",
+        "url": "https://kling.ai/app/commission-share",
+        "limits": "commission not published on the page",
+        "checkedAt": "2026-09-29"
+      },
+      "darebay": {
+        "own": false
+      },
+      "source": {
+        "url": "https://kling.ai/app/membership/membership-plan",
+        "date": "2026-09-29"
+      },
+      "sources": [
+        {
+          "field": "freeTier",
+          "url": "https://kling.ai/explore/kling_ai_membership_plans_|_ai_video_&_image_generation_pricing",
+          "date": "2026-09-29"
+        },
+        {
+          "field": "credits pricing",
+          "url": "https://kling.ai/docs/point-policy",
+          "date": "2026-09-29"
+        }
+      ]
+    },
+    {
+      "id": "google-veo",
+      "category": "ai-video",
+      "name": "Google Veo",
+      "mono": "GV",
+      "url": "https://gemini.google.com/",
+      "whatFor": {
+        "ru": "Генерация видео в приложении Gemini и студии Google Flow",
+        "en": "Video generation in the Gemini app and Google Flow"
+      },
+      "priceFrom": {
+        "ru": "Google AI Plus $4,99 в месяц (генерация видео, 200 кредитов Flow); AI Pro $19,99 (цены США)",
+        "en": "Google AI Plus $4.99/month (video generation, 200 Flow credits); AI Pro $19.99 (US prices)"
+      },
+      "priceBadge": {
+        "ru": "от $4,99/мес",
+        "en": "from $4.99/mo"
+      },
+      "pay": {
+        "ru": "unavailable",
+        "en": "foreign-card"
+      },
+      "priceCheckedAt": "2026-09-29",
+      "freeTier": {
+        "ru": "Бесплатный Gemini есть; генерация видео открывается с Google AI Plus",
+        "en": "Free Gemini plan exists; video generation starts with Google AI Plus"
+      },
+      "availability": {
+        "ru": "Gemini недоступен в России и Беларуси; работает в Казахстане, Узбекистане, Кыргызстане, Армении, Азербайджане, Грузии, Молдове, Таджикистане, Туркменистане и Украине",
+        "en": "Gemini app on the web, iOS and Android, plus Google Flow; plan prices vary by country"
+      },
+      "affiliate": null,
+      "darebay": {
+        "own": false
+      },
+      "source": {
+        "url": "https://gemini.google/us/subscriptions/",
+        "date": "2026-09-29",
+        "owner": "Google, the developer of the service"
+      },
+      "sources": [
+        {
+          "field": "availability",
+          "url": "https://support.google.com/gemini/answer/13575153?hl=en",
+          "date": "2026-09-29"
+        }
+      ]
+    },
+    {
+      "id": "runway",
+      "category": "ai-video",
+      "name": "Runway",
+      "url": "https://runway.com/",
+      "whatFor": {
+        "ru": "ИИ-видео и картинки в одном месте: свои модели Gen и сторонние, включая Kling",
+        "en": "AI video and images in one place: Runway's Gen models plus others such as Kling"
+      },
+      "priceFrom": {
+        "ru": "Standard $15 в месяц или $12 в месяц при оплате за год (625 кредитов, без водяных знаков)",
+        "en": "Standard $15/month or $12/month billed yearly (625 credits, no watermarks)"
+      },
+      "priceBadge": {
+        "ru": "от $12/мес",
+        "en": "from $12/mo"
+      },
+      "pay": {
+        "ru": "foreign-card",
+        "en": "foreign-card"
+      },
+      "priceCheckedAt": "2026-09-29",
+      "freeTier": {
+        "ru": "125 кредитов один раз",
+        "en": "125 one-time credits"
+      },
+      "availability": {
+        "ru": "Оплата картой, выпущенной вне России",
+        "en": "Browser, iOS and Android"
+      },
+      "affiliate": null,
+      "darebay": {
+        "own": false
+      },
+      "source": {
+        "url": "https://runway.com/pricing",
+        "date": "2026-09-29"
+      }
+    },
+    {
+      "id": "higgsfield",
+      "category": "ai-video",
+      "name": "Higgsfield",
+      "url": "https://higgsfield.ai/",
+      "locales": [
+        "en"
+      ],
+      "whatFor": {
+        "en": "AI model hub for video and images: Kling, Seedance, Nano Banana and more"
+      },
+      "priceFrom": {
+        "en": "Starter €19/month (270 credits; EU price, same monthly or yearly)"
+      },
+      "priceBadge": {
+        "en": "from €19/mo"
+      },
+      "pay": {
+        "en": "foreign-card"
+      },
+      "priceCheckedAt": "2026-09-29",
+      "freeTier": {
+        "en": "Free plan with limited use"
+      },
+      "availability": {
+        "en": "Runs in a browser; the price shown is for the EU"
+      },
+      "affiliate": {
+        "program": "Higgsfield Affiliate Program",
+        "commission": "up to 25% for up to 12 months",
+        "cookie": null,
+        "payout": "cash (not credits)",
+        "url": "https://higgsfield.ai/affiliate",
+        "limits": "referrals get up to 50% off for three hours",
+        "checkedAt": "2026-09-29"
+      },
+      "darebay": {
+        "own": false
+      },
+      "source": {
+        "url": "https://higgsfield.ai/pricing",
+        "date": "2026-09-29"
+      },
+      "sources": [
+        {
+          "field": "affiliate",
+          "url": "https://higgsfield.ai/affiliate",
+          "date": "2026-09-29"
+        }
+      ]
+    },
+    {
+      "id": "shedevrum",
+      "category": "ai-video",
+      "name": "Shedevrum",
+      "displayName": {
+        "ru": "Шедеврум",
+        "en": "Shedevrum (Yandex)"
+      },
+      "url": "https://shedevrum.ai/",
+      "locales": [
+        "ru"
+      ],
+      "whatFor": {
+        "ru": "Короткие ИИ-ролики по запросу на русском: 4 секунды, 24 кадра в секунду"
+      },
+      "priceFrom": {
+        "ru": "Про 100 ₽ в месяц при подписке Яндекс Плюс (первые 7 дней бесплатно)"
+      },
+      "priceBadge": {
+        "ru": "100 ₽/мес с Плюсом"
+      },
+      "pay": {
+        "ru": "rub"
+      },
+      "priceCheckedAt": "2026-09-29",
+      "freeTier": {
+        "ru": "Генерация видео бесплатно; скачивание без логотипа Шедеврума и коммерческое использование только в Про"
+      },
+      "availability": {
+        "ru": "Сервис Яндекса, оплата в рублях; коммерческое использование без согласования с сервисом только в Про"
+      },
+      "affiliate": null,
+      "darebay": {
+        "own": false
+      },
+      "source": {
+        "url": "https://yandex.ru/support/shedevrum/ru/pro",
+        "date": "2026-09-29",
+        "owner": "Yandex, the developer of the service"
+      },
+      "sources": [
+        {
+          "field": "whatFor (4 s, 24 fps, models)",
+          "url": "https://yandex.ru/support/shedevrum/ru/video/create",
+          "date": "2026-09-29"
+        }
+      ]
+    },
+    {
+      "id": "kandinsky",
+      "category": "ai-video",
+      "name": "Kandinsky",
+      "displayName": {
+        "ru": "Kandinsky в GigaChat",
+        "en": "Kandinsky (GigaChat)"
+      },
+      "mono": "K",
+      "url": "https://giga.chat/",
+      "locales": [
+        "ru"
+      ],
+      "whatFor": {
+        "ru": "Генерация роликов по тексту или картинке на русском языке, модель Kandinsky 5.0"
+      },
+      "priceFrom": {
+        "ru": "Бесплатно, подписка не нужна"
+      },
+      "priceBadge": {
+        "ru": "Бесплатно для себя"
+      },
+      "priceCheckedAt": "2026-09-29",
+      "freeTier": {
+        "ru": "После регистрации, с лимитом запросов; только для личного некоммерческого использования"
+      },
+      "availability": {
+        "ru": "Сервис Сбера: сайт GigaChat, боты в Telegram и MAX; коммерческое использование по отдельному платному договору со Сбером"
+      },
+      "affiliate": null,
+      "darebay": {
+        "own": false
+      },
+      "source": {
+        "url": "https://giga.chat/help/articles/kandinsky-to-create-a-video",
+        "date": "2026-09-29"
+      },
+      "sources": [
+        {
+          "field": "freeTier, availability",
+          "url": "https://developers.sber.ru/docs/ru/policies/gigachat/agreement",
+          "date": "2026-09-30"
+        }
+      ]
+    },
+    {
+      "id": "reels-boss-uniquify",
+      "category": "uniqueization",
+      "name": "Reels Boss uniquify",
+      "displayName": {
+        "ru": "Рилс Босс: уникализация",
+        "en": "Reels Boss: uniquify"
+      },
+      "mono": "РБ",
+      "url": "https://reels-boss.io/video-uniquify",
+      "locales": [
+        "ru"
+      ],
+      "whatFor": {
+        "ru": "Делает от 5 до 100 версий одного ролика: меняет кадр, цвет, скорость, звук и метаданные"
+      },
+      "priceFrom": {
+        "ru": "Из общего баланса кредитов Рилс Босс, тариф Про от 2 270 ₽ в месяц при оплате за год"
+      },
+      "priceBadge": {
+        "ru": "от 2 270 ₽/мес"
+      },
+      "pay": {
+        "ru": "rub"
+      },
+      "priceCheckedAt": "2026-09-29",
+      "freeTier": {
+        "ru": "Первые 5 роликов бесплатно или 20 кредитов без карты"
+      },
+      "availability": {
+        "ru": "Оплата российскими картами и СБП"
+      },
+      "review": {
+        "ru": "/instrumenty/unikalizator-video"
+      },
+      "affiliate": {
+        "program": "Reels Boss partner program",
+        "commission": "35% of the first payment + 20 to 35% of renewals by tier",
+        "cookie": "12 months",
+        "payout": "from 3,000 RUB via SBP, card or invoice; 30-day hold",
+        "url": "https://reels-boss.io/affiliate-program",
+        "limits": null,
+        "checkedAt": "2026-09-29"
+      },
+      "darebay": {
+        "own": false
+      },
+      "source": {
+        "url": "https://reels-boss.io/video-uniquify",
+        "date": "2026-09-29"
+      },
+      "sources": [
+        {
+          "field": "priceFrom (shared credit balance)",
+          "url": "https://reels-boss.io/pricing",
+          "date": "2026-09-29"
+        }
+      ]
+    },
+    {
+      "id": "uniquizer-360",
+      "category": "uniqueization",
+      "name": "360° Uniquizer",
+      "mono": "U",
+      "url": "https://360uniquizer.com/",
+      "locales": [
+        "ru"
+      ],
+      "whatFor": {
+        "ru": "Программа для Windows: версии видео с новым кадрированием, сплит-скрином, звуком и метаданными"
+      },
+      "priceFrom": {
+        "ru": "$12,99 за 7 дней, $24,99 за 30 дней, $199,99 за год"
+      },
+      "priceBadge": {
+        "ru": "от $12,99 за 7 дней"
+      },
+      "priceCheckedAt": "2026-09-29",
+      "freeTier": {
+        "ru": "До 30 готовых видео бесплатно"
+      },
+      "availability": {
+        "ru": "Оплата картой или криптовалютой; только Windows 10 и 11"
+      },
+      "review": {
+        "ru": "/instrumenty/unikalizator-video"
+      },
+      "affiliate": {
+        "program": "360° Uniquizer referral",
+        "commission": "20% of every purchase, lifetime",
+        "cookie": null,
+        "payout": "personal account",
+        "url": "https://360uniquizer.com/ru",
+        "limits": null,
+        "checkedAt": "2026-09-29"
+      },
+      "darebay": {
+        "own": false
+      },
+      "source": {
+        "url": "https://360uniquizer.com/ru",
+        "date": "2026-09-29"
+      }
+    },
+    {
+      "id": "offerrum-uniq",
+      "category": "uniqueization",
+      "name": "Offerrum Uniq",
+      "url": "https://uniq.offerrum.com/",
+      "locales": [
+        "ru"
+      ],
+      "whatFor": {
+        "ru": "Бесплатный онлайн-уникализатор видео и фото: несколько копий файла за пару минут"
+      },
+      "priceFrom": {
+        "ru": "Бесплатно"
+      },
+      "priceBadge": {
+        "ru": "Бесплатно"
+      },
+      "priceCheckedAt": "2026-09-29",
+      "freeTier": {
+        "ru": "JPG, PNG и MP4 до 100 МБ; архив хранится 24 часа"
+      },
+      "availability": {
+        "ru": "Работает в браузере"
+      },
+      "review": {
+        "ru": "/instrumenty/unikalizator-video"
+      },
+      "affiliate": null,
+      "darebay": {
+        "own": false
+      },
+      "source": {
+        "url": "https://uniq.offerrum.com/",
+        "date": "2026-09-29"
+      }
+    },
+    {
+      "id": "smmplanner",
+      "category": "publishing",
+      "name": "SMMplanner",
+      "url": "https://smmplanner.com/",
+      "locales": [
+        "ru"
+      ],
+      "whatFor": {
+        "ru": "Автопостинг по расписанию в соцсети и мессенджеры, включая рилс и сторис в Instagram"
+      },
+      "priceFrom": {
+        "ru": "От 660 ₽ в месяц при оплате за год"
+      },
+      "priceBadge": {
+        "ru": "от 660 ₽/мес"
+      },
+      "pay": {
+        "ru": "rub"
+      },
+      "priceCheckedAt": "2026-09-29",
+      "freeTier": {
+        "ru": "7 дней бесплатно"
+      },
+      "availability": {
+        "ru": "Российский сервис, цены в рублях"
+      },
+      "affiliate": {
+        "program": "SMMplanner partner program",
+        "commission": "10% per referred user",
+        "cookie": null,
+        "payout": "credited to SMMplanner plans and courses (no cash withdrawal seen)",
+        "url": "https://smmplanner.com/partners",
+        "limits": null,
+        "checkedAt": "2026-09-29"
+      },
+      "darebay": {
+        "own": false
+      },
+      "source": {
+        "url": "https://smmplanner.com/",
+        "date": "2026-09-29"
+      },
+      "sources": [
+        {
+          "field": "affiliate",
+          "url": "https://smmplanner.com/partners",
+          "date": "2026-09-29"
+        }
+      ]
+    },
+    {
+      "id": "postmypost",
+      "category": "publishing",
+      "name": "Postmypost",
+      "url": "https://postmypost.io/",
+      "whatFor": {
+        "ru": "Отложенный постинг в TikTok, YouTube, Instagram, VK, Rutube, Threads и MAX из одного окна",
+        "en": "Scheduled posting to TikTok, YouTube, Instagram, VK, Rutube, Threads and more"
+      },
+      "priceFrom": {
+        "ru": "Стандартный 1 190 ₽ в месяц за 5 аккаунтов (в долларах $19,49)",
+        "en": "Standard $19.49/month for 5 accounts (1,190 RUB in rubles)"
+      },
+      "priceBadge": {
+        "ru": "от 1 190 ₽/мес",
+        "en": "from $19.49/mo"
+      },
+      "pay": {
+        "ru": "rub",
+        "en": "foreign-card"
+      },
+      "priceCheckedAt": "2026-09-29",
+      "freeTier": {
+        "ru": "7 дней бесплатно, без банковской карты",
+        "en": "7-day free trial, no card"
+      },
+      "availability": {
+        "ru": "Цены в рублях, тенге и долларах",
+        "en": "Runs in a browser; prices in USD, RUB or KZT"
+      },
+      "affiliate": {
+        "program": "Postmypost partner program",
+        "commission": "individual rate shown when you create a link",
+        "cookie": null,
+        "payout": "on the 29th, only to sole proprietors, companies or self-employed",
+        "url": "https://postmypost.io/partners-terms",
+        "limits": "paid only after 10+ paying users and over 5,000 RUB accumulated",
+        "checkedAt": "2026-09-29"
+      },
+      "darebay": {
+        "own": false
+      },
+      "source": {
+        "url": "https://postmypost.io/ru/prices",
+        "date": "2026-09-29"
+      },
+      "sources": [
+        {
+          "field": "priceFrom.en",
+          "url": "https://postmypost.io/prices",
+          "date": "2026-09-29"
+        },
+        {
+          "field": "affiliate",
+          "url": "https://postmypost.io/partners-terms",
+          "date": "2026-09-29"
+        }
+      ]
+    },
+    {
+      "id": "metricool",
+      "category": "publishing",
+      "name": "Metricool",
+      "url": "https://metricool.com/",
+      "whatFor": {
+        "ru": "Планировщик и аналитика соцсетей для нескольких брендов, включая TikTok и YouTube",
+        "en": "Social scheduler and analytics for several brands, TikTok and YouTube included"
+      },
+      "priceFrom": {
+        "ru": "Starter от €16 в месяц при оплате за год, €20 помесячно (в долларах $20 и $25)",
+        "en": "Starter from $20/month billed yearly, $25 monthly (€16 and €20 in the EU)"
+      },
+      "priceBadge": {
+        "ru": "от €16/мес",
+        "en": "from $20/mo"
+      },
+      "pay": {
+        "ru": "foreign-card",
+        "en": "foreign-card"
+      },
+      "priceCheckedAt": "2026-09-29",
+      "freeTier": {
+        "ru": "1 бренд и до 20 запланированных постов в месяц",
+        "en": "1 brand and up to 20 scheduled posts a month"
+      },
+      "availability": {
+        "ru": "Оплата картой, выпущенной вне России",
+        "en": "Browser, iOS and Android apps"
+      },
+      "affiliate": {
+        "program": "Metricool Affiliate",
+        "commission": "25% of subscriptions up to $100 per user; 50% up to $300 after 200 paid sign-ups",
+        "cookie": "never expires",
+        "payout": "monthly via Zexel, minimum $200",
+        "url": "https://metricool.com/affiliate-program/",
+        "limits": null,
+        "checkedAt": "2026-09-29"
+      },
+      "darebay": {
+        "own": false
+      },
+      "source": {
+        "url": "https://metricool.com/pricing/",
+        "date": "2026-09-29"
+      },
+      "sources": [
+        {
+          "field": "affiliate",
+          "url": "https://metricool.com/affiliate-program/",
+          "date": "2026-09-29"
+        }
+      ]
+    },
+    {
+      "id": "repurpose-io",
+      "category": "publishing",
+      "name": "Repurpose.io",
+      "url": "https://repurpose.io/",
+      "locales": [
+        "en"
+      ],
+      "whatFor": {
+        "en": "Auto-reposts videos across TikTok, Reels and Shorts on several accounts"
+      },
+      "priceFrom": {
+        "en": "Starter $35/month or $349/year (up to 3 accounts per network)"
+      },
+      "priceBadge": {
+        "en": "Starter $35/mo"
+      },
+      "pay": {
+        "en": "foreign-card"
+      },
+      "priceCheckedAt": "2026-09-29",
+      "freeTier": {
+        "en": "10 videos free without a card, plus a 14-day trial"
+      },
+      "availability": {
+        "en": "Runs in a browser; prices in USD"
+      },
+      "affiliate": {
+        "program": "Repurpose.io Affiliate",
+        "commission": "25% recurring for 12 months",
+        "cookie": "60 days",
+        "payout": null,
+        "url": "https://repurpose.io/become-an-affiliate/",
+        "limits": "paid advertising not allowed",
+        "checkedAt": "2026-09-29"
+      },
+      "darebay": {
+        "own": false
+      },
+      "source": {
+        "url": "https://repurpose.io/pricing/",
+        "date": "2026-09-29"
+      },
+      "sources": [
+        {
+          "field": "affiliate",
+          "url": "https://repurpose.io/become-an-affiliate/",
+          "date": "2026-09-29"
+        }
+      ]
+    },
+    {
+      "id": "tiktok-creative-center",
+      "category": "analytics-hooks",
+      "name": "TikTok Creative Center",
+      "url": "https://ads.tiktok.com/creative/creativeCenter",
+      "whatFor": {
+        "ru": "Тренды TikTok по регионам и лучшие рекламные ролики: хэштеги, звуки, приёмы первых секунд",
+        "en": "TikTok trends by region and top-performing ads: hashtags, sounds, opening hooks"
+      },
+      "priceFrom": {
+        "ru": "Бесплатно",
+        "en": "Free"
+      },
+      "priceBadge": {
+        "ru": "Бесплатно",
+        "en": "Free"
+      },
+      "priceCheckedAt": "2026-09-29",
+      "freeTier": {
+        "ru": "Для раздела трендов нужен вход",
+        "en": "The Trends section needs a TikTok login"
+      },
+      "availability": {
+        "ru": "Бесплатный сервис TikTok для бизнеса",
+        "en": "Runs in a browser"
+      },
+      "affiliate": null,
+      "darebay": {
+        "own": false
+      },
+      "source": {
+        "url": "https://ads.tiktok.com/resources/help/article/creative-center",
+        "date": "2026-09-29"
+      },
+      "sources": [
+        {
+          "field": "freeTier (login for Trends)",
+          "url": "https://ads.tiktok.com/resources/help/article/how-to-use-trends",
+          "date": "2026-09-29"
+        },
+        {
+          "field": "current name TikTok One Creative Suite",
+          "url": "https://ads.tiktok.com/creative/creativeCenter",
+          "date": "2026-09-29"
+        }
+      ]
+    },
+    {
+      "id": "submagic-hook-generator",
+      "category": "analytics-hooks",
+      "name": "Submagic video hook generator",
+      "displayName": {
+        "ru": "Submagic: генератор хуков"
+      },
+      "mono": "S",
+      "url": "https://www.submagic.co/tools/video-hook-generator",
+      "whatFor": {
+        "ru": "Пять вариантов первой фразы ролика по теме, площадке и тону; интерфейс на английском",
+        "en": "Five opening lines for your video by topic, platform and tone"
+      },
+      "priceFrom": {
+        "ru": "Бесплатно, без регистрации",
+        "en": "Free, no sign-up"
+      },
+      "priceBadge": {
+        "ru": "Бесплатно",
+        "en": "Free"
+      },
+      "priceCheckedAt": "2026-09-29",
+      "freeTier": null,
+      "availability": {
+        "ru": "Работает в браузере",
+        "en": "Runs in a browser"
+      },
+      "affiliate": null,
+      "darebay": {
+        "own": false
+      },
+      "source": {
+        "url": "https://www.submagic.co/tools/video-hook-generator",
+        "date": "2026-09-29"
+      }
+    },
+    {
+      "id": "vidiq",
+      "category": "analytics-hooks",
+      "name": "vidIQ",
+      "url": "https://vidiq.com/",
+      "locales": [
+        "en"
+      ],
+      "whatFor": {
+        "en": "Niche trends, video ideas and AI coaching for YouTube growth"
+      },
+      "priceFrom": {
+        "en": "Boost €16.58/month billed yearly (EU price)"
+      },
+      "priceBadge": {
+        "en": "from €16.58/mo"
+      },
+      "pay": {
+        "en": "foreign-card"
+      },
+      "priceCheckedAt": "2026-09-29",
+      "freeTier": {
+        "en": "150 AI credits a month, niche trends and ideas"
+      },
+      "availability": {
+        "en": "Browser and a browser extension; built for YouTube channels"
+      },
+      "affiliate": null,
+      "darebay": {
+        "own": false
+      },
+      "source": {
+        "url": "https://vidiq.com/pricing/",
+        "date": "2026-09-29"
+      }
+    },
+    {
+      "id": "social-blade",
+      "category": "analytics-hooks",
+      "name": "Social Blade",
+      "url": "https://socialblade.com/",
+      "whatFor": {
+        "ru": "Статистика и рост каналов YouTube, TikTok, Instagram и Twitch, топы авторов",
+        "en": "Stats and growth of YouTube, TikTok, Instagram and Twitch creators, top lists"
+      },
+      "priceFrom": {
+        "ru": "Бесплатно; платное членство убирает рекламу и открывает историю",
+        "en": "Free; a paid membership removes ads and unlocks history"
+      },
+      "priceBadge": {
+        "ru": "Бесплатно",
+        "en": "Free"
+      },
+      "priceCheckedAt": "2026-09-29",
+      "freeTier": null,
+      "availability": {
+        "ru": "Работает в браузере; членство оплачивается картой, выпущенной вне России",
+        "en": "Runs in a browser"
+      },
+      "affiliate": null,
+      "darebay": {
+        "own": false
+      },
+      "source": {
+        "url": "https://socialblade.com/",
+        "date": "2026-09-29"
+      }
+    },
+    {
+      "id": "livedune",
+      "category": "analytics-hooks",
+      "name": "LiveDune",
+      "url": "https://livedune.com/ru/",
+      "locales": [
+        "ru"
+      ],
+      "whatFor": {
+        "ru": "Статистика аккаунтов, топ Reels, Shorts и TikTok-роликов, автопостинг"
+      },
+      "priceFrom": {
+        "ru": "Блогер 2 300 ₽ в месяц (5 аккаунтов); при оплате за год скидка 10 %"
+      },
+      "priceBadge": {
+        "ru": "Блогер 2 300 ₽/мес"
+      },
+      "pay": {
+        "ru": "rub"
+      },
+      "priceCheckedAt": "2026-09-29",
+      "freeTier": {
+        "ru": "Автопостинг бесплатно даже без тарифа; полный доступ на 7 дней"
+      },
+      "availability": {
+        "ru": "Оплата из любой страны; из России цены в рублях"
+      },
+      "affiliate": {
+        "program": "LiveDune referral program",
+        "commission": "30% for the first 6 months, 15% for the next 6, 7.5% for 2 more years",
+        "cookie": null,
+        "payout": null,
+        "url": "https://livedune.com/ru/partners/",
+        "limits": null,
+        "checkedAt": "2026-09-29"
+      },
+      "darebay": {
+        "own": false
+      },
+      "source": {
+        "url": "https://livedune.com/ru/pricing/",
+        "date": "2026-09-29"
+      },
+      "sources": [
+        {
+          "field": "affiliate",
+          "url": "https://livedune.com/ru/partners/",
+          "date": "2026-09-29"
+        }
+      ]
+    },
+    {
+      "id": "popsters",
+      "category": "analytics-hooks",
+      "name": "Popsters",
+      "url": "https://popsters.ru/",
+      "locales": [
+        "ru"
+      ],
+      "whatFor": {
+        "ru": "Анализ контента любых страниц: какие посты и ролики набрали больше всего реакций, в том числе в TikTok"
+      },
+      "priceFrom": {
+        "ru": "799 ₽ в месяц за одну соцсеть"
+      },
+      "priceBadge": {
+        "ru": "799 ₽/мес за соцсеть"
+      },
+      "pay": {
+        "ru": "rub"
+      },
+      "priceCheckedAt": "2026-09-29",
+      "freeTier": {
+        "ru": "Пробный доступ: 10 загрузок и выгрузка в XLSX на 7 дней"
+      },
+      "availability": {
+        "ru": "Российский сервис, оплата в рублях"
+      },
+      "affiliate": null,
+      "darebay": {
+        "own": false
+      },
+      "source": {
+        "url": "https://popsters.ru/app/buy",
+        "date": "2026-09-29"
+      },
+      "sources": [
+        {
+          "field": "supported networks",
+          "url": "https://popsters.ru/",
+          "date": "2026-09-29"
+        }
+      ]
+    },
+    {
+      "id": "dolphin-anty",
+      "category": "multi-account",
+      "name": "Dolphin{anty}",
+      "url": "https://dolphin-anty.net/",
+      "whatFor": {
+        "ru": "Антидетект-браузер: отдельный профиль браузера под каждый аккаунт, работа командой",
+        "en": "Antidetect browser: a separate browser profile per account, team access"
+      },
+      "priceFrom": {
+        "ru": "Starter $10 в месяц (от 20 профилей); за 12 месяцев скидка 40 %",
+        "en": "Starter $10/month (20+ profiles); 40% off for 12 months"
+      },
+      "priceCheckedAt": "2026-09-29",
+      "freeTier": {
+        "ru": "До 5 профилей бесплатно",
+        "en": "Up to 5 profiles free"
+      },
+      "availability": {
+        "ru": "Цены в долларах, рублях, евро и реалах",
+        "en": "Prices in USD, RUB, EUR or BRL"
+      },
+      "affiliate": {
+        "program": "Dolphin{anty} affiliate program",
+        "commission": "15% of referral spending",
+        "cookie": null,
+        "payout": "weekly on request via support, to a TRC-20 wallet",
+        "url": "https://dolphin-anty.net/ru/partnership/",
+        "limits": "new users only; promo code gives the audience 20% off the first payment",
+        "checkedAt": "2026-09-29"
+      },
+      "darebay": {
+        "own": false
+      },
+      "source": {
+        "url": "https://dolphin-anty.net/ru/tarifs/",
+        "date": "2026-09-29"
+      },
+      "sources": [
+        {
+          "field": "affiliate rules",
+          "url": "https://dolphin-anty.net/ru/partnership/",
+          "date": "2026-09-29"
+        },
+        {
+          "field": "affiliate payout (TRC-20, updated 08.08.2026)",
+          "url": "https://dolphin-anty.com/blog/en/dolphin-anty-affiliate-program-terms-and-conditions-for-cooperation-and-main-benefits-2024/",
+          "date": "2026-09-29"
+        }
+      ]
+    },
+    {
+      "id": "adspower",
+      "category": "multi-account",
+      "name": "AdsPower",
+      "url": "https://www.adspower.com/",
+      "whatFor": {
+        "ru": "Антидетект-браузер с автоматизацией (RPA) и облачным телефоном для команд",
+        "en": "Antidetect browser with RPA automation and a cloud phone for teams"
+      },
+      "priceFrom": {
+        "ru": "Professional $9 в месяц или $4,5 в месяц при оплате за год ($54, 10 профилей)",
+        "en": "Professional $9/month or $4.50/month billed yearly ($54, 10 profiles)"
+      },
+      "priceCheckedAt": "2026-09-29",
+      "freeTier": {
+        "ru": "2 профиля бесплатно навсегда и 7 дней пробного периода",
+        "en": "2 profiles free forever plus a 7-day trial"
+      },
+      "availability": {
+        "ru": "Принимает карты, PayPal и криптовалюту (USDT, BTC, ETH, USDC)",
+        "en": "Cards, PayPal, Alipay or crypto"
+      },
+      "affiliate": {
+        "program": "AdsPower referral program",
+        "commission": "up to 30% of the referral's subscription fee",
+        "cookie": null,
+        "payout": "within 24 hours; PayPal, WebMoney or Capitalist",
+        "url": "https://www.adspower.com/referral-program",
+        "limits": "brand-new users only",
+        "checkedAt": "2026-09-29"
+      },
+      "darebay": {
+        "own": false
+      },
+      "source": {
+        "url": "https://www.adspower.com/pricing",
+        "date": "2026-09-29"
+      },
+      "sources": [
+        {
+          "field": "affiliate",
+          "url": "https://www.adspower.com/referral-program",
+          "date": "2026-09-29"
+        }
+      ]
+    },
+    {
+      "id": "octo-browser",
+      "category": "multi-account",
+      "name": "Octo Browser",
+      "url": "https://octobrowser.net/",
+      "whatFor": {
+        "ru": "Антидетект-браузер для компьютера и телефона: профили, API, работа командой",
+        "en": "Antidetect browser for desktop and phone: profiles, API, team work"
+      },
+      "priceFrom": {
+        "ru": "Lite €10 в месяц (3 профиля); за 12 месяцев скидка 30 %",
+        "en": "Lite €10/month (3 profiles); 30% off for 12 months"
+      },
+      "priceCheckedAt": "2026-09-29",
+      "freeTier": {
+        "ru": "В мобильном приложении новым пользователям 100 профилей бесплатно",
+        "en": "Mobile app: 100 free profiles for new users"
+      },
+      "availability": {
+        "ru": "Принимает карты и криптовалюту: USDT, BTC, ETH, TON и другие",
+        "en": "Cards or crypto (USDT, BTC, ETH, TON and more)"
+      },
+      "affiliate": {
+        "program": "Octo Browser referral program",
+        "commission": "15% of every payment for 360 days after sign-up",
+        "cookie": null,
+        "payout": "to Octo balance from 10 tokens or USDT/USDC from 100 tokens (1 token = €1), on the 1st or 15th",
+        "url": "https://docs.octobrowser.net/en/referral-program/",
+        "limits": null,
+        "checkedAt": "2026-09-29"
+      },
+      "darebay": {
+        "own": false
+      },
+      "source": {
+        "url": "https://octobrowser.net/pricing/",
+        "date": "2026-09-29"
+      },
+      "sources": [
+        {
+          "field": "affiliate",
+          "url": "https://docs.octobrowser.net/en/referral-program/",
+          "date": "2026-09-29"
+        }
+      ]
+    },
+    {
+      "id": "geelark",
+      "category": "multi-account",
+      "name": "GeeLark",
+      "url": "https://www.geelark.com/",
+      "whatFor": {
+        "ru": "Облачные Android-телефоны: смартфон работает в облаке, своё железо не нужно",
+        "en": "Cloud Android phones: the phone runs in the cloud, no hardware of your own"
+      },
+      "priceFrom": {
+        "ru": "Base $13 в месяц или $8,45 при оплате за год; работа облачного телефона $0,007 в минуту или аренда $29,9 в месяц",
+        "en": "Base $13/month or $8.45 billed yearly; cloud phone time $0.007/minute or $29.90/month rental"
+      },
+      "priceCheckedAt": "2026-09-29",
+      "freeTier": {
+        "ru": "2 профиля и 30 бонусных минут",
+        "en": "2 profiles and 30 bonus minutes"
+      },
+      "availability": {
+        "ru": "Принимает карты, PayPal, Skrill, Capitalist и другие способы",
+        "en": "Cards, PayPal, Skrill, Capitalist and more"
+      },
+      "affiliate": {
+        "program": "GeeLark referral program",
+        "commission": "10% monthly reward, lifetime",
+        "cookie": null,
+        "payout": null,
+        "url": "https://www.geelark.com/pricing/",
+        "limits": null,
+        "checkedAt": "2026-09-29"
+      },
+      "darebay": {
+        "own": false
+      },
+      "source": {
+        "url": "https://www.geelark.com/pricing/",
+        "date": "2026-09-29"
+      }
+    },
+    {
+      "id": "mobileproxy-space",
+      "category": "multi-account",
+      "name": "mobileproxy.space",
+      "url": "https://mobileproxy.space/",
+      "locales": [
+        "ru"
+      ],
+      "whatFor": {
+        "ru": "Мобильные прокси на реальных SIM-картах в 50+ странах, аренда по дням"
+      },
+      "priceFrom": {
+        "ru": "От 490 ₽ в сутки, цена зависит от страны"
+      },
+      "priceCheckedAt": "2026-09-29",
+      "freeTier": {
+        "ru": "Пробный доступ 3 часа без карты"
+      },
+      "availability": {
+        "ru": "Оплата USDT, МИР, СБП, ЮMoney"
+      },
+      "affiliate": {
+        "program": "mobileproxy.space partner program",
+        "commission": "16% of every payment, lifetime",
+        "cookie": null,
+        "payout": "site balance, crypto (BTC, USDT and others) or bank transfer under contract",
+        "url": "https://mobileproxy.space/partner.html",
+        "limits": null,
+        "checkedAt": "2026-09-29"
+      },
+      "darebay": {
+        "own": false
+      },
+      "source": {
+        "url": "https://mobileproxy.space/",
+        "date": "2026-09-29"
+      },
+      "sources": [
+        {
+          "field": "affiliate",
+          "url": "https://mobileproxy.space/en/partner.html",
+          "date": "2026-09-29"
+        }
+      ]
+    },
+    {
+      "id": "iproxy-online",
+      "category": "multi-account",
+      "name": "iProxy.online",
+      "url": "https://iproxy.online/",
+      "whatFor": {
+        "ru": "Превращает свой Android-телефон в мобильный прокси с удалённой сменой IP",
+        "en": "Turns your own Android phone into a mobile proxy with remote IP rotation"
+      },
+      "priceFrom": {
+        "ru": "Basic $9 за устройство на 30 дней; Pro $12,5",
+        "en": "Basic $9 per device for 30 days; Pro $12.50"
+      },
+      "priceCheckedAt": "2026-09-29",
+      "freeTier": {
+        "ru": "Pro бесплатно 48 часов без карты",
+        "en": "Pro free for 48 hours, no card"
+      },
+      "availability": {
+        "ru": "Оплата картами и кошельками (Apple Pay, Google Pay и другие), нужна карта, выпущенная вне России",
+        "en": "Cards and wallets; methods vary by country"
+      },
+      "affiliate": null,
+      "darebay": {
+        "own": false
+      },
+      "source": {
+        "url": "https://iproxy.online/ru/pricing",
+        "date": "2026-09-29"
+      }
+    },
+    {
+      "id": "darebay-ready-clips",
+      "category": "editing",
+      "name": "DareBay ready clips",
+      "icon": "video",
+      "displayName": {
+        "ru": "Готовые ролики DareBay"
+      },
+      "url": "https://darebay.com/tasks",
+      "whatFor": {
+        "ru": "В заданиях под офферы: готовый ролик, у каждого аккаунта своя версия",
+        "en": "In offer tasks: a ready clip, a separate version for every account"
+      },
+      "priceFrom": {
+        "ru": "Бесплатно для участника задания",
+        "en": "Free for task participants"
+      },
+      "priceCheckedAt": "2026-09-29",
+      "freeTier": null,
+      "availability": {
+        "ru": "Работает в браузере и в Telegram",
+        "en": "Works in the browser and in Telegram"
+      },
+      "affiliate": null,
+      "darebay": {
+        "own": true,
+        "status": "live",
+        "to": "signup"
+      },
+      "source": {
+        "url": "https://darebay.com/tasks",
+        "date": "2026-09-29"
+      }
+    },
+    {
+      "id": "darebay-uniqualizer",
+      "category": "uniqueization",
+      "name": "DareBay version builder",
+      "icon": "copies",
+      "displayName": {
+        "ru": "Уникализатор DareBay"
+      },
+      "url": "https://darebay.com/tasks",
+      "whatFor": {
+        "ru": "В заданиях под офферы: до 20 версий оригинала за раз, по одной на аккаунт",
+        "en": "In offer tasks: up to 20 versions of a task original per request, one per account"
+      },
+      "priceFrom": {
+        "ru": "Бесплатно для участника задания",
+        "en": "Free for task participants"
+      },
+      "priceCheckedAt": "2026-09-29",
+      "freeTier": null,
+      "availability": {
+        "ru": "Работает в браузере и в Telegram",
+        "en": "Works in the browser and in Telegram"
+      },
+      "affiliate": null,
+      "darebay": {
+        "own": true,
+        "status": "live",
+        "to": "signup"
+      },
+      "source": {
+        "url": "https://darebay.com/tasks",
+        "date": "2026-09-29"
+      }
+    },
+    {
+      "id": "darebay-accounts",
+      "category": "publishing",
+      "name": "DareBay account connection",
+      "icon": "accounts",
+      "displayName": {
+        "ru": "Подключение аккаунтов DareBay"
+      },
+      "url": "https://darebay.com/tasks",
+      "whatFor": {
+        "ru": "До 20 твоих аккаунтов в одно задание, все площадки вместе: новые ролики подтягиваются сами",
+        "en": "Up to 20 of your accounts per task across all platforms; new videos are pulled in for you"
+      },
+      "priceFrom": {
+        "ru": "Бесплатно для участника задания",
+        "en": "Free for task participants"
+      },
+      "priceCheckedAt": "2026-09-29",
+      "freeTier": null,
+      "availability": {
+        "ru": "Работает в браузере и в Telegram",
+        "en": "Works in the browser and in Telegram"
+      },
+      "affiliate": null,
+      "darebay": {
+        "own": true,
+        "status": "live",
+        "to": "signup"
+      },
+      "source": {
+        "url": "https://darebay.com/tasks",
+        "date": "2026-09-29"
+      }
+    },
+    {
+      "id": "darebay-tracked-links",
+      "category": "analytics-hooks",
+      "name": "DareBay tracked links",
+      "icon": "link",
+      "displayName": {
+        "ru": "Трек-ссылки DareBay"
+      },
+      "url": "https://darebay.com/tasks",
+      "whatFor": {
+        "ru": "В заданиях за продажи: по каждой ссылке видны переходы живых людей и продажи",
+        "en": "In pay-per-sale tasks: each link shows clicks from real people and sales"
+      },
+      "priceFrom": {
+        "ru": "Бесплатно для участника задания",
+        "en": "Free for task participants"
+      },
+      "priceCheckedAt": "2026-09-29",
+      "freeTier": null,
+      "availability": {
+        "ru": "Работает в браузере и в Telegram",
+        "en": "Works in the browser and in Telegram"
+      },
+      "affiliate": null,
+      "darebay": {
+        "own": true,
+        "status": "live",
+        "to": "traffic"
+      },
+      "source": {
+        "url": "https://darebay.com/tasks",
+        "date": "2026-09-29"
+      }
+    },
+    {
+      "id": "darebay-earnings-calculator",
+      "category": "analytics-hooks",
+      "name": "DareBay earnings calculator",
+      "icon": "calc",
+      "displayName": {
+        "ru": "Калькулятор заработка DareBay"
+      },
+      "url": "https://darebay.com/zarabotok/kalkulyator-zarabotka-na-narezkah",
+      "whatFor": {
+        "ru": "Доход по просмотрам на ролик, роликам в неделю и ставке задания",
+        "en": "Earnings from views per clip, clips per week and the task's rate"
+      },
+      "priceFrom": {
+        "ru": "Бесплатно",
+        "en": "Free"
+      },
+      "priceCheckedAt": "2026-09-29",
+      "freeTier": null,
+      "availability": {
+        "ru": "Открывается в браузере, регистрация не нужна",
+        "en": "Opens in the browser, no sign-up"
+      },
+      "affiliate": null,
+      "darebay": {
+        "own": true,
+        "status": "live"
+      },
+      "source": {
+        "url": "https://darebay.com/zarabotok/kalkulyator-zarabotka-na-narezkah",
+        "date": "2026-09-29"
+      },
+      "sources": [
+        {
+          "field": "en page",
+          "url": "https://darebay.com/en/earnings/clipping-earnings-calculator",
+          "date": "2026-09-29"
+        }
+      ]
+    },
+    {
+      "id": "darebay-store",
+      "category": null,
+      "name": "DareBay store",
+      "icon": "store",
+      "displayName": {
+        "ru": "Магазин DareBay"
+      },
+      "url": "https://darebay.com/store",
+      "whatFor": {
+        "ru": "Цифровые товары продавцов с оплатой на платформе",
+        "en": "Digital goods from sellers, paid for on the platform"
+      },
+      "priceFrom": {
+        "ru": "Цена у каждого товара своя",
+        "en": "Each product has its own price"
+      },
+      "priceCheckedAt": "2026-09-29",
+      "freeTier": null,
+      "availability": {
+        "ru": "Оплата на платформе",
+        "en": "Checkout on the platform"
+      },
+      "affiliate": null,
+      "darebay": {
+        "own": true,
+        "status": "live",
+        "to": "store"
+      },
+      "source": {
+        "url": "https://darebay.com/store",
+        "date": "2026-09-29"
+      },
+      "sources": [
+        {
+          "field": "live catalog (2 third-party CRYPTO products on 29.09)",
+          "url": "https://darebay.com/api/store/products",
+          "date": "2026-09-29"
+        }
+      ]
+    }
+  ]
+}

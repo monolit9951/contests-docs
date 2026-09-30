@@ -3,15 +3,27 @@ import { useData } from 'vitepress'
 import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import { useLangs } from '../langs'
 import type { DareBayThemeConfig } from '../../chrome'
-import { localeOf } from './copy'
+import { ctaHref } from '../../links'
+import { LANDING_COPY, localeOf } from './copy'
 import { NAVIGATION_COPY, navigationCurrent } from './navigation'
 
-const { theme, page, lang } = useData<DareBayThemeConfig>()
+const { theme, page, lang, frontmatter } = useData<DareBayThemeConfig>()
 const { localeLinks, currentLang } = useLangs()
 // The registry supplies the section URLs and keeps the product CTA last.
 const links = computed(() => (theme.value.nav ?? []).slice(0, -1) as { text: string; link: string }[])
-const cta = computed(() => (theme.value.nav ?? []).slice(-1)[0] as { text: string; link: string } | undefined)
 const copy = computed(() => NAVIGATION_COPY[localeOf(lang.value)])
+// On a showcase landing the hero already starts a registration in lime, so the header's button is
+// the returning reader's door instead: the task catalogue, drawn as an outline so the first screen
+// shows one lime action, not two with different targets («На сайт» on darebay.com itself said little).
+// `?auth=signup` opens the registration dialog even for a signed-in reader (verify.md §6.2 #9), so
+// the catalogue needs a door of its own, and every landing now has one without JavaScript.
+const showcase = computed(() => Boolean(frontmatter.value.isHub) && frontmatter.value.showcase === true)
+const cta = computed(() => {
+  const product = (theme.value.nav ?? []).slice(-1)[0] as { text: string; link: string } | undefined
+  if (!showcase.value || !product) return product ? { ...product, compact: copy.value.site, ghost: false } : undefined
+  const locale = localeOf(lang.value)
+  return { text: LANDING_COPY[locale].ctaPrimary, link: ctaHref('tasks', locale), compact: copy.value.tasks, ghost: true }
+})
 const header = ref<HTMLElement>()
 const menu = ref<HTMLDetailsElement>()
 const languages = ref<HTMLDetailsElement>()
@@ -70,9 +82,9 @@ onBeforeUnmount(() => {
             </nav>
           </details>
         </div>
-        <a v-if="cta" class="lp-header-cta" :href="cta.link" target="_self">
+        <a v-if="cta" class="lp-header-cta" :class="{ 'lp-header-cta--ghost': cta.ghost }" :href="cta.link" target="_self">
           <span class="lp-cta-full">{{ cta.text }}</span>
-          <span class="lp-cta-compact">{{ copy.site }}</span>
+          <span class="lp-cta-compact">{{ cta.compact }}</span>
           <svg class="lp-cta-arrow" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5"/></svg>
         </a>
         <details ref="menu" class="lp-mobile-menu">
@@ -101,7 +113,7 @@ onBeforeUnmount(() => {
 .lp-header { position: sticky; inset-block-start: 0; z-index: 50; background: rgba(9, 12, 17, .94); border-block-end: 1px solid var(--lp-line); backdrop-filter: blur(20px); }
 .lp-header-in { display: flex; align-items: center; gap: 32px; min-height: 76px; }
 .lp-logo { display: inline-flex; align-items: center; flex: none; gap: 9px; min-height: 44px; color: var(--lp-text); font-family: var(--lp-display); font-size: 17px; font-weight: 700; letter-spacing: -.05em; }
-.lp-logo-mark { display: grid; place-items: center; width: 30px; height: 30px; border-radius: 9px; background: var(--lp-accent); color: var(--lp-on-accent); }
+.lp-logo-mark { display: grid; place-items: center; width: 30px; height: 30px; border-radius: 9px; background: var(--lp-action); color: var(--lp-on-action); }
 .lp-logo-mark svg { width: 22px; height: 22px; }
 .lp-nav { display: flex; align-items: center; gap: 22px; }
 .lp-nav a { display: inline-flex; align-items: center; min-height: 44px; white-space: nowrap; font-size: 13px; font-weight: 650; color: var(--lp-muted); transition: color .16s; }
@@ -120,8 +132,10 @@ details[open] .lp-chevron { transform: rotate(180deg); }
 .lp-language-options a, .lp-language-current { display: flex; align-items: center; justify-content: space-between; min-height: 44px; padding: 8px 12px; border-radius: 8px; font-size: 13px; }
 .lp-language-options a:hover { background: var(--lp-panel-2); }
 .lp-language-current { color: var(--lp-accent); }
-.lp-header-cta { display: inline-flex; align-items: center; justify-content: center; flex: none; min-height: 42px; padding: 10px 17px; border-radius: 10px; background: var(--lp-accent); color: var(--lp-on-accent); font-size: 12px; font-weight: 800; white-space: nowrap; transition: background .16s, transform .16s; }
-.lp-header-cta:hover { background: var(--lp-accent-deep); transform: translateY(-1px); }
+.lp-header-cta { display: inline-flex; align-items: center; justify-content: center; flex: none; min-height: 42px; padding: 10px 17px; border-radius: 10px; background: var(--lp-action); color: var(--lp-on-action); font-size: 12px; font-weight: 800; white-space: nowrap; transition: background .16s, transform .16s; }
+.lp-header-cta:hover { background: var(--lp-action-deep); transform: translateY(-1px); }
+.lp-header-cta--ghost { background: transparent; color: var(--lp-text); box-shadow: inset 0 0 0 1px var(--lp-line-2); }
+.lp-header-cta--ghost:hover { background: var(--lp-panel-2); }
 .lp-cta-compact, .lp-cta-arrow, .lp-mobile-menu { display: none; }
 .lp-skip { position: absolute; inset-block-start: -100px; inset-inline-start: 20px; padding: 12px 18px; background: var(--lp-accent); color: var(--lp-on-accent); border-radius: 8px; font-size: 14px; font-weight: 700; z-index: 5; }
 .lp-skip:focus { inset-block-start: 10px; }

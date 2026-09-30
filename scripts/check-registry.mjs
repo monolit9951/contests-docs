@@ -18,6 +18,7 @@
 import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs'
 import { join, dirname, relative } from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { rootLinkPaths } from './markdown-links.mjs'
 
 const HERE = dirname(fileURLToPath(import.meta.url))
 const DOCS = join(HERE, '..', 'docs')
@@ -448,7 +449,10 @@ for (const entry of PAGES) {
 
     for (const file of walk(DOCS)) {
         const raw = readFileSync(file, 'utf8')
-        for (const [, href] of raw.matchAll(/\]\((\/[^)#\s]*)/g)) {
+        // The path is judged without its query, as VitePress's own dead-link check judges it: the
+        // registration link `/tasks?auth=signup` is the task catalogue with the sign-up dialog open
+        // (`ctaHref('signup', …)` in links.ts), not an address of its own (markdown-links.mjs).
+        for (const href of rootLinkPaths(raw)) {
             if (live.has(href) || hubRoots.has(href) || appRoutes.has(href) || appLink(href)) continue
             if (rootFiles.has(href)) continue
             // `/legal/*` is shared across locales by design.

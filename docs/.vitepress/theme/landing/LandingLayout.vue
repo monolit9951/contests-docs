@@ -4,8 +4,13 @@
 // renders through it (the stock docs layout is retired); a 404 renders inside
 // the same shell. Everything is server-rendered: the crawlers that matter here
 // do not run JavaScript.
+//
+// A hub index lists its section with the catalogue first and its Markdown below. A showcase hub
+// index (`showcase: true`) is a landing instead: hero with buttons, then the page's own Markdown
+// with its blocks, then the catalogue (`LCatalog`, where the Markdown places it or after it), then
+// the CTA band. Either way the section's catalogue renders exactly once (dist gate `hub-directory`).
 import { Content, useData } from 'vitepress'
-import { computed } from 'vue'
+import { computed, onMounted } from 'vue'
 import type { DareBayThemeConfig } from '../../chrome'
 import LandingHeader from './LandingHeader.vue'
 import LandingFooter from './LandingFooter.vue'
@@ -13,11 +18,15 @@ import LHero from './LHero.vue'
 import LCta from './LCta.vue'
 import LRelated from './LRelated.vue'
 import LContents from './LContents.vue'
+import LCatalog from './LCatalog.vue'
 import HubIndex from '../HubIndex.vue'
+import { catalogPlacement, installReturningVisitorLinks } from './showcase'
 
 const { frontmatter, page, theme } = useData<DareBayThemeConfig>()
 const world = computed(() => (frontmatter.value.world === 'cyan' ? 'lp-world-cyan' : ''))
 const notFound = computed(() => Boolean(page.value.isNotFound))
+const catalog = computed(() => catalogPlacement(frontmatter.value))
+onMounted(installReturningVisitorLinks)
 </script>
 
 <template>
@@ -30,7 +39,12 @@ const notFound = computed(() => Boolean(page.value.isNotFound))
       <a class="lp-btn lp-btn-primary" :href="theme.logoLink as string" :aria-label="theme.notFound?.linkLabel">{{ theme.notFound?.linkText ?? 'Home' }}</a>
     </main>
     <main v-else id="main-content" tabindex="-1">
-      <template v-if="frontmatter.isHub">
+      <template v-if="catalog === 'inline' || catalog === 'after'">
+        <LHero />
+        <Content class="lp-content lp-showcase" />
+        <LCatalog v-if="catalog === 'after'" />
+      </template>
+      <template v-else-if="catalog === 'top'">
         <LHero />
         <div class="lp-container"><HubIndex :hub="frontmatter.sectionHub.id" /></div>
         <Content class="lp-content lp-hub-context" />

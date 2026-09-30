@@ -104,8 +104,10 @@ export function internalNofollowAnchors(html) {
  * Anchor classes that are page chrome, not a recommendation of another page: the skip link, logo
  * and header button; the breadcrumb and byline (the same two targets on every article); the
  * page's own outline and heading permalinks; the "all pages of this section" link and the hub
- * catalogue cards; the product buttons. The language switcher and the section menu live in
- * `<header>`, outside `<main>`, and never reach this filter.
+ * catalogue cards; the product buttons; the tools catalogue's category chips (jumps within the
+ * page) and the dated source link of a price. The language switcher and the section menu live in
+ * `<header>`, outside `<main>`, and never reach this filter. A tool card's "review" link is
+ * editorial on purpose: it recommends our own article about the tool.
  */
 export const NON_EDITORIAL_CLASSES = [
   'lp-skip',
@@ -120,6 +122,8 @@ export const NON_EDITORIAL_CLASSES = [
   'hub-feature',
   'lp-hero-action',
   'lp-btn',
+  'lp-tchip',
+  'lp-tsrc',
 ]
 
 /** The `<main>` element of a document (the landing shell renders exactly one), or '' without one. */

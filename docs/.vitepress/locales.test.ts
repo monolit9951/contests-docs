@@ -17,12 +17,13 @@ import siteConfig, {
   LOCALE_LABELS,
   OG_LOCALE,
   ORGANIZATION,
-  OVERVIEW,
 } from './config'
 import { businessUrlForLocale, productUrlForLocale, tasksUrlForLocale } from './links'
-import { KNOWN_LOCALES, LOCALES, knownAxisOf, textDirectionOf, type Locale } from './registry'
+import { HUBS, KNOWN_LOCALES, LOCALES, knownAxisOf, textDirectionOf, type Locale } from './registry'
 import { sourcesHeading } from './sources'
 import { LANDING_COPY, NUMBER_LOCALE, localeOf } from './theme/landing/copy'
+import { TOOLS_COPY } from './theme/landing/toolsCopy'
+import { NAVIGATION_COPY } from './theme/landing/navigation'
 
 // Every per-language table of this build, held against the registry's list of KNOWN languages.
 //
@@ -68,17 +69,29 @@ describe('every interface dictionary speaks every known language', () => {
   it.each([
     ['CHROME_COPY (chrome.ts)', CHROME_COPY],
     ['LANDING_COPY (theme/landing/copy.ts)', LANDING_COPY],
+    ['TOOLS_COPY (theme/landing/toolsCopy.ts)', TOOLS_COPY],
+    ['NAVIGATION_COPY (theme/landing/navigation.ts)', NAVIGATION_COPY],
     ['NUMBER_LOCALE (theme/landing/copy.ts)', NUMBER_LOCALE],
     ['LOCALE_LABELS (config.ts)', LOCALE_LABELS],
     ['LOCALE_DESCRIPTIONS (config.ts)', LOCALE_DESCRIPTIONS],
     ['OG_LOCALE (config.ts)', OG_LOCALE],
     ['HUB_TITLES (config.ts)', HUB_TITLES],
-    ['OVERVIEW (config.ts)', OVERVIEW],
     ['AUTHOR_NAME (config.ts)', AUTHOR_NAME],
     ['COPY (scripts/gen-llms.mjs)', LLMS_COPY],
     ['TABLE_HEADERS (scripts/gen-facts-json.mjs)', TABLE_HEADERS],
   ] as [string, Record<string, unknown>][])('%s', (name, table) => {
     expectEveryLanguage(table, name)
+  })
+
+  // The shape check above compares each language with English, so a section missing from all four
+  // at once passes it: the header, the breadcrumb and llms.txt would print `undefined` for it. The
+  // registry's sections are the reference here instead.
+  it('titles every section of the registry in every language', () => {
+    const sections = Object.keys(HUBS).sort()
+    for (const language of KNOWN_LOCALES) {
+      expect(Object.keys(HUB_TITLES[language]).sort(), `HUB_TITLES.${language}`).toEqual(sections)
+      expect(Object.keys(LLMS_COPY[language].hubs).sort(), `llms COPY.${language}.hubs`).toEqual(sections)
+    }
   })
 
   it('names each language in its own script, and each Open Graph locale in its own format', () => {
@@ -91,9 +104,26 @@ describe('every interface dictionary speaks every known language', () => {
   it('points the "onward" arrows of a right-to-left tree to the left', () => {
     for (const language of KNOWN_LOCALES) {
       const onward = textDirectionOf(language) === 'rtl' ? '←' : '→'
-      for (const label of [CHROME_COPY[language].navCta, LANDING_COPY[language].ctaPrimary, LANDING_COPY[language].bizCtaPrimary]) {
+      const landing = LANDING_COPY[language]
+      // Every label that leads on into the product or another page; the rooms (community, the
+      // founder) open in a new tab and carry no arrow.
+      const onwardLabels = [
+        CHROME_COPY[language].navCta,
+        landing.ctaPrimary,
+        landing.bizCtaPrimary,
+        landing.actions.signup,
+        landing.actions.teams,
+        landing.actions.traffic,
+        landing.actions.store,
+        landing.more,
+        TOOLS_COPY[language].open,
+        TOOLS_COPY[language].compared,
+      ]
+      for (const label of onwardLabels) {
         expect(label, `${language}: ${label}`).toContain(onward)
+        expect(label, `${language}: ${label}`).not.toContain(onward === '→' ? '←' : '→')
       }
+      expect(TOOLS_COPY[language].asOf, language).toContain('{date}')
     }
   })
 

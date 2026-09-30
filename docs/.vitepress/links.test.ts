@@ -1,7 +1,22 @@
 import { describe, expect, it } from 'vitest'
+import { CHROME_COPY } from './chrome'
 import { DATA, sourcesOf } from './theme/landing/platforms'
-import { localizedSitePath, sitePathOf, sourceAnchor, sourceLabel } from './links'
-import { LOCALES, PAGES, localesOf, pagePath } from './registry'
+import {
+  COMMUNITY_PLATFORM,
+  CTA_KEYS,
+  DISCORD,
+  FOUNDER_TELEGRAM,
+  TELEGRAM,
+  TELEGRAM_CHAT,
+  ctaAnchor,
+  ctaHref,
+  isCtaKey,
+  localizedSitePath,
+  sitePathOf,
+  sourceAnchor,
+  sourceLabel,
+} from './links'
+import { APP_ROUTES, KNOWN_LOCALES, LOCALES, PAGES, localesOf, pagePath } from './registry'
 
 describe('sourceAnchor: our own site versus somebody else’s', () => {
   it('keeps a citation of another site an outbound, unfollowed link in a new tab', () => {
@@ -89,5 +104,71 @@ describe('sourceLabel', () => {
   it('prints what the link opens', () => {
     expect(sourceLabel('https://www.whop.com/terms', 'ru')).toBe('whop.com/terms')
     expect(sourceLabel('https://darebay.com/o-proekte/darebay-v-tsifrakh', 'en')).toBe('darebay.com/en/about/darebay-at-a-glance')
+  })
+})
+
+describe('CTA keys', () => {
+  it('sends every application key into the application tree the reader is sent to', () => {
+    expect(ctaHref('tasks', 'ru')).toBe('https://darebay.com/tasks')
+    expect(ctaHref('tasks', 'uk')).toBe('https://darebay.com/ua/tasks')
+    expect(ctaHref('teams', 'ru')).toBe('https://darebay.com/earn/teams')
+    expect(ctaHref('traffic', 'en')).toBe('https://darebay.com/en/earn/traffic')
+    expect(ctaHref('store', 'ru')).toBe('https://darebay.com/store')
+    expect(ctaHref('business', 'en')).toBe('https://darebay.com/en/for-business')
+    // The application has no Arabic tree: an Arabic page's buttons open the English interface.
+    expect(ctaHref('business', 'ar')).toBe('https://darebay.com/en/for-business')
+  })
+
+  it('opens the registration dialog over the task catalogue for `signup`', () => {
+    expect(ctaHref('signup', 'ru')).toBe('https://darebay.com/tasks?auth=signup')
+    expect(ctaHref('signup', 'en')).toBe('https://darebay.com/en/tasks?auth=signup')
+    expect(ctaHref('signup', 'ar')).toBe('https://darebay.com/en/tasks?auth=signup')
+  })
+
+  it('opens the founder and the community room of the page’s language directly', () => {
+    for (const language of KNOWN_LOCALES) expect(ctaHref('founder', language)).toBe(FOUNDER_TELEGRAM)
+    expect(ctaHref('community', 'ru')).toBe(TELEGRAM_CHAT)
+    expect(ctaHref('community', 'uk')).toBe(TELEGRAM_CHAT)
+    expect(ctaHref('community', 'en')).toBe(DISCORD)
+    expect(ctaHref('community', 'ar')).toBe(DISCORD)
+    // The chat, not the one-way channel; the room itself, not `/community?src=…`, whose `src` never
+    // reaches analytics.
+    for (const language of KNOWN_LOCALES) {
+      expect(ctaHref('community', language)).not.toBe(TELEGRAM)
+      expect(ctaHref('community', language)).not.toMatch(/\/community\b/)
+    }
+  })
+
+  it('names the community platform each language declares in its chrome copy', () => {
+    for (const language of KNOWN_LOCALES) expect(COMMUNITY_PLATFORM[language], language).toBe(CHROME_COPY[language].community.platform)
+  })
+
+  it('keeps a product button in the same tab and opens a room in a new one, never unfollowed', () => {
+    for (const language of KNOWN_LOCALES) {
+      for (const key of CTA_KEYS) {
+        const anchor = ctaAnchor(key, language)
+        expect(anchor.href).toBe(ctaHref(key, language))
+        expect(anchor.rel ?? '').not.toContain('nofollow')
+        expect(anchor.target).toBe(key === 'founder' || key === 'community' ? '_blank' : '_self')
+      }
+    }
+  })
+
+  it('lands every application key on a route the dead-link checks know, and carries no UTM', () => {
+    const routes = new Set(APP_ROUTES)
+    for (const language of KNOWN_LOCALES) {
+      for (const key of CTA_KEYS) {
+        const url = new URL(ctaHref(key, language))
+        expect(url.search, key).not.toMatch(/utm_/)
+        if (url.hostname !== 'darebay.com') continue
+        // VitePress and check-registry both judge the path without its query.
+        expect(routes.has(url.pathname), `${key} on ${language}: ${url.pathname}`).toBe(true)
+      }
+    }
+  })
+
+  it('accepts exactly the closed key set', () => {
+    for (const key of CTA_KEYS) expect(isCtaKey(key)).toBe(true)
+    for (const value of ['clips', 'home', '', undefined, null, 1, '/tasks']) expect(isCtaKey(value)).toBe(false)
   })
 })

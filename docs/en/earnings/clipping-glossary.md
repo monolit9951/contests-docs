@@ -1,6 +1,6 @@
 ---
 title: "Clipping glossary: the terms every clipper should know"
-description: "Clipping is cutting streams and videos into short clips that earn per view. 52 clipper terms: CPM, threshold, cap, counted views, offers, wallet, withdrawal."
+description: "Clipping is cutting streams and videos into short clips that earn per view. 53 clipper terms: CPM, threshold, cap, counted views, offers, wallet, withdrawal."
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_min_views_threshold_live, ppv_default_min_views_threshold, ppv_max_per_work_typical, commission_crypto, commission_fiat, contest_create_usdt_price]
 seo: true
@@ -24,6 +24,7 @@ glossary:
   - { id: "claim-now", term: "Claim now", definition: "A button some tasks show once your work is approved: it locks in the amount accrued so far ahead of time. Once pressed, the video stops earning in that task, so it makes sense when the views have already stopped." }
   - { id: "clipper", term: "Clipper", definition: "Someone who cuts other people's streams or shoots short videos of their own for a task, posts them on their own accounts and is paid for counted views. No followers are needed: what counts is the reach of one specific clip." }
   - { id: "clipping", term: "Clipping", definition: "Cutting streams, podcasts and long videos into short clips, or shooting short videos of your own for a task, then posting them on your own accounts and getting paid per view. The Russian-speaking scene calls the same thing narezki." }
+  - { id: "content-farm", term: "Content farm", definition: "In short video, a set of live accounts run by one person or a team, each on its own niche and each posting its own version of a clip. Accounts that push one clip through bots or empty profiles are an engagement farm, and their views are not paid." }
   - { id: "contest-fee", term: "Contest fee", definition: "The share of a task's budget the platform keeps: on DareBay it is 0%, so the whole fund goes to clippers. Creating a contest is free for the buyer too, so the whole budget is there to pay creators." }
   - { id: "counted-view", term: "Counted view", definition: "A view the platform's counter has read from the site's public counter and that has passed moderation and fraud checks. Only counted views are paid, and the figure is refreshed several times a day." }
   - { id: "cpa", term: "CPA", definition: "Cost per action: payment for a target action such as a sign-up, an application or a purchase through your link or promo code. On DareBay, a CPA offer task can add a fixed fee per accepted clip and a share of sales." }
@@ -71,7 +72,7 @@ glossary:
   - { id: "withdrawal-fee", term: "Withdrawal fee", definition: "A charge for moving money from the balance to a wallet. On DareBay it is 10% of the requested amount, deducted inside the request, while contest payouts themselves carry 0%; a personal rate may apply, and the form shows the exact rate and the amount to receive before you confirm." }
 ---
 
-Read a task card without stumbling and you stop guessing what it will pay you: CPM or per thousand, threshold or cap, claim now or withdrawal. This glossary collects 52 terms from DareBay task cards, payout rules and clipper chats, each explained in a sentence or two.
+Read a task card without stumbling and you stop guessing what it will pay you: CPM or per thousand, threshold or cap, claim now or withdrawal. This glossary collects 53 terms from DareBay task cards, payout rules and clipper chats, each explained in a sentence or two.
 
 The definitions follow the platform's own rules, and DareBay's figures come from its own public pages. Every term has its own anchor you can link to from a chat. For the whole mechanic, start with [how pay-per-view works](/en/earnings/how-pay-per-view-works).
 
@@ -98,6 +99,10 @@ A pay-per-view task pays one thing: the rate per 1000 counted views, up to any c
 ### Withdrawal and Stars
 
 A withdrawal is a request for USDT on the TON network: file it from 10 USDT and the platform does the rest, with a 10% fee deducted inside the request. Stars are the second route in the same wizard: the amount goes out as Telegram Stars and stays inside Telegram, so it is not a withdrawal. Both routes draw on the available balance, which a wallet-backed task credits when it ends, or earlier with Claim now where the task shows it<!-- source: https://darebay.com/en/help/darebay-withdrawals 2026-09-24 -->; details on the [withdrawals page](/en/help/darebay-withdrawals).
+
+### Content farm and engagement farm
+
+A content farm in the short-video sense is a set of live niche accounts, each posting its own version of a clip to real viewers. An engagement farm pushes one clip through empty or bot accounts to inflate the numbers, and a task pays nothing for those views. Where the term comes from and where the platforms draw the line is covered in [what a content farm is](/en/content-farm/what-is-a-content-farm).
 
 ## Frequently asked questions
 

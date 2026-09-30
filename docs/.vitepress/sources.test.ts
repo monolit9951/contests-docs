@@ -66,15 +66,15 @@ describe('source comments with the flag', () => {
 
     expect(html).toContain('First<sup class="src-ref">&#8202;<a href="#src-1">[1]</a></sup> then<sup class="src-ref">&#8202;<a href="#src-2">[2]</a></sup>.')
     expect(html).not.toContain('<!-- source:')
-    expect(html).toContain('<li id="src-1"><span class="src-n">[1]</span> <a href="https://telegram.org/blog/monetization-for-channels" rel="nofollow noopener">telegram.org/blog/monetization-for-channels</a> — 2026-09-04</li>')
-    expect(html).toContain('<li id="src-2"><span class="src-n">[2]</span> <a href="https://npd.nalog.ru/" rel="nofollow noopener">npd.nalog.ru/</a> — 2026-09-04</li>')
+    expect(html).toContain('<li id="src-1"><span class="src-n">[1]</span> <span><a href="https://telegram.org/blog/monetization-for-channels" rel="nofollow noopener">telegram.org/blog/monetization-for-channels</a>, <time datetime="2026-09-04">04.09.2026</time></span></li>')
+    expect(html).toContain('<li id="src-2"><span class="src-n">[2]</span> <span><a href="https://npd.nalog.ru/" rel="nofollow noopener">npd.nalog.ru/</a>, <time datetime="2026-09-04">04.09.2026</time></span></li>')
   })
 
   it('renders a competitor platform as plain text with no link at all', () => {
     const html = render(`Their own terms say so ${CLIPPING_NET}.`)
 
     expect(html).toContain('<sup class="src-ref">&#8202;<a href="#src-1">[1]</a></sup>')
-    expect(html).toContain('<li id="src-1"><span class="src-n">[1]</span> clipping.net/clip — 2026-09-05</li>')
+    expect(html).toContain('<li id="src-1"><span class="src-n">[1]</span> <span>clipping.net/clip, <time datetime="2026-09-05">05.09.2026</time></span></li>')
     // Not merely nofollow: the competitor's URL must not appear as an href anywhere.
     expect(html).not.toContain('href="https://clipping.net/clip"')
   })
@@ -86,16 +86,16 @@ describe('source comments with the flag', () => {
     const OWN = '<!-- source: https://darebay.com/en/help/what-commission 2026-09-04 -->'
 
     const ru = render(`Комиссия ${OWN}.`, { path: 'pomoshch/example.md' })
-    expect(ru).toContain('<li id="src-1"><span class="src-n">[1]</span> <a href="/pomoshch/kakaya-komissiya">darebay.com/pomoshch/kakaya-komissiya</a> — 2026-09-04</li>')
+    expect(ru).toContain('<li id="src-1"><span class="src-n">[1]</span> <span><a href="/pomoshch/kakaya-komissiya">darebay.com/pomoshch/kakaya-komissiya</a>, <time datetime="2026-09-04">04.09.2026</time></span></li>')
     expect(ru).not.toContain('nofollow')
 
     const en = render(`Fee ${OWN}.`, { path: 'en/help/example.md' })
-    expect(en).toContain('<li id="src-1"><span class="src-n">[1]</span> <a href="/en/help/what-commission">darebay.com/en/help/what-commission</a> — 2026-09-04</li>')
+    expect(en).toContain('<li id="src-1"><span class="src-n">[1]</span> <span><a href="/en/help/what-commission">darebay.com/en/help/what-commission</a>, <time datetime="2026-09-04">2026-09-04</time></span></li>')
 
     // An application address has no docs page behind it: relative, in the reader's application
     // tree, and `_self` so the docs router does not swallow it.
     const app = render(`Tasks <!-- source: https://darebay.com/en/tasks 2026-09-04 -->.`, { path: 'ua/dopomoha/a.md' })
-    expect(app).toContain('<li id="src-1"><span class="src-n">[1]</span> <a href="/ua/tasks" target="_self">darebay.com/ua/tasks</a> — 2026-09-04</li>')
+    expect(app).toContain('<li id="src-1"><span class="src-n">[1]</span> <span><a href="/ua/tasks" target="_self">darebay.com/ua/tasks</a>, <time datetime="2026-09-04">04.09.2026</time></span></li>')
   })
 
   it('gives a duplicated URL one number and one list entry', () => {
@@ -104,7 +104,7 @@ describe('source comments with the flag', () => {
     const html = render(`A ${CLIPPING_NET} B ${later} C ${TAX}.`)
 
     expect(html.match(/href="#src-1"/g)).toHaveLength(2)
-    expect(html).toContain('<li id="src-1"><span class="src-n">[1]</span> clipping.net/clip — 2026-09-05</li>')
+    expect(html).toContain('<li id="src-1"><span class="src-n">[1]</span> <span>clipping.net/clip, <time datetime="2026-09-05">05.09.2026</time></span></li>')
     expect(html).not.toContain('2026-09-11')
     expect(html.match(/<li id="src-/g)).toHaveLength(2)
     expect(html).toContain('<li id="src-2">')
@@ -143,6 +143,17 @@ describe('source comments with the flag', () => {
 
   it('fails the build on a malformed comment instead of hiding the claim', () => {
     expect(() => render('Half a citation <!-- source: https://npd.nalog.ru/ -->.')).toThrow(/sources: pomoshch\/example\.md/)
+  })
+
+  // Russian copy carries no «—» or «–» (BRIEF 2026-09-29), and the list used to print one after
+  // every address. The day follows after a comma now, written the way the page's language writes it.
+  it('prints no dash in the list, and the day as the page language writes it', () => {
+    const list = (html: string) => html.slice(html.indexOf('<ol'))
+    for (const path of ['pomoshch/a.md', 'ua/dopomoha/a.md', 'en/help/a.md', 'ar/help/a.md']) {
+      expect(list(render(`x ${TAX} y ${CLIPPING_NET}`, { path })), path).not.toMatch(/[—–]/)
+    }
+    expect(render(`x ${TAX}`, { path: 'ua/dopomoha/a.md' })).toContain('<time datetime="2026-09-04">04.09.2026</time>')
+    expect(render(`x ${TAX}`, { path: 'ar/help/a.md' })).toContain('<time datetime="2026-09-04">2026-09-04</time>')
   })
 
   it('escapes a URL and a date rather than letting them close an attribute', () => {

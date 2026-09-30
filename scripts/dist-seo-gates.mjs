@@ -6,6 +6,8 @@ import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { gluedTextFindings, sourceMarkerFindings, tableNumberingFindings } from './extracted-text.mjs'
 import { MIN_INBOUND, inboundSources, inboundVerdict, internalNofollowAnchors } from './internal-links.mjs'
+import { showcaseWeightFindings } from './showcase-weight.mjs'
+import { hubDirectoryFinding } from './hub-directory.mjs'
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..')
 const DOCS = join(ROOT, 'docs')
@@ -107,6 +109,14 @@ for (const page of PAGES) {
 
     const h1Tags = tags(html, 'h1')
     if (h1Tags.length !== 1) fail('h1-count', `${path}: ${h1Tags.length}`)
+
+    // A hub index lists its section exactly once, whichever layout drew it (hub-directory.mjs).
+    const directory = hubDirectoryFinding(markup, page, locale, PAGES)
+    if (directory) fail('hub-directory', `${path}: ${directory}`)
+
+    // A showcase hub index keeps to the weight a stalling connection still delivers: 40 KB of its own
+    // markup, 85 KB on the wire, nothing fetched to draw it (scripts/showcase-weight.mjs).
+    for (const finding of showcaseWeightFindings(html)) fail('showcase-weight', `${path}: ${finding}`)
 
     const documentLanguage = html.match(/<html\b[^>]*\blang="([^"]+)"/i)?.[1]
     if (documentLanguage !== locale) fail('html-lang', `${path}: ${documentLanguage ?? 'missing'} != ${locale}`)

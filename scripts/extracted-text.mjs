@@ -124,8 +124,12 @@ export function tableNumberingFindings(html) {
   return findings
 }
 
-/** The blocks whose text is the comparison's figures: tables, cards, sources, method, calculators. */
-export const TEXT_REGIONS = Object.freeze(['lp-table', 'lp-card-grid', 'lp-card-foot', 'lp-method', 'lp-calc', 'db-sources'])
+/**
+ * The blocks whose text is the page's figures and claims: tables, cards, sources, method,
+ * calculators, and the blocks of a showcase landing (the flow of the work, the feature tiles, the
+ * setup offer, the tools catalogue with its prices and dates).
+ */
+export const TEXT_REGIONS = Object.freeze(['lp-table', 'lp-card-grid', 'lp-card-foot', 'lp-method', 'lp-calc', 'db-sources', 'lp-flow', 'lp-features', 'lp-setup', 'lp-tools'])
 
 // Elements that do not break a line of extracted text (HTML's phrasing content). Everything else —
 // a cell, a list item, a paragraph, a <br> — does, and text on either side of it is not glued.

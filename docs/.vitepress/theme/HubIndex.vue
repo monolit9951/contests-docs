@@ -3,9 +3,13 @@ import { useData } from 'vitepress'
 import { computed, onMounted, ref, watch } from 'vue'
 import { data as hubs } from '../hubs.data'
 import { localeOf } from './landing/copy'
-import { CATALOG_COPY, TOPIC_LABELS, featuredPages, filterCatalog, groupCatalog, topicFor, type Topic } from './catalog'
+import { CATALOG_COPY, COMPACT_MAX, TOPIC_LABELS, featuredPages, filterCatalog, groupCatalog, topicFor, type Topic } from './catalog'
 
-const props = defineProps<{ hub: string }>()
+// `compact`: the catalogue of a showcase landing (LCatalog.vue). A landing's section holds a few
+// articles, and a search field, topic chips, a result count and topic rows of one or two cards
+// around four links read as an unfinished page (review 2026-09-30); up to `COMPACT_MAX` articles it
+// is one grid of cards. A section that outgrows that gets its controls back.
+const props = defineProps<{ hub: string; compact?: boolean }>()
 const { lang } = useData()
 const locale = computed(() => localeOf(lang.value))
 const copy = computed(() => CATALOG_COPY[locale.value])
@@ -22,6 +26,7 @@ const groups = computed(() => groupCatalog(filtered.value))
 const topics = computed(() => groupCatalog(pages.value))
 const featured = computed(() => featuredPages(pages.value))
 const isFiltered = computed(() => Boolean(query.value.trim()) || activeTopic.value !== 'all')
+const flat = computed(() => Boolean(props.compact) && pages.value.length <= COMPACT_MAX)
 const arrow = computed(() => locale.value === 'ar' ? '←' : '→')
 const number = (value: number) => new Intl.NumberFormat(locale.value, { minimumIntegerDigits: 2 }).format(value)
 </script>
@@ -42,8 +47,19 @@ const number = (value: number) => new Intl.NumberFormat(locale.value, { minimumI
     </div>
     <div class="hub-catalog-heading">
       <div><span class="hub-eyebrow">{{ copy.kicker }}</span><h2 :id="`catalog-${hub}-title`">{{ copy.browse }}</h2></div>
-      <span class="hub-total" aria-hidden="true">{{ number(pages.length) }}</span>
+      <span v-if="!flat" class="hub-total" aria-hidden="true">{{ number(pages.length) }}</span>
     </div>
+    <div v-if="flat" :id="`catalog-${hub}-results`" class="hub-results">
+      <div class="hub-card-grid">
+        <a v-for="(page, index) in pages" :key="page.id" class="hub-card" :href="page.path">
+          <div class="hub-card-meta"><span>{{ labels[topicFor(page.id)] }}</span><span aria-hidden="true">{{ number(index + 1) }}</span></div>
+          <h4>{{ page.title }}</h4>
+          <p v-if="page.description">{{ page.description }}</p>
+          <span class="hub-card-arrow" aria-hidden="true">{{ arrow }}</span>
+        </a>
+      </div>
+    </div>
+    <template v-else>
     <!-- Controls reserve their final space in SSR; no-JS readers keep every link. -->
     <div class="hub-controls">
       <label class="hub-search" :for="`catalog-${hub}-search`">
@@ -74,6 +90,7 @@ const number = (value: number) => new Intl.NumberFormat(locale.value, { minimumI
       </section>
       <div v-if="!filtered.length" class="hub-empty"><h3>{{ copy.empty }}</h3><p>{{ copy.emptyNote }}</p><button type="button" @click="reset">{{ copy.reset }}</button></div>
     </div>
+    </template>
   </section>
 </template>
 
@@ -122,7 +139,13 @@ const number = (value: number) => new Intl.NumberFormat(locale.value, { minimumI
 .hub-search input:focus-visible { outline: none; }
 .hub-filters { display: flex; flex-wrap: wrap; gap: 8px; margin-block-start: 16px; }
 .hub-filters button { display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--lp-line-2); border-radius: 999px; padding: 8px 12px; background: transparent; color: var(--lp-muted); font-size: 12px; line-height: 1.5; cursor: pointer; text-align: start; }
-.hub-filters button span { font-size: 10px; opacity: .7; font-variant-numeric: tabular-nums; }
+/* The count beside a topic: faint, not faded. Opacity over the muted colour measured 4.27:1 at 10px (WCAG AA wants 4.5). */
+.hub-filters button span { font-size: 11px; color: var(--lp-faint); font-variant-numeric: tabular-nums; }
+.hub-filters button[aria-pressed="true"] span { color: inherit; opacity: .8; }
+/* Before hydration (and without JavaScript) the search and the topics cannot work: the field keeps
+   its place without looking like one, and the topics read as labels, not as buttons to press. */
+.hub-search:has(input:disabled) { visibility: hidden; }
+.hub-filters button:disabled { opacity: .55; cursor: default; }
 .hub-filters button:hover { border-color: var(--lp-faint); color: var(--lp-text); }
 .hub-filters button[aria-pressed="true"] { background: var(--lp-accent); color: var(--lp-on-accent); border-color: var(--lp-accent); }
 .hub-results-bar { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 58px; font-size: 12px; color: var(--lp-faint); }
@@ -137,14 +160,14 @@ const number = (value: number) => new Intl.NumberFormat(locale.value, { minimumI
 .hub-card-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
 .hub-card { display: flex; flex-direction: column; align-items: flex-start; position: relative; min-width: 0; padding: 23px; border: 1px solid var(--lp-line); border-radius: 15px; background: var(--lp-panel); transition: border-color .18s, background .18s; }
 .hub-card:hover { border-color: var(--lp-line-2); background: var(--lp-panel-2); }
-.hub-card-meta { display: flex; justify-content: space-between; align-items: baseline; gap: 14px; width: 100%; color: var(--lp-faint); font-size: 10px; line-height: 1.5; margin-block-end: 18px; }
+.hub-card-meta { display: flex; justify-content: space-between; align-items: baseline; gap: 14px; width: 100%; color: var(--lp-faint); font-size: 11px; line-height: 1.5; margin-block-end: 18px; }
 .hub-card-meta > span:last-child { font-variant-numeric: tabular-nums; }
 .hub-card h4 { font-size: 16px; font-weight: 700; line-height: 1.5; letter-spacing: -.018em; overflow-wrap: anywhere; }
 .hub-card p { margin-block-start: 10px; color: var(--lp-muted); font-size: 12px; line-height: 1.75; overflow-wrap: anywhere; }
 .hub-card-arrow { align-self: flex-end; margin-block-start: auto; padding-block-start: 20px; color: var(--lp-accent); font-size: 20px; line-height: 1; }
 .hub-empty { border: 1px dashed var(--lp-line-2); border-radius: 16px; padding: 44px 24px; text-align: center; }
 .hub-empty h3 { font-size: 20px; }.hub-empty p { color: var(--lp-muted); font-size: 14px; margin-block: 10px 20px; }
-.hub-empty button { background: var(--lp-accent); color: var(--lp-on-accent); border: 0; border-radius: 999px; padding: 10px 18px; font-size: 13px; font-weight: 700; cursor: pointer; }
+.hub-empty button { background: var(--lp-action); color: var(--lp-on-action); border: 0; border-radius: 999px; padding: 10px 18px; font-size: 13px; font-weight: 700; cursor: pointer; }
 .hub-sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
 @media (max-width: 960px) { .hub-card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }.hub-feature { padding: 22px; }.hub-feature-grid { gap: 12px; } }
 @media (max-width: 640px) {

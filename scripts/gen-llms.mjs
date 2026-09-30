@@ -55,7 +55,7 @@ export const COPY = {
     factsJson: { title: 'Факты о DareBay в JSON', note: 'все поля карточки фактов, у каждого источник и дата чтения' },
     pagesJson: { title: 'Реестр страниц в JSON', note: 'идентификаторы, языки и адреса всех материалов сайта' },
     factCardNote: 'те же факты таблицей, у каждого значения источник и дата',
-    hubs: { about: 'О проекте', earnings: 'Заработок', brands: 'Брендам', help: 'Помощь', legal: 'Юридические документы' },
+    hubs: { about: 'О проекте', earnings: 'Заработок', brands: 'Брендам', help: 'Помощь', farm: 'Контент-завод', tools: 'Инструменты', legal: 'Юридические документы' },
   },
   uk: {
     label: 'Українська',
@@ -65,7 +65,7 @@ export const COPY = {
     factsJson: { title: 'Факти про DareBay у JSON', note: 'усі поля картки фактів, у кожного джерело і дата читання' },
     pagesJson: { title: 'Реєстр сторінок у JSON', note: 'ідентифікатори, мови та адреси всіх матеріалів сайту' },
     factCardNote: 'ті самі факти таблицею, у кожного значення джерело і дата',
-    hubs: { about: 'Про проєкт', earnings: 'Заробіток', brands: 'Брендам', help: 'Допомога', legal: 'Юридичні документи' },
+    hubs: { about: 'Про проєкт', earnings: 'Заробіток', brands: 'Брендам', help: 'Допомога', farm: 'Контент-завод', tools: 'Інструменти', legal: 'Юридичні документи' },
   },
   en: {
     label: 'English',
@@ -75,7 +75,7 @@ export const COPY = {
     factsJson: { title: 'DareBay facts as JSON', note: 'every field of the fact card, each with its source and reading date' },
     pagesJson: { title: 'Page registry as JSON', note: 'ids, languages and addresses of every guide on the site' },
     factCardNote: 'the same facts as a table, each value with its source and date',
-    hubs: { about: 'About', earnings: 'Earnings', brands: 'For brands', help: 'Help', legal: 'Legal' },
+    hubs: { about: 'About', earnings: 'Earnings', brands: 'For brands', help: 'Help', farm: 'Content farm', tools: 'Tools', legal: 'Legal' },
   },
   ar: {
     label: 'العربية',
@@ -85,10 +85,10 @@ export const COPY = {
     factsJson: { title: 'حقائق DareBay بصيغة JSON', note: 'كل بنود بطاقة الحقائق، ولكل بند مصدره وتاريخ قراءته' },
     pagesJson: { title: 'سجل الصفحات بصيغة JSON', note: 'معرّفات كل مقالات الموقع ولغاتها وروابطها' },
     factCardNote: 'الحقائق نفسها في جدول، ولكل قيمة مصدرها وتاريخها',
-    hubs: { about: 'عن المشروع', earnings: 'الربح', brands: 'للعلامات التجارية', help: 'المساعدة', legal: 'الوثائق القانونية' },
+    hubs: { about: 'عن المشروع', earnings: 'الربح', brands: 'للعلامات التجارية', help: 'المساعدة', farm: 'مزرعة المحتوى', tools: 'الأدوات', legal: 'الوثائق القانونية' },
   },
 }
-const HUB_ORDER = ['about', 'earnings', 'brands', 'help', 'legal']
+const HUB_ORDER = ['about', 'earnings', 'brands', 'help', 'farm', 'tools', 'legal']
 
 const field = (raw, name) => {
   const match = raw.match(new RegExp(`^${name}:\\s*(.+)$`, 'm'))

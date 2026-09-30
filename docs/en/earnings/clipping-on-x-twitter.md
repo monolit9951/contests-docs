@@ -37,6 +37,8 @@ Formats that gain steadily on X:
 - a thread of clips from one stream, hook first;
 - a vertical clip with subtitles, since sound is off by default.
 
+Apps that add captions and reframe clips to vertical are compared in the [tools catalog](/en/tools/).
+
 ## Two income streams from one clip
 
 DareBay's clip tasks count views on TikTok, Instagram Reels, YouTube Shorts and Facebook Reels, as each task states, and a link to an X post is not accepted. So the same clip is published twice: on TikTok, in Reels or in Shorts for a task that pays a rate per view, and on X for the network's own programme, as long as the task's terms do not demand exclusivity.

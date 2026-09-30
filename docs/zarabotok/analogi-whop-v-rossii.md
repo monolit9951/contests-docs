@@ -87,3 +87,4 @@ Klipni публикует 5% с одобренных выплат. У Vues и Re
 - [Whop Content Rewards: обзор](/zarabotok/whop-content-rewards-obzor) - как устроены кампании и куда Whop не платит
 - [Vyro: обзор платформы](/zarabotok/vyro-obzor-platformy) - порог 5000, потолок в просмотрах, закрытые страны
 - [Калькулятор заработка на нарезках](/zarabotok/kalkulyator-zarabotka-na-narezkah) - сумма в месяц с порогом, потолком и комиссией вывода
+- [Нейросети для нарезки видео на шортсы](/instrumenty/neyroseti-dlya-narezki-video): редакторы вроде OpusClip и Klap, цена часа исходника и оплата из России

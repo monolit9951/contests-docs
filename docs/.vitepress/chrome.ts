@@ -2,10 +2,13 @@ import type { DefaultTheme } from 'vitepress'
 import type { CommunityPlatform } from './links'
 import type { Locale } from './registry'
 
+/**
+ * The product and community addresses the shell prints on every page (LHero, LCta, LandingFooter),
+ * in the page's language. Only what a component reads: every field here is serialised into the site
+ * data of every document, so an unread one costs bytes on all of them (the old CTA box's title, lede
+ * and button label went with it on 2026-09-30).
+ */
 export interface DareBayCtaConfig {
-  readonly title: string
-  readonly lede: string
-  readonly productLabel: string
   readonly productUrl: string
   /** Open-task catalogue in the page's language: the primary CTA target outside the brands section. */
   readonly tasksUrl: string
@@ -16,8 +19,6 @@ export interface DareBayCtaConfig {
   readonly communityName: string
   /** Business page in the page's language: the primary CTA target of the brands section. */
   readonly businessUrl: string
-  /** The founder's own Telegram: the second CTA of the brands section. */
-  readonly founderUrl: string
 }
 
 /** The byline every article carries: who signs the corpus and where that page is. */
@@ -60,10 +61,7 @@ interface ChromeCopy {
   }
   readonly navLabel: string
   readonly languageLabel: string
-  readonly cta: Omit<
-    DareBayCtaConfig,
-    'productUrl' | 'tasksUrl' | 'communityUrl' | 'communityName' | 'businessUrl' | 'founderUrl'
-  >
+  readonly cta: Pick<DareBayCtaConfig, 'communityLabel'>
 }
 
 /**
@@ -96,12 +94,7 @@ export const CHROME_COPY: Record<Locale, ChromeCopy> = {
     community: { platform: 'telegram', ariaLabel: 'Telegram-канал DareBay', footerLabel: 'Telegram' },
     navLabel: 'Разделы',
     languageLabel: 'Язык',
-    cta: {
-      title: 'Открыть DareBay',
-      lede: 'Задания и конкурсы живут на сайте и в Telegram — это две равные двери в один продукт.',
-      productLabel: 'Перейти на darebay.com →',
-      communityLabel: 'Telegram-канал',
-    },
+    cta: { communityLabel: 'Telegram-канал' },
   },
   uk: {
     navCta: 'Перейти на сайт →',
@@ -125,12 +118,7 @@ export const CHROME_COPY: Record<Locale, ChromeCopy> = {
     community: { platform: 'telegram', ariaLabel: 'Telegram-канал DareBay', footerLabel: 'Telegram' },
     navLabel: 'Розділи',
     languageLabel: 'Мова',
-    cta: {
-      title: 'Відкрити DareBay',
-      lede: 'Завдання та конкурси доступні на сайті й у Telegram — це два рівноцінні входи в один продукт.',
-      productLabel: 'Перейти на darebay.com →',
-      communityLabel: 'Telegram-канал',
-    },
+    cta: { communityLabel: 'Telegram-канал' },
   },
   en: {
     navCta: 'Go to the site →',
@@ -154,12 +142,7 @@ export const CHROME_COPY: Record<Locale, ChromeCopy> = {
     community: { platform: 'discord', ariaLabel: 'DareBay Discord server', footerLabel: 'Discord' },
     navLabel: 'Sections',
     languageLabel: 'Language',
-    cta: {
-      title: 'Open DareBay',
-      lede: 'Tasks and contests are available on the website and in Telegram — two equal ways into the same product.',
-      productLabel: 'Go to darebay.com →',
-      communityLabel: 'Join our Discord',
-    },
+    cta: { communityLabel: 'Join our Discord' },
   },
   // Right-to-left: an arrow that means "onward" points left. The product buttons open the
   // English interface (the application has no Arabic one — `appLocaleOf` in the registry), and
@@ -186,11 +169,6 @@ export const CHROME_COPY: Record<Locale, ChromeCopy> = {
     community: { platform: 'discord', ariaLabel: 'خادم DareBay على Discord', footerLabel: 'Discord' },
     navLabel: 'الأقسام',
     languageLabel: 'اللغة',
-    cta: {
-      title: 'افتح DareBay',
-      lede: 'المهام والمسابقات متاحة على الموقع وفي Telegram، وهما مدخلان متكافئان إلى المنتج نفسه. واجهة المنصة بالإنجليزية.',
-      productLabel: 'الانتقال إلى darebay.com ←',
-      communityLabel: 'انضم إلى Discord',
-    },
+    cta: { communityLabel: 'انضم إلى Discord' },
   },
 }

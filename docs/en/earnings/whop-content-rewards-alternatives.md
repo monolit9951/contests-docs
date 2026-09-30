@@ -89,3 +89,4 @@ On the day we checked, clipaffiliates.com answered "service suspended" and its b
 - [DareBay vs Whop](/en/earnings/darebay-vs-whop) - the two platforms compared field by field
 - [Clipping platforms that pay in Russia and CIS](/en/earnings/clipping-platforms-that-pay-in-russia-and-cis) - who pays into Russia, Belarus, Ukraine and Kazakhstan, in the platforms' own words
 - [How much clipping pays](/en/earnings/how-much-clipping-pays) - worked examples per 1,000 views with threshold and cap
+- [OpusClip alternatives for clippers](/en/tools/opus-clip-alternatives) - what editors like OpusClip and Klap cost per hour of footage

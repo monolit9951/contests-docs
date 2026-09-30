@@ -69,7 +69,7 @@ In a wallet-backed task, what your approved clips earn is two steps from cash. S
 
 Step two: request a withdrawal from 10 USDT, and the platform does the rest. You receive USDT to a wallet on the TON network or Telegram Stars; Stars are "get it in Stars", not a cash withdrawal. The only fee along the way is 10% of the request, deducted inside it: a hundred on the balance pays out 90 USDT, and the form shows that amount before you confirm. Every request is checked before it goes out, so the money reaches the right wallet. Details in [DareBay withdrawals](/en/help/darebay-withdrawals) and [what commission DareBay charges](/en/help/what-commission).
 
-Once the first hundred is in, the next question is scale: [how to make $1,000 a month clipping](/en/earnings/make-1000-a-month-clipping).
+Once the first hundred is in, the next question is scale: [how to make $1,000 a month clipping](/en/earnings/make-1000-a-month-clipping). Running several accounts as one pipeline is covered on the [content farm](/en/content-farm/) page.
 
 ## Frequently asked questions
 

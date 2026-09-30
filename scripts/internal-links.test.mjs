@@ -142,6 +142,13 @@ describe('editorial links', () => {
     ])
   })
 
+  it('drops the tools catalogue’s chips and price sources, and keeps a tool card’s review of the tool', () => {
+    const html = '<main><section class="lp-tools"><a class="lp-tchip" href="#tools-editing">Монтаж</a>' +
+      '<a class="lp-tsrc" href="https://www.opus.pro/pricing">на 29.09.2026</a>' +
+      '<span class="lp-review"><a href="/instrumenty/capcut-v-rossii">Обзор CapCut →</a></span></section></main>'
+    expect(editorialAnchors(html).map((anchor) => anchor.href)).toEqual(['/instrumenty/capcut-v-rossii'])
+  })
+
   it('finds nothing in a document without <main>', () => {
     expect(editorialAnchors('<header><a href="/x">x</a></header>')).toEqual([])
   })

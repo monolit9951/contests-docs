@@ -38,6 +38,18 @@
       "en": "help",
       "ar": "help"
     },
+    "farm": {
+      "ru": "kontent-zavod",
+      "uk": "kontent-zavod",
+      "en": "content-farm",
+      "ar": "content-farm"
+    },
+    "tools": {
+      "ru": "instrumenty",
+      "uk": "instrumenty",
+      "en": "tools",
+      "ar": "tools"
+    },
     "about": {
       "ru": "o-proekte",
       "uk": "pro-proekt",
@@ -968,6 +980,84 @@
         "ru": "redaktsionnaya-politika",
         "uk": "redaktsiina-polityka",
         "en": "editorial-policy"
+      }
+    },
+    {
+      "id": "farm-hub",
+      "hub": "farm",
+      "slugs": {
+        "ru": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "farm-what-is",
+      "hub": "farm",
+      "slugs": {
+        "ru": "chto-takoe-kontent-zavod",
+        "en": "what-is-a-content-farm"
+      }
+    },
+    {
+      "id": "farm-how-to-build",
+      "hub": "farm",
+      "slugs": {
+        "ru": "kak-sozdat-kontent-zavod",
+        "en": "how-to-build-a-tiktok-content-farm"
+      }
+    },
+    {
+      "id": "farm-ai",
+      "hub": "farm",
+      "slugs": {
+        "ru": "ii-kontent-zavod",
+        "en": "youtube-shorts-automation"
+      }
+    },
+    {
+      "id": "farm-team",
+      "hub": "farm",
+      "slugs": {
+        "ru": "komanda-narezchikov",
+        "en": "how-to-start-a-clipping-agency"
+      }
+    },
+    {
+      "id": "tools-hub",
+      "hub": "tools",
+      "slugs": {
+        "ru": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "tools-ai-clipping",
+      "hub": "tools",
+      "slugs": {
+        "ru": "neyroseti-dlya-narezki-video",
+        "en": "opus-clip-alternatives"
+      }
+    },
+    {
+      "id": "tools-uniqualizer",
+      "hub": "tools",
+      "slugs": {
+        "ru": "unikalizator-video"
+      }
+    },
+    {
+      "id": "tools-capcut",
+      "hub": "tools",
+      "slugs": {
+        "ru": "capcut-v-rossii",
+        "en": "capcut-alternatives"
+      }
+    },
+    {
+      "id": "tools-voiceover",
+      "hub": "tools",
+      "slugs": {
+        "ru": "ozvuchka-video-neyrosetyu"
       }
     }
   ]

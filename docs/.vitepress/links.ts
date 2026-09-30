@@ -1,5 +1,5 @@
 // Extensions spelled out: `check:sources` reaches this file through sources.ts under plain Node.
-import { appPathFor, appSectionOf, localesOf, pagePath, PAGES, type Locale } from './registry.ts'
+import { appPathFor, appSectionOf, localesOf, pagePath, PAGES, type AppSection, type Locale } from './registry.ts'
 import { isSiteHost, SITE_HOST } from './siteHost.ts'
 
 // Single source of truth for the outbound links the docs site owns: the product itself, the
@@ -45,6 +45,65 @@ export const tasksUrlForLocale = (locale: Locale): string => `${HOMEPAGE}${appPa
 
 /** The business page in the application tree of the current content page. */
 export const businessUrlForLocale = (locale: Locale): string => `${HOMEPAGE}${appPathFor(locale, 'for-business')}`
+
+// ---------------------------------------------------------------------------
+// Call-to-action keys. A page names where a button goes by KEY (`hero.actions[].to`,
+// `cta.primary.to`, `setup.action.to`, `features.items[].to`, `flow.steps[].to`, a tool card's
+// `darebay.to`), never by address: the address is decided here, per reader language, from the same
+// rules as every other product link — `appPathFor` for the application, the room of the page's
+// language for the community. A page can therefore not send an English reader into the Russian
+// catalogue, and moving a destination is one edit.
+//
+// `signup` is the task catalogue with the registration dialog open over it (contests-frontend reads
+// `?auth=signup`, `authModal.tsx`). The dialog also opens for a visitor who is already signed in,
+// so a page that offers `signup` should offer `tasks` somewhere near it for returning readers.
+// `community` is the creators' CHAT on Telegram (founder, 2026-09-26: RU/UA readers go to the chat)
+// or the Discord server: the platform each language names in `CHROME_COPY[locale].community`
+// (`COMMUNITY_PLATFORM` repeats it here so the client bundle does not carry the chrome copy, and
+// `links.test.ts` holds the two equal). It links the room directly: `/community?src=…` loses `src`
+// before analytics (verified 2026-09-29).
+// No UTM on any of them: the docs and the application share one origin and one analytics session.
+// ---------------------------------------------------------------------------
+
+/** Every destination a page may name. Closed on purpose: a new one is a reviewed change here. */
+export const CTA_KEYS = ['tasks', 'signup', 'teams', 'traffic', 'store', 'business', 'founder', 'community'] as const
+export type CtaKey = (typeof CTA_KEYS)[number]
+export const isCtaKey = (value: unknown): value is CtaKey => typeof value === 'string' && (CTA_KEYS as readonly string[]).includes(value)
+
+/** The creators' chat of the Russian-speaking community, «DareBay · Нарезчики». */
+export const TELEGRAM_CHAT = 'https://t.me/darebaycreatorschat'
+/** The community platform of each language, as `CHROME_COPY[locale].community.platform` declares it. */
+export const COMMUNITY_PLATFORM: Record<Locale, CommunityPlatform> = { ru: 'telegram', uk: 'telegram', en: 'discord', ar: 'discord' }
+/** The room the `community` key opens, per platform: the Telegram chat or the Discord server. */
+export const COMMUNITY_ROOM: Record<CommunityPlatform, string> = { telegram: TELEGRAM_CHAT, discord: DISCORD }
+/** The query that opens the application's registration dialog over the page it names. */
+export const SIGNUP_QUERY = '?auth=signup'
+
+const CTA_SECTION: Readonly<Record<Exclude<CtaKey, 'founder' | 'community'>, AppSection>> = {
+  tasks: 'tasks',
+  signup: 'tasks',
+  teams: 'earn/teams',
+  traffic: 'earn/traffic',
+  store: 'store',
+  business: 'for-business',
+}
+
+/** The address a CTA key opens for a reader of `locale`. */
+export const ctaHref = (key: CtaKey, locale: Locale): string => {
+  if (key === 'founder') return FOUNDER_TELEGRAM
+  if (key === 'community') return COMMUNITY_ROOM[COMMUNITY_PLATFORM[locale]]
+  return `${HOMEPAGE}${appPathFor(locale, CTA_SECTION[key])}${key === 'signup' ? SIGNUP_QUERY : ''}`
+}
+
+/**
+ * The attributes of a CTA link. An application address gets `target="_self"`, as every product
+ * button here: without a target VitePress would route it inside the docs and render its 404. A
+ * Telegram or Discord room opens in a new tab, as the footer's does.
+ */
+export const ctaAnchor = (key: CtaKey, locale: Locale): SourceAnchor =>
+  key === 'founder' || key === 'community'
+    ? { href: ctaHref(key, locale), rel: 'noreferrer', target: '_blank' }
+    : { href: ctaHref(key, locale), target: '_self' }
 
 // ---------------------------------------------------------------------------
 // Links the templates render to addresses they did not write: a comparison's source column, a

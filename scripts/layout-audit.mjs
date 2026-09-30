@@ -94,8 +94,11 @@ export const PROBE = `(() => {
     }
   }
 
-  // Header labels must sit over the cells they name.
+  // Header labels must sit over the cells they name. A table a phone stacks into row cards
+  // (landing.css, tableWrap.ts) has no columns to drift: its header is hidden and each cell names
+  // its own column, so only a table laid out as a table is measured.
   for (const table of document.querySelectorAll('table')) {
+    if (getComputedStyle(table).display !== 'table') continue
     const head = table.tHead && table.tHead.rows[0]
     const body = table.tBodies[0] && table.tBodies[0].rows[0]
     if (!head || !body) continue
@@ -128,6 +131,14 @@ export const PROBE = `(() => {
     if (getComputedStyle(el).overflowX !== 'visible') continue
     if (el.scrollWidth > el.clientWidth + 2) {
       findings.push({ kind: 'text-spill', detail: describe(el) + ': ' + el.scrollWidth + 'px of text in a ' + el.clientWidth + 'px box ("' + label(el) + '")' })
+    }
+  }
+
+  // A tool card's name block narrower than its longest word: the name then runs under the price
+  // badge beside it. The spill sits on the block, not on the heading, so the check above misses it.
+  for (const el of document.querySelectorAll('.lp-tool-t')) {
+    if (el.scrollWidth > el.clientWidth + 2) {
+      findings.push({ kind: 'tool-name-squeezed', detail: describe(el) + ': ' + el.scrollWidth + 'px of name in a ' + el.clientWidth + 'px box ("' + label(el) + '")' })
     }
   }
   return findings

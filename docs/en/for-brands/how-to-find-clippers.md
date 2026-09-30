@@ -26,7 +26,7 @@ To find clippers, post in your own chat and Discord, try a freelance board, buil
 
 **Freelance boards.** Editors with portfolios and ratings: a plus when you need one strong person for a specific format. They are paid per clip or per hour, for the work rather than reach, so a clip with a hundred views is your risk.
 
-**Your own clip channel with a team.** You open a highlights account, recruit two or three clippers and pay a revenue share or a flat fee. Control is total, but you become a channel manager.
+**Your own clip channel with a team.** You open a highlights account, recruit two or three clippers and pay a revenue share or a flat fee. Control is total, but you become a channel manager. Roles, account ownership and pay splits for a team like that are covered in [how to start a clipping agency](/en/content-farm/how-to-start-a-clipping-agency).
 
 **A pay-per-view platform.** You publish a task, hand over recordings, set a rate per 1000 views and fund a budget. Clippers take it themselves, publish on their own accounts and send in links; the platform counts the views.
 

@@ -22,6 +22,14 @@ body:has(.lp) { min-width: 0; }
   --lp-accent: #c8f542;
   --lp-accent-deep: #a8d92c;
   --lp-on-accent: #131807;
+  /* The colour of an action. A section's world recolours the accent, never a button: the product
+     landings' rule (contests-frontend landingKit.scss, "action is always lime"). */
+  --lp-action: #c8f542;
+  --lp-action-deep: #a8d92c;
+  --lp-on-action: #131807;
+  /* The accent as a glow and as an edge: the showcase blocks' two tints, in whatever world. */
+  --lp-glow:color-mix(in srgb,var(--lp-accent) 14%,transparent);
+  --lp-edge:color-mix(in srgb,var(--lp-accent) 50%,transparent);
   --lp-blue: #4b7bff;
   --lp-cyan: #46d4ff;
   --lp-gold: #f7c95f;
@@ -49,16 +57,15 @@ body:has(.lp) { min-width: 0; }
 .lp-container { width: min(100% - 40px, var(--lp-container)); margin-inline: auto; }
 .lp-kicker { font-family: var(--lp-body); font-weight: 700; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--lp-accent); }
 .lp-h2 { font-family: var(--lp-display); font-weight: 600; font-size: clamp(1.3rem, 2.2vw, 1.8rem); line-height: 1.3; letter-spacing: -0.01em; margin: 0 0 14px; text-wrap: balance; }
-.lp-h3 { font-family: var(--lp-display); font-weight: 500; font-size: 1.15rem; line-height: 1.3; margin: 0 0 10px; }
 .lp-muted { color: var(--lp-muted); }
 .lp-num { font-variant-numeric: tabular-nums; }
 .lp-money { color: var(--lp-gold); font-weight: 700; font-variant-numeric: tabular-nums; }
 
 /* ---- shared actions ---------------------------------------------------- */
 .lp .lp-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; font-weight: 700; font-size: 15px; padding: 12px 20px; border-radius: 999px; border: 1px solid transparent; transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease; white-space: nowrap; }
-.lp .lp-btn-primary { background: var(--lp-accent); color: var(--lp-on-accent); box-shadow: 0 0 0 0 rgba(200, 245, 66, 0); }
-.lp .lp-btn-primary:hover, .lp .lp-btn-primary:focus-visible { color: var(--lp-on-accent); }
-.lp .lp-btn-primary:hover { transform: translateY(-1px); box-shadow: 0 10px 34px -10px var(--lp-accent); }
+.lp .lp-btn-primary { background: var(--lp-action); color: var(--lp-on-action); box-shadow: 0 0 0 0 rgba(200, 245, 66, 0); }
+.lp .lp-btn-primary:hover, .lp .lp-btn-primary:focus-visible { color: var(--lp-on-action); }
+.lp .lp-btn-primary:hover { transform: translateY(-1px); box-shadow: 0 10px 34px -10px var(--lp-action); }
 .lp .lp-btn-ghost { border-color: var(--lp-line-2); color: var(--lp-text); background: transparent; }
 .lp .lp-btn-ghost:hover { background: var(--lp-panel); }
 .lp .lp-btn-sm { padding: 8px 14px; font-size: 13px; }
@@ -66,7 +73,7 @@ body:has(.lp) { min-width: 0; }
 .lp-hero { position: relative; padding: 48px 0 28px; }
 .lp-hero-in { position: relative; display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px; min-width: 0; }
 .lp-hero-meta { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; margin-bottom: 20px; }
-.lp-hero-meta .lp-kicker { font-size: 10px; letter-spacing: .08em; }
+.lp-hero-meta .lp-kicker { font-size: 11px; letter-spacing: .08em; }
 .lp-breadcrumb { display: inline-flex; align-items: center; gap: 8px; color: var(--lp-accent) !important; font-size: 13px; font-weight: 700; }
 .lp-breadcrumb:hover { text-decoration: underline; text-underline-offset: 4px; }
 [dir='rtl'] .lp-breadcrumb > span { transform: scaleX(-1); }
@@ -75,6 +82,10 @@ body:has(.lp) { min-width: 0; }
 .lp-hero-meta a.lp-byline:hover b { color: var(--lp-text); text-decoration: underline; text-underline-offset: 3px; }
 .lp-hero h1 { font-family: var(--lp-display); font-weight: 600; font-size: clamp(1.65rem, 3.15vw, 2.6rem); line-height: 1.23; letter-spacing: -.035em; margin: 0 0 20px; text-wrap: balance; overflow-wrap: break-word; }
 .lp-hero h1 em { font-style: normal; color: var(--lp-accent); }
+/* A compound kept on one line (headingHtml, headingTypeset.ts): one unit that moves to the next line
+   whole, and breaks at its hyphen only when it is wider than the line itself («сервисы-уникализаторы»
+   in a phone's H2), where `nowrap` pushed the page sideways. */
+.lp-nw { display: inline-block; max-width: 100%; }
 .lp-lede { font-size: 17px; line-height: 1.7; color: var(--lp-muted); max-width: 70ch; margin: 0; }
 .lp-lede b { color: var(--lp-text); }
 .lp-hero-ctas { display: flex; flex-wrap: wrap; gap: 8px 24px; margin-top: 16px; }
@@ -86,7 +97,7 @@ body:has(.lp) { min-width: 0; }
 .lp-takeaways ol { margin: 0; padding: 0; list-style: none; display: grid; gap: 12px; counter-reset: tk; }
 .lp-takeaways li { display: grid; grid-template-columns: 22px minmax(0, 1fr); gap: 10px; font-size: 14px; line-height: 1.65; color: rgba(245,247,250,.82); }
 .lp-takeaways li > span { display: block; min-width: 0; }
-.lp-takeaways li::before { content: counter(tk, decimal-leading-zero); counter-increment: tk; font-family: var(--lp-body); font-size: 11px; font-weight: 700; color: var(--lp-accent); padding-top: 2px; }
+.lp-takeaways li::before { content: counter(tk, decimal-leading-zero); content: counter(tk, decimal-leading-zero) / ""; counter-increment: tk; font-family: var(--lp-body); font-size: 11px; font-weight: 700; color: var(--lp-accent); padding-top: 2px; }
 .lp-takeaways li b { color: var(--lp-text); }
 .lp-hero--hub { padding: 56px 0 32px; background: radial-gradient(ellipse at 85% 0, rgba(200,245,66,.06), transparent 55%); }
 .lp-hero--hub .lp-hero-in { max-width: var(--lp-container); }
@@ -140,6 +151,28 @@ body:has(.lp) { min-width: 0; }
 .lp-content .lp-md-table :is(th, td) { border-bottom: 1px solid var(--lp-line); padding: 10px 14px; text-align: start; vertical-align: top; }
 .lp-content .lp-md-table tr:last-child td { border-bottom: 0; }
 .lp-content .lp-md-table th { color: var(--lp-muted); font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; }
+/* A row that names a group ("| **Озвучка в браузере** | | | |", tableWrap.ts) is a subheading across
+   the table, not a data row beside empty cells. */
+.lp-content .lp-md-group > td { background: var(--lp-panel-2); padding-block: 8px; }
+.lp-content .lp-md-group > td:first-child { white-space: nowrap; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--lp-accent); }
+/* On a phone a table of three or more columns is a stack of row cards (tableWrap.ts copies each
+   header onto its cells): held at 720 px it showed half of itself, and the half cut off was the
+   column that sells, DareBay's or the price. The row's first cell is the card's title, every other
+   cell opens with its column's name; the header stays for assistive technology only. A table of
+   one or two columns fits as it is. */
+@media (max-width: 640px) {
+  .lp-content .lp-md-table table { min-width: 0; }
+  .lp-content .lp-md-table.lp-md-stack { overflow: visible; border: 0; border-radius: 0; background: none; }
+  .lp-md-stack :is(table, tbody, tr, td) { display: block; }
+  .lp-md-stack thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  .lp-md-stack tr { margin-block-end: 10px; padding: 12px 14px; border: 1px solid var(--lp-line); border-radius: 14px; background: var(--lp-panel); }
+  .lp-content .lp-md-stack td { padding: 6px 0 0; border: 0; }
+  .lp-content .lp-md-stack td:first-child { padding-block: 0 2px; font-weight: 800; color: var(--lp-text); }
+  .lp-md-stack td:empty { display: none; }
+  .lp-md-stack td[data-label]::before { content: attr(data-label); display: block; font: 700 11px/1.4 var(--lp-body); letter-spacing: .08em; text-transform: uppercase; color: var(--lp-faint); }
+  .lp-md-stack .lp-md-group { margin-block: 18px 8px; padding: 0; border: 0; background: none; }
+  .lp-content .lp-md-stack .lp-md-group > td { padding: 0; background: none; white-space: normal; }
+}
 /* Code blocks. VitePress emits them as `div.language-*` with its own copy button, and all of the
    styling lives under `.vp-doc`, a class the landing shell does not have: the block arrived
    unstyled, stuck to the left edge of the window and stretched the document to 1627px (the brief
@@ -177,7 +210,7 @@ body:has(.lp) { min-width: 0; }
 .lp-table td.lp-cell-name { font-weight: 700; white-space: normal; min-width: 150px; max-width: 220px; }
 .lp-table td.lp-cell-name small { display: block; font-weight: 500; color: var(--lp-muted); font-size: 12px; margin-top: 2px; }
 /* Our review of the platform (`reviewPath`): the row's own link, under the name that opens the platform's site. */
-.lp .lp-review a { color: var(--lp-accent); font-weight: 700; text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--lp-accent) 40%, transparent); text-underline-offset: 3px; }
+.lp :is(.lp-review a, a.lp-review) { color: var(--lp-accent); font-weight: 700; text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--lp-accent) 40%, transparent); text-underline-offset: 3px; }
 .lp-table td.lp-cell-name small.lp-review { margin-top: 6px; }
 .lp-table .lp-cell-name, .lp-table th:first-child { position: sticky; inset-inline-start: 0; background: var(--lp-panel); z-index: 1; box-shadow: 1px 0 0 var(--lp-line); }
 .lp-table th:first-child { background: var(--lp-panel-2); z-index: 3; }
@@ -253,7 +286,10 @@ body:has(.lp) { min-width: 0; }
 /* Each item prints its own "[3]" as text (`sourceItemHtml`): the CSS marker would print it twice.
    Same specificity as the generic `.lp-content ol` rules above, later in the file. */
 .lp-content .db-sources ol { font-size: 13.5px; color: var(--lp-muted); list-style: none; padding-inline-start: 0; }
-.lp-content .db-sources li { scroll-margin-top: 108px; overflow-wrap: anywhere; }
+/* The number in a column of its own, the address and its day beside it (sourceItemHtml): on a phone
+   the number no longer stands alone on a line above an address broken mid-path. */
+.lp-content .db-sources li { display: grid; grid-template-columns: 2.6em minmax(0, 1fr); column-gap: 6px; align-items: baseline; scroll-margin-top: 108px; overflow-wrap: anywhere; }
+.lp-content .db-sources time { color: var(--lp-faint); white-space: nowrap; font-variant-numeric: tabular-nums; }
 
 /* ---- calculator ---------------------------------------------------------- */
 .lp-calc { background: var(--lp-panel); border: 1px solid var(--lp-line); border-radius: 22px; padding: 26px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 24px; align-items: center; }
@@ -283,28 +319,16 @@ body:has(.lp) { min-width: 0; }
 .lp-footer nav { display: flex; flex-wrap: wrap; row-gap: 6px; }
 .lp-footer nav a { white-space: nowrap; }
 
-/* ---- fact sheet --------------------------------------------------------------- */
-.lp-facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
-@media (max-width: 900px) { .lp-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 560px) { .lp-facts { grid-template-columns: 1fr; } }
-.lp-fact { background: var(--lp-panel); border: 1px solid var(--lp-line); border-radius: 18px; padding: 18px 18px 16px; }
-.lp-fact dt { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--lp-faint); font-weight: 700; margin-bottom: 8px; }
-.lp-fact dd { margin: 0; font-size: 17px; font-weight: 700; line-height: 1.35; }
-.lp-fact dd.lp-money { font-family: var(--lp-display); font-size: 1.5rem; }
-.lp-fact small { display: block; margin-top: 6px; font-size: 12px; color: var(--lp-faint); font-weight: 500; }
-
 @media (prefers-reduced-motion: reduce) { .lp * { transition: none !important; } }
 
 /* ---- section cards: hub index + "more in this section" --------------------- */
 .lp-related { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
 @media (max-width: 900px) { .lp-related { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 560px) { .lp-related { grid-template-columns: 1fr; } }
-.lp-related--hub { margin: 12px auto 8px; }
 .lp .lp-card--link { display: flex; flex-direction: column; gap: 8px; padding: 20px 22px; color: var(--lp-text); text-decoration: none; }
 .lp .lp-card--link:hover { background: var(--lp-panel-2); border-color: color-mix(in srgb, var(--lp-accent) 45%, transparent); }
 .lp .lp-card--link h3 { text-wrap: pretty; font-family: var(--lp-body); font-weight: 800; font-size: 1.05rem; line-height: 1.3; margin: 0; }
 .lp .lp-card--link p { margin: 0; color: var(--lp-muted); font-size: 14px; line-height: 1.45; }
-.lp-content .lp-related--hub { width: min(100% - 40px, var(--lp-container)); }
 
 /* ---- 404 inside the shell --------------------------------------------------- */
 .lp-notfound { padding: 96px 20px 72px; text-align: center; display: grid; justify-items: center; gap: 14px; }
@@ -345,7 +369,7 @@ body:has(.lp) { min-width: 0; }
    value keeps its own.
 
    Arabic sentences are deliberately NOT isolated or auto-directed, and neither is a table cell
-   (`.lp-money` in LCompare, LPlatforms, LFacts holds a whole phrase, "$1.00–$2.00 per 1,000
+   (`.lp-money` in LCompare and LPlatforms holds a whole phrase, "$1.00–$2.00 per 1,000
    views"). Forced left to right, an Arabic phrase is read backwards; auto-directed, one that
    starts with a Latin brand ("DareBay يدفع…") is. An Arabic cell keeps the page's direction —
    a range in it reads right to left, the Arabic convention — and an English fallback is marked
@@ -354,7 +378,7 @@ body:has(.lp) { min-width: 0; }
 [dir='rtl'] .lp-table td.lp-cell-name > a,
 [dir='rtl'] .lp-method li :is(a, b),
 [dir='rtl'] .lp-card-foot .lp-srcs a,
-[dir='rtl'] .lp-content .db-sources li > a,
+[dir='rtl'] .lp-content .db-sources li > span:not(.src-n),
 [dir='rtl'] .lp-content :is(p, li, td, th):not(.lp-bleed *) code { direction: ltr; unicode-bidi: isolate; }
 /* Source numbers are isolated in the page's own direction: a superscript `[3]` after `10%` must
    stay a separate token that FOLLOWS the figure, not become part of it. For a marker the isolate is
@@ -364,10 +388,6 @@ body:has(.lp) { min-width: 0; }
 /* A code block is code: always left to right, whatever the page. Its copy button stays in the
    block's own top-right corner through `inset-inline-end` above. */
 [dir='rtl'] .lp-content div[class*="language-"] { direction: ltr; }
-/* An English value in a fact card (`bidiAttrs` marked the whole dd dir="ltr") keeps the card's
-   alignment: `end` of a left-to-right box is the right edge, where the Arabic label above it
-   starts. */
-[dir='rtl'] .lp-fact dd[dir='ltr'] { text-align: end; }
 /* The sticky platform column's divider sits on its inline-end side: on the left of the column in
    a right-to-left table. */
 [dir='rtl'] .lp-table .lp-cell-name, [dir='rtl'] .lp-table th:first-child { box-shadow: -1px 0 0 var(--lp-line); }
@@ -416,4 +436,238 @@ body:has(.lp) { min-width: 0; }
   .lp-cta { padding: 32px 0 40px; margin-top: 40px; }
   .lp-cta-actions { display: grid; grid-template-columns: 1fr; }
   .lp-cta-actions .lp-btn { white-space: normal; text-align: center; }
+}
+
+/* ---- showcase: a section index as a landing (showcase: true) ----------------------------------
+   Hero with buttons over an aurora and a masked dot grid, then the page's blocks: the flow of the
+   work (LFlow), the tiles of what is already there (LFeatures), the setup offer (LSetup), the tools
+   catalogue (LTools). Everything starts at the container's edge, prose included, so the page reads
+   as one column system. Panels and hairlines, no shadow but the phones'; motion only in the
+   drawing, for readers who have not asked for less. */
+.lp-hero--show { overflow: hidden; padding-block: 64px 44px; background: radial-gradient(55% 75% at 90% 0, var(--lp-glow), transparent 70%), radial-gradient(40% 45% at 0 45%, rgba(75, 123, 255, .1), transparent 70%); }
+.lp-hero--show::before { content: ''; position: absolute; inset: 0; background: radial-gradient(rgba(245, 247, 250, .12) 1px, transparent 1.5px) 0 0 / 22px 22px; -webkit-mask: radial-gradient(60% 70% at 78% 35%, #000, transparent 75%); mask: radial-gradient(60% 70% at 78% 35%, #000, transparent 75%); pointer-events: none; }
+.lp-hero--show .lp-hero-in { grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); align-items: center; column-gap: 48px; }
+.lp-hero--show h1 { max-width: 22ch; font-size: clamp(1.8rem, 3.3vw, 2.75rem); }
+.lp-hero--show .lp-lede { max-width: 58ch; }
+.lp-hero--show .lp-takeaways { grid-column: 1 / -1; margin-block-start: 16px; }
+.lp-hero--show .lp-takeaways ol { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px 24px; }
+.lp-hero-btns { display: flex; flex-wrap: wrap; gap: 12px; margin-block-start: 30px; }
+.lp .lp-hero-btns .lp-btn { min-height: 52px; padding-inline: 26px; font-size: 16px; }
+.lp .lp-hero-btns .lp-btn-primary, .lp .lp-setup .lp-btn-primary { box-shadow: 0 12px 40px -14px var(--lp-action); }
+.lp .lp-hero-btns .lp-btn-ghost { background: rgba(245, 247, 250, .04); }
+.lp-hero-note, .lp-tstat, .lp-tool-h em { font-size: 12px; font-style: normal; color: var(--lp-faint); }
+.lp-hero-note { margin: 14px 0 0; }
+.lp-proof, .lp-tchips { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.lp-proof { margin-block-start: 24px; }
+.lp-proof li, .lp .lp-tchip { padding: 7px 14px; border: 1px solid var(--lp-line-2); border-radius: 999px; font: 700 13px/1.3 var(--lp-body); }
+.lp-proof li { background: rgba(245, 247, 250, .03); }
+.lp-proof li::before, .lp-setup ul li::before { content: ''; display: inline-block; width: 5px; height: 9px; margin-inline-end: 10px; border: solid var(--lp-accent); border-width: 0 2px 2px 0; transform: translateY(-2px) rotate(45deg); }
+.lp-hero-fork { margin: 20px 0 0; font-size: 14px; color: var(--lp-muted); }
+.lp .lp-hero-fork a, .lp .lp-flow-link, .lp-tiles a, .lp-tool-a a { font-size: 13px; font-weight: 700; color: var(--lp-accent); white-space: nowrap; }
+.lp-hero-art { position: relative; }
+.lp-hero-art::before { content: ''; position: absolute; inset: 0 8%; background: radial-gradient(closest-side, var(--lp-glow), transparent); }
+.lp-hero-art svg { position: relative; display: block; width: 100%; max-width: 560px; margin-inline: auto; }
+[dir='rtl'] .lp-hero-art svg { transform: scaleX(-1); }
+
+/* The page's own Markdown between the blocks: prose at the container's start edge, lead paragraph larger.
+   A table keeps the container's width (the general rule above), as the blocks do: a comparison of four
+   or five columns squeezed into the prose column wrapped every cell onto three lines. */
+.lp-showcase :is(h2, h3, h4, p, ul, ol, blockquote, hr):not(.lp-bleed *, .db-sources *) { width: min(100% - 40px, var(--lp-prose)); margin-inline: max(20px, (100% - var(--lp-container)) / 2) auto; }
+.lp-showcase > div > p:first-child { margin-block-start: 8px; font-size: 18px; color: var(--lp-text); }
+.lp-showcase h2:not(.lp-bleed *, .db-sources *) { margin-block-start: 72px; }
+.lp-showcase h3:not(.lp-bleed *) { margin-block-start: 24px; padding-block-start: 22px; border-block-start: 1px solid var(--lp-line); }
+.lp-showcase .lp-section { padding-block: 72px 24px; }
+.lp-showcase .lp-section-head p { text-wrap: pretty; }
+.lp-catalog { width: min(100% - 40px, var(--lp-container)); margin: 72px auto 0; }
+/* The section's articles on a landing: one grid in the page's type (HubIndex `compact`), four
+   across on a desktop, the heading in the display face like every other H2 of the page. Written
+   against `.lp` so it outranks the catalogue's own scoped rules. */
+.lp .lp-catalog .hub-directory { padding-block-end: 24px; }
+.lp .lp-catalog .hub-card-grid { grid-template-columns: repeat(auto-fill, minmax(min(260px, 100%), 1fr)); }
+.lp .lp-catalog .hub-catalog-heading h2 { font: 600 clamp(1.3rem, 2.2vw, 1.8rem)/1.3 var(--lp-display); letter-spacing: -.01em; }
+.lp .lp-catalog .hub-card { border-radius: 22px; }
+.lp .lp-catalog .hub-card p { font-size: 13px; }
+/* The source list starts at the container's edge like the prose above it, not centred under it; its
+   heading and list keep their own rules (`.db-sources :is(h2, ol)`), not the prose column's again. */
+.lp-showcase .db-sources { margin-inline: max(20px, (100% - var(--lp-container)) / 2) auto; }
+/* The last conversion moment: a lit panel, not the plainest band of the page. */
+.lp-cta--show { background: none; border-top: 0; }
+.lp-cta--show .lp-cta-in { padding: 44px; border: 1px solid var(--lp-edge); border-radius: 28px; background: radial-gradient(60% 120% at 100% 100%, var(--lp-glow), transparent 70%), var(--lp-panel); }
+.lp .lp-cta--show h2 { font-size: clamp(1.6rem, 3vw, 2.4rem); }
+/* The one-line pointers after a full-bleed block read as captions glued to it without room above. */
+.lp .lp-showcase .lp-flow + p { margin-block-start: 32px; }
+.lp .lp-showcase .lp-features + p { margin-block-start: 8px; }
+
+/* Panels of the blocks: a hairline, the 22px radius, a faint light from the top. */
+.lp-flow li, .lp-tiles li, .lp-tool, .lp-setup-in { position: relative; min-width: 0; padding: 22px; border: 1px solid var(--lp-line); border-radius: 22px; background: linear-gradient(rgba(245, 247, 250, .04), transparent 60%), var(--lp-panel); }
+:is(.lp-flow, .lp-features, .lp-setup, .lp-tools) :is(h3, h4, p, ul, ol, dl, dd) { margin: 0; }
+.lp-flow h3, .lp-tiles h3, .lp-tool h4 { font: 800 1.05rem/1.35 var(--lp-body); }
+.lp-flow p, .lp-tiles p, .lp-tool :is(p, dd) { font-size: 14px; line-height: 1.6; color: var(--lp-muted); }
+.lp-setup-in::before { content: ''; position: absolute; inset-block-start: -1px; inset-inline: 44px; height: 1px; background: linear-gradient(90deg, transparent, var(--lp-accent), transparent); }
+
+/* Flow: cards joined through the gaps by a line, a node per step, the step's number in outline. */
+.lp .lp-flow { padding-block: 64px; background: var(--lp-band); box-shadow: 0 0 0 100vmax var(--lp-band); clip-path: inset(0 -100vmax); }
+.lp-showcase .lp-flow { margin-block-start: 72px; }
+.lp-flow ol, .lp-tiles, .lp-tgrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; padding: 0; list-style: none; }
+.lp-flow ol { gap: 28px 22px; counter-reset: lp-step; }
+.lp .lp-flow li { padding-block-start: 58px; counter-increment: lp-step; }
+.lp-flow li::before { content: counter(lp-step, decimal-leading-zero); content: counter(lp-step, decimal-leading-zero) / ""; position: absolute; inset-block-start: 14px; inset-inline-end: 20px; font: 700 46px/1 var(--lp-display); color: rgba(245, 247, 250, .04); -webkit-text-stroke: 1px var(--lp-edge); }
+.lp-flow h3::before { content: ''; position: absolute; inset-block-start: 26px; inset-inline-start: 22px; width: 10px; height: 10px; border-radius: 50%; background: var(--lp-accent); box-shadow: 0 0 0 6px var(--lp-glow); }
+.lp-flow li:not(:last-child)::after { content: ''; position: absolute; inset-block-start: 30px; inset-inline-start: 100%; width: 23px; height: 2px; background: var(--lp-edge); }
+.lp-flow h3 { margin-block-end: 8px; }
+.lp .lp-flow-us { margin-block-start: 14px; padding-block-start: 12px; border-block-start: 1px solid var(--lp-line); }
+.lp-flow-us b { color: var(--lp-accent); }
+.lp .lp-flow-link { display: inline-block; margin-block-start: 12px; }
+
+/* Features: tiles, each wholly its link; the phones: one clip, a version per account. */
+.lp-feat { display: grid; gap: 16px; }
+.lp-feat--phones { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); align-items: start; }
+.lp-feat--phones .lp-tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.lp-tiles li { display: flex; flex-direction: column; gap: 8px; }
+.lp-tiles li:hover { border-color: var(--lp-edge); }
+.lp-tile-icon, .lp-mono { display: grid; place-items: center; flex: none; width: 44px; height: 44px; border-radius: 13px; background: var(--lp-glow); color: var(--lp-accent); }
+.lp :is(.lp-tile-icon, .lp-mono) svg { width: 22px; }
+.lp-tile-icon { margin-block-end: 6px; }
+.lp-tiles a { margin-block-start: auto; padding-block-start: 6px; }
+.lp-tiles a::after { content: ''; position: absolute; inset: 0; }
+.lp-phones { position: sticky; inset-block-start: 96px; display: flex; justify-content: center; align-items: center; min-height: 380px; padding: 36px 24px; border: 1px solid var(--lp-line); border-radius: 22px; background: radial-gradient(55% 55% at 50% 45%, var(--lp-glow), transparent 72%), var(--lp-band); }
+.lp-phone { --c:var(--lp-accent); position: relative; flex: none; width: 124px; aspect-ratio: 1 / 2; margin-inline: -8px; padding: 8px; border: 1px solid var(--lp-line-2); border-radius: 24px; background: #0b0e14; box-shadow: 0 24px 50px rgba(0, 0, 0, .5); transform: rotate(-7deg) translateY(16px); }
+.lp-phone:nth-child(2) { --c:#46d4ff; z-index: 1; transform: translateY(-10px); }
+.lp-phone:nth-child(3) { --c:#4b7bff; transform: rotate(7deg) translateY(16px); }
+.lp-phone i { display: block; height: 100%; border-radius: 17px; background: linear-gradient(165deg, var(--c), #0b0e14 80%); }
+.lp-phone i::after { content: ''; position: absolute; inset: 0 0 18%; width: 24px; height: 24px; margin: auto; background: #fff; clip-path: polygon(20% 10%, 90% 50%, 20% 90%); }
+/* A version differs by its layout, not by a tint (DareBay's measurement: colour leaves a copy a copy,
+   a split screen does not): the second is a split screen, the third a tighter frame under a caption. */
+.lp-phone:nth-child(2) i { background: linear-gradient(165deg, var(--c), #0b0e14 90%) top / 100% 54% no-repeat, linear-gradient(#1c2331, #10141c) bottom / 100% 46% no-repeat; }
+.lp-phone:nth-child(2) i::after { inset: 0 0 50%; }
+.lp-phone:nth-child(3) i { background: radial-gradient(90% 60% at 65% 35%, var(--c), #0b0e14 78%); }
+.lp-phone:nth-child(3) i::before { content: ''; position: absolute; inset: 24% 22% auto; height: 5px; border-radius: 3px; background: rgba(245, 247, 250, .85); box-shadow: 0 9px 0 -1px rgba(245, 247, 250, .45); }
+.lp-phone :is(b, span) { position: absolute; inset-inline: 8px; inset-block-end: 44px; text-align: center; font-size: 13px; font-weight: 800; }
+.lp-phone span { inset-block-end: 18px; margin-inline: auto; width: fit-content; padding: 3px 9px; white-space: nowrap; border-radius: 999px; background: rgba(7, 9, 13, .72); font-size: 11px; color: var(--c); }
+
+/* Setup: one panel, the offer and its button beside what it covers and what to prepare. */
+.lp .lp-setup-in { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 40px; padding: 44px; border-color: var(--lp-edge); border-radius: 28px; background: radial-gradient(60% 90% at 0 0, var(--lp-glow), transparent 70%), var(--lp-panel); }
+.lp-setup-head p { margin-block-end: 24px; color: var(--lp-muted); }
+.lp .lp-setup-note { margin-block-start: 16px; font-size: 13px; color: var(--lp-faint); }
+.lp-setup-lists { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; }
+.lp-setup h3, .lp-tool dt { margin-block-end: 14px; font-size: 11px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--lp-accent); }
+.lp-setup :is(ul, ol) { display: grid; gap: 12px; padding: 0; list-style: none; counter-reset: lp-prep; }
+.lp-setup li { padding-inline-start: 26px; text-indent: -26px; font-size: 15px; line-height: 1.55; }
+.lp-setup ul li::before { margin-inline: 5px 14px; }
+.lp-setup ol li::before { content: counter(lp-prep); content: counter(lp-prep) / ""; counter-increment: lp-prep; display: inline-grid; place-items: center; width: 18px; height: 18px; margin-inline-end: 6px; text-indent: 0; border: 1px solid var(--lp-line-2); border-radius: 50%; font-size: 10px; font-weight: 800; color: var(--lp-muted); }
+
+/* Tools: chips that jump (hydrated: filter), short cards with a monogram and a disclosure, DareBay's
+   own tools as one lime-edged panel of rows with their icons. */
+.lp-tools-bar { display: grid; grid-template-columns: minmax(0, 1fr) minmax(200px, 300px); align-items: center; gap: 14px; padding: 16px; border: 1px solid var(--lp-line); border-radius: 18px; background: var(--lp-panel); }
+.lp .lp-tchip { display: inline-block; min-height: 38px; background: none; color: var(--lp-muted); cursor: pointer; }
+.lp .lp-tchip:hover { color: var(--lp-text); }
+.lp .lp-tchip[aria-pressed='true'] { border-color: var(--lp-accent); background: var(--lp-accent); color: var(--lp-on-accent); }
+/* The count: faint, not faded (opacity over the muted colour measured 4.27:1, under WCAG AA). */
+.lp-tchip span { font-size: 11px; color: var(--lp-faint); }
+.lp .lp-tchip[aria-pressed='true'] span { color: inherit; opacity: .8; }
+.lp-tsearch input { width: 100%; min-height: 42px; padding: 9px 14px; border: 1px solid var(--lp-line-2); border-radius: 12px; background: var(--lp-bg); font: 16px var(--lp-body); color: var(--lp-text); }
+/* Before hydration, and without JavaScript, the field cannot search: it keeps its place, unseen. */
+.lp-tsearch:has(input:disabled) { visibility: hidden; }
+.lp-tstat { grid-column: 1 / -1; }
+.lp-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+.lp-tgroup { padding-block-start: 40px; }
+.lp-tgroup, .lp-tresults { scroll-margin-block-start: 96px; }
+.lp-tgroup h3 { display: flex; align-items: center; gap: 14px; font: 600 1.15rem/1.3 var(--lp-display); }
+.lp-tgroup h3::after { content: ''; flex: 1; height: 1px; background: var(--lp-line); }
+.lp-tgroup > p { margin-block-start: 6px; color: var(--lp-muted); }
+.lp-tgrid { margin-block-start: 16px; }
+.lp-tool { display: flex; flex-direction: column; gap: 10px; }
+/* A long price badge moves under the name rather than squeezing it (a 320 px card has room for one). */
+.lp-tool-h { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; }
+.lp-tool-t { display: grid; gap: 3px; min-width: 0; }
+.lp-mono { border: 1px solid var(--lp-edge); font: 700 15px/1 var(--lp-display); font-style: normal; }
+.lp-tool-h em { font-weight: 700; }
+/* The short price beside the name, when the data has one (tools.ts `priceBadge`). */
+.lp-tool-badge { flex: none; margin-inline-start: auto; padding: 4px 10px; border: 1px solid var(--lp-line-2); border-radius: 999px; font: 700 13px/1.3 var(--lp-body); white-space: nowrap; font-variant-numeric: tabular-nums; }
+/* A price reads as a line of the card in plain type, never louder than the tool's name. */
+.lp .lp-tool .lp-tool-price { color: rgba(245, 247, 250, .86); font-variant-numeric: tabular-nums; }
+.lp-pay { display: inline-block; margin-inline-end: 4px; padding: 1px 8px; border: 1px solid var(--lp-line-2); border-radius: 999px; font-size: 12px; font-weight: 700; color: var(--lp-muted); }
+.lp .lp-tsrc { font-size: 11px; color: var(--lp-faint); font-weight: 500; letter-spacing: 0; text-transform: none; text-decoration: underline dotted; white-space: nowrap; }
+/* The free tier and how to pay: one tap away, in the page's HTML, no JavaScript. */
+.lp-tool-more summary { display: inline-flex; align-items: center; gap: 8px; width: fit-content; min-height: 32px; font-size: 13px; font-weight: 700; color: var(--lp-muted); list-style: none; cursor: pointer; }
+.lp-tool-more summary::-webkit-details-marker { display: none; }
+.lp-tool-more summary::after { content: ''; width: 6px; height: 6px; border: solid currentColor; border-width: 0 1.5px 1.5px 0; transform: translateY(-2px) rotate(45deg); }
+.lp-tool-more[open] summary::after { transform: translateY(1px) rotate(-135deg); }
+.lp-tool-more summary:hover { color: var(--lp-text); }
+.lp-tool dl { display: grid; gap: 8px; margin-block-start: 6px; }
+.lp-tool dl div { padding-block-start: 8px; border-block-start: 1px solid var(--lp-line); }
+.lp .lp-tool dt { display: flex; justify-content: space-between; gap: 8px; margin-block-end: 2px; font-size: 11px; color: var(--lp-muted); }
+.lp-tool dd { overflow-wrap: anywhere; }
+.lp-tool-a { display: flex; flex-wrap: wrap; gap: 6px 18px; margin-block-start: auto; }
+.lp .lp-tool .lp-tool-meta { font-size: 13px; line-height: 1.5; }
+.lp .lp-tool-meta .lp-money { font-size: 13px; }
+.lp-tgroup--own { --lp-accent:var(--lp-action); --lp-glow:color-mix(in srgb,var(--lp-action) 14%,transparent); --lp-edge:color-mix(in srgb,var(--lp-action) 50%,transparent); margin-block-start: 32px; padding: 24px 26px 8px; border: 1px solid var(--lp-edge); border-radius: 22px; background: radial-gradient(80% 120% at 100% 0, var(--lp-glow), transparent 60%), var(--lp-panel); }
+.lp-tgroup--own .lp-tgrid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 28px; margin-block-start: 12px; }
+.lp .lp-tgroup--own .lp-tool { gap: 8px; padding: 16px 0; border: 0; border-block-start: 1px solid var(--lp-line); border-radius: 0; background: none; }
+.lp-tgroup--own .lp-mono { width: 34px; height: 34px; border: 0; border-radius: 10px; background: var(--lp-glow); color: var(--lp-accent); }
+.lp .lp-tgroup--own .lp-mono svg { width: 18px; }
+.lp .lp-tgroup--own .lp-tool h4 { font-size: 1rem; }
+/* The catalogue's own call to action, after every third stage (LTools.vue). */
+.lp-tools-cta { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px 24px; margin-block-start: 40px; padding: 22px 26px; border: 1px solid color-mix(in srgb, var(--lp-action) 50%, transparent); border-radius: 22px; background: radial-gradient(60% 140% at 0 0, color-mix(in srgb, var(--lp-action) 14%, transparent), transparent 70%), var(--lp-panel); }
+.lp .lp-tools-cta p { max-width: 60ch; font: 700 1.05rem/1.45 var(--lp-body); color: var(--lp-text); }
+.lp-tempty { display: grid; justify-items: center; gap: 12px; margin-block-start: 24px; }
+@media (min-width: 900px) { .lp-flow li:nth-child(3n)::after { display: none; } }
+@media (max-width: 1023px) {
+  .lp-hero--show .lp-hero-in, .lp-feat--phones { grid-template-columns: minmax(0, 1fr); }
+  .lp-hero-art svg { max-width: 460px; }
+  .lp-hero--show .lp-takeaways ol, .lp-tgrid, .lp-tgroup--own .lp-tgrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .lp-phones { position: static; min-height: 0; }
+  /* The toolbar in one column below a laptop: the field on top, the chips one swipeable row that
+     fades out where it runs on (at 768 they wrapped into five rows beside a floating field). */
+  .lp-tools-bar { grid-template-columns: minmax(0, 1fr); }
+  .lp-tsearch { order: -1; }
+  .lp-tools-bar .lp-tchips { flex-wrap: nowrap; overflow-x: auto; margin-inline: -16px; padding-inline: 16px; scrollbar-width: none; -webkit-mask-image: linear-gradient(90deg, #000 85%, transparent); mask-image: linear-gradient(90deg, #000 85%, transparent); }
+  [dir='rtl'] .lp-tools-bar .lp-tchips { -webkit-mask-image: linear-gradient(270deg, #000 85%, transparent); mask-image: linear-gradient(270deg, #000 85%, transparent); }
+  .lp-tools-bar .lp-tchips::-webkit-scrollbar { display: none; }
+  .lp .lp-tools-bar .lp-tchip { white-space: nowrap; }
+}
+@media (min-width: 641px) and (max-width: 1023px) {
+  /* The drawing under left-aligned copy starts where the copy does. */
+  .lp-hero-art svg { margin-inline: 0; }
+}
+@media (max-width: 899px) {
+  .lp-flow ol, .lp .lp-setup-in, .lp-setup-lists { grid-template-columns: minmax(0, 1fr); }
+  .lp-flow li:not(:last-child)::after { inset-block-start: 100%; inset-inline-start: 26px; width: 2px; height: 29px; }
+  .lp .lp-setup-in { gap: 28px; padding: 28px 20px; }
+  .lp-tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+/* A tablet has the width for two steps a row: six one-line cards stacked ran 1,300 px at 768. */
+@media (min-width: 641px) and (max-width: 899px) {
+  .lp-flow ol, .lp-setup-lists { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .lp-flow li:not(:last-child)::after { display: none; }
+}
+@media (max-width: 640px) {
+  .lp-hero--show { padding-block: 28px 32px; }
+  /* The section's drawing on a phone too, after the buttons and the side door: it cannot push an
+     action out of the first screen, and at 390 it starts at the fold as a cue to scroll. */
+  .lp-hero-art { margin-block: 0 -8px; }
+  .lp-hero-art svg { max-width: 340px; }
+  .lp-hero-art::before { inset: 0 18%; }
+  .lp-hero-btns { display: grid; margin-block-start: 24px; }
+  /* The hero's last CTA (the side door) stays inside a 390x844 first screen with room to spare, the
+     page's "updated" line under a long kicker included. */
+  .lp-proof { margin-block-start: 18px; gap: 6px; }
+  .lp-hero-fork { margin-block-start: 14px; }
+  .lp .lp-hero-btns .lp-btn { white-space: normal; }
+  .lp-hero--show .lp-takeaways ol, .lp-tgrid, .lp-tgroup--own .lp-tgrid, .lp .lp-tiles { grid-template-columns: minmax(0, 1fr); }
+  .lp-showcase :is(h2, h3, h4, p, ul, ol, blockquote, hr, .lp-md-table, .lp-bleed):not(.lp-bleed *, .db-sources *), .lp-catalog, .lp-showcase .db-sources { width: calc(100% - 32px); margin-inline: 16px; }
+  .lp-showcase > div > p:first-child { font-size: 16px; }
+  .lp-showcase h2:not(.lp-bleed *, .db-sources *) { margin-block-start: 48px; }
+  .lp-showcase .lp-section { padding-block: 48px 16px; }
+  .lp .lp-flow { padding-block: 44px; }
+  .lp-tiles li { display: grid; grid-template-columns: 42px minmax(0, 1fr); gap: 4px 14px; }
+  .lp-tiles li > :not(.lp-tile-icon) { grid-column: 2; }
+  .lp-tile-icon { grid-row: span 3; margin: 0; }
+  .lp-phone { width: 100px; margin-inline: -4px; }
+  .lp-phone b { font-size: 12px; }
+  .lp-phone span { padding-inline: 7px; }
+  .lp-tgroup--own { padding: 20px 18px 6px; }
+  .lp-tools-cta { padding: 20px 18px; }
+  .lp .lp-tools-cta .lp-btn { white-space: normal; text-align: center; }
+  .lp-cta--show .lp-cta-in { padding: 28px 20px; border-radius: 22px; }
 }

@@ -210,6 +210,73 @@ try {
     await emulate({ width: 1440, height: 900, mobile: false })
     await waitFor(`(() => { const links = Array.from(document.querySelectorAll('.lp-outline-desktop .lp-outline-link')); const reached = links.filter((link) => document.getElementById(decodeURIComponent(link.hash.slice(1))).getBoundingClientRect().top <= 130); return (reached.at(-1) ?? links[0]).getAttribute('aria-current') === 'location' })()`)
   })
+  // Showcase hub indexes (LandingLayout `showcase: true`): the landing's buttons in the first screen
+  // of a phone, their destinations, the tools catalogue's filter and the returning-visitor rewrite of
+  // the registration link. No click here leaves for the application: navigation is prevented and
+  // only the address the link would open is read.
+  for (const locale of ['ru', 'en']) {
+    await test(`${locale}: showcase hero buttons in the first screen at 390x844, and where they lead`, async () => {
+      await emulate({ width: 390, height: 844, mobile: true })
+      await navigate(route('farm-hub', locale))
+      await check('document.querySelectorAll(".lp-hero-btns .lp-btn").length === 2', 'showcase hero must render its two buttons')
+      await check('Array.from(document.querySelectorAll(".lp-hero-btns .lp-btn")).every((button) => { const box = button.getBoundingClientRect(); return box.top >= 0 && box.bottom <= innerHeight && box.width >= 44 && box.height >= 44 })', 'hero buttons must fit the first screen at 390x844')
+      await check('document.documentElement.scrollWidth <= document.documentElement.clientWidth', 'showcase page overflows the phone width')
+      const signup = locale === 'ru' ? 'https://darebay.com/tasks?auth=signup' : 'https://darebay.com/en/tasks?auth=signup'
+      await check(`(() => { const [first, second] = document.querySelectorAll('.lp-hero-btns .lp-btn'); return first.href === ${quote(signup)} && first.target === '_self' && second.href === 'https://t.me/ruslanbwork' && second.target === '_blank' })()`, 'hero buttons must open the registration in the reader\'s tree and the founder\'s Telegram in a new tab')
+      await check(`document.querySelectorAll('main .hub-directory').length <= 1 && document.querySelectorAll('#flow li').length > 1 && !!document.querySelector('#features .lp-phones') && !!document.querySelector('#setup .lp-btn')`, 'showcase blocks must be server-rendered, with at most one section catalogue')
+      await evaluate(`(() => { window.__uiAuditStop = (event) => event.preventDefault(); window.addEventListener('click', window.__uiAuditStop) })()`)
+      try {
+        await evaluate(`localStorage.setItem('userToken', 'ui-audit')`)
+        await click('.lp-hero-btns .lp-btn-primary')
+        await check(`document.querySelector('.lp-hero-btns .lp-btn-primary').href === ${quote(signup.replace('?auth=signup', ''))}`, 'a signed-in visitor\'s registration button must open the catalogue itself')
+      } finally {
+        await evaluate(`(() => { localStorage.removeItem('userToken'); window.removeEventListener('click', window.__uiAuditStop) })()`)
+      }
+    })
+
+    await test(`${locale}: tools catalogue chips, filter, search, empty state and reset`, async () => {
+      await emulate({ width: 390, height: 844, mobile: true })
+      await navigate(route('tools-hub', locale))
+      await waitFor('!!document.querySelector(".lp-tsearch input:not([disabled])") && !!document.querySelector("button.lp-tchip")')
+      const cards = 'document.querySelectorAll("#tools-results .lp-tool").length'
+      const total = await evaluate(cards)
+      await check(`${total} > 1 && Number(document.querySelector('.lp-tstat b').textContent) === ${total}`, 'status must count every card before filtering')
+      await check(`document.querySelectorAll('.lp-tchips [aria-pressed="true"]').length === 1 && document.querySelector('.lp-tchips button').getAttribute('aria-pressed') === 'true'`, '"all" must start pressed')
+      await click('.lp-tchips li:nth-child(2) button')
+      await waitFor('document.querySelector(".lp-tchips li:nth-child(2) button").getAttribute("aria-pressed") === "true"')
+      await check(`document.querySelectorAll('#tools-results .lp-tgroup').length === 1 && Number(document.querySelector('.lp-tstat b').textContent) === ${cards}`, 'a category chip must show only its group, and the status its count')
+      await click('.lp-tchips li:first-child button')
+      await waitFor(`${cards} === ${total}`)
+      await evaluate('document.querySelector(".lp-tsearch input").focus()')
+      await send('Input.insertText', { text: 'opus' })
+      await waitFor(`${cards} === 1`)
+      await check(`Number(document.querySelector('.lp-tstat b').textContent) === 1`, 'search must narrow the cards and the status must say so')
+      await evaluate('document.querySelector(".lp-tsearch input").select()')
+      await send('Input.insertText', { text: 'ui-audit-no-matches-284f9e' })
+      await waitFor('!!document.querySelector(".lp-tempty button")')
+      await click('.lp-tempty button')
+      await waitFor(`${cards} === ${total}`)
+      await check('document.querySelector(".lp-tsearch input").value === ""', 'reset must clear the search')
+      await check(`Array.from(document.querySelectorAll('#tools-results .lp-tool a[target="_blank"]')).every((link) => link.rel.includes('nofollow') && link.rel.includes('noopener') && !link.href.startsWith(location.origin) && !/darebay\\.com/.test(new URL(link.href).hostname))`, 'third-party links must be unfollowed and never point at darebay.com')
+    })
+  }
+
+  await test('ru: no-JavaScript showcase: chips jump, every card and every CTA is there', async () => {
+    await send('Emulation.setScriptExecutionDisabled', { value: true })
+    try {
+      await emulate({ width: 390, height: 844, mobile: true })
+      await navigate(route('tools-hub', 'ru'))
+      await check(`(() => { const chips = Array.from(document.querySelectorAll('.lp-tchips a.lp-tchip')); return chips.length > 1 && chips.every((chip) => !!document.getElementById(chip.hash.slice(1))) })()`, 'without JavaScript the chips must be links to the groups')
+      await check('document.querySelector(".lp-tsearch input").disabled', 'search must stay disabled without JavaScript')
+      await check(`document.querySelectorAll('#tools-results .lp-tool').length === Number(document.querySelector('.lp-tstat b').textContent) && document.querySelectorAll('#tools-results .lp-tool').length > 1`, 'every card must be server-rendered')
+      await check(`document.querySelectorAll('.lp-hero-btns .lp-btn').length === 2 && document.querySelectorAll('.lp-cta .lp-btn').length === 2`, 'hero and CTA buttons must be server-rendered')
+      const fragment = await evaluate('document.querySelector(".lp-tchips a.lp-tchip").hash')
+      await click('.lp-tchips a.lp-tchip')
+      await waitFor(`decodeURIComponent(location.hash) === decodeURIComponent(${quote(fragment)})`)
+      await headingVisible(fragment)
+    } finally { await send('Emulation.setScriptExecutionDisabled', { value: false }) }
+  })
+
   await test('ru: no-JavaScript catalog, native menu and article outline', async () => {
     await send('Emulation.setScriptExecutionDisabled', { value: true })
     try {

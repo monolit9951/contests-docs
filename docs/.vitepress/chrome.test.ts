@@ -17,7 +17,6 @@ const CASES: {
   previous: string
   next: string
   notFound: string
-  ctaTitle: string
 }[] = [
   {
     locale: 'ru',
@@ -31,7 +30,6 @@ const CASES: {
     previous: 'Предыдущая страница',
     next: 'Следующая страница',
     notFound: 'Страница не найдена',
-    ctaTitle: 'Открыть DareBay',
   },
   {
     locale: 'uk',
@@ -45,7 +43,6 @@ const CASES: {
     previous: 'Попередня сторінка',
     next: 'Наступна сторінка',
     notFound: 'Сторінку не знайдено',
-    ctaTitle: 'Відкрити DareBay',
   },
   {
     locale: 'en',
@@ -59,7 +56,6 @@ const CASES: {
     previous: 'Previous page',
     next: 'Next page',
     notFound: 'Page not found',
-    ctaTitle: 'Open DareBay',
   },
 ]
 
@@ -80,10 +76,17 @@ describe.each(CASES)('$locale shared chrome', (expected) => {
     expect(theme.outline).toMatchObject({ label: expected.outline })
     expect(theme.docFooter).toEqual({ prev: expected.previous, next: expected.next })
     expect(theme.notFound?.title).toBe(expected.notFound)
-    expect(theme.darebayCta.title).toBe(expected.ctaTitle)
 
     const configured = siteConfig.locales?.[expected.localeKey]?.themeConfig
     expect(configured).toEqual(theme)
+  })
+
+  // Everything in a tree's theme config is serialised into the site data of every document of that
+  // tree, read or not. The stock sidebar rendered on no page and cost 9.7 KB at gzip level 1 on each
+  // of them (2026-09-30); the old CTA box's copy was read by no component either.
+  it('ships only what the shell reads: no sidebar, no copy of the retired CTA box', () => {
+    expect(theme).not.toHaveProperty('sidebar')
+    expect(Object.keys(theme.darebayCta).sort()).toEqual(['businessUrl', 'communityLabel', 'communityName', 'communityUrl', 'productUrl', 'tasksUrl'])
   })
 })
 
@@ -96,8 +99,8 @@ describe('header and footer sections', () => {
   const declared = LOCALES.map((axis) => axis.language)
   const sectionsOf = (language: Locale) => (themeForLocale(language).nav ?? []).slice(0, -1) as { text: string; link: string }[]
 
-  it('offers earnings, brands, help and about, in that order', () => {
-    expect(NAV_HUBS).toEqual(['earnings', 'brands', 'help', 'about'])
+  it('offers earnings, brands, help, content farm, tools and about, in that order', () => {
+    expect(NAV_HUBS).toEqual(['earnings', 'brands', 'help', 'farm', 'tools', 'about'])
   })
 
   it.each(declared)('%s: every offered section is an index page that exists, under its own title', (language) => {

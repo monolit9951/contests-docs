@@ -49,7 +49,7 @@ This is the arithmetic of the formula, not a forecast: a real month is made of t
 
 **Views and the rate both move the number.** The rate a task sets runs from $1 to $10, a factor of ten, and the same factor separates a 5,000-view clip from a 50,000-view clip. Chasing $10 only pays off where the subject is yours: someone else's niche at a high rate gets fewer views than your own at a low one.
 
-**The cap is per clip, not per author.** Where a task sets a cap, up to $500, that is the most one clip can earn, so the number grows with the count of clips, not with one viral hit: at a $500 cap, two clips at 600,000 views at $1 make $1,000.00, one clip at 1,200,000 makes $500.00.
+**The cap is per clip, not per author.** Where a task sets a cap, up to $500, that is the most one clip can earn, so the number grows with the count of clips, not with one viral hit: at a $500 cap, two clips at 600,000 views at $1 make $1,000.00, one clip at 1,200,000 makes $500.00. More clips come from more accounts: the [content farm](/en/content-farm/) page shows how to run them as one pipeline.
 
 **The view threshold.** A clip below the threshold on the task card does not enter the maths at all, so the first seconds decide more than the length or the edit. The threshold is not subtracted: clear it and you are paid for every view from the first.
 

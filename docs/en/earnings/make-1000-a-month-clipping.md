@@ -43,6 +43,8 @@ The cap sits on one submission inside one task. A clip with a million views at $
 - **Ready-made setups with uniqueization.** An offer task can hand out finished videos with built-in uniqueization, so every clipper gets their own copy, and can add a fixed fee per accepted clip and a share of sales.
 - **Several tasks in parallel.** The cap is counted inside a task, so three tasks on your topic are three independent funds.
 
+Running those accounts as one system, from niche to payout, is covered in [how to build a TikTok content farm](/en/content-farm/how-to-build-a-tiktok-content-farm); once there are more accounts than one person can run, [how to start a clipping agency](/en/content-farm/how-to-start-a-clipping-agency) covers roles, splits and margins.
+
 Caps, fees and payout countries across platforms: [the best clipping platforms](/en/earnings/best-clipping-platforms).
 
 ## A weekly system
@@ -79,7 +81,7 @@ It depends on average reach: at 40,000 views per clip it is 25 clips a month, si
 
 ### Can I take one task from several accounts?
 
-Yes, if they are different clips and every account is connected to the task and meets its terms. The same clip on a second account is a duplicate: it is skipped or removed, and a run of copies looks like dodging the cap.
+Yes, if they are different clips and every account is connected to the task and meets its terms. The same file on a second account is a repeat: platforms cut its reach, the task's moderation can take the copy down, and a run of copies looks like dodging the cap. Versions of one original handed out by an offer task are different clips, one per account.
 
 ### What happens to the plan when a task's fund is exhausted?
 

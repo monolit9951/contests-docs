@@ -3,12 +3,12 @@
 > ⚙️ **Сгенерировано** из `docs/.vitepress/registry.ts`. Руками не править —
 > `node --experimental-strip-types scripts/print-addresses.mjs > ADDRESSES.md`.
 
-Страниц: **88** · адресов: **232** · редиректов со старых адресов: **253**
+Страниц: **98** · адресов: **250** · редиректов со старых адресов: **267**
 
-Из них **161** — производные написания тех же адресов: без `/docs`
+Из них **175** — производные написания тех же адресов: без `/docs`
 (`/faq/fees`), под старым префиксом корневой локали `/ru` (`/ru/o-proekte`) и имя файла
 `<раздел>/index`. Они выводятся в `registry.ts`, ведут туда же, куда исходный адрес, и ради
-них хост отдаёт контенту ещё 13 префиксов: `/faq`, `/getting-started`, `/platformy`, `/ru/blog`, `/ru/brendam`, `/ru/faq`, `/ru/getting-started`, `/ru/kak-rabotaet`, `/ru/legal`, `/ru/o-proekte`, `/ru/platformy`, `/ru/pomoshch`, `/ru/zarabotok`.
+них хост отдаёт контенту ещё 15 префиксов: `/faq`, `/getting-started`, `/platformy`, `/ru/blog`, `/ru/brendam`, `/ru/faq`, `/ru/getting-started`, `/ru/instrumenty`, `/ru/kak-rabotaet`, `/ru/kontent-zavod`, `/ru/legal`, `/ru/o-proekte`, `/ru/platformy`, `/ru/pomoshch`, `/ru/zarabotok`.
 
 Страница объявляет только те языки, на которых она действительно существует: той,
 которой нет на языке, в сайтмапе этой локали и в hreflang нет вообще. Русская версия
@@ -104,6 +104,26 @@
 | `/docs/ru/faq/illegal-content`<br>`/docs/faq/illegal-content` | `/pomoshch/zapreshchennyy-kontent` | `help-illegal-content` |
 | `/docs/ru/faq/kakaya-komissiya`<br>`/docs/faq/fees` | `/pomoshch/kakaya-komissiya` | `help-commission` |
 | `/docs/ru/faq/no-submissions`<br>`/docs/faq/no-submissions` | `/pomoshch/esli-nikto-ne-uchastvuet` | `help-no-submissions` |
+
+## Контент-завод — `/kontent-zavod/`
+
+| Было | Стало | id |
+|---|---|---|
+| — *(новая)* | `/kontent-zavod/` | `farm-hub` |
+| — *(новая)* | `/kontent-zavod/chto-takoe-kontent-zavod` | `farm-what-is` |
+| — *(новая)* | `/kontent-zavod/kak-sozdat-kontent-zavod` | `farm-how-to-build` |
+| — *(новая)* | `/kontent-zavod/ii-kontent-zavod` | `farm-ai` |
+| — *(новая)* | `/kontent-zavod/komanda-narezchikov` | `farm-team` |
+
+## Инструменты — `/instrumenty/`
+
+| Было | Стало | id |
+|---|---|---|
+| — *(новая)* | `/instrumenty/` | `tools-hub` |
+| — *(новая)* | `/instrumenty/neyroseti-dlya-narezki-video` | `tools-ai-clipping` |
+| — *(новая)* | `/instrumenty/unikalizator-video` | `tools-uniqualizer` |
+| — *(новая)* | `/instrumenty/capcut-v-rossii` | `tools-capcut` |
+| — *(новая)* | `/instrumenty/ozvuchka-video-neyrosetyu` | `tools-voiceover` |
 
 ## О проекте — `/o-proekte/`
 

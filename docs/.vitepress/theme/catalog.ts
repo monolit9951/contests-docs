@@ -3,15 +3,25 @@ import type { Locale } from '../registry'
 
 // Editorial metadata contains semantic IDs only. The registry and frontmatter
 // own addresses and article copy, including partially translated trees.
-export const TOPICS = ['basics', 'money', 'creation', 'platforms', 'countries', 'campaigns', 'trust', 'project', 'rules'] as const
+//
+// The last four groups belong to the content-farm and tools hubs (2026-09-29), whose articles the
+// id-prefix fallbacks below would all drop into "Getting started". They follow the stages of the
+// work: editing and originality of each account's version, the team, AI tooling, and the accounts
+// and traffic side. Their articles are listed by id from the page map of 2026-09-29, ahead of their
+// registration; `catalog.test.ts` refuses a registered article of those hubs that has no group.
+export const TOPICS = ['basics', 'money', 'creation', 'platforms', 'countries', 'campaigns', 'trust', 'project', 'rules', 'editing', 'team', 'ai', 'accounts'] as const
 export type Topic = typeof TOPICS[number]
 
 const TOPIC_PAGES: Readonly<Partial<Record<Topic, readonly string[]>>> = {
-  basics: ['earnings-clipper-job', 'earnings-where-to-find-work', 'earnings-glossary', 'help-quick-start', 'help-submit-work', 'help-watch-vote-win', 'help-choosing-winners'],
+  basics: ['earnings-clipper-job', 'earnings-where-to-find-work', 'earnings-glossary', 'help-quick-start', 'help-submit-work', 'help-watch-vote-win', 'help-choosing-winners', 'farm-what-is', 'farm-how-to-build'],
   money: ['earnings-how-much-total', 'earnings-streamer-clip-rate', 'earnings-ppv-mechanics', 'earnings-calculator', 'earnings-rates-by-niche', 'earnings-first-100-dollars', 'earnings-1000-a-month', 'earnings-taxes', 'brands-pay-clippers', 'brands-campaign-cost', 'help-prizes-and-payouts', 'help-crypto-payment', 'help-withdraw', 'help-commission'],
   creation: ['earnings-how-to-clip', 'earnings-film-clips', 'earnings-streamers-who-pay', 'earnings-tiktok-views', 'earnings-youtube-clips', 'earnings-instagram-reels', 'earnings-x-twitter-clips', 'earnings-vk-clips', 'earnings-telegram-clips', 'earnings-account-warmup', 'brands-create-contest', 'brands-brief-template', 'help-first-contest'],
   platforms: ['best-clipping-platforms', 'whop-alternatives', 'darebay-vs-whop', 'darebay-vs-klipni', 'how-to-choose-clipping-platform', 'earnings-whop-review', 'earnings-clipping-net-alternatives', 'earnings-vyro-review', 'clipgrow-review', 'is-wondeed-legit', 'vues-review', 'reach-cat-review', 'prime-oracles-review', 'klipni-review', 'wusul-review'],
   trust: ['earnings-is-clipping-legal', 'earnings-why-clips-rejected', 'help-verification', 'help-fake-submissions', 'help-illegal-content', 'help-no-submissions', 'about-is-it-a-scam', 'about-reviews', 'about-is-it-a-fraud', 'about-really-pays', 'about-payout-guarantee', 'about-clipping-scam-red-flags'],
+  editing: ['tools-capcut', 'tools-auto-captions', 'tools-uniqualizer'],
+  team: ['farm-team', 'farm-jobs'],
+  ai: ['farm-ai', 'tools-ai-clipping', 'tools-voiceover', 'tools-ai-video', 'tools-best-ai'],
+  accounts: ['farm-ubt', 'farm-multi-accounts', 'tools-scheduling', 'tools-multi-account'],
 }
 const TOPIC_BY_ID = new Map(Object.entries(TOPIC_PAGES).flatMap(([topic, ids]) => ids.map((id) => [id, topic as Topic] as const)))
 
@@ -26,10 +36,10 @@ export function topicFor(id: string): Topic {
 }
 
 export const TOPIC_LABELS: Record<Locale, Record<Topic, string>> = {
-  ru: { basics: 'С чего начать', money: 'Деньги и выплаты', creation: 'Практика и контент', platforms: 'Обзоры и сравнения', countries: 'Платформы по странам', campaigns: 'Продвижение и кампании', trust: 'Правила и безопасность', project: 'О DareBay', rules: 'Документы' },
-  uk: { basics: 'З чого почати', money: 'Гроші й виплати', creation: 'Практика й контент', platforms: 'Огляди й порівняння', countries: 'Платформи за країнами', campaigns: 'Просування й кампанії', trust: 'Правила й безпека', project: 'Про DareBay', rules: 'Документи' },
-  en: { basics: 'Getting started', money: 'Earnings & payouts', creation: 'Skills & content', platforms: 'Reviews & comparisons', countries: 'Platforms by country', campaigns: 'Promotion & campaigns', trust: 'Rules & safety', project: 'About DareBay', rules: 'Documents' },
-  ar: { basics: 'من أين تبدأ', money: 'الأرباح والدفعات', creation: 'المهارات والمحتوى', platforms: 'مراجعات ومقارنات', countries: 'المنصات حسب البلد', campaigns: 'الترويج والحملات', trust: 'القواعد والأمان', project: 'عن DareBay', rules: 'الوثائق' },
+  ru: { basics: 'С чего начать', money: 'Деньги и выплаты', creation: 'Практика и контент', platforms: 'Обзоры и сравнения', countries: 'Платформы по странам', campaigns: 'Продвижение и кампании', trust: 'Правила и безопасность', project: 'О DareBay', rules: 'Документы', editing: 'Монтаж и уникализация', team: 'Команда и роли', ai: 'Нейросети и автоматизация', accounts: 'Аккаунты и трафик' },
+  uk: { basics: 'З чого почати', money: 'Гроші й виплати', creation: 'Практика й контент', platforms: 'Огляди й порівняння', countries: 'Платформи за країнами', campaigns: 'Просування й кампанії', trust: 'Правила й безпека', project: 'Про DareBay', rules: 'Документи', editing: 'Монтаж і унікалізація', team: 'Команда й ролі', ai: 'Нейромережі й автоматизація', accounts: 'Акаунти й трафік' },
+  en: { basics: 'Getting started', money: 'Earnings & payouts', creation: 'Skills & content', platforms: 'Reviews & comparisons', countries: 'Platforms by country', campaigns: 'Promotion & campaigns', trust: 'Rules & safety', project: 'About DareBay', rules: 'Documents', editing: 'Editing & originality', team: 'Team & roles', ai: 'AI & automation', accounts: 'Accounts & traffic' },
+  ar: { basics: 'من أين تبدأ', money: 'الأرباح والدفعات', creation: 'المهارات والمحتوى', platforms: 'مراجعات ومقارنات', countries: 'المنصات حسب البلد', campaigns: 'الترويج والحملات', trust: 'القواعد والأمان', project: 'عن DareBay', rules: 'الوثائق', editing: 'المونتاج والأصالة', team: 'الفريق والأدوار', ai: 'الذكاء الاصطناعي والأتمتة', accounts: 'الحسابات والزيارات' },
 }
 
 export const CATALOG_COPY = {
@@ -38,6 +48,9 @@ export const CATALOG_COPY = {
   en: { kicker: 'DareBay library', featured: 'Three ways to get started', start: 'Get started', calculate: 'Calculate', choose: 'Choose', startNote: 'Understand the work and where to begin.', calculateNote: 'Your rate, your views, your result.', chooseNote: 'What to check before your first clip.', browse: 'Explore this section', search: 'Search the guides', placeholder: 'Title, topic or question…', topics: 'Choose a topic', all: 'All topics', results: 'Showing', of: 'of', empty: 'No guides found', emptyNote: 'Try another word or select all topics.', reset: 'Clear filters', read: 'Read guide' },
   ar: { kicker: 'مكتبة DareBay', featured: 'ثلاثة مسارات للبدء', start: 'ابدأ', calculate: 'احسب', choose: 'اختر', startNote: 'افهم العمل واعرف من أين تبدأ.', calculateNote: 'السعر والمشاهدات والنتيجة.', chooseNote: 'ما يجب التحقق منه قبل أول مقطع.', browse: 'تصفّح مواد هذا القسم', search: 'البحث في الأدلة', placeholder: 'عنوان أو موضوع أو سؤال…', topics: 'اختر موضوعًا', all: 'كل المواضيع', results: 'النتائج', of: 'من', empty: 'لا توجد نتائج', emptyNote: 'جرّب كلمة أخرى أو اختر كل المواضيع.', reset: 'مسح المرشحات', read: 'اقرأ الدليل' },
 } satisfies Record<Locale, Record<string, string>>
+
+/** Up to this many articles, a showcase landing lists its section as one grid, without search or topics (HubIndex.vue `compact`). */
+export const COMPACT_MAX = 8
 
 // A locale without these articles gets its complete catalog, never a featured
 // route that silently changes language.
@@ -50,7 +63,8 @@ export function featuredPages<T extends { id: string }>(pages: readonly T[]): { 
   return found.length === routes.length ? found : []
 }
 
-const searchText = (value: string): string => value.normalize('NFKD').replace(/\p{M}/gu, '').toLocaleLowerCase().replace(/ё/g, 'е')
+/** Text as the catalogue searches it: no diacritics, lower case, ё read as е. Shared with the tools catalogue (`LTools.vue`). */
+export const searchText = (value: string): string => value.normalize('NFKD').replace(/\p{M}/gu, '').toLocaleLowerCase().replace(/ё/g, 'е')
 
 /** The empty initial state returns every page, also during server rendering. */
 export function filterCatalog<T extends Pick<HubPage, 'id' | 'title' | 'description'>>(pages: readonly T[], query = '', topic: Topic | 'all' = 'all', locale: Locale = 'en'): T[] {
@@ -71,7 +85,7 @@ export function groupCatalog<T extends { id: string }>(pages: readonly T[]): { t
 }
 
 // Words of a page id too common to say anything about its subject.
-const GENERIC_ID_TOKENS = new Set(['earnings', 'brands', 'help', 'about', 'legal', 'clipping', 'clips', 'review', 'reviews', 'alternatives', 'platforms', 'darebay', 'vs', 'the', 'a', 'to', 'and', 'is'])
+const GENERIC_ID_TOKENS = new Set(['earnings', 'brands', 'help', 'farm', 'tools', 'about', 'legal', 'clipping', 'clips', 'review', 'reviews', 'alternatives', 'platforms', 'darebay', 'vs', 'the', 'a', 'to', 'and', 'is'])
 
 /** How related a candidate is to the current page: same topic (+100), then one point per shared id word. */
 export function relatedScore(currentId: string, candidateId: string): number {

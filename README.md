@@ -63,13 +63,42 @@ URLs to IndexNow endpoints.
 
 1. Add Markdown under a real localized hub (for fleet-authored pages, Russian
    root hubs are `docs/zarabotok/`, `docs/brendam/`, `docs/pomoshch/` or
-   `docs/o-proekte/`).
+   `docs/o-proekte/`; the content-farm and tools hubs, `docs/kontent-zavod/`
+   and `docs/instrumenty/`, are written by sessions and pass the same
+   anti-doorway gates).
 2. Add or update its stable semantic entry in `docs/content-pages.json`.
-   Declare only translations that actually exist.
+   Declare only translations that actually exist. A page of the content-farm
+   or tools hub also gets its catalogue group by id in
+   `docs/.vitepress/theme/catalog.ts` (`TOPIC_PAGES`) and in the pinned list
+   of `catalog.test.ts`, which fails for a page of those hubs without one.
 3. Run `npm test` and `DOCS_ENV=prod npm run docs:build`.
 
 Navigation, sitemap, canonical, hreflang, public host routes and the language
 switcher are derived from the manifest; do not maintain a second URL table.
+
+## Showcase hub index
+
+A hub index with `showcase: true` in its frontmatter renders as a landing:
+hero with buttons, the page's Markdown with its blocks (`<LFlow />`,
+`<LFeatures />`, `<LSetup />` and `<LTools :data="tools" />`, which the page
+imports in its own `<script setup>`, LTools with its language's
+`tools.<locale>.data`, so they stay out of the theme chunk), the section's
+catalogue (where `<LCatalog />` stands, else after the Markdown), then the CTA
+band. Buttons and links name their destination by CTA key (`tasks`, `signup`,
+`teams`, `traffic`, `store`, `business`, `founder`, `community`; `ctaHref` in
+`docs/.vitepress/links.ts`), never by address. The keys each block reads and
+their limits are checked at build time by
+`docs/.vitepress/landingFrontmatter.ts`; the tools catalogue lives in
+`docs/.vitepress/data/tools.json` (schema and view in
+`docs/.vitepress/tools.ts`, including the optional `priceBadge`, `pay` and, on
+DareBay's own tools, `icon`). The dist gate `showcase-weight`
+(`scripts/showcase-weight.mjs`) holds such a page to three budgets: the page's
+own markup in `<main>` to 40 KB raw, its two data listings (the tools
+catalogue and the section catalogue) excepted, since they grow with their data
+and compress card by card; the whole document to 85 KB as nginx sends it, gzip
+level 1 measured with the reference zlib (pako, byte for byte what the live
+site sends; Node's own zlib reads 2–4 % light); and no media. Keep a page well
+under the wire ceiling: the next wave of articles adds cards to its catalogue.
 
 ## Product truth gate
 

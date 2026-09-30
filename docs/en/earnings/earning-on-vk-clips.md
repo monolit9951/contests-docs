@@ -56,6 +56,8 @@ On availability, honestly. For a creator in Russia some counted platforms work w
 - Hashtags. Two or three on topic (streamer, game, genre) plus one trending tag if it fits; a dozen in a row reads as spam.
 - Format. Vertical 9:16, subtitles for viewing without sound, length set by the moment.
 
+Tools that caption, voice and reframe clips for vertical are compared in the [tools catalog for Reels, Shorts and TikTok](/en/tools/).
+
 ## Inflated views and the rules
 
 VK counts only organic views: in its first support programme for clip creators in 2022 only unique views of original vertical videos counted, without inflation or paid promotion <!-- source: https://vk.company/ru/press/releases/11111/ 2026-09-04 -->, and the partner programme requires original content <!-- source: https://vk.company/ru/press/releases/12381/ 2026-09-04 -->. Bought views and reuploads of other people's clips do not pass.

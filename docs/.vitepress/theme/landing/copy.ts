@@ -57,6 +57,17 @@ export interface LandingCopy {
   budgetCpm: string
   budgetNote: string
   glossaryTitle: string
+  /**
+   * Default labels of the CTA keys that have no label of their own above (`links.ts` CTA_KEYS):
+   * `tasks` reads `ctaPrimary`, `business` reads `bizCtaPrimary`, `founder` reads `bizCtaSecondary`.
+   * Labels only: what a destination offers is said by the page, where the truth lint reads it.
+   */
+  actions: { signup: string; teams: string; traffic: string; store: string; community: string }
+  /** The link of a feature tile or a flow step that opens a page of this site. */
+  more: string
+  /** Default headings of the two lists of the setup block (`setup.itemsTitle`, `setup.prepareTitle`). */
+  setupItems: string
+  setupPrepare: string
 }
 
 const columns = {
@@ -206,6 +217,10 @@ export const LANDING_COPY: Record<Locale, LandingCopy> = {
     budgetCpm: 'Cost per 1,000 views',
     budgetNote: 'Contest fee 0%: the whole budget goes to creators. Launching is free; in a wallet-backed contest the budget is locked on the platform before the start.',
     glossaryTitle: 'Terms',
+    actions: { signup: 'Start on DareBay →', teams: 'For teams →', traffic: 'For traffic partners →', store: 'DareBay store →', community: 'Join our Discord' },
+    more: 'Learn more →',
+    setupItems: 'What’s included',
+    setupPrepare: 'What to prepare',
   },
   ru: {
     updated: 'Обновлено',
@@ -257,6 +272,10 @@ export const LANDING_COPY: Record<Locale, LandingCopy> = {
     budgetCpm: 'Цена за 1000 просмотров',
     budgetNote: 'Комиссия конкурса 0%: весь бюджет уходит авторам. Запуск бесплатный; в кошельковом конкурсе бюджет заблокирован на платформе до старта.',
     glossaryTitle: 'Термины',
+    actions: { signup: 'Начать на DareBay →', teams: 'Командам →', traffic: 'Траферам →', store: 'Магазин DareBay →', community: 'Чат нарезчиков' },
+    more: 'Подробнее →',
+    setupItems: 'Что входит',
+    setupPrepare: 'Что подготовить',
   },
   uk: {
     updated: 'Оновлено',
@@ -308,6 +327,10 @@ export const LANDING_COPY: Record<Locale, LandingCopy> = {
     budgetCpm: 'Ціна за 1000 переглядів',
     budgetNote: 'Комісія конкурсу 0%: увесь бюджет іде авторам. Запуск безкоштовний; у гаманцевому конкурсі бюджет заблоковано на платформі до старту.',
     glossaryTitle: 'Терміни',
+    actions: { signup: 'Почати на DareBay →', teams: 'Командам →', traffic: 'Траферам →', store: 'Магазин DareBay →', community: 'Чат нарізчиків' },
+    more: 'Докладніше →',
+    setupItems: 'Що входить',
+    setupPrepare: 'Що підготувати',
   },
   // Arabic. Arrows that mean "onward" point left in a right-to-left line. The product buttons open
   // the English interface (the application has no Arabic one — `appLocaleOf` in the registry), and
@@ -364,6 +387,10 @@ export const LANDING_COPY: Record<Locale, LandingCopy> = {
     budgetCpm: 'التكلفة لكل 1,000 مشاهدة',
     budgetNote: 'عمولة المسابقة 0%: الميزانية كلها تذهب إلى صنّاع المحتوى. الإطلاق مجاني، وفي المسابقة الممولة من المحفظة تُحجز الميزانية على المنصة قبل البدء.',
     glossaryTitle: 'المصطلحات',
+    actions: { signup: 'ابدأ على DareBay ←', teams: 'للفرق ←', traffic: 'لشركاء الزيارات ←', store: 'متجر DareBay ←', community: 'انضم إلى Discord' },
+    more: 'اعرف المزيد ←',
+    setupItems: 'ما يشمله',
+    setupPrepare: 'ما الذي تجهّزه',
   },
 }
 
@@ -386,6 +413,30 @@ export const NUMBER_LOCALE: Record<Locale, string> = {
  */
 export const localeOf = (lang: string): Locale =>
   (KNOWN_LOCALES as readonly string[]).includes(lang) ? (lang as Locale) : ROOT_LOCALE.language
+
+/**
+ * A day as the page's language writes a date: `04.09.2026` in Russian and Ukrainian, ISO elsewhere.
+ * For every visible day of the shell, the hero's "updated" and a source's day alike, so one page
+ * never prints the same kind of date two ways; `<time datetime>` keeps the ISO day for machines.
+ */
+export const formatDay = (date: string, locale: Locale): string =>
+  (locale === 'ru' || locale === 'uk') && /^\d{4}-\d{2}-\d{2}$/.test(date) ? date.split('-').reverse().join('.') : date
+
+// Russian typesetting of a display line. A short preposition or conjunction left at a line's end
+// («Контент-завод на | DareBay», «для | рилс и | шортсов») and a compound broken at its hyphen
+// («контент- | завод») read as mistakes in a heading. Display only: the page's title, its snippet
+// and its Markdown source stay as written.
+const SHORT_WORD = /(?<=^|[\s(«"\u00a0])(в|во|на|и|с|со|к|ко|о|об|у|по|за|от|до|из|а|но|не|для|без|при|или|что|как)\s+(?=\S)/giu
+const COMPOUND = /[\p{L}\d]+(?:-[\p{L}\d]+)+/gu
+const escapeHtml = (text: string): string => text.replace(/[&<>"]/g, (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[char]!)
+
+/** A Russian line with each short preposition or conjunction bound to the next word by a no-break space. */
+export const keepShortWords = (text: string, locale: Locale): string =>
+  locale === 'ru' ? text.replace(SHORT_WORD, (_, word: string) => `${word}\u00a0`) : text
+
+/** A heading as HTML: escaped, and in Russian with its short words bound and its compounds unbroken (`.lp-nw`). */
+export const headingHtml = (text: string, locale: Locale): string =>
+  locale === 'ru' ? escapeHtml(keepShortWords(text, locale)).replace(COMPOUND, '<span class="lp-nw">$&</span>') : escapeHtml(text)
 
 /** The text of a link to our review of the platform called `name`, on a page in `locale`. */
 export const reviewLabel = (locale: Locale, name: string): string =>

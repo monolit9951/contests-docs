@@ -1,4 +1,7 @@
+import { execFileSync } from 'node:child_process'
 import { readFileSync } from 'node:fs'
+import { fileURLToPath } from 'node:url'
+import { gzipSync } from 'node:zlib'
 import { describe, expect, it } from 'vitest'
 import { RETENTION_MANIFEST_PATH } from './content-asset-policy.mjs'
 
@@ -124,16 +127,36 @@ describe('release delivery contract', () => {
   })
 
   it('authenticates every staged byte before executing root-owned artifacts', () => {
-    expect(workflow).toContain('encoded="$(base64 --wrap=0 -- "$file")"')
-    expect(workflow).toContain("printf '%s' \"$payload\" | base64 --decode > \"$temporary\"")
+    expect(workflow).toContain('encoded="$(gzip -9 --no-name --stdout -- "$file" | base64 --wrap=0)"')
+    expect(workflow).toContain("printf '%s' \"$payload\" | base64 --decode | gzip --decompress --stdout > \"$temporary\"")
     expect(workflow).toContain('[[ "$actual_digest" == "$expected_digest" ]]')
     expect(workflow).toContain('[[ -f "$target" && ! -L "$target" && "$metadata" == "0:0:${mode}" ]]')
-    expect(workflow).toContain('decode_artifact deploy-content-transaction.sh "$CONTENT_TRANSACTION_B64" "$CONTENT_TRANSACTION_SHA" 700')
+    expect(workflow).toContain('decode_artifact deploy-content-transaction.sh "$CONTENT_TRANSACTION_GZ_B64" "$CONTENT_TRANSACTION_SHA" 700')
     expect(transaction).toContain('artifact_contract "$script_real" 700 "$7"')
     expect(transaction).toContain("readonly STAGING_PARENT='/var/lib/darebay-content-deploy'")
     expect(transaction).toContain("[[ $STAGING_DIRECTORY =~ ^/var/lib/darebay-content-deploy/transaction\\.[A-Za-z0-9]+$ && ! -L $STAGING_DIRECTORY ]]")
     expect(transaction).toContain("[[ $parent_metadata == '0:0:700' ]]")
     expect(transaction).toContain("[[ $staging_metadata == '0:0:700' ]]")
+  })
+
+  it('keeps the transferred payloads far below the kernel limit on one command-line argument', () => {
+    // The three artifacts ride inside the single remote command, and Linux
+    // refuses any argument over 128 KiB (MAX_ARG_STRLEN) before the script
+    // runs. Plain base64 crossed it on 2026-09-30 when two hubs were added.
+    const step = namedStep(workflow, 'Package authenticated deployment artifacts')
+    expect(step).toContain('readonly payload_budget=98304')
+    expect(step).toContain('if (( total > payload_budget )); then')
+    expect(workflow).toContain('for command in base64 gzip sha256sum stat mktemp mkdir chown chmod mv git rm; do')
+    const snippet = execFileSync(
+      process.execPath,
+      ['--experimental-strip-types', '--no-warnings', fileURLToPath(new URL('./gen-host-nginx.mjs', import.meta.url))],
+      { encoding: 'utf8' },
+    )
+    const encodedSize = (text) => gzipSync(Buffer.from(text), { level: 9 }).toString('base64').length
+    const total = encodedSize(snippet) + encodedSize(installer) + encodedSize(transaction)
+    // Leave room for the snippet to grow several times over before the guard fires.
+    expect(total).toBeLessThan(98304 / 2)
+    expect(snippet).toContain('/kontent-zavod/')
   })
 
   it('proves host-side registry write access before the first production mutation', () => {

@@ -211,22 +211,37 @@ jobs:
 
       # Transfer through the one SSH transaction instead of SCP into a public,
       # predictable /tmp path. Each payload is authenticated before execution.
+      #
+      # The payloads travel inside the one remote command line, and Linux caps a
+      # single argument at 128 KiB (MAX_ARG_STRLEN). Plain base64 of the three
+      # files reached that cap on 2026-09-30 (the route snippet grows with every
+      # hub), and the host answered "Argument list too long" before running
+      # anything. Each file is therefore gzip-compressed before base64 (about a
+      # sixth of the size), the digest still covers the uncompressed bytes, and
+      # the run stops here with a clear message long before the kernel limit.
       - name: Package authenticated deployment artifacts
         id: artifacts
         run: |
           set -Eeuo pipefail
+          readonly payload_budget=98304
+          total=0
           emit_artifact() {
             local key="$1" file="$2" digest encoded
             [[ -f "$file" && ! -L "$file" ]]
             digest="$(sha256sum -- "$file")"
             digest="${digest%% *}"
-            encoded="$(base64 --wrap=0 -- "$file")"
+            encoded="$(gzip -9 --no-name --stdout -- "$file" | base64 --wrap=0)"
+            total=$((total + ${#encoded}))
             printf '%s_sha=%s\n' "$key" "$digest" >> "$GITHUB_OUTPUT"
-            printf '%s_b64=%s\n' "$key" "$encoded" >> "$GITHUB_OUTPUT"
+            printf '%s_gz_b64=%s\n' "$key" "$encoded" >> "$GITHUB_OUTPUT"
           }
           emit_artifact snippet .deploy-artifacts/darebay-content.conf
           emit_artifact installer .deploy-artifacts/install-host-nginx-snippet.sh
           emit_artifact transaction .deploy-artifacts/deploy-content-transaction.sh
+          if (( total > payload_budget )); then
+            echo "deployment payloads are ${total} bytes after gzip+base64, over the ${payload_budget}-byte budget that keeps the remote command under the 128 KiB argument limit" >&2
+            exit 1
+          fi
 
       - name: Refuse a stale release after candidate publication
         run: |
@@ -242,11 +257,11 @@ jobs:
         env:
           EXPECTED_RELEASE_SHA: ${{ github.sha }}
           EXPECTED_MANIFEST_DIGEST: ${{ steps.candidate.outputs.manifest_digest }}
-          CONTENT_SNIPPET_B64: ${{ steps.artifacts.outputs.snippet_b64 }}
+          CONTENT_SNIPPET_GZ_B64: ${{ steps.artifacts.outputs.snippet_gz_b64 }}
           CONTENT_SNIPPET_SHA: ${{ steps.artifacts.outputs.snippet_sha }}
-          CONTENT_INSTALLER_B64: ${{ steps.artifacts.outputs.installer_b64 }}
+          CONTENT_INSTALLER_GZ_B64: ${{ steps.artifacts.outputs.installer_gz_b64 }}
           CONTENT_INSTALLER_SHA: ${{ steps.artifacts.outputs.installer_sha }}
-          CONTENT_TRANSACTION_B64: ${{ steps.artifacts.outputs.transaction_b64 }}
+          CONTENT_TRANSACTION_GZ_B64: ${{ steps.artifacts.outputs.transaction_gz_b64 }}
           CONTENT_TRANSACTION_SHA: ${{ steps.artifacts.outputs.transaction_sha }}
           DOCKER_DEPLOY_USERNAME: ${{ secrets.DOCKER_USERNAME }}
           DOCKER_DEPLOY_TOKEN: ${{ secrets.DOCKER_PASSWORD }}
@@ -257,7 +272,7 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           passphrase: ${{ secrets.SSH_PASSPHRASE }}
           command_timeout: 20m
-          envs: EXPECTED_RELEASE_SHA,EXPECTED_MANIFEST_DIGEST,CONTENT_SNIPPET_B64,CONTENT_SNIPPET_SHA,CONTENT_INSTALLER_B64,CONTENT_INSTALLER_SHA,CONTENT_TRANSACTION_B64,CONTENT_TRANSACTION_SHA,DOCKER_DEPLOY_USERNAME,DOCKER_DEPLOY_TOKEN
+          envs: EXPECTED_RELEASE_SHA,EXPECTED_MANIFEST_DIGEST,CONTENT_SNIPPET_GZ_B64,CONTENT_SNIPPET_SHA,CONTENT_INSTALLER_GZ_B64,CONTENT_INSTALLER_SHA,CONTENT_TRANSACTION_GZ_B64,CONTENT_TRANSACTION_SHA,DOCKER_DEPLOY_USERNAME,DOCKER_DEPLOY_TOKEN
           script: |
             set -Eeuo pipefail
             umask 077
@@ -266,7 +281,7 @@ jobs:
               echo 'content deploy wrapper: root is required' >&2
               exit 1
             fi
-            for command in base64 sha256sum stat mktemp mkdir chown chmod mv git rm; do
+            for command in base64 gzip sha256sum stat mktemp mkdir chown chmod mv git rm; do
               command -v "$command" >/dev/null || {
                 echo "content deploy wrapper: missing command: $command" >&2
                 exit 1
@@ -283,7 +298,7 @@ jobs:
               trap - EXIT
               trap '' HUP INT TERM PIPE
               set +e
-              unset CONTENT_SNIPPET_B64 CONTENT_INSTALLER_B64 CONTENT_TRANSACTION_B64
+              unset CONTENT_SNIPPET_GZ_B64 CONTENT_INSTALLER_GZ_B64 CONTENT_TRANSACTION_GZ_B64
               unset DOCKER_DEPLOY_USERNAME DOCKER_DEPLOY_TOKEN
               if [[ -z "$artifact_dir" ]]; then
                 exit "$status"
@@ -334,7 +349,7 @@ jobs:
               target="${artifact_dir}/${name}"
               [[ ! -e "$target" && ! -L "$target" ]]
               temporary="$(mktemp "${artifact_dir}/.${name}.XXXXXX")"
-              printf '%s' "$payload" | base64 --decode > "$temporary"
+              printf '%s' "$payload" | base64 --decode | gzip --decompress --stdout > "$temporary"
               [[ -s "$temporary" && -f "$temporary" && ! -L "$temporary" ]]
               actual_digest="$(sha256sum -- "$temporary")"
               actual_digest="${actual_digest%% *}"
@@ -349,10 +364,10 @@ jobs:
               [[ "$actual_digest" == "$expected_digest" ]]
             }
 
-            decode_artifact darebay-content.conf "$CONTENT_SNIPPET_B64" "$CONTENT_SNIPPET_SHA" 600
-            decode_artifact install-host-nginx-snippet.sh "$CONTENT_INSTALLER_B64" "$CONTENT_INSTALLER_SHA" 600
-            decode_artifact deploy-content-transaction.sh "$CONTENT_TRANSACTION_B64" "$CONTENT_TRANSACTION_SHA" 700
-            unset CONTENT_SNIPPET_B64 CONTENT_INSTALLER_B64 CONTENT_TRANSACTION_B64
+            decode_artifact darebay-content.conf "$CONTENT_SNIPPET_GZ_B64" "$CONTENT_SNIPPET_SHA" 600
+            decode_artifact install-host-nginx-snippet.sh "$CONTENT_INSTALLER_GZ_B64" "$CONTENT_INSTALLER_SHA" 600
+            decode_artifact deploy-content-transaction.sh "$CONTENT_TRANSACTION_GZ_B64" "$CONTENT_TRANSACTION_SHA" 700
+            unset CONTENT_SNIPPET_GZ_B64 CONTENT_INSTALLER_GZ_B64 CONTENT_TRANSACTION_GZ_B64
 
             # This check is after the transfer/verification boundary. The child
             # repeats it after taking the shared deploy lock and immediately

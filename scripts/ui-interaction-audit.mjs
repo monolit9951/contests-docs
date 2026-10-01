@@ -5,6 +5,7 @@
 // the first desktop breakpoint (1120px), the tablet outline at 768px, and a narrow desktop
 // viewport with a classic scrollbar (whose available content width is smaller than 320px).
 import { openAuditBrowser, PAGES, pagePath } from './layout-audit.mjs'
+import { ctaHref } from '../docs/.vitepress/links.ts'
 
 const browser = await openAuditBrowser()
 const { evaluate, waitFor, send, navigate, emulate } = browser
@@ -114,6 +115,28 @@ try {
       await check('!document.querySelector(".lp-mobile-menu").open', 'language transition must close mobile menu')
     })
 
+    await test(`${locale}: article catalogue links and mobile reading CTA`, async () => {
+      await navigate(article)
+      const catalogue = ctaHref('tasks', locale)
+      await check(`(() => {
+        const links = document.querySelectorAll('[data-analytics-cta-id="article_tasks"]')
+        return links.length >= 4 && Array.from(links).every((link) => link.href === ${quote(catalogue)} && link.target === '_self' && !link.search)
+      })()`, 'article header, hero, closing and mobile buttons must open all tasks without a signup dialog or attribution parameters')
+      await check(`(() => { const box = document.querySelector('.lp-header-cta').getBoundingClientRect(); return box.top >= 0 && box.bottom <= innerHeight && box.width >= 44 && box.height >= 44 })()`, 'catalogue CTA must be visible and touch-sized on the first screen')
+      await check('document.querySelector(".lp-task-dock").getBoundingClientRect().height === 0', 'mobile reading CTA must give way to the hero on the first screen')
+      await evaluate(`window.scrollTo({ top: document.querySelector('.lp-hero').getBoundingClientRect().bottom + scrollY, behavior: 'instant' })`)
+      await waitFor('document.querySelector(".lp-task-dock").getBoundingClientRect().height > 0')
+      await check(`(() => { const box = document.querySelector('.lp-task-dock .lp-btn').getBoundingClientRect(); return box.left >= 0 && box.right <= innerWidth && box.top >= 0 && box.bottom <= innerHeight && box.height >= 44 })()`, 'reading CTA must fit inside the phone viewport')
+      await openDetails('.lp-mobile-menu')
+      await check('document.querySelector(".lp-task-dock").getBoundingClientRect().height === 0', 'reading CTA must not cover the open menu')
+      await escapeDetails('.lp-mobile-menu')
+      await evaluate(`window.scrollTo({ top: document.querySelector('.lp-cta').getBoundingClientRect().top + scrollY - innerHeight / 2, behavior: 'instant' })`)
+      await waitFor('document.querySelector(".lp-task-dock").getBoundingClientRect().height === 0')
+      await follow('.lp-breadcrumb')
+      await waitFor('document.querySelector(".lp-task-dock").getBoundingClientRect().height === 0')
+      await check(`document.querySelector('.lp-hero-ctas .lp-btn-primary').href === ${quote(catalogue)}`, 'plain earnings hub must also expose the full task catalogue in its hero')
+    })
+
     await test(`${locale}: catalog search, empty state, category, reset and route reset`, async () => {
       await navigate(home)
       await waitFor('!!document.querySelector(".hub-search input:not([disabled])")')
@@ -211,8 +234,8 @@ try {
     await waitFor(`(() => { const links = Array.from(document.querySelectorAll('.lp-outline-desktop .lp-outline-link')); const reached = links.filter((link) => document.getElementById(decodeURIComponent(link.hash.slice(1))).getBoundingClientRect().top <= 130); return (reached.at(-1) ?? links[0]).getAttribute('aria-current') === 'location' })()`)
   })
   // Showcase hub indexes (LandingLayout `showcase: true`): the landing's buttons in the first screen
-  // of a phone, their destinations, the tools catalogue's filter and the returning-visitor rewrite of
-  // the registration link. No click here leaves for the application: navigation is prevented and
+  // of a phone, their destinations, the tools catalogue's filter and the same catalogue destination
+  // for guests and returning readers. No click here leaves for the application: navigation is prevented and
   // only the address the link would open is read.
   for (const locale of ['ru', 'en']) {
     await test(`${locale}: showcase hero buttons in the first screen at 390x844, and where they lead`, async () => {
@@ -221,14 +244,17 @@ try {
       await check('document.querySelectorAll(".lp-hero-btns .lp-btn").length === 2', 'showcase hero must render its two buttons')
       await check('Array.from(document.querySelectorAll(".lp-hero-btns .lp-btn")).every((button) => { const box = button.getBoundingClientRect(); return box.top >= 0 && box.bottom <= innerHeight && box.width >= 44 && box.height >= 44 })', 'hero buttons must fit the first screen at 390x844')
       await check('document.documentElement.scrollWidth <= document.documentElement.clientWidth', 'showcase page overflows the phone width')
-      const signup = locale === 'ru' ? 'https://darebay.com/tasks?auth=signup' : 'https://darebay.com/en/tasks?auth=signup'
-      await check(`(() => { const [first, second] = document.querySelectorAll('.lp-hero-btns .lp-btn'); return first.href === ${quote(signup)} && first.target === '_self' && second.href === 'https://t.me/ruslanbwork' && second.target === '_blank' })()`, 'hero buttons must open the registration in the reader\'s tree and the founder\'s Telegram in a new tab')
+      const catalogue = ctaHref('tasks', locale)
+      await check(`(() => { const [first, second] = document.querySelectorAll('.lp-hero-btns .lp-btn'); return first.href === ${quote(catalogue)} && first.target === '_self' && second.href === 'https://t.me/ruslanbwork' && second.target === '_blank' })()`, 'hero buttons must open all tasks in the reader\'s tree and the founder\'s Telegram in a new tab')
       await check(`document.querySelectorAll('main .hub-directory').length <= 1 && document.querySelectorAll('#flow li').length > 1 && !!document.querySelector('#features .lp-phones') && !!document.querySelector('#setup .lp-btn')`, 'showcase blocks must be server-rendered, with at most one section catalogue')
       await evaluate(`(() => { window.__uiAuditStop = (event) => event.preventDefault(); window.addEventListener('click', window.__uiAuditStop) })()`)
       try {
+        await evaluate(`localStorage.removeItem('userToken')`)
+        await click('.lp-hero-btns .lp-btn-primary')
+        await check(`document.querySelector('.lp-hero-btns .lp-btn-primary').href === ${quote(catalogue)}`, 'a guest must choose from all tasks before being asked to register')
         await evaluate(`localStorage.setItem('userToken', 'ui-audit')`)
         await click('.lp-hero-btns .lp-btn-primary')
-        await check(`document.querySelector('.lp-hero-btns .lp-btn-primary').href === ${quote(signup.replace('?auth=signup', ''))}`, 'a signed-in visitor\'s registration button must open the catalogue itself')
+        await check(`document.querySelector('.lp-hero-btns .lp-btn-primary').href === ${quote(catalogue)}`, 'a signed-in visitor must open the same catalogue without an authentication dialog')
       } finally {
         await evaluate(`(() => { localStorage.removeItem('userToken'); window.removeEventListener('click', window.__uiAuditStop) })()`)
       }

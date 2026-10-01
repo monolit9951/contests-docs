@@ -9,7 +9,7 @@ hero:
   kicker: "For clippers, faceless pages and clipping teams"
   lede: "A brand behind each task pays per counted view. You post from live accounts; DareBay counts views and pays you."
   actions:
-    - { label: "Start on DareBay →", to: "signup" }
+    - { label: "View all tasks →", to: "tasks" }
     - { label: "Get setup help", to: "founder" }
   note: "Free sign-up with email, Google, Discord or Telegram."
   proof:
@@ -118,7 +118,7 @@ setup:
 cta:
   title: "Run your content farm on DareBay"
   lede: "Tasks, tracking and payouts are already here. Sign-up is free, and Ruslan will help you connect your accounts and launch."
-  primary: { label: "Start on DareBay →", to: "signup" }
+  primary: { label: "View all tasks →", to: "tasks" }
   secondary: { label: "Get setup help", to: "founder" }
 ---
 

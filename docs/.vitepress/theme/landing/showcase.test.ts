@@ -15,8 +15,8 @@ import {
   ctaLabel,
   heroAction,
   installReturningVisitorLinks,
+  isCreatorSection,
   itemLink,
-  signupLeafLinks,
   withoutSignup,
 } from './showcase'
 
@@ -60,8 +60,8 @@ describe('CTA buttons', () => {
 
   it('gives each landing section its CTA pair, and keeps the brands pair it always had', () => {
     expect(HUB_CTA.brands).toEqual(['business', 'founder'])
-    expect(HUB_CTA.farm).toEqual(['signup', 'founder'])
-    expect(HUB_CTA.tools).toEqual(['signup', 'community'])
+    expect(HUB_CTA.farm).toEqual(['tasks', 'founder'])
+    expect(HUB_CTA.tools).toEqual(['tasks', 'community'])
     for (const pair of Object.values(HUB_CTA)) for (const key of pair) expect(CTA_KEYS).toContain(key)
   })
 
@@ -76,8 +76,8 @@ describe('CTA buttons', () => {
 
   it('fills an article’s band from its section’s pair, and the page’s own keys win', () => {
     const ru = LANDING_COPY.ru
-    expect(bandButtons('farm', {}, 'ru', ru)).toEqual([ctaButton({ to: 'signup' }, 'ru', ru), ctaButton({ to: 'founder' }, 'ru', ru)])
-    expect(bandButtons('tools', {}, 'en', LANDING_COPY.en)).toEqual([ctaButton({ to: 'signup' }, 'en', LANDING_COPY.en), ctaButton({ to: 'community' }, 'en', LANDING_COPY.en)])
+    expect(bandButtons('farm', {}, 'ru', ru)).toEqual([ctaButton({ to: 'tasks' }, 'ru', ru), ctaButton({ to: 'founder' }, 'ru', ru)])
+    expect(bandButtons('tools', {}, 'en', LANDING_COPY.en)).toEqual([ctaButton({ to: 'tasks' }, 'en', LANDING_COPY.en), ctaButton({ to: 'community' }, 'en', LANDING_COPY.en)])
     expect(bandButtons('tools', {}, 'ru', ru)[1]?.anchor.href).toBe('https://t.me/darebaycreatorschat')
     expect(bandButtons('brands', {}, 'uk', LANDING_COPY.uk).map((button) => button?.anchor.href)).toEqual([ctaAnchor('business', 'uk').href, ctaAnchor('founder', 'uk').href])
     // No pair: the catalogue, and the chrome's room for the second button (LCta.vue).
@@ -88,25 +88,18 @@ describe('CTA buttons', () => {
     ])
   })
 
-  // verify.md §6.2 #1 and #9 (2026-09-29): the catalogue holds nothing a newcomer can join, so an
-  // article of these sections leads with the registration, and `?auth=signup` opens the dialog even
-  // for a signed-in reader, so the catalogue keeps a door of its own, second.
-  it('starts a registration from the hero of a farm or tools article, with the catalogue second', () => {
-    for (const hub of ['farm', 'tools']) {
+  it('takes creator readers to all tasks before registration, preserving each application language', () => {
+    const paths = { ru: '/tasks', uk: '/ua/tasks', en: '/en/tasks', ar: '/en/tasks' }
+    for (const hub of ['earnings', 'farm', 'tools', 'about']) {
+      expect(isCreatorSection(hub)).toBe(true)
       for (const language of KNOWN_LOCALES) {
         const copy = LANDING_COPY[language]
-        const [first, second] = signupLeafLinks(hub, language, copy)!
-        expect(first.anchor.href, `${hub}/${language}`).toMatch(/\?auth=signup$/)
-        expect(first).toEqual({ label: copy.actions.signup, anchor: ctaAnchor('signup', language) })
-        expect(second).toEqual({ label: copy.ctaPrimary, anchor: ctaAnchor('tasks', language) })
+        const [first] = bandButtons(hub, {}, language, copy)
+        expect(first.anchor, `${hub}/${language}`).toEqual({ href: `https://darebay.com${paths[language]}`, target: '_self' })
+        expect(first.label).toBe(copy.ctaPrimary)
       }
     }
-    expect(signupLeafLinks('farm', 'ru', LANDING_COPY.ru, 'Попробовать →')![0].label).toBe('Попробовать →')
-    for (const hub of ['earnings', 'brands', 'help', 'about', 'legal', '']) expect(signupLeafLinks(hub, 'ru', LANDING_COPY.ru), hub).toBeNull()
-    // …and the hero asks it on every article, before its single catalogue link.
-    const hero = readFileSync(join(import.meta.dirname, 'LHero.vue'), 'utf8')
-    expect(hero).toContain('signupLeafLinks(hub.value?.id')
-    expect(hero.indexOf('v-if="signupLinks"')).toBeLessThan(hero.indexOf(':href="primaryHref"'))
+    for (const hub of ['brands', 'help', 'legal', '']) expect(isCreatorSection(hub), hub).toBe(false)
   })
 })
 

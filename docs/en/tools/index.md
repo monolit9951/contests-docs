@@ -21,8 +21,8 @@ hero:
   kicker: "Prices checked September 29, 2026"
   lede: "Editing, AI clipping, captions, voice and scheduling tools sorted by stage, with free plans, prices and phone apps marked."
   actions:
-    - { label: "Browse the catalog ↓", href: "#tools" }
-    - { label: "Start on DareBay →", to: "signup" }
+    - { label: "View all tasks →", to: "tasks" }
+    - { label: "Browse tools ↓", href: "#tools" }
   note: "Sign-up on DareBay is free: email, Google, Discord or Telegram."
   proof:
     - "Prices from each tool's own page"
@@ -40,11 +40,11 @@ tools:
   lede: "Stages follow a clip from raw footage to stats. Within each stage, tools are listed A to Z, and every price links to the page it came from, with the date it was checked."
   ownTitle: "DareBay's own tools"
   ownLede: "Tools from DareBay, the publisher of this catalog. Each card says where the tool works; they're not part of the stage-by-stage comparison."
-  cta: { text: "Editing sorted? DareBay tasks pay per counted view on TikTok, Reels and Shorts.", to: "signup" }
+  cta: { text: "Editing sorted? DareBay tasks pay per counted view on TikTok, Reels and Shorts.", to: "tasks" }
 cta:
   title: "Add the stage that pays you"
   lede: "Sign-up is free. DareBay pays per counted view on TikTok, Reels, Shorts and Facebook Reels, and in offer tasks it hands out ready clips, a separate version for every account. New tasks and answers are on our Discord."
-  primary: { label: "Start on DareBay →", to: "signup" }
+  primary: { label: "View all tasks →", to: "tasks" }
   secondary: { label: "Join our Discord", to: "community" }
 ---
 

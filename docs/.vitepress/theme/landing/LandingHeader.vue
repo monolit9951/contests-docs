@@ -6,23 +6,22 @@ import type { DareBayThemeConfig } from '../../chrome'
 import { ctaHref } from '../../links'
 import { LANDING_COPY, localeOf } from './copy'
 import { NAVIGATION_COPY, navigationCurrent } from './navigation'
+import { isCreatorSection } from './showcase'
 
 const { theme, page, lang, frontmatter } = useData<DareBayThemeConfig>()
 const { localeLinks, currentLang } = useLangs()
 // The registry supplies the section URLs and keeps the product CTA last.
 const links = computed(() => (theme.value.nav ?? []).slice(0, -1) as { text: string; link: string }[])
 const copy = computed(() => NAVIGATION_COPY[localeOf(lang.value)])
-// On a showcase landing the hero already starts a registration in lime, so the header's button is
-// the returning reader's door instead: the task catalogue, drawn as an outline so the first screen
-// shows one lime action, not two with different targets («На сайт» on darebay.com itself said little).
-// `?auth=signup` opens the registration dialog even for a signed-in reader (verify.md §6.2 #9), so
-// the catalogue needs a door of its own, and every landing now has one without JavaScript.
+// Creator articles and landings have one product destination: all tasks, in the reader's app
+// language. Business, help and legal pages keep their existing navigation intent.
+const creator = computed(() => !page.value.isNotFound && isCreatorSection(frontmatter.value.sectionHub?.id ?? ''))
 const showcase = computed(() => Boolean(frontmatter.value.isHub) && frontmatter.value.showcase === true)
 const cta = computed(() => {
   const product = (theme.value.nav ?? []).slice(-1)[0] as { text: string; link: string } | undefined
-  if (!showcase.value || !product) return product ? { ...product, compact: copy.value.site, ghost: false } : undefined
+  if (!creator.value) return product ? { ...product, compact: copy.value.site, ghost: false } : undefined
   const locale = localeOf(lang.value)
-  return { text: LANDING_COPY[locale].ctaPrimary, link: ctaHref('tasks', locale), compact: copy.value.tasks, ghost: true }
+  return { text: LANDING_COPY[locale].ctaPrimary, link: ctaHref('tasks', locale), compact: copy.value.tasks, ghost: showcase.value }
 })
 const header = ref<HTMLElement>()
 const menu = ref<HTMLDetailsElement>()
@@ -85,7 +84,7 @@ onBeforeUnmount(() => {
             </nav>
           </details>
         </div>
-        <a v-if="cta" class="lp-header-cta" :class="{ 'lp-header-cta--ghost': cta.ghost }" :href="cta.link" target="_self">
+        <a v-if="cta" class="lp-header-cta" :class="{ 'lp-header-cta--ghost': cta.ghost }" :href="cta.link" target="_self" :data-analytics-cta-id="creator ? 'article_tasks' : undefined" :data-analytics-cta-placement="creator ? 'header' : undefined">
           <span class="lp-cta-full">{{ cta.text }}</span>
           <span class="lp-cta-compact">{{ cta.compact }}</span>
           <svg class="lp-cta-arrow" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5"/></svg>
@@ -146,7 +145,7 @@ details[open] .lp-chevron { transform: rotate(180deg); }
   .lp-header-in { min-height: 64px; gap: 16px; }
   .lp-nav, .lp-lang, .lp-cta-full { display: none; }
   .lp-header-actions { gap: 10px; }
-  .lp-header-cta { min-height: 40px; padding: 9px 13px; gap: 7px; }
+  .lp-header-cta { min-height: 44px; padding: 9px 13px; gap: 7px; }
   .lp-cta-compact, .lp-cta-arrow { display: block; }
   .lp-cta-arrow { width: 16px; height: 16px; }
   .lp-mobile-menu { display: block; }
@@ -174,7 +173,7 @@ details[open] .lp-chevron { transform: rotate(180deg); }
   .lp-logo-mark { width: 27px; height: 27px; }
   .lp-header-actions { gap: 7px; }
   .lp-header-cta { padding-inline: 11px; font-size: 11px; gap: 5px; }
-  .lp-cta-arrow { width: 14px; height: 14px; }
+  .lp-cta-arrow { display: none; }
 }
 :global([dir='rtl'] .lp-cta-arrow) { transform: scaleX(-1); }
 @media (prefers-reduced-motion: reduce) {

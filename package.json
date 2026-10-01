@@ -36,7 +36,7 @@
   "devDependencies": {
     "pako": "2.1.0",
     "vitepress": "^1.6.3",
-    "vitest": "^4.1.10"
+    "vitest": "^4.1.11"
   },
   "dependencies": {
     "web-vitals": "^6.0.1"

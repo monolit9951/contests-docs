@@ -4,6 +4,7 @@ import { computed } from 'vue'
 import type { DareBayThemeConfig } from '../../chrome'
 import { LANDING_COPY, localeOf } from './copy'
 import { bandButtons, type CtaSpec, type LinkButton } from './showcase'
+import { ctaHref } from '../../links'
 
 const { theme, lang, frontmatter } = useData<DareBayThemeConfig>()
 const loc = computed(() => localeOf(lang.value))
@@ -18,6 +19,7 @@ const hub = computed(() => (frontmatter.value.sectionHub as { id?: string } | un
 const brands = computed(() => hub.value === 'brands')
 const buttons = computed(() => bandButtons(hub.value, cta.value, loc.value, copy.value))
 const primary = computed<LinkButton>(() => buttons.value[0])
+const catalogue = computed(() => primary.value.anchor.href === ctaHref('tasks', loc.value))
 const secondary = computed<LinkButton>(() => buttons.value[1] ?? {
   label: theme.value.darebayCta.communityLabel,
   anchor: { href: theme.value.darebayCta.communityUrl, rel: 'noreferrer', target: '_blank' },
@@ -33,7 +35,7 @@ const showcase = computed(() => Boolean(frontmatter.value.isHub) && frontmatter.
         <p>{{ cta.lede ?? (brands ? copy.bizCtaLede : copy.ctaLede) }}</p>
       </div>
       <div class="lp-cta-actions">
-        <a class="lp-btn lp-btn-primary" v-bind="primary.anchor">{{ primary.label }}</a>
+        <a class="lp-btn lp-btn-primary" v-bind="primary.anchor" :data-analytics-cta-id="catalogue ? 'article_tasks' : undefined" :data-analytics-cta-placement="catalogue ? 'footer' : undefined">{{ primary.label }}</a>
         <a class="lp-btn lp-btn-ghost" v-bind="secondary.anchor">{{ secondary.label }}</a>
       </div>
     </div>

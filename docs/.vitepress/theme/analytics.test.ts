@@ -4,6 +4,7 @@ import {
     classifyExitFrom,
     DocsEvent,
     flushDocsOutbox,
+    installDocsAnalytics,
     isContentPath,
     normalizeDocsPath,
     readDocsOutbox,
@@ -338,5 +339,92 @@ describe('docs analytics persistence boundaries', () => {
 
         const request = send.mock.calls[0]?.[1] as { body?: string }
         expect(JSON.parse(request.body ?? '{}')).not.toHaveProperty('authToken')
+    })
+})
+
+describe('docs exit link activation', () => {
+    let listeners: Map<string, (event: MouseEvent) => void>
+    let listen: ReturnType<typeof vi.fn>
+    let send: ReturnType<typeof vi.fn>
+
+    beforeEach(() => {
+        listeners = new Map()
+        listen = vi.fn((type: string, handler: (event: MouseEvent) => void) => {
+            listeners.set(type, handler)
+        })
+        send = vi.fn().mockResolvedValue({ ok: true, status: 202 })
+        vi.stubGlobal('localStorage', new MemoryStorage())
+        vi.stubGlobal('window', {
+            location: {
+                href: 'https://darebay.com/en/earnings/article?utm_source=google',
+                origin: 'https://darebay.com',
+                pathname: '/en/earnings/article',
+                search: '?utm_source=google',
+                hash: '',
+                hostname: 'darebay.com',
+            },
+            addEventListener: vi.fn(),
+        })
+        vi.stubGlobal('document', { referrer: 'https://www.google.com/', addEventListener: listen })
+        vi.stubGlobal('navigator', { language: 'en-US' })
+        vi.stubGlobal('fetch', send)
+        resetDocsAnalyticsForTests()
+    })
+
+    const activate = (type: string, button: number, detail = 1): void => {
+        const anchor = {
+            href: 'https://darebay.com/en/tasks',
+            getAttribute: (name: string) => name === 'href' ? '/en/tasks' : null,
+        }
+        listeners.get(type)?.({
+            type, button, detail,
+            target: { closest: () => anchor },
+        } as unknown as MouseEvent)
+    }
+
+    it('records a middle-click once with the article, catalogue and original acquisition', async () => {
+        installDocsAnalytics()
+        installDocsAnalytics()
+        await flushDocsOutbox()
+
+        activate('auxclick', 1)
+        await flushDocsOutbox()
+
+        expect(listen.mock.calls.filter(([type]) => type === 'auxclick')).toHaveLength(1)
+        expect(send).toHaveBeenCalledTimes(1)
+        expect(JSON.parse(send.mock.calls[0][1].body)).toMatchObject({
+            eventId: DocsEvent.ExitToSite,
+            page: '/en/earnings/article',
+            targetUrl: '/en/tasks',
+            firstTouchUtmSource: 'google',
+            sessionTouchUtmSource: 'google',
+            firstTouchLandingPage: '/en/earnings/article',
+            sessionTouchLandingPage: '/en/earnings/article',
+        })
+    })
+
+    it('does not count opening the link context menu as leaving the article', async () => {
+        installDocsAnalytics()
+        await flushDocsOutbox()
+
+        activate('auxclick', 2)
+        await flushDocsOutbox()
+
+        expect(send).not.toHaveBeenCalled()
+        expect(readDocsOutbox()).toHaveLength(0)
+    })
+
+    it.each([
+        { label: 'primary click', detail: 1 },
+        { label: 'keyboard activation', detail: 0 },
+    ])('keeps $label tracked through the click listener', async ({ detail }) => {
+        installDocsAnalytics()
+        await flushDocsOutbox()
+
+        activate('click', 0, detail)
+        await flushDocsOutbox()
+
+        expect(send).toHaveBeenCalledTimes(1)
+        expect(JSON.parse(send.mock.calls[0][1].body).eventId).toBe(DocsEvent.ExitToSite)
     })
 })

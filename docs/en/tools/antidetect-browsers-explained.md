@@ -23,7 +23,7 @@ hero:
 cta:
   title: "Many accounts? One task takes up to 20"
   lede: "Sign up free with email, Google, Discord or Telegram. Connect up to 20 accounts to a task, TikTok, Instagram, YouTube and Facebook combined, and each clip earns on its own counted views. Running a dozen accounts or a team? Ruslan will help you set it up."
-  primary: { to: "signup" }
+  primary: { to: "tasks" }
   secondary: { to: "founder", label: "Message us on Telegram" }
 ---
 

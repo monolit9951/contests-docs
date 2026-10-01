@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-20T17:05:11.773Z",
+  "generatedAt": "2026-10-01T20:57:59.912Z",
   "url": "https://darebay.com/data/darebay-facts.json",
   "operator": "Ruslan",
   "sources": {
@@ -15,7 +15,7 @@
     "liveCatalogue": {
       "file": "data/contests-snapshot.json",
       "endpoint": "https://darebay.com/api/contests",
-      "fetchedAt": "2026-09-20T17:05:11.773Z"
+      "fetchedAt": "2026-10-01T20:57:59.912Z"
     }
   },
   "facts": [

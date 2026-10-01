@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "fetchedAt": "2026-09-20T17:05:11.773Z",
+  "fetchedAt": "2026-10-01T20:57:59.912Z",
   "source": {
     "endpoint": "https://darebay.com/api/contests",
     "params": {
@@ -12,17 +12,17 @@
     "openFilter": "status === 'ACTIVE' && acceptingWorks !== false"
   },
   "counts": {
-    "returned": 10,
-    "listed": 10,
-    "open": 2,
-    "openWithPayPerView": 2,
+    "returned": 8,
+    "listed": 8,
+    "open": 1,
+    "openWithPayPerView": 1,
     "openUncapped": 0,
     "pagesFetched": 1
   },
   "ppv": {
-    "rateMin": 1.19,
-    "rateMax": 5.94,
-    "capMax": 100,
+    "rateMin": 2,
+    "rateMax": 2,
+    "capMax": 200,
     "viewThresholds": [
       1000
     ]

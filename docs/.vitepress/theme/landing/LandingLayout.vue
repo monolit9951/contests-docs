@@ -19,18 +19,20 @@ import LCta from './LCta.vue'
 import LRelated from './LRelated.vue'
 import LContents from './LContents.vue'
 import LCatalog from './LCatalog.vue'
+import LTaskDock from './LTaskDock.vue'
 import HubIndex from '../HubIndex.vue'
-import { catalogPlacement, installReturningVisitorLinks } from './showcase'
+import { catalogPlacement, installReturningVisitorLinks, isCreatorSection } from './showcase'
 
 const { frontmatter, page, theme } = useData<DareBayThemeConfig>()
 const world = computed(() => (frontmatter.value.world === 'cyan' ? 'lp-world-cyan' : ''))
 const notFound = computed(() => Boolean(page.value.isNotFound))
 const catalog = computed(() => catalogPlacement(frontmatter.value))
+const creator = computed(() => !notFound.value && isCreatorSection(frontmatter.value.sectionHub?.id ?? ''))
 onMounted(installReturningVisitorLinks)
 </script>
 
 <template>
-  <div class="lp" :class="world">
+  <div class="lp" :class="[world, { 'lp--catalogue': creator }]">
     <LandingHeader />
     <main v-if="notFound" id="main-content" tabindex="-1" class="lp-container lp-notfound">
       <span class="lp-kicker">{{ theme.notFound?.code ?? '404' }}</span>
@@ -58,5 +60,6 @@ onMounted(installReturningVisitorLinks)
     </main>
     <LCta v-if="!notFound" />
     <LandingFooter />
+    <LTaskDock v-if="creator" />
   </div>
 </template>

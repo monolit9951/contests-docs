@@ -72,16 +72,19 @@ export const catalogPlacement = (frontmatter: { readonly isHub?: unknown; readon
 
 /**
  * The two buttons of a section's CTA band when its page names none (`cta.primary`, `cta.secondary`).
- * Brands send a business to its page and to the founder, as they always did. The content-farm
- * section starts a registration and offers the founder's help with the setup; the tools section
- * starts a registration and opens the community room. Every other section keeps the task catalogue
- * and the room the site's chrome names (`LCta.vue`).
+ * Brands send a business to its page and to the founder. Creator sections open the full task
+ * catalogue first: the reader chooses a task before the application asks them to register.
+ * The content-farm section also offers setup help; tools keep the community room.
  */
 export const HUB_CTA: Readonly<Record<string, readonly [CtaKey, CtaKey]>> = {
   brands: ['business', 'founder'],
-  farm: ['signup', 'founder'],
-  tools: ['signup', 'community'],
+  farm: ['tasks', 'founder'],
+  tools: ['tasks', 'community'],
 }
+
+/** Creator acquisition sections, using the hub IDs supplied by the content registry. */
+export const isCreatorSection = (hub: string): boolean =>
+  hub === 'earnings' || hub === 'farm' || hub === 'tools' || hub === 'about'
 
 /**
  * The stages of a long list after which the page's call to action interrupts it (LTools.vue): every
@@ -106,16 +109,6 @@ export const bandButtons = (
   const second = cta.secondary ?? (pair ? { to: pair[1] } : null)
   return [ctaButton(cta.primary ?? { to: pair?.[0] ?? 'tasks' }, locale, copy), second ? ctaButton(second, locale, copy) : null]
 }
-
-/**
- * The hero links of an article in a section whose CTA band starts a registration (`HUB_CTA`: the
- * content-farm and tools sections): the registration first, then the task catalogue for a reader
- * who already has an account, since `?auth=signup` opens the dialog for them too. The catalogue
- * holds nothing a newcomer can join today, so it is never the only door (verify.md §6.2 #1, #9).
- * Null for every other section: its hero keeps its one link, the catalogue or the business page.
- */
-export const signupLeafLinks = (hub: string, locale: Locale, copy: LandingCopy, label?: string): readonly [LinkButton, LinkButton] | null =>
-  HUB_CTA[hub]?.[0] === 'signup' ? [ctaButton({ to: 'signup', label }, locale, copy), ctaButton({ to: 'tasks' }, locale, copy)] : null
 
 // `?auth=signup` opens the application's registration dialog, and the application opens it for a
 // visitor who is signed in too (contests-frontend `authModal.tsx` never looks at the session;

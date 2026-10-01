@@ -22,7 +22,7 @@ hero:
 cta:
   title: "Много аккаунтов? В одном задании их до 20"
   lede: "Регистрация на DareBay бесплатная: почта, Google или Telegram. К одному заданию подключается до 20 твоих аккаунтов, TikTok, Instagram, YouTube и Facebook вместе, и каждый ролик засчитывается отдельно. Ведёшь десяток аккаунтов или команду? Руслан поможет настроить."
-  primary: { to: "signup" }
+  primary: { to: "tasks" }
   secondary: { to: "founder", label: "Написать в Telegram" }
 ---
 

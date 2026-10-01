@@ -677,12 +677,17 @@ let installed = false
 export const installDocsAnalytics = (): void => {
     if (typeof window === 'undefined' || installed) return
     installed = true
-    document.addEventListener('click', (event) => {
+    const onLinkActivation = (event: MouseEvent): void => {
+        // Opening the catalogue in a new tab with the middle button emits
+        // auxclick instead of click. A right click only opens the context menu.
+        if (event.type === 'auxclick' && event.button !== 1) return
         const anchor = (event.target as HTMLElement | null)?.closest?.('a')
         if (!anchor) return
         const exit = classifyExit(anchor.getAttribute('href'))
         if (exit) trackDocsEvent(exit, { targetUrl: anchor.href })
-    }, { capture: true })
+    }
+    document.addEventListener('click', onLinkActivation, { capture: true })
+    document.addEventListener('auxclick', onLinkActivation, { capture: true })
     window.addEventListener('online', () => void flushDocsOutbox())
     window.addEventListener('storage', (event) => {
         if (event.key === null || SHARED_STORAGE_KEYS.has(event.key)) sharedCopiesStale = true

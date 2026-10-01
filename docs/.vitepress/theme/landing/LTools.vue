@@ -81,7 +81,7 @@ const cta = computed(() => {
   const spec = head.value.cta
   if (!spec) return null
   const after = ctaAfterStages(shownGroups.value.filter((group) => group.id !== OWN).map((group) => group.id))
-  return after.size ? { after, text: spec.text, ...ctaButton(spec, props.data.locale, LANDING_COPY[props.data.locale]) } : null
+  return after.size ? { after, text: spec.text, catalogue: spec.to === 'tasks', ...ctaButton(spec, props.data.locale, LANDING_COPY[props.data.locale]) } : null
 })
 </script>
 
@@ -149,7 +149,7 @@ const cta = computed(() => {
         </section>
         <div v-if="cta && cta.after.has(group.id)" class="lp-tools-cta">
           <p>{{ cta.text }}</p>
-          <a class="lp-btn lp-btn-primary" v-bind="cta.anchor">{{ cta.label }}</a>
+          <a class="lp-btn lp-btn-primary" v-bind="cta.anchor" :data-analytics-cta-id="cta.catalogue ? 'article_tasks' : undefined" :data-analytics-cta-placement="cta.catalogue ? 'inline' : undefined">{{ cta.label }}</a>
         </div>
       </template>
       <div v-if="!shown" class="lp-tempty"><p>{{ t.empty }}</p><button type="button" class="lp-tchip" @click="reset">{{ t.reset }}</button></div>

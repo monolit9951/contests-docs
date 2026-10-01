@@ -14,7 +14,7 @@ import { computed } from 'vue'
 import type { DareBayThemeConfig } from '../../chrome'
 import { LANDING_COPY, formatDay, headingHtml, localeOf } from './copy'
 import { DATA } from './platforms'
-import { ctaButton, heroAction, signupLeafLinks, type CtaSpec, type LinkButton } from './showcase'
+import { ctaButton, heroAction, isCreatorSection, type CtaSpec, type LinkButton } from './showcase'
 
 const { frontmatter, theme, lang, page } = useData<DareBayThemeConfig>()
 const loc = computed(() => localeOf(lang.value))
@@ -26,12 +26,11 @@ const hero = computed(() => (frontmatter.value.hero ?? {}) as {
 })
 const hub = computed(() => (frontmatter.value.sectionHub ?? null) as { id: string; title: string; path: string | null } | null)
 const brands = computed(() => hub.value?.id === 'brands')
+const creator = computed(() => isCreatorSection(hub.value?.id ?? ''))
 const primaryHref = computed(() => (brands.value ? theme.value.darebayCta.businessUrl : theme.value.darebayCta.tasksUrl))
-const primaryLabel = computed(() => hero.value.primary ?? (brands.value ? copy.value.bizCtaPrimary : copy.value.ctaPrimary))
+const primaryLabel = computed(() => creator.value ? copy.value.ctaPrimary : hero.value.primary ?? (brands.value ? copy.value.bizCtaPrimary : copy.value.ctaPrimary))
 const isHub = computed(() => Boolean(frontmatter.value.isHub))
 const showcase = computed(() => isHub.value && frontmatter.value.showcase === true)
-// An article of the content-farm or tools section starts a registration, the catalogue second.
-const signupLinks = computed(() => (isHub.value ? null : signupLeafLinks(hub.value?.id ?? '', loc.value, copy.value, hero.value.primary)))
 const actions = computed(() =>
   showcase.value ? (hero.value.actions ?? []).slice(0, 2).flatMap((action) => heroAction(action, loc.value, copy.value) ?? []) : ([] as LinkButton[]),
 )
@@ -76,7 +75,7 @@ const showByline = computed(
         <p v-if="lede" class="lp-lede">{{ lede }}</p>
         <template v-if="showcase">
           <div v-if="actions.length" class="lp-hero-btns">
-            <a v-for="(action, index) in actions" :key="index" class="lp-btn" :class="index ? 'lp-btn-ghost' : 'lp-btn-primary'" v-bind="action.anchor">{{ action.label }}</a>
+            <a v-for="(action, index) in actions" :key="index" class="lp-btn" :class="index ? 'lp-btn-ghost' : 'lp-btn-primary'" v-bind="action.anchor" :data-analytics-cta-id="creator && action.anchor.href === primaryHref ? 'article_tasks' : undefined" :data-analytics-cta-placement="creator && action.anchor.href === primaryHref ? 'hero' : undefined">{{ action.label }}</a>
           </div>
           <p v-if="hero.note" class="lp-hero-note">{{ hero.note }}</p>
           <ul v-if="proof.length" class="lp-proof">
@@ -84,12 +83,8 @@ const showByline = computed(
           </ul>
           <p v-if="fork" class="lp-hero-fork">{{ fork.text }} <a v-bind="fork.anchor">{{ fork.label }}</a></p>
         </template>
-        <div v-else-if="!isHub" class="lp-hero-ctas">
-          <template v-if="signupLinks">
-            <a class="lp-hero-action" v-bind="signupLinks[0].anchor">{{ signupLinks[0].label }}</a>
-            <a class="lp-hero-action lp-hero-action--secondary" v-bind="signupLinks[1].anchor">{{ signupLinks[1].label }}</a>
-          </template>
-          <a v-else class="lp-hero-action" :href="primaryHref" target="_self">{{ primaryLabel }}</a>
+        <div v-else-if="!isHub || creator" class="lp-hero-ctas">
+          <a :class="creator ? 'lp-btn lp-btn-primary' : 'lp-hero-action'" :href="primaryHref" target="_self" :data-analytics-cta-id="creator ? 'article_tasks' : undefined" :data-analytics-cta-placement="creator ? 'hero' : undefined">{{ primaryLabel }}</a>
           <a v-if="hero.secondary" class="lp-hero-action lp-hero-action--secondary" :href="secondaryHref">{{ hero.secondary }} <span aria-hidden="true">↓</span></a>
         </div>
       </div>

@@ -194,12 +194,12 @@
         },
         "bangladesh": {
           "text": {
-            "en": "no country list, only people on sanctions lists are barred; USDT on TON or Telegram Stars, and Bangladesh Bank and Nepal Rastra Bank do not permit crypto transactions, so check the local rules before you cash out USDT"
+            "en": "no country list, only people on sanctions lists are barred; payouts available in USDT on TON or Telegram Stars; local restrictions, crypto risks and taxes are the user's responsibility"
           },
-          "state": "partial",
+          "state": "yes",
           "source": {
             "url": "https://darebay.com/en/earnings/clipping-platforms-that-pay-in-bangladesh-and-nepal",
-            "date": "2026-09-18"
+            "date": "2026-10-01"
           }
         },
         "nigeria": {

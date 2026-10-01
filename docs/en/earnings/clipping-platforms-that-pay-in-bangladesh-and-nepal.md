@@ -1,22 +1,22 @@
 ---
 title: "Clipping platforms that pay in Bangladesh and Nepal"
-description: "PayPal and Stripe skip Bangladesh; Bangladesh Bank bars crypto. Which clipping platforms still pay, via Payoneer to bKash or a bank, and how Nepal differs."
-provenance: { snapshot_date: "2026-09-19", source: "darebay-prod" }
+description: "Clipping payouts in Bangladesh and Nepal: compare USDT on TON, Payoneer, bKash and local banks. Check local restrictions, crypto risks and taxes yourself."
+provenance: { snapshot_date: "2026-10-01", source: "darebay-prod" }
 numbers_used: []
 seo: true
 landing: true
 sources: visible
 hero:
-  updated: "2026-09-25"
+  updated: "2026-10-01"
   kicker: "Payouts into Bangladesh and Nepal · 2026"
-  lede: "Neither Bangladesh nor Nepal is on PayPal's table of countries that can receive a payout or on Stripe's list of supported countries, and both central banks have published that crypto transactions are not permitted (Bangladesh Bank) or illegal, stablecoins included (Nepal Rastra Bank). That leaves a short list of fiat routes: Payoneer into a bank or a bKash wallet, Whop's payouts in taka or rupees, a Khalti payment link in Nepal. This page reads each one from its operator's and its regulator's own pages."
+  lede: "You can receive DareBay payouts in USDT on the TON network. You are responsible for checking local restrictions, assessing crypto risks and handling your taxes. For local-currency payments, this guide also compares Payoneer into a bank or bKash, Whop's payouts in taka or rupees, and a Khalti payment link in Nepal."
   secondary: "The two-country table"
   secondaryHref: "#two-central-banks-four-rails-one-table"
   takeaways:
     - "<b>PayPal and Stripe reach neither country.</b> Neither is on PayPal's payout table or Stripe's country list, and Nepal's PayPal site is built for sending and paying only."
     - "<b>Payoneer into bKash is the route Bangladesh publishes.</b> bKash lists BDT 1,000 to 250,000 per transfer and Payoneer's 3% plus $1, with no 2.5% remittance bonus on top."
-    - "<b>Both central banks close the crypto door.</b> Bangladesh Bank says transactions to obtain virtual assets are not permitted; Nepal Rastra Bank calls crypto transactions illegal, stablecoins included."
-    - "<b>DareBay keeps no country list and pays in USDT on the TON network or Telegram Stars; both central banks restrict crypto, so check the local rules before you cash out USDT.</b> A withdrawal starts at 10 USDT with 10% taken inside the request; Whop names both countries for a local-currency bank account."
+    - "<b>Local rules, risks and taxes are your responsibility.</b> Check how the regulator's rules and tax obligations apply to you before receiving or exchanging crypto."
+    - "<b>DareBay pays in USDT on the TON network.</b> A withdrawal starts at 10 USDT with 10% taken inside the request; Telegram Stars are another payout option. Whop names both countries for a local-currency bank account."
 compare:
   ids: [whop, darebay, vyro, reach-cat, clipping-net, vues, prime-oracles, clipping-io]
   columns: [bangladesh, payoutMethods, minPayout, fee]
@@ -27,11 +27,11 @@ method:
   - "Payment-rail rows come from the operators' own pages, read on 18 September 2026: PayPal's payout-country table and its Nepal site, Stripe's country list, Wise's taka and rupee guides, Payoneer's coverage data, and the published pages of bKash, Nagad, Khalti and eSewa."
   - "A platform row repeats what that platform publishes about these two countries. \"Not stated\" means its public pages say nothing, which is not the same as a refusal. DareBay's own terms come from its help pages, not from this comparison."
 cta:
-  title: "Take a task where a USDT payout is lawful"
-  lede: "DareBay keeps no country list (only people on sanctions lists are barred) and asks for no followers or application, and each task prints its rate on the card. Its only cash rail is USDT on the TON network, and a payout received in Telegram Stars is not money, so in Bangladesh and Nepal, where the central banks do not permit crypto transactions, it is not a way to be paid today. Elsewhere that rail works; here, the bank rails above are the honest answer."
+  title: "Take a task and receive your earnings in USDT"
+  lede: "DareBay asks for no followers or application, and each task prints its rate on the card. You can receive your earnings in USDT on the TON network. Local restrictions, cryptocurrency risks and any tax declarations or payments are your responsibility."
 ---
 
-A clipper in Dhaka or Kathmandu has two questions: does a platform's money reach this country, and does it arrive on a rail the central bank accepts. Here the second question removes more options than the first. Platforms are ranked on [the best clipping platforms](/en/earnings/best-clipping-platforms), rates are on [how much clipping pays](/en/earnings/how-much-clipping-pays), and the neighbouring markets have their own pages on [Pakistan](/en/earnings/clipping-platforms-that-pay-in-pakistan) and [India](/en/earnings/clipping-platforms-that-pay-in-india).
+A clipper in Dhaka or Kathmandu needs to know how a platform pays: to a local bank or wallet, or in cryptocurrency. This page compares those routes and documents the local rules; you are responsible for assessing the risks and your tax obligations. Platforms are ranked on [the best clipping platforms](/en/earnings/best-clipping-platforms), rates are on [how much clipping pays](/en/earnings/how-much-clipping-pays), and the neighbouring markets have their own pages on [Pakistan](/en/earnings/clipping-platforms-that-pay-in-pakistan) and [India](/en/earnings/clipping-platforms-that-pay-in-india).
 
 ## Two central banks, four rails, one table
 
@@ -84,15 +84,15 @@ When a resident individual not running a business is paid in foreign currency "f
 
 <LCompare />
 
-Read the table by rail. Whop puts both countries on its payout list <!-- source: https://docs.whop.com/manage-your-business/manage-payouts/set-up-payouts 2026-09-18 --> and neither on its sanctions list <!-- source: https://docs.whop.com/trust-and-safety/trust-safety-overview/sanctioned-countries 2026-09-18 -->, and asks creators outside the United States for a bank account "that accepts the currency of their registered country" <!-- source: https://docs.whop.com/manage-your-business/manage-payouts/payout-methods 2026-09-18 -->: taka or rupees. DareBay takes 0% from a task payout, but a balance leaves only as USDT on the TON network, 10% deducted from a request of at least 10 USDT; that is the rail neither central bank permits, so it has no lawful payout route here. Clipping.net pays each campaign by PayPal or by USDC or USDT on Ethereum <!-- source: https://clipping.net/docs/clippers/payments 2026-09-18 -->, and Vues leaves the method to the brand <!-- source: https://vues.app/terms 2026-09-18 -->. Reach.cat lists no countries <!-- source: https://reach.cat/become-a-clipper/ 2026-09-24 -->, pays in USDT, with bank transfer "very soon" per its creator FAQ <!-- source: https://reach.cat/creator 2026-09-24 -->, and requires an ID check once total payout requests pass $500 <!-- source: https://reach.cat/terms 2026-09-24 -->. [Prime Oracles](/en/earnings/prime-oracles-review) pays in crypto, and its agreement also describes USD through Garna (Cyprus) to a verified Garna account; it excludes "any jurisdiction in which the use of cryptocurrency services is restricted or prohibited under applicable law" <!-- source: https://www.primeoracles.com/terms-agreement 2026-09-24 -->. Clipping.io publishes nothing on countries or payouts <!-- source: https://www.clipping.io/terms-of-use 2026-09-18 -->. BlueClip, which calls itself "Bangladesh's clipping campaign platform", is not a ninth board: on 19 September 2026 its Whop store held a course, a chat and a forum, and its one post says "payouts run through Whop" <!-- source: https://whop.com/blueclip/ 2026-09-19 -->.
+Read the table by rail. Whop puts both countries on its payout list <!-- source: https://docs.whop.com/manage-your-business/manage-payouts/set-up-payouts 2026-09-18 --> and neither on its sanctions list <!-- source: https://docs.whop.com/trust-and-safety/trust-safety-overview/sanctioned-countries 2026-09-18 -->, and asks creators outside the United States for a bank account "that accepts the currency of their registered country" <!-- source: https://docs.whop.com/manage-your-business/manage-payouts/payout-methods 2026-09-18 -->: taka or rupees. DareBay takes 0% from a task payout and offers balance withdrawals in USDT on the TON network, with 10% deducted from a request of at least 10 USDT. You are responsible for local restrictions, crypto risks and taxes. Clipping.net pays each campaign by PayPal or by USDC or USDT on Ethereum <!-- source: https://clipping.net/docs/clippers/payments 2026-09-18 -->, and Vues leaves the method to the brand <!-- source: https://vues.app/terms 2026-09-18 -->. Reach.cat lists no countries <!-- source: https://reach.cat/become-a-clipper/ 2026-09-24 -->, pays in USDT, with bank transfer "very soon" per its creator FAQ <!-- source: https://reach.cat/creator 2026-09-24 -->, and requires an ID check once total payout requests pass $500 <!-- source: https://reach.cat/terms 2026-09-24 -->. [Prime Oracles](/en/earnings/prime-oracles-review) pays in crypto, and its agreement also describes USD through Garna (Cyprus) to a verified Garna account; it excludes "any jurisdiction in which the use of cryptocurrency services is restricted or prohibited under applicable law" <!-- source: https://www.primeoracles.com/terms-agreement 2026-09-24 -->. Clipping.io publishes nothing on countries or payouts <!-- source: https://www.clipping.io/terms-of-use 2026-09-18 -->. BlueClip, which calls itself "Bangladesh's clipping campaign platform", is not a ninth board: on 19 September 2026 its Whop store held a course, a chat and a forum, and its one post says "payouts run through Whop" <!-- source: https://whop.com/blueclip/ 2026-09-19 -->.
 
-## DareBay in Bangladesh and Nepal: no money route today
+## DareBay payouts in Bangladesh and Nepal: USDT on TON
 
 DareBay keeps no country list (only people on sanctions lists are barred) and asks for no followers or application. It takes 0% from a task budget and nothing from what a clip earns; the one charge on a clipper is 10% of a withdrawal, deducted inside a request of at least 10 USDT, with the amount to receive shown before you confirm ([DareBay withdrawals](/en/help/darebay-withdrawals), [DareBay fees](/en/help/what-commission)).
 
-A DareBay balance leaves as USDT on the TON network, or you receive the payout in Telegram Stars, and a single task can set a card or a bank transfer as its prize if its organizer decides so. Bangladesh Bank says transactions to obtain virtual assets are not permitted and Nepal Rastra Bank calls crypto transactions illegal, so check the local rules before you cash out USDT. Stars are not money: Telegram's terms call them "virtual items" and bar selling or withdrawing a personal Star balance <!-- source: https://telegram.org/tos/stars 2026-09-18 -->. The interface is in English, Russian, Ukrainian and Polish.
+A DareBay balance can be paid out in USDT on the TON network or Telegram Stars. An individual task can offer a card or bank transfer as its prize if its organizer chooses that method. Stars are not money: Telegram's terms call them "virtual items" and bar selling or withdrawing a personal Star balance <!-- source: https://telegram.org/tos/stars 2026-09-18 -->. The interface is in English, Russian, Ukrainian and Polish.
 
-The answer here is a fiat rail: Whop, which lists both countries for payouts to a local-currency bank account, or in Bangladesh the Payoneer to bKash route that bKash itself describes.
+You can receive your DareBay earnings in cryptocurrency. You are responsible for checking the local restrictions, assessing the risks of receiving, holding or exchanging USDT, and declaring and paying any applicable taxes. If you prefer local currency, Whop lists both countries for bank payouts, and bKash describes a Payoneer route for Bangladesh.
 
 <LMethod />
 

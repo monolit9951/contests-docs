@@ -187,11 +187,9 @@ describe('the platforms every regional page compares', () => {
     // DareBay excludes no country, so every regional cell says so ("no country list" since
     // 2026-09-25, "no exclusion list" in the cells the regional pass has not reworded yet) and cites
     // a darebay.com page.
-    // Until 2026-09-18 every cell was also required to read plain "yes". That stopped being true
-    // for regions whose regulator bars or criminalizes dealing in crypto (Egypt, Algeria and Iraq
-    // in `mena`; Bangladesh and Nepal, whose central banks do not permit crypto transactions, in
-    // `bangladesh`): DareBay's only money rail is USDT on TON, so "yes" there would contradict the
-    // regional page itself. Such a cell is `partial`, and it must name the rail it is limited by.
+    // A regional cell describes the platform's payout availability. Local rules, crypto risks
+    // and taxes are separate user responsibilities, not evidence that a payout is unavailable.
+    // Both `yes` and `partial` are supported; a `partial` cell must name the payment rail.
     const darebay = byId('darebay')!
     for (const key of REGION_FIELDS) {
       const field = darebay.fields[key]

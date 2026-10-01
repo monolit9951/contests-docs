@@ -127,6 +127,8 @@ Tubefilter wrote in October 2025 that brands and creators embraced clipping beca
 
 Supporters of clipping argue it is cheaper than traditional campaigns, and brands are racing to fold it into their marketing (Digiday, May 2026)<!-- source: https://digiday.com/media/the-case-for-and-against-clipping/ 2026-09-24 -->. Sample budgets are in [what a clipping campaign costs](/en/for-brands/clipping-campaign-cost); to run a campaign on DareBay, which publishes this page, start at [DareBay for brands](/en/for-brands/).
 
+If you publish through several niche accounts, the [TikTok content farm guide](/en/content-farm/) covers the production workflow and team roles. Editors, AI clippers and caption apps are compared in the [tools catalog for Reels and Shorts](/en/tools/).
+
 <LCalc />
 
 <LMethod />

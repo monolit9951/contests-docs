@@ -28,6 +28,9 @@ const header = ref<HTMLElement>()
 const menu = ref<HTMLDetailsElement>()
 const languages = ref<HTMLDetailsElement>()
 const current = (link: string) => navigationCurrent(link, page.value.relativePath)
+// The brand mark is contests-frontend's /favicon.svg at the root of darebay.com. Bound, so Vite
+// leaves the address to the server instead of resolving it as a docs asset.
+const mark = '/favicon.svg'
 
 function closeMenus() {
   if (menu.value) menu.value.open = false
@@ -62,7 +65,7 @@ onBeforeUnmount(() => {
     <a class="lp-skip" href="#main-content">{{ theme.skipToContentLabel }}</a>
     <div class="lp-container lp-header-in">
       <a class="lp-logo" :href="theme.logoLink as string" :aria-current="current(theme.logoLink as string)">
-        <span class="lp-logo-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M7 4h5.5a8 8 0 0 1 0 16H7V4Z" stroke="currentColor" stroke-width="3.5"/><path d="m5 12 5-3v6l-5-3Z" fill="currentColor"/></svg></span>
+        <img class="lp-logo-mark" :src="mark" alt="" width="30" height="30">
         DareBay
       </a>
       <nav class="lp-nav" :aria-label="theme.navLabel">
@@ -113,8 +116,7 @@ onBeforeUnmount(() => {
 .lp-header { position: sticky; inset-block-start: 0; z-index: 50; background: rgba(9, 12, 17, .94); border-block-end: 1px solid var(--lp-line); backdrop-filter: blur(20px); }
 .lp-header-in { display: flex; align-items: center; gap: 32px; min-height: 76px; }
 .lp-logo { display: inline-flex; align-items: center; flex: none; gap: 9px; min-height: 44px; color: var(--lp-text); font-family: var(--lp-display); font-size: 17px; font-weight: 700; letter-spacing: -.05em; }
-.lp-logo-mark { display: grid; place-items: center; width: 30px; height: 30px; border-radius: 9px; background: var(--lp-action); color: var(--lp-on-action); }
-.lp-logo-mark svg { width: 22px; height: 22px; }
+.lp-logo-mark { display: block; width: 30px; height: 30px; }
 .lp-nav { display: flex; align-items: center; gap: 22px; }
 .lp-nav a { display: inline-flex; align-items: center; min-height: 44px; white-space: nowrap; font-size: 13px; font-weight: 650; color: var(--lp-muted); transition: color .16s; }
 .lp-nav a:hover, .lp-nav a[aria-current] { color: var(--lp-text); }

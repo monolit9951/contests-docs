@@ -210,7 +210,7 @@ describe('stylesheets inside the document', () => {
     })
 
     it('leaves a document without the bundle link as it is, reading nothing', () => {
-        const html = page('<link rel="icon" href="/content-assets/favicon.svg">')
+        const html = page('<link rel="icon" href="/favicon.svg">')
         expect(inlineStylesheets(html, () => { throw new Error('read') })).toBe(html)
     })
 
@@ -261,5 +261,26 @@ describe('stylesheets inside the document', () => {
             expect(text, href).not.toMatch(/@import/i)
             for (const target of cssUrls(text)) expect(target, href).toMatch(ABSOLUTE_URL)
         }
+    })
+})
+
+describe('site icons', () => {
+    // contests-frontend owns the root of darebay.com and renders every icon raster from its
+    // favicon.svg. A docs-side copy is how the old "D" touch icon outlived the logo change.
+    it('links the icons the frontend serves at the root, and ships no copy of them', () => {
+        const head = (siteConfig.head ?? []) as [string, Record<string, string>][]
+        const icons = head
+            .filter(([name, attrs]) => name === 'link' && /\bicon\b/.test(attrs.rel))
+            .map(([, attrs]) => `${attrs.rel} ${attrs.href}`)
+        expect(icons).toEqual([
+            'icon /favicon.ico',
+            'icon /favicon.svg',
+            'icon /favicon-32x32.png',
+            'icon /favicon-16x16.png',
+            'apple-touch-icon /apple-touch-icon.png',
+        ])
+        expect(siteConfig.themeConfig?.logo).toEqual({ src: '/favicon.svg', alt: 'DareBay' })
+        const shipped = readdirSync(join(DOCS, 'public'), { recursive: true }).map(String)
+        expect(shipped.filter((file) => /favicon|apple-touch|logo\./i.test(file))).toEqual([])
     })
 })

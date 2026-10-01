@@ -678,10 +678,7 @@ for (const canonical of new Set(appUrls)) {
             fail('8-cache', `${expired}: status=${response.status}, cache-control=${cache}, ожидался 410 max-age=600`)
         }
     }
-    for (const stable of [
-        '/content-assets/logo.svg',
-        '/content-assets/fonts/manrope-400-cyrillic.woff2',
-    ]) {
+    for (const stable of ['/content-assets/fonts/manrope-400-cyrillic.woff2']) {
         const response = await head(stable)
         const cache = response.headers.get('cache-control') ?? ''
         if (

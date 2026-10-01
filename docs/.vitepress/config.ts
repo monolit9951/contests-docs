@@ -1012,7 +1012,14 @@ export default defineConfig({
         : 'noindex, follow',
     }],
     ...VERIFICATION_TAGS,
-    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/content-assets/favicon.svg' }],
+    // The site icons belong to contests-frontend, which owns the root of darebay.com and renders
+    // every raster from its favicon.svg (scripts/favicons.mjs there). These pages link the same
+    // files instead of keeping copies: a copy is how the old "D" touch icon outlived the logo.
+    ['link', { rel: 'icon', type: 'image/x-icon', sizes: '16x16 32x32 48x48', href: '/favicon.ico' }],
+    ['link', { rel: 'icon', type: 'image/svg+xml', sizes: 'any', href: '/favicon.svg' }],
+    ['link', { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' }],
+    ['link', { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' }],
+    ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' }],
     ['meta', { name: 'theme-color', content: '#02140E' }],
     // og:type and og:locale are per-page now (see transformPageData): a site-wide
     // value would have to be wrong on two of the three trees.
@@ -1036,7 +1043,7 @@ export default defineConfig({
     inlineStylesheets(stripVpIconsLink(html), (href) => readFileSync(join(ctx.siteConfig.outDir, href), 'utf8')),
 
   themeConfig: {
-    logo: { src: '/content-assets/logo.svg', alt: 'DareBay' },
+    logo: { src: '/favicon.svg', alt: 'DareBay' },
     // No site title text — just the logo. Its locale-aware docs-home href and
     // every visible chrome label live in `themeForLocale` above.
     siteTitle: false,

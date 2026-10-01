@@ -81,7 +81,7 @@ serves the hashed `/content-assets/` files that recent releases retired.
 - window: 14 days from the retiring release's commit time (`RELEASE_EPOCH`);
 - cap: 256 MiB of raw retained bytes; above it the oldest retirements go first;
 - hashed names: the regex of nginx.conf's immutable location (the self-test
-  fails if they drift). Stable names (fonts, `logo.svg`) are never retained;
+  fails if they drift). Stable names (the fonts) are never retained;
 - manifest: `/usr/share/nginx/content-assets-retention.json`, outside the web
   root `/usr/share/nginx/html`, so nginx never serves it. It lists every
   retained path with its retirement time, sha256 and size.

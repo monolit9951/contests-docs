@@ -19,7 +19,7 @@ jobs:
       PRODUCT_TRUTH_PACK_REPO: ${{ github.workspace }}/.product-truth-sources/truth-pack
       PRODUCT_TRUTH_REQUIRE_LOCAL_SOURCES: '1'
     steps:
-      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           fetch-depth: 0                                   # linter diffs the PR against its base
           ref: ${{ github.event.pull_request.head.sha }}   # the PR head, not the synthetic merge ref
@@ -29,7 +29,7 @@ jobs:
       # These are private repositories with distinct read-only deploy keys.
       # The reviewed SHAs come only from the versioned product-truth snapshot.
       - name: Checkout reviewed backend truth source
-        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           repository: monolit9951/Contests
           ref: ${{ steps.product_truth_refs.outputs.backend_sha }}
@@ -46,7 +46,7 @@ jobs:
           ssh-strict: true
           persist-credentials: false
       - name: Checkout reviewed truth-pack source
-        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           repository: monolit9951/darebay-seo-fleet
           ref: ${{ steps.product_truth_refs.outputs.truth_pack_sha }}

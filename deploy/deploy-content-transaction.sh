@@ -148,7 +148,7 @@ managed_snippet_contract() {
   proxy_count=$(grep -c '^[[:space:]]*proxy_pass[[:space:]]' "$file" || true)
   ((proxy_count > 0)) || return 1
   ! grep '^[[:space:]]*proxy_pass[[:space:]]' "$file" |
-    grep -qvE '^[[:space:]]*proxy_pass[[:space:]]+http://127\.0\.0\.1:3002;[[:space:]]*$'
+    grep -vE '^[[:space:]]*proxy_pass[[:space:]]+http://127\.0\.0\.1:3002;[[:space:]]*$' >/dev/null
 }
 
 secure_host_snippet_path() {
@@ -266,6 +266,32 @@ read_private_value() {
   printf '%s\n' "$value"
 }
 
+require_compose_support() {
+  local help_output services_output
+  docker compose version >/dev/null || {
+    echo 'deploy-content-transaction: docker compose version failed' >&2
+    return 1
+  }
+  # Read Docker to completion before matching. An early-exiting grep in a pipe
+  # can give Docker SIGPIPE and turn a successful match into a pipefail error.
+  if ! help_output=$(docker compose up --help); then
+    echo 'deploy-content-transaction: could not read docker compose up help' >&2
+    return 1
+  fi
+  grep -F -- '--pull string' <<< "$help_output" >/dev/null || {
+    echo 'deploy-content-transaction: docker compose up does not support --pull string' >&2
+    return 1
+  }
+  if ! services_output=$(docker compose --project-directory "$COMPOSE_DIRECTORY" config --services); then
+    echo "deploy-content-transaction: could not enumerate compose services in $COMPOSE_DIRECTORY" >&2
+    return 1
+  fi
+  grep -Fx -- "$COMPOSE_SERVICE" <<< "$services_output" >/dev/null || {
+    echo "deploy-content-transaction: compose service '$COMPOSE_SERVICE' is missing" >&2
+    return 1
+  }
+}
+
 require_production_inputs() {
   if [[ ${EUID} -ne 0 ]]; then
     echo 'deploy-content-transaction: root is required' >&2
@@ -293,16 +319,11 @@ require_production_inputs() {
     echo 'deploy-content-transaction: ephemeral Docker registry credentials are required' >&2
     return 1
   }
-  docker compose version >/dev/null
-  docker compose up --help | grep -q -- '--pull string'
   [[ -d $COMPOSE_DIRECTORY ]] || {
     echo "deploy-content-transaction: missing compose directory: $COMPOSE_DIRECTORY" >&2
     return 1
   }
-  docker compose --project-directory "$COMPOSE_DIRECTORY" config --services | grep -Fxq "$COMPOSE_SERVICE" || {
-    echo "deploy-content-transaction: compose service '$COMPOSE_SERVICE' is missing" >&2
-    return 1
-  }
+  require_compose_support || return 1
   [[ -f $HOST_SNIPPET && ! -L $HOST_SNIPPET ]] || {
     echo "deploy-content-transaction: current host snippet is missing or unsafe: $HOST_SNIPPET" >&2
     return 1
@@ -926,6 +947,64 @@ execute_transaction() {
   trap - EXIT HUP INT TERM PIPE
 }
 
+self_test_compose_case() {
+  local scenario=$1 expected_status=$2 expected_error=$3 output status
+  set +e
+  output=$(
+    (
+      set -Eeuo pipefail
+      emit_large_tail() {
+        local chunk index
+        printf -v chunk '%8192s' ''
+        chunk=${chunk// /x}
+        for ((index = 0; index < 128; index++)); do
+          printf 'other-%s-%s\n' "$index" "$chunk"
+        done
+      }
+      docker() {
+        case "$*" in
+          'compose version')
+            printf '%s\n' 'Docker Compose version v2.test'
+            [[ $scenario != version-failure ]] || return 42
+            ;;
+          'compose up --help')
+            if [[ $scenario == missing-help-flag ]]; then
+              printf '%s\n' 'Usage: docker compose up'
+              return 0
+            fi
+            printf '%s\n' '      --pull string   Pull image before running'
+            [[ $scenario != help-failure-after-match ]] || return 43
+            if [[ $scenario == large-help ]]; then emit_large_tail; fi
+            ;;
+          "compose --project-directory $COMPOSE_DIRECTORY config --services")
+            case "$scenario" in
+              missing-service) printf '%s\n' backend redis ;;
+              similar-service) printf '%s\n' docs-old other-docs ;;
+              *) printf '%s\n' docs ;;
+            esac
+            [[ $scenario != services-failure-after-match ]] || return 44
+            if [[ $scenario == large-services ]]; then emit_large_tail; fi
+            ;;
+          *)
+            echo "unexpected Docker command in compose self-test: $*" >&2
+            return 99
+            ;;
+        esac
+      }
+      # Conditional callers disable errexit inside functions. The real helper
+      # must still reject command failures explicitly, including after a match.
+      if require_compose_support; then exit 0; else exit 1; fi
+    ) 2>&1
+  )
+  status=$?
+  set -e
+  if [[ $status -ne $expected_status || $output != "$expected_error" ]]; then
+    echo "deploy-content-transaction compose self-test failed: scenario=$scenario status=$status output=$output" >&2
+    echo "  expected status=$expected_status output=$expected_error" >&2
+    return 1
+  fi
+}
+
 self_test_case() {
   local fail_at=$1 expected_status=$2 expected_events=$3 work events status
   work=$(mktemp -d)
@@ -1072,6 +1151,16 @@ self_test() {
   valid_manifest_digest sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
   ! valid_manifest_digest aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
   [[ $(rollback_tag_for ABCDEF0123456789ABCDEF0123456789ABCDEF01) =~ ^contestvibe/contests-docs:txn-rollback-abcdef0123456789abcdef0123456789abcdef01-[0-9]+-[0-9]+$ ]]
+
+  self_test_compose_case success 0 ''
+  self_test_compose_case large-help 0 ''
+  self_test_compose_case large-services 0 ''
+  self_test_compose_case missing-service 1 "deploy-content-transaction: compose service '$COMPOSE_SERVICE' is missing"
+  self_test_compose_case similar-service 1 "deploy-content-transaction: compose service '$COMPOSE_SERVICE' is missing"
+  self_test_compose_case services-failure-after-match 1 "deploy-content-transaction: could not enumerate compose services in $COMPOSE_DIRECTORY"
+  self_test_compose_case help-failure-after-match 1 'deploy-content-transaction: could not read docker compose up help'
+  self_test_compose_case missing-help-flag 1 'deploy-content-transaction: docker compose up does not support --pull string'
+  self_test_compose_case version-failure 1 'deploy-content-transaction: docker compose version failed'
 
   local snippet_test_directory managed_sample unmanaged_sample
   snippet_test_directory=$(mktemp -d)

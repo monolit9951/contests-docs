@@ -182,7 +182,7 @@ grep -q '^# ⚙️ GENERATED — do not edit\.$' "$source_file"
 safe_managed_snippet_syntax "$source_file"
 grep -q 'proxy_pass[[:space:]]\+http://127.0.0.1:3002;' "$source_file"
 ! grep '^[[:space:]]*proxy_pass[[:space:]]' "$source_file" |
-  grep -qvE '^[[:space:]]*proxy_pass[[:space:]]+http://127\.0\.0\.1:3002;[[:space:]]*$'
+  grep -vE '^[[:space:]]*proxy_pass[[:space:]]+http://127\.0\.0\.1:3002;[[:space:]]*$' >/dev/null
 if ((restore_managed == 0)); then
   # New candidates must expose the publication proof endpoints. A legacy
   # rollback snapshot predates those locations, but is still generator-owned

@@ -34,7 +34,7 @@
     "audit:failstatic": "node --experimental-strip-types --no-warnings scripts/fail-static-audit.mjs"
   },
   "devDependencies": {
-    "pako": "2.1.0",
+    "pako": "3.0.2",
     "vitepress": "^1.6.3",
     "vitest": "^4.1.11"
   },

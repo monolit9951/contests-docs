@@ -1,6 +1,6 @@
 ---
 title: "Brolivo: flirt bolder"
-description: "Your flirting wingman: turn a screenshot or text into one reply, make it bolder and find your next move. Brolivo for adults 18+, preparing for launch."
+description: "Your flirting wingman: turn a screenshot or text into one reply, make it bolder and find your next move. Open Brolivo’s test web version for adults 18+."
 publisher: brolivo
 provenance: { snapshot_date: 2026-10-08 }
 ---
@@ -9,7 +9,7 @@ provenance: { snapshot_date: 2026-10-08 }
 
 There is a spark in the conversation, but the right line is not coming to you. Brolivo helps you flirt back, handle a tease or ask them out. Add a screenshot or text and get one reply you can make your own.
 
-**We are preparing Brolivo for launch.** App Store and Google Play links will appear here after publication.
+**[Open Brolivo’s test web version](https://brolivo.com/).** It works in your browser. Mobile apps are not yet published in the App Store or Google Play; links will appear here after publication.
 
 ## Screenshot → reply → your next move {#how-it-works}
 

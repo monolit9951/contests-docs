@@ -2,7 +2,13 @@ export type PublisherLocale = 'en' | 'ru' | 'uk'
 export const publisherLocale = (language: string): PublisherLocale =>
   language === 'ru' || language === 'uk' ? language : 'en'
 
-// Public availability stays explicit until the founder authorizes the product launch.
+// The web test build is available separately from the unpublished mobile apps.
+// These are destinations on Brolivo, not routes owned by the docs manifest.
+export const BROLIVO_WEB_URLS = {
+  en: 'https://brolivo.com/',
+  ru: 'https://brolivo.com/ru',
+  uk: 'https://brolivo.com/uk',
+} as const
 export const PUBLISHER_CONTACT = 'support@darebay.com'
 export const BROLIVO_CONTACT = 'brolivo@darebay.com'
 export const PUBLISHER_COPY = {
@@ -11,15 +17,15 @@ export const PUBLISHER_COPY = {
     navProduct: 'Our app', navContact: 'Contact', back: 'All products',
     eyebrow: 'Independent apps by DareBay', title: ['Small apps.', 'Useful every day.'],
     lede: 'Apps for the moments you want to go for it. Meet Brolivo: your wingman for bolder flirting and a better next move.',
-    primary: 'Meet Brolivo', secondary: 'Get in touch', status: 'Preparing for launch',
-    statusNote: 'App Store and Google Play links will be added when Brolivo launches.',
+    primary: 'Open Brolivo', secondary: 'About Brolivo', status: 'Test web version',
+    statusNote: 'The test version is available in your browser. Mobile apps are not yet published in the App Store or Google Play.',
     catalogLabel: 'Our first app', catalogTitle: 'Flirt bolder.',
     productCategory: 'Your flirting wingman · 18+',
     productSummary: 'Turn a chat screenshot into a reply with a little spark. Tease back, ask them out or turn up the heat when the feeling is mutual.',
-    productLink: 'Meet your wingman', tags: ['Tease back', 'Make a move', 'Ask them out'],
+    productLink: 'Open Brolivo', tags: ['Tease back', 'Make a move', 'Ask them out'],
     appEyebrow: 'Brolivo · Your flirting wingman · 18+', appTitle: ['Brolivo.', 'Flirt bolder.'],
     appLede: 'A screenshot. One reply. Your next move. Find the words to flirt, ask them out or get a little more direct. Make it bolder, make it yours, then copy.',
-    appPrimary: 'See your next move', appSecondary: 'Contact us',
+    appPrimary: 'Open Brolivo', appSecondary: 'How it works',
     processLabel: 'From their message to your next move.', processSteps: ['Add a screenshot or text', 'Get one reply', 'Refine it and copy'],
     sceneLabel: 'Fictional conversation · Bold style', sceneIncoming: 'Are you always this bold? 😏',
     sceneReply: 'Usually I’m much more innocent. You’re making that difficult.',
@@ -34,15 +40,15 @@ export const PUBLISHER_COPY = {
     navProduct: 'Наше приложение', navContact: 'Контакты', back: 'Все продукты',
     eyebrow: 'Приложения от DareBay', title: ['Полезные приложения', 'на каждый день.'],
     lede: 'Приложения для моментов, когда хочется решиться. Начинаем с Brolivo: твоего напарника для смелого флирта и следующего шага.',
-    primary: 'Знакомьтесь: Brolivo', secondary: 'Связаться с нами', status: 'Готовимся к запуску',
-    statusNote: 'Ссылки на App Store и Google Play появятся после запуска Brolivo.',
+    primary: 'Открыть Brolivo', secondary: 'Подробнее о Brolivo', status: 'Тестовая веб-версия',
+    statusNote: 'Пока доступна тестовая версия в браузере. Мобильные приложения ещё не опубликованы в App Store и Google Play.',
     catalogLabel: 'Наше первое приложение', catalogTitle: 'Флиртуй смелее.',
     productCategory: 'Твой напарник во флирте · 18+',
     productSummary: 'Преврати скрин переписки в ответ с искрой. Подхвати флирт, позови на встречу или добавь огня, когда интерес взаимный.',
-    productLink: 'Знакомься с Brolivo', tags: ['Подхватить флирт', 'Добавить смелости', 'Позвать на встречу'],
+    productLink: 'Открыть Brolivo', tags: ['Подхватить флирт', 'Добавить смелости', 'Позвать на встречу'],
     appEyebrow: 'Brolivo · Напарник во флирте · 18+', appTitle: ['Brolivo.', 'Флиртуй смелее.'],
     appLede: 'Скрин. Один ответ. Твой следующий ход. Найди слова для флирта, приглашения на встречу или более откровенного разговора. Сделай смелее, подстрой под себя и скопируй.',
-    appPrimary: 'Посмотреть следующий ход', appSecondary: 'Написать нам',
+    appPrimary: 'Открыть Brolivo', appSecondary: 'Как это работает',
     processLabel: 'От сообщения к твоему следующему ходу.', processSteps: ['Добавь скрин или текст', 'Получи один ответ', 'Подстрой и скопируй'],
     sceneLabel: 'Вымышленная переписка · смелый тон', sceneIncoming: 'ты всегда такой смелый? 😏',
     sceneReply: 'Обычно я скромнее. Но ты мне мешаешь.',
@@ -57,15 +63,15 @@ export const PUBLISHER_COPY = {
     navProduct: 'Наш застосунок', navContact: 'Контакти', back: 'Усі продукти',
     eyebrow: 'Застосунки від DareBay', title: ['Корисні застосунки', 'на щодень.'],
     lede: 'Застосунки для моментів, коли хочеться наважитися. Починаємо з Brolivo: твого напарника для сміливого флірту й наступного кроку.',
-    primary: 'Знайомтеся: Brolivo', secondary: 'Зв’язатися з нами', status: 'Готуємося до запуску',
-    statusNote: 'Посилання на App Store і Google Play з’являться після запуску Brolivo.',
+    primary: 'Відкрити Brolivo', secondary: 'Докладніше про Brolivo', status: 'Тестова вебверсія',
+    statusNote: 'Наразі доступна тестова версія в браузері. Мобільні застосунки ще не опубліковані в App Store і Google Play.',
     catalogLabel: 'Наш перший застосунок', catalogTitle: 'Фліртуй сміливіше.',
     productCategory: 'Твій напарник у флірті · 18+',
     productSummary: 'Перетвори скрин листування на відповідь з іскрою. Підхопи флірт, запроси на зустріч або додай вогню, коли інтерес взаємний.',
-    productLink: 'Знайомся з Brolivo', tags: ['Підхопити флірт', 'Додати сміливості', 'Запросити на зустріч'],
+    productLink: 'Відкрити Brolivo', tags: ['Підхопити флірт', 'Додати сміливості', 'Запросити на зустріч'],
     appEyebrow: 'Brolivo · Напарник у флірті · 18+', appTitle: ['Brolivo.', 'Фліртуй сміливіше.'],
     appLede: 'Скрин. Одна відповідь. Твій наступний хід. Знайди слова для флірту, запрошення на зустріч чи відвертішої розмови. Зроби сміливіше, підлаштуй під себе й скопіюй.',
-    appPrimary: 'Побачити наступний хід', appSecondary: 'Написати нам',
+    appPrimary: 'Відкрити Brolivo', appSecondary: 'Як це працює',
     processLabel: 'Від повідомлення до твого наступного ходу.', processSteps: ['Додай скрин або текст', 'Отримай одну відповідь', 'Підлаштуй і скопіюй'],
     sceneLabel: 'Вигадане листування · сміливий тон', sceneIncoming: 'ти завжди такий сміливий? 😏',
     sceneReply: 'Зазвичай я скромніший. Але ти мені заважаєш.',

@@ -9,7 +9,7 @@ import { MIN_INBOUND, inboundSources, inboundVerdict, internalNofollowAnchors } 
 import { showcaseWeightFindings } from './showcase-weight.mjs'
 import { hubDirectoryFinding } from './hub-directory.mjs'
 import { publisherPageFindings } from './publisher-pages.mjs'
-import { BROLIVO_CONTACT, PUBLISHER_CONTACT } from '../docs/.vitepress/theme/products/copy.ts'
+import { BROLIVO_CONTACT, BROLIVO_WEB_URLS, PUBLISHER_CONTACT, PUBLISHER_COPY } from '../docs/.vitepress/theme/products/copy.ts'
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..')
 const DOCS = join(ROOT, 'docs')
@@ -112,9 +112,11 @@ for (const page of PAGES) {
     if (page.id === 'about-products' || page.id === 'about-brolivo') {
       const mode = page.id === 'about-brolivo' ? 'brolivo' : 'products'
       const brolivo = PAGES.find((entry) => entry.id === 'about-brolivo')
-      for (const finding of publisherPageFindings(html, {
+      for (const finding of publisherPageFindings(markup, {
         mode,
         productHref: pagePath(brolivo, locale),
+        webHref: BROLIVO_WEB_URLS[locale],
+        availability: PUBLISHER_COPY[locale].status,
         contact: mode === 'brolivo' ? BROLIVO_CONTACT : PUBLISHER_CONTACT,
       })) fail('publisher-page', `${path}: ${finding}`)
     }

@@ -2,7 +2,7 @@
 import { Content, useData } from 'vitepress'
 import { computed } from 'vue'
 import { pagePath, PAGES } from '../../registry'
-import { BROLIVO_CONTACT, PUBLISHER_CONTACT, PUBLISHER_COPY, publisherLocale } from './copy'
+import { BROLIVO_CONTACT, BROLIVO_WEB_URLS, PUBLISHER_CONTACT, PUBLISHER_COPY, publisherLocale } from './copy'
 import brolivoIcon from './brolivo.svg'
 import './publisher.css'
 
@@ -17,7 +17,8 @@ const brolivoEntry = PAGES.find((entry) => entry.id === 'about-brolivo')!
 const productsHref = computed(() => pagePath(productsEntry, locale.value)!)
 const brolivoHref = computed(() => pagePath(brolivoEntry, locale.value)!)
 const title = computed(() => app.value ? copy.value.appTitle : copy.value.title)
-const primaryHref = computed(() => app.value ? '#how-it-works' : brolivoHref.value)
+const primaryHref = computed(() => BROLIVO_WEB_URLS[locale.value])
+const secondaryHref = computed(() => app.value ? '#how-it-works' : brolivoHref.value)
 const localeLabels = { en: 'EN', ru: 'RU', uk: 'UA' } as const
 const languages = computed(() => (['en', 'ru', 'uk'] as const).map((language) => ({
   language, label: localeLabels[language], href: pagePath(app.value ? brolivoEntry : productsEntry, language)!,
@@ -53,7 +54,7 @@ const languages = computed(() => (['en', 'ru', 'uk'] as const).map((language) =>
             <p class="publisher-lede">{{ app ? copy.appLede : copy.lede }}</p>
             <div class="publisher-actions">
               <a class="lp-btn lp-btn-primary" :href="primaryHref">{{ app ? copy.appPrimary : copy.primary }} <span aria-hidden="true">↗</span></a>
-              <a class="publisher-secondary" href="#contact">{{ app ? copy.appSecondary : copy.secondary }} <span aria-hidden="true">→</span></a>
+              <a class="publisher-secondary" :href="secondaryHref">{{ app ? copy.appSecondary : copy.secondary }} <span aria-hidden="true">→</span></a>
             </div>
             <p class="publisher-availability"><span aria-hidden="true"></span>{{ copy.status }}</p>
           </div>
@@ -85,7 +86,7 @@ const languages = computed(() => (['en', 'ru', 'uk'] as const).map((language) =>
               <p>{{ copy.productSummary }}</p>
               <ul class="publisher-tags"><li v-for="tag in copy.tags" :key="tag">{{ tag }}</li></ul>
               <div class="publisher-product-footer">
-                <a class="publisher-product-link" :href="brolivoHref">{{ copy.productLink }} <span aria-hidden="true">↗</span></a>
+                <a class="publisher-product-link" :href="primaryHref">{{ copy.productLink }} <span aria-hidden="true">↗</span></a>
                 <span class="publisher-product-status">{{ copy.status }}</span>
               </div>
             </div>

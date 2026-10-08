@@ -1,6 +1,6 @@
 ---
 title: "DareBay Products — our apps and the team behind them"
-description: "DareBay Products: our apps and the team behind them. Meet Brolivo, your wingman for bolder flirting, check launch availability and get in touch."
+description: "DareBay Products: our apps and the team behind them. Open the test web version of Brolivo, your wingman for bolder flirting, and explore the product."
 publisher: products
 provenance: { snapshot_date: 2026-10-08 }
 ---
@@ -13,7 +13,7 @@ DareBay Products is the home for apps we build under the DareBay name. Each prod
 
 We are starting with [Brolivo](/en/about/brolivo): a wingman for bolder flirting between adults. A chat screenshot or text becomes one reply you can make bolder, put in your own voice and copy. Find the words to tease back, show your interest or ask them out.
 
-We are preparing Brolivo for launch. Its product page includes examples, explains the features and keeps availability clear.
+[Brolivo’s test web version](https://brolivo.com/) is available in your browser. Its product page includes examples and explains the features. Mobile apps are not yet published in the App Store or Google Play.
 
 ## One team, distinct products
 

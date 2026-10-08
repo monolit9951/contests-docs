@@ -1,6 +1,6 @@
 ---
 title: "DareBay Products — our apps and the team behind them"
-description: "Meet DareBay Products and Brolivo, our first conversation app. Explore what we are building, see launch availability and contact the team."
+description: "DareBay Products: our apps and the team behind them. Meet Brolivo, your wingman for bolder flirting, check launch availability and get in touch."
 publisher: products
 provenance: { snapshot_date: 2026-10-08 }
 ---
@@ -11,7 +11,9 @@ provenance: { snapshot_date: 2026-10-08 }
 
 DareBay Products is the home for apps we build under the DareBay name. Each product focuses on a specific everyday need, with its own experience and purpose.
 
-We are starting with Brolivo: a conversation helper for adults navigating dating and getting to know someone. Its product page explains the ideas behind it, the ways it can help and its current launch status.
+We are starting with [Brolivo](/en/about/brolivo): a wingman for bolder flirting between adults. A chat screenshot or text becomes one reply you can make bolder, put in your own voice and copy. Find the words to tease back, show your interest or ask them out.
+
+We are preparing Brolivo for launch. Its product page includes examples, explains the features and keeps availability clear.
 
 ## One team, distinct products
 

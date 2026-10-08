@@ -57,22 +57,15 @@ const languages = computed(() => (['en', 'ru', 'uk'] as const).map((language) =>
             </div>
             <p class="publisher-availability"><span aria-hidden="true"></span>{{ copy.status }}</p>
           </div>
-          <!-- Existing Brolivo brand art; no native screenshots or download claims. -->
-          <div class="publisher-art" aria-hidden="true">
-            <div class="publisher-art-orbit publisher-art-orbit--outer"></div>
-            <div class="publisher-art-orbit publisher-art-orbit--inner"></div>
-            <div class="publisher-art-dot publisher-art-dot--lime"></div>
-            <div class="publisher-art-dot publisher-art-dot--blue"></div>
-            <div class="publisher-art-card">
-              <span class="publisher-art-category">{{ copy.productCategory }}</span>
-              <img :src="brolivoIcon" alt="" width="144" height="144" class="publisher-art-icon">
-              <span class="publisher-art-name">Brolivo<span>↗</span></span>
-              <span class="publisher-art-tagline">{{ copy.processLabel }}</span>
-              <span class="publisher-art-status">{{ copy.status }}</span>
+          <figure class="publisher-scene">
+            <figcaption>{{ copy.sceneLabel }}</figcaption>
+            <p class="publisher-scene-incoming">{{ copy.sceneIncoming }}</p>
+            <div class="publisher-scene-reply">
+              <p class="publisher-scene-brand"><img :src="brolivoIcon" alt="" width="28" height="28">Brolivo <span>{{ copy.sceneReplyLabel }}</span></p>
+              <p>{{ copy.sceneReply }}</p>
             </div>
-            <span class="publisher-art-label publisher-art-label--one">{{ copy.tags[0] }}</span>
-            <span class="publisher-art-label publisher-art-label--two">{{ copy.tags[1] }}</span>
-          </div>
+            <p class="publisher-scene-styles">{{ copy.sceneNote }}</p>
+          </figure>
         </div>
       </section>
 

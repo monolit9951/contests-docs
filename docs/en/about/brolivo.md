@@ -1,32 +1,32 @@
 ---
-title: "Brolivo — find your next reply"
-description: "Meet Brolivo: one suggested reply from text or a screenshot, chat details when you ask, and a check of your draft before sending. Preparing for launch."
+title: "Brolivo: flirt bolder"
+description: "Your flirting wingman: turn a screenshot or text into one reply, make it bolder and find your next move. Brolivo for adults 18+, preparing for launch."
 publisher: brolivo
 provenance: { snapshot_date: 2026-10-08 }
 ---
 
-# Brolivo — find your next reply
+# Brolivo: flirt bolder
 
-Brolivo is an AI assistant for dating and relationship conversations between adults aged 18 and over. It helps you find the next words when you want to keep a conversation going but are unsure what to write.
+There is a spark in the conversation, but the right line is not coming to you. Brolivo helps you flirt back, handle a tease or ask them out. Add a screenshot or text and get one reply you can make your own.
 
-**We are preparing Brolivo for launch.** App Store and Google Play links will appear here after publication. Here is how the main product features work.
+**We are preparing Brolivo for launch.** App Store and Google Play links will appear here after publication.
 
-## One reply first {#how-it-works}
+## Screenshot → reply → your next move {#how-it-works}
 
-Add a message, part of a conversation or a screenshot, with background if it helps. Choose a voice: flirty, bold, genuine or spicy. Brolivo starts with one suggested reply that you can read and copy.
+Add a message, part of a conversation or a screenshot. Pick a style and optionally add a goal: make them laugh, pick up a hint or ask for a date. Brolivo starts with one suggested reply.
 
-Ask for another option or a refinement when you need it. You can look for wording that sounds like you: shorter, simpler or bolder. When the conversation needs space, the suggestion may be to wait.
+Make it bolder or shorter, ask for another or copy it straight away. When a new message arrives, continue the same conversation. You send the reply yourself.
 
-## Details when you need them
+## From playful flirting to a spicy hint
 
-If a reply alone is not enough, request a separate reading of the conversation. It gives a short summary and points to signals in the messages you supplied: what supports the exchange and where there may be distance.
+Four styles help you find the right mood: **Flirty**, **Bold**, **Genuine** and **Spicy 18+**. Tease back, show your interest directly or add an adult hint when you both want it. You choose Spicy separately.
 
-These details are an AI interpretation of the visible text. They help you think about your next step; they do not establish another person's feelings. Before adding a screenshot, hide unnecessary personal information and use conversations you have permission to share.
+Brolivo is for conversations between adults. A confident message can express your interest; the other person's feelings and response remain their choice.
 
-## Check your draft before sending
+## When you want the context
 
-Already written something? Add your draft and, optionally, the other person's last message. The check explains how your text could come across, what works and what could be improved.
+Ask for a chat breakdown to explore the cues in the messages you added and a possible next move. It is an interpretation of text, not a measurement of someone's feelings.
 
-Compare the suggested edit with your original. You choose what to send: a clear reply, an invitation, a calm question or a respectful pause.
+Already have a draft? Check it before sending and compare the suggested edit with your own. Hide unnecessary personal details before uploading a screenshot and use conversations you have the right to share.
 
-Brolivo is part of [DareBay Products](/en/about/products), where you can find the apps we are building.
+Brolivo is part of [DareBay Products](/en/about/products). Contact the team below with product questions or collaboration ideas.

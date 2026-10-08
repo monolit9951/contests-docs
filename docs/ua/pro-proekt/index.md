@@ -60,3 +60,4 @@ DareBay - це майданчик, де бренди та звичайні лю�
 
 - [Як працює оплата за перегляди](/ua/zarobitok/yak-pratsiuie-oplata-za-perehliady)
 - [Допомога по DareBay](/ua/dopomoha/)
+- [DareBay Products: наші застосунки](/ua/pro-proekt/products)

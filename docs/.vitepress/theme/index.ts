@@ -18,6 +18,7 @@ import {
 import { leavesForApplication, mergeSlashes } from './routing'
 import HubIndex from './HubIndex.vue'
 import LandingLayout from './landing/LandingLayout.vue'
+import PublisherLayout from './products/PublisherLayout.vue'
 import LCompare from './landing/LCompare.vue'
 import LPlatforms from './landing/LPlatforms.vue'
 import LMethod from './landing/LMethod.vue'
@@ -151,17 +152,19 @@ const DocsLayout = defineComponent({
       () => void nextTick(onPageReady),
     )
 
-    // Every page renders through the landing shell (founder directive 2026-09-03: the old docs
-    // format is retired), and the shell ends every page with the product CTA band (LCta.vue).
+    // Public guides render through the landing shell and its task CTA. The publisher pages
+    // have a separate shell for discovering apps, without entering the creator task funnel.
     // `landing: false` keeps the stock VitePress layout as a bare escape hatch; no page uses it
     // (2026-09-29), so its old injected CTA box is gone with its styles. The instrumentation above
     // is the same for both, so analytics do not depend on which shell rendered.
     return () =>
       keepServed.value && servedVNode
         ? servedVNode
-        : frontmatter.value.landing === false
-          ? h(DefaultTheme.Layout)
-          : h(LandingLayout)
+        : frontmatter.value.publisher === 'products' || frontmatter.value.publisher === 'brolivo'
+          ? h(PublisherLayout)
+          : frontmatter.value.landing === false
+            ? h(DefaultTheme.Layout)
+            : h(LandingLayout)
   },
 })
 

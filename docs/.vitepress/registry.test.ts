@@ -418,6 +418,8 @@ describe('legacy spellings of content addresses', () => {
             '/faq',
             '/getting-started',
             '/platformy',
+            // Publisher entry aliases are content-owned; application routes stay outside.
+            '/products',
             '/ru/blog',
             '/ru/brendam',
             '/ru/faq',
@@ -429,6 +431,7 @@ describe('legacy spellings of content addresses', () => {
             '/ru/o-proekte',
             '/ru/platformy',
             '/ru/pomoshch',
+            '/ru/products',
             '/ru/zarabotok',
         ])
         const sources = Object.keys(map)

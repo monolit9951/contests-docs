@@ -63,3 +63,4 @@ channel is read by the same people who edit these pages.
 
 - [How pay-per-view works](/en/earnings/how-pay-per-view-works)
 - [DareBay help](/en/help/)
+- [DareBay Products: our apps](/en/about/products)

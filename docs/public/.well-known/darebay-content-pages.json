@@ -437,6 +437,32 @@
       ]
     },
     {
+      "id": "about-products",
+      "hub": "about",
+      "slugs": {
+        "ru": "products",
+        "uk": "products",
+        "en": "products"
+      },
+      "retired": [
+        "/products",
+        "/products/"
+      ]
+    },
+    {
+      "id": "about-brolivo",
+      "hub": "about",
+      "slugs": {
+        "ru": "brolivo",
+        "uk": "brolivo",
+        "en": "brolivo"
+      },
+      "retired": [
+        "/products/brolivo",
+        "/products/brolivo/"
+      ]
+    },
+    {
       "id": "about-manifesto",
       "hub": "about",
       "slugs": {

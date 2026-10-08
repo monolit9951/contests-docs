@@ -66,3 +66,4 @@ DareBay - это площадка, где бренды и обычные люд�
 
 - [Как работает оплата за просмотры](/zarabotok/kak-rabotaet-oplata-za-prosmotry)
 - [Помощь по DareBay](/pomoshch/)
+- [DareBay Products: наши приложения](/o-proekte/products)

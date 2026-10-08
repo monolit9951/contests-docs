@@ -34,10 +34,12 @@
 - [Отзывы о DareBay: как проверить площадку самому за 10 минут](https://darebay.com/o-proekte/darebay-otzyvy): Отзывы о DareBay: пять проверок вместо чужих слов. Каталог, ставка $1–10 за 1000 просмотров в карточке, основатель, вывод от 10 USDT, счётчик ролика.
 - [Редакционная политика раздела о заработке на нарезках](https://darebay.com/o-proekte/redaktsionnaya-politika): Редакционная политика гайдов о нарезках: один вопрос на страницу, источник и дата у каждой цифры, площадки по их документам, что не обещаем, как правим ошибки.
 - [Скам в клиппинге: девять красных флагов площадки для нарезок](https://darebay.com/o-proekte/skam-v-klippinge-krasnye-flagi): Клиппинг не развод, но площадки бывают разными. Девять красных флагов, проверка площадки за десять минут и что делать, если уже заплатил за «доступ».
+- [Brolivo — что написать в ответ](https://darebay.com/o-proekte/brolivo): Знакомство с Brolivo: один ответ по тексту или скриншоту, разбор переписки по запросу и проверка своего сообщения перед отправкой. Готовим к запуску.
 - [DareBay - развод или нет? Где здесь платишь ты](https://darebay.com/o-proekte/darebay-razvod-ili-net): DareBay развод или нет: участие бесплатное, комиссия конкурса 0%, вывод на кошелёк от 10 USDT, переводов от тебя нет ни на одном шаге. И красные флаги.
 - [DareBay - это скам? Разбор по признакам](https://darebay.com/o-proekte/darebay-eto-skam): DareBay скам или нет: разбор по шести признакам скам-площадки, от предоплаты до чужой цифры результата. Каждый пункт можно проверить самому.
 - [DareBay в цифрах: ставки, комиссии, выплаты и страны](https://darebay.com/o-proekte/darebay-v-tsifrakh): DareBay платит $1–10 за 1000 просмотров, до $500 за ролик, комиссия конкурса 0%, вывод на кошелёк от 10 USDT, списка стран нет. Все факты на одной странице.
 - [DareBay реально платит? Путь денег после закрытия конкурса](https://darebay.com/o-proekte/darebay-realno-platit): DareBay реально платит: сумму считает код, заработок зачисляется на баланс автоматически. Путь денег от финального счётчика до вывода от 10 USDT.
+- [DareBay Products — наши приложения и команда](https://darebay.com/o-proekte/products): Знакомьтесь с DareBay Products и первым приложением Brolivo. Что мы создаём, какой сейчас статус запуска и как связаться с командой.
 
 ### Заработок
 
@@ -169,11 +171,13 @@
 - [Редакційна політика розділу про заробіток на нарізках](https://darebay.com/ua/pro-proekt/redaktsiina-polityka): Редакційна політика гайдів про нарізки: одне питання на сторінку, джерело і дата в кожної цифри, чужі майданчики за їхніми документами, як правимо помилки.
 - [Скам у кліпінгу: дев'ять червоних прапорців для нарізчика](https://darebay.com/ua/pro-proekt/skam-u-klipinhu-chervoni-prapory): Кліпінг не розвод, але майданчики бувають різними. Дев'ять червоних прапорців, перевірка за десять хвилин і що робити, якщо вже заплатив за «доступ».
 - [Хто пише гайди DareBay і звідки в них цифри](https://darebay.com/ua/pro-proekt/khto-pyshe-i-zvidky-tsyfry): Хто пише гайди DareBay про нарізки і відповідає за кожну цифру: звідки ставки і пороги, як перевіряються дані інших майданчиків і куди писати про помилку.
+- [Brolivo — що написати у відповідь](https://darebay.com/ua/pro-proekt/brolivo): Знайомство з Brolivo: одна відповідь за текстом чи скриншотом, розбір листування на запит і перевірка свого повідомлення перед надсиланням. Готуємо до запуску.
 - [DareBay - відгуки і те, що можна перевірити замість них](https://darebay.com/ua/pro-proekt/darebay-vidhuky): Чому ми не публікуємо відгуки про DareBay і що варто перевірити самому: кому підходить майданчик, які параметри видно наперед і які ролі на ньому є.
 - [DareBay - розвод чи ні? Комісії, платежі й червоні прапорці](https://darebay.com/ua/pro-proekt/darebay-rozvod-chy-ni): DareBay розвод чи ні: участь безкоштовна, окремого переказу в продукті не існує, платне лише виведення з комісією всередині заявки. І червоні прапорці.
 - [DareBay - скам чи ні? Розбір механіки посередника](https://darebay.com/ua/pro-proekt/darebay-tse-skam): DareBay скам чи ні: розбір за ознаками шахрайського майданчика. Режим фінансування, умови і джерело цифри переглядів видно ще до подачі роботи.
 - [DareBay справді платить - шлях грошей від бюджету до балансу](https://darebay.com/ua/pro-proekt/darebay-spravdi-platyt): DareBay справді платить: гаманцевий бюджет лежить на платформі до старту, суму рахує код, а заробіток зараховується на баланс автоматично.
 - [DareBay у цифрах: ставки, комісії, виплати та країни](https://darebay.com/ua/pro-proekt/darebay-u-tsyfrakh): DareBay платить $1–10 за 1000 переглядів, до $500 за ролик, комісія конкурсу 0%, виведення на гаманець від 10 USDT. Усі факти на одній сторінці.
+- [DareBay Products — наші застосунки та команда](https://darebay.com/ua/pro-proekt/products): Знайомтеся з DareBay Products і першим застосунком Brolivo. Що ми створюємо, який зараз статус запуску та як зв’язатися з командою.
 
 ### Заробіток
 
@@ -269,8 +273,10 @@ Guides to content tasks, participation, validated views and payouts on DareBay.
 ### About
 
 - [About DareBay: who runs the platform and how it pays](https://darebay.com/en/about/): About DareBay without the sales pitch: who builds the platform, where contest money sits before a payout, where our numbers come from, who answers you.
+- [Brolivo — find your next reply](https://darebay.com/en/about/brolivo): Meet Brolivo: one suggested reply from text or a screenshot, chat details when you ask, and a check of your draft before sending. Preparing for launch.
 - [DareBay at a glance: rates, fees, payouts and countries](https://darebay.com/en/about/darebay-at-a-glance): DareBay pays $1.00 to $10.00 per 1,000 views, 0% contest fee, withdrawals to your wallet from 10 USDT, no country list. Every figure sourced and dated.
 - [DareBay payout guarantee: what it covers and how it works](https://darebay.com/en/about/payout-guarantee): The DareBay payout guarantee: a wallet-backed budget is frozen on the platform before the start, the terms stay fixed and the count comes from outside.
+- [DareBay Products — our apps and the team behind them](https://darebay.com/en/about/products): Meet DareBay Products and Brolivo, our first conversation app. Explore what we are building, see launch availability and contact the team.
 - [DareBay reviews - what to expect instead of testimonials](https://darebay.com/en/about/darebay-reviews): Who actually uses DareBay, what a contest looks like from each side, and what you can check yourself - written out instead of collected as reviews.
 - [Does DareBay really pay? The chain from clip to money](https://darebay.com/en/about/does-darebay-really-pay): Does DareBay pay? Yes: the wallet-backed budget is locked before you start, code works out your amount and credits it to your balance. The chain, step by step.
 - [Editorial policy of the clipping earnings section](https://darebay.com/en/about/editorial-policy): The editorial rules behind these clipping guides: one question per page, a source and a date on every figure, rival platforms quoted from their own documents.

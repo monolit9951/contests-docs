@@ -1,7 +1,9 @@
 # contests-docs — Agent Guide
 
 > Truth order: live prod/code > `darebay-ceo/STATUS.md` > product truth-pack > prose docs.
-> Cross-repo safety, data persistence, git and deployment rules come from `/root/CLAUDE.md`.
+> Cross-repo safety, data persistence, git and deployment rules come from the canonical guide
+> `/root/brain/memory/GUIDE.md` and its index `/root/brain/memory/MEMORY.md` (the managed memory
+> hook loads both at session start).
 
 `CLAUDE.md` is intentionally the single repository guide for both providers: Claude loads it
 natively and managed Codex loads it through `project_doc_fallback_filenames`. Do not add a duplicate

@@ -70,7 +70,7 @@ If clips from a fresh account stall at a few hundred views, the account is usual
 
 In a wallet-backed task, what your approved clips earn is two steps from cash. Step one: the task credits it to your DareBay wallet when it ends, or earlier where it shows "Claim now": the button appears once a clip is approved and locks in what has been credited; fresh accruals mature for 24 hours. Pressing it stops the clip earning in that task, so wait until the counter has stopped<!-- source: https://darebay.com/en/help/darebay-withdrawals 2026-09-24 -->. A manual-payout task works differently: its organizer pays you directly.
 
-Step two: request a withdrawal from 10 USDT, and the platform does the rest. You receive USDT to a wallet on the TON network or Telegram Stars; Stars are "get it in Stars", not a cash withdrawal. The only fee along the way is 10% of the request, deducted inside it: a hundred on the balance pays out 90 USDT, and the form shows that amount before you confirm. Every request is checked before it goes out, so the money reaches the right wallet. Details in [DareBay withdrawals](/en/help/darebay-withdrawals) and [what commission DareBay charges](/en/help/what-commission).
+Step two: request a withdrawal from 10 USDT, and the platform does the rest. You receive USDT to a wallet on the TON network or Telegram Stars; Stars are "get it in Stars", not a cash withdrawal. The only fee along the way is 10% (default) of the request, deducted inside it: a hundred on the balance pays out 90 USDT, and the form shows that amount before you confirm. Every request is checked before it goes out, so the money reaches the right wallet. Details in [DareBay withdrawals](/en/help/darebay-withdrawals) and [what commission DareBay charges](/en/help/what-commission).
 
 Once the first hundred is in, the next question is scale: [how to make $1,000 a month clipping](/en/earnings/make-1000-a-month-clipping). Running several accounts as one pipeline is covered on the [content farm](/en/content-farm/) page.
 
@@ -94,7 +94,7 @@ Do not redo or delete them: a clip has until the task is finalised to reach the 
 
 ### Can I take the first $100 out in one request?
 
-Yes, once the amount is on your balance: credited when the task ends, or earlier with "Claim now" where the task shows it. A request for 100 USDT pays out 90 USDT after the 10% withdrawal fee, which is deducted inside the request and shown before you confirm. The minimum for one request is 10 USDT, so the hundred can also go out in parts.
+Yes, once the amount is on your balance: credited when the task ends, or earlier with "Claim now" where the task shows it. A request for 100 USDT pays out 90 USDT after the 10% (default) withdrawal fee, which is deducted inside the request and shown before you confirm. The minimum for one request is 10 USDT, so the hundred can also go out in parts.
 
 ### Should a beginner start with offer tasks and ready-made videos?
 

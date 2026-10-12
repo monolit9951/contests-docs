@@ -115,7 +115,7 @@ PayPal lists among its Restricted Activities "Provide false, inaccurate or misle
 
 ## When another platform suits you better than DareBay
 
-DareBay pays a credited balance out in USDT on the TON network, or you receive the payout in Telegram Stars; it publishes no country list and asks for no followers, application or tax status. Entering is free and nothing is taken from a task budget; withdrawing a credited balance carries 10%, deducted inside a request that starts at 10 USDT, and the team checks every request by hand with no promised settlement time. Detail: [withdrawals](/en/help/darebay-withdrawals), [fees](/en/help/what-commission), [the wallet page](/en/help/paying-with-crypto).
+DareBay pays a credited balance out in USDT on the TON network, or you receive the payout in Telegram Stars; it publishes no country list and asks for no followers, application or tax status. Entering is free and nothing is taken from a task budget; withdrawing a credited balance carries 10% (default), deducted inside a request that starts at 10 USDT, and the team checks every request by hand with no promised settlement time. Detail: [withdrawals](/en/help/darebay-withdrawals), [fees](/en/help/what-commission), [the wallet page](/en/help/paying-with-crypto).
 
 So others fit better in four situations:
 

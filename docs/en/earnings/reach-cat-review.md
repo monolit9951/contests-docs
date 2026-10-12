@@ -27,7 +27,7 @@ method:
   - "Where a landing page and the terms disagree, both are quoted with their source and the terms are treated as the binding text. Reviews on third-party sites were used only to find the questions clippers ask. DareBay's figures come from its own public pages."
 cta:
   title: "A payout rule you can read before the first clip"
-  lede: "On DareBay the rate, the view threshold and any cap sit on the task card before your first clip, and task payouts carry a 0% fee. You pay 10% only when you withdraw: request a withdrawal from 10 USDT and the platform does the rest. The money leaves in USDT on TON, or you receive the payout in Telegram Stars."
+  lede: "On DareBay the rate, the view threshold and any cap sit on the task card before your first clip, and task payouts carry a 0% fee. You pay 10% (default) only when you withdraw: request a withdrawal from 10 USDT and the platform does the rest. The money leaves in USDT on TON, or you receive the payout in Telegram Stars."
 ---
 ## Before crossing the identity-check threshold
 
@@ -94,7 +94,7 @@ The comparisons at reach.cat/blog place Reach.cat first. Its About page calls th
 
 ## Reach.cat or DareBay: how to choose
 
-For comparison, DareBay's side of the ledger: 0% on task payouts; 10% only when you withdraw, and withdrawals start at 10 USDT <!-- source: https://darebay.com/en/help/what-commission 2026-09-24 -->. The money leaves in USDT on TON, or you receive the payout in Telegram Stars, virtual items that Telegram's terms say you "may not sell, withdraw, transfer" outside its own uses <!-- source: https://telegram.org/tos/stars 2026-09-18 -->. Your earnings reach your balance automatically when a wallet-backed task ends, and from there you request a withdrawal and the platform does the rest <!-- source: https://darebay.com/en/help/darebay-withdrawals 2026-09-24 -->: [the withdrawal rules](/en/help/darebay-withdrawals), [the fee list](/en/help/what-commission).
+For comparison, DareBay's side of the ledger: 0% on task payouts; 10% (default) only when you withdraw, and withdrawals start at 10 USDT <!-- source: https://darebay.com/en/help/what-commission 2026-09-24 -->. The money leaves in USDT on TON, or you receive the payout in Telegram Stars, virtual items that Telegram's terms say you "may not sell, withdraw, transfer" outside its own uses <!-- source: https://telegram.org/tos/stars 2026-09-18 -->. Your earnings reach your balance automatically when a wallet-backed task ends, and from there you request a withdrawal and the platform does the rest <!-- source: https://darebay.com/en/help/darebay-withdrawals 2026-09-24 -->: [the withdrawal rules](/en/help/darebay-withdrawals), [the fee list](/en/help/what-commission).
 
 Reach.cat is the better fit when:
 

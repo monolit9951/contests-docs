@@ -42,7 +42,7 @@ method:
   - "Indian law is quoted from the Income Tax Department, TRACES, the Union Budget memorandum and MeitY. Review sites and forums served only to find the questions readers ask; no rating or complaint is repeated here. Rupee amounts are not converted to dollars, and DareBay's figures come from its own public pages."
 cta:
   title: "A new account on the same terms as everyone: DareBay has no country list"
-  lede: "An account opened today takes a task on the same terms as anyone else, with the rate, the view threshold and any cap per clip printed on the card. You send the link to your clip. DareBay takes 0% on task payouts and 10% only when you withdraw; withdrawals start at 10 USDT and leave as USDT on TON, or you receive the payout in Telegram Stars."
+  lede: "An account opened today takes a task on the same terms as anyone else, with the rate, the view threshold and any cap per clip printed on the card. You send the link to your clip. DareBay takes 0% on task payouts and 10% (default) only when you withdraw; withdrawals start at 10 USDT and leave as USDT on TON, or you receive the payout in Telegram Stars."
 ---
 
 ## Who is behind Wondeed
@@ -106,7 +106,7 @@ Wondeed is the better pick when:
 - you live in India and want rupees in a bank account through UPI. DareBay pays out in USDT on the TON network or in Telegram Stars, which Telegram's terms do not let you sell or withdraw from a personal balance <!-- source: https://telegram.org/tos/stars 2026-09-18 -->;
 - you would rather keep virtual digital assets out of the picture: the 30% tax on their gains <!-- source: https://www.incometax.gov.in/iec/foportal/help/FileITR-2Online-FAQ 2026-09-18 --> is covered in the country view on [clipping platforms that pay in India](/en/earnings/clipping-platforms-that-pay-in-india);
 - you want a published clock and tax deducted for you;
-- you want no platform cut: Wondeed takes 0% from clippers, while DareBay takes 0% of task payouts and 10% only when you withdraw, with withdrawals from 10 USDT.
+- you want no platform cut: Wondeed takes 0% from clippers, while DareBay takes 0% of task payouts and 10% (default) only when you withdraw, with withdrawals from 10 USDT.
 
 DareBay is the better pick when you are not an Indian resident, since it keeps no country list (only people on sanctions lists are barred); when you want a task rate visible before submission rather than assuming a rate from a creator division; when you post on TikTok, which Wondeed calls "planned but not available yet" <!-- source: https://www.wondeed.com/help 2026-09-18 -->, or prefer to submit a link rather than connect an account; and when the rate decides it: DareBay tasks pay the task-set rate per 1,000 eligible views, with a cap stated on the task card <!-- source: https://darebay.com/en/earnings/how-much-clipping-pays 2026-09-24 -->; compare an actual Wondeed campaign rather than its old division-rate chart. On DareBay the calculation and the crediting to your balance are automatic, and you request a withdrawal from 10 USDT and the platform does the rest. The same questions about ClipGrow are answered in the [ClipGrow review](/en/earnings/clipgrow-review); [the platform comparison](/en/earnings/best-clipping-platforms) sets the global boards side by side, and [how much clipping pays](/en/earnings/how-much-clipping-pays) covers the per-view arithmetic.
 

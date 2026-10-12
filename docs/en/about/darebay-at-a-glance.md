@@ -50,7 +50,7 @@ The [machine-readable snapshot](/data/darebay-facts.json) has values with their 
 
 **Better offers.** Besides the rate per 1,000 views, an offer task can pay a fixed fee for every accepted clip and a share of the orders your promo code brings in, all on the same task card.
 
-**Ready-made videos with built-in uniqueization.** On offer tasks the platform hands you finished videos and makes every copy unique for you, so you can post without editing software and without repeating another clipper's clip. How ready clips and a few live accounts add up to a [content farm paid per view](/en/content-farm/) has its own section, and editors, AI clippers and caption apps for cutting your own clips are compared in the [tools catalog](/en/tools/).
+**Supplied videos and uniqueization when enabled by the task.** A particular task can provide finished videos and enable uniqueization of copies. Before posting, check its card for the materials and features available; these options vary by task. How ready clips and a few live accounts add up to a [content farm paid per view](/en/content-farm/) has its own section, and editors, AI clippers and caption apps for cutting your own clips are compared in the [tools catalog](/en/tools/).
 
 Eligibility includes age requirements and sanctions restrictions; check available methods in the form and task terms. See [eligibility terms](/en/legal/terms).
 

@@ -28,7 +28,7 @@ method:
   - "Reviews on third-party sites were used only as a list of the questions people ask, and not one sentence from them is repeated as fact. Garna's own pages cover where money can go from a Garna account. DareBay's figures come from its own public pages, not from this comparison."
 cta:
   title: "One page of rules, readable before the first clip"
-  lede: "DareBay, our platform, keeps no country list, while Prime Oracles bars the EU, the UK and the US and does not name Ukraine: on DareBay only people on sanctions lists are barred. Nothing is taken from a task payout; the only fee is 10% of what you withdraw, and withdrawals start at 10 USDT. The rate, the view threshold and any cap are printed on every task card."
+  lede: "DareBay, our platform, keeps no country list, while Prime Oracles bars the EU, the UK and the US and does not name Ukraine: on DareBay only people on sanctions lists are barred. Nothing is taken from a task payout; the only fee is 10% (default) of what you withdraw, and withdrawals start at 10 USDT. The rate, the view threshold and any cap are printed on every task card."
 ---
 ## Current rewards: 12 October 2026 snapshot
 
@@ -98,7 +98,7 @@ What remains is its own counters: on 19 September 2026 they showed $22,674 paid 
 
 ## Where Prime Oracles fits better than DareBay, and where it does not
 
-DareBay's side of the ledger: nothing is taken from a task payout, a withdrawal costs 10% of the request deducted inside a request of at least 10 USDT, and the only cash rail is USDT on the TON network. Every request is checked by a person, so no settlement time is promised, and there is no country exclusion list, no follower minimum and no application. The interface is in English, Russian, Ukrainian and Polish. Its task card states the rate per 1,000 eligible views and any cap, and the task sets its own threshold: [how withdrawals work](/en/help/darebay-withdrawals), [what DareBay charges](/en/help/what-commission), [DareBay at a glance](/en/about/darebay-at-a-glance).
+DareBay's side of the ledger: nothing is taken from a task payout, a withdrawal costs 10% (default) of the request deducted inside a request of at least 10 USDT, and the only cash rail is USDT on the TON network. Every request is checked by a person, so no settlement time is promised, and there is no country exclusion list, no follower minimum and no application. The interface is in English, Russian, Ukrainian and Polish. Its task card states the rate per 1,000 eligible views and any cap, and the task sets its own threshold: [how withdrawals work](/en/help/darebay-withdrawals), [what DareBay charges](/en/help/what-commission), [DareBay at a glance](/en/about/darebay-at-a-glance).
 
 Prime Oracles is the better fit when:
 
@@ -148,4 +148,4 @@ Not at sign-up: the agreement asks for an email, a name or a pseudonym and a pas
 
 ### What are the alternatives to Prime Oracles?
 
-DareBay pays with no country list, in USDT on the TON network: requests from 10 USDT, 10% taken at withdrawal, with the rate and any cap printed on the task card. The rest are compared in [the best clipping platforms](/en/earnings/best-clipping-platforms) and in [Whop Content Rewards alternatives](/en/earnings/whop-content-rewards-alternatives).
+DareBay pays with no country list, in USDT on the TON network: requests from 10 USDT, 10% (default) taken at withdrawal, with the rate and any cap printed on the task card. The rest are compared in [the best clipping platforms](/en/earnings/best-clipping-platforms) and in [Whop Content Rewards alternatives](/en/earnings/whop-content-rewards-alternatives).

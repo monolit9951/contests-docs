@@ -85,7 +85,7 @@ A submission whose growth pattern looks suspicious is flagged and goes on hold: 
 
 **The system computes.** Nobody types figures in by hand: the formula is deterministic, the same views at the same rate give the same amount, and the result is recorded as a credit with a status you can see in the task. In a wallet-backed task your earnings reach your balance automatically when it ends, or earlier with Claim now where the task shows it.
 
-**The platform does the rest.** Request a withdrawal from 10 USDT: 10% comes off inside the request, and you see the amount to receive before you confirm. Every request is checked before it goes out, so the money reaches the right wallet. Behind it stands the task itself: a wallet-backed task budget is already frozen on the platform, the calculation is already recorded in a status, and it cannot be replayed in anyone's favour. Taking part costs a clipper nothing, and contest payouts carry 0%; the withdrawal fee is the only charge, see [what fees does DareBay charge](/en/help/what-commission).
+**The platform does the rest.** Request a withdrawal from 10 USDT: 10% (default) comes off inside the request, and you see the amount to receive before you confirm. Every request is checked before it goes out, so the money reaches the right wallet. Behind it stands the task itself: a wallet-backed task budget is already frozen on the platform, the calculation is already recorded in a status, and it cannot be replayed in anyone's favour. Taking part costs a clipper nothing, and contest payouts carry 0%; the withdrawal fee is the only charge, see [what fees does DareBay charge](/en/help/what-commission).
 
 ## What happens to an unspent budget
 
@@ -109,7 +109,7 @@ Where the task shows "Claim now", an approved submission can be credited earlier
 
 ### What payout methods are available?
 
-The withdrawal wizard offers USDT to an external wallet on the TON network, or you can receive the payout in Telegram Stars: request from 10 USDT and the platform does the rest, with 10% of the requested amount deducted inside the request and the amount to receive shown before you confirm. In tasks with direct payment the organizer pays you themselves, by the method the task sets; the platform never asks you to send money in advance to "activate" a payout. Details: [withdrawing money from DareBay](/en/help/darebay-withdrawals).
+The withdrawal wizard offers USDT to an external wallet on the TON network, or you can receive the payout in Telegram Stars: request from 10 USDT and the platform does the rest, with 10% (default) of the requested amount deducted inside the request and the amount to receive shown before you confirm. In tasks with direct payment the organizer pays you themselves, by the method the task sets; the platform never asks you to send money in advance to "activate" a payout. Details: [withdrawing money from DareBay](/en/help/darebay-withdrawals).
 
 ### Can I submit more than one clip?
 

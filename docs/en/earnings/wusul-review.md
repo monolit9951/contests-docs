@@ -23,7 +23,7 @@ method:
   - "\"Not published\" means no statement on the subject appears anywhere on those pages. It is not a refusal, and this page does not turn one into the other. DareBay's figures come from its own public pages."
 cta:
   title: "Task rate and cap printed before you start"
-  lede: "DareBay tasks pay a rate set by each task per 1,000 eligible views, and the per-task cap, when used; there is no country list, no follower minimum and no application. Nothing is taken out of a task payout, and the only fee is 10% of what you withdraw: request a withdrawal from 10 USDT and the platform does the rest. A balance leaves as USDT on the TON network, or you receive the payout in Telegram Stars; where the law closes crypto, as in Egypt, Algeria and Iraq, check the local rules before cashing out USDT."
+  lede: "DareBay tasks pay a rate set by each task per 1,000 eligible views, and the per-task cap, when used; there is no country list, no follower minimum and no application. Nothing is taken out of a task payout, and the only fee is 10% (default) of what you withdraw: request a withdrawal from 10 USDT and the platform does the rest. A balance leaves as USDT on the TON network, or you receive the payout in Telegram Stars; where the law closes crypto, as in Egypt, Algeria and Iraq, check the local rules before cashing out USDT."
 ---
 ## Campaigns rechecked 12 October: a rate is not an open offer
 
@@ -75,7 +75,7 @@ The clipper terms leave it to you: "Choose whichever method works where you bank
 
 ## Wusul or DareBay: which one to pick
 
-DareBay's side: its tasks pay a rate set by each task per 1,000 eligible views, and the per-task cap, when used <!-- source: https://darebay.com/en/earnings/how-much-clipping-pays 2026-09-24 -->. It takes nothing out of a task payout, the only fee is 10% of what you withdraw, and you are paid in USDT on the TON network or in Telegram Stars. Your earnings reach your balance automatically when a wallet-backed task ends, and a withdrawal is one request from 10 USDT: the platform does the rest — [how withdrawals work](/en/help/darebay-withdrawals), [the fees](/en/help/what-commission).
+DareBay's side: its tasks pay a rate set by each task per 1,000 eligible views, and the per-task cap, when used <!-- source: https://darebay.com/en/earnings/how-much-clipping-pays 2026-09-24 -->. It takes nothing out of a task payout, the only fee is 10% (default) of what you withdraw, and you are paid in USDT on the TON network or in Telegram Stars. Your earnings reach your balance automatically when a wallet-backed task ends, and a withdrawal is one request from 10 USDT: the platform does the rest — [how withdrawals work](/en/help/darebay-withdrawals), [the fees](/en/help/what-commission).
 
 Wusul fits better when:
 

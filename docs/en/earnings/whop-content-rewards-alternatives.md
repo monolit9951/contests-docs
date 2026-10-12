@@ -11,7 +11,7 @@ hero:
   secondary: "Compare the alternatives"
   takeaways:
     - "<b>DareBay has no country list; Whop blocks Russia and Belarus.</b> Klipni is Russia-only; Prime Oracles covers Russia, Belarus and Kazakhstan."
-    - "<b>Read the fee before you cut anything.</b> DareBay takes 0% on contest payouts and 10% of what you withdraw; withdrawals start at 10 USDT."
+    - "<b>Read the fee before you cut anything.</b> DareBay takes 0% on contest payouts and 10% by default on withdrawals; check your account rate in the form. Requests start at 10 USDT."
     - "<b>Budgets run out everywhere, so keep two platforms open.</b> Clipping.net and Vyro carry the large streamer and creator campaigns."
     - "<b>An editor is not a marketplace:</b> OpusClip, Klap and Submagic help you cut clips; none pays for views."
 compare:
@@ -61,7 +61,7 @@ Vues and Reach.cat each have a full review that reads the platform's terms again
 
 **You are in a country Whop excludes.** DareBay keeps no country list: only people on sanctions lists are barred<!-- source: https://darebay.com/en/legal/terms 2026-09-24 -->, so clippers in Russia, Belarus, Ukraine, Kazakhstan and the rest of CIS are paid. It needs no followers, a wallet-backed contest locks its budget on the platform before the start, and you are paid in USDT on TON, or receive the payout in Telegram Stars<!-- source: https://darebay.com/en/help/darebay-withdrawals 2026-09-24 -->, so check that you can receive USDT where you live. Klipni pays in rubles but requires Russian self-employed status. Prime Oracles serves Russia, Belarus and Kazakhstan in USDT or USDC from $5. Vyro is not an option: its unsupported list includes Russia, Belarus, Ukraine, Uzbekistan, Armenia, Georgia and Moldova.
 
-**You want the lowest fee.** Klipni takes 5% of each approved payout; Vues publishes no fee rate and its pages disagree: its homepage puts its cut on the brand, its referral page illustrates a 10% fee on each clipper cash-out <!-- source: https://vues.app/affiliate 2026-09-18 -->; Reach.cat bills brands 10% on top of the budget <!-- source: https://reach.cat/blog/reach-cat-pricing-brands-2026/ 2026-09-18 -->, while its terms cite "approximately 10% on all CPM-based payouts" <!-- source: https://reach.cat/terms 2026-09-18 -->; DareBay takes 0% on contest payouts and 10% when you withdraw your balance to your wallet. Clipping.net and Vyro do not publish a clipper fee, which is a reason to ask before you clip.
+**You want the lowest fee.** Klipni takes 5% of each approved payout; Vues publishes no fee rate and its pages disagree: its homepage puts its cut on the brand, its referral page illustrates a 10% fee on each clipper cash-out <!-- source: https://vues.app/affiliate 2026-09-18 -->; Reach.cat bills brands 10% on top of the budget <!-- source: https://reach.cat/blog/reach-cat-pricing-brands-2026/ 2026-09-18 -->, while its terms cite "approximately 10% on all CPM-based payouts" <!-- source: https://reach.cat/terms 2026-09-18 -->; DareBay takes 0% on contest payouts and 10% by default when you withdraw your balance; an account can have another applicable rate, so check the form. Clipping.net and Vyro do not publish a clipper fee, which is a reason to ask before you clip.
 
 **You want the most campaigns after Whop.** Vyro carries campaigns from the largest US creators at $1–$2 per 1,000 views, with a 5,000-view minimum per post. Clipping.net runs streamer and celebrity campaigns at $0.20–$0.75 per 1,000 with a 1,000-view minimum per post. Use both, and keep Whop if it can pay you.
 
@@ -75,7 +75,7 @@ Yes. DareBay pays clippers in Russia, Belarus, Ukraine, Kazakhstan and the rest 
 
 ### Which Whop alternative has the lowest fee?
 
-Klipni publishes a 5% fee on approved payouts. Vues and Reach.cat give no single answer: each one's own pages disagree on whether its cut comes from the brand or from the clipper's payout <!-- source: https://vues.app/affiliate 2026-09-18 --> <!-- source: https://reach.cat/terms 2026-09-18 -->. DareBay charges 0% on contest payouts and 10% only when you withdraw: requests start at 10 USDT, and you see the amount to receive before you confirm. Clipping.net and Vyro do not publish a clipper fee.
+Klipni publishes a 5% fee on approved payouts. Vues and Reach.cat give no single answer: each one's own pages disagree on whether its cut comes from the brand or from the clipper's payout <!-- source: https://vues.app/affiliate 2026-09-18 --> <!-- source: https://reach.cat/terms 2026-09-18 -->. DareBay charges 0% on contest payouts; withdrawals carry a default 10% fee, with a possible account-specific rate. Requests start at 10 USDT, and the form shows the actual fee and amount to receive before confirmation. Clipping.net and Vyro do not publish a clipper fee.
 
 ### Can I use Whop and another platform at the same time?
 

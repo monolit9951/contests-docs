@@ -1,9 +1,7 @@
 ---
 title: 'Як обрати платформу для нарізок: дев''ять питань до першого ролика'
 description: 'Як обрати платформу для нарізок: допуск, поріг, стеля, комісії та розрахунок виплати на одному умовному ролику.'
-provenance:
-  snapshot_date: '2026-09-20'
-  source: darebay-prod
+provenance: { snapshot_date: "2026-09-20", source: "darebay-prod" }
 numbers_used:
 - ppv_cpm_band_low
 - ppv_cpm_band_high

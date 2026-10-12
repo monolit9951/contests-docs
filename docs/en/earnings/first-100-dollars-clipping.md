@@ -1,9 +1,7 @@
 ---
 title: 'Your first $100 from clipping: a 30-day plan'
 description: 'Plan your first $100 from clipping: choose a task, track payable attempts and distinguish gross earnings from money received.'
-provenance:
-  snapshot_date: '2026-08-23'
-  source: darebay-prod
+provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used:
 - ppv_cpm_band_low
 - ppv_cpm_band_high

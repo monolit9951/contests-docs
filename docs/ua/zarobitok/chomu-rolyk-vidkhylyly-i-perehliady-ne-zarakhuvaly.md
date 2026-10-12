@@ -1,9 +1,7 @@
 ---
 title: 'Чому ролик відхилили і перегляди не зарахували: десять причин'
 description: 'Відхилений ролик чи затримка грошей: точний статус, докази та окрема перевірка подання, лічильника й виплати.'
-provenance:
-  snapshot_date: '2026-08-23'
-  source: darebay-prod
+provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used:
 - ppv_cpm_median
 - ppv_min_views_threshold_live

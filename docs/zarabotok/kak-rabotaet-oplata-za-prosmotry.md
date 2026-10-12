@@ -1,9 +1,7 @@
 ---
 title: 'Как работает оплата за просмотры: как считают и когда платят'
 description: 'Как считают оплату за просмотры: порог, потолок работы, статус и разница между начислением, выплатой организатора и выводом.'
-provenance:
-  snapshot_date: '2026-08-23'
-  source: darebay-prod
+provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used:
 - ppv_cpm_band_low
 - ppv_cpm_band_high

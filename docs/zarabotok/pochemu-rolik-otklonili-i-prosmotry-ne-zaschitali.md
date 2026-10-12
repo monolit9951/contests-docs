@@ -1,9 +1,7 @@
 ---
 title: 'Почему ролик отклонили и просмотры не засчитали: десять причин'
 description: 'Отклонённый ролик или задержка денег: точный статус, доказательства и раздельная проверка подачи, счётчика и выплаты.'
-provenance:
-  snapshot_date: '2026-08-23'
-  source: darebay-prod
+provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used:
 - ppv_cpm_median
 - ppv_min_views_threshold_live

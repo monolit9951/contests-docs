@@ -1,9 +1,7 @@
 ---
 title: 'Why clips get rejected and views go unpaid: ten reasons'
 description: 'Rejected clips versus delayed earnings: inspect the exact status, collect evidence and separate submission, view counting and payment.'
-provenance:
-  snapshot_date: '2026-08-23'
-  source: darebay-prod
+provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used:
 - ppv_cpm_median
 - ppv_min_views_threshold_live

@@ -1,9 +1,7 @@
 ---
 title: 'How to choose a clipping platform: nine questions to ask first'
 description: Choose a clipping platform by eligibility, thresholds, caps, fees and settlement. Compare the complete payout on the same example clip.
-provenance:
-  snapshot_date: '2026-08-23'
-  source: darebay-prod
+provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used:
 - ppv_cpm_band_low
 - ppv_cpm_band_high

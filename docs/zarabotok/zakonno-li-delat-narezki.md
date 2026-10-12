@@ -1,9 +1,7 @@
 ---
 title: Законно ли делать нарезки - права, музыка, маркировка, налоги
 description: 'Законность нарезок: проверить права на исходник и музыку, согласовать коммерческое использование, рекламную публикацию и документы на оплату.'
-provenance:
-  snapshot_date: '2026-09-17'
-  source: darebay-prod
+provenance: { snapshot_date: "2026-09-17", source: "darebay-prod" }
 numbers_used: []
 competitor_sources:
 - platform: КонсультантПлюс

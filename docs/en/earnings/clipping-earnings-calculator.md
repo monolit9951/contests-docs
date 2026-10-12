@@ -1,9 +1,7 @@
 ---
 title: 'Clipping earnings calculator: how much can you make a month?'
 description: 'Clipping earnings calculator with example assumptions: compute clips separately, apply the threshold and cap, then estimate fees and batch costs.'
-provenance:
-  snapshot_date: '2026-08-23'
-  source: darebay-prod
+provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used:
 - ppv_cpm_band_low
 - ppv_cpm_band_high

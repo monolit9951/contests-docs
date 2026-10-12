@@ -1,9 +1,7 @@
 ---
 title: 'Перші 100 доларів на нарізках: план на 30 днів'
 description: 'Перші 100 доларів на нарізках: вибір завдання, облік оплачуваних спроб і розрахунок суми до отримання після комісії.'
-provenance:
-  snapshot_date: '2026-08-23'
-  source: darebay-prod
+provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used:
 - ppv_cpm_band_low
 - ppv_cpm_band_high

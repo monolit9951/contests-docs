@@ -1,9 +1,7 @@
 ---
 title: 'Заработок на нарезках фильмов и сериалов: авторские права'
 description: 'Заработок на кинонарезках: проверить разрешение на материал, отличить клейм от удаления и учесть блокировку Shorts с активной претензией.'
-provenance:
-  snapshot_date: '2026-08-15'
-  source: darebay-prod
+provenance: { snapshot_date: "2026-08-15", source: "darebay-prod" }
 numbers_used: []
 seo: true
 ---

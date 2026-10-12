@@ -1,9 +1,7 @@
 ---
 title: 'Clipping glossary: the terms every clipper should know'
 description: 'Clipping glossary: read task terms, distinguish counters, accruals and withdrawals, and follow one example from CPM to received money.'
-provenance:
-  snapshot_date: '2026-08-23'
-  source: darebay-prod
+provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used:
 - ppv_cpm_band_low
 - ppv_cpm_band_high

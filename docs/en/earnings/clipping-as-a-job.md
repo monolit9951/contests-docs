@@ -1,9 +1,7 @@
 ---
 title: Clipping as a job - what clipping jobs involve and pay
 description: 'Clipping as paid work: define the deliverable, compare fixed-price and per-view arrangements, and measure earnings over the full production cycle.'
-provenance:
-  snapshot_date: '2026-09-20'
-  source: darebay-prod
+provenance: { snapshot_date: "2026-09-20", source: "darebay-prod" }
 numbers_used:
 - ppv_cpm_min
 - ppv_cpm_median

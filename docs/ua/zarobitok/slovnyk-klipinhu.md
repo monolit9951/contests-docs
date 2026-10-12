@@ -1,9 +1,7 @@
 ---
 title: 'Словник кліпінгу: терміни нарізальника простими словами'
 description: 'Словник кліпінгу: умови завдання, лічильники, нарахування та виведення. Приклад від ставки CPM до отриманих грошей.'
-provenance:
-  snapshot_date: '2026-08-23'
-  source: darebay-prod
+provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used:
 - ppv_cpm_band_low
 - ppv_cpm_band_high

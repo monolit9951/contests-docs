@@ -1,9 +1,7 @@
 ---
 title: Робота нарізальником - як заробляти на нарізках відео
 description: 'Робота нарізальником: умови замовлення, фіксована ціна й оплата за перегляди, портфоліо та дохід за повний робочий цикл.'
-provenance:
-  snapshot_date: '2026-08-23'
-  source: darebay-prod
+provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used:
 - ppv_cpm_min
 - ppv_cpm_median

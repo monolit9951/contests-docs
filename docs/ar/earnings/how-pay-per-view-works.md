@@ -1,9 +1,7 @@
 ---
 title: 'كيف يعمل الدفع مقابل المشاهدات: الاحتساب والصرف'
 description: كيف تُحسب المشاهدات المؤهلة، ويُطبق الحد والسقف، وتختلف التسوية المباشرة عن السحب من رصيد المنصة. مثال حسابي واضح.
-provenance:
-  snapshot_date: '2026-09-18'
-  source: darebay-prod
+provenance: { snapshot_date: "2026-09-18", source: "darebay-prod" }
 numbers_used:
 - ppv_cpm_band_low
 - ppv_cpm_band_high

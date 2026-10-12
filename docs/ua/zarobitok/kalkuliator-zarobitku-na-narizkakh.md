@@ -1,9 +1,7 @@
 ---
 title: 'Калькулятор заробітку на нарізках: скільки вийде на місяць'
 description: 'Калькулятор заробітку на нарізках: окремий розрахунок роликів, поріг, стеля, комісія й витрати партії на прикладі.'
-provenance:
-  snapshot_date: '2026-08-23'
-  source: darebay-prod
+provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used:
 - ppv_cpm_band_low
 - ppv_cpm_band_high

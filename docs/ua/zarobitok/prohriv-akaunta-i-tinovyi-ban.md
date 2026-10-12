@@ -1,9 +1,7 @@
 ---
 title: 'Прогрів акаунта і тіньовий бан: як перевірити падіння переглядів'
 description: 'Падіння переглядів і тіньовий бан: статус акаунта, порівняння публікацій та допуск роботи до оплати без міфів про прогрів.'
-provenance:
-  snapshot_date: '2026-08-23'
-  source: darebay-prod
+provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used:
 - ppv_cpm_band_low
 - ppv_cpm_band_high

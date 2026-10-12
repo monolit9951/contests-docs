@@ -1,9 +1,7 @@
 ---
 title: Де брати замовлення на нарізки - біржа нарізок
 description: 'Де брати замовлення на нарізки: прямі клієнти, агенції та біржа завдань. Пропозиція, права на вихідник і перевірка оплати.'
-provenance:
-  snapshot_date: '2026-08-23'
-  source: darebay-prod
+provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used:
 - ppv_cpm_min
 - ppv_cpm_median

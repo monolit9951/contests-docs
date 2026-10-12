@@ -1,9 +1,7 @@
 ---
 title: 'Как выбрать платформу для нарезок: девять вопросов'
 description: 'Как выбрать платформу для нарезок: допуск, порог, потолок, комиссии и расчёт выплаты на одном условном ролике.'
-provenance:
-  snapshot_date: '2026-09-20'
-  source: darebay-prod
+provenance: { snapshot_date: "2026-09-20", source: "darebay-prod" }
 numbers_used:
 - ppv_cpm_band_low
 - ppv_cpm_band_high

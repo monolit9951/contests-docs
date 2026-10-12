@@ -1,9 +1,7 @@
 ---
 title: Как делать нарезки - выбор момента, монтаж, субтитры
 description: 'Как делать нарезки: выбрать момент, собрать вертикальный кадр и проверить экспорт, субтитры, звук и условия задания перед публикацией.'
-provenance:
-  snapshot_date: '2026-08-15'
-  source: darebay-prod
+provenance: { snapshot_date: "2026-08-15", source: "darebay-prod" }
 numbers_used: []
 seo: true
 ---

@@ -1,9 +1,7 @@
 ---
 title: 'How to make $1,000 a month clipping: the arithmetic'
 description: 'Work backwards from a $1,000 clipping target: gross versus net, payable clips, attempt rate and the hours required.'
-provenance:
-  snapshot_date: '2026-08-23'
-  source: darebay-prod
+provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used:
 - ppv_cpm_band_low
 - ppv_cpm_band_high

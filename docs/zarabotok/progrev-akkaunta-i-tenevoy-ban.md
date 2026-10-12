@@ -1,9 +1,7 @@
 ---
 title: 'Прогрев аккаунта и теневой бан: как проверить падение просмотров'
 description: 'Падение просмотров и теневой бан: статус аккаунта, сравнение публикаций и допуск работы к оплате без мифов о прогреве.'
-provenance:
-  snapshot_date: '2026-08-23'
-  source: darebay-prod
+provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used:
 - ppv_cpm_band_low
 - ppv_cpm_band_high

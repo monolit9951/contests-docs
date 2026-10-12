@@ -1,9 +1,7 @@
 ---
 title: Where to find clipping work and clipping jobs for beginners
 description: 'Where to find clipping work: direct clients, agencies and task boards, with a proposal checklist, source permissions and payment checks.'
-provenance:
-  snapshot_date: '2026-08-23'
-  source: darebay-prod
+provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used:
 - ppv_cpm_min
 - ppv_cpm_median

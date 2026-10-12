@@ -1,9 +1,7 @@
 ---
 title: 'Что такое клиппинг: словарь терминов нарезчика простыми словами'
 description: 'Словарь клиппинга: условия задания, счётчики, начисления и вывод. Один пример от ставки CPM до полученных денег.'
-provenance:
-  snapshot_date: '2026-08-23'
-  source: darebay-prod
+provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used:
 - ppv_cpm_band_low
 - ppv_cpm_band_high

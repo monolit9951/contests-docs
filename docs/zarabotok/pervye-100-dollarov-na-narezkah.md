@@ -1,9 +1,7 @@
 ---
 title: 'Первые 100 долларов на нарезках: план на 30 дней'
 description: 'Первые 100 долларов на нарезках: выбор задания, учёт оплаченных попыток и расчёт суммы к получению после комиссии.'
-provenance:
-  snapshot_date: '2026-08-23'
-  source: darebay-prod
+provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used:
 - ppv_cpm_band_low
 - ppv_cpm_band_high

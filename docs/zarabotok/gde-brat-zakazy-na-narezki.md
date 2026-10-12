@@ -1,9 +1,7 @@
 ---
 title: Где брать заказы на нарезки - биржа нарезок
 description: 'Где брать заказы на нарезки: прямые клиенты, агентства и витрина заданий. Предложение, права на исходник и проверка оплаты.'
-provenance:
-  snapshot_date: '2026-08-23'
-  source: darebay-prod
+provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used:
 - ppv_cpm_min
 - ppv_cpm_median

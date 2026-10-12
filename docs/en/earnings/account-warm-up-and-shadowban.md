@@ -1,9 +1,7 @@
 ---
 title: 'Account warm-up and shadowban: diagnose low views'
 description: 'Low views and shadowban: check account notices, compare similar posts and separate reach from task eligibility.'
-provenance:
-  snapshot_date: '2026-08-23'
-  source: darebay-prod
+provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used:
 - ppv_cpm_band_low
 - ppv_cpm_band_high

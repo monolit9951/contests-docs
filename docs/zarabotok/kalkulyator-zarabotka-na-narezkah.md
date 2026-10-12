@@ -1,9 +1,7 @@
 ---
 title: 'Калькулятор заработка на нарезках: сколько выйдет в месяц'
 description: 'Калькулятор заработка на нарезках: отдельный расчёт роликов, порог, потолок, комиссия и расходы партии на примере.'
-provenance:
-  snapshot_date: '2026-08-23'
-  source: darebay-prod
+provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used:
 - ppv_cpm_band_low
 - ppv_cpm_band_high

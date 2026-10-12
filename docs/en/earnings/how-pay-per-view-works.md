@@ -1,9 +1,7 @@
 ---
 title: 'How pay-per-view works: how views are counted and paid'
 description: 'How pay-per-view counts eligible views: threshold, per-clip cap, task status and the difference between an accrual and a received payment.'
-provenance:
-  snapshot_date: '2026-08-23'
-  source: darebay-prod
+provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used:
 - ppv_cpm_band_low
 - ppv_cpm_band_high

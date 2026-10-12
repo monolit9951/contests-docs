@@ -5,14 +5,15 @@ import { useData } from 'vitepress'
 import { computed } from 'vue'
 import { sourceAnchor, sourceLabel } from '../../links'
 import { LANDING_COPY, localeOf } from './copy'
-import { DEFAULT_COLUMNS, comparisonUpdated, methodSources, pick } from './platforms'
+import { DEFAULT_COLUMNS, comparisonSnapshotDate, methodSources, pick } from './platforms'
 
 const { frontmatter, lang } = useData()
 const loc = computed(() => localeOf(lang.value))
 const copy = computed(() => LANDING_COPY[loc.value])
 const paragraphs = computed(() => (frontmatter.value.method ?? []) as string[])
-// The same date the hero prints: a page whose figures were re-read (`hero.updated`) says so here too.
-const updated = computed(() => comparisonUpdated(frontmatter.value))
+// A source snapshot is independent of the article's latest reader-visible edit.
+// Preserve the original source-check date; changing the article does not recheck its figures.
+const snapshotDate = computed(() => comparisonSnapshotDate(frontmatter.value))
 const cfg = computed(() => (frontmatter.value.compare ?? {}) as { ids?: string[]; columns?: string[] })
 const ids = computed(() => cfg.value.ids ?? [])
 // Same columns the table above renders, so a per-country or page-only source (`payoutSpeed`) is
@@ -30,7 +31,7 @@ const sources = computed(() => methodSources(pick(ids.value), columns.value, loc
     <div class="lp-method">
       <div>
         <p v-for="(t, i) in paragraphs" :key="i">{{ t }}</p>
-        <p class="lp-muted" style="font-size:13px">{{ copy.snapshotNote }} {{ copy.updated }}: <time :datetime="updated">{{ updated }}</time>.</p>
+        <p class="lp-muted" style="font-size:13px">{{ copy.snapshotNote }} {{ copy.snapshotDate }}: <time :datetime="snapshotDate">{{ snapshotDate }}</time>.</p>
       </div>
       <div>
         <span class="lp-kicker" style="display:block;margin-bottom:10px">{{ copy.sources }}</span>

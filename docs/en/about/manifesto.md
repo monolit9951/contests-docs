@@ -1,7 +1,7 @@
 ---
 title: "The DareBay manifesto: what we pay for and what we promise"
 description: "The DareBay manifesto: why results beat metrics, how winners are picked, what the platform will not tolerate and what it commits to in return."
-provenance: { snapshot_date: "2026-08-15", source: "darebay-prod" }
+provenance: { snapshot_date: "2026-10-12", source: "darebay-prod" }
 numbers_used: []
 ---
 
@@ -60,7 +60,7 @@ and the same product. Come in whichever way suits you, the cycle is the same.
   fits your contest and lock it in before the start.
 - **[Fees](/en/help/what-commission) are separated by operation.** Contest creation
   and top-ups currently carry 0%, the store carries 8%, and withdrawal to your
-  wallet carries 10% of the requested amount, from a 10 USDT minimum. The amount
+  wallet carries 10% (default) of the requested amount, from a 10 USDT minimum. The amount
   you receive, fee already deducted, is shown before confirmation.
 - **A locked budget beats a promise.** A wallet-backed prize is locked the moment a contest
   goes live and it sits with the platform for the whole run. The buyer cannot
@@ -125,3 +125,9 @@ reward method of a particular contest and is fulfilled separately.
 
 *This is version 1 of the manifesto. It will change as we learn.
 When it changes, we will say exactly what changed.*
+
+## Check a principle against an actual contest
+
+Compare one task's published requirement, submitted result and reward record. For pay per view, check the counter and calculation parameters; for organizer selection, check the announced criteria. The word “fair” does not replace that comparison.
+
+Start a money question with funding: was a wallet-backed pool deposited, or does the organizer pay directly? Assess the obligation within that mode rather than relying on a promise about another kind of contest.

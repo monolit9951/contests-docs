@@ -1,7 +1,7 @@
 ---
 title: Is DareBay a scam? Checking it against the fraud patterns
 description: "Scam or not: DareBay put through the tells of a fake earning platform. No entry fee, no unlock transfer, no income promises, a rate fixed at the start."
-provenance: { snapshot_date: "2026-08-15", source: "darebay-prod" }
+provenance: { snapshot_date: "2026-10-12", source: "darebay-prod" }
 numbers_used: []
 seo: true
 ---
@@ -10,7 +10,7 @@ seo: true
 
 No. But the word "no" is worth nothing until you can check it, so every point below is one you can check yourself. Start with the mechanics: in a wallet-backed contest the budget is charged from the organizer and locked against that contest **before** anyone picks the task up, the rate per 1000 views and the view threshold sit on the contest card before you edit a single frame, and the sum you are owed is worked out by formula from a counter neither side can type into.
 
-The money side is just as checkable: **0% on contest payouts; 10% only when you withdraw**, deducted inside the request, with the amount to receive shown before you confirm. DareBay never asks you to pay anything up front.
+The money side is just as checkable: **0% on contest payouts; 10% (default) only when you withdraw**, deducted inside the request, with the amount to receive shown before you confirm. DareBay never asks you to pay anything up front.
 
 ## The tells of a fake earning platform
 
@@ -19,7 +19,7 @@ Fraud in this niche is not creative. It reuses the same five moves, and they are
 | The tell | What it looks like | DareBay |
 |---|---|---|
 | Pay to start | A deposit, an "activation", a paid access tier | Entry is free. No deposit, no access charge, no follower minimum |
-| Pay to get paid | A transfer to an outside wallet to "unlock" or "verify" a prize | Never. The only fee is 10% of a withdrawal request, deducted inside it, and the form shows the amount to receive before you confirm; nothing is paid up front |
+| Pay to get paid | A transfer to an outside wallet to "unlock" or "verify" a prize | Never. The only fee is 10% (default) of a withdrawal request, deducted inside it, and the form shows the amount to receive before you confirm; nothing is paid up front |
 | Money for nothing | Income for signing up, clicking or inviting friends | Payment follows a result: counted views, votes, or a judged decision. No result, no money |
 | Terms that move | The rate or the rules change once the work is done | The rate and the threshold are fixed when the contest is created. After launch the buyer can change the cap per submission (never below what a clip has already earned), move the deadline or top up the budget |
 | Nobody to ask | No name, no address, no human | The platform is run by its founder, Ruslan, reachable at [@ruslanbwork](https://t.me/ruslanbwork) |
@@ -36,11 +36,17 @@ DareBay also supports contests without a locked pool, where the organizer settle
 - **Moderation that protects your share.** A submission with suspicious view dynamics is flagged and goes on hold until it is reviewed: a pause, not a verdict, so suspicious growth does not eat the budget meant for honest clips.
 - **A guarantor, not a smart contract.** DareBay is an intermediary and guarantor holding real money, and in a wallet-backed contest the budget is locked on the platform before the start. It earns trust for reasons you can check, not because a blockchain is involved.
 
+## Check a real task rather than a screenshot of a promise
+
+Open the task at the platform address yourself, rather than through an unknown “manager.” Find its payment and funding terms and compare them with the message you received. A promise of fixed income for registering differs from a card paying views on submitted work.
+
+Check an unlock-payment request through the product form and support. Keep the link and message, but do not share a password, login code or wallet key. DareBay in an avatar does not establish the sender's authority.
+
 ## Frequently asked questions
 
 ### Do I have to send money to unlock a prize?
 
-No, and nobody legitimate will ever ask you to. Creating, entering and the budget split are free; the platform's only earning on contests is 10% of the amount you request when you withdraw, deducted inside the request, and the request form shows the amount to receive before you confirm. Nothing is ever paid up front. A message asking you to transfer money to an unknown wallet first is not part of this product, whoever appears to be sending it.
+No, and nobody legitimate will ever ask you to. Creating, entering and the budget split are free; the platform's only earning on contests is 10% (default) of the amount you request when you withdraw, deducted inside the request, and the request form shows the amount to receive before you confirm. Nothing is ever paid up front. A message asking you to transfer money to an unknown wallet first is not part of this product, whoever appears to be sending it.
 
 ### Is there an entry fee or a deposit?
 

@@ -1,7 +1,7 @@
 ---
 title: "How many TikTok accounts can you have? Limits and rules"
 description: "Multiple TikTok accounts are allowed with no published cap, but each needs its own email or phone. Rules on reposts, automation and bans, as of September 2026."
-provenance: { snapshot_date: "2026-09-29", source: "darebay-prod" }
+provenance: { snapshot_date: "2026-10-12", source: "darebay-prod" }
 seo: true
 landing: true
 sources: visible
@@ -21,6 +21,12 @@ cta:
 TikTok publishes no maximum number of accounts: its help center says you can add accounts to your device and switch between them in the app <!-- source: https://www.tiktok.com/support/faq_detail?id=7581821549574052364 2026-09-29 -->. Running multiple TikTok accounts means one person or team operating several profiles, each with its own login, and TikTok's Community Guidelines allow it, naming fan content and creative expression as examples, but not "to deceive others or break the rules" <!-- source: https://www.tiktok.com/safety/en/policies-and-engagement/integrity-authenticity 2026-09-29 -->.
 
 The real limits are logins, what each account posts and how a ban spreads. Below is what TikTok's own pages said on September 29, 2026 (the Community Guidelines version effective September 24, 2026), and how DareBay, which publishes this guide, pays when one person runs many accounts.
+
+## Keep an account register that makes mistakes visible
+
+Give every account a row containing its owner, recovery contact, niche, permitted source footage and most recent public post. Keep the recovery details private; the production sheet needs an owner and contact route, not passwords. Give every edit a version ID and record which account published it.
+
+When an account loses reach, compare its own recent posts and platform notices before moving the same clips elsewhere. Zero task earnings, a private upload and a recommendation restriction are different problems. A version ID also helps you find accidental duplicate uploads without relying on filenames alone. Start with the number of accounts you can review after publication, then add another when editing and checks fit the available time. Neither separate devices nor a larger register replaces the platform's rules.
 
 ## What TikTok's rules say about several accounts
 
@@ -72,7 +78,7 @@ On DareBay you keep one account, as the [terms](/en/legal/terms) require, and co
 
 Every clip on every account is its own entry, with its own counted views and its own payout. The task's view threshold, and its per-clip ceiling if it sets one, apply to each clip separately, and each task sets its rate.
 
-The task rule follows the same logic: a version goes out once, on one account, and the same original reaches your next account as a new version. In offer tasks DareBay hands out ready clips with a separate version for every account, and a version builder, or video uniquifier, makes versions of the task's original, with the layout and edit strength up to you. Only live views are paid: empty placeholder accounts and botted views earn nothing, and [why clips get rejected](/en/earnings/why-clips-get-rejected) lists every reason a clip can be turned down.
+The task rule follows the same logic: a version goes out once, on one account, and the same original reaches your next account as a new version. Where enabled in an offer task, DareBay provides ready clips and tools for account versions, and a version builder, or video uniquifier, makes versions of the task's original, with the layout and edit strength up to you. Only live views are paid: empty placeholder accounts and botted views earn nothing, and [why clips get rejected](/en/earnings/why-clips-get-rejected) lists every reason a clip can be turned down.
 
 Running a dozen accounts or a team? [Message Ruslan on Telegram](https://t.me/ruslanbwork) with your platforms and account count, and we'll help you pick a task and plan a version for each account. New tasks and answers are posted in the [DareBay Discord](https://discord.gg/unCNzuhcHP), and everything DareBay offers a farm is on the [content farm page](/en/content-farm/).
 

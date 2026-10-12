@@ -1,22 +1,29 @@
 ---
 title: "Earning from clipping: what it pays and how to start"
-description: "Clipper earnings on DareBay run $1.00 to $10.00 per 1000 views, up to $500 a clip, with withdrawals to your wallet from 10 USDT. Every guide, mapped."
-provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
-numbers_used: [ppv_cpm_min, ppv_cpm_median, ppv_cpm_max, ppv_min_views_threshold_live, ppv_max_per_work_typical]
+description: "How clipping pays: choose a brief, calculate eligible views and budget limits, submit a clip and receive payment. Platform reviews, calculators and first steps."
+provenance: { snapshot_date: "2026-10-12", source: "darebay-prod" }
+numbers_used: []
 ---
 
 # Earning from clipping: what it pays and how to start
 
-You know what one clip is worth before you open the editor, because the price is printed on the card. Rates run from **$1.00 to $10.00 per 1000 views**, and each task sets its own. A submission joins the budget split once it clears the threshold, and the view threshold is set by each task (system default 1000 views) - check the card in the catalog. The cap on one submission, where the task sets one, runs **up to $500**<!-- source: https://darebay.com/en/earnings/how-much-clipping-pays 2026-09-24 -->. The buyer sets them when the contest is created; the rate and the threshold do not change after launch, and the cap per clip can only be raised, so nothing about the money turns into a surprise once you start cutting.
+A clipper turns permitted footage into a short video and publishes it where the brief accepts submissions. Pay depends on the buyer's rate, eligible-view threshold, any per-clip cap and the remaining budget. DareBay has no single platform-wide rate. Read a live card in the [task catalog](/en/earn/clips) before using an example from a guide as a forecast.
 
-The calculation is automatic: an independent counter reads the published view counter on the site where you posted, works out the sum and records it against you, and nobody types figures in by hand. The money is there before you start: in a wallet-backed contest the budget is frozen on the platform before you take the task, and a recorded calculation cannot be replayed after the fact.
+Before editing, check footage rights, eligible accounts and platforms, the required content and the payment mode. A wallet-backed contest locks its budget against the contest on DareBay. In manual mode the organizer pays creators directly; read those payment terms separately.
 
-A wallet-backed contest credits your earnings to your balance when it ends, or earlier with Claim now where the card shows it<!-- source: https://darebay.com/en/help/darebay-withdrawals 2026-09-24 -->. From 10 USDT you request a withdrawal, and the platform does the rest.
+Entry is free for creators and the contest payout fee is 0%. Withdrawing an already credited balance is a separate operation: the minimum request is 10 USDT before fees, and the standard withdrawal fee is 10%. At that standard rate a 10 USDT request sends 9 USDT. The confirmation screen shows your actual fee and net amount. Recorded earnings, an available balance and a received transfer are different stages.
 
-Live tasks sit in the [clip earnings catalogue](/en/earn/clips): the rate, the threshold, any cap and the publishing site are all on the contest card before you submit, and taking part costs a clipper nothing. The contest names the site - view stats are counted for TikTok, YouTube, Instagram and the other sites named in the task.
+## Choose a route for the question you have
 
-## Where to start
+| Your question | Start here | What to work out |
+|---|---|---|
+| What does a clipper actually do? | [Clipping as a job](/en/earnings/clipping-as-a-job) | The work from footage to a submitted public link |
+| Can this task pay for my time? | [Clipping pay](/en/earnings/how-much-clipping-pays) and the [calculator](/en/earnings/clipping-earnings-calculator) | Your assumptions, budget limits and fees |
+| Which platform should I try? | [Where to find work](/en/earnings/where-to-find-clipping-work) and [platform comparison](/en/earnings/best-clipping-platforms) | Eligibility, footage rights and the route to a payout |
+| Why was a clip rejected? | [Rejection reasons](/en/earnings/why-clips-get-rejected) | A check against the brief and the published clip |
 
-If this is your first time in the section, the route is short. [Clipping as a job](/en/earnings/clipping-as-a-job) - what the work is as a whole and what it asks of you. [How much you can earn from clips](/en/earnings/how-much-clipping-pays) - how to work out your own figure before you open the editor. [Where to find clipping work](/en/earnings/where-to-find-clipping-work) - where the first brief comes from and what to read on the card. When you get to the edit, [tools for Reels, Shorts and TikTok](/en/tools/) lists editors, AI clippers and caption apps with prices, and once you run several accounts, the [content farm](/en/content-farm/) page shows how they get paid per view.
+## Count the result after acceptance
 
-- [DareBay at a glance](/en/about/darebay-at-a-glance) - the fact sheet: rates, fees, payouts, countries.
+A public view counter is not a promise that every view will be paid. A submission must meet the brief and pass checks; the threshold, cap and budget still apply. Wallet-backed tasks credit earnings at completion, with Claim now available only where the task shows it. [How pay-per-view works](/en/earnings/how-pay-per-view-works) explains the calculation.
+
+Use the [tools catalog](/en/tools/) for editing and captions. Move to [several accounts](/en/content-farm/) after you have an accepted clip and understand the payout: more accounts add tracking work rather than guaranteed reach. [Help](/en/help/) covers fees and payment modes; [DareBay at a glance](/en/about/darebay-at-a-glance) records facts about the platform.

@@ -1,98 +1,51 @@
 ---
-title: "Account warm-up and shadowban: a 7-day plan and what to do"
-description: "Warm-up is a week of acting like a normal viewer before posting; a shadowban is lost reach after duplicates or fake views. A 7-day plan and the fixes."
-provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
-numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_cpm_median, ppv_min_views_threshold_live, ppv_max_per_work_typical]
+title: 'Account warm-up and shadowban: diagnose low views'
+description: 'Low views and shadowban: check account notices, compare similar posts and separate reach from task eligibility.'
+provenance:
+  snapshot_date: '2026-08-23'
+  source: darebay-prod
+numbers_used:
+- ppv_cpm_band_low
+- ppv_cpm_band_high
+- ppv_cpm_median
+- ppv_min_views_threshold_live
+- ppv_max_per_work_typical
 competitor_sources:
-  - { platform: "YouTube", url: "https://support.google.com/youtube/answer/3399767", date: "2026-09-04" }
+- platform: YouTube
+  url: https://support.google.com/youtube/answer/3399767
+  date: '2026-09-04'
 seo: true
 landing: true
 hero:
-  kicker: "Guide · 2026"
-  lede: "Your first clip from a new account often starts from zero distribution, and not because it is weak: the platform does not yet know who to show it to. A week of warm-up gives it that data. Here is the plan day by day, the signs and causes of a shadowban, what to do when views drop, and where all of it runs into the task threshold that the money sits behind."
+  kicker: Guide · 2026
+  lede: 'Low views and shadowban: check account notices, compare similar posts and separate reach from task eligibility.'
   takeaways:
-    - "<b>Warm-up is data for the algorithm, not a trick.</b> For a week, behave like an ordinary viewer on one topic."
-    - "<b>A shadowban is a symptom, not a verdict.</b> Reach drops after duplicates, re-uploads, bought views and mass actions."
-    - "<b>The order of fixes: pause, clear duplicates, new material.</b> A new account is the last resort, if reach does not return."
-    - "<b>A task does not forgive fake views.</b> Bought views put the submission on hold, and moderation removes it."
+  - “Shadowban” is a creator's label for reduced distribution. A low counter alone cannot establish a restriction. Check the post's visibility, account notices and traffic sources before deleting work or buying a warm-up service.
 cta:
-  title: "Account warm? Take your first task"
-  lede: "A DareBay task card names its site before the start, so you can warm the account on exactly the topic you plan to clip. A week by the plan above, then one clip, one link, and a counter the platform reads for you."
+  title: 'Account warm-up and shadowban: diagnose low views'
+  lede: 'Low views and shadowban: check account notices, compare similar posts and separate reach from task eligibility.'
 ---
 
-## What warm-up is and why a clipper needs it
+## Diagnose low reach before changing accounts
 
-To a platform a new account is an unknown: no viewing history, no reactions, no sign of a live person. Warm-up is the first few days when you behave like an ordinary viewer: watching clips on your topic to the end, following, liking, replying in comments, and only then posting. The goal is not to fool the algorithm but to feed it data: the topic, the audience, the person behind the account.
+“Shadowban” is a creator's label for reduced distribution. A low counter alone cannot establish a restriction. Check the post's visibility, account notices and traffic sources before deleting work or buying a warm-up service.
 
-A clipper needs this for a prosaic reason: a task pays for counted views, and a clip from an account with no history tends to start from zero distribution and never reach the threshold. The second rule matters more than the first: one topic per account. An account that mixes streamer clips, recipes and crypto is one the platform cannot read, so it shows it to nobody.
+TikTok offers an account check through TikTok Studio or the Safety Center<!-- source: https://support.tiktok.com/en/safety-hc/account-and-user-safety/account-status 2026-10-12 -->. Recommendation-ineligibility notices identify affected content and offer an appeal<!-- source: https://support.tiktok.com/en/safety-hc/account-and-user-safety/why-is-my-account-not-being-recommended 2026-10-12 -->.
 
-## The 7-day warm-up plan
+## Compare posts at the same age
 
-The plan describes actions, not reach: nobody promises how much distribution a platform will give. The first posts are not from a task, so you do not spend task material on an account that has shown nothing yet.
+Record publication time, topic, duration, traffic sources, retention and restriction notices. Compare posts over the same elapsed time. A two-hour-old upload and a week-old success have had different opportunities to find viewers.
 
-| Day | What you do | What you post | What you do not do |
-|---|---|---|---|
-| 1 | Sign up with a real number, add an avatar and an on-topic bio, half an hour of the feed on your topic | Nothing | Links in the bio, mass follows |
-| 2 | Watch topic clips to the end, like and follow the creators, a couple of useful comments | Nothing | Unfollowing in bulk, spam comments |
-| 3 | The same plus saves and shares, prepare the first clip | One clip in the evening: the account's topic, your own edit | Reposting someone else's watermarked clip |
-| 4 | Reply to comments, check the traffic source in analytics | One clip | Deleting the first clip because it did not take off |
-| 5 | Feed and reactions on the topic, a second editing batch | One or two clips | Changing topic, five clips in a day |
-| 6 | Check the profile is public, take a task on the account's topic | A task clip, with the link sent to the task the same day | Off-topic hashtags, bought views |
-| 7 | See which clips travelled beyond your followers, plan the week | One clip | Logging in from new devices and countries in a row |
+If one post is restricted, use its stated reason. If several posts lose recommendations, check what topic or format they share. If recommendation traffic still arrives but viewers leave, examine the opening. If the public counter differs from the task, check the last sync. Save URLs and screenshots before an appeal or edit.
 
-If the account is old and active, a warm-up from scratch is unnecessary: a week of posting on one topic before the first task is enough.
+## Prepare a working account without a promised unlock date
 
-## Shadowban: signs and causes
+Secure access, complete an accurate profile, learn the publishing tools and verify that your own permitted test upload is public. Seven days of watching and liking do not establish a guaranteed distribution unlock. A week can be an observation window.
 
-Officially the platforms do not use the term: they talk about limited recommendations and content that is not eligible for the feed. It looks the same either way: only followers see the clips, the share of traffic from recommendations in analytics falls to nothing, the clip cannot be found by hashtag, and the counter slides from the usual thousands to dozens.
+Publish a manageable batch and change one editorial choice at a time. Replacing the device, topic, caption and schedule together makes the comparison harder to interpret. Follow a platform's appeal route when it gives one; avoid inventing a fixed recovery period.
 
-- **Duplicates and reposts.** The same clip on several accounts, a re-upload after deletion, someone else's watermarked clip: the platform sees the match and does not recommend the copy.
-- **Fake engagement.** Bought views arrive in a burst from bots; the platform strips them out and marks the account. YouTube says it outright: content with fake engagement is removed, and three strikes within 90 days can end in the channel being terminated <!-- source: https://support.google.com/youtube/answer/3399767 2026-09-04 -->.
-- **Mass actions.** Hundreds of follows and unfollows a day, identical comments, a dozen uploads in a row: that is how bots behave, and the account gets a bot's restrictions.
-- **Rule violations.** Someone else's music, prohibited topics, misleading captions: some of those clips the platform simply does not show, and the warnings accumulate.
-- **Technical signals.** A dozen accounts on one phone, links to dubious sites on day one, hopping between countries over a VPN.
+## Check task status independently
 
-## What to do when views drop
+A clip below the task threshold can have no account restriction. A widely viewed clip can still fail the brief. Review acceptance, counted views and sync separately in [why clips get rejected](/en/earnings/why-clips-get-rejected).
 
-1. **Pause.** A few days without posting and without mass deletions; keep watching the feed on your topic so the account stays alive.
-2. **Check for duplicates.** The same clip on another account, a re-upload, a copy of someone else's: remove the extra copies and keep one, and not the one already submitted to a task.
-3. **Change the material.** A different moment, a different format, subtitles, a new first second, your own footage instead of a repost. A clip that did not take off is not remade; the next one is made instead.
-4. **Audit violations.** Take down clips with platform warnings or someone else's music and leave the rest alone: a task clip must stay public until the payout.
-5. **A new account.** The last resort, if reach has not returned a couple of weeks after the pause and the clean-up: a new number, one topic from day one, a warm-up from scratch, and the old account stays alive until its task clips have been paid.
-
-## How this ties into pay-per-view tasks
-
-A task pays for a clip that clears the threshold, and the threshold is set by each task (system default 1,000 views) - check the card in the catalog - and then counts the whole counter. DareBay tasks pay $1–$10 per 1,000 views, set by each task, with a cap of up to $500 per clip<!-- source: https://darebay.com/en/earnings/how-much-clipping-pays 2026-09-24 -->. A hypothetical clip with 20,000 views at $1.00 makes `20,000 / 1,000 × $1.00 = $20.00`, while a clip under a restriction never reaches the threshold and earns nothing. Put your own numbers into the [clipping earnings calculator](/en/earnings/clipping-earnings-calculator).
-
-- **Fake views are rejected twice.** A jump in views inside a single sync tick sends the submission on hold, and moderation removes it with the reason "Fake views". Bought views do not lift a shadowban, but they do cost you the payout: more in [why clips get rejected](/en/earnings/why-clips-get-rejected).
-- **Several accounts and sites are legitimate.** Different clips on different accounts, each on its own topic, and on different sites: TikTok, Reels, Shorts. The same clip on two accounts is a duplicate both for the platform and for the task. Once the accounts are warm, [build a TikTok content farm step by step](/en/content-farm/how-to-build-a-tiktok-content-farm), with a separate version of every clip on each account. TikTok's own limits on logins, reposts and bans across accounts are collected in [how many TikTok accounts you can have](/en/content-farm/multiple-tiktok-accounts).
-- **Ready-made videos are already uniqueized.** In tasks with ready-made videos the platform gives every clipper their own copy with built-in uniqueization: layout, subtitles, crop, sound. A hundred clippers with one setup do not turn into a hundred reposts.
-- **Followers are not required.** A task pays for the clip's reach, not the size of the account; how that differs from a platform's creator programme is in [what TikTok pays for views](/en/earnings/tiktok-view-payouts). Claiming what has accrued is covered in [DareBay withdrawals](/en/help/darebay-withdrawals).
-
-## What never to do
-
-- Buy views, likes or followers: the platform strips them, the task rejects the clip, the money is gone.
-- Upload one clip to several accounts, or twice into one task.
-- Delete and re-upload "failed" clips in bulk hoping for a second start.
-- Run a dozen accounts from one phone on one script.
-- Put links to casinos, betting and the rest of the [prohibited content](/en/help/prohibited-content) list in the first days.
-- Change the account's topic every week.
-- Delete or hide a task clip before the payout: there will be no counter left to read.
-
-## Frequently asked questions
-
-### How many days should a new account warm up before the first task?
-
-A week, as in the plan above: two days without posting, then one on-topic clip a day, and a task on day six. If the account is old and has been posting regularly on the same topic, a few posts before the start are enough.
-
-### How do I tell a shadowban from a clip that simply flopped?
-
-A weak clip flops alone while its neighbours perform as usual. Under a restriction every clip in a row drops, traffic from recommendations disappears from analytics, and a hashtag search no longer finds the clip. Three or four clips in a row with dozens of views where thousands were normal is already a reason to pause.
-
-### Does deleting every clip and starting over on the same account help?
-
-No: mass deletion itself looks like suspicious behaviour, and the account's history does not go anywhere. Remove only clips with warnings and duplicates, leave the rest, and do not touch a task clip until the payout.
-
-### Do I need a separate account for every task?
-
-No, you need an account for every topic. Several tasks about one streamer or one game live comfortably on one account, while a crypto task next to streamer clips is better run from another.
+YouTube prohibits artificial engagement and can remove content or terminate a channel<!-- source: https://support.google.com/youtube/answer/3399767 2026-10-12 -->. Buying traffic adds a policy problem instead of testing an opening. Neither account preparation nor an appeal guarantees views or income.

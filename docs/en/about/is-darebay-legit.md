@@ -1,7 +1,7 @@
 ---
 title: Is DareBay legit? The terms, the fees and who runs it
 description: "Is DareBay legit? Terms sit on the task card before you edit, no contest fee, withdrawals to your wallet from 10 USDT, and a named operator answers."
-provenance: { snapshot_date: "2026-08-15", source: "darebay-prod-config" }
+provenance: { snapshot_date: "2026-10-12", source: "darebay-prod-config" }
 numbers_used: []
 seo: true
 ---
@@ -31,7 +31,7 @@ One detail worth knowing because it works in your favour: clearing the threshold
 
 ## What the platform charges
 
-Creating a contest and topping up its budget currently carry no fee, entering a contest is free for creators, and the budget split reaches your balance untouched. Withdrawing a credited balance costs **10% of the requested amount**, deducted inside the request, with a **10 USDT minimum request**: that is the platform's only earning on contests, and the form shows the amount to receive before you confirm.
+Creating a contest and topping up its budget currently carry no fee, entering a contest is free for creators, and the budget split reaches your balance untouched. Withdrawing a credited balance costs **10% (default) of the requested amount**, deducted inside the request, with a **10 USDT minimum request**: that is the platform's only earning on contests, and the form shows the amount to receive before you confirm.
 
 Nothing is ever a separate transfer, and nothing is ever sent in advance. The full breakdown by operation is on the [DareBay fees page](/en/help/what-commission).
 
@@ -40,6 +40,12 @@ Nothing is ever a separate transfer, and nothing is ever sent in advance. The fu
 The product is built and run by **Ruslan**, who writes the code and answers in public at [@ruslanbwork](https://t.me/ruslanbwork). Corrections to these pages go to the [DareBay Telegram channel](https://t.me/darebay_app) and reach the people who edit them.
 
 The same account works on darebay.com and inside Telegram. They are two doors into one product, not a website plus a lookalike app.
+
+## Separate platform terms from task terms
+
+Withdrawal fees and the minimum request concern an available balance. Publication network, authorized footage, rate and deadline belong to the selected task. Organizer-direct payment has its own details and does not mean the platform holds the organizer's money.
+
+Before your first clip, save the task link and terms you relied on. For a money question, identify the stage: acceptance, calculation, credit or withdrawal. This lets you check a specific obligation rather than relying on a general label about the platform.
 
 ## Frequently asked questions
 

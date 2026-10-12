@@ -19,8 +19,8 @@
         "en": "AI clipping"
       },
       "lede": {
-        "ru": "Нейросеть находит сильные моменты в длинной записи и режет их на вертикальные клипы с субтитрами. Тарифы считают минуты исходника или готовые клипы, поэтому сравнивай, сколько часов записи даёт месяц.",
-        "en": "AI clippers find the strongest moments in a long recording and cut them into captioned vertical clips. Plans count minutes of footage or finished clips, so compare how many hours a month you get."
+        "ru": "ИИ-сервисы предлагают вертикальные клипы из длинной записи. Лимит минут исходника и лимит готовых клипов это разные единицы: сравнивай число пригодных роликов и время исправления, а не выдуманную цену часа.",
+        "en": "AI tools propose vertical clips from a long recording. Footage minutes and generated clips are different units: compare usable output and correction time rather than deriving an hourly price from a clip limit."
       }
     },
     {
@@ -444,7 +444,7 @@
         "ru": "foreign-card",
         "en": "foreign-card"
       },
-      "priceCheckedAt": "2026-09-29",
+      "priceCheckedAt": "2026-10-12",
       "freeTier": {
         "ru": "60 кредитов в месяц, клипы до 1080p с водяным знаком, скачать можно в течение 3 дней",
         "en": "60 credits a month, clips up to 1080p with a watermark, exportable for 3 days"
@@ -488,6 +488,11 @@
           "field": "platforms, availability.en (Android app: US, UK, Canada, Australia, Germany, France, Spain, Brazil; English only)",
           "url": "https://help.opus.pro/docs/article/android-app-supported-unsupported-features",
           "date": "2026-09-29"
+        },
+        {
+          "field": "priceFrom, priceBadge (October price recheck; other fields retain their earlier sources)",
+          "url": "https://www.opus.pro/pricing",
+          "date": "2026-10-12"
         }
       ]
     },
@@ -512,7 +517,7 @@
         "ru": "foreign-card",
         "en": "foreign-card"
       },
-      "priceCheckedAt": "2026-09-29",
+      "priceCheckedAt": "2026-10-12",
       "freeTier": {
         "ru": "60 кредитов в месяц, экспорт 720p, хранение 3 дня; без водяного знака только в Creator",
         "en": "60 credits a month, 720p export, 3-day storage; no watermark only on Creator"
@@ -561,6 +566,16 @@
           "field": "platforms, availability.en (Google Play)",
           "url": "https://play.google.com/store/apps/details?id=ai.vizard.android",
           "date": "2026-09-29"
+        },
+        {
+          "field": "priceFrom, priceBadge (October price recheck; other fields retain their earlier sources)",
+          "url": "https://vizard.ai/pricing",
+          "date": "2026-10-12"
+        },
+        {
+          "field": "priceFrom (public plan data)",
+          "url": "https://elb-api.vizard.ai/hvizard-server-front/api/v1/subscription/list",
+          "date": "2026-10-12"
         }
       ]
     },
@@ -585,7 +600,7 @@
         "ru": "foreign-card",
         "en": "foreign-card"
       },
-      "priceCheckedAt": "2026-09-29",
+      "priceCheckedAt": "2026-10-12",
       "freeTier": {
         "ru": "Один ролик на пробу без карты",
         "en": "One video free to try, no card needed"
@@ -624,6 +639,11 @@
           "field": "freeTier",
           "url": "https://klap.app/",
           "date": "2026-09-29"
+        },
+        {
+          "field": "priceFrom, priceBadge (October price recheck; other fields retain their earlier sources)",
+          "url": "https://klap.app/pricing",
+          "date": "2026-10-12"
         }
       ]
     },
@@ -733,8 +753,8 @@
         "en": "Animated captions, hook titles and silence removal for shorts"
       },
       "priceFrom": {
-        "ru": "Starter $19 в месяц или $12 в месяц при оплате за год (15 видео до 2 минут)",
-        "en": "Starter $19/month or $12/month billed yearly (15 videos up to 2 minutes)"
+        "ru": "Starter $19 в месяц или $12 в месяц за год: 45 кредитов, эквивалент 15 видео до 2 минут; ИИ-функции используют кредиты",
+        "en": "Starter $19/month or $12/month billed yearly: 45 credits, shown as 15 videos up to 2 minutes; AI features use credits"
       },
       "priceBadge": {
         "ru": "от $12/мес",
@@ -744,7 +764,7 @@
         "ru": "foreign-card",
         "en": "foreign-card"
       },
-      "priceCheckedAt": "2026-09-29",
+      "priceCheckedAt": "2026-10-12",
       "freeTier": {
         "ru": "Бесплатного тарифа нет, попробовать можно без карты",
         "en": "No free plan; you can start without a card"
@@ -778,6 +798,11 @@
           "field": "affiliate",
           "url": "https://www.submagic.co/affiliate",
           "date": "2026-09-29"
+        },
+        {
+          "field": "priceFrom, priceBadge (October price recheck; other fields retain their earlier sources)",
+          "url": "https://www.submagic.co/pricing",
+          "date": "2026-10-12"
         }
       ]
     },
@@ -2351,8 +2376,8 @@
       },
       "url": "https://darebay.com/tasks",
       "whatFor": {
-        "ru": "В заданиях под офферы: готовый ролик, у каждого аккаунта своя версия",
-        "en": "In offer tasks: a ready clip, a separate version for every account"
+        "ru": "Готовые ролики там, где заказчик включил их в задании; требования к версии смотри в карточке",
+        "en": "Ready clips where the task enables them; check the card for required account versions"
       },
       "priceFrom": {
         "ru": "Бесплатно для участника задания",
@@ -2373,7 +2398,14 @@
       "source": {
         "url": "https://darebay.com/tasks",
         "date": "2026-09-29"
-      }
+      },
+      "sources": [
+        {
+          "field": "whatFor (current feature availability and limits)",
+          "url": "https://darebay.com/tasks",
+          "date": "2026-10-12"
+        }
+      ]
     },
     {
       "id": "darebay-uniqualizer",
@@ -2385,8 +2417,8 @@
       },
       "url": "https://darebay.com/tasks",
       "whatFor": {
-        "ru": "В заданиях под офферы: до 20 версий оригинала за раз, по одной на аккаунт",
-        "en": "In offer tasks: up to 20 versions of a task original per request, one per account"
+        "ru": "Версии оригинала задания с выбранной раскладкой и силой правок, если инструмент включён в карточке",
+        "en": "Versions of task originals with a chosen layout and edit strength, where the task enables the tool"
       },
       "priceFrom": {
         "ru": "Бесплатно для участника задания",
@@ -2407,7 +2439,14 @@
       "source": {
         "url": "https://darebay.com/tasks",
         "date": "2026-09-29"
-      }
+      },
+      "sources": [
+        {
+          "field": "whatFor (current feature availability and limits)",
+          "url": "https://darebay.com/tasks",
+          "date": "2026-10-12"
+        }
+      ]
     },
     {
       "id": "darebay-accounts",
@@ -2419,8 +2458,8 @@
       },
       "url": "https://darebay.com/tasks",
       "whatFor": {
-        "ru": "До 20 твоих аккаунтов в одно задание, все площадки вместе: новые ролики подтягиваются сами",
-        "en": "Up to 20 of your accounts per task across all platforms; new videos are pulled in for you"
+        "ru": "До 20 активных аккаунтов автора в одном задании; новые публикации обнаруживаются периодически",
+        "en": "Up to 20 active accounts per creator in one task; new publications are discovered periodically"
       },
       "priceFrom": {
         "ru": "Бесплатно для участника задания",
@@ -2441,7 +2480,14 @@
       "source": {
         "url": "https://darebay.com/tasks",
         "date": "2026-09-29"
-      }
+      },
+      "sources": [
+        {
+          "field": "whatFor (current feature availability and limits)",
+          "url": "https://darebay.com/tasks",
+          "date": "2026-10-12"
+        }
+      ]
     },
     {
       "id": "darebay-tracked-links",

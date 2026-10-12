@@ -19,7 +19,7 @@ hero:
   fork: { text: "Want creators posting about your product?", label: "For business →", to: "business" }
   takeaways:
     - "<b>The buyer pays.</b> Tasks pay per counted view on TikTok, Reels, Shorts and Facebook Reels."
-    - "<b>Offer tasks bring the material.</b> Source footage and ready clips, with a unique version for every account."
+    - "<b>Check the material in the task.</b> Where enabled: source footage, ready clips and tools for making account versions."
     - "<b>Tracking and payouts are covered.</b> Your balance is credited automatically, and withdrawals start at 10 USDT."
     - "<b>Help with the setup.</b> Message Ruslan on Telegram for a model, a first task and a launch plan."
 flow:
@@ -75,7 +75,7 @@ features:
       label: "What a setup includes →"
     - icon: "video"
       title: "Ready clips"
-      text: "In offer tasks DareBay hands out ready clips, a separate version for every account, with no editing needed."
+      text: "Where the task provides ready clips, review them against the brief and make the required account version."
       href: "/en/about/darebay-at-a-glance"
       label: "DareBay at a glance →"
     - icon: "copies"
@@ -85,7 +85,7 @@ features:
       label: "Versions, step by step →"
     - icon: "accounts"
       title: "Many accounts, one task"
-      text: "Up to 20 accounts per person across all platforms; new clips are pulled in and counted on their own."
+      text: "Up to 20 active accounts per person in one task across all platforms; new clips are pulled in and counted on their own."
       href: "/en/earnings/make-1000-a-month-clipping"
       label: "How to scale your income →"
     - icon: "team"
@@ -128,11 +128,19 @@ import LFeatures from '../../.vitepress/theme/landing/LFeatures.vue'
 import LSetup from '../../.vitepress/theme/landing/LSetup.vue'
 </script>
 
+## Test a complete cycle before adding accounts
+
+Run a small pilot on accounts you are authorized to manage: task material, clip, public link, acceptance status and calculation. Record the account, publication date, acceptance, eligible views and earnings for each submission. Track editing time and subscriptions separately. This shows whether a weak result comes from production, acceptance, reach or payment.
+
+Ready clips, setups and the version builder are available where the task enables them; connecting an account does not create material. Automatic discovery runs periodically rather than instantly, so check the submission status. Platform balance credits apply to wallet-backed tasks; a manual organizer pays directly. [Payout help](/en/help/prizes-and-payouts) explains the modes.
+
+Use [the launch guide](/en/content-farm/how-to-build-a-tiktok-content-farm) for a solo workflow and [the agency guide](/en/content-farm/how-to-start-a-clipping-agency) for roles and settlement. For YouTube income, also check the [Shorts automation guide](/en/content-farm/youtube-shorts-automation): it covers the announced February 2027 eligibility changes separately from the rules currently in force. Add accounts after a clear accepted result rather than an assumed payment for every post.
+
 A content farm, in short-video terms, is a set of TikTok, Reels and Shorts accounts that one person or a small team posts to every day, with each account getting its own version of every clip. The kind that gets paid in 2026 runs live accounts on one niche each; a content mill does the opposite and pushes the same AI slop through hundreds of empty accounts. Where the term came from and what the platforms penalize is covered in [what is a content farm](/en/content-farm/what-is-a-content-farm).
 
 Posting at volume is the easy part; the hard part is who pays for the views. Agencies sell production to brands, courses sell the method, and creator funds pay only accounts that qualify.
 
-On DareBay the buyer is already in place: tasks pay per counted view on TikTok, Instagram Reels, YouTube Shorts and Facebook Reels, $1–10 per 1,000 views at the rate each task sets, up to $500 per clip, with no follower minimum. Other tasks pay for every confirmed sale through your personal link.
+On DareBay the buyer is already in place: tasks pay per counted view on TikTok, Instagram Reels, YouTube Shorts and Facebook Reels, at the rate and any per-clip cap each task sets, with no follower minimum. Other tasks pay for every confirmed sale through your personal link.
 
 Everything else a farm needs is on DareBay too: on offer tasks, source footage, setups and ready clips with a unique version for every account, plus tracking of views, clicks and sales, a balance credited automatically and withdrawals to your wallet, on the web and in Telegram. You post from your own live accounts, and we'll help with the setup.
 

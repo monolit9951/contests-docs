@@ -20,10 +20,10 @@
         "ar": "لا قائمة دول ولا متابعين ولا طلب انضمام"
       },
       "summary": {
-        "en": "Brands and creators post clipping tasks; you take a brief with no application, post the clip on your own account and get paid for counted views. DareBay welcomes creators worldwide, with crypto withdrawals in USDT on TON. Check that participation and receiving payments are permitted under your local laws and DareBay's Terms. Offer tasks can add a fixed fee per accepted clip and a share of sales, and hand you ready-made videos with built-in uniqueization.",
-        "ru": "Бренды и авторы публикуют задания на нарезки; ты берёшь задание без заявки, публикуешь ролик у себя и получаешь оплату за засчитанные просмотры. Списка стран нет, поэтому нарезчикам из России, Беларуси и остального СНГ тоже платят. Задания под офферы могут добавлять фикс за принятый ролик и процент с продаж и выдавать готовые ролики со встроенной уникализацией.",
-        "uk": "Бренди та автори публікують завдання на нарізки; ти береш завдання без заявки, публікуєш ролик у себе й отримуєш оплату за зараховані перегляди. Списку країн немає, тож оплату отримують і нарізчики в Росії, Білорусі та решті СНД. Завдання під офери можуть додавати фікс за прийнятий ролик і відсоток із продажів і видавати готові ролики з вбудованою унікалізацією.",
-        "ar": "تنشر العلامات التجارية وصنّاع المحتوى مهامّ قص المقاطع؛ تأخذ المهمة بشروطها دون طلب انضمام، وتنشر المقطع على حسابك، ويُدفع لك مقابل المشاهدات المحتسبة. لا توجد قائمة دول، لذا يُدفع لصنّاع المقاطع في روسيا وبيلاروسيا وسائر دول رابطة الدول المستقلة أيضًا. ويمكن لمهام العروض الترويجية أن تضيف مبلغًا ثابتًا عن كل مقطع مقبول ونسبة من المبيعات، وأن تسلّمك فيديوهات جاهزة كل نسخة منها فريدة."
+        "en": "Brands and creators post clipping tasks; you take a brief with no application, post the clip on your own account and get paid for counted views. DareBay welcomes creators worldwide, with crypto withdrawals in USDT on TON. Check that participation and receiving payments are permitted under your local laws and DareBay's Terms. Offer tasks can add a fixed fee per accepted clip and a share of sales, and hand you ready-made videos with uniqueization when the task enables it.",
+        "ru": "Бренды и авторы публикуют задания на нарезки; ты берёшь задание без заявки, публикуешь ролик у себя и получаешь оплату за засчитанные просмотры. Списка стран нет, поэтому нарезчикам из России, Беларуси и остального СНГ тоже платят. Задания под офферы могут добавлять фикс за принятый ролик и процент с продаж и выдавать готовые ролики с уникализацией, когда она включена в задании.",
+        "uk": "Бренди та автори публікують завдання на нарізки; ти береш завдання без заявки, публікуєш ролик у себе й отримуєш оплату за зараховані перегляди. Списку країн немає, тож оплату отримують і нарізчики в Росії, Білорусі та решті СНД. Завдання під офери можуть додавати фікс за прийнятий ролик і відсоток із продажів і видавати готові ролики з унікалізацією, коли її ввімкнено в завданні.",
+        "ar": "تنشر العلامات التجارية وصنّاع المحتوى مهامّ قص المقاطع؛ تأخذ المهمة بشروطها دون طلب انضمام، وتنشر المقطع على حسابك، ويُدفع لك مقابل المشاهدات المحتسبة. لا توجد قائمة دول، لذا يُدفع لصنّاع المقاطع في روسيا وبيلاروسيا وسائر دول رابطة الدول المستقلة أيضًا. ويمكن لمهام العروض الترويجية أن تضيف مبلغًا ثابتًا عن كل مقطع مقبول ونسبة من المبيعات، وأن تسلّمك فيديوهات جاهزة مع تخصيص النسخ حين تفعّله المهمة."
       },
       "calc": {
         "rateMin": 1,
@@ -36,12 +36,12 @@
       "fields": {
         "rate": {
           "text": {
-            "en": "$1–$10 per 1,000 views, set by each task",
-            "ru": "$1–$10 за 1000 просмотров, ставку задаёт каждое задание",
-            "uk": "$1–$10 за 1000 переглядів, ставку задає кожне завдання",
-            "ar": "$1–$10 لكل 1,000 مشاهدة، تحدده كل مهمة"
+            "en": "set by the task per 1,000 eligible views; check its card",
+            "ru": "задаёт задание за 1000 зачтённых просмотров; смотри карточку",
+            "uk": "задає завдання за 1000 зарахованих переглядів; дивись картку",
+            "ar": "تحدده المهمة لكل 1,000 مشاهدة محتسبة؛ راجع البطاقة"
           },
-          "value": 1,
+          "value": null,
           "source": {
             "url": "https://darebay.com/en/earnings/how-much-clipping-pays",
             "date": "2026-09-24"
@@ -62,12 +62,12 @@
         },
         "cap": {
           "text": {
-            "en": "up to $500 per clip",
-            "ru": "до $500 на ролик",
-            "uk": "до $500 на ролик",
-            "ar": "حتى $500 لكل مقطع"
+            "en": "set per task when used; the actual cap is on the card",
+            "ru": "задаёт задание, если используется; точный потолок на карточке",
+            "uk": "задає завдання, якщо застосовується; точна стеля на картці",
+            "ar": "تحدده المهمة إن وُجد؛ السقف الفعلي في البطاقة"
           },
-          "value": 500,
+          "value": null,
           "source": {
             "url": "https://darebay.com/en/earnings/how-much-clipping-pays",
             "date": "2026-09-24"
@@ -75,10 +75,10 @@
         },
         "fee": {
           "text": {
-            "en": "0% on contest payouts; 10% on balance withdrawal (requests from 10 USDT)",
-            "ru": "0% с выплат конкурса; 10% при выводе баланса (заявки от 10 USDT)",
-            "uk": "0% з виплат конкурсу; 10% при виведенні балансу (заявки від 10 USDT)",
-            "ar": "0% من دفعات المسابقات؛ و10% عند سحب الرصيد (الطلبات من 10 USDT)"
+            "en": "0% on contest payouts; 10% default on balance withdrawal (requests from 10 USDT; check the form)",
+            "ru": "0% с выплат конкурса; 10% по умолчанию при выводе (заявки от 10 USDT; смотри форму)",
+            "uk": "0% з виплат конкурсу; 10% за замовчуванням при виведенні (заявки від 10 USDT; перевір форму)",
+            "ar": "0% من دفعات المسابقة؛ 10% افتراضيًا عند السحب (من 10 USDT؛ راجع الطلب)"
           },
           "value": 10,
           "source": {
@@ -255,9 +255,9 @@
         },
         "cpm": {
           "text": {
-            "en": "$1–$10, set by each task"
+            "en": "set by the task; numeric calculator inputs are example assumptions"
           },
-          "value": 10,
+          "value": null,
           "source": {
             "url": "https://darebay.com/en/earnings/how-much-clipping-pays",
             "date": "2026-09-24"
@@ -277,28 +277,28 @@
         "en": [
           "Crypto withdrawals in USDT on TON for eligible creators worldwide",
           "Offer tasks can add a fixed fee per accepted clip and a share of sales on top of the per-view rate",
-          "Ready-made videos with built-in uniqueization on offer tasks, no editing software needed",
+          "Ready-made videos on tasks that provide them; uniqueization when enabled by the task",
           "No followers, portfolio or application",
           "Wallet-backed budgets are locked before the contest starts"
         ],
         "ru": [
           "Списка стран нет: платит нарезчикам и в России, и в Беларуси, где Whop и Vyro не платят",
           "Задания под офферы могут добавить к ставке за просмотры фикс за принятый ролик и процент с продаж",
-          "Готовые ролики со встроенной уникализацией в заданиях под офферы, монтажный софт не нужен",
+          "Готовые ролики в заданиях, которые их предоставляют; уникализация, если включена в задании",
           "Не нужны подписчики, портфолио и заявка",
           "Кошельковый бюджет заблокирован до старта конкурса"
         ],
         "uk": [
           "Списку країн немає: платить нарізчикам і в Росії та Білорусі, де Whop і Vyro не платять",
           "Завдання під офери можуть додавати фікс за прийнятий ролик і відсоток із продажів понад ставку за перегляди",
-          "Готові ролики з вбудованою унікалізацією в завданнях під офери, монтажний софт не потрібен",
+          "Готові ролики в завданнях, що їх надають; унікалізація, якщо її ввімкнено",
           "Не потрібні підписники, портфоліо і заявка",
           "Гаманцевий бюджет заблоковано до старту конкурсу"
         ],
         "ar": [
           "لا قائمة دول: تدفع لصنّاع المقاطع في روسيا وبيلاروسيا أيضًا، حيث لا تدفع Whop وVyro",
           "يمكن لمهام العروض الترويجية أن تضيف مبلغًا ثابتًا عن كل مقطع مقبول ونسبة من المبيعات، إضافةً إلى السعر مقابل المشاهدات",
-          "فيديوهات جاهزة كل نسخة منها فريدة في مهام العروض الترويجية، دون حاجة إلى برنامج مونتاج",
+          "فيديوهات جاهزة في المهام التي توفرها؛ تخصيص النسخ حين تفعّله المهمة",
           "بلا متابعين ولا معرض أعمال ولا طلب انضمام",
           "ميزانيات المسابقات الممولة من المحفظة محجوزة قبل بدء المسابقة"
         ]
@@ -306,22 +306,22 @@
       "cons": {
         "en": [
           "Payouts in USDT on TON or Telegram Stars; no PayPal or bank withdrawal",
-          "10% fee on balance withdrawals; nothing is taken from contest payouts",
+          "10% default fee on balance withdrawals; check your form; no contest payout fee",
           "Manual-payout contests depend on the organizer paying"
         ],
         "ru": [
           "Выплаты в USDT в сети TON или звёздами Telegram; вывода на PayPal или в банк нет",
-          "Комиссия 10% при выводе баланса; с выплат конкурса ничего не берут",
+          "Комиссия вывода 10% по умолчанию; проверяй форму; с выплат конкурса ничего не берут",
           "В ручном конкурсе выплата зависит от организатора"
         ],
         "uk": [
           "Виплати в USDT у мережі TON або зірками Telegram; виведення на PayPal чи в банк немає",
-          "Комісія 10% при виведенні балансу; з виплат конкурсу нічого не беруть",
+          "Комісія виведення 10% за замовчуванням; перевіряй форму; з виплат конкурсу нічого не беруть",
           "У ручному конкурсі виплата залежить від організатора"
         ],
         "ar": [
           "الدفع بعملة USDT على شبكة TON أو بنجوم Telegram؛ لا سحب إلى PayPal أو البنك",
-          "عمولة 10% على سحب الرصيد؛ ولا يُقتطع شيء من دفعات المسابقات",
+          "عمولة السحب الافتراضية 10%؛ راجع طلبك؛ لا اقتطاع من دفعات المسابقة",
           "مسابقة الدفع اليدوي تتوقف على أن يدفع المنظِّم"
         ]
       }
@@ -348,15 +348,15 @@
       "fields": {
         "rate": {
           "text": {
-            "en": "set per campaign and per network: the first 50 campaigns on its Discover board on 2026-09-24 list $0.05–$3 per 1,000 views for their best-paying network, most often $1 (21 of them)",
-            "ru": "ставку задаёт кампания, отдельно для каждой площадки: первые 50 кампаний на витрине Discover 24.09.2026 показывают $0.05–$3 за 1000 просмотров на своей самой выгодной площадке, чаще всего $1 (у 21 из них)",
-            "uk": "ставку задає кампанія, окремо для кожного майданчика: перші 50 кампаній на вітрині Discover 24.09.2026 вказують $0.05–$3 за 1000 переглядів для свого найвигіднішого майданчика, найчастіше $1 (21 з них)",
-            "ar": "تحدده الحملة لكل منصة على حدة: أول 50 حملة على لوحة Discover في 2026-09-24 تعرض $0.05–$3 لكل 1,000 مشاهدة على أعلى منصة دفعًا في كل منها، والأكثر شيوعًا $1 (21 حملة منها)"
+            "en": "set per campaign and network; first 50 cards under All campaigns on 2026-10-12 displayed $0.05–$5 per 1,000, most often $1 (21 cards); card headlines are not every network rate",
+            "ru": "задаётся кампанией и площадкой; первые 50 карточек All campaigns 12.10.2026 показывали $0.05–$5 за 1000, чаще $1 (21 карточка); заголовок не отражает ставки всех площадок",
+            "uk": "задається кампанією та майданчиком; перші 50 карток All campaigns 12.10.2026 показували $0.05–$5 за 1000, найчастіше $1 (21 картка); заголовок не відображає ставки всіх майданчиків",
+            "ar": "تحدده الحملة والمنصة؛ أول 50 بطاقة في All campaigns يوم 2026-10-12 عرضت $0.05–$5 لكل 1,000، والأكثر $1 (21 بطاقة)؛ السعر الظاهر لا يشمل كل المنصات"
           },
           "value": 0.05,
           "source": {
             "url": "https://contentrewards.com/discover",
-            "date": "2026-09-24"
+            "date": "2026-10-12"
           }
         },
         "threshold": {
@@ -386,15 +386,15 @@
         },
         "fee": {
           "text": {
-            "en": "10% of each payout; 0% on per-post and retainer campaigns budgeted at $5,000+; 7% may still apply on pre-relaunch campaigns, per its help centre; plus Whop's own withdrawal fee",
-            "ru": "10% с каждой выплаты; 0% в кампаниях за пост и ретейнер с бюджетом от $5,000; по справке, в кампаниях, запущенных до перезапуска, ещё могут действовать 7%; плюс собственная комиссия Whop за вывод",
-            "uk": "10% з кожної виплати; 0% у кампаніях за пост і ретейнер із бюджетом від $5,000; у кампаніях, запущених до перезапуску, за довідкою ще можуть діяти 7%; плюс власна комісія Whop за виведення",
-            "ar": "10% من كل دفعة؛ و0% في حملات الدفع عن كل منشور وحملات الأجر الثابت (retainer) بميزانية $5,000 فأكثر؛ وقد تظل نسبة 7% مطبَّقة على حملات ما قبل إعادة الإطلاق، بحسب مركز المساعدة لديها؛ ويُضاف إلى ذلك رسم السحب لدى Whop نفسها"
+            "en": "10% on every CPM and Pool payout; per-post/retainer 10% below $5,000 campaign budget, 0% at $5,000+; stated promotional discounts may apply; Whop withdrawal fees are separate",
+            "ru": "10% с каждой выплаты CPM и Pool; за пост/ретейнер 10% при бюджете кампании ниже $5,000, 0% от $5,000; возможны указанные промоскидки; комиссия вывода Whop отдельно",
+            "uk": "10% з кожної виплати CPM і Pool; за пост/ретейнер 10% за бюджету кампанії нижче $5,000, 0% від $5,000; можливі зазначені промознижки; комісія виведення Whop окремо",
+            "ar": "10% من كل دفعة CPM وPool؛ في الدفع لكل منشور وretainer تكون 10% تحت ميزانية $5,000 و0% عند $5,000 فأكثر؛ قد تسري خصومات ترويجية معلنة؛ ورسوم سحب Whop منفصلة"
           },
           "value": 10,
           "source": {
             "url": "https://contentrewards.com/terms",
-            "date": "2026-09-24"
+            "date": "2026-10-12"
           }
         },
         "minPayout": {
@@ -431,7 +431,7 @@
           "state": "partial",
           "source": {
             "url": "https://docs.whop.com/trust-and-safety/trust-safety-overview/sanctioned-countries",
-            "date": "2026-09-24"
+            "date": "2026-10-12"
           }
         },
         "followers": {
@@ -565,22 +565,22 @@
         },
         "cpm": {
           "text": {
-            "en": "$0.05–$3, most often $1 (first 50 board campaigns, best-paying network)"
+            "en": "$0.05–$5; most often $1 (first 50 public board cards, 12 October 2026)"
           },
-          "value": 3,
+          "value": 5,
           "source": {
             "url": "https://contentrewards.com/discover",
-            "date": "2026-09-24"
+            "date": "2026-10-12"
           }
         },
         "payoutSpeed": {
           "text": {
-            "en": "CPM: about 10 days after the brand approves the clip (no automatic approval); per post shortly after approval once any view minimum is met; then Whop's withdrawal, ~3–5 business days or instant for a fee"
+            "en": "CPM rounds: normally 7 earning days + 3-day hold; first opens after approval AND minimum earnings, later rounds after the previous settles; Pool allocation at campaign end + normally 3-day hold; Whop withdrawal follows separately"
           },
           "value": null,
           "source": {
             "url": "https://contentrewards.com/terms",
-            "date": "2026-09-24"
+            "date": "2026-10-12"
           }
         }
       },
@@ -677,15 +677,15 @@
         },
         "cap": {
           "text": {
-            "en": "1 million eligible views per clip, typically $500–$2,000",
-            "ru": "1 млн засчитанных просмотров на ролик, обычно $500–$2,000",
-            "uk": "1 млн зарахованих переглядів на ролик, зазвичай $500–$2,000",
-            "ar": "مليون مشاهدة محتسبة لكل مقطع، وعادةً $500–$2,000"
+            "en": "up to $1,000 per clip; each campaign brief states the exact maximum",
+            "ru": "до $1,000 на ролик; точный максимум написан в условиях кампании",
+            "uk": "до $1,000 на ролик; точний максимум написано в умовах кампанії",
+            "ar": "حتى $1,000 لكل مقطع؛ يحدد موجز كل حملة الحد الأقصى الدقيق"
           },
-          "value": 500,
+          "value": 1000,
           "source": {
             "url": "https://vyro.com/help/earnings-and-payments/whats-the-most-i-can-earn-per-clip",
-            "date": "2026-09-24"
+            "date": "2026-10-12"
           }
         },
         "fee": {
@@ -735,7 +735,7 @@
           "state": "no",
           "source": {
             "url": "https://vyro.com/help/getting-started/what-countries-are-supported",
-            "date": "2026-09-24"
+            "date": "2026-10-12"
           }
         },
         "followers": {
@@ -793,7 +793,7 @@
           "state": "yes",
           "source": {
             "url": "https://vyro.com/help/getting-started/what-countries-are-supported",
-            "date": "2026-09-24"
+            "date": "2026-10-12"
           }
         },
         "pakistan": {
@@ -803,7 +803,7 @@
           "state": "no",
           "source": {
             "url": "https://vyro.com/help/getting-started/what-countries-are-supported",
-            "date": "2026-09-24"
+            "date": "2026-10-12"
           }
         },
         "bangladesh": {
@@ -813,7 +813,7 @@
           "state": "no",
           "source": {
             "url": "https://vyro.com/help/getting-started/what-countries-are-supported",
-            "date": "2026-09-24"
+            "date": "2026-10-12"
           }
         },
         "nigeria": {
@@ -823,7 +823,7 @@
           "state": "yes",
           "source": {
             "url": "https://vyro.com/help/getting-started/what-countries-are-supported",
-            "date": "2026-09-24"
+            "date": "2026-10-12"
           }
         },
         "kenya": {
@@ -833,7 +833,7 @@
           "state": "partial",
           "source": {
             "url": "https://vyro.com/help/getting-started/what-countries-are-supported",
-            "date": "2026-09-24"
+            "date": "2026-10-12"
           }
         },
         "mena": {
@@ -844,7 +844,7 @@
           "state": "partial",
           "source": {
             "url": "https://vyro.com/help/getting-started/what-countries-are-supported",
-            "date": "2026-09-24"
+            "date": "2026-10-12"
           }
         },
         "indonesia": {
@@ -854,7 +854,7 @@
           "state": "yes",
           "source": {
             "url": "https://vyro.com/help/getting-started/what-countries-are-supported",
-            "date": "2026-09-24"
+            "date": "2026-10-12"
           }
         },
         "philippines": {
@@ -864,7 +864,7 @@
           "state": "yes",
           "source": {
             "url": "https://vyro.com/help/getting-started/what-countries-are-supported",
-            "date": "2026-09-24"
+            "date": "2026-10-12"
           }
         },
         "cpm": {
@@ -1239,7 +1239,7 @@
       "url": "https://vues.app/",
       "review": "vues-review",
       "kind": "clipping marketplace",
-      "operator": "Vues Technology LLC (its App Store listing); its terms name only \"Vues\", under Delaware law",
+      "operator": "Vues Technologies LLC (5 October 2026 terms); Vues Technology LLC in the earlier App Store seller field",
       "bestFor": {
         "en": "clippers who want crypto or PayPal payouts without follower minimums",
         "ru": "нарезчики, которым нужны выплаты криптой или PayPal без порога подписчиков",
@@ -1291,14 +1291,14 @@
         },
         "fee": {
           "text": {
-            "en": "not published as a rate: its homepage says Vues' cut comes from the brand and clippers see only \"a small processing fee\" on withdrawal; its referral page illustrates a 10% platform fee on each cash-out",
-            "ru": "ставка не опубликована: главная пишет, что Vues берёт свою долю из бюджета бренда, а нарезчик видит лишь небольшую плату за обработку при выводе; страница реферальной программы иллюстрирует комиссию платформы 10% с каждого вывода",
-            "uk": "ставку не опубліковано: головна пише, що Vues бере свою частку з бюджету бренду, а нарізчик бачить лише невелику плату за обробку при виведенні; сторінка реферальної програми ілюструє комісію платформи 10% з кожного виведення",
-            "ar": "غير معلنة كنسبة: صفحتها الرئيسية تقول إن اقتطاع Vues يأتي من العلامة التجارية وإن صانع المقاطع لا يرى عند السحب إلا «رسم معالجة صغير» (a small processing fee)؛ وصفحة الإحالة لديها تضرب مثالًا بعمولة منصة قدرها 10% على كل عملية صرف"
+            "en": "affiliate example assumes a standard 10% withdrawal fee; the exact fee is shown at cash-out, so check the confirmation screen",
+            "ru": "пример реферальной страницы предполагает стандартную комиссию вывода 10%; точная комиссия показана перед подтверждением",
+            "uk": "приклад реферальної сторінки припускає стандартну комісію виведення 10%; точну комісію показано перед підтвердженням",
+            "ar": "مثال صفحة الإحالة يفترض رسم سحب قياسيًا 10%؛ ويظهر الرسم الدقيق عند تأكيد السحب"
           },
           "source": {
             "url": "https://vues.app/affiliate",
-            "date": "2026-09-24"
+            "date": "2026-10-12"
           }
         },
         "minPayout": {
@@ -1315,14 +1315,14 @@
         },
         "payoutMethods": {
           "text": {
-            "en": "terms: whatever the brand enables, such as USDT, PayPal or Zelle (a Vues post says Vues does not replicate Zelle rails); homepage: USDT, Solana, BTC, PayPal or bank transfer; the iOS app pays USDT on ERC-20",
-            "ru": "условия: то, что включит бренд, например USDT, PayPal или Zelle (пост Vues пишет, что Vues не воспроизводит платёжные каналы Zelle); главная: USDT, Solana, BTC, PayPal или банковский перевод; iOS-приложение платит USDT в сети ERC-20",
-            "uk": "умови: те, що ввімкне бренд, наприклад USDT, PayPal або Zelle (допис Vues пише, що Vues не відтворює платіжні канали Zelle); головна: USDT, Solana, BTC, PayPal або банківський переказ; iOS-застосунок платить USDT у мережі ERC-20",
-            "ar": "الشروط: ما تفعّله العلامة التجارية، مثل USDT أو PayPal أو Zelle (منشور لـVues يقول إن Vues لا تستنسخ قنوات Zelle)؛ والصفحة الرئيسية: USDT أو Solana أو BTC أو PayPal أو تحويل بنكي؛ وتطبيق iOS يدفع USDT على شبكة ERC-20"
+            "en": "homepage and iOS: bank account or USDC wallet through Stripe, depending on country; public pages do not name the USDC network; terms also allow brand-enabled methods such as USDT, PayPal or Zelle",
+            "ru": "главная и iOS: банковский счёт или USDC-кошелёк через Stripe в зависимости от страны; сеть USDC публично не названа; условия также допускают включённые брендом USDT, PayPal или Zelle",
+            "uk": "головна та iOS: банківський рахунок або USDC-гаманець через Stripe залежно від країни; мережу USDC публічно не названо; умови також допускають увімкнені брендом USDT, PayPal чи Zelle",
+            "ar": "الصفحة الرئيسية وiOS: حساب بنكي أو محفظة USDC عبر Stripe بحسب البلد؛ لم تسمّ الصفحات العامة شبكة USDC؛ وتسمح الشروط أيضًا بوسائل تفعّلها العلامة مثل USDT أو PayPal أو Zelle"
           },
           "source": {
-            "url": "https://vues.app/terms",
-            "date": "2026-09-24"
+            "url": "https://vues.app/ios",
+            "date": "2026-10-12"
           }
         },
         "cis": {
@@ -1479,33 +1479,33 @@
         },
         "payoutSpeed": {
           "text": {
-            "en": "terms: the brand authorizes each payout and processing times may apply; blogs: settled at campaign end (one table says weekly); homepage: withdraw \"instantly\" above the minimum"
+            "en": "homepage/iOS advertise on-demand withdrawals above the minimum; creator login still says Friday; terms require brand authorization and allow verification and provider processing"
           },
           "source": {
             "url": "https://vues.app/terms",
-            "date": "2026-09-24"
+            "date": "2026-10-12"
           }
         }
       },
       "pros": {
         "en": [
           "Clips posted to X can count too, where a campaign's brief allows it",
-          "USDT or PayPal payouts, as each brand enables them (terms)",
+          "Country-dependent bank or USDC payouts through Stripe (current homepage and iOS page)",
           "No follower minimum"
         ],
         "ru": [
           "Ролики в X тоже могут засчитываться, если это разрешают условия кампании",
-          "Выплаты в USDT или PayPal, если их включил бренд (условия)",
+          "Банк или USDC через Stripe, доступность зависит от страны (главная и iOS)",
           "Нет минимума подписчиков"
         ],
         "uk": [
           "Ролики в X теж можуть зараховуватися, якщо це дозволяє завдання кампанії",
-          "Виплати в USDT або PayPal, як їх увімкне кожен бренд (умови)",
+          "Банк або USDC через Stripe, доступність залежить від країни (головна та iOS)",
           "Немає мінімуму підписників"
         ],
         "ar": [
           "يمكن أن تُحتسب أيضًا المقاطع المنشورة على X، إذا سمح بذلك موجز الحملة",
-          "الدفع بعملة USDT أو عبر PayPal، بحسب ما تفعّله كل علامة تجارية (الشروط)",
+          "السحب إلى بنك أو USDC عبر Stripe بحسب البلد (الصفحة الرئيسية وiOS)",
           "لا حد أدنى للمتابعين"
         ]
       },
@@ -2162,15 +2162,15 @@
       "fields": {
         "rate": {
           "text": {
-            "en": "printed on every public card; $0.05–$8.00 per 1,000 views across the open rewards on 2026-09-24 (the $8 is for long YouTube reviews of the platform); clip cards $0.20–$1.00 per 1,000, or view tiers whose first tier pays $3 at 10K or $10–$25 at 100K views (≈ $0.10–$0.30 per 1,000)",
-            "ru": "напечатана на каждой открытой карточке; $0.05–$8.00 за 1000 просмотров у открытых наград на 24.09.2026 ($8 платят за длинные обзоры площадки на YouTube); карточки нарезок $0.20–$1.00 за 1000 или пороги просмотров, где первый порог платит $3 за 10 тыс. или $10–$25 за 100 тыс. просмотров (≈ $0.10–$0.30 за 1000)",
-            "uk": "надрукована на кожній відкритій картці; $0.05–$8.00 за 1000 переглядів у відкритих винагород на 24.09.2026 ($8 — за довгі огляди платформи на YouTube); картки нарізок $0.20–$1.00 за 1000 або пороги переглядів, де перший поріг платить $3 при 10 тис. чи $10–$25 при 100 тис. переглядів (≈ $0.10–$0.30 за 1000)",
-            "ar": "مطبوع على كل بطاقة عامة؛ $0.05–$8.00 لكل 1,000 مشاهدة في المكافآت المفتوحة يوم 2026-09-24 (سعر $8 مخصص لمراجعات مطوّلة للمنصة على YouTube)؛ وبطاقات المقاطع $0.20–$1.00 لكل 1,000، أو شرائح مشاهدات تدفع شريحتها الأولى $3 عند 10,000 مشاهدة أو $10–$25 عند 100,000 مشاهدة (≈ $0.10–$0.30 لكل 1,000)"
+            "en": "26 active rewards on 2026-10-12; CPM configurations $0.10–$8 per 1,000 ($8 is a long YouTube review, not a normal clip); separate view-tier rewards include $20 at 100K for Domer and $25 at 100K for Zeny",
+            "ru": "26 активных наград на 12.10.2026; CPM $0.10–$8 за 1000 ($8 за длинный YouTube-обзор, не обычную нарезку); отдельные ступенчатые награды: Домер $20 за 100 тыс., Zeny $25 за 100 тыс.",
+            "uk": "26 активних винагород на 12.10.2026; CPM $0.10–$8 за 1000 ($8 за довгий YouTube-огляд, не звичайну нарізку); окремі ступінчасті винагороди: Домер $20 за 100 тис., Zeny $25 за 100 тис.",
+            "ar": "26 مكافأة نشطة في 2026-10-12؛ إعدادات CPM بين $0.10 و$8 لكل 1,000 ($8 لمراجعة مطوّلة على YouTube، وليس لمقطع عادي)؛ ومكافآت شرائح منفصلة: Domer يدفع $20 عند 100 ألف وZeny $25 عند 100 ألف"
           },
-          "value": 0.05,
+          "value": 0.1,
           "source": {
             "url": "https://www.primeoracles.com/rewards",
-            "date": "2026-09-24"
+            "date": "2026-10-12"
           }
         },
         "threshold": {
@@ -2187,14 +2187,14 @@
         },
         "cap": {
           "text": {
-            "en": "maximum payout set per reward; $15–$300 across the open rewards on 2026-09-24; one payout per video",
-            "ru": "максимальная выплата задаётся по награде; $15–$300 у открытых наград на 24.09.2026; одно видео = одна выплата",
-            "uk": "максимальна виплата задається по винагороді; $15–$300 у відкритих винагород на 24.09.2026; одне відео = одна виплата",
-            "ar": "الحد الأقصى للدفعة تحدده كل مكافأة؛ $15–$300 في المكافآت المفتوحة يوم 2026-09-24؛ دفعة واحدة لكل فيديو"
+            "en": "maximum payout per reward; CPM configuration caps $20–$500 across active rewards on 2026-10-12; one payout per video",
+            "ru": "максимум задаёт награда; потолки CPM $20–$500 у активных наград 12.10.2026; одно видео — одна выплата",
+            "uk": "максимум задає винагорода; стелі CPM $20–$500 в активних винагородах 12.10.2026; одне відео — одна виплата",
+            "ar": "تحدده كل مكافأة؛ حدود إعدادات CPM كانت $20–$500 في المكافآت النشطة يوم 2026-10-12؛ دفعة واحدة لكل فيديو"
           },
           "source": {
             "url": "https://www.primeoracles.com/rewards",
-            "date": "2026-09-24"
+            "date": "2026-10-12"
           }
         },
         "fee": {
@@ -2378,12 +2378,12 @@
         },
         "cpm": {
           "text": {
-            "en": "$0.05–$8, open clip cards up to $1"
+            "en": "$0.10–$8 across active CPM rewards; the $8 card requires a long YouTube review"
           },
           "value": 8,
           "source": {
             "url": "https://www.primeoracles.com/rewards",
-            "date": "2026-09-24"
+            "date": "2026-10-12"
           }
         },
         "payoutSpeed": {
@@ -2740,7 +2740,7 @@
         "en": "Indian clippers who want rupee campaigns paid to UPI with no follower minimum"
       },
       "summary": {
-        "en": "An Indian clipping agency that runs brand campaigns and pays clippers 30-70 rupees per 1,000 verified views, checked against Instagram's Insights API and the YouTube Data API. The campaign pages live on 2026-09-24 publish the rate, the budget, the remaining budget and a minimum of 1,000 or 5,000 views per clip. Clippers pay no fee; the brand pays a 20% management fee on top of the campaign budget."
+        "en": "A Kerala editing agency: new campaigns pay a fixed amount per approved clip, you upload supplied-footage edits and ClipGrow publishes them on its pages; monthly UPI. Only campaigns begun before 9 October 2026 retain view-based pay."
       },
       "calc": {
         "rateMin": null,
@@ -2753,58 +2753,61 @@
       "fields": {
         "rate": {
           "text": {
-            "en": "₹30–₹70 per 1,000 verified views; the campaigns live on the site on 2026-09-24 pay ₹50–₹70"
+            "en": "new campaigns: fixed pay per approved clip at your campaign/tier rate; no universal public rate; legacy CPM campaigns started before 9 October continue until they end"
           },
           "source": {
             "url": "https://clipgrow.in/for-clippers",
-            "date": "2026-09-24"
-          }
+            "date": "2026-10-12"
+          },
+          "value": null
         },
         "threshold": {
           "text": {
-            "en": "1,000 or 5,000 views per clip on the campaigns live on 2026-09-24 (5,000 on the ₹70 campaign); the terms say every campaign brief sets its own minimum"
+            "en": "new fixed-pay work requires clip approval, not a view minimum; legacy CPM briefs retain their own view thresholds"
           },
-          "value": 1000,
+          "value": null,
           "source": {
-            "url": "https://clipgrow.in/campaigns/mali-music-campaign-905",
-            "date": "2026-09-24"
+            "url": "https://clipgrow.in/terms",
+            "date": "2026-10-12"
           }
         },
         "cap": {
           "text": {
-            "en": "₹2,000–₹2,500 per clip on the campaigns live on 2026-09-24, up to ₹5,000 on closed ones; each campaign sets its own, and views above it count but are not paid; one of its guides says there is no cap"
+            "en": "new work pays the fixed approved-clip amount; legacy CPM briefs can cap earnings per video"
           },
           "source": {
-            "url": "https://clipgrow.in/for-clippers",
-            "date": "2026-09-24"
-          }
+            "url": "https://clipgrow.in/terms",
+            "date": "2026-10-12"
+          },
+          "value": null
         },
         "fee": {
           "text": {
-            "en": "0% for clippers; the brand pays a separate 20% management fee on top of the campaign budget"
+            "en": "no ClipGrow fee for creators; current client retainers have an agreed price, not the earlier extra 20% CPM management fee"
           },
           "value": 0,
           "source": {
-            "url": "https://clipgrow.in/for-brands",
-            "date": "2026-09-24"
+            "url": "https://clipgrow.in/for-clippers",
+            "date": "2026-10-12"
           }
         },
         "minPayout": {
           "text": {
-            "en": "₹500 per payout run; anything below rolls over"
-          },
-          "source": {
-            "url": "https://clipgrow.in/for-clippers",
-            "date": "2026-09-24"
-          }
-        },
-        "payoutMethods": {
-          "text": {
-            "en": "UPI to GPay, PhonePe or Paytm from ₹500 a run; monthly per its terms, every Sunday per its clipper page"
+            "en": "new fixed-pay work: no public minimum stated for monthly UPI; ₹500 Sunday floor applies only to legacy per-view campaigns"
           },
           "source": {
             "url": "https://clipgrow.in/terms",
-            "date": "2026-09-24"
+            "date": "2026-10-12"
+          },
+          "value": null
+        },
+        "payoutMethods": {
+          "text": {
+            "en": "new work paid monthly after the month ends to UPI (GPay, PhonePe, Paytm); no posting required; older per-view campaigns retain Sunday UPI from ₹500"
+          },
+          "source": {
+            "url": "https://clipgrow.in/for-clippers",
+            "date": "2026-10-12"
           }
         },
         "cis": {
@@ -2829,30 +2832,30 @@
         },
         "escrow": {
           "text": {
-            "en": "its terms say the brand funds a campaign in advance, but its brand page asks for 40% of the total commitment (budget plus the 20% fee) upfront and the other 60% as the first tranche runs down; a brand can stop on five days' notice, and clips already scheduled are compensated"
+            "en": "new client retainers are priced by written proposal; the current terms do not describe an escrow budget for new editor work"
           },
-          "state": "partial",
+          "state": "unknown",
           "source": {
-            "url": "https://clipgrow.in/for-brands",
-            "date": "2026-09-24"
+            "url": "https://clipgrow.in/terms",
+            "date": "2026-10-12"
           }
         },
         "networks": {
           "text": {
-            "en": "Instagram Reels and YouTube Shorts"
+            "en": "ClipGrow publishes approved edits on its Instagram, YouTube and Facebook pages; the editor does not post"
           },
           "source": {
             "url": "https://clipgrow.in/for-clippers",
-            "date": "2026-09-24"
+            "date": "2026-10-12"
           }
         },
         "verification": {
           "text": {
-            "en": "views are read from Instagram's Insights API or the YouTube Data API — no screenshots or self-reported numbers; Instagram needs a Professional account, and while ClipGrow's apps are in Meta and Google review each account is added to a tester list; every clip is reviewed by hand against the brief and must carry a CTA"
+            "en": "new editor work reviewed against the campaign SOP before approval; legacy per-view earnings use official Instagram/YouTube APIs"
           },
           "source": {
             "url": "https://clipgrow.in/terms",
-            "date": "2026-09-24"
+            "date": "2026-10-12"
           }
         },
         "india": {
@@ -2937,38 +2940,36 @@
         },
         "cpm": {
           "text": {
-            "en": "₹30–₹70 (≈$0.31–$0.73)"
+            "en": "not applicable to new fixed-pay editor campaigns; earlier CPM campaigns are legacy only"
           },
-          "value": 0.73,
+          "value": null,
           "source": {
-            "url": "https://clipgrow.in/",
-            "date": "2026-09-24"
+            "url": "https://clipgrow.in/terms",
+            "date": "2026-10-12"
           }
         },
         "payoutSpeed": {
           "text": {
-            "en": "a monthly cycle per its terms and campaign pages; its home and clipper pages say every Sunday, its guides by the 7th of the next month"
+            "en": "new work: after the month ends, UPI; old per-view campaigns: Sundays once ₹500 is reached"
           },
           "source": {
             "url": "https://clipgrow.in/terms",
-            "date": "2026-09-24"
+            "date": "2026-10-12"
           }
         }
       },
       "pros": {
         "en": [
-          "Public terms and privacy policy name the payout rail, the clipper fee and the view-verification APIs",
-          "Live campaign pages publish the rate, the total budget, the budget still available and the view minimum; the clipper page lists per-clip ceilings",
-          "No fee for clippers, no follower minimum, and no PAN or Aadhaar collected"
+          "No personal following or social account needed for new editor work",
+          "Supplied footage, campaign SOP and review feedback",
+          "Fixed approved-clip pay rather than dependence on viral reach"
         ]
       },
       "cons": {
         "en": [
-          "Its own pages name three payout schedules: every Sunday, a monthly cycle, and payment by the 7th of the next month",
-          "No legal entity is named anywhere — only \"operated from Kerala, India\"",
-          "Rates and the payout minimum are in rupees; campaigns live on 2026-09-24 capped a clip at ₹2,000–₹2,500",
-          "Once a clip is paid it is closed: views it gains afterwards earn nothing",
-          "Instagram needs a Professional account, and while ClipGrow’s apps are in Meta and Google review each account is added to a tester list"
+          "Public pages do not publish a universal fixed clip rate",
+          "Daily output and approval/revision requirements",
+          "UPI after month-end; legacy CPM advice no longer applies to new work"
         ]
       }
     },
@@ -2984,7 +2985,7 @@
         "en": "Indian residents who want UPI payouts and a budget deposited up front"
       },
       "summary": {
-        "en": "An Indian clipping marketplace where brands set the rate; its clipper page lists ₹5, ₹7 or ₹10 per 1,000 views by campaign earning level, the higher levels unlocked by clipper tier. Its refund policy puts the budget in an escrow pool when a campaign starts, though its FAQ and pricing pages let the brand withdraw unspent budget anytime. Views are read through the Instagram and YouTube APIs, then clear an anomaly check and a 72-hour hold. Clippers request UPI payouts from a ₹500 balance, pay no fee and need no followers; the terms admit only Indian residents aged 18 or over."
+        "en": "An Indian view-reward marketplace: brands set campaign rates, while current Rookie/Pro/Legend divisions track lifetime earnings. The creator page no longer publishes the older ₹5/₹7/₹10 CPM table. Views clear API checks and a 72-hour hold; UPI requests need a ₹500 balance. Terms require Indian residents aged 18+."
       },
       "calc": {
         "rateMin": null,
@@ -2997,12 +2998,13 @@
       "fields": {
         "rate": {
           "text": {
-            "en": "set by the brand: ₹5, ₹7 or ₹10 per 1,000 views for standard, medium or high-earning campaigns (\"Actual rates vary by campaign\"), with the higher levels unlocked by clipper tier; the home page's sample brief shows ₹90 per 1,000 verified views"
+            "en": "set by campaign; current creator page no longer publishes the earlier ₹5/₹7/₹10 CPM table; Rookie/Pro/Legend are lifetime earning divisions, not rates"
           },
           "source": {
             "url": "https://www.wondeed.com/clippers",
-            "date": "2026-09-24"
-          }
+            "date": "2026-10-12"
+          },
+          "value": null
         },
         "threshold": {
           "text": {
@@ -3015,12 +3017,13 @@
         },
         "cap": {
           "text": {
-            "en": "no ceiling per clip on the clipper page (\"No ceiling\"), but the FAQ page says a clip keeps earning for 7 days after the campaign closes, \"against any remaining budget\", then stops; brands on the paid plans can also set daily view caps"
+            "en": "campaign-specific limits must be checked; current creator page mentions higher caps by division and does not repeat the old universal no-ceiling claim"
           },
           "source": {
             "url": "https://www.wondeed.com/clippers",
-            "date": "2026-09-24"
-          }
+            "date": "2026-10-12"
+          },
+          "value": null
         },
         "fee": {
           "text": {
@@ -3043,11 +3046,11 @@
         },
         "payoutMethods": {
           "text": {
-            "en": "UPI to a UPI ID linked to an Indian bank account, requested from a ₹500 balance after a 72-hour hold; paid within 7 business days of the request per the terms, \"within 7 days\" per the clipper page, which gives Tier 1 a 14-day payout window and Tier 3 a 3-day fast-track"
+            "en": "UPI from a ₹500 wallet balance after a 72-hour hold; terms say within seven business days of the request; creator page says seven days"
           },
           "source": {
             "url": "https://www.wondeed.com/terms",
-            "date": "2026-09-24"
+            "date": "2026-10-12"
           }
         },
         "cis": {
@@ -3180,22 +3183,22 @@
         },
         "cpm": {
           "text": {
-            "en": "₹5–₹10 (≈$0.05–$0.10)"
+            "en": "campaign-specific; no current universal CPM published on creator page"
           },
-          "value": 0.1,
+          "value": null,
           "source": {
             "url": "https://www.wondeed.com/clippers",
-            "date": "2026-09-24"
+            "date": "2026-10-12"
           }
         },
         "payoutSpeed": {
           "text": {
-            "en": "72-hour hold, then UPI within 7 business days of a payout request (terms; the clipper page says 7 days); 14-day window at Tier 1, 3-day fast-track at Tier 3"
+            "en": "72-hour view hold, qualifying ₹500 balance, then request; terms state up to seven business days, creator FAQ says seven days"
           },
           "value": null,
           "source": {
             "url": "https://www.wondeed.com/terms",
-            "date": "2026-09-24"
+            "date": "2026-10-12"
           }
         }
       },
@@ -3211,7 +3214,7 @@
           "The GST page gives the legal entity only as \"Wondeed\" and the GSTIN as \"To be updated\"",
           "The terms still carry a template placeholder: jurisdiction is \"the courts of [Registered City], India\"",
           "Indian residents only, and TDS is deducted before payout above the section 194-O threshold",
-          "New clippers start at Tier 1: standard campaigns only, with a 14-day payout window"
+          "Current public creator page does not publish one numeric CPM; confirm the actual campaign rate and cap"
         ]
       }
     },

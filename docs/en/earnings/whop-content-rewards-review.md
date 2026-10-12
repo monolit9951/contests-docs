@@ -25,21 +25,31 @@ seo: true
 landing: true
 sources: visible
 hero:
-  updated: "2026-09-18"
+  updated: "2026-10-12"
   kicker: "Review · 2026"
   lede: "Whop Content Rewards is no longer just an app inside Whop. It runs on its own site under its own terms, and Whop stays underneath for sign-in, identity checks and withdrawals. Here is what that means for a clipper today: how a campaign card reads, what the flat 10% fee leaves you, how long the money takes on each side, and which countries Whop will not pay, every figure read off the two companies' own pages and dated."
   takeaways:
     - "<b>Content Rewards has its own site now, and Whop is still underneath.</b> Campaigns, review and fraud checks run on contentrewards.com; sign-in, identity checks and withdrawals stay with Whop, under Whop's terms."
     - "<b>The fee is a flat 10% of what you earn.</b> The old step-down ladder is gone, and per-post and retainer campaigns with a budget of $5,000 or more charge the creator nothing."
-    - "<b>Count about ten days from approval on CPM.</b> A clip earns for 7 days, then sits through a 3-day hold; after that you move the money to your Whop balance, and it leaves on Whop's schedule."
+    - "<b>CPM payment rounds open after approval and the minimum earnings.</b> Normally seven earning days plus a three-day hold; Pool pays after closing, and Whop withdrawal is separate."
     - "<b>Russia and Belarus stay closed.</b> Whop's sanctioned list names them and six Ukrainian regions, while the rest of Ukraine and Kazakhstan are on its payout list. Where Whop cannot pay, DareBay has no country list."
 cta:
   title: "Whop cannot pay your country? DareBay has no country list"
-  lede: "Clippers in Russia and Belarus, where Whop cannot pay, are paid here: only people on sanctions lists are barred. You get USDT on TON in your wallet, or receive the payout in Telegram Stars. Every task card states the pay rate ($1–$10 per 1,000 views), the view threshold and any ceiling on a single clip (up to $500) before you submit. Nobody screens your follower count and nobody reviews an application, so the weekend you spend editing is not spent on a maybe."
+  lede: "Clippers in Russia and Belarus, where Whop cannot pay, are paid here: only people on sanctions lists are barred. You get USDT on TON in your wallet, or receive the payout in Telegram Stars. Every task card states the pay rate, the view threshold and any ceiling on a single clip before you submit. Nobody screens your follower count and nobody reviews an application, so the weekend you spend editing is not spent on a maybe."
 ---
+## October rules: what a Pool balance actually means
+
+The creator terms now carry **4 October 2026**. CPM and Pool payouts both carry a 10% creator fee; per-post and retainer campaigns retain the $5,000 budget boundary for a 0% creator fee. <!-- source: https://contentrewards.com/terms 2026-10-12 -->
+
+For a Pool, do not calculate from the displayed budget alone: that figure includes the organization's fee. A hypothetical $900 remaining for creators, with your 10% share of eligible views, gives $90 gross and **$81 after the 10% creator fee**, before Whop withdrawal costs. If others' views reduce your final share to 5%, it becomes $40.50. Neither the early estimate nor approval locks that share.
+
+Check three things in the brief: whether it is CPM or Pool, how its view minimum is applied, and when the campaign stops counting views or closes. A Pool's minimum can apply across your approved submissions; below it you receive no share. The organization normally decides when the Pool ends. <!-- source: https://contentrewards.com/terms 2026-10-12 -->
+
+The first 50 public All campaigns cards on 12 October displayed $0.05–$5 per 1,000, with $1 on 21 cards. This is a dated headline sample, not a universal rate or all network-specific offers. September samples below remain historical. <!-- source: https://contentrewards.com/discover 2026-10-12 -->
+
 ## What Content Rewards is today, and what stays on Whop
 
-Content Rewards is a clipping and UGC marketplace: a brand puts up a budget, you make content that fits the brief, post it from your own accounts and get paid on what the campaign pays for <!-- source: https://contentrewards.com/creators 2026-09-18 -->. The older version is an app a brand adds to its whop from the Whop App Store, and Whop's help centre still documents it that way <!-- source: https://docs.whop.com/memberships-and-access/third-party-apps/content-rewards 2026-09-18 -->. The release Content Rewards calls V2, dated 19 August 2026, rebuilt the platform with separate apps for brands and for creators <!-- source: https://contentrewards.com/changelog 2026-09-18 -->. Its Creator Terms, last updated on 3 September, are an agreement with Content Rewards Inc, a Delaware corporation based in Beverly Hills, for the "Content Rewards web application"; the version inside Whop is now "an earlier experience hosted inside the Whop platform", and campaigns you joined there stay under the old clipper terms <!-- source: https://contentrewards.com/terms 2026-09-18 -->.
+Content Rewards is a clipping and UGC marketplace: a brand puts up a budget, you make content that fits the brief, post it from your own accounts and get paid on what the campaign pays for <!-- source: https://contentrewards.com/creators 2026-09-18 -->. The older version is an app a brand adds to its whop from the Whop App Store, and Whop's help centre still documents it that way <!-- source: https://docs.whop.com/memberships-and-access/third-party-apps/content-rewards 2026-09-18 -->. The release Content Rewards calls V2, dated 19 August 2026, rebuilt the platform with separate apps for brands and for creators <!-- source: https://contentrewards.com/changelog 2026-09-18 -->. Its Creator Terms, last updated on 4 October 2026, are an agreement with Content Rewards Inc, a Delaware corporation based in Beverly Hills, for the "Content Rewards web application"; the version inside Whop is now "an earlier experience hosted inside the Whop platform", and campaigns you joined there stay under the old clipper terms <!-- source: https://contentrewards.com/terms 2026-10-12 -->.
 
 Whop has not left. The Creator Terms split the work between the two companies <!-- source: https://contentrewards.com/terms 2026-09-18 -->:
 
@@ -51,7 +61,7 @@ So a Whop account is still part of the deal. If Whop bans you or you lose access
 
 ## How a campaign pays, and how to read its card
 
-A campaign pays in one of three ways: CPM per 1,000 views, a flat amount per approved post, or a retainer paid per cycle for an agreed set of deliverables <!-- source: https://contentrewards.com/creators 2026-09-18 -->. Every type needs a brand budget of at least $1,000 <!-- source: https://contentrewards.com/terms 2026-09-18 -->, paid in before launch and kept against the campaign until creators earn it <!-- source: https://contentrewards.com/ 2026-09-18 -->. The creator page groups the work into clipping, music, logo and UGC campaigns <!-- source: https://contentrewards.com/creators 2026-09-18 -->.
+Campaigns now include CPM, per-post, retainer and **Pool**. CPM pays verified views; a Pool shares an available budget according to eligible counted views when the Pool closes. Approval alone does not reserve a Pool payout. <!-- source: https://contentrewards.com/terms 2026-10-12 -->
 
 On 18 September the first page of the Discover board showed 50 campaigns, and every one of them paid per 1,000 views; the board is paginated, so those 50 are its first page and not the whole catalogue <!-- source: https://contentrewards.com/discover 2026-09-21 -->. On that page rates spread between $0.05 on a logo campaign and $10 on a trading firm's campaign; 17 of the 50 paid $1, and the Call of Duty: Modern Warfare 4 campaign paid $1.75 <!-- source: https://contentrewards.com/discover 2026-09-18 -->. A card carries more than the rate:
 
@@ -71,7 +81,7 @@ At $1 per 1,000 views, 30,000 views earn $30 before the fee and $27 after it.
 
 ## Payouts: Content Rewards' clock first, then Whop's
 
-On CPM, approval starts 7 days in which the clip keeps earning, then a 3-day hold, so the payout settles about 10 days after approval <!-- source: https://contentrewards.com/terms 2026-09-18 -->. Per-post payouts settle shortly after approval, 15 minutes by the V2 release notes <!-- source: https://contentrewards.com/changelog 2026-09-18 -->, and retainers after the end of each cycle <!-- source: https://contentrewards.com/terms 2026-09-18 -->. An open fraud flag pauses settlement until it is resolved, and a credited payout that has not settled can still be reversed if the clip is rejected later or the flag is upheld <!-- source: https://contentrewards.com/terms 2026-09-18 -->.
+A CPM round normally has seven earning days followed by a three-day hold. The first round starts after **both approval and the minimum payout are met**; recurring rounds follow settlement of the previous one while eligible earnings remain. Pool shares are allocated at Pool close, then normally held three days. Whop withdrawal takes a separate step; its estimated timing is not a guaranteed arrival date. <!-- source: https://contentrewards.com/terms 2026-10-12 -->
 
 The money then moves twice:
 
@@ -109,7 +119,7 @@ The Bot Score runs first, then a brand moderator approves or rejects <!-- source
 
 ## When DareBay is the better choice
 
-DareBay fits the clipper Whop cannot pay, and anyone who would rather not have a second company between the clip and the money. It keeps no country list: only people on sanctions lists are barred <!-- source: https://darebay.com/en/legal/terms 2026-09-24 -->. You post the clip on your own account, send the link, the platform counts the views, and your balance leaves in USDT on TON to your wallet, or you receive the payout in Telegram Stars <!-- source: https://darebay.com/en/help/darebay-withdrawals 2026-09-24 -->. The rate is $1–$10 per 1,000 views, set by each task, the view threshold is set per task (system default 1,000 views), and a task can cap each clip at up to $500, all on the card before you submit <!-- source: https://darebay.com/en/earnings/how-much-clipping-pays 2026-09-24 -->. The fee on the task payout is 0%; 10% comes off only when you withdraw, and withdrawals start at 10 USDT <!-- source: https://darebay.com/en/help/what-commission 2026-09-24 -->. Hypothetically: 20,000 / 1,000 × $1.00 = **$20.00**, never above the task's cap if it sets one. Field by field: [DareBay vs Whop](/en/earnings/darebay-vs-whop); every figure: [fact sheet](/en/about/darebay-at-a-glance).
+DareBay fits the clipper Whop cannot pay, and anyone who would rather not have a second company between the clip and the money. It keeps no country list: only people on sanctions lists are barred <!-- source: https://darebay.com/en/legal/terms 2026-09-24 -->. You post the clip on your own account, send the link, the platform counts the views, and your balance leaves in USDT on TON to your wallet, or you receive the payout in Telegram Stars <!-- source: https://darebay.com/en/help/darebay-withdrawals 2026-09-24 -->. The rate is a rate set by each task per 1,000 eligible views, the view threshold is set per task (system default 1,000 views), and a task can cap each clip at up to $500, all on the card before you submit <!-- source: https://darebay.com/en/earnings/how-much-clipping-pays 2026-09-24 -->. The fee on the task payout is 0%; 10% comes off only when you withdraw, and withdrawals start at 10 USDT <!-- source: https://darebay.com/en/help/what-commission 2026-09-24 -->. Hypothetically: 20,000 / 1,000 × $1.00 = **$20.00**, never above the task's cap if it sets one. Field by field: [DareBay vs Whop](/en/earnings/darebay-vs-whop); every figure: [fact sheet](/en/about/darebay-at-a-glance).
 
 Content Rewards is the better choice when Whop can pay you and you want its wide board: 50 campaigns on the first page alone on the day we checked, some paying $3, $5 or $10 per 1,000 views <!-- source: https://contentrewards.com/discover 2026-09-18 -->.
 
@@ -133,7 +143,7 @@ Legit: a named Delaware corporation with a Beverly Hills address stands behind i
 
 ### How fast does Content Rewards pay out?
 
-On CPM, about ten days after approval: 7 days of earning, then a 3-day hold; per post pays after approval and a retainer at the end of each cycle <!-- source: https://contentrewards.com/pricing/creators 2026-09-18 -->. Then comes Whop's leg, about 3–5 business days as the Creator Terms describe it <!-- source: https://contentrewards.com/terms 2026-09-18 -->. Add the brand's review before approval, and count on more than ten days from posting.
+A CPM round normally has seven earning days followed by a three-day hold. The first round starts after **both approval and the minimum payout are met**; recurring rounds follow settlement of the previous one while eligible earnings remain. Pool shares are allocated at Pool close, then normally held three days. Whop withdrawal takes a separate step; its estimated timing is not a guaranteed arrival date. <!-- source: https://contentrewards.com/terms 2026-10-12 -->
 
 ### Why do clips get rejected even with views?
 

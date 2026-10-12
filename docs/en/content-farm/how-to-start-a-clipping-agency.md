@@ -1,7 +1,7 @@
 ---
 title: "How to start a clipping agency: clippers, accounts, margins"
 description: "How to start a clipping agency: where paid campaigns come from, five roles on the team, who owns the accounts, three ways to pay clippers, margin formulas."
-provenance: { snapshot_date: "2026-09-29", source: "darebay-prod" }
+provenance: { snapshot_date: "2026-10-12", source: "darebay-prod" }
 seo: true
 landing: true
 sources: visible
@@ -11,7 +11,7 @@ hero:
   takeaways:
     - "<b>Line up campaigns before people.</b> Join marketplaces that already fund clips in your niche, then recruit."
     - "<b>Five roles, two or three people.</b> Sourcing, editing, posting, QA and the lead; early on, people double up."
-    - "<b>Margin is a formula.</b> Clip earnings, minus clipper pay and tools, minus the 10% withdrawal fee."
+    - "<b>Margin is a formula.</b> Clip earnings, minus clipper pay and tools, minus the recipient’s actual withdrawal fee."
     - "<b>Everyone is paid to their own wallet.</b> Terms for a team your size are agreed with Ruslan directly."
 cta:
   title: "Start your clipping agency on DareBay"
@@ -21,6 +21,12 @@ cta:
 To start a clipping agency, sign up where funded clipping campaigns already run, recruit two or three clippers, split the work into roles, and write down who owns each account and how payouts are split before the first clip. A clipping agency is a small team that turns long videos into short clips at volume and posts them across many accounts, paid by campaigns per view or per sale, or by clients on a retainer.
 
 This guide is for the side doing the clipping; streamers looking for clippers should read [how to find clippers for your content](/en/for-brands/how-to-find-clippers). DareBay, which publishes this guide, runs one of the campaign marketplaces below.
+
+## Close the week using settled earnings, not raw views
+
+Agree what an “accepted clip” means before promising a flat fee: passing the editing brief, being published, and earning on a campaign are different milestones. In the weekly sheet keep pending, credited and withdrawn amounts separate, with the task, clip link, account owner and agreed split.
+
+For a hypothetical revenue-share job, first identify who receives the platform payment. Apply that person's actual withdrawal fee once, then calculate the share on the agreed gross or net base. Do not subtract a second platform fee merely because an editor is paid later. Put tools, revisions and direct client invoices on separate lines. If a task uses organizer-direct payment, record the organizer's confirmation separately from wallet balance credit. The [payout guarantee guide](/en/about/payout-guarantee) explains why the funding mode changes that evidence.
 
 ## Where the paid campaigns come from
 
@@ -62,10 +68,10 @@ DareBay matches each clip's author against the connected social account and ties
 None of this is a forecast.
 
 - **One clip:** `E = min(V ÷ 1,000 × R, C)`, with counted views V, the task's rate R per 1,000 views and its per-clip ceiling C. Below the task's view threshold, E is zero.
-- **Agency income:** `I = 0.9 × (E_own + E_ref) + D`, with earnings on the agency's own accounts, referral bonuses and direct client income. The 0.9 is what stays after the 10% fee on withdrawal.
+- **Agency income, hypothetical at the default withdrawal rate:** `I = 0.9 × (E_own + E_ref) + D`, with wallet-backed earnings on the agency’s own accounts, referral bonuses and separately received direct client income. The 0.9 assumes the default 10% balance withdrawal fee; use `1 − actual fee rate` if the recipient has a personal rate.
 - **Costs:** `K = F × N + S + T`, with a flat fee F for N accepted clips, shares S, and tools and devices T.
 - **Margin:** `M = I − K`.
-- **Flat-fee break-even:** a clip covers fee F at `F ÷ (0.9 × R) × 1,000` counted views, and never when F is above 0.9 × C.
+- **Flat-fee break-even at that same default rate:** a clip covers fee F at `F ÷ (0.9 × R) × 1,000` counted views, and not when F is above 0.9 × C. Substitute the actual fee factor if it differs; the view threshold and campaign budget still apply.
 
 Check E against realistic views per clip in the [clipping earnings calculator](/en/earnings/clipping-earnings-calculator) before promising a flat fee.
 
@@ -77,7 +83,7 @@ Check E against realistic views per clip in the [clipping earnings calculator](/
 | Flat fee | The agency's | The lead | A fixed fee per accepted clip |
 | Revenue share | The poster's | The account owner | An agreed share of their clips |
 
-With own accounts nothing is split: the lead earns 10% of each invited clipper's earnings, paid by DareBay, not by the clipper. A flat fee leaves the risk with the agency, which pays even for clips that miss the threshold. A revenue share follows contribution and risk; say whether it is counted before or after the 10% withdrawal fee.
+With own accounts nothing is split: the lead earns 10% of each invited clipper's earnings, paid by DareBay, not by the clipper. A flat fee leaves the risk with the agency, which pays even for clips that miss the threshold. A revenue share follows contribution and risk; say whether it is counted before or after the recipient’s actual withdrawal fee.
 
 ## Tracking who earned what
 
@@ -88,7 +94,7 @@ The platform counts the views: each member's dashboard shows clips, statuses, co
 - Tasks pay per counted view on TikTok, Reels, Shorts and Facebook Reels: $1–10 per 1,000 views and up to $500 per clip, with the rate set by each task. Some tasks pay for every confirmed sale through a personal link.
 - Offer tasks include a setup per account: footage, an avatar, a video guide and platform instructions.
 - Each member connects up to 20 of their own accounts to a task, all platforms combined, and new clips are picked up automatically.
-- Earnings are calculated and credited to the balance automatically, and everyone withdraws to their own wallet from 10 USDT.
+- Wallet-backed tasks credit earnings to the recipient’s balance. A balance withdrawal starts at 10 USDT before fees; organizer-direct payment follows the task’s own procedure.
 
 Everything DareBay offers a content farm is on [the content farm page](/en/content-farm/), the solo version is in [how to build a TikTok content farm](/en/content-farm/how-to-build-a-tiktok-content-farm), and team terms are on the [page for teams and agencies](/en/earn/teams). Running several people or a dozen accounts? [Message Ruslan on Telegram](https://t.me/ruslanbwork) with your headcount and platforms, and we'll help set up the launch and agree terms for your volume. New tasks and answers are posted in the [DareBay Discord](https://discord.gg/unCNzuhcHP).
 

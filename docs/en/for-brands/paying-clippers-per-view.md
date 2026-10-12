@@ -1,7 +1,7 @@
 ---
 title: "How to pay clippers per view: rate, threshold, cap"
 description: "Paying clippers per view: you set the rate per 1000 views, the platform counts them for you, and an unspent wallet-backed budget comes back to you."
-provenance: { snapshot_date: "2026-08-15", source: "darebay-prod" }
+provenance: { snapshot_date: "2026-10-12", source: "darebay-prod" }
 numbers_used: []
 seo: true
 ---
@@ -37,13 +37,13 @@ One thing to price in when you pick the threshold: it is not a deductible. Once 
 
 ## Cost and fees
 
-Creating a contest and topping up its budget currently carry no fee. The organizer funds the prize budget. Entry is free for creators too: contest payouts carry 0%, and 10% applies only when a creator withdraws.
+Creating a contest and topping up its budget currently carry no fee. The organizer funds the prize budget. Entry is free for creators too: contest payouts carry 0%, and 10% (default) applies only when a creator withdraws.
 
 | Parameter | Value | What it means |
 |-----------|-------|---------------|
 | Contest creation | no fee | The organizer funds the budget |
 | Budget top-up | no fee | No additional top-up charge |
-| Creator withdrawal | 10%, paid by the creator | Only when they withdraw, from 10 USDT; contest payouts themselves carry 0% |
+| Creator withdrawal | 10% (default), paid by the creator | Only when they withdraw, from 10 USDT; contest payouts themselves carry 0% |
 | Refund of the remainder | wallet-backed contests | What the clippers did not earn goes back to the organizer balance |
 
 See [current DareBay fees](/en/help/what-commission) for the operational terms.
@@ -57,6 +57,12 @@ See [current DareBay fees](/en/help/what-commission) for the operational terms.
 **An independent count.** The figure is read from the published view counter on the site the video went out on. Neither you nor the clippers can nudge it, so you are paying against a number you could check yourself on the video.
 
 **The calculation runs without you.** Every creator's share follows the formula, and in a wallet-backed contest the earnings reach each creator's balance automatically when the contest ends. Your sign-off is not needed on each payout.
+
+## Test the terms against two submissions
+
+A hypothetical task pays $2 per 1,000 views, with a 1,000-view threshold and a $30 cap. A 900-view clip fails the threshold; a 12,000-view clip earns $24; a 25,000-view clip reaches the $30 cap. Apply the threshold to each submission separately: two 600-view clips do not make one payable thousand.
+
+Put the calculation and total budget in the brief. Creators can check the terms without messaging you, and you can see how many capped submissions could consume the pool.
 
 ## Frequently asked questions
 

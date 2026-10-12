@@ -7,124 +7,100 @@ seo: true
 landing: true
 sources: visible
 hero:
-  updated: "2026-09-18"
+  updated: "2026-10-12"
   kicker: "Platform review · 2026"
-  lede: "Vues is a pay-per-view clipping marketplace with an iPhone app, a public roster weighted toward betting, crypto and prediction markets, and a claim of more than $3 million paid to clippers. Before the rate, one line in its terms decides how you get paid: the brand owes you the money, not Vues. This review reads its terms, app page, campaign directory and blog side by side, dated, and names the places where they disagree."
+  lede: "Vues is a clipping marketplace with a web app and an iPhone app. As checked on 12 October 2026, its homepage and iOS page offer Stripe payouts to a bank account or USDC wallet, depending on country. Its 5 October terms still make the brand responsible for payment and say Vues does not custody campaign funds. Here is what changed, what remains conditional and what to verify before posting."
   secondary: "Comparison table"
   takeaways:
     - "<b>The brand is your debtor, not the platform.</b> Vues calls itself a neutral intermediary that holds no campaign money; each payout is authorized by the brand that ran the campaign."
     - "<b>The public roster leans one way.</b> Vues describes its brands as weighted toward crypto, prediction markets, betting and gaming, and it shows rates only inside the app."
-    - "<b>The only network Vues names is ERC-20.</b> Its iPhone app pays USDT to an Ethereum address; the homepage adds Solana, BTC, PayPal and bank transfer, and the terms leave the choice to the brand."
-    - "<b>Three pages, three payout schedules.</b> On demand, every Friday, or when the campaign ends, depending on which Vues page you read."
+    - "<b>The current payout pages say bank or USDC through Stripe.</b> The available option depends on your country; the app no longer describes a USDT ERC-20-only setup."
+    - "<b>The cash-out screen decides the rail, fee and minimum.</b> Public pages advertise on-demand withdrawals but the terms keep brand authorization, verification and processing conditions."
 compare:
   ids: [vues, reach-cat, whop, darebay]
   columns: [escrow, fee, payoutMethods, verification, cap]
   highlight: darebay
   title: "Who holds the money, what it costs and how views are checked"
 method:
-  - "Every statement about Vues was read on 2026-09-18 from vues.app itself: the terms and privacy policy last updated on 20 July 2026, the homepage, the brands page, the campaign directory and its per-brand pages, the iOS app page, the referral page, the creator sign-in page and the posts of its own blog. The company name comes from the seller field of its App Store listing."
-  - "Where two Vues pages say different things, both are quoted with their source and the terms are treated as the binding text. A statement from its blog is attributed to the blog, not presented as a rule."
-  - "Numbered references at the end of the article name each page and the day it was read. DareBay's figures come from its own public pages, not from this comparison."
+  - "The homepage, iOS page, terms, affiliate page, brands page, campaign directory and creator login were checked on 2026-10-12. The terms carry the edition of 5 October 2026. No account was opened and no payout was executed."
+  - "The directory still labels its totals July 2026. Blog, privacy and DareBay references retain their earlier source dates; they were not all rechecked during this update. Public marketing describes an available flow, not proof that a particular creator was paid."
+  - "The comparison table dates each field separately. USDC and USDT are different assets; an iOS payout description does not establish every web payout network."
 cta:
   title: "Know who is paying before you post"
   lede: "On DareBay a wallet-backed task has its budget locked on the platform before it opens, and the task card says which kind of task it is. Task payouts carry a 0% fee, and you pay 10% only when you withdraw: request a withdrawal from 10 USDT and the platform does the rest. You receive the money in USDT on TON or in Telegram Stars."
 ---
-## Who is behind Vues and who owes you the money
+## What changed in October: bank or USDC, not a USDT-only app
 
-On Vues a brand sets a rate per 1,000 views and a budget, and clippers post to TikTok, Instagram, YouTube or X and submit the link <!-- source: https://vues.app/terms 2026-09-18 -->. The terms name the other party only as "Vues" and place the agreement under the laws of the State of Delaware <!-- source: https://vues.app/terms 2026-09-18 -->. The privacy policy adds "We are based in, and process information in, the United States" <!-- source: https://vues.app/privacy 2026-09-18 -->, and the seller of its iPhone app is Vues Technology LLC <!-- source: https://apps.apple.com/us/app/vues-the-clipper-app/id6788968167 2026-09-18 -->.
+Vues' [homepage](https://vues.app/) and [iOS page](https://vues.app/ios) now describe payouts through Stripe to a bank account or a **USDC wallet**, with availability depending on country. This replaces the older app description of a USDT ERC-20 address. **USDC is not USDT**: do not reuse an old deposit address or choose a network on the strength of this review. The public pages do not identify the USDC network; verify the asset, network, recipient and fee in your own payout setup before confirming. <!-- source: https://vues.app/ios 2026-10-12 --> <!-- source: https://vues.app/ 2026-10-12 -->
 
-Section 1 of the terms settles the main question: "The Brand — not Vues — is responsible for paying the Clipper." Vues describes itself as "a neutral venue and intermediary", and section 7 says campaign and payout funds "remain owned and controlled by the Brand" and "are not deposited with or custodied by Vues" <!-- source: https://vues.app/terms 2026-09-18 -->. A payout request you file "is an administrative instruction and does not itself move funds". For a crypto payout Vues only passes your wallet address on; the brand's own wallet, run on Privy infrastructure, sends the transfer <!-- source: https://vues.app/terms 2026-09-18 -->.
+The native app requires iOS 18 or later and works on iPhone and iPad. Android users can use the full web app in a mobile browser; a native Android app is not advertised. The iOS page describes connecting accounts, applying to a brand and submitting a published clip through the share sheet. <!-- source: https://vues.app/ios 2026-10-12 -->
 
-Vues may ask a brand to show reserved funds before launch, but promises nothing: "We do not guarantee that any campaign, earnings, results, content, or Payout will be available, approved, or successful" <!-- source: https://vues.app/terms 2026-09-18 -->. [Reach.cat](/en/earnings/reach-cat-review) is built the other way round: there the platform pays clippers out of a budget the brand prepays.
+## Who owes you the money
 
-## Where Vues campaigns come from
+The [terms dated 5 October 2026](https://vues.app/terms) name **Vues Technologies LLC**. They still place the payment obligation on the brand, keep campaign funds under brand control and give no general payout guarantee. Vues can request evidence that a brand reserved funds, but a withdrawal request by itself is not a transfer. <!-- source: https://vues.app/terms 2026-10-12 -->
 
-Rates are not public: "Exact CPM rates and briefs live inside the app — join free to see them" <!-- source: https://vues.app/campaigns 2026-09-18 -->. The one public number is an example: the calculator on the homepage works at $3.00 per 1,000 views <!-- source: https://vues.app/ 2026-09-18 -->.
+This matters even though the homepage advertises fully funded campaigns and guaranteed payouts. The brands page now describes Stripe bank or USDC disbursements, while the terms retain examples such as USDT, PayPal and Zelle that depend on what the brand enables. A marketing payout option and legal responsibility for funding are separate questions. <!-- source: https://vues.app/ 2026-10-12 --> <!-- source: https://vues.app/brands 2026-10-12 --> <!-- source: https://vues.app/terms 2026-10-12 -->
 
-What Vues does publish is a directory of 18 organizations with all-time totals as of July 2026. Roobet leads with 8.70B views tracked and $600k+ paid to clippers, followed by Duel with $580k+, Polymarket with $150k+ and CrownCoins with $110k+ <!-- source: https://vues.app/campaigns 2026-09-18 -->. Vues' own descriptions place the list in one corner of the market: CrownCoins is "a social casino brand" <!-- source: https://vues.app/campaigns/crowncoins 2026-09-18 -->, Rebet "the social sports betting app" <!-- source: https://vues.app/campaigns/rebet 2026-09-18 -->, Novig "the commission-free sports prediction market" <!-- source: https://vues.app/campaigns/novig 2026-09-18 -->. Its blog sums the roster up as "weighted toward crypto, prediction markets, betting and gaming" <!-- source: https://vues.app/blog/vues-vs-vyro 2026-09-18 -->.
+Before joining, check the paying brand, funded budget still available, rate for your social network and payout method available to your country. A platform listing or a payment-provider logo does not confirm that those four checks passed.
 
-The terms require you to be at least 18 <!-- source: https://vues.app/terms 2026-09-18 -->, and whether promoting a casino or a sportsbook is lawful where you and your viewers live is your question, not the platform's. The public list is not the whole board either: the totals "span all 60+ funded brands, including programs that run privately" <!-- source: https://vues.app/campaigns 2026-09-18 -->.
+## Rates and campaign statistics: what the public directory actually shows
 
-Platform-wide, as of July 2026, Vues reports "$3M+ Paid to clippers" and 2,933 clippers <!-- source: https://vues.app/campaigns 2026-09-18 -->, and its blog admits the top ten account for "close to a third of everything ever paid out" <!-- source: https://vues.app/blog/clipping-earnings-real-numbers 2026-09-18 -->.
+Exact CPMs and briefs remain inside the app. The homepage's **$3 per 1,000 views is a calculator example**, not a rate promised across campaigns. The public directory lists 18 organizations and says other campaigns run privately. <!-- source: https://vues.app/ 2026-10-12 --> <!-- source: https://vues.app/campaigns 2026-10-12 -->
 
-## From tracked view to balance: caps and the end-of-campaign freeze
+The directory still labels its **$3M+ paid, 2,933 clippers and 60+ funded brands as July 2026 statistics**. Checking that page in October does not turn those figures into October totals. Roobet, Duel and Polymarket feature among its published organizations; the roster includes betting and prediction-market campaigns. Choose a brief that you can lawfully publish to your audience and that the social network permits. <!-- source: https://vues.app/campaigns 2026-10-12 -->
 
-The terms define the arithmetic: verified views divided by 1,000, multiplied by the campaign's rate, accruing "until the Campaign's budget cap or end date is reached". Which views count is Vues' decision, taken from the social platforms "and from our own tracking, which controls over any other count" <!-- source: https://vues.app/terms 2026-09-18 -->.
+The top-ten earnings are also lifetime figures dated July, not a typical monthly income or a beginner forecast. For a useful comparison, calculate your own eligible views and the campaign's constraints instead.
 
-There is no view floor on a clip: Vues' own comparison table gives "Minimum view threshold per clip" as "None" <!-- source: https://vues.app/blog/best-clipping-platforms-that-pay-crypto 2026-09-18 -->. A campaign can instead set a minimum payout per qualifying post, a maximum per post, and limits per profile or per poster, and "If your post hits a cap, your effective payout is clamped to it" <!-- source: https://vues.app/blog/how-cpm-payouts-work 2026-09-18 -->.
+## Calculate the campaign before you commit
 
-The counting window is the campaign itself. A clip has to be "posted inside the campaign window" <!-- source: https://vues.app/blog/how-clipping-platforms-verify-views 2026-09-18 -->, and "When a campaign ends, your earnings freeze at the view counts as of end-time" <!-- source: https://vues.app/blog/how-cpm-payouts-work 2026-09-18 -->. Views after the close still reach the brand's report, while "your payout stays fixed at end-time" <!-- source: https://vues.app/blog/how-cpm-payouts-work 2026-09-18 -->.
+A hypothetical campaign paying $3 per 1,000 eligible views produces **$60 gross from 20,000 views**. If that brief caps a post at $40, the clip earns at most $40 before fees. If the confirmation screen then charges 10%, $36 remains, before any provider or network charge. These are examples, not a current Vues offer or a published universal cap.
+
+Vues' earlier explanation allows caps per post or profile, and freezes payable earnings at the campaign end time; later views can appear in reports without adding earnings. Preserve the brief and end time alongside the post link. That explanation was read on 18 September, rather than revalidated as an account screen in October. <!-- source: https://vues.app/blog/how-cpm-payouts-work 2026-09-18 -->
 
 <LCompare />
 
-## Cashing out: rails, the ERC-20 network and the fee
+## Withdrawal fee, minimum and timing
 
-The homepage lists five rails: "Withdraw to USDT, Solana, BTC, PayPal, or Bank Transfer" <!-- source: https://vues.app/ 2026-09-18 -->. The terms are narrower and conditional: payouts go through "the methods a Brand makes available through the Service, which may include cryptocurrency (such as USDT), PayPal, or Zelle" <!-- source: https://vues.app/terms 2026-09-18 -->. The iPhone app names a single network: "Set a USDT (ERC-20) address once", with "Additional payout methods are available on vues.app" <!-- source: https://vues.app/ios 2026-09-18 -->. A USDT withdrawal from the app therefore needs an Ethereum address.
+The current homepage advertises on-demand withdrawal after the minimum is reached. It does not publish the minimum as a number. The affiliate page illustrates a **10% withdrawal fee**, explicitly presents its arithmetic as illustrative and tells users that the exact fee appears at cash-out. A $100 withdrawal at that example fee leaves $90, before any separately shown provider charge. <!-- source: https://vues.app/ 2026-10-12 --> <!-- source: https://vues.app/affiliate 2026-10-12 -->
 
-A minimum exists and is not published. The homepage speaks of cashing out "once you clear the minimum withdrawal" <!-- source: https://vues.app/ 2026-09-18 -->, and the blog adds "Your current balance and the threshold are both visible in your account" <!-- source: https://vues.app/blog/clipping-payout-methods 2026-09-18 -->.
+The creator login still advertises Friday payments, which is narrower than the homepage's on-demand message. Do not turn either slogan into a guaranteed receipt time: the terms require brand funding and authorization and permit minimums, verification, provider screening and processing. <!-- source: https://vues.app/login/creator 2026-10-12 --> <!-- source: https://vues.app/terms 2026-10-12 -->
 
-The fee is not published as a rate either. The homepage FAQ says "Vues takes its cut from the brand's budget. The only fee you see is a small processing fee on withdrawals, shown before you confirm" <!-- source: https://vues.app/ 2026-09-18 -->. The referral page works through a $1,000 cash-out on which "Vues takes its 10% platform fee", labelled "Illustrative" and assuming the standard fee, and adds that referred clippers "pay exactly the same fee whether or not they signed up through you" <!-- source: https://vues.app/affiliate 2026-09-18 -->. The number that binds you is the one on the confirmation screen.
+The earlier country guide publishes no fixed country list. A fresh Stripe-based setup makes it especially useful to check onboarding eligibility before editing clips. The absence of a public country ban is not confirmation that bank or USDC payout works where you live. <!-- source: https://vues.app/blog/clipping-from-any-country 2026-09-18 -->
 
-The terms allow "identity, tax, or payout-information verification" before a payout and mention Form W-9 or W-8 <!-- source: https://vues.app/terms 2026-09-18 -->; the blog names the usual reason a withdrawal is held: "Payout accounts that don't match your platform profile" <!-- source: https://vues.app/blog/clipping-payout-methods 2026-09-18 -->. There is no country list, by choice: "We don't publish a country list because these change" <!-- source: https://vues.app/blog/clipping-from-any-country 2026-09-18 -->.
+## Rights complaints: a useful change in the October terms
 
-## Six things Vues says two different ways
+The updated terms describe notice and a reasonable opportunity to provide evidence before a final adverse payout decision on disputed rights. A complaint alone does not establish a violation, and unaffected legitimately earned payouts remain payable. They also require removal or disabling of affected content within 24 hours of notice. Save the creator's permission, supplied assets and campaign brief before publishing; an appeal needs that evidence. <!-- source: https://vues.app/terms 2026-10-12 -->
 
-1. **Whether payment is guaranteed.** The homepage calls its campaigns "fully funded with a 100% guarantee for payout" <!-- source: https://vues.app/ 2026-09-18 --> and the App Store description says "payouts are guaranteed" <!-- source: https://apps.apple.com/us/app/vues-the-clipper-app/id6788968167 2026-09-18 -->; the terms guarantee no payout at all.
-2. **Who sends the payout.** The brands page says "We split and send every payout in crypto, PayPal, or bank transfer" <!-- source: https://vues.app/brands 2026-09-18 -->; the terms say Vues does not "transmit the funds used for a Clipper's Payout".
-3. **What the clipper pays.** "A small processing fee" on the homepage, a 10% platform fee in the referral example.
-4. **Which rails exist.** Five on the homepage, whatever the brand switches on in the terms, one network in the app.
-5. **When you are paid.** The homepage promises "No waiting on a pay cycle" <!-- source: https://vues.app/ 2026-09-18 -->; the creator sign-in page says "Paid every Friday" <!-- source: https://vues.app/login/creator 2026-09-18 -->; the blog says "Earnings settle automatically when a campaign ends" <!-- source: https://vues.app/blog/clipping-payout-methods 2026-09-18 -->.
-6. **Whether you apply.** The homepage steps read "Apply, get approved, and review post requirements" <!-- source: https://vues.app/ 2026-09-18 -->; a comparison post in its blog promises "no application, no follower minimum" <!-- source: https://vues.app/blog/vues-vs-vyro 2026-09-18 -->.
+Permission to make a clip and permission to promote a brand are not automatically interchangeable. A gambling brief also needs the disclosure and audience restrictions applicable to the post. The platform's public campaign roster does not settle those questions for you.
 
-Take numbers from the terms and the confirmation screen, not from the marketing.
+## Vues or DareBay: choose the payout and funding model
 
-## Rejections, fraud flags and arbitration
+Vues is worth checking when the brand fits your audience, your country is eligible for its current bank or USDC setup, and you want its iPhone submission flow. Verify the paying brand and cash-out conditions first.
 
-"The Brand and Vues may approve or reject any Submission, and a rejected or non-compliant Submission is not eligible for a Payout." Bought or automated views "do not count and are not compensable", a post without an #Ad-style disclosure can be marked ineligible, and a brand "may delay, withhold, or seek recovery of a Payout" on suspicion of fraud, a chargeback or a refund <!-- source: https://vues.app/terms 2026-09-18 -->. The blog adds the usual causes: a broken brief, an unlinked account, a duplicate, a watermark, an authenticity flag, or a clip that "landed after the campaign closed or the budget ran out" <!-- source: https://vues.app/blog/why-clips-get-rejected 2026-09-18 -->.
+On DareBay, wallet-backed tasks lock the budget on the platform before opening; manual-payout tasks, where the organizer pays directly, are labelled on the card. Task earnings carry 0% commission, and withdrawal requests start at 10 USDT with 10% deducted at withdrawal. Payouts are USDT on TON or Telegram Stars. Those DareBay facts retain their 24 September source snapshot. <!-- source: https://darebay.com/en/about/payout-guarantee 2026-09-24 --> <!-- source: https://darebay.com/en/help/what-commission 2026-09-24 --> <!-- source: https://darebay.com/en/help/darebay-withdrawals 2026-09-24 -->
 
-Against an automated fraud decision the privacy policy offers one route: "you may contact us to request human review or to contest a decision" <!-- source: https://vues.app/privacy 2026-09-18 -->. A larger dispute starts with 30 days of informal talks through support@vues.app and then goes to binding individual arbitration, class actions waived, unless you opt out by email within 30 days of accepting the terms <!-- source: https://vues.app/terms 2026-09-18 -->.
-
-## Vues or DareBay: who each one suits
-
-DareBay takes 0% from task payouts. You pay 10% only when you withdraw, and withdrawals start at 10 USDT <!-- source: https://darebay.com/en/help/what-commission 2026-09-24 -->; the balance leaves in USDT on the TON network, or you receive the payout in Telegram Stars, which Telegram's terms describe as virtual items you "may not sell, withdraw, transfer" outside Telegram's own uses <!-- source: https://telegram.org/tos/stars 2026-09-18 -->. Your earnings reach your balance automatically when a wallet-backed task ends, and from there you request a withdrawal and the platform does the rest <!-- source: https://darebay.com/en/help/darebay-withdrawals 2026-09-24 -->: [how withdrawals work](/en/help/darebay-withdrawals), [what DareBay charges](/en/help/what-commission).
-
-Vues fits better in these cases:
-
-- **You want PayPal, a bank transfer or USDT on a chain other than TON.** Vues' homepage lists PayPal and bank transfer and its app pays USDT on ERC-20; a DareBay balance leaves in USDT on TON, or you receive the payout in Telegram Stars; a card or bank transfer comes only from a prize contest that names it as the reward <!-- source: https://darebay.com/en/help/prizes-and-payouts 2026-09-24 -->.
-- **You want no view floor on a clip.** Vues' own table lists none; on DareBay each task sets its threshold.
-- **You clip crypto, betting or prediction-market content and want many funded programs to choose from.** Vues shows 18 organizations, the largest with six-figure payout totals, and says more run privately.
-- **You work from an iPhone.** Its app submits a clip straight from the TikTok, Instagram, YouTube or X share sheet <!-- source: https://vues.app/ios 2026-09-18 -->.
-
-The other side of the ledger is custody. On DareBay a wallet-backed task has its budget locked on the platform before the start, and a manual-payout task, where the organizer pays directly, is labelled on the card <!-- source: https://darebay.com/en/about/payout-guarantee 2026-09-24 -->. On Vues the brand keeps the money until it authorizes your payout. The wider field is in [the best clipping platforms comparison](/en/earnings/best-clipping-platforms), and [clipping platforms that pay without PayPal or Stripe](/en/earnings/clipping-platforms-that-pay-without-paypal-or-stripe) sorts them by the rail the money leaves on.
+Compare the actual terms in [the best clipping platforms](/en/earnings/best-clipping-platforms), and check [platforms that pay without PayPal or Stripe](/en/earnings/clipping-platforms-that-pay-without-paypal-or-stripe) if payment-provider eligibility is your constraint.
 
 <LMethod />
 
 ## Frequently asked questions
 
-### Is Vues a scam or a real platform?
+### Is Vues legit, and does that mean my payout is guaranteed?
 
-A real business: US privacy policy, Delaware terms, an App Store listing under Vues Technology LLC, published payout totals. The risk is structural: the brand, not Vues, owes you each payout, and the terms guarantee none.
+Vues publishes terms, a campaign directory and an iOS app. Those establish a public service, not independent proof of every payout. Its October terms make the brand responsible for paying and give no universal guarantee.
 
-### Does Vues hold the campaign budget?
+### Does Vues pay USDT or USDC?
 
-No. Its terms keep campaign money with the brand, even in a Privy-managed wallet; Vues can only ask a brand to show that funds are reserved before a campaign goes live.
+Its current homepage and iOS page advertise **USDC or bank transfer through Stripe**, depending on country. The terms also allow brand-enabled methods including USDT. The public iOS page no longer describes USDT ERC-20 as its sole rail, and it does not name a USDC network.
 
-### What network does Vues send USDT on?
+### How much is the Vues withdrawal fee?
 
-ERC-20, on Ethereum, is the only network it names, in its iPhone app. The homepage lists Solana and BTC without networks, and the terms leave crypto to the brand.
+The affiliate example uses 10%, but the exact fee is shown at cash-out. Read that screen together with any provider fees and the minimum withdrawal.
 
-### How much does Vues take when you withdraw?
+### Can I use Vues on Android?
 
-It publishes no rate: a small processing fee on the homepage, a 10% platform fee in the referral example. The confirmation screen shows the one that applies to you.
+The web app works in a mobile browser. The only native app advertised on its current iOS page is for iPhone and iPad on iOS 18 or later.
 
-### Which day does Vues pay?
+### Are its July payout statistics current October results?
 
-Its pages give three answers: on demand, every Friday, or at the end of the campaign. In every case the brand has to fund and authorize the payout.
-
-### Do views after a Vues campaign closes earn anything?
-
-No. Earnings freeze at the view count at the campaign's end time; later views appear in the brand's report but are not paid.
-
-### Does Vues ask for a W-9 or ID?
-
-It can: the terms allow identity, tax or payout-information checks, name Form W-9 or W-8, and leave any Form 1099 to the paying brand or its payment provider.
+No. The directory still explicitly dates those totals July 2026. They are Vues' own lifetime statistics, not independently audited receipts or a typical creator's earnings.

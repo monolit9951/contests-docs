@@ -1,7 +1,7 @@
 ---
 title: "What if nobody enters your contest: budget and refund"
 description: "Nobody entered? A wallet-backed budget returns to your balance in full, the 0% fee on creation and top-ups leaves nothing to refund, and your rating holds."
-provenance: { snapshot_date: "2026-08-15", source: "darebay-prod" }
+provenance: { snapshot_date: "2026-10-12", source: "darebay-prod" }
 numbers_used: [commission_fiat, commission_crypto, commission_coins]
 ---
 
@@ -50,6 +50,12 @@ mid-contest, and so on).
   submissions.
 - **Pick the right category.** Narrow categories have a smaller audience,
   but a relevant one.
+
+## Find where a participant stopped
+
+Ask someone from the target audience to open the task and explain what to do. If the file will not open, fix access. If the criterion is unclear, clarify it. If the work is clear but nobody accepts, compare effort, publication conditions and reward with other available tasks.
+
+Do not rewrite expectations retroactively. Remove one barrier in the next launch and check the result. An unspent refund applies to a deposited wallet-backed budget; the platform cannot refund money it never received in an organizer-direct arrangement.
 
 ---
 

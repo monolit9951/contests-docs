@@ -1,7 +1,7 @@
 ---
 title: "Verification and trust on DareBay: who checks what"
 description: "Verification and ratings on DareBay: what a verified badge proves, how the organizer and participant ratings are built, and what changes when they drop."
-provenance: { snapshot_date: "2026-08-15", source: "darebay-prod" }
+provenance: { snapshot_date: "2026-10-12", source: "darebay-prod" }
 numbers_used: []
 ---
 
@@ -66,6 +66,12 @@ If you are just starting out:
   authorship.
 
 Verification can be done at any point, and you do not need it to start.
+
+## Keep three kinds of evidence separate
+
+A badge concerns identity or organization checks. A rating reflects participation history. Funding answers another question: who holds the money and pays the reward. A high rating or badge does not turn an organizer's direct payment into a locked wallet-backed budget.
+
+Check all three separately and read the task terms before working. Submit identity documents only through the product's designated process; a request for your password or seed phrase in a private message is not verification.
 
 ---
 

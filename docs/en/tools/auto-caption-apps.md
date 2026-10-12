@@ -1,7 +1,7 @@
 ---
 title: "Auto caption apps for Reels and Shorts, compared"
 description: "Auto caption apps for Reels, Shorts and TikTok compared: free Edits, Adobe Premiere and YouTube Create, plus Captions, Kapwing, Submagic, VEED and Vizard."
-provenance: { snapshot_date: "2026-09-29", source: "darebay-prod" }
+provenance: { snapshot_date: "2026-10-12", source: "darebay-prod" }
 competitor_sources:
   - { platform: "Adobe Premiere", url: "https://apps.apple.com/us/app/adobe-premiere-ai-video-editor/id6742757464", date: "2026-09-29" }
   - { platform: "Captions", url: "https://captions.ai/pricing", date: "2026-09-29" }
@@ -31,6 +31,15 @@ cta:
 The best free auto caption apps for Reels and Shorts in 2026 are Edits and Adobe Premiere on a phone<!-- source: https://apps.apple.com/us/app/edits-video-editor/id6738967378 2026-09-29 --><!-- source: https://apps.apple.com/us/app/adobe-premiere-ai-video-editor/id6742757464 2026-09-29 -->, while Captions, Kapwing, Submagic and VEED charge for animated caption styles at volume<!-- source: https://captions.ai/pricing 2026-09-29 --><!-- source: https://www.kapwing.com/pricing 2026-09-29 --><!-- source: https://www.submagic.co/pricing 2026-09-29 --><!-- source: https://www.veed.io/pricing 2026-09-29 -->. Auto captions are subtitles an app generates from the speech in a video and times to it; burned-in captions become part of the picture, while closed captions can be switched off by the viewer.
 
 DareBay, a platform that pays clippers per counted view, put this comparison together. Prices come from each tool's own pages and store listings on September 29, 2026; there are no affiliate links, tables run A to Z, and DareBay's caption layouts, which live inside its tasks, get their own section at the end. Other tools are in the [tools catalog for Reels, Shorts and TikTok](/en/tools/).
+
+Submagic now displays Starter as 45 credits, equivalent to 15 short videos; generative features also consume that budget. Compare the credits required by your workflow, not just the video count.<!-- source: https://www.submagic.co/pricing 2026-10-12 -->
+
+
+## Compare caption accuracy on the same one-minute sample
+
+Use a sample with a person's name, a product name, a number and some background noise. Give both apps the same audio and language. Count errors that change meaning separately from punctuation, then time the corrections and export. This is your own comparison, not an accuracy score promised by a vendor.
+
+For example, if one app needs twelve corrections and another needs four, the second may save more time than a cheaper subscription. Check the exported clip at phone size with sound off: a correct sentence can still be unreadable if it sits behind buttons or breaks at the wrong word. Keep an editable transcript as well as the burned-in version. On YouTube, automatic captions can be reviewed and edited; recognition errors are a reason to review them, not a reason to trust a percentage in a sales page<!-- source: https://support.google.com/youtube/answer/6373554 2026-10-12 -->.
 
 ## Built-in captions on TikTok, Instagram and YouTube
 

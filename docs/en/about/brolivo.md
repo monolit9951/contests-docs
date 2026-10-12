@@ -2,7 +2,7 @@
 title: "Brolivo: flirt bolder"
 description: "Your flirting wingman: turn a screenshot or text into one reply, make it bolder and find your next move. Open Brolivo’s test web version for adults 18+."
 publisher: brolivo
-provenance: { snapshot_date: 2026-10-08 }
+provenance: { snapshot_date: 2026-10-12 }
 ---
 
 # Brolivo: flirt bolder
@@ -30,3 +30,11 @@ Ask for a chat breakdown to explore the cues in the messages you added and a pos
 Already have a draft? Check it before sending and compare the suggested edit with your own. Hide unnecessary personal details before uploading a screenshot and use conversations you have the right to share.
 
 Brolivo is part of [DareBay Products](/en/about/products). Contact the team below with product questions or collaboration ideas.
+
+## Prepare context for one reply
+
+Choose a short conversation extract that makes the last question clear. Add your goal, such as suggesting a date rather than simply continuing the chat. Hide names, numbers and messages unnecessary for that reply.
+
+Read the suggested line aloud before sending and check that it matches your intention. Respect an expressed refusal or boundary. A suggestion helps you phrase a message; deciding to send it and carrying on the conversation remain your choices.
+
+<!-- source: https://brolivo.com/ 2026-10-12 -->

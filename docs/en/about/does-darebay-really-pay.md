@@ -1,7 +1,7 @@
 ---
 title: Does DareBay really pay? The chain from clip to money
 description: "Does DareBay pay? Yes: the wallet-backed budget is locked before you start, code works out your amount and credits it to your balance. The chain, step by step."
-provenance: { snapshot_date: "2026-08-15", source: "darebay-prod" }
+provenance: { snapshot_date: "2026-10-12", source: "darebay-prod" }
 numbers_used: []
 seo: true
 ---
@@ -20,7 +20,7 @@ Short version: the calculation is automatic and cannot be re-run in anyone's fav
 4. **The counter is read.** The platform's independent counter reads the published view counter on the site the clip was posted on. Neither the buyer nor the clipper types that figure in, and neither can adjust it.
 5. **The formula runs.** `views / 1000 * rate`, capped at the contest's cap per submission, for every clip that cleared the threshold. Clearing the threshold puts the whole counter into the calculation, not just the part above it.
 6. **The result becomes an obligation.** The platform records a credit or a payout obligation with a status attached to it. That record is what you follow from here.
-7. **The money reaches your balance.** In a wallet-backed contest your earnings are credited to your balance automatically when the contest ends, or earlier with Claim now where the task shows it. From there you request a withdrawal from 10 USDT and the platform does the rest: 10% comes off inside the request, and you see the amount to receive before you confirm.
+7. **The money reaches your balance.** In a wallet-backed contest your earnings are credited to your balance automatically when the contest ends, or earlier with Claim now where the task shows it. From there you request a withdrawal from 10 USDT and the platform does the rest: 10% (default) comes off inside the request, and you see the amount to receive before you confirm.
 
 None of these steps leaves the organizer room for a change of mind: the terms were fixed at creation, the figure came from outside both parties, the arithmetic is fixed, and in a wallet-backed contest the crediting runs on its own once the contest ends.
 
@@ -37,6 +37,12 @@ None of these steps leaves the organizer room for a change of mind: the terms we
 Everything is visible in the product: the contest card, the request status and the payout details you entered. Every request is checked before it goes out, so the money reaches the right wallet; the one thing worth double-checking on your side is the wallet address you type. For a question about a specific request, write to support@darebay.com and quote the request identifier.
 
 Two things not to do: do not create a second request for the same money, and do not send anyone a "fee" to speed it up. The fee for a withdrawal is taken out of the amount you requested, inside the form, and never in advance.
+
+## Locate the amount at each stage
+
+Published but not entered? Start with [submitting the link](/en/help/submit-your-work). Work already recorded? Check its status and calculation terms. Reward on your available balance? Open [withdrawals](/en/help/darebay-withdrawals). For an organizer-direct reward, follow the task's obligation rather than the platform balance.
+
+Name a specific stage, contest and work or request when contacting support. An external counter screenshot without a link does not establish acceptance or how the reward is funded.
 
 ## Frequently asked questions
 

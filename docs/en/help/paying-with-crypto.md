@@ -1,8 +1,8 @@
 ---
 title: "Can you pay with crypto on DareBay?"
 description: "Paying with crypto on DareBay means one coin: USDT on the TON network, for top-ups, budgets and withdrawals. Crypto is optional, COINS never leave it."
-provenance: { snapshot_date: "2026-08-15", source: "darebay-prod" }
-numbers_used: [contest_create_usdt_price, commission_fiat, commission_crypto, commission_coins]
+provenance: { snapshot_date: "2026-10-12", source: "darebay-prod" }
+numbers_used: [commission_fiat, commission_crypto, commission_coins]
 seo: true
 ---
 
@@ -41,6 +41,12 @@ What exactly protects the payout and why it works without a blockchain is covere
 ## Do you have to pay with crypto
 
 No. The terms of a contest can name a card, a bank transfer, Telegram Stars, a Telegram gift or an item. Those are reward methods of that particular contest, not withdrawal rails for the balance: the withdrawal wizard offers USDT to an external wallet and Telegram Stars. Request a withdrawal from 10 USDT and the platform does the rest.
+
+## Match the asset and network before sending
+
+“USDT” without a network is insufficient: the address and selected network must match the method in the form. Do not choose another network merely for a lower fee. Check asset, network, destination and amount before confirmation; recheck a saved address if your wallet changed.
+
+Nobody needs your private key to send you a payment. For an organizer's direct reward, confirm details under the task; for balance withdrawal, use the withdrawal form. The same currency does not make these the same operation.
 
 ---
 

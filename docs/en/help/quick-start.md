@@ -1,7 +1,7 @@
 ---
 title: "Quick start on DareBay: your first task from zero"
 description: "Quick start on DareBay: pick one of three roles and go. Launch a contest, submit work, or watch and vote. One account covers the site and Telegram."
-provenance: { snapshot_date: "2026-08-15", source: "darebay-prod" }
+provenance: { snapshot_date: "2026-10-12", source: "darebay-prod" }
 numbers_used: []
 ---
 
@@ -68,3 +68,9 @@ outcome without submitting a single entry.
   separately shows available USDT and Telegram Stars options.
 - **[Verification and trust](/en/help/verification)**: what the badge on an
   account means and why it matters to everyone dealing with it.
+
+## A participant's first five minutes
+
+Open one task and note the publication network, submission deadline and payment rule. Check source access before editing. After publishing, submit the link to that task and confirm the work appears in its list: a hashtag alone does not create an entry.
+
+Return to the work for review and credit status. Winner selection, reward credit and available-balance withdrawal are separate steps. Start with [submitting work](/en/help/submit-your-work); for an already credited amount, read [withdrawals](/en/help/darebay-withdrawals).

@@ -1,8 +1,8 @@
 ---
 title: "Clipping brief template: copy, fill in, publish"
 description: "A ready-to-copy brief for clippers: ten fields from goal to acceptance, a field-by-field guide, a filled-in example and a six-point check before you publish."
-provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
-numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_default_min_views_threshold, ppv_min_views_threshold_live, ppv_max_per_work_typical]
+provenance: { snapshot_date: "2026-10-12", source: "darebay-prod" }
+numbers_used: [ppv_default_min_views_threshold]
 seo: true
 landing: true
 hero:
@@ -10,7 +10,7 @@ hero:
   lede: "A good brief saves you the private chat with every single creator: a clipper reads it once and knows what to cut, and you know in advance what you are paying for and what you can turn down. Copy the template, fill in ten fields with the notes below, run the checklist and publish."
   takeaways:
     - "<b>Ten fields answer the questions before anyone asks them:</b> goal, materials, format, platforms, hashtag, must-haves, banned content, rate with threshold and cap, deadline, acceptance."
-    - "<b>Three numbers decide who takes the task: rate, threshold and cap.</b> Rates run $1 to $10 per 1,000 views, the view threshold is set by each task and the cap per clip runs up to $500."
+    - "<b>Add one accepted and one rejected submission example.</b> Check the task terms before publishing and submitting the clip."
     - "<b>A clip enters the task only through the link the creator sends.</b> A moderator checks it against your terms and fake views are filtered out, so the brief is your acceptance tool: what is not in it cannot be demanded later."
     - "<b>Five phrasings bring you the wrong clips:</b> a vague goal, no bans, no example, 'like our competitor' and a deadline with no date. Each one is rewritten below."
 cta:
@@ -51,7 +51,7 @@ HOW WORK IS ACCEPTED: (published link, moderator check, what gets rejected)
 
 **Not allowed.** The list a clip is rejected for: other people's clips, promises of income, shock content, music without rights, naming competitors. A ban missing from the brief cannot be applied afterwards.
 
-**Rate, threshold, cap.** The three numbers on the card: a rate of $1 to $10 per 1,000 views, the threshold defaults to 1,000 and is then set by each task, and the cap per clip runs up to $500. What each number buys: [clipping campaign cost](/en/for-brands/clipping-campaign-cost). Your rate from the creator's side: [earnings calculator](/en/earnings/clipping-earnings-calculator); what they compare you with: [platform comparison](/en/earnings/best-clipping-platforms).
+**Rate, threshold, cap.** The three numbers on the card: the task-specific rate per 1,000 views, the threshold defaults to 1,000 and is then set by each task, and the cap per clip is set per task. What each number buys: [clipping campaign cost](/en/for-brands/clipping-campaign-cost). Your rate from the creator's side: [earnings calculator](/en/earnings/clipping-earnings-calculator); what they compare you with: [platform comparison](/en/earnings/best-clipping-platforms).
 
 **Deadline.** Date, time and time zone: "by the end of the week" means something else to a clipper elsewhere.
 
@@ -92,6 +92,12 @@ HOW WORK IS ACCEPTED: published link through the task form; the moderator checks
 6. It is clear how the creator sends the work and what happens to a rejected clip.
 
 Then it goes into the form: [how to set up a contest](/en/for-brands/set-up-a-clipping-contest) shows where each field goes; [how to pay clippers](/en/for-brands/paying-clippers-per-view) covers the money side, [how to commission clips](/en/for-brands/commission-clips-for-a-campaign) the contest-versus-hiring comparison, and the [business page](/en/for-business) the formats for business.
+
+## Add an acceptance example instead of “make it good”
+
+Requirement: “Show the export step with captions.” Accepted example: the creator demonstrates that step and its visible result. Rejected example: the creator mentions the feature without showing it. A sentence beside the requirement can explain both.
+
+Separate requirements from preferences: duration and authorized footage may be mandatory, while a playful tone is a preference. Do not reject work for missing a preference that was never an acceptance criterion in the published brief.
 
 ## Frequently asked questions
 

@@ -2,7 +2,7 @@
 title: "DareBay Products — our apps and the team behind them"
 description: "DareBay Products: our apps and the team behind them. Open the test web version of Brolivo, your wingman for bolder flirting, and explore the product."
 publisher: products
-provenance: { snapshot_date: 2026-10-08 }
+provenance: { snapshot_date: 2026-10-12 }
 ---
 
 # DareBay Products
@@ -22,3 +22,11 @@ DareBay also runs a [platform for brands and creators](https://darebay.com/). Br
 The platform’s [editorial policy](/en/about/editorial-policy) explains how we check and update its public guides.
 
 For a product question or a collaboration idea, use the contact below. We will add more products here as they take shape.
+
+## Choose the product for your next action
+
+To publish a task, submit a clip or receive a content reward, open the DareBay platform. To prepare a reply in a personal conversation, start with Brolivo's product page and its example.
+
+When contacting the team, name the product and the action where you stopped. An error screenshot helps when private messages and payment details are hidden. This identifies the specific app question without confusing it with a contest on the other platform.
+
+<!-- source: https://brolivo.com/ 2026-10-12 -->

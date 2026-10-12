@@ -1,8 +1,8 @@
 ---
 title: "Clipping for game marketing: a UGC campaign paid per view"
-description: "Promote a game with gameplay clips: clippers post on their own accounts and you pay $1 to $10 per 1,000 counted views. Formats, materials and three budgets."
-provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
-numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_cpm_median, ppv_default_min_views_threshold, ppv_min_views_threshold_live, ppv_max_per_work_typical, contest_create_usdt_price, commission_crypto, commission_fiat]
+description: "Promoting a game through clips: build and embargo, permitted scenes, creator materials, hypothetical budgets and separate install measurement."
+provenance: { snapshot_date: "2026-10-12", source: "darebay-prod" }
+numbers_used: [ppv_default_min_views_threshold, commission_crypto, commission_fiat]
 seo: true
 landing: true
 hero:
@@ -11,7 +11,7 @@ hero:
   takeaways:
     - "<b>Five formats sell a game, so name them in the brief:</b> the gameplay moment, the fail or the clutch, the how-to-beat-it guide, the streamer reaction and the before-and-after of an update."
     - "<b>Nobody buys your game to enter a task, you hand it over:</b> the build or keys, gameplay captures, partner streams and spoiler rules live in one folder linked from the brief."
-    - "<b>Rates run $1 to $10 per 1,000 views, and views are all you pay for:</b> the threshold and the cap per clip are yours to set (up to $500 per clip), and installs run through the second mode, a CPA offer."
+    - "<b>Specify the build, embargo and permitted scenes.</b> Check the task terms before publishing and submitting the clip."
     - "<b>Launch, update and season are three separate tasks,</b> not one big one: different formats, pools and deadlines, and views you can compare directly."
 cta:
   title: "Launch the first task for your game"
@@ -46,7 +46,7 @@ All five map onto the Materials, Must-be-in-the-clip and Not-allowed fields of t
 
 The primary mode for a game is pay per view: you set a rate per 1,000 views, a threshold and a cap per clip, and fund the budget. The clipper publishes on their own TikTok, Reels or Shorts account and sends the link; the platform reads views from the site's public counter, reconciles several times a day and drops inflated views.
 
-You set the rate from $1 to $10 per 1,000 views. The threshold defaults to 1,000 views and above that the figure is yours to set; a clip below it earns nothing, a clip above it is paid for its whole counter. The cap per clip is yours too, up to $500, so no single viral clip takes the whole pool. A hypothetical example:
+You set the rate per 1,000 views on the task card. The threshold defaults to 1,000 views and above that the figure is yours to set; a clip below it earns nothing, a clip above it is paid for its whole counter. The cap per clip is yours too, set for the task, so no single viral clip takes the whole pool. A hypothetical example:
 
 > 20,000 / 1,000 × $1.00 = **$20.00**
 
@@ -54,7 +54,7 @@ The second mode suits games that earn from paying players and need installs rath
 
 ## Launch, update, season: three campaign scenarios
 
-The scenarios use the formula at $1 per 1,000 views and a $100 cap per clip in the example (the platform allows up to $500). This is arithmetic, not a forecast: the number of clips and views depends on the game, the materials and the brief.
+The scenarios use the formula at $1 per 1,000 views and a $100 cap per clip in the example . This is arithmetic, not a forecast: the number of clips and views depends on the game, the materials and the brief.
 
 | Scenario | Pool | Paid views at $1 | Clips at the $100 maximum | The brief |
 |---|---:|---:|---:|---|
@@ -98,6 +98,12 @@ A campaign has three sources of data, and none replaces the others.
 **The store side.** Installs and purchases are not counted by the platform: watch organic installs by day in the store console, clicks on tagged links and promo code activations; on a CPA offer, conversions per creator arrive by postback.
 
 You do not have to hunt for clippers: the task goes into the feed, where creators worldwide see it. More ways to bring them in: [how to find clippers](/en/for-brands/how-to-find-clippers); the setup order: [how to set up a contest](/en/for-brands/set-up-a-clipping-contest); the terms for studios: the [business page](/en/for-business).
+
+## Tie the clip to a game build
+
+State the build number, platform and embargo date in the task. For a before-and-after patch comparison, provide both recordings and label the versions: mixed builds can show a bug already fixed in the release.
+
+List permitted scenes and hidden story details. If creators need a key, define how to obtain it; a key does not replace agreed payment. Separate gameplay views, store-page visits and installs in the results where you can measure them.
 
 ## Frequently asked questions
 

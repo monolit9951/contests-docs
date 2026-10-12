@@ -13,6 +13,7 @@ import {
   buildFacts,
   readInputs,
   renderTable,
+  replaceFactTable,
   snapshotWarnings,
 } from './gen-facts-json.mjs'
 
@@ -26,6 +27,54 @@ const byId = new Map(document.facts.map((fact) => [fact.id, fact]))
 const uaPage = readFileSync(UA_PAGE, 'utf8')
 
 describe('machine-readable fact card', () => {
+  it('does not advertise historical target bands as current earning opportunities', () => {
+    for (const id of ['rate-per-1000-views', 'cap-per-clip']) {
+      const fact = byId.get(id)
+      expect(fact.liveOffer).toBe(false)
+      expect(fact.scope).toMatch(/^historical-/)
+      expect(fact.text.en).toContain('set by the task')
+      expect(fact.note).toContain('task card')
+    }
+  })
+  const expectReviewedRate = (rateFact) => {
+    expect(rateFact.value).toEqual({
+      min: inputs.truth.ppv.stable.bands.cpm.low,
+      max: inputs.truth.ppv.stable.bands.cpm.high,
+    })
+    expect(rateFact.scope).toBe('historical-reviewed-band')
+    expect(rateFact.liveOffer).toBe(false)
+    expect(rateFact.source).toBe('product-truth.json#ppv.stable.bands.cpm')
+    expect(rateFact.asOf).toBe(inputs.truth.verifiedAt)
+    expect(rateFact.note).toContain('Historical reviewed band')
+    expect(rateFact.note).not.toContain('Product target decided')
+    expect(rateFact.text.ru).toContain('исторический проверенный диапазон')
+    expect(rateFact.text.uk).toContain('історичний перевірений діапазон')
+    expect(rateFact.text.en).toContain('dated reviewed band')
+    expect(rateFact.text.ar).toContain('نطاق تمت مراجعته')
+    expect(rateFact.text.ru).not.toContain('ориентир продукта')
+    expect(rateFact.text.uk).not.toContain('орієнтир продукту')
+    expect(rateFact.text.en).not.toContain('product target')
+    expect(rateFact.text.ar).not.toContain('هدف المنتج')
+  }
+
+  it('describes the reviewed historical rate when there is no product intent', () => {
+    const withoutIntent = buildFacts({ ...inputs, intent: null })
+    expectReviewedRate(withoutIntent.facts.find((fact) => fact.id === 'rate-per-1000-views'))
+    expect(withoutIntent.sources.productIntent).toBeNull()
+  })
+
+  it.each(['pending-product-change', 'matches-live'])(
+    'describes the reviewed historical rate when a %s target already matches the reviewed value',
+    (status) => {
+      const intent = structuredClone(inputs.intent)
+      const rateBand = intent.claims.find((claim) => claim.id === 'rate-band')
+      rateBand.target[rateBand.liveTruth.indexOf('ppv.stable.bands.cpm.high')] = inputs.truth.ppv.stable.bands.cpm.high
+      rateBand.status = status
+      const matching = buildFacts({ ...inputs, intent })
+      expectReviewedRate(matching.facts.find((fact) => fact.id === 'rate-per-1000-views'))
+    }
+  )
+
   it('publishes the eleven public fields, in order', () => {
     expect(document.facts.map((fact) => fact.id)).toEqual([...FACT_IDS])
     expect(FACT_IDS).toHaveLength(11)
@@ -97,9 +146,9 @@ describe('machine-readable fact card', () => {
     } else {
       expect(fee.value).toBe(truth.withdrawal.defaultCommissionPercent)
       expect(fee.source).toBe('product-truth.json#withdrawal.defaultCommissionPercent')
-      expect(fee.text.ru).toBe(`${truth.withdrawal.defaultCommissionPercent}% от суммы заявки, заявка от 10 USDT`)
-      expect(fee.text.uk).toBe(`${truth.withdrawal.defaultCommissionPercent}% від суми заявки, заявка від 10 USDT`)
-      expect(fee.text.en).toBe(`${truth.withdrawal.defaultCommissionPercent}% of the requested amount, request from 10 USDT`)
+      expect(fee.text.ru).toBe(`${truth.withdrawal.defaultCommissionPercent}% по умолчанию от суммы заявки, заявка от 10 USDT`)
+      expect(fee.text.uk).toBe(`${truth.withdrawal.defaultCommissionPercent}% за замовчуванням від суми заявки, заявка від 10 USDT`)
+      expect(fee.text.en).toBe(`${truth.withdrawal.defaultCommissionPercent}% by default of the requested amount, request from 10 USDT`)
     }
   })
 
@@ -117,6 +166,22 @@ describe('machine-readable fact card', () => {
     const committed = JSON.parse(readFileSync(FACTS_OUTPUT_FILE, 'utf8'))
     // `generatedAt` is the only field that legitimately differs between two runs of the same data.
     expect({ ...committed, generatedAt: null }).toEqual({ ...document, generatedAt: null })
+  })
+})
+
+describe('generated table replacement', () => {
+  it('preserves frontmatter and article sections around the fact table', () => {
+    const old = '---\ntitle: Facts\n---\n\n## Facts\n\n| Field | Value | Source | As of |\n| --- | --- | --- | --- |\n| Old | Value | Source | Date |\n\n## Explanation\n\nAuthored text.\n'
+    const table = renderTable(document, 'en')
+    const updated = replaceFactTable(old, table, 'en')
+    expect(updated).toBe(old.replace('| Field | Value | Source | As of |\n| --- | --- | --- | --- |\n| Old | Value | Source | Date |', table))
+    expect(replaceFactTable(updated, table, 'en')).toBe(updated)
+  })
+
+  it('refuses a missing or ambiguous table rather than replacing unrelated prose', () => {
+    const table = renderTable(document, 'en')
+    expect(() => replaceFactTable('# Facts\n', table, 'en')).toThrow('found 0')
+    expect(() => replaceFactTable(`${table}\n\n${table}`, table, 'en')).toThrow('found 2')
   })
 })
 

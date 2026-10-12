@@ -1,21 +1,25 @@
 ---
-title: "Why clips get rejected and views go unpaid: ten reasons"
-description: "Clips get rejected for breaking task terms, someone else's video, a missing hashtag or fake views; unpaid views wait on the threshold, a sync or 24 h maturing."
-provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
-numbers_used: [ppv_cpm_median, ppv_min_views_threshold_live, ppv_default_min_views_threshold, ppv_max_per_work_typical]
+title: 'Why clips get rejected and views go unpaid: ten reasons'
+description: 'Rejected clips versus delayed earnings: inspect the exact status, collect evidence and separate submission, view counting and payment.'
+provenance:
+  snapshot_date: '2026-08-23'
+  source: darebay-prod
+numbers_used:
+- ppv_cpm_median
+- ppv_min_views_threshold_live
+- ppv_default_min_views_threshold
+- ppv_max_per_work_typical
 seo: true
 landing: true
 hero:
-  kicker: "Guide · 2026"
-  lede: "A rejected clip and a clip that has not earned yet are two different problems: the first needs a new video, the second usually just needs the threshold or the next sync. Here are the ten reasons an organizer takes a clip down, the six situations where the views are there and the money is not, and a checklist that leaves nothing to argue about."
+  kicker: Guide · 2026
+  lede: 'Rejected clips versus delayed earnings: inspect the exact status, collect evidence and separate submission, view counting and payment.'
   takeaways:
-    - "<b>You always get the reason in writing.</b> An organizer cannot reject a clip without one: four common reasons come as presets, the rest are typed out, and all of it shows in your cabinet."
-    - "<b>No accrual does not mean rejected, and nothing needs redoing.</b> Most of the time the clip has not cleared the threshold, the counter has not synced with the site yet, or a fresh amount is maturing for 24 h."
-    - "<b>The threshold lets you in, it does not take a cut.</b> Past the threshold on the card the whole counter is paid from the first view; above the per-clip cap, if the task sets one (up to $500 per clip), the amount stops growing."
-    - "<b>A dispute is won with links and dates.</b> The clip link, a screenshot of the caption with the hashtag and the time you posted close most reviews, so save them as you go."
+  - 'Record the task URL, video URL, submission time, public visibility, the current caption and the exact status or reason shown. Keep a screenshot of the brief as it stood when you worked on it. These establish different facts: timely submission does not prove acceptance, and a high public counter does not prove payable views.'
+  - 'Rejected clips versus delayed earnings: inspect the exact status, collect evidence and separate submission, view counting and payment.'
 cta:
-  title: "Read the card first and skip the rejection"
-  lede: "A DareBay task card names the site, the hashtag, the date window, the threshold and any cap before the start, not after. Walk the seven points above, publish on the site the task names and send the link, and the clip clears review the first time."
+  title: Read the card first and skip the rejection
+  lede: 'Rejected clips versus delayed earnings: inspect the exact status, collect evidence and separate submission, view counting and payment.'
 ---
 
 ## Ten reasons a clip gets rejected
@@ -25,7 +29,7 @@ The organizer takes a clip down, and the form demands a reason. Four common ones
 1. **Off the task terms.** "Doesn't match the task": wrong format or length, the product or moment the task is about is missing, no required mention. Reread the card, make a new clip.
 2. **Someone else's footage or a repost.** "Someone else's video": downloaded from another clipper, reposted from a channel, or built on an edit that is not yours. Cut from the task materials or shoot your own.
 3. **No hashtag or no link.** "Missing hashtag": the tag from the terms is not in the caption. Its twin: a live video missing from the task because no link was sent and no account is connected. Tag as you post, then check your list of works.
-4. **Account not connected or off-topic.** Clips from an account not connected to the task never enter it, and a themed task drops clips from an off-topic profile. Connect the account before posting.
+4. **Submission route.** Where a task imports a connected account, check that connection; a task accepting a video link uses its own submission form. Confirm the work appears in your list.
 5. **Wrong site.** The task names the site: TikTok, Shorts or Reels. A clip elsewhere cannot be counted; an Instagram photo post has no view counter. Post where the task says.
 6. **Timing.** Posted before the task started or after submissions closed; views after the final data collection do not count either. Post inside the "Starts" and "Until" window.
 7. **Duplicates of one clip.** The same clip on two accounts or twice in one task: the extra copy is skipped or removed, and a run of copies looks like dodging the cap. One clip, one submission.
@@ -55,7 +59,7 @@ A separate case is a clip that went live and barely gets views: that is not a re
 1. Read the whole card: site, format, length, hashtag, mention, account requirements, date window.
 2. Connect the account to the task before posting; keep the profile public.
 3. Cut from the task materials or shoot your own; never someone else's clip.
-4. Hashtag and mention go in the caption as you post, not "later".
+4. **Submission route.** Where a task imports a connected account, check that connection; a task accepting a video link uses its own submission form. Confirm the work appears in your list.
 5. Post on the named site inside the task window; on Instagram, video only.
 6. Send the link, or check the clip was picked up from the connected account, before entries close.
 7. Until the payout, leave the clip alone: no deleting, no closing the profile, no buying views.
@@ -67,6 +71,14 @@ Both routes, step by step: [submit your work](/en/help/submit-your-work).
 Reread the terms and the rejection reason in your cabinet, point by point: half of all disputes end here. Sure the clip qualifies? Write to the organizer from the task, briefly, with facts; no answer or a debatable reason, write to support. Attach links to the submission and the clip, the task id, screenshots of the caption with hashtag and date and of the site's stats, the repost link for a spike dispute, the task materials for "Someone else's video".
 
 Every dispute that reaches support is read by a person and answered. A flag is a pause, not a verdict; its outcomes are in [protection from view fraud](/en/help/protection-from-view-fraud).
+
+## Build one evidence packet before resubmitting
+
+Record the task URL, video URL, submission time, public visibility, the current caption and the exact status or reason shown. Keep a screenshot of the brief as it stood when you worked on it. These establish different facts: timely submission does not prove acceptance, and a high public counter does not prove payable views.
+
+If the work is missing, check the task's submission method. Some tasks take a video link; account-import tasks require the appropriate connection. A hashtag alone is not confirmation that a work entered the task. Look for the work in your own list.
+
+If it is present but the counter is behind, note the last sync before opening a duplicate submission. If it is rejected, respond to the stated reason with the relevant evidence rather than another upload of the same clip. If the amount is approved but not received, ask about settlement or the withdrawal request, not view collection. Avoid deleting the public video while it is the evidence needed to review the case.
 
 ## Frequently asked questions
 

@@ -1,7 +1,7 @@
 ---
 title: Who writes the DareBay guides and where the numbers come from
 description: "Who writes the DareBay clipping guides and answers for every figure: where rates come from, how other platforms' numbers are checked, where to report an error."
-provenance: { snapshot_date: "2026-09-11", source: "darebay-prod" }
+provenance: { snapshot_date: "2026-10-12", source: "darebay-prod" }
 numbers_used: []
 seo: true
 ---
@@ -24,21 +24,13 @@ same people: the [Telegram channel](https://t.me/darebay_app),
 [LinkedIn](https://www.linkedin.com/company/darebay), [YouTube](https://www.youtube.com/@darebay),
 [TikTok](https://www.tiktok.com/@darebay.com).
 
-The texts are prepared by the platform team. The founder reads every text before it goes out and
-corrects it wherever the description drifts from how the product actually works. A page is published
-only after that.
+The platform team prepares the guides and is responsible for product descriptions and corrections. Use the contacts above for a question about a particular claim.
 
 ## Three sources of figures
 
 Every figure in the section belongs to one of three kinds, and each kind is checked its own way.
 
-1. **The platform's own data.** The rate per 1,000 views, the view threshold and the cap per clip
-   come from a snapshot of the platform's data, which carries its own date. Before every publication
-   of the section an automatic check compares the figures on the pages with the latest snapshot, and
-   a page with a stale figure does not pass. The "Updated" date in the header belongs to the text,
-   not to the snapshot: the text may have been edited later than the figures were taken. If a task
-   closed yesterday, an article can lag, which is why the task card in the catalogue always outranks
-   any text here.
+1. **The platform's own data.** A snapshot has its own date. Check an active task's rate, threshold and cap on its card: a snapshot or article can lag available work. Fees are separate from task rates. The page update date reflects changes to the text, not a new reading of every number.
 2. **Other platforms' documents.** Their terms, help pages and public pages. Every figure about
    another platform carries a link to its source and the date we took it. A figure older than a month
    is a reason to re-check it at the source. If a platform has already changed its terms and the page
@@ -70,10 +62,14 @@ own indicators in one fact sheet, each with its source and date.
 
 ## How to report an error
 
-Write with a link to the page and to the source it disagrees with. The correction goes out within a
-few days, and the date in the page header updates with it. An error in the terms of a task itself is
-fixed in the product straight away, not in the text.
+Write with a link to the page and to the source it disagrees with. A substantive correction updates the article date. A question about a task term is handled separately using the particular task card.
 
 How the section's rules work as a whole, from choosing a topic to re-checking other platforms'
 figures, is described in the [editorial policy](/en/about/editorial-policy). What the platform
 guarantees about money is in the [payout guarantee](/en/about/payout-guarantee).
+
+## Report a checkable error
+
+“Everything here is wrong” is hard to investigate. Include the page address, exact sentence, primary source and date of the discrepancy. For example, an article gives a general rate range while an open card shows a different condition.
+
+Say whether it concerns one task or the whole platform. For a translation, include the language and original wording: a different sentence does not always change a term. This identifies the claim and language versions that need correction.

@@ -72,11 +72,11 @@ export const optIn = (key: string): boolean => REGION_FIELDS.includes(key) || PA
 
 export const DATA = raw as PlatformsData
 /**
- * The "Updated" date a comparison page prints: its own `hero.updated` when its figures were re-read
- * after the catalog snapshot, otherwise the snapshot itself. The hero and "how this comparison was
- * built" both show it, so the two can never disagree on one page.
+ * The historical source-check date of a comparison, separate from the git-derived page update.
+ * Existing `hero.updated` records a page's source reread; absent that, keep the catalog snapshot.
+ * Neither date is advanced just because the article was edited.
  */
-export const comparisonUpdated = (frontmatter: { hero?: { updated?: string } | null }): string =>
+export const comparisonSnapshotDate = (frontmatter: { hero?: { updated?: string } | null }): string =>
   frontmatter.hero?.updated ?? DATA.snapshot
 export const byId = (id: string): Platform | undefined => DATA.platforms.find((p) => p.id === id)
 export const pick = (ids: string[]): Platform[] => ids.map(byId).filter((p): p is Platform => Boolean(p))

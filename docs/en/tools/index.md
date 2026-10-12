@@ -1,6 +1,6 @@
 ---
 title: "Tools for Reels, Shorts and TikTok, picked for clippers"
-description: "Editing, AI clipping, caption, voice and scheduling tools for Reels, Shorts and TikTok by stage, with free plans and prices as of September 29, 2026."
+description: "Editing, AI clipping, caption, voice and scheduling tools for Reels, Shorts and TikTok by stage, with free plans, dated prices and export limits."
 provenance: { snapshot_date: "2026-09-29", source: "darebay-prod" }
 landing: true
 showcase: true
@@ -18,7 +18,7 @@ competitor_sources:
   - { platform: "YouTube", url: "https://support.google.com/youtube/answer/14328491", date: "2026-09-29" }
   - { platform: "TikTok", url: "https://www.tiktok.com/safety/en/policies-and-engagement/integrity-authenticity", date: "2026-09-29" }
 hero:
-  kicker: "Prices checked September 29, 2026"
+  kicker: "Prices and plan limits, with source dates"
   lede: "Editing, AI clipping, captions, voice and scheduling tools sorted by stage, with free plans, prices and phone apps marked."
   actions:
     - { label: "View all tasks →", to: "tasks" }
@@ -34,7 +34,7 @@ hero:
     - "<b>Sorted by stage.</b> Editing, AI clipping, captions, voiceover, AI video, scheduling and trend tools, A to Z."
     - "<b>Start at $0.</b> Free plans cover editing, captions, voiceover and an hour of AI clipping a month."
     - "<b>Phone first.</b> VN and Edits edit on a phone; Vizard and OpusClip have phone apps too."
-    - "<b>DareBay pays per counted view.</b> In offer tasks it hands out ready clips, a separate version per account."
+    - "<b>DareBay pays for eligible work.</b> Ready clips and version tools are available where the task enables them."
 tools:
   title: "The catalog, stage by stage"
   lede: "Stages follow a clip from raw footage to stats. Within each stage, tools are listed A to Z, and every price links to the page it came from, with the date it was checked."
@@ -53,7 +53,13 @@ import LTools from '../../.vitepress/theme/landing/LTools.vue'
 import { data as tools } from '../../.vitepress/tools.en.data'
 </script>
 
-Tools for Reels, Shorts and TikTok are the apps and web services that handle each stage of a short video: editing, cutting a long recording into clips, captions, voiceover, AI video, posting and analytics. This catalog sorts them by stage and lists them A to Z within each one, and every card shows the price as of September 29, 2026, the free plan if there is one, and where the tool runs.
+## Compare output, billing units and source dates
+
+The October 12 editorial review clarifies the units that affect a clipping budget: Klap counts generated clips, OpusClip counts processing minutes, and posting to X uses separate credits. A clip allowance cannot be converted into an hourly footage price without another limit. [The clipping comparison](/en/tools/opus-clip-alternatives) includes the new Klap and Choppity details. Other catalog cards retain their own check dates; editing the guide does not imply every app was tested again.
+
+Pick the tool for the bottleneck. Use [caption apps](/en/tools/auto-caption-apps) when names and numbers need correction, [faceless AI tools](/en/tools/best-ai-tools-for-reels) when failed generations inflate costs, and [schedulers](/en/tools/multi-account-schedulers) when queued posts never become public links. Give two tools the same source, then compare usable clips, correction time and the actual export. A free trial of that full cycle is more informative than counting listed features.
+
+Tools for Reels, Shorts and TikTok are the apps and web services that handle each stage of a short video: editing, cutting a long recording into clips, captions, voiceover, AI video, posting and analytics. This catalog sorts them by stage and lists them A to Z within each one, and each card shows its own price-check date, the free plan if there is one, and where the tool runs.
 
 DareBay, a platform that pays clippers per counted view on TikTok, Instagram Reels, YouTube Shorts and Facebook Reels, publishes this catalog. Its own tools sit in a separate, labeled group, and [how we pick tools](#how-we-pick) explains what gets listed.
 
@@ -118,7 +124,7 @@ DareBay, the publisher of this page and a platform that pays clippers per counte
 
 - **Order.** Tools are grouped by stage and listed A to Z within each stage. There is no ranking.
 - **DareBay's own tools** sit in a separate, labeled group at the top of the catalog and aren't part of the stage-by-stage comparison.
-- **Prices** come from each tool's own pricing page, with the date we checked, currently September 29, 2026. Some tools price by visitor country, so the card says which region a price is for.
+- **Prices** come from each tool's own pricing page, with its own check date. Some tools price by visitor country, so the card says which region a price is for.
 - **Where it runs** comes from each tool's own site and its app store listings.
 - **Links** to tools are plain links with no affiliate tracking for now; if that changes, affiliate links will be marked on the card and here.
 - **What we leave out:** view botting, account sellers, tools for downloading other people's videos, and tools that publish no price or terms on their own pages.
@@ -151,4 +157,4 @@ DareBay publishes this page and picks the tools: it's a platform that pays clipp
 
 ### What does DareBay itself add to these tools?
 
-DareBay, which publishes this catalog, hands out ready clips in offer tasks, a separate version for every account, plus a version builder for task originals and a setup for each platform. One person can connect up to 20 accounts to a task, new videos are pulled in for you, and DareBay pays per counted view. Sign-up is free with email, Google, Discord or Telegram.
+DareBay publishes this catalog. Where enabled in the task, it provides ready clips, a version builder for task originals and platform setup instructions. One person can connect up to 20 accounts to a task, new videos are pulled in for you, and DareBay pays per counted view. Sign-up is free with email, Google, Discord or Telegram.

@@ -29,7 +29,7 @@ cta:
 
 ## What counts as a clipper's income
 
-DareBay pays in three ways: the view payout at the task's rate, and in CPA-offer tasks a fixed fee per accepted clip plus a share of sales. To a tax office all of it is income, USDT or not.
+Start with the basis of the payment: counted views under task terms, a fixed editing fee or another agreed reward. Keep the task card or contract and payer details. The app name, payment in USDT and a similar amount do not determine the income classification.
 
 Timing is harder. Every payout has three dates: the credit to your balance, the withdrawal to your TON wallet and the swap into local currency. Which one is the date of income depends on the country and the regime; ask your tax office and meanwhile record all three.
 
@@ -68,11 +68,11 @@ Elsewhere in CIS the principle is the same: declare income in local currency at 
 
 DareBay pays for counted views in USDT but is not a tax agent: it withholds no tax and issues no statements in your tax office's format. It keeps the history of credits and withdrawals in your cabinet; no tax status is needed to take a task, so that decision is yours.
 
-Once a submission is approved you can lock in credits with "Claim now"; fresh credits mature for 24 hours. Withdrawal is a separate operation: a request of at least 10 USDT, a 10% fee deducted inside the request, and the team checks the details and sends it; see [DareBay withdrawals](/en/help/darebay-withdrawals) and [DareBay fees](/en/help/what-commission). Record both the requested and the received amount: they differ by that fee (a 100 USDT request pays out 90 USDT), and a tax office may ask for either. Telegram Stars are "get it in Stars", not a cash withdrawal; how a tax office treats them is its call.
+In a wallet-backed task, the balance is credited when the task ends. If the task offers "Claim now", approved credits can be locked in earlier after the displayed maturation period. Withdrawal is a separate operation: a request of at least 10 USDT, a default 10% fee deducted inside the request, and the team checks the details and sends it; see [DareBay withdrawals](/en/help/darebay-withdrawals) and [DareBay fees](/en/help/what-commission). Record both the requested and the received amount: they differ by that fee (a 100 USDT request at the default rate pays out 90 USDT), and a tax office may ask for either. Telegram Stars are "get it in Stars", not a cash withdrawal; how a tax office treats them is its call.
 
 ## A ten-minute monthly ledger
 
-Once a month, fill six columns from the cabinet and the wallet. The rate is either your central bank's official dollar rate on the date or the exchange rate you got; which one your tax office accepts, ask in advance.
+Once a month, combine cabinet, wallet and exchange operations in one ledger. Record actual dates and amounts; fill the tax valuation and recognition date according to the rule your accountant or tax office confirms for your regime.
 
 | Date | Task | Credited, USDT | Withdrawn, USDT | Rate | Local currency |
 |---|---|---:|---:|---|---|
@@ -82,6 +82,20 @@ Once a month, fill six columns from the cabinet and the wallet. The rate is eith
 
 Which total you report, credited or withdrawn, depends on how your country reads the moment of income; the table shows either. Size the columns with the [clipping earnings calculator](/en/earnings/clipping-earnings-calculator); rate, threshold and cap are explained in [how much clipping pays](/en/earnings/how-much-clipping-pays).
 
+## One work payment, three linked events
+
+Hypothetical example: a task credits 20 USDT, a withdrawal request for 20 USDT sends 18 USDT after the default 10% fee, and you later exchange it for local currency. These are linked events, rather than three equal work payments. Give them one earnings reference and separate operation IDs:
+
+| Event | Evidence to keep | Amount |
+|---|---|---:|
+| Work credit | Task, clip URL, date and cabinet entry | 20 USDT |
+| Withdrawal | Request ID, fee, wallet address and transaction hash | 20 requested, 2 fee, 18 USDT received |
+| Exchange | Trade document, date, actual rate and exchange charge | Local currency received |
+
+Give your accountant the chain before filing. Ask about the income recognition date, USDT valuation method, fee treatment and any separate consequences of the exchange. Russia's mining and digital-currency disposal guidance cannot automatically determine the treatment of editing fees paid in USDT: the source and type of transaction differ. <!-- source: https://www.nalog.gov.ru/rn77/promo/mining/ 2026-10-12 -->
+
+For an organizer's direct payment, keep their confirmation and payment evidence. The DareBay wallet history cannot substitute for an external payment it never recorded.
+
 ## Frequently asked questions
 
 ### Do I owe tax while the USDT sits in my DareBay wallet?
@@ -90,7 +104,7 @@ It depends on which date your country treats as the moment of income: credit, wi
 
 ### How do I report a USDT payout in my own currency?
 
-Convert at the rate on the date of receipt: your central bank's official dollar rate or the exchange quote you got. Russia's Federal Tax Service values digital currency at the market quote on the date of income, converted at the Bank of Russia rate <!-- source: https://www.nalog.gov.ru/rn77/promo/mining/ 2026-09-04 -->.
+First establish which recognition date and valuation method your tax regime requires for services paid in USDT. Keep the actual quote and exchange document; do not automatically substitute the dollar rate, because USDT and USD are different assets. The Federal Tax Service mining page covers specific transactions rather than a universal rule for editing fees. Ask your tax office or accountant which method applies. <!-- source: https://www.nalog.gov.ru/rn77/promo/mining/ 2026-10-12 -->
 
 ### Can I start clipping first and register as self-employed later?
 

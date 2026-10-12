@@ -1,8 +1,8 @@
 ---
 title: "Clipping for podcasts: turn an episode into Shorts"
 description: "One podcast episode yields 10 to 20 clips for TikTok, Reels and Shorts, and clippers are paid only for counted views. Three formats, handover and the maths."
-provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
-numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_min_views_threshold_live, ppv_max_per_work_typical, contest_create_usdt_price, commission_crypto, commission_fiat]
+provenance: { snapshot_date: "2026-10-12", source: "darebay-prod" }
+numbers_used: [commission_crypto, commission_fiat]
 seo: true
 landing: true
 hero:
@@ -10,7 +10,7 @@ hero:
   lede: "A podcast cuts more easily than any other source: the thoughts are already spoken, the questions are already asked, the faces are already on camera. Below are the three clip formats one episode produces, what to hand clippers, what an episode costs when you pay per counted view, and how to put clipping on a weekly cycle beside your releases."
   takeaways:
     - "<b>An hour of talk is 10 to 20 clips:</b> a quotable point, a disagreement or a moment of emotion, a question and answer. Your guest has already made the point and your host has already asked the question, so the clipper only picks the best seconds and adds a hook."
-    - "<b>You pay for counted views, not for editing hours:</b> the rate is yours to set, from $1 to $10 per 1,000 views, and so are the threshold and the cap per clip (up to $500 per clip)."
+    - "<b>Supply timestamps with the question and answer context.</b> Check the task terms before publishing and submitting the clip."
     - "<b>An episode with 120,000 counted views at $1.00 costs 120,000 / 1,000 × $1.00 = $120.00.</b> Launching is free and the contest fee is 0%."
     - "<b>The brief protects your guest, a verbal promise does not:</b> consent agreed before release, a list of topics nobody may lift out of context, and a required link to the full episode."
 cta:
@@ -54,7 +54,7 @@ Hypothetically, clippers made 15 clips from an hour-long episode. Three missed t
 
 > 120,000 / 1,000 × $1.00 = **$120.00**
 
-If one clip takes off to 150,000 views, the formula gives $150.00, but with a $100 cap set on the task the creator gets $100. At $10.00 the same episode would cost $1,200.00: you choose the rate, from $1 to $10 per 1,000 views, when you create the task<!-- source: https://darebay.com/en/earnings/how-much-clipping-pays 2026-09-24 -->. Creating the contest is free, the contest fee is 0% and topping up costs nothing.
+If one clip takes off to 150,000 views, the formula gives $150.00, but with a $100 cap set on the task the creator gets $100. At a hypothetical $10.00 rate, 120,000 views would yield $1,200 before per-clip caps; a $100 cap stops each clip at that amount. Calculate clips separately rather than multiplying the episode total without caps. Creating the contest is free, the contest fee is 0% and topping up costs nothing.
 
 A wallet-backed budget is locked on the platform before the start, spent on counted views, and the remainder comes back. Rate and cap for a pool: [clipping campaign cost](/en/for-brands/clipping-campaign-cost); the calculator below works any budget.
 
@@ -80,6 +80,12 @@ Clips work when they go out every week with the episode, not once a season.
 4. **The next recording.** A new episode into the same folder; the budget is topped up and the deadline extended: one task lives all season, so you set it up only once.
 
 The best clips become announcements on your own accounts, and the accepted submissions become your Shorts library. Form walkthrough: [how to set up a clipping contest](/en/for-brands/set-up-a-clipping-contest); first creators: [how to find clippers](/en/for-brands/how-to-find-clippers); business formats: the [business page](/en/for-business).
+
+## Preserve the context of a short quotation
+
+Give clippers timestamps together with the host's question. For example, a guest says “I do not recommend it” at 18:40, but 18:20 establishes that this applies only to beginners. Removing that qualification changes the meaning even with a verbatim quote. Specify which context must remain.
+
+Supply approved names, job titles and the full-episode link. Before reusing a clip, check the guest's permission for that distribution as well as the captions.
 
 ## Frequently asked questions
 

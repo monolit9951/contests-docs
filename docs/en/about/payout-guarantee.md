@@ -1,7 +1,7 @@
 ---
 title: "DareBay payout guarantee: what it covers and how it works"
 description: "The DareBay payout guarantee: a wallet-backed budget is frozen on the platform before the start, the terms stay fixed and the count comes from outside."
-provenance: { snapshot_date: "2026-08-15", source: "darebay-prod" }
+provenance: { snapshot_date: "2026-10-12", source: "darebay-prod" }
 numbers_used: []
 seo: true
 ---
@@ -24,7 +24,7 @@ DareBay is an intermediary and guarantor. It holds the budget of every wallet-ba
 
 **Suspicious views are held back.** Moderation and basic checks sit on top of the count, and a clip with suspicious dynamics goes on hold pending review, so suspicious growth does not eat into the budget meant for honest clips.
 
-**Your earnings reach your balance automatically.** What each clip earned is credited in full when a wallet-backed task ends, or earlier with Claim now where the task shows it. Request a withdrawal from 10 USDT and the platform does the rest: 10% comes off inside the request, and you see the amount to receive before you confirm.
+**Your earnings reach your balance automatically.** What each clip earned is credited in full when a wallet-backed task ends, or earlier with Claim now where the task shows it. Request a withdrawal from 10 USDT and the platform does the rest: 10% (default) comes off inside the request, and you see the amount to receive before you confirm.
 
 ## Wallet-backed and direct-charge contests
 
@@ -39,6 +39,12 @@ The funding mode changes what the platform can promise, so it is stated on the c
 | What DareBay guarantees | The money is present and the calculation is fixed | The calculation and the recorded obligation |
 
 The leftover rule is worth reading twice, because it is often stated too broadly. A refund of the unspent remainder is a property of a **locked wallet-backed budget**: the platform is holding money and gives back what the clippers did not earn. Where the budget was never deposited, there is nothing to return and no refund is placed in a queue.
+
+## What to include in a guarantee question
+
+Keep the contest, funding mode, work and credit or obligation record. For wallet-backed funding, the question concerns a held pool and calculation. For direct payment, it concerns the recorded result and organizer fulfillment; an obligation record does not mean money was deposited on the platform.
+
+If the amount is already on your balance but absent from an external wallet, provide the withdrawal request identifier and status. Separating these cases identifies the relevant record rather than any transfer with a similar amount.
 
 ## Frequently asked questions
 

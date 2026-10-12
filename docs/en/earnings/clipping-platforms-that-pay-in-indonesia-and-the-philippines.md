@@ -31,6 +31,14 @@ cta:
   lede: "DareBay keeps no country list: only people on sanctions lists are barred, so a clipper in Surabaya or Cebu takes a task on the same terms as anyone else. It pays in USDT on the TON network. If your wallet is ready and you have read what your regulator says above, pick a task, post the clip and let the platform count the views."
 ---
 
+## Indonesia and the Philippines: editing pay versus view rewards
+
+Neither country appears in Vyro's current exclusions, but platform eligibility and an accepted receiving account are separate questions. ClipGrow moved new work to fixed pay for approved editing, with monthly UPI payments; older Sunday CPM rules concern legacy campaigns. Wondeed requires Indian residency. Neither establishes direct GCash or DANA payouts.<!-- source: https://vyro.com/help/getting-started/what-countries-are-supported 2026-10-12 --><!-- source: https://clipgrow.in/terms 2026-10-12 --><!-- source: https://wondeed.com/terms 2026-10-12 -->
+
+Vues offers bank or USDC through Stripe depending on country. Record who posts the clip, whether payment depends on approval or views, and the receiving method. Fixed editing pay cannot be forecast using CPM.<!-- source: https://vues.app/ios 2026-10-12 -->
+
+Local payment, tax and regulator documents below retain their September reading dates.
+
 Two questions decide clipping here: will a platform pay you at all, and what does its rail become once the money lands? Platforms answer the first, payment companies and regulators the second. For a country-blind ranking see [the best clipping platforms](/en/earnings/best-clipping-platforms); for what a thousand views is worth, [how much clipping pays](/en/earnings/how-much-clipping-pays).
 
 ## Indonesia and the Philippines in one table
@@ -52,7 +60,7 @@ Six more local boards publish payout terms, five Indonesian and one Philippine, 
 | **Indoclip** | CPM on views checked in 1 to 3 working days <!-- source: https://indoclip.id/ 2026-09-19 --> | DANA, GoPay, OVO or ShopeePay <!-- source: https://indoclip.id/ 2026-09-19 --> | Not published | The rate or the fee; its terms keep a right to adjust a reward <!-- source: https://indoclip.id/terms 2026-09-19 --> |
 | **Ternak Buzzer**, not TryBuzzer or Ternak Klip | On each campaign's terms, after a view check it calls final <!-- source: https://ternakbuzzer.id/terms-of-service 2026-09-19 --> | An e-wallet or a bank transfer after approval <!-- source: https://ternakbuzzer.id/cara-kerja 2026-09-19 --> | Not published | The rate, the operator, the size of its fee |
 | **Vouched** (Manila, pre-launch) | A fixed rate per 1,000 eligible verified views, or a pool share <!-- source: https://www.vouched.ph/how-it-works/creators 2026-09-19 --> | GCash or Maya, a bank account in a later clause <!-- source: https://www.vouched.ph/terms 2026-09-19 --> | None; the floor is what the transfer costs <!-- source: https://www.vouched.ph/terms 2026-09-19 --> | Its operating company, or any delivery time |
-| **DareBay** | $1.00 to $10.00 per 1,000 counted views, set by each task | USDT on the TON network, or the payout received in Telegram Stars | 10 USDT per request, 10% taken inside it | Nothing from this table: its rate, rails, minimum and fee are all published |
+| **DareBay** | rate per 1,000 eligible views set by the task; check the card | USDT on the TON network, or the payout received in Telegram Stars | 10 USDT per request, 10% taken inside it | Nothing from this table: its rate, rails, minimum and fee are all published |
 
 ## Rupiah boards built in Indonesia, and who they are open to
 
@@ -110,7 +118,7 @@ The Philippine BIR requires anyone earning through electronic platforms to regis
 
 ## A rupiah board, a GCash route or DareBay: which fits you
 
-DareBay keeps no country list: only people on sanctions lists are barred <!-- source: https://darebay.com/en/legal/terms 2026-09-24 -->, so both countries are in, and it pays in USDT on the TON network. You can also receive the payout in Telegram Stars, but Stars are not cash: "You may not sell, withdraw, transfer or use Stars in your personal balance" beyond what Telegram's terms allow. <!-- source: https://telegram.org/tos/stars 2026-09-18 --> Nothing is taken from a task budget; the one charge a clipper meets is 10% of the amount withdrawn, withdrawals start at 10 USDT, and you see the amount to receive before you confirm. The rate is set by each task and printed on its card, from $1.00 to $10.00 per 1,000 counted views, and no followers or application are needed: a brand-new account can take a task. The interface is in English, Russian, Ukrainian and Polish.
+DareBay keeps no country list: only people on sanctions lists are barred <!-- source: https://darebay.com/en/legal/terms 2026-09-24 -->, so both countries are in, and it pays in USDT on the TON network. You can also receive the payout in Telegram Stars, but Stars are not cash: "You may not sell, withdraw, transfer or use Stars in your personal balance" beyond what Telegram's terms allow. <!-- source: https://telegram.org/tos/stars 2026-09-18 --> Nothing is taken from a task budget; the one charge a clipper meets is 10% of the amount withdrawn, withdrawals start at 10 USDT, and you see the amount to receive before you confirm. The rate is set by each task and printed on its card, the rate shown on its card per 1,000 counted views, and no followers or application are needed: a brand-new account can take a task. The interface is in English, Russian, Ukrainian and Polish.
 
 So a rupiah board is the better answer for an Indonesian resident who wants rupiah in DANA or GoPay with no crypto in the chain; Clippo even withholds the income tax. In Manila, while the local board has no brief to take, a global board paying by PayPal or Payoneer is better when the money must end up in GCash. DareBay fits a clipper who already holds a TON wallet, falls outside the rupiah boards' residency rules and has read the regulators above. The rails, platform by platform, are in [clipping platforms that pay without PayPal or Stripe](/en/earnings/clipping-platforms-that-pay-without-paypal-or-stripe).
 

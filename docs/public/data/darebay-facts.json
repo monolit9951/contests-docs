@@ -26,6 +26,8 @@
         "max": 10
       },
       "unit": "usd_per_1000_views",
+      "scope": "historical-product-target",
+      "liveOffer": false,
       "labels": {
         "ru": "Ставка за 1000 просмотров",
         "uk": "Ставка за 1000 переглядів",
@@ -33,19 +35,21 @@
         "ar": "السعر لكل 1,000 مشاهدة"
       },
       "text": {
-        "ru": "$1.00–$10.00 за 1000 просмотров, ставку задаёт каждое задание",
-        "uk": "$1.00–$10.00 за 1000 переглядів, ставку задає кожне завдання",
-        "en": "$1.00–$10.00 per 1,000 views, set by each task",
-        "ar": "$1.00–$10.00 لكل 1,000 مشاهدة، تحدده كل مهمة"
+        "ru": "ставку задаёт задание; $1.00–$10.00 за 1000 просмотров — опубликованный ориентир продукта на указанную дату, не текущий оффер",
+        "uk": "ставку задає завдання; $1.00–$10.00 за 1000 переглядів — опублікований орієнтир продукту на зазначену дату, не поточна пропозиція",
+        "en": "set by the task; $1.00–$10.00 per 1,000 views is the dated product target, not a live offer",
+        "ar": "تحدده المهمة؛ $1.00–$10.00 لكل 1,000 مشاهدة هدف المنتج في التاريخ المذكور، وليس عرضًا متاحًا الآن"
       },
       "source": "product-intent.json#rate-band",
       "asOf": "2026-09-20",
-      "note": "Band decided 2026-09-20 (product-intent.json#rate-band). Each task sets its own rate inside it; the exact rate is printed on the task card and cannot change after the start."
+      "note": "Product target decided 2026-09-20 (product-intent.json#rate-band). This historical value is not a live offer or a guaranteed platform-wide rate. Read the selected task card for its actual rate before working."
     },
     {
       "id": "cap-per-clip",
       "value": 500,
       "unit": "usd",
+      "scope": "historical-reviewed-band",
+      "liveOffer": false,
       "labels": {
         "ru": "Потолок на один ролик",
         "uk": "Стеля на один ролик",
@@ -53,14 +57,14 @@
         "ar": "الحد الأقصى لكل مقطع"
       },
       "text": {
-        "ru": "до $500 на ролик",
-        "uk": "до $500 на ролик",
-        "en": "up to $500 per clip",
-        "ar": "حتى $500 لكل مقطع"
+        "ru": "задаётся заданием; $500 — верхняя граница исторического среза, не универсальный потолок",
+        "uk": "задається завданням; $500 — верхня межа історичного зрізу, не універсальна стеля",
+        "en": "set by the task; $500 is the historical band's upper edge, not a universal cap",
+        "ar": "تحدده المهمة؛ $500 الحد الأعلى للنطاق التاريخي، وليس سقفًا موحّدًا"
       },
       "source": "product-truth.json#ppv.stable.bands.maxPerWork.high",
       "asOf": "2026-08-23",
-      "note": "The highest cap a task may set, founder-approved in product-intent.json#rate-band; each task sets its own cap, and a task may set none. After the start a cap may only be raised."
+      "note": "Historical reviewed value, not the highest cap currently permitted by the platform. Read the selected task card for its actual cap; a task may set none. After the start a cap may only be raised."
     },
     {
       "id": "view-threshold",
@@ -150,14 +154,14 @@
         "ar": "عمولة سحب الرصيد"
       },
       "text": {
-        "ru": "10% от суммы заявки, заявка от 10 USDT",
-        "uk": "10% від суми заявки, заявка від 10 USDT",
-        "en": "10% of the requested amount, request from 10 USDT",
-        "ar": "10% من المبلغ المطلوب، والطلب من 10 USDT"
+        "ru": "10% по умолчанию от суммы заявки, заявка от 10 USDT",
+        "uk": "10% за замовчуванням від суми заявки, заявка від 10 USDT",
+        "en": "10% by default of the requested amount, request from 10 USDT",
+        "ar": "10% افتراضيًا من المبلغ المطلوب، والطلب من 10 USDT"
       },
       "source": "product-truth.json#withdrawal.defaultCommissionPercent",
       "asOf": "2026-08-23",
-      "note": "Live value; withdrawals are processed manually."
+      "note": "Reviewed default rate; individual overrides may apply. The request shows its actual fee and net amount; withdrawals are processed manually."
     },
     {
       "id": "withdrawal-minimum",

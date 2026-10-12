@@ -1,7 +1,7 @@
 ---
 title: "How to submit your work on DareBay: link and checks"
 description: "Submit work on DareBay without losing the payout: in a pay-per-view contest the entry arrives as a link to the published video, in the rest you upload a file."
-provenance: { snapshot_date: "2026-08-15", source: "darebay-prod" }
+provenance: { snapshot_date: "2026-10-12", source: "darebay-prod" }
 numbers_used: []
 ---
 
@@ -94,7 +94,7 @@ You get a notification, and the platform records what you are owed with a status
 In a wallet-backed contest that money left the organizer's balance back when the contest was
 created, so nothing depends on their goodwill at this point: the reward reaches your balance
 automatically when the contest ends. Entry is free, and a
-[withdrawal](/en/help/darebay-withdrawals) takes one request from 10 USDT: 10% comes off inside
+[withdrawal](/en/help/darebay-withdrawals) takes one request from 10 USDT: 10% (default) comes off inside
 the request, the form shows the amount to receive and the method available to you before you
 confirm, and the platform does the rest. For an **ITEM** prize the organizer gets in touch to
 arrange the handover.
@@ -104,6 +104,12 @@ arrange the handover.
 That is fine. Enter the next one. Your participant rating grows simply from
 sending in real work and not breaking the rules: reputation is not built by
 winners alone.
+
+## Check the link after publishing
+
+Open the address while signed out of your network account. It must reach the specific clip, rather than a profile, draft or private post. Check that the network matches the task, submit the link, and confirm it was recorded in the intended contest.
+
+If the work is absent, first establish whether submission saved; do not create duplicate posts blindly. Keep the post URL, contest link and error text for a question. Removing or making the post private can prevent counter checks.
 
 ---
 

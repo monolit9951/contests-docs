@@ -30,11 +30,19 @@ cta:
   lede: "DareBay keeps no country list, and only people on sanctions lists are barred; it asks for no follower count, no portfolio and no application before you take a task. Every task carries its rate on the card, and the money leaves as USDT on the TON network to a wallet you control: request a withdrawal from 10 USDT and the platform does the rest."
 ---
 
+## Pakistan: remove unavailable routes before comparing rates
+
+The current Vyro exclusion list still includes Pakistan. Wondeed requires Indian residency; its UPI offers therefore do not establish a Pakistani receiving route.<!-- source: https://vyro.com/help/getting-started/what-countries-are-supported 2026-10-12 --><!-- source: https://wondeed.com/terms 2026-10-12 -->
+
+Vues now advertises bank or USDC through Stripe depending on country; calling this crypto does not bypass provider screening. On Clipping.net the campaign chooses PayPal, USDC or USDT on Ethereum: a PayPal campaign does not promise a crypto alternative. A Payoneer account helps only when the paying platform accepts it.<!-- source: https://vues.app/ios 2026-10-12 --><!-- source: https://clipping.net/docs/clippers/payments 2026-10-12 -->
+
+The SBP, tax and banking sections below retain their earlier source dates, not a new October legal review.
+
 ## A PayPal line on the campaign card is where it ends here
 
 Before the rate matters, read the rail. PayPal's own worldwide list of countries and regions carries no Pakistan entry: its Asia section runs from Armenia to Vietnam and steps straight from Nepal to the Philippines <!-- source: https://www.paypal.com/us/webapps/mpp/country-worldwide 2026-09-18 -->. Stripe's page of supported countries does not name Pakistan either, in the main list, the extended network or the preview markets <!-- source: https://stripe.com/global 2026-09-18 -->. Wise closes the third door: Pakistan is absent from its list of places you must live in to hold money there <!-- source: https://wise.com/help/articles/2813542/where-do-i-need-to-live-to-hold-money-with-wise 2026-09-18 -->.
 
-Those three absences decide most of the board. Vyro withdraws only through "PayPal or Stripe depending on your country" <!-- source: https://vyro.com/help/earnings-and-payments/how-can-i-withdraw-my-earnings 2026-09-18 -->, and it names Pakistan on its unsupported list, where a clipper "won't be able to use Vyro or receive payouts" <!-- source: https://vyro.com/help/getting-started/what-countries-are-supported 2026-09-18 -->. Clipping.net stays half open: it supports PayPal, USDC on Ethereum and USDT on Ethereum, but each campaign fixes one method and a PayPal campaign cannot be taken in crypto instead <!-- source: https://clipping.net/docs/clippers/payments 2026-09-18 -->. Vues leaves it to the brand, paying "through the methods a Brand makes available" — crypto such as USDT, PayPal or Zelle — subject to provider screening <!-- source: https://vues.app/terms 2026-09-18 -->.
+Those three absences decide most of the board. Vyro withdraws only through "PayPal or Stripe depending on your country" <!-- source: https://vyro.com/help/earnings-and-payments/how-can-i-withdraw-my-earnings 2026-09-18 -->, and it names Pakistan on its unsupported list, where a clipper "won't be able to use Vyro or receive payouts" <!-- source: https://vyro.com/help/getting-started/what-countries-are-supported 2026-09-18 -->. Clipping.net stays half open: it supports PayPal, USDC on Ethereum and USDT on Ethereum, but each campaign fixes one method and a PayPal campaign cannot be taken in crypto instead <!-- source: https://clipping.net/docs/clippers/payments 2026-09-18 -->. The September Vues terms described brand-enabled USDT, PayPal or Zelle; its current app page advertises bank or USDC through Stripe depending on country <!-- source: https://vues.app/terms 2026-09-18 -->.
 
 ## What a clipper here can actually receive
 
@@ -60,7 +68,7 @@ The question on any campaign card is therefore narrow: does this platform hand m
 | Reach.cat | A crypto-wallet board with no PayPal step, though not an anonymous one: its landing page says "No KYC. No ID check. No bank account needed" <!-- source: https://reach.cat/become-a-clipper/ 2026-09-24 -->, while its terms effective 13 September 2026 require identity verification through iDenfy once total payout requests pass $500 <!-- source: https://reach.cat/terms 2026-09-24 -->. It pays in USDT, and its creator FAQ says bank transfer is coming "very soon" <!-- source: https://reach.cat/creator 2026-09-24 -->. It claims 149+ countries but lists none. |
 | Prime Oracles | Bars EU, UK and US residents "or any jurisdiction in which the use of cryptocurrency services is restricted or prohibited under applicable law" <!-- source: https://www.primeoracles.com/terms-agreement 2026-09-18 --> — a clause that names no country and points back at your own rules. |
 | Clipping.net | Requires residence "in the territories where we operate" without listing them <!-- source: https://clipping.net/policies/clipper-terms-and-conditions 2026-09-18 -->, and half its rails are PayPal. |
-| Vues | No country list; the rail depends on the brand, and Zelle is not reachable from here. |
+| Vues | No country list; current bank/USDC flow uses Stripe and depends on country. Confirm recipient access. |
 | Clipping.io | Publishes no country and no payout information at all, so nothing can be checked before signing in. |
 | Vyro | Closed: Pakistan is named on the unsupported list. |
 | Klipni | Unreachable: it pays only authors holding Russian self-employed or sole-trader tax status <!-- source: https://klipni.com/legal/terms 2026-09-18 -->. |

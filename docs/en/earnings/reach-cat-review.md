@@ -27,8 +27,14 @@ method:
   - "Where a landing page and the terms disagree, both are quoted with their source and the terms are treated as the binding text. Reviews on third-party sites were used only to find the questions clippers ask. DareBay's figures come from its own public pages."
 cta:
   title: "A payout rule you can read before the first clip"
-  lede: "On DareBay the rate ($1–$10 per 1,000 views), the view threshold and any cap sit on the task card before your first clip, and task payouts carry a 0% fee. You pay 10% only when you withdraw: request a withdrawal from 10 USDT and the platform does the rest. The money leaves in USDT on TON, or you receive the payout in Telegram Stars."
+  lede: "On DareBay the rate, the view threshold and any cap sit on the task card before your first clip, and task payouts carry a 0% fee. You pay 10% only when you withdraw: request a withdrawal from 10 USDT and the platform does the rest. The money leaves in USDT on TON, or you receive the payout in Telegram Stars."
 ---
+## Before crossing the identity-check threshold
+
+The terms snapshot below puts identity verification after cumulative payout requests exceed $500. In that model, earlier requests totalling $480 plus a new $30 request cross the threshold even though the latest withdrawal is small. A low single cash-out does not keep your lifetime requests below the limit. Preserve the total requested, the applicable terms edition and your account's verification state before planning the next batch.
+
+The public terms and creator URLs returned only a JavaScript shell during our 12 October HTTP recheck, so their current clauses were not revalidated in this update. The September terms, live-card and account observations below keep their original dates. This access limitation does not establish that Reach.cat stopped operating or paying.
+
 ## The company behind Reach.cat
 
 The terms open with the operator: "Reach.cat is operated by REACH MARKETING NETWORK - FZCO" <!-- source: https://reach.cat/terms 2026-09-18 -->, and the privacy policy gives its address as Building A1, Dubai Digital Park, Dubai Silicon Oasis <!-- source: https://reach.cat/privacy-policy 2026-09-18 -->. The law is that of the United Arab Emirates, with disputes handled "via binding arbitration or through courts in Dubai". At checkout a brand buys from a different company: orders are "sold by Inflowpay SAS, acting as the authorized reseller and Merchant of Record", incorporated in France <!-- source: https://reach.cat/terms 2026-09-18 -->.

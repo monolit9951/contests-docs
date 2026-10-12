@@ -1,8 +1,8 @@
 ---
 title: DareBay reviews - what to expect instead of testimonials
-description: Who actually uses DareBay, what a contest looks like from each side, and what you can check yourself - written out instead of collected as reviews.
-provenance: { snapshot_date: "2026-08-15", source: "darebay-prod" }
-numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high]
+description: "DareBay reviews: check a contest, funding, acceptance, reward credit and withdrawal rather than relying on a screenshot."
+provenance: { snapshot_date: "2026-10-12", source: "darebay-prod" }
+numbers_used: []
 seo: true
 landing: true
 hero:
@@ -10,9 +10,9 @@ hero:
   lede: "There is no pile of DareBay reviews, and we are not about to invent one: reviews of earning platforms mostly record the reviewer's own luck. What works better takes ten minutes and asks you to trust nobody, us included. Here is exactly what to open and what to look at."
   takeaways:
     - "<b>DareBay is discussed live in its Telegram channel,</b> not on review sites, and the founder answers questions in person."
-    - "<b>DareBay tasks pay $1–$10 per 1,000 views, set by each task,</b> and the card shows rate, threshold, cap and site before you submit."
+    - "<b>A useful review identifies the contest and payout stage.</b> Check the task terms before publishing and submitting the clip."
     - "<b>Nothing moves once a contest is live:</b> the rate and threshold stay fixed; the cap can only be raised."
-    - "<b>The last step is plain too:</b> withdrawal from 10 USDT, with 10% taken inside the request and the amount to receive shown before you confirm."
+    - "<b>The last step is plain too:</b> withdrawal from 10 USDT, with 10% (default) taken inside the request and the amount to receive shown before you confirm."
 cta:
   title: "Skip the reviews and check for yourself"
   lede: "Open the contest catalogue, read one card from top to bottom, look at the withdrawal form before you confirm anything, and write to the founder. That walk through the product tells you more about DareBay than any testimonial could."
@@ -34,7 +34,7 @@ DareBay is a marketplace for content tasks. Someone posts a task with a budget, 
 
 **The terms hold.** The rate and the threshold are recorded at creation and cannot be rewritten once your clip is up. In a wallet-backed contest the budget is charged from the organizer before you take the task.
 
-**The calculation is automatic.** The platform's own counter reads the public view counter at your link and works out the sum; nobody types figures in by hand. Your earnings reach your balance automatically when a wallet-backed task ends, or earlier with Claim now where the task shows it, and a withdrawal is one request from 10 USDT: 10% comes off inside the request, and you see the amount to receive before you confirm.
+**The calculation is automatic.** The platform's own counter reads the public view counter at your link and works out the sum; nobody types figures in by hand. Your earnings reach your balance automatically when a wallet-backed task ends, or earlier with Claim now where the task shows it, and a withdrawal is one request from 10 USDT: 10% (default) comes off inside the request, and you see the amount to receive before you confirm.
 
 **Support is a person, not a queue number.** The product is run by a named operator who answers on Telegram. That is a genuine advantage over faceless platforms, on top of the mechanics above.
 
@@ -44,10 +44,10 @@ DareBay is a marketplace for content tasks. Someone posts a task with a budget, 
 |---|---|---|
 | "They never pay" | A wallet-backed budget is charged from the organizer before the start; the mode is on the card | Contest card |
 | "They understate the views" | Nobody types the figure in: the platform reads the public counter of the publishing site | Your clip and the card |
-| "Hidden fees" | None hidden: 0% on contest payouts and nothing is taken from the task budget; the one fee is 10% of what you withdraw, deducted inside the request with the amount to receive shown before you confirm, and withdrawals start at 10 USDT<!-- source: https://darebay.com/en/help/what-commission 2026-09-24 --> | [DareBay fees](/en/help/what-commission) |
+| "Hidden fees" | None hidden: 0% on contest payouts and nothing is taken from the task budget; the one fee is 10% (default) of what you withdraw, deducted inside the request with the amount to receive shown before you confirm, and withdrawals start at 10 USDT<!-- source: https://darebay.com/en/help/what-commission 2026-09-24 --> | [DareBay fees](/en/help/what-commission) |
 | "Payouts take forever" | Earnings reach your balance automatically when a wallet-backed task ends, or earlier with Claim now where the task shows it; a withdrawal is then one request | Task card and withdrawal form |
 | "Nobody is behind it" | The founder, Ruslan, answers in person | [@ruslanbwork](https://t.me/ruslanbwork) |
-| "Nobody knows what it pays" | $1–$10 per 1,000 views, set by each task and printed on its card<!-- source: https://darebay.com/en/earnings/how-much-clipping-pays 2026-09-24 --> | [Contest catalogue](/en/earn/clips) |
+| "Nobody knows what it pays" |Stated on the particular task card| [Contest catalogue](/en/earn/clips) |
 
 ## Reading the figures quoted here
 
@@ -58,6 +58,12 @@ Instead of an income projection, the card gives you the numbers to work it out y
 ## DareBay's numbers, and the other platforms
 
 Where reviews fail, a like-for-like comparison helps. [DareBay at a glance](/en/about/darebay-at-a-glance) collects the rate, threshold, cap, fees, minimum withdrawal and payout methods, each with a source and a date. And in [best clipping platforms](/en/earnings/best-clipping-platforms) DareBay stands next to the other clipping platforms, every competitor figure taken from its own page.
+
+## What makes a review useful
+
+A reward review needs a date, contest, funding mode and stage: work accepted, reward credited or withdrawal received. Otherwise “I was paid” and “they do not pay” can refer to different operations. Private payment details need not be published.
+
+Start by matching those conditions when comparing a review with your experience. One successful withdrawal establishes that case rather than future income; one delay without a status does not explain its cause.
 
 ## Frequently asked questions
 

@@ -1,8 +1,8 @@
 ---
 title: How to commission clips for a campaign on DareBay
 description: "Commission clips for a campaign with one task: clippers take it from the feed, a wallet-backed budget pays for counted views, and the unspent part comes back."
-provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
-numbers_used: [ppv_cpm_min, ppv_cpm_max, ppv_min_views_threshold_live, ppv_default_min_views_threshold]
+provenance: { snapshot_date: "2026-10-12", source: "darebay-prod" }
+numbers_used: [ppv_cpm_min, ppv_cpm_max, ppv_default_min_views_threshold]
 seo: true
 ---
 
@@ -27,17 +27,17 @@ You set the terms of the offer yourself when creating the contest. Clippers see 
 
 | Parameter | Who sets it and the range | What it is for |
 |-----------|--------------------------------|----------------|
-| Rate per 1000 views | set by the buyer, from $1.00 to $10.00 per 1000 views<!-- source: https://darebay.com/en/earnings/how-much-clipping-pays 2026-09-24 --> | Defines what a clipper gets for every thousand counted views |
+| Rate per 1000 views |Stated on the particular task card| Defines what a clipper gets for every thousand counted views |
 | View threshold | set by the buyer and printed on the task card (system default 1000) | Submissions below the threshold take no part in the split and cost you nothing |
-| Cap per submission | set by the buyer, up to $500 per clip, or no cap<!-- source: https://darebay.com/en/earnings/how-much-clipping-pays 2026-09-24 --> | Limits the payout for one clip so a single video cannot eat the whole budget |
+| Cap per submission |Stated on the particular task card| Limits the payout for one clip so a single video cannot eat the whole budget |
 | Total budget | set by the buyer | The full amount, held on the platform in a wallet-backed contest |
 | Task and publishing site | set by the buyer | The brief, and which of TikTok, YouTube, Instagram or the other sites named in the task the video goes on |
 
-Each task sets its own rate, from **$1.00 to $10.00 per 1000 views**, and its own view threshold rather than a platform-wide one: the system default is 1000 views, and the buyer can change it<!-- source: https://darebay.com/en/earnings/how-much-clipping-pays 2026-09-24 -->. More on the threshold: [how pay-per-view works](/en/earnings/how-pay-per-view-works).
+Each task states its own rate per 1,000 views, and its own view threshold rather than a platform-wide one: the system default is 1000 views, and the buyer can change it. More on the threshold: [how pay-per-view works](/en/earnings/how-pay-per-view-works).
 
 ## What to weigh up: a checklist for the buyer
 
-1. **The rate.** A high rate brings in more clippers and burns the budget faster; a low rate saves budget but gets picked up slowly. You set it from $1.00 to $10.00 per 1000 views.
+1. **The rate.** A high rate brings in more clippers and burns the budget faster; a low rate saves budget but gets picked up slowly. Set the rate per 1,000 views on the card.
 2. **The threshold.** It protects the budget from submissions with a handful of views: anything below it costs you nothing. The threshold is set by each task and printed on its card.
 3. **The cap.** It stops one video that went viral from taking the whole budget. Pick it so the same money buys videos from several creators.
 4. **The task.** The more concrete the result you describe (format, style, key moments), the closer the work lands to what you wanted. Clippers pick the tasks they understand on the first read.
@@ -70,6 +70,12 @@ people on sanctions lists are barred. Clippers are paid in USDT on TON, or recei
 Telegram Stars; in a prize contest the organizer may also pay by card, bank transfer or gift when
 the contest sets it<!-- source: https://darebay.com/en/help/darebay-withdrawals 2026-09-24 -->.
 
+## Specify the deliverable you are buying
+
+“Ten clips for our account by Friday” and “views on creators' accounts” require different agreements. For the first, agree on files, deadline, revision count and usage rights. For the second, put publication requirements and the view-payment calculation in the task.
+
+If you later want to run a successful clip as an ad, obtain permission for that use separately. A link to a published submission does not by itself define rights to the source footage, edited file or advertising placement.
+
 ## Frequently asked questions
 
 ### How do I protect myself from bought views?
@@ -86,7 +92,7 @@ There is nothing to do: if the budget is not spent in full (few participants, su
 
 ### Where are the clippers?
 
-Across Russia and the CIS, and there is no country list: only people on sanctions lists are barred.
+Across Russia and the CIS, and there is no country list: age requirements and sanctions restrictions apply under the Terms.
 Sign-up is open, no followers or application are needed, and the platform runs in English. Each
 contest defines its reward method, and the product shows the payout details and the status of every
 request.

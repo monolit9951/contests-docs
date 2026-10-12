@@ -1,8 +1,8 @@
 ---
 title: "How to find clippers for your content: four ways that work"
 description: "Find clippers in your chat and Discord, on freelance boards, in your own clip channel or on a pay-per-view platform. What they need from you and how to start."
-provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
-numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_default_min_views_threshold, ppv_min_views_threshold_live, ppv_max_per_work_typical, contest_create_usdt_price, commission_crypto, commission_fiat]
+provenance: { snapshot_date: "2026-10-12", source: "darebay-prod" }
+numbers_used: [ppv_default_min_views_threshold, commission_crypto, commission_fiat]
 seo: true
 landing: true
 hero:
@@ -11,7 +11,7 @@ hero:
   takeaways:
     - "<b>Clippers come from four places.</b> A post in your chat and Discord, freelance boards, your own clip channel with a team, or a pay-per-view platform where creators take the task themselves."
     - "<b>Six things and a clipper starts the same day.</b> Access to recordings, rights, a hashtag, a format, a rate and a steady flow of material."
-    - "<b>On DareBay you set the rate, from $1.00 to $10.00 per 1000 views.</b><!-- source: https://darebay.com/en/earnings/how-much-clipping-pays 2026-09-24 --> The threshold and the cap per clip are yours too, so you pay for reach and not for the hours someone spent editing."
+    - "<b>Include materials and a link to actual terms in your invitation.</b> Check the task terms before publishing and submitting the clip."
     - "<b>A wallet-backed budget is locked on the platform before launch.</b> It is spent only on counted views, and whatever the clips did not earn comes back to you."
 cta:
   title: "Post the task tonight, creators pick it up themselves"
@@ -54,7 +54,7 @@ A good clipper starts the same day if six things are in place.
 
 A flat fee per clip is fair while clips perform evenly. Once one gets 200 thousand views and another 300, the first creator feels cheated and you overpaid. Pay per view removes the argument: earnings grow with reach, and you pay for the result.
 
-On DareBay you set your task's rate, from $1.00 to $10.00 per 1000 views. The threshold is yours to set, with a system default of 1000 views: a clip below it costs nothing. The cap per submission is yours too, up to $500, and protects the budget from a single viral clip<!-- source: https://darebay.com/en/earnings/how-much-clipping-pays 2026-09-24 -->. A wallet-backed budget is locked on the platform before launch and is spent only on counted views; the remainder returns to you<!-- source: https://darebay.com/en/about/payout-guarantee 2026-09-24 -->. Views are read from the site's public counter, and fraud is filtered out.
+On DareBay you set your task's rate per 1,000 views. The threshold is yours to set, with a system default of 1000 views: a clip below it costs nothing. The cap per submission is yours too, set per task, and protects the budget from a single viral clip. A wallet-backed budget is locked on the platform before launch and is spent only on counted views; the remainder returns to you<!-- source: https://darebay.com/en/about/payout-guarantee 2026-09-24 -->. Views are read from the site's public counter, and fraud is filtered out.
 
 A hypothetical example: a clip got 20 000 views at $1.00.
 
@@ -79,11 +79,17 @@ The threshold is not deducted: clear it and the whole counter is paid. At 150 00
 
 **Your own highlights channel.** Links to accepted submissions stay in the task, so a highlights channel assembles itself: the clip channel from the first section, with a team already paid per view.
 
+## Send an offer someone can answer
+
+Recruitment message: “We have a 40-minute episode and permission to clip it. We need vertical posts on creators' accounts. Materials and rules: [task link]. It lists rate, threshold, cap, deadline and funding. Do you have a suitable account?” Replace the placeholder with an actual card rather than an income promise.
+
+For an editor working on your account, ask instead for one relevant sample and a price for a defined file package. Editing skill does not imply willingness to advertise on a personal account.
+
 ## Frequently asked questions
 
 ### Do I need a big channel for clippers to take my content?
 
-No. A clipper cares about the material and the terms, not your channel size. DareBay keeps no country list: only people on sanctions lists are barred<!-- source: https://darebay.com/en/legal/terms 2026-09-24 -->. Your task is taken by whoever likes the rate and format.
+No. A clipper cares about the material and the terms, not your channel size. DareBay keeps no country list: age requirements and sanctions restrictions apply under the Terms<!-- source: https://darebay.com/en/legal/terms 2026-09-24 -->. Your task is taken by whoever likes the rate and format.
 
 ### Can I pay clippers directly, without the platform wallet?
 

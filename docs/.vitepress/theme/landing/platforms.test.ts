@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { LANDING_COPY, reviewLabel } from './copy'
-import { DATA, DEFAULT_COLUMNS, REGION_FIELDS, bidiAttrs, byId, comparisonUpdated, optIn, reviewPath, sourceIndex, sourcesOf, text, textLang } from './platforms'
+import { DATA, DEFAULT_COLUMNS, REGION_FIELDS, bidiAttrs, byId, comparisonSnapshotDate, optIn, reviewPath, sourceIndex, sourcesOf, text, textLang } from './platforms'
 import { sourceAnchor } from '../../links'
 import { KNOWN_LOCALES, LOCALES as LIVE_LOCALES, PAGES, pagePath, sourceFile } from '../../registry'
 
@@ -233,15 +233,20 @@ describe('the compact dollars-per-1,000-views column', () => {
   })
 })
 
-describe('the date a comparison page prints as updated', () => {
+describe('the historical source snapshot of a comparison', () => {
   it('is the page\'s own re-read date when it has one', () => {
-    expect(comparisonUpdated({ hero: { updated: '2026-09-24' } })).toBe('2026-09-24')
+    expect(comparisonSnapshotDate({ hero: { updated: '2026-09-24' } })).toBe('2026-09-24')
+  })
+
+  it('does not advance a source snapshot to the page modification date', () => {
+    const page = { updated: '2026-10-12', hero: { updated: '2026-09-24' } }
+    expect(comparisonSnapshotDate(page)).toBe('2026-09-24')
   })
 
   it('falls back to the catalog snapshot otherwise', () => {
-    expect(comparisonUpdated({})).toBe(DATA.snapshot)
-    expect(comparisonUpdated({ hero: {} })).toBe(DATA.snapshot)
-    expect(comparisonUpdated({ hero: null })).toBe(DATA.snapshot)
+    expect(comparisonSnapshotDate({})).toBe(DATA.snapshot)
+    expect(comparisonSnapshotDate({ hero: {} })).toBe(DATA.snapshot)
+    expect(comparisonSnapshotDate({ hero: null })).toBe(DATA.snapshot)
   })
 })
 

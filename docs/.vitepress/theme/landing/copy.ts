@@ -8,6 +8,7 @@ export interface LandingCopy {
   /** Label before the author's name in the hero byline. */
   byline: string
   snapshotNote: string
+  snapshotDate: string
   keyTakeaways: string
   compareTitle: string
   compareNote: string
@@ -28,6 +29,8 @@ export interface LandingCopy {
   calcCap: string
   calcOut: string
   calcNote: string
+  calcScenario: string
+  calcSimpleScenario: string
   ctaTitle: string
   ctaLede: string
   ctaPrimary: string
@@ -169,6 +172,7 @@ const columns = {
 export const LANDING_COPY: Record<Locale, LandingCopy> = {
   en: {
     updated: 'Updated',
+    snapshotDate: 'Source snapshot',
     byline: 'By',
     snapshotNote: 'Competitor figures are taken from each platform’s own public pages on the date shown.',
     keyTakeaways: 'Key takeaways',
@@ -183,11 +187,13 @@ export const LANDING_COPY: Record<Locale, LandingCopy> = {
     review: '{name} review →',
     notPublished: 'not published',
     methodTitle: 'How this comparison was built',
-    calcTitle: 'What a clip pays on DareBay',
+    calcTitle: 'Example calculation for one DareBay clip',
     calcViews: 'Counted views on one clip',
     calcRate: 'Rate per 1,000 views',
+    calcScenario: 'Example assumptions: the rate, threshold and cap are shown below. Compare them with the chosen task’s conditions.',
+    calcSimpleScenario: 'Illustrative gross calculation using the displayed rate and cap. Check the task card: view eligibility, thresholds, approval and withdrawal fees affect what you receive.',
     calcCap: 'Cap per clip',
-    calcOut: 'Payout for this clip',
+    calcOut: 'Example amount before withdrawal fees',
     calcNote: 'Formula: rate × views ÷ 1,000, never above the cap. Each task sets its own rate and, if it has one, its cap.',
     ctaTitle: 'Take a brief and get paid per view',
     ctaLede: 'No followers, no application. In a wallet-backed task the budget is locked on the platform before you start; views are counted independently.',
@@ -224,6 +230,7 @@ export const LANDING_COPY: Record<Locale, LandingCopy> = {
   },
   ru: {
     updated: 'Обновлено',
+    snapshotDate: 'Снимок источников',
     byline: 'Автор:',
     snapshotNote: 'Цифры площадок сняты с их публичных страниц в указанную дату.',
     keyTakeaways: 'Главное',
@@ -238,11 +245,13 @@ export const LANDING_COPY: Record<Locale, LandingCopy> = {
     review: 'Обзор {name} →',
     notPublished: 'не публикует',
     methodTitle: 'Как строили сравнение',
-    calcTitle: 'Сколько платит один ролик на DareBay',
+    calcTitle: 'Пример расчёта для одного ролика на DareBay',
     calcViews: 'Засчитанных просмотров на ролике',
     calcRate: 'Ставка за 1000',
+    calcScenario: 'Параметры примера: ставка, порог и потолок показаны ниже. Сравни их с условиями выбранного задания.',
+    calcSimpleScenario: 'Пример расчёта по показанным ставке и потолку. Проверь карточку задания: правила зачёта просмотров, порог, приёмка и комиссия вывода влияют на сумму к получению.',
     calcCap: 'Потолок на ролик',
-    calcOut: 'Выплата за этот ролик',
+    calcOut: 'Сумма в примере до комиссии вывода',
     calcNote: 'Формула: ставка × просмотры ÷ 1000, но не выше потолка. Ставку и потолок, если он есть, задаёт каждое задание.',
     ctaTitle: 'Возьми задание и получай за просмотры',
     ctaLede: 'Подписчики и заявка не нужны. В кошельковом задании бюджет лежит на платформе до старта, просмотры считаются независимо.',
@@ -279,6 +288,7 @@ export const LANDING_COPY: Record<Locale, LandingCopy> = {
   },
   uk: {
     updated: 'Оновлено',
+    snapshotDate: 'Знімок джерел',
     byline: 'Автор:',
     snapshotNote: 'Цифри майданчиків зняті з їхніх публічних сторінок у вказану дату.',
     keyTakeaways: 'Головне',
@@ -293,11 +303,13 @@ export const LANDING_COPY: Record<Locale, LandingCopy> = {
     review: 'Огляд {name} →',
     notPublished: 'не публікує',
     methodTitle: 'Як будували порівняння',
-    calcTitle: 'Скільки платить один ролик на DareBay',
+    calcTitle: 'Приклад розрахунку для одного ролика на DareBay',
     calcViews: 'Зарахованих переглядів на ролику',
     calcRate: 'Ставка за 1000',
+    calcScenario: 'Параметри прикладу: ставка, поріг і стеля показані нижче. Зістав їх з умовами обраного завдання.',
+    calcSimpleScenario: 'Приклад розрахунку за показаними ставкою та стелею. Перевір картку завдання: правила зарахування переглядів, поріг, прийняття та комісія виведення впливають на суму до отримання.',
     calcCap: 'Стеля на ролик',
-    calcOut: 'Виплата за цей ролик',
+    calcOut: 'Сума в прикладі до комісії виведення',
     calcNote: 'Формула: ставка × перегляди ÷ 1000, але не вище стелі. Ставку і стелю, якщо вона є, задає кожне завдання.',
     ctaTitle: 'Візьми завдання й отримуй за перегляди',
     ctaLede: 'Підписники та заявка не потрібні. У гаманцевому завданні бюджет лежить на платформі до старту, перегляди рахуються незалежно.',
@@ -339,6 +351,7 @@ export const LANDING_COPY: Record<Locale, LandingCopy> = {
   // الأقصى لكل مقطع, withdrawal السحب; USDT, TON and Telegram stay in Latin script.
   ar: {
     updated: 'آخر تحديث',
+    snapshotDate: 'لقطة المصادر',
     byline: 'بقلم',
     snapshotNote: 'أرقام المنصات الأخرى مأخوذة من صفحاتها العامة في التاريخ المذكور.',
     keyTakeaways: 'أهم النقاط',
@@ -353,11 +366,13 @@ export const LANDING_COPY: Record<Locale, LandingCopy> = {
     review: 'مراجعة {name} ←',
     notPublished: 'غير معلن',
     methodTitle: 'كيف أُعدّت هذه المقارنة',
-    calcTitle: 'كم يدفع مقطع واحد على DareBay',
+    calcTitle: 'مثال حساب لمقطع واحد على DareBay',
     calcViews: 'المشاهدات المحتسبة لمقطع واحد',
     calcRate: 'السعر لكل 1,000 مشاهدة',
+    calcScenario: 'افتراضات المثال: السعر وحد المشاهدات والسقف موضحة أدناه. قارنها بشروط المهمة التي تختارها.',
+    calcSimpleScenario: 'مثال حساب إجمالي باستخدام السعر والسقف المعروضين. راجع بطاقة المهمة: أهلية المشاهدات والحد الأدنى والقبول ورسوم السحب تؤثر في المبلغ الذي تتلقاه.',
     calcCap: 'الحد الأقصى لكل مقطع',
-    calcOut: 'المبلغ المستحق عن هذا المقطع',
+    calcOut: 'قيمة المثال قبل رسوم السحب',
     calcNote: 'المعادلة: السعر × المشاهدات ÷ 1,000، دون تجاوز الحد الأقصى. كل مهمة تحدد سعرها، وحدّها الأقصى إن وُجد.',
     ctaTitle: 'خذ مهمة واحصل على أجر مقابل المشاهدات',
     ctaLede: 'لا حاجة إلى متابعين ولا إلى طلب انضمام. في المهمة الممولة من المحفظة تُحجز الميزانية على المنصة قبل أن تبدأ، والمشاهدات يحتسبها عدّاد مستقل. واجهة المنصة بالإنجليزية.',

@@ -13,7 +13,7 @@ import { useData } from 'vitepress'
 import { computed } from 'vue'
 import type { DareBayThemeConfig } from '../../chrome'
 import { LANDING_COPY, formatDay, headingHtml, localeOf } from './copy'
-import { DATA } from './platforms'
+import { visibleUpdatedDate } from '../../pageDates'
 import { ctaButton, heroAction, isCreatorSection, type CtaSpec, type LinkButton } from './showcase'
 
 const { frontmatter, theme, lang, page } = useData<DareBayThemeConfig>()
@@ -39,10 +39,10 @@ const fork = computed(() => (showcase.value && hero.value.fork ? { text: hero.va
 const art = computed(() => (showcase.value ? (frontmatter.value.art as { hero?: string } | undefined)?.hero ?? null : null))
 const kicker = computed(() => hero.value.kicker ?? hub.value?.title ?? '')
 const crumbHref = computed(() => (!isHub.value && hub.value?.path ? hub.value.path : null))
-// A showcase states its own day where it matters (the tools landing's kicker: «проверено 29.09.2026»);
-// the git day beside it would be a second date in the same line. Elsewhere the page's last change.
-const updated = computed(() =>
-  hero.value.updated ?? (showcase.value ? null : frontmatter.value.compare ? DATA.snapshot : (frontmatter.value.updated as string | null) ?? null))
+// The config injects the git-derived day used by Article.dateModified and the sitemap.
+// hero.updated remains the historical source-check date for LMethod, never the page update.
+// A showcase keeps its dated kicker without adding a second date on the same line.
+const updated = computed(() => visibleUpdatedDate(frontmatter.value))
 const title = computed(() => String(frontmatter.value.title ?? ''))
 const lede = computed(() => hero.value.lede ?? String(frontmatter.value.description ?? ''))
 // The ghost button jumps to the section the page actually has. It used to be hardcoded to

@@ -31,6 +31,14 @@ cta:
   lede: "DareBay keeps no country list (only people on sanctions lists are barred) and asks for no application: you pick a task, post the clip and the platform counts the views. It pays in USDT on the TON network, so it fits wherever receiving USDT sits within your local law."
 ---
 
+## Current Arab campaign availability
+
+On 12 October Wusul still shows three closed campaigns with zero days remaining. Rates and an InstaPay description do not make these open jobs. Vyro's current exclusions name Egypt, Algeria and Iraq; Whop's sanctions list includes Iraq. Check country eligibility before choosing the highest rate.<!-- source: https://www.wusulclips.com/en/campaigns 2026-10-12 --><!-- source: https://vyro.com/help/getting-started/what-countries-are-supported 2026-10-12 --><!-- source: https://docs.whop.com/trust-and-safety/trust-safety-overview/sanctioned-countries 2026-10-12 -->
+
+Vues now advertises bank or USDC through Stripe depending on country. Confirm the actual recipient route; USDC is not USDT, and a generic crypto label does not prove local access.<!-- source: https://vues.app/ios 2026-10-12 -->
+
+The country-law and bank sections below retain their earlier source dates; this platform check is not a new legal review.
+
 Two questions decide whether clipping is worth your evening in Cairo, Casablanca, Algiers, Baghdad, Riyadh or Dubai. Can the platform send money to your country at all, and what does your own regulator say about the rail it would use. This page keeps them apart, using the regulators' own publications and the platforms' own pages. It does not rank platforms — that is [the best clipping platforms](/en/earnings/best-clipping-platforms) — and it does not explain rates, which are on [how much clipping pays](/en/earnings/how-much-clipping-pays).
 
 ## What each of the six countries lets through
@@ -104,7 +112,7 @@ One line of that table is addressed to Cairo: Wusul's Instapay in pounds, with n
 
 <LCompare />
 
-DareBay keeps no country list (only people on sanctions lists are barred) and pays in USDT on the TON network; Telegram Stars, the other way to receive a payout, are spending power inside Telegram. Entering is free and the contest fee is 0%; the only charge a clipper pays is 10% on a withdrawal, deducted inside a request of at least 10 USDT, and you see the amount to receive before you confirm. Its tasks pay $1 to $10 per 1,000 counted views, set by each task, with up to $500 for one clip, the task sets the view threshold, and no followers or application are needed; the terms are on [how DareBay withdrawals work](/en/help/darebay-withdrawals). The interface is in English, Russian, Ukrainian and Polish, and each task card is written in its organizer's language.
+DareBay keeps no country list (only people on sanctions lists are barred) and pays in USDT on the TON network; Telegram Stars, the other way to receive a payout, are spending power inside Telegram. Entering is free and the contest fee is 0%; the only charge a clipper pays is 10% on a withdrawal, deducted inside a request of at least 10 USDT, and you see the amount to receive before you confirm. Its task card states the rate per 1,000 counted views and any per-clip cap, the task sets the view threshold, and no followers or application are needed; the terms are on [how DareBay withdrawals work](/en/help/darebay-withdrawals). The interface is in English, Russian, Ukrainian and Polish, and each task card is written in its organizer's language.
 
 In Egypt, Algeria and Iraq, read the regulators quoted above before a USDT payout: a criminal prohibition on holding virtual assets in Algeria, activity the Central Bank of Egypt describes as criminalized, and a closed banking and wallet channel with no legal protection in Iraq. There, an individual task can name a card or a bank transfer as its reward, if its organizer sets one, and the platforms with a bank or PayPal rail above cover the rest.
 

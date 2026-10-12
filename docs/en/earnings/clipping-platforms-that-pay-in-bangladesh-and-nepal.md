@@ -31,6 +31,14 @@ cta:
   lede: "DareBay asks for no followers or application, and each task prints its rate on the card. You can receive your earnings in USDT on the TON network. Local restrictions, cryptocurrency risks and any tax declarations or payments are your responsibility."
 ---
 
+## Bangladesh and Nepal: current recipient checks
+
+Vyro's October exclusion list includes Bangladesh; Nepal is absent, which does not establish a usable receiving account. Wondeed requires Indian residency, so its UPI offers are not a Bangladesh/Nepal route.<!-- source: https://vyro.com/help/getting-started/what-countries-are-supported 2026-10-12 --><!-- source: https://wondeed.com/terms 2026-10-12 -->
+
+Vues now advertises bank or USDC payouts through Stripe depending on country. USDC is different from USDT, and this page does not name its network. A bKash or Khalti account cannot substitute for the method a campaign and provider accept. Confirm country, recipient verification and payment method together before editing.<!-- source: https://vues.app/ios 2026-10-12 -->
+
+The banking, tax and regulator texts below retain their September reading dates; this platform check does not revalidate those legal documents.
+
 A clipper in Dhaka or Kathmandu needs to know how a platform pays: to a local bank or wallet, or in cryptocurrency. This page compares those routes and documents the local rules; you are responsible for assessing the risks and your tax obligations. Platforms are ranked on [the best clipping platforms](/en/earnings/best-clipping-platforms), rates are on [how much clipping pays](/en/earnings/how-much-clipping-pays), and the neighbouring markets have their own pages on [Pakistan](/en/earnings/clipping-platforms-that-pay-in-pakistan) and [India](/en/earnings/clipping-platforms-that-pay-in-india).
 
 ## Two central banks, four rails, one table

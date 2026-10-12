@@ -1,7 +1,7 @@
 ---
 title: Protection from view fraud and fake submissions
 description: "View fraud protection on DareBay: the figure is read from the public counter on the site your video went out on, and suspicious growth goes on hold."
-provenance: { snapshot_date: "2026-08-15", source: "darebay-prod" }
+provenance: { snapshot_date: "2026-10-12", source: "darebay-prod" }
 numbers_used: []
 ---
 
@@ -74,6 +74,12 @@ prize even after "winning", and takes a visible hit to their **participant ratin
 thing on the profile that every future organizer reads. A second violation costs the account.
 
 For anyone building that rating honestly, no single contest is worth burning it.
+
+## Make a view-fraud report checkable
+
+Include the contest, work link and a specific observation, such as a counter change between two times. Add observation times and available public evidence. A sudden increase alone does not prove purchased views; distinguish observation from inference.
+
+Do not publish the creator's private details or organize mass reports. If your work is under review, keep its post accessible and respond to questions about that work. Focus on its status and data rather than speculation about another person's earnings.
 
 ---
 

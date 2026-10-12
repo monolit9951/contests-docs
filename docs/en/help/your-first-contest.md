@@ -1,7 +1,7 @@
 ---
 title: "Create your first contest on DareBay: rate, threshold, budget"
 description: "Your first DareBay contest takes under ten minutes: title, terms, format, selection type, prize and dates on one screen. What is locked after launch."
-provenance: { snapshot_date: "2026-08-15", source: "darebay-prod" }
+provenance: { snapshot_date: "2026-10-12", source: "darebay-prod" }
 numbers_used: []
 ---
 
@@ -93,6 +93,12 @@ prize pool leaves your balance for the contest, and participants start sending i
 work. In a pay-per-view contest they publish on the site you named - statistics
 are collected today for TikTok, YouTube, Instagram and the other sites
 named in the task - and send you the link.
+
+## Check that a participant can satisfy the requirement
+
+Walk through one possible submission: are the materials accessible, is the format clear, and can the creator demonstrate the result? Replace “best video” with criteria such as showing the product in use and preserving a required phrase. Allow time to obtain materials and publish.
+
+Match selection and reward. Choosing one best submission and paying views on every qualifying submission serve different objectives. The selection rule should describe the result you intend to pay for.
 
 ---
 

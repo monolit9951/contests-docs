@@ -1,7 +1,7 @@
 ---
 title: "How winners are chosen on DareBay: a formula, not a jury"
 description: "How winners are chosen: one of four types, fixed before the start. A seeded draw, the organizer's own call, a viewer vote, or pay per view."
-provenance: { snapshot_date: "2026-08-15", source: "darebay-prod" }
+provenance: { snapshot_date: "2026-10-12", source: "darebay-prod" }
 numbers_used: []
 ---
 
@@ -84,6 +84,12 @@ If a named winner does not claim the prize in time, the prize passes to the
 next in line for voting, a seeded replacement for RANDOM, or the organizer picks again
 (the organizer's own call). The claim deadline is always stated in the
 notification the winner receives.
+
+## Why a popular submission may not win
+
+Many views do not turn organizer selection into pay per view. Conversely, no likes do not cancel the calculation for a qualifying PPV submission. Compare the result with the stated selection type and eligibility rules.
+
+If you think the result is wrong, keep the work link, selection rule, status and specific discrepancy. “I have more likes” is insufficient when likes do not enter that selection method. Check reward fulfillment separately from winner selection.
 
 ---
 

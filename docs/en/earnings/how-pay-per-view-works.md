@@ -1,27 +1,33 @@
 ---
-title: "How pay-per-view works: how views are counted and paid"
-description: "How pay-per-view works: the platform reads the counter, payout = views / 1,000 × rate, threshold not deducted, caps to $500 per clip, withdrawals from 10 USDT."
-provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
-numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_cpm_median, ppv_min_views_threshold_live, ppv_default_min_views_threshold, ppv_max_per_work_typical]
+title: 'How pay-per-view works: how views are counted and paid'
+description: 'How pay-per-view counts eligible views: threshold, per-clip cap, task status and the difference between an accrual and a received payment.'
+provenance:
+  snapshot_date: '2026-08-23'
+  source: darebay-prod
+numbers_used:
+- ppv_cpm_band_low
+- ppv_cpm_band_high
+- ppv_cpm_median
+- ppv_min_views_threshold_live
+- ppv_default_min_views_threshold
+- ppv_max_per_work_typical
 seo: true
 landing: true
 hero:
-  kicker: "Guide · 2026"
-  lede: "You post the clip, and from that point nobody gets to argue about the numbers. In a wallet-backed task the budget is locked on the platform before you start, the platform reads the public counter at your link, a formula turns those views into money, and the sum reaches your balance automatically when the task ends. Here is the whole chain step by step, with the threshold, the cap and an example in dollars."
+  kicker: Guide · 2026
+  lede: 'How pay-per-view counts eligible views: threshold, per-clip cap, task status and the difference between an accrual and a received payment. Track one submission through four separate records: the public video counter, the latest counter saved in the task, the approved amount, and the settlement or withdrawal status.'
   takeaways:
-    - "<b>The platform reads the views, not a person:</b> an independent counter takes the site's public figure at your link."
-    - "<b>The threshold is not a deduction:</b> clear it and all your views count, from the very first one."
-    - "<b>One formula for everybody:</b> views / 1000 × rate, never above the cap (up to $500)."
-    - "<b>Code counts, the money is already on the platform:</b> wallet-backed budgets are frozen before you start; withdrawals start at 10 USDT."
+  - A ledger that separates views from money received.
+  - The cap is a parameter of the task, applied separately to each eligible submission. Check the card for a stated cap or the absence of one; a limit used in an example is only an assumption.
 cta:
-  title: "Pick a task where the maths is open before you start"
-  lede: "Rate, threshold and cap are set before anyone opens an editor, the platform reads your counter, and the result is recorded against your name. Choose a task for the site you already post on, publish the clip and send the link."
+  title: Pick a task where the maths is open before you start
+  lede: Rate, threshold and cap are set before anyone opens an editor, the platform reads your counter, and the result is recorded against your name. Choose a task for the site you already post on, publish the clip and send the link.
 ---
 
 ## The full chain: budget to payout
 
-1. **The buyer sets the terms and funds the budget.** The buyer names the rate, the threshold and any cap; in wallet-backed mode the budget is frozen on the platform until the task ends, while direct-payment tasks change step 6 only.
-2. **The clipper publishes the clip and sends the link.** You publish on the site named in the terms, and a submission enters the task only through the link you send: there is no import by hashtag.
+1. **The buyer publishes terms and a payment mode.** The card names the rate, threshold and any cap. Wallet-backed tasks reserve funds on the platform; in organizer-direct tasks the platform does not hold the fund and the organizer handles settlement.
+2. **The clipper publishes and checks admission.** Follow the submission method shown in the task: send the video link or connect an account where supported. A hashtag alone does not confirm admission; check that the work appears in your list.
 3. **A moderator checks the terms, the platform reads the views.** Nobody types the figure in by hand: an independent counter reads the published view counter on the site. A submission with suspicious growth goes on hold, which is a pause, not a removal.
 4. **The formula sets the amount.** At the end the system works out the payout for each submission: `views / 1000 × rate`. The threshold is an entry condition, not a deduction, and the cap limits one submission.
 5. **The amount is recorded against the author.** The platform creates a credit with a status that the buyer cannot recompute or erase. Where the task shows "Claim now", the credit on an approved submission can be locked in before the end, which stops that clip earning: the button opens when the whole credited amount is 24 hours old, so on a clip that is still gathering views the clock starts again.
@@ -31,9 +37,9 @@ cta:
 
 | Parameter | Value | What it means |
 |---|---|---|
-| Rate | from $1.00 to $10.00 per 1000 views, set by each task | The buyer names it when creating the task |
+| Rate | Set by the task card | The buyer names it when creating the task |
 | View threshold | Set by the buyer on the card (system default 1000 views) | The entry condition: below it a clip earns nothing, above it the whole counter is paid |
-| Cap per submission | Up to $500, set by each task; a task may set none | The most one submission can earn |
+| Cap per submission | Set by the task card | The most one submission can earn |
 | Site | Set by the task | Stats are collected for TikTok, YouTube, Instagram and the other sites named in the task |
 
 The rate and the threshold are fixed at creation, a cap can only be raised later, and the card shows each of them before you submit. DareBay's figures come from its own public pages<!-- source: https://darebay.com/en/earnings/how-much-clipping-pays 2026-09-24 -->.
@@ -86,6 +92,14 @@ A submission whose growth pattern looks suspicious is flagged and goes on hold: 
 ## What happens to an unspent budget
 
 A PPV task budget is spent against the views actually earned, so there is nearly always a part that nobody earned: fewer submissions than expected, some below the threshold, or a submission that hit the cap. In a wallet-backed task the unspent part returns to the buyer's balance; with direct payment the budget was never held up front, so there is nothing to return.
+
+## A ledger that separates views from money received
+
+Track one submission through four separate records: the public video counter, the latest counter saved in the task, the approved amount, and the settlement or withdrawal status. A difference between the first two can be a collection delay; a difference between the last two is a payment question. Treating all four as one number sends a support request to the wrong place.
+
+For an illustrative task with a 1,000-view threshold, a $2 rate and a $25 cap, an approved clip at 800 counted views earns zero. At 6,000 views the formula gives $12; at 20,000 it gives $40 before the cap and $25 after it. These are chosen example inputs, not a claim about available campaigns.
+
+Before publishing, save the card's rate, threshold, cap, submission window and payment mode. In wallet-backed mode, distinguish an accrual from a withdrawal request; in organizer-direct mode, ask which payment evidence will accompany settlement. When an amount seems wrong, send the video URL, task URL, visible status and the time of the last sync. Keep the public video available while the work is being checked.
 
 ## Frequently asked questions
 

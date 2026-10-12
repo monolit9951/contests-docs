@@ -1,7 +1,7 @@
 ---
 title: "YouTube Shorts automation after July 2026: what still pays"
 description: "YouTube Shorts automation after the July 2026 policy clarification: what YPP still pays for, when AI needs a label, and per-view tasks that skip YPP."
-provenance: { snapshot_date: "2026-09-29", source: "darebay-prod" }
+provenance: { snapshot_date: "2026-10-12", source: "darebay-prod" }
 competitor_sources:
   - { platform: "YouTube", url: "https://support.google.com/youtube/answer/12843009", date: "2026-09-29" }
 seo: true
@@ -23,6 +23,12 @@ cta:
 YouTube Shorts automation means running a channel where software does most of the production: an AI model writes the script, a synthetic voice or avatar delivers it, a template edits it, and a workflow tool such as n8n hands each file to the next step. The pipeline still works in 2026, but YouTube's July 2026 clarification of its inauthentic content policy spells out that a channel of interchangeable, template-made Shorts will not earn from the YouTube Partner Program (YPP).
 
 This guide covers the channel side; for the accounts themselves, start with [how to build a TikTok content farm](/en/content-farm/how-to-build-a-tiktok-content-farm).
+
+## A practical checkpoint before the February 2027 change
+
+On October 12, YouTube's official notice still sets February 1, 2027 as the date of the new ads and Premium entry thresholds and the monthly Shorts performance test. Current YPP members keep membership; missing the new monthly Shorts test affects that income stream. Review and accept the relevant updated terms in YouTube Studio by January 31, 2027<!-- source: https://support.google.com/youtube/answer/12843009 2026-10-12 -->.
+
+Keep three figures separate in your plan: eligibility in Studio, qualified Shorts views and actual Shorts revenue in Analytics. Total public views are not a substitute for the qualified-view counter. For a channel outside YPP, model a task or a direct client contract on its own acceptance rules; do not book both sources as guaranteed income from the same views. Automation becomes useful when it reduces production cost for videos that pass review, not when it produces the largest upload count.
 
 ## What YouTube clarified in July 2026
 
@@ -67,9 +73,9 @@ TikTok requires a label on AI-generated or significantly edited content that sho
 
 ## Pay-per-view tasks: income that doesn't wait for YPP
 
-DareBay tasks pay for counted views on TikTok, Instagram Reels, YouTube Shorts and Facebook Reels: $1–10 per 1,000 views, up to $500 per clip, with the rate set by each task. Followers are not required, and only live views are paid, so botted views never earn. Some tasks pay per confirmed sale through your personal link instead.
+DareBay tasks pay for counted views on TikTok, Instagram Reels, YouTube Shorts and Facebook Reels: at the rate, view threshold and per-clip limit stated on each task card. Followers are not required, and only live views are paid, so botted views never earn. Some tasks pay per confirmed sale through your personal link instead.
 
-Offer tasks take over the hardest step of an automated setup: in them DareBay hands out ready clips with a separate version for every account, so the edit does not have to be yours. You can connect up to 20 accounts to one task; new clips are picked up automatically and the platform counts the views. Publishing stays with you, by hand or with your own scheduler. The calculation and crediting to your balance are automatic, and you withdraw to your wallet from 10 USDT. The full count, from threshold to payout, is in [how pay-per-view works](/en/earnings/how-pay-per-view-works).
+Offer tasks take over the hardest step of an automated setup: where enabled, DareBay provides ready clips and tools for account versions, so the edit does not have to be yours. You can connect up to 20 accounts to one task; new clips are picked up automatically and the platform counts the views. Publishing stays with you, by hand or with your own scheduler. Wallet-backed tasks credit earnings to your DareBay balance, with balance withdrawals requested from 10 USDT before fees. Organizer-direct payment follows the task’s own terms. The full count, from threshold to payout, is in [how pay-per-view works](/en/earnings/how-pay-per-view-works).
 
 AI-made Shorts are fine in tasks unless a task says otherwise: label them wherever the platform asks, and never pass off an AI rework of someone else's clip as your own. Tools for each step are compared in [OpusClip alternatives for clippers](/en/tools/opus-clip-alternatives) and across the [tools section](/en/tools/), and everything DareBay offers a farm is on the [content farm page](/en/content-farm/). Want help pointing an existing channel setup at a task? [Message Ruslan on Telegram](https://t.me/ruslanbwork).
 

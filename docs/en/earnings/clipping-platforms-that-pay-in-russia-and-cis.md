@@ -30,6 +30,14 @@ cta:
   lede: "DareBay keeps no country list: only people on sanctions lists are barred, so it pays clippers in Russia, Belarus, Ukraine, Kazakhstan and the rest of CIS, in USDT on TON, or you receive the payout in Telegram Stars. Sign up, take a task off the board and post where the brief says. Nobody checks your follower count on the way in."
 ---
 
+## October country and recipient check
+
+Vyro still excludes Russia, Belarus, all Ukraine, Uzbekistan, Armenia, Georgia and Moldova. Whop excludes Russia and Belarus and names six Ukrainian regions; this is a territorial restriction, not a ban on all Ukraine. Kazakhstan's absence from Vyro's list does not prove a particular receiving account is accepted.<!-- source: https://vyro.com/help/getting-started/what-countries-are-supported 2026-10-12 --><!-- source: https://docs.whop.com/trust-and-safety/trust-safety-overview/sanctioned-countries 2026-10-12 -->
+
+Vues now advertises bank or USDC through Stripe depending on country. Older brand-enabled USDT wording does not guarantee a Stripe-free route today. Klipni requires the Russian recipient status in its offer; a CIS address alone does not satisfy it.<!-- source: https://vues.app/ios 2026-10-12 --><!-- source: https://klipni.com/creators 2026-10-12 -->
+
+The remaining September platform and payment snapshots below retain their dates. Confirm the recipient, campaign and currency together before editing.
+
 ## Country by country, in the platforms' own words
 
 | Country | Whop Content Rewards | Vyro | DareBay | Prime Oracles | Klipni | Klipbait | Clipping.net, Vues, Reach.cat, Clipping.io |
@@ -56,7 +64,7 @@ Klipbait, a Russian- and Ukrainian-language front end for Western campaigns, des
 
 **Klipbait** pays in USDT or to a card; for USDT you pick the network yourself, its blog calling TRC-20 the default for amounts this size, and a withdrawal can be requested once the balance reaches $20.00 <!-- source: https://www.klipbait.com/ru/blog/kak-vyvesti-dengi-za-klipping-iz-rossii 2026-09-18 -->. It promises no date: the money waits until the brand behind each campaign settles, "usually a few days, sometimes longer", as its Russian FAQ puts it <!-- source: https://www.klipbait.com/ru 2026-09-18 -->, and only views from tier-1 countries such as the US, the UK, Germany, France, Canada and Australia are paid <!-- source: https://www.klipbait.com/ru/blog/whop-klipping-iz-rossii 2026-09-18 -->. It publishes no terms of service, no privacy policy and no operator name: its sitemap lists landing pages and a blog only <!-- source: https://www.klipbait.com/sitemap.xml 2026-09-18 -->, and support is a Telegram chat.
 
-**Reach.cat** pays in USDT, and its creator FAQ says bank transfer is coming "very soon" <!-- source: https://reach.cat/creator 2026-09-24 -->; it claims 149+ countries but publishes no list, and its clipper page says "No KYC. No ID check." <!-- source: https://reach.cat/become-a-clipper/ 2026-09-24 -->, while its terms effective 13 September 2026 require an identity check once total payout requests pass $500 <!-- source: https://reach.cat/terms 2026-09-24 -->. **Clipping.net** pays by PayPal or USDC/USDT on Ethereum and requires legal residence "in the territories where we operate"<!-- source: https://clipping.net/policies/clipper-terms-and-conditions 2026-09-24 -->, without naming them. **Vues** names USDT, Solana, BTC, PayPal or bank transfer on its homepage <!-- source: https://vues.app/ 2026-09-18 -->, while its terms say a payout goes through whatever the brand enables, such as USDT, PayPal or Zelle <!-- source: https://vues.app/terms 2026-09-18 -->, and publishes no country list. Treat all three as "ask first".
+**Reach.cat** pays in USDT, and its creator FAQ says bank transfer is coming "very soon" <!-- source: https://reach.cat/creator 2026-09-24 -->; it claims 149+ countries but publishes no list, and its clipper page says "No KYC. No ID check." <!-- source: https://reach.cat/become-a-clipper/ 2026-09-24 -->, while its terms effective 13 September 2026 require an identity check once total payout requests pass $500 <!-- source: https://reach.cat/terms 2026-09-24 -->. **Clipping.net** pays by PayPal or USDC/USDT on Ethereum and requires legal residence "in the territories where we operate"<!-- source: https://clipping.net/policies/clipper-terms-and-conditions 2026-09-24 -->, without naming them. **Vues** currently advertises bank or USDC through Stripe depending on country; older brand-enabled methods need confirmation for the actual campaign.<!-- source: https://vues.app/ios 2026-10-12 --> Treat all three as "ask first".
 
 ## Before your first clip
 

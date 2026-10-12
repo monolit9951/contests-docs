@@ -22,12 +22,12 @@ seo: true
 landing: true
 sources: visible
 hero:
-  updated: "2026-09-18"
+  updated: "2026-10-12"
   kicker: "Trust check · 2026"
-  lede: "Wondeed publishes clear rules for clippers, from tier rates of ₹5 to ₹10 per 1,000 views to a 72-hour hold, UPI payouts requested from ₹500 and tax deducted at source, but not the company behind them: its legal entity reads \"Wondeed\", its GSTIN \"To be updated\" and its court clause \"[Registered City]\". We found no independent reviews either way. Here is what each of its pages said on 18 September 2026, and three checks you can run yourself."
+  lede: "Wondeed now describes Rookie, Pro and Legend divisions based on lifetime verified earnings, with a 72-hour hold and UPI requests from ₹500. Its current creator page no longer publishes the old ₹5/₹7/₹10 CPM table. The terms still require Indian residency and describe UPI within seven business days of a request. Current offers and older September observations are separated below."
   secondary: "See the table"
   takeaways:
-    - "<b>The rules for clippers are written down.</b> Tier rates, a 72-hour hold, a ₹500 payout request, a stated UPI window and a 48-hour dispute review all sit on public pages."
+    - "<b>The rules for clippers are written down.</b> Campaign-dependent rates, a 72-hour hold, a ₹500 payout request, a stated UPI window and a 48-hour dispute review all sit on public pages."
     - "<b>The company behind them is not.</b> The operator is \"Wondeed\", the GSTIN field reads \"To be updated\" and the terms still name \"[Registered City]\" as the court."
     - "<b>Wondeed is not wondeea.com.</b> Reviews under that near-identical name belong to another domain; on 18 September 2026 wondeed.com served only the clipping marketplace."
     - "<b>Your first TDS certificate is a check you can run.</b> A certificate names the deductor with its PAN and TAN, details no Wondeed page publishes."
@@ -37,6 +37,7 @@ compare:
   highlight: darebay
   title: "Wondeed next to ClipGrow and DareBay"
 method:
+  - "Creator page, terms and trust page rechecked on 2026-10-12. Other legal/tax, company and review observations retain their dated September snapshot; no UPI payment was executed."
   - "Wondeed was read on 18 September 2026 from its own pages: home, clippers, brands, pricing, FAQ, trust, terms, privacy, refund, GST, grievance, help centre, creator guide, about and press. Tabs that only appear in a browser were read from the scripts those pages load."
   - "Indian law is quoted from the Income Tax Department, TRACES, the Union Budget memorandum and MeitY. Review sites and forums served only to find the questions readers ask; no rating or complaint is repeated here. Rupee amounts are not converted to dollars, and DareBay's figures come from its own public pages."
 cta:
@@ -107,7 +108,7 @@ Wondeed is the better pick when:
 - you want a published clock and tax deducted for you;
 - you want no platform cut: Wondeed takes 0% from clippers, while DareBay takes 0% of task payouts and 10% only when you withdraw, with withdrawals from 10 USDT.
 
-DareBay is the better pick when you are not an Indian resident, since it keeps no country list (only people on sanctions lists are barred); when you are new, because a Wondeed beginner starts at Tier 1 on ₹5 per 1,000 views, three campaigns and a 14-day window, while a new DareBay account takes a task on the same terms as anyone, with no application or follower count; when you post on TikTok, which Wondeed calls "planned but not available yet" <!-- source: https://www.wondeed.com/help 2026-09-18 -->, or prefer to submit a link rather than connect an account; and when the rate decides it: DareBay tasks pay $1.00–$10.00 per 1,000 views, set by each task, with a cap of up to $500 per clip <!-- source: https://darebay.com/en/earnings/how-much-clipping-pays 2026-09-24 -->, next to Wondeed's ₹5–₹10, each in its own currency. On DareBay the calculation and the crediting to your balance are automatic, and you request a withdrawal from 10 USDT and the platform does the rest. The same questions about ClipGrow are answered in the [ClipGrow review](/en/earnings/clipgrow-review); [the platform comparison](/en/earnings/best-clipping-platforms) sets the global boards side by side, and [how much clipping pays](/en/earnings/how-much-clipping-pays) covers the per-view arithmetic.
+DareBay is the better pick when you are not an Indian resident, since it keeps no country list (only people on sanctions lists are barred); when you want a task rate visible before submission rather than assuming a rate from a creator division; when you post on TikTok, which Wondeed calls "planned but not available yet" <!-- source: https://www.wondeed.com/help 2026-09-18 -->, or prefer to submit a link rather than connect an account; and when the rate decides it: DareBay tasks pay the task-set rate per 1,000 eligible views, with a cap stated on the task card <!-- source: https://darebay.com/en/earnings/how-much-clipping-pays 2026-09-24 -->; compare an actual Wondeed campaign rather than its old division-rate chart. On DareBay the calculation and the crediting to your balance are automatic, and you request a withdrawal from 10 USDT and the platform does the rest. The same questions about ClipGrow are answered in the [ClipGrow review](/en/earnings/clipgrow-review); [the platform comparison](/en/earnings/best-clipping-platforms) sets the global boards side by side, and [how much clipping pays](/en/earnings/how-much-clipping-pays) covers the per-view arithmetic.
 
 <LMethod />
 
@@ -115,7 +116,7 @@ DareBay is the better pick when you are not an Indian resident, since it keeps n
 
 ### Is Wondeed legit?
 
-Wondeed publishes working rules: tier rates, a 72-hour hold, UPI payouts requested from ₹500, a dispute route and a grievance address <!-- source: https://www.wondeed.com/clippers 2026-09-18 -->. It does not publish who runs it, and we found no independent reviews either way. Three checks help: a first payout at the ₹500 minimum, the deductor named on your TDS certificate once tax is deducted, and a written answer from grievance@wondeed.com.
+Wondeed publishes a view-verification flow, a 72-hour hold and UPI requests from ₹500, but published rules alone do not confirm reliable payments. Its current creator page lists lifetime-earning divisions rather than a universal CPM. The older entity and review observations below keep their September dates. Verify a written campaign offer and your first bank receipt before scaling. <!-- source: https://www.wondeed.com/clippers 2026-10-12 -->
 
 ### Is Wondeed the same as wondeea.com?
 
@@ -123,11 +124,11 @@ No. Wondeed is the clipping marketplace at wondeed.com; reviews filed under wond
 
 ### What is Wondeed's rate for 1,000 views?
 
-The clipper page lists ₹5 for standard, ₹7 for medium and ₹10 for high-earning campaigns, adding "Actual rates vary by campaign"; new clippers start at Tier 1, which opens standard campaigns only <!-- source: https://www.wondeed.com/clippers 2026-09-18 -->. The ₹90 on the home page is an illustration.
+The current creator page does not publish a universal numeric CPM. It lists Rookie, Pro and Legend lifetime-earning divisions; those are not per-view prices. The ₹5/₹7/₹10 table was visible in the September snapshot and should not be assumed to apply now. Read the campaign's accepted rate and cap before posting. <!-- source: https://www.wondeed.com/clippers 2026-10-12 -->
 
 ### How long do Wondeed UPI payouts take?
 
-After the 72-hour hold you request a payout from ₹500. The clipper FAQ says "within 7 days", Tier 1 carries a 14-day window and Tier 3 a 3-day fast-track <!-- source: https://www.wondeed.com/clippers 2026-09-18 -->, and the terms say 7 business days <!-- source: https://www.wondeed.com/terms 2026-09-18 -->.
+After the 72-hour hold and a qualifying ₹500 wallet balance, you request payment. The current creator FAQ says seven days; the terms say seven business days after the request. The older Tier 1/3 timing promises are not repeated on the current creator page. <!-- source: https://www.wondeed.com/clippers 2026-10-12 --> <!-- source: https://www.wondeed.com/terms 2026-10-12 -->
 
 ### Does Wondeed deduct TDS from clippers?
 

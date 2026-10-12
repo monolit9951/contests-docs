@@ -29,6 +29,12 @@ cta:
   lede: "DareBay keeps no country list: only people on sanctions lists are barred, so clippers in Russia and Belarus, where Whop is closed, are paid too. There are no followers to gather and no application to wait on, and a wallet-backed contest locks its budget on the platform before the start."
 ---
 
+## Build a shortlist you can actually withdraw from
+
+Check recipient eligibility before comparing advertised CPM: residence, age, tax status where required and a payout account you control. Then open a particular brief and record its model, remaining budget, cap and approval requirements. A marketplace listing is not an offer you have already been accepted into.
+
+Use the updated [Vues review](/en/earnings/vues-review) to distinguish bank or USDC payouts through Stripe from USDT, and the [Prime review](/en/earnings/prime-oracles-review) to separate short clips from longer review briefs. Older campaign examples retain their dates. Reach.cat's current terms could not be fully re-read, so confirm its payout details directly before relying on a historical row. Keep two sources of briefs only when you can manage their rules and avoid double submitting the same work.
+
 ## Why clippers look beyond Whop Content Rewards
 
 Whop Content Rewards is where most clipping campaigns live: brands fund CPM campaigns, Whop keeps the brand's budget on its side of the campaign, and clippers are paid per verified view into a Content Rewards wallet that is withdrawn through Whop <!-- source: https://contentrewards.com/terms 2026-09-18 -->. Four things send clippers looking for an alternative, and each of them is written on Whop's own pages.
@@ -39,7 +45,7 @@ Whop Content Rewards is where most clipping campaigns live: brands fund CPM camp
 
 **Churn.** Brand campaigns start at $1,000 and stop the moment the budget is spent, so a clipper who relies on one marketplace spends time waiting for the next brief.
 
-**Timing.** A clip earns for 7 days from approval and the payout is then held for 3 days, so money arrives a week and a half after the clip did its work.
+**Timing.** The first CPM round opens when approval and the minimum are both met; later rounds can open after the preceding round settles while eligible earnings remain. A round normally has seven earning days and a three-day validation hold.<!-- source: https://contentrewards.com/terms 2026-10-12 -->
 
 The sanctioned list is not the only filter, either: Whop publishes a separate list of the countries it pays out to, and its payout setup ends in identity verification — [clipping platforms that pay without PayPal or Stripe](/en/earnings/clipping-platforms-that-pay-without-paypal-or-stripe) weighs alternatives on exactly those two points.
 
@@ -77,7 +83,7 @@ Yes. Nothing on Whop's pages forbids clipping for other marketplaces, and campai
 
 ### Is DareBay a Whop alternative?
 
-Yes, especially where Whop cannot pay: DareBay keeps no country list, and only people on sanctions lists are barred<!-- source: https://darebay.com/en/legal/terms 2026-09-24 -->. Its pay-per-view tasks pay $1–$10 per 1,000 views, set by each task, and up to $500 per clip, with no follower requirement<!-- source: https://darebay.com/en/earnings/how-much-clipping-pays 2026-09-24 -->, and a wallet-backed contest locks its budget on the platform before the start<!-- source: https://darebay.com/en/about/payout-guarantee 2026-09-24 -->. Offer tasks can add a fixed fee per accepted clip and a share of sales, and hand you ready-made videos with built-in uniqueization.
+Yes, especially where Whop cannot pay: DareBay keeps no country list, and only people on sanctions lists are barred<!-- source: https://darebay.com/en/legal/terms 2026-09-24 -->. Its pay-per-view tasks pay at the task-specific rate and cap, with no follower requirement<!-- source: https://darebay.com/en/earnings/how-much-clipping-pays 2026-09-24 -->, and a wallet-backed contest locks its budget on the platform before the start<!-- source: https://darebay.com/en/about/payout-guarantee 2026-09-24 -->. Offer tasks can add a fixed fee per accepted clip and a share of sales, and hand you ready-made videos with built-in uniqueization.
 
 ### What happened to ClipAffiliates?
 

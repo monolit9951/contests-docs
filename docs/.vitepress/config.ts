@@ -20,13 +20,12 @@ import { installCommentSpacingRule, stripComments } from './commentSpacing'
 import { installSourcesRule } from './sources'
 import { fontPreloadTags, inlineStylesheets, stripVpIconsLink } from './headAssets'
 import { keepLandingFigures, landingArt, landingProblems, placementProblems, placesCatalog, sourceProblems, usesPageBlocks } from './landingFrontmatter'
+import { modifiedDay, type PageDates } from './pageDates'
 import PAGE_DATES from '../page-dates.json'
 import PLATFORMS from './data/platforms.json'
 
 // Source file -> commit date, rekeyed to the URL VitePress hands `transformItems`
 // (docs-relative, no leading slash, `.md` dropped, `index` collapsed away).
-interface PageDates { readonly published: string; readonly modified: string }
-
 const PAGE_DATES_BY_URL: Record<string, PageDates> = Object.fromEntries(
   Object.entries(PAGE_DATES as Record<string, PageDates>).map(([file, dates]) => [
     file.replace(/(^|\/)index\.md$/, '$1').replace(/\.md$/, ''),
@@ -460,7 +459,7 @@ function structuredData(
   const raw = existsSync(file) ? readFileSync(file, 'utf8') : ''
   const body = raw.replace(/^---\n[\s\S]*?\n---/, '')
   const published = dates?.published?.slice(0, 10)
-  const modified = dates?.modified?.slice(0, 10)
+  const modified = modifiedDay(dates)
 
   const graph: Record<string, unknown>[] = [
     {
@@ -936,7 +935,7 @@ export default defineConfig({
       path: hubEntry ? pagePath(hubEntry, found.lang) : null,
     }
     pageData.frontmatter.isHub = isHub
-    pageData.frontmatter.updated = dates?.modified?.slice(0, 10) ?? null
+    pageData.frontmatter.updated = modifiedDay(dates)
     pageData.frontmatter.head.push(['script', { type: 'application/ld+json' }, JSON.stringify(schema)])
 
     pageData.frontmatter.head.push(

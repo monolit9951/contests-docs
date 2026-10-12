@@ -243,6 +243,17 @@ test("the recorded 10 USDT minimum licenses nothing: no-minimum claims still fai
   assert(rules("The minimum withdrawal request is 2 USDT.").has("withdrawal-minimum"));
 });
 
+test("withdrawal minimum paraphrases require whole words, not letters inside fee arithmetic", () => {
+  for (const wording of [
+    "Если запросить вывод всех 20 USDT при стандартных 10%, комиссия заявки составит 2 USDT.",
+    "Якщо запросити виведення всіх 20 USDT за стандартних 10%, комісія заявки становитиме 2 USDT.",
+    "A withdrawal of 20 USDT costs 2 USDT in fees at the standard 10% rate.",
+  ]) assert(!rules(wording).has("withdrawal-minimum"), wording);
+  for (const wording of ["Вывод от 2 USDT.", "Вывести с 2 USDT.", "Виведення від 2 USDT.", "Вивести з 2 USDT.", "Withdraw from 2 USDT."]) {
+    assert(rules(wording).has("withdrawal-minimum"), wording);
+  }
+});
+
 test("a decided target relaxes its own field only", () => {
   assert(rules("Store purchase: 0%.").has("store-fee"));
   assert(rules("Комиссия за вывод баланса - 3%.").has("withdrawal-fee"));

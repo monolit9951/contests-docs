@@ -1,32 +1,26 @@
 ---
 title: What TikTok pays for views - two routes to monetization
-description: "What TikTok pays for views: the creator programme wants an audience first, a contest pays $1.00 to $10.00 per 1000 views from your very first clip."
+description: "TikTok Creator Rewards and brand tasks use different payout rules. Eligibility, qualified views, video length and the rate printed on a task card."
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
-numbers_used: [ppv_cpm_min, ppv_cpm_median, ppv_cpm_max, ppv_min_views_threshold_live]
+numbers_used: []
 seo: true
 ---
 
 # What TikTok pays for views
 
-You can be paid for views before you have a single follower, and that is the whole difference between the two routes below. A platform's creator programme pays you for the audience you have already built. A contest on an intermediary platform pays for the reach of one specific video: no audience needed, and you see the rate before you sit down to edit. On DareBay, each contest sets its rate, from **$1.00 to $10.00 per 1000 views**, and its view threshold (system default 1000 views), both printed on the card<!-- source: https://darebay.com/en/earnings/how-much-clipping-pays 2026-09-24 -->; once a submission clears that threshold, it enters the split. The site is set by the contest: submissions are accepted on TikTok, YouTube, Instagram and the other sites named in the task.
+You can be paid for views before you have a single follower, and that is the whole difference between the two routes below. A platform's creator programme pays you for the audience you have already built. A contest on an intermediary platform pays for the reach of one specific video: no audience needed, and you see the rate before you sit down to edit. On DareBay, each contest sets its rate per 1000 views and its view threshold (system default 1000 views), both printed on the card; once a submission clears that threshold, it enters the split. The site is set by the contest: submissions are accepted on TikTok, YouTube, Instagram and the other sites named in the task.
 
-DareBay's figures come from its own public pages, and DareBay set its rate band on 20 September 2026<!-- source: https://darebay.com/en/earnings/how-much-clipping-pays 2026-09-24 -->. The TikTok and YouTube programme requirements below were **checked against the platforms' own sources on 15 August 2026**: platforms move their bars, so check them with the platform itself before you apply.
+Read DareBay’s rate, threshold and cap on the current task card. TikTok eligibility and YouTube’s announced 2027 changes were checked against official help on 12 October 2026; account region also determines programme access.
 
-## The platform programmes: what they require in August 2026
+## The platform programmes: eligibility checked in October 2026
 
 First, what is dead. The TikTok Creator Fund is closed. The YouTube Shorts Fund is closed too, replaced by a share of ad revenue inside the YouTube Partner Program. The guides to those two funds that fill search results describe programmes that no longer exist.
 
-**TikTok Creator Rewards Program.** This is the former Creativity Program: TikTok took it out of beta and renamed it. What it takes to get in:
+**TikTok Creator Rewards Program.** TikTok's help, checked on 12 October 2026, requires a personal account in good standing, age 18+ (19 in South Korea), 10,000 followers and 100,000 video views over the previous 30 days. The account must be registered in an eligible region; check the current availability for your account in TikTok Studio → Creator Rewards Program.
 
-- being 18 or older;
-- at least 10,000 followers;
-- at least 100,000 video views over the last 30 days;
-- a personal account (not a business account) in good standing;
-- registration in a country where the programme is open. The list is limited: the US, the UK, Germany, France, Japan, South Korea, Brazil, Mexico. Russia and the CIS countries are not on it.
+An eligible original video must be at least one minute long and posted after joining. Its public view counter is different from qualified For You views. TikTok publishes no fixed rate per thousand. <!-- source: https://support.tiktok.com/es/business-and-creator/creator-rewards-program/creator-rewards-program 2026-10-12 -->
 
-The video has to qualify too: longer than a minute, original, not a duet and not a stitch, not photo mode, and not an advertisement or paid placement. TikTok publishes no fixed rate per 1000 views - the reward is worked out by a closed formula over four metrics: originality, watch duration, search value and audience engagement.
-
-**YouTube Partner Program.** Getting in today: 1000 subscribers plus either 4000 valid public watch hours over the last 12 months, or 10 million valid Shorts views over the last 90 days. From 1 February 2027 the bar rises for new applications: 8000 hours over 365 days or 20 million Shorts views over 90 days, and to receive a share of ad and subscription revenue for Shorts a channel has to hold 10 million valid Shorts views over a rolling 90 days. Anyone already accepted into the programme is not affected by the change.
+**YouTube Partner Program.** Getting in today: 1000 subscribers plus either 4000 valid public watch hours over the last 12 months, or 10 million valid Shorts views over the last 90 days. From 1 February 2027 the bar rises for new applications: 8000 hours over 365 days or 20 million Shorts views over 90 days, and to receive a share of ad and subscription revenue for Shorts a channel has to hold 10 million valid Shorts views over a rolling 90 days. Existing YPP status is retained; the monthly Shorts earnings requirement is a separate check.
 
 A separate point on geography: because Google's ad systems are suspended in Russia, new connections to the YouTube Partner Program from there are unavailable. Kazakhstan, Armenia and Georgia are on the list of available countries. YouTube does not publish its rate either - it depends on ad auctions and shifts month to month. What an automated, AI-made Shorts channel can still monetize under YouTube's July 2026 clarification is covered in [YouTube Shorts automation after July 2026](/en/content-farm/youtube-shorts-automation).
 
@@ -51,9 +45,9 @@ The platform takes the views neither from your word nor from the buyer's: an ind
 | Barrier to entry | An audience already built: 10,000 followers and 100,000 views over 30 days at TikTok, 1000 subscribers plus watch hours or millions of Shorts views at YouTube | No audience needed. The threshold is counted on the individual submission and printed on the contest card |
 | Who pays | The platform, out of its own revenue and by its own rules | A specific buyer: in a wallet-backed contest out of a budget frozen on the platform before the start, in a manual-payout contest directly<!-- source: https://darebay.com/en/about/payout-guarantee 2026-09-24 --> |
 | Is the rate known in advance | No. Neither TikTok nor YouTube publishes a tariff per 1000 views | Yes. The rate stands on the contest card and does not move after launch |
-| How the payout is worked out | The platform's closed formula: four quality metrics at TikTok, ad auctions at YouTube | Views are divided by 1000 and multiplied by the rate. The threshold is not subtracted: once a submission clears it, the whole counter goes into the maths. Nothing is paid above a cap on one submission, which the buyer can set at up to $500, visible on the card before you submit |
+| How the payout is worked out | The platform's closed formula: four quality metrics at TikTok, ad auctions at YouTube | Views are divided by 1000 and multiplied by the rate. The threshold is not subtracted: once a submission clears it, the whole counter goes into the maths. Nothing is paid above a cap on one submission, which the buyer can set, visible on the card before you submit |
 | How fast money starts | Money does not start with the first video but after the account has made up the programme's thresholds. That is months of work for nothing | The work takes part from the first video. The calculation is automatic, and your earnings reach your balance automatically when a wallet-backed contest ends, or earlier with Claim now where the contest shows it (that clip then stops earning); request a withdrawal from 10 USDT and the platform does the rest<!-- source: https://darebay.com/en/help/darebay-withdrawals 2026-09-24 --> |
-| Availability by country | TikTok: Russia and the CIS are not on the programme's country list. YouTube: new connections from Russia are unavailable | No country list: only people on sanctions lists are barred, and clippers in Russia, Belarus, Ukraine, Kazakhstan and the rest of CIS are paid<!-- source: https://darebay.com/en/legal/terms 2026-09-24 --> |
+| Availability | Creator Rewards depends on account region; check YPP against YouTube’s country list | DareBay age and sanctions terms, posting-site access and reward-method availability are separate checks |
 
 ## The two do not cancel each other out
 
@@ -62,6 +56,18 @@ This is not an either-or. A creator programme pays you for your channel, a conte
 The order that works in practice: contests pay for the very first clips while the channel is still small, and at the same time bring it views and followers - exactly what is needed to get into a creator programme. Once the platform's thresholds are cleared, the programme is added on top rather than replacing contests.
 
 One check before counting on both at once: a creator programme has its own requirements for the video itself, and it may not count a paid placement. Read a specific programme's terms with the platform, and a specific contest's terms on its card.
+
+## Why 1,000 public views may earn no Creator Rewards
+
+An eligible video posted after joining the programme must reach **1,000 qualified For You feed views**. Repeat views by one account, paid or artificial views and very short views do not all count toward that figure. The public counter can exceed the view count used to calculate rewards. <!-- source: https://support.tiktok.com/es/business-and-creator/creator-rewards-program/creator-rewards-program 2026-10-12 -->
+
+Check three cases before editing:
+
+- A 20-second clip may satisfy a brand task but falls short of Creator Rewards' one-minute video requirement.
+- An original one-minute video posted before admission does not earn programme rewards retroactively.
+- A qualifying video posted after admission still needs qualified views; 1,000 public starts do not guarantee it has reached that threshold.
+
+Paid placements and sponsored clips require a separate eligibility check. Taking a task does not automatically make its video suitable for Creator Rewards. Compare the task rate and TikTok's own RPM using their respective metrics.
 
 ## Frequently asked questions
 
@@ -75,7 +81,7 @@ There is nothing to compare directly: neither TikTok nor YouTube publishes a tar
 
 ### The programme is unavailable in my country. Are contests too?
 
-No, those are different restrictions. The list of countries for a creator programme is set by the platform itself, and Russia and the CIS countries are not on it. DareBay keeps no country list: only people on sanctions lists are barred, and clippers in Russia, Belarus, Ukraine, Kazakhstan and the rest of CIS are paid<!-- source: https://darebay.com/en/legal/terms 2026-09-24 -->. The balance leaves as USDT on TON, or you receive the payout in Telegram Stars. Where the law closes crypto, as in Bangladesh, Nepal, Egypt, Algeria or Iraq, check the local rules before cashing out USDT; the available ways to get the money are covered in the payout breakdown.
+Creator Rewards availability and task eligibility are separate checks. Check account region and programme access in TikTok Studio, then DareBay age and sanctions terms, task requirements and your available reward method. An unavailable creator programme does not make every task unavailable; an accessible website does not guarantee every payment tool.
 
 ### Which site should I publish the work on?
 

@@ -2,7 +2,7 @@
 // Monthly earnings calculator: views per clip × clips per week × rate, with the
 // threshold, the cap per clip and the withdrawal fee applied. Every number comes
 // from data/platforms.json (`calc` on the DareBay entry), refreshed from the
-// baseline; nothing product-specific is typed here.
+// baseline. They are scenario inputs, not a statement of current campaign availability.
 import { useData } from 'vitepress'
 import { computed, ref } from 'vue'
 import { LANDING_COPY, NUMBER_LOCALE, localeOf } from './copy'
@@ -30,6 +30,7 @@ const fill = (text: string, values: Record<string, string | number>) => text.rep
 <template>
   <section class="lp-bleed lp-section" id="calculator">
     <div class="lp-section-head"><div><span class="lp-kicker">{{ copy.calcProTitle }}</span></div></div>
+    <p class="lp-muted">{{ copy.calcScenario }}</p>
     <div class="lp-calc">
       <div>
         <label for="lpp-views">{{ copy.calcViews }}: <span class="lp-calc-val lp-num">{{ fmt(views) }}</span></label>

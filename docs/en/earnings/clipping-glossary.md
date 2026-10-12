@@ -1,75 +1,189 @@
 ---
-title: "Clipping glossary: the terms every clipper should know"
-description: "Clipping is cutting streams and videos into short clips that earn per view. 53 clipper terms: CPM, threshold, cap, counted views, offers, wallet, withdrawal."
-provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
-numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_min_views_threshold_live, ppv_default_min_views_threshold, ppv_max_per_work_typical, commission_crypto, commission_fiat, contest_create_usdt_price]
+title: 'Clipping glossary: the terms every clipper should know'
+description: 'Clipping glossary: read task terms, distinguish counters, accruals and withdrawals, and follow one example from CPM to received money.'
+provenance:
+  snapshot_date: '2026-08-23'
+  source: darebay-prod
+numbers_used:
+- ppv_cpm_band_low
+- ppv_cpm_band_high
+- ppv_min_views_threshold_live
+- ppv_default_min_views_threshold
+- ppv_max_per_work_typical
+- commission_crypto
+- commission_fiat
+- contest_create_usdt_price
 seo: true
 landing: true
 hero:
-  kicker: "Glossary · 2026"
-  lede: "Opened a task card and met CPM, threshold, cap and claim now in one breath? Every one of them is here in a sentence or two, taken from DareBay task cards, payout rules and clipper chats, so you read terms like someone who has clipped for years. Each term has its own anchor, so 'what is CPM' is answered with a link. DareBay's figures come from its own public pages."
+  kicker: Glossary · 2026
+  lede: 'Clipping glossary: read task terms, distinguish counters, accruals and withdrawals, and follow one example from CPM to received money.'
   takeaways:
-    - "<b>CPM here means the rate for 1,000 counted views.</b> On DareBay it is $1–$10 per 1,000 views, set by each task<!-- source: https://darebay.com/en/earnings/how-much-clipping-pays 2026-09-24 -->, and it has nothing to do with the price of an ad."
-    - "<b>Threshold and cap hold a clip from both ends.</b> Clear the threshold on the card and nothing is subtracted for it; the cap (up to $500 per clip, set by each task)<!-- source: https://darebay.com/en/earnings/how-much-clipping-pays 2026-09-24 --> closes the amount from above."
-    - "<b>You are paid for counted views, not for the figure in your stats.</b> The platform's counter reads the site's public counter, and inflated views are filtered at moderation."
-    - "<b>Withdrawal and Stars are two different doors.</b> A withdrawal request starts from 10 USDT and goes to your wallet; getting it in Stars stays inside Telegram."
+  - Start with a permitted source and the brief, then the submission method, acceptance and counted views. Only then apply rate, threshold and cap. The resulting accrual still has a settlement status; a withdrawal is a separate movement to your chosen destination.
+  - 'Clipping glossary: read task terms, distinguish counters, accruals and withdrawals, and follow one example from CPM to received money.'
 cta:
-  title: "Now go and read a real card"
-  lede: "Open the DareBay catalogue and these words stop being abstract: the card names the rate, the threshold and any cap before you submit, and in a wallet-backed contest the fund already sits on the platform. Find every term you have just learned in the first card you open."
+  title: Now go and read a real card
+  lede: 'Open the DareBay catalogue and these words stop being abstract: the card names the rate, the threshold and any cap before you submit, and in a wallet-backed contest the fund already sits on the platform. Find every term you have just learned in the first card you open.'
 glossary:
-  - { id: "account-warmup", term: "Account warm-up", definition: "Getting a new account ready before posting for a task: watching, liking, following and publishing the first videos at a human pace. A fresh account that drops ten clips in an hour is easy for the site to restrict." }
-  - { id: "affiliate-link", term: "Affiliate link", definition: "The offer link with your own code: every clipper gets a personal one and puts it in the bio or a pinned comment. It tells the task whose orders came in; the organizer sets the link template and it cannot be changed." }
-  - { id: "budget-limit", term: "Budget limit", definition: "The total the buyer is prepared to pay out on a task, which is the size of the fund. When accrued earnings reach it, the task switches to fund exhausted; there is no overall limit per clipper, only the cap on each video where the task sets one." }
-  - { id: "cap-per-video", term: "Cap per video", definition: "The most one submission can earn, set by each task: up to $500 per clip, and a task may set no cap at all. A cap applies to each video separately with no overall limit per clipper, so a second clip is counted afresh." }
-  - { id: "claim-now", term: "Claim now", definition: "A button some tasks show once your work is approved: it locks in the amount accrued so far ahead of time. Once pressed, the video stops earning in that task, so it makes sense when the views have already stopped." }
-  - { id: "clipper", term: "Clipper", definition: "Someone who cuts other people's streams or shoots short videos of their own for a task, posts them on their own accounts and is paid for counted views. No followers are needed: what counts is the reach of one specific clip." }
-  - { id: "clipping", term: "Clipping", definition: "Cutting streams, podcasts and long videos into short clips, or shooting short videos of your own for a task, then posting them on your own accounts and getting paid per view. The Russian-speaking scene calls the same thing narezki." }
-  - { id: "content-farm", term: "Content farm", definition: "In short video, a set of live accounts run by one person or a team, each on its own niche and each posting its own version of a clip. Accounts that push one clip through bots or empty profiles are an engagement farm, and their views are not paid." }
-  - { id: "contest-fee", term: "Contest fee", definition: "The share of a task's budget the platform keeps: on DareBay it is 0%, so the whole fund goes to clippers. Creating a contest is free for the buyer too, so the whole budget is there to pay creators." }
-  - { id: "counted-view", term: "Counted view", definition: "A view the platform's counter has read from the site's public counter and that has passed moderation and fraud checks. Only counted views are paid, and the figure is refreshed several times a day." }
-  - { id: "cpa", term: "CPA", definition: "Cost per action: payment for a target action such as a sign-up, an application or a purchase through your link or promo code. On DareBay, a CPA offer task can add a fixed fee per accepted clip and a share of sales." }
-  - { id: "cpm", term: "CPM", definition: "Cost per mille, the advertising price of a thousand impressions. In clipping the same word means the rate per 1000 counted views: at a CPM of $1, a clip with 20,000 views makes 20,000 / 1000 × $1 = $20." }
-  - { id: "cps", term: "CPS", definition: "Cost per sale: you get a percentage of the orders that came through your affiliate link or promo code. On an offer task CPS usually sits on top of pay per view." }
-  - { id: "creator-decision", term: "Creator's decision", definition: "The CREATOR_DECISION selection type: the organizer reviews the entries and names the winner by the selection deadline fixed when the contest was created. It rests on the organizer's good faith, so check their rating first." }
-  - { id: "faceless", term: "Face on camera and faceless", definition: "Two clip formats: the author talks to the camera, or the clip is built without a face, on voice-over, captions, gameplay or slides. Both are accepted unless the task requirements say otherwise." }
-  - { id: "fixed-fee-per-clip", term: "Fixed fee per clip", definition: "A flat amount for an accepted clip on an offer task, whatever the views. It sits on top of pay per view and any share of sales; it becomes available only after a moderator approves the work, and automated view counting is not approval by itself." }
-  - { id: "frozen-budget", term: "Frozen budget", definition: "In a wallet-backed contest the budget is frozen on the platform before the start: the buyer handed the money over before you opened the editor and cannot take it back before the contest ends. Whatever is left undistributed after the calculation returns to their balance." }
-  - { id: "fund-exhausted", term: "Fund exhausted", definition: "The task state when the whole fund has been distributed over counted views. New works can still be posted, but they will not be paid from this fund; the card shows when it ran out, and the buyer can top the budget up." }
-  - { id: "hook", term: "Hook", definition: "The first one to three seconds of a clip, which decide whether the viewer stays or scrolls. A strong hook lifts watch time, watch time brings reach, and reach brings the views you are paid for." }
-  - { id: "incentivized-traffic", term: "Incentivized traffic", definition: "Views, clicks or sign-ups from people who were paid or promised a bonus for them. On offers it is banned alongside bots and pop traffic: the advertiser does not pay for such conversions and the work is rejected." }
-  - { id: "manual-payout", term: "Manual payout by the organizer", definition: "A task mode with no fund on the platform: the organizer pays the clipper directly, by the method the task sets. What and when they pay is written on the card; such a task rests on their reputation rather than on a frozen fund." }
-  - { id: "maturing-earnings", term: "Maturing earnings", definition: "The 24-hour window fresh earnings on a work sit through before the Claim now button opens, on tasks that show it. It is time for checks, not a deduction: when it runs out, the button opens on its own." }
-  - { id: "withdrawal-minimum", term: "Minimum withdrawal", definition: "The smallest single withdrawal request: 10 USDT. The form will not accept less, so the only option is to keep accruing; the request terms are on the withdrawals page." }
-  - { id: "moderation", term: "Moderation (review)", definition: "A moderator's check of the work against the task terms: site, format, hashtag, content requirements. While a work is under review it takes no part in the calculation; suspicious view growth sends a work on hold until it is examined." }
-  - { id: "offer", term: "Offer", definition: "An advertiser's proposition: the product, the target action and the price for it. An offer task can pay not only for views but also a fixed fee per accepted clip and a share of sales through your link or promo code, all on one card." }
-  - { id: "ppv", term: "Pay per view (PPV)", definition: "The model where the buyer pays for a clip's counted views rather than for the fact of posting. The DareBay formula: views / 1000 × rate, but never more than the cap per video." }
-  - { id: "random-selection", term: "Random selection", definition: "The RANDOM selection type: the system shuffles the eligible entries with ACTIVE status using a saved seed and picks the winner. Likes do not change the odds; there is no top by reactions." }
-  - { id: "rate-per-1000", term: "Rate per 1,000 views", definition: "The price the buyer pays for every thousand counted views; it sits on the card before you submit and does not change after launch. On DareBay it is $1–$10 per 1,000 views, set by each task, and the payout is views / 1000 × rate." }
-  - { id: "reach", term: "Reach", definition: "The number of unique viewers who saw the clip. A pay-per-view task counts not reach but the clip's view counter: that is what gets multiplied by the rate." }
-  - { id: "rejected-work", term: "Rejected work", definition: "A moderator's decision that the work does not meet the terms: wrong site, missing hashtag, broken requirements or inflated views. A rejected work takes no part in the calculation, and the number of rejected works is shown on the task card." }
-  - { id: "s2s-postback", term: "S2S postback", definition: "A server-to-server notification of a conversion: the advertiser's tracker tells the platform that a sign-up or a purchase came through the link with your code. That is how a sale is tied to a specific clipper without cookies or screenshots." }
-  - { id: "setup", term: "Setup (ready-made video)", definition: "A kit inside an offer task: a finished video or source footage, a caption, a link with your code and posting instructions. Every clipper gets their own setup and the copy is made unique for you, so no editing software is needed." }
-  - { id: "shadowban", term: "Shadowban", definition: "A hidden reach restriction with no notice: clips stop reaching recommendations and views fall back to followers only. The sign is a sharp drop on new clips; for a task it is the risk of missing the threshold, which is why you clip from a healthy account." }
-  - { id: "shorts-reels-tiktok", term: "Shorts, Reels and TikTok", definition: "The three homes of vertical short video: YouTube Shorts, Instagram Reels and TikTok. The task names the site to post on, and DareBay's live view counting works precisely for TikTok, YouTube, Instagram and the other sites named in the task." }
-  - { id: "slideshow", term: "Slideshow", definition: "A clip assembled from photos over music, which TikTok calls photo mode. The format is alive, but whether it fits a task is decided by its requirements: you are paid for the clip's view counter, not for a post's reach." }
-  - { id: "store", term: "Store", definition: "The DareBay section with digital goods from creators and brands: courses, closed communities, access and files. A purchase in the store carries an 8% fee; it has nothing to do with tasks or pay per view." }
-  - { id: "submission", term: "Submission", definition: "Sending the link to your published clip into the task. Until then the work is not in the task at all; the exact URL you sent is what counts, and a copy on another account is a different work." }
-  - { id: "task", term: "Task (campaign)", definition: "What a buyer publishes on DareBay: the materials, the rate per 1000 views, the threshold, any cap, the site, the requirements and the budget. Older pages of the platform call the same thing a contest, and so does the code." }
-  - { id: "task-fund", term: "Task fund (budget)", definition: "The money the buyer set aside for payouts on a task. The card shows how much participants have earned and how much is left; in a wallet-backed contest the fund sits on the platform before the start, and the undistributed remainder goes back to the buyer." }
-  - { id: "task-hashtag", term: "Task hashtag", definition: "A tag the organizer sets on the task and the clipper puts in the caption. It is required where the terms spell it out and for anonymous submissions: there the tag is the proof the clip was made for this task." }
-  - { id: "task-requirements", term: "Task requirements", definition: "The terms on the card: the site to post on, the format and length, the hashtag, what must be shown and what is banned. The moderator checks the work against exactly these, and a mismatch is grounds for rejection." }
-  - { id: "telegram-stars", term: "Telegram Stars", definition: "Telegram's in-app currency. What you have earned on DareBay can be received in Stars instead of USDT: that is getting it in Stars, not a withdrawal, because Stars stay inside Telegram." }
-  - { id: "ton", term: "TON", definition: "The blockchain network DareBay sends USDT to an external wallet on. Check the address and the network before you request: a transfer sent to the wrong network cannot be recovered." }
-  - { id: "ugc", term: "UGC", definition: "User-generated content: videos shot by ordinary people in their own style rather than by the brand's studio. On a UGC task you film the product on your phone yourself, and that is valued for looking natural." }
-  - { id: "usdt", term: "USDT", definition: "A stablecoin pegged to the dollar: one coin is worth about $1. Your available balance on DareBay is kept in USDT, and withdrawals to a TON wallet leave in it too." }
-  - { id: "video-uniqueization", term: "Video uniqueization", definition: "Changing a copy of a clip so that the site does not treat it as a duplicate: layout, captions, crop, mirror, sound. On offer tasks the platform hands out ready-made videos with built-in uniqueization, so every clipper's copy differs." }
-  - { id: "view-fraud", term: "View fraud", definition: "Artificial views: bots, bought packages, view exchanges, incentivized traffic. A work with suspicious growth gets flagged and goes on hold, and confirmed fraud is filtered out and not paid." }
-  - { id: "view-oracle", term: "View oracle", definition: "The platform's independent counter, which reads the site's public view counter by the link you sent. Neither the buyer nor the clipper types the figure in, so both sides look at the same number." }
-  - { id: "view-threshold", term: "View threshold", definition: "The minimum number of views below which a clip is not paid at all. Each task sets its own threshold and prints it on the card, with a system default of 1000 views; it is not deducted: clear it and the whole counter goes into the formula from the first view." }
-  - { id: "viewer-voting", term: "Viewer voting", definition: "The VIEWER_VOTING selection type: the winner is chosen by viewers' votes for the entries, not by a view counter. One of four selection types on DareBay, visible on the card before you submit." }
-  - { id: "wallet", term: "Wallet", definition: "Your balance on DareBay. A wallet-backed task credits your earnings here when it ends, or earlier with Claim now where the task shows it; from here you withdraw USDT to an external wallet on TON, or receive the payout in Telegram Stars." }
-  - { id: "watch-time", term: "Watch time (retention)", definition: "The share of a clip the viewer watched to the end. The main signal for recommendations: a clip with high retention gets shown further, and views grow without followers." }
-  - { id: "withdrawal-fee", term: "Withdrawal fee", definition: "A charge for moving money from the balance to a wallet. On DareBay it is 10% of the requested amount, deducted inside the request, while contest payouts themselves carry 0%; a personal rate may apply, and the form shows the exact rate and the amount to receive before you confirm." }
+- id: account-warmup
+  term: Account warm-up
+  definition: 'Preparing an account for reliable publishing: secure access, an accurate profile and a permitted public test upload. A seven-day viewing routine is not a guaranteed distribution unlock.'
+- id: affiliate-link
+  term: Affiliate link
+  definition: 'The offer link with your own code: every clipper gets a personal one and puts it in the bio or a pinned comment. It tells the task whose orders came in; the organizer sets the link template and it cannot be changed.'
+- id: budget-limit
+  term: Budget limit
+  definition: The total the buyer is prepared to pay out on a task, which is the size of the fund. When accrued earnings reach it, the task switches to fund exhausted; there is no overall limit per clipper, only the cap on each video where the task sets one.
+- id: cap-per-video
+  term: Cap per video
+  definition: The maximum amount one eligible submission can earn when a task sets a cap. Read its exact value on the card; a view cap and a currency cap are different limits.
+- id: claim-now
+  term: Claim now
+  definition: 'A button some tasks show once your work is approved: it locks in the amount accrued so far ahead of time. Once pressed, the video stops earning in that task, so it makes sense when the views have already stopped.'
+- id: clipper
+  term: Clipper
+  definition: 'Someone who cuts other people''s streams or shoots short videos of their own for a task, posts them on their own accounts and is paid for counted views. No followers are needed: what counts is the reach of one specific clip.'
+- id: clipping
+  term: Clipping
+  definition: Cutting streams, podcasts and long videos into short clips, or shooting short videos of your own for a task, then posting them on your own accounts and getting paid per view. The Russian-speaking scene calls the same thing narezki.
+- id: content-farm
+  term: Content farm
+  definition: In short video, a set of live accounts run by one person or a team, each on its own niche and each posting its own version of a clip. Accounts that push one clip through bots or empty profiles are an engagement farm, and their views are not paid.
+- id: contest-fee
+  term: Contest fee
+  definition: 'The share of a task''s budget the platform keeps: on DareBay it is 0%, so the whole fund goes to clippers. Creating a contest is free for the buyer too, so the whole budget is there to pay creators.'
+- id: counted-view
+  term: Counted view
+  definition: A view the platform's counter has read from the site's public counter and that has passed moderation and fraud checks. Only counted views are paid, and the figure is refreshed several times a day.
+- id: cpa
+  term: CPA
+  definition: 'Cost per action: payment for a target action such as a sign-up, an application or a purchase through your link or promo code. On DareBay, a CPA offer task can add a fixed fee per accepted clip and a share of sales.'
+- id: cpm
+  term: CPM
+  definition: 'Cost per mille: in a clipping task, the agreed rate per 1,000 eligible views. The task card supplies the actual value; it is distinct from an advertising impression price.'
+- id: cps
+  term: CPS
+  definition: 'Cost per sale: you get a percentage of the orders that came through your affiliate link or promo code. On an offer task CPS usually sits on top of pay per view.'
+- id: creator-decision
+  term: Creator's decision
+  definition: 'The CREATOR_DECISION selection type: the organizer reviews the entries and names the winner by the selection deadline fixed when the contest was created. It rests on the organizer''s good faith, so check their rating first.'
+- id: faceless
+  term: Face on camera and faceless
+  definition: 'Two clip formats: the author talks to the camera, or the clip is built without a face, on voice-over, captions, gameplay or slides. Both are accepted unless the task requirements say otherwise.'
+- id: fixed-fee-per-clip
+  term: Fixed fee per clip
+  definition: A flat amount for an accepted clip on an offer task, whatever the views. It sits on top of pay per view and any share of sales; it becomes available only after a moderator approves the work, and automated view counting is not approval by itself.
+- id: frozen-budget
+  term: Frozen budget
+  definition: 'In a wallet-backed contest the budget is frozen on the platform before the start: the buyer handed the money over before you opened the editor and cannot take it back before the contest ends. Whatever is left undistributed after the calculation returns to their balance.'
+- id: fund-exhausted
+  term: Fund exhausted
+  definition: The task state when the whole fund has been distributed over counted views. New works can still be posted, but they will not be paid from this fund; the card shows when it ran out, and the buyer can top the budget up.
+- id: hook
+  term: Hook
+  definition: The first one to three seconds of a clip, which decide whether the viewer stays or scrolls. A strong hook lifts watch time, watch time brings reach, and reach brings the views you are paid for.
+- id: incentivized-traffic
+  term: Incentivized traffic
+  definition: 'Views, clicks or sign-ups from people who were paid or promised a bonus for them. On offers it is banned alongside bots and pop traffic: the advertiser does not pay for such conversions and the work is rejected.'
+- id: manual-payout
+  term: Manual payout by the organizer
+  definition: 'A task mode with no fund on the platform: the organizer pays the clipper directly, by the method the task sets. What and when they pay is written on the card; such a task rests on their reputation rather than on a frozen fund.'
+- id: maturing-earnings
+  term: Maturing earnings
+  definition: 'The 24-hour window fresh earnings on a work sit through before the Claim now button opens, on tasks that show it. It is time for checks, not a deduction: when it runs out, the button opens on its own.'
+- id: withdrawal-minimum
+  term: Minimum withdrawal
+  definition: 'The smallest single withdrawal request: 10 USDT. The form will not accept less, so the only option is to keep accruing; the request terms are on the withdrawals page.'
+- id: moderation
+  term: Moderation (review)
+  definition: 'A moderator''s check of the work against the task terms: site, format, hashtag, content requirements. While a work is under review it takes no part in the calculation; suspicious view growth sends a work on hold until it is examined.'
+- id: offer
+  term: Offer
+  definition: 'An advertiser''s proposition: the product, the target action and the price for it. An offer task can pay not only for views but also a fixed fee per accepted clip and a share of sales through your link or promo code, all on one card.'
+- id: ppv
+  term: Pay per view (PPV)
+  definition: 'The model where the buyer pays for a clip''s counted views rather than for the fact of posting. The DareBay formula: views / 1000 × rate, but never more than the cap per video.'
+- id: random-selection
+  term: Random selection
+  definition: 'The RANDOM selection type: the system shuffles the eligible entries with ACTIVE status using a saved seed and picks the winner. Likes do not change the odds; there is no top by reactions.'
+- id: rate-per-1000
+  term: Rate per 1,000 views
+  definition: The rate agreed by a task per 1,000 eligible views. Read its exact value on the current card; illustrative calculations do not establish a catalog-wide rate.
+- id: reach
+  term: Reach
+  definition: 'The number of unique viewers who saw the clip. A pay-per-view task counts not reach but the clip''s view counter: that is what gets multiplied by the rate.'
+- id: rejected-work
+  term: Rejected work
+  definition: 'A moderator''s decision that the work does not meet the terms: wrong site, missing hashtag, broken requirements or inflated views. A rejected work takes no part in the calculation, and the number of rejected works is shown on the task card.'
+- id: s2s-postback
+  term: S2S postback
+  definition: 'A server-to-server notification of a conversion: the advertiser''s tracker tells the platform that a sign-up or a purchase came through the link with your code. That is how a sale is tied to a specific clipper without cookies or screenshots.'
+- id: setup
+  term: Setup (ready-made video)
+  definition: 'A kit inside an offer task: a finished video or source footage, a caption, a link with your code and posting instructions. Every clipper gets their own setup and the copy is made unique for you, so no editing software is needed.'
+- id: shadowban
+  term: Shadowban
+  definition: An informal name for reduced distribution. A low counter alone does not prove a restriction; check account notices, post eligibility and comparable analytics.
+- id: shorts-reels-tiktok
+  term: Shorts, Reels and TikTok
+  definition: 'The three homes of vertical short video: YouTube Shorts, Instagram Reels and TikTok. The task names the site to post on, and DareBay''s live view counting works precisely for TikTok, YouTube, Instagram and the other sites named in the task.'
+- id: slideshow
+  term: Slideshow
+  definition: 'A clip assembled from photos over music, which TikTok calls photo mode. The format is alive, but whether it fits a task is decided by its requirements: you are paid for the clip''s view counter, not for a post''s reach.'
+- id: store
+  term: Store
+  definition: 'The DareBay section with digital goods from creators and brands: courses, closed communities, access and files. A purchase in the store carries an 8% fee; it has nothing to do with tasks or pay per view.'
+- id: submission
+  term: Submission
+  definition: Sending the link to your published clip into the task. Until then the work is not in the task at all; the exact URL you sent is what counts, and a copy on another account is a different work.
+- id: task
+  term: Task (campaign)
+  definition: 'What a buyer publishes on DareBay: the materials, the rate per 1000 views, the threshold, any cap, the site, the requirements and the budget. Older pages of the platform call the same thing a contest, and so does the code.'
+- id: task-fund
+  term: Task fund (budget)
+  definition: The money the buyer set aside for payouts on a task. The card shows how much participants have earned and how much is left; in a wallet-backed contest the fund sits on the platform before the start, and the undistributed remainder goes back to the buyer.
+- id: task-hashtag
+  term: Task hashtag
+  definition: 'A tag the organizer sets on the task and the clipper puts in the caption. It is required where the terms spell it out and for anonymous submissions: there the tag is the proof the clip was made for this task.'
+- id: task-requirements
+  term: Task requirements
+  definition: 'The terms on the card: the site to post on, the format and length, the hashtag, what must be shown and what is banned. The moderator checks the work against exactly these, and a mismatch is grounds for rejection.'
+- id: telegram-stars
+  term: Telegram Stars
+  definition: 'Telegram''s in-app currency. What you have earned on DareBay can be received in Stars instead of USDT: that is getting it in Stars, not a withdrawal, because Stars stay inside Telegram.'
+- id: ton
+  term: TON
+  definition: 'The blockchain network DareBay sends USDT to an external wallet on. Check the address and the network before you request: a transfer sent to the wrong network cannot be recovered.'
+- id: ugc
+  term: UGC
+  definition: 'User-generated content: videos shot by ordinary people in their own style rather than by the brand''s studio. On a UGC task you film the product on your phone yourself, and that is valued for looking natural.'
+- id: usdt
+  term: USDT
+  definition: 'A stablecoin pegged to the dollar: one coin is worth about $1. Your available balance on DareBay is kept in USDT, and withdrawals to a TON wallet leave in it too.'
+- id: video-uniqueization
+  term: Video uniqueization
+  definition: 'Changing a copy of a clip so that the site does not treat it as a duplicate: layout, captions, crop, mirror, sound. On offer tasks the platform hands out ready-made videos with built-in uniqueization, so every clipper''s copy differs.'
+- id: view-fraud
+  term: View fraud
+  definition: 'Artificial views: bots, bought packages, view exchanges, incentivized traffic. A work with suspicious growth gets flagged and goes on hold, and confirmed fraud is filtered out and not paid.'
+- id: view-oracle
+  term: View oracle
+  definition: The platform's independent counter, which reads the site's public view counter by the link you sent. Neither the buyer nor the clipper types the figure in, so both sides look at the same number.
+- id: view-threshold
+  term: View threshold
+  definition: 'The minimum number of views below which a clip is not paid at all. Each task sets its own threshold and prints it on the card, with a system default of 1000 views; it is not deducted: clear it and the whole counter goes into the formula from the first view.'
+- id: viewer-voting
+  term: Viewer voting
+  definition: 'The VIEWER_VOTING selection type: the winner is chosen by viewers'' votes for the entries, not by a view counter. One of four selection types on DareBay, visible on the card before you submit.'
+- id: wallet
+  term: Wallet
+  definition: Your balance on DareBay. A wallet-backed task credits your earnings here when it ends, or earlier with Claim now where the task shows it; from here you withdraw USDT to an external wallet on TON, or receive the payout in Telegram Stars.
+- id: watch-time
+  term: Watch time (retention)
+  definition: 'The share of a clip the viewer watched to the end. The main signal for recommendations: a clip with high retention gets shown further, and views grow without followers.'
+- id: withdrawal-fee
+  term: Withdrawal fee
+  definition: A fee applied to a gross withdrawal request. DareBay’s default is 10%; a valid personal rate may apply. The form shows the actual rate and amount to receive before confirmation.
 ---
 
 Read a task card without stumbling and you stop guessing what it will pay you: CPM or per thousand, threshold or cap, claim now or withdrawal. This glossary collects 53 terms from DareBay task cards, payout rules and clipper chats, each explained in a sentence or two.
@@ -86,7 +200,7 @@ In advertising, CPM is the price of a thousand impressions paid to a platform. I
 
 ### Threshold and cap
 
-The threshold looks at views, the cap at money. The threshold is the minimum without which a clip is not paid at all: set by the task (1000 by default), never deducted. The cap is the most one video can earn: up to $500 per clip, set by each task, and a task may set none<!-- source: https://darebay.com/en/earnings/how-much-clipping-pays 2026-09-24 -->; a second clip is counted on its own with no limit per author. 20,000 views at a $1 rate make 20,000 / 1000 × $1.00 = **$20.00**, well under any cap on the card; the threshold check is in [how pay-per-view works](/en/earnings/how-pay-per-view-works).
+The threshold is an eligibility gate measured in views; the cap is a limit on an eligible work’s earnings. Read the task’s exact units and values. After an eligible clip clears DareBay’s threshold, the threshold is not deducted from the counted views. A currency cap and a view cap are different inputs.
 
 ### Counted and displayed views
 
@@ -103,6 +217,14 @@ A withdrawal is a request for USDT on the TON network: file it from 10 USDT and 
 ### Content farm and engagement farm
 
 A content farm in the short-video sense is a set of live niche accounts, each posting its own version of a clip to real viewers. An engagement farm pushes one clip through empty or bot accounts to inflate the numbers, and a task pays nothing for those views. Where the term comes from and where the platforms draw the line is covered in [what a content farm is](/en/content-farm/what-is-a-content-farm).
+
+## Read the terms in the order money moves
+
+Start with a permitted source and the brief, then the submission method, acceptance and counted views. Only then apply rate, threshold and cap. The resulting accrual still has a settlement status; a withdrawal is a separate movement to your chosen destination.
+
+In an illustrative task with a 1,000-view threshold, a $2 CPM and a $15 cap, a 6,000-view accepted clip earns $12. A second clip at 20,000 views reaches the $15 cap rather than $40. The batch accrues $27. A modeled 10% withdrawal fee leaves $24.30; a personal fee or organizer-direct payment changes the final step.
+
+Keep the four nouns separate in a support question: public counter, counted views, credited balance and payment received. Saying only “the views disappeared” can mean any of them. Include the task and video URLs, the visible status and the time observed. The glossary defines the mechanics; the task card supplies their actual values.
 
 ## Frequently asked questions
 

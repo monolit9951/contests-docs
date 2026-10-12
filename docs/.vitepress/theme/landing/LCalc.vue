@@ -1,7 +1,7 @@
 <script setup lang="ts">
 // Payout calculator for one clip on DareBay: rate × views ÷ 1000, capped.
 // Inputs come from data/platforms.json (`calc` on the DareBay entry), which is
-// refreshed from the baseline; nothing is typed by hand here.
+// refreshed from the baseline. The displayed numbers are an illustrative scenario.
 import { useData } from 'vitepress'
 import { computed, ref } from 'vue'
 import { LANDING_COPY, NUMBER_LOCALE, localeOf } from './copy'
@@ -20,6 +20,7 @@ const money = (n: number) => '$' + n.toFixed(2)
 <template>
   <section class="lp-bleed lp-section" id="calculator">
     <div class="lp-section-head"><div><span class="lp-kicker">{{ copy.calcTitle }}</span></div></div>
+    <p class="lp-muted">{{ copy.calcSimpleScenario }}</p>
     <div class="lp-calc">
       <div>
         <label for="lp-views">{{ copy.calcViews }}: <span class="lp-calc-val lp-num">{{ fmt(views) }}</span></label>

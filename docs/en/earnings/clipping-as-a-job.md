@@ -1,24 +1,28 @@
 ---
 title: Clipping as a job - what clipping jobs involve and pay
-description: "What clipping jobs involve: piecework paid per view, $1–10 per 1,000 views, up to $500 per clip, withdrawable from 10 USDT. No followers, no portfolio."
-provenance: { snapshot_date: "2026-09-20", source: "darebay-prod" }
-numbers_used: [ppv_cpm_min, ppv_cpm_median, ppv_cpm_max, ppv_min_views_threshold_live]
+description: 'Clipping as paid work: define the deliverable, compare fixed-price and per-view arrangements, and measure earnings over the full production cycle.'
+provenance:
+  snapshot_date: '2026-09-20'
+  source: darebay-prod
+numbers_used:
+- ppv_cpm_min
+- ppv_cpm_median
+- ppv_cpm_max
+- ppv_min_views_threshold_live
 seo: true
 landing: true
 hero:
-  kicker: "Clipper guide · 2026"
-  lede: "A clipper is paid for the reach of one video, not for the size of a channel, so zero followers and an empty portfolio are a normal place to start. Here is the craft without the varnish: what goes into one clip, how long it takes, why the income swings, and the route from a first contest to first money."
+  kicker: Clipper guide · 2026
+  lede: 'Clipping as paid work: define the deliverable, compare fixed-price and per-view arrangements, and measure earnings over the full production cycle. Before accepting recurring clipping work, define the deliverable in writing: source footage, number of clips, duration, publishing responsibility, revision rounds and the approval deadline.'
   takeaways:
-    - "<b>Reach pays here, not your follower count:</b> each task sets its rate, from $1.00 to $10.00 per 1000 views of one specific video, whatever the size of your channel."
-    - "<b>The threshold on the card is never subtracted:</b> clear it and the whole counter is paid, so 12,000 views at $1.00 per 1000 is 12,000 / 1000 × $1.00 = $12.00."
-    - "<b>The cap per submission is set by the buyer,</b> up to $500 per clip; your next clip starts its own count from scratch."
-    - "<b>Your first clip takes a couple of hours,</b> later ones 20 to 40 minutes; all you need is a DareBay account, an open account on the contest's site and any editing app."
+  - Measure a job by the whole production cycle.
+  - 'Clipping as paid work: define the deliverable, compare fixed-price and per-view arrangements, and measure earnings over the full production cycle.'
 cta:
-  title: "Take your first brief from the board"
-  lede: "No application, no portfolio, no follower count to clear. Open the DareBay catalogue, pick a brief whose numbers you have checked on the card, and send in your first clip as a link."
+  title: Take your first brief from the board
+  lede: No application, no portfolio, no follower count to clear. Open the DareBay catalogue, pick a brief whose numbers you have checked on the card, and send in your first clip as a link.
 ---
 
-You can earn from clips with no followers and nothing to show, because clipping is piecework paid per view. A clipper takes a brief on the platform, cuts a short vertical video out of somebody else's footage, publishes it on the contest's site - TikTok, YouTube, Instagram or another site named in the brief - and sends the link. After that, reach pays: each task sets its rate, from **$1.00**<!-- baseline: ppv_cpm_min --> to **$10.00 per 1000 views**<!-- baseline: ppv_cpm_max -->. A portfolio and years of practice buy you nothing here: you are paid for the views of one specific video, not for the size of your channel. In a wallet-backed contest the budget is frozen on the platform before you take the brief, the contest commission is 0%, and taking part is free.
+The task card sets the actual rate per 1,000 views. Published ranges and the arithmetic examples below do not establish which paid campaigns are available to you; use the current card's threshold, cap, eligible site and payment mode.
 
 This is piecework, not passive income. Below: what the job actually asks of you, what the result depends on, and one route from zero - first contest, first submission, first money.
 
@@ -85,7 +89,7 @@ That is where the shape of the income comes from. One video takes 3000 views and
 
 The threshold is not subtracted, though: once a submission clears it, the whole counter goes into the maths. A video with 12,000 views at $1.00<!-- baseline: ppv_cpm_median --> per 1000 brings 12,000 / 1000 * $1.00 = **$12.00** - all 12,000 count, not the remainder above the bar.
 
-The cap on a single submission is set by the buyer at contest creation: that is how they insure the budget against one viral video taking everything. A task that sets a cap shows it on the card before you submit, and caps run up to $500 per clip. It works per submission, not per author: your next clip is counted against its own cap from scratch. A cap is a limit in the mechanic, not a plan for the month.
+The cap is a parameter of the task, applied separately to each eligible submission. Check the card for a stated cap or the absence of one; a limit used in an example is only an assumption.
 
 Silence for a beginner often comes from the account itself: platforms show a fresh profile cautiously and the first clips may stay in the hundreds of views; how that works and what to do is in [TikTok shadowban and account warm-up](/en/earnings/account-warm-up-and-shadowban).
 
@@ -129,6 +133,14 @@ A first job rarely takes off, and that is normal: its purpose is to show you the
 ## Other platforms and the DareBay fact sheet
 
 A clipper is better off registered on two or three platforms: campaigns run out of budget, and a supply of briefs matters more than one high rate. How DareBay compares with the other clipping platforms on rate, threshold, cap, fee and payout countries is in [best clipping platforms](/en/earnings/best-clipping-platforms). Every DareBay figure, from the rate to the withdrawal terms, stands with a source and a date in [DareBay at a glance](/en/about/darebay-at-a-glance). The first things to check on any platform are whether it pays in your country, what fee it takes from the payout and from which threshold it counts views: a headline rate without those three fields says nothing.
+
+## Measure a job by the whole production cycle
+
+Before accepting recurring clipping work, define the deliverable in writing: source footage, number of clips, duration, publishing responsibility, revision rounds and the approval deadline. Fixed-price editing sells that deliverable; pay-per-view work sells a result whose value depends on accepted reach. Combining them without written terms creates unpaid revisions and arguments about what “finished” means.
+
+Track time from opening the brief to recording the settled payment. An illustrative batch earning $60 over six hours of editing, two hours of source research and one hour of posting/support produces $6.67 gross per hour. The same $60 divided only by editing time would show $10 and hide a third of the work. Add tool costs and applicable payout fees before comparing it with another job.
+
+Keep a small portfolio of permitted examples with a short description of what you did. Even where a task board does not require a portfolio, it helps when contacting a direct client. A stable working relationship is evidenced by clear briefs, timely decisions and completed payments; a promise of unlimited work or a viral screenshot does not establish your future workload.
 
 ## Frequently asked questions
 

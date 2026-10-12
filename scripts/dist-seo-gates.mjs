@@ -9,6 +9,7 @@ import { MIN_INBOUND, inboundSources, inboundVerdict, internalNofollowAnchors } 
 import { showcaseWeightFindings } from './showcase-weight.mjs'
 import { hubDirectoryFinding } from './hub-directory.mjs'
 import { publisherPageFindings } from './publisher-pages.mjs'
+import { visiblePageDateFindings } from './visible-page-date.mjs'
 import { BROLIVO_CONTACT, BROLIVO_WEB_URLS, PUBLISHER_CONTACT, PUBLISHER_COPY } from '../docs/.vitepress/theme/products/copy.ts'
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..')
@@ -253,6 +254,12 @@ for (const page of PAGES) {
     const modifiedMeta = tags(html, 'meta').filter((tag) => attr(tag, 'property') === 'article:modified_time')
     const pageDatesForMeta = dates[source]
     if (isArticle) {
+      // Publisher pages use their own shell; every Article in the landing shell exposes this date.
+      if (pageDatesForMeta?.modified && /class="[^"]*\blp-hero(?:\s|")/.test(markup)) {
+        for (const finding of visiblePageDateFindings(markup, pageDatesForMeta.modified.slice(0, 10))) {
+          fail('visible-modified', path + ': ' + finding)
+        }
+      }
       if (
         pageDatesForMeta?.published &&
         (publishedMeta.length !== 1 || attr(publishedMeta[0], 'content') !== new Date(pageDatesForMeta.published).toISOString())

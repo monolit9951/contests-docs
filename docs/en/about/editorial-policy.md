@@ -1,7 +1,7 @@
 ---
 title: Editorial policy of the clipping earnings section
 description: "The editorial rules behind these clipping guides: one question per page, a source and a date on every figure, rival platforms quoted from their own documents."
-provenance: { snapshot_date: "2026-09-11", source: "darebay-prod" }
+provenance: { snapshot_date: "2026-10-12", source: "darebay-prod" }
 numbers_used: []
 seo: true
 ---
@@ -18,7 +18,7 @@ Every page has a reader's question it was written for, and that question is in t
 texts answered the same question, they are merged into one and the old address leads to the new one.
 Pages "for the query" that restate a neighbouring page in other words are not created here.
 
-The three language versions - English, Russian and Ukrainian - answer the same question but are
+English, Russian and Ukrainian versions, with selected guides also available in Arabic, answer the same question and are
 adapted to their reader: the comparisons list different platforms, the examples use different tax
 rules and different advertising prices.
 
@@ -66,8 +66,11 @@ never presented as the main reason to work on the platform.
 
 ## Corrections
 
-An error is fixed within a few days of being reported, and the header date updates with the
-correction. If the error is in the terms of a task itself, it is fixed in the product: the task card
-changes at once and the text here catches up at the next publication of the section. Where and what
-to send is on [who writes the guides and where the numbers come from](/en/about/who-writes-darebay-guides);
-who is responsible for the section and where its public pages are is on [about](/en/about/).
+
+An error report should identify the page, sentence and primary source. A substantive correction changes the article date; a field's snapshot date remains its reading date. A task-term question is handled through that card rather than by editing a general review. Contacts and a report example are on [the author page](/en/about/who-writes-darebay-guides).
+
+## An example of a substantive update
+
+When another service changes a plan, correct that comparison entry and its source date. A closed task stops being an example of work available today. Reformatting a paragraph does not recheck its old prices or terms.
+
+Mark calculations using invented view counts as hypothetical. Check the meaning in translation as well as the numbers: “reward,” “balance” and “withdrawal” are not interchangeable. Read the update date alongside the source for the particular fact you need.

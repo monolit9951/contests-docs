@@ -30,6 +30,12 @@ cta:
   lede: "DareBay pays a credited balance out in USDT on the TON network, or you receive the payout in Telegram Stars, and it publishes no country list at all. A request starts at 10 USDT, the form shows the fee and the amount to receive before you confirm, and the team checks every request by hand. Take a task off the board - there is no application and nobody counts your followers."
 ---
 
+## Check the entire payout path before making clips
+
+Vues now advertises bank or USDC **through Stripe** depending on country. USDC is an asset, not proof that the provider can be skipped; the page does not name its USDC network. It therefore cannot be recommended as a guaranteed route without Stripe.<!-- source: https://vues.app/ios 2026-10-12 -->
+
+Clipping.net lists PayPal, USDC on Ethereum and USDT on Ethereum, but the campaign chooses its method. A PayPal-only campaign does not acquire a wallet alternative merely because the platform also supports crypto. Check, in order: your recipient country and verification, the actual campaign method, currency and network, minimum, fees and settlement event. A matching wallet address solves only the currency/network step.<!-- source: https://clipping.net/docs/clippers/payments 2026-10-12 -->
+
 ## The rail decides, not the country
 
 A clipper usually meets the payment problem last: after the account, after the clips, after the views are counted, at the moment the balance will not move. The reason is rarely the platform but the processor under it.
@@ -59,7 +65,7 @@ The table carries what the data card below does not: whether a rail exists, whic
 | Prime Oracles | no | no | USD through Garna (Cyprus) to a verified Garna account, described in its agreement <!-- source: https://www.primeoracles.com/terms-agreement 2026-09-24 --> | USDT on Tron, BNB Smart Chain or Solana; USDC on Ethereum or Solana; TON <!-- source: https://www.primeoracles.com/terms-agreement 2026-09-24 --> | Garna's own KYC, to a verified Garna account; terms require consent to verification <!-- source: https://www.primeoracles.com/terms-agreement 2026-09-24 --> |
 | Klipni | no | no | bank details, Russian tax status required <!-- source: https://klipni.com/legal/terms 2026-09-18 --> | no | tax status, verified in-app |
 | Clipping.net | yes | no | no | USDC and USDT, Ethereum mainnet only <!-- source: https://clipping.net/docs/clippers/payments 2026-09-18 --> | not published |
-| Vues | yes | no | whatever the brand offers | USDT; its iOS app names ERC-20 <!-- source: https://vues.app/ios 2026-09-18 --> | may be required, per its terms <!-- source: https://vues.app/terms 2026-09-18 --> |
+| Vues | current public flow uses Stripe | country-dependent | verify onboarding before clipping | bank account or USDC wallet; network not publicly named <!-- source: https://vues.app/ios 2026-10-12 --> | checks may apply |
 | Whop Content Rewards | its Content Rewards FAQ lists it<!-- source: https://contentrewards.com/creators 2026-09-18 -->, but Whop's docs tie PayPal payouts to PayPal purchases<!-- source: https://docs.whop.com/manage-your-business/manage-payouts/payout-methods 2026-09-24 --> | not published | bank account or mobile wallet <!-- source: https://contentrewards.com/creators 2026-09-18 --> | "crypto", coin and network not published | yes, including a document upload <!-- source: https://docs.whop.com/manage-your-business/manage-payouts/set-up-payouts 2026-09-18 --> |
 | Vyro | yes | yes | no <!-- source: https://vyro.com/help/earnings-and-payments/how-can-i-withdraw-my-earnings 2026-09-18 --> | no | not published |
 | Clipping.io | not published | not published | not published | not published <!-- source: https://www.clipping.io/ 2026-09-18 --> | not published |

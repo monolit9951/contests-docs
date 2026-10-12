@@ -1,20 +1,17 @@
 ---
 title: What to do about prohibited or dangerous content?
-description: "Prohibited content on DareBay: where to report a work, a comment or a profile, which categories carry zero tolerance, and what a confirmed violation costs."
-provenance: { snapshot_date: "2026-08-15", source: "darebay-prod" }
+description: "Prohibited content on DareBay: locate the reported object, include evidence and find contacts. Reporting procedure, platform rules and contest money."
+provenance: { snapshot_date: "2026-10-12", source: "darebay-prod" }
 numbers_used: []
 ---
 
 # What to do about prohibited or dangerous content?
 
-One report starts a review, and you need not find anyone to file it: a work or
-comment has **Report** in the **⋯** menu, an account has the link on its
-profile, and anything urgent or illegal goes to **trust@darebay.com**. In
-the zero-tolerance categories below there is no warning, only removal and a ban.
+Identify the particular work, comment or profile when reporting a violation. Use **Report** in the **⋯** menu, or **trust@darebay.com** for urgent or illegal content. Acceptable-use rules and responses to violations are published in the [platform terms](/en/legal/terms).
 
-## Zero tolerance
+## Prohibited categories
 
-These categories are not up for discussion:
+Report these kinds of content:
 
 - **Illegal content** under the jurisdiction of the person reporting it
   and under DareBay's own jurisdictions: CSAM, intimate material shared
@@ -33,26 +30,25 @@ and the rules for entering work are in [Submit your work](/en/help/submit-your-w
 - On a submission or a comment: the **⋯** menu has **Report**.
 - On an account: the **Report** link on the profile.
 - Anything urgent or illegal that has to come down immediately: write to
-  **trust@darebay.com** with a link and a short description. Trusted
-  reporters get a priority queue.
+  **trust@darebay.com** with a link and a short description.
 
 ## What happens next
 
-- **The report goes into the queue straight away.** Zero-tolerance categories
-  jump it, and every report is read by a person, not by a ticket robot.
-- **Violation confirmed:** the content is removed and the account banned,
-  with no "three strikes" here. A [wallet-backed budget](/en/about/payout-guarantee) held for the
-  affected contest goes back to the organizer, and is withheld if the organizer
-  was the one in violation.
-- **Not confirmed:** the reporter gets a short explanation. Anyone who
-  files reports in bad faith on a regular basis picks up restrictions of
-  their own.
+
+A report helps locate the object and investigate a violation. Responses and the dispute process are described in the [terms](/en/legal/terms). Submitting a report does not establish a violation or promise a particular response time.
+
+For contest money, include the funding mode and reward status. Wallet-backed funding has a deposited budget; organizer-direct payment does not place a pool with the platform. Do not assume a violation decision automatically refunds any amount.
 
 ## Legally
 
-DareBay cooperates with law enforcement under the process in force in every
-jurisdiction where it operates. We publish a transparency report with
-aggregate statistics on the requests received and how we responded.
+
+Send rights-holder notices and legal questions to **legal@darebay.com**. Include the link and basis; copyright-notice requirements are described in the [terms of use](/en/legal/terms).
+
+## Send a link without redistributing the material
+
+A report needs the work, comment or profile address, a short description and the time you observed it. Add a timestamp for a specific video segment. Do not repost dangerous material in a chat as evidence or add private details beyond what is necessary to locate the issue.
+
+If the public link disappeared, include the known identifier and context. Help locate the original object; publicly accusing another participant does not replace a report.
 
 ---
 

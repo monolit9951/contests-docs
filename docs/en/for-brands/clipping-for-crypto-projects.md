@@ -1,8 +1,8 @@
 ---
 title: "Clipping for crypto projects: UGC paid per view in USDT"
 description: "Promote a crypto project with explainer and tutorial clips: clippers earn USDT per view and the brief bans any promise of returns. Rules, formats and budget."
-provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
-numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_default_min_views_threshold, ppv_min_views_threshold_live, ppv_max_per_work_typical, contest_create_usdt_price, commission_crypto, commission_fiat]
+provenance: { snapshot_date: "2026-10-12", source: "darebay-prod" }
+numbers_used: [ppv_default_min_views_threshold, commission_crypto, commission_fiat]
 seo: true
 landing: true
 hero:
@@ -11,7 +11,7 @@ hero:
   takeaways:
     - "<b>Crypto gets watched in the feed, not on a landing page:</b> explainers, news clips, product tutorials and AMA cuts collect views with no ad account and no sponsored label."
     - "<b>The rules in your brief are what protect the project:</b> no promises of returns, no signals, a disclaimer in every clip, official links only, no third-party referral links."
-    - "<b>Clippers receive USDT to a TON wallet and you pay for reach:</b> you set the rate from $1 to $10 per 1,000 views, launching is free and the contest fee is 0%."
+    - "<b>An editor needs a demonstration rather than wallet keys.</b> Check the task terms before publishing and submitting the clip."
     - "<b>Your community already explains the product for free:</b> a pay-per-view task turns the active members of your chat into creators paid honestly by the counter."
 cta:
   title: "Launch the task, get clips within days"
@@ -46,13 +46,13 @@ A clip that breaks any of the six is rejected in the selection window and is not
 
 For a crypto project the money side is already in USDT: the budget is funded in USDT and creators receive USDT to a wallet on the TON network. You set a rate per 1,000 views, a threshold, a cap per clip and a budget; the platform reads views from the site's public counter, reconciles several times a day and filters out inflated views.
 
-You set the rate from $1 to $10 per 1,000 views. The view threshold is set by each task, with a system default of 1,000 views: a clip below it costs nothing, a clip above it is paid for its whole counter. The cap per clip runs up to $500: a viral clip gets the maximum, the rest goes to other creators. A hypothetical calculation:
+You set the rate per 1,000 views on the task card. The view threshold is set by each task, with a system default of 1,000 views: a clip below it costs nothing, a clip above it is paid for its whole counter. The cap per clip is set per task: a viral clip gets the maximum, the rest goes to other creators. A hypothetical calculation:
 
 > 20,000 / 1,000 × $1.00 = **$20.00**
 
 Creating a contest is free, the contest fee is 0% and topping up the budget is 0%: the pool goes to creators in full. In a wallet-backed task the budget is locked on the platform before launch, spent on counted views, and the remainder returns to your balance.
 
-Once a submission is approved, the creator can lock in what it has earned and withdraw USDT to their TON wallet from a 10 USDT request: the 10% withdrawal fee comes out of that request, never out of your budget, and the creator sees the amount to receive before confirming. The full campaign cost is on the [clipping campaign cost](/en/for-brands/clipping-campaign-cost) page.
+Once a submission is approved, the creator can lock in what it has earned and withdraw USDT to their TON wallet from a 10 USDT request: the 10% (default) withdrawal fee comes out of that request, never out of your budget, and the creator sees the amount to receive before confirming. The full campaign cost is on the [clipping campaign cost](/en/for-brands/clipping-campaign-cost) page.
 
 ## Two formats: the explainer and the product tutorial
 
@@ -85,6 +85,12 @@ The community is the first circle, not the ceiling: creators worldwide see the t
 **Clicks by tag.** A tag per creator shows who brought sign-ups, a promo code shows deposits. The platform counts the views; sign-ups and deposits live in your own analytics and decide whom to invite to the next task first.
 
 The setup order is in [how to set up a contest](/en/for-brands/set-up-a-clipping-contest), the business terms on the [business page](/en/for-business).
+
+## Record a demonstration without wallet secrets
+
+Prepare a separate demo account and a short sequence: open a feature, perform an example, show its result. Remove seed phrases, private keys, personal data and unnecessary addresses before handing over the recording. An editor does not need access to a funded wallet.
+
+State whether the recording uses a test network or a real transaction, and label it on screen. Check that editing does not turn a demo balance into an investment-return promise. A product visit and a token purchase are different objectives and measurements.
 
 ## Frequently asked questions
 

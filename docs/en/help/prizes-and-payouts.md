@@ -1,7 +1,7 @@
 ---
 title: "Prizes and payouts on DareBay: how they accrue and arrive"
 description: "Prizes and payouts on DareBay: money or an item as the reward, where the budget sits in a wallet-backed contest, and what happens once the result is in."
-provenance: { snapshot_date: "2026-08-15", source: "darebay-prod" }
+provenance: { snapshot_date: "2026-10-12", source: "darebay-prod" }
 numbers_used: []
 ---
 
@@ -69,7 +69,7 @@ carry no fee.
 
 Creating a contest and topping up its budget currently carry no fee. Entry is
 free. After a reward is credited, request a withdrawal from 10 USDT and the
-platform does the rest: 10% comes off inside the request, and you see the amount
+platform does the rest: 10% (default) comes off inside the request, and you see the amount
 to receive before you confirm. See [current fees](/en/help/what-commission).
 
 ## Paying the winners
@@ -97,6 +97,12 @@ particular contest and is fulfilled separately, not by pressing withdraw.
 ## Withdrawing
 
 See ["How do I withdraw my winnings?"](/en/help/darebay-withdrawals).
+
+## Similar prizes can follow different payout paths
+
+For a wallet-backed reward already credited to your available balance, the next step is a withdrawal request. For a reward delivered directly by the organizer, arrange payment details or delivery under that task. A withdrawal request cannot turn a physical prize or direct payment into a platform balance.
+
+For a question, include the contest link, reward type and status. Support can identify the relevant obligation without access to your wallet or password.
 
 ---
 

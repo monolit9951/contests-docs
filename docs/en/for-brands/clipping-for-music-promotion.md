@@ -1,8 +1,8 @@
 ---
 title: "Clipping for music promotion: promote a song with clippers"
-description: "Artists and labels pay clippers per view on clips around a track: $1 to $10 per 1,000 views, a threshold and a cap per clip. Formats, brief, rights, metrics."
-provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
-numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_min_views_threshold_live, ppv_max_per_work_typical, contest_create_usdt_price, commission_crypto, commission_fiat]
+description: "Music promotion with clips: track segments, permitted edits, sound rights, task view-payment terms and measuring track visits."
+provenance: { snapshot_date: "2026-10-12", source: "darebay-prod" }
+numbers_used: [commission_crypto, commission_fiat]
 seo: true
 landing: true
 hero:
@@ -10,7 +10,7 @@ hero:
   lede: "A track starts to travel when dozens of people post to it, not when one label account does. Here is how to get those clips from clippers and pay only for counted views: the formats artists and labels ask for, what goes into the brief, how the payout is worked out and what to measure after release week."
   takeaways:
     - "<b>Five formats do the work around a track:</b> sound under a clip, lip sync, dance, concert footage, video teaser. Write each one into the brief and you can insist on it."
-    - "<b>You pay for views of a clip, never for uses of the sound:</b> the platform reads the clip's public counter, and the rate runs $1 to $10 per 1,000 views."
+    - "<b>Name the exact track version and permitted segment.</b> Check the task terms before publishing and submitting the clip."
     - "<b>Release week can be costed before it starts:</b> 300,000 counted views at a $10.00 rate is 300,000 / 1,000 × $10.00 = $3,000.00, and launching the contest is free."
     - "<b>The rights to the track never leave you,</b> the clips go out on clippers' own TikTok, Reels and Shorts accounts, and growth in sound uses is read on the platform itself."
 cta:
@@ -48,7 +48,7 @@ Rate, threshold and cap go into separate fields; everything above maps onto the 
 
 Labels count uses of a sound, but the platform counts views of a clip: it reads the public counter of the clip whose link the creator sent. Other people's clips under your sound cost you nothing.
 
-You set three numbers. The rate runs $1 to $10 per 1,000 views, and music tends to sit at the top of the band because a clip to a sound is quick to shoot. The threshold is yours to set, with a system default of 1,000 views, and it drops clips with no reach at no cost. The cap per clip is yours too, up to $500, and it stops one viral clip from taking the budget.
+You set three numbers. The rate is stated on the task card, based on the materials and publication requirements. The threshold is yours to set, with a system default of 1,000 views, and it drops clips with no reach at no cost. The cap per clip is yours too, set per task, and it stops one viral clip from taking the budget.
 
 A hypothetical example: a clip reaches 8,000 views at a $10.00 rate.
 
@@ -73,6 +73,12 @@ The platforms are TikTok, Reels and Shorts; which count goes into the terms, and
 **Growth in sound uses.** Read it on the platform's own sound page, which counts every clip made to the track, including those outside the task. Release week against the week before is the reach effect.
 
 **Streaming clicks.** The platform does not count clicks, so make a tagged release link a required caption field: your analytics then show which clips brought listeners. Terms for labels and distributors: the [business page](/en/for-business).
+
+## Supply the exact track segment
+
+Name the recording version, permitted start and end times, official sound link and whether speed or pitch changes are allowed. “Use the chorus” is insufficient when several versions exist or the rights holder authorized only one extract.
+
+Check a test post on the target network: the sound is available to that account and region, the creator's voice is audible and the link reaches the right release. Report clip views separately from track visits; views do not measure listening.
 
 ## Frequently asked questions
 

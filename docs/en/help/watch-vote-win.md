@@ -1,7 +1,7 @@
 ---
 title: "Watch, vote, win: how DareBay viewers take part"
 description: "The viewer's side of DareBay: how the feed works, which contests your vote actually decides, where a like changes nothing, and what a clean record buys you."
-provenance: { snapshot_date: "2026-08-15", source: "darebay-prod" }
+provenance: { snapshot_date: "2026-10-12", source: "darebay-prod" }
 numbers_used: []
 ---
 
@@ -47,6 +47,12 @@ Every DareBay account has two ratings: **organizer** and **participant**. Viewer
 have no separate rating, but consistently good behavior (genuine likes, comments
 with substance, no harassment) is visible to moderators and counts in borderline
 cases.
+
+## Find the selection rule first
+
+Imagine two works: one has more reactions, the other more views. A voting contest uses its defined vote; pay per view uses a qualifying work's counter; organizer selection uses the organizer's decision under the terms. The same like does not imply a reward in all three cases.
+
+Open the rules and contest stage before voting. You can share a work's link; do not impersonate another account or buy votes. A comment explaining your choice is more useful than an argument about a presumed prize.
 
 ---
 

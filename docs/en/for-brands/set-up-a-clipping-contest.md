@@ -1,8 +1,8 @@
 ---
 title: How to set up a clipping contest on DareBay
 description: "Set up a clipping contest and pay only for counted views: how to choose the rate, the threshold and the cap, lock the budget and get the unspent part back."
-provenance: { snapshot_date: "2026-08-15", source: "darebay-prod" }
-numbers_used: [ppv_default_min_views_threshold, ppv_min_views_threshold_live, ppv_max_cpm_rate]
+provenance: { snapshot_date: "2026-10-12", source: "darebay-prod" }
+numbers_used: [ppv_default_min_views_threshold, ppv_max_cpm_rate]
 seo: true
 ---
 
@@ -54,7 +54,7 @@ Whatever the clippers did not earn returns to your organizer balance.
 |-----------|--------------------------------|---------------|
 | Rate per 1000 views | set by the organizer | What you pay for every thousand counted views |
 | View threshold | set by the organizer (system default is 1000) | The minimum views for a submission to take part in the split |
-| Cap per submission | set by the buyer, up to $500 per clip | The maximum payout for a single submission |
+| Cap per submission |Stated on the particular task card| The maximum payout for a single submission |
 | Publishing site | set by the organizer | TikTok, YouTube, Instagram or another site named in the contest. For Instagram it has to be a video with a view count |
 
 You set the rate, the threshold and the cap yourself when creating the contest. The exact set of fields is shown on the contest creation screen. One system-level limit exists as a typo guard rather than a market signal: the validator refuses a contest with a rate above $100 per 1000 views.
@@ -62,6 +62,12 @@ You set the rate, the threshold and the cap yourself when creating the contest. 
 ## Cost and commission
 
 Creating a contest and topping up its budget currently carry no fee: the organizer funds the prize budget. Store terms and a creator's later balance withdrawal are separate operations; see [current DareBay fees](/en/help/what-commission). For the full pay-per-view model, see [how to pay clippers per view](/en/for-brands/paying-clippers-per-view).
+
+## Read the brief as your first participant
+
+Before publishing, open the source links without the owner's access: the file must open and the permitted segment must be clear. Test one sample clip against the platform, length, caption and submission-link requirements. If you cannot decide whether it qualifies, clarify the rule before launch.
+
+Check funding separately. A wallet-backed contest reserves a budget; in a direct-payout contest the organizer pays the creator. Do not describe the latter as a locked pool or promise a refund of money the platform never received.
 
 ## Frequently asked questions
 

@@ -627,9 +627,9 @@ function numericMinimumClaims(line, file, lineNumber, truth, intent, out, allow)
   }
 
   const paraphrases = [
-    /(?:withdraw|withdrawal)[^.\n]{0,65}(?:once|when|from)[^.\n]{0,35}?(\d+(?:[.,]\d+)?)\s*USDT/ig,
-    /(?:вывод|вывести)[^.\n]{0,65}(?:когда|после|от|с)[^.\n]{0,35}?(\d+(?:[.,]\d+)?)\s*USDT/ig,
-    /(?:виведення|вивести)[^.\n]{0,65}(?:коли|після|від|з)[^.\n]{0,35}?(\d+(?:[.,]\d+)?)\s*USDT/ig,
+    /(?:withdraw|withdrawal)[^.\n]{0,65}\b(?:once|when|from)\b[^.\n]{0,35}?(\d+(?:[.,]\d+)?)\s*USDT/ig,
+    /(?:вывод|вывести)[^.\n]{0,65}(?<![\p{L}\p{N}])(?:когда|после|от|с)(?![\p{L}\p{N}])[^.\n]{0,35}?(\d+(?:[.,]\d+)?)\s*USDT/igu,
+    /(?:виведення|вивести)[^.\n]{0,65}(?<![\p{L}\p{N}])(?:коли|після|від|з)(?![\p{L}\p{N}])[^.\n]{0,35}?(\d+(?:[.,]\d+)?)\s*USDT/igu,
   ];
   for (const pattern of paraphrases) {
     for (const match of line.matchAll(pattern)) {

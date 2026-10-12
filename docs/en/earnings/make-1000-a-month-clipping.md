@@ -1,26 +1,31 @@
 ---
-title: "How to make $1,000 a month clipping: the arithmetic"
-description: "Make $1,000 a month clipping: a million views at $1 per 1,000 or 100,000 at $10. Three layouts by clip count, a weekly system, withdrawals from 10 USDT."
-provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
-numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_cpm_median, ppv_min_views_threshold_live, ppv_max_per_work_typical]
+title: 'How to make $1,000 a month clipping: the arithmetic'
+description: 'Work backwards from a $1,000 clipping target: gross versus net, payable clips, attempt rate and the hours required.'
+provenance:
+  snapshot_date: '2026-08-23'
+  source: darebay-prod
+numbers_used:
+- ppv_cpm_band_low
+- ppv_cpm_band_high
+- ppv_cpm_median
+- ppv_min_views_threshold_live
+- ppv_max_per_work_typical
 seo: true
 landing: true
 hero:
-  kicker: "Guide · 2026"
-  lede: "A thousand a month is built from the clips you finish, not from one viral hit: the cap per clip (up to $500, set by each task) cannot be out-reached. Here is the arithmetic of that thousand, three layouts by number of submissions, a week you can actually run, and the things that usually break the plan, each with its own way out. Every scenario is hypothetical."
+  kicker: Guide · 2026
+  lede: 'Work backwards from a $1,000 clipping target: gross versus net, payable clips, attempt rate and the hours required. Start with the income you need to receive, then work backwards through fees, acceptance and hours.'
   takeaways:
-    - "<b>$1,000 at $1 is a million counted views, and more than one way to collect them:</b> 10 clips at 100,000 views, 25 at 40,000 or 50 at 20,000. Three layouts, none of them a promise."
-    - "<b>The cap per clip is set by the task, up to $500.</b> The thousand is still built from accepted work, not from a lucky video: a steady run of clips beats one viral hit."
-    - "<b>You grow the count honestly, inside the task rules:</b> several submissions in one task when the terms allow it, different clips on different accounts and sites, ready-made setups with uniqueization."
-    - "<b>Three things break the plan, and each one needs a spare task behind it:</b> rejected clips, an exhausted fund and a paused task."
+  - Stress-test the monthly target before scaling.
+  - 'Work backwards from a $1,000 clipping target: gross versus net, payable clips, attempt rate and the hours required.'
 cta:
-  title: "Lay your own thousand out over a month"
-  lede: "Pick two or three DareBay tasks on your topic, run your real average reach through the arithmetic above, and see how many clips a month it actually asks for. Keep a spare task going, so a fund that runs dry costs you a batch and not the month."
+  title: Lay your own thousand out over a month
+  lede: Pick two or three DareBay tasks on your topic, run your real average reach through the arithmetic above, and see how many clips a month it actually asks for. Keep a spare task going, so a fund that runs dry costs you a batch and not the month.
 ---
 
 ## The arithmetic of a thousand
 
-The payout formula does not change with scale: views / 1,000 × rate, never above the cap per clip. On DareBay the rate is $1–$10 per 1,000 views, set by each task, and so is the view threshold (system default 1,000 views), counted on every clip separately<!-- source: https://darebay.com/en/earnings/how-much-clipping-pays 2026-09-24 -->. So a thousand at $1 is a million counted views a month, a hundred thousand at $10.
+The task card sets the actual rate per 1,000 views. Published ranges and the arithmetic examples below do not establish which paid campaigns are available to you; use the current card's threshold, cap, eligible site and payment mode.
 
 The cap per clip sets the lower bound on count: with the $100 cap used in the example, fewer than ten clips cannot make a thousand at any reach, while a task capped at $500 needs as few as two. Three hypothetical layouts at $1 and a $100 cap:
 
@@ -72,6 +77,14 @@ Bookkeeping is the only way to see your real average reach by topic and task. Af
 The YouTube and TikTok partner programmes pay out of advertising revenue: the rate depends on the viewer's country and topic, and you learn it after the payout; you also have to get in first, since the programmes set entry requirements on audience. A pay-per-view task is the reverse: rate, threshold and any cap are printed before the start, no followers are required, the clip is counted by the site's counter. Details in [what TikTok pays for views](/en/earnings/tiktok-view-payouts).
 
 The flip side: a partner programme has no cap on one video and does not end with a fund, while a task can cap each clip and is limited by the buyer's budget. Both can live on one profile; reading the rate and the cap on a card is explained in [how much clipping pays](/en/earnings/how-much-clipping-pays).
+
+## Stress-test the monthly target before scaling
+
+Start with the income you need to receive, then work backwards through fees, acceptance and hours. An illustrative $1,000 net target with a 10% withdrawal fee needs about $1,111.12 gross. If the observed payout averages $20 per payable clip, plan for at least 56 payable clips; at a 70% payable share, that means roughly 80 attempts. These assumptions describe a worksheet, not a typical creator's result.
+
+Now put the work into your calendar. At 45 minutes per attempt, 80 attempts require 60 editing hours before source selection, posting, checking statuses or handling revisions. Deduct software and other direct costs to measure effective hourly income. A larger number of accounts does not remove this workload.
+
+Use the weakest part of your own completed batches to set the limit: task availability, permitted footage, accepted output, audience reach or payment timing. Keep cash needed for ordinary expenses separate from amounts awaiting review. Increase the weekly batch only after the prior one shows that the bottleneck is manageable; copying the best month's reach into every future month makes the target fragile.
 
 ## Common questions
 

@@ -5,6 +5,13 @@ description: "About DareBay without the sales pitch: who builds the platform, wh
 
 # About DareBay
 
+
+## Check the claim that matters to your decision
+
+An identity, funding and a fee are separate facts. [Who writes the guides](/en/about/who-writes-darebay-guides) identifies the sources and authors; the [payout guarantee guide](/en/about/payout-guarantee) distinguishes wallet-backed and manual payment; [commission help](/en/help/what-commission) lists the cost of each operation. Use the [terms](/en/legal/terms) for eligibility and rights rather than treating a review as the policy itself.
+
+[DareBay at a glance](/en/about/darebay-at-a-glance) separates platform rules from earnings examples. An article's update date records an editorial change; a source date records when a specific price or observation was checked. Editing a page in October does not turn a September experiment into a new measurement. To report an error, include the page and the exact disputed claim so its source can be checked.
+
 DareBay is a marketplace where brands and ordinary people post content tasks, and creators
 make their own videos and get paid for them. What counts is the reach the video actually
 collected: views, not followers, a portfolio or account age.
@@ -38,16 +45,16 @@ itself, before a creator takes it on. There is no single platform-wide rate: it 
 posts the task.
 
 Taking part is free for creators: there is no entry fee, deposit or access charge.
-Request a withdrawal from 10 USDT and the platform does the rest: 10% comes off inside the
-request, and you see the amount to receive before you confirm. The
+Request a withdrawal from 10 USDT. The default fee is 10%, deducted within the
+request; a personal account rate may differ. The form shows the actual fee and net amount
+before you confirm. The
 [current fee terms](/en/help/what-commission) list every operation.
 
 ## Where the numbers come from
 
 DareBay's figures come from its own public pages, not from estimates or someone else's
 article. Pages carrying numbers record in their source the date each figure was checked, and
-state it in the text. When a figure changes the page is rewritten whole, not patched one
-number at a time.
+state it in the text. When a claim changes, we check its source and date it; historical observations retain their original dates.
 
 We publish our own figures, never other people's results passed off as ours. What a creator
 earns is set by the views their video gets: the views it pulls are the money it pays, at the

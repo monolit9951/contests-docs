@@ -14,11 +14,11 @@
 //
 //   * `data/product-truth.json`   — the reviewed live-backend snapshot (commissions, minimums,
 //                                   the stable PPV bands and the default view threshold).
-//   * `data/product-intent.json`  — founder-decided product changes. The withdrawal fee the docs
-//                                   describe is the DECIDED target (0%), not the live 10%; the
-//                                   resolution rule is the one `scripts/product-truth-lint.mjs`
-//                                   applies in `effectiveWithdrawalFee`, replicated below because
-//                                   that function is module-private there.
+//   * `data/product-intent.json`  — founder-decided product changes. The withdrawal fee currently
+//                                   uses the reviewed 10% default; there is no pending 0% target.
+//                                   A pending fee target follows the resolution rule applied by
+//                                   `scripts/product-truth-lint.mjs` in `effectiveWithdrawalFee`,
+//                                   replicated below because that function is module-private there.
 //   * `data/contests-snapshot.json` — the live catalogue reading written by `facts:refresh`. It is
 //                                   cited under `sources.liveCatalogue` and dates `generatedAt`;
 //                                   no field or note quotes its task count or rates, because the
@@ -284,36 +284,47 @@ export function buildFacts({ truth, intent, snapshot, now }) {
       id: 'rate-per-1000-views',
       value: { min: cpm.low, max: cpm.high },
       unit: cpm.unit,
+      scope: cpmTargeted ? 'historical-product-target' : 'historical-reviewed-band',
+      liveOffer: false,
       labels: LABELS['rate-per-1000-views'],
       text: localized((locale) => {
         const range = `${rate(cpm.low)}–${rate(cpm.high)}`
-        return {
-          ru: `${range} за 1000 просмотров, ставку задаёт каждое задание`,
-          uk: `${range} за 1000 переглядів, ставку задає кожне завдання`,
-          en: `${range} per 1,000 views, set by each task`,
-          ar: `${range} لكل 1,000 مشاهدة، تحدده كل مهمة`,
-        }[locale]
+        const targetText = {
+          ru: `ставку задаёт задание; ${range} за 1000 просмотров — опубликованный ориентир продукта на указанную дату, не текущий оффер`,
+          uk: `ставку задає завдання; ${range} за 1000 переглядів — опублікований орієнтир продукту на зазначену дату, не поточна пропозиція`,
+          en: `set by the task; ${range} per 1,000 views is the dated product target, not a live offer`,
+          ar: `تحدده المهمة؛ ${range} لكل 1,000 مشاهدة هدف المنتج في التاريخ المذكور، وليس عرضًا متاحًا الآن`,
+        }
+        const reviewedText = {
+          ru: `ставку задаёт задание; ${range} за 1000 просмотров — исторический проверенный диапазон на указанную дату, не текущий оффер`,
+          uk: `ставку задає завдання; ${range} за 1000 переглядів — історичний перевірений діапазон на зазначену дату, не поточна пропозиція`,
+          en: `set by the task; ${range} per 1,000 views is the dated reviewed band, not a live offer`,
+          ar: `تحدده المهمة؛ ${range} لكل 1,000 مشاهدة نطاق تمت مراجعته في التاريخ المذكور، وليس عرضًا متاحًا الآن`,
+        }
+        return (cpmTargeted ? targetText : reviewedText)[locale]
       }),
       source: cpmTargeted ? `product-intent.json#${cpmHighIntent.id}` : 'product-truth.json#ppv.stable.bands.cpm',
       asOf: cpmTargeted ? cpmHighIntent.decidedAt : truthAsOf,
-      note: `${cpmTargeted ? `Band decided ${cpmHighIntent.decidedAt} (product-intent.json#${cpmHighIntent.id})` : 'Reviewed stable band'}. Each task sets its own rate inside it; the exact rate is printed on the task card and cannot change after the start.`,
+      note: `${cpmTargeted ? `Product target decided ${cpmHighIntent.decidedAt} (product-intent.json#${cpmHighIntent.id})` : 'Historical reviewed band'}. This historical value is not a live offer or a guaranteed platform-wide rate. Read the selected task card for its actual rate before working.`,
     },
     {
       id: 'cap-per-clip',
       value: capBand.high,
       unit: capBand.unit,
+      scope: 'historical-reviewed-band',
+      liveOffer: false,
       labels: LABELS['cap-per-clip'],
       text: localized((locale) => ({
-        ru: `до ${money(capBand.high)} на ролик`,
-        uk: `до ${money(capBand.high)} на ролик`,
-        en: `up to ${money(capBand.high)} per clip`,
-        ar: `حتى ${money(capBand.high)} لكل مقطع`,
+        ru: `задаётся заданием; ${money(capBand.high)} — верхняя граница исторического среза, не универсальный потолок`,
+        uk: `задається завданням; ${money(capBand.high)} — верхня межа історичного зрізу, не універсальна стеля`,
+        en: `set by the task; ${money(capBand.high)} is the historical band's upper edge, not a universal cap`,
+        ar: `تحدده المهمة؛ ${money(capBand.high)} الحد الأعلى للنطاق التاريخي، وليس سقفًا موحّدًا`,
       }[locale])),
       source: 'product-truth.json#ppv.stable.bands.maxPerWork.high',
       asOf: truthAsOf,
       note:
-        `The highest cap a task may set, founder-approved in product-intent.json#rate-band; ` +
-        `each task sets its own cap, and a task may set none. After the start a cap may only be raised.`,
+        `Historical reviewed value, not the highest cap currently permitted by the platform. ` +
+        `Read the selected task card for its actual cap; a task may set none. After the start a cap may only be raised.`,
     },
     {
       id: 'view-threshold',
@@ -374,10 +385,10 @@ export function buildFacts({ truth, intent, snapshot, now }) {
               ar: `دون عمولة، والطلب من ${minimum}`,
             }[locale]
           : {
-              ru: `${fee.percent}% от суммы заявки, заявка от ${minimum}`,
-              uk: `${fee.percent}% від суми заявки, заявка від ${minimum}`,
-              en: `${fee.percent}% of the requested amount, request from ${minimum}`,
-              ar: `${fee.percent}% من المبلغ المطلوب، والطلب من ${minimum}`,
+              ru: `${fee.percent}% по умолчанию от суммы заявки, заявка от ${minimum}`,
+              uk: `${fee.percent}% за замовчуванням від суми заявки, заявка від ${minimum}`,
+              en: `${fee.percent}% by default of the requested amount, request from ${minimum}`,
+              ar: `${fee.percent}% افتراضيًا من المبلغ المطلوب، والطلب من ${minimum}`,
             }[locale]
       }),
       source: fee.intentId ? `product-intent.json#${fee.intentId}` : 'product-truth.json#withdrawal.defaultCommissionPercent',
@@ -386,7 +397,7 @@ export function buildFacts({ truth, intent, snapshot, now }) {
         ? `The target product, decided ${fee.decidedAt} and recorded as product-intent.json#${fee.intentId}. ` +
           `The live backend still charges ${truth.withdrawal.defaultCommissionPercent}% and processes withdrawals manually; ` +
           `the fee reaches 0% when that pending product change ships.`
-        : `Live value; withdrawals are processed manually.`,
+        : `Reviewed default rate; individual overrides may apply. The request shows its actual fee and net amount; withdrawals are processed manually.`,
     },
     {
       id: 'withdrawal-minimum',
@@ -496,12 +507,37 @@ export function renderTable(document, locale) {
   return [`| ${headers.join(' | ')} |`, `| ${headers.map(() => '---').join(' | ')} |`, ...rows].join('\n')
 }
 
+/** Change only the generated table, preserving the article's authored sections. */
+export function replaceFactTable(markdown, table, locale) {
+  const header = `| ${TABLE_HEADERS[locale].join(' | ')} |`
+  const lines = markdown.split('\n')
+  const starts = lines.flatMap((line, index) => line === header ? [index] : [])
+  if (starts.length !== 1) throw new Error(`gen-facts-json: expected one ${locale} fact-table header, found ${starts.length}`)
+  const start = starts[0]
+  let end = start + 1
+  while (end < lines.length && lines[end].startsWith('|')) end += 1
+  return [...lines.slice(0, start), ...table.split('\n'), ...lines.slice(end)].join('\n')
+}
+
+const FACT_CARD_FILES = {
+  ru: 'o-proekte/darebay-v-tsifrakh.md',
+  uk: 'ua/pro-proekt/darebay-u-tsyfrakh.md',
+  en: 'en/about/darebay-at-a-glance.md',
+  ar: 'ar/about/darebay-at-a-glance.md',
+}
+
 const main = () => {
   const { truth, intent, snapshot } = readInputs()
   const document = buildFacts({ truth, intent, snapshot })
   for (const warning of snapshotWarnings(snapshot)) console.warn(`gen-facts-json: ${warning}`)
   mkdirSync(dirname(FACTS_OUTPUT_FILE), { recursive: true })
   writeFileSync(FACTS_OUTPUT_FILE, `${JSON.stringify(document, null, 2)}\n`)
+  for (const [locale, relative] of Object.entries(FACT_CARD_FILES)) {
+    const path = join(ROOT, 'docs', relative)
+    const original = readFileSync(path, 'utf8')
+    const updated = replaceFactTable(original, renderTable(document, locale), locale)
+    if (updated !== original) writeFileSync(path, updated)
+  }
   console.log(
     `facts json: ${document.facts.length} fields -> ${FACTS_PUBLIC_PATH} ` +
       `(truth ${truth.verifiedAt}, catalogue ${dateOf(snapshot.fetchedAt)})`

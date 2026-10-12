@@ -7,9 +7,9 @@ seo: true
 landing: true
 sources: visible
 hero:
-  updated: "2026-09-19"
+  updated: "2026-10-12"
   kicker: "Platform review · 2026"
-  lede: "Wusul writes down most of what a clipper needs — a rate per 1,000 verified views, a 1,000-view floor, three payout rails and payment within 30 days of a campaign closing — in clipper terms that, like its four other legal pages, carry the line \"Template — pending legal review\" and a contact address the page itself calls a placeholder. Its campaign board says \"3 campaigns available\" above three cards marked Closed. This review reads wusulclips.com as it stood on 19 September 2026: what is published, what is not, and the checks you can run before the first clip."
+  lede: "Wusul writes down most of what a clipper needs — a rate per 1,000 verified views, a 1,000-view floor, three payout rails and payment within 30 days of a campaign closing — in clipper terms that, like its four other legal pages, carry the line \"Template — pending legal review\" and a contact address the page itself calls a placeholder. Its campaign board says \"3 campaigns available\" above three cards marked Closed. The board and main terms were rechecked on 12 October 2026; the remaining September observations are dated below: what is published, what is not, and the checks you can run before the first clip."
   secondary: "See the board"
   secondaryHref: "#the-board-on-19-september-2026"
   takeaways:
@@ -22,9 +22,17 @@ method:
   - "Wusul serves the whole application's interface strings inside every public page, including screens that live behind /dashboard, a path its robots.txt disallows. None of those strings is quoted here, even where they contradict the marketing; where a published equivalent exists, the published one is used instead."
   - "\"Not published\" means no statement on the subject appears anywhere on those pages. It is not a refusal, and this page does not turn one into the other. DareBay's figures come from its own public pages."
 cta:
-  title: "$1–$10 per 1,000 views, printed before you start"
-  lede: "DareBay tasks pay $1–$10 per 1,000 views, set by each task, and up to $500 per clip; there is no country list, no follower minimum and no application. Nothing is taken out of a task payout, and the only fee is 10% of what you withdraw: request a withdrawal from 10 USDT and the platform does the rest. A balance leaves as USDT on the TON network, or you receive the payout in Telegram Stars; where the law closes crypto, as in Egypt, Algeria and Iraq, check the local rules before cashing out USDT."
+  title: "Task rate and cap printed before you start"
+  lede: "DareBay tasks pay a rate set by each task per 1,000 eligible views, and the per-task cap, when used; there is no country list, no follower minimum and no application. Nothing is taken out of a task payout, and the only fee is 10% of what you withdraw: request a withdrawal from 10 USDT and the platform does the rest. A balance leaves as USDT on the TON network, or you receive the payout in Telegram Stars; where the law closes crypto, as in Egypt, Algeria and Iraq, check the local rules before cashing out USDT."
 ---
+## Campaigns rechecked 12 October: a rate is not an open offer
+
+The [public board](https://www.wusulclips.com/en/campaigns) still shows three cards, all marked **Closed** with zero days left: Rasid App $150 per 100,000 views, Noor Beverages $125 and Khatwa Footwear $90. They convert to $1.50, $1.25 and $0.90 per 1,000 respectively, but none is an open campaign in this public snapshot. The headline saying three available campaigns and a remaining-budget percentage do not override the Closed status. <!-- source: https://www.wusulclips.com/en/campaigns 2026-10-12 -->
+
+Its [clipper terms](https://www.wusulclips.com/en/clipper-terms) still carry the legal-template warning and placeholder contact. They describe a 1,000-view minimum and manual review, but a draft rule plus a closed card cannot establish a current earning opportunity. Ask for the active campaign URL and confirmation of payout method and deadline before making content for a Wusul brief. <!-- source: https://www.wusulclips.com/en/clipper-terms 2026-10-12 -->
+
+For a hypothetical future offer at $1.50 CPM, 20,000 eligible views would be $30 before fees. That calculation becomes relevant only after the campaign is open, your format qualifies and the payout path is confirmed; it is not money available from the closed Rasid card.
+
 ## Who runs Wusul
 
 The terms name the operator: Wusul is "operated by Camaran Group OÜ, a company registered in Estonia", with disputes "subject to the exclusive jurisdiction of the courts of Estonia" <!-- source: https://www.wusulclips.com/en/terms 2026-09-19 -->. Nothing else is published: no registration number, address, phone, founding year or person.
@@ -67,7 +75,7 @@ The clipper terms leave it to you: "Choose whichever method works where you bank
 
 ## Wusul or DareBay: which one to pick
 
-DareBay's side: its tasks pay $1–$10 per 1,000 views, set by each task, and up to $500 per clip <!-- source: https://darebay.com/en/earnings/how-much-clipping-pays 2026-09-24 -->. It takes nothing out of a task payout, the only fee is 10% of what you withdraw, and you are paid in USDT on the TON network or in Telegram Stars. Your earnings reach your balance automatically when a wallet-backed task ends, and a withdrawal is one request from 10 USDT: the platform does the rest — [how withdrawals work](/en/help/darebay-withdrawals), [the fees](/en/help/what-commission).
+DareBay's side: its tasks pay a rate set by each task per 1,000 eligible views, and the per-task cap, when used <!-- source: https://darebay.com/en/earnings/how-much-clipping-pays 2026-09-24 -->. It takes nothing out of a task payout, the only fee is 10% of what you withdraw, and you are paid in USDT on the TON network or in Telegram Stars. Your earnings reach your balance automatically when a wallet-backed task ends, and a withdrawal is one request from 10 USDT: the platform does the rest — [how withdrawals work](/en/help/darebay-withdrawals), [the fees](/en/help/what-commission).
 
 Wusul fits better when:
 
@@ -104,4 +112,4 @@ One thousand views on a clip: clips that miss it "earn nothing for that submissi
 
 ### What are the alternatives if Wusul has nothing open?
 
-[The Egypt and Arab countries page](/en/earnings/clipping-platforms-that-pay-in-egypt-and-arab-countries) sorts the boards by the rail that reaches your country. DareBay keeps no country list: only people on sanctions lists are barred<!-- source: https://darebay.com/en/legal/terms 2026-09-24 -->. Its tasks pay $1–$10 per 1,000 views, set by each task, with no followers or application needed<!-- source: https://darebay.com/en/earnings/how-much-clipping-pays 2026-09-24 -->. A balance leaves as USDT on TON, or you receive the payout in Telegram Stars; in Egypt, Algeria and Iraq, where the law closes crypto, check the local rules before cashing out USDT.
+[The Egypt and Arab countries page](/en/earnings/clipping-platforms-that-pay-in-egypt-and-arab-countries) sorts the boards by the rail that reaches your country. DareBay keeps no country list: only people on sanctions lists are barred<!-- source: https://darebay.com/en/legal/terms 2026-09-24 -->. Its tasks pay a rate set by each task per 1,000 eligible views, with no followers or application needed<!-- source: https://darebay.com/en/earnings/how-much-clipping-pays 2026-09-24 -->. A balance leaves as USDT on TON, or you receive the payout in Telegram Stars; in Egypt, Algeria and Iraq, where the law closes crypto, check the local rules before cashing out USDT.

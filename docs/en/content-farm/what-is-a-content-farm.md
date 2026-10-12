@@ -1,7 +1,7 @@
 ---
 title: "What is a content farm? The short-video kind that gets paid"
 description: "A content farm mass-produces content to capture traffic. What the term means in 2026, what TikTok, YouTube and Instagram penalize, and the kind that gets paid."
-provenance: { snapshot_date: "2026-09-29", source: "darebay-prod" }
+provenance: { snapshot_date: "2026-10-12", source: "darebay-prod" }
 seo: true
 landing: true
 sources: visible
@@ -21,6 +21,12 @@ cta:
 A content farm is an operation that publishes content in bulk to capture traffic, putting volume ahead of originality. The term started on the web: Dictionary.com defines a content farm as a website that packs popular search terms into high-volume content to climb search results and attract advertisers, often with little attention to originality or quality <!-- source: https://www.dictionary.com/browse/content-farm 2026-09-29 -->.
 
 In 2026 creators use the same words for something newer: a set of TikTok, Instagram Reels and YouTube Shorts accounts, run by one person or a team, that post short clips every day. Some of those setups are spam with a fresh coat of paint. Others are small media businesses that get paid for real views. This page explains the difference and where the platforms draw the line.
+
+## Three separate tests for a paid short-video operation
+
+Permission, distribution and payment answer different questions. Permission means you may use the footage. Distribution means the platform may recommend the finished video. Payment means a buyer or creator program accepts the result under its own rules. Passing one test does not establish the other two.
+
+A permitted excerpt can still be too repetitive for recommendations or YPP, and a widely watched video can fail a task's brief. YouTube explicitly separates its reused-content monetization review from copyright permission<!-- source: https://support.google.com/youtube/answer/1311392 2026-10-12 -->. For each source, keep the permission, the purpose of the edit and the buyer's acceptance conditions together. That record turns a vague promise of “a farm that earns” into a production plan with a named customer and a result you can actually deliver.
 
 ## The original meaning: spam sites built for search
 
@@ -53,7 +59,7 @@ A brand-new account carries its own risk: the platform does not know yet who to 
 
 Strip out the copies, the scripts and the fake views, and what is left is simple: live accounts, each on its own niche, each posting its own version of a clip, watched by real people. The missing piece is a buyer. Platform programs pay only accounts that qualify, and only for content they rate as original <!-- source: https://www.tiktok.com/creator-academy/article/tiktok-originality-policy 2026-09-29 -->. A clipping task pays for the views a clip gets, whatever the size of the account.
 
-That is how DareBay tasks work. They pay per counted view on TikTok, Instagram Reels, YouTube Shorts and Facebook Reels, at the rate each task sets. In offer tasks, DareBay supplies ready clips and every account gets its own unique version, so no editing is needed. One person can connect up to 20 accounts to a task; new clips are picked up automatically and the platform counts the views. You post from your own accounts, and botted views are never paid; every reason a clip can be turned down is listed in [why clips get rejected](/en/earnings/why-clips-get-rejected).
+That is how DareBay tasks work. They pay per counted view on TikTok, Instagram Reels, YouTube Shorts and Facebook Reels, at the rate each task sets. Where an offer task supplies ready clips, review them against the brief and create the required account version before publishing. One person can connect up to 20 accounts to a task; new clips are picked up automatically and the platform counts the views. You post from your own accounts, and botted views are never paid; every reason a clip can be turned down is listed in [why clips get rejected](/en/earnings/why-clips-get-rejected).
 
 Everything DareBay already offers such a farm is collected in the [content farm section](/en/content-farm/), and [how to build a TikTok content farm](/en/content-farm/how-to-build-a-tiktok-content-farm) walks through the launch step by step. Running a team? [How to start a clipping agency](/en/content-farm/how-to-start-a-clipping-agency) covers roles and margins, and [Ruslan on Telegram](https://t.me/ruslanbwork) will help you set it up.
 

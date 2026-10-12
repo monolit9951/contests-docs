@@ -1,8 +1,8 @@
 ---
 title: "Is clipping a scam? 9 red flags of a fake clipping platform"
 description: "Clipping itself is legit; some platforms are not. Nine red flags, a ten-minute check before your first clip, and what to do if you already paid someone."
-provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
-numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_min_views_threshold_live, ppv_default_min_views_threshold, ppv_max_per_work_typical, ppv_max_per_work_band_high, commission_crypto, commission_fiat]
+provenance: { snapshot_date: "2026-10-12", source: "darebay-prod" }
+numbers_used: [ppv_default_min_views_threshold, commission_crypto, commission_fiat]
 seo: true
 landing: true
 hero:
@@ -12,10 +12,10 @@ hero:
     - "<b>Money only ever moves towards you.</b> A request to pay for access or faster payouts is a scam."
     - "<b>The terms are written before the work, not after it.</b> Rate, threshold and cap belong on the task before you submit."
     - "<b>The budget should be sitting with the platform.</b> DareBay's wallet-backed tasks, Klipni and Whop keep the budget on the platform."
-    - "<b>A threshold, a cap and a withdrawal fee are not flags.</b> DareBay's per-clip cap runs up to $500; withdrawals start at 10 USDT, with 10% taken inside the request."
+    - "<b>A request fee differs from an advance-payment demand.</b> Check the task terms before publishing and submitting the clip."
 cta:
   title: "Run DareBay through the same nine"
-  lede: "Rate, threshold, cap and funding mode are all open on the card before you take the task, and a wallet-backed budget stays on the platform. There is no country list: only people on sanctions lists are barred. And nobody here will ask you to pay for access."
+  lede: "Rate, threshold, cap and funding mode are all open on the card before you take the task, and a wallet-backed budget stays on the platform. There is no country list: age requirements and sanctions restrictions apply under the Terms. And nobody here will ask you to pay for access."
 ---
 
 The question usually follows one strange platform, and the model is not to blame. A buyer sets a price per 1,000 views and funds a budget, a clipper posts on their own account, the platform counts and pays; the fraud starts where somebody asks you for money. DareBay's answers: [Is DareBay legit?](/en/about/is-darebay-legit) and [Is DareBay a scam?](/en/about/is-darebay-a-scam); this page covers the category.
@@ -25,7 +25,7 @@ The question usually follows one strange platform, and the model is not to blame
 1. **Pay to get in, or an "unlock fee".** An honest platform earns from the buyer's budget, not yours. A deposit or a transfer to "activate" a payout is money in the wrong direction; a real withdrawal fee comes out of what you earned, never in advance.
 2. **The budget does not sit with the platform.** If the money stays with the buyer, they pay when they choose. DareBay's wallet-backed tasks lock the budget before the start<!-- source: https://darebay.com/en/about/payout-guarantee 2026-09-24 -->, and Klipni and Whop say they hold a campaign's budget until spent; Vues says it does not custody campaign funds, so the brand pays.
 3. **Rate, threshold and cap not written in advance.** Three numbers define a clip's economics: what 1,000 views pay, where counting starts, the most one clip earns. Missing one? Your sum is set after the views are in, not in your favour.
-4. **No public list of payout countries.** Where a platform pays must be public before you register, or you work a week and get refused. A restriction list is normal; its absence is the flag. DareBay publishes its rule instead of a country list: only people on UK, EU or UN sanctions lists are barred<!-- source: https://darebay.com/en/legal/terms 2026-09-24 -->, so clippers in Russia, Belarus, Ukraine and Kazakhstan are paid<!-- source: https://darebay.com/en/legal/terms 2026-09-24 -->. The balance leaves as USDT on TON, or you receive the payout in Telegram Stars; where the law closes crypto, check the local rules before cashing out USDT.
+4. **Unclear eligibility and payout terms.** Check age requirements, account restrictions and available methods before working. The absence of a country list alone does not prove fraud; what matters is whether you can satisfy the published terms. Age requirements and sanctions restrictions are set out in the [eligibility terms](/en/legal/terms); check the available payout method in the form.
 5. **Promised sums with no formula.** A real sum comes from numbers: views / 1,000 × rate, never above the cap. Example: 20,000 views at $1.00 give 20,000 / 1,000 × $1.00 = **$20.00**; the cap the task printed stops a clip there and no further. "Hundreds a week" is advertising, not a term.
 6. **Payout screenshots instead of rules.** A transfer screenshot proves that someone once paid somebody. Rules are checked differently: a task card with numbers, a work status in your cabinet, a fees page; receipts and testimonials are a sales funnel.
 7. **Payouts only "by arrangement" in chat.** A normal payout is an operation in the product: amount, fee, details, status. A chat leaves no record and nobody to turn to once the person goes quiet; a "guarantor" routing money through themselves is a third wallet.
@@ -54,11 +54,11 @@ DareBay as the example:
 | What you see | Why it is normal | On DareBay |
 |---|---|---|
 | A view threshold | Filters out clips not worth paying for; past it the whole counter is paid | Set by the task and printed on its card, system default 1,000 views |
-| A per-clip cap | Stops one clip eating a budget meant for dozens | Set by the task, up to $500 per clip |
+| A per-clip cap | Limits what one clip can take from the total budget | The specific cap is stated in the task |
 | Moderation | Filters fake views and rule-breaking clips, protecting your share | Counts once the link is sent; a moderator checks it |
-| A withdrawal fee | Comes out of what you earned, never up front | 10% of the request on DareBay, deducted inside it, with the amount to receive shown before you confirm; 0% on the contest payout, 10 USDT minimum request |
+| A withdrawal fee | Comes out of what you earned, never up front | 10% (default) of the request on DareBay, deducted inside it, with the amount to receive shown before you confirm; 0% on the contest payout, 10 USDT minimum request |
 
-Where a DareBay task shows "Claim now", a fresh accrual matures for 24 hours before the button locks it in: a second pass over the counter, not a hold on your money. On DareBay the rate is $1–$10 per 1,000 views, set by each task<!-- source: https://darebay.com/en/earnings/how-much-clipping-pays 2026-09-24 -->: modest next to advertising promises, and the sign of a real budget.
+Where a DareBay task shows "Claim now", a fresh accrual matures for 24 hours before the button locks it in: a second pass over the counter, not a hold on your money. On DareBay the rate is stated on the task card: modest next to advertising promises, and the sign of a real budget.
 
 ## If you have already been caught
 
@@ -69,6 +69,12 @@ If money has gone out, the steps are the same everywhere.
 3. **Report where the money left from.** A reversal is rare, but a report marks the recipient.
 4. **Warn the chat.** One message with the platform's name and a screenshot protects dozens.
 5. **Do not quit clipping.** Pick one from [the best clipping platforms](/en/earnings/best-clipping-platforms), run the checklist and start with one task.
+
+## Work through a delay versus an advance-payment demand
+
+Case A: a request has an identifier, amount and status, with no separate payment demanded. Ask about that request's stage; a delay alone does not establish fraud. Case B: a “manager” demands a transfer to their address to release the reward. Do not send it; verify the message through an official contact.
+
+Keep the original conversation and task link in either case. Do not publish other people's payment details. If a wallet secret was exposed, address wallet security rather than speeding up a payout.
 
 ## Frequently asked questions
 

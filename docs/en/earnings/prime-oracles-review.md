@@ -1,15 +1,15 @@
 ---
 title: "Prime Oracles review: 10% fee, $5 payouts, who is barred"
-description: "Prime Oracles is run by a sole trader in Georgia: $0.02-$8 per 1,000 views, crypto withdrawals from $5, a published 10% fee. EU, UK and US residents barred."
+description: "Prime Oracles: 26 active rewards checked 12 October, CPM $0.10–$8, crypto withdrawal rules, 10% fee and country restrictions."
 provenance: { snapshot_date: "2026-09-19", source: "darebay-prod" }
 numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_min_views_threshold_live, ppv_max_per_work_typical, ppv_max_per_work_band_high, commission_crypto, commission_fiat]
 seo: true
 landing: true
 sources: visible
 hero:
-  updated: "2026-09-25"
+  updated: "2026-10-12"
   kicker: "Platform review · 2026"
-  lede: "Prime Oracles is a digital-goods marketplace with a rewards board for short video, and on 19 September 2026 it carried 20 open rewards paying $0.02 to $8.00 per 1,000 views. It is owned by a sole trader registered in Tbilisi, Georgia; it pays USDT, USDC or TON, with a withdrawal floor the agreement puts at 5 to 12 USD depending on the network, and takes 10% when you withdraw. Its terms also describe USD through Garna (Cyprus) to a verified Garna account. Residents and citizens of the EU, the UK and the United States are not served. It publishes no settlement time and no list of served countries; below is what its own documents said on 19 and 24 September 2026."
+  lede: "Prime Oracles had 26 active rewards on 12 October 2026. CPM configurations were $0.10–$8 per 1,000, but the $8 card pays for a long platform review; ordinary clipping and view-tier rewards have their own rules. Its agreement describes 10% withdrawal fees and a $5–$12 crypto minimum. The fresh board snapshot is separated below from the earlier September legal and campaign source snapshots."
   secondary: "Comparison table"
   takeaways:
     - "<b>The operator is a sole trader, not a company.</b> A sole trader registered in Georgia, with an address in Tbilisi; the name and tax ID are printed in the header of its user agreement. Georgian law applies, disputes go to the courts of Tbilisi, and all three documents carry the edition of 1 June 2026."
@@ -22,6 +22,7 @@ compare:
   highlight: darebay
   title: "Payout floor, fee, rails and who holds the budget"
 method:
+  - "The public rewards board and current card data were rechecked on 2026-10-12 without a signed-in account. September legal, social and review observations retain their original dates."
   - "Prime Oracles builds its pages in the browser. The user agreement, the privacy policy and the AML/KYC policy were read on 2026-09-19 at their public addresses /terms-agreement, /privacy-policy and /aml-policy; all three stand in the edition of 1 June 2026, and clause 22.5 gives the Russian version precedence over any translation, so Russian wording is quoted where it is the binding text."
   - "The rewards board, the reward cards, the About, communities and marketplace pages and the platform's own Telegram channel were read as published. Everything this page says about Prime Oracles comes from those published sources; screens inside an account were not used."
   - "Reviews on third-party sites were used only as a list of the questions people ask, and not one sentence from them is repeated as fact. Garna's own pages cover where money can go from a Garna account. DareBay's figures come from its own public pages, not from this comparison."
@@ -29,6 +30,22 @@ cta:
   title: "One page of rules, readable before the first clip"
   lede: "DareBay, our platform, keeps no country list, while Prime Oracles bars the EU, the UK and the US and does not name Ukraine: on DareBay only people on sanctions lists are barred. Nothing is taken from a task payout; the only fee is 10% of what you withdraw, and withdrawals start at 10 USDT. The rate, the view threshold and any cap are printed on every task card."
 ---
+## Current rewards: 12 October 2026 snapshot
+
+The public board returned **26 active rewards**, plus three finished and eight stopped. Active CPM configurations ran from **$0.10 to $8 per 1,000 views**, with per-video caps **$20–$500**. The $8 offer requires a long YouTube review of Prime Oracles; it is not the normal rate for a short streamer clip. All 26 active cards had a future end date and budget remaining at the time of this check. That does not reserve money for a clip you have not submitted. <!-- source: https://www.primeoracles.com/rewards 2026-10-12 -->
+
+| Public reward | Current payment rule | End date shown |
+|---|---|---|
+| [Prime Oracles](https://www.primeoracles.com/rewards/861acf3b-b3cd-4168-a7f2-4f8219d0d2a6) | $1/1,000, minimum $1, maximum $100 per video | 22 October 2026 |
+| [Domer](https://www.primeoracles.com/rewards/51d294d0-5602-4eb8-973a-6c75317b0c15) | $20 at 100K, $45 at 500K, $90 at 1M views | 31 October 2026 |
+| [Zeny](https://www.primeoracles.com/rewards/6ce64ef4-f95c-4b76-8463-9b6b111ab346) | $25 at 100K, $44 at 500K, $88 at 1M views | 4 November 2026 |
+
+<!-- source: https://www.primeoracles.com/rewards/861acf3b-b3cd-4168-a7f2-4f8219d0d2a6 2026-10-12 --> <!-- source: https://www.primeoracles.com/rewards/51d294d0-5602-4eb8-973a-6c75317b0c15 2026-10-12 --> <!-- source: https://www.primeoracles.com/rewards/6ce64ef4-f95c-4b76-8463-9b6b111ab346 2026-10-12 -->
+
+These are different payment functions. At 100K eligible views, the $1 CPM card gives $100 gross and hits its cap; Domer's first tier gives $20 gross. At the agreement's 10% withdrawal fee, those become $90 and $18 before network charges. A 99K-view Domer clip has not reached the first tier. Do not interpolate a tier as a continuous CPM or add tiers together without an explicit instruction from the card.
+
+The dated September examples below are retained for comparison, rather than presented as today's offers. Check the card again immediately before publishing: a future deadline alone does not prove that budget is still available.
+
 ## What Prime Oracles is, and who runs it
 
 The platform describes itself in the title of its own Russian-language home page as "маркетплейс цифровых продуктов и реварды", a marketplace of digital products and rewards <!-- source: https://www.primeoracles.com/ 2026-09-19 -->. There are two services behind that. One is a task board where "Заказчики пополняют Баланс Награды в криптовалюте" — customers fund a reward balance in crypto and post content tasks against it. The other is a marketplace where the buyer's money is "удерживаются в эскроу Площадки до подтверждения сделки", held in the platform's escrow until the deal is confirmed <!-- source: https://www.primeoracles.com/terms-agreement 2026-09-19 -->.
@@ -81,7 +98,7 @@ What remains is its own counters: on 19 September 2026 they showed $22,674 paid 
 
 ## Where Prime Oracles fits better than DareBay, and where it does not
 
-DareBay's side of the ledger: nothing is taken from a task payout, a withdrawal costs 10% of the request deducted inside a request of at least 10 USDT, and the only cash rail is USDT on the TON network. Every request is checked by a person, so no settlement time is promised, and there is no country exclusion list, no follower minimum and no application. The interface is in English, Russian, Ukrainian and Polish. Its tasks pay $1.00 to $10.00 per 1,000 views, set by each task, with a cap of up to $500 per clip, and the task sets its own threshold: [how withdrawals work](/en/help/darebay-withdrawals), [what DareBay charges](/en/help/what-commission), [DareBay at a glance](/en/about/darebay-at-a-glance).
+DareBay's side of the ledger: nothing is taken from a task payout, a withdrawal costs 10% of the request deducted inside a request of at least 10 USDT, and the only cash rail is USDT on the TON network. Every request is checked by a person, so no settlement time is promised, and there is no country exclusion list, no follower minimum and no application. The interface is in English, Russian, Ukrainian and Polish. Its task card states the rate per 1,000 eligible views and any cap, and the task sets its own threshold: [how withdrawals work](/en/help/darebay-withdrawals), [what DareBay charges](/en/help/what-commission), [DareBay at a glance](/en/about/darebay-at-a-glance).
 
 Prime Oracles is the better fit when:
 
@@ -96,6 +113,10 @@ The other side of it: residents and citizens of the EU, the UK and the US are ba
 <LMethod />
 
 ## Frequently asked questions
+
+### What rates are currently on Prime Oracles?
+
+On 12 October 2026, active CPM configurations were $0.10–$8 per 1,000, with caps $20–$500. The $8 card requires a long YouTube review; streamer rewards can instead use discrete view tiers. This is a dated public-board sample, not a rate promised for every clip. <!-- source: https://www.primeoracles.com/rewards 2026-10-12 -->
 
 ### What is Prime Oracles?
 

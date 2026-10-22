@@ -107,7 +107,7 @@ DareBay працює з України без обхідних шляхів: р�
 
 ## Куди далі
 
-- [Де брати замовлення на нарізки](/ua/zarobitok/de-braty-zamovlennia-na-narizky) - як влаштований ринок замовлень і порівняння умов
+- [Як створити конкурс для нарізальників](/ua/brendam/yak-stvoryty-konkurs-dlia-narizalnykiv) - параметри запуску і що змінюється після старту
 - [Як працює оплата за перегляди](/ua/zarobitok/yak-pratsiuie-oplata-za-perehliady) - повна механіка PPV-конкурсу
 - [Яка комісія на DareBay](/ua/dopomoha/yaka-komisiia) - актуальні умови створення, магазину і виведення
 - [Скільки можна заробити на нарізках](/ua/zarobitok/skilky-mozhna-zarobyty-na-narizkakh) - розрахунок виплати для нарізальника

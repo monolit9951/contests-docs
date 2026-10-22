@@ -95,11 +95,11 @@ seo: true
 
 - чи потрібні підписники і скільки вийде в грошах - [Скільки можна заробити на нарізках](/ua/zarobitok/skilky-mozhna-zarobyty-na-narizkakh);
 - як рахуються перегляди, поріг, накрутка, коли і якими способами приходять гроші - [Як працює оплата за перегляди](/ua/zarobitok/yak-pratsiuie-oplata-za-perehliady);
-- де брати завдання і вихідники - [Де брати замовлення на нарізки](/ua/zarobitok/de-braty-zamovlennia-na-narizky).
+- де брати завдання - [каталог конкурсів на нарізки](/ua/earn/clips).
 
 ## Куди далі
 
-- [Де брати замовлення на нарізки](/ua/zarobitok/de-braty-zamovlennia-na-narizky) - відкрита вітрина завдань
+- [Заробіток на нарізках](/ua/earn/clips) - відкрита вітрина завдань
 - [Як працює оплата за перегляди](/ua/zarobitok/yak-pratsiuie-oplata-za-perehliady) - від бюджету гаманцевого конкурсу до виплати
 - [Скільки можна заробити на нарізках](/ua/zarobitok/skilky-mozhna-zarobyty-na-narizkakh) - розрахунок від ставки до стелі і довідник зі ставок
 - [Які комісії на DareBay](/ua/dopomoha/yaka-komisiia) - умови створення, магазину і виведення

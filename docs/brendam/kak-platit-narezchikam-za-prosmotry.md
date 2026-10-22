@@ -90,4 +90,4 @@ seo: true
 - [Условия для бизнеса](/for-business) - форматы, цены и гарантии
 - [Как работает оплата за просмотры](/zarabotok/kak-rabotaet-oplata-za-prosmotry) - независимый счётчик, порог и холд
 - [Какие комиссии на DareBay?](/pomoshch/kakaya-komissiya) - условия по отдельным операциям
-- [DareBay реально платит?](/o-proekte/darebay-realno-platit) - гарантия выплат
+- [Гарантия выплат](/o-proekte/garantiya-vyplat) - чем обеспечена выплата и как проверить площадку

@@ -120,13 +120,13 @@ cta:
 
 - Чи потрібні підписники і скільки вийде в підсумку - [скільки можна заробити на нарізках](/ua/zarobitok/skilky-mozhna-zarobyty-na-narizkakh)
 - Як рахуються перегляди, поріг, накрутка, коли приходять гроші і кілька робіт одразу - [як працює оплата за перегляди](/ua/zarobitok/yak-pratsiuie-oplata-za-perehliady)
-- Де брати замовлення і вихідники - [де брати замовлення на нарізки](/ua/zarobitok/de-braty-zamovlennia-na-narizky)
+- Де брати завдання - [каталог конкурсів на нарізки](/ua/earn/clips)
 - Яка комісія в платформи - [яка комісія](/ua/dopomoha/yaka-komisiia)
 
 ## Куди далі
 
 - [Робота нарізальником](/ua/zarobitok/robota-narizalnykom) - цикл однієї роботи і шлях з нуля
-- [Де брати замовлення на нарізки](/ua/zarobitok/de-braty-zamovlennia-na-narizky) - каталог завдань і вихідники
+- [Заробіток на нарізках](/ua/earn/clips) - живі завдання й умови участі
 - [Як працює оплата за перегляди](/ua/zarobitok/yak-pratsiuie-oplata-za-perehliady) - лічильник, поріг, спірні випадки і коли приходять гроші
 - [Скільки можна заробити на нарізках](/ua/zarobitok/skilky-mozhna-zarobyty-na-narizkakh) - формула і приклади на різних ставках
 - [Скільки платять за перегляди в ТікТок](/ua/zarobitok/skilky-platiat-za-perehliady-v-tiktok) - які майданчики в заліку і чим конкурс відрізняється від партнерки

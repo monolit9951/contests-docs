@@ -136,5 +136,5 @@ cta:
 - [Сколько можно заработать на нарезках](/zarabotok/skolko-mozhno-zarabotat-na-narezkah) - формула, ставка за 1000 просмотров и нужны ли подписчики
 - [Защита от накрутки](/pomoshch/zashchita-ot-nakrutki) - что видит заказчик
 - [Какая комиссия на DareBay](/pomoshch/kakaya-komissiya) - актуальные условия по операциям
-- [DareBay реально платит?](/o-proekte/darebay-realno-platit) - чем обеспечена выплата
+- [Гарантия выплат](/o-proekte/garantiya-vyplat) - чем обеспечена выплата
 - [Заработок на нарезках](/earn/clips) - живые задания и условия участия

@@ -136,7 +136,7 @@ cta:
 
 - Нужны ли подписчики и сколько выйдет по формуле - [Сколько можно заработать на нарезках](/zarabotok/skolko-mozhno-zarabotat-na-narezkah)
 - Как считаются просмотры, порог, накрутка, когда приходят деньги и сколько работ можно подать - [Как работает оплата за просмотры](/zarabotok/kak-rabotaet-oplata-za-prosmotry)
-- Чем обеспечена выплата - [DareBay реально платит?](/o-proekte/darebay-realno-platit)
+- Чем обеспечена выплата - [Гарантия выплат](/o-proekte/garantiya-vyplat)
 - Какая комиссия - [Какая комиссия на DareBay](/pomoshch/kakaya-komissiya)
 
 ## Куда дальше

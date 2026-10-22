@@ -41,7 +41,7 @@
   },
   "brendam/kak-platit-narezchikam-za-prosmotry.md": {
     "published": "2026-07-10T14:11:31Z",
-    "modified": "2026-10-12T16:54:02Z"
+    "modified": "2026-10-22T10:47:34Z"
   },
   "brendam/kak-sozdat-konkurs-dlya-narezchikov.md": {
     "published": "2026-07-10T14:23:53Z",
@@ -547,29 +547,13 @@
     "published": "2026-10-08T11:02:29Z",
     "modified": "2026-10-12T16:54:02Z"
   },
-  "o-proekte/darebay-eto-skam.md": {
-    "published": "2026-07-09T23:55:46+02:00",
-    "modified": "2026-10-12T16:54:02Z"
-  },
-  "o-proekte/darebay-otzyvy.md": {
-    "published": "2026-07-09T23:44:16+02:00",
-    "modified": "2026-10-12T16:54:02Z"
-  },
-  "o-proekte/darebay-razvod-ili-net.md": {
-    "published": "2026-07-10T00:09:35+02:00",
-    "modified": "2026-10-12T16:54:02Z"
-  },
-  "o-proekte/darebay-realno-platit.md": {
-    "published": "2026-07-10T00:21:15+02:00",
-    "modified": "2026-10-12T16:54:02Z"
-  },
   "o-proekte/darebay-v-tsifrakh.md": {
     "published": "2026-09-03T10:36:52Z",
     "modified": "2026-10-12T17:29:22Z"
   },
   "o-proekte/garantiya-vyplat.md": {
     "published": "2026-07-10T10:14:11+02:00",
-    "modified": "2026-10-12T16:54:02Z"
+    "modified": "2026-10-22T10:47:34Z"
   },
   "o-proekte/index.md": {
     "published": "2026-08-03T10:42:28Z",
@@ -593,7 +577,7 @@
   },
   "o-proekte/skam-v-klippinge-krasnye-flagi.md": {
     "published": "2026-09-04T20:08:45Z",
-    "modified": "2026-10-12T16:54:02Z"
+    "modified": "2026-10-22T10:47:34Z"
   },
   "pomoshch/bystryy-start.md": {
     "published": "2026-04-16T17:38:37Z",
@@ -601,7 +585,7 @@
   },
   "pomoshch/darebay-vyvod-deneg.md": {
     "published": "2026-07-10T10:14:26+02:00",
-    "modified": "2026-10-12T16:54:02Z"
+    "modified": "2026-10-22T10:47:34Z"
   },
   "pomoshch/esli-nikto-ne-uchastvuet.md": {
     "published": "2026-04-16T17:38:37Z",
@@ -651,61 +635,21 @@
     "published": "2026-04-16T17:38:37Z",
     "modified": "2026-10-12T16:54:02Z"
   },
-  "ua/brendam/de-znaity-narizchykiv-dlia-svoho-kontentu.md": {
-    "published": "2026-09-04T21:40:22Z",
-    "modified": "2026-10-12T16:54:02Z"
-  },
   "ua/brendam/index.md": {
     "published": "2026-08-03T14:23:10Z",
-    "modified": "2026-10-12T16:54:02Z"
-  },
-  "ua/brendam/klipinh-dlia-ahentsii-i-cpa-partneriv.md": {
-    "published": "2026-09-04T21:40:22Z",
-    "modified": "2026-10-12T16:54:02Z"
-  },
-  "ua/brendam/narizky-chy-reklama-shcho-deshevshe.md": {
-    "published": "2026-09-04T21:40:22Z",
-    "modified": "2026-10-12T16:54:02Z"
-  },
-  "ua/brendam/narizky-dlia-krypto-proiektiv.md": {
-    "published": "2026-09-05T11:38:08Z",
-    "modified": "2026-10-12T16:54:02Z"
-  },
-  "ua/brendam/narizky-dlia-podkastiv.md": {
-    "published": "2026-09-05T11:38:08Z",
-    "modified": "2026-10-12T16:54:02Z"
-  },
-  "ua/brendam/narizky-dlia-prosuvannia-ihor.md": {
-    "published": "2026-09-05T11:38:08Z",
-    "modified": "2026-10-12T16:54:02Z"
-  },
-  "ua/brendam/narizky-dlia-prosuvannia-muzyky.md": {
-    "published": "2026-09-05T11:38:08Z",
-    "modified": "2026-10-12T16:54:02Z"
-  },
-  "ua/brendam/shablon-zavdannia-dlia-narizchykiv.md": {
-    "published": "2026-09-04T21:40:22Z",
-    "modified": "2026-10-12T16:54:02Z"
-  },
-  "ua/brendam/skilky-koshtuie-klipinh-kampaniia.md": {
-    "published": "2026-09-04T21:40:22Z",
-    "modified": "2026-10-12T16:54:02Z"
-  },
-  "ua/brendam/yak-platyty-narizalnykam-za-perehliady.md": {
-    "published": "2026-08-03T18:04:35Z",
-    "modified": "2026-10-12T16:54:02Z"
+    "modified": "2026-10-22T10:47:34Z"
   },
   "ua/brendam/yak-stvoryty-konkurs-dlia-narizalnykiv.md": {
     "published": "2026-08-03T18:04:35Z",
-    "modified": "2026-10-12T16:54:02Z"
+    "modified": "2026-10-22T10:47:34Z"
   },
   "ua/brendam/yak-zamovyty-narizky-dlia-prosuvannia.md": {
     "published": "2026-08-03T18:04:35Z",
-    "modified": "2026-10-12T16:54:02Z"
+    "modified": "2026-10-22T10:47:34Z"
   },
   "ua/dopomoha/darebay-vyvedennia-hroshei.md": {
     "published": "2026-08-03T17:55:09Z",
-    "modified": "2026-10-12T16:54:02Z"
+    "modified": "2026-10-22T10:47:34Z"
   },
   "ua/dopomoha/dyvytys-holosuvaty-vyhravaty.md": {
     "published": "2026-08-03T17:55:09Z",
@@ -775,29 +719,13 @@
     "published": "2026-10-08T11:02:29Z",
     "modified": "2026-10-12T16:54:02Z"
   },
-  "ua/pro-proekt/darebay-rozvod-chy-ni.md": {
-    "published": "2026-08-03T17:55:09Z",
-    "modified": "2026-10-12T16:54:02Z"
-  },
-  "ua/pro-proekt/darebay-spravdi-platyt.md": {
-    "published": "2026-08-03T17:55:09Z",
-    "modified": "2026-10-12T16:54:02Z"
-  },
-  "ua/pro-proekt/darebay-tse-skam.md": {
-    "published": "2026-08-03T17:55:09Z",
-    "modified": "2026-10-12T16:54:02Z"
-  },
   "ua/pro-proekt/darebay-u-tsyfrakh.md": {
     "published": "2026-09-03T10:36:52Z",
     "modified": "2026-10-12T17:29:22Z"
   },
-  "ua/pro-proekt/darebay-vidhuky.md": {
-    "published": "2026-08-03T17:55:09Z",
-    "modified": "2026-10-12T16:54:02Z"
-  },
   "ua/pro-proekt/harantiia-vyplat.md": {
     "published": "2026-08-03T17:55:09Z",
-    "modified": "2026-10-12T16:54:02Z"
+    "modified": "2026-10-22T10:47:34Z"
   },
   "ua/pro-proekt/index.md": {
     "published": "2026-08-03T14:23:10Z",
@@ -819,17 +747,13 @@
     "published": "2026-09-11T19:26:58Z",
     "modified": "2026-10-12T16:54:02Z"
   },
-  "ua/pro-proekt/skam-u-klipinhu-chervoni-prapory.md": {
-    "published": "2026-09-04T20:08:45Z",
-    "modified": "2026-10-12T16:54:02Z"
-  },
   "ua/zarobitok/alternatyvy-clipping-net.md": {
     "published": "2026-09-05T12:26:49Z",
     "modified": "2026-10-12T17:29:22Z"
   },
   "ua/zarobitok/alternatyvy-whop-v-ukraini.md": {
     "published": "2026-09-03T10:58:17Z",
-    "modified": "2026-10-12T17:29:22Z"
+    "modified": "2026-10-22T10:47:34Z"
   },
   "ua/zarobitok/chomu-rolyk-vidkhylyly-i-perehliady-ne-zarakhuvaly.md": {
     "published": "2026-09-04T20:08:45Z",
@@ -839,13 +763,9 @@
     "published": "2026-09-03T10:58:17Z",
     "modified": "2026-10-12T16:54:02Z"
   },
-  "ua/zarobitok/de-braty-zamovlennia-na-narizky.md": {
-    "published": "2026-08-03T17:55:09Z",
-    "modified": "2026-10-12T17:29:22Z"
-  },
   "ua/zarobitok/index.md": {
     "published": "2026-08-03T14:23:10Z",
-    "modified": "2026-10-12T16:54:02Z"
+    "modified": "2026-10-22T10:47:34Z"
   },
   "ua/zarobitok/kalkuliator-zarobitku-na-narizkakh.md": {
     "published": "2026-09-04T20:08:45Z",
@@ -857,7 +777,7 @@
   },
   "ua/zarobitok/pershi-100-dolariv-na-narizkakh.md": {
     "published": "2026-09-04T21:40:22Z",
-    "modified": "2026-10-12T16:54:02Z"
+    "modified": "2026-10-22T10:47:34Z"
   },
   "ua/zarobitok/platformy-dlia-narizchykiv-shcho-platiat-v-ukrainu.md": {
     "published": "2026-09-03T11:05:07Z",
@@ -873,7 +793,7 @@
   },
   "ua/zarobitok/robota-narizalnykom.md": {
     "published": "2026-08-03T17:55:09Z",
-    "modified": "2026-10-12T17:29:22Z"
+    "modified": "2026-10-22T10:47:34Z"
   },
   "ua/zarobitok/skilky-mozhna-zarobyty-na-narizkakh.md": {
     "published": "2026-08-03T17:55:09Z",
@@ -881,7 +801,7 @@
   },
   "ua/zarobitok/skilky-platiat-za-narizky-strymeriv.md": {
     "published": "2026-08-03T17:55:09Z",
-    "modified": "2026-10-12T17:29:22Z"
+    "modified": "2026-10-22T10:47:34Z"
   },
   "ua/zarobitok/skilky-platiat-za-narizky-za-nishamy.md": {
     "published": "2026-09-04T20:08:45Z",
@@ -889,19 +809,7 @@
   },
   "ua/zarobitok/skilky-platiat-za-perehliady-v-tiktok.md": {
     "published": "2026-08-03T17:55:09Z",
-    "modified": "2026-10-12T16:54:02Z"
-  },
-  "ua/zarobitok/slovnyk-klipinhu.md": {
-    "published": "2026-09-04T20:08:45Z",
-    "modified": "2026-10-12T16:54:02Z"
-  },
-  "ua/zarobitok/vyro-ohliad-platformy.md": {
-    "published": "2026-09-05T12:26:49Z",
-    "modified": "2026-10-12T17:29:22Z"
-  },
-  "ua/zarobitok/whop-content-rewards-ohliad.md": {
-    "published": "2026-09-05T12:26:49Z",
-    "modified": "2026-10-12T17:29:22Z"
+    "modified": "2026-10-22T10:47:34Z"
   },
   "ua/zarobitok/yak-obraty-platformu-dlia-narizok.md": {
     "published": "2026-09-03T11:05:07Z",
@@ -909,7 +817,7 @@
   },
   "ua/zarobitok/yak-pratsiuie-oplata-za-perehliady.md": {
     "published": "2026-08-03T14:31:02Z",
-    "modified": "2026-10-12T17:29:22Z"
+    "modified": "2026-10-22T10:47:34Z"
   },
   "ua/zarobitok/yak-vyity-na-1000-dolariv-na-misiats-na-narizkakh.md": {
     "published": "2026-09-04T21:40:22Z",
@@ -917,15 +825,7 @@
   },
   "ua/zarobitok/zarobitok-na-narizkakh-u-telegram.md": {
     "published": "2026-09-05T11:38:08Z",
-    "modified": "2026-10-12T16:54:02Z"
-  },
-  "ua/zarobitok/zarobitok-na-narizkakh-u-x-twitter.md": {
-    "published": "2026-09-05T11:38:08Z",
-    "modified": "2026-10-12T16:54:02Z"
-  },
-  "ua/zarobitok/zarobitok-na-vk-klipakh.md": {
-    "published": "2026-09-05T11:38:08Z",
-    "modified": "2026-10-12T16:54:02Z"
+    "modified": "2026-10-22T10:47:34Z"
   },
   "zarabotok/analogi-clipping-net.md": {
     "published": "2026-09-05T12:26:49Z",
@@ -957,7 +857,7 @@
   },
   "zarabotok/kak-rabotaet-oplata-za-prosmotry.md": {
     "published": "2026-07-10T10:14:34+02:00",
-    "modified": "2026-10-12T16:54:02Z"
+    "modified": "2026-10-22T10:47:34Z"
   },
   "zarabotok/kak-vybrat-platformu-dlya-narezok.md": {
     "published": "2026-09-03T11:05:07Z",
@@ -1009,7 +909,7 @@
   },
   "zarabotok/rabota-narezchikom.md": {
     "published": "2026-07-10T18:20:54Z",
-    "modified": "2026-10-12T16:54:02Z"
+    "modified": "2026-10-22T10:47:34Z"
   },
   "zarabotok/skolko-mozhno-zarabotat-na-narezkah.md": {
     "published": "2026-07-10T12:03:37+02:00",

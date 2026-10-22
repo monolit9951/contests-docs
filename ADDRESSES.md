@@ -3,12 +3,12 @@
 > ⚙️ **Сгенерировано** из `docs/.vitepress/registry.ts`. Руками не править —
 > `node --experimental-strip-types scripts/print-addresses.mjs > ADDRESSES.md`.
 
-Страниц: **106** · адресов: **261** · редиректов со старых адресов: **273**
+Страниц: **108** · адресов: **242** · редиректов со старых адресов: **312**
 
-Из них **181** — производные написания тех же адресов: без `/docs`
+Из них **191** — производные написания тех же адресов: без `/docs`
 (`/faq/fees`), под старым префиксом корневой локали `/ru` (`/ru/o-proekte`) и имя файла
 `<раздел>/index`. Они выводятся в `registry.ts`, ведут туда же, куда исходный адрес, и ради
-них хост отдаёт контенту ещё 15 префиксов: `/faq`, `/getting-started`, `/platformy`, `/ru/blog`, `/ru/brendam`, `/ru/faq`, `/ru/getting-started`, `/ru/instrumenty`, `/ru/kak-rabotaet`, `/ru/kontent-zavod`, `/ru/legal`, `/ru/o-proekte`, `/ru/platformy`, `/ru/pomoshch`, `/ru/zarabotok`.
+них хост отдаёт контенту ещё 17 префиксов: `/faq`, `/getting-started`, `/platformy`, `/products`, `/ru/blog`, `/ru/brendam`, `/ru/faq`, `/ru/getting-started`, `/ru/instrumenty`, `/ru/kak-rabotaet`, `/ru/kontent-zavod`, `/ru/legal`, `/ru/o-proekte`, `/ru/platformy`, `/ru/pomoshch`, `/ru/products`, `/ru/zarabotok`.
 
 Страница объявляет только те языки, на которых она действительно существует: той,
 которой нет на языке, в сайтмапе этой локали и в hreflang нет вообще. Русская версия
@@ -27,7 +27,7 @@
 | — *(новая)* | `/zarabotok/kto-iz-strimerov-platit-za-narezki` | `earnings-streamers-who-pay` |
 | `/docs/ru/zarabotok/skolko-platyat-za-prosmotry-v-tiktok` | `/zarabotok/skolko-platyat-za-prosmotry-v-tiktok` | `earnings-tiktok-views` |
 | `/docs/ru/kak-rabotaet/kak-rabotaet-oplata-za-prosmotry`<br>`/zarabotok/kak-schitayutsya-prosmotry-dlya-vyplaty`<br>`/ua/zarobitok/yak-rakhuiutsia-perehliady-dlia-vyplaty`<br>`/en/earnings/how-views-are-counted`<br>`/docs/ru/kak-rabotaet/kak-schitayutsya-prosmotry-dlya-vyplaty`<br>`/zarabotok/porog-prosmotrov-dlya-vyplaty`<br>`/ua/zarobitok/porih-perehliadiv-dlia-vyplaty`<br>`/en/earnings/view-threshold`<br>`/docs/ru/kak-rabotaet/porog-prosmotrov-dlya-vyplaty` | `/zarabotok/kak-rabotaet-oplata-za-prosmotry` | `earnings-ppv-mechanics` |
-| `/docs/ru/platformy/gde-brat-zakazy-na-narezki`<br>`/zarabotok/ploshchadki-i-komissii`<br>`/ua/zarobitok/maidanchyky-i-komisii`<br>`/en/earnings/platforms-and-fees`<br>`/docs/ru/platformy/`<br>`/docs/platformy/` | `/zarabotok/gde-brat-zakazy-na-narezki` | `earnings-where-to-find-work` |
+| `/docs/ru/platformy/gde-brat-zakazy-na-narezki`<br>`/zarabotok/ploshchadki-i-komissii`<br>`/ua/zarobitok/maidanchyky-i-komisii`<br>`/en/earnings/platforms-and-fees`<br>`/docs/ru/platformy/`<br>`/docs/platformy/`<br>`/ua/zarobitok/de-braty-zamovlennia-na-narizky` | `/zarabotok/gde-brat-zakazy-na-narezki` | `earnings-where-to-find-work` |
 | — *(новая)* | `/zarabotok/kak-delat-narezki` | `earnings-how-to-clip` |
 | — *(новая)* | `/zarabotok/zarabotok-na-narezkah-filmov` | `earnings-film-clips` |
 | — *(новая)* | `/zarabotok/zakonno-li-delat-narezki` | `earnings-is-clipping-legal` |
@@ -47,19 +47,19 @@
 | — *(новая)* | `/zarabotok/kak-vybrat-platformu-dlya-narezok` | `how-to-choose-clipping-platform` |
 | — *(новая)* | `/zarabotok/darebay-ili-klipni` | `darebay-vs-klipni` |
 | — *(новая)* | `/zarabotok/kalkulyator-zarabotka-na-narezkah` | `earnings-calculator` |
-| — *(новая)* | `/zarabotok/slovar-klippinga` | `earnings-glossary` |
+| `/ua/zarobitok/slovnyk-klipinhu` | `/zarabotok/slovar-klippinga` | `earnings-glossary` |
 | — *(новая)* | `/zarabotok/skolko-platyat-za-narezki-po-nisham` | `earnings-rates-by-niche` |
 | — *(новая)* | `/zarabotok/pochemu-rolik-otklonili-i-prosmotry-ne-zaschitali` | `earnings-why-clips-rejected` |
 | — *(новая)* | `/zarabotok/pervye-100-dollarov-na-narezkah` | `earnings-first-100-dollars` |
 | — *(новая)* | `/zarabotok/kak-vyyti-na-1000-dollarov-v-mesyats-na-narezkah` | `earnings-1000-a-month` |
 | — *(новая)* | `/zarabotok/nalogi-i-samozanyatost-narezchika` | `earnings-taxes` |
-| — *(новая)* | `/zarabotok/zarabotok-na-narezkah-v-x-twitter` | `earnings-x-twitter-clips` |
-| — *(новая)* | `/zarabotok/zarabotok-na-vk-klipah` | `earnings-vk-clips` |
+| `/ua/zarobitok/zarobitok-na-narizkakh-u-x-twitter` | `/zarabotok/zarabotok-na-narezkah-v-x-twitter` | `earnings-x-twitter-clips` |
+| `/ua/zarobitok/zarobitok-na-vk-klipakh` | `/zarabotok/zarabotok-na-vk-klipah` | `earnings-vk-clips` |
 | — *(новая)* | `/zarabotok/zarabotok-na-narezkah-v-telegram` | `earnings-telegram-clips` |
 | — *(новая)* | `/zarabotok/progrev-akkaunta-i-tenevoy-ban` | `earnings-account-warmup` |
-| — *(новая)* | `/zarabotok/whop-content-rewards-obzor` | `earnings-whop-review` |
+| `/ua/zarobitok/whop-content-rewards-ohliad` | `/zarabotok/whop-content-rewards-obzor` | `earnings-whop-review` |
 | — *(новая)* | `/zarabotok/analogi-clipping-net` | `earnings-clipping-net-alternatives` |
-| — *(новая)* | `/zarabotok/vyro-obzor-platformy` | `earnings-vyro-review` |
+| `/ua/zarobitok/vyro-ohliad-platformy` | `/zarabotok/vyro-obzor-platformy` | `earnings-vyro-review` |
 | — *(новая)* | `/en/earnings/clipgrow-review` | `clipgrow-review` |
 | — *(новая)* | `/en/earnings/is-wondeed-legit` | `is-wondeed-legit` |
 | — *(новая)* | `/en/earnings/vues-review` | `vues-review` |
@@ -73,18 +73,18 @@
 | Было | Стало | id |
 |---|---|---|
 | — *(новая)* | `/brendam/` | `brands-hub` |
-| `/docs/ru/kak-rabotaet/kak-platit-narezchikam-za-prosmotry` | `/brendam/kak-platit-narezchikam-za-prosmotry` | `brands-pay-clippers` |
+| `/docs/ru/kak-rabotaet/kak-platit-narezchikam-za-prosmotry`<br>`/ua/brendam/yak-platyty-narizalnykam-za-perehliady` | `/brendam/kak-platit-narezchikam-za-prosmotry` | `brands-pay-clippers` |
 | `/docs/ru/kak-rabotaet/kak-sozdat-konkurs-dlya-narezchikov` | `/brendam/kak-sozdat-konkurs-dlya-narezchikov` | `brands-create-contest` |
 | `/docs/ru/platformy/kak-zakazat-narezki-dlya-prodvizheniya` | `/brendam/kak-zakazat-narezki-dlya-prodvizheniya` | `brands-order-clips` |
-| — *(новая)* | `/brendam/skolko-stoit-klipping-kampaniya` | `brands-campaign-cost` |
-| — *(новая)* | `/brendam/narezki-ili-reklama-chto-deshevle` | `brands-clipping-vs-ads` |
-| — *(новая)* | `/brendam/shablon-zadaniya-dlya-narezchikov` | `brands-brief-template` |
-| — *(новая)* | `/brendam/gde-nayti-narezchikov-dlya-svoego-kontenta` | `brands-find-clippers` |
-| — *(новая)* | `/brendam/klipping-dlya-agentstv-i-cpa-partnerov` | `brands-agencies-cpa` |
-| — *(новая)* | `/brendam/narezki-dlya-prodvizheniya-muzyki` | `brands-clipping-for-music` |
-| — *(новая)* | `/brendam/narezki-dlya-podkastov` | `brands-clipping-for-podcasts` |
-| — *(новая)* | `/brendam/narezki-dlya-prodvizheniya-igr` | `brands-clipping-for-games` |
-| — *(новая)* | `/brendam/narezki-dlya-kripto-proektov` | `brands-clipping-for-crypto` |
+| `/ua/brendam/skilky-koshtuie-klipinh-kampaniia` | `/brendam/skolko-stoit-klipping-kampaniya` | `brands-campaign-cost` |
+| `/ua/brendam/narizky-chy-reklama-shcho-deshevshe` | `/brendam/narezki-ili-reklama-chto-deshevle` | `brands-clipping-vs-ads` |
+| `/ua/brendam/shablon-zavdannia-dlia-narizchykiv` | `/brendam/shablon-zadaniya-dlya-narezchikov` | `brands-brief-template` |
+| `/ua/brendam/de-znaity-narizchykiv-dlia-svoho-kontentu` | `/brendam/gde-nayti-narezchikov-dlya-svoego-kontenta` | `brands-find-clippers` |
+| `/ua/brendam/klipinh-dlia-ahentsii-i-cpa-partneriv` | `/brendam/klipping-dlya-agentstv-i-cpa-partnerov` | `brands-agencies-cpa` |
+| `/ua/brendam/narizky-dlia-prosuvannia-muzyky` | `/brendam/narezki-dlya-prodvizheniya-muzyki` | `brands-clipping-for-music` |
+| `/ua/brendam/narizky-dlia-podkastiv` | `/brendam/narezki-dlya-podkastov` | `brands-clipping-for-podcasts` |
+| `/ua/brendam/narizky-dlia-prosuvannia-ihor` | `/brendam/narezki-dlya-prodvizheniya-igr` | `brands-clipping-for-games` |
+| `/ua/brendam/narizky-dlia-krypto-proiektiv` | `/brendam/narezki-dlya-kripto-proektov` | `brands-clipping-for-crypto` |
 
 ## Помощь — `/pomoshch/`
 
@@ -138,14 +138,16 @@
 | Было | Стало | id |
 |---|---|---|
 | `/docs/ru/o-proekte` | `/o-proekte/` | `about-hub` |
+| `/products`<br>`/products/` | `/o-proekte/products` | `about-products` |
+| `/products/brolivo`<br>`/products/brolivo/` | `/o-proekte/brolivo` | `about-brolivo` |
 | `/docs/`<br>`/docs/ru/` | `/o-proekte/manifest` | `about-manifesto` |
-| `/docs/ru/faq/darebay-eto-skam` | `/o-proekte/darebay-eto-skam` | `about-is-it-a-scam` |
-| `/docs/ru/faq/darebay-otzyvy` | `/o-proekte/darebay-otzyvy` | `about-reviews` |
-| `/docs/ru/faq/darebay-razvod-ili-net` | `/o-proekte/darebay-razvod-ili-net` | `about-is-it-a-fraud` |
-| `/docs/ru/faq/darebay-realno-platit` | `/o-proekte/darebay-realno-platit` | `about-really-pays` |
-| `/docs/ru/faq/garantiya-vyplat` | `/o-proekte/garantiya-vyplat` | `about-payout-guarantee` |
+| `/ua/pro-proekt/darebay-tse-skam` | `/en/about/is-darebay-a-scam` | `about-is-it-a-scam` |
+| `/ua/pro-proekt/darebay-vidhuky` | `/en/about/darebay-reviews` | `about-reviews` |
+| `/ua/pro-proekt/darebay-rozvod-chy-ni` | `/en/about/is-darebay-legit` | `about-is-it-a-fraud` |
+| `/ua/pro-proekt/darebay-spravdi-platyt` | `/en/about/does-darebay-really-pay` | `about-really-pays` |
+| `/docs/ru/faq/garantiya-vyplat`<br>`/o-proekte/darebay-eto-skam`<br>`/docs/ru/faq/darebay-eto-skam`<br>`/o-proekte/darebay-razvod-ili-net`<br>`/docs/ru/faq/darebay-razvod-ili-net`<br>`/o-proekte/darebay-otzyvy`<br>`/docs/ru/faq/darebay-otzyvy`<br>`/o-proekte/darebay-realno-platit`<br>`/docs/ru/faq/darebay-realno-platit` | `/o-proekte/garantiya-vyplat` | `about-payout-guarantee` |
 | — *(новая)* | `/o-proekte/darebay-v-tsifrakh` | `darebay-at-a-glance` |
-| — *(новая)* | `/o-proekte/skam-v-klippinge-krasnye-flagi` | `about-clipping-scam-red-flags` |
+| `/ua/pro-proekt/skam-u-klipinhu-chervoni-prapory` | `/o-proekte/skam-v-klippinge-krasnye-flagi` | `about-clipping-scam-red-flags` |
 | — *(новая)* | `/o-proekte/kto-pishet-i-otkuda-tsifry` | `about-author` |
 | — *(новая)* | `/o-proekte/redaktsionnaya-politika` | `about-editorial-policy` |
 

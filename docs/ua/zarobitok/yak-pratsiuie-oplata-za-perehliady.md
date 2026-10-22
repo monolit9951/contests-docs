@@ -136,5 +136,5 @@ cta:
 - [Скільки можна заробити на нарізках](/ua/zarobitok/skilky-mozhna-zarobyty-na-narizkakh) - формула, ставка за 1000 переглядів і чи потрібні підписники
 - [Захист від накрутки](/ua/dopomoha/zakhyst-vid-nakrutky) - що бачить замовник
 - [Яка комісія на DareBay](/ua/dopomoha/yaka-komisiia) - актуальні умови за операціями
-- [DareBay справді платить?](/ua/pro-proekt/darebay-spravdi-platyt) - чим забезпечена виплата
+- [Гарантія виплат](/ua/pro-proekt/harantiia-vyplat) - чим забезпечена виплата
 - [Заробіток на нарізках](/ua/earn/clips) - живі завдання й умови участі

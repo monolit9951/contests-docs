@@ -30,10 +30,11 @@ const registered = PAGES.flatMap((page) => localesOf(page).map((locale) => ({ pa
 const registeredPaths = new Set(registered.map(({ path }) => path))
 const article = (locale) => registered.find((entry) => entry.locale === locale && entry.page.slugs[locale] !== '')?.path
 const hub = (locale) => registered.find((entry) => entry.locale === locale && entry.page.slugs[locale] === '')?.path
-// The two addresses Search Console reported as soft 404 on 2026-09-23, then one article per
-// remaining locale (Arabic keeps dir=rtl) and a hub index.
+// The address Search Console reported as soft 404 on 2026-09-23, a Ukrainian article of the same
+// report's hub (the reported one, /ua/brendam/narizky-dlia-prosuvannia-ihor, was retired with a 301
+// on 2026-10-22), then one article per remaining locale (Arabic keeps dir=rtl) and a hub index.
 const ARTICLE = '/zarabotok/zarabotok-na-vk-klipah'
-const UA_ARTICLE = '/ua/brendam/narizky-dlia-prosuvannia-ihor'
+const UA_ARTICLE = '/ua/brendam/yak-zamovyty-narizky-dlia-prosuvannia'
 for (const path of [ARTICLE, UA_ARTICLE]) {
   if (!registeredPaths.has(path)) throw new Error(`fixture is not a registered page any more: ${path}`)
 }

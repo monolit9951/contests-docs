@@ -181,7 +181,6 @@
       "hub": "earnings",
       "slugs": {
         "ru": "gde-brat-zakazy-na-narezki",
-        "uk": "de-braty-zamovlennia-na-narizky",
         "en": "where-to-find-clipping-work"
       },
       "retired": [
@@ -190,7 +189,8 @@
         "/ua/zarobitok/maidanchyky-i-komisii",
         "/en/earnings/platforms-and-fees",
         "/docs/ru/platformy/",
-        "/docs/platformy/"
+        "/docs/platformy/",
+        "/ua/zarobitok/de-braty-zamovlennia-na-narizky"
       ]
     },
     {
@@ -207,11 +207,11 @@
       "hub": "brands",
       "slugs": {
         "ru": "kak-platit-narezchikam-za-prosmotry",
-        "uk": "yak-platyty-narizalnykam-za-perehliady",
         "en": "paying-clippers-per-view"
       },
       "retired": [
-        "/docs/ru/kak-rabotaet/kak-platit-narezchikam-za-prosmotry"
+        "/docs/ru/kak-rabotaet/kak-platit-narezchikam-za-prosmotry",
+        "/ua/brendam/yak-platyty-narizalnykam-za-perehliady"
       ]
     },
     {
@@ -479,48 +479,40 @@
       "id": "about-is-it-a-scam",
       "hub": "about",
       "slugs": {
-        "ru": "darebay-eto-skam",
-        "uk": "darebay-tse-skam",
         "en": "is-darebay-a-scam"
       },
       "retired": [
-        "/docs/ru/faq/darebay-eto-skam"
+        "/ua/pro-proekt/darebay-tse-skam"
       ]
     },
     {
       "id": "about-reviews",
       "hub": "about",
       "slugs": {
-        "ru": "darebay-otzyvy",
-        "uk": "darebay-vidhuky",
         "en": "darebay-reviews"
       },
       "retired": [
-        "/docs/ru/faq/darebay-otzyvy"
+        "/ua/pro-proekt/darebay-vidhuky"
       ]
     },
     {
       "id": "about-is-it-a-fraud",
       "hub": "about",
       "slugs": {
-        "ru": "darebay-razvod-ili-net",
-        "uk": "darebay-rozvod-chy-ni",
         "en": "is-darebay-legit"
       },
       "retired": [
-        "/docs/ru/faq/darebay-razvod-ili-net"
+        "/ua/pro-proekt/darebay-rozvod-chy-ni"
       ]
     },
     {
       "id": "about-really-pays",
       "hub": "about",
       "slugs": {
-        "ru": "darebay-realno-platit",
-        "uk": "darebay-spravdi-platyt",
         "en": "does-darebay-really-pay"
       },
       "retired": [
-        "/docs/ru/faq/darebay-realno-platit"
+        "/ua/pro-proekt/darebay-spravdi-platyt"
       ]
     },
     {
@@ -532,7 +524,15 @@
         "en": "payout-guarantee"
       },
       "retired": [
-        "/docs/ru/faq/garantiya-vyplat"
+        "/docs/ru/faq/garantiya-vyplat",
+        "/o-proekte/darebay-eto-skam",
+        "/docs/ru/faq/darebay-eto-skam",
+        "/o-proekte/darebay-razvod-ili-net",
+        "/docs/ru/faq/darebay-razvod-ili-net",
+        "/o-proekte/darebay-otzyvy",
+        "/docs/ru/faq/darebay-otzyvy",
+        "/o-proekte/darebay-realno-platit",
+        "/docs/ru/faq/darebay-realno-platit"
       ]
     },
     {
@@ -738,9 +738,11 @@
       "hub": "earnings",
       "slugs": {
         "ru": "slovar-klippinga",
-        "uk": "slovnyk-klipinhu",
         "en": "clipping-glossary"
-      }
+      },
+      "retired": [
+        "/ua/zarobitok/slovnyk-klipinhu"
+      ]
     },
     {
       "id": "earnings-rates-by-niche",
@@ -765,9 +767,11 @@
       "hub": "about",
       "slugs": {
         "ru": "skam-v-klippinge-krasnye-flagi",
-        "uk": "skam-u-klipinhu-chervoni-prapory",
         "en": "clipping-scams-red-flags"
-      }
+      },
+      "retired": [
+        "/ua/pro-proekt/skam-u-klipinhu-chervoni-prapory"
+      ]
     },
     {
       "id": "earnings-first-100-dollars",
@@ -801,99 +805,121 @@
       "hub": "brands",
       "slugs": {
         "ru": "skolko-stoit-klipping-kampaniya",
-        "uk": "skilky-koshtuie-klipinh-kampaniia",
         "en": "clipping-campaign-cost"
-      }
+      },
+      "retired": [
+        "/ua/brendam/skilky-koshtuie-klipinh-kampaniia"
+      ]
     },
     {
       "id": "brands-clipping-vs-ads",
       "hub": "brands",
       "slugs": {
         "ru": "narezki-ili-reklama-chto-deshevle",
-        "uk": "narizky-chy-reklama-shcho-deshevshe",
         "en": "clipping-vs-paid-ads"
-      }
+      },
+      "retired": [
+        "/ua/brendam/narizky-chy-reklama-shcho-deshevshe"
+      ]
     },
     {
       "id": "brands-brief-template",
       "hub": "brands",
       "slugs": {
         "ru": "shablon-zadaniya-dlya-narezchikov",
-        "uk": "shablon-zavdannia-dlia-narizchykiv",
         "en": "clipping-brief-template"
-      }
+      },
+      "retired": [
+        "/ua/brendam/shablon-zavdannia-dlia-narizchykiv"
+      ]
     },
     {
       "id": "brands-find-clippers",
       "hub": "brands",
       "slugs": {
         "ru": "gde-nayti-narezchikov-dlya-svoego-kontenta",
-        "uk": "de-znaity-narizchykiv-dlia-svoho-kontentu",
         "en": "how-to-find-clippers"
-      }
+      },
+      "retired": [
+        "/ua/brendam/de-znaity-narizchykiv-dlia-svoho-kontentu"
+      ]
     },
     {
       "id": "brands-agencies-cpa",
       "hub": "brands",
       "slugs": {
         "ru": "klipping-dlya-agentstv-i-cpa-partnerov",
-        "uk": "klipinh-dlia-ahentsii-i-cpa-partneriv",
         "en": "clipping-for-agencies-and-cpa-partners"
-      }
+      },
+      "retired": [
+        "/ua/brendam/klipinh-dlia-ahentsii-i-cpa-partneriv"
+      ]
     },
     {
       "id": "brands-clipping-for-music",
       "hub": "brands",
       "slugs": {
         "ru": "narezki-dlya-prodvizheniya-muzyki",
-        "uk": "narizky-dlia-prosuvannia-muzyky",
         "en": "clipping-for-music-promotion"
-      }
+      },
+      "retired": [
+        "/ua/brendam/narizky-dlia-prosuvannia-muzyky"
+      ]
     },
     {
       "id": "brands-clipping-for-podcasts",
       "hub": "brands",
       "slugs": {
         "ru": "narezki-dlya-podkastov",
-        "uk": "narizky-dlia-podkastiv",
         "en": "clipping-for-podcasts"
-      }
+      },
+      "retired": [
+        "/ua/brendam/narizky-dlia-podkastiv"
+      ]
     },
     {
       "id": "brands-clipping-for-games",
       "hub": "brands",
       "slugs": {
         "ru": "narezki-dlya-prodvizheniya-igr",
-        "uk": "narizky-dlia-prosuvannia-ihor",
         "en": "clipping-for-games"
-      }
+      },
+      "retired": [
+        "/ua/brendam/narizky-dlia-prosuvannia-ihor"
+      ]
     },
     {
       "id": "brands-clipping-for-crypto",
       "hub": "brands",
       "slugs": {
         "ru": "narezki-dlya-kripto-proektov",
-        "uk": "narizky-dlia-krypto-proiektiv",
         "en": "clipping-for-crypto-projects"
-      }
+      },
+      "retired": [
+        "/ua/brendam/narizky-dlia-krypto-proiektiv"
+      ]
     },
     {
       "id": "earnings-x-twitter-clips",
       "hub": "earnings",
       "slugs": {
         "ru": "zarabotok-na-narezkah-v-x-twitter",
-        "uk": "zarobitok-na-narizkakh-u-x-twitter",
         "en": "clipping-on-x-twitter"
-      }
+      },
+      "retired": [
+        "/ua/zarobitok/zarobitok-na-narizkakh-u-x-twitter"
+      ]
     },
     {
       "id": "earnings-vk-clips",
       "hub": "earnings",
       "slugs": {
         "ru": "zarabotok-na-vk-klipah",
-        "uk": "zarobitok-na-vk-klipakh",
         "en": "earning-on-vk-clips"
-      }
+      },
+      "retired": [
+        "/ua/zarobitok/zarobitok-na-vk-klipakh"
+      ]
     },
     {
       "id": "earnings-telegram-clips",
@@ -918,9 +944,11 @@
       "hub": "earnings",
       "slugs": {
         "ru": "whop-content-rewards-obzor",
-        "uk": "whop-content-rewards-ohliad",
         "en": "whop-content-rewards-review"
-      }
+      },
+      "retired": [
+        "/ua/zarobitok/whop-content-rewards-ohliad"
+      ]
     },
     {
       "id": "earnings-clipping-net-alternatives",
@@ -936,9 +964,11 @@
       "hub": "earnings",
       "slugs": {
         "ru": "vyro-obzor-platformy",
-        "uk": "vyro-ohliad-platformy",
         "en": "vyro-review"
-      }
+      },
+      "retired": [
+        "/ua/zarobitok/vyro-ohliad-platformy"
+      ]
     },
     {
       "id": "clipgrow-review",

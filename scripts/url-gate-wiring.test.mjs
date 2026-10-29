@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { BACKEND_STAND_IN, containerServer } from './url-gate-wiring.mjs'
+import { BACKEND_STAND_IN, containerServer, standInBackendStatus } from './url-gate-wiring.mjs'
 
 const wire = (text) => containerServer(text, {
     port: 18100,
@@ -52,5 +52,27 @@ describe('URL gates wire a container config to the harness', () => {
         const wired = wire('upstream a {\n    server backend:8080 resolve;\n}\nproxy_pass http://backend:8080;\n')
         expect(wired).not.toMatch(/backend:8080/)
         expect(wired).not.toMatch(/\bresolve\b/)
+    })
+})
+
+describe('the stand-in backend answers the validators for what the sitemaps publish', () => {
+    const published = { tasks: new Set(['domer-narezki', 'tarea-ñ']), products: new Set(['inner-club']) }
+
+    it('finds a published task and product and nothing else', () => {
+        expect(standInBackendStatus('/api/contests/domer-narezki', published)).toBe(200)
+        expect(standInBackendStatus('/api/contests/6a74ae08d7a6b8417afccb09', published)).toBe(404)
+        expect(standInBackendStatus('/api/store/products/inner-club', published)).toBe(200)
+        expect(standInBackendStatus('/api/store/products/gone', published)).toBe(404)
+    })
+
+    it('reads a percent-encoded key the way the backend does', () => {
+        expect(standInBackendStatus('/api/contests/tarea-%C3%B1', published)).toBe(200)
+        expect(standInBackendStatus('/api/contests/%E0%A4%A', published)).toBe(404)
+    })
+
+    it('knows no profile and no other endpoint', () => {
+        expect(standInBackendStatus('/api/users/username/someone', published)).toBe(404)
+        expect(standInBackendStatus('/api/geo/context', published)).toBe(404)
+        expect(standInBackendStatus('/tasks/domer-narezki', published)).toBe(404)
     })
 })

@@ -31,6 +31,7 @@
 // Nothing here talks to production. It binds loopback ports and tears them down.
 
 import { execFileSync, spawn } from 'node:child_process'
+import { createServer } from 'node:http'
 import { existsSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs'
 import { tmpdir } from 'node:os'
 import { join, dirname, resolve } from 'node:path'
@@ -40,7 +41,7 @@ import { FACT_IDS, FACTS_PUBLIC_PATH } from './gen-facts-json.mjs'
 import { parseHreflangCluster, sameHreflangMap } from './hreflang-cluster.mjs'
 import { readLocalSitemapTree } from './sitemap-tree.mjs'
 import { appHtmlArtifactPath, expectedHtmlLocale } from './url-gate-locale.mjs'
-import { containerServer as wireContainerServer } from './url-gate-wiring.mjs'
+import { BACKEND_STAND_IN, containerServer as wireContainerServer, standInBackendStatus } from './url-gate-wiring.mjs'
 
 const HERE = dirname(fileURLToPath(import.meta.url))
 const CONTENT_ROOT = resolve(HERE, '..')
@@ -272,6 +273,30 @@ const appUrls = [
     ...sitemapUrls('sitemap-store.xml'),
 ]
 const allUrls = [...new Set([...contentUrls, ...appUrls])]
+
+// The app's validators ask the backend about every task, product and profile page
+// before serving it. The stand-in answers for exactly what the shipped sitemaps
+// publish (url-gate-wiring.mjs explains why it has to answer at all).
+const publishedKeys = (urls, section) => new Set(
+    urls
+        .map((url) => splitAppLocalePath(url).path.match(new RegExp(`^/${section}/([^/?#]+)$`))?.[1])
+        .filter(Boolean)
+        .map((key) => decodeURIComponent(key))
+)
+const published = {
+    tasks: publishedKeys(sitemapUrls('sitemap-contests.xml'), 'tasks'),
+    products: publishedKeys(sitemapUrls('sitemap-store.xml'), 'store'),
+}
+const [standInHost, standInPort] = BACKEND_STAND_IN.split(':')
+const standInBackend = createServer((req, res) => {
+    res.statusCode = standInBackendStatus(req.url ?? '', published)
+    res.setHeader('Content-Type', 'application/json')
+    res.end('{}')
+})
+await new Promise((resolveListen, rejectListen) => {
+    standInBackend.once('error', rejectListen)
+    standInBackend.listen(Number(standInPort), standInHost, resolveListen)
+})
 
 // The application's retired addresses live in its own nginx.conf as literal
 // rules. Read from the SHIPPED config rather than imported from the source: the
@@ -846,6 +871,7 @@ for (const canonical of new Set(appUrls)) {
 // ---------------------------------------------------------------------------
 
 stop()
+standInBackend.close()
 process.removeAllListeners('exit')
 
 if (failures.length) {

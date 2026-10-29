@@ -251,6 +251,16 @@ const LANG = {
     withdrawal: String.raw`(?:виведенн(?:я|і) (?:доступного |зарахованого )?балансу|комісі[яї] за виведення)`,
     manual: /в?ручн(?:а|ої|у|і|их|о)/i,
   },
+  // Spanish (locale es, 2026-10-29), in the terms of the Spanish tree: concurso, presupuesto,
+  // tienda, retiro del saldo, comisión de retiro. Accented letters take Unicode boundaries, as
+  // Cyrillic does (see the note below).
+  es: {
+    creation: String.raw`(?:creaci[oó]n (?:de(?:l)? )?(?:un |el )?concurso|crear (?:un |el )?concurso)`,
+    topUp: String.raw`(?:recarga(?:r)? (?:del |el )?presupuesto (?:del|de un) concurso|recarga(?:r)? (?:un |el )?concurso)`,
+    store: String.raw`(?:compras? en la tienda)`,
+    withdrawal: String.raw`(?:retiro (?:del |de tu |de su )?saldo(?: disponible| acreditado)?|retirar (?:el |tu |su )?saldo(?: disponible| acreditado)?|comisi[oó]n (?:de|por|al) retir(?:o|ar))`,
+    manual: /(?<![\p{L}\p{N}])manual(?:es|mente)?(?![\p{L}\p{N}])/iu,
+  },
 };
 
 // `\b` is an ASCII word boundary: it takes every Cyrillic letter for a non-word character, so
@@ -263,7 +273,7 @@ const LANG = {
 //
 // The Russian and Ukrainian stems differ in one letter (комисс- / коміс-), so they are spelled
 // separately: a shared stem matched neither language's "no fee".
-const NO_FEE = /(?<![\p{L}\p{N}])(?:no (?:fee|commission)|without (?:a )?(?:fee|commission))(?![\p{L}\p{N}])|без (?:комисси[ий]|комісії)|коміс(?:ія|ії) не (?:стягується|взимається)|комисс(?:ия|ии) не (?:взимается|бер[её]тся)/iu;
+const NO_FEE = /(?<![\p{L}\p{N}])(?:no (?:fee|commission)|without (?:a )?(?:fee|commission)|sin comisi(?:ón|ones))(?![\p{L}\p{N}])|без (?:комисси[ий]|комісії)|коміс(?:ія|ії) не (?:стягується|взимається)|комисс(?:ия|ии) не (?:взимается|бер[её]тся)/iu;
 
 // `intentId` names the record in `data/product-intent.json` that licenses the claim this rule
 // cuts. The rule keeps firing until that record exists with a licensing status, so wiring one is
@@ -293,6 +303,12 @@ const CLAIM_RULES = [
       /(?<!هل\s)(?<!هل\s(?:[\p{L}\p{M}]{1,16}\s){1,3})(?<![\p{L}\p{N}])[وف]?[اتين]سحب[^.،؛\n]{0,16}\s[وف]?(?:(?:ال)?مج[\u064B-\u0652]?ان(?:ي(?:ة|[\u064B-\u0652]?ا[\u064B-\u0652]?)?|[\u064B-\u0652]?ا[\u064B-\u0652]?)|بالمجان|(?:بلا|بدون|دون)\s+(?:[أا]ي\s+)?(?:عمول(?:ة|ات)|رسوم|تكاليف))(?![\p{L}\p{N}])/iu,
       /(?<!هل\s)(?<!هل\s(?:[\p{L}\p{M}]{1,16}\s){1,3})(?<![\p{L}\p{N}])(?:(?<![\p{N}])(?:0|٠)\s*[%٪]\s+(?:عمول(?:ة|ات)|رسوم)|عمول(?:ة|ات)\s+(?<![\p{N}])(?:0|٠)\s*[%٪])\s*(?:على|عند|في|مقابل)\s*(?:[وف]?(?:لل|بال|كال|ال|[بكل])?)(?:سحب|صرف)(?![\p{L}\p{N}])/iu,
       /(?<!هل\s)(?<!هل\s(?:[\p{L}\p{M}]{1,16}\s){1,3})(?<![\p{L}\p{N}])(?:[وف]?(?:لل|بال|كال|ال|[بكل])?)(?:سحب|صرف)(?:\s+(?:ال)?(?:رصيد|[أا]رباح)(?:ك|كم)?)?\s+لا\s+[يت][\u064B-\u0652]*كلف[\u064B-\u0652]*(?:ك|كم|نا)?\s+(?:[أا]ي\s+)?(?:شيئ|مليم|قرش|عمول(?:ة|ات)|رسوم|رسم|خصم|اقتطاع|مصاريف|مصروفات)/iu,
+      // Spanish (locale es, 2026-10-29). Unicode boundaries; negated and questioned wordings pass. Cases: product-truth-lint.es-cases.json.
+      /(?<![\p{L}\p{N}])(?<!no )retir(?:o|os|ar)(?: (?:del|de tu|de su|el|tu|su) (?:saldo|dinero|ganancias))? (?:es|son|sale|resulta) (?:totalmente |completamente )?(?:gratis|gratuit[oa]s?)(?![\p{L}\p{N}])/iu,
+      /(?<![\p{L}\p{N}])retir(?:o|os|ar|as|a)(?: (?:tu|tus|el|del|su) (?:saldo|dinero|ganancias))?[^.\n]{0,30}sin (?:ninguna |ning[uú]n )?(?:comisi[oó]n|costo|coste|cargo)(?:es)?(?![\p{L}\p{N}])/iu,
+      /(?<![\p{L}\p{N}])(?:no hay|sin) (?:ninguna )?comisi[oó]n (?:de|por|al|en el|sobre el) retir(?:o|ar)(?![\p{L}\p{N}])/iu,
+      /(?<![\p{L}\p{N}])comisi[oó]n (?:de|por|al) retir(?:o|ar)(?: del saldo)?(?: es)?(?: del| de)? 0\s*%/iu,
+      /(?<![\p{L}\p{N}])retira(?:s|r)?(?: tus ganancias| tu saldo| el dinero| tu dinero)? gratis(?![\p{L}\p{N}])/iu,
     ],
   },
   {
@@ -316,6 +332,9 @@ const CLAIM_RULES = [
       /(?<!هل\s)(?<!هل\s(?:[\p{L}\p{M}]{1,16}\s){1,3})(?<![\p{L}\p{N}])(?:[وف]?(?:لل|بال|كال|ال|[بكل])?)[اتين]?(?:سحب|صرف)[^.،؛\n]{0,20}من\s+(?:(?:[أا]ول|[أا]ي)\s+(?:دولار|سنت|قرش|مبلغ|USDT)|دولار\s+واحد)(?![\p{L}\p{N}])/iu,
       /(?<!هل\s)(?<!هل\s(?:[\p{L}\p{M}]{1,16}\s){1,3})(?<!(?:لا|لم|لن|ليس|ليست|غير)\s)(?<!(?:لا|لم|لن|ليس|ليست|غير)\s(?:[\p{L}\p{M}]{1,14}\s){1,2})(?<![\p{L}\p{N}])(?:[وف]?(?:لل|بال|كال|ال|[بكل])?)(?:سحب|صرف)(?:\s+(?:ال)?(?:رصيد|[أا]رباح|مال)(?:ك|كم)?)?\s+(?:بلا|بدون|من\s+دون|دون|لا\s+(?:يوجد|توجد|ي[\u064B-\u0652]*وجد|ت[\u064B-\u0652]*وجد))\s+(?:[أا]ي\s+)?حد\u0651?\s+[أا]دن[ىي](?![\p{L}\p{N}])/iu,
       /(?<!هل\s)(?<!هل\s(?:[\p{L}\p{M}]{1,16}\s){1,3})(?<![\p{L}\p{N}])[وف]?الحد\u0651?\s+ال[أا]دن[ىي]\s+(?:للسحب|لسحب|لطلب\s+السحب|للصرف)(?:\s+(?:ال)?(?:رصيد|[أا]رباح)(?:ك|كم)?)?[^.\n]{0,8}(?:(?<![\p{N}])(?:0|٠)(?![\p{N},.٫])|صفر|لا\s+شيء|غير\s+موجود|لا\s+يوجد)(?![\p{L}\p{N}])/iu,
+      // Spanish (locale es, 2026-10-29). Unicode boundaries; negated and questioned wordings pass. Cases: product-truth-lint.es-cases.json.
+      /(?<![\p{L}\p{N}])(?:sin|no hay|no tiene) (?:un |ning[uú]n )?(?:monto |importe )?m[ií]nimo (?:de|para|al) retir(?:o|ar)(?![\p{L}\p{N}])/iu,
+      /(?<![\p{L}\p{N}])retir(?:o|os|a|as|ar)[^.\n]{0,35}(?:cualquier (?:monto|cantidad|importe|suma)|sin (?:un )?m[ií]nimo(?! de (?:seguidores|suscriptores|vistas|audiencia|experiencia)))(?![\p{L}\p{N}])/iu,
     ],
   },
   {
@@ -349,6 +368,14 @@ const CLAIM_RULES = [
       /(?<!هل\s)(?<!هل\s(?:[\p{L}\p{M}]{1,16}\s){1,3})(?<![\p{L}\p{N}])[وف]?[تي][\u064B-\u0652]*(?:ن[\u064B-\u0652]*)?(?:دفع|رسل|صرف|سحب|ح[\u064B-\u0652]*و[\u064B-\u0652]*ل)(?=[^.،؛\n]{0,30}(?:[أا]رباح|رصيد|مال|[أا]موال|مبلغ|جائز|مكاف[أا]|دفع[ةت]|مستحق|USDT|نجوم))(?![^.،؛\n]{0,26}(?:ميزانية|المتبقي|غير\s+المصروف|غير\s+المستخدم))[^.،؛\n]{0,26}(?:فور(?:[\u064B-\u0652]?ا[\u064B-\u0652]?|ي(?:ة)?)|في\s+الحال|لحظي(?:[\u064B-\u0652]?ا[\u064B-\u0652]?)?)(?![\p{L}\p{N}])/iu,
       /(?<!هل\s)(?<!هل\s(?:[\p{L}\p{M}]{1,16}\s){1,3})(?<![\p{L}\p{N}])[وف]?[تي][\u064B-\u0652]*(?:دفع|رسل|صرف|سحب|ح[\u064B-\u0652]*و[\u064B-\u0652]*ل)[^.،؛\n]{0,26}فور\s+(?:ال)?(?:[إا]نتهاء|انتهاء|[إا]غلاق|انقضاء|نهاية|صدور|اعتماد|قبول|تأكيد|طلب)(?![\p{L}\p{N}])/iu,
       /(?<!هل\s)(?<!هل\s(?:[\p{L}\p{M}]{1,16}\s){1,3})(?<![\p{L}\p{N}])(?:[وف]?(?:لل|بال|كال|ال|[بكل])?)(?:عملية\s+السحب|سحب|صرف|دفع(?:ة|ات)?|مدفوعات)(?:\s+(?:ال)?(?:رصيد|[أا]رباح|مال|[أا]موال)(?:ك|كم)?)?[^.،؛\n]{0,26}(?:بدون|بلا|من\s+دون|دون)\s+(?:[أا]ي\s+)?(?:تدخل|مراجعة|موافقة|تحقق)(?:\s+(?:بشري|يدوي|بشرية|يدوية|من\s+[أا]حد))?(?![\p{L}\p{N}])/iu,
+      // Spanish (locale es, 2026-10-29). Unicode boundaries; negated and questioned wordings pass. Cases: product-truth-lint.es-cases.json.
+      // Crediting stays out of these, as in Russian: earnings reach the balance on the scheduler
+      // («se acreditan automáticamente» is true); paying out, withdrawing and transferring do not.
+      /(?<![\p{L}\p{N}])(?:pagos?|retiros?|transferencias?)(?: de (?:los |las |tus )?(?:premios?|ganancias|saldo))? (?:es|son|se hacen|se hace|se realizan?|ocurren?) autom[aá]tic(?:o|a|os|as|amente)(?![\p{L}\p{N}])/iu,
+      /(?<![\p{L}\p{N}])(?:paga|pagan|transfiere|transfieren|env[ií]a|env[ií]an|retira|retiran) autom[aá]ticamente(?![\p{L}\p{N}])/iu,
+      /(?<![\p{L}\p{N}])(?:pagad|transferid|enviad|retirad)[oa]s? autom[aá]ticamente(?![\p{L}\p{N}])/iu,
+      /(?<![\p{L}\p{N}])(?:pagos?|retiros?) (?:instant[aá]ne|inmediat)[oa]s?(?![\p{L}\p{N}])/iu,
+      /(?<![\p{L}\p{N}])(?:ganador|creador|clipper)(?:es)?[^.\n]{0,40}(?:cobra|cobran|recibe|reciben) (?:al instante|de inmediato|en el acto)(?![\p{L}\p{N}])/iu,
     ],
   },
   {
@@ -360,6 +387,8 @@ const CLAIM_RULES = [
       /\b(?:instant|immediate) (?:payout|withdrawal|settlement|transfer)s?\b/i,
       /(?<![\p{L}\p{N}])(?:выплата|вывод|перевод|зачисление)[^.\n]{0,45}(?:приходит|занимает|проходит|обрабатывается)[^.\n]{0,20}(?:за|в течение) (?:нескольких |пары )?минут(?![\p{L}\p{N}])/iu,
       /(?<![\p{L}\p{N}])(?:виплата|виведення|переказ|зарахування)[^.\n]{0,45}(?:приходить|займає|відбувається|обробляється)[^.\n]{0,20}(?:за|протягом) (?:кількох |пари )?хвилин(?![\p{L}\p{N}])/iu,
+      // Spanish (locale es, 2026-10-29). Unicode boundaries; negated and questioned wordings pass. Cases: product-truth-lint.es-cases.json.
+      /(?<![\p{L}\p{N}])(?:pago|retiro|transferencia|dinero|fondos)[^.\n]{0,45}(?:llega|llegan|tarda|tardan|se procesa|se procesan|se completa|se completan)[^.\n]{0,20}en (?:unos |pocos |algunos )?minutos(?![\p{L}\p{N}])/iu,
     ],
   },
   {
@@ -399,6 +428,8 @@ const CLAIM_RULES = [
       /\b(?:at contest close|at the end of the contest|when the contest ends?)[^.\n]{0,80}(?:money|payout|prize)[^.\n]{0,35}(?:goes out|goes to|is sent|is transferred) (?:to )?(?:the )?winners?\b/i,
       /(?<![\p{L}\p{N}])(?:в конце конкурса|при завершении конкурса|когда конкурс завершается)[^.\n]{0,80}(?:деньги|выплата|приз)[^.\n]{0,35}(?:уходит|переводится|отправляется) победител/iu,
       /(?<![\p{L}\p{N}])(?:наприкінці конкурсу|під час завершення конкурсу|коли конкурс завершується)[^.\n]{0,80}(?:гроші|виплата|приз)[^.\n]{0,35}(?:йде|переказується|надсилається) переможц/iu,
+      // Spanish (locale es, 2026-10-29). Unicode boundaries; negated and questioned wordings pass. Cases: product-truth-lint.es-cases.json.
+      /(?<![\p{L}\p{N}])(?:al cierre del concurso|al final del concurso|cuando (?:termina|acaba|cierra) el concurso)[^.\n]{0,80}(?:dinero|pago|premio)[^.\n]{0,35}(?:va|se env[ií]a|se transfiere|se paga) (?:a los |al )ganador/iu,
     ],
   },
   {
@@ -411,6 +442,9 @@ const CLAIM_RULES = [
       /\b(?:blockchain|smart|escrow) contract (?:secures|protects|guarantees|safeguards) (?:the )?(?:prize|funds|money|budget)\b/i,
       /(?<![\p{L}\p{N}])(?:деньги|средства|приз|бюджет) (?:хранится|хранятся|заблокирован|удерживается|выплачивается) (?:в|через|смарт-контрактом) (?:он[- ]чейн )?(?:эскроу|смарт-контракт)(?![\p{L}\p{N}])/iu,
       /(?<![\p{L}\p{N}])(?:деньги|кошти|приз|бюджет) (?:зберігається|зберігаються|заблокований|утримується|виплачується) (?:в|через|смарт-контрактом) (?:он[- ]чейн )?(?:ескроу|смарт-контракт)(?![\p{L}\p{N}])/iu,
+      // Spanish (locale es, 2026-10-29). Unicode boundaries; negated and questioned wordings pass. Cases: product-truth-lint.es-cases.json.
+      /(?<![\p{L}\p{N}])(?:fondos|dinero|premio|presupuesto)[^.\n]{0,20}(?:se guarda|se guardan|queda|quedan|est[aá]|est[aá]n|se bloquea|se bloquean|se libera|se liberan) (?:en|mediante|por|a trav[eé]s de) (?:un )?(?:contrato inteligente|smart contract|escrow on-?chain)(?![\p{L}\p{N}])/iu,
+      /(?<![\p{L}\p{N}])(?:contrato inteligente|smart contract|escrow on-?chain) (?:guarda|bloquea|retiene|libera|paga|protege|garantiza)(?![\p{L}\p{N}])/iu,
     ],
   },
   {
@@ -435,6 +469,10 @@ const CLAIM_RULES = [
       /(?:замовник|організатор) (?:блокує|заморожує) (?:приз|гроші|кошти|бюджет)/i,
       /організатор уже заплатив/i,
       /організатор (?:у виплаті не бере участі|не бере участі у виплаті)/i,
+      // Spanish (locale es, 2026-10-29). Unicode boundaries; negated and questioned wordings pass. Cases: product-truth-lint.es-cases.json.
+      /(?<![\p{L}\p{N}])(?:premios?|fondos|dinero|presupuesto) (?:est[aá]|est[aá]n|queda|quedan|qued[oó]|se queda|sigue|siguen) (?:totalmente |ya )?(?:bloquead|congelad|retenid)[oa]s? (?:en|por|con) (?:la plataforma|DareBay|la billetera)(?![\p{L}\p{N}])/iu,
+      /(?<![\p{L}\p{N}])(?:la plataforma|DareBay) (?:bloquea|congela|retiene) (?:el |los |la |las )?(?:premios?|fondos|dinero|presupuesto)(?![\p{L}\p{N}])/iu,
+      /(?<![\p{L}\p{N}])el organizador ya (?:pag[oó]|ha pagado)(?![\p{L}\p{N}])/iu,
     ],
   },
   {
@@ -444,6 +482,8 @@ const CLAIM_RULES = [
       /(?:views?|view counts?)[^.\n]{0,90}(?:through|from|via|straight through) (?:the )?(?:TikTok|platform|source-platform) APIs?/i,
       /(?:просмотр\w*)[^.\n]{0,90}(?:через|из|напрямую из) API (?:TikTok|площад\w*)/i,
       /(?:перегляд\w*)[^.\n]{0,90}(?:через|з|напряму з) API (?:TikTok|майданчик\w*)/i,
+      // Spanish (locale es, 2026-10-29). Unicode boundaries; negated and questioned wordings pass. Cases: product-truth-lint.es-cases.json.
+      /(?:vistas|visualizaciones)[^.\n]{0,90}(?:a trav[eé]s de|mediante|desde|directamente desde) (?:la )?API (?:oficial )?(?:de )?(?:TikTok|la plataforma)/iu,
     ],
   },
   {
@@ -539,7 +579,10 @@ function isNegated(line, index, previousLine = "") {
   const clause = currentPrefix.slice(Math.max(
     currentPrefix.lastIndexOf("."), currentPrefix.lastIndexOf("!"),
     currentPrefix.lastIndexOf("?"), currentPrefix.lastIndexOf(";")) + 1).toLowerCase();
-  const negation = /(?:(?<![\p{L}\p{N}])(?:not|never|cannot|can't|does not|doesn't|isn't|aren't|without|no promise (?:of|that)|no guarantee (?:of|that))(?![\p{L}\p{N}])|(?:^|\s)(?:не|нет|без|немає|не обіцяє|не гарантується|не гарантируется)(?:\s|$))/u;
+  // Spanish (2026-10-29) negates with a bare «no», which English also writes as a determiner ("no
+  // followers"), so «no» counts only before a verb or a promise; «nunca», «jamás», «nadie» and
+  // «tampoco» are unambiguous.
+  const negation = /(?:(?<![\p{L}\p{N}])(?:not|never|cannot|can't|does not|doesn't|isn't|aren't|without|no promise (?:of|that)|no guarantee (?:of|that))(?![\p{L}\p{N}])|(?:^|\s)(?:не|нет|без|немає|не обіцяє|не гарантується|не гарантируется)(?:\s|$)|(?<![\p{L}\p{N}])(?:nunca|jamás|nadie|tampoco|no (?:es|son|está|están|hay|se|significa|promete|prometemos|garantiza|garantizamos|ofrece|ofrecemos|será|serán|habrá))(?![\p{L}\p{N}]))/u;
   if (negation.test(clause) || /\bno (?:fixed )?(?:or )?$/i.test(clause)) return true;
 
   // Preserve a genuine line-wrapped clause, but do not let an unrelated sentence on
@@ -552,7 +595,7 @@ function isNegated(line, index, previousLine = "") {
 
 function isWalletQualified(line, previousLine = "") {
   const context = `${previousLine} ${line}`.toLowerCase();
-  return /(?<![\p{L}\p{N}])wallet[- ]backed(?![\p{L}\p{N}])|(?<![\p{L}\p{N}])funded (?:wallet )?(?:flow|contest|mode)(?![\p{L}\p{N}])|кошельков|кошелёчн|гаманцев|(?<![\p{L}\p{N}])(?:only|только|лишь|лише) (?:for |для )?(?:wallet|кошел|гаман)/u.test(context);
+  return /(?<![\p{L}\p{N}])wallet[- ]backed(?![\p{L}\p{N}])|(?<![\p{L}\p{N}])funded (?:wallet )?(?:flow|contest|mode)(?![\p{L}\p{N}])|кошельков|кошелёчн|гаманцев|(?<![\p{L}\p{N}])(?:only|только|лишь|лише) (?:for |для )?(?:wallet|кошел|гаман)|(?<![\p{L}\p{N}])con fondo(?:s)? en la plataforma(?![\p{L}\p{N}])|(?<![\p{L}\p{N}])respaldad[oa]s? por (?:la )?billetera(?![\p{L}\p{N}])/u.test(context);
 }
 
 function addViolation(out, rule, file, line, message) {
@@ -582,6 +625,10 @@ function numericPercentClaims(line, file, lineNumber, truth, intent, out, allow)
     ["withdrawal-fee", LANG.en.withdrawal, truth.withdrawal.defaultCommissionPercent, "withdrawal.defaultCommissionPercent"],
     ["withdrawal-fee", LANG.ru.withdrawal, truth.withdrawal.defaultCommissionPercent, "withdrawal.defaultCommissionPercent"],
     ["withdrawal-fee", LANG.ua.withdrawal, truth.withdrawal.defaultCommissionPercent, "withdrawal.defaultCommissionPercent"],
+    ["contest-creation-fee", LANG.es.creation, truth.contest.creationCommissionPercent, "contest.creationCommissionPercent"],
+    ["contest-topup-fee", LANG.es.topUp, truth.contest.topUpCommissionPercent, "contest.topUpCommissionPercent"],
+    ["store-fee", LANG.es.store, truth.store.commissionPercent, "store.commissionPercent"],
+    ["withdrawal-fee", LANG.es.withdrawal, truth.withdrawal.defaultCommissionPercent, "withdrawal.defaultCommissionPercent"],
   ];
 
   for (const [rule, subject, expected, path] of facts) {
@@ -613,7 +660,7 @@ function numericPercentClaims(line, file, lineNumber, truth, intent, out, allow)
 function numericMinimumClaims(line, file, lineNumber, truth, intent, out, allow) {
   const expected = truth.withdrawal.minimumGrossAmount;
   const intended = intentForPath(intent, "withdrawal.minimumGrossAmount", expected);
-  const minimumSubjects = String.raw`(?:minimum (?:withdrawal )?(?:request|amount)|minimum withdrawal|минимальн(?:ая|ый) (?:заявка|сумма вывода)|мінімальн(?:а|ий) (?:заявка|сума виведення))`;
+  const minimumSubjects = String.raw`(?:minimum (?:withdrawal )?(?:request|amount)|minimum withdrawal|минимальн(?:ая|ый) (?:заявка|сумма вывода)|мінімальн(?:а|ий) (?:заявка|сума виведення)|solicitud m[ií]nima(?: de retiro)?|retiro m[ií]nimo|m[ií]nimo (?:de|para) retir(?:o|ar))`;
   const regex = new RegExp(`${minimumSubjects}[^.\\n]{0,60}?(\\d+(?:[.,]\\d+)?)\\s*USDT`, "ig");
   for (const match of line.matchAll(regex)) {
     const actual = Number(match[1].replace(",", "."));
@@ -630,6 +677,7 @@ function numericMinimumClaims(line, file, lineNumber, truth, intent, out, allow)
     /(?:withdraw|withdrawal)[^.\n]{0,65}\b(?:once|when|from)\b[^.\n]{0,35}?(\d+(?:[.,]\d+)?)\s*USDT/ig,
     /(?:вывод|вывести)[^.\n]{0,65}(?<![\p{L}\p{N}])(?:когда|после|от|с)(?![\p{L}\p{N}])[^.\n]{0,35}?(\d+(?:[.,]\d+)?)\s*USDT/igu,
     /(?:виведення|вивести)[^.\n]{0,65}(?<![\p{L}\p{N}])(?:коли|після|від|з)(?![\p{L}\p{N}])[^.\n]{0,35}?(\d+(?:[.,]\d+)?)\s*USDT/igu,
+    /(?<![\p{L}\p{N}])retir(?:o|os|ar|a|as)(?![\p{L}\p{N}])[^.\n]{0,65}(?<![\p{L}\p{N}])(?:desde|a partir de|cuando|al llegar a)(?![\p{L}\p{N}])[^.\n]{0,35}?(\d+(?:[.,]\d+)?)\s*USDT/igu,
   ];
   for (const pattern of paraphrases) {
     for (const match of line.matchAll(pattern)) {
@@ -687,6 +735,8 @@ function declaresLiveReading(declaration, ...facts) {
 const CPM_RANGE_PATTERNS = [
   /(?:rates?[^.\n]{0,45}(?:run|range)|pay[^.\n]{0,20}from)\s*(?:from\s*)?\*?\*?\$?(\d+(?:[.,]\d+)?)\b[^.\n]{0,25}\bto\s*\*?\*?\$?(\d+(?:[.,]\d+)?)[^.\n]{0,35}(?:1000|1,000) views/ig,
   /(?:ставк[аи]|платят)[^.\n]{0,45}(?:от|від)\s*\*?\*?\$?(\d+(?:[.,]\d+)?)[^.\n]{0,25}(?:до)\s*\*?\*?\$?(\d+(?:[.,]\d+)?)[^.\n]{0,35}(?:1000|1 000) (?:просмотров|переглядів)/ig,
+  // Spanish: «las tarifas van de $1 a $10 por cada 1000 vistas», «pagan desde $1 hasta $10…».
+  /(?:tarifas?[^.\n]{0,45}(?:van|oscilan|var[ií]an)|pagan[^.\n]{0,20}?)\s*(?:de|desde|entre)\s*\*?\*?\$?(\d+(?:[.,]\d+)?)[^.\n]{0,25}?(?:a|hasta|y)\s*\*?\*?\$?(\d+(?:[.,]\d+)?)[^.\n]{0,35}(?:1000|1\.000) vistas/igu,
 ];
 
 // The subject phrase only. The old rule glued `[^.\n]{0,55}\$(\d+)` onto the subject and let it
@@ -694,11 +744,11 @@ const CPM_RANGE_PATTERNS = [
 // "Потолок на одну работу | $98.50 (живой разброс от $30 до $100)" it read the band edge $100 as
 // the claimed typical cap. Locating the subject and then scanning every amount in the window
 // removes the ordering dependency entirely.
-const CAP_SUBJECT = /(?:typical|current|типичн\w*|поточн\w*|типов\w*)[^.\n]{0,55}?(?:cap|потолок|стеля)|cap per (?:submission|work)|потолок на (?:одну )?работу|стеля на (?:одну )?роботу/ig;
+const CAP_SUBJECT = /(?:typical|current|типичн\w*|поточн\w*|типов\w*)[^.\n]{0,55}?(?:cap|потолок|стеля)|cap per (?:submission|work)|потолок на (?:одну )?работу|стеля на (?:одну )?роботу|tope (?:t[ií]pico|habitual|actual)|tope por (?:env[ií]o|trabajo)/ig;
 const CAP_WINDOW = 55;
 const AMOUNT = /\$\s*(\d+(?:[.,]\d+)?)/g;
 // "$2.00 per 1000 views" next to the word "cap" is a rate, not a per-submission ceiling.
-const PER_THOUSAND_VIEWS = /^\s*(?:\*\*)?\s*(?:per|за|\/)\s*(?:1000|1,000|1 000)\s*(?:views|просмотр|перегляд)/i;
+const PER_THOUSAND_VIEWS = /^\s*(?:\*\*)?\s*(?:per|за|\/|por(?: cada)?)\s*(?:1000|1,000|1 000|1\.000)\s*(?:views|просмотр|перегляд|vistas)/i;
 
 // `[^.\n]` cannot express "up to the end of the sentence": it also stops dead on the decimal
 // point of "$98.50". Cut the window on real sentence punctuation instead.

@@ -54,6 +54,9 @@ describe('sourceAnchor: our own site versus somebody else’s', () => {
     expect(sourceAnchor('https://darebay.com/en', 'ru')).toEqual({ href: '/', target: '_self' })
     expect(sourceAnchor('https://darebay.com/en', 'uk')).toEqual({ href: '/ua', target: '_self' })
     expect(sourceAnchor('https://darebay.com/en', 'ar')).toEqual({ href: '/en', target: '_self' })
+    // The application has a Spanish tree: DareBay's own row opens it for a Spanish reader.
+    expect(sourceAnchor('https://darebay.com/en', 'es')).toEqual({ href: '/es', target: '_self' })
+    expect(sourceAnchor('https://darebay.com/tasks?type=clips', 'es')).toEqual({ href: '/es/tasks?type=clips', target: '_self' })
     expect(sourceAnchor('https://darebay.com/tasks?type=clips', 'en')).toEqual({ href: '/en/tasks?type=clips', target: '_self' })
   })
 
@@ -117,12 +120,17 @@ describe('CTA keys', () => {
     expect(ctaHref('business', 'en')).toBe('https://darebay.com/en/for-business')
     // The application has no Arabic tree: an Arabic page's buttons open the English interface.
     expect(ctaHref('business', 'ar')).toBe('https://darebay.com/en/for-business')
+    // It has a Spanish one (2026-10-29): a Spanish page's buttons stay in Spanish.
+    expect(ctaHref('tasks', 'es')).toBe('https://darebay.com/es/tasks')
+    expect(ctaHref('business', 'es')).toBe('https://darebay.com/es/for-business')
+    expect(ctaHref('teams', 'es')).toBe('https://darebay.com/es/earn/teams')
   })
 
   it('opens the registration dialog over the task catalogue for `signup`', () => {
     expect(ctaHref('signup', 'ru')).toBe('https://darebay.com/tasks?auth=signup')
     expect(ctaHref('signup', 'en')).toBe('https://darebay.com/en/tasks?auth=signup')
     expect(ctaHref('signup', 'ar')).toBe('https://darebay.com/en/tasks?auth=signup')
+    expect(ctaHref('signup', 'es')).toBe('https://darebay.com/es/tasks?auth=signup')
   })
 
   it('opens the founder and the community room of the page’s language directly', () => {
@@ -131,6 +139,7 @@ describe('CTA keys', () => {
     expect(ctaHref('community', 'uk')).toBe(TELEGRAM_CHAT)
     expect(ctaHref('community', 'en')).toBe(DISCORD)
     expect(ctaHref('community', 'ar')).toBe(DISCORD)
+    expect(ctaHref('community', 'es')).toBe(DISCORD)
     // The chat, not the one-way channel; the room itself, not `/community?src=…`, whose `src` never
     // reaches analytics.
     for (const language of KNOWN_LOCALES) {
@@ -154,9 +163,13 @@ describe('CTA keys', () => {
     }
   })
 
+  // Every DECLARED tree, not every known one (changed 2026-10-29): a CTA renders only on a page, and
+  // a page exists only in a declared tree. Until Spanish, every known language led into a declared
+  // tree's application (Arabic into English), so the two lists gave the same answer; Spanish has an
+  // application tree of its own, whose routes join the allowance the day the manifest declares it.
   it('lands every application key on a route the dead-link checks know, and carries no UTM', () => {
     const routes = new Set(APP_ROUTES)
-    for (const language of KNOWN_LOCALES) {
+    for (const { language } of LOCALES) {
       for (const key of CTA_KEYS) {
         const url = new URL(ctaHref(key, language))
         expect(url.search, key).not.toMatch(/utm_/)

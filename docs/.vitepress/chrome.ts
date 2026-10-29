@@ -171,4 +171,33 @@ export const CHROME_COPY: Record<Locale, ChromeCopy> = {
     languageLabel: 'اللغة',
     cta: { communityLabel: 'انضم إلى Discord' },
   },
+  // Neutral Spanish for Spain and Latin America, addressed with «tú», in the application's own
+  // terms (contests-frontend locales/es). The product buttons open the application's Spanish
+  // interface under `/es` (`appLocaleOf`), so, unlike Arabic, nothing here warns about the language
+  // on the other side of the click. The community room is the Discord server, as for every reader
+  // outside the Russian-speaking world (founder, 2026-09-26).
+  es: {
+    navCta: 'Ir al sitio →',
+    notFound: {
+      code: '404',
+      title: 'Página no encontrada',
+      quote: 'Este enlace no lleva a ninguna parte: la página cambió de nombre o nunca existió.',
+      linkLabel: 'a la página principal de las guías',
+      linkText: 'Volver a las guías',
+    },
+    darkModeSwitchLabel: 'Apariencia',
+    lightModeSwitchTitle: 'Cambiar al tema claro',
+    darkModeSwitchTitle: 'Cambiar al tema oscuro',
+    sidebarMenuLabel: 'Menú',
+    returnToTopLabel: 'Volver arriba',
+    langMenuLabel: 'Cambiar idioma',
+    skipToContentLabel: 'Ir al contenido',
+    outlineLabel: 'En esta página',
+    previousPage: 'Página anterior',
+    nextPage: 'Página siguiente',
+    community: { platform: 'discord', ariaLabel: 'Servidor de DareBay en Discord', footerLabel: 'Discord' },
+    navLabel: 'Secciones',
+    languageLabel: 'Idioma',
+    cta: { communityLabel: 'Únete a nuestro Discord' },
+  },
 }

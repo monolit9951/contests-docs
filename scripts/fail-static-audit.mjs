@@ -32,7 +32,8 @@ const article = (locale) => registered.find((entry) => entry.locale === locale &
 const hub = (locale) => registered.find((entry) => entry.locale === locale && entry.page.slugs[locale] === '')?.path
 // The address Search Console reported as soft 404 on 2026-09-23, a Ukrainian article of the same
 // report's hub (the reported one, /ua/brendam/narizky-dlia-prosuvannia-ihor, was retired with a 301
-// on 2026-10-22), then one article per remaining locale (Arabic keeps dir=rtl) and a hub index.
+// on 2026-10-22), then one article per remaining locale (Arabic keeps dir=rtl, Spanish has an
+// application tree of its own) and a hub index. A locale the manifest does not declare yields none.
 const ARTICLE = '/zarabotok/zarabotok-na-vk-klipah'
 const UA_ARTICLE = '/ua/brendam/yak-zamovyty-narizky-dlia-prosuvannia'
 for (const path of [ARTICLE, UA_ARTICLE]) {
@@ -40,7 +41,7 @@ for (const path of [ARTICLE, UA_ARTICLE]) {
 }
 const blockedPaths = ALL
   ? [...registeredPaths]
-  : [...new Set([ARTICLE, UA_ARTICLE, article('en'), article('ar'), hub('ru')].filter(Boolean))]
+  : [...new Set([ARTICLE, UA_ARTICLE, article('en'), article('ar'), article('es'), hub('ru')].filter(Boolean))]
 
 // Before any page script, on every document: let analytics run (it drops a webdriver browser),
 // record its events and each document load in localStorage (a reload must not lose them), and

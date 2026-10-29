@@ -517,41 +517,49 @@ describe('legacy spellings of content addresses', () => {
 // `ar` — the live instance cannot, because in the live manifest Arabic has no
 // address yet. Axes, hub segments and the translated entries are read from the
 // live manifest, so the fixture cannot drift from production topology.
+//
+// The live manifest is PROJECTED onto the trees a fixture is about (`TREES`):
+// the three that are always declared, plus the one under test. A tree declared
+// later — Spanish, 2026-10-29 — would otherwise walk into every Arabic fixture
+// the day it ships and change clusters and switchers that are not about it.
 // ---------------------------------------------------------------------------
+
+/** The trees every manifest declares (`MANDATORY_LOCALES` in registry.ts). */
+const BASE_TREES = ['ru', 'uk', 'en']
+const onlyTrees = <T extends Record<string, unknown>>(record: T, trees: readonly string[]) =>
+    Object.fromEntries(Object.entries(record).filter(([language]) => trees.includes(language)))
+/** The live axes and hub segments of `trees` only. */
+const projectedTrees = (trees: readonly string[]) => ({
+    locales: onlyTrees(liveManifest.locales, trees),
+    hubs: Object.fromEntries(
+        Object.entries(liveManifest.hubs).map(([hub, segments]) => [hub, onlyTrees(segments as Record<string, string>, trees)]),
+    ) as Record<string, Record<string, string>>,
+})
+/** A live entry with only the slugs of `trees`, plus `extra`. */
+const liveEntry = (id: string, trees: readonly string[], extra: Record<string, string> = {}) => {
+    const entry = PAGES.find((page) => page.id === id)
+    if (!entry) throw new Error(`fixture: ${id} is not in the live manifest`)
+    return { ...entry, slugs: { ...onlyTrees(entry.slugs, trees), ...extra } }
+}
 
 const AR_AXIS = { prefix: '/ar', vitepressKey: 'ar' }
 /** Arabic hub segments: the English ones, under `/ar` (Latin slugs, no transliteration). */
 const arabicHubs = Object.fromEntries(
-    Object.entries(liveManifest.hubs).map(([hub, segments]) => [hub, { ...segments, ar: segments.en }]),
+    Object.entries(projectedTrees(BASE_TREES).hubs).map(([hub, segments]) => [hub, { ...segments, ar: segments.en }]),
 )
 const withArabic = (pages: unknown[]) => ({
     ...manifestWith(pages),
-    locales: { ...liveManifest.locales, ar: AR_AXIS },
+    locales: { ...projectedTrees(BASE_TREES).locales, ar: AR_AXIS },
     hubs: arabicHubs,
 })
 /** The same manifest with the Arabic tree NOT declared, whatever the live one says by then. */
-const withoutArabic = (pages: unknown[]) => {
-    const { ar: _axis, ...locales } = liveManifest.locales as Record<string, unknown>
-    const hubs = Object.fromEntries(
-        Object.entries(liveManifest.hubs).map(([hub, segments]) => {
-            const { ar: _segment, ...rest } = segments as Record<string, string>
-            return [hub, rest]
-        }),
-    )
-    return { ...manifestWith(pages), locales, hubs }
-}
+const withoutArabic = (pages: unknown[]) => ({ ...manifestWith(pages), ...projectedTrees(BASE_TREES) })
 /** A live entry without its Arabic slug, for a manifest that does not declare the tree. */
-const untranslated = (id: string) => {
-    const entry = PAGES.find((page) => page.id === id)
-    if (!entry) throw new Error(`fixture: ${id} is not in the live manifest`)
-    const { ar: _arabic, ...slugs } = entry.slugs
-    return { ...entry, slugs }
-}
+const untranslated = (id: string) => liveEntry(id, BASE_TREES)
 /** A live entry with an Arabic slug added — the shape of a wave-3 translation. */
 const translated = (id: string, arabicSlug?: string) => {
-    const entry = PAGES.find((page) => page.id === id)
-    if (!entry) throw new Error(`fixture: ${id} is not in the live manifest`)
-    return { ...entry, slugs: { ...entry.slugs, ar: arabicSlug ?? entry.slugs.en } }
+    const entry = liveEntry(id, BASE_TREES)
+    return { ...entry, slugs: { ...entry.slugs, ar: arabicSlug ?? entry.slugs.en! } }
 }
 
 const AR_ONLY = {
@@ -572,7 +580,7 @@ const EN_AND_AR = {
 describe('registry: the Arabic tree, declared', () => {
     // The About hub keeps no Arabic index: the Arabic fact card lives in a section that has not
     // opened in Arabic, exactly the wave-3 shape.
-    const aboutHub = PAGES.find((page) => page.id === 'about-hub')
+    const aboutHub = untranslated('about-hub')
     const arabic = createRegistry(
         withArabic([translated('earnings-hub', ''), aboutHub, translated('darebay-at-a-glance'), AR_ONLY, EN_AND_AR]),
     )
@@ -689,10 +697,12 @@ describe('registry: product links from the Arabic tree lead into the English app
         expect(arabic.appLinkTarget('https://darebay.com/ar/tasks')).toBeNull()
     })
 
-    it('adds no application routes: the dead-link allowance stays the three application trees', () => {
+    // The live allowance is no longer compared with the three-tree one: a tree with an application
+    // tree of its own (Spanish, 2026-10-29) adds its routes the day it is declared. What Arabic must
+    // never do is add any.
+    it('adds no application routes: declaring Arabic leaves the dead-link allowance as it was', () => {
         const dark = createRegistry(withoutArabic([untranslated('earnings-hub')]))
         expect(arabic.APP_ROUTES).toEqual(dark.APP_ROUTES)
-        expect(APP_ROUTES).toEqual(dark.APP_ROUTES)
         expect(APP_ROUTES.some((route) => route.startsWith('/ar/'))).toBe(false)
     })
 
@@ -732,15 +742,16 @@ describe('registry: reading an application address back (appSectionOf)', () => {
 })
 
 describe('registry: declaring a tree is validated before anything is derived', () => {
+    // Spanish joined the known languages on 2026-10-29, appended so that no published order moves.
     it('knows Arabic without the live manifest declaring it', () => {
-        expect(KNOWN_LOCALES).toEqual(['ru', 'uk', 'en', 'ar'])
+        expect(KNOWN_LOCALES).toEqual(['ru', 'uk', 'en', 'ar', 'es'])
         expect(textDirectionOf('ar')).toBe('rtl')
         expect(localeOfSourcePath('ar/earnings/x.md')).toBe('ar')
         expect(localeOfSourcePath('arabic/x.md')).toBe('ru')
     })
 
     it('holds the Arabic axis to its stable shape', () => {
-        expect(() => parseContentManifest({ ...withArabic([]), pages: [EN_ONLY], locales: { ...liveManifest.locales, ar: { prefix: '/arabic', vitepressKey: 'ar' } } })).toThrow(
+        expect(() => parseContentManifest({ ...withArabic([]), pages: [EN_ONLY], locales: { ...projectedTrees(BASE_TREES).locales, ar: { prefix: '/arabic', vitepressKey: 'ar' } } })).toThrow(
             /manifest\.locales\.ar violates the stable locale axis/,
         )
     })
@@ -762,5 +773,156 @@ describe('registry: declaring a tree is validated before anything is derived', (
     it('accepts an Arabic slug only on a manifest that declares the tree', () => {
         expect(() => parseContentManifest(withArabic([AR_ONLY]))).not.toThrow()
         expect(() => parseContentManifest(withoutArabic([AR_ONLY]))).toThrow(/unknown key "ar"/)
+    })
+})
+
+// ---------------------------------------------------------------------------
+// The Spanish tree (2026-10-29): one tree for Spain and Latin America.
+//
+// Two things set it apart from Arabic, and both are held here on in-memory
+// manifests (projected like the Arabic ones, so they read the same before and
+// after the live manifest declares Spanish): its hub segments are Spanish words
+// rather than the English ones, and the application has a Spanish tree of its
+// own under the same `/es` prefix, so a Spanish page's product links stay in
+// Spanish — `/es/tasks`, never the English catalogue Arabic readers are sent to.
+// ---------------------------------------------------------------------------
+
+const SPANISH_TREES = [...BASE_TREES, 'ar']
+const ES_AXIS = { prefix: '/es', vitepressKey: 'es' }
+/** The Spanish hub segments: ASCII Spanish words, the accents of «sobre», «contenido» dropped. */
+const SPANISH_SEGMENTS: Record<string, string> = {
+    earnings: 'ganar-dinero',
+    brands: 'para-marcas',
+    help: 'ayuda',
+    farm: 'granja-de-contenido',
+    tools: 'herramientas',
+    about: 'sobre-darebay',
+    legal: 'legal',
+}
+const spanishHubs = Object.fromEntries(
+    Object.entries(projectedTrees(SPANISH_TREES).hubs).map(([hub, segments]) => [hub, { ...segments, es: SPANISH_SEGMENTS[hub] }]),
+)
+const withSpanish = (pages: unknown[]) => ({
+    ...manifestWith(pages),
+    locales: { ...projectedTrees(SPANISH_TREES).locales, es: ES_AXIS },
+    hubs: spanishHubs,
+})
+const withoutSpanish = (pages: unknown[]) => ({ ...manifestWith(pages), ...projectedTrees(SPANISH_TREES) })
+/** A live entry in the trees that existed before Spanish, with a Spanish slug added. */
+const inSpanish = (id: string, slug: string) => liveEntry(id, SPANISH_TREES, { es: slug })
+
+describe('registry: the Spanish tree, declared', () => {
+    const spanish = createRegistry(
+        withSpanish([
+            inSpanish('earnings-hub', ''),
+            inSpanish('earnings-how-much-total', 'cuanto-se-gana-haciendo-clips'),
+            inSpanish('help-quick-start', 'inicio-rapido'),
+            inSpanish('darebay-at-a-glance', 'darebay-en-cifras'),
+            liveEntry('about-hub', SPANISH_TREES),
+            liveEntry('earnings-ppv-mechanics', SPANISH_TREES),
+        ]),
+    )
+    const byId = (id: string) => spanish.PAGES.find((page) => page.id === id)!
+    const glance = byId('darebay-at-a-glance')
+    const abs = (path: string) => `https://darebay.com${path}`
+
+    it('appends Spanish after every existing tree, left to right, with its own prefix and directory', () => {
+        expect(spanish.LOCALES.map((axis) => axis.language)).toEqual(['ru', 'uk', 'en', 'ar', 'es'])
+        expect(spanish.LOCALES.at(-1)).toEqual({ language: 'es', prefix: '/es', vitepressKey: 'es', dir: 'ltr' })
+        expect(textDirectionOf('es')).toBe('ltr')
+        expect(localeOfSourcePath('es/ganar-dinero/x.md')).toBe('es')
+        expect(localeOfSourcePath('espanol/x.md')).toBe('ru')
+    })
+
+    it('addresses a page under its Spanish hub segment, and keeps x-default English', () => {
+        expect(spanish.pagePath(glance, 'es')).toBe('/es/sobre-darebay/darebay-en-cifras')
+        expect(spanish.sourceFile(glance, 'es')).toBe('es/sobre-darebay/darebay-en-cifras.md')
+        expect(spanish.hubIndexPath('earnings', 'es')).toBe('/es/ganar-dinero/')
+        expect(spanish.hubIndexPath('about', 'es')).toBeNull()
+        expect(spanish.hreflangCluster(glance)).toEqual([
+            { hreflang: 'ru', href: abs('/o-proekte/darebay-v-tsifrakh') },
+            { hreflang: 'uk', href: abs('/ua/pro-proekt/darebay-u-tsyfrakh') },
+            { hreflang: 'en', href: abs('/en/about/darebay-at-a-glance') },
+            { hreflang: 'ar', href: abs('/ar/about/darebay-at-a-glance') },
+            { hreflang: 'es', href: abs('/es/sobre-darebay/darebay-en-cifras') },
+            { hreflang: 'x-default', href: abs('/en/about/darebay-at-a-glance') },
+        ])
+        expect(spanish.alternateLocalesOf(glance, 'es')).toEqual(['ru', 'uk', 'en', 'ar'])
+    })
+
+    it('routes only the Spanish hubs that have pages, and none before the tree is declared', () => {
+        expect(spanish.CONTENT_SEGMENTS.filter((segment) => segment.startsWith('es/')).sort()).toEqual([
+            'es/ayuda',
+            'es/ganar-dinero',
+            'es/sobre-darebay',
+        ])
+        const dark = createRegistry(withoutSpanish([liveEntry('earnings-hub', SPANISH_TREES)]))
+        expect(dark.CONTENT_SEGMENTS.some((segment) => segment.startsWith('es/'))).toBe(false)
+    })
+
+    it('rescues a link to an untranslated Spanish sibling onto the Spanish hub, where there is one', () => {
+        expect(spanish.resolveLocalizedLink('/es/ganar-dinero/cuanto-se-gana-haciendo-clips')).toBe('/es/ganar-dinero/cuanto-se-gana-haciendo-clips')
+        expect(spanish.resolveLocalizedLink('/es/ganar-dinero/como-funciona-el-pago-por-vistas#umbral')).toBe('/es/ganar-dinero/#umbral')
+        // No Spanish About index: left as written, so the dead-link check still catches it.
+        expect(spanish.resolveLocalizedLink('/es/sobre-darebay/darebay-es-confiable')).toBe('/es/sobre-darebay/darebay-es-confiable')
+    })
+})
+
+describe('registry: product links from the Spanish tree stay in the Spanish application', () => {
+    const spanish = createRegistry(withSpanish([inSpanish('earnings-hub', '')]))
+    const dark = createRegistry(withoutSpanish([liveEntry('earnings-hub', SPANISH_TREES)]))
+
+    it('names Spanish as the application tree of a Spanish reader', () => {
+        expect(appLocaleOf('es')).toBe('es')
+        expect(appPathFor('es', 'tasks')).toBe('/es/tasks')
+        expect(appPathFor('es', 'earn/clips')).toBe('/es/earn/clips')
+        expect(appPathFor('es', 'for-business')).toBe('/es/for-business')
+        expect(appPathFor('es', '')).toBe('/es')
+    })
+
+    it('reads a Spanish application address back as its section, declared or not', () => {
+        expect(appSectionOf('/es/tasks')).toBe('tasks')
+        expect(appSectionOf('/es')).toBe('')
+        expect(appSectionOf('/es/ganar-dinero/')).toBeNull()
+    })
+
+    it('leaves a link into the Spanish application as written: it is already the address', () => {
+        expect(spanish.appLinkTarget('/es/tasks')).toBeNull()
+        expect(spanish.resolveLocalizedLink('/es/tasks')).toBe('/es/tasks')
+        expect(spanish.resolveLocalizedLink('/es/earn/clips?from=docs#top')).toBe('/es/earn/clips?from=docs#top')
+    })
+
+    it('adds the Spanish application routes to the dead-link allowance the day the tree is declared', () => {
+        const added = spanish.APP_ROUTES.filter((route) => !dark.APP_ROUTES.includes(route))
+        expect(added).toContain('/es/tasks')
+        expect(added).toContain('/es/earn/clips')
+        expect(added.every((route) => route.startsWith('/es/'))).toBe(true)
+        expect(dark.APP_ROUTES.every((route) => spanish.APP_ROUTES.includes(route))).toBe(true)
+        expect(dark.APP_ROUTES.some((route) => route.startsWith('/es/'))).toBe(false)
+    })
+})
+
+describe('registry: declaring the Spanish tree is validated like any other', () => {
+    it('holds the Spanish axis to its stable shape', () => {
+        expect(() =>
+            parseContentManifest({ ...withSpanish([EN_ONLY]), locales: { ...projectedTrees(SPANISH_TREES).locales, es: { prefix: '/es-es', vitepressKey: 'es' } } }),
+        ).toThrow(/manifest\.locales\.es violates the stable locale axis/)
+    })
+
+    it('requires a Spanish hub segment for every hub once the tree is declared, and refuses one before', () => {
+        const withoutSegment = { ...withSpanish([EN_ONLY]), hubs: { ...spanishHubs, tools: withoutSpanish([]).hubs.tools } }
+        expect(() => parseContentManifest(withoutSegment)).toThrow(/manifest\.hubs\.tools is missing "es"/)
+        expect(() => parseContentManifest({ ...withoutSpanish([EN_ONLY]), hubs: spanishHubs })).toThrow(/unknown key "es"/)
+    })
+
+    it('refuses an accented or capitalised Spanish segment: slugs are ASCII', () => {
+        const accented = { ...spanishHubs, earnings: { ...spanishHubs.earnings, es: 'ganar-dinéro' } }
+        expect(() => parseContentManifest({ ...withSpanish([EN_ONLY]), hubs: accented })).toThrow(/invalid hub slug manifest\.hubs\.earnings\.es/)
+    })
+
+    it('accepts a Spanish slug only on a manifest that declares the tree', () => {
+        const page = { id: 'x', hub: 'earnings', slugs: { es: 'cuanto-se-gana' } }
+        expect(() => parseContentManifest(withSpanish([page]))).not.toThrow()
+        expect(() => parseContentManifest(withoutSpanish([page]))).toThrow(/unknown key "es"/)
     })
 })

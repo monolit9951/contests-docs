@@ -87,6 +87,16 @@ export const COPY = {
     factCardNote: 'الحقائق نفسها في جدول، ولكل قيمة مصدرها وتاريخها',
     hubs: { about: 'عن المشروع', earnings: 'الربح', brands: 'للعلامات التجارية', help: 'المساعدة', farm: 'مزرعة المحتوى', tools: 'الأدوات', legal: 'الوثائق القانونية' },
   },
+  es: {
+    label: 'Español',
+    summary: 'Guías sobre tareas de contenido, participación, vistas validadas y pagos en DareBay.',
+    keyFacts: 'Datos clave',
+    machineSources: 'Fuentes legibles por máquina',
+    factsJson: { title: 'Datos de DareBay en JSON', note: 'todos los campos de la ficha de datos, cada uno con su fuente y fecha de lectura' },
+    pagesJson: { title: 'Registro de páginas en JSON', note: 'identificadores, idiomas y direcciones de todas las guías del sitio' },
+    factCardNote: 'los mismos datos en una tabla, cada valor con su fuente y su fecha',
+    hubs: { about: 'Sobre DareBay', earnings: 'Ganar dinero', brands: 'Para marcas', help: 'Ayuda', farm: 'Granja de contenido', tools: 'Herramientas', legal: 'Documentos legales' },
+  },
 }
 const HUB_ORDER = ['about', 'earnings', 'brands', 'help', 'farm', 'tools', 'legal']
 

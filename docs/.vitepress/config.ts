@@ -78,6 +78,7 @@ export const LOCALE_LABELS: Record<Locale, string> = {
   uk: 'Українська',
   en: 'English',
   ar: 'العربية',
+  es: 'Español',
 }
 
 /**
@@ -110,6 +111,7 @@ export const LOCALE_DESCRIPTIONS: Record<Locale, string> = {
   uk: 'Запускайте активності, надсилайте роботи, отримуйте винагороди на DareBay.',
   en: 'Launch activities, submit work, get rewarded on DareBay.',
   ar: 'أطلق الأنشطة، وأرسل أعمالك، واحصل على المكافآت على DareBay.',
+  es: 'Lanza actividades, envía tus trabajos y recibe recompensas en DareBay.',
 }
 // Shared with the app so a docs link and a site link preview identically.
 const OG_IMAGE = 'https://darebay.com/og-default.jpg'
@@ -121,7 +123,12 @@ const OG_IMAGE = 'https://darebay.com/og-default.jpg'
 // og:locale is read against. It names no country on purpose — the Arabic tree is
 // written for readers across Egypt, the Maghreb, Iraq and the Gulf alike, and
 // `ar_EG` or `ar_SA` would claim one market for all of them.
-export const OG_LOCALE: Record<Locale, string> = { ru: 'ru_RU', uk: 'uk_UA', en: 'en_US', ar: 'ar_AR' }
+//
+// Spanish is `es_ES`, the value the application's Spanish tree publishes (contests-frontend
+// `PRERENDER_LOCALES`): one docs page and one application page of the same tree must not describe
+// themselves to a link unfurler in two locales. The tree itself is written for Spain and Latin
+// America alike; og:locale takes exactly one value, and hreflang (`es`) is what claims both.
+export const OG_LOCALE: Record<Locale, string> = { ru: 'ru_RU', uk: 'uk_UA', en: 'en_US', ar: 'ar_AR', es: 'es_ES' }
 
 // The nav, built from the registry.
 //
@@ -142,6 +149,7 @@ export const HUB_TITLES: Record<Locale, Record<HubId, string>> = {
   uk: { about: 'Про проєкт', earnings: 'Заробіток', brands: 'Брендам', help: 'Допомога', farm: 'Контент-завод', tools: 'Інструменти', legal: 'Юридичні документи' },
   en: { about: 'About', earnings: 'Earning', brands: 'For brands', help: 'Help', farm: 'Content farm', tools: 'Tools', legal: 'Legal' },
   ar: { about: 'عن المشروع', earnings: 'الربح', brands: 'للعلامات التجارية', help: 'المساعدة', farm: 'مزرعة المحتوى', tools: 'الأدوات', legal: 'الوثائق القانونية' },
+  es: { about: 'Sobre DareBay', earnings: 'Ganar dinero', brands: 'Para marcas', help: 'Ayuda', farm: 'Granja de contenido', tools: 'Herramientas', legal: 'Documentos legales' },
 }
 
 
@@ -351,8 +359,9 @@ export const ORGANIZATION = {
 // the app and the corpus, so its `name` is the Latin spelling on every page (app
 // parity gate 11-entity) and the Cyrillic form is the alternateName. Arabic pages
 // keep the Latin spelling: no Arabic transcription of the name has been approved,
-// and an invented one would be a third spelling of one person.
-export const AUTHOR_NAME: Record<Locale, string> = { ru: 'Руслан', uk: 'Руслан', en: 'Ruslan', ar: 'Ruslan' }
+// and an invented one would be a third spelling of one person. Spanish is written
+// in Latin script and spells it the same way.
+export const AUTHOR_NAME: Record<Locale, string> = { ru: 'Руслан', uk: 'Руслан', en: 'Ruslan', ar: 'Ruslan', es: 'Ruslan' }
 
 // The author page is a manifest entry like any other, so its address is derived
 // and the byline and the Person node can never point two ways.
@@ -380,22 +389,24 @@ const author = (language: Locale) => ({
 // The WebSite node is ONE entity published by two renderers, the application and this build, and
 // `url-gates.mjs` gate 11 requires the two copies to be identical. Its languages are therefore the
 // ones the application's copy declares (contests-frontend `metadata.ts` and `prerender.mjs`, both
-// reading src/shared/lib/seo/identityGraph.json; Polish joined it on 2026-09-21), not
-// this build's list of trees: deriving them from the manifest would make declaring a docs tree
-// (Arabic) break parity until the application shipped the same change. Each page states its own
-// language in its own node (`inLanguage` on the Article / CollectionPage / WebPage below).
+// reading src/shared/lib/seo/identityGraph.json; Polish joined it on 2026-09-21, Spanish on
+// 2026-10-29 with the application's `/es` tree), not this build's list of trees: deriving them from
+// the manifest would make declaring a docs tree (Arabic) break parity until the application shipped
+// the same change. The two copies change in the same release wave or not at all. Each page states
+// its own language in its own node (`inLanguage` on the Article / CollectionPage / WebPage below).
 const WEBSITE = {
   '@type': 'WebSite',
   '@id': WEBSITE_ID,
   name: 'DareBay',
   url: `${ENTITY_ORIGIN}/`,
-  inLanguage: ['ru', 'uk', 'en', 'pl'],
+  inLanguage: ['ru', 'uk', 'en', 'pl', 'es'],
   publisher: { '@id': ORG_ID },
 }
 
 // The H2 that opens a page's FAQ, in every tree's language. Arabic is matched with and without
-// the hamza an editor may drop (أسئلة / اسئلة), and on the singular سؤال.
-const FAQ_HEADING = /вопрос|питання|question|أسئلة|اسئلة|سؤال/i
+// the hamza an editor may drop (أسئلة / اسئلة), and on the singular سؤال; Spanish on «Preguntas
+// frecuentes» and the singular.
+const FAQ_HEADING = /вопрос|питання|question|أسئلة|اسئلة|سؤال|pregunta/i
 
 // Comments go the way `installCommentSpacingRule` takes them off the page: "claim <!-- source: … -->."
 // answers "claim.", not "claim .".

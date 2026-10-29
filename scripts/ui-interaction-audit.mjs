@@ -1,11 +1,12 @@
 #!/usr/bin/env node --experimental-strip-types
 // Bounded, real-browser behavior checks against the current built site. Run after docs:build:
 // node --experimental-strip-types --no-warnings scripts/ui-interaction-audit.mjs
-// The exhaustive layout audit remains separate; this exercises all four locales at 320px,
+// The exhaustive layout audit remains separate; this exercises every declared locale at 320px,
 // the first desktop breakpoint (1120px), the tablet outline at 768px, and a narrow desktop
 // viewport with a classic scrollbar (whose available content width is smaller than 320px).
 import { openAuditBrowser, PAGES, pagePath } from './layout-audit.mjs'
 import { ctaHref } from '../docs/.vitepress/links.ts'
+import { LOCALES, alternateLocalesOf } from '../docs/.vitepress/registry.ts'
 
 const browser = await openAuditBrowser()
 const { evaluate, waitFor, send, navigate, emulate } = browser
@@ -93,19 +94,23 @@ try {
     await check(`(${inViewport})(".lp-mobile-panel")`, 'open menu must fit beside the classic scrollbar')
     await escapeDetails('.lp-mobile-menu')
   })
-  for (const locale of ['ru', 'uk', 'en', 'ar']) {
+  // Every declared tree, read from the registry: a tree added later (Spanish, 2026-10-29) is
+  // exercised the day the manifest declares it, and the language menu is held to the translations
+  // the hub actually has rather than to a count that was true when there were four trees.
+  for (const { language: locale, dir } of LOCALES) {
     const home = route('earnings-hub', locale)
     const article = route('best-clipping-platforms', locale)
+    const otherLanguages = alternateLocalesOf(PAGES.find((entry) => entry.id === 'earnings-hub'), locale).length
     await emulate({ width: 320, height: 740, mobile: true })
 
     await test(`${locale}: mobile menu, keyboard, languages and route closure at 320px`, async () => {
       await navigate(home)
-      await check(`document.documentElement.dir === ${quote(locale === 'ar' ? 'rtl' : 'ltr')}`, 'wrong writing direction')
+      await check(`document.documentElement.dir === ${quote(dir)}`, 'wrong writing direction')
       await check(`[document.documentElement, document.body].every((element) => getComputedStyle(element).transform === 'none')`, 'page containers must not transform or mirror text glyphs')
       await check(`(${inViewport})(".lp-mobile-menu > summary")`, 'mobile menu trigger is outside viewport')
       await openDetails('.lp-mobile-menu')
       await check(`(${inViewport})(".lp-mobile-panel")`, 'open mobile panel is outside viewport')
-      await check('document.querySelectorAll(".lp-mobile-languages a").length === 3', 'hub must expose its three other available languages')
+      await check(`document.querySelectorAll(".lp-mobile-languages a").length === ${otherLanguages}`, `hub must expose its ${otherLanguages} other available languages`)
       await press('Tab')
       await check('document.activeElement.matches(".lp-mobile-nav a")', 'Tab should enter open mobile navigation')
       await escapeDetails('.lp-mobile-menu')
@@ -312,7 +317,9 @@ try {
       await check(`(() => { const links = new Set(Array.from(document.querySelectorAll('.hub-results .hub-card'), (link) => link.getAttribute('href'))); return ${quote(expected)}.every((path) => links.has(path)) })()`, 'SSR hub must retain every manifest article link without JavaScript')
       await check('document.querySelector(".hub-search input").disabled', 'unavailable search should remain disabled before hydration')
       await openDetails('.lp-mobile-menu')
-      await check(`(${inViewport})(".lp-mobile-panel") && document.querySelectorAll('.lp-mobile-nav a').length > 0 && document.querySelectorAll('.lp-mobile-languages a').length === 3`, 'native menu must expose navigation and languages without JavaScript')
+      // The hub's other translations, from the registry: four since the Spanish tree (2026-10-29).
+      const languages = alternateLocalesOf(PAGES.find((entry) => entry.id === 'earnings-hub'), 'ru').length
+      await check(`(${inViewport})(".lp-mobile-panel") && document.querySelectorAll('.lp-mobile-nav a').length > 0 && document.querySelectorAll('.lp-mobile-languages a').length === ${languages}`, 'native menu must expose navigation and languages without JavaScript')
       await press('Enter')
       await check('!document.querySelector(".lp-mobile-menu").open', 'native summary must close its menu with Enter without JavaScript')
       await navigate(route('best-clipping-platforms', 'ru'))

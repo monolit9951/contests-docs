@@ -10,8 +10,8 @@ import { isSiteHost, SITE_HOST } from './siteHost.ts'
 //
 // Which application tree a docs locale leads into is the registry's call (`appPathFor`): the same
 // language where the application has it, English where it does not — an Arabic article's buttons
-// open the English interface. The addresses below are that one rule applied, not a table per
-// language that could say otherwise.
+// open the English interface, a Spanish one's the Spanish interface under `/es`. The addresses
+// below are that one rule applied, not a table per language that could say otherwise.
 //
 // TELEGRAM is the channel, not the bot: `@darebay_app_bot` is the mini-app entry point and belongs
 // in product surfaces, not in a docs "follow us" slot.
@@ -73,7 +73,7 @@ export const isCtaKey = (value: unknown): value is CtaKey => typeof value === 's
 /** The creators' chat of the Russian-speaking community, «DareBay · Нарезчики». */
 export const TELEGRAM_CHAT = 'https://t.me/darebaycreatorschat'
 /** The community platform of each language, as `CHROME_COPY[locale].community.platform` declares it. */
-export const COMMUNITY_PLATFORM: Record<Locale, CommunityPlatform> = { ru: 'telegram', uk: 'telegram', en: 'discord', ar: 'discord' }
+export const COMMUNITY_PLATFORM: Record<Locale, CommunityPlatform> = { ru: 'telegram', uk: 'telegram', en: 'discord', ar: 'discord', es: 'discord' }
 /** The room the `community` key opens, per platform: the Telegram chat or the Discord server. */
 export const COMMUNITY_ROOM: Record<CommunityPlatform, string> = { telegram: TELEGRAM_CHAT, discord: DISCORD }
 /** The query that opens the application's registration dialog over the page it names. */

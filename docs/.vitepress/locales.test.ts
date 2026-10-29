@@ -98,6 +98,10 @@ describe('every interface dictionary speaks every known language', () => {
     // The switcher matches the current tree by LABEL (config.ts), so two trees may not share one.
     expect(new Set(Object.values(LOCALE_LABELS)).size).toBe(KNOWN_LOCALES.length)
     expect(LOCALE_LABELS.ar).toBe('العربية')
+    expect(LOCALE_LABELS.es).toBe('Español')
+    // One Spanish tree for Spain and Latin America, described the way the application's Spanish
+    // tree describes itself (contests-frontend PRERENDER_LOCALES: `es_ES`).
+    expect(OG_LOCALE.es).toBe('es_ES')
     for (const value of Object.values(OG_LOCALE)) expect(value).toMatch(/^[a-z]{2}_[A-Z]{2}$/)
   })
 
@@ -169,12 +173,14 @@ describe('the Organization node publishes its documented support contact', () =>
 })
 
 describe('product links of a tree lead into the application tree it is sent to', () => {
+  // Spanish has an application tree of its own (2026-10-29): its buttons open `/es`, not English.
   it('sends Arabic readers to the English application, every other tree to its own', () => {
     const expected: Record<Locale, string> = {
       ru: 'https://darebay.com',
       uk: 'https://darebay.com/ua',
       en: 'https://darebay.com/en',
       ar: 'https://darebay.com/en',
+      es: 'https://darebay.com/es',
     }
     for (const language of KNOWN_LOCALES) {
       expect(productUrlForLocale(language)).toBe(language === 'ru' ? 'https://darebay.com/' : expected[language])

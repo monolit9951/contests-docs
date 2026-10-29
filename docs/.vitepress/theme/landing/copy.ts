@@ -167,6 +167,30 @@ const columns = {
     indonesia: 'تدفع في إندونيسيا',
     philippines: 'تدفع في الفلبين',
   },
+  // Figures in Spanish style (1000, 10.000), as the application's Spanish tree prints them.
+  es: {
+    cpm: '$ por cada 1000 vistas',
+    rate: 'Tarifa por cada 1000 vistas',
+    threshold: 'Umbral de vistas',
+    cap: 'Tope por clip',
+    fee: 'Comisión sobre el pago',
+    minPayout: 'Pago mínimo',
+    payoutMethods: 'Métodos de pago',
+    payoutSpeed: 'Plazo de pago',
+    cis: 'Paga en Rusia / CEI',
+    followers: 'Seguidores necesarios',
+    escrow: 'Presupuesto bloqueado por adelantado',
+    networks: 'Redes que cuentan',
+    verification: 'Verificación de vistas',
+    india: 'Paga en India',
+    pakistan: 'Paga en Pakistán',
+    bangladesh: 'Paga en Bangladés',
+    nigeria: 'Paga en Nigeria',
+    kenya: 'Paga en Kenia',
+    mena: 'Paga en Egipto / países árabes',
+    indonesia: 'Paga en Indonesia',
+    philippines: 'Paga en Filipinas',
+  },
 }
 
 export const LANDING_COPY: Record<Locale, LandingCopy> = {
@@ -407,6 +431,69 @@ export const LANDING_COPY: Record<Locale, LandingCopy> = {
     setupItems: 'ما يشمله',
     setupPrepare: 'ما الذي تجهّزه',
   },
+  // Spanish for Spain and Latin America: «tú», no «vosotros», and the application's own terms
+  // (contests-frontend locales/es): task tarea, view vista, clip clip, rate tarifa, view threshold
+  // umbral de vistas, cap tope, wallet-backed con fondo en la plataforma, withdrawal retiro, wallet
+  // billetera, Telegram Stars Estrellas de Telegram. The product buttons open the Spanish interface
+  // under `/es`, so neither CTA lede mentions the interface language.
+  es: {
+    updated: 'Actualizado',
+    snapshotDate: 'Fecha de las fuentes',
+    byline: 'Por',
+    snapshotNote: 'Las cifras de las demás plataformas se tomaron de sus propias páginas públicas en la fecha indicada.',
+    keyTakeaways: 'Lo esencial',
+    compareTitle: 'Comparación lado a lado',
+    compareNote: 'Haz clic en una columna para ordenar. Un número entre corchetes abre su página de origen, que aparece con ese mismo número para esa plataforma en «Cómo se hizo esta comparación».',
+    platform: 'Plataforma',
+    us: 'DareBay',
+    bestFor: 'Ideal para',
+    pros: 'Puntos fuertes',
+    cons: 'A tener en cuenta',
+    sources: 'Fuentes',
+    review: 'Reseña de {name} →',
+    notPublished: 'no publicado',
+    methodTitle: 'Cómo se hizo esta comparación',
+    calcTitle: 'Cálculo de ejemplo para un clip en DareBay',
+    calcViews: 'Vistas contabilizadas de un clip',
+    calcRate: 'Tarifa por cada 1000 vistas',
+    calcScenario: 'Supuestos del ejemplo: la tarifa, el umbral y el tope aparecen abajo. Compáralos con las condiciones de la tarea que elijas.',
+    calcSimpleScenario: 'Cálculo bruto ilustrativo con la tarifa y el tope mostrados. Revisa la ficha de la tarea: las reglas de las vistas válidas, el umbral, la aprobación y la comisión de retiro cambian lo que recibes.',
+    calcCap: 'Tope por clip',
+    calcOut: 'Monto del ejemplo antes de la comisión de retiro',
+    calcNote: 'Fórmula: tarifa × vistas ÷ 1000, nunca por encima del tope. Cada tarea fija su tarifa y, si lo tiene, su tope.',
+    ctaTitle: 'Toma una tarea y cobra por vistas',
+    ctaLede: 'Sin seguidores ni solicitud. En una tarea con fondo en la plataforma, el presupuesto queda bloqueado en la plataforma antes de que empieces; las vistas se cuentan de forma independiente.',
+    ctaPrimary: 'Ver todas las tareas →',
+    bizCtaTitle: 'Los creadores hacen los clips y tú pagas por vistas',
+    bizCtaLede: 'Fijas la tarifa, el umbral y el tope por clip antes del lanzamiento, y el presupuesto solo se gasta en vistas de clips que superaron el umbral. ¿Tienes preguntas antes de lanzar? Escríbele al fundador por Telegram.',
+    bizCtaPrimary: 'Hablar del lanzamiento →',
+    bizCtaSecondary: 'Escribir al fundador',
+    columns: columns.es,
+    cis: { yes: 'sí', no: 'no', partial: 'en parte', unknown: 'no indicado' },
+    footerHome: 'darebay.com',
+    related: 'Más en esta sección',
+    hubAll: 'Todas las páginas',
+    calcProTitle: 'Calculadora de ganancias con clips',
+    calcClipsPerWeek: 'Clips por semana',
+    calcPerClip: 'Por clip',
+    calcPerWeek: 'Por semana',
+    calcPerMonth: 'Por mes, cuatro semanas',
+    calcNet: 'Neto tras la comisión de retiro del {fee}%',
+    calcThresholdNote: 'Por debajo del umbral de {threshold} vistas un clip no gana nada; una vez superado, cuenta cada vista desde la primera.',
+    calcCapped: 'en el tope',
+    calcMinPayout: 'Retiro mínimo de {min} USDT',
+    budgetTitle: 'Calculadora de presupuesto de campaña',
+    budgetBudget: 'Presupuesto, USDT',
+    budgetViews: 'Vistas pagadas que compra este presupuesto',
+    budgetClips: 'Clips en el tope para gastarlo todo',
+    budgetCpm: 'Costo por cada 1000 vistas',
+    budgetNote: 'Comisión del concurso: 0%; todo el presupuesto va a los creadores. Lanzar es gratis; en un concurso con fondo en la plataforma, el presupuesto queda bloqueado en la plataforma antes del inicio.',
+    glossaryTitle: 'Términos',
+    actions: { signup: 'Empieza en DareBay →', teams: 'Para equipos →', traffic: 'Para socios de tráfico →', store: 'Tienda de DareBay →', community: 'Únete a nuestro Discord' },
+    more: 'Más información →',
+    setupItems: 'Qué incluye',
+    setupPrepare: 'Qué preparar',
+  },
 }
 
 /**
@@ -414,12 +501,15 @@ export const LANDING_COPY: Record<Locale, LandingCopy> = {
  * digits: the money beside every figure is formatted `$1,000.00` whatever the page's language,
  * and the tables, the fact card and the sources this corpus quotes all use Latin digits too — a
  * calculator in Arabic-Indic digits (٥٠٬٠٠٠) would be the one place on the page that disagrees.
+ * Spanish is `es-ES`, the number locale of the application's Spanish tree (contests-frontend
+ * `uiNumberLocale`): 1000 bare, 10.000 with a point, a decimal comma — the prose's own style.
  */
 export const NUMBER_LOCALE: Record<Locale, string> = {
   ru: 'ru-RU',
   uk: 'uk-UA',
   en: 'en-US',
   ar: 'ar-u-nu-latn',
+  es: 'es-ES',
 }
 
 /**

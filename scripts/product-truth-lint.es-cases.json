@@ -1,0 +1,138 @@
+{
+  "free-withdrawal": {
+    "must_match": [
+      "El retiro es gratis en DareBay.",
+      "Los retiros son totalmente gratuitos.",
+      "Retirar tu saldo es gratis.",
+      "Retira tus ganancias gratis cuando quieras.",
+      "Retiro del saldo sin comisión: recibes el monto completo.",
+      "Retiras tu dinero sin ningún costo.",
+      "No hay comisión de retiro en la plataforma.",
+      "Sin comisión por retiro, solo pagas al lanzar.",
+      "La comisión de retiro es del 0%."
+    ],
+    "must_not_match": [
+      "La comisión de retiro es del 10%.",
+      "El retiro no es gratis: se descuenta un 10% de cada solicitud.",
+      "¿El retiro es gratis?",
+      "### ¿Retirar el saldo es gratis en DareBay?",
+      "Participar es gratis y la comisión de los pagos del concurso es del 0%.",
+      "Lanzar es gratis; en un concurso con fondo en la plataforma, el presupuesto queda bloqueado antes del inicio.",
+      "La única comisión que paga un clipper es del 10% (por defecto) al retirar el saldo disponible.",
+      "Clippo no cobra comisión a los clippers cuando retiran.",
+      "| Comisión por retiro del saldo | 10% por defecto sobre el monto solicitado, solicitud desde 10 USDT | reglas de la plataforma | 2026-08-23 |"
+    ]
+  },
+  "no-withdrawal-minimum": {
+    "must_match": [
+      "Sin mínimo de retiro en DareBay.",
+      "No hay un monto mínimo para retirar.",
+      "Retira cualquier monto cuando quieras.",
+      "El retiro de tu saldo es sin mínimo."
+    ],
+    "must_not_match": [
+      "La solicitud mínima de retiro es de 10 USDT.",
+      "Retiros a tu billetera desde 10 USDT.",
+      "¿Hay un mínimo para retirar?",
+      "Sin mínimo de seguidores ni solicitud.",
+      "Retiros en USDT en la red TON y sin mínimo de seguidores ni solicitud."
+    ]
+  },
+  "automatic-payout": {
+    "must_match": [
+      "Los pagos son automáticos.",
+      "El retiro se hace automáticamente.",
+      "La plataforma paga automáticamente a los ganadores.",
+      "Los premios son transferidos automáticamente.",
+      "Pagos instantáneos para todos los ganadores.",
+      "Los ganadores cobran al instante."
+    ],
+    "must_not_match": [
+      "Tus ganancias llegan a tu saldo automáticamente cuando termina una tarea con fondo en la plataforma.",
+      "El cálculo es automático: nadie escribe las cifras a mano.",
+      "No prometemos que los pagos son automáticos.",
+      "Los retiros no son automáticos: el equipo revisa cada solicitud.",
+      "¿Los pagos son automáticos?"
+    ]
+  },
+  "instant-payout-sla": {
+    "must_match": [
+      "El retiro llega en unos minutos.",
+      "El pago se procesa en pocos minutos."
+    ],
+    "must_not_match": [
+      "Nadie promete que el retiro llega en unos minutos.",
+      "Cada solicitud se revisa antes de salir, para que el dinero llegue a la billetera correcta."
+    ]
+  },
+  "contest-close-auto-transfer": {
+    "must_match": [
+      "Al cierre del concurso, el premio se envía al ganador.",
+      "Cuando termina el concurso, el dinero va al ganador."
+    ],
+    "must_not_match": [
+      "No prometemos que al cierre del concurso el premio se envía al ganador el mismo día.",
+      "En un concurso con fondo en la plataforma, la recompensa llega automáticamente al saldo del ganador."
+    ]
+  },
+  "live-on-chain-escrow": {
+    "must_match": [
+      "Los fondos se guardan en un contrato inteligente.",
+      "Un smart contract bloquea el presupuesto."
+    ],
+    "must_not_match": [
+      "No hay contrato inteligente: el presupuesto de un concurso con fondo en la plataforma lo retiene DareBay.",
+      "Su política de reembolsos usa un «escrow pool at the start of a campaign»."
+    ]
+  },
+  "unqualified-prize-lock": {
+    "must_match": [
+      "El presupuesto queda bloqueado en la plataforma antes del inicio.",
+      "La plataforma bloquea el presupuesto antes de empezar.",
+      "El organizador ya pagó."
+    ],
+    "must_not_match": [
+      "En un concurso con fondo en la plataforma, el presupuesto queda bloqueado en la plataforma antes del inicio.",
+      "Una tarea de DareBay con fondo en la plataforma bloquea el presupuesto antes de empezar.",
+      "En un concurso de pago directo, el organizador paga a los clippers por su cuenta."
+    ]
+  },
+  "official-api-view-oracle": {
+    "must_match": [
+      "Las vistas se leen directamente desde la API de TikTok."
+    ],
+    "must_not_match": [
+      "Un contador independiente lee el contador público de vistas del sitio en el enlace que enviaste."
+    ]
+  },
+  "withdrawal-fee": {
+    "must_match": [
+      "La comisión de retiro es del 5%.",
+      "Retirar el saldo tiene una comisión del 2%."
+    ],
+    "must_not_match": [
+      "La comisión de retiro estándar es del 10%.",
+      "Retirar el saldo acreditado cuesta un 10% (por defecto) del monto solicitado."
+    ]
+  },
+  "withdrawal-minimum": {
+    "must_match": [
+      "La solicitud mínima es de 5 USDT.",
+      "Retiros a tu billetera desde 5 USDT."
+    ],
+    "must_not_match": [
+      "La solicitud mínima es de 10 USDT antes de comisiones.",
+      "Pide un retiro desde 10 USDT y la plataforma hace el resto."
+    ]
+  },
+  "ppv-live-rate-range": {
+    "must_match": [
+      "Las tarifas van de $1 a $20 por cada 1000 vistas.",
+      "Las tareas pagan desde $0,30 hasta $1 por cada 1000 vistas."
+    ],
+    "must_not_match": [
+      "Las tarifas van de $1 a $10 por cada 1000 vistas.",
+      "Cada tarea fija su propia tarifa por cada 1000 vistas válidas."
+    ]
+  }
+}

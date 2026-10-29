@@ -16,6 +16,8 @@ export const FONT_DIR = '/content-assets/fonts'
  * and English and Arabic pages fetched a Cyrillic body face they never render. The Arabic tree
  * has no display preload at all — landing.css sets its display face to Manrope, because
  * Unbounded has no Arabic — and its body text needs Manrope only for Latin names and digits.
+ * Spanish is an English page as far as fonts go: á, é, í, ó, ú, ñ, ü, ¿ and ¡ all sit inside the
+ * `latin` subset's U+0000-00FF, so the same two files paint its first screen.
  * latin-ext is never preloaded: 118 KB for the odd accented letter.
  */
 export const FONT_PRELOADS: Record<Locale, readonly string[]> = {
@@ -23,6 +25,7 @@ export const FONT_PRELOADS: Record<Locale, readonly string[]> = {
   uk: ['manrope-400-cyrillic.woff2', 'unbounded-var-cyrillic.woff2', 'unbounded-var-latin.woff2'],
   en: ['manrope-400-latin.woff2', 'unbounded-var-latin.woff2'],
   ar: ['manrope-400-latin.woff2'],
+  es: ['manrope-400-latin.woff2', 'unbounded-var-latin.woff2'],
 }
 
 export const fontPreloadHrefs = (language: Locale): string[] =>

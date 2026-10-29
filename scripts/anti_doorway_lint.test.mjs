@@ -581,6 +581,35 @@ console.log("anti_doorway_lint: арабские FAQ и сквозные бло�
     `${normalizeHeading("الأسئلة الشائعة")} / ${normalizeHeading("الاسئلة الشائعة")}`);
 }
 
+// Зачем (2026-10-29): испанское дерево закрывает страницы блоком «Qué leer después» и открывает FAQ
+// «Preguntas frecuentes». Без них в словарях FAQ-секция испанской страницы считалась бы
+// содержательным H2. И ударение в заголовке редактор то ставит, то нет: «¿Cuánto paga?» и
+// «Cuanto paga» — один вопрос, и эхо должно его видеть.
+console.log("anti_doorway_lint: испанские FAQ, сквозные блоки и ударения");
+{
+  const body = [
+    "## Cómo se cuentan las vistas",
+    "texto",
+    "## Preguntas frecuentes",
+    "### ¿Necesito seguidores?",
+    "No.",
+    "## Qué leer después",
+    "- enlace",
+  ].join("\n\n");
+  const { h2, faq } = sectionHeadings(body);
+  check("испанский FAQ-блок уходит в вопросы, а не в H2",
+    faq.length === 1 && !h2.some((heading) => /preguntas/.test(heading)), JSON.stringify({ h2, faq }));
+  check("«Qué leer después» — сквозной блок, не содержательный H2",
+    h2.length === 1 && h2[0] === normalizeHeading("Como se cuentan las vistas"), JSON.stringify(h2));
+  check("ударение и ñ не делают из одного заголовка два",
+    normalizeHeading("¿Cuánto paga DareBay?") === normalizeHeading("Cuanto paga DareBay") &&
+      normalizeHeading("Año") === normalizeHeading("ano"),
+    `${normalizeHeading("¿Cuánto paga DareBay?")} / ${normalizeHeading("Cuanto paga DareBay")}`);
+  check("кириллица не теряет й и ї от снятия латинских ударений",
+    normalizeHeading("Який поріг") === "який поріг" && normalizeHeading("Мой ёж") === "мой еж",
+    `${normalizeHeading("Який поріг")} / ${normalizeHeading("Мой ёж")}`);
+}
+
 console.log("anti_doorway_lint: арабский артикль не склеивает разные вопросы");
 {
   const similarity = (a, b) => {

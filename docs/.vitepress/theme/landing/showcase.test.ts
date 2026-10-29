@@ -89,7 +89,7 @@ describe('CTA buttons', () => {
   })
 
   it('takes creator readers to all tasks before registration, preserving each application language', () => {
-    const paths = { ru: '/tasks', uk: '/ua/tasks', en: '/en/tasks', ar: '/en/tasks' }
+    const paths = { ru: '/tasks', uk: '/ua/tasks', en: '/en/tasks', ar: '/en/tasks', es: '/es/tasks' }
     for (const hub of ['earnings', 'farm', 'tools', 'about']) {
       expect(isCreatorSection(hub)).toBe(true)
       for (const language of KNOWN_LOCALES) {

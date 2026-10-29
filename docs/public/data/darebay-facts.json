@@ -32,13 +32,15 @@
         "ru": "Ставка за 1000 просмотров",
         "uk": "Ставка за 1000 переглядів",
         "en": "Rate per 1,000 views",
-        "ar": "السعر لكل 1,000 مشاهدة"
+        "ar": "السعر لكل 1,000 مشاهدة",
+        "es": "Tarifa por cada 1000 vistas"
       },
       "text": {
         "ru": "ставку задаёт задание; $1.00–$10.00 за 1000 просмотров — опубликованный ориентир продукта на указанную дату, не текущий оффер",
         "uk": "ставку задає завдання; $1.00–$10.00 за 1000 переглядів — опублікований орієнтир продукту на зазначену дату, не поточна пропозиція",
         "en": "set by the task; $1.00–$10.00 per 1,000 views is the dated product target, not a live offer",
-        "ar": "تحدده المهمة؛ $1.00–$10.00 لكل 1,000 مشاهدة هدف المنتج في التاريخ المذكور، وليس عرضًا متاحًا الآن"
+        "ar": "تحدده المهمة؛ $1.00–$10.00 لكل 1,000 مشاهدة هدف المنتج في التاريخ المذكور، وليس عرضًا متاحًا الآن",
+        "es": "la fija la tarea; $1,00–$10,00 por cada 1000 vistas es el objetivo del producto en la fecha indicada, no una oferta vigente"
       },
       "source": "product-intent.json#rate-band",
       "asOf": "2026-09-20",
@@ -54,13 +56,15 @@
         "ru": "Потолок на один ролик",
         "uk": "Стеля на один ролик",
         "en": "Cap per clip",
-        "ar": "الحد الأقصى لكل مقطع"
+        "ar": "الحد الأقصى لكل مقطع",
+        "es": "Tope por clip"
       },
       "text": {
         "ru": "задаётся заданием; $500 — верхняя граница исторического среза, не универсальный потолок",
         "uk": "задається завданням; $500 — верхня межа історичного зрізу, не універсальна стеля",
         "en": "set by the task; $500 is the historical band's upper edge, not a universal cap",
-        "ar": "تحدده المهمة؛ $500 الحد الأعلى للنطاق التاريخي، وليس سقفًا موحّدًا"
+        "ar": "تحدده المهمة؛ $500 الحد الأعلى للنطاق التاريخي، وليس سقفًا موحّدًا",
+        "es": "lo fija la tarea; $500 es el límite superior de la franja histórica, no un tope universal"
       },
       "source": "product-truth.json#ppv.stable.bands.maxPerWork.high",
       "asOf": "2026-08-23",
@@ -74,13 +78,15 @@
         "ru": "Порог просмотров",
         "uk": "Поріг переглядів",
         "en": "View threshold",
-        "ar": "حد المشاهدات"
+        "ar": "حد المشاهدات",
+        "es": "Umbral de vistas"
       },
       "text": {
         "ru": "задаёт задание (по умолчанию 1000 просмотров)",
         "uk": "задає завдання (за замовчуванням 1000 переглядів)",
         "en": "set per task (system default 1,000 views)",
-        "ar": "تحدده المهمة (الافتراضي في النظام 1,000 مشاهدة)"
+        "ar": "تحدده المهمة (الافتراضي في النظام 1,000 مشاهدة)",
+        "es": "lo fija cada tarea (valor predeterminado del sistema: 1000 vistas)"
       },
       "source": "product-truth.json#ppv.stable.defaultMinimumViews.value",
       "asOf": "2026-08-23",
@@ -94,13 +100,15 @@
         "ru": "Комиссия за создание конкурса",
         "uk": "Комісія за створення конкурсу",
         "en": "Contest creation fee",
-        "ar": "عمولة إنشاء المسابقة"
+        "ar": "عمولة إنشاء المسابقة",
+        "es": "Comisión por crear un concurso"
       },
       "text": {
         "ru": "0%",
         "uk": "0%",
         "en": "0%",
-        "ar": "0%"
+        "ar": "0%",
+        "es": "0%"
       },
       "source": "product-truth.json#contest.creationCommissionPercent",
       "asOf": "2026-08-23"
@@ -113,13 +121,15 @@
         "ru": "Комиссия за пополнение бюджета конкурса",
         "uk": "Комісія за поповнення бюджету конкурсу",
         "en": "Contest budget top-up fee",
-        "ar": "عمولة شحن ميزانية المسابقة"
+        "ar": "عمولة شحن ميزانية المسابقة",
+        "es": "Comisión por recargar el presupuesto de un concurso"
       },
       "text": {
         "ru": "0%",
         "uk": "0%",
         "en": "0%",
-        "ar": "0%"
+        "ar": "0%",
+        "es": "0%"
       },
       "source": "product-truth.json#contest.topUpCommissionPercent",
       "asOf": "2026-08-23"
@@ -132,13 +142,15 @@
         "ru": "Комиссия с покупки в магазине",
         "uk": "Комісія з покупки в магазині",
         "en": "Store purchase fee",
-        "ar": "عمولة الشراء من المتجر"
+        "ar": "عمولة الشراء من المتجر",
+        "es": "Comisión por compra en la tienda"
       },
       "text": {
         "ru": "8%",
         "uk": "8%",
         "en": "8%",
-        "ar": "8%"
+        "ar": "8%",
+        "es": "8%"
       },
       "source": "product-truth.json#store.commissionPercent",
       "asOf": "2026-08-23"
@@ -151,13 +163,15 @@
         "ru": "Комиссия за вывод баланса",
         "uk": "Комісія за виведення балансу",
         "en": "Balance withdrawal fee",
-        "ar": "عمولة سحب الرصيد"
+        "ar": "عمولة سحب الرصيد",
+        "es": "Comisión por retiro del saldo"
       },
       "text": {
         "ru": "10% по умолчанию от суммы заявки, заявка от 10 USDT",
         "uk": "10% за замовчуванням від суми заявки, заявка від 10 USDT",
         "en": "10% by default of the requested amount, request from 10 USDT",
-        "ar": "10% افتراضيًا من المبلغ المطلوب، والطلب من 10 USDT"
+        "ar": "10% افتراضيًا من المبلغ المطلوب، والطلب من 10 USDT",
+        "es": "10% por defecto sobre el monto solicitado, solicitud desde 10 USDT"
       },
       "source": "product-truth.json#withdrawal.defaultCommissionPercent",
       "asOf": "2026-08-23",
@@ -171,13 +185,15 @@
         "ru": "Минимальная заявка на вывод",
         "uk": "Мінімальна заявка на виведення",
         "en": "Minimum withdrawal request",
-        "ar": "الحد الأدنى لطلب السحب"
+        "ar": "الحد الأدنى لطلب السحب",
+        "es": "Solicitud mínima de retiro"
       },
       "text": {
         "ru": "10 USDT",
         "uk": "10 USDT",
         "en": "10 USDT",
-        "ar": "10 USDT"
+        "ar": "10 USDT",
+        "es": "10 USDT"
       },
       "source": "product-truth.json#withdrawal.minimumGrossAmount",
       "asOf": "2026-08-23",
@@ -193,13 +209,15 @@
         "ru": "Способы выплаты",
         "uk": "Способи виплати",
         "en": "Payout rails",
-        "ar": "طرق الدفع"
+        "ar": "طرق الدفع",
+        "es": "Métodos de pago"
       },
       "text": {
         "ru": "USDT в сети TON, звёзды Telegram",
         "uk": "USDT у мережі TON, зірки Telegram",
         "en": "USDT on TON, Telegram Stars",
-        "ar": "USDT على شبكة TON، ونجوم Telegram"
+        "ar": "USDT على شبكة TON، ونجوم Telegram",
+        "es": "USDT en la red TON, Estrellas de Telegram"
       },
       "source": "product-truth.json#withdrawal.wizardMethods",
       "asOf": "2026-08-23",
@@ -216,13 +234,15 @@
         "ru": "Площадки",
         "uk": "Майданчики",
         "en": "Platforms",
-        "ar": "المنصات"
+        "ar": "المنصات",
+        "es": "Plataformas"
       },
       "text": {
         "ru": "TikTok, YouTube, Instagram и другие сайты, названные в задании",
         "uk": "TikTok, YouTube, Instagram та інші сайти, названі в завданні",
         "en": "TikTok, YouTube, Instagram and other sites named in the task",
-        "ar": "TikTok وYouTube وInstagram ومواقع أخرى تحددها المهمة"
+        "ar": "TikTok وYouTube وInstagram ومواقع أخرى تحددها المهمة",
+        "es": "TikTok, YouTube, Instagram y otros sitios que indique la tarea"
       },
       "source": "gen-facts-json.mjs#WORDING.platforms",
       "asOf": "2026-09-17",
@@ -235,13 +255,15 @@
         "ru": "География выплат",
         "uk": "Географія виплат",
         "en": "Geography of payouts",
-        "ar": "جغرافيا الدفع"
+        "ar": "جغرافيا الدفع",
+        "es": "Geografía de los pagos"
       },
       "text": {
         "ru": "списка стран нет; не допускаются только люди из санкционных списков",
         "uk": "списку країн немає; не допускаються лише люди із санкційних списків",
         "en": "no country list; only people on sanctions lists are barred",
-        "ar": "لا توجد قائمة دول؛ يُستثنى فقط الأشخاص المدرجون في قوائم العقوبات"
+        "ar": "لا توجد قائمة دول؛ يُستثنى فقط الأشخاص المدرجون في قوائم العقوبات",
+        "es": "sin lista de países; solo se excluye a las personas que figuran en listas de sanciones"
       },
       "source": "gen-facts-json.mjs#WORDING.geography",
       "asOf": "2026-09-17",

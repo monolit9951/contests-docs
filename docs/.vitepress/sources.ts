@@ -176,7 +176,7 @@ export function sourceLinkClass(url: string): SourceLinkClass {
  * The locale a page's sources speak, from its path.
  *
  * The same rule the rest of the site uses, from the registry's one table of locale directories:
- * Russian is the unprefixed root, `ua/` is Ukrainian, `en/` English, `ar/` Arabic. Taken from the
+ * Russian is the unprefixed root, `ua/` is Ukrainian, `en/` English, `ar/` Arabic, `es/` Spanish. Taken from the
  * path rather than from `localeIndex` so the heading is right in a unit test that has only a
  * filename, and so it cannot disagree with the address the page ships on.
  */

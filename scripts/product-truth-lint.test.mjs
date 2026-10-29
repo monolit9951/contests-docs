@@ -364,6 +364,17 @@ test("Arabic false claims about withdrawal fail and their true neighbours pass",
   }
 });
 
+test("Spanish false claims about money fail and their true neighbours pass", () => {
+  // The Spanish tree (2026-10-29): every rule a Spanish page can trip, fed page-style lines — the
+  // false claim, the same words negated or asked, and wording the Spanish pages actually use. The
+  // rules match the language of the line, so one file holds them all, as for Arabic.
+  const cases = JSON.parse(readFileSync(new URL("./product-truth-lint.es-cases.json", import.meta.url), "utf8"));
+  for (const [rule, { must_match, must_not_match }] of Object.entries(cases)) {
+    for (const line of must_match) assert(rules(line).has(rule), `${rule} should flag: ${line}`);
+    for (const line of must_not_match) assert(!rules(line).has(rule), `${rule} should not flag: ${line}`);
+  }
+});
+
 test("live smart-contract escrow claims and paraphrases fail", () => {
   assert(rules("The budget is held in an on-chain escrow.").has("live-on-chain-escrow"));
   assert(rules("The prize is secured by a blockchain smart contract.").has("live-on-chain-escrow"));
@@ -688,6 +699,9 @@ test("no pattern in the linter puts an ASCII \\b beside Cyrillic or a \\p{..} ou
   source.forEach((line, index) => {
     if (/^\s*\/\//.test(line)) return;
     if (/[Ѐ-ӿ]/.test(line) && line.includes("\\b")) offenders.push(`${index + 1}: ASCII \\b beside Cyrillic`);
+    // The same blindness for an accented Latin letter (Spanish, 2026-10-29): `\b` takes «ó» for a
+    // non-word character, so `\bcomisión\b` could never match at the end of the word.
+    if (/[áéíóúüñ]/i.test(line) && line.includes("\\b")) offenders.push(`${index + 1}: ASCII \\b beside an accented letter`);
     if (line.includes("\\p{") && !/\/[dgimsy]*u[dgimsy]*(?![\w$])/.test(line)) offenders.push(`${index + 1}: \\p{..} without the u flag`);
   });
   assert.deepEqual(offenders, []);

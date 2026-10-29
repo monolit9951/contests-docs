@@ -67,6 +67,7 @@ const WORDING = {
     uk: 'USDT у мережі TON, зірки Telegram',
     en: 'USDT on TON, Telegram Stars',
     ar: 'USDT على شبكة TON، ونجوم Telegram',
+    es: 'USDT en la red TON, Estrellas de Telegram',
   },
   platforms: {
     ids: ['TIKTOK', 'YOUTUBE', 'INSTAGRAM'],
@@ -74,6 +75,7 @@ const WORDING = {
     uk: 'TikTok, YouTube, Instagram та інші сайти, названі в завданні',
     en: 'TikTok, YouTube, Instagram and other sites named in the task',
     ar: 'TikTok وYouTube وInstagram ومواقع أخرى تحددها المهمة',
+    es: 'TikTok, YouTube, Instagram y otros sitios que indique la tarea',
   },
   geography: {
     value: 'no-country-list',
@@ -81,6 +83,7 @@ const WORDING = {
     uk: 'списку країн немає; не допускаються лише люди із санкційних списків',
     en: 'no country list; only people on sanctions lists are barred',
     ar: 'لا توجد قائمة دول؛ يُستثنى فقط الأشخاص المدرجون في قوائم العقوبات',
+    es: 'sin lista de países; solo se excluye a las personas que figuran en listas de sanciones',
   },
   operator: 'Ruslan',
 }
@@ -92,7 +95,7 @@ const WORDING = {
  * an import: this generator runs under plain `node`, without TypeScript stripping. The test suite
  * fails when the two lists part.
  */
-export const FACT_LOCALES = Object.freeze(['ru', 'uk', 'en', 'ar'])
+export const FACT_LOCALES = Object.freeze(['ru', 'uk', 'en', 'ar', 'es'])
 
 /** Column headers of the rendered fact table, per locale. Labels, never values. */
 export const TABLE_HEADERS = {
@@ -100,6 +103,7 @@ export const TABLE_HEADERS = {
   uk: ['Показник', 'Значення', 'Джерело', 'Станом на'],
   en: ['Field', 'Value', 'Source', 'As of'],
   ar: ['البند', 'القيمة', 'المصدر', 'بتاريخ'],
+  es: ['Dato', 'Valor', 'Fuente', 'Fecha'],
 }
 
 /** Row labels. The fact NAMES a reader sees; the values next to them are computed. */
@@ -109,66 +113,77 @@ const LABELS = {
     uk: 'Ставка за 1000 переглядів',
     en: 'Rate per 1,000 views',
     ar: 'السعر لكل 1,000 مشاهدة',
+    es: 'Tarifa por cada 1000 vistas',
   },
   'cap-per-clip': {
     ru: 'Потолок на один ролик',
     uk: 'Стеля на один ролик',
     en: 'Cap per clip',
     ar: 'الحد الأقصى لكل مقطع',
+    es: 'Tope por clip',
   },
   'view-threshold': {
     ru: 'Порог просмотров',
     uk: 'Поріг переглядів',
     en: 'View threshold',
     ar: 'حد المشاهدات',
+    es: 'Umbral de vistas',
   },
   'contest-creation-fee': {
     ru: 'Комиссия за создание конкурса',
     uk: 'Комісія за створення конкурсу',
     en: 'Contest creation fee',
     ar: 'عمولة إنشاء المسابقة',
+    es: 'Comisión por crear un concurso',
   },
   'budget-top-up-fee': {
     ru: 'Комиссия за пополнение бюджета конкурса',
     uk: 'Комісія за поповнення бюджету конкурсу',
     en: 'Contest budget top-up fee',
     ar: 'عمولة شحن ميزانية المسابقة',
+    es: 'Comisión por recargar el presupuesto de un concurso',
   },
   'store-fee': {
     ru: 'Комиссия с покупки в магазине',
     uk: 'Комісія з покупки в магазині',
     en: 'Store purchase fee',
     ar: 'عمولة الشراء من المتجر',
+    es: 'Comisión por compra en la tienda',
   },
   'withdrawal-fee': {
     ru: 'Комиссия за вывод баланса',
     uk: 'Комісія за виведення балансу',
     en: 'Balance withdrawal fee',
     ar: 'عمولة سحب الرصيد',
+    es: 'Comisión por retiro del saldo',
   },
   'withdrawal-minimum': {
     ru: 'Минимальная заявка на вывод',
     uk: 'Мінімальна заявка на виведення',
     en: 'Minimum withdrawal request',
     ar: 'الحد الأدنى لطلب السحب',
+    es: 'Solicitud mínima de retiro',
   },
   'payout-rails': {
     ru: 'Способы выплаты',
     uk: 'Способи виплати',
     en: 'Payout rails',
     ar: 'طرق الدفع',
+    es: 'Métodos de pago',
   },
   platforms: {
     ru: 'Площадки',
     uk: 'Майданчики',
     en: 'Platforms',
     ar: 'المنصات',
+    es: 'Plataformas',
   },
   geography: {
     ru: 'География выплат',
     uk: 'Географія виплат',
     en: 'Geography of payouts',
     ar: 'جغرافيا الدفع',
+    es: 'Geografía de los pagos',
   },
 }
 
@@ -180,26 +195,32 @@ export { LABELS }
 // Formatting. Numbers arrive from the data files and are only rendered here.
 // ---------------------------------------------------------------------------
 
-const money = (value) => `$${Number.isInteger(value) ? value : value.toFixed(2)}`
+// Spanish writes the decimal with a comma ("$1,00", "0,5"), as its prose and the application's
+// Spanish tree do; every other tree keeps the point.
+const decimals = (text, locale) => (locale === 'es' ? text.replace('.', ',') : text)
+const money = (value, locale) => `$${Number.isInteger(value) ? value : decimals(value.toFixed(2), locale)}`
 /** A rate is always printed with cents: "$1.00–$2.00" reads as money, "$1–$2" as a guess. */
-const rate = (value) => `$${value.toFixed(2)}`
+const rate = (value, locale) => `$${decimals(value.toFixed(2), locale)}`
 // English groups thousands ("1,000 views"); the Russian and Ukrainian corpus writes them bare
 // ("1000 просмотров"), and the truth gate's own patterns are written for that form. Arabic is
 // written with Latin digits and groups them the English way ("1,000 مشاهدة"), like the money
-// ranges next to it.
-const group = (value, locale) => (locale === 'en' || locale === 'ar' ? value.toLocaleString('en-US') : String(value))
+// ranges next to it. Spanish follows its own norm, the application's `es-ES`: four digits bare
+// ("1000 vistas"), a point from five ("10.000 vistas").
+const group = (value, locale) =>
+  locale === 'en' || locale === 'ar' ? value.toLocaleString('en-US') : locale === 'es' ? value.toLocaleString('es-ES') : String(value)
 const views = (value, locale) =>
   ({
     ru: `${group(value, 'ru')} просмотров`,
     uk: `${group(value, 'uk')} переглядів`,
     en: `${group(value, 'en')} views`,
     ar: `${group(value, 'ar')} مشاهدة`,
+    es: `${group(value, 'es')} vistas`,
   })[locale]
 
 const dateOf = (isoTimestamp) => isoTimestamp.slice(0, 10)
 const DAY_MS = 86_400_000
 
-const percentText = (value) => ({ ru: `${value}%`, uk: `${value}%`, en: `${value}%`, ar: `${value}%` })
+const percentText = (value) => ({ ru: `${value}%`, uk: `${value}%`, en: `${value}%`, ar: `${value}%`, es: `${value}%` })
 
 // ---------------------------------------------------------------------------
 // Inputs.
@@ -288,18 +309,20 @@ export function buildFacts({ truth, intent, snapshot, now }) {
       liveOffer: false,
       labels: LABELS['rate-per-1000-views'],
       text: localized((locale) => {
-        const range = `${rate(cpm.low)}–${rate(cpm.high)}`
+        const range = `${rate(cpm.low, locale)}–${rate(cpm.high, locale)}`
         const targetText = {
           ru: `ставку задаёт задание; ${range} за 1000 просмотров — опубликованный ориентир продукта на указанную дату, не текущий оффер`,
           uk: `ставку задає завдання; ${range} за 1000 переглядів — опублікований орієнтир продукту на зазначену дату, не поточна пропозиція`,
           en: `set by the task; ${range} per 1,000 views is the dated product target, not a live offer`,
           ar: `تحدده المهمة؛ ${range} لكل 1,000 مشاهدة هدف المنتج في التاريخ المذكور، وليس عرضًا متاحًا الآن`,
+          es: `la fija la tarea; ${range} por cada 1000 vistas es el objetivo del producto en la fecha indicada, no una oferta vigente`,
         }
         const reviewedText = {
           ru: `ставку задаёт задание; ${range} за 1000 просмотров — исторический проверенный диапазон на указанную дату, не текущий оффер`,
           uk: `ставку задає завдання; ${range} за 1000 переглядів — історичний перевірений діапазон на зазначену дату, не поточна пропозиція`,
           en: `set by the task; ${range} per 1,000 views is the dated reviewed band, not a live offer`,
           ar: `تحدده المهمة؛ ${range} لكل 1,000 مشاهدة نطاق تمت مراجعته في التاريخ المذكور، وليس عرضًا متاحًا الآن`,
+          es: `la fija la tarea; ${range} por cada 1000 vistas es la franja revisada en la fecha indicada, no una oferta vigente`,
         }
         return (cpmTargeted ? targetText : reviewedText)[locale]
       }),
@@ -315,10 +338,11 @@ export function buildFacts({ truth, intent, snapshot, now }) {
       liveOffer: false,
       labels: LABELS['cap-per-clip'],
       text: localized((locale) => ({
-        ru: `задаётся заданием; ${money(capBand.high)} — верхняя граница исторического среза, не универсальный потолок`,
-        uk: `задається завданням; ${money(capBand.high)} — верхня межа історичного зрізу, не універсальна стеля`,
-        en: `set by the task; ${money(capBand.high)} is the historical band's upper edge, not a universal cap`,
-        ar: `تحدده المهمة؛ ${money(capBand.high)} الحد الأعلى للنطاق التاريخي، وليس سقفًا موحّدًا`,
+        ru: `задаётся заданием; ${money(capBand.high, locale)} — верхняя граница исторического среза, не универсальный потолок`,
+        uk: `задається завданням; ${money(capBand.high, locale)} — верхня межа історичного зрізу, не універсальна стеля`,
+        en: `set by the task; ${money(capBand.high, locale)} is the historical band's upper edge, not a universal cap`,
+        ar: `تحدده المهمة؛ ${money(capBand.high, locale)} الحد الأعلى للنطاق التاريخي، وليس سقفًا موحّدًا`,
+        es: `lo fija la tarea; ${money(capBand.high, locale)} es el límite superior de la franja histórica, no un tope universal`,
       }[locale])),
       source: 'product-truth.json#ppv.stable.bands.maxPerWork.high',
       asOf: truthAsOf,
@@ -336,6 +360,7 @@ export function buildFacts({ truth, intent, snapshot, now }) {
         uk: `задає завдання (за замовчуванням ${views(threshold.value, 'uk')})`,
         en: `set per task (system default ${views(threshold.value, 'en')})`,
         ar: `تحدده المهمة (الافتراضي في النظام ${views(threshold.value, 'ar')})`,
+        es: `lo fija cada tarea (valor predeterminado del sistema: ${views(threshold.value, 'es')})`,
       }[locale])),
       source: 'product-truth.json#ppv.stable.defaultMinimumViews.value',
       asOf: truthAsOf,
@@ -383,12 +408,14 @@ export function buildFacts({ truth, intent, snapshot, now }) {
               uk: `без комісії, заявка від ${minimum}`,
               en: `no fee, request from ${minimum}`,
               ar: `دون عمولة، والطلب من ${minimum}`,
+              es: `sin comisión, solicitud desde ${minimum}`,
             }[locale]
           : {
               ru: `${fee.percent}% по умолчанию от суммы заявки, заявка от ${minimum}`,
               uk: `${fee.percent}% за замовчуванням від суми заявки, заявка від ${minimum}`,
               en: `${fee.percent}% by default of the requested amount, request from ${minimum}`,
               ar: `${fee.percent}% افتراضيًا من المبلغ المطلوب، والطلب من ${minimum}`,
+              es: `${fee.percent}% por defecto sobre el monto solicitado, solicitud desde ${minimum}`,
             }[locale]
       }),
       source: fee.intentId ? `product-intent.json#${fee.intentId}` : 'product-truth.json#withdrawal.defaultCommissionPercent',
@@ -485,10 +512,10 @@ const cell = (value) => String(value).replaceAll('|', '\\|')
 // (`fact.source`). A file path and a JSON pointer mean nothing to a reader, so the table
 // names the kind of source instead and leaves the exact pointer to the JSON copy.
 export const SOURCE_LABELS = {
-  'product-truth.json': { ru: 'правила платформы', uk: 'правила платформи', en: 'platform rules', ar: 'قواعد المنصة' },
-  'product-intent.json': { ru: 'решение по продукту', uk: 'рішення щодо продукту', en: 'product decision', ar: 'قرار المنتج' },
-  'gen-facts-json.mjs': { ru: 'условия заданий', uk: 'умови завдань', en: 'task terms', ar: 'شروط المهام' },
-  'contests-snapshot.json': { ru: 'живой каталог', uk: 'живий каталог', en: 'live catalogue', ar: 'قائمة المهام الحالية' },
+  'product-truth.json': { ru: 'правила платформы', uk: 'правила платформи', en: 'platform rules', ar: 'قواعد المنصة', es: 'reglas de la plataforma' },
+  'product-intent.json': { ru: 'решение по продукту', uk: 'рішення щодо продукту', en: 'product decision', ar: 'قرار المنتج', es: 'decisión de producto' },
+  'gen-facts-json.mjs': { ru: 'условия заданий', uk: 'умови завдань', en: 'task terms', ar: 'شروط المهام', es: 'condiciones de las tareas' },
+  'contests-snapshot.json': { ru: 'живой каталог', uk: 'живий каталог', en: 'live catalogue', ar: 'قائمة المهام الحالية', es: 'catálogo en vivo' },
 }
 
 export function sourceLabel(source, locale) {

@@ -32,8 +32,15 @@ const blockOf = (section, heading) => {
   return lines.slice(at + 1, end === -1 ? undefined : end).filter((line) => line.trim() !== '')
 }
 
-/** "1,000" and "1000" are the same number; "$1.00" is 1. Arabic is written with Latin digits. */
-const numbersIn = (text) => [...text.matchAll(/\d[\d,]*(?:\.\d+)?/g)].map((match) => Number(match[0].replaceAll(',', '')))
+/**
+ * "1,000" and "1000" are the same number; "$1.00" is 1. Arabic is written with Latin digits.
+ * Spanish swaps the two marks (gen-facts-json.mjs, as the application's `es-ES`): "10.000" is ten
+ * thousand and "$1,00" is 1, so its line is read in its own style.
+ */
+const numbersIn = (text, locale) =>
+  locale === 'es'
+    ? [...text.matchAll(/\d[\d.]*(?:,\d+)?/g)].map((match) => Number(match[0].replaceAll('.', '').replace(',', '.')))
+    : [...text.matchAll(/\d[\d,]*(?:\.\d+)?/g)].map((match) => Number(match[0].replaceAll(',', '')))
 
 /**
  * The numbers a key-fact line may carry, read off the MACHINE side of the same fact (`value`,
@@ -75,7 +82,7 @@ describe('llms.txt key facts', () => {
   it.each(declared)('%s: every number equals the value buildFacts publishes', (locale) => {
     const lines = blockOf(sectionOf(locale), COPY[locale].keyFacts)
     KEY_FACT_IDS.forEach((id, index) => {
-      expect(new Set(numbersIn(lines[index])), `${locale}: ${lines[index]}`).toEqual(new Set(valuesOf(id)))
+      expect(new Set(numbersIn(lines[index], locale)), `${locale}: ${lines[index]}`).toEqual(new Set(valuesOf(id)))
     })
   })
 })

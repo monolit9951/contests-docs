@@ -53,13 +53,14 @@ const fail = (check, detail) => failures.push(`${check}: ${detail}`)
 // segment of the `routes:map` block in contests-frontend nginx.conf (public
 // sections, app-only screens and retired addresses: src/app/routers/appRouter.tsx
 // and scripts/seo-routes.mjs there), its hand-written locations (/about, /login,
-// /tiktok, /health, /fonts/, the /ko and /ja 410s), the locale prefixes and the
-// backend paths of the host. Kept here rather than imported because the two
-// repos build independently. Gates 5a and 7 both need it, and it is the only
-// guard for the app-only screens: they are in no sitemap, so url-gates gate 2
-// never requests them.
+// /tiktok, /health, /fonts/, the /ko and /ja 410s), the locale prefixes (`/es`
+// since the application's Spanish tree, 2026-10-29) and the backend paths of
+// the host. Kept here rather than imported because the two repos build
+// independently. Gates 5a and 7 both need it, and it is the only guard for the
+// app-only screens: they are in no sitemap, so url-gates gate 2 never requests
+// them.
 const SPA_SEGMENTS = new Set([
-    'ua', 'en', 'ru', 'pl', 'ko', 'ja',
+    'ua', 'en', 'ru', 'pl', 'es', 'ko', 'ja',
     'feed', 'lenta', 'strichka',
     'contests', 'zadaniya', 'zavdannya', 'tasks',
     'store', 'magazin', 'kramnytsia',

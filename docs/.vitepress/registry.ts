@@ -45,7 +45,7 @@ import contentManifest from '../content-pages.json' with { type: 'json' }
 //     locale is self-canonical and its own x-default, exactly as the six ru-only
 //     pages already are.
 
-export type Locale = 'ru' | 'uk' | 'en' | 'ar'
+export type Locale = 'ru' | 'uk' | 'en' | 'ar' | 'es'
 export type HubId = 'earnings' | 'brands' | 'help' | 'farm' | 'tools' | 'about' | 'legal'
 export type TextDirection = 'ltr' | 'rtl'
 
@@ -74,10 +74,11 @@ export interface LocaleAxis {
 // together with its first pages, with no second code change.
 //
 // `app` is the application locale behind the product links of a docs locale.
-// The application speaks Russian, Ukrainian and English (and Polish, which has
-// no docs tree), not Arabic: an Arabic reader who presses "open the tasks" is
-// sent to the English interface, and that decision lives here, once, rather
-// than in the text of every Arabic page (`appPathFor`, `appLinkTarget`).
+// The application speaks Russian, Ukrainian, English and Spanish (and Polish,
+// which has no docs tree), not Arabic: an Arabic reader who presses "open the
+// tasks" is sent to the English interface, a Spanish one to the Spanish
+// interface under `/es`, and that decision lives here, once, rather than in the
+// text of every page (`appPathFor`, `appLinkTarget`).
 // ---------------------------------------------------------------------------
 
 interface LocaleShape {
@@ -94,6 +95,13 @@ const LOCALE_SHAPES: Readonly<Record<Locale, LocaleShape>> = {
     // Latin slugs under `/ar`, like every other tree: an Arabic-script slug would
     // travel as percent-escapes, and the slug grammar below admits none.
     ar: { prefix: '/ar', vitepressKey: 'ar', dir: 'rtl', app: 'en' },
+    // One tree for Spain and Latin America (founder, 2026-10-29), `es` and not
+    // `es-ES` or `es-419`, exactly as the application's own Spanish tree
+    // (contests-frontend `SERVED_LOCALES`). The application answers under the
+    // same `/es` prefix, so a Spanish page's product buttons stay in Spanish:
+    // `/es/tasks`, never the English catalogue. Slugs are ASCII Spanish words,
+    // accents dropped, for the reason given above for Arabic.
+    es: { prefix: '/es', vitepressKey: 'es', dir: 'ltr', app: 'es' },
 }
 
 /**
@@ -105,7 +113,7 @@ const LOCALE_SHAPES: Readonly<Record<Locale, LocaleShape>> = {
  * keyed by this list, and `locales.test.ts` fails when one of them misses a
  * language here.
  */
-export const KNOWN_LOCALES: readonly Locale[] = ['ru', 'uk', 'en', 'ar']
+export const KNOWN_LOCALES: readonly Locale[] = ['ru', 'uk', 'en', 'ar', 'es']
 
 /**
  * The trees the manifest can never drop: they have pages, host routes and
@@ -135,7 +143,7 @@ export const appLocaleOf = (language: Locale): Locale => LOCALE_SHAPES[language]
 
 /**
  * The language of a page, read off its docs-relative source path: `ua/…` is
- * Ukrainian, `ar/…` Arabic, anything outside a locale directory the root locale.
+ * Ukrainian, `ar/…` Arabic, `es/…` Spanish, anything outside a locale directory the root locale.
  * It is how a Markdown rule that only has a file name knows the language of the
  * page it is rendering. Directories are matched whole, so `uanews/x.md` is not
  * Ukrainian.
@@ -650,7 +658,8 @@ export const createRegistry = (input: unknown) => {
     // list is derived rather than written out once per language. If that ever
     // changes again, this is where it breaks — loudly, via VitePress's dead-link
     // check. A docs tree without an application tree of its own (Arabic) adds no
-    // routes: its readers are sent to the tree `appLocaleOf` names.
+    // routes: its readers are sent to the tree `appLocaleOf` names. A tree that
+    // has one (Spanish, `/es/tasks`) adds its routes the day it is declared.
     const APP_ROUTES: readonly string[] = [
         ...new Set(LOCALES.flatMap((locale) => APP_SECTIONS.map((section) => appPathFor(locale.language, section)))),
     ]

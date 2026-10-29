@@ -8,6 +8,7 @@ export const NAVIGATION_COPY: Record<Locale, { site: string; tasks: string; cont
   uk: { site: 'На сайт', tasks: 'Усі завдання', contents: 'У статті' },
   en: { site: 'Open site', tasks: 'All tasks', contents: 'In this article' },
   ar: { site: 'إلى الموقع', tasks: 'كل المهام', contents: 'في هذا المقال' },
+  es: { site: 'Ir al sitio', tasks: 'Todas las tareas', contents: 'En este artículo' },
 }
 
 /** The source path is stable during SSR; a section is current only at its path boundary. */

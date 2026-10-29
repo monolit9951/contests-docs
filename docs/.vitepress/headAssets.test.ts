@@ -34,6 +34,8 @@ describe('font preloads per tree', () => {
     it('preloads no Cyrillic for English, no display face for Arabic, and never latin-ext', () => {
         expect(FONT_PRELOADS.en.some((file) => file.includes('cyrillic'))).toBe(false)
         expect(FONT_PRELOADS.en).toContain('unbounded-var-latin.woff2')
+        // Spanish letters, ¿ and ¡ included, all live in the latin subset: an English page's fonts.
+        expect(FONT_PRELOADS.es).toEqual(FONT_PRELOADS.en)
         expect(FONT_PRELOADS.ar.some((file) => file.startsWith('unbounded'))).toBe(false)
         for (const language of KNOWN_LOCALES) {
             expect(FONT_PRELOADS[language].some((file) => file.includes('-ext')), language).toBe(false)

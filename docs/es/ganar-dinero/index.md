@@ -7,7 +7,7 @@ numbers_used: []
 
 # Ganar dinero con clipping: cuánto se paga y cómo empezar
 
-Un clipper convierte material autorizado en un video corto y lo publica donde la tarea acepta envíos. El pago depende de la tarifa que fija el cliente, del umbral de vistas válidas, del tope por clip, si lo hay, y del presupuesto que queda. DareBay no tiene una tarifa única para toda la plataforma. Lee una ficha vigente en el [catálogo de tareas](/es/earn/clips) antes de tomar el ejemplo de una guía como un pronóstico.
+Un clipper (o clipero) convierte material autorizado en un video corto y lo publica donde la tarea acepta envíos. El pago depende de la tarifa que fija el cliente, del umbral de vistas válidas, del tope por clip, si lo hay, y del presupuesto que queda. DareBay no tiene una tarifa única para toda la plataforma. Lee una ficha vigente en el [catálogo de tareas](/es/earn/clips) antes de tomar el ejemplo de una guía como un pronóstico.
 
 Antes de editar, revisa los derechos sobre el material, las cuentas y redes admitidas, el contenido que se pide y la forma de pago. En un concurso con fondo en la plataforma, el presupuesto queda bloqueado para ese concurso en DareBay. En el modo de pago directo, el organizador les paga directamente a los creadores; lee esas condiciones de pago por separado.
 

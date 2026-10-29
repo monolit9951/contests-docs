@@ -22,24 +22,24 @@ cta:
 
 Para un envío válido, usa `vistas válidas / 1000 × tarifa de la tarea` y después aplica el tope por envío si la tarea lo tiene. Por debajo del umbral de vistas, el clip no cumple los requisitos. Una vez que los cumple, el umbral no se descuenta de sus vistas. El alcance total de tu canal no equivale a las vistas pagadas de este envío.
 
-Estos datos son **hipotéticos**, no una franja de tarifas vigente: $2 por cada 1000 vistas válidas, un umbral de 1000 vistas y un tope de $100.
+Estos datos son **hipotéticos**, no una franja de tarifas vigente: US$2 por cada 1000 vistas válidas, un umbral de 1000 vistas y un tope de US$100.
 
 | Vistas válidas | Resultado bruto |
 |---|---:|
-| 800 | $0: por debajo del umbral |
-| 5000 | $10 |
-| 20.000 | $40 |
-| 100.000 | $100: la fórmula sin tope daría $200 |
+| 800 | US$0: por debajo del umbral |
+| 5000 | US$10 |
+| 20.000 | US$40 |
+| 100.000 | US$100: la fórmula sin tope daría US$200 |
 
 El tope se alcanza en `tope / tarifa × 1000`: aquí, con 50.000 vistas válidas. Las vistas que se sumen después en ese envío ya no aumentan su pago. Un segundo clip válido tiene su propio cálculo y su propio tope.
 
 ## Estima un mes con el trabajo aprobado
 
-Supón que editas 20 clips y que 12 cumplen los requisitos y se aprueban, con 10.000 vistas pagadas cada uno, a la tarifa de ejemplo de $2. Cada uno gana $20 si su tope es de al menos $20. Las ganancias brutas son **12 × $20 = $240**, no 20 clips multiplicados por un pago supuesto.
+Supón que editas 20 clips y que 12 cumplen los requisitos y se aprueban, con 10.000 vistas pagadas cada uno, a la tarifa de ejemplo de US$2. Cada uno gana US$20 si su tope es de al menos US$20. Las ganancias brutas son **12 × US$20 = US$240**, no 20 clips multiplicados por un pago supuesto.
 
-Si los $240 están disponibles y los retiras con una comisión del 10%, el monto recibido es de **$216**. La comisión pública de DareBay es del 10% por defecto; usa el monto que muestre tu formulario de retiro real. Este ejemplo usa los datos de la página de ayuda en la fecha de la fuente y no pretende ser una nueva revisión de la comisión de cada cuenta.<!-- source: https://darebay.com/en/help/what-commission 2026-09-24 -->
+Si los US$240 están disponibles y los retiras con una comisión del 10%, el monto recibido es de **US$216**. La comisión pública de DareBay es del 10% por defecto; usa el monto que muestre tu formulario de retiro real. Este ejemplo usa los datos de la página de ayuda en la fecha de la fuente y no pretende ser una nueva revisión de la comisión de cada cuenta.<!-- source: https://darebay.com/en/help/what-commission 2026-09-24 -->
 
-Si editar te llevó 20 horas y buscar tareas, publicar y revisar resultados te llevó otras cinco, el rendimiento efectivo es de **$216 / 25 = $8,64 por hora**. Contar solo la edición daría $10,80 y escondería cinco horas de trabajo. Si solo seis clips cumplen los requisitos, los mismos datos dan $120 brutos y $108 recibidos: la tasa de aprobación importa tanto como el CPM.
+Si editar te llevó 20 horas y buscar tareas, publicar y revisar resultados te llevó otras cinco, el rendimiento efectivo es de **US$216 / 25 = US$8,64 por hora**. Contar solo la edición daría US$10,80 y escondería cinco horas de trabajo. Si solo seis clips cumplen los requisitos, los mismos datos dan US$120 brutos y US$108 recibidos: la tasa de aprobación importa tanto como el CPM.
 
 ## Anota los datos antes de aceptar una tarea
 
@@ -51,7 +51,7 @@ Una tarifa alta con un umbral que tus clips rara vez alcanzan puede rendir menos
 
 ### ¿Hay una tarifa normal para el clipping?
 
-Unas pocas fichas de campaña no establecen una tarifa universal de mercado. Tu oferta real es la tarifa de la tarea que de verdad puedes tomar. Los $2 del ejemplo no prometen que haya una tarea así disponible.
+Unas pocas fichas de campaña no establecen una tarifa universal de mercado. Tu oferta real es la tarifa de la tarea que de verdad puedes tomar. Los US$2 del ejemplo no prometen que haya una tarea así disponible.
 
 ### ¿Los seguidores determinan el pago?
 

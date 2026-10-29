@@ -128,10 +128,13 @@
   "ppv-live-rate-range": {
     "must_match": [
       "Las tarifas van de $1 a $20 por cada 1000 vistas.",
+      "Las tarifas van de US$1 a US$20 por cada 1000 vistas.",
+      "Las tareas pagan desde US$0,30 hasta US$1 por cada 1000 vistas.",
       "Las tareas pagan desde $0,30 hasta $1 por cada 1000 vistas."
     ],
     "must_not_match": [
       "Las tarifas van de $1 a $10 por cada 1000 vistas.",
+      "Las tarifas van de US$1 a US$10 por cada 1000 vistas.",
       "Cada tarea fija su propia tarifa por cada 1000 vistas válidas."
     ]
   }

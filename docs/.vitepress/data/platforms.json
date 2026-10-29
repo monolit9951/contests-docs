@@ -380,7 +380,7 @@
             "ru": "задаётся кампанией и площадкой; первые 50 карточек All campaigns 12.10.2026 показывали $0.05–$5 за 1000, чаще $1 (21 карточка); заголовок не отражает ставки всех площадок",
             "uk": "задається кампанією та майданчиком; перші 50 карток All campaigns 12.10.2026 показували $0.05–$5 за 1000, найчастіше $1 (21 картка); заголовок не відображає ставки всіх майданчиків",
             "ar": "تحدده الحملة والمنصة؛ أول 50 بطاقة في All campaigns يوم 2026-10-12 عرضت $0.05–$5 لكل 1,000، والأكثر $1 (21 بطاقة)؛ السعر الظاهر لا يشمل كل المنصات",
-            "es": "la fija cada campaña y cada red; las primeras 50 fichas de All campaigns el 2026-10-12 mostraban $0,05–$5 por cada 1000, con $1 como valor más frecuente (21 fichas); el titular de una ficha no es la tarifa de todas las redes"
+            "es": "la fija cada campaña y cada red; las primeras 50 fichas de All campaigns el 2026-10-12 mostraban US$0,05–US$5 por cada 1000, con US$1 como valor más frecuente (21 fichas); el titular de una ficha no es la tarifa de todas las redes"
           },
           "value": 0.05,
           "source": {
@@ -407,7 +407,7 @@
             "ru": "задаётся кампанией, отдельно для каждой площадки; справка называет $200 обычным потолком; на страницах кампаний, проверенных 24.09.2026, от $80 до $1,500 за ролик",
             "uk": "задається кампанією, окремо для кожного майданчика; довідка називає $200 звичайною стелею; на сторінках кампаній, перевірених 24.09.2026, від $80 до $1,500 на ролик",
             "ar": "تحدده الحملة لكل منصة على حدة؛ ومركز المساعدة لديها يصف $200 بأنه الحد الأقصى المعتاد؛ وصفحات الحملات التي فُحصت في 2026-09-24 تراوحت من $80 إلى $1,500 لكل مقطع",
-            "es": "lo fija cada campaña y cada red; su centro de ayuda dice que el tope habitual es de $200; las páginas de campaña revisadas el 2026-09-24 iban de $80 a $1500 por clip"
+            "es": "lo fija cada campaña y cada red; su centro de ayuda dice que el tope habitual es de US$200; las páginas de campaña revisadas el 2026-09-24 iban de US$80 a US$1500 por clip"
           },
           "value": 200,
           "source": {
@@ -421,7 +421,7 @@
             "ru": "10% с каждой выплаты CPM и Pool; за пост/ретейнер 10% при бюджете кампании ниже $5,000, 0% от $5,000; возможны указанные промоскидки; комиссия вывода Whop отдельно",
             "uk": "10% з кожної виплати CPM і Pool; за пост/ретейнер 10% за бюджету кампанії нижче $5,000, 0% від $5,000; можливі зазначені промознижки; комісія виведення Whop окремо",
             "ar": "10% من كل دفعة CPM وPool؛ في الدفع لكل منشور وretainer تكون 10% تحت ميزانية $5,000 و0% عند $5,000 فأكثر؛ قد تسري خصومات ترويجية معلنة؛ ورسوم سحب Whop منفصلة",
-            "es": "10% de cada pago de CPM y de Pool; en las campañas por publicación o de retainer, 10% con un presupuesto de campaña inferior a $5000 y 0% a partir de $5000; pueden aplicarse descuentos promocionales anunciados; las comisiones de retiro de Whop van aparte"
+            "es": "10% de cada pago de CPM y de Pool; en las campañas por publicación o de retainer, 10% con un presupuesto de campaña inferior a US$5000 y 0% a partir de US$5000; pueden aplicarse descuentos promocionales anunciados; las comisiones de retiro de Whop van aparte"
           },
           "value": 10,
           "source": {
@@ -435,7 +435,7 @@
             "ru": "перевод заработка на баланс Whop без минимума по странице тарифов, минимум $1 по справке; в инструкции самого Whop по выплатам — минимум $10 «if applicable» (если применимо)",
             "uk": "переказ на баланс Whop без мінімуму за сторінкою з цінами, мінімум $1 за довідкою; інструкція самого Whop з виплат ставить мінімум $10 «if applicable» (якщо застосовно)",
             "ar": "لا حد أدنى لنقل الأرباح إلى رصيدك في Whop بحسب صفحة الأسعار لديها، وحد أدنى قدره $1 بحسب مركز المساعدة لديها؛ ودليل الدفعات لدى Whop نفسها يضع حدًا أدنى قدره $10 «إن كان ذلك منطبقًا» (if applicable)",
-            "es": "sin mínimo para pasar a tu saldo de Whop según su página de precios, un mínimo de $1 según su centro de ayuda; la propia guía de pagos de Whop fija un mínimo de $10 «if applicable»"
+            "es": "sin mínimo para pasar a tu saldo de Whop según su página de precios, un mínimo de US$1 según su centro de ayuda; la propia guía de pagos de Whop fija un mínimo de US$10 «if applicable»"
           },
           "source": {
             "url": "https://contentrewards.com/pricing/creators",
@@ -602,7 +602,7 @@
         "cpm": {
           "text": {
             "en": "$0.05–$5; most often $1 (first 50 public board cards, 12 October 2026)",
-            "es": "$0,05–$5; lo más frecuente, $1 (primeras 50 fichas del listado público, 12 de octubre de 2026)"
+            "es": "US$0,05–US$5; lo más frecuente, US$1 (primeras 50 fichas del listado público, 12 de octubre de 2026)"
           },
           "value": 5,
           "source": {
@@ -646,7 +646,7 @@
         "es": [
           "Decenas de campañas financiadas por marcas en su listado público Discover",
           "El presupuesto queda reservado para la campaña antes de que se publiquen los clips",
-          "Sin mínimo para pasar a tu saldo de Whop según su página de precios; un mínimo de $1 según su centro de ayuda"
+          "Sin mínimo para pasar a tu saldo de Whop según su página de precios; un mínimo de US$1 según su centro de ayuda"
         ]
       },
       "cons": {
@@ -696,7 +696,7 @@
         "ru": "Площадка нарезок от MrBeast: кампании крупных авторов и студий по $1–$2 за 1000 просмотров, минимум 5000 просмотров на пост, выплаты через PayPal или Stripe. Россия, Беларусь, Украина, Узбекистан, Армения, Грузия и Молдова не поддерживаются.",
         "uk": "Майданчик нарізок від MrBeast: кампанії великих авторів і студій по $1–$2 за 1000 переглядів, мінімум 5000 переглядів на пост, виплати через PayPal або Stripe. Росія, Білорусь, Україна, Узбекистан, Вірменія, Грузія та Молдова не підтримуються.",
         "ar": "سوق قص المقاطع التابعة لـMrBeast: حملات من كبار صنّاع المحتوى والاستوديوهات بسعر $1–$2 لكل 1,000 مشاهدة، وحد أدنى 5,000 مشاهدة لكل منشور، ودفعات عبر PayPal أو Stripe. وروسيا وبيلاروسيا وأوكرانيا وأوزبكستان وأرمينيا وجورجيا ومولدوفا غير مدعومة.",
-        "es": "El mercado de clipping de MrBeast: campañas de grandes creadores y estudios a $1–$2 por cada 1000 vistas, un mínimo de 5000 vistas por publicación y pagos por PayPal o Stripe. Rusia, Bielorrusia, Ucrania, Uzbekistán, Armenia, Georgia y Moldavia no están admitidos."
+        "es": "El mercado de clipping de MrBeast: campañas de grandes creadores y estudios a US$1–US$2 por cada 1000 vistas, un mínimo de 5000 vistas por publicación y pagos por PayPal o Stripe. Rusia, Bielorrusia, Ucrania, Uzbekistán, Armenia, Georgia y Moldavia no están admitidos."
       },
       "fields": {
         "rate": {
@@ -705,7 +705,7 @@
             "ru": "$1.00–$2.00 за 1000 просмотров в живых кампаниях (показывают за 1 млн)",
             "uk": "$1.00–$2.00 за 1000 переглядів у живих кампаніях (показують за 1 млн)",
             "ar": "$1.00–$2.00 لكل 1,000 مشاهدة في الحملات الجارية (يُعرض لكل مليون مشاهدة)",
-            "es": "$1,00–$2,00 por cada 1000 vistas en las campañas activas (se muestra por cada millón de vistas)"
+            "es": "US$1,00–US$2,00 por cada 1000 vistas en las campañas activas (se muestra por cada millón de vistas)"
           },
           "value": 1,
           "source": {
@@ -733,7 +733,7 @@
             "ru": "до $1,000 на ролик; точный максимум написан в условиях кампании",
             "uk": "до $1,000 на ролик; точний максимум написано в умовах кампанії",
             "ar": "حتى $1,000 لكل مقطع؛ يحدد موجز كل حملة الحد الأقصى الدقيق",
-            "es": "hasta $1000 por clip; el brief de cada campaña indica el máximo exacto"
+            "es": "hasta US$1000 por clip; el brief de cada campaña indica el máximo exacto"
           },
           "value": 1000,
           "source": {
@@ -760,7 +760,7 @@
             "ru": "$10, раз в 7 дней",
             "uk": "$10, раз на 7 днів",
             "ar": "$10، مرة كل 7 أيام",
-            "es": "$10, una vez cada 7 días"
+            "es": "US$10, una vez cada 7 días"
           },
           "value": 10,
           "source": {
@@ -929,7 +929,7 @@
         "cpm": {
           "text": {
             "en": "$1–$2",
-            "es": "$1–$2"
+            "es": "US$1–US$2"
           },
           "value": 2,
           "source": {
@@ -972,7 +972,7 @@
         ],
         "es": [
           "Sin mínimo de seguidores, y las condiciones están documentadas en un centro de ayuda",
-          "Cifras claras: mínimo de 5000 vistas, pago mínimo de $10 y tope por clip",
+          "Cifras claras: mínimo de 5000 vistas, pago mínimo de US$10 y tope por clip",
           "Paga por PayPal o Stripe, según tu país"
         ]
       },
@@ -1022,7 +1022,7 @@
         "ru": "Сеть нарезчиков вокруг кампаний стримеров и звёзд: ставки указаны за 100 тысяч просмотров, часто $20–$75+ ($0.20–$0.75+ за 1000) и до $300 ($3 за 1000) с баунти; каждому посту нужно 1000 просмотров, а выплаты идут через PayPal или USDC/USDT в Ethereum по закрытию цикла.",
         "uk": "Мережа нарізчиків навколо кампаній стримерів і зірок: ставки вказані за 100 тисяч переглядів, часто $20–$75+ ($0.20–$0.75+ за 1000) і до $300 ($3 за 1000) з баунті; кожному посту потрібно 1000 переглядів, а виплати йдуть через PayPal або USDC/USDT в Ethereum по закриттю циклу.",
         "ar": "شبكة لقص المقاطع قائمة على حملات صنّاع البث المباشر والمشاهير: الأسعار مذكورة لكل 100,000 مشاهدة، وهي غالبًا $20–$75+ ($0.20–$0.75+ لكل 1,000) وتصل إلى $300 ($3 لكل 1,000) مع المكافآت (bounties)؛ وكل منشور يحتاج إلى 1,000 مشاهدة، والدفع عبر PayPal أو USDC/USDT على شبكة Ethereum عند إغلاق الدورة.",
-        "es": "Una red de clipping centrada en campañas de streamers y celebridades: las tarifas se indican por cada 100.000 vistas, a menudo $20–$75+ ($0,20–$0,75+ por cada 1000) y hasta $300 ($3 por cada 1000) con bonificaciones; cada publicación necesita 1000 vistas, y los pagos van por PayPal o en USDC/USDT en Ethereum cuando se cierra un ciclo."
+        "es": "Una red de clipping centrada en campañas de streamers y celebridades: las tarifas se indican por cada 100.000 vistas, a menudo US$20–US$75+ (US$0,20–US$0,75+ por cada 1000) y hasta US$300 (US$3 por cada 1000) con bonificaciones; cada publicación necesita 1000 vistas, y los pagos van por PayPal o en USDC/USDT en Ethereum cuando se cierra un ciclo."
       },
       "fields": {
         "rate": {
@@ -1031,7 +1031,7 @@
             "ru": "ставку задаёт кампания; FAQ пишет, что ставки часто $20–$75+ за 100 тыс. просмотров ($0.20–$0.75+ за 1000), а страницы кампаний показывают до $300 за 100 тыс. ($3 за 1000) с баунти",
             "uk": "ставку задає кампанія; його FAQ пише, що ставки часто $20–$75+ за 100 тис. переглядів ($0.20–$0.75+ за 1000), а сторінки кампаній показують до $300 за 100 тис. ($3 за 1000) з баунті",
             "ar": "تحدده الحملة؛ وتقول صفحة الأسئلة الشائعة لديها إن الأسعار تكون غالبًا $20–$75+ لكل 100,000 مشاهدة ($0.20–$0.75+ لكل 1,000)، وصفحات حملاتها تعرض حتى $300 لكل 100,000 ($3 لكل 1,000) مع المكافآت (bounties)",
-            "es": "la fija cada campaña; sus preguntas frecuentes dicen que las tarifas suelen ser de $20–$75+ por cada 100.000 vistas ($0,20–$0,75+ por cada 1000), y sus páginas de campaña muestran hasta $300 por cada 100.000 ($3 por cada 1000) con bonificaciones"
+            "es": "la fija cada campaña; sus preguntas frecuentes dicen que las tarifas suelen ser de US$20–US$75+ por cada 100.000 vistas (US$0,20–US$0,75+ por cada 1000), y sus páginas de campaña muestran hasta US$300 por cada 100.000 (US$3 por cada 1000) con bonificaciones"
           },
           "value": 0.2,
           "source": {
@@ -1253,7 +1253,7 @@
         "cpm": {
           "text": {
             "en": "often $0.20–$0.75+; up to $3 with bounties",
-            "es": "a menudo $0,20–$0,75+; hasta $3 con bonificaciones"
+            "es": "a menudo US$0,20–US$0,75+; hasta US$3 con bonificaciones"
           },
           "value": 3,
           "source": {
@@ -1355,7 +1355,7 @@
             "ru": "задаёт кампания, видно только в приложении; калькулятор на главной считает по $3.00 за 1000",
             "uk": "задає кампанія, видно лише в застосунку; калькулятор на головній рахує за $3.00 за 1000",
             "ar": "تحدده الحملة ولا يظهر إلا داخل التطبيق؛ وحاسبة الصفحة الرئيسية تحسب بسعر $3.00 لكل 1,000",
-            "es": "la fija cada campaña y solo se ve en la app; la calculadora de la página principal usa $3,00 por cada 1000"
+            "es": "la fija cada campaña y solo se ve en la app; la calculadora de la página principal usa US$3,00 por cada 1000"
           },
           "source": {
             "url": "https://vues.app/",
@@ -1575,7 +1575,7 @@
         "cpm": {
           "text": {
             "en": "shown only in the app; site example $3",
-            "es": "solo se ve en la app; ejemplo del sitio: $3"
+            "es": "solo se ve en la app; ejemplo del sitio: US$3"
           },
           "value": null,
           "source": {
@@ -1668,7 +1668,7 @@
         "ru": "Площадка из Дубая с CPM-кампаниями, которые оплачивают бренды, а выплаты нарезчикам делает сама в USDT. Лендинги пишут «No KYC. No ID check.», а условия, действующие с 13 сентября 2026 года, требуют проверку личности через iDenfy, как только общая сумма запросов на выплату превысит $500; диапазоны ставок на её страницах тоже расходятся.",
         "uk": "Зареєстрований у Дубаї майданчик із CPM-кампаніями, які оплачують бренди, а виплати нарізчикам робить сам, у USDT. Лендинги пишуть «No KYC. No ID check.», а умови, чинні з 13 вересня 2026 року, вимагають перевірку особи через iDenfy, щойно загальна сума запитів на виплату перевищить $500, і його сторінки наводять різні діапазони CPM.",
         "ar": "سوق مسجَّلة في دبي لحملات محسوبة لكل 1,000 مشاهدة تموّلها العلامات التجارية، وتدفع هي بنفسها لصنّاع المقاطع بعملة USDT. صفحاتها التعريفية تقول «لا KYC ولا تحقق من الهوية» (No KYC. No ID check.)، بينما تشترط شروطها السارية منذ 13 سبتمبر 2026 التحقق من الهوية عبر iDenfy بمجرد أن يتجاوز مجموع طلبات الدفع $500، وصفحاتها تذكر نطاقات مختلفة للسعر لكل 1,000 مشاهدة.",
-        "es": "Un mercado registrado en Dubái de campañas por CPM financiadas por marcas que les paga a los clippers directamente en USDT. Sus páginas de presentación dicen «No KYC. No ID check.», mientras que sus condiciones vigentes desde el 13 de septiembre de 2026 exigen verificar la identidad con iDenfy cuando el total de solicitudes de pago supera los $500, y sus páginas citan rangos de CPM distintos."
+        "es": "Un mercado registrado en Dubái de campañas por CPM financiadas por marcas que les paga a los clippers directamente en USDT. Sus páginas de presentación dicen «No KYC. No ID check.», mientras que sus condiciones vigentes desde el 13 de septiembre de 2026 exigen verificar la identidad con iDenfy cuando el total de solicitudes de pago supera los US$500, y sus páginas citan rangos de CPM distintos."
       },
       "fields": {
         "rate": {
@@ -1677,7 +1677,7 @@
             "ru": "$1–$3 за 1000 «с первого дня» (страница для нарезчиков); блог: $1–$6; страницы для брендов расходятся в том, сколько платят бренды ($5–$18 в FAQ на главной, $1–$3 на странице Clipping vs Ads)",
             "uk": "$1–$3 за 1000 «з першого дня» (сторінка для нарізчиків); блог: $1–$6; сторінки для брендів розходяться в тому, скільки платять бренди ($5–$18 у FAQ на головній, $1–$3 на сторінці Clipping vs Ads)",
             "ar": "$1–$3 لكل 1,000 مشاهدة «من اليوم الأول» (from day one) بحسب صفحة صنّاع المقاطع لديها؛ ومدونتها تذكر $1–$6؛ وصفحات العلامات التجارية تتناقض فيما تدفعه العلامات ($5–$18 في الأسئلة الشائعة بالصفحة الرئيسية، و$1–$3 في صفحة Clipping vs Ads)",
-            "es": "$1–$3 por cada 1000 «from day one» (página para clippers); blog: $1–$6; sus páginas para marcas no coinciden en lo que pagan las marcas ($5–$18 en las preguntas frecuentes de la página principal, $1–$3 en Clipping vs Ads)"
+            "es": "US$1–US$3 por cada 1000 «from day one» (página para clippers); blog: US$1–US$6; sus páginas para marcas no coinciden en lo que pagan las marcas (US$5–US$18 en las preguntas frecuentes de la página principal, US$1–US$3 en Clipping vs Ads)"
           },
           "value": 1,
           "source": {
@@ -1771,7 +1771,7 @@
             "ru": "минимума подписчиков нет; условия требуют проверку аккаунта кодом в био и проверку личности через iDenfy, когда общая сумма запросов на выплату превысит $500, а лендинги пишут «No KYC. No ID check.»",
             "uk": "мінімуму підписників немає; умови вимагають перевірки акаунта кодом у біо, а також перевірки особи через iDenfy, щойно загальна сума запитів на виплату перевищить $500, тоді як лендинги пишуть «No KYC. No ID check.»",
             "ar": "لا حد أدنى للمتابعين؛ وشروطها تشترط التحقق من الحساب برمز في النبذة الشخصية، والتحقق من الهوية عبر iDenfy بمجرد أن يتجاوز مجموع طلبات الدفع $500، بينما تقول الصفحات التعريفية «لا KYC ولا تحقق من الهوية» (No KYC. No ID check.)",
-            "es": "sin mínimo de seguidores; sus condiciones exigen comprobar la cuenta con un código en la biografía y un control de identidad con iDenfy cuando el total de solicitudes de pago supera los $500, mientras que las páginas de presentación dicen «No KYC. No ID check.»"
+            "es": "sin mínimo de seguidores; sus condiciones exigen comprobar la cuenta con un código en la biografía y un control de identidad con iDenfy cuando el total de solicitudes de pago supera los US$500, mientras que las páginas de presentación dicen «No KYC. No ID check.»"
           },
           "state": "no",
           "source": {
@@ -1899,7 +1899,7 @@
         "cpm": {
           "text": {
             "en": "$1–$3 (clipper page)",
-            "es": "$1–$3 (página para clippers)"
+            "es": "US$1–US$3 (página para clippers)"
           },
           "value": 3,
           "source": {
@@ -1968,7 +1968,7 @@
           "صفحاتها تتناقض في الأسعار والحد الأدنى للسحب وطرق الدفع"
         ],
         "es": [
-          "Las páginas de presentación dicen que no hay control de identidad; sus condiciones lo exigen cuando el total de solicitudes de pago supera los $500",
+          "Las páginas de presentación dicen que no hay control de identidad; sus condiciones lo exigen cuando el total de solicitudes de pago supera los US$500",
           "Una publicación retirada dentro de los 60 días posteriores al final de la campaña puede perder sus ganancias, incluso las ya pagadas",
           "Sus páginas no coinciden en las tarifas, el pago mínimo ni los métodos de pago"
         ]
@@ -2225,7 +2225,7 @@
         "cpm": {
           "text": {
             "en": "20–60 ₽ calculator presets (≈$0.24–$0.71)",
-            "es": "20–60 ₽ en los valores predefinidos de la calculadora (≈$0,24–$0,71)"
+            "es": "20–60 ₽ en los valores predefinidos de la calculadora (≈US$0,24–US$0,71)"
           },
           "value": 0.71,
           "source": {
@@ -2316,14 +2316,14 @@
         "ru": "нарезчики с русским или английским, которым нужны USDT, USDC или TON от $5 и ставка, потолок и остаток бюджета, напечатанные до регистрации",
         "uk": "нарізчики з російською чи англійською, яким потрібні USDT, USDC або TON від $5 і ставка, стеля та залишок бюджету, надруковані до реєстрації",
         "ar": "صنّاع المقاطع الذين يعرفون الروسية أو الإنجليزية ويريدون USDT أو USDC أو TON من $5، والسعر والحد الأقصى وما تبقى من الميزانية مطبوعة قبل التسجيل",
-        "es": "clippers que hablan ruso o inglés y quieren USDT, USDC o TON desde $5, con la tarifa, el tope y el presupuesto restante visibles antes de registrarse"
+        "es": "clippers que hablan ruso o inglés y quieren USDT, USDC o TON desde US$5, con la tarifa, el tope y el presupuesto restante visibles antes de registrarse"
       },
       "summary": {
         "en": "A marketplace of digital products with a rewards board for short video: the customer sets a rate per 1,000 views or view tiers, the reward balance is frozen on activation, and the public card prints the rate, the cap and what is left of the budget. Withdrawal is in USDT, USDC or TON, from $5 to $12 depending on the network, with a published 10% fee; the agreement also offers USD through Garna (Cyprus) to a verified Garna account. Residents and citizens of the EU, the UK and the US are not served.",
         "ru": "Маркетплейс цифровых продуктов с доской наград за короткие видео: заказчик задаёт ставку за 1000 просмотров или пороги, баланс награды замораживается при активации, а открытая карточка печатает ставку, потолок и остаток бюджета. Вывод в USDT, USDC или TON, от $5 до $12 в зависимости от сети, комиссия 10% опубликована; соглашение также предлагает вывод в USD через Garna (Кипр) на верифицированный аккаунт Garna. Резидентам и гражданам ЕС, Великобритании и США услуги не оказываются.",
         "uk": "Маркетплейс цифрових продуктів із дошкою винагород за короткі відео: замовник задає ставку за 1000 переглядів або пороги, баланс винагороди заморожується при активації, а відкрита картка друкує ставку, стелю та залишок бюджету. Виведення в USDT, USDC або TON, від $5 до $12 залежно від мережі, комісія 10% опублікована; угода також пропонує виведення в USD через Garna (Кіпр) на верифікований акаунт Garna. Резидентам і громадянам ЄС, Британії та США послуги не надаються.",
         "ar": "سوق للمنتجات الرقمية فيها لوحة مكافآت للفيديو القصير: العميل يحدد السعر لكل 1,000 مشاهدة أو شرائح مشاهدات، ورصيد المكافأة يُجمَّد عند التفعيل، والبطاقة العامة تطبع السعر والحد الأقصى وما تبقى من الميزانية. والسحب بعملة USDT أو USDC أو TON، من $5 إلى $12 بحسب الشبكة، بعمولة 10% معلنة؛ وتتيح الاتفاقية أيضًا السحب بالدولار عبر Garna (قبرص) إلى حساب Garna موثَّق. ولا تُقدَّم الخدمة للمقيمين في الاتحاد الأوروبي والمملكة المتحدة والولايات المتحدة ولا لمواطنيها.",
-        "es": "Un mercado de productos digitales con un listado de recompensas para video corto: el cliente fija una tarifa por cada 1000 vistas o por tramos de vistas, el saldo de la recompensa se congela al activarla, y la ficha pública muestra la tarifa, el tope y lo que queda del presupuesto. El retiro es en USDT, USDC o TON, desde $5 hasta $12 según la red, con una comisión publicada del 10%; el acuerdo también ofrece USD a través de Garna (Chipre) a una cuenta de Garna verificada. No atiende a residentes ni ciudadanos de la UE, el Reino Unido ni EE. UU."
+        "es": "Un mercado de productos digitales con un listado de recompensas para video corto: el cliente fija una tarifa por cada 1000 vistas o por tramos de vistas, el saldo de la recompensa se congela al activarla, y la ficha pública muestra la tarifa, el tope y lo que queda del presupuesto. El retiro es en USDT, USDC o TON, desde US$5 hasta US$12 según la red, con una comisión publicada del 10%; el acuerdo también ofrece USD a través de Garna (Chipre) a una cuenta de Garna verificada. No atiende a residentes ni ciudadanos de la UE, el Reino Unido ni EE. UU."
       },
       "fields": {
         "rate": {
@@ -2332,7 +2332,7 @@
             "ru": "26 активных наград на 12.10.2026; CPM $0.10–$8 за 1000 ($8 за длинный YouTube-обзор, не обычную нарезку); отдельные ступенчатые награды: Домер $20 за 100 тыс., Zeny $25 за 100 тыс.",
             "uk": "26 активних винагород на 12.10.2026; CPM $0.10–$8 за 1000 ($8 за довгий YouTube-огляд, не звичайну нарізку); окремі ступінчасті винагороди: Домер $20 за 100 тис., Zeny $25 за 100 тис.",
             "ar": "26 مكافأة نشطة في 2026-10-12؛ إعدادات CPM بين $0.10 و$8 لكل 1,000 ($8 لمراجعة مطوّلة على YouTube، وليس لمقطع عادي)؛ ومكافآت شرائح منفصلة: Domer يدفع $20 عند 100 ألف وZeny $25 عند 100 ألف",
-            "es": "26 recompensas activas el 2026-10-12; configuraciones de CPM de $0,10–$8 por cada 1000 ($8 es una reseña larga en YouTube, no un clip normal); otras recompensas por tramos de vistas incluyen $20 a las 100.000 para Domer y $25 a las 100.000 para Zeny"
+            "es": "26 recompensas activas el 2026-10-12; configuraciones de CPM de US$0,10–US$8 por cada 1000 (US$8 es una reseña larga en YouTube, no un clip normal); otras recompensas por tramos de vistas incluyen US$20 a las 100.000 para Domer y US$25 a las 100.000 para Zeny"
           },
           "value": 0.1,
           "source": {
@@ -2346,7 +2346,7 @@
             "ru": "общего порога нет; на карточке он получается делением минимальной выплаты на ставку и напечатан как «$1 (1K views)»; карточки с оплатой по порогам просмотров ничего не платят ниже первого порога («≥ 10K views $3»)",
             "uk": "загального порога немає; на картці він виходить діленням мінімальної виплати на ставку і надрукований як «$1 (1K views)»; картки з порогами переглядів нічого не платять нижче першого порога («≥ 10K views $3»)",
             "ar": "لا حد على مستوى المنصة؛ ويُستخرج في كل بطاقة بقسمة الحد الأدنى للدفعة على السعر، ويُطبع هكذا: «$1 (1K views)»؛ والبطاقات التي تدفع بشرائح مشاهدات لا تدفع شيئًا تحت شريحتها الأولى («≥ 10K views $3»)",
-            "es": "sin mínimo para toda la plataforma; cada ficha lo deriva del pago mínimo dividido por la tarifa y lo muestra como «$1 (1K views)»; las fichas que pagan por tramos de vistas no pagan nada por debajo del primer tramo («≥ 10K views $3»)"
+            "es": "sin mínimo para toda la plataforma; cada ficha lo deriva del pago mínimo dividido por la tarifa y lo muestra como «US$1 (1K views)»; las fichas que pagan por tramos de vistas no pagan nada por debajo del primer tramo («≥ 10K views US$3»)"
           },
           "source": {
             "url": "https://www.primeoracles.com/rewards/861acf3b-b3cd-4168-a7f2-4f8219d0d2a6",
@@ -2359,7 +2359,7 @@
             "ru": "максимум задаёт награда; потолки CPM $20–$500 у активных наград 12.10.2026; одно видео — одна выплата",
             "uk": "максимум задає винагорода; стелі CPM $20–$500 в активних винагородах 12.10.2026; одне відео — одна виплата",
             "ar": "تحدده كل مكافأة؛ حدود إعدادات CPM كانت $20–$500 في المكافآت النشطة يوم 2026-10-12؛ دفعة واحدة لكل فيديو",
-            "es": "pago máximo por recompensa; topes de las configuraciones de CPM de $20–$500 en las recompensas activas el 2026-10-12; un solo pago por video"
+            "es": "pago máximo por recompensa; topes de las configuraciones de CPM de US$20–US$500 en las recompensas activas el 2026-10-12; un solo pago por video"
           },
           "source": {
             "url": "https://www.primeoracles.com/rewards",
@@ -2385,7 +2385,7 @@
             "ru": "от $5 до $12 в зависимости от сети; точную сумму соглашение оставляет интерфейсу",
             "uk": "від $5 до $12 залежно від мережі; точну суму угода залишає інтерфейсу",
             "ar": "من $5 إلى $12 بحسب الشبكة؛ والاتفاقية تترك الرقم الدقيق للواجهة",
-            "es": "desde $5 hasta $12 según la red; el acuerdo deja la cifra exacta a la interfaz"
+            "es": "desde US$5 hasta US$12 según la red; el acuerdo deja la cifra exacta a la interfaz"
           },
           "value": 5,
           "source": {
@@ -2554,7 +2554,7 @@
         "cpm": {
           "text": {
             "en": "$0.10–$8 across active CPM rewards; the $8 card requires a long YouTube review",
-            "es": "$0,10–$8 en las recompensas por CPM activas; la ficha de $8 exige una reseña larga en YouTube"
+            "es": "US$0,10–US$8 en las recompensas por CPM activas; la ficha de US$8 exige una reseña larga en YouTube"
           },
           "value": 8,
           "source": {
@@ -2596,7 +2596,7 @@
         ],
         "es": [
           "El saldo de la recompensa se congela antes de que empiece la campaña",
-          "USDT, USDC o TON en cinco redes; el acuerdo fija el mínimo entre $5 y $12 según la red",
+          "USDT, USDC o TON en cinco redes; el acuerdo fija el mínimo entre US$5 y US$12 según la red",
           "La cláusula fiscal del acuerdo nombra diez países de la CEI, con controles reforzados contra el lavado de dinero para residentes de Rusia y Bielorrusia"
         ]
       },
@@ -4212,7 +4212,7 @@
         "rate": {
           "text": {
             "en": "each campaign sets its own RPM, paid per 1,000 validated views; the campaign card on its home page lists $1.50–$2.00 per 1,000",
-            "es": "cada campaña fija su propio RPM, pagado por cada 1000 vistas validadas; la ficha de campaña de su página principal indica $1,50–$2,00 por cada 1000"
+            "es": "cada campaña fija su propio RPM, pagado por cada 1000 vistas validadas; la ficha de campaña de su página principal indica US$1,50–US$2,00 por cada 1000"
           },
           "value": 1.5,
           "source": {
@@ -4404,7 +4404,7 @@
         "cpm": {
           "text": {
             "en": "$1.50–$2 on the home page campaigns",
-            "es": "$1,50–$2 en las campañas de su página principal"
+            "es": "US$1,50–US$2 en las campañas de su página principal"
           },
           "value": 2,
           "source": {
@@ -4666,7 +4666,7 @@
         "cpm": {
           "text": {
             "en": "₹50–₹300 (≈$0.52–$3.13) on the home page; ₹10–₹100 (≈$0.10–$1.04) in its earnings guides",
-            "es": "₹50–₹300 (≈$0,52–$3,13) en la página principal; ₹10–₹100 (≈$0,10–$1,04) en sus guías de ganancias"
+            "es": "₹50–₹300 (≈US$0,52–US$3,13) en la página principal; ₹10–₹100 (≈US$0,10–US$1,04) en sus guías de ganancias"
           },
           "value": 3.13,
           "source": {
@@ -4924,7 +4924,7 @@
         "cpm": {
           "text": {
             "en": "Rp1,000–Rp5,000 (≈$0.06–$0.28)",
-            "es": "Rp1000–Rp5000 (≈$0,06–$0,28)"
+            "es": "Rp1000–Rp5000 (≈US$0,06–US$0,28)"
           },
           "value": 0.28,
           "source": {
@@ -5189,7 +5189,7 @@
         "cpm": {
           "text": {
             "en": "Rp1,000–Rp5,000 (≈$0.06–$0.28) on the first page of its board",
-            "es": "Rp1000–Rp5000 (≈$0,06–$0,28) en la primera página de su listado"
+            "es": "Rp1000–Rp5000 (≈US$0,06–US$0,28) en la primera página de su listado"
           },
           "value": 0.28,
           "source": {
@@ -5685,7 +5685,7 @@
         "cpm": {
           "text": {
             "en": "Rp1,500–Rp7,500 (≈$0.08–$0.42)",
-            "es": "Rp1500–Rp7500 (≈$0,08–$0,42)"
+            "es": "Rp1500–Rp7500 (≈US$0,08–US$0,42)"
           },
           "value": 0.42,
           "source": {
@@ -5980,7 +5980,7 @@
         "rate": {
           "text": {
             "en": "$50–$4,000 per 1M views ($0.05–$4 per 1,000) on the 90 campaigns listed on its Discover board on 2026-09-24; set per campaign",
-            "es": "$50–$4000 por cada millón de vistas ($0,05–$4 por cada 1000) en las 90 campañas de su listado Discover el 2026-09-24; la fija cada campaña"
+            "es": "US$50–US$4000 por cada millón de vistas (US$0,05–US$4 por cada 1000) en las 90 campañas de su listado Discover el 2026-09-24; la fija cada campaña"
           },
           "value": 0.05,
           "source": {
@@ -6002,7 +6002,7 @@
         "cap": {
           "text": {
             "en": "set per campaign: $80–$1,750 per post on live campaigns, most often $400; each campaign also caps earnings per profile",
-            "es": "lo fija cada campaña: de $80 a $1750 por publicación en las campañas activas, con $400 como valor más frecuente; cada campaña también limita las ganancias por perfil"
+            "es": "lo fija cada campaña: de US$80 a US$1750 por publicación en las campañas activas, con US$400 como valor más frecuente; cada campaña también limita las ganancias por perfil"
           },
           "value": 400,
           "source": {
@@ -6173,7 +6173,7 @@
         "cpm": {
           "text": {
             "en": "$0.05–$4",
-            "es": "$0,05–$4"
+            "es": "US$0,05–US$4"
           },
           "value": 4,
           "source": {
@@ -6230,13 +6230,13 @@
       },
       "summary": {
         "en": "A clipping campaign board inside Ssemble's AI clipping editor, run by Ssemble Inc. (Delaware). Ssemble-hosted campaigns pay a standard $1 per 1,000 verified views; the board also lists Whop partner campaigns that pay out on Whop.",
-        "es": "Un listado de campañas de clipping dentro del editor de clips con IA de Ssemble, gestionado por Ssemble Inc. (Delaware). Las campañas alojadas por Ssemble pagan una tarifa estándar de $1 por cada 1000 vistas verificadas; el listado también incluye campañas de socios de Whop que pagan en Whop."
+        "es": "Un listado de campañas de clipping dentro del editor de clips con IA de Ssemble, gestionado por Ssemble Inc. (Delaware). Las campañas alojadas por Ssemble pagan una tarifa estándar de US$1 por cada 1000 vistas verificadas; el listado también incluye campañas de socios de Whop que pagan en Whop."
       },
       "fields": {
         "rate": {
           "text": {
             "en": "$0.50–$2 per 1,000 views on the campaigns listed on its Clip Rewards board, set per campaign (its FAQ says roughly $0.35–$4); Ssemble-hosted campaigns use a standard $1 per 1,000 verified views",
-            "es": "$0,50–$2 por cada 1000 vistas en las campañas de su listado Clip Rewards, la fija cada campaña (sus preguntas frecuentes hablan de aproximadamente $0,35–$4); las campañas alojadas por Ssemble usan una tarifa estándar de $1 por cada 1000 vistas verificadas"
+            "es": "US$0,50–US$2 por cada 1000 vistas en las campañas de su listado Clip Rewards, la fija cada campaña (sus preguntas frecuentes hablan de aproximadamente US$0,35–US$4); las campañas alojadas por Ssemble usan una tarifa estándar de US$1 por cada 1000 vistas verificadas"
           },
           "value": 0.5,
           "source": {
@@ -6268,7 +6268,7 @@
         "fee": {
           "text": {
             "en": "not published for clippers; the creator page says 100% of the $100 Clip Test budget goes to clippers",
-            "es": "no publicada para clippers; la página para creadores dice que el 100% del presupuesto de $100 de Clip Test va a los clippers"
+            "es": "no publicada para clippers; la página para creadores dice que el 100% del presupuesto de US$100 de Clip Test va a los clippers"
           },
           "value": null,
           "source": {
@@ -6279,7 +6279,7 @@
         "minPayout": {
           "text": {
             "en": "$20 accumulated (Ssemble-hosted campaigns; the Clipper page says $10)",
-            "es": "$20 acumulados (campañas alojadas por Ssemble; la página para clippers dice $10)"
+            "es": "US$20 acumulados (campañas alojadas por Ssemble; la página para clippers dice US$10)"
           },
           "value": 20,
           "source": {
@@ -6430,7 +6430,7 @@
         "cpm": {
           "text": {
             "en": "$0.50–$2 on its board, $1 on its own campaigns",
-            "es": "$0,50–$2 en su listado, $1 en sus propias campañas"
+            "es": "US$0,50–US$2 en su listado, US$1 en sus propias campañas"
           },
           "value": 2,
           "source": {
@@ -6457,7 +6457,7 @@
           "Campaign clips are cut in an AI editor that auto-crops and captions long videos"
         ],
         "es": [
-          "Reglas de pago publicadas para las campañas alojadas por Ssemble: mínimo de 1000 vistas por clip, revisión de 5 días y pago mínimo de $20",
+          "Reglas de pago publicadas para las campañas alojadas por Ssemble: mínimo de 1000 vistas por clip, revisión de 5 días y pago mínimo de US$20",
           "Los presupuestos de los creadores se pagan por adelantado y, según Ssemble, quedan en depósito en garantía hasta que se verifican las vistas",
           "Los clips de campaña se cortan en un editor con IA que recorta y subtitula automáticamente los videos largos"
         ]
@@ -6471,7 +6471,7 @@
         "es": [
           "Las campañas de socios del listado se envían, se siguen y se pagan en Whop",
           "Los pagos de campañas alojadas por Ssemble requieren una cuenta de cobro en uno de los 39 países de su lista (EE. UU., Canadá, México, Brasil, la mayor parte de Europa, Australia, Nueva Zelanda, Japón, Singapur, Hong Kong)",
-          "Las propias páginas de Ssemble no coinciden en las condiciones de pago (Stripe y $20 en Clip Rewards frente a PayPal y $10 en la página para clippers)"
+          "Las propias páginas de Ssemble no coinciden en las condiciones de pago (Stripe y US$20 en Clip Rewards frente a PayPal y US$10 en la página para clippers)"
         ]
       }
     },
@@ -6494,7 +6494,7 @@
         "rate": {
           "text": {
             "en": "typically $0.10–$0.15 per 1,000 views (its CloutBot blog post, January 2026); live campaign rates are shown only to accepted creators",
-            "es": "por lo general $0,10–$0,15 por cada 1000 vistas (la entrada de su blog sobre CloutBot, enero de 2026); las tarifas de las campañas activas solo se muestran a los creadores aceptados"
+            "es": "por lo general US$0,10–US$0,15 por cada 1000 vistas (la entrada de su blog sobre CloutBot, enero de 2026); las tarifas de las campañas activas solo se muestran a los creadores aceptados"
           },
           "value": 0.1,
           "source": {
@@ -6689,7 +6689,7 @@
         "cpm": {
           "text": {
             "en": "$0.10–$0.15, typical per its blog",
-            "es": "$0,10–$0,15, lo habitual según su blog"
+            "es": "US$0,10–US$0,15, lo habitual según su blog"
           },
           "value": 0.15,
           "source": {
@@ -6947,7 +6947,7 @@
         "cpm": {
           "text": {
             "en": "R$1–R$3 (≈$0.19–$0.58)",
-            "es": "R$1–R$3 (≈$0,19–$0,58)"
+            "es": "R$1–R$3 (≈US$0,19–US$0,58)"
           },
           "value": 0.58,
           "source": {
@@ -7004,13 +7004,13 @@
       },
       "summary": {
         "en": "Promote.fun lists brand campaigns that pay a per-campaign rate per 1,000 verified views on TikTok, Instagram, YouTube and X; on 2026-09-24 it showed live campaigns at $1–$3 per 1,000 views. Earnings are added to the balance when a campaign ends and are withdrawn as USDC on Solana.",
-        "es": "Promote.fun publica campañas de marcas que pagan una tarifa propia de cada campaña por cada 1000 vistas verificadas en TikTok, Instagram, YouTube y X; el 2026-09-24 mostraba campañas activas a $1–$3 por cada 1000 vistas. Las ganancias se suman al saldo cuando termina una campaña y se retiran en USDC en Solana."
+        "es": "Promote.fun publica campañas de marcas que pagan una tarifa propia de cada campaña por cada 1000 vistas verificadas en TikTok, Instagram, YouTube y X; el 2026-09-24 mostraba campañas activas a US$1–US$3 por cada 1000 vistas. Las ganancias se suman al saldo cuando termina una campaña y se retiran en USDC en Solana."
       },
       "fields": {
         "rate": {
           "text": {
             "en": "$1–$3 per 1,000 views on the live campaigns shown on its Campaigns page; its terms let Promote.fun change CPMs at any time, while its home page says brands set them",
-            "es": "$1–$3 por cada 1000 vistas en las campañas activas de su página Campaigns; sus condiciones permiten a Promote.fun cambiar los CPM en cualquier momento, mientras que su página principal dice que los fijan las marcas"
+            "es": "US$1–US$3 por cada 1000 vistas en las campañas activas de su página Campaigns; sus condiciones permiten a Promote.fun cambiar los CPM en cualquier momento, mientras que su página principal dice que los fijan las marcas"
           },
           "value": 1,
           "source": {
@@ -7204,7 +7204,7 @@
         "cpm": {
           "text": {
             "en": "$1–$3",
-            "es": "$1–$3"
+            "es": "US$1–US$3"
           },
           "value": 3,
           "source": {
@@ -7230,7 +7230,7 @@
           "No platform-wide follower minimum is published; follower and view rules are set per campaign"
         ],
         "es": [
-          "La tarifa y el presupuesto total de cada campaña activa son públicos ($1–$3 por cada 1000 vistas el 2026-09-24)",
+          "La tarifa y el presupuesto total de cada campaña activa son públicos (US$1–US$3 por cada 1000 vistas el 2026-09-24)",
           "Sus condiciones dicen que las marcas financian las campañas antes del lanzamiento y que Promote.fun guarda los fondos en un saldo de custodia o tipo depósito en garantía, pero niegan responsabilidad por las ganancias no pagadas si una marca no aporta fondos suficientes",
           "No publica un mínimo de seguidores para toda la plataforma; las reglas de seguidores y vistas las fija cada campaña"
         ]

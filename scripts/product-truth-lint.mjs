@@ -735,8 +735,9 @@ function declaresLiveReading(declaration, ...facts) {
 const CPM_RANGE_PATTERNS = [
   /(?:rates?[^.\n]{0,45}(?:run|range)|pay[^.\n]{0,20}from)\s*(?:from\s*)?\*?\*?\$?(\d+(?:[.,]\d+)?)\b[^.\n]{0,25}\bto\s*\*?\*?\$?(\d+(?:[.,]\d+)?)[^.\n]{0,35}(?:1000|1,000) views/ig,
   /(?:ставк[аи]|платят)[^.\n]{0,45}(?:от|від)\s*\*?\*?\$?(\d+(?:[.,]\d+)?)[^.\n]{0,25}(?:до)\s*\*?\*?\$?(\d+(?:[.,]\d+)?)[^.\n]{0,35}(?:1000|1 000) (?:просмотров|переглядів)/ig,
-  // Spanish: «las tarifas van de $1 a $10 por cada 1000 vistas», «pagan desde $1 hasta $10…».
-  /(?:tarifas?[^.\n]{0,45}(?:van|oscilan|var[ií]an)|pagan[^.\n]{0,20}?)\s*(?:de|desde|entre)\s*\*?\*?\$?(\d+(?:[.,]\d+)?)[^.\n]{0,25}?(?:a|hasta|y)\s*\*?\*?\$?(\d+(?:[.,]\d+)?)[^.\n]{0,35}(?:1000|1\.000) vistas/igu,
+  // Spanish: «las tarifas van de US$1 a US$10 por cada 1000 vistas», «pagan desde US$1 hasta…»;
+  // Spanish pages name the currency (US$), and a bare `$` is read the same way.
+  /(?:tarifas?[^.\n]{0,45}(?:van|oscilan|var[ií]an)|pagan[^.\n]{0,20}?)\s*(?:de|desde|entre)\s*\*?\*?(?:US)?\$?(\d+(?:[.,]\d+)?)[^.\n]{0,25}?(?:a|hasta|y)\s*\*?\*?(?:US)?\$?(\d+(?:[.,]\d+)?)[^.\n]{0,35}(?:1000|1\.000) vistas/igu,
 ];
 
 // The subject phrase only. The old rule glued `[^.\n]{0,55}\$(\d+)` onto the subject and let it

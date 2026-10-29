@@ -195,12 +195,14 @@ export { LABELS }
 // Formatting. Numbers arrive from the data files and are only rendered here.
 // ---------------------------------------------------------------------------
 
-// Spanish writes the decimal with a comma ("$1,00", "0,5"), as its prose and the application's
-// Spanish tree do; every other tree keeps the point.
+// Spanish writes the decimal with a comma ("US$1,00", "0,5"), as its prose and the application's
+// Spanish tree do, and names the currency: a bare `$` reads as the local peso in Mexico, Argentina,
+// Colombia or Chile. Every other tree keeps the bare `$` and the point.
+const dollar = (locale) => (locale === 'es' ? 'US$' : '$')
 const decimals = (text, locale) => (locale === 'es' ? text.replace('.', ',') : text)
-const money = (value, locale) => `$${Number.isInteger(value) ? value : decimals(value.toFixed(2), locale)}`
+const money = (value, locale) => `${dollar(locale)}${Number.isInteger(value) ? value : decimals(value.toFixed(2), locale)}`
 /** A rate is always printed with cents: "$1.00–$2.00" reads as money, "$1–$2" as a guess. */
-const rate = (value, locale) => `$${decimals(value.toFixed(2), locale)}`
+const rate = (value, locale) => `${dollar(locale)}${decimals(value.toFixed(2), locale)}`
 // English groups thousands ("1,000 views"); the Russian and Ukrainian corpus writes them bare
 // ("1000 просмотров"), and the truth gate's own patterns are written for that form. Arabic is
 // written with Latin digits and groups them the English way ("1,000 مشاهدة"), like the money

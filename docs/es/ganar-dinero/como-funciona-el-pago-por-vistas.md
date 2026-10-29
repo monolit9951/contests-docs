@@ -25,7 +25,7 @@ cta:
 ## La cadena completa: del presupuesto al pago
 
 1. **El cliente publica las condiciones y la forma de pago.** La ficha indica la tarifa, el umbral y el tope, si lo hay. Las tareas con fondo en la plataforma reservan allí el dinero; en las tareas de pago directo del organizador, la plataforma no guarda el fondo y el organizador se encarga de liquidar.
-2. **El clipper publica y comprueba la admisión.** Sigue el método de envío que indique la tarea: manda el enlace del video o conecta una cuenta donde se admita. Un hashtag por sí solo no confirma la admisión; comprueba que el trabajo aparece en tu lista.
+2. **El clipper (o clipero) publica y comprueba la admisión.** Sigue el método de envío que indique la tarea: manda el enlace del video o conecta una cuenta donde se admita. Un hashtag por sí solo no confirma la admisión; comprueba que el trabajo aparece en tu lista.
 3. **Un moderador revisa las condiciones y la plataforma lee las vistas.** Nadie escribe la cifra a mano: un contador independiente lee el contador de vistas publicado en el sitio. Un envío con un crecimiento sospechoso queda en espera: es una pausa, no una eliminación.
 4. **La fórmula fija el monto.** Al final, el sistema calcula el pago de cada envío: `vistas / 1000 × tarifa`. El umbral es una condición de entrada, no un descuento, y el tope limita lo que gana cada envío.
 5. **El monto se registra a nombre del autor.** La plataforma crea una acreditación con un estado que el cliente no puede recalcular ni borrar. Donde la tarea muestra «Cobrar ahora», la acreditación de un envío aprobado puede asegurarse antes del final, y ese clip deja de ganar: el botón se habilita cuando todo el monto acreditado cumple 24 horas, así que en un clip que todavía suma vistas el plazo vuelve a empezar.
@@ -50,10 +50,10 @@ Un contador independiente lee el contador de vistas publicado en el sitio, en el
 
 El umbral es una condición de admisión, no un descuento: solo decide si el envío entra en el reparto del presupuesto. El cliente lo fija en el campo «mínimo de vistas»; si lo deja vacío, el sistema pone su valor predeterminado de **1000 vistas**, y el cliente puede poner cualquier cifra, hasta una sola vista. El valor exacto siempre está en la ficha antes de que envíes.
 
-Un ejemplo: un umbral de 1000 vistas, una tarifa de $1,00 por cada 1000 vistas y un envío que llegó a 6000 vistas.
+Un ejemplo: un umbral de 1000 vistas, una tarifa de US$1,00 por cada 1000 vistas y un envío que llegó a 6000 vistas.
 
-- **Cómo lo cuenta DareBay:** 6000 / 1000 × $1,00 = **$6,00**; las 6000 vistas entran en el cálculo.
-- **Si el umbral se descontara:** solo contaría el resto, 5000 / 1000 × $1,00 = **$5,00**.
+- **Cómo lo cuenta DareBay:** 6000 / 1000 × US$1,00 = **US$6,00**; las 6000 vistas entran en el cálculo.
+- **Si el umbral se descontara:** solo contaría el resto, 5000 / 1000 × US$1,00 = **US$5,00**.
 
 | Vistas del envío | Umbral de la tarea | Qué entra en el cálculo |
 |---|---|---|
@@ -95,7 +95,7 @@ El presupuesto de una tarea de pago por vistas se gasta según las vistas realme
 
 Sigue un envío a través de cuatro registros separados: el contador público del video, el último contador guardado en la tarea, el monto aprobado y el estado de la liquidación o del retiro. Una diferencia entre los dos primeros puede ser un retraso en la recolección; una diferencia entre los dos últimos es una cuestión de pago. Tratar los cuatro como un solo número manda la consulta al lugar equivocado del soporte.
 
-Para una tarea ilustrativa con un umbral de 1000 vistas, una tarifa de $2 y un tope de $25, un clip aprobado con 800 vistas contabilizadas gana cero. Con 6000 vistas la fórmula da $12; con 20.000 da $40 antes del tope y $25 después. Son datos de ejemplo elegidos a propósito, no una afirmación sobre campañas disponibles.
+Para una tarea ilustrativa con un umbral de 1000 vistas, una tarifa de US$2 y un tope de US$25, un clip aprobado con 800 vistas contabilizadas gana cero. Con 6000 vistas la fórmula da US$12; con 20.000 da US$40 antes del tope y US$25 después. Son datos de ejemplo elegidos a propósito, no una afirmación sobre campañas disponibles.
 
 Antes de publicar, guarda la tarifa, el umbral, el tope, el plazo de envío y la forma de pago que indica la ficha. En el modo con fondo en la plataforma, distingue lo acreditado de una solicitud de retiro; en el modo de pago directo del organizador, pregunta qué comprobante de pago acompañará la liquidación. Si un monto te parece incorrecto, envía la URL del video, la URL de la tarea, el estado visible y la hora de la última sincronización. Mantén el video público mientras se revisa el trabajo.
 

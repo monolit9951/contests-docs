@@ -7,7 +7,7 @@ seo: true
 landing: true
 hero:
   kicker: "Alternativas a Whop · 2026"
-  lede: "Whop Content Rewards es el mayor mercado de clipping, y no les paga a todos los que hacen clips para él: Rusia y Bielorrusia están en su lista de países sancionados, sus condiciones fijan una comisión del 10% sobre los pagos por CPM y las campañas necesitan un presupuesto de marca de $1000. Siete plataformas aceptan a esos clippers, comparadas aquí con los mismos campos y con cada cifra leída en la propia página de la plataforma."
+  lede: "Whop Content Rewards es el mayor mercado de clipping, y no les paga a todos los que hacen clips para él: Rusia y Bielorrusia están en su lista de países sancionados, sus condiciones fijan una comisión del 10% sobre los pagos por CPM y las campañas necesitan un presupuesto de marca de US$1000. Siete plataformas aceptan a esos clippers (o cliperos), comparadas aquí con los mismos campos y con cada cifra leída en la propia página de la plataforma."
   secondary: "Comparar las alternativas"
   takeaways:
     - "<b>DareBay no tiene lista de países; Whop bloquea Rusia y Bielorrusia.</b> Klipni es solo para Rusia; Prime Oracles cubre Rusia, Bielorrusia y Kazajistán."
@@ -43,7 +43,7 @@ Whop Content Rewards es donde se concentra la mayoría de las campañas de clipp
 
 **La comisión.** Según sus condiciones, Whop se queda con un 10% fijo de los pagos por CPM, y las preguntas frecuentes para creadores ya indican ese mismo 10% fijo, sin tramos <!-- source: https://contentrewards.com/creators 2026-09-18 -->. La tarifa de la ficha de la campaña sigue sin ser la tarifa que te llega.
 
-**La rotación.** Las campañas de marca parten de $1000 y se detienen en cuanto se gasta el presupuesto, así que un clipper que depende de un solo mercado pasa tiempo esperando la siguiente tarea.
+**La rotación.** Las campañas de marca parten de US$1000 y se detienen en cuanto se gasta el presupuesto, así que un clipper que depende de un solo mercado pasa tiempo esperando la siguiente tarea.
 
 **Los plazos.** La primera ronda de CPM se abre cuando se cumplen la aprobación y el mínimo; las rondas siguientes pueden abrirse después de que se liquide la anterior, mientras queden ganancias válidas. Una ronda suele tener siete días de ganancias y tres días de validación.<!-- source: https://contentrewards.com/terms 2026-10-12 -->
 
@@ -59,11 +59,11 @@ Vues y Reach.cat tienen cada una su propia reseña completa, que contrasta las c
 
 ## Elige la alternativa según tu situación
 
-**Estás en un país que Whop excluye.** DareBay no tiene lista de países: solo se excluye a las personas que figuran en listas de sanciones<!-- source: https://darebay.com/en/legal/terms 2026-09-24 -->, así que se les paga a los clippers de Rusia, Bielorrusia, Ucrania, Kazajistán y el resto de la CEI. No pide seguidores, un concurso con fondo en la plataforma bloquea allí su presupuesto antes del inicio, y cobras en USDT en la red TON o recibes el pago en Estrellas de Telegram<!-- source: https://darebay.com/en/help/darebay-withdrawals 2026-09-24 -->, así que comprueba que puedes recibir USDT donde vives. Klipni paga en rublos, pero exige estar registrado en Rusia como trabajador autónomo. Prime Oracles atiende a Rusia, Bielorrusia y Kazajistán en USDT o USDC desde $5. Vyro no es una opción: su lista de países no admitidos incluye Rusia, Bielorrusia, Ucrania, Uzbekistán, Armenia, Georgia y Moldavia.
+**Estás en un país que Whop excluye.** DareBay no tiene lista de países: solo se excluye a las personas que figuran en listas de sanciones<!-- source: https://darebay.com/en/legal/terms 2026-09-24 -->, así que se les paga a los clippers de Rusia, Bielorrusia, Ucrania, Kazajistán y el resto de la CEI. No pide seguidores, un concurso con fondo en la plataforma bloquea allí su presupuesto antes del inicio, y cobras en USDT en la red TON o recibes el pago en Estrellas de Telegram<!-- source: https://darebay.com/en/help/darebay-withdrawals 2026-09-24 -->, así que comprueba que puedes recibir USDT donde vives. Klipni paga en rublos, pero exige estar registrado en Rusia como trabajador autónomo. Prime Oracles atiende a Rusia, Bielorrusia y Kazajistán en USDT o USDC desde US$5. Vyro no es una opción: su lista de países no admitidos incluye Rusia, Bielorrusia, Ucrania, Uzbekistán, Armenia, Georgia y Moldavia.
 
 **Quieres la comisión más baja.** Klipni se queda con el 5% de cada pago aprobado; Vues no publica una tasa de comisión y sus páginas se contradicen: su página principal dice que su parte la paga la marca, y su página de referidos ilustra una comisión del 10% en cada cobro del clipper <!-- source: https://vues.app/affiliate 2026-09-18 -->; Reach.cat les cobra a las marcas un 10% además del presupuesto <!-- source: https://reach.cat/blog/reach-cat-pricing-brands-2026/ 2026-09-18 -->, mientras que sus condiciones citan «aproximadamente un 10% de todos los pagos basados en CPM» <!-- source: https://reach.cat/terms 2026-09-18 -->; DareBay se queda con el 0% de los pagos de concursos y con el 10% por defecto cuando retiras tu saldo; una cuenta puede tener otra comisión aplicable, así que revisa el formulario. Clipping.net y Vyro no publican una comisión para clippers, y esa es una razón para preguntar antes de hacer clips.
 
-**Quieres el mayor número de campañas después de Whop.** Vyro tiene campañas de los mayores creadores de EE. UU. a $1–$2 por cada 1000 vistas, con un mínimo de 5000 vistas por publicación. Clipping.net tiene campañas de streamers y celebridades a $0,20–$0,75 por cada 1000 vistas, con un mínimo de 1000 vistas por publicación. Usa las dos, y sigue en Whop si te puede pagar.
+**Quieres el mayor número de campañas después de Whop.** Vyro tiene campañas de los mayores creadores de EE. UU. a US$1–US$2 por cada 1000 vistas, con un mínimo de 5000 vistas por publicación. Clipping.net tiene campañas de streamers y celebridades a US$0,20–US$0,75 por cada 1000 vistas, con un mínimo de 1000 vistas por publicación. Usa las dos, y sigue en Whop si te puede pagar.
 
 <LMethod />
 

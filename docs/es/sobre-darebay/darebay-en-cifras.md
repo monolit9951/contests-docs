@@ -8,7 +8,7 @@ landing: true
 app: true
 hero:
   kicker: "Ficha de datos"
-  lede: "Todas las cifras sobre DareBay que piden los clippers, las marcas y los sitios de comparativas, en una sola página y con los mismos campos con los que se comparan otras plataformas de clipping. Las cifras de DareBay salen de sus propias páginas públicas; cada una lleva la fecha en que se leyó y se actualiza cada mes."
+  lede: "Todas las cifras sobre DareBay que piden los clippers (o cliperos), las marcas y los sitios de comparativas, en una sola página y con los mismos campos con los que se comparan otras plataformas de clipping. Las cifras de DareBay salen de sus propias páginas públicas; cada una lleva la fecha en que se leyó y se actualiza cada mes."
   secondary: "Ver los campos"
   secondaryHref: "#facts"
   takeaways:
@@ -32,8 +32,8 @@ Hay dos tipos de concurso. En un **concurso con fondo en la plataforma**, el pre
 
 | Dato | Valor | Fuente | Fecha |
 | --- | --- | --- | --- |
-| Tarifa por cada 1000 vistas | la fija la tarea; $1,00–$10,00 por cada 1000 vistas es el objetivo del producto en la fecha indicada, no una oferta vigente | decisión de producto | 2026-09-20 |
-| Tope por clip | lo fija la tarea; $500 es el límite superior de la franja histórica, no un tope universal | reglas de la plataforma | 2026-08-23 |
+| Tarifa por cada 1000 vistas | la fija la tarea; US$1,00–US$10,00 por cada 1000 vistas es el objetivo del producto en la fecha indicada, no una oferta vigente | decisión de producto | 2026-09-20 |
+| Tope por clip | lo fija la tarea; US$500 es el límite superior de la franja histórica, no un tope universal | reglas de la plataforma | 2026-08-23 |
 | Umbral de vistas | lo fija cada tarea (valor predeterminado del sistema: 1000 vistas) | reglas de la plataforma | 2026-08-23 |
 | Comisión por crear un concurso | 0% | reglas de la plataforma | 2026-08-23 |
 | Comisión por recargar el presupuesto de un concurso | 0% | reglas de la plataforma | 2026-08-23 |

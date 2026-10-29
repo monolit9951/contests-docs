@@ -4,7 +4,7 @@
 // refreshed from the baseline. The displayed numbers are an illustrative scenario.
 import { useData } from 'vitepress'
 import { computed, ref } from 'vue'
-import { LANDING_COPY, NUMBER_LOCALE, localeOf } from './copy'
+import { LANDING_COPY, NUMBER_LOCALE, formatDollars, localeOf } from './copy'
 import { byId } from './platforms'
 
 const { lang } = useData()
@@ -14,7 +14,7 @@ const views = ref(50000)
 const rate = ref(calc.value.rateMin)
 const payout = computed(() => Math.min((rate.value * views.value) / 1000, calc.value.cap))
 const fmt = (n: number) => n.toLocaleString(NUMBER_LOCALE[localeOf(lang.value)])
-const money = (n: number) => '$' + n.toFixed(2)
+const money = (n: number) => formatDollars(n, localeOf(lang.value), false)
 </script>
 
 <template>

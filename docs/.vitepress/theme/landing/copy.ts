@@ -167,9 +167,10 @@ const columns = {
     indonesia: 'تدفع في إندونيسيا',
     philippines: 'تدفع في الفلبين',
   },
-  // Figures in Spanish style (1000, 10.000), as the application's Spanish tree prints them.
+  // Figures in Spanish style (1000, 10.000), as the application's Spanish tree prints them, and
+  // dollars as US$: a bare `$` reads as the local peso in Mexico, Argentina, Colombia or Chile.
   es: {
-    cpm: '$ por cada 1000 vistas',
+    cpm: 'US$ por cada 1000 vistas',
     rate: 'Tarifa por cada 1000 vistas',
     threshold: 'Umbral de vistas',
     cap: 'Tope por clip',
@@ -498,7 +499,8 @@ export const LANDING_COPY: Record<Locale, LandingCopy> = {
 
 /**
  * How the calculators group a number (`toLocaleString`), per tree. Arabic is written with Latin
- * digits: the money beside every figure is formatted `$1,000.00` whatever the page's language,
+ * digits: the money beside every figure is formatted `$1,000.00` in every tree but Spanish
+ * (`formatDollars`),
  * and the tables, the fact card and the sources this corpus quotes all use Latin digits too — a
  * calculator in Arabic-Indic digits (٥٠٬٠٠٠) would be the one place on the page that disagrees.
  * Spanish is `es-ES`, the number locale of the application's Spanish tree (contests-frontend
@@ -511,6 +513,18 @@ export const NUMBER_LOCALE: Record<Locale, string> = {
   ar: 'ar-u-nu-latn',
   es: 'es-ES',
 }
+
+/**
+ * A dollar amount as a calculator prints it on a page in `locale`. Every tree keeps the `$` and the
+ * English digits it always had — grouped (`$1,000.00`) or, for the one-clip calculator, plain
+ * (`$1000.00`) — except Spanish: a bare `$` reads as the local peso in Mexico, Argentina, Colombia
+ * or Chile, so a Spanish page writes `US$` and its own number style (`US$1000,00`, `US$10.000,00`),
+ * as its prose and the comparison data do (coordinator rule, 2026-10-29).
+ */
+export const formatDollars = (amount: number, locale: Locale, grouped = true): string =>
+  locale === 'es'
+    ? `US$${amount.toLocaleString(NUMBER_LOCALE.es, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`
+    : `$${grouped ? amount.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) : amount.toFixed(2)}`
 
 /**
  * The copy locale of a VitePress `lang`: the language itself when the build knows it, the root

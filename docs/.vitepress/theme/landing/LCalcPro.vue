@@ -5,7 +5,7 @@
 // baseline. They are scenario inputs, not a statement of current campaign availability.
 import { useData } from 'vitepress'
 import { computed, ref } from 'vue'
-import { LANDING_COPY, NUMBER_LOCALE, localeOf } from './copy'
+import { LANDING_COPY, NUMBER_LOCALE, formatDollars, localeOf } from './copy'
 import { byId } from './platforms'
 
 interface Calc { rateMin: number; rateMax: number; cap: number; threshold: number; fee: number; minPayout: number }
@@ -23,7 +23,7 @@ const perMonth = computed(() => perWeek.value * 4)
 const net = computed(() => perMonth.value * (1 - calc.value.fee / 100))
 const numLocale = computed(() => NUMBER_LOCALE[localeOf(lang.value)])
 const fmt = (n: number) => n.toLocaleString(numLocale.value)
-const money = (n: number) => '$' + n.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })
+const money = (n: number) => formatDollars(n, localeOf(lang.value))
 const fill = (text: string, values: Record<string, string | number>) => text.replace(/\{(\w+)\}/g, (m, k) => String(values[k] ?? m))
 </script>
 

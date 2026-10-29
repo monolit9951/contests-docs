@@ -21,7 +21,7 @@ import siteConfig, {
 import { businessUrlForLocale, productUrlForLocale, tasksUrlForLocale } from './links'
 import { HUBS, KNOWN_LOCALES, LOCALES, knownAxisOf, textDirectionOf, type Locale } from './registry'
 import { sourcesHeading } from './sources'
-import { LANDING_COPY, NUMBER_LOCALE, localeOf } from './theme/landing/copy'
+import { LANDING_COPY, NUMBER_LOCALE, formatDollars, localeOf } from './theme/landing/copy'
 import { TOOLS_COPY } from './theme/landing/toolsCopy'
 import { NAVIGATION_COPY } from './theme/landing/navigation'
 
@@ -135,6 +135,25 @@ describe('every interface dictionary speaks every known language', () => {
     for (const language of KNOWN_LOCALES) expect(localeOf(language)).toBe(language)
     expect(localeOf('xx')).toBe('ru')
     expect(sourcesHeading('ar')).toBe(LANDING_COPY.ar.sources)
+  })
+})
+
+// A bare `$` reads as the local peso in Mexico, Argentina, Colombia or Chile (coordinator rule,
+// 2026-10-29): a Spanish page names the currency and writes its own digits; every other tree keeps
+// exactly the amounts it printed before.
+describe('dollar amounts in the calculators', () => {
+  it('name the currency and use Spanish digits on a Spanish page', () => {
+    expect(formatDollars(1, 'es')).toBe('US$1,00')
+    expect(formatDollars(1000, 'es')).toBe('US$1000,00')
+    expect(formatDollars(12500.5, 'es')).toBe('US$12.500,50')
+    expect(formatDollars(500, 'es', false)).toBe('US$500,00')
+  })
+
+  it('keep the bare $ and English digits in every other tree', () => {
+    for (const language of KNOWN_LOCALES.filter((known) => known !== 'es')) {
+      expect(formatDollars(1234.5, language), language).toBe('$1,234.50')
+      expect(formatDollars(1234.5, language, false), language).toBe('$1234.50')
+    }
   })
 })
 

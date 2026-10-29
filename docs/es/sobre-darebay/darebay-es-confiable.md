@@ -8,7 +8,7 @@ seo: true
 
 # ¿Es confiable DareBay?
 
-Sí, y puedes comprobarlo tú mismo en un minuto: cada condición con la que se te pide trabajar está a la vista antes de que empieces a trabajar, y ninguna se puede reescribir después a tus espaldas. DareBay es un mercado donde marcas y compradores particulares publican tareas de contenido, y los clippers cobran por el alcance que consiguen sus propios clips. No tienes que comprar nada para empezar ni hacer ningún depósito para entrar.
+Sí, y puedes comprobarlo tú mismo en un minuto: cada condición con la que se te pide trabajar está a la vista antes de que empieces a trabajar, y ninguna se puede reescribir después a tus espaldas. DareBay es un mercado donde marcas y compradores particulares publican tareas de contenido, y los clippers (o cliperos) cobran por el alcance que consiguen sus propios clips. No tienes que comprar nada para empezar ni hacer ningún depósito para entrar.
 
 En una plataforma que mueve dinero, la confianza es una lista de detalles concretos, así que aquí está la lista.
 

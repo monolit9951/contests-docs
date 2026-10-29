@@ -40,7 +40,7 @@
         "uk": "ставку задає завдання; $1.00–$10.00 за 1000 переглядів — опублікований орієнтир продукту на зазначену дату, не поточна пропозиція",
         "en": "set by the task; $1.00–$10.00 per 1,000 views is the dated product target, not a live offer",
         "ar": "تحدده المهمة؛ $1.00–$10.00 لكل 1,000 مشاهدة هدف المنتج في التاريخ المذكور، وليس عرضًا متاحًا الآن",
-        "es": "la fija la tarea; $1,00–$10,00 por cada 1000 vistas es el objetivo del producto en la fecha indicada, no una oferta vigente"
+        "es": "la fija la tarea; US$1,00–US$10,00 por cada 1000 vistas es el objetivo del producto en la fecha indicada, no una oferta vigente"
       },
       "source": "product-intent.json#rate-band",
       "asOf": "2026-09-20",
@@ -64,7 +64,7 @@
         "uk": "задається завданням; $500 — верхня межа історичного зрізу, не універсальна стеля",
         "en": "set by the task; $500 is the historical band's upper edge, not a universal cap",
         "ar": "تحدده المهمة؛ $500 الحد الأعلى للنطاق التاريخي، وليس سقفًا موحّدًا",
-        "es": "lo fija la tarea; $500 es el límite superior de la franja histórica, no un tope universal"
+        "es": "lo fija la tarea; US$500 es el límite superior de la franja histórica, no un tope universal"
       },
       "source": "product-truth.json#ppv.stable.bands.maxPerWork.high",
       "asOf": "2026-08-23",

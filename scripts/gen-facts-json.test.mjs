@@ -288,13 +288,17 @@ describe('every declared fact card prints exactly what the JSON publishes', () =
   })
 
   // Spanish (2026-10-29) writes its numbers its own way, as the application's Spanish tree does:
-  // four digits bare, a decimal comma — never the English "1,000 views" or "$1.00".
-  it('renders the Spanish table in Spanish number style, ready for its page', () => {
+  // four digits bare, a decimal comma — never the English "1,000 views" or "$1.00" — and dollars
+  // as US$, because a bare `$` reads as the local peso across most of Latin America.
+  it('renders the Spanish table in Spanish number style with US$, ready for its page', () => {
     const table = renderTable(document, 'es')
     expect(table.split('\n')[0]).toBe('| Dato | Valor | Fuente | Fecha |')
     expect(table).toContain('| Umbral de vistas | lo fija cada tarea (valor predeterminado del sistema: 1000 vistas) |')
-    expect(table).toMatch(/\$1,00–\$\d+,00 por cada 1000 vistas/)
+    expect(table).toMatch(/US\$1,00–US\$\d+,00 por cada 1000 vistas/)
+    expect(table).toContain('US$500 ')
     expect(table).toContain('| 10 USDT |')
     expect(table).not.toMatch(/1,000|\$\d+\.\d/)
+    // Every dollar sign names its currency.
+    expect(table.match(/(?<!US)\$/g)).toBeNull()
   })
 })

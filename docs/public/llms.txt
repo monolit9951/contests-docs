@@ -408,8 +408,8 @@ Guías sobre tareas de contenido, participación, vistas validadas y pagos en Da
 
 ### Datos clave
 
-- Tarifa por cada 1000 vistas: la fija la tarea; $1,00–$10,00 por cada 1000 vistas es el objetivo del producto en la fecha indicada, no una oferta vigente
-- Tope por clip: lo fija la tarea; $500 es el límite superior de la franja histórica, no un tope universal
+- Tarifa por cada 1000 vistas: la fija la tarea; US$1,00–US$10,00 por cada 1000 vistas es el objetivo del producto en la fecha indicada, no una oferta vigente
+- Tope por clip: lo fija la tarea; US$500 es el límite superior de la franja histórica, no un tope universal
 - Umbral de vistas: lo fija cada tarea (valor predeterminado del sistema: 1000 vistas)
 - Comisión por crear un concurso: 0%
 - Comisión por recargar el presupuesto de un concurso: 0%

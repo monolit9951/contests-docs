@@ -431,28 +431,28 @@
         },
         "minPayout": {
           "text": {
-            "en": "no minimum to your Whop balance per its pricing page, a $1 minimum per its help centre; Whop's own payout guide sets a $10 minimum \"if applicable\"",
-            "ru": "перевод заработка на баланс Whop без минимума по странице тарифов, минимум $1 по справке; в инструкции самого Whop по выплатам — минимум $10 «if applicable» (если применимо)",
-            "uk": "переказ на баланс Whop без мінімуму за сторінкою з цінами, мінімум $1 за довідкою; інструкція самого Whop з виплат ставить мінімум $10 «if applicable» (якщо застосовно)",
-            "ar": "لا حد أدنى لنقل الأرباح إلى رصيدك في Whop بحسب صفحة الأسعار لديها، وحد أدنى قدره $1 بحسب مركز المساعدة لديها؛ ودليل الدفعات لدى Whop نفسها يضع حدًا أدنى قدره $10 «إن كان ذلك منطبقًا» (if applicable)",
-            "es": "sin mínimo para pasar a tu saldo de Whop según su página de precios, un mínimo de US$1 según su centro de ayuda; la propia guía de pagos de Whop fija un mínimo de US$10 «if applicable»"
+            "en": "a $1 minimum to move earnings to your Whop balance, per its pricing page and help centre; Whop's own payout guide sets a $10 minimum \"if applicable\"",
+            "ru": "минимум $1 для перевода заработка на баланс Whop по странице тарифов и справке; в инструкции самого Whop по выплатам — минимум $10 «if applicable» (если применимо)",
+            "uk": "мінімум $1 для переказу заробітку на баланс Whop за сторінкою з цінами й довідкою; інструкція самого Whop з виплат ставить мінімум $10 «if applicable» (якщо застосовно)",
+            "ar": "حد أدنى قدره $1 لنقل الأرباح إلى رصيدك في Whop بحسب صفحة الأسعار ومركز المساعدة لديها؛ ودليل الدفعات لدى Whop نفسها يضع حدًا أدنى قدره $10 «إن كان ذلك منطبقًا» (if applicable)",
+            "es": "un mínimo de US$1 para pasar tus ganancias a tu saldo de Whop, según su página de precios y su centro de ayuda; la propia guía de pagos de Whop fija un mínimo de US$10 «if applicable»"
           },
           "source": {
             "url": "https://contentrewards.com/pricing/creators",
-            "date": "2026-09-24"
+            "date": "2026-10-29"
           }
         },
         "payoutMethods": {
           "text": {
-            "en": "via your Whop balance to a bank, mobile wallet or crypto in 200+ countries; Content Rewards' FAQ also lists PayPal, but Whop's docs tie PayPal payouts to PayPal purchases",
-            "ru": "через баланс Whop — в банк, мобильный кошелёк или крипту в 200+ странах; FAQ Content Rewards называет ещё и PayPal, но документация Whop привязывает выплаты на PayPal к покупкам через PayPal",
-            "uk": "через баланс Whop у банк, мобільний гаманець або крипту у 200+ країнах; FAQ Content Rewards називає ще й PayPal, але документація Whop прив'язує виплати на PayPal до покупок через PayPal",
-            "ar": "عبر رصيدك في Whop إلى بنك أو محفظة هاتف محمول أو عملات مشفرة في أكثر من 200 دولة؛ والأسئلة الشائعة في Content Rewards تذكر PayPal أيضًا، لكن وثائق Whop تربط الدفعات عبر PayPal بالمشتريات التي دُفعت عبر PayPal",
-            "es": "desde tu saldo de Whop a un banco, una billetera móvil o en cripto en más de 200 países; las preguntas frecuentes de Content Rewards también mencionan PayPal, pero la documentación de Whop vincula los pagos por PayPal a las compras hechas con PayPal"
+            "en": "via your Whop balance to a bank, mobile wallet or crypto in 200+ countries; Content Rewards' help centre also names PayPal, but Whop's docs tie PayPal payouts to PayPal purchases",
+            "ru": "через баланс Whop — в банк, мобильный кошелёк или крипту в 200+ странах; справка Content Rewards называет ещё и PayPal, но документация Whop привязывает выплаты на PayPal к покупкам через PayPal",
+            "uk": "через баланс Whop у банк, мобільний гаманець або крипту у 200+ країнах; довідка Content Rewards називає ще й PayPal, але документація Whop прив'язує виплати на PayPal до покупок через PayPal",
+            "ar": "عبر رصيدك في Whop إلى بنك أو محفظة هاتف محمول أو عملات مشفرة في أكثر من 200 دولة؛ ومركز المساعدة في Content Rewards يذكر PayPal أيضًا، لكن وثائق Whop تربط الدفعات عبر PayPal بالمشتريات التي دُفعت عبر PayPal",
+            "es": "desde tu saldo de Whop a un banco, una billetera móvil o en cripto en más de 200 países; el centro de ayuda de Content Rewards también menciona PayPal, pero la documentación de Whop vincula los pagos por PayPal a las compras hechas con PayPal"
           },
           "source": {
             "url": "https://docs.whop.com/manage-your-business/manage-payouts/payout-methods",
-            "date": "2026-09-24"
+            "date": "2026-10-29"
           }
         },
         "cis": {
@@ -498,13 +498,14 @@
         },
         "networks": {
           "text": {
-            "en": "TikTok, YouTube, Instagram, X and Facebook per its terms; its help centre's connect guide lists only the first four",
-            "ru": "TikTok, YouTube, Instagram, X и Facebook по условиям; инструкция по подключению в справке называет только первые четыре",
-            "uk": "TikTok, YouTube, Instagram, X і Facebook за умовами; інструкція з підключення в довідці називає лише перші чотири"
+            "en": "TikTok, YouTube, Instagram, X and Facebook per its help centre's connect guide; Instagram must be a Business account, and Facebook connects with a code",
+            "ru": "TikTok, YouTube, Instagram, X и Facebook по инструкции по подключению в справке; Instagram — только бизнес-аккаунт, Facebook подключается по коду",
+            "uk": "TikTok, YouTube, Instagram, X і Facebook за інструкцією з підключення в довідці; Instagram — лише бізнес-акаунт, Facebook підключається за кодом",
+            "es": "TikTok, YouTube, Instagram, X y Facebook según la guía de conexión de su centro de ayuda; Instagram tiene que ser una cuenta de empresa y Facebook se conecta con un código"
           },
           "source": {
-            "url": "https://contentrewards.com/terms",
-            "date": "2026-09-24"
+            "url": "https://help.contentrewards.com/en/articles/16746780-connect-your-social-accounts",
+            "date": "2026-10-29"
           }
         },
         "verification": {

@@ -401,3 +401,43 @@ Guides to content tasks, participation, validated views and payouts on DareBay.
 ### المساعدة
 
 - [البدء السريع في DareBay: مهمتك الأولى من الصفر](https://darebay.com/ar/help/quick-start): البدء السريع في DareBay: اختر أحد ثلاثة أدوار وانطلق. أطلق مسابقة، أو قدّم عملك، أو شاهد وصوّت. حساب واحد للموقع وTelegram معًا.
+
+## Español
+
+Guías sobre tareas de contenido, participación, vistas validadas y pagos en DareBay.
+
+### Datos clave
+
+- Tarifa por cada 1000 vistas: la fija la tarea; $1,00–$10,00 por cada 1000 vistas es el objetivo del producto en la fecha indicada, no una oferta vigente
+- Tope por clip: lo fija la tarea; $500 es el límite superior de la franja histórica, no un tope universal
+- Umbral de vistas: lo fija cada tarea (valor predeterminado del sistema: 1000 vistas)
+- Comisión por crear un concurso: 0%
+- Comisión por recargar el presupuesto de un concurso: 0%
+- Comisión por retiro del saldo: 10% por defecto sobre el monto solicitado, solicitud desde 10 USDT
+- Solicitud mínima de retiro: 10 USDT
+- Métodos de pago: USDT en la red TON, Estrellas de Telegram
+- Plataformas: TikTok, YouTube, Instagram y otros sitios que indique la tarea
+- Geografía de los pagos: sin lista de países; solo se excluye a las personas que figuran en listas de sanciones
+
+### Fuentes legibles por máquina
+
+- [Datos de DareBay en JSON](https://darebay.com/data/darebay-facts.json): todos los campos de la ficha de datos, cada uno con su fuente y fecha de lectura
+- [Registro de páginas en JSON](https://darebay.com/.well-known/darebay-content-pages.json): identificadores, idiomas y direcciones de todas las guías del sitio
+- [DareBay en cifras: tarifas, comisiones, pagos y países](https://darebay.com/es/sobre-darebay/darebay-en-cifras): los mismos datos en una tabla, cada valor con su fuente y su fecha
+
+### Sobre DareBay
+
+- [¿Es confiable DareBay? Condiciones, comisiones y quién la dirige](https://darebay.com/es/sobre-darebay/darebay-es-confiable): ¿Es confiable DareBay? Las condiciones están en la ficha antes de editar, el concurso no tiene comisión, retiras desde 10 USDT y responde una persona con nombre.
+- [DareBay en cifras: tarifas, comisiones, pagos y países](https://darebay.com/es/sobre-darebay/darebay-en-cifras): Datos de DareBay: comisiones, retiros desde 10 USDT, formas de financiación y tarifas de cada tarea. Cómo leer las fechas de las fuentes y comparar plataformas.
+
+### Ganar dinero
+
+- [Ganar dinero con clipping: cuánto se paga y cómo empezar](https://darebay.com/es/ganar-dinero/): Cómo paga el clipping: elige una tarea, calcula las vistas válidas y los límites del presupuesto, envía tu clip y cobra. Comparativas y primeros pasos.
+- [¿Cuánto se gana haciendo clips? Tarifa por 1000 vistas en DareBay](https://darebay.com/es/ganar-dinero/cuanto-se-gana-haciendo-clips): Lo que se gana haciendo clips depende de las vistas válidas, la tarifa, el umbral y el tope de la tarea. Ejemplos por clip y por mes, con retiro y horas de trabajo.
+- [7 alternativas a Whop Content Rewards que pagan a clippers (2026)](https://darebay.com/es/ganar-dinero/alternativas-a-whop-content-rewards): ¿Whop Content Rewards te deja fuera por su lista de países, su comisión del 10% o sus campañas cortas? Siete plataformas que pagan por vistas, campo por campo.
+- [Cómo funciona el pago por vistas: qué vistas cuentan y se pagan](https://darebay.com/es/ganar-dinero/como-funciona-el-pago-por-vistas): Cómo cuenta el pago por vistas las vistas válidas: umbral, tope por clip, estado de la tarea y la diferencia entre un monto acreditado y un pago recibido.
+- [Mejores plataformas de clipping en 2026: 21 opciones comparadas](https://darebay.com/es/ganar-dinero/mejores-plataformas-de-clipping): 21 plataformas de clipping y trabajos de edición: tarifas, comisiones, límites, métodos de pago y países, con fuentes primarias fechadas. Sin ranking.
+
+### Ayuda
+
+- [Inicio rápido en DareBay: tu primera tarea desde cero](https://darebay.com/es/ayuda/inicio-rapido): Inicio rápido en DareBay: elige uno de tres roles y empieza. Lanza un concurso, envía tu trabajo o mira y vota. Una sola cuenta para el sitio y Telegram.

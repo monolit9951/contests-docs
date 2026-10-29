@@ -551,6 +551,7 @@ const FACT_CARD_FILES = {
   uk: 'ua/pro-proekt/darebay-u-tsyfrakh.md',
   en: 'en/about/darebay-at-a-glance.md',
   ar: 'ar/about/darebay-at-a-glance.md',
+  es: 'es/sobre-darebay/darebay-en-cifras.md',
 }
 
 const main = () => {

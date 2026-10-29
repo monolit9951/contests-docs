@@ -17,6 +17,10 @@
     "ar": {
       "prefix": "/ar",
       "vitepressKey": "ar"
+    },
+    "es": {
+      "prefix": "/es",
+      "vitepressKey": "es"
     }
   },
   "hubs": {
@@ -24,43 +28,50 @@
       "ru": "zarabotok",
       "uk": "zarobitok",
       "en": "earnings",
-      "ar": "earnings"
+      "ar": "earnings",
+      "es": "ganar-dinero"
     },
     "brands": {
       "ru": "brendam",
       "uk": "brendam",
       "en": "for-brands",
-      "ar": "for-brands"
+      "ar": "for-brands",
+      "es": "para-marcas"
     },
     "help": {
       "ru": "pomoshch",
       "uk": "dopomoha",
       "en": "help",
-      "ar": "help"
+      "ar": "help",
+      "es": "ayuda"
     },
     "farm": {
       "ru": "kontent-zavod",
       "uk": "kontent-zavod",
       "en": "content-farm",
-      "ar": "content-farm"
+      "ar": "content-farm",
+      "es": "granja-de-contenido"
     },
     "tools": {
       "ru": "instrumenty",
       "uk": "instrumenty",
       "en": "tools",
-      "ar": "tools"
+      "ar": "tools",
+      "es": "herramientas"
     },
     "about": {
       "ru": "o-proekte",
       "uk": "pro-proekt",
       "en": "about",
-      "ar": "about"
+      "ar": "about",
+      "es": "sobre-darebay"
     },
     "legal": {
       "ru": "legal",
       "uk": "legal",
       "en": "legal",
-      "ar": "legal"
+      "ar": "legal",
+      "es": "legal"
     }
   },
   "pages": [
@@ -71,7 +82,8 @@
         "ru": "",
         "uk": "",
         "en": "",
-        "ar": ""
+        "ar": "",
+        "es": ""
       },
       "retired": [
         "/docs/ru/zarabotok/",
@@ -101,7 +113,8 @@
         "ru": "skolko-mozhno-zarabotat-na-narezkah",
         "uk": "skilky-mozhna-zarobyty-na-narizkakh",
         "en": "how-much-clipping-pays",
-        "ar": "how-much-clipping-pays"
+        "ar": "how-much-clipping-pays",
+        "es": "cuanto-se-gana-haciendo-clips"
       },
       "retired": [
         "/docs/ru/zarabotok/skolko-mozhno-zarabotat-na-narezkah",
@@ -162,7 +175,8 @@
         "ru": "kak-rabotaet-oplata-za-prosmotry",
         "uk": "yak-pratsiuie-oplata-za-perehliady",
         "en": "how-pay-per-view-works",
-        "ar": "how-pay-per-view-works"
+        "ar": "how-pay-per-view-works",
+        "es": "como-funciona-el-pago-por-vistas"
       },
       "retired": [
         "/docs/ru/kak-rabotaet/kak-rabotaet-oplata-za-prosmotry",
@@ -258,7 +272,8 @@
         "ru": "bystryy-start",
         "uk": "shvydkyi-start",
         "en": "quick-start",
-        "ar": "quick-start"
+        "ar": "quick-start",
+        "es": "inicio-rapido"
       },
       "retired": [
         "/docs/ru/getting-started/",
@@ -499,7 +514,8 @@
       "id": "about-is-it-a-fraud",
       "hub": "about",
       "slugs": {
-        "en": "is-darebay-legit"
+        "en": "is-darebay-legit",
+        "es": "darebay-es-confiable"
       },
       "retired": [
         "/ua/pro-proekt/darebay-rozvod-chy-ni"
@@ -616,7 +632,8 @@
         "ru": "darebay-v-tsifrakh",
         "uk": "darebay-u-tsyfrakh",
         "en": "darebay-at-a-glance",
-        "ar": "darebay-at-a-glance"
+        "ar": "darebay-at-a-glance",
+        "es": "darebay-en-cifras"
       }
     },
     {
@@ -626,7 +643,8 @@
         "ru": "luchshie-platformy-dlya-zarabotka-na-narezkah",
         "en": "best-clipping-platforms",
         "uk": "naikrashchi-platformy-dlia-zarobitku-na-narizkakh",
-        "ar": "best-clipping-platforms"
+        "ar": "best-clipping-platforms",
+        "es": "mejores-plataformas-de-clipping"
       }
     },
     {
@@ -636,7 +654,8 @@
         "ru": "analogi-whop-v-rossii",
         "uk": "alternatyvy-whop-v-ukraini",
         "en": "whop-content-rewards-alternatives",
-        "ar": "whop-content-rewards-alternatives"
+        "ar": "whop-content-rewards-alternatives",
+        "es": "alternativas-a-whop-content-rewards"
       }
     },
     {

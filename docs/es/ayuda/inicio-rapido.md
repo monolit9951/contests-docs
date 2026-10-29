@@ -1,6 +1,6 @@
 ---
 title: "Inicio rápido en DareBay: tu primera tarea desde cero"
-description: "Inicio rápido en DareBay: elige uno de tres roles y empieza. Lanza un concurso, envía tu trabajo o mira y vota. Una sola cuenta para el sitio y Telegram."
+description: "Inicio rápido en DareBay: elige uno de los tres roles y empieza. Lanza un concurso, envía tu trabajo o mira y vota. Una sola cuenta para el sitio y Telegram."
 provenance: { snapshot_date: "2026-10-12", source: "darebay-prod" }
 numbers_used: []
 ---
@@ -11,7 +11,7 @@ Un minuto después de registrarte puedes lanzar un concurso, enviar un trabajo o
 según lo que te haya traído. Hay tres roles: el **organizador** define la actividad y la
 recompensa, el **participante** hace su propia versión del contenido y se lleva esa
 recompensa, y el **espectador** mira, comenta y vota, y muchas veces su voto es el que
-decide. La mayoría de las cuentas acaban haciendo las tres cosas.
+decide. La mayoría de las cuentas terminan haciendo las tres cosas.
 
 DareBay tiene dos entradas iguales y una sola cuenta detrás: el sitio
 [**darebay.com**](https://darebay.com/es) y Telegram (la app, el bot, el grupo). Entres
@@ -38,8 +38,8 @@ tienes delante lo cambia todo en tu forma de trabajar:
 - **Todo lo demás.** Subes el trabajo a DareBay (texto, imagen o video) y esperas a la
   fase de selección, en la que decide una votación, el organizador o un sorteo con semilla.
 
-Un premio con fondo en la plataforma quedó bloqueado en la plataforma antes de que tú
-llegaras; un premio de pago directo sigue siendo una obligación de pago directa del
+Un premio con fondo en la plataforma quedó bloqueado en DareBay antes incluso de que
+llegaras; un premio de pago directo sigue siendo una obligación de pago directo del
 organizador. Cuando hay un resultado, la plataforma registra el monto y su estado, y una
 recompensa con fondo en la plataforma llega automáticamente a tu saldo. Pide un retiro
 desde 10 USDT y la plataforma se encarga del resto.

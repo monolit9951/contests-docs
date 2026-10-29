@@ -26,7 +26,7 @@
         "ru": "Бренды и авторы публикуют задания на нарезки; ты берёшь задание без заявки, публикуешь ролик у себя и получаешь оплату за засчитанные просмотры. Списка стран нет, поэтому нарезчикам из России, Беларуси и остального СНГ тоже платят. Задания под офферы могут добавлять фикс за принятый ролик и процент с продаж и выдавать готовые ролики с уникализацией, когда она включена в задании.",
         "uk": "Бренди та автори публікують завдання на нарізки; ти береш завдання без заявки, публікуєш ролик у себе й отримуєш оплату за зараховані перегляди. Списку країн немає, тож оплату отримують і нарізчики в Росії, Білорусі та решті СНД. Завдання під офери можуть додавати фікс за прийнятий ролик і відсоток із продажів і видавати готові ролики з унікалізацією, коли її ввімкнено в завданні.",
         "ar": "تنشر العلامات التجارية وصنّاع المحتوى مهامّ قص المقاطع؛ تأخذ المهمة بشروطها دون طلب انضمام، وتنشر المقطع على حسابك، ويُدفع لك مقابل المشاهدات المحتسبة. لا توجد قائمة دول، لذا يُدفع لصنّاع المقاطع في روسيا وبيلاروسيا وسائر دول رابطة الدول المستقلة أيضًا. ويمكن لمهام العروض الترويجية أن تضيف مبلغًا ثابتًا عن كل مقطع مقبول ونسبة من المبيعات، وأن تسلّمك فيديوهات جاهزة مع تخصيص النسخ حين تفعّله المهمة.",
-        "es": "Marcas y creadores publican tareas de clipping; tú tomas una tarea sin solicitud, publicas el clip en tu propia cuenta y cobras por las vistas contabilizadas. DareBay acepta creadores de todo el mundo, con retiros en cripto en USDT en la red TON. Comprueba que participar y recibir pagos está permitido por las leyes de tu país y los Términos de DareBay. Las tareas de oferta pueden sumar un monto fijo por cada clip aceptado y un porcentaje de las ventas, y darte videos listos con versiones únicas cuando la tarea lo activa."
+        "es": "Marcas y creadores publican tareas de clipping; tú tomas una tarea sin solicitud, publicas el clip en tu propia cuenta y cobras por las vistas contabilizadas. DareBay acepta creadores de todo el mundo, con retiros en cripto, en USDT en la red TON. Comprueba que participar y recibir pagos está permitido por las leyes de tu país y los Términos de DareBay. Las tareas de oferta pueden sumar un monto fijo por cada clip aceptado y un porcentaje de las ventas, y darte videos listos con versiones únicas cuando la tarea lo activa."
       },
       "calc": {
         "rateMin": 1,
@@ -154,7 +154,7 @@
             "ru": "кошельковый конкурс: заблокирован до старта; ручной конкурс: платит организатор",
             "uk": "гаманцевий конкурс: заблоковано до старту; ручний конкурс: платить організатор",
             "ar": "المسابقة الممولة من المحفظة: الميزانية محجوزة على المنصة قبل البدء؛ ومسابقة الدفع اليدوي: يدفع المنظِّم مباشرة",
-            "es": "concursos con fondo en la plataforma: bloqueado antes del inicio; concursos de pago directo: paga el organizador"
+            "es": "concursos con fondo en la plataforma: bloqueado antes del inicio; concursos de pago directo: paga el organizador directamente"
           },
           "state": "partial",
           "source": {
@@ -347,7 +347,7 @@
         ],
         "es": [
           "Pagos en USDT en la red TON o en Estrellas de Telegram; sin retiro por PayPal ni por banco",
-          "Comisión del 10% por defecto al retirar el saldo, revisa tu formulario; sin comisión sobre los pagos del concurso",
+          "Comisión del 10% por defecto al retirar el saldo (revisa tu formulario); sin comisión sobre los pagos del concurso",
           "En los concursos de pago directo, cobrar depende de que pague el organizador"
         ]
       }
@@ -380,7 +380,7 @@
             "ru": "задаётся кампанией и площадкой; первые 50 карточек All campaigns 12.10.2026 показывали $0.05–$5 за 1000, чаще $1 (21 карточка); заголовок не отражает ставки всех площадок",
             "uk": "задається кампанією та майданчиком; перші 50 карток All campaigns 12.10.2026 показували $0.05–$5 за 1000, найчастіше $1 (21 картка); заголовок не відображає ставки всіх майданчиків",
             "ar": "تحدده الحملة والمنصة؛ أول 50 بطاقة في All campaigns يوم 2026-10-12 عرضت $0.05–$5 لكل 1,000، والأكثر $1 (21 بطاقة)؛ السعر الظاهر لا يشمل كل المنصات",
-            "es": "la fija cada campaña y cada red; las primeras 50 fichas de All campaigns el 2026-10-12 mostraban $0,05–$5 por cada 1000, sobre todo $1 (21 fichas); el titular de una ficha no es la tarifa de todas las redes"
+            "es": "la fija cada campaña y cada red; las primeras 50 fichas de All campaigns el 2026-10-12 mostraban $0,05–$5 por cada 1000, con $1 como valor más frecuente (21 fichas); el titular de una ficha no es la tarifa de todas las redes"
           },
           "value": 0.05,
           "source": {
@@ -602,7 +602,7 @@
         "cpm": {
           "text": {
             "en": "$0.05–$5; most often $1 (first 50 public board cards, 12 October 2026)",
-            "es": "$0,05–$5; sobre todo $1 (primeras 50 fichas del listado público, 12 de octubre de 2026)"
+            "es": "$0,05–$5; lo más frecuente, $1 (primeras 50 fichas del listado público, 12 de octubre de 2026)"
           },
           "value": 5,
           "source": {
@@ -671,9 +671,9 @@
           "شروطها تقتطع 10% من دفعات حملات CPM، ويُضاف إلى ذلك رسم السحب لدى Whop نفسها"
         ],
         "es": [
-          "No registra ni les paga a clippers de Rusia, Bielorrusia ni seis regiones de Ucrania",
+          "No registra ni les paga a clippers de Rusia, Bielorrusia ni de seis regiones de Ucrania",
           "El inicio de sesión, los controles de identidad y los retiros pasan por Whop: perder el acceso a Whop puede bloquear un retiro",
-          "Sus condiciones se quedan con el 10% de los pagos de las campañas por CPM, más la propia comisión de retiro de Whop"
+          "Según sus condiciones, se queda con el 10% de los pagos de las campañas por CPM, más la propia comisión de retiro de Whop"
         ]
       }
     },
@@ -801,7 +801,7 @@
             "ru": "минимума подписчиков нет (страница о компании); 18+, соцаккаунты должны быть верифицированы",
             "uk": "мінімуму підписників немає (сторінка про компанію); 18+, соцакаунти мають бути верифіковані",
             "ar": "لا حد أدنى للمتابعين (صفحة «من نحن»)؛ 18+، ويجب توثيق حسابات التواصل",
-            "es": "sin mínimo de seguidores (página About); mayores de 18 años, las cuentas sociales deben estar verificadas"
+            "es": "sin mínimo de seguidores (página About); mayores de 18 años, las cuentas en redes sociales deben estar verificadas"
           },
           "state": "no",
           "source": {
@@ -972,7 +972,7 @@
         ],
         "es": [
           "Sin mínimo de seguidores, y las condiciones están documentadas en un centro de ayuda",
-          "Cifras claras: mínimo de 5000 vistas, pago de $10 y tope por clip",
+          "Cifras claras: mínimo de 5000 vistas, pago mínimo de $10 y tope por clip",
           "Paga por PayPal o Stripe, según tu país"
         ]
       },
@@ -998,7 +998,7 @@
           "الدفع بعد انتهاء الحملة فقط، ثم عادةً 7–10 أيام"
         ],
         "es": [
-          "No admite Rusia, Bielorrusia, Ucrania ni otros países de la CEI",
+          "No admite Rusia, Bielorrusia, Ucrania ni varios países más de la CEI",
           "5000 vistas por publicación antes de que se pague nada",
           "Solo paga cuando termina la campaña, y luego suelen pasar 7–10 días"
         ]
@@ -1015,7 +1015,7 @@
         "ru": "кампании стримеров и звёзд на объёме",
         "uk": "кампанії стримерів і зірок на обсязі",
         "ar": "أعداد كبيرة من حملات صنّاع البث المباشر والمشاهير",
-        "es": "campañas de streamers y celebridades en volumen"
+        "es": "muchas campañas de streamers y celebridades"
       },
       "summary": {
         "en": "A clipping network built around streamer and celebrity campaigns: rates are quoted per 100K views, often $20–$75+ ($0.20–$0.75+ per 1,000) and up to $300 ($3 per 1,000) with bounties; each post needs 1,000 views, and payouts go by PayPal or USDC/USDT on Ethereum when a cycle closes.",
@@ -1045,7 +1045,7 @@
             "ru": "1000 просмотров на пост; условия пишут, что кампании обычно требуют 25 000 в сумме; страницы кампаний указывают минимумы 10 000–1 000 000 просмотров, чаще всего 100 000",
             "uk": "1000 переглядів на пост; умови кажуть, що кампанії зазвичай вимагають 25 000 у сумі; сторінки кампаній вказують мінімуми 10 000–1 000 000 переглядів, найчастіше 100 000",
             "ar": "1,000 مشاهدة لكل منشور؛ وتقول شروطها إن الحملات تشترط عادةً 25,000 في المجموع؛ وصفحات حملاتها تذكر حدودًا دنيا تتراوح بين 10,000 و1,000,000 مشاهدة، أكثرها شيوعًا 100,000",
-            "es": "1000 vistas por publicación; sus condiciones dicen que las campañas suelen exigir 25.000 en total; sus páginas de campaña indican mínimos de 10.000 a 1.000.000 de vistas, sobre todo 100.000"
+            "es": "1000 vistas por publicación; sus condiciones dicen que las campañas suelen exigir 25.000 en total; sus páginas de campaña indican mínimos de 10.000 a 1.000.000 de vistas, con 100.000 como valor más frecuente"
           },
           "value": 1000,
           "source": {
@@ -1321,7 +1321,7 @@
           "دفعات العملات المشفرة على شبكة Ethereum وحدها، وهي نهائية لا رجعة فيها"
         ],
         "es": [
-          "Las páginas de campaña indican mínimos de 10.000 a 1.000.000 de vistas, sobre todo 100.000",
+          "Las páginas de campaña indican mínimos de 10.000 a 1.000.000 de vistas, con 100.000 como valor más frecuente",
           "No publica comisión, lista de países ni custodia del presupuesto",
           "Los pagos en cripto solo van por Ethereum y son definitivos"
         ]
@@ -1447,7 +1447,7 @@
             "ru": "минимума подписчиков нет; 18+; главная: заявка и одобрение по каждой кампании; блог: для участия в кампании заявка не нужна",
             "uk": "мінімуму підписників немає; 18+; головна: заявка і схвалення по кожній кампанії; блог: щоб приєднатися до кампанії, заявка не потрібна",
             "ar": "لا حد أدنى للمتابعين؛ 18+؛ والصفحة الرئيسية: تقديم طلب ونيل الموافقة لكل حملة؛ والمدونة: لا حاجة إلى طلب للانضمام إلى حملة",
-            "es": "sin mínimo de seguidores; mayores de 18 años; página principal: postulas y te aprueban por campaña; blog: no hace falta solicitud para unirse a una campaña"
+            "es": "sin mínimo de seguidores; mayores de 18 años; página principal: envías una solicitud y te aprueban por campaña; blog: no hace falta solicitud para unirse a una campaña"
           },
           "state": "no",
           "source": {
@@ -1586,7 +1586,7 @@
         "payoutSpeed": {
           "text": {
             "en": "homepage/iOS advertise on-demand withdrawals above the minimum; creator login still says Friday; terms require brand authorization and allow verification and provider processing",
-            "es": "la página principal y la de iOS anuncian retiros a demanda por encima del mínimo; el acceso para creadores aún dice que los viernes; las condiciones exigen la autorización de la marca y permiten verificaciones y el procesamiento del proveedor"
+            "es": "la página principal y la de iOS anuncian retiros a demanda por encima del mínimo; la página de acceso para creadores aún dice que se paga los viernes; las condiciones exigen la autorización de la marca y permiten verificaciones y el procesamiento del proveedor"
           },
           "source": {
             "url": "https://vues.app/terms",
@@ -1757,7 +1757,7 @@
             "ru": "на странице для нарезчиков заявлено 149+ стран, в блоге 130+; списка стран нет",
             "uk": "на сторінці для нарізчиків заявлено 149+ країн, у блозі 130+; списку країн немає",
             "ar": "تدّعي صفحة صنّاع المقاطع 149+ دولة، ومدونتها 130+؛ ولا قائمة دول منشورة",
-            "es": "dice cubrir más de 149 países en su página para clippers y más de 130 en su blog; no publica lista de países"
+            "es": "dice cubrir 149 países o más en su página para clippers y 130 o más en su blog; no publica lista de países"
           },
           "state": "unknown",
           "source": {
@@ -2646,7 +2646,7 @@
         "ru": "Площадка, которая почти не публикует условий: на открытых страницах нет ставок, порогов, комиссий, минимумов и стран, способы выплат показаны только картинками логотипов, а в остальном есть лишь иллюстрации месячного заработка и названия функций трекинга и антибота.",
         "uk": "Майданчик, який майже не публікує умов: на відкритих сторінках немає ставок, порогів, комісій, мінімумів і країн, способи виплат показані лише як зображення логотипів, а крім цього є тільки ілюстрації місячного заробітку та назви функцій трекінгу й антибота.",
         "ar": "سوق لا تكاد تنشر شروطًا: لا أسعار ولا حدود مشاهدات ولا عمولات ولا حدود دنيا ولا دول على صفحاتها العامة، وطرق الدفع لا تظهر إلا صورًا لشعارات، وما عدا ذلك لا شيء سوى أمثلة مصوَّرة للأرباح الشهرية وأسماء خصائص التتبع ومكافحة البوتات.",
-        "es": "Un mercado que casi no publica condiciones: en sus páginas públicas no hay tarifas, umbrales, comisiones, mínimos ni países; los métodos de pago solo aparecen como imágenes de logotipos y, por lo demás, solo muestra ejemplos de ganancias mensuales y los nombres de sus funciones de seguimiento y antibots."
+        "es": "Un mercado que casi no publica condiciones: en sus páginas públicas no hay tarifas, umbrales, comisiones, mínimos ni países; los métodos de pago solo aparecen como imágenes de logotipos y, por lo demás, solo muestra ejemplos de ganancias mensuales y los nombres de sus funciones de seguimiento y de detección de bots."
       },
       "fields": {
         "rate": {
@@ -3151,7 +3151,7 @@
         "cpm": {
           "text": {
             "en": "not applicable to new fixed-pay editor campaigns; earlier CPM campaigns are legacy only",
-            "es": "no se aplica a las nuevas campañas de edición con pago fijo; las campañas anteriores por CPM son solo antiguas"
+            "es": "no se aplica a las nuevas campañas de edición con pago fijo; solo quedan campañas antiguas por CPM"
           },
           "value": null,
           "source": {
@@ -3177,7 +3177,7 @@
           "Fixed approved-clip pay rather than dependence on viral reach"
         ],
         "es": [
-          "No necesitas seguidores propios ni una cuenta social para el nuevo trabajo de edición",
+          "No necesitas seguidores propios ni una cuenta en redes sociales para el nuevo trabajo de edición",
           "Material proporcionado, procedimiento de la campaña y comentarios de revisión",
           "Pago fijo por clip aprobado en lugar de depender del alcance viral"
         ]
@@ -3255,7 +3255,7 @@
         "fee": {
           "text": {
             "en": "0% taken from clippers and 0% from the campaign budget; the platform's income is the brand's subscription (free / ₹8,000 / ₹20,000 a month)",
-            "es": "0% para los clippers y 0% del presupuesto de la campaña; los ingresos de la plataforma son la suscripción de la marca (gratis / ₹8000 / ₹20.000 al mes)"
+            "es": "0% de lo que ganan los clippers y 0% del presupuesto de la campaña; los ingresos de la plataforma son la suscripción de la marca (gratis / ₹8000 / ₹20.000 al mes)"
           },
           "value": 0,
           "source": {
@@ -3427,7 +3427,7 @@
         "payoutSpeed": {
           "text": {
             "en": "72-hour view hold, qualifying ₹500 balance, then request; terms state up to seven business days, creator FAQ says seven days",
-            "es": "retención de las vistas de 72 horas, saldo de ₹500 que califique y luego la solicitud; las condiciones indican hasta siete días hábiles, las preguntas frecuentes para creadores dicen siete días"
+            "es": "retención de las vistas de 72 horas, saldo de ₹500 que cumpla los requisitos y luego la solicitud; las condiciones indican hasta siete días hábiles, las preguntas frecuentes para creadores dicen siete días"
           },
           "value": null,
           "source": {
@@ -4194,7 +4194,7 @@
       "operator": "not published; the terms are governed by French law and the competent French courts",
       "bestFor": {
         "en": "creators who want weekly Monday payouts and view rules spelled out",
-        "es": "creadores que quieren cobrar cada lunes y reglas de vistas por escrito"
+        "es": "creadores que quieren cobrar cada lunes y reglas de vistas explícitas"
       },
       "summary": {
         "en": "A creator network that pays for validated views on TikTok, Instagram and YouTube short-form video, unrelated to the African cliptocash.io despite the identical name. Its terms set out how views are paid: a campaign RPM per 1,000 views, a 1,000-view threshold unless a campaign sets its own, a 125,000-view cap per video that no campaign can raise and a 30-day counting window. Earnings are paid every Monday via Stripe or Whop; the minimum payout amount and the creator fee are not published.",
@@ -4463,7 +4463,7 @@
       },
       "summary": {
         "en": "An Indian clipping marketplace whose home page lists ₹50–₹300 per 1,000 views by niche and a 20% fee split 10% from each side, while its earnings guides put typical rates at ₹10–₹100 per 1,000 and its terms take 5% from clippers on withdrawal. Clippers complete KYC and supply UPI details before taking a campaign, then withdraw by UPI from ₹500. No legal entity is named, only an office address in Kishanganj, Bihar.",
-        "es": "Un mercado de clipping de la India cuya página principal indica ₹50–₹300 por cada 1000 vistas según el nicho y una comisión del 20% repartida en un 10% para cada parte, mientras que sus guías de ganancias sitúan las tarifas habituales en ₹10–₹100 por cada 1000 y sus condiciones se quedan con un 5% de los clippers al retirar. Los clippers completan la verificación de identidad (KYC) e indican sus datos de UPI antes de tomar una campaña, y después retiran por UPI desde ₹500. No nombra ninguna entidad legal, solo una dirección de oficina en Kishanganj, Bihar."
+        "es": "Un mercado de clipping de la India cuya página principal indica ₹50–₹300 por cada 1000 vistas según el nicho y una comisión del 20% que pagan las dos partes a medias, un 10% cada una, mientras que sus guías de ganancias sitúan las tarifas habituales en ₹10–₹100 por cada 1000 y sus condiciones descuentan un 5% a los clippers cuando retiran. Los clippers completan la verificación de identidad (KYC) e indican sus datos de UPI antes de tomar una campaña, y después retiran por UPI desde ₹500. No nombra ninguna entidad legal, solo una dirección de oficina en Kishanganj, Bihar."
       },
       "calc": {
         "rateMin": null,
@@ -4505,7 +4505,7 @@
         "fee": {
           "text": {
             "en": "the terms deduct 5% from the clipper's earnings on withdrawal and charge the brand 10% on top of the budget; the home page and FAQ say a 20% fee split in half, 10% from each side",
-            "es": "las condiciones descuentan un 5% de las ganancias del clipper al retirar y le cobran a la marca un 10% encima del presupuesto; la página principal y las preguntas frecuentes hablan de una comisión del 20% repartida a medias, un 10% de cada parte"
+            "es": "las condiciones descuentan un 5% de las ganancias del clipper al retirar y le cobran a la marca un 10% además del presupuesto; la página principal y las preguntas frecuentes hablan de una comisión del 20% repartida a medias, un 10% de cada parte"
           },
           "value": 10,
           "source": {
@@ -4935,7 +4935,7 @@
         "payoutSpeed": {
           "text": {
             "en": "every seven days per its FAQ: balance credited 7 days after verification (another answer: 7+ days after submitting); most reviews take a few working days; bank payout on request, no time stated",
-            "es": "cada siete días según sus preguntas frecuentes: el saldo se acredita 7 días después de la verificación (otra respuesta dice más de 7 días después del envío); la mayoría de las revisiones tardan unos pocos días laborables; pago al banco a petición, sin plazo indicado"
+            "es": "cada siete días según sus preguntas frecuentes: el saldo se acredita 7 días después de la verificación (otra respuesta dice 7 días o más después del envío); la mayoría de las revisiones tardan unos pocos días laborables; pago al banco a petición, sin plazo indicado"
           },
           "value": null,
           "source": {
@@ -5991,7 +5991,7 @@
         "threshold": {
           "text": {
             "en": "set per campaign: 1,000–7,500 views on listed campaigns, 2,000 on most (62 of 90)",
-            "es": "la fija cada campaña: de 1000 a 7500 vistas en las campañas listadas, 2000 en la mayoría (62 de 90)"
+            "es": "lo fija cada campaña: de 1000 a 7500 vistas en las campañas listadas, 2000 en la mayoría (62 de 90)"
           },
           "value": 2000,
           "source": {
@@ -6002,7 +6002,7 @@
         "cap": {
           "text": {
             "en": "set per campaign: $80–$1,750 per post on live campaigns, most often $400; each campaign also caps earnings per profile",
-            "es": "lo fija cada campaña: de $80 a $1750 por publicación en las campañas activas, sobre todo $400; cada campaña también limita las ganancias por perfil"
+            "es": "lo fija cada campaña: de $80 a $1750 por publicación en las campañas activas, con $400 como valor más frecuente; cada campaña también limita las ganancias por perfil"
           },
           "value": 400,
           "source": {
@@ -6064,7 +6064,7 @@
         "escrow": {
           "text": {
             "en": "not locked upfront per the Brand Terms: campaign fees are due within 30 days of the campaign's first date",
-            "es": "no se bloquea por adelantado según sus condiciones para marcas: las tarifas de la campaña vencen dentro de los 30 días posteriores a su primera fecha"
+            "es": "no se bloquea por adelantado según sus condiciones para marcas: las tarifas de campaña vencen dentro de los 30 días posteriores a la primera fecha de la campaña"
           },
           "state": "no",
           "source": {
@@ -6226,7 +6226,7 @@
       "operator": "Ssemble Inc., a Delaware corporation, San Francisco, CA (terms); governed by the Federal Arbitration Act, US federal law and California law",
       "bestFor": {
         "en": "Ssemble editor users with a payout account in its 39 listed countries",
-        "es": "usuarios del editor de Ssemble con una cuenta de cobro en sus 39 países listados"
+        "es": "usuarios del editor de Ssemble con una cuenta de cobro en uno de los 39 países de su lista"
       },
       "summary": {
         "en": "A clipping campaign board inside Ssemble's AI clipping editor, run by Ssemble Inc. (Delaware). Ssemble-hosted campaigns pay a standard $1 per 1,000 verified views; the board also lists Whop partner campaigns that pay out on Whop.",
@@ -6488,7 +6488,7 @@
       },
       "summary": {
         "en": "FindClout runs brand watermark and content campaigns that creators post on Instagram, TikTok, YouTube and X, paid per verified view. Access is by application, and campaign rates and briefs are shown only to accepted creators.",
-        "es": "FindClout organiza campañas de marca con marca de agua y de contenido que los creadores publican en Instagram, TikTok, YouTube y X, pagadas por cada vista verificada. El acceso es por solicitud, y las tarifas y los briefs de las campañas solo se muestran a los creadores aceptados."
+        "es": "FindClout organiza campañas de marcas, de marca de agua y de contenido, que los creadores publican en Instagram, TikTok, YouTube y X, pagadas por cada vista verificada. El acceso es por solicitud, y las tarifas y los briefs de las campañas solo se muestran a los creadores aceptados."
       },
       "fields": {
         "rate": {
@@ -6785,7 +6785,7 @@
         "fee": {
           "text": {
             "en": "organizers pay a 20% service fee on top of cash prizes; announced prizes are gross, subject only to legally required tax withholding (policy)",
-            "es": "los organizadores pagan una comisión de servicio del 20% sobre los premios en dinero; los premios anunciados son brutos, solo sujetos a la retención de impuestos que exija la ley (política)"
+            "es": "los organizadores pagan, además de los premios en dinero, una comisión de servicio del 20%; los premios anunciados son brutos, solo sujetos a la retención de impuestos que exija la ley (política)"
           },
           "value": 0,
           "source": {
@@ -7004,7 +7004,7 @@
       },
       "summary": {
         "en": "Promote.fun lists brand campaigns that pay a per-campaign rate per 1,000 verified views on TikTok, Instagram, YouTube and X; on 2026-09-24 it showed live campaigns at $1–$3 per 1,000 views. Earnings are added to the balance when a campaign ends and are withdrawn as USDC on Solana.",
-        "es": "Promote.fun lista campañas de marcas que pagan una tarifa propia de cada campaña por cada 1000 vistas verificadas en TikTok, Instagram, YouTube y X; el 2026-09-24 mostraba campañas activas a $1–$3 por cada 1000 vistas. Las ganancias se suman al saldo cuando termina una campaña y se retiran en USDC en Solana."
+        "es": "Promote.fun publica campañas de marcas que pagan una tarifa propia de cada campaña por cada 1000 vistas verificadas en TikTok, Instagram, YouTube y X; el 2026-09-24 mostraba campañas activas a $1–$3 por cada 1000 vistas. Las ganancias se suman al saldo cuando termina una campaña y se retiran en USDC en Solana."
       },
       "fields": {
         "rate": {
@@ -7095,7 +7095,7 @@
         "escrow": {
           "text": {
             "en": "brands deposit campaign funds before launch; Promote.fun holds them in a custodial or escrow-style balance (terms); the same terms disclaim unpaid earnings if a brand underfunds",
-            "es": "las marcas depositan los fondos de la campaña antes del lanzamiento; Promote.fun los guarda en un saldo de custodia o tipo depósito en garantía (condiciones); las mismas condiciones niegan responsabilidad por las ganancias impagas si una marca no aporta fondos suficientes"
+            "es": "las marcas depositan los fondos de la campaña antes del lanzamiento; Promote.fun los guarda en un saldo de custodia o tipo depósito en garantía (condiciones); las mismas condiciones niegan responsabilidad por las ganancias no pagadas si una marca no aporta fondos suficientes"
           },
           "state": "yes",
           "source": {
@@ -7231,7 +7231,7 @@
         ],
         "es": [
           "La tarifa y el presupuesto total de cada campaña activa son públicos ($1–$3 por cada 1000 vistas el 2026-09-24)",
-          "Sus condiciones dicen que las marcas financian las campañas antes del lanzamiento y que Promote.fun guarda los fondos en un saldo de custodia o tipo depósito en garantía, pero niegan responsabilidad por las ganancias impagas si una marca no aporta fondos suficientes",
+          "Sus condiciones dicen que las marcas financian las campañas antes del lanzamiento y que Promote.fun guarda los fondos en un saldo de custodia o tipo depósito en garantía, pero niegan responsabilidad por las ganancias no pagadas si una marca no aporta fondos suficientes",
           "No publica un mínimo de seguidores para toda la plataforma; las reglas de seguidores y vistas las fija cada campaña"
         ]
       },

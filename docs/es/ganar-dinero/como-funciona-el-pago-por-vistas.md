@@ -1,6 +1,6 @@
 ---
 title: "Cómo funciona el pago por vistas: qué vistas cuentan y se pagan"
-description: "Cómo cuenta el pago por vistas las vistas válidas: umbral, tope por clip, estado de la tarea y la diferencia entre un monto acreditado y un pago recibido."
+description: "Cómo se cuentan las vistas válidas en el pago por vistas: umbral, tope por clip, estado de la tarea y la diferencia entre un monto acreditado y un pago recibido."
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used:
 - ppv_cpm_band_low
@@ -13,7 +13,7 @@ seo: true
 landing: true
 hero:
   kicker: "Guía · 2026"
-  lede: "Cómo cuenta el pago por vistas las vistas válidas: umbral, tope por clip, estado de la tarea y la diferencia entre un monto acreditado y un pago recibido. Sigue un envío a través de cuatro registros separados: el contador público del video, el último contador guardado en la tarea, el monto aprobado y el estado de la liquidación o del retiro."
+  lede: "Cómo se cuentan las vistas válidas en el pago por vistas: umbral, tope por clip, estado de la tarea y la diferencia entre un monto acreditado y un pago recibido. Sigue un envío a través de cuatro registros separados: el contador público del video, el último contador guardado en la tarea, el monto aprobado y el estado de la liquidación o del retiro."
   takeaways:
   - "Un registro que separa las vistas del dinero recibido."
   - "El tope es un parámetro de la tarea y se aplica por separado a cada envío válido. Revisa en la ficha si hay un tope o si no lo hay; un límite usado en un ejemplo es solo un supuesto."
@@ -24,11 +24,11 @@ cta:
 
 ## La cadena completa: del presupuesto al pago
 
-1. **El cliente publica las condiciones y la forma de pago.** La ficha indica la tarifa, el umbral y el tope, si lo hay. Las tareas con fondo en la plataforma reservan el dinero en la plataforma; en las tareas de pago directo del organizador, la plataforma no guarda el fondo y el organizador se encarga de liquidar.
+1. **El cliente publica las condiciones y la forma de pago.** La ficha indica la tarifa, el umbral y el tope, si lo hay. Las tareas con fondo en la plataforma reservan allí el dinero; en las tareas de pago directo del organizador, la plataforma no guarda el fondo y el organizador se encarga de liquidar.
 2. **El clipper publica y comprueba la admisión.** Sigue el método de envío que indique la tarea: manda el enlace del video o conecta una cuenta donde se admita. Un hashtag por sí solo no confirma la admisión; comprueba que el trabajo aparece en tu lista.
-3. **Un moderador revisa las condiciones y la plataforma lee las vistas.** Nadie escribe la cifra a mano: un contador independiente lee el contador de vistas publicado en el sitio. Un envío con un crecimiento sospechoso queda en espera, que es una pausa, no una eliminación.
-4. **La fórmula fija el monto.** Al final, el sistema calcula el pago de cada envío: `vistas / 1000 × tarifa`. El umbral es una condición de entrada, no un descuento, y el tope limita un solo envío.
-5. **El monto se registra a nombre del autor.** La plataforma crea una acreditación con un estado que el cliente no puede recalcular ni borrar. Donde la tarea muestra «Cobrar ahora», la acreditación de un envío aprobado puede asegurarse antes del final, y ese clip deja de ganar: el botón se habilita cuando todo el monto acreditado tiene 24 horas, así que en un clip que todavía suma vistas el plazo vuelve a empezar.
+3. **Un moderador revisa las condiciones y la plataforma lee las vistas.** Nadie escribe la cifra a mano: un contador independiente lee el contador de vistas publicado en el sitio. Un envío con un crecimiento sospechoso queda en espera: es una pausa, no una eliminación.
+4. **La fórmula fija el monto.** Al final, el sistema calcula el pago de cada envío: `vistas / 1000 × tarifa`. El umbral es una condición de entrada, no un descuento, y el tope limita lo que gana cada envío.
+5. **El monto se registra a nombre del autor.** La plataforma crea una acreditación con un estado que el cliente no puede recalcular ni borrar. Donde la tarea muestra «Cobrar ahora», la acreditación de un envío aprobado puede asegurarse antes del final, y ese clip deja de ganar: el botón se habilita cuando todo el monto acreditado cumple 24 horas, así que en un clip que todavía suma vistas el plazo vuelve a empezar.
 6. **El remanente sin repartir vuelve al cliente.** En una tarea con fondo en la plataforma, la plataforma guarda el presupuesto y devuelve la parte no gastada al saldo del cliente; con pago directo no hay nada que devolver.
 
 ## Parámetros de la tarea: tarifa, umbral, tope y red
@@ -36,7 +36,7 @@ cta:
 | Parámetro | Valor | Qué significa |
 |---|---|---|
 | Tarifa | La fija la ficha de la tarea | El cliente la indica al crear la tarea |
-| Umbral de vistas | Lo fija el cliente en la ficha (valor predeterminado del sistema: 1000 vistas) | La condición de entrada: por debajo, un clip no gana nada; por encima, se paga todo el contador |
+| Umbral de vistas | Lo fija el cliente en la ficha (valor predeterminado del sistema: 1000 vistas) | La condición de entrada: por debajo, un clip no gana nada; por encima, se pagan todas las vistas del contador |
 | Tope por envío | Lo fija la ficha de la tarea | Lo máximo que puede ganar un envío |
 | Red | La fija la tarea | Las estadísticas se recogen en TikTok, YouTube, Instagram y los demás sitios que indique la tarea |
 
@@ -44,11 +44,11 @@ La tarifa y el umbral se fijan al crear la tarea, el tope solo puede subirse des
 
 ## De dónde sale la cifra de vistas y quién la confirma
 
-Un contador independiente lee el contador de vistas publicado en el sitio, en el enlace que enviaste. Las dos partes ven el mismo número y en ningún punto de la cadena hay carga manual. La plataforma no vuelve a contar a su manera, y por encima solo actúan la moderación y las comprobaciones básicas. El contador se actualiza varias veces al día, así que la cifra de tu panel puede ir unas horas por detrás del sitio; el valor final se fija al cerrar la tarea, y las vistas que lleguen después ya no cuentan.
+Un contador independiente lee el contador de vistas publicado en el sitio, en el enlace que enviaste. Las dos partes ven el mismo número y en ningún punto de la cadena se introducen datos a mano. La plataforma no vuelve a contar a su manera, y por encima solo actúan la moderación y las comprobaciones básicas. El contador se actualiza varias veces al día, así que la cifra de tu panel puede ir unas horas por detrás del sitio; el valor final se fija al cerrar la tarea, y las vistas que lleguen después ya no cuentan.
 
-## El umbral no se descuenta: cuenta todo el contador
+## El umbral no se descuenta: cuentan todas las vistas
 
-El umbral es una condición de admisión, no un descuento: solo decide si el envío entra en el reparto del presupuesto. El cliente lo fija en el campo «vistas mínimas»; si lo deja vacío, el sistema pone su valor predeterminado de **1000 vistas**, y el cliente puede poner cualquier cifra, hasta una sola vista. El valor exacto siempre está en la ficha antes de que envíes.
+El umbral es una condición de admisión, no un descuento: solo decide si el envío entra en el reparto del presupuesto. El cliente lo fija en el campo «mínimo de vistas»; si lo deja vacío, el sistema pone su valor predeterminado de **1000 vistas**, y el cliente puede poner cualquier cifra, hasta una sola vista. El valor exacto siempre está en la ficha antes de que envíes.
 
 Un ejemplo: un umbral de 1000 vistas, una tarifa de $1,00 por cada 1000 vistas y un envío que llegó a 6000 vistas.
 
@@ -61,14 +61,14 @@ Un ejemplo: un umbral de 1000 vistas, una tarifa de $1,00 por cada 1000 vistas y
 | 1000 | 1000 | 1000 vistas |
 | 6000 | 1000 | 6000 vistas |
 
-El tramo más valioso de una tarea son los últimos cientos de vistas antes del umbral: convierten un cero en un pago por todo el contador.
+El tramo más valioso de una tarea son los últimos cientos de vistas antes del umbral: convierten un cero en un pago por todas las vistas.
 
 ## Qué vistas entran en el cálculo
 
 | Vistas | En el cálculo | Nota |
 |---|:-:|---|
 | El contador del video en el sitio de la tarea | Sí | El valor público en tu enlace |
-| Las vistas reunidas antes de superar el umbral | Sí | El umbral no se descuenta |
+| Las vistas acumuladas antes de superar el umbral | Sí | El umbral no se descuenta |
 | Las vistas posteriores a la recolección final de datos | No | El contador se toma al cerrar la tarea |
 | Una copia del video en otro sitio o en otra cuenta | No | Un enlace por envío |
 | Un video borrado u ocultado antes del cierre | No | No queda nada que leer ni confirmar |
@@ -79,17 +79,17 @@ La plataforma toma el número que muestra el contador público del sitio y no ha
 
 ## Crecimiento sospechoso: la espera y sus tres desenlaces
 
-Un envío cuyo patrón de crecimiento parece sospechoso se marca y queda en espera: su acreditación se pausa hasta la revisión. Es una pausa seguida de una decisión de moderación con tres desenlaces posibles: el envío pasa y todo el contador entra en el cálculo; sigue en espera y, cuando vence el plazo de revisión, es posible un pago por él; o la moderación lo rechaza y no hay dinero por él. Por eso comprar vistas es una mala apuesta: las pagas por adelantado, mientras que nada garantiza un pago por ese envío.
+Un envío cuyo patrón de crecimiento parece sospechoso se marca y queda en espera: su acreditación se pausa hasta la revisión. Es una pausa seguida de una decisión de moderación con tres desenlaces posibles: el envío pasa y todas sus vistas entran en el cálculo; sigue en espera y, cuando vence el plazo de revisión, es posible un pago por él; o la moderación lo rechaza y no hay dinero por él. Por eso comprar vistas es una mala apuesta: las pagas por adelantado, mientras que nada garantiza un pago por ese envío.
 
 ## El cálculo es automático y el retiro es una solicitud
 
 **El sistema calcula.** Nadie escribe cifras a mano: la fórmula es determinista, las mismas vistas con la misma tarifa dan el mismo monto, y el resultado se registra como una acreditación con un estado que ves en la tarea. En una tarea con fondo en la plataforma, tus ganancias llegan automáticamente a tu saldo cuando termina, o antes con «Cobrar ahora» donde la tarea lo muestre.
 
-**La plataforma hace el resto.** Pide un retiro desde 10 USDT: el 10% (por defecto) se descuenta dentro de la solicitud y ves el monto que recibirás antes de confirmar. Cada solicitud se revisa antes de salir, para que el dinero llegue a la billetera correcta. Detrás está la propia tarea: el presupuesto de una tarea con fondo en la plataforma ya está congelado en la plataforma, el cálculo ya está registrado en un estado y no se puede repetir a favor de nadie. Participar no le cuesta nada a un clipper y los pagos de los concursos llevan un 0%; la comisión de retiro es el único cargo, consulta [qué comisiones cobra DareBay](/en/help/what-commission) (en inglés).
+**La plataforma hace el resto.** Pide un retiro desde 10 USDT: el 10% (por defecto) se descuenta dentro de la solicitud y ves el monto que recibirás antes de confirmar. Cada solicitud se revisa antes de salir, para que el dinero llegue a la billetera correcta. Detrás está la propia tarea: el presupuesto de una tarea con fondo en la plataforma ya está congelado en DareBay, el cálculo ya está registrado en un estado y no se puede rehacer a favor de nadie. Participar no le cuesta nada a un clipper y los pagos de los concursos tienen una comisión del 0%; la comisión de retiro es el único cargo. Consulta [qué comisiones cobra DareBay](/en/help/what-commission) (en inglés).
 
 ## Qué pasa con un presupuesto sin gastar
 
-El presupuesto de una tarea de pago por vistas se gasta según las vistas realmente ganadas, así que casi siempre queda una parte que nadie ganó: menos envíos de los esperados, algunos por debajo del umbral o un envío que llegó al tope. En una tarea con fondo en la plataforma, la parte sin gastar vuelve al saldo del cliente; con pago directo, el presupuesto nunca se retuvo por adelantado, así que no hay nada que devolver.
+El presupuesto de una tarea de pago por vistas se gasta según las vistas realmente conseguidas, así que casi siempre queda una parte que nadie ganó: menos envíos de los esperados, algunos por debajo del umbral o un envío que llegó al tope. En una tarea con fondo en la plataforma, la parte sin gastar vuelve al saldo del cliente; con pago directo, el presupuesto nunca se retuvo por adelantado, así que no hay nada que devolver.
 
 ## Un registro que separa las vistas del dinero recibido
 
@@ -105,15 +105,15 @@ Antes de publicar, guarda la tarifa, el umbral, el tope, el plazo de envío y la
 
 Tus ganancias llegan automáticamente a tu saldo cuando termina una tarea con fondo en la plataforma: en ese momento se hace el cálculo y se genera una acreditación con un estado.
 
-Donde la tarea muestra «Cobrar ahora», un envío aprobado puede acreditarse antes, y ese clip deja de ganar; el botón se habilita cuando todo el monto acreditado tiene 24 horas, así que en un clip que sigue creciendo el plazo vuelve a empezar<!-- source: https://darebay.com/en/help/darebay-withdrawals 2026-09-24 -->. Desde el saldo, pide un retiro desde 10 USDT y la plataforma se encarga del resto; un envío en espera se resuelve aparte, incluso con un pago cuando vence el plazo.
+Donde la tarea muestra «Cobrar ahora», un envío aprobado puede acreditarse antes, y ese clip deja de ganar; el botón se habilita cuando todo el monto acreditado cumple 24 horas, así que en un clip que sigue creciendo el plazo vuelve a empezar<!-- source: https://darebay.com/en/help/darebay-withdrawals 2026-09-24 -->. Desde el saldo, pide un retiro desde 10 USDT y la plataforma se encarga del resto; un envío en espera se resuelve aparte, incluso con un pago cuando vence el plazo.
 
 ### ¿Qué métodos de pago hay?
 
-El asistente de retiro ofrece USDT a una billetera externa en la red TON, o puedes recibir el pago en Estrellas de Telegram: pide un retiro desde 10 USDT y la plataforma se encarga del resto, con un 10% (por defecto) del monto solicitado descontado dentro de la solicitud y el monto que recibirás visible antes de confirmar. En las tareas de pago directo, el organizador te paga por su cuenta, con el método que fije la tarea; la plataforma nunca te pide enviar dinero por adelantado para «activar» un pago. Detalles: [cómo retirar dinero de DareBay](/en/help/darebay-withdrawals) (en inglés).
+El asistente de retiro ofrece USDT a una billetera externa en la red TON, o puedes recibir el pago en Estrellas de Telegram: pide un retiro desde 10 USDT y la plataforma se encarga del resto; se descuenta un 10% (por defecto) del monto solicitado dentro de la propia solicitud y ves el monto que recibirás antes de confirmar. En las tareas de pago directo, el organizador te paga por su cuenta, con el método que fije la tarea; la plataforma nunca te pide enviar dinero por adelantado para «activar» un pago. Detalles: [cómo retirar dinero de DareBay](/en/help/darebay-withdrawals) (en inglés).
 
 ### ¿Puedo enviar más de un clip?
 
-Sí, salvo que las condiciones de esa tarea limiten los envíos de un mismo autor. El tope se aplica a un envío, no al autor, así que cada video se cuenta por separado; las copias del mismo video no son varios envíos, sino un motivo para que la moderación lo revise.
+Sí, salvo que las condiciones de esa tarea limiten los envíos de un mismo autor. El tope se aplica a cada envío, no al autor, así que cada video se cuenta por separado; las copias del mismo video no son varios envíos, sino un motivo para que la moderación lo revise.
 
 ### ¿Qué pasa si inflo mis vistas?
 

@@ -69,6 +69,9 @@ const SOURCE_COMMENT_OPENER = /<!--\s*source:/g
  * board its section on other roundups names. A board added to `platforms.json` or cited only in prose is added here by
  * hand; `check:sources` prints each host of the pages it checks with the class this list gives it, so one missing from
  * here shows up as "linked".
+ * Extended 2026-10-29 with the Spanish-language boards the second wave of `/es/` pages cites from their own terms:
+ * ClipBoom (Spain), Clipea and Lulosa (Latin music campaigns), Clipealo (Mexico, clipealo.co), Clipero (clipero.net,
+ * a streamer-campaign app) and Clippers Flow (Latin America).
  *
  * Matched by host, so `docs.whop.com` and `www.vyro.com` need no entry of their own. A trailing
  * `.*` means "this brand under any TLD" — `klipni.*` and `vues.*` are one small platform each and
@@ -127,6 +130,12 @@ export const COMPETITOR_SOURCE_HOSTS: readonly string[] = [
   'clipfarm.biz',
   'tryearnable.com',
   'clipaffiliates.com',
+  'clipboom.io',
+  'clipea.com',
+  'clipealo.co',
+  'clipero.net',
+  'clippersflow.com',
+  'lulosa.com',
 ]
 
 /** The host as a reader would say it — what `LPlatforms.vue` already prints for the same sources. */

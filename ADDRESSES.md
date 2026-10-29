@@ -3,7 +3,7 @@
 > ⚙️ **Сгенерировано** из `docs/.vitepress/registry.ts`. Руками не править —
 > `node --experimental-strip-types scripts/print-addresses.mjs > ADDRESSES.md`.
 
-Страниц: **108** · адресов: **250** · редиректов со старых адресов: **312**
+Страниц: **110** · адресов: **258** · редиректов со старых адресов: **312**
 
 Из них **191** — производные написания тех же адресов: без `/docs`
 (`/faq/fees`), под старым префиксом корневой локали `/ru` (`/ru/o-proekte`) и имя файла
@@ -44,6 +44,8 @@
 | — *(новая)* | `/en/earnings/clipping-platforms-that-pay-in-egypt-and-arab-countries` | `clipping-platforms-egypt-mena` |
 | — *(новая)* | `/en/earnings/clipping-platforms-that-pay-in-bangladesh-and-nepal` | `clipping-platforms-bangladesh-nepal` |
 | — *(новая)* | `/en/earnings/clipping-platforms-that-pay-in-indonesia-and-the-philippines` | `clipping-platforms-indonesia-philippines` |
+| — *(новая)* | `/es/ganar-dinero/plataformas-de-clipping-que-pagan-en-venezuela` | `clipping-platforms-venezuela` |
+| — *(новая)* | `/es/ganar-dinero/plataformas-de-clipping-que-pagan-en-mexico` | `clipping-platforms-mexico` |
 | — *(новая)* | `/zarabotok/kak-vybrat-platformu-dlya-narezok` | `how-to-choose-clipping-platform` |
 | — *(новая)* | `/zarabotok/darebay-ili-klipni` | `darebay-vs-klipni` |
 | — *(новая)* | `/zarabotok/kalkulyator-zarabotka-na-narezkah` | `earnings-calculator` |

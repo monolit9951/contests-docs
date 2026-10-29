@@ -66,4 +66,4 @@ espectadores influyen en el resultado sin enviar ni un solo trabajo.
 
 Abre una tarea y anota la red de publicación, la fecha límite de envío y la regla de pago. Comprueba que tienes acceso al material antes de editar. Después de publicar, envía el enlace a esa tarea y confirma que el trabajo aparece en su lista: un hashtag por sí solo no crea un envío.
 
-Vuelve al trabajo para ver la revisión y el estado de la acreditación. Elegir ganador, acreditar la recompensa y retirar el saldo disponible son pasos distintos. Empieza por [enviar tu trabajo](/en/help/submit-your-work) (en inglés); para un monto ya acreditado, lee [cómo funcionan los retiros](/en/help/darebay-withdrawals) (en inglés).
+Vuelve al trabajo para ver la revisión y el estado de la acreditación. Elegir ganador, acreditar la recompensa y retirar el saldo disponible son pasos distintos. Empieza por [enviar tu trabajo](/en/help/submit-your-work) (en inglés); para un monto ya acreditado, lee [cómo retirar dinero de DareBay](/es/ayuda/retirar-dinero).

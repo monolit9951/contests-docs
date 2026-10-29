@@ -70,4 +70,4 @@ Para participar, no. Cada concurso define su propio método de recompensa, que p
 - [¿Es DareBay una estafa?](/en/about/is-darebay-a-scam) (en inglés): la plataforma frente a los patrones habituales de fraude
 - [¿DareBay paga de verdad?](/en/about/does-darebay-really-pay) (en inglés): la cadena del clip al dinero, paso a paso
 - [La garantía de pago](/en/about/payout-guarantee) (en inglés): qué está garantizado de verdad
-- [Retiros en DareBay](/en/help/darebay-withdrawals) (en inglés): la solicitud, la comisión y los métodos disponibles
+- [Cómo retirar dinero de DareBay](/es/ayuda/retirar-dinero): la solicitud, la comisión y los métodos disponibles

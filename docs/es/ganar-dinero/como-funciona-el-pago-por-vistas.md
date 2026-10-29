@@ -109,7 +109,7 @@ Donde la tarea muestra «Cobrar ahora», un envío aprobado puede acreditarse an
 
 ### ¿Qué métodos de pago hay?
 
-El asistente de retiro ofrece USDT a una billetera externa en la red TON, o puedes recibir el pago en Estrellas de Telegram: pide un retiro desde 10 USDT y la plataforma se encarga del resto; se descuenta un 10% (por defecto) del monto solicitado dentro de la propia solicitud y ves el monto que recibirás antes de confirmar. En las tareas de pago directo, el organizador te paga por su cuenta, con el método que fije la tarea; la plataforma nunca te pide enviar dinero por adelantado para «activar» un pago. Detalles: [cómo retirar dinero de DareBay](/en/help/darebay-withdrawals) (en inglés).
+El asistente de retiro ofrece USDT a una billetera externa en la red TON, o puedes recibir el pago en Estrellas de Telegram: pide un retiro desde 10 USDT y la plataforma se encarga del resto; se descuenta un 10% (por defecto) del monto solicitado dentro de la propia solicitud y ves el monto que recibirás antes de confirmar. En las tareas de pago directo, el organizador te paga por su cuenta, con el método que fije la tarea; la plataforma nunca te pide enviar dinero por adelantado para «activar» un pago. Detalles: [cómo retirar dinero de DareBay](/es/ayuda/retirar-dinero).
 
 ### ¿Puedo enviar más de un clip?
 

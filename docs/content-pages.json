@@ -96,7 +96,8 @@
       "slugs": {
         "ru": "rabota-narezchikom",
         "uk": "robota-narizalnykom",
-        "en": "clipping-as-a-job"
+        "en": "clipping-as-a-job",
+        "es": "que-es-el-clipping"
       },
       "retired": [
         "/docs/ru/zarabotok/rabota-narezchikom",
@@ -162,7 +163,8 @@
       "slugs": {
         "ru": "skolko-platyat-za-prosmotry-v-tiktok",
         "uk": "skilky-platiat-za-perehliady-v-tiktok",
-        "en": "tiktok-view-payouts"
+        "en": "tiktok-view-payouts",
+        "es": "cuanto-paga-tiktok-por-1000-visitas"
       },
       "retired": [
         "/docs/ru/zarabotok/skolko-platyat-za-prosmotry-v-tiktok"
@@ -379,7 +381,8 @@
       "slugs": {
         "ru": "darebay-vyvod-deneg",
         "uk": "darebay-vyvedennia-hroshei",
-        "en": "darebay-withdrawals"
+        "en": "darebay-withdrawals",
+        "es": "retirar-dinero"
       },
       "retired": [
         "/docs/ru/faq/darebay-vyvod-deneg",
@@ -664,7 +667,8 @@
       "slugs": {
         "ru": "darebay-ili-whop",
         "uk": "darebay-chy-whop",
-        "en": "darebay-vs-whop"
+        "en": "darebay-vs-whop",
+        "es": "darebay-vs-whop"
       }
     },
     {
@@ -727,6 +731,20 @@
       }
     },
     {
+      "id": "clipping-platforms-venezuela",
+      "hub": "earnings",
+      "slugs": {
+        "es": "plataformas-de-clipping-que-pagan-en-venezuela"
+      }
+    },
+    {
+      "id": "clipping-platforms-mexico",
+      "hub": "earnings",
+      "slugs": {
+        "es": "plataformas-de-clipping-que-pagan-en-mexico"
+      }
+    },
+    {
       "id": "how-to-choose-clipping-platform",
       "hub": "earnings",
       "slugs": {
@@ -757,7 +775,8 @@
       "hub": "earnings",
       "slugs": {
         "ru": "slovar-klippinga",
-        "en": "clipping-glossary"
+        "en": "clipping-glossary",
+        "es": "glosario-de-clipping"
       },
       "retired": [
         "/ua/zarobitok/slovnyk-klipinhu"
@@ -963,7 +982,8 @@
       "hub": "earnings",
       "slugs": {
         "ru": "whop-content-rewards-obzor",
-        "en": "whop-content-rewards-review"
+        "en": "whop-content-rewards-review",
+        "es": "whop-content-rewards"
       },
       "retired": [
         "/ua/zarobitok/whop-content-rewards-ohliad"

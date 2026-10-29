@@ -91,8 +91,8 @@ El día de nuestra revisión, clipaffiliates.com respondía «service suspended�
 
 ## Qué leer después
 
-- [Reseña de Whop Content Rewards](/en/earnings/whop-content-rewards-review) (en inglés): campañas, su comisión del 10%, los plazos de pago y la lista de países sancionados en detalle
-- [DareBay frente a Whop](/en/earnings/darebay-vs-whop) (en inglés): las dos plataformas comparadas campo por campo
+- [Whop Content Rewards](/es/ganar-dinero/whop-content-rewards): qué es, su comisión del 10%, los plazos de pago y la lista de países sancionados en detalle
+- [DareBay frente a Whop](/es/ganar-dinero/darebay-vs-whop): las dos plataformas comparadas campo por campo
 - [Plataformas de clipping que pagan en Rusia y la CEI](/en/earnings/clipping-platforms-that-pay-in-russia-and-cis) (en inglés): quién paga en Rusia, Bielorrusia, Ucrania y Kazajistán, según las propias plataformas
 - [Cuánto se gana haciendo clips](/es/ganar-dinero/cuanto-se-gana-haciendo-clips): ejemplos por cada 1000 vistas con umbral y tope
 - [Alternativas a OpusClip para clippers](/en/tools/opus-clip-alternatives) (en inglés): cuánto cuestan por hora de material editores como OpusClip y Klap

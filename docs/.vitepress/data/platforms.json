@@ -166,7 +166,8 @@
           "text": {
             "en": "TikTok, YouTube Shorts, Instagram Reels, Facebook Reels (per task terms)",
             "ru": "TikTok, YouTube Shorts, Instagram Reels, Facebook Reels (по условиям задания)",
-            "uk": "TikTok, YouTube Shorts, Instagram Reels, Facebook Reels (за умовами завдання)"
+            "uk": "TikTok, YouTube Shorts, Instagram Reels, Facebook Reels (за умовами завдання)",
+            "es": "TikTok, YouTube Shorts, Instagram Reels y Facebook Reels (según las condiciones de cada tarea)"
           },
           "source": {
             "url": "https://darebay.com/en/earnings/clipping-on-x-twitter",
@@ -177,7 +178,8 @@
           "text": {
             "en": "independent reading of the public view counter, hold on suspicious dynamics",
             "ru": "независимое чтение публичного счётчика, холд при подозрительной динамике",
-            "uk": "незалежне зчитування публічного лічильника, холд за підозрілої динаміки"
+            "uk": "незалежне зчитування публічного лічильника, холд за підозрілої динаміки",
+            "es": "lectura independiente del contador público de vistas; espera de revisión si la dinámica es sospechosa"
           },
           "source": {
             "url": "https://darebay.com/en/help/protection-from-view-fraud",
@@ -512,7 +514,8 @@
           "text": {
             "en": "on every submission: platform APIs and a 0–100 Bot Score produced with a third-party fraud-detection provider's help, then the brand's moderator decides; a person makes the final call",
             "ru": "по каждой заявке: API площадок и оценка Bot Score 0–100, которую составляют с помощью стороннего антифрод-провайдера, затем решает модератор бренда; окончательное решение принимает человек",
-            "uk": "для кожної заявки: API майданчиків і оцінка Bot Score 0–100, яку обчислюють за допомогою зовнішнього провайдера виявлення шахрайства, потім вирішує модератор бренду; остаточне рішення ухвалює людина"
+            "uk": "для кожної заявки: API майданчиків і оцінка Bot Score 0–100, яку обчислюють за допомогою зовнішнього провайдера виявлення шахрайства, потім вирішує модератор бренду; остаточне рішення ухвалює людина",
+            "es": "en cada envío: las API de las plataformas y un Bot Score de 0 a 100 calculado con ayuda de un proveedor externo contra el fraude; después decide el moderador de la marca, y la decisión final la toma una persona"
           },
           "source": {
             "url": "https://contentrewards.com/terms",

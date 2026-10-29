@@ -86,7 +86,7 @@ No. El pago depende de las vistas de un clip concreto, así que una cuenta nueva
 
 ### ¿DareBay paga a clippers de España y Latinoamérica?
 
-Para participar hay requisitos de edad y restricciones por sanciones; revisa los métodos disponibles en el formulario y en las condiciones de la tarea. Consulta las [reglas de la cuenta](/en/legal/terms) (en inglés).
+Para participar hay requisitos de edad y restricciones por sanciones; revisa los métodos disponibles en el formulario y en las condiciones de la tarea. Consulta las [reglas de la cuenta](/en/legal/terms) (en inglés). Guías por país en español: [México](/es/ganar-dinero/plataformas-de-clipping-que-pagan-en-mexico) · [Venezuela](/es/ganar-dinero/plataformas-de-clipping-que-pagan-en-venezuela); el paso del saldo a tu billetera está en [cómo retirar dinero de DareBay](/es/ayuda/retirar-dinero).
 
 ### ¿A qué países paga DareBay: India, Pakistán, Nigeria, Egipto?
 

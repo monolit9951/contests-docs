@@ -178,6 +178,13 @@ describe('competitor classification', () => {
       'klipni.com',
       'www.primeoracles.com',
       'clipradar.co',
+      // the Spanish-language boards the /es/ pages cite (2026-10-29)
+      'clipboom.io',
+      'clipea.com',
+      'www.clipealo.co',
+      'www.clipero.net',
+      'clippersflow.com',
+      'lulosa.com',
     ]) {
       expect(isCompetitorHost(host), host).toBe(true)
     }

@@ -9,7 +9,7 @@ sources: visible
 
 # Cómo retirar dinero de DareBay: mínimo, plazos y lo que recibes
 
-Para retirar dinero de DareBay haces una solicitud desde **10 USDT** y eliges cómo cobrar: USDT en una billetera tuya de la red TON o Estrellas de Telegram en tu @username. La comisión es del **10% por defecto**, se descuenta dentro de la propia solicitud y el formulario te muestra la comisión y el monto que recibirás antes de confirmar. Tu cuenta puede tener una comisión personal. Una persona revisa y tramita cada solicitud, y DareBay no garantiza un plazo de pago fijo ni inmediato<!-- source: https://darebay.com/en/legal/terms 2026-10-29 -->.
+Para retirar dinero de DareBay haces una solicitud desde **10 USDT** y eliges cómo cobrar: USDT en una billetera tuya de la red TON o Estrellas de Telegram en tu @username. La comisión es del **10% por defecto**, se descuenta dentro de la propia solicitud y el formulario te muestra la comisión y el monto que recibirás antes de confirmar. Tu cuenta puede tener una comisión personal distinta. Una persona revisa y tramita cada solicitud, y DareBay no garantiza un plazo de pago fijo ni inmediato<!-- source: https://darebay.com/en/legal/terms 2026-10-29 -->.
 
 Participar no cuesta nada y DareBay no se queda con ninguna parte de lo que ganas en un concurso; crear un concurso o recargar su presupuesto también tiene una comisión del 0%. El retiro es otra operación, que viene después de la acreditación, y su comisión es el único cargo que DareBay aplica a lo que ganas<!-- source: https://darebay.com/en/help/what-commission 2026-10-29 -->.
 
@@ -30,7 +30,7 @@ Un concurso puede entregar su recompensa de otra manera, por ejemplo con una tar
 
 ## TON no es TRC-20: comprueba la red antes de pegar la dirección
 
-USDT circula en varias cadenas de bloques (blockchains) a la vez: Tether, su emisor, lo emite, entre otras, en TON, en Tron (estándar TRC-20) y en Ethereum (estándar ERC-20). Un USDT vale lo mismo en todas, pero cada red es un camino aparte<!-- source: https://tether.to/en/supported-protocols/ 2026-10-29 -->. Si sueles recibir USDT por TRC-20, ten presente que TON es otra red y usa otro tipo de dirección. La tabla sirve para reconocer de qué red es una dirección:
+USDT circula en varias cadenas de bloques (blockchains) a la vez: Tether, la empresa que lo emite, lo ofrece, entre otras redes, en TON, en Tron (estándar TRC-20) y en Ethereum (estándar ERC-20). Un USDT vale lo mismo en todas, pero cada red es un camino aparte<!-- source: https://tether.to/en/supported-protocols/ 2026-10-29 -->. Si sueles recibir USDT por TRC-20, ten presente que TON es otra red y usa otro tipo de dirección. La tabla sirve para reconocer de qué red es una dirección:
 
 | Red | Blockchain | La dirección suele empezar por | Longitud |
 |---|---|---|---|
@@ -71,7 +71,7 @@ Si eliges Estrellas de Telegram (Telegram Stars), escribes tu @username y el pag
 
 ## De USDT a pesos, soles, bolívares o euros
 
-Cambiar USDT por tu moneda ocurre fuera de DareBay: lo haces en un exchange u otro servicio, con sus reglas y sus comisiones, y bajo la ley de tu país, impuestos incluidos. Las condiciones de DareBay dejan los impuestos sobre premios e ingresos a cargo de cada usuario<!-- source: https://darebay.com/en/legal/terms 2026-10-29 -->. Las guías de [México](/es/ganar-dinero/plataformas-de-clipping-que-pagan-en-mexico) y de [Venezuela](/es/ganar-dinero/plataformas-de-clipping-que-pagan-en-venezuela) reúnen qué plataformas pagan en cada país y cómo llega ese dinero a la moneda local.
+El cambio de USDT a tu moneda se hace fuera de DareBay: en un exchange u otro servicio, con sus reglas y sus comisiones, y bajo la ley de tu país, impuestos incluidos. Las condiciones de DareBay dejan los impuestos sobre premios e ingresos a cargo de cada usuario<!-- source: https://darebay.com/en/legal/terms 2026-10-29 -->. Las guías de [México](/es/ganar-dinero/plataformas-de-clipping-que-pagan-en-mexico) y de [Venezuela](/es/ganar-dinero/plataformas-de-clipping-que-pagan-en-venezuela) reúnen qué plataformas pagan en cada país y cómo llega ese dinero a la moneda local.
 
 En España, desde el 1 de julio de 2026 solo pueden operar los proveedores de criptoactivos autorizados por la CNMV u otras autoridades europeas<!-- source: https://www.cnmv.es/portal/mica/regulacion-criptoactivos?lang=es 2026-10-29 -->. USDT no aparece entre los tokens de dinero electrónico del registro de ESMA<!-- source: https://www.esma.europa.eu/sites/default/files/2024-12/EMTWP.csv 2026-10-29 -->, y ESMA ha pedido a esos proveedores que, con los clientes de la UE, se limiten a liquidar, convertir, retirar, transferir o custodiar las stablecoins que no cumplen MiCA, durante un tiempo limitado<!-- source: https://www.esma.europa.eu/press-news/esma-news/esma-sets-out-supervisory-expectations-services-related-unauthorised 2026-10-29 -->. Si vives en España, cuenta con que cambiar USDT a euros a través de un proveedor autorizado puede estar limitado.
 
@@ -79,7 +79,7 @@ En España, desde el 1 de julio de 2026 solo pueden operar los proveedores de cr
 
 Después de confirmar, la solicitud queda «En proceso» hasta que una persona la revisa y envía la transferencia. Las condiciones de DareBay no fijan un plazo ni garantizan un pago al instante, y donde la ley lo exige se aplica una verificación de identidad. DareBay también puede suspender un retiro para investigar una actividad sospechosa o ante un requerimiento legal: en ese caso te avisa y deja registrado el motivo<!-- source: https://darebay.com/en/legal/terms 2026-10-29 -->.
 
-Si tienes una pregunta sobre una solicitud, revisa los datos de pago que pusiste y escribe a support@darebay.com con el identificador de la solicitud<!-- source: https://darebay.com/en/help/what-commission 2026-10-29 -->. No abras solicitudes repetidas por el mismo monto ni envíes la comisión por separado.
+Si tienes una pregunta sobre una solicitud, revisa los datos de pago que indicaste y escribe a support@darebay.com con el identificador de la solicitud<!-- source: https://darebay.com/en/help/what-commission 2026-10-29 -->. No abras solicitudes repetidas por el mismo monto ni envíes la comisión por separado.
 
 ## Un retiro real frente a una estafa
 
@@ -96,7 +96,7 @@ Pagar para «desbloquear», «verificar» o «acelerar» un retiro no forma part
 
 Con la comisión por defecto, una solicitud de 10 USDT cumple el mínimo y te deja 9 USDT. Para recibir 10 USDT completos tienes que pedir algo más, alrededor de 11,12 USDT; el formulario muestra el redondeo exacto. La comisión nunca se envía como una transferencia aparte.
 
-El 10% es la comisión por defecto, y una cuenta puede tener otra aplicable: revisa la comisión real y el total antes de confirmar.
+El 10% es la comisión por defecto, pero tu cuenta puede tener otra: revisa la comisión real y el total antes de confirmar.
 
 ## Preguntas frecuentes
 

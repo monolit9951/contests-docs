@@ -50,10 +50,10 @@ glossary:
   definition: "Botón que algunas tareas muestran cuando tu trabajo está aprobado: asegura por adelantado el monto acumulado hasta ese momento. Una vez pulsado, el video deja de ganar en esa tarea, así que conviene cuando las vistas ya se frenaron."
 - id: comision-de-retiro
   term: "Comisión de retiro"
-  definition: "Comisión que se aplica sobre el monto bruto de una solicitud de retiro. La de DareBay es del 10% por defecto, y una cuenta puede tener una comisión personal válida. El formulario muestra la comisión real y el monto que recibirás antes de confirmar."
+  definition: "Comisión que se aplica sobre el monto bruto de una solicitud de retiro. La de DareBay es del 10% por defecto, y una cuenta puede tener asignada una comisión personal. El formulario muestra la comisión real y el monto que recibirás antes de confirmar."
 - id: comision-del-concurso
   term: "Comisión del concurso"
-  definition: "La parte del presupuesto de una tarea que se queda la plataforma: en DareBay es del 0%, así que todo el fondo va a los clippers. Crear un concurso y recargar su presupuesto también tienen una comisión del 0% para el organizador, de modo que todo el presupuesto queda para pagar a los creadores."
+  definition: "La parte del presupuesto de una tarea con la que se queda la plataforma: en DareBay es del 0%, así que todo el fondo va a los clippers. Crear un concurso y recargar su presupuesto también tienen una comisión del 0% para el organizador."
 - id: con-cara-o-sin-cara
   term: "Con cara o sin cara (faceless)"
   definition: "Dos formatos de clip: el autor habla a la cámara, o el clip se arma sin rostro, con voz en off, subtítulos, gameplay o diapositivas. Los dos se aceptan salvo que los requisitos de la tarea digan otra cosa."
@@ -146,7 +146,7 @@ glossary:
   definition: "Nombre informal de una distribución reducida. Un contador bajo, por sí solo, no prueba una restricción; revisa los avisos de la cuenta, si la publicación cumple las reglas y las estadísticas de publicaciones comparables."
 - id: shorts-reels-y-tiktok
   term: "Shorts, Reels y TikTok"
-  definition: "Los tres hogares del video corto vertical: YouTube Shorts, Instagram Reels y TikTok. La tarea indica la red donde publicar, y el conteo de vistas de DareBay funciona justamente en TikTok, YouTube, Instagram y los demás sitios que nombre la tarea."
+  definition: "Los tres grandes destinos del video corto vertical: YouTube Shorts, Instagram Reels y TikTok. La tarea indica la red donde publicar, y el conteo de vistas de DareBay funciona justamente en TikTok, YouTube, Instagram y los demás sitios que nombre la tarea."
 - id: sorteo
   term: "Sorteo (selección aleatoria)"
   definition: "El tipo de selección RANDOM: el sistema mezcla los trabajos admitidos con estado ACTIVE usando una semilla guardada y elige al ganador. Los me gusta no cambian las probabilidades; no hay un ranking por reacciones."
@@ -196,13 +196,13 @@ glossary:
 
 Este glosario explica, en una o dos frases, los 58 términos que vas a encontrar en una ficha de tarea, en las reglas de pago y en los chats de clippers. Un clipero es lo mismo que un clipper, dicho como en Perú y Bolivia; el CPM es la tarifa por cada 1000 vistas; el umbral decide si un clip cobra, y el tope, cuánto puede cobrar como máximo.
 
-Con estas palabras claras dejas de adivinar lo que te va a pagar una tarea: CPM o tarifa por vista, umbral o tope, «Cobrar ahora» o retiro. Las definiciones siguen las reglas de la propia plataforma, y las cifras de DareBay salen de sus páginas públicas. Cada término tiene su propio enlace directo para compartirlo en un chat. Para ver el mecanismo completo, empieza por [cómo funciona el pago por vistas](/es/ganar-dinero/como-funciona-el-pago-por-vistas).
+Si tienes claras estas palabras, dejas de adivinar lo que te va a pagar una tarea: CPM o tarifa por vista, umbral o tope, «Cobrar ahora» o retiro. Las definiciones siguen las reglas de la propia plataforma, y las cifras de DareBay salen de sus páginas públicas. Cada término tiene su propio enlace directo para compartirlo en un chat. Para ver el mecanismo completo, empieza por [cómo funciona el pago por vistas](/es/ganar-dinero/como-funciona-el-pago-por-vistas).
 
 <LGlossary />
 
 ## ¿Qué es un clipero?
 
-Un clipero es la persona que mira las transmisiones en vivo de un streamer, recorta sus mejores momentos y los publica como clips cortos en TikTok, YouTube Shorts o Instagram Reels: es la palabra de Perú y Bolivia para lo que en otros países se llama clipper. Así lo describía en septiembre de 2025 el diario peruano La República, que ligaba el origen de la actividad al auge de los creadores de contenido en Perú y contaba que los streamers les pagan a sus cliperos según las vistas que consiguen<!-- source: https://larepublica.pe/streamers/2025/09/10/streamer-sacha-revela-las-jugosas-ganancias-de-sus-cliperos-8-sueldos-minimos-no-es-broma-evat-769400 2026-10-29 -->.
+Un clipero es la persona que mira las transmisiones en vivo de un streamer, recorta sus mejores momentos y los publica como clips cortos en TikTok, YouTube Shorts o Instagram Reels: es la palabra de Perú y Bolivia para lo que en otros países se llama clipper. Así lo describía en septiembre de 2025 el diario peruano La República, que vinculaba el origen de la actividad al auge de los creadores de contenido en Perú y contaba que los streamers les pagan a sus cliperos según las vistas que consiguen<!-- source: https://larepublica.pe/streamers/2025/09/10/streamer-sacha-revela-las-jugosas-ganancias-de-sus-cliperos-8-sueldos-minimos-no-es-broma-evat-769400 2026-10-29 -->.
 
 **Dónde se usa.** Según Google Trends, en los 12 meses anteriores al 29 de octubre de 2026 el interés por «clipero» se concentró en Perú (100), Bolivia (46), Ecuador (15) y Argentina (7); el 100 marca el país donde la palabra pesa más dentro de todas sus búsquedas<!-- source: https://trends.google.com/trends/explore?date=today%2012-m&q=clipero&hl=es 2026-10-29 -->. Es una palabra nueva: en la serie de cinco años, la primera semana con datos es la que empieza el 31 de agosto de 2025, y todas las demás son de 2026<!-- source: https://trends.google.com/trends/explore?date=today%205-y&q=clipero&hl=es 2026-10-29 -->. Las búsquedas relacionadas repiten casi siempre la misma duda: «qué es un clipero» o «qué significa clipero».
 
@@ -242,7 +242,7 @@ El umbral es una condición de entrada que se mide en vistas; el tope limita lo 
 
 ### Vistas contabilizadas y vistas en pantalla
 
-La vista en pantalla es la cifra de las estadísticas de tu cuenta en el momento en que miras. La vista contabilizada es lo que el contador de la plataforma leyó en el contador público de la red con tu enlace y lo que sobrevivió a la moderación: un crecimiento sospechoso deja el trabajo en espera y el fraude confirmado se filtra. Solo se paga la segunda, y las capturas de pantalla no cuentan.
+La vista en pantalla es la cifra de las estadísticas de tu cuenta en el momento en que miras. La vista contabilizada es la que el contador de la plataforma leyó en el contador público de la red con tu enlace y que, además, superó la moderación: un crecimiento sospechoso deja el trabajo en espera y el fraude confirmado se filtra. Solo se paga la segunda, y las capturas de pantalla no cuentan.
 
 ### Oferta y tarea de pago por vistas
 
@@ -250,7 +250,7 @@ Una tarea de pago por vistas paga una sola cosa: la tarifa por cada 1000 vistas 
 
 ### Retiro y Estrellas
 
-Un retiro es una solicitud de USDT en la red TON: la presentas desde 10 USDT y la plataforma hace el resto, con una comisión del 10% (por defecto) descontada dentro de la solicitud. Las Estrellas son la segunda vía del mismo asistente: el monto sale en Estrellas de Telegram y se queda dentro de Telegram, así que no es un retiro. Las dos vías usan el saldo disponible, que una tarea con fondo en la plataforma acredita cuando termina, o antes con «Cobrar ahora» donde la tarea lo muestra<!-- source: https://darebay.com/en/help/darebay-withdrawals 2026-09-24 -->; los detalles están en [cómo retirar dinero de DareBay](/es/ayuda/retirar-dinero).
+Un retiro es una solicitud de USDT en la red TON: la presentas desde 10 USDT y la plataforma se encarga del resto, con una comisión del 10% (por defecto) descontada dentro de la solicitud. Las Estrellas son la segunda vía del mismo asistente: el monto sale en Estrellas de Telegram y se queda dentro de Telegram, así que no es un retiro. Las dos vías usan el saldo disponible, que una tarea con fondo en la plataforma acredita cuando termina, o antes con «Cobrar ahora» donde la tarea lo muestra<!-- source: https://darebay.com/en/help/darebay-withdrawals 2026-09-24 -->; los detalles están en [cómo retirar dinero de DareBay](/es/ayuda/retirar-dinero).
 
 ### Granja de contenido y granja de interacción
 
@@ -258,7 +258,7 @@ Una granja de contenido, en el sentido del video corto, es un conjunto de cuenta
 
 ## Lee los términos en el orden en que se mueve el dinero
 
-Empieza por un material permitido y la ficha; después vienen el método de envío, la aceptación y las vistas contabilizadas. Solo entonces se aplican la tarifa, el umbral y el tope. La acreditación que resulta todavía tiene un estado de liquidación, y el retiro es un movimiento aparte hacia el destino que elijas.
+Empieza por un material permitido y la ficha; después vienen el método de envío, la aceptación y las vistas contabilizadas. Solo entonces se aplican la tarifa, el umbral y el tope. Lo que se acredita todavía pasa por un estado de liquidación, y el retiro es un movimiento aparte hacia el destino que elijas.
 
 En una tarea ilustrativa con un umbral de 1000 vistas, un CPM de US$2 y un tope de US$15, un clip aceptado con 6000 vistas gana US$12. Un segundo clip con 20.000 vistas se queda en el tope de US$15 en lugar de US$40. El lote acumula US$27. Una comisión de retiro de ejemplo del 10% deja US$24,30; una comisión personal o un pago directo del organizador cambian ese último paso.
 
@@ -268,7 +268,7 @@ En una consulta al soporte, separa cuatro cosas: el contador público, las vista
 
 ### ¿Clipper y clipero significan lo mismo?
 
-Sí. Los dos nombran a quien recorta streams o videos largos, publica los clips en sus cuentas y cobra por ellos. «Clipper» es el anglicismo que usan las plataformas y casi todos los países; «clipero» es la forma que se oye en Perú y Bolivia, a menudo ligada a un streamer concreto. En DareBay las condiciones son las mismas uses la palabra que uses.
+Sí. Los dos nombran a quien recorta streams o videos largos, publica los clips en sus cuentas y cobra por ellos. «Clipper» es el anglicismo que usan las plataformas y casi todos los países; «clipero» es la forma que se oye en Perú y Bolivia, a menudo vinculada a un streamer concreto. En DareBay las condiciones son las mismas uses la palabra que uses.
 
 ### ¿Qué significa CPM en una tarea de clipping?
 
@@ -276,7 +276,7 @@ Es la tarifa por cada 1000 vistas contabilizadas de un clip, y una ficha de Dare
 
 ### ¿El clipping es lo mismo que editar videos?
 
-No. Un editor le entrega un archivo al cliente y cobra un monto fijo; el video vive en el canal de otra persona. Un clipper publica el clip en su propia cuenta y gana por sus vistas, así que el momento elegido, el gancho y la retención importan más que unos cortes limpios. En las tareas de oferta ni siquiera hace falta editar. El oficio completo se explica en [qué es el clipping](/es/ganar-dinero/que-es-el-clipping).
+No. Un editor le entrega un archivo al cliente y cobra un monto fijo; el video se publica en el canal de otra persona. Un clipper publica el clip en su propia cuenta y gana por sus vistas, así que el momento elegido, el gancho y la retención importan más que unos cortes limpios. En las tareas de oferta ni siquiera hace falta editar. El oficio completo se explica en [qué es el clipping](/es/ganar-dinero/que-es-el-clipping).
 
 ### ¿Qué significa que una tarea pague en USDT?
 

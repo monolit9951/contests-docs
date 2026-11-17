@@ -40,7 +40,8 @@ const art = computed(() => (showcase.value ? (frontmatter.value.art as { hero?: 
 const kicker = computed(() => hero.value.kicker ?? hub.value?.title ?? '')
 const crumbHref = computed(() => (!isHub.value && hub.value?.path ? hub.value.path : null))
 // The config injects the git-derived day used by Article.dateModified and the sitemap.
-// hero.updated remains the historical source-check date for LMethod, never the page update.
+// hero.updated is not that day and the hero never prints it: it is a hand-kept source re-read that
+// only LMethod reads, and only on a page that lists no competitor source (comparisonSnapshot).
 // A showcase keeps its dated kicker without adding a second date on the same line.
 const updated = computed(() => visibleUpdatedDate(frontmatter.value))
 const title = computed(() => String(frontmatter.value.title ?? ''))

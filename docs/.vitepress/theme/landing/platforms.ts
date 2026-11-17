@@ -71,13 +71,39 @@ export const PAGE_ONLY_FIELDS: readonly string[] = ['payoutSpeed']
 export const optIn = (key: string): boolean => REGION_FIELDS.includes(key) || PAGE_ONLY_FIELDS.includes(key)
 
 export const DATA = raw as PlatformsData
+/** Our own row of a comparison: its figures come from our own pages, not from a competitor's. */
+export const OWN_ID = 'darebay'
 /**
- * The historical source-check date of a comparison, separate from the git-derived page update.
- * Existing `hero.updated` records a page's source reread; absent that, keep the catalog snapshot.
- * Neither date is advanced just because the article was edited.
+ * The dates the snapshot line of a comparison prints: the oldest and the newest date among the
+ * sources the page lists for platforms other than DareBay. These are the dates printed beside those
+ * sources, so the line that sums them up cannot disagree with the list next to it.
+ *
+ * It sums up the list, not every figure. `sourcesOf` lists an address once, with the date of the
+ * first field that cites it, so a figure read from the same address on another day is in neither.
+ * On 2026-11-17 Prime Oracles' "followers", read 2026-09-24, sits behind an entry dated 2026-11-14,
+ * and a page comparing Prime Oracles alone would print 2026-11-14 for it.
+ *
+ * Until 2026-11-17 this was one date kept by hand: `hero.updated`, or the catalog snapshot where a
+ * page had none. Nothing tied it to the data. After the re-reads of September and November 2026,
+ * 18 comparison pages printed a snapshot older than every competitor source they listed, and the
+ * ten that had it set to the newest re-read still listed sources up to two months older.
+ *
+ * A page that lists no competitor source keeps its recorded re-read (`hero.updated`), then the
+ * catalog snapshot. On every other page `hero.updated` is not read: re-stamping it there changes
+ * nothing a reader sees, yet moves the page's "Updated" date, because gen-page-dates.mjs counts the
+ * whole `hero` block as reader-visible. A re-read is recorded in `source.date` in
+ * data/platforms.json. The page's modification date never enters: editing an article does not
+ * recheck its figures.
  */
-export const comparisonSnapshotDate = (frontmatter: { hero?: { updated?: string } | null }): string =>
-  frontmatter.hero?.updated ?? DATA.snapshot
+export const comparisonSnapshot = (
+  frontmatter: { hero?: { updated?: string } | null },
+  listed: readonly { date: string }[] = []
+): { from: string; to: string } => {
+  const dates = listed.map((s) => s.date).filter(Boolean).sort()
+  if (dates.length > 0) return { from: dates[0], to: dates[dates.length - 1] }
+  const recorded = frontmatter.hero?.updated ?? DATA.snapshot
+  return { from: recorded, to: recorded }
+}
 export const byId = (id: string): Platform | undefined => DATA.platforms.find((p) => p.id === id)
 export const pick = (ids: string[]): Platform[] => ids.map(byId).filter((p): p is Platform => Boolean(p))
 /**
@@ -163,3 +189,9 @@ export const methodSources = (
   locale: Locale
 ): (Source & { name: string; n: number })[] =>
   platforms.flatMap((p) => sourcesOf(p, shown, locale).map((s, k) => ({ name: p.name, n: k + 1, ...s })))
+/** The entries of `methodSources` that are not our own row: what `comparisonSnapshot` sums up. */
+export const competitorSources = (
+  platforms: readonly Platform[],
+  shown: readonly string[],
+  locale: Locale
+): (Source & { name: string; n: number })[] => methodSources(platforms.filter((p) => p.id !== OWN_ID), shown, locale)

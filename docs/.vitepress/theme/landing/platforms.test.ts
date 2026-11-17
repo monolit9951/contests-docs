@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { LANDING_COPY, reviewLabel } from './copy'
-import { DATA, DEFAULT_COLUMNS, REGION_FIELDS, bidiAttrs, byId, comparisonSnapshotDate, optIn, reviewPath, sourceIndex, sourcesOf, text, textLang } from './platforms'
+import { DATA, DEFAULT_COLUMNS, OWN_ID, REGION_FIELDS, bidiAttrs, byId, comparisonSnapshot, competitorSources, optIn, reviewPath, sourceIndex, sourcesOf, text, textLang } from './platforms'
 import { sourceAnchor } from '../../links'
 import { KNOWN_LOCALES, LOCALES as LIVE_LOCALES, PAGES, pagePath, sourceFile } from '../../registry'
 
@@ -233,20 +233,53 @@ describe('the compact dollars-per-1,000-views column', () => {
   })
 })
 
-describe('the historical source snapshot of a comparison', () => {
-  it('is the page\'s own re-read date when it has one', () => {
-    expect(comparisonSnapshotDate({ hero: { updated: '2026-09-24' } })).toBe('2026-09-24')
+describe('the source snapshot of a comparison', () => {
+  const day = (date: string) => ({ date })
+
+  it('spans the oldest and the newest date of the competitor sources the page lists', () => {
+    const listed = [day('2026-11-14'), day('2026-09-17'), day('2026-10-12')]
+    expect(comparisonSnapshot({}, listed)).toEqual({ from: '2026-09-17', to: '2026-11-14' })
   })
 
-  it('does not advance a source snapshot to the page modification date', () => {
-    const page = { updated: '2026-10-12', hero: { updated: '2026-09-24' } }
-    expect(comparisonSnapshotDate(page)).toBe('2026-09-24')
+  it('is one date when every listed source was read on the same day', () => {
+    expect(comparisonSnapshot({}, [day('2026-11-14'), day('2026-11-14')])).toEqual({ from: '2026-11-14', to: '2026-11-14' })
   })
 
-  it('falls back to the catalog snapshot otherwise', () => {
-    expect(comparisonSnapshotDate({})).toBe(DATA.snapshot)
-    expect(comparisonSnapshotDate({ hero: {} })).toBe(DATA.snapshot)
-    expect(comparisonSnapshotDate({ hero: null })).toBe(DATA.snapshot)
+  it('follows the listed sources, not a date kept by hand in the frontmatter', () => {
+    const page = { hero: { updated: '2026-09-25' } }
+    expect(comparisonSnapshot(page, [day('2026-11-14')])).toEqual({ from: '2026-11-14', to: '2026-11-14' })
+  })
+
+  it('does not advance to the page modification date', () => {
+    const page = { updated: '2026-11-17', hero: { updated: '2026-09-24' } }
+    expect(comparisonSnapshot(page, [day('2026-09-24')])).toEqual({ from: '2026-09-24', to: '2026-09-24' })
+    expect(comparisonSnapshot(page)).toEqual({ from: '2026-09-24', to: '2026-09-24' })
+  })
+
+  it('keeps the recorded re-read, then the catalog snapshot, when the page lists no competitor source', () => {
+    expect(comparisonSnapshot({ hero: { updated: '2026-10-12' } }, [])).toEqual({ from: '2026-10-12', to: '2026-10-12' })
+    // `updated` is the page modification date the config puts on every page: never the fallback.
+    for (const page of [{}, { hero: {} }, { hero: null }, { updated: '2026-11-17' }, { updated: '2026-11-17', hero: {} }]) {
+      expect(comparisonSnapshot(page)).toEqual({ from: DATA.snapshot, to: DATA.snapshot })
+    }
+  })
+
+  it('reads competitor entries only: our own row never moves the line', () => {
+    // Exactly one catalog entry is ours: a renamed id would let DareBay's own dates into the line.
+    expect(DATA.platforms.filter((p) => p.id === OWN_ID)).toHaveLength(1)
+    const source = (url: string, date: string) => ({ rate: { text: {}, source: { url, date } } })
+    const own = { ...byId(OWN_ID)!, fields: source('https://darebay.com/en/help/rates', '2026-01-01') }
+    const other = { ...byId('whop')!, fields: source('https://example.com/terms', '2026-11-14') }
+    expect(competitorSources([own, other], DEFAULT_COLUMNS, 'en').map((s) => s.date)).toEqual(['2026-11-14'])
+    expect(competitorSources([own], DEFAULT_COLUMNS, 'en')).toEqual([])
+  })
+
+  it('compares dates as text, which is their order in time only while every source date is an ISO day', () => {
+    for (const platform of DATA.platforms) {
+      for (const [key, field] of Object.entries(platform.fields)) {
+        if (field.source) expect(field.source.date, `${platform.id}.${key}`).toMatch(/^\d{4}-\d{2}-\d{2}$/)
+      }
+    }
   })
 })
 

@@ -5,24 +5,28 @@ import { useData } from 'vitepress'
 import { computed } from 'vue'
 import { sourceAnchor, sourceLabel } from '../../links'
 import { LANDING_COPY, localeOf } from './copy'
-import { DEFAULT_COLUMNS, comparisonSnapshotDate, methodSources, pick } from './platforms'
+import { DEFAULT_COLUMNS, comparisonSnapshot, competitorSources, methodSources, pick } from './platforms'
 
 const { frontmatter, lang } = useData()
 const loc = computed(() => localeOf(lang.value))
 const copy = computed(() => LANDING_COPY[loc.value])
 const paragraphs = computed(() => (frontmatter.value.method ?? []) as string[])
-// A source snapshot is independent of the article's latest reader-visible edit.
-// Preserve the original source-check date; changing the article does not recheck its figures.
-const snapshotDate = computed(() => comparisonSnapshotDate(frontmatter.value))
 const cfg = computed(() => (frontmatter.value.compare ?? {}) as { ids?: string[]; columns?: string[] })
 const ids = computed(() => cfg.value.ids ?? [])
 // Same columns the table above renders, so a per-country or page-only source (`payoutSpeed`) is
 // listed exactly on the pages that print that column and nowhere else.
 const columns = computed(() => cfg.value.columns ?? DEFAULT_COLUMNS)
+const platforms = computed(() => pick(ids.value))
 // In the reader's language: two citations that open one address here are listed once. Each entry
 // carries its number within its platform, the "[n]" the table prints in that platform's row
 // (`methodSources` explains why the count restarts per platform).
-const sources = computed(() => methodSources(pick(ids.value), columns.value, loc.value))
+const sources = computed(() => methodSources(platforms.value, columns.value, loc.value))
+// The snapshot line sums up the dates of the competitor sources listed beside it: one date when
+// they were all read on the same day, the oldest and the newest otherwise. It is independent of
+// the article's latest edit: changing the article does not recheck its figures.
+const snapshot = computed(() =>
+  comparisonSnapshot(frontmatter.value, competitorSources(platforms.value, columns.value, loc.value))
+)
 </script>
 
 <template>
@@ -31,7 +35,7 @@ const sources = computed(() => methodSources(pick(ids.value), columns.value, loc
     <div class="lp-method">
       <div>
         <p v-for="(t, i) in paragraphs" :key="i">{{ t }}</p>
-        <p class="lp-muted" style="font-size:13px">{{ copy.snapshotNote }} {{ copy.snapshotDate }}: <time :datetime="snapshotDate">{{ snapshotDate }}</time>.</p>
+        <p class="lp-muted" style="font-size:13px">{{ copy.snapshotNote }} {{ copy.snapshotDate }}: <time :datetime="snapshot.from">{{ snapshot.from }}</time><template v-if="snapshot.to !== snapshot.from"> – <time :datetime="snapshot.to">{{ snapshot.to }}</time></template>.</p>
       </div>
       <div>
         <span class="lp-kicker" style="display:block;margin-bottom:10px">{{ copy.sources }}</span>

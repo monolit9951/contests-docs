@@ -120,7 +120,7 @@ Whop никуда не делся: за ним вход в аккаунт, пр�
 - **Klipni**: российская площадка, оплата в рублях, нужен статус самозанятого, комиссия 5% с одобренной выплаты, минимума на вывод нет, на карту до пяти рабочих дней <!-- source: https://klipni.com/creators 2026-09-02 --> <!-- source: https://klipni.com/legal/terms 2026-09-02 -->.
 - **Vyro**: площадка MrBeast, на публичной доске 14 ноября 2026 года кампании по $1–$2.50 за 1000 просмотров <!-- source: https://vyro.com/campaigns 2026-11-14 -->, порог в большинстве кампаний 5000 просмотров на пост <!-- source: https://vyro.com/help/earnings-and-payments/how-many-views-do-i-need-before-i-can-start-earning 2026-11-14 -->. Заменой для стран, которые закрыл Whop, она не станет: со 2 ноября 2026 года Vyro сама выводит деньги на кошелёк Whop <!-- source: https://vyro.com/help/earnings-and-payments/payouts 2026-11-14 -->, а Россия, Беларусь и вся Украина стоят в её списке из 28 стран без выплат <!-- source: https://vyro.com/help/earnings-and-payments/eligibility 2026-11-14 -->.
 
-Семь площадок по одним полям собраны в [аналогах Whop](/zarabotok/analogi-whop-v-rossii), общее сравнение в [подборке площадок](/zarabotok/luchshie-platformy-dlya-zarabotka-na-narezkah).
+Шесть площадок по одним полям собраны в [аналогах Whop](/zarabotok/analogi-whop-v-rossii), общее сравнение в [подборке площадок](/zarabotok/luchshie-platformy-dlya-zarabotka-na-narezkah).
 
 ## Частые вопросы
 

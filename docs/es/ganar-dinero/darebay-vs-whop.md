@@ -90,7 +90,7 @@ Whop no es una opción: Venezuela y Cuba están en su lista de países sancionad
 ## Qué leer después
 
 - [Whop Content Rewards: qué es y cómo funciona](/es/ganar-dinero/whop-content-rewards): la plataforma por dentro, con su comisión, sus plazos y sus países
-- [Alternativas a Whop Content Rewards](/es/ganar-dinero/alternativas-a-whop-content-rewards): siete plataformas para usar junto a Whop o en su lugar
+- [Alternativas a Whop Content Rewards](/es/ganar-dinero/alternativas-a-whop-content-rewards): seis plataformas para usar junto a Whop o en su lugar
 - [Plataformas de clipping que pagan en México](/es/ganar-dinero/plataformas-de-clipping-que-pagan-en-mexico): TikTok, Whop y las campañas por vistas en México
 - [Cómo retirar dinero de DareBay](/es/ayuda/retirar-dinero): la solicitud, la comisión y la red de USDT
 - [Calculadora de ganancias de clipping](/en/earnings/clipping-earnings-calculator) (en inglés): lo que deja una tarifa después del umbral y el tope

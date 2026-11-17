@@ -17,7 +17,7 @@ hero:
     - "<b>The current payout pages say bank or USDC through Stripe.</b> The available option depends on your country; the app no longer describes a USDT ERC-20-only setup."
     - "<b>The cash-out screen decides the rail, fee and minimum.</b> Public pages advertise on-demand withdrawals but the terms keep brand authorization, verification and processing conditions."
 compare:
-  ids: [vues, reach-cat, whop, darebay]
+  ids: [vues, whop, darebay]
   columns: [escrow, fee, payoutMethods, verification, cap]
   highlight: darebay
   title: "Who holds the money, what it costs and how views are checked"

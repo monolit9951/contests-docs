@@ -292,4 +292,4 @@ Con cinco basta: tarifa, umbral, tope, requisitos y envío por enlace. El resto 
 - [Cómo funciona el pago por vistas](/es/ganar-dinero/como-funciona-el-pago-por-vistas): qué vistas cuentan y cuándo se acredita el dinero
 - [Cuánto se gana haciendo clips](/es/ganar-dinero/cuanto-se-gana-haciendo-clips): la fórmula con ejemplos por clip y por mes
 - [Cómo retirar dinero de DareBay](/es/ayuda/retirar-dinero): el mínimo, la comisión y la red de USDT
-- [Mejores plataformas de clipping](/es/ganar-dinero/mejores-plataformas-de-clipping): 21 opciones comparadas con los mismos campos
+- [Mejores plataformas de clipping](/es/ganar-dinero/mejores-plataformas-de-clipping): 19 opciones comparadas con los mismos campos

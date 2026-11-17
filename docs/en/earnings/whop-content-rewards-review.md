@@ -139,7 +139,7 @@ Other boards for the countries Whop closes:
 - **Vyro**: a clipping board that calls itself a MrBeast company; on 14 November 2026 its public board listed $1.00–$2.50 per 1,000 views, shown as $1,000–$2,500 per million <!-- source: https://vyro.com/campaigns 2026-11-14 -->, and on most campaigns a post earns only once it passes 5,000 views <!-- source: https://vyro.com/help/earnings-and-payments/how-many-views-do-i-need-before-i-can-start-earning 2026-11-14 -->. It is no way round Whop: since 2 November 2026 Vyro sends cash-outs to a Whop wallet <!-- source: https://vyro.com/help/earnings-and-payments/payouts 2026-11-14 -->, and Russia, Belarus and the whole of Ukraine are among the 28 countries it does not pay, while Uzbekistan, Armenia, Georgia and Moldova, which its earlier list named, are no longer on it <!-- source: https://vyro.com/help/earnings-and-payments/eligibility 2026-11-14 -->.
 - **Clipping.net**: 1,000 views per post and usually 25,000 per campaign before earnings release, paid by PayPal or USDC/USDT on Ethereum mainnet only <!-- source: https://clipping.net/docs/clippers/payments 2026-09-18 -->, when the sponsor closes a cycle; the terms ask for residence "in the territories where we operate" and name none <!-- source: https://clipping.net/policies/clipper-terms-and-conditions 2026-09-18 -->.
 
-Eleven platforms on the same fields: [Whop alternatives](/en/earnings/whop-content-rewards-alternatives); the full comparison: [the best clipping platforms](/en/earnings/best-clipping-platforms).
+Ten platforms on the same fields: [Whop alternatives](/en/earnings/whop-content-rewards-alternatives); the full comparison: [the best clipping platforms](/en/earnings/best-clipping-platforms).
 
 ## Frequently asked questions
 

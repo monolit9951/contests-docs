@@ -1658,323 +1658,228 @@
       "name": "Reach.cat",
       "url": "https://reach.cat/",
       "review": "reach-cat-review",
-      "kind": "CPM campaign marketplace",
+      "kind": "CPM campaign marketplace, closed on 1 November 2026",
       "operator": "REACH MARKETING NETWORK - FZCO, Dubai Silicon Oasis, UAE (its terms and privacy policy); UAE law",
       "bestFor": {
-        "en": "clippers who want USDT in a crypto wallet, with no bank account needed",
-        "ru": "нарезчики, которым нужен USDT на криптокошелёк без банковского счёта",
-        "uk": "нарізчики, яким потрібен USDT на криптогаманець без потреби в банківському рахунку",
-        "ar": "صنّاع المقاطع الذين يريدون USDT في محفظة عملات مشفرة، دون حاجة إلى حساب بنكي",
-        "es": "clippers que quieren USDT en una billetera cripto, sin necesidad de cuenta bancaria"
+        "en": "nobody now: its site says the platform permanently closed on 1 November 2026"
       },
       "summary": {
-        "en": "A Dubai-registered marketplace of brand-funded CPM campaigns that pays clippers itself in USDT. Its landing pages say \"No KYC. No ID check.\", while its terms effective 13 September 2026 require identity verification through iDenfy once total payout requests pass $500, and its pages quote different CPM ranges.",
-        "ru": "Площадка из Дубая с CPM-кампаниями, которые оплачивают бренды, а выплаты нарезчикам делает сама в USDT. Лендинги пишут «No KYC. No ID check.», а условия, действующие с 13 сентября 2026 года, требуют проверку личности через iDenfy, как только общая сумма запросов на выплату превысит $500; диапазоны ставок на её страницах тоже расходятся.",
-        "uk": "Зареєстрований у Дубаї майданчик із CPM-кампаніями, які оплачують бренди, а виплати нарізчикам робить сам, у USDT. Лендинги пишуть «No KYC. No ID check.», а умови, чинні з 13 вересня 2026 року, вимагають перевірку особи через iDenfy, щойно загальна сума запитів на виплату перевищить $500, і його сторінки наводять різні діапазони CPM.",
-        "ar": "سوق مسجَّلة في دبي لحملات محسوبة لكل 1,000 مشاهدة تموّلها العلامات التجارية، وتدفع هي بنفسها لصنّاع المقاطع بعملة USDT. صفحاتها التعريفية تقول «لا KYC ولا تحقق من الهوية» (No KYC. No ID check.)، بينما تشترط شروطها السارية منذ 13 سبتمبر 2026 التحقق من الهوية عبر iDenfy بمجرد أن يتجاوز مجموع طلبات الدفع $500، وصفحاتها تذكر نطاقات مختلفة للسعر لكل 1,000 مشاهدة.",
-        "es": "Un mercado registrado en Dubái de campañas por CPM financiadas por marcas que les paga a los clippers directamente en USDT. Sus páginas de presentación dicen «No KYC. No ID check.», mientras que sus condiciones vigentes desde el 13 de septiembre de 2026 exigen verificar la identidad con iDenfy cuando el total de solicitudes de pago supera los US$500, y sus páginas citan rangos de CPM distintos."
+        "en": "A Dubai-registered marketplace of brand-funded CPM campaigns that paid clippers in USDT. Its site says the platform permanently closed on 1 November 2026; the notice does not say what happens to unpaid balances, and on 14 November 2026 its landing pages still invited sign-ups."
       },
       "fields": {
         "rate": {
           "text": {
-            "en": "$1–$3 per 1,000 \"from day one\" (clipper page); blog: $1–$6; brand pages disagree on what brands pay ($5–$18 home-page FAQ, $1–$3 Clipping vs Ads)",
-            "ru": "$1–$3 за 1000 «с первого дня» (страница для нарезчиков); блог: $1–$6; страницы для брендов расходятся в том, сколько платят бренды ($5–$18 в FAQ на главной, $1–$3 на странице Clipping vs Ads)",
-            "uk": "$1–$3 за 1000 «з першого дня» (сторінка для нарізчиків); блог: $1–$6; сторінки для брендів розходяться в тому, скільки платять бренди ($5–$18 у FAQ на головній, $1–$3 на сторінці Clipping vs Ads)",
-            "ar": "$1–$3 لكل 1,000 مشاهدة «من اليوم الأول» (from day one) بحسب صفحة صنّاع المقاطع لديها؛ ومدونتها تذكر $1–$6؛ وصفحات العلامات التجارية تتناقض فيما تدفعه العلامات ($5–$18 في الأسئلة الشائعة بالصفحة الرئيسية، و$1–$3 في صفحة Clipping vs Ads)",
-            "es": "US$1–US$3 por cada 1000 «from day one» (página para clippers); blog: US$1–US$6; sus páginas para marcas no coinciden en lo que pagan las marcas (US$5–US$18 en las preguntas frecuentes de la página principal, US$1–US$3 en Clipping vs Ads)"
+            "en": "closed on 1 November 2026, per the notice on its site; its clipper page still advertises $1–$3 per 1,000"
           },
-          "value": 1,
+          "value": null,
           "source": {
-            "url": "https://reach.cat/become-a-clipper/",
-            "date": "2026-09-24"
+            "url": "https://reach.cat/",
+            "date": "2026-11-14"
           }
         },
         "threshold": {
           "text": {
-            "en": "no view minimum in its terms or FAQs; its creator page says both \"Get paid for just 1,000 views\" and \"Every view earns you money.\"",
-            "ru": "в условиях и FAQ минимума просмотров нет; страница для авторов пишет и «Get paid for just 1,000 views», и «Every view earns you money.»",
-            "uk": "мінімуму переглядів немає ні в умовах, ні в FAQ; сторінка для авторів пише і «Get paid for just 1,000 views», і «Every view earns you money.»",
-            "ar": "لا حد أدنى للمشاهدات في شروطها ولا في صفحات الأسئلة الشائعة لديها؛ وصفحة صنّاع المحتوى لديها تقول الأمرين معًا: «احصل على أجرك مقابل 1,000 مشاهدة فقط» (Get paid for just 1,000 views) و«كل مشاهدة تُكسبك مالًا» (Every view earns you money.)",
-            "es": "sin mínimo de vistas en sus condiciones ni en sus preguntas frecuentes; su página para creadores dice a la vez «Get paid for just 1,000 views» y «Every view earns you money.»"
+            "en": "closed on 1 November 2026; its terms and FAQs set no view minimum"
           },
           "source": {
-            "url": "https://reach.cat/creator",
-            "date": "2026-09-24"
+            "url": "https://reach.cat/",
+            "date": "2026-11-14"
           }
         },
         "cap": {
           "text": {
-            "en": "no per-clip cap published; brands set a daily spending cap and a campaign budget, and its page for clipping agencies says payouts are \"uncapped\"",
-            "ru": "потолок на ролик не опубликован; бренды задают дневной потолок расходов и бюджет кампании, а страница для клиппинг-агентств называет выплаты «uncapped» (без потолка)",
-            "uk": "стелю на ролик не опубліковано; бренди задають денну стелю витрат і бюджет кампанії, а сторінка для агенцій нарізок пише, що виплати «uncapped» (без стелі)",
-            "ar": "لا حد أقصى معلن لكل مقطع؛ والعلامات التجارية تضع حدًّا أقصى يوميًا للإنفاق وميزانية للحملة، وصفحتها لوكالات قص المقاطع تقول إن الدفعات «بلا سقف» (uncapped)",
-            "es": "no publica un tope por clip; las marcas fijan un límite de gasto diario y un presupuesto de campaña, y su página para agencias de clipping dice que los pagos son «uncapped»"
+            "en": "closed on 1 November 2026; it published no per-clip cap"
           },
           "source": {
             "url": "https://reach.cat/",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "fee": {
           "text": {
-            "en": "terms: \"approximately 10% on all CPM-based payouts\"; its brand pages bill brands a flat 10%, while blog posts disagree on whether clippers keep 100% or 90%",
-            "ru": "условия: «approximately 10% on all CPM-based payouts»; по страницам для брендов, с бренда берут фиксированные 10%, а посты в блоге расходятся в том, оставляет ли нарезчик себе 100% или 90%",
-            "uk": "умови: «approximately 10% on all CPM-based payouts»; за сторінками для брендів, з бренду беруть фіксовані 10%, а дописи в блозі розходяться в тому, чи лишається нарізчику 100% чи 90%",
-            "ar": "الشروط: «ما يقارب 10% على جميع الدفعات المحسوبة لكل 1,000 مشاهدة» (approximately 10% on all CPM-based payouts)؛ وصفحاتها للعلامات التجارية تفرض على العلامات نسبة ثابتة قدرها 10%، بينما تتناقض منشورات مدونتها في ما إذا كان صنّاع المقاطع يحتفظون بنسبة 100% أو 90%",
-            "es": "condiciones: «approximately 10% on all CPM-based payouts»; sus páginas para marcas les cobran a las marcas un 10% fijo, mientras que las entradas del blog no coinciden en si los clippers se quedan con el 100% o con el 90%"
+            "en": "closed on 1 November 2026; its terms cite \"approximately 10% on all CPM-based payouts\""
           },
           "source": {
-            "url": "https://reach.cat/terms",
-            "date": "2026-09-24"
+            "url": "https://reach.cat/",
+            "date": "2026-11-14"
           }
         },
         "minPayout": {
           "text": {
-            "en": "no amount published: its clipper and Whop-alternative pages advertise no floor, while its creator FAQ says payouts wait until earnings \"reach the minimum threshold\"",
-            "ru": "сумма не опубликована: страница для нарезчиков и страница об альтернативе Whop обещают вывод без нижней границы, а FAQ для авторов пишет, что выплаты ждут, пока заработок не достигнет «минимального порога»",
-            "uk": "суму не опубліковано: сторінки для нарізчиків і про альтернативу Whop обіцяють виведення без нижньої межі, а FAQ для авторів пише, що виплата чекає, поки заробіток «reach the minimum threshold» (досягне мінімального порогу)",
-            "ar": "لا مبلغ معلن: صفحتها لصنّاع المقاطع وصفحتها عن بدائل Whop تعلنان أنه لا حد أدنى، بينما تقول صفحة الأسئلة الشائعة لصنّاع المحتوى إن الأرباح لا تُدفع حتى «تبلغ الحد الأدنى» (reach the minimum threshold)",
-            "es": "no publica un monto: sus páginas para clippers y de alternativa a Whop no anuncian mínimo, mientras que sus preguntas frecuentes para creadores dicen que los pagos esperan hasta que las ganancias «reach the minimum threshold»"
+            "en": "closed on 1 November 2026; it published no minimum amount"
           },
           "value": null,
           "source": {
-            "url": "https://reach.cat/become-a-clipper/",
-            "date": "2026-09-24"
+            "url": "https://reach.cat/",
+            "date": "2026-11-14"
           }
         },
         "payoutMethods": {
           "text": {
-            "en": "USDT (\"USDT or SOL\", clipper page); bank transfer \"very soon\" (creator FAQ), though its page for clipping agencies lists bank transfer and PayPal, and its blog says no PayPal; terms: typically 3–5 business days after validation",
-            "ru": "USDT («USDT or SOL», страница для нарезчиков); банковский перевод «очень скоро» (FAQ для авторов), хотя страница для клиппинг-агентств называет банковский перевод и PayPal, а блог пишет, что PayPal нет; условия: обычно 3–5 рабочих дней после проверки",
-            "uk": "USDT («USDT or SOL», сторінка для нарізчиків); банківський переказ «very soon» (незабаром), за FAQ для авторів, хоча сторінка для агенцій нарізок називає банківський переказ і PayPal, а блог пише, що PayPal немає; умови: зазвичай 3–5 робочих днів після перевірки",
-            "ar": "USDT («USDT or SOL» بحسب صفحة صنّاع المقاطع)؛ والتحويل البنكي «قريبًا جدًا» (very soon) بحسب صفحة الأسئلة الشائعة لصنّاع المحتوى، مع أن صفحتها لوكالات قص المقاطع تذكر التحويل البنكي وPayPal، ومدونتها تقول إنه لا PayPal؛ والشروط: عادةً 3–5 أيام عمل بعد التحقق",
-            "es": "USDT («USDT or SOL», página para clippers); transferencia bancaria «very soon» (preguntas frecuentes para creadores), aunque su página para agencias de clipping indica transferencia bancaria y PayPal, y su blog dice que no hay PayPal; condiciones: normalmente 3–5 días hábiles después de la validación"
+            "en": "closed on 1 November 2026; it paid in USDT, and its notice does not say how or whether remaining balances are paid"
           },
           "source": {
-            "url": "https://reach.cat/creator",
-            "date": "2026-09-24"
+            "url": "https://reach.cat/",
+            "date": "2026-11-14"
           }
         },
         "cis": {
           "text": {
-            "en": "149+ countries claimed on its clipper page, 130+ in its blog; no country list published",
-            "ru": "на странице для нарезчиков заявлено 149+ стран, в блоге 130+; списка стран нет",
-            "uk": "на сторінці для нарізчиків заявлено 149+ країн, у блозі 130+; списку країн немає",
-            "ar": "تدّعي صفحة صنّاع المقاطع 149+ دولة، ومدونتها 130+؛ ولا قائمة دول منشورة",
-            "es": "dice cubrir 149 países o más en su página para clippers y 130 o más en su blog; no publica lista de países"
+            "en": "closed on 1 November 2026; it claimed 149+ countries and published no list"
           },
-          "state": "unknown",
+          "state": "no",
           "source": {
-            "url": "https://reach.cat/become-a-clipper/",
-            "date": "2026-09-24"
+            "url": "https://reach.cat/",
+            "date": "2026-11-14"
           }
         },
         "followers": {
           "text": {
-            "en": "no follower minimum; its terms require a bio-code account check, and an iDenfy ID check once total payout requests pass $500, while landing pages say \"No KYC. No ID check.\"",
-            "ru": "минимума подписчиков нет; условия требуют проверку аккаунта кодом в био и проверку личности через iDenfy, когда общая сумма запросов на выплату превысит $500, а лендинги пишут «No KYC. No ID check.»",
-            "uk": "мінімуму підписників немає; умови вимагають перевірки акаунта кодом у біо, а також перевірки особи через iDenfy, щойно загальна сума запитів на виплату перевищить $500, тоді як лендинги пишуть «No KYC. No ID check.»",
-            "ar": "لا حد أدنى للمتابعين؛ وشروطها تشترط التحقق من الحساب برمز في النبذة الشخصية، والتحقق من الهوية عبر iDenfy بمجرد أن يتجاوز مجموع طلبات الدفع $500، بينما تقول الصفحات التعريفية «لا KYC ولا تحقق من الهوية» (No KYC. No ID check.)",
-            "es": "sin mínimo de seguidores; sus condiciones exigen comprobar la cuenta con un código en la biografía y un control de identidad con iDenfy cuando el total de solicitudes de pago supera los US$500, mientras que las páginas de presentación dicen «No KYC. No ID check.»"
+            "en": "closed on 1 November 2026, per the notice on its site"
           },
-          "state": "no",
+          "state": "unknown",
           "source": {
-            "url": "https://reach.cat/become-a-clipper/",
-            "date": "2026-09-24"
+            "url": "https://reach.cat/",
+            "date": "2026-11-14"
           }
         },
         "escrow": {
           "text": {
-            "en": "the brand prepays the budget plus 10% before launch and Reach.cat pays clippers from it, but no terms describe how the budget is held",
-            "ru": "бренд заранее оплачивает бюджет и 10% сверху, а Reach.cat платит нарезчикам из него, но как хранится бюджет, условия не описывают",
-            "uk": "бренд наперед оплачує бюджет і 10% зверху, а Reach.cat платить нарізчикам із нього, але як зберігається бюджет, умови не описують",
-            "ar": "العلامة التجارية تدفع الميزانية و10% فوقها قبل الإطلاق، وتدفع Reach.cat لصنّاع المقاطع منها، لكن لا شيء في الشروط يصف كيف تُحفظ الميزانية",
-            "es": "la marca paga por adelantado el presupuesto más un 10% antes del lanzamiento y Reach.cat les paga a los clippers con ese dinero, pero ninguna condición describe cómo se guarda el presupuesto"
+            "en": "closed on 1 November 2026; its notice does not say what happens to prepaid budgets or unpaid earnings"
           },
-          "state": "partial",
+          "state": "unknown",
           "source": {
-            "url": "https://reach.cat/blog/reach-cat-pricing-brands-2026/",
-            "date": "2026-09-24"
+            "url": "https://reach.cat/",
+            "date": "2026-11-14"
           }
         },
         "networks": {
           "text": {
-            "en": "TikTok, YouTube, X, Instagram",
-            "ru": "TikTok, YouTube, X, Instagram",
-            "uk": "TikTok, YouTube, X, Instagram"
+            "en": "closed on 1 November 2026; it covered TikTok, YouTube, X and Instagram"
           },
           "source": {
-            "url": "https://reach.cat/creator",
-            "date": "2026-09-24"
+            "url": "https://reach.cat/",
+            "date": "2026-11-14"
           }
         },
         "verification": {
           "text": {
-            "en": "platform analytics plus its own tracking (creator FAQ); its terms require brand approval of each post before it earns, while its Whop-alternative page says \"Earn without approvals\"",
-            "ru": "аналитика площадок плюс собственный трекинг (FAQ для авторов); условия требуют, чтобы бренд одобрил каждый пост, прежде чем тот начнёт зарабатывать, а страница об альтернативе Whop пишет «Earn without approvals»",
-            "uk": "аналітика майданчиків плюс власний трекінг (FAQ для авторів); умови вимагають, щоб бренд схвалив кожен пост до нарахування, тоді як сторінка про альтернативу Whop пише «Earn without approvals»"
+            "en": "closed on 1 November 2026; its terms required brand approval of each post and an iDenfy ID check once total payout requests passed $500"
           },
           "source": {
-            "url": "https://reach.cat/terms",
-            "date": "2026-09-24"
+            "url": "https://reach.cat/",
+            "date": "2026-11-14"
           }
         },
         "india": {
           "text": {
-            "en": "no country list, 149+ countries claimed; terms require ID once total payout requests pass $500, landing pages say none"
+            "en": "closed on 1 November 2026, per the notice on its site"
           },
-          "state": "unknown",
+          "state": "no",
           "source": {
-            "url": "https://reach.cat/terms",
-            "date": "2026-09-24"
+            "url": "https://reach.cat/",
+            "date": "2026-11-14"
           }
         },
         "pakistan": {
           "text": {
-            "en": "no country list, 149+ countries claimed; terms require ID once total payout requests pass $500, landing pages say none"
+            "en": "closed on 1 November 2026, per the notice on its site"
           },
-          "state": "unknown",
+          "state": "no",
           "source": {
-            "url": "https://reach.cat/terms",
-            "date": "2026-09-24"
+            "url": "https://reach.cat/",
+            "date": "2026-11-14"
           }
         },
         "bangladesh": {
           "text": {
-            "en": "no country list, 149+ countries claimed; terms require ID once total payout requests pass $500, landing pages say none"
+            "en": "closed on 1 November 2026, per the notice on its site"
           },
-          "state": "unknown",
+          "state": "no",
           "source": {
-            "url": "https://reach.cat/terms",
-            "date": "2026-09-24"
+            "url": "https://reach.cat/",
+            "date": "2026-11-14"
           }
         },
         "nigeria": {
           "text": {
-            "en": "a clipper in Nigeria reports a first payout (testimonial on its clipper page); no country list; terms require ID once total payout requests pass $500, landing pages say none"
+            "en": "closed on 1 November 2026, per the notice on its site"
           },
-          "state": "partial",
+          "state": "no",
           "source": {
-            "url": "https://reach.cat/terms",
-            "date": "2026-09-24"
+            "url": "https://reach.cat/",
+            "date": "2026-11-14"
           }
         },
         "kenya": {
           "text": {
-            "en": "no country list, 149+ countries claimed; terms require ID once total payout requests pass $500, landing pages say none"
+            "en": "closed on 1 November 2026, per the notice on its site"
           },
-          "state": "unknown",
+          "state": "no",
           "source": {
-            "url": "https://reach.cat/terms",
-            "date": "2026-09-24"
+            "url": "https://reach.cat/",
+            "date": "2026-11-14"
           }
         },
         "mena": {
           "text": {
-            "en": "a clipper in Morocco reports earnings (testimonial on its clipper page); no country list; terms require ID once total payout requests pass $500, landing pages say none",
-            "ar": "صانع مقاطع في المغرب يذكر أرباحه (شهادة على صفحة صنّاع المقاطع)؛ ولا قائمة دول؛ والشروط تشترط التحقق من الهوية بمجرد أن يتجاوز مجموع طلبات الدفع $500، والصفحات التعريفية تقول إنه لا تحقق من الهوية"
+            "en": "closed on 1 November 2026, per the notice on its site"
           },
-          "state": "partial",
+          "state": "no",
           "source": {
-            "url": "https://reach.cat/terms",
-            "date": "2026-09-24"
+            "url": "https://reach.cat/",
+            "date": "2026-11-14"
           }
         },
         "indonesia": {
           "text": {
-            "en": "no country list, 149+ countries claimed; terms require ID once total payout requests pass $500, landing pages say none"
+            "en": "closed on 1 November 2026, per the notice on its site"
           },
-          "state": "unknown",
+          "state": "no",
           "source": {
-            "url": "https://reach.cat/terms",
-            "date": "2026-09-24"
+            "url": "https://reach.cat/",
+            "date": "2026-11-14"
           }
         },
         "philippines": {
           "text": {
-            "en": "a clipper in the Philippines reports a crypto payout (testimonial on its clipper page); no country list; terms require ID once total payout requests pass $500, landing pages say none"
+            "en": "closed on 1 November 2026, per the notice on its site"
           },
-          "state": "partial",
+          "state": "no",
           "source": {
-            "url": "https://reach.cat/terms",
-            "date": "2026-09-24"
+            "url": "https://reach.cat/",
+            "date": "2026-11-14"
           }
         },
         "cpm": {
           "text": {
-            "en": "$1–$3 (clipper page)",
-            "es": "US$1–US$3 (página para clippers)"
+            "en": "closed 1 November 2026"
           },
-          "value": 3,
+          "value": null,
           "source": {
-            "url": "https://reach.cat/become-a-clipper/",
-            "date": "2026-09-24"
+            "url": "https://reach.cat/",
+            "date": "2026-11-14"
           }
         },
         "payoutSpeed": {
           "text": {
-            "en": "typically 3–5 business days after final validation per its creator terms, timing not guaranteed; its blog says weekly, a landing page says hours",
-            "es": "normalmente 3–5 días hábiles después de la validación final según sus condiciones para creadores, sin plazo garantizado; su blog dice que es semanal y una página de presentación habla de horas"
+            "en": "closed on 1 November 2026; its notice does not say whether or when unpaid balances are paid"
           },
           "value": null,
           "source": {
-            "url": "https://reach.cat/user-agreement",
-            "date": "2026-09-24"
+            "url": "https://reach.cat/",
+            "date": "2026-11-14"
           }
         }
       },
       "pros": {
-        "en": [
-          "Pays in USDT to a crypto wallet",
-          "No follower minimum",
-          "Brand fee is flat and published"
-        ],
-        "ru": [
-          "Платит в USDT на криптокошелёк",
-          "Нет минимума подписчиков",
-          "Комиссия бренда фиксированная и опубликована"
-        ],
-        "uk": [
-          "Платить у USDT на криптогаманець",
-          "Немає мінімуму підписників",
-          "Комісія бренду фіксована й опублікована"
-        ],
-        "ar": [
-          "تدفع بعملة USDT إلى محفظة عملات مشفرة",
-          "لا حد أدنى للمتابعين",
-          "عمولة العلامة التجارية ثابتة ومعلنة"
-        ],
-        "es": [
-          "Paga en USDT a una billetera cripto",
-          "Sin mínimo de seguidores",
-          "La comisión para marcas es fija y pública"
-        ]
+        "en": []
       },
       "cons": {
         "en": [
-          "Landing pages say no ID check; its terms require one once total payout requests pass $500",
-          "A post taken down within 60 days of the campaign's end can lose its earnings, even paid ones",
-          "Its pages disagree on rates, the payout floor and payout methods"
-        ],
-        "ru": [
-          "Лендинги пишут, что проверки личности нет, а условия требуют её, когда общая сумма запросов на выплату превысит $500",
-          "Пост, удалённый раньше чем через 60 дней после конца кампании, может лишиться заработка, даже уже выплаченного",
-          "Его страницы расходятся в ставках, минимуме вывода и способах выплаты"
-        ],
-        "uk": [
-          "Лендинги пишуть, що перевірки особи немає, а умови вимагають її, щойно загальна сума запитів на виплату перевищить $500",
-          "Пост, видалений раніше ніж через 60 днів після кінця кампанії, може втратити заробіток, навіть уже виплачений",
-          "Його сторінки розходяться щодо ставок, мінімуму виведення і способів виплати"
-        ],
-        "ar": [
-          "الصفحات التعريفية تقول إنه لا تحقق من الهوية؛ وشروطها تشترطه بمجرد أن يتجاوز مجموع طلبات الدفع $500",
-          "المنشور الذي يُحذف قبل مرور 60 يومًا على انتهاء الحملة قد يفقد أرباحه، حتى المدفوعة منها",
-          "صفحاتها تتناقض في الأسعار والحد الأدنى للسحب وطرق الدفع"
-        ],
-        "es": [
-          "Las páginas de presentación dicen que no hay control de identidad; sus condiciones lo exigen cuando el total de solicitudes de pago supera los US$500",
-          "Una publicación retirada dentro de los 60 días posteriores al final de la campaña puede perder sus ganancias, incluso las ya pagadas",
-          "Sus páginas no coinciden en las tarifas, el pago mínimo ni los métodos de pago"
+          "Closed: its site says the platform permanently closed on 1 November 2026",
+          "The closure notice does not say whether or how unpaid balances are paid",
+          "On 14 November 2026 its landing pages and its weekly Telegram recap were still advertising campaigns, after the closure date"
         ]
       }
     },
@@ -2010,7 +1915,7 @@
           },
           "source": {
             "url": "https://klipni.com/calculator",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "threshold": {
@@ -2023,7 +1928,7 @@
           },
           "source": {
             "url": "https://klipni.com/legal/terms",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "cap": {
@@ -2036,7 +1941,7 @@
           },
           "source": {
             "url": "https://klipni.com/creators",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "fee": {
@@ -2050,7 +1955,7 @@
           "value": 5,
           "source": {
             "url": "https://klipni.com/creators",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "minPayout": {
@@ -2064,20 +1969,20 @@
           "value": 0,
           "source": {
             "url": "https://klipni.com/creators",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "payoutMethods": {
           "text": {
-            "en": "rubles to the bank details of a self-employed person or sole trader in Russia; after the hold period each campaign sets, within five business days once the bank accepts the payout",
-            "ru": "рубли на банковские реквизиты самозанятого или ИП в России; после холда, который задаёт кампания, до пяти рабочих дней с момента, когда выплату принял банк",
-            "uk": "рублі на банківські реквізити самозайнятого або ІП в Росії; після холду, який задає кампанія, до п'яти робочих днів з моменту, коли виплату прийняв банк",
-            "ar": "بالروبل إلى الحساب البنكي لصاحب صفة العمل الحر أو المشروع الفردي في روسيا؛ بعد فترة احتجاز تحددها كل حملة، ثم خلال خمسة أيام عمل من قبول البنك للدفعة",
-            "es": "rublos a los datos bancarios de un trabajador autónomo o de un empresario individual en Rusia; después del período de retención que fija cada campaña, en un plazo de cinco días hábiles desde que el banco acepta el pago"
+            "en": "rubles to the bank details of a self-employed person or sole trader in Russia; under the terms of 21 October 2026 a self-employed author chooses a partner bank that issues the tax receipt or a plain bank transfer followed by a receipt issued within three days; after the hold period each campaign sets, within five business days once the bank accepts the payout",
+            "ru": "рубли на банковские реквизиты самозанятого или ИП в России; по оферте от 21 октября 2026 года самозанятый выбирает банк-партнёр, который сам формирует чек, или обычный перевод, после которого чек нужно выбить самому за три дня; после холда, который задаёт кампания, до пяти рабочих дней с момента, когда выплату принял банк",
+            "uk": "рублі на банківські реквізити самозайнятого або ІП в Росії; за умовами від 21 жовтня 2026 року самозайнятий автор обирає банк-партнер, який сам формує податковий чек, або звичайний банківський переказ, після якого чек треба сформувати самому протягом трьох днів; після холду, який задає кампанія, до п'яти робочих днів з моменту, коли виплату прийняв банк",
+            "ar": "بالروبل إلى الحساب البنكي لصاحب صفة العمل الحر أو المشروع الفردي في روسيا؛ وبموجب شروط 21 أكتوبر 2026 يختار صاحب صفة العمل الحر بين بنك شريك يصدر الإيصال الضريبي، وتحويل بنكي عادي يليه إيصال يُصدَر خلال ثلاثة أيام؛ بعد فترة احتجاز تحددها كل حملة، ثم خلال خمسة أيام عمل من قبول البنك للدفعة",
+            "es": "rublos a los datos bancarios de un trabajador autónomo o de un empresario individual en Rusia; según las condiciones del 21 de octubre de 2026, un autor autónomo elige entre un banco asociado que emite el comprobante fiscal y una transferencia bancaria corriente seguida de un comprobante emitido en un plazo de tres días; después del período de retención que fija cada campaña, en un plazo de cinco días hábiles desde que el banco acepta el pago"
           },
           "source": {
             "url": "https://klipni.com/legal/terms",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "cis": {
@@ -2091,7 +1996,7 @@
           "state": "partial",
           "source": {
             "url": "https://klipni.com/legal/terms",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "followers": {
@@ -2105,7 +2010,7 @@
           "state": "no",
           "source": {
             "url": "https://klipni.com/legal/terms",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "escrow": {
@@ -2119,7 +2024,7 @@
           "state": "partial",
           "source": {
             "url": "https://klipni.com/legal/advertiser",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "networks": {
@@ -2131,7 +2036,7 @@
           },
           "source": {
             "url": "https://klipni.com/creators",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "verification": {
@@ -2142,7 +2047,7 @@
           },
           "source": {
             "url": "https://klipni.com/legal/terms",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "india": {
@@ -2152,7 +2057,7 @@
           "state": "no",
           "source": {
             "url": "https://klipni.com/legal/terms",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "pakistan": {
@@ -2162,7 +2067,7 @@
           "state": "no",
           "source": {
             "url": "https://klipni.com/legal/terms",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "bangladesh": {
@@ -2172,7 +2077,7 @@
           "state": "no",
           "source": {
             "url": "https://klipni.com/legal/terms",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "nigeria": {
@@ -2182,7 +2087,7 @@
           "state": "no",
           "source": {
             "url": "https://klipni.com/legal/terms",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "kenya": {
@@ -2192,7 +2097,7 @@
           "state": "no",
           "source": {
             "url": "https://klipni.com/legal/terms",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "mena": {
@@ -2203,7 +2108,7 @@
           "state": "no",
           "source": {
             "url": "https://klipni.com/legal/terms",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "indonesia": {
@@ -2213,7 +2118,7 @@
           "state": "no",
           "source": {
             "url": "https://klipni.com/legal/terms",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "philippines": {
@@ -2223,7 +2128,7 @@
           "state": "no",
           "source": {
             "url": "https://klipni.com/legal/terms",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "cpm": {
@@ -2234,17 +2139,17 @@
           "value": 0.71,
           "source": {
             "url": "https://klipni.com/calculator",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "payoutSpeed": {
           "text": {
-            "en": "hold set per campaign after moderation (\"a few days\" per its FAQ), then withdraw any time; money within 5 business days once the bank accepts the payout",
-            "es": "retención que fija cada campaña después de la moderación («unos días», según sus preguntas frecuentes), y luego retiras cuando quieras; el dinero llega en 5 días hábiles desde que el banco acepta el pago"
+            "en": "hold set per campaign after moderation (\"несколько дней\", a few days, per its FAQ); cleared money opens once a day at 18:00, then any amount can be withdrawn; money within 5 business days once the bank accepts the payout",
+            "es": "retención que fija cada campaña después de la moderación («несколько дней», unos días, según sus preguntas frecuentes); el dinero liberado se habilita una vez al día, a las 18:00, y luego puedes retirar cualquier monto; el dinero llega en un plazo de hasta 5 días hábiles desde que el banco acepta el pago"
           },
           "source": {
             "url": "https://klipni.com/creators",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         }
       },
@@ -2394,7 +2299,7 @@
           "value": 5,
           "source": {
             "url": "https://www.primeoracles.com/terms-agreement",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "payoutMethods": {
@@ -2407,7 +2312,7 @@
           },
           "source": {
             "url": "https://www.primeoracles.com/terms-agreement",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "cis": {
@@ -2639,18 +2544,18 @@
       "kind": "clipping marketplace",
       "operator": "not published (California law)",
       "bestFor": {
-        "en": "Snapchat clippers, if its app is live (not confirmed on 2026-09-24)",
-        "ru": "нарезчики в Snapchat, если приложение площадки работает (на 24.09.2026 не подтверждено)",
-        "uk": "нарізчики Snapchat, якщо застосунок майданчика працює (не підтверджено 24.09.2026)",
-        "ar": "صنّاع المقاطع على Snapchat، إن كان تطبيقها يعمل (لم يتأكد ذلك يوم 2026-09-24)",
-        "es": "clippers de Snapchat, si su app está activa (sin confirmar el 2026-09-24)"
+        "en": "nobody until its site loads again: every page returned an error on 2026-11-14",
+        "ru": "никому, пока сайт снова не откроется (14.11.2026 все страницы отвечали ошибкой)",
+        "uk": "нікому, доки його сайт знову не запрацює (14.11.2026 кожна сторінка відповідала помилкою)",
+        "ar": "لا أحد إلى أن يعود موقعها إلى العمل: كل صفحاته ردّت بخطأ يوم 2026-11-14",
+        "es": "nadie mientras su sitio no vuelva a cargar: todas sus páginas devolvían un error el 2026-11-14"
       },
       "summary": {
-        "en": "A marketplace that publishes almost no terms: no rates, thresholds, fees, minimums or countries on its public pages, payout methods shown only as logo images, and otherwise only monthly earnings illustrations and the names of its tracking and anti-bot features.",
-        "ru": "Площадка, которая почти не публикует условий: на открытых страницах нет ставок, порогов, комиссий, минимумов и стран, способы выплат показаны только картинками логотипов, а в остальном есть лишь иллюстрации месячного заработка и названия функций трекинга и антибота.",
-        "uk": "Майданчик, який майже не публікує умов: на відкритих сторінках немає ставок, порогів, комісій, мінімумів і країн, способи виплат показані лише як зображення логотипів, а крім цього є тільки ілюстрації місячного заробітку та назви функцій трекінгу й антибота.",
-        "ar": "سوق لا تكاد تنشر شروطًا: لا أسعار ولا حدود مشاهدات ولا عمولات ولا حدود دنيا ولا دول على صفحاتها العامة، وطرق الدفع لا تظهر إلا صورًا لشعارات، وما عدا ذلك لا شيء سوى أمثلة مصوَّرة للأرباح الشهرية وأسماء خصائص التتبع ومكافحة البوتات.",
-        "es": "Un mercado que casi no publica condiciones: en sus páginas públicas no hay tarifas, umbrales, comisiones, mínimos ni países; los métodos de pago solo aparecen como imágenes de logotipos y, por lo demás, solo muestra ejemplos de ganancias mensuales y los nombres de sus funciones de seguimiento y de detección de bots."
+        "en": "On 14 November 2026 every page of its site returned a \"Page not found\" error, so nothing here could be re-read. As last read on 24 September 2026, it was a marketplace that published almost no terms: no rates, thresholds, fees, minimums or countries on its public pages, payout methods shown only as logo images, and otherwise only monthly earnings illustrations and the names of its tracking and anti-bot features.",
+        "ru": "14 ноября 2026 года все страницы сайта отвечали ошибкой «Page not found», поэтому перечитать здесь ничего не удалось. При последнем чтении, 24 сентября 2026 года, это была площадка, которая почти не публиковала условий: на открытых страницах не было ставок, порогов, комиссий, минимумов и стран, способы выплат были показаны только картинками логотипов, а в остальном были лишь иллюстрации месячного заработка и названия функций трекинга и антибота.",
+        "uk": "14 листопада 2026 року кожна сторінка його сайту відповідала помилкою «Page not found» (сторінку не знайдено), тож перечитати тут нічого не вдалося. На 24 вересня 2026 року, коли його сторінки востаннє вдалося прочитати, це був майданчик, який майже не публікував умов: на відкритих сторінках не було ставок, порогів, комісій, мінімумів і країн, способи виплат були показані лише як зображення логотипів, а крім цього були тільки ілюстрації місячного заробітку та назви функцій трекінгу й антибота.",
+        "ar": "في 14 نوفمبر 2026 ردّت كل صفحات موقعها بخطأ «الصفحة غير موجودة» (Page not found)، فتعذّرت إعادة قراءة أي شيء مما هنا. وبحسب آخر قراءة لها في 24 سبتمبر 2026، كانت سوقًا لا تكاد تنشر شروطًا: لا أسعار ولا حدود مشاهدات ولا عمولات ولا حدود دنيا ولا دول على صفحاتها العامة، وطرق الدفع لم تكن تظهر إلا صورًا لشعارات، وما عدا ذلك لم يكن فيها سوى أمثلة مصوَّرة للأرباح الشهرية وأسماء خصائص التتبع ومكافحة البوتات.",
+        "es": "El 14 de noviembre de 2026, todas las páginas de su sitio devolvían un error «Page not found», así que aquí no se pudo releer nada. Según la última lectura, del 24 de septiembre de 2026, era un mercado que casi no publicaba condiciones: en sus páginas públicas no había tarifas, umbrales, comisiones, mínimos ni países; los métodos de pago solo aparecían como imágenes de logotipos y, por lo demás, solo mostraba ejemplos de ganancias mensuales y los nombres de sus funciones de seguimiento y de detección de bots."
       },
       "fields": {
         "rate": {
@@ -4252,7 +4157,7 @@
           "value": 1.5,
           "source": {
             "url": "https://cliptocash.com/",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "threshold": {
@@ -4263,7 +4168,7 @@
           "value": 1000,
           "source": {
             "url": "https://cliptocash.com/legal/terms",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "cap": {
@@ -4273,7 +4178,7 @@
           },
           "source": {
             "url": "https://cliptocash.com/legal/terms",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "fee": {
@@ -4283,7 +4188,7 @@
           },
           "source": {
             "url": "https://cliptocash.com/legal/terms",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "minPayout": {
@@ -4293,7 +4198,7 @@
           },
           "source": {
             "url": "https://cliptocash.com/legal/terms",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "payoutMethods": {
@@ -4303,7 +4208,7 @@
           },
           "source": {
             "url": "https://cliptocash.com/legal/terms",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "cis": {
@@ -4313,7 +4218,7 @@
           "state": "unknown",
           "source": {
             "url": "https://cliptocash.com/legal/terms",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "followers": {
@@ -4324,7 +4229,7 @@
           "state": "unknown",
           "source": {
             "url": "https://cliptocash.com/legal/terms",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "escrow": {
@@ -4335,7 +4240,7 @@
           "state": "unknown",
           "source": {
             "url": "https://cliptocash.com/legal/terms",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "networks": {
@@ -4344,16 +4249,16 @@
           },
           "source": {
             "url": "https://cliptocash.com/legal/terms",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "verification": {
           "text": {
-            "en": "every video is reviewed by the team or automated tools before any view counts, and only validated, non-fraudulent views are paid; a required brand mention is re-checked daily; per its privacy policy, a third-party service tracks public views and, if you choose Stripe, Stripe verifies your identity"
+            "en": "every video is reviewed by the team or automated tools before any view counts, and only validated, non-fraudulent views are paid; a video must be submitted within 7 days of its publication; a required brand mention is re-checked daily; per its privacy policy, a third-party service tracks public views and, if you choose Stripe, Stripe verifies your identity"
           },
           "source": {
             "url": "https://cliptocash.com/legal/terms",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "india": {
@@ -4363,7 +4268,7 @@
           "state": "unknown",
           "source": {
             "url": "https://cliptocash.com/legal/terms",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "pakistan": {
@@ -4373,7 +4278,7 @@
           "state": "unknown",
           "source": {
             "url": "https://cliptocash.com/legal/terms",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "bangladesh": {
@@ -4383,7 +4288,7 @@
           "state": "unknown",
           "source": {
             "url": "https://cliptocash.com/legal/terms",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "nigeria": {
@@ -4393,7 +4298,7 @@
           "state": "unknown",
           "source": {
             "url": "https://cliptocash.com/legal/terms",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "kenya": {
@@ -4403,7 +4308,7 @@
           "state": "unknown",
           "source": {
             "url": "https://cliptocash.com/legal/terms",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "mena": {
@@ -4413,7 +4318,7 @@
           "state": "unknown",
           "source": {
             "url": "https://cliptocash.com/legal/terms",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "indonesia": {
@@ -4423,7 +4328,7 @@
           "state": "unknown",
           "source": {
             "url": "https://cliptocash.com/legal/terms",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "philippines": {
@@ -4433,7 +4338,7 @@
           "state": "unknown",
           "source": {
             "url": "https://cliptocash.com/legal/terms",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "cpm": {
@@ -4444,7 +4349,7 @@
           "value": 2,
           "source": {
             "url": "https://cliptocash.com/",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "payoutSpeed": {
@@ -4454,7 +4359,7 @@
           },
           "source": {
             "url": "https://cliptocash.com/legal/terms",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         }
       },
@@ -4744,17 +4649,17 @@
     {
       "id": "ternak-klip",
       "name": "Ternak Klip",
-      "url": "https://ternakklip.com/home",
+      "url": "https://ternakklip.com/",
       "kind": "pay-per-view clipping marketplace (Indonesia)",
-      "founded": "not published",
-      "operator": "PT Media Klip Nusantara (site footer, which also states registration with Indonesia's Ministry of Communication and Digital Affairs)",
+      "founded": "not published; its changelog dates the first production app release to 21 April 2026",
+      "operator": "PT Ternak Klip Indonesia (About page, which gives it as the legal name, and site footer)",
       "bestFor": {
         "en": "Indonesian clippers who want rupiah campaigns from local brands, film studios and podcasts with no follower minimum",
         "es": "clippers de Indonesia que quieren campañas en rupias indonesias de marcas locales, estudios de cine y pódcasts, sin mínimo de seguidores"
       },
       "summary": {
-        "en": "An Indonesian clipping marketplace: brands, film studios and podcasters post campaigns with a rupiah rate per 1,000 views, and clippers post from linked public TikTok, Instagram, YouTube or X accounts. On 2026-09-24 its Explore page showed clipping rates of Rp1,000 to Rp5,000 per 1,000 views. Its FAQ says the platform keeps 20% of creator payouts and credits the Ternak Klip balance every seven days for each submission that earned, with the bank payout on request.",
-        "es": "Un mercado indonesio de clipping: marcas, estudios de cine y podcasters publican campañas con una tarifa en rupias indonesias por cada 1000 vistas, y los clippers publican desde cuentas públicas vinculadas de TikTok, Instagram, YouTube o X. El 2026-09-24 su página Explore mostraba tarifas de clipping de Rp1000 a Rp5000 por cada 1000 vistas. Sus preguntas frecuentes dicen que la plataforma se queda con el 20% de los pagos a creadores y acredita el saldo de Ternak Klip cada siete días por cada envío que generó ganancias, con el pago al banco a petición."
+        "en": "An Indonesian clipping marketplace: brands, film studios and music labels post campaigns with a rupiah rate per 1,000 views, and clippers post from linked TikTok, Instagram, YouTube, Facebook, X or Threads accounts. On 2026-11-14 its Discover board listed 184 campaigns, with clipping rates of Rp650 to Rp25,000 per 1,000 views, Rp2,000 to Rp5,000 on most. Its FAQ says budgets are held in escrow before a campaign opens and that a platform fee is taken from earnings, without publishing the percentage; its pricing page says payouts clear every seven days, and its FAQ says you withdraw to your own bank account or e-wallet.",
+        "es": "Un mercado indonesio de clipping: marcas, estudios de cine y sellos discográficos publican campañas con una tarifa en rupias indonesias por cada 1000 vistas, y los clippers publican desde cuentas vinculadas de TikTok, Instagram, YouTube, Facebook, X o Threads. El 2026-11-14 su listado Discover tenía 184 campañas, con tarifas de clipping de Rp650 a Rp25.000 por cada 1000 vistas y de Rp2000 a Rp5000 en la mayoría. Sus preguntas frecuentes dicen que los presupuestos quedan en depósito en garantía antes de que se abra una campaña y que de las ganancias se descuenta una comisión de plataforma, sin publicar el porcentaje; su página de precios dice que los pagos se liquidan cada siete días, y sus preguntas frecuentes dicen que retiras a tu propia cuenta bancaria o billetera electrónica."
       },
       "calc": {
         "rateMin": null,
@@ -4767,240 +4672,240 @@
       "fields": {
         "rate": {
           "text": {
-            "en": "Rp1,000–Rp5,000 per 1,000 views on the clipping campaigns shown on its Explore page on 2026-09-24, Rp2,000–Rp3,000 on most; UGC campaigns list Rp10,000–Rp15,000, and some campaigns pay a flat fee per video instead",
-            "es": "Rp1000–Rp5000 por cada 1000 vistas en las campañas de clipping que se mostraban en su página Explore el 2026-09-24, Rp2000–Rp3000 en la mayoría; las campañas de UGC indican Rp10.000–Rp15.000, y algunas campañas pagan en cambio un monto fijo por video"
+            "en": "Rp650–Rp25,000 per 1,000 views on the 174 per-view clipping campaigns on its Discover board on 2026-11-14, Rp2,000–Rp5,000 on most; cards print rounded figures such as \"Rp 3rb/1K\"; six UGC campaigns list about Rp8,000–Rp15,000, and three clipping campaigns pay a flat fee per video instead",
+            "es": "Rp650–Rp25.000 por cada 1000 vistas en las 174 campañas de clipping pagadas por vistas de su listado Discover el 2026-11-14, Rp2000–Rp5000 en la mayoría; las fichas muestran cifras redondeadas, como «Rp 3rb/1K»; seis campañas de UGC indican aproximadamente Rp8000–Rp15.000, y tres campañas de clipping pagan en cambio un monto fijo por video"
           },
           "source": {
-            "url": "https://ternakklip.com/explore",
-            "date": "2026-09-24"
+            "url": "https://ternakklip.com/discover",
+            "date": "2026-11-14"
           }
         },
         "threshold": {
           "text": {
-            "en": "set per campaign and counted in views: a clip is paid only after it reaches the campaign's minimum views (\"minimum views campaign\"); the FAQ labels this \"Minimum payout\"",
-            "es": "lo fija cada campaña y se cuenta en vistas: un clip solo se paga cuando llega al mínimo de vistas de la campaña («minimum views campaign»); las preguntas frecuentes lo llaman «Minimum payout»"
+            "en": "set per campaign and counted in views: the views in one submission must reach the campaign's \"Min. akumulasi to payout\" (guide of 26 October 2026); the public board does not print the figure",
+            "es": "lo fija cada campaña y se cuenta en vistas: las vistas de un mismo envío tienen que llegar al «Min. akumulasi to payout» de la campaña (guía del 26 de octubre de 2026); el listado público no muestra la cifra"
           },
           "source": {
-            "url": "https://ternakklip.com/home",
-            "date": "2026-09-24"
+            "url": "https://ternakklip.com/id/blog/cara-submit-video-campaign",
+            "date": "2026-11-14"
           }
         },
         "cap": {
           "text": {
-            "en": "a clip can claim at most a set number of views (\"jumlah maksimal views yang bisa Anda claim per video\"); once it reaches that, earnings stop even if views keep growing",
-            "es": "un clip puede reclamar como máximo un número fijo de vistas («jumlah maksimal views yang bisa Anda claim per video»); al llegar a esa cifra, las ganancias se detienen aunque las vistas sigan creciendo"
+            "en": "set per campaign: its FAQ says the brand sets a maximum payout per clip, written on the campaign page; its guide says views above the campaign's \"Max. akumulasi to payout\" are not paid",
+            "es": "lo fija cada campaña: sus preguntas frecuentes dicen que la marca fija un pago máximo por clip, que figura en la página de la campaña; su guía dice que las vistas por encima del «Max. akumulasi to payout» de la campaña no se pagan"
           },
           "source": {
-            "url": "https://ternakklip.com/home",
-            "date": "2026-09-24"
+            "url": "https://ternakklip.com/faq",
+            "date": "2026-11-14"
           }
         },
         "fee": {
           "text": {
-            "en": "20% of creator payouts: \"Ternak Klip mengambil biaya 20% dari semua creator payouts\"; the brand-side FAQ separately says 20% of the campaign budget goes to platform and operating costs",
-            "es": "20% de los pagos a creadores: «Ternak Klip mengambil biaya 20% dari semua creator payouts»; las preguntas frecuentes para marcas dicen aparte que el 20% del presupuesto de la campaña se destina a la plataforma y a los costos operativos"
+            "en": "a flat platform fee is taken from what you earn, but the percentage is no longer published (\"not published on this page yet\"); the only figure left on the site is a changelog line of 3 May 2026, \"The wallet deduction is a flat 20%\"; larger per-post and retainer campaigns carry no fee; the pricing page says withdrawals are free, the terms of 16 October 2026 say they carry a service fee and a transfer fee",
+            "es": "se descuenta una comisión de plataforma fija de lo que ganas, pero el porcentaje ya no está publicado («not published on this page yet»); la única cifra que queda en el sitio es una línea de su registro de cambios del 3 de mayo de 2026: «The wallet deduction is a flat 20%»; las campañas más grandes de pago por publicación y de pago fijo periódico (retainer) no llevan comisión; la página de precios dice que los retiros son gratis, y las condiciones del 16 de octubre de 2026 dicen que llevan una comisión de servicio y una de transferencia"
           },
           "value": 20,
           "source": {
-            "url": "https://ternakklip.com/home",
-            "date": "2026-09-24"
+            "url": "https://ternakklip.com/faq",
+            "date": "2026-11-14"
           }
         },
         "minPayout": {
           "text": {
-            "en": "not published; the FAQ says a clip is paid only once it reaches the campaign's minimum and seven days have passed since submission",
-            "es": "no publicado; las preguntas frecuentes dicen que un clip solo se paga cuando llega al mínimo de la campaña y han pasado siete días desde el envío"
+            "en": "does not publish a figure: \"The minimum you can withdraw is different for each campaign\" (pricing page)",
+            "es": "no publica una cifra: «The minimum you can withdraw is different for each campaign» (página de precios)"
           },
           "source": {
-            "url": "https://ternakklip.com/home",
-            "date": "2026-09-24"
+            "url": "https://ternakklip.com/pricing/creators",
+            "date": "2026-11-14"
           }
         },
         "payoutMethods": {
           "text": {
-            "en": "a transfer to your bank account (\"langsung ke rekeningmu\"): earnings go to your Ternak Klip balance, then you request a payout (\"ajukan pembayaran\") and wait for it to be verified; no other method is named",
-            "es": "una transferencia a tu cuenta bancaria («langsung ke rekeningmu»): las ganancias van a tu saldo de Ternak Klip, luego pides el pago («ajukan pembayaran») y esperas a que se verifique; no nombra ningún otro método"
+            "en": "your own bank account or e-wallet, in your own name, withdrawn from the app balance (\"TernakKlip does not pay a third-party account\"); its app guide names GoPay as an example and its changelog names Xendit as the payment provider",
+            "es": "tu propia cuenta bancaria o billetera electrónica, a tu nombre, con retiro desde el saldo de la app («TernakKlip does not pay a third-party account»); la guía de su app nombra GoPay como ejemplo y su registro de cambios nombra a Xendit como proveedor de pagos"
           },
           "source": {
-            "url": "https://ternakklip.com/home",
-            "date": "2026-09-24"
+            "url": "https://ternakklip.com/faq",
+            "date": "2026-11-14"
           }
         },
         "cis": {
           "text": {
-            "en": "its FAQ says anyone can join wherever they live, but its application form says most campaigns target Indonesia; the only payout named goes to a bank account (\"rekeningmu\"), and no non-Indonesian payout method is published"
+            "en": "does not publish a country rule: its rebuilt site no longer says residence does not matter; it says \"Open to every creator\", pays to \"your own bank account or e-wallet\" and names no payout method outside Indonesia"
           },
-          "state": "partial",
+          "state": "unknown",
           "source": {
-            "url": "https://ternakklip.com/home",
-            "date": "2026-09-24"
+            "url": "https://ternakklip.com/faq",
+            "date": "2026-11-14"
           }
         },
         "followers": {
           "text": {
-            "en": "no minimum: \"Anda tidak memerlukan followers atau pengalaman sebelumnya\"",
-            "es": "sin mínimo: «Anda tidak memerlukan followers atau pengalaman sebelumnya»"
+            "en": "no minimum: \"No follower minimum, and nothing to negotiate\"",
+            "es": "sin mínimo: «No follower minimum, and nothing to negotiate»"
           },
           "state": "no",
           "source": {
-            "url": "https://ternakklip.com/home",
-            "date": "2026-09-24"
+            "url": "https://ternakklip.com/faq",
+            "date": "2026-11-14"
           }
         },
         "escrow": {
           "text": {
-            "en": "not published: the page promises \"Proteksi Pembayaran\" but does not say whether a campaign budget is funded before launch",
-            "es": "no publicado: la página promete «Proteksi Pembayaran», pero no dice si el presupuesto de una campaña se financia antes del lanzamiento"
+            "en": "its FAQ says brands open campaigns with the budget already held in escrow: the full budget goes in upfront, by bank transfer or virtual account, and unspent budget can be withdrawn; the terms describe campaigns funded from the client's credit balance",
+            "es": "sus preguntas frecuentes dicen que las marcas abren las campañas con el presupuesto ya en depósito en garantía: el presupuesto completo se aporta por adelantado, por transferencia bancaria o cuenta virtual, y lo que no se gaste se puede retirar; las condiciones describen campañas financiadas con el saldo de crédito del cliente"
           },
-          "state": "unknown",
+          "state": "yes",
           "source": {
-            "url": "https://ternakklip.com/home",
-            "date": "2026-09-24"
+            "url": "https://ternakklip.com/faq",
+            "date": "2026-11-14"
           }
         },
         "networks": {
           "text": {
-            "en": "TikTok, Instagram, YouTube or X per its terms and FAQ, as each campaign allows; its campaign board also filters by Threads and Facebook; submissions must come from public accounts"
+            "en": "YouTube, TikTok, X, Instagram, Facebook Pages and Threads per its terms of 16 October 2026 and its About page, as each campaign allows; on its board on 2026-11-14 nearly every clipping campaign paid for TikTok and one for X"
           },
           "source": {
             "url": "https://ternakklip.com/legal/terms",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "verification": {
           "text": {
-            "en": "social accounts are linked so the system can verify videos; each submission is reviewed by the campaign admin, and bot views mean rejection, no pay and a possible ban"
+            "en": "each submission goes through the brand's review and a verification layer: metrics pulled from the platform are checked against engagement patterns and account history (FAQ); its guides say accounts are linked by a bio code or the platform's own login and that each submission needs a screenshot of the video's analytics, while the home page says numbers never come from a screenshot"
           },
           "source": {
-            "url": "https://ternakklip.com/home",
-            "date": "2026-09-24"
+            "url": "https://ternakklip.com/faq",
+            "date": "2026-11-14"
           }
         },
         "india": {
           "text": {
-            "en": "its FAQ says anyone can join wherever they live, but its application form says most campaigns target Indonesia; the only payout named goes to a bank account (\"rekeningmu\"), and no non-Indonesian payout method is published"
+            "en": "does not publish a country rule: its rebuilt site no longer says residence does not matter; it says \"Open to every creator\", pays to \"your own bank account or e-wallet\" and names no payout method outside Indonesia"
           },
-          "state": "partial",
+          "state": "unknown",
           "source": {
-            "url": "https://ternakklip.com/home",
-            "date": "2026-09-24"
+            "url": "https://ternakklip.com/faq",
+            "date": "2026-11-14"
           }
         },
         "pakistan": {
           "text": {
-            "en": "its FAQ says anyone can join wherever they live, but its application form says most campaigns target Indonesia; the only payout named goes to a bank account (\"rekeningmu\"), and no non-Indonesian payout method is published"
+            "en": "does not publish a country rule: its rebuilt site no longer says residence does not matter; it says \"Open to every creator\", pays to \"your own bank account or e-wallet\" and names no payout method outside Indonesia"
           },
-          "state": "partial",
+          "state": "unknown",
           "source": {
-            "url": "https://ternakklip.com/home",
-            "date": "2026-09-24"
+            "url": "https://ternakklip.com/faq",
+            "date": "2026-11-14"
           }
         },
         "bangladesh": {
           "text": {
-            "en": "its FAQ says anyone can join wherever they live, but its application form says most campaigns target Indonesia; the only payout named goes to a bank account (\"rekeningmu\"), and no non-Indonesian payout method is published"
+            "en": "does not publish a country rule: its rebuilt site no longer says residence does not matter; it says \"Open to every creator\", pays to \"your own bank account or e-wallet\" and names no payout method outside Indonesia"
           },
-          "state": "partial",
+          "state": "unknown",
           "source": {
-            "url": "https://ternakklip.com/home",
-            "date": "2026-09-24"
+            "url": "https://ternakklip.com/faq",
+            "date": "2026-11-14"
           }
         },
         "nigeria": {
           "text": {
-            "en": "its FAQ says anyone can join wherever they live, but its application form says most campaigns target Indonesia; the only payout named goes to a bank account (\"rekeningmu\"), and no non-Indonesian payout method is published"
+            "en": "does not publish a country rule: its rebuilt site no longer says residence does not matter; it says \"Open to every creator\", pays to \"your own bank account or e-wallet\" and names no payout method outside Indonesia"
           },
-          "state": "partial",
+          "state": "unknown",
           "source": {
-            "url": "https://ternakklip.com/home",
-            "date": "2026-09-24"
+            "url": "https://ternakklip.com/faq",
+            "date": "2026-11-14"
           }
         },
         "kenya": {
           "text": {
-            "en": "its FAQ says anyone can join wherever they live, but its application form says most campaigns target Indonesia; the only payout named goes to a bank account (\"rekeningmu\"), and no non-Indonesian payout method is published"
+            "en": "does not publish a country rule: its rebuilt site no longer says residence does not matter; it says \"Open to every creator\", pays to \"your own bank account or e-wallet\" and names no payout method outside Indonesia"
           },
-          "state": "partial",
+          "state": "unknown",
           "source": {
-            "url": "https://ternakklip.com/home",
-            "date": "2026-09-24"
+            "url": "https://ternakklip.com/faq",
+            "date": "2026-11-14"
           }
         },
         "mena": {
           "text": {
-            "en": "its FAQ says anyone can join wherever they live, but its application form says most campaigns target Indonesia; the only payout named goes to a bank account (\"rekeningmu\"), and no non-Indonesian payout method is published"
+            "en": "does not publish a country rule: its rebuilt site no longer says residence does not matter; it says \"Open to every creator\", pays to \"your own bank account or e-wallet\" and names no payout method outside Indonesia"
           },
-          "state": "partial",
+          "state": "unknown",
           "source": {
-            "url": "https://ternakklip.com/home",
-            "date": "2026-09-24"
+            "url": "https://ternakklip.com/faq",
+            "date": "2026-11-14"
           }
         },
         "indonesia": {
           "text": {
-            "en": "an Indonesian marketplace with rupiah campaigns, operated by PT Media Klip Nusantara"
+            "en": "an Indonesian marketplace with rupiah campaigns, operated by PT Ternak Klip Indonesia"
           },
           "state": "yes",
           "source": {
-            "url": "https://ternakklip.com/home",
-            "date": "2026-09-24"
+            "url": "https://ternakklip.com/about",
+            "date": "2026-11-14"
           }
         },
         "philippines": {
           "text": {
-            "en": "its FAQ says anyone can join wherever they live, but its application form says most campaigns target Indonesia; the only payout named goes to a bank account (\"rekeningmu\"), and no non-Indonesian payout method is published"
+            "en": "does not publish a country rule: its rebuilt site no longer says residence does not matter; it says \"Open to every creator\", pays to \"your own bank account or e-wallet\" and names no payout method outside Indonesia"
           },
-          "state": "partial",
+          "state": "unknown",
           "source": {
-            "url": "https://ternakklip.com/home",
-            "date": "2026-09-24"
+            "url": "https://ternakklip.com/faq",
+            "date": "2026-11-14"
           }
         },
         "cpm": {
           "text": {
-            "en": "Rp1,000–Rp5,000 (≈$0.06–$0.28)",
-            "es": "Rp1000–Rp5000 (≈US$0,06–US$0,28)"
+            "en": "Rp650–Rp25,000 (≈$0.04–$1.40), Rp2,000–Rp5,000 on most",
+            "es": "Rp650–Rp25.000 (≈US$0,04–US$1,40), Rp2000–Rp5000 en la mayoría"
           },
-          "value": 0.28,
+          "value": 1.4,
           "source": {
-            "url": "https://ternakklip.com/explore",
-            "date": "2026-09-24"
+            "url": "https://ternakklip.com/discover",
+            "date": "2026-11-14"
           }
         },
         "payoutSpeed": {
           "text": {
-            "en": "every seven days per its FAQ: balance credited 7 days after verification (another answer: 7+ days after submitting); most reviews take a few working days; bank payout on request, no time stated",
-            "es": "cada siete días según sus preguntas frecuentes: el saldo se acredita 7 días después de la verificación (otra respuesta dice 7 días o más después del envío); la mayoría de las revisiones tardan unos pocos días laborables; pago al banco a petición, sin plazo indicado"
+            "en": "pricing and About pages: payouts clear every seven days; FAQ: on CPM, views are held briefly for verification before they reach your balance, and per-post pays once the clip is approved; its guide says the reward reaches the wallet as soon as a submission is approved; withdrawals are processed after review (terms), no time stated",
+            "es": "páginas de precios y About: los pagos se liquidan cada siete días; preguntas frecuentes: en CPM, las vistas se retienen brevemente para verificarlas antes de llegar a tu saldo, y en pago por publicación se paga una vez aprobado el clip; su guía dice que la recompensa llega a la billetera en cuanto se aprueba un envío; los retiros se procesan tras una revisión (condiciones), sin plazo indicado"
           },
           "value": null,
           "source": {
-            "url": "https://ternakklip.com/home",
-            "date": "2026-09-24"
+            "url": "https://ternakklip.com/pricing/creators",
+            "date": "2026-11-14"
           }
         }
       },
       "pros": {
         "en": [
           "The campaign list is public and shows the rupiah rate per 1,000 views and the budget left",
-          "No follower or experience requirement, and the FAQ says location does not matter for joining",
-          "A weekly payout cycle is stated in the FAQ"
+          "No follower minimum, and its FAQ says the budget is held in escrow before a campaign opens",
+          "A seven-day payout cycle is stated on its pricing and About pages"
         ],
         "es": [
           "La lista de campañas es pública y muestra la tarifa en rupias indonesias por cada 1000 vistas y el presupuesto restante",
-          "No pide seguidores ni experiencia, y las preguntas frecuentes dicen que la ubicación no importa para unirse",
-          "Las preguntas frecuentes indican un ciclo de pago semanal"
+          "Sin mínimo de seguidores, y sus preguntas frecuentes dicen que el presupuesto queda en depósito en garantía antes de que se abra una campaña",
+          "Sus páginas de precios y About indican un ciclo de pago de siete días"
         ]
       },
       "cons": {
         "en": [
-          "Keeps 20% of creator payouts",
-          "No payout method other than \"your bank account\" is published, and the terms of service contain no payout clauses",
-          "The FAQ answers are in Indonesian only and appear only when clicked"
+          "Takes a platform fee from earnings without publishing the percentage on its pricing or FAQ pages; a changelog line of May 2026 says 20%",
+          "The pricing page says withdrawals are free, while the terms of 16 October 2026 say they carry a service fee and a transfer fee",
+          "Minimum views and the cap per clip are not shown on the public board; its FAQ says the cap is written on the campaign page"
         ],
         "es": [
-          "Se queda con el 20% de los pagos a creadores",
-          "No publica ningún método de pago aparte de «tu cuenta bancaria», y las condiciones del servicio no tienen cláusulas sobre pagos",
-          "Las respuestas de las preguntas frecuentes solo están en indonesio y solo aparecen al hacer clic"
+          "Descuenta una comisión de plataforma de las ganancias sin publicar el porcentaje en su página de precios ni en sus preguntas frecuentes; una línea de su registro de cambios de mayo de 2026 dice 20%",
+          "La página de precios dice que los retiros son gratis, mientras que las condiciones del 16 de octubre de 2026 dicen que llevan una comisión de servicio y una de transferencia",
+          "El mínimo de vistas y el tope por clip no se muestran en el listado público; sus preguntas frecuentes dicen que el tope figura en la página de la campaña"
         ]
       }
     },
@@ -5012,31 +4917,31 @@
       "founded": "not published",
       "operator": "PT Clippo Media Digital, South Jakarta (NIB 0207260037825, with a private-scope electronic system operator registration)",
       "bestFor": {
-        "en": "Indonesian clippers who want no platform fee, income tax handled at withdrawal and payouts to a local bank or e-wallet",
-        "es": "clippers de Indonesia que no quieren comisión de la plataforma, con el impuesto sobre la renta gestionado al retirar y pagos a un banco o una billetera electrónica local"
+        "en": "Indonesian clippers who want income tax handled at withdrawal, a budget funded before launch and payouts to a local bank or e-wallet",
+        "es": "clippers de Indonesia que quieren el impuesto sobre la renta gestionado al retirar, un presupuesto financiado antes del lanzamiento y pagos a un banco o una billetera electrónica local"
       },
       "summary": {
-        "en": "An Indonesian clipping marketplace for TikTok and Instagram Reels. Each campaign sets a rupiah rate per 1,000 views and may cap paid views per clip; the first page of its public campaign board on 2026-09-24 showed Rp1,000 to Rp5,000. A clip needs 1,000 views to be submitted, withdrawals start at Rp100,000 after a KTP identity check, and instead of a platform fee Clippo withholds Indonesian income tax when you withdraw.",
-        "es": "Un mercado indonesio de clipping para TikTok e Instagram Reels. Cada campaña fija una tarifa en rupias indonesias por cada 1000 vistas y puede limitar las vistas pagadas por clip; la primera página de su listado público de campañas mostraba de Rp1000 a Rp5000 el 2026-09-24. Un clip necesita 1000 vistas para poder enviarse, los retiros empiezan en Rp100.000 tras un control de identidad con KTP y, en lugar de una comisión de plataforma, Clippo retiene el impuesto sobre la renta indonesio cuando retiras."
+        "en": "An Indonesian clipping marketplace for TikTok and Instagram Reels. Each campaign sets a rupiah rate per 1,000 views and may cap paid views per clip; the first page of its public campaign board on 2026-11-14 showed Rp400 to Rp6,000. A clip needs 1,000 views to be submitted and withdrawals start at Rp100,000 after a KTP identity check. Under terms headed \"Tanggal Efektif: 1 Oktober 2026\" (effective 1 October 2026), Clippo takes a conversion fee of 13% from a new clipper's earnings, falling to 9%, 5% and 0% at higher monthly tiers, and withholds Indonesian income tax when you withdraw.",
+        "es": "Un mercado indonesio de clipping para TikTok e Instagram Reels. Cada campaña fija una tarifa en rupias indonesias por cada 1000 vistas y puede limitar las vistas pagadas por clip; la primera página de su listado público de campañas mostraba de Rp400 a Rp6000 el 2026-11-14. Un clip necesita 1000 vistas para poder enviarse, y los retiros empiezan en Rp100.000 tras un control de identidad con KTP. Según unas condiciones encabezadas como vigentes desde el 1 de octubre de 2026, Clippo descuenta una comisión de conversión del 13% de las ganancias de un clipper nuevo, que baja al 9%, al 5% y al 0% en los niveles mensuales superiores, y retiene el impuesto sobre la renta indonesio cuando retiras."
       },
       "calc": {
         "rateMin": null,
         "rateMax": null,
         "cap": null,
         "threshold": 1000,
-        "fee": 0,
+        "fee": 13,
         "minPayout": null
       },
       "fields": {
         "rate": {
           "text": {
-            "en": "Rp1,000–Rp5,000 per 1,000 views on the first page of its public campaign board on 2026-09-24, Rp2,000–Rp5,000 on most; the rate may differ by platform within one campaign",
-            "es": "Rp1000–Rp5000 por cada 1000 vistas en la primera página de su listado público de campañas el 2026-09-24, Rp2000–Rp5000 en la mayoría; la tarifa puede variar según la red dentro de una misma campaña"
+            "en": "Rp400–Rp6,000 per 1,000 views on the first page (15 cards) of its public campaign board on 2026-11-14, Rp2,000–Rp5,000 on most; the whole board listed 39 campaigns, 34 at Rp200–Rp6,000 per 1,000 views and five at Rp5,000 per video; the terms let the rate differ by platform within one campaign",
+            "es": "Rp400–Rp6000 por cada 1000 vistas en la primera página (15 fichas) de su listado público de campañas el 2026-11-14, Rp2000–Rp5000 en la mayoría; el listado completo tenía 39 campañas, 34 a Rp200–Rp6000 por cada 1000 vistas y cinco a Rp5000 por video; las condiciones permiten que la tarifa varíe según la red dentro de una misma campaña"
           },
-          "value": 0.06,
+          "value": 0.02,
           "source": {
             "url": "https://app.clippo.id/campaigns",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "threshold": {
@@ -5047,7 +4952,7 @@
           "value": 1000,
           "source": {
             "url": "https://app.clippo.id/terms-and-conditions",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "cap": {
@@ -5057,18 +4962,18 @@
           },
           "source": {
             "url": "https://app.clippo.id/terms-and-conditions",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "fee": {
           "text": {
-            "en": "0% platform fee on earnings and on withdrawals, and Clippo covers the bank or e-wallet transfer charge; income tax (PPh 21) is withheld at withdrawal for individuals and is not a platform fee",
-            "es": "comisión de plataforma del 0% sobre las ganancias y los retiros, y Clippo cubre el costo de la transferencia al banco o a la billetera electrónica; el impuesto sobre la renta (PPh 21) se retiene al retirar en el caso de personas físicas y no es una comisión de la plataforma"
+            "en": "conversion fee by monthly tier when potential earnings become withdrawable: Bronze 13%, Silver 9%, Gold 5%, Platinum 0%, Diamond 0% plus a 5% bonus; new clippers start at Bronze; no fee on withdrawals, and Clippo covers the transfer charge; income tax (PPh 21) is withheld at withdrawal for individuals; the home page and rules page still say 0% platform fee",
+            "es": "comisión de conversión según el nivel mensual, cuando las ganancias potenciales pasan a ser retirables: Bronze 13%, Silver 9%, Gold 5%, Platinum 0%, Diamond 0% más una bonificación del 5%; los clippers nuevos empiezan en Bronze; sin comisión por retirar, y Clippo cubre el costo de la transferencia; el impuesto sobre la renta (PPh 21) se retiene al retirar en el caso de personas físicas; la página principal y la página de reglas todavía dicen 0% de comisión de plataforma"
           },
-          "value": 0,
+          "value": 13,
           "source": {
             "url": "https://app.clippo.id/terms-and-conditions",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "minPayout": {
@@ -5078,7 +4983,7 @@
           },
           "source": {
             "url": "https://app.clippo.id/terms-and-conditions",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "payoutMethods": {
@@ -5088,7 +4993,7 @@
           },
           "source": {
             "url": "https://app.clippo.id/terms-and-conditions",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "cis": {
@@ -5098,7 +5003,7 @@
           "state": "no",
           "source": {
             "url": "https://app.clippo.id/terms-and-conditions",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "followers": {
@@ -5109,7 +5014,7 @@
           "state": "yes",
           "source": {
             "url": "https://app.clippo.id/terms-and-conditions",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "escrow": {
@@ -5120,16 +5025,16 @@
           "state": "yes",
           "source": {
             "url": "https://app.clippo.id/terms-and-conditions",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "networks": {
           "text": {
-            "en": "TikTok and Instagram Reels under the terms; its public campaign board on 2026-09-24 also lists a Facebook-only campaign"
+            "en": "TikTok and Instagram Reels under the terms; its public campaign board on 2026-11-14 also lists one campaign that adds Facebook and one Threads-only text campaign, and has filters for Facebook, Threads and YouTube"
           },
           "source": {
             "url": "https://app.clippo.id/terms-and-conditions",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "verification": {
@@ -5138,7 +5043,7 @@
           },
           "source": {
             "url": "https://app.clippo.id/terms-and-conditions",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "india": {
@@ -5148,7 +5053,7 @@
           "state": "no",
           "source": {
             "url": "https://app.clippo.id/terms-and-conditions",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "pakistan": {
@@ -5158,7 +5063,7 @@
           "state": "no",
           "source": {
             "url": "https://app.clippo.id/terms-and-conditions",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "bangladesh": {
@@ -5168,7 +5073,7 @@
           "state": "no",
           "source": {
             "url": "https://app.clippo.id/terms-and-conditions",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "nigeria": {
@@ -5178,7 +5083,7 @@
           "state": "no",
           "source": {
             "url": "https://app.clippo.id/terms-and-conditions",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "kenya": {
@@ -5188,7 +5093,7 @@
           "state": "no",
           "source": {
             "url": "https://app.clippo.id/terms-and-conditions",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "mena": {
@@ -5198,7 +5103,7 @@
           "state": "no",
           "source": {
             "url": "https://app.clippo.id/terms-and-conditions",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "indonesia": {
@@ -5208,7 +5113,7 @@
           "state": "yes",
           "source": {
             "url": "https://app.clippo.id/terms-and-conditions",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "philippines": {
@@ -5218,18 +5123,18 @@
           "state": "no",
           "source": {
             "url": "https://app.clippo.id/terms-and-conditions",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "cpm": {
           "text": {
-            "en": "Rp1,000–Rp5,000 (≈$0.06–$0.28) on the first page of its board",
-            "es": "Rp1000–Rp5000 (≈US$0,06–US$0,28) en la primera página de su listado"
+            "en": "Rp400–Rp6,000 (≈$0.02–$0.34) on the first page of its board",
+            "es": "Rp400–Rp6000 (≈US$0,02–US$0,34) en la primera página de su listado"
           },
-          "value": 0.28,
+          "value": 0.34,
           "source": {
             "url": "https://app.clippo.id/campaigns",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "payoutSpeed": {
@@ -5240,19 +5145,19 @@
           "value": null,
           "source": {
             "url": "https://app.clippo.id/terms-and-conditions",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         }
       },
       "pros": {
         "en": [
           "Numbered, dated terms that spell out fees, limits, review times and clawbacks",
-          "0% platform fee, with transfer charges paid by the platform",
+          "No fee on withdrawals, with transfer charges paid by the platform",
           "Campaign budgets must be fully funded before clippers see the campaign"
         ],
         "es": [
           "Condiciones numeradas y fechadas que detallan comisiones, límites, plazos de revisión y recuperaciones de pagos",
-          "Comisión de plataforma del 0%, y la plataforma paga los gastos de transferencia",
+          "Sin comisión por retirar, y la plataforma paga los gastos de transferencia",
           "Los presupuestos de las campañas tienen que estar totalmente financiados antes de que los clippers vean la campaña"
         ]
       },
@@ -5260,12 +5165,12 @@
         "en": [
           "Indonesian users only; foreign accounts, foreign e-wallets and crypto are not supported",
           "KTP identity check with a live selfie before the first withdrawal",
-          "Terms and rules page disagree on earnings review time and on withdrawals before the KTP check"
+          "Terms take a 13% conversion fee at the entry tier while the home page and rules page still say 0% platform fee; the terms and the rules page also disagree on review time and on withdrawals before the KTP check"
         ],
         "es": [
           "Solo para usuarios de Indonesia; no admite cuentas extranjeras, billeteras electrónicas extranjeras ni cripto",
           "Control de identidad con KTP y selfi en vivo antes del primer retiro",
-          "Las condiciones y la página de reglas no coinciden en el plazo de revisión de las ganancias ni en los retiros antes del control con KTP"
+          "Las condiciones descuentan una comisión de conversión del 13% en el nivel de entrada, mientras que la página principal y la página de reglas todavía dicen 0% de comisión de plataforma; las condiciones y la página de reglas tampoco coinciden en el plazo de revisión ni en los retiros antes del control con KTP"
         ]
       }
     },
@@ -5512,8 +5417,8 @@
         "es": "clippers de Indonesia con pocos seguidores que quieren una lista pública de campañas"
       },
       "summary": {
-        "en": "An Indonesian clipping marketplace for TikTok, Instagram Reels and YouTube Shorts. The public campaign list on 2026-09-24 showed clipping rates of Rp1,500 to Rp7,500 per 1,000 views. Since July 2026 it keeps 20% of gross earnings and charges Rp10,000 per withdrawal, with a Rp50,000 minimum, rupiah-only payouts to Indonesian banks or verified e-wallets, and no KTP check.",
-        "es": "Un mercado indonesio de clipping para TikTok, Instagram Reels y YouTube Shorts. La lista pública de campañas mostraba el 2026-09-24 tarifas de clipping de Rp1500 a Rp7500 por cada 1000 vistas. Desde julio de 2026 se queda con el 20% de las ganancias brutas y cobra Rp10.000 por retiro, con un mínimo de Rp50.000, pagos solo en rupias indonesias a bancos de Indonesia o a billeteras electrónicas verificadas y sin control con KTP."
+        "en": "An Indonesian clipping marketplace for TikTok, Instagram Reels, YouTube Shorts and Threads. The public campaign list on 2026-11-14 showed clipping rates of Rp1,000 to Rp12,000 per 1,000 views. Since July 2026 it keeps 20% of gross earnings and charges Rp10,000 per withdrawal, with a Rp50,000 minimum, rupiah-only payouts to Indonesian banks or verified e-wallets, and no KTP check.",
+        "es": "Un mercado indonesio de clipping para TikTok, Instagram Reels, YouTube Shorts y Threads. La lista pública de campañas mostraba el 2026-11-14 tarifas de clipping de Rp1000 a Rp12.000 por cada 1000 vistas. Desde julio de 2026 se queda con el 20% de las ganancias brutas y cobra Rp10.000 por retiro, con un mínimo de Rp50.000, pagos solo en rupias indonesias a bancos de Indonesia o a billeteras electrónicas verificadas y sin control con KTP."
       },
       "calc": {
         "rateMin": null,
@@ -5526,34 +5431,34 @@
       "fields": {
         "rate": {
           "text": {
-            "en": "Rp1,500–Rp7,500 per 1,000 views on the clipping campaigns shown on 2026-09-24",
-            "es": "Rp1500–Rp7500 por cada 1000 vistas en las campañas de clipping que se mostraban el 2026-09-24"
+            "en": "Rp1,000–Rp12,000 per 1,000 views on the 59 clipping campaigns on its public list on 2026-11-14, Rp2,000–Rp5,000 on most; five UGC campaigns list Rp3,000–Rp15,000",
+            "es": "Rp1000–Rp12.000 por cada 1000 vistas en las 59 campañas de clipping de su lista pública el 2026-11-14, Rp2000–Rp5000 en la mayoría; cinco campañas de UGC indican Rp3000–Rp15.000"
           },
-          "value": 0.08,
+          "value": 0.06,
           "source": {
             "url": "https://konten.com/campaigns",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "threshold": {
           "text": {
-            "en": "set per campaign: 5,000–20,000 views on the clipping campaigns shown on 2026-09-24, 10,000 on most (its July guide says at least 10,000); some pay a reduced rate from 1,000 views until the minimum (July guides say all do, at half rate)",
-            "es": "lo fija cada campaña: de 5000 a 20.000 vistas en las campañas de clipping que se mostraban el 2026-09-24, 10.000 en la mayoría (su guía de julio dice al menos 10.000); algunas pagan una tarifa reducida desde las 1000 vistas hasta llegar al mínimo (las guías de julio dicen que todas, a mitad de tarifa)"
+            "en": "set per campaign: 1,000–50,000 views on the 59 clipping campaigns shown on 2026-11-14, 10,000 on most (its July guide says at least 10,000); about half pay a reduced rate from 1,000 or 5,000 views until the minimum (July guides say all do, at half rate)",
+            "es": "lo fija cada campaña: de 1000 a 50.000 vistas en las 59 campañas de clipping que se mostraban el 2026-11-14, 10.000 en la mayoría (su guía de julio dice al menos 10.000); cerca de la mitad paga una tarifa reducida desde las 1000 o las 5000 vistas hasta llegar al mínimo (las guías de julio dicen que todas, a mitad de tarifa)"
           },
           "value": 10000,
           "source": {
             "url": "https://konten.com/campaigns",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "cap": {
           "text": {
-            "en": "set per campaign as a maximum of paid views per video, with no cap when a campaign states none: 300,000–2,000,000 views on the clipping campaigns shown on 2026-09-24, mostly 500,000 or 1,000,000",
-            "es": "lo fija cada campaña como un máximo de vistas pagadas por video, sin tope cuando la campaña no indica ninguno: de 300.000 a 2.000.000 de vistas en las campañas de clipping que se mostraban el 2026-09-24, sobre todo 500.000 o 1.000.000"
+            "en": "set per campaign as a maximum of paid views per video, with no cap when a campaign states none: 100,000–2,000,000 views on the clipping campaigns shown on 2026-11-14, mostly 500,000 or 1,000,000",
+            "es": "lo fija cada campaña como un máximo de vistas pagadas por video, sin tope cuando la campaña no indica ninguno: de 100.000 a 2.000.000 de vistas en las campañas de clipping que se mostraban el 2026-11-14, sobre todo 500.000 o 1.000.000"
           },
           "source": {
             "url": "https://konten.com/campaigns",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "fee": {
@@ -5564,7 +5469,7 @@
           "value": 20,
           "source": {
             "url": "https://konten.com/terms",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "minPayout": {
@@ -5574,7 +5479,7 @@
           },
           "source": {
             "url": "https://konten.com/terms",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "payoutMethods": {
@@ -5584,7 +5489,7 @@
           },
           "source": {
             "url": "https://konten.com/terms",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "cis": {
@@ -5594,7 +5499,7 @@
           "state": "no",
           "source": {
             "url": "https://konten.com/terms",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "followers": {
@@ -5605,7 +5510,7 @@
           "state": "no",
           "source": {
             "url": "https://konten.com/blog/kenapa-cuma-rank-tertentu-yang-bisa-ikut",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "escrow": {
@@ -5616,25 +5521,25 @@
           "state": "yes",
           "source": {
             "url": "https://konten.com/brand-rules",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "networks": {
           "text": {
-            "en": "TikTok, Instagram Reels and YouTube Shorts"
+            "en": "TikTok, Instagram Reels, YouTube Shorts and Threads (terms updated 21 October 2026); one campaign on its list on 2026-11-14 also names Facebook"
           },
           "source": {
             "url": "https://konten.com/terms",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "verification": {
           "text": {
-            "en": "accounts are verified by a six-digit bio or channel code; the platform's own view count is final, and earnings wait five calendar days before they can be withdrawn (terms; the home page FAQ still says seven)"
+            "en": "accounts are verified by a six-digit bio or channel code; the platform's own view count is final, and earnings wait five calendar days before they can be withdrawn (terms and home page FAQ; a July payout guide still says about seven)"
           },
           "source": {
             "url": "https://konten.com/terms",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "india": {
@@ -5644,7 +5549,7 @@
           "state": "no",
           "source": {
             "url": "https://konten.com/terms",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "pakistan": {
@@ -5654,7 +5559,7 @@
           "state": "no",
           "source": {
             "url": "https://konten.com/terms",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "bangladesh": {
@@ -5664,7 +5569,7 @@
           "state": "no",
           "source": {
             "url": "https://konten.com/terms",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "nigeria": {
@@ -5674,7 +5579,7 @@
           "state": "no",
           "source": {
             "url": "https://konten.com/terms",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "kenya": {
@@ -5684,7 +5589,7 @@
           "state": "no",
           "source": {
             "url": "https://konten.com/terms",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "mena": {
@@ -5694,7 +5599,7 @@
           "state": "no",
           "source": {
             "url": "https://konten.com/terms",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "indonesia": {
@@ -5704,7 +5609,7 @@
           "state": "yes",
           "source": {
             "url": "https://konten.com/terms",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "philippines": {
@@ -5714,29 +5619,29 @@
           "state": "no",
           "source": {
             "url": "https://konten.com/terms",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "cpm": {
           "text": {
-            "en": "Rp1,500–Rp7,500 (≈$0.08–$0.42)",
-            "es": "Rp1500–Rp7500 (≈US$0,08–US$0,42)"
+            "en": "Rp1,000–Rp12,000 (≈$0.06–$0.67)",
+            "es": "Rp1000–Rp12.000 (≈US$0,06–US$0,67)"
           },
-          "value": 0.42,
+          "value": 0.67,
           "source": {
             "url": "https://konten.com/campaigns",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "payoutSpeed": {
           "text": {
-            "en": "withdrawable 5 calendar days after each nightly count of an approved clip (its home page FAQ says 7); cash-out targeted within 1 working day, not guaranteed",
-            "es": "se puede retirar 5 días naturales después de cada conteo nocturno de un clip aprobado (las preguntas frecuentes de su página principal dicen 7); el cobro se procura hacer en 1 día laborable, sin garantía"
+            "en": "withdrawable 5 calendar days after each nightly count of an approved clip (terms and home page FAQ; its July payout guide still says about 7); cash-out targeted within 1 working day, not guaranteed",
+            "es": "se puede retirar 5 días naturales después de cada conteo nocturno de un clip aprobado (condiciones y preguntas frecuentes de su página principal; su guía de pagos de julio todavía dice unos 7); el cobro se procura hacer en 1 día laborable, sin garantía"
           },
           "value": null,
           "source": {
             "url": "https://konten.com/terms",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         }
       },
@@ -6270,27 +6175,27 @@
       "id": "ssemble-clip-rewards",
       "name": "Ssemble Clip Rewards",
       "url": "https://www.ssemble.com/clip-rewards",
-      "kind": "campaign board inside an AI clipping editor (own campaigns plus Whop partner campaigns)",
+      "kind": "campaign board inside an AI clipping editor (own campaigns plus partner campaigns from Content Rewards, Clipster and Promote.fun)",
       "founded": "not published",
       "operator": "Ssemble Inc., a Delaware corporation, San Francisco, CA (terms); governed by the Federal Arbitration Act, US federal law and California law",
       "bestFor": {
-        "en": "Ssemble editor users with a payout account in its 39 listed countries",
-        "es": "usuarios del editor de Ssemble con una cuenta de cobro en uno de los 39 países de su lista"
+        "en": "Ssemble editor users with a payout account in its 51 listed countries",
+        "es": "usuarios del editor de Ssemble con una cuenta de cobro en uno de los 51 países de su lista"
       },
       "summary": {
-        "en": "A clipping campaign board inside Ssemble's AI clipping editor, run by Ssemble Inc. (Delaware). Ssemble-hosted campaigns pay a standard $1 per 1,000 verified views; the board also lists Whop partner campaigns that pay out on Whop.",
-        "es": "Un listado de campañas de clipping dentro del editor de clips con IA de Ssemble, gestionado por Ssemble Inc. (Delaware). Las campañas alojadas por Ssemble pagan una tarifa estándar de US$1 por cada 1000 vistas verificadas; el listado también incluye campañas de socios de Whop que pagan en Whop."
+        "en": "A clipping campaign board inside Ssemble's AI clipping editor, run by Ssemble Inc. (Delaware). Ssemble-hosted campaigns pay $1 per 1,000 verified views through Stripe; most of the board is partner campaigns from Content Rewards, Clipster and Promote.fun, which are joined and paid on the partner's site.",
+        "es": "Un listado de campañas de clipping dentro del editor de clips con IA de Ssemble, gestionado por Ssemble Inc. (Delaware). Las campañas alojadas por Ssemble pagan US$1 por cada 1000 vistas verificadas, a través de Stripe; la mayor parte del listado son campañas de socios, de Content Rewards, Clipster y Promote.fun, en las que te unes y cobras en el sitio del socio."
       },
       "fields": {
         "rate": {
           "text": {
-            "en": "$0.50–$2 per 1,000 views on the campaigns listed on its Clip Rewards board, set per campaign (its FAQ says roughly $0.35–$4); Ssemble-hosted campaigns use a standard $1 per 1,000 verified views",
-            "es": "US$0,50–US$2 por cada 1000 vistas en las campañas de su listado Clip Rewards, la fija cada campaña (sus preguntas frecuentes hablan de aproximadamente US$0,35–US$4); las campañas alojadas por Ssemble usan una tarifa estándar de US$1 por cada 1000 vistas verificadas"
+            "en": "$1 per 1,000 views on all 27 Ssemble-hosted campaigns on its public board on 2026-11-14; its Clip Rewards page prints $0.10–$15 for the whole board, depending on the campaign (its FAQ still says roughly $0.35–$4), and the other 233 cards were partner campaigns paid on the partner's site",
+            "es": "US$1 por cada 1000 vistas en las 27 campañas alojadas por Ssemble de su listado público el 2026-11-14; su página Clip Rewards indica US$0,10–US$15 para todo el listado, según la campaña (sus preguntas frecuentes todavía hablan de aproximadamente US$0,35–US$4), y las otras 233 fichas eran campañas de socios que se pagan en el sitio del socio"
           },
-          "value": 0.5,
+          "value": 1,
           "source": {
             "url": "https://www.ssemble.com/clip-rewards",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "threshold": {
@@ -6301,49 +6206,50 @@
           "value": 1000,
           "source": {
             "url": "https://www.ssemble.com/clip-rewards",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "cap": {
           "text": {
-            "en": ""
+            "en": "no per-clip cap published; a clip earns for 30 days after posting, and views stop counting when the campaign ends or its budget runs out (Ssemble-hosted campaigns)",
+            "es": "no publica un tope por clip; un clip gana durante 30 días después de publicarse, y las vistas dejan de contarse cuando termina la campaña o se agota su presupuesto (campañas alojadas por Ssemble)"
           },
           "value": null,
           "source": {
-            "url": "https://www.ssemble.com/clip-rewards",
-            "date": "2026-09-24"
+            "url": "https://help.ssemble.com/docs/monetization/how-clip-rewards-campaigns-track-and-pay-clips",
+            "date": "2026-11-14"
           }
         },
         "fee": {
           "text": {
-            "en": "not published for clippers; the creator page says 100% of the $100 Clip Test budget goes to clippers",
-            "es": "no publicada para clippers; la página para creadores dice que el 100% del presupuesto de US$100 de Clip Test va a los clippers"
+            "en": "not published for clippers; the creator page says 100% of the $100 Clip Test budget goes to clippers, and larger campaigns add a 10% platform fee for the creator; clips for Ssemble-hosted campaigns must be made in Ssemble, which uses credits, with one free clip request per live campaign",
+            "es": "no publicada para clippers; la página para creadores dice que el 100% del presupuesto de US$100 de Clip Test va a los clippers, y que las campañas más grandes suman una comisión de plataforma del 10% a cargo del creador; los clips de las campañas alojadas por Ssemble tienen que hacerse en Ssemble, que consume créditos, con una solicitud de clip gratis por cada campaña activa"
           },
           "value": null,
           "source": {
             "url": "https://www.ssemble.com/clip-rewards/creator",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "minPayout": {
           "text": {
-            "en": "$20 accumulated (Ssemble-hosted campaigns; the Clipper page says $10)",
-            "es": "US$20 acumulados (campañas alojadas por Ssemble; la página para clippers dice US$10)"
+            "en": "$10 accumulated; its help centre says the payout is sent once the balance reaches that amount (Ssemble-hosted campaigns)",
+            "es": "US$10 acumulados; su centro de ayuda dice que el pago se envía cuando el saldo llega a ese monto (campañas alojadas por Ssemble)"
           },
-          "value": 20,
+          "value": 10,
           "source": {
             "url": "https://www.ssemble.com/clip-rewards",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "payoutMethods": {
           "text": {
-            "en": "Stripe payout to a bank account (identity + bank setup) for Ssemble-hosted campaigns; partner campaigns pay out on Whop (the Clipper page says PayPal)",
-            "es": "pago por Stripe a una cuenta bancaria (configuración de identidad y banco) en las campañas alojadas por Ssemble; las campañas de socios pagan en Whop (la página para clippers dice PayPal)"
+            "en": "Stripe payout to a bank account (identity + bank setup) for Ssemble-hosted campaigns; partner campaigns are joined and paid on the partner's site (Content Rewards, Clipster, Promote.fun); its Clipper page names both Stripe and PayPal",
+            "es": "pago por Stripe a una cuenta bancaria (configuración de identidad y banco) en las campañas alojadas por Ssemble; en las campañas de socios, te unes y cobras en el sitio del socio (Content Rewards, Clipster, Promote.fun); su página para clippers nombra tanto Stripe como PayPal"
           },
           "source": {
             "url": "https://www.ssemble.com/clip-rewards",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "cis": {
@@ -6353,7 +6259,7 @@
           "state": "no",
           "source": {
             "url": "https://www.ssemble.com/clip-rewards",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "followers": {
@@ -6364,7 +6270,7 @@
           "state": "no",
           "source": {
             "url": "https://www.ssemble.com/clipper",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "escrow": {
@@ -6375,45 +6281,45 @@
           "state": "yes",
           "source": {
             "url": "https://www.ssemble.com/clip-rewards/creator",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "networks": {
           "text": {
-            "en": "TikTok, Instagram Reels, YouTube Shorts, X (set per campaign)"
+            "en": "TikTok, Instagram Reels and YouTube Shorts on Ssemble-hosted campaigns (its help centre says only these are paid); its FAQ also names X, which appears on partner campaigns"
           },
           "source": {
-            "url": "https://www.ssemble.com/clip-rewards",
-            "date": "2026-09-24"
+            "url": "https://help.ssemble.com/docs/monetization/how-clip-rewards-campaigns-work",
+            "date": "2026-11-14"
           }
         },
         "verification": {
           "text": {
-            "en": "connect your socials; bot and low-quality views are filtered out; on Ssemble-hosted campaigns earnings become payable 5 days after posting; partner-campaign clips are submitted and tracked on Whop"
+            "en": "on Ssemble-hosted campaigns a clip must be made in Ssemble and posted through Ssemble (no link to submit); only organic views count, and bot and paid views are filtered out; earnings become payable 5 days after posting, and under its terms a post deleted, made private or removed before it is paid is not paid; partner-campaign clips are submitted and tracked on the partner's site"
           },
           "source": {
-            "url": "https://www.ssemble.com/clip-rewards",
-            "date": "2026-09-24"
+            "url": "https://help.ssemble.com/docs/monetization/how-clip-rewards-campaigns-track-and-pay-clips",
+            "date": "2026-11-14"
           }
         },
         "india": {
           "text": {
-            "en": "not on Ssemble's Stripe payout country list (Ssemble-hosted campaigns)"
+            "en": "on Ssemble's Stripe payout list of 51 countries (Ssemble-hosted campaigns)"
           },
-          "state": "no",
+          "state": "yes",
           "source": {
             "url": "https://www.ssemble.com/clip-rewards",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "pakistan": {
           "text": {
-            "en": "not on Ssemble's Stripe payout country list (Ssemble-hosted campaigns)"
+            "en": "on Ssemble's Stripe payout list of 51 countries (Ssemble-hosted campaigns)"
           },
-          "state": "no",
+          "state": "yes",
           "source": {
             "url": "https://www.ssemble.com/clip-rewards",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "bangladesh": {
@@ -6423,104 +6329,104 @@
           "state": "no",
           "source": {
             "url": "https://www.ssemble.com/clip-rewards",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "nigeria": {
           "text": {
-            "en": "not on Ssemble's Stripe payout country list (Ssemble-hosted campaigns)"
+            "en": "on Ssemble's Stripe payout list of 51 countries (Ssemble-hosted campaigns)"
           },
-          "state": "no",
+          "state": "yes",
           "source": {
             "url": "https://www.ssemble.com/clip-rewards",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "kenya": {
           "text": {
-            "en": "not on Ssemble's Stripe payout country list (Ssemble-hosted campaigns)"
+            "en": "on Ssemble's Stripe payout list of 51 countries (Ssemble-hosted campaigns)"
           },
-          "state": "no",
+          "state": "yes",
           "source": {
             "url": "https://www.ssemble.com/clip-rewards",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "mena": {
           "text": {
-            "en": "not on Ssemble's Stripe payout country list (Ssemble-hosted campaigns)"
+            "en": "the UAE and Egypt are on Ssemble's Stripe payout list of 51 countries, as is Turkey; no other Arab country is named (Ssemble-hosted campaigns)"
           },
-          "state": "no",
+          "state": "partial",
           "source": {
             "url": "https://www.ssemble.com/clip-rewards",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "indonesia": {
           "text": {
-            "en": "not on Ssemble's Stripe payout country list (Ssemble-hosted campaigns)"
+            "en": "on Ssemble's Stripe payout list of 51 countries (Ssemble-hosted campaigns)"
           },
-          "state": "no",
+          "state": "yes",
           "source": {
             "url": "https://www.ssemble.com/clip-rewards",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "philippines": {
           "text": {
-            "en": "not on Ssemble's Stripe payout country list (Ssemble-hosted campaigns)"
+            "en": "on Ssemble's Stripe payout list of 51 countries (Ssemble-hosted campaigns)"
           },
-          "state": "no",
+          "state": "yes",
           "source": {
             "url": "https://www.ssemble.com/clip-rewards",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "cpm": {
           "text": {
-            "en": "$0.50–$2 on its board, $1 on its own campaigns",
-            "es": "US$0,50–US$2 en su listado, US$1 en sus propias campañas"
+            "en": "$1 on its own campaigns; its Clip Rewards page prints $0.10–$15 for the whole board, partner campaigns included",
+            "es": "US$1 en sus propias campañas; su página Clip Rewards indica US$0,10–US$15 para todo el listado, incluidas las campañas de socios"
           },
-          "value": 2,
+          "value": 1,
           "source": {
             "url": "https://www.ssemble.com/clip-rewards",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "payoutSpeed": {
           "text": {
-            "en": "payable 5 days after posting, after bot and abuse review (Ssemble-hosted campaigns); partner campaigns pay out on Whop under their terms",
-            "es": "se puede cobrar 5 días después de publicar, tras la revisión de bots y abusos (campañas alojadas por Ssemble); las campañas de socios pagan en Whop con sus propias condiciones"
+            "en": "payable 5 days after posting, after bot and abuse review, and sent once the balance reaches $10 (Ssemble-hosted campaigns); partner campaigns pay out on the partner's site under their terms",
+            "es": "se puede cobrar 5 días después de publicar, tras la revisión de bots y abusos, y se envía cuando el saldo llega a US$10 (campañas alojadas por Ssemble); las campañas de socios pagan en el sitio del socio, con sus propias condiciones"
           },
           "value": null,
           "source": {
             "url": "https://www.ssemble.com/clip-rewards",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         }
       },
       "pros": {
         "en": [
-          "Published payout rules for Ssemble-hosted campaigns: 1,000-view minimum per clip, 5-day review, $20 minimum payout",
+          "Published payout rules for Ssemble-hosted campaigns: 1,000-view minimum per clip, 5-day review, $10 minimum payout",
           "Creator budgets are prepaid and, per Ssemble, held in escrow until views are verified",
           "Campaign clips are cut in an AI editor that auto-crops and captions long videos"
         ],
         "es": [
-          "Reglas de pago publicadas para las campañas alojadas por Ssemble: mínimo de 1000 vistas por clip, revisión de 5 días y pago mínimo de US$20",
+          "Reglas de pago publicadas para las campañas alojadas por Ssemble: mínimo de 1000 vistas por clip, revisión de 5 días y pago mínimo de US$10",
           "Los presupuestos de los creadores se pagan por adelantado y, según Ssemble, quedan en depósito en garantía hasta que se verifican las vistas",
           "Los clips de campaña se cortan en un editor con IA que recorta y subtitula automáticamente los videos largos"
         ]
       },
       "cons": {
         "en": [
-          "Partner campaigns on the board are submitted, tracked and paid out on Whop",
-          "Ssemble-hosted payouts need a payout account in one of 39 listed countries (US, Canada, Mexico, Brazil, most of Europe, Australia, New Zealand, Japan, Singapore, Hong Kong)",
-          "Ssemble's own pages disagree on payout terms (Stripe and $20 on Clip Rewards vs PayPal and $10 on the Clipper page)"
+          "Most of the board is partner campaigns (233 of 260 cards on 2026-11-14), joined and paid on the partner's site",
+          "Ssemble-hosted payouts need a payout account in one of 51 listed countries (the US, Canada, Mexico, the UK, Switzerland, Norway, the EU, Australia, New Zealand, Japan, Singapore, Hong Kong and 13 more, among them India, Pakistan, Nigeria and Kenya)",
+          "Ssemble's own pages disagree: its Clipper page names both Stripe and PayPal as the payout rail and says campaigns pay from view 1, while its Clip Rewards FAQ sets a 1,000-view minimum per clip"
         ],
         "es": [
-          "Las campañas de socios del listado se envían, se siguen y se pagan en Whop",
-          "Los pagos de campañas alojadas por Ssemble requieren una cuenta de cobro en uno de los 39 países de su lista (EE. UU., Canadá, México, Brasil, la mayor parte de Europa, Australia, Nueva Zelanda, Japón, Singapur, Hong Kong)",
-          "Las propias páginas de Ssemble no coinciden en las condiciones de pago (Stripe y US$20 en Clip Rewards frente a PayPal y US$10 en la página para clippers)"
+          "La mayor parte del listado son campañas de socios (233 de 260 fichas el 2026-11-14), en las que te unes y cobras en el sitio del socio",
+          "Los pagos de campañas alojadas por Ssemble requieren una cuenta de cobro en uno de los 51 países de su lista (EE. UU., Canadá, México, el Reino Unido, Suiza, Noruega, la UE, Australia, Nueva Zelanda, Japón, Singapur, Hong Kong y 13 más, entre ellos la India, Pakistán, Nigeria y Kenia)",
+          "Las propias páginas de Ssemble no coinciden: su página para clippers nombra a la vez Stripe y PayPal como vía de pago y dice que las campañas pagan desde la primera vista, mientras que las preguntas frecuentes de Clip Rewards fijan un mínimo de 1000 vistas por clip"
         ]
       }
     },
@@ -6548,29 +6454,29 @@
           "value": 0.1,
           "source": {
             "url": "https://findclout.com/blog/what-is-cloutbot-meme-page-automation-tool",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "threshold": {
           "text": {
-            "en": "no minimum view count per post (clipper page)",
-            "es": "sin mínimo de vistas por publicación (página para clippers)"
+            "en": "its blog (27 September 2026) says some campaigns set a minimum total of views per creator before any views pay; its clipper page still says no minimum view count per post",
+            "es": "su blog (27 de septiembre de 2026) dice que algunas campañas fijan un mínimo total de vistas por creador antes de que se pague ninguna vista; su página para clippers sigue diciendo que no hay mínimo de vistas por publicación"
           },
-          "value": 0,
+          "value": null,
           "source": {
-            "url": "https://findclout.com/clipper",
-            "date": "2026-09-24"
+            "url": "https://findclout.com/blog/clipping-platforms-weekly-payouts",
+            "date": "2026-11-14"
           }
         },
         "cap": {
           "text": {
-            "en": "no payout cap stated on its clipper page; terms let it set per-clip and per-account caps",
-            "es": "su página para clippers no indica un tope de pago; las condiciones le permiten fijar topes por clip y por cuenta"
+            "en": "its blog (27 September 2026) says each campaign's rules state a per-post view cap; its clipper page still says no payout caps; terms let it set per-clip and per-account caps",
+            "es": "su blog (27 de septiembre de 2026) dice que las reglas de cada campaña indican un tope de vistas por publicación; su página para clippers sigue diciendo que no hay topes de pago; las condiciones le permiten fijar topes por clip y por cuenta"
           },
           "value": null,
           "source": {
-            "url": "https://findclout.com/clipper",
-            "date": "2026-09-24"
+            "url": "https://findclout.com/blog/clipping-platforms-weekly-payouts",
+            "date": "2026-11-14"
           }
         },
         "fee": {
@@ -6581,7 +6487,7 @@
           "value": 0,
           "source": {
             "url": "https://app.findclout.com/for-creators",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "minPayout": {
@@ -6592,17 +6498,17 @@
           "value": 0,
           "source": {
             "url": "https://app.findclout.com/how-it-works",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "payoutMethods": {
           "text": {
-            "en": "PayPal, Venmo or a crypto wallet (coin and network not stated) per its privacy policy, which names PayPal for creator payouts; its September 2026 blog says creators are paid 'in dollars rather than to an anonymous wallet'",
-            "es": "PayPal, Venmo o una billetera cripto (no indica moneda ni red) según su política de privacidad, que nombra PayPal para los pagos a creadores; su blog de septiembre de 2026 dice que a los creadores se les paga «in dollars rather than to an anonymous wallet»"
+            "en": "paid through the FindClout Payment Portal after identity verification and a W-9 or W-8BEN tax form (its blog, 27 September 2026); its privacy policy lists PayPal and Venmo handles and crypto wallet addresses as payout details and names PayPal for creator payouts; coin and network not stated",
+            "es": "se paga a través del FindClout Payment Portal, tras la verificación de identidad y un formulario fiscal W-9 o W-8BEN (su blog, 27 de septiembre de 2026); su política de privacidad incluye entre los datos de pago los nombres de usuario de PayPal y Venmo y las direcciones de billeteras cripto, y nombra PayPal para los pagos a creadores; no indica moneda ni red"
           },
           "source": {
-            "url": "https://findclout.com/privacypolicy",
-            "date": "2026-09-24"
+            "url": "https://findclout.com/blog/clipping-payout-methods",
+            "date": "2026-11-14"
           }
         },
         "cis": {
@@ -6612,18 +6518,18 @@
           "state": "unknown",
           "source": {
             "url": "https://findclout.com/termsofservice",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "followers": {
           "text": {
-            "en": "none required (FAQ), but its invite-only board says 'Built for big pages. Not everyone gets in.'; brands can set a per-campaign minimum (homepage example: 'Min creator followers 100K+')",
-            "es": "no se exigen (preguntas frecuentes), pero su listado solo por invitación dice «Built for big pages. Not everyone gets in.»; las marcas pueden fijar un mínimo por campaña (ejemplo de la página principal: «Min creator followers 100K+»)"
+            "en": "none required (FAQ), but its invite-only board says 'Built for big pages. Not everyone gets in.'; its blog says a page must clear a 40% US-audience floor and that roughly 19 of every 20 applicants are not accepted",
+            "es": "no se exigen (preguntas frecuentes), pero su listado solo por invitación dice «Built for big pages. Not everyone gets in.»; su blog dice que una página tiene que superar un mínimo del 40% de audiencia de EE. UU. y que aproximadamente 19 de cada 20 solicitantes no son aceptados"
           },
           "state": "partial",
           "source": {
             "url": "https://app.findclout.com/faq",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "escrow": {
@@ -6634,7 +6540,7 @@
           "state": "partial",
           "source": {
             "url": "https://findclout.com/termsofservice",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "networks": {
@@ -6643,16 +6549,16 @@
           },
           "source": {
             "url": "https://app.findclout.com/faq",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "verification": {
           "text": {
-            "en": "application with audience review (US or tier-1 audience required); views tracked using platform APIs and scraping, with screenshot proofs on campaign pages; terms allow ID and tax-form checks, and its blog says creators are KYC-verified and tax-onboarded before any payout"
+            "en": "application with audience review: a page connects its Instagram account and must clear a 40% US-audience floor (its blog); views tracked using platform APIs and scraping; terms allow ID and tax-form checks, and its blog says creators are KYC-verified and tax-onboarded before any payout"
           },
           "source": {
             "url": "https://app.findclout.com/",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "india": {
@@ -6662,7 +6568,7 @@
           "state": "unknown",
           "source": {
             "url": "https://findclout.com/termsofservice",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "pakistan": {
@@ -6672,7 +6578,7 @@
           "state": "unknown",
           "source": {
             "url": "https://findclout.com/termsofservice",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "bangladesh": {
@@ -6682,7 +6588,7 @@
           "state": "unknown",
           "source": {
             "url": "https://findclout.com/termsofservice",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "nigeria": {
@@ -6692,7 +6598,7 @@
           "state": "unknown",
           "source": {
             "url": "https://findclout.com/termsofservice",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "kenya": {
@@ -6702,7 +6608,7 @@
           "state": "unknown",
           "source": {
             "url": "https://findclout.com/termsofservice",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "mena": {
@@ -6712,7 +6618,7 @@
           "state": "unknown",
           "source": {
             "url": "https://findclout.com/termsofservice",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "indonesia": {
@@ -6722,7 +6628,7 @@
           "state": "unknown",
           "source": {
             "url": "https://findclout.com/termsofservice",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "philippines": {
@@ -6732,7 +6638,7 @@
           "state": "unknown",
           "source": {
             "url": "https://findclout.com/termsofservice",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "cpm": {
@@ -6743,28 +6649,28 @@
           "value": 0.15,
           "source": {
             "url": "https://findclout.com/blog/what-is-cloutbot-meme-page-automation-tool",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "payoutSpeed": {
           "text": {
-            "en": "paid on a weekly cycle, funds typically sent within 1–3 business days (FAQ); the first payout waits for KYC and tax onboarding (its blog); terms promise no payout timing",
-            "es": "se paga en un ciclo semanal y el dinero suele enviarse en 1–3 días hábiles (preguntas frecuentes); el primer pago espera a la verificación de identidad (KYC) y al alta fiscal (su blog); las condiciones no prometen ningún plazo"
+            "en": "paid on a weekly cycle, funds typically sent within 1–3 business days (FAQ); its blog says every payout passes an approval step and gives no day count; the first payout waits for identity verification and a tax form; terms promise no payout timing",
+            "es": "se paga en un ciclo semanal y el dinero suele enviarse en 1–3 días hábiles (preguntas frecuentes); su blog dice que cada pago pasa por una etapa de aprobación y no indica cuántos días tarda; el primer pago espera a la verificación de identidad y a un formulario fiscal; las condiciones no prometen ningún plazo"
           },
           "source": {
             "url": "https://app.findclout.com/faq",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         }
       },
       "pros": {
         "en": [
-          "No minimum view count and no payout cap stated on its clipper page",
+          "Its clipper page states no minimum view count and no payout cap, though its own blog says campaigns set a per-post view cap and some a per-creator view minimum",
           "0% commission on creator earnings; weekly payout cycle (FAQ)",
           "Brands fund each campaign before it goes live (For Creators page); terms allow clawbacks"
         ],
         "es": [
-          "Su página para clippers no indica un mínimo de vistas ni un tope de pago",
+          "Su página para clippers dice que no hay mínimo de vistas ni tope de pago, aunque su propio blog dice que las campañas fijan un tope de vistas por publicación y algunas, un mínimo de vistas por creador",
           "Comisión del 0% sobre las ganancias de los creadores; ciclo de pago semanal (preguntas frecuentes)",
           "Las marcas financian cada campaña antes de que se publique (página For Creators); las condiciones permiten recuperar pagos"
         ]
@@ -6800,67 +6706,67 @@
       "fields": {
         "rate": {
           "text": {
-            "en": "R$1–R$3 per 1,000 views on the five per-view championships open on its Discover page; each organizer sets the rate, and the other open championships pay by ranking",
-            "es": "R$1–R$3 por cada 1000 vistas en los cinco campeonatos por vistas abiertos en su página Discover; cada organizador fija la tarifa, y los demás campeonatos abiertos pagan por clasificación"
+            "en": "R$0.50–R$2.50 per 1,000 views on the eleven per-view championships on its Discover page on 2026-11-14 (nine running, two scheduled), R$1 on seven; each organizer sets the rate, and the other five open championships pay by ranking",
+            "es": "R$0,50–R$2,50 por cada 1000 vistas en los once campeonatos por vistas de su página Discover el 2026-11-14 (nueve en curso y dos programados), R$1 en siete; cada organizador fija la tarifa, y los otros cinco campeonatos abiertos pagan por clasificación"
           },
-          "value": 0.19,
+          "value": 0.1,
           "source": {
             "url": "https://cut.pro/en/championships/discover",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "threshold": {
           "text": {
-            "en": "set per championship: 1,000 or 5,000 views per video on three of the five open per-view championships, none shown on the other two; the 5,000 one says 20,000 in its own description",
-            "es": "lo fija cada campeonato: 1000 o 5000 vistas por video en tres de los cinco campeonatos por vistas abiertos, ninguno en los otros dos; el de 5000 dice 20.000 en su propia descripción"
+            "en": "set per championship: 1,000, 3,000 or 5,000 views per video on six of the eleven per-view championships on its Discover page on 2026-11-14, none shown on the other five",
+            "es": "lo fija cada campeonato: 1000, 3000 o 5000 vistas por video en seis de los once campeonatos por vistas de su página Discover el 2026-11-14, ninguno indicado en los otros cinco"
           },
           "value": null,
           "source": {
-            "url": "https://cut.pro/en/championships/dr-renan-botelho-3-0-102555617524920320",
-            "date": "2026-09-24"
+            "url": "https://cut.pro/en/championships/erico-rocha-122325743488913409",
+            "date": "2026-11-14"
           }
         },
         "cap": {
           "text": {
-            "en": "set per championship: R$200–R$270 per video on the five open per-view championships",
-            "es": "lo fija cada campeonato: R$200–R$270 por video en los cinco campeonatos por vistas abiertos"
+            "en": "set per championship: R$150–R$300 per video on nine of the eleven per-view championships on its Discover page on 2026-11-14; two show no cap",
+            "es": "lo fija cada campeonato: R$150–R$300 por video en nueve de los once campeonatos por vistas de su página Discover el 2026-11-14; dos no indican tope"
           },
           "value": null,
           "source": {
             "url": "https://cut.pro/en/championships/discover",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "fee": {
           "text": {
-            "en": "organizers pay a 20% service fee on top of cash prizes; announced prizes are gross, subject only to legally required tax withholding (policy)",
-            "es": "los organizadores pagan, además de los premios en dinero, una comisión de servicio del 20%; los premios anunciados son brutos, solo sujetos a la retención de impuestos que exija la ley (política)"
+            "en": "organizers pay a 20% service fee on top of cash prizes; announced prizes are gross: no income tax is withheld while what you withdraw in a month stays within R$5,000, and if you withdraw more, tax is calculated on the month's total and withheld from the withdrawal; each PIX withdrawal after the first in a month costs R$0.99 (policy of 10 October 2026)",
+            "es": "los organizadores pagan, además de los premios en dinero, una comisión de servicio del 20%; los premios anunciados son brutos: no se retiene impuesto sobre la renta mientras lo que retires en un mes no pase de R$5000, y si retiras más, el impuesto se calcula sobre el total del mes y se retiene del retiro; cada retiro por PIX después del primero de cada mes cuesta R$0,99 (política del 10 de octubre de 2026)"
           },
           "value": 0,
           "source": {
             "url": "https://cut.pro/championships-policy",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "minPayout": {
           "text": {
-            "en": "no withdrawal minimum per the help center (one PIX withdrawal request per week); the policy lets per-view championships set a minimum per payment cycle",
-            "es": "sin retiro mínimo según el centro de ayuda (una solicitud de retiro por PIX a la semana); la política permite que los campeonatos por vistas fijen un mínimo por ciclo de pago"
+            "en": "no withdrawal minimum: the policy of 10 October 2026 lets you withdraw whenever you like (\"saca quando quiser, sem valor mínimo\"); the help center, last updated 18 September 2026, still allows one PIX withdrawal request a week",
+            "es": "sin retiro mínimo: la política del 10 de octubre de 2026 te deja retirar cuando quieras («saca quando quiser, sem valor mínimo»); el centro de ayuda, actualizado por última vez el 18 de septiembre de 2026, todavía permite una sola solicitud de retiro por PIX a la semana"
           },
           "value": 0,
           "source": {
-            "url": "https://cut.pro/en/help/prizes-and-submissions",
-            "date": "2026-09-24"
+            "url": "https://cut.pro/championships-policy",
+            "date": "2026-11-14"
           }
         },
         "payoutMethods": {
           "text": {
-            "en": "PIX in BRL, processed by Asaas, to a PIX key in the clipper's own name; credit championships pay Cut.Pro credits, which cannot be converted to cash",
-            "es": "PIX en reales, procesado por Asaas, a una clave PIX a nombre del propio clipper; los campeonatos de créditos pagan en créditos de Cut.Pro, que no se pueden convertir en dinero"
+            "en": "PIX in BRL to a PIX key in the clipper's own name, through a partner payment institution the policy no longer names; credit championships pay Cut.Pro credits, which cannot be converted to cash",
+            "es": "PIX en reales a una clave PIX a nombre del propio clipper, a través de una institución de pago asociada que la política ya no nombra; los campeonatos de créditos pagan en créditos de Cut.Pro, que no se pueden convertir en dinero"
           },
           "source": {
             "url": "https://cut.pro/championships-policy",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "cis": {
@@ -6870,7 +6776,7 @@
           "state": "no",
           "source": {
             "url": "https://cut.pro/terms",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "followers": {
@@ -6881,7 +6787,7 @@
           "state": "no",
           "source": {
             "url": "https://cut.pro/en/championships/discover",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "escrow": {
@@ -6892,25 +6798,25 @@
           "state": "yes",
           "source": {
             "url": "https://cut.pro/championships-policy",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "networks": {
           "text": {
-            "en": "TikTok, Instagram, YouTube, Facebook, Kwai (organizer picks per championship; help center also lists Pinterest)"
+            "en": "TikTok, Instagram, YouTube, Facebook, Kwai and, on two of the 16 open championships on 2026-11-14, X (organizer picks per championship; help center also lists Pinterest)"
           },
           "source": {
             "url": "https://cut.pro/en/championships/discover",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "verification": {
           "text": {
-            "en": "read-only OAuth link of TikTok, Instagram, Facebook or Pinterest accounts (YouTube and Kwai by pasted link); required hashtags; organizer approves each video; anti-fraud review; 18+ (policy; the help center also accepts a guardian's authorization); extra KYC possible for prizes of R$10,000 or more; championship pages also ask for a description code (policy: not needed)"
+            "en": "read-only OAuth link of TikTok, Instagram, Facebook or Pinterest accounts (the policy puts YouTube and Kwai on a pasted link; the open championship pages on 2026-11-14 asked to connect a YouTube account as well); required hashtags; organizer approves each video; anti-fraud review; 18+, and the policy of 10 October 2026 rules out a guardian's authorization, which a help-center article of 26 July 2026 still accepts; extra KYC possible for prizes of R$10,000 or more; no code in the video is needed"
           },
           "source": {
             "url": "https://cut.pro/championships-policy",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "india": {
@@ -6920,7 +6826,7 @@
           "state": "no",
           "source": {
             "url": "https://cut.pro/championships-policy",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "pakistan": {
@@ -6930,7 +6836,7 @@
           "state": "no",
           "source": {
             "url": "https://cut.pro/championships-policy",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "bangladesh": {
@@ -6940,7 +6846,7 @@
           "state": "no",
           "source": {
             "url": "https://cut.pro/championships-policy",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "nigeria": {
@@ -6950,7 +6856,7 @@
           "state": "no",
           "source": {
             "url": "https://cut.pro/championships-policy",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "kenya": {
@@ -6960,7 +6866,7 @@
           "state": "no",
           "source": {
             "url": "https://cut.pro/championships-policy",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "mena": {
@@ -6970,7 +6876,7 @@
           "state": "no",
           "source": {
             "url": "https://cut.pro/championships-policy",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "indonesia": {
@@ -6980,7 +6886,7 @@
           "state": "no",
           "source": {
             "url": "https://cut.pro/championships-policy",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "philippines": {
@@ -6990,28 +6896,28 @@
           "state": "no",
           "source": {
             "url": "https://cut.pro/championships-policy",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "cpm": {
           "text": {
-            "en": "R$1–R$3 (≈$0.19–$0.58)",
-            "es": "R$1–R$3 (≈US$0,19–US$0,58)"
+            "en": "R$0.50–R$2.50 (≈$0.10–$0.49)",
+            "es": "R$0,50–R$2,50 (≈US$0,10–US$0,49)"
           },
-          "value": 0.58,
+          "value": 0.49,
           "source": {
             "url": "https://cut.pro/en/championships/discover",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "payoutSpeed": {
           "text": {
-            "en": "policy: per-view pay daily or when the organizer triggers it; fixed-place prizes after the close plus up to 7 business days' review; newer help center: cash goes to a wallet, one team-reviewed PIX withdrawal a week",
-            "es": "política: el pago por vistas es diario o cuando lo activa el organizador; los premios por puesto, después del cierre más hasta 7 días hábiles de revisión; centro de ayuda más reciente: el dinero va a una billetera, con un retiro por PIX a la semana revisado por el equipo"
+            "en": "policy of 10 October 2026: cash prizes go to a wallet and are paid when you ask to withdraw, at once if nothing is flagged, after a manual check otherwise; fixed-place prizes follow a review of up to 7 business days after the close; the help center (18 September 2026) still says one withdrawal request a week and that PIX is not instant; the landing page says usually within 2 business days after closing",
+            "es": "política del 10 de octubre de 2026: los premios en dinero van a una billetera y se pagan cuando pides el retiro, en el momento si no hay ninguna señal de irregularidad y tras una revisión manual en los demás casos; los premios por puesto llegan tras una revisión de hasta 7 días hábiles después del cierre; el centro de ayuda (18 de septiembre de 2026) todavía dice que solo se puede pedir un retiro a la semana y que el PIX no es instantáneo; la página de presentación dice que el PIX suele salir en un plazo de hasta 2 días hábiles después del cierre"
           },
           "source": {
             "url": "https://cut.pro/championships-policy",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         }
       },
@@ -7030,41 +6936,41 @@
       "cons": {
         "en": [
           "Cash is paid only via PIX in BRL, to a Brazilian PIX key in the clipper's own name",
-          "Only 5 of the open championships paid per view on 2026-09-24; the rest pay by ranking",
-          "Landing page, help center and policy disagree on payout timing, minimums and age rules"
+          "Per-view championships paid R$0.50–R$2.50 per 1,000 views on 2026-11-14, most capped at R$150–R$300 per video; 5 of the 16 open championships paid by ranking only",
+          "Landing page, help center and policy disagree on payout timing, withdrawal frequency and age rules"
         ],
         "es": [
           "El dinero solo se paga por PIX en reales, a una clave PIX brasileña a nombre del propio clipper",
-          "Solo 5 de los campeonatos abiertos pagaban por vistas el 2026-09-24; el resto paga por clasificación",
-          "La página de presentación, el centro de ayuda y la política no coinciden en los plazos de pago, los mínimos ni las reglas de edad"
+          "Los campeonatos por vistas pagaban R$0,50–R$2,50 por cada 1000 vistas el 2026-11-14, la mayoría con un tope de R$150–R$300 por video; 5 de los 16 campeonatos abiertos pagaban solo por clasificación",
+          "La página de presentación, el centro de ayuda y la política no coinciden en los plazos de pago, la frecuencia de los retiros ni las reglas de edad"
         ]
       }
     },
     {
       "id": "promote-fun",
       "name": "Promote.fun",
-      "url": "https://promote.fun/",
+      "url": "https://www.promote.fun/",
       "kind": "campaign clipping marketplace",
       "founded": "not published",
-      "operator": "not published; site footer reads \"© 2026 PromoteFun\"; disputes go to binding individual arbitration in Delaware (terms)",
+      "operator": "not named in its terms; the site footer reads \"© 2026 Promote Media, Inc. All rights reserved.\"; no address or registration number is published; disputes go to binding individual arbitration in Delaware (terms)",
       "bestFor": {
         "en": "Instagram and TikTok page owners who can receive USDC on Solana",
         "es": "dueños de páginas de Instagram y TikTok que pueden recibir USDC en Solana"
       },
       "summary": {
-        "en": "Promote.fun lists brand campaigns that pay a per-campaign rate per 1,000 verified views on TikTok, Instagram, YouTube and X; on 2026-09-24 it showed live campaigns at $1–$3 per 1,000 views. Earnings are added to the balance when a campaign ends and are withdrawn as USDC on Solana.",
-        "es": "Promote.fun publica campañas de marcas que pagan una tarifa propia de cada campaña por cada 1000 vistas verificadas en TikTok, Instagram, YouTube y X; el 2026-09-24 mostraba campañas activas a US$1–US$3 por cada 1000 vistas. Las ganancias se suman al saldo cuando termina una campaña y se retiran en USDC en Solana."
+        "en": "Promote.fun lists brand campaigns that pay a per-campaign rate per 1,000 verified views on TikTok, Instagram, YouTube and X; on 2026-11-14 it showed seven live campaigns at $0.50–$3 per 1,000 views. Earnings are added to the balance when a campaign ends and are withdrawn as USDC on Solana.",
+        "es": "Promote.fun publica campañas de marcas que pagan una tarifa propia de cada campaña por cada 1000 vistas verificadas en TikTok, Instagram, YouTube y X; el 2026-11-14 mostraba siete campañas activas a US$0,50–US$3 por cada 1000 vistas. Las ganancias se suman al saldo cuando termina una campaña y se retiran en USDC en Solana."
       },
       "fields": {
         "rate": {
           "text": {
-            "en": "$1–$3 per 1,000 views on the live campaigns shown on its Campaigns page; its terms let Promote.fun change CPMs at any time, while its home page says brands set them",
-            "es": "US$1–US$3 por cada 1000 vistas en las campañas activas de su página Campaigns; sus condiciones permiten a Promote.fun cambiar los CPM en cualquier momento, mientras que su página principal dice que los fijan las marcas"
+            "en": "$0.50–$3 per 1,000 views on the seven live campaigns shown on its Campaigns page on 2026-11-14; its terms let Promote.fun change CPMs at any time, while its home page says brands set them",
+            "es": "US$0,50–US$3 por cada 1000 vistas en las siete campañas activas que mostraba su página Campaigns el 2026-11-14; sus condiciones permiten a Promote.fun cambiar los CPM en cualquier momento, mientras que su página principal dice que los fijan las marcas"
           },
-          "value": 1,
+          "value": 0.5,
           "source": {
             "url": "https://www.promote.fun/campaigns/",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "threshold": {
@@ -7075,7 +6981,7 @@
           "value": null,
           "source": {
             "url": "https://www.promote.fun/terms-of-service/",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "cap": {
@@ -7086,7 +6992,7 @@
           "value": null,
           "source": {
             "url": "https://www.promote.fun/campaigns/",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "fee": {
@@ -7097,7 +7003,7 @@
           "value": null,
           "source": {
             "url": "https://www.promote.fun/terms-of-service/",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "minPayout": {
@@ -7107,7 +7013,7 @@
           "value": null,
           "source": {
             "url": "https://www.promote.fun/terms-of-service/",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "payoutMethods": {
@@ -7117,7 +7023,7 @@
           },
           "source": {
             "url": "https://www.promote.fun/",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "cis": {
@@ -7127,7 +7033,7 @@
           "state": "unknown",
           "source": {
             "url": "https://www.promote.fun/terms-of-service/",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "followers": {
@@ -7138,7 +7044,7 @@
           "state": "unknown",
           "source": {
             "url": "https://www.promote.fun/",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "escrow": {
@@ -7149,16 +7055,16 @@
           "state": "yes",
           "source": {
             "url": "https://www.promote.fun/terms-of-service/",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "networks": {
           "text": {
-            "en": "TikTok, Instagram, YouTube, X"
+            "en": "TikTok, Instagram, YouTube, X; the platform filter on its Campaigns page also lists Facebook"
           },
           "source": {
-            "url": "https://www.promote.fun/",
-            "date": "2026-09-24"
+            "url": "https://www.promote.fun/campaigns/",
+            "date": "2026-11-14"
           }
         },
         "verification": {
@@ -7167,7 +7073,7 @@
           },
           "source": {
             "url": "https://www.promote.fun/",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "india": {
@@ -7177,7 +7083,7 @@
           "state": "unknown",
           "source": {
             "url": "https://www.promote.fun/terms-of-service/",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "pakistan": {
@@ -7187,7 +7093,7 @@
           "state": "unknown",
           "source": {
             "url": "https://www.promote.fun/terms-of-service/",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "bangladesh": {
@@ -7197,7 +7103,7 @@
           "state": "unknown",
           "source": {
             "url": "https://www.promote.fun/terms-of-service/",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "nigeria": {
@@ -7207,7 +7113,7 @@
           "state": "unknown",
           "source": {
             "url": "https://www.promote.fun/terms-of-service/",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "kenya": {
@@ -7217,7 +7123,7 @@
           "state": "unknown",
           "source": {
             "url": "https://www.promote.fun/terms-of-service/",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "mena": {
@@ -7227,7 +7133,7 @@
           "state": "unknown",
           "source": {
             "url": "https://www.promote.fun/terms-of-service/",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "indonesia": {
@@ -7237,7 +7143,7 @@
           "state": "unknown",
           "source": {
             "url": "https://www.promote.fun/terms-of-service/",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "philippines": {
@@ -7247,18 +7153,18 @@
           "state": "unknown",
           "source": {
             "url": "https://www.promote.fun/terms-of-service/",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "cpm": {
           "text": {
-            "en": "$1–$3",
-            "es": "US$1–US$3"
+            "en": "$0.50–$3",
+            "es": "US$0,50–US$3"
           },
           "value": 3,
           "source": {
             "url": "https://www.promote.fun/campaigns/",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         },
         "payoutSpeed": {
@@ -7268,18 +7174,18 @@
           },
           "source": {
             "url": "https://www.promote.fun/",
-            "date": "2026-09-24"
+            "date": "2026-11-14"
           }
         }
       },
       "pros": {
         "en": [
-          "Rate and total budget of every live campaign are listed publicly ($1–$3 per 1,000 views on 2026-09-24)",
+          "Rate and total budget of every live campaign are listed publicly ($0.50–$3 per 1,000 views on 2026-11-14)",
           "Terms say brands fund campaigns before launch and Promote.fun holds the funds in a custodial or escrow-style balance, but disclaim unpaid earnings if a brand underfunds",
           "No platform-wide follower minimum is published; follower and view rules are set per campaign"
         ],
         "es": [
-          "La tarifa y el presupuesto total de cada campaña activa son públicos (US$1–US$3 por cada 1000 vistas el 2026-09-24)",
+          "La tarifa y el presupuesto total de cada campaña activa son públicos (US$0,50–US$3 por cada 1000 vistas el 2026-11-14)",
           "Sus condiciones dicen que las marcas financian las campañas antes del lanzamiento y que Promote.fun guarda los fondos en un saldo de custodia o tipo depósito en garantía, pero niegan responsabilidad por las ganancias no pagadas si una marca no aporta fondos suficientes",
           "No publica un mínimo de seguidores para toda la plataforma; las reglas de seguidores y vistas las fija cada campaña"
         ]
@@ -7288,12 +7194,12 @@
         "en": [
           "Withdrawals shown are USDC on Solana; no fee schedule or withdrawal minimum is published",
           "Earnings are credited after a campaign ends; campaign rules, view minimums and caps are hidden until you sign in and join",
-          "No company name or address is published; the site is marked ALPHA"
+          "A company name appears only in the site footer (Promote Media, Inc.), with no address or registration number; the site is marked ALPHA"
         ],
         "es": [
           "Los retiros que muestra son en USDC en Solana; no publica tabla de comisiones ni retiro mínimo",
           "Las ganancias se acreditan cuando termina una campaña; las reglas, los mínimos de vistas y los topes de cada campaña no se ven hasta que inicias sesión y te unes",
-          "No publica nombre de empresa ni dirección; el sitio está marcado como ALPHA"
+          "El nombre de una empresa aparece solo en el pie del sitio (Promote Media, Inc.), sin dirección ni número de registro; el sitio está marcado como ALPHA"
         ]
       }
     },

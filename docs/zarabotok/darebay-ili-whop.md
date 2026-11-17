@@ -89,7 +89,7 @@ cta:
 ## Куда дальше
 
 - [Whop Content Rewards: обзор](/zarabotok/whop-content-rewards-obzor) - кампании, ставки, сроки выплат и закрытые страны
-- [Аналоги Whop в России и СНГ](/zarabotok/analogi-whop-v-rossii) - семь площадок вместо Whop по одним полям
+- [Аналоги Whop в России и СНГ](/zarabotok/analogi-whop-v-rossii) - шесть площадок вместо Whop по одним полям
 - [Сколько можно заработать на нарезках](/zarabotok/skolko-mozhno-zarabotat-na-narezkah) - формула выплаты и три сценария по просмотрам
 - [Сколько платят за нарезки](/zarabotok/skolko-platyat-za-narezki-po-nisham) - ставки по нишам, площадкам и соцсетям
 - [Калькулятор заработка на нарезках](/zarabotok/kalkulyator-zarabotka-na-narezkah) - сумма в месяц с порогом, потолком и комиссией вывода

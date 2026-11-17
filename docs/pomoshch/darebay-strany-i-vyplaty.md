@@ -39,7 +39,7 @@ seo: true
 | Где ты живёшь | О чём разбор | Страница |
 |---|---|---|
 | Россия, Беларусь, Украина, Казахстан и другие страны СНГ | какие площадки называют эти страны сами и как до тебя доходят деньги | [Платформы, которые платят в Россию и СНГ](/zarabotok/platformy-dlya-narezchikov-kotorye-platyat-v-sng) |
-| Россия и Беларусь, если нужен аналог Whop | семь площадок с оплатой за просмотры и кто из них платит в РФ | [Аналоги Whop в России](/zarabotok/analogi-whop-v-rossii) |
+| Россия и Беларусь, если нужен аналог Whop | шесть площадок с оплатой за просмотры и кто из них платит в РФ | [Аналоги Whop в России](/zarabotok/analogi-whop-v-rossii) |
 | Индия | рупиевые площадки рядом с долларовыми, PAN и налог на криптодоход (на английском) | [India](/en/earnings/clipping-platforms-that-pay-in-india) |
 | Пакистан | Payoneer, JazzCash, местные банки и закон о виртуальных активах (на английском) | [Pakistan](/en/earnings/clipping-platforms-that-pay-in-pakistan) |
 | Нигерия, Кения, Гана | Paga, M-PESA, MoMo и позиции трёх центральных банков (на английском) | [Nigeria, Kenya and Ghana](/en/earnings/clipping-platforms-that-pay-in-nigeria-and-kenya) |

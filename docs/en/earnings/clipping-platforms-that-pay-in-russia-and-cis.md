@@ -9,21 +9,21 @@ sources: visible
 hero:
   kicker: "Payouts by country · 2026"
   updated: "2026-09-25"
-  lede: "Three platforms will pay into Russia and the CIS, two keep exclusion lists, and four never say either way. Long before the rate matters, that is the question: can the money reach you at all. Whop's sanctioned list shuts out Russia and Belarus, Vyro's list of countries it does not pay adds the whole of Ukraine, so here is what each platform's own pages state, country by country."
+  lede: "Three platforms will pay into Russia and the CIS, two keep exclusion lists, and two never say either way. Long before the rate matters, that is the question: can the money reach you at all. Whop's sanctioned list shuts out Russia and Belarus, Vyro's list of countries it does not pay adds the whole of Ukraine, so here is what each platform's own pages state, country by country."
   secondary: "Country table"
   takeaways:
     - "<b>DareBay, Klipni and Prime Oracles say they pay in Russia:</b> DareBay across CIS with no country list, Klipni in Russia only, Prime Oracles in ten CIS states."
     - "<b>Vyro and Whop both block Russia and Belarus:</b> in Ukraine, Vyro blocks the whole country and Whop six regions."
-    - "<b>Four publish no country list at all:</b> Clipping.net, Vues, Reach.cat and Clipping.io; ask their support before your first clip."
+    - "<b>Two publish no country list at all:</b> Clipping.net and Vues; ask their support before your first clip."
     - "<b>Kazakhstan is on neither exclusion list:</b> Whop names it among its payout countries, and Vyro's list of 28 countries leaves it off, as it now does Uzbekistan, Armenia, Georgia and Moldova."
 compare:
-  ids: [clipping-io, clipping-net, darebay, klipbait, klipni, prime-oracles, reach-cat, vues, vyro, whop]
+  ids: [clipping-net, darebay, klipbait, klipni, prime-oracles, vues, vyro, whop]
   columns: [cis, payoutMethods, minPayout, fee, followers, escrow]
   highlight: none
   ranked: false
   title: "Payout access and rails, platform by platform"
 method:
-  - "Country statements come from each platform's own sanctioned-country page, unsupported-country page, terms or FAQ, read on the date shown; 'not published' means the platform lists no countries anywhere on its public pages. Vyro, Whop, Prime Oracles and Vues were read again on 14 November 2026; Klipbait's site was paused that day, so its figures are those of 18 September 2026."
+  - "Country statements come from each platform's own sanctioned-country page, unsupported-country page, terms or FAQ, read on the date shown; 'not published' means the platform lists no countries anywhere on its public pages. Vyro, Whop, Prime Oracles and Vues were read again on 14 November 2026; Klipbait's site was paused that day, so its figures are those of 18 September 2026. On 14 November 2026 Klipni was read again too, Reach.cat's site carried a closure notice and every page of Clipping.io's site returned a \"Page not found\" error; Reach.cat and Clipping.io have left the table."
   - "Payout rails and minimums come from the same pages. DareBay's figures come from its own public pages."
 cta:
   title: "Your country is not on any list here"
@@ -40,7 +40,7 @@ The remaining September platform and payment snapshots below retain their dates.
 
 ## Country by country, in the platforms' own words
 
-| Country | Whop Content Rewards | Vyro | DareBay | Prime Oracles | Klipni | Klipbait, as read on 18 September 2026 | Clipping.net, Vues, Reach.cat, Clipping.io |
+| Country | Whop Content Rewards | Vyro | DareBay | Prime Oracles | Klipni | Klipbait, as read on 18 September 2026 | Clipping.net, Vues |
 |---|---|---|---|---|---|---|---|
 | Russia | excluded (sanctioned list) | excluded (unsupported list) | paid | paid | paid, self-employed status required | named in its site description, no terms published <!-- source: https://www.klipbait.com/ru 2026-09-18 -->; its Telegram channel says Russian cards are not supported <!-- source: https://t.me/s/klipbait 2026-11-14 -->; its site was paused on 14 November 2026 <!-- source: https://klipbait.com/ 2026-11-14 --> | no country list published |
 | Belarus | excluded | excluded | paid | paid | no | named | no country list published |
@@ -64,13 +64,15 @@ Klipbait's site was paused when this page was re-read: on 14 November 2026 every
 
 **Klipbait**, when read on 18 September 2026, paid in USDT or to a card; for USDT you picked the network yourself, its blog calling TRC-20 the default for amounts this size, and a withdrawal could be requested once the balance reached $20.00 <!-- source: https://www.klipbait.com/ru/blog/kak-vyvesti-dengi-za-klipping-iz-rossii 2026-09-18 -->. Its Telegram channel, whose last post is dated 26 September 2026, names the same two methods and adds that Russian cards are not supported <!-- source: https://t.me/s/klipbait 2026-11-14 -->, which left a clipper in Russia with USDT. It promised no date: the money waited until the brand behind each campaign settled, usually a few days and sometimes longer by its Russian FAQ <!-- source: https://www.klipbait.com/ru 2026-09-18 -->, and only views from tier-1 countries such as the US, the UK, Germany, France, Canada and Australia were paid <!-- source: https://www.klipbait.com/ru/blog/whop-klipping-iz-rossii 2026-09-18 -->. It published no terms of service, no privacy policy and no operator name: its sitemap listed landing pages and a blog only <!-- source: https://www.klipbait.com/sitemap.xml 2026-09-18 -->, and support was a Telegram chat. With the site paused on 14 November 2026, none of this is a live offer.
 
-**Reach.cat** pays in USDT, and its creator FAQ says bank transfer is coming "very soon" <!-- source: https://reach.cat/creator 2026-09-24 -->; it claims 149+ countries but publishes no list, and its clipper page says "No KYC. No ID check." <!-- source: https://reach.cat/become-a-clipper/ 2026-09-24 -->, while its terms effective 13 September 2026 require an identity check once total payout requests pass $500 <!-- source: https://reach.cat/terms 2026-09-24 -->. **Clipping.net** pays by PayPal or USDC/USDT on Ethereum and requires legal residence "in the territories where we operate"<!-- source: https://clipping.net/policies/clipper-terms-and-conditions 2026-09-24 -->, without naming them. **Vues** currently advertises bank or USDC through Stripe depending on country; the other methods its terms let a brand enable need confirmation for the actual campaign.<!-- source: https://vues.app/ios 2026-11-14 --><!-- source: https://vues.app/terms 2026-11-14 --> Treat all three as "ask first".
+**Clipping.net** pays by PayPal or USDC/USDT on Ethereum and requires legal residence "in the territories where we operate"<!-- source: https://clipping.net/policies/clipper-terms-and-conditions 2026-09-24 -->, without naming them. **Vues** currently advertises bank or USDC through Stripe depending on country; the other methods its terms let a brand enable need confirmation for the actual campaign.<!-- source: https://vues.app/ios 2026-11-14 --><!-- source: https://vues.app/terms 2026-11-14 --> Treat both as "ask first".
+
+Two boards that stood beside them in September are no longer in the tables above. **Reach.cat**, which paid in USDT and claimed 149+ countries without publishing a list, is closed: its site says the platform permanently closed on 1 November 2026, and the notice does not say what happens to unpaid balances <!-- source: https://reach.cat/ 2026-11-14 -->. **Clipping.io** could not be re-read: on 14 November 2026 every page of its site returned a "Page not found" error <!-- source: https://www.clipping.io/ 2026-11-14 -->, so what we know is what its pages said on 24 September 2026, when they published no country list <!-- source: https://www.clipping.io/terms-of-use 2026-09-24 -->.
 
 ## Before your first clip
 
 - Read the platform's own country page or terms, not a forum post; lists change and the platform's page is what its payout partner enforces.
 - Check the payout rail you can actually receive: PayPal and Stripe are unavailable to many clippers in the region, USDT on TON or Tron and Telegram Stars are not.
-- Check whether a tax status is required (Klipni) and whether identity verification is demanded before withdrawal (Whop, and Reach.cat once total payout requests pass $500 <!-- source: https://reach.cat/terms 2026-09-24 -->).
+- Check whether a tax status is required (Klipni) and whether identity verification is demanded before withdrawal (Whop, which checks identity for Vyro too, before you can join a campaign <!-- source: https://vyro.com/help/earnings-and-payments/eligibility 2026-11-14 -->).
 - Prefer a platform that holds the budget before you post: DareBay's wallet-backed contests and Prime Oracles' frozen reward balance do, though on Prime Oracles' continuously tracked rewards, earnings accrued beyond the reward pool are not secured by that balance<!-- source: https://www.primeoracles.com/terms-agreement 2026-11-14 -->; Klipni takes prepayment unless agreed otherwise in writing, but its advertiser terms call the balance an accounting figure, not escrow<!-- source: https://klipni.com/legal/advertiser 2026-09-24 -->; Vues states that it does not custody funds.
 
 Other regions have their own version of this page: there is one for [India](/en/earnings/clipping-platforms-that-pay-in-india), one for [Pakistan](/en/earnings/clipping-platforms-that-pay-in-pakistan), one for [Bangladesh and Nepal](/en/earnings/clipping-platforms-that-pay-in-bangladesh-and-nepal), one for [Indonesia and the Philippines](/en/earnings/clipping-platforms-that-pay-in-indonesia-and-the-philippines), one for [Nigeria, Kenya and Ghana](/en/earnings/clipping-platforms-that-pay-in-nigeria-and-kenya) and one for [Egypt and the Arab countries](/en/earnings/clipping-platforms-that-pay-in-egypt-and-arab-countries), each read country by country, while [clipping platforms that pay without PayPal or Stripe](/en/earnings/clipping-platforms-that-pay-without-paypal-or-stripe) answers the same worry without a border in it.
@@ -85,7 +87,7 @@ Not in Russia or Belarus: Whop's sanctioned-country list blocks registration, se
 
 ### Which clipping platforms pay in Ukraine?
 
-DareBay states that it pays clippers in Ukraine: USDT on TON, or the payout received in Telegram Stars. Whop lists Ukraine among its payout countries and excludes only six regions (Crimea, Sevastopol, Donetsk, Luhansk, Zaporizhzhia and Kherson). Vyro excludes Ukraine. Clipping.net, Vues, Reach.cat and Clipping.io publish no country list, and Prime Oracles' agreement names ten CIS states without mentioning Ukraine.
+DareBay states that it pays clippers in Ukraine: USDT on TON, or the payout received in Telegram Stars. Whop lists Ukraine among its payout countries and excludes only six regions (Crimea, Sevastopol, Donetsk, Luhansk, Zaporizhzhia and Kherson). Vyro excludes Ukraine. Clipping.net and Vues publish no country list, and Prime Oracles' agreement names ten CIS states without mentioning Ukraine.
 
 ### Which clipping platforms pay in Kazakhstan?
 
@@ -93,8 +95,8 @@ DareBay and Prime Oracles state that they pay in Kazakhstan, and Whop lists Kaza
 
 ### Can I get paid in USDT?
 
-Yes, on several platforms: Clipping.net pays USDT or USDC on Ethereum, DareBay USDT on TON, Prime Oracles USDT on Tron, BNB Smart Chain or Solana, Reach.cat USDT (its clipper page says "USDT or SOL" without naming a chain<!-- source: https://reach.cat/become-a-clipper/ 2026-09-24 -->). Vues is a narrower case: its marketing pages offer a bank account or a USDC wallet through Stripe, depending on your country<!-- source: https://vues.app/ios 2026-11-14 -->, and USDT appears only in its terms of 5 October 2026, among the methods a brand may make available<!-- source: https://vues.app/terms 2026-11-14 -->.
+Yes, on several platforms: Clipping.net pays USDT or USDC on Ethereum, DareBay USDT on TON, and Prime Oracles USDT on Tron, BNB Smart Chain or Solana. Vues is a narrower case: its marketing pages offer a bank account or a USDC wallet through Stripe, depending on your country<!-- source: https://vues.app/ios 2026-11-14 -->, and USDT appears only in its terms of 5 October 2026, among the methods a brand may make available<!-- source: https://vues.app/terms 2026-11-14 -->.
 
 ### Do I need a tax status or KYC?
 
-DareBay needs no tax status to take a brief, and its terms say identity verification applies where the law requires it<!-- source: https://darebay.com/en/legal/terms 2026-09-24 -->. Klipni requires Russian self-employed or sole-trader status. Whop requires identity verification before payouts. Reach.cat's landing pages say no ID check, but its terms effective 13 September 2026 require identity verification through iDenfy once total payout requests pass $500<!-- source: https://reach.cat/terms 2026-09-24 -->.
+DareBay needs no tax status to take a brief, and its terms say identity verification applies where the law requires it<!-- source: https://darebay.com/en/legal/terms 2026-09-24 -->. Klipni requires Russian self-employed or sole-trader status. Whop requires identity verification before payouts.

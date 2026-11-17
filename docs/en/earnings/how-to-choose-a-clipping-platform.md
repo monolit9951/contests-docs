@@ -24,10 +24,8 @@ compare:
   - vyro
   - clipping-net
   - vues
-  - reach-cat
   - prime-oracles
   - klipni
-  - clipping-io
   columns:
   - rate
   - threshold

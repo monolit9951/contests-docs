@@ -171,7 +171,7 @@ DareBay no publica una lista de países: solo excluye a las personas que figuran
 
 Vyro ya no es una alternativa cuando el obstáculo es Whop. Desde el 2 de noviembre de 2026 envía los retiros a una billetera de Whop, que sustituyó a Stripe y a PayPal <!-- source: https://vyro.com/changelog/more-ways-to-get-paid-with-whop 2026-11-14 -->, y su lista de 28 países en los que no paga, actualizada el 30 de octubre de 2026, incluye a Venezuela y a Cuba <!-- source: https://vyro.com/help/earnings-and-payments/eligibility 2026-11-14 -->. Sus condiciones para creadores, del 28 de octubre de 2026, dicen que hay que usar Whop para recibir y retirar los pagos <!-- source: https://vyro.com/creator-terms 2026-11-14 -->.
 
-Para Venezuela en concreto, [plataformas de clipping que pagan en Venezuela](/es/ganar-dinero/plataformas-de-clipping-que-pagan-en-venezuela) revisa quién paga allí y cómo; las [alternativas a Whop Content Rewards](/es/ganar-dinero/alternativas-a-whop-content-rewards) comparan siete plataformas con los mismos campos.
+Para Venezuela en concreto, [plataformas de clipping que pagan en Venezuela](/es/ganar-dinero/plataformas-de-clipping-que-pagan-en-venezuela) revisa quién paga allí y cómo; las [alternativas a Whop Content Rewards](/es/ganar-dinero/alternativas-a-whop-content-rewards) comparan seis plataformas con los mismos campos.
 
 ## Preguntas frecuentes
 
@@ -202,7 +202,7 @@ Los de su lista de países sancionados: Afganistán, Bielorrusia, Burundi, Comor
 ## Qué leer después
 
 - [DareBay frente a Whop Content Rewards](/es/ganar-dinero/darebay-vs-whop): las dos plataformas comparadas campo por campo
-- [Alternativas a Whop Content Rewards](/es/ganar-dinero/alternativas-a-whop-content-rewards): siete plataformas para usar junto a Whop o en su lugar
+- [Alternativas a Whop Content Rewards](/es/ganar-dinero/alternativas-a-whop-content-rewards): seis plataformas para usar junto a Whop o en su lugar
 - [Plataformas de clipping que pagan en Venezuela](/es/ganar-dinero/plataformas-de-clipping-que-pagan-en-venezuela): quién paga donde Whop no puede
 - [Plataformas de clipping que pagan en México](/es/ganar-dinero/plataformas-de-clipping-que-pagan-en-mexico): TikTok, Whop y las campañas por vistas en México
 - [Cuánto se gana haciendo clips](/es/ganar-dinero/cuanto-se-gana-haciendo-clips): la tarifa por cada 1000 vistas con umbral y tope

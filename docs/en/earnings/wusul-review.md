@@ -67,7 +67,7 @@ Each card adds "Min. 1,000 views" <!-- source: https://www.wusulclips.com/en/cam
 
 Views "must come from real, organic reach"; bots, view farms and engagement pods bring rejection "and may result in account suspension and forfeiture of related earnings", and each submission is read by a person, "a manual, hands-on process rather than an automated one" <!-- source: https://www.wusulclips.com/en/clipper-terms 2026-09-19 -->. A refusal shows "the reason… in your submissions list" <!-- source: https://www.wusulclips.com/en/blog/verified-views-explained 2026-09-19 -->.
 
-Three things are missing, not strict. No page sets out an appeal, a dispute procedure or arbitration. No rule makes you keep a clip online once a campaign ends, unlike the 60-day rule in the [Reach.cat review](/en/earnings/reach-cat-review). And there is no identity check: no page mentions KYC or a government-issued document; a bio code proves the account is yours, "no passwords, no app access" <!-- source: https://www.wusulclips.com/en 2026-09-19 -->.
+Three things are missing, not strict. No page sets out an appeal, a dispute procedure or arbitration. No rule makes you keep a clip online once a campaign ends, unlike the 60-day rule recorded in the [Reach.cat review](/en/earnings/reach-cat-review); Reach.cat itself closed on 1 November 2026, its site says <!-- source: https://reach.cat/ 2026-11-14 -->. And there is no identity check: no page mentions KYC or a government-issued document; a bio code proves the account is yours, "no passwords, no app access" <!-- source: https://www.wusulclips.com/en 2026-09-19 -->.
 
 ## Who picks the payout rail: three answers
 

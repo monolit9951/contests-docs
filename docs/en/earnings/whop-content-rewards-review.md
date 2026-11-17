@@ -7,57 +7,67 @@ competitor_sources:
   - { platform: "Content Rewards", url: "https://contentrewards.com/", date: "2026-09-18" }
   - { platform: "Content Rewards", url: "https://contentrewards.com/creators", date: "2026-09-18" }
   - { platform: "Content Rewards", url: "https://contentrewards.com/terms", date: "2026-09-18" }
-  - { platform: "Content Rewards", url: "https://contentrewards.com/changelog", date: "2026-09-18" }
+  - { platform: "Content Rewards", url: "https://contentrewards.com/terms", date: "2026-11-14" }
   - { platform: "Content Rewards", url: "https://contentrewards.com/discover", date: "2026-09-18" }
-  - { platform: "Content Rewards", url: "https://contentrewards.com/pricing/creators", date: "2026-09-18" }
-  - { platform: "Whop", url: "https://docs.whop.com/memberships-and-access/third-party-apps/content-rewards", date: "2026-09-18" }
+  - { platform: "Content Rewards", url: "https://contentrewards.com/discover", date: "2026-11-14" }
+  - { platform: "Content Rewards", url: "https://contentrewards.com/pricing/creators", date: "2026-11-14" }
+  - { platform: "Content Rewards", url: "https://contentrewards.com/about", date: "2026-11-14" }
+  - { platform: "Content Rewards", url: "https://contentrewards.com/articles/is-content-rewards-part-of-whop", date: "2026-11-14" }
+  - { platform: "Content Rewards", url: "https://contentrewards.com/articles/is-content-rewards-legit", date: "2026-11-14" }
+  - { platform: "Content Rewards", url: "https://contentrewards.com/articles/clipping-cpm-rates-november-2026", date: "2026-11-14" }
+  - { platform: "Content Rewards", url: "https://help.contentrewards.com/en/articles/15725120-how-your-payout-fees-work", date: "2026-11-14" }
+  - { platform: "Content Rewards", url: "https://help.contentrewards.com/en/articles/16817239-withdraw-your-earnings", date: "2026-11-14" }
+  - { platform: "Whop", url: "https://docs.whop.com/memberships-and-access/third-party-apps/content-rewards", date: "2026-11-14" }
   - { platform: "Whop", url: "https://docs.whop.com/manage-your-business/manage-payouts/payout-methods", date: "2026-09-18" }
   - { platform: "Whop", url: "https://docs.whop.com/manage-your-business/manage-payouts/set-up-payouts", date: "2026-09-18" }
   - { platform: "Whop", url: "https://docs.whop.com/trust-and-safety/trust-safety-overview/sanctioned-countries", date: "2026-09-18" }
   - { platform: "Klipni", url: "https://klipni.com/creators", date: "2026-09-18" }
   - { platform: "Klipni", url: "https://klipni.com/legal/terms", date: "2026-09-18" }
-  - { platform: "Vyro", url: "https://vyro.com/campaigns", date: "2026-09-18" }
-  - { platform: "Vyro", url: "https://vyro.com/help/earnings-and-payments/how-many-views-do-i-need-before-i-can-start-earning", date: "2026-09-18" }
-  - { platform: "Vyro", url: "https://vyro.com/help/getting-started/what-countries-are-supported", date: "2026-09-18" }
+  - { platform: "Vyro", url: "https://vyro.com/campaigns", date: "2026-11-14" }
+  - { platform: "Vyro", url: "https://vyro.com/help/earnings-and-payments/how-many-views-do-i-need-before-i-can-start-earning", date: "2026-11-14" }
+  - { platform: "Vyro", url: "https://vyro.com/help/earnings-and-payments/payouts", date: "2026-11-14" }
+  - { platform: "Vyro", url: "https://vyro.com/help/earnings-and-payments/eligibility", date: "2026-11-14" }
   - { platform: "Clipping.net", url: "https://clipping.net/policies/clipper-terms-and-conditions", date: "2026-09-18" }
   - { platform: "Clipping.net", url: "https://clipping.net/docs/clippers/payments", date: "2026-09-18" }
 seo: true
 landing: true
 sources: visible
 hero:
-  updated: "2026-10-12"
+  updated: "2026-11-14"
   kicker: "Review · 2026"
-  lede: "Whop Content Rewards is no longer just an app inside Whop. It runs on its own site under its own terms, and Whop stays underneath for sign-in, identity checks and withdrawals. Here is what that means for a clipper today: how a campaign card reads, what the flat 10% fee leaves you, how long the money takes on each side, and which countries Whop will not pay, every figure read off the two companies' own pages and dated."
+  lede: "Whop Content Rewards is by now an older name: the platform calls itself Content Rewards and says it is not part of Whop. It runs on its own site under its own terms, from its own company, and Whop, a separate company, stays underneath for withdrawals, identity checks and sign-in. Here is what that means for a clipper today: how a campaign card reads, what the flat 10% fee leaves you, how long the money takes on each side, and which countries Whop will not pay, every figure read off the two companies' own pages and dated."
   takeaways:
-    - "<b>Content Rewards has its own site now, and Whop is still underneath.</b> Campaigns, review and fraud checks run on contentrewards.com; sign-in, identity checks and withdrawals stay with Whop, under Whop's terms."
-    - "<b>The fee is a flat 10% of what you earn.</b> The old step-down ladder is gone, and per-post and retainer campaigns with a budget of $5,000 or more charge the creator nothing."
+    - "<b>Content Rewards says it is not part of Whop, and Whop is still underneath.</b> Campaigns, review and fraud checks run on contentrewards.com under Content Rewards Inc., a Delaware company set up on 5 June 2025; withdrawals and the related identity checks stay with Whop, under Whop's terms."
+    - "<b>The fee is a flat 10% of what you earn.</b> It does not change with how much you earn; per-post and retainer campaigns with a budget of $5,000 or more charge the creator nothing, and a campaign carried over from the earlier Whop-hosted version can still show 7%."
     - "<b>CPM payment rounds open after approval and the minimum earnings.</b> Normally seven earning days plus a three-day hold; Pool pays after closing, and Whop withdrawal is separate."
     - "<b>Russia and Belarus stay closed.</b> Whop's sanctioned list names them and six Ukrainian regions, while the rest of Ukraine and Kazakhstan are on its payout list. Where Whop cannot pay, DareBay has no country list."
 cta:
   title: "Whop cannot pay your country? DareBay has no country list"
   lede: "Clippers in Russia and Belarus, where Whop cannot pay, are paid here: only people on sanctions lists are barred. You get USDT on TON in your wallet, or receive the payout in Telegram Stars. Every task card states the pay rate, the view threshold and any ceiling on a single clip before you submit. Nobody screens your follower count and nobody reviews an application, so the weekend you spend editing is not spent on a maybe."
 ---
-## October rules: what a Pool balance actually means
+## November rules: what a Pool balance actually means
 
-The creator terms now carry **4 October 2026**. CPM and Pool payouts both carry a 10% creator fee; per-post and retainer campaigns retain the $5,000 budget boundary for a 0% creator fee. <!-- source: https://contentrewards.com/terms 2026-10-12 -->
+The creator terms now carry **13 November 2026**. CPM and Pool payouts both carry a 10% creator fee; per-post and retainer campaigns retain the $5,000 budget boundary for a 0% creator fee. <!-- source: https://contentrewards.com/terms 2026-11-14 -->
 
 For a Pool, do not calculate from the displayed budget alone: that figure includes the organization's fee. A hypothetical $900 remaining for creators, with your 10% share of eligible views, gives $90 gross and **$81 after the 10% creator fee**, before Whop withdrawal costs. If others' views reduce your final share to 5%, it becomes $40.50. Neither the early estimate nor approval locks that share.
 
 Check three things in the brief: whether it is CPM or Pool, how its view minimum is applied, and when the campaign stops counting views or closes. A Pool's minimum can apply across your approved submissions; below it you receive no share. The organization normally decides when the Pool ends. <!-- source: https://contentrewards.com/terms 2026-10-12 -->
 
-The first 50 public All campaigns cards on 12 October displayed $0.05–$5 per 1,000, with $1 on 21 cards. This is a dated headline sample, not a universal rate or all network-specific offers. September samples below remain historical. <!-- source: https://contentrewards.com/discover 2026-10-12 -->
+Of the first 50 public All campaigns cards on 14 November 2026, 47 showed a fixed rate, $0.40–$6 per 1,000 views, with $1 on 17 of them; two showed "Up to $2.00 per 1K views, by viewer country" and one was a "$9K pool". <!-- source: https://contentrewards.com/discover 2026-11-14 --> This is a dated headline sample, not a universal rate or all network-specific offers: Content Rewards' own count of 13 November 2026 put the median of the 712 live fixed-rate campaigns at about $1.04 per 1,000 views. <!-- source: https://contentrewards.com/articles/clipping-cpm-rates-november-2026 2026-11-14 --> September samples below remain historical.
 
 ## What Content Rewards is today, and what stays on Whop
 
-Content Rewards is a clipping and UGC marketplace: a brand puts up a budget, you make content that fits the brief, post it from your own accounts and get paid on what the campaign pays for <!-- source: https://contentrewards.com/creators 2026-09-18 -->. The older version is an app a brand adds to its whop from the Whop App Store, and Whop's help centre still documents it that way <!-- source: https://docs.whop.com/memberships-and-access/third-party-apps/content-rewards 2026-09-18 -->. The release Content Rewards calls V2, dated 19 August 2026, rebuilt the platform with separate apps for brands and for creators <!-- source: https://contentrewards.com/changelog 2026-09-18 -->. Its Creator Terms, last updated on 4 October 2026, are an agreement with Content Rewards Inc, a Delaware corporation based in Beverly Hills, for the "Content Rewards web application"; the version inside Whop is now "an earlier experience hosted inside the Whop platform", and campaigns you joined there stay under the old clipper terms <!-- source: https://contentrewards.com/terms 2026-10-12 -->.
+Content Rewards is a clipping and UGC marketplace: a brand puts up a budget, you make content that fits the brief, post it from your own accounts and get paid on what the campaign pays for <!-- source: https://contentrewards.com/creators 2026-09-18 -->. The older version is an app a brand adds to its whop from the Whop App Store, and Whop's help centre still documents it that way <!-- source: https://docs.whop.com/memberships-and-access/third-party-apps/content-rewards 2026-11-14 -->. In August 2026 the platform launched its own app at contentrewards.com <!-- source: https://contentrewards.com/about 2026-11-14 -->. Its Creator Terms, last updated on 13 November 2026, are an agreement with Content Rewards Inc, a Delaware corporation based in Beverly Hills, for the "Content Rewards web application"; the version inside Whop is now "an earlier experience hosted inside the Whop platform", and campaigns you joined there stay under the old clipper terms <!-- source: https://contentrewards.com/terms 2026-11-14 -->. The About page, updated on 7 November 2026, gives the earlier dates as well: Content Rewards "started on Whop in late 2024", and the company was set up on 5 June 2025 <!-- source: https://contentrewards.com/about 2026-11-14 -->.
 
-Whop has not left. The Creator Terms split the work between the two companies <!-- source: https://contentrewards.com/terms 2026-09-18 -->:
+Whop has not left. The Creator Terms call it "a separate company whose platform CR uses for payment processing and money movement" and split the work between the two companies <!-- source: https://contentrewards.com/terms 2026-11-14 -->:
 
 | Content Rewards runs | Whop runs |
 |---|---|
-| Campaigns, submissions, view checks, fraud flags and the ledger of your earnings | Sign-in credentials, identity checks (KYC), brand budgets and money movement, withdrawals |
+| Campaigns, submissions, view checks, fraud flags and the ledger of your earnings | Payment processing and money movement, brand budgets included; withdrawals of your balance and the related identity checks (KYC) |
 
-So a Whop account is still part of the deal. If Whop bans you or you lose access to it, the terms warn that you may be unable to withdraw, and any other payout route is at Content Rewards' discretion <!-- source: https://contentrewards.com/terms 2026-09-18 -->. The creator page counts 1M+ creators and $20M paid out <!-- source: https://contentrewards.com/creators 2026-09-18 -->.
+So a Whop account is still part of the deal. If Whop bans you or you lose access to it, the terms warn that you may be unable to withdraw, and any other payout route is at Content Rewards' discretion <!-- source: https://contentrewards.com/terms 2026-09-18 -->. Sign-in is no longer listed in the terms' split of the work, but a Content Rewards article of 10 November 2026 still says "Whop also manages sign-in credentials under its terms." <!-- source: https://contentrewards.com/articles/is-content-rewards-legit 2026-11-14 -->
+
+Its own pages give three different totals. The creator pricing page counts "$20M paid out" and "1M+ creators" <!-- source: https://contentrewards.com/pricing/creators 2026-11-14 -->, the About page "$14 million+ paid to creators" and "400,000+ have posted" <!-- source: https://contentrewards.com/about 2026-11-14 -->, and the 10 November article "$15M+ paid to creators" and "500k+ who have posted" <!-- source: https://contentrewards.com/articles/is-content-rewards-legit 2026-11-14 -->. Treat all three as the platform's own figures.
 
 ## How a campaign pays, and how to read its card
 
@@ -73,9 +83,9 @@ On 18 September the first page of the Discover board showed 50 campaigns, and ev
 | Minimum per clip | set by the brand inside the campaign <!-- source: https://contentrewards.com/terms 2026-09-18 --> | A clip below it is not paid |
 | Application | required on 4 of the 50 <!-- source: https://contentrewards.com/discover 2026-09-18 --> | The rest take anyone who joins |
 
-## The fee: a flat 10%, and the ladder is gone
+## The fee: a flat 10%, whatever you earn
 
-Content Rewards takes a flat 10% creator fee on every CPM payout, whatever your lifetime earnings or the campaign's size; per-post and retainer campaigns cost the creator 10% below a $5,000 budget and nothing from $5,000 up <!-- source: https://contentrewards.com/terms 2026-09-18 -->. The creator FAQ now says the same thing, "no tiers, no thresholds" <!-- source: https://contentrewards.com/creators 2026-09-18 -->, and the V2 release notes describe the flat fee as coming "with no step-down ladder" <!-- source: https://contentrewards.com/changelog 2026-09-18 -->. A write-up that still quotes a lower fee for creators who have earned more is describing the old version.
+Content Rewards takes a flat 10% creator fee on every CPM and Pool payout, whatever your lifetime earnings or the campaign's size; per-post and retainer campaigns cost the creator 10% below a $5,000 budget and nothing from $5,000 up <!-- source: https://contentrewards.com/terms 2026-11-14 -->. The creator pricing page says the same in its own words, "You keep 90%. It is a flat 10% fee on every payout model" <!-- source: https://contentrewards.com/pricing/creators 2026-11-14 -->, and the platform's help article on payout fees says the fee "applies the same way on every CPM campaign that started on the current version, whatever you earn and however many campaigns you are in" <!-- source: https://help.contentrewards.com/en/articles/15725120-how-your-payout-fees-work 2026-11-14 -->. One lower figure is still real, and the same article names it: "Campaigns that started on the previous version of Content Rewards can still show their original 7%." <!-- source: https://help.contentrewards.com/en/articles/15725120-how-your-payout-fees-work 2026-11-14 --> A write-up that quotes 7% as the platform's fee is describing campaigns carried over from that earlier version.
 
 At $1 per 1,000 views, 30,000 views earn $30 before the fee and $27 after it.
 
@@ -85,10 +95,10 @@ A CPM round normally has seven earning days followed by a three-day hold. The fi
 
 The money then moves twice:
 
-1. **From your Content Rewards wallet to your Whop balance.** The creator pricing page says this step costs nothing and has no minimum, "so you can take out $3 or $3,000" <!-- source: https://contentrewards.com/pricing/creators 2026-09-18 -->.
-2. **From your Whop balance to you.** Whop pays out to a bank account, a mobile wallet or a crypto wallet in over 200 countries, with different options per country; standard payouts take up to 5 business days, and Whop can hold a withdrawal for a manual compliance review <!-- source: https://docs.whop.com/manage-your-business/manage-payouts/payout-methods 2026-09-18 -->. The Creator Terms put Whop's timing at about 3–5 business days, or instantly for a fee Whop charges, and say Content Rewards does not control it <!-- source: https://contentrewards.com/terms 2026-09-18 -->. Whop's withdrawal guide asks for your details, a linked bank and an uploaded ID, and mentions "a minimum withdrawal threshold of $10 (if applicable)" <!-- source: https://docs.whop.com/manage-your-business/manage-payouts/set-up-payouts 2026-09-18 -->.
+1. **From your Content Rewards wallet to your Whop balance.** The creator pricing page now says "Withdraw any time from $1" <!-- source: https://contentrewards.com/pricing/creators 2026-11-14 -->, and the help article on withdrawals says the money is "yours to withdraw once you have at least $1 available, with no fee from us" <!-- source: https://help.contentrewards.com/en/articles/16817239-withdraw-your-earnings 2026-11-14 -->. The pricing page's earlier "$3 or $3,000" line is gone.
+2. **From your Whop balance to you.** Whop pays out to a bank account, a mobile wallet or a crypto wallet in over 200 countries, with different options per country; standard payouts take up to 5 business days, and Whop can hold a withdrawal for a manual compliance review <!-- source: https://docs.whop.com/manage-your-business/manage-payouts/payout-methods 2026-09-18 -->. The Creator Terms put Whop's timing at about 3–5 business days, or instantly for a fee Whop charges, and say Content Rewards does not control it <!-- source: https://contentrewards.com/terms 2026-09-18 -->. Whop's withdrawal guide asks for your details, a linked bank and an uploaded ID, and mentions "the minimum withdrawal threshold of $10 (if applicable)" <!-- source: https://docs.whop.com/manage-your-business/manage-payouts/set-up-payouts 2026-09-18 -->.
 
-On that last point the two companies' pages disagree: the Content Rewards FAQ says there is no minimum and no charge <!-- source: https://contentrewards.com/creators 2026-09-18 -->, while Whop's guide names $10 where it applies. Check the figure your own Whop balance screen shows before you plan a small cash-out.
+On that last point the two companies' pages still give different figures: Content Rewards names $1 for the move to your Whop balance, with no fee of its own <!-- source: https://help.contentrewards.com/en/articles/16817239-withdraw-your-earnings 2026-11-14 -->, while Whop's guide names $10 where it applies. Check the figure your own Whop balance screen shows before you plan a small cash-out.
 
 ## Which countries are closed
 
@@ -121,21 +131,21 @@ The Bot Score runs first, then a brand moderator approves or rejects <!-- source
 
 DareBay fits the clipper Whop cannot pay, and anyone who would rather not have a second company between the clip and the money. It keeps no country list: only people on sanctions lists are barred <!-- source: https://darebay.com/en/legal/terms 2026-09-24 -->. You post the clip on your own account, send the link, the platform counts the views, and your balance leaves in USDT on TON to your wallet, or you receive the payout in Telegram Stars <!-- source: https://darebay.com/en/help/darebay-withdrawals 2026-09-24 -->. The rate is set by each task per 1,000 eligible views, the view threshold is set per task (system default 1,000 views), and a task can set its own per-clip cap, all on the card before you submit <!-- source: https://darebay.com/en/earnings/how-much-clipping-pays 2026-09-24 -->. The fee on the task payout is 0%; the default withdrawal fee is 10%, but an account can have another applicable rate, so check the form. Withdrawal requests start at 10 USDT <!-- source: https://darebay.com/en/help/what-commission 2026-09-24 -->. Hypothetically: 20,000 / 1,000 × $1.00 = **$20.00**, never above the task's cap if it sets one. Field by field: [DareBay vs Whop](/en/earnings/darebay-vs-whop); every figure: [fact sheet](/en/about/darebay-at-a-glance).
 
-Content Rewards is the better choice when Whop can pay you and you want its wide board: 50 campaigns on the first page alone on the day we checked, some paying $3, $5 or $10 per 1,000 views <!-- source: https://contentrewards.com/discover 2026-09-18 -->.
+Content Rewards is the better choice when Whop can pay you and you want its wide board: by its own count 712 live fixed-rate campaigns on 13 November 2026 <!-- source: https://contentrewards.com/articles/clipping-cpm-rates-november-2026 2026-11-14 -->, with rates up to $6 per 1,000 views among the first 50 cards on 14 November <!-- source: https://contentrewards.com/discover 2026-11-14 -->.
 
 Other boards for the countries Whop closes:
 
 - **Klipni**: rubles to a Russian bank account for self-employed or sole-trader authors, 5% of each approved payout, no floor on withdrawals <!-- source: https://klipni.com/creators 2026-09-18 -->, and money within five business days after the bank accepts the payout <!-- source: https://klipni.com/legal/terms 2026-09-18 -->.
-- **Vyro**: a clipping board that calls itself a MrBeast company, paying $1–$2 per 1,000 views, shown as $1,000–$2,000 per million <!-- source: https://vyro.com/campaigns 2026-09-18 -->, once a post passes 5,000 views <!-- source: https://vyro.com/help/earnings-and-payments/how-many-views-do-i-need-before-i-can-start-earning 2026-09-18 -->; Russia, Belarus, Ukraine, Uzbekistan, Armenia, Georgia and Moldova are on its unsupported list <!-- source: https://vyro.com/help/getting-started/what-countries-are-supported 2026-09-18 -->.
+- **Vyro**: a clipping board that calls itself a MrBeast company; on 14 November 2026 its public board listed $1.00–$2.50 per 1,000 views, shown as $1,000–$2,500 per million <!-- source: https://vyro.com/campaigns 2026-11-14 -->, and on most campaigns a post earns only once it passes 5,000 views <!-- source: https://vyro.com/help/earnings-and-payments/how-many-views-do-i-need-before-i-can-start-earning 2026-11-14 -->. It is no way round Whop: since 2 November 2026 Vyro sends cash-outs to a Whop wallet <!-- source: https://vyro.com/help/earnings-and-payments/payouts 2026-11-14 -->, and Russia, Belarus and the whole of Ukraine are among the 28 countries it does not pay, while Uzbekistan, Armenia, Georgia and Moldova, which its earlier list named, are no longer on it <!-- source: https://vyro.com/help/earnings-and-payments/eligibility 2026-11-14 -->.
 - **Clipping.net**: 1,000 views per post and usually 25,000 per campaign before earnings release, paid by PayPal or USDC/USDT on Ethereum mainnet only <!-- source: https://clipping.net/docs/clippers/payments 2026-09-18 -->, when the sponsor closes a cycle; the terms ask for residence "in the territories where we operate" and name none <!-- source: https://clipping.net/policies/clipper-terms-and-conditions 2026-09-18 -->.
 
-Seven platforms on the same fields: [Whop alternatives](/en/earnings/whop-content-rewards-alternatives); the full comparison: [the best clipping platforms](/en/earnings/best-clipping-platforms).
+Eleven platforms on the same fields: [Whop alternatives](/en/earnings/whop-content-rewards-alternatives); the full comparison: [the best clipping platforms](/en/earnings/best-clipping-platforms).
 
 ## Frequently asked questions
 
 ### Is Content Rewards still part of Whop?
 
-As a product, no: it runs as its own web application under Creator Terms from Content Rewards Inc, and those terms call the version inside Whop an earlier experience <!-- source: https://contentrewards.com/terms 2026-09-18 -->. Whop stays underneath as the payment layer: sign-in credentials, identity checks, brand budgets and your withdrawals all go through it.
+Content Rewards now answers that itself: "No. Content Rewards (contentrewards.com) is an independent clipping and UGC (user-generated content) campaign marketplace, run by its own company, Content Rewards Inc." It adds that "Whop is a separate company that Content Rewards uses for payment processing and money movement, which is why creators see a Whop Balance when they withdraw." <!-- source: https://contentrewards.com/articles/is-content-rewards-part-of-whop 2026-11-14 --> Its About page gives the dates: the product started on Whop in late 2024, Content Rewards Inc., a Delaware company, was set up on 5 June 2025, and its own app at contentrewards.com launched in August 2026. The same page calls "Whop Content Rewards" "an older name people used for Content Rewards, from the time campaigns ran on Whop" <!-- source: https://contentrewards.com/about 2026-11-14 -->; this review keeps the older name in its title because people still search for it. Whop's own docs file Content Rewards under third-party apps and do not name Content Rewards Inc. <!-- source: https://docs.whop.com/memberships-and-access/third-party-apps/content-rewards 2026-11-14 --> In practice Whop stays underneath as the payment layer: brand budgets, your withdrawals and the related identity checks go through it, and the Creator Terms warn that "If Whop bans you or you lose Whop access, you may be unable to withdraw through Whop." <!-- source: https://contentrewards.com/terms 2026-11-14 -->
 
 ### Is Content Rewards legit, or a scam?
 

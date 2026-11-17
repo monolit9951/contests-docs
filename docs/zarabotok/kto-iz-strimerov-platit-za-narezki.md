@@ -1,6 +1,6 @@
 ---
 title: "Кто из стримеров платит за нарезки: Мелстрой, Эвелон, Злой"
-description: "Кто платит за нарезки: октябрьские ставки Злого, активные награды Домера и Zeny, очередь выплат Мелстроя. Официальные источники и условия каждого формата."
+description: "Кто платит за нарезки: октябрьские ставки Злого, награда Домера на 14 ноября, очередь выплат Мелстроя. Официальные источники и условия каждого формата."
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_min_views_threshold_live, ppv_max_per_work_typical, ppv_max_per_work_band_high]
 competitor_sources:
@@ -25,6 +25,8 @@ competitor_sources:
   - { platform: "Стинт, канал thestint", url: "https://t.me/thestint/5593", date: "2026-09-12" }
   - { platform: "Стинт, канал thestint", url: "https://t.me/thestint/7443", date: "2026-09-12" }
   - { platform: "Klipni, блог", url: "https://klipni.com/blog/kto-platit-za-narezki", date: "2026-09-12" }
+  - { platform: "Prime Oracles", url: "https://www.primeoracles.com/rewards", date: "2026-11-14" }
+  - { platform: "Prime Oracles", url: "https://www.primeoracles.com/rewards/51d294d0-5602-4eb8-973a-6c75317b0c15", date: "2026-11-14" }
 seo: true
 landing: true
 hero:
@@ -43,7 +45,7 @@ cta:
 
 ## Проверять не имя, а открытый срок и условия
 
-На 12 октября карточки Domer и Zeny на Prime Oracles активны со сроками до 31 октября и 4 ноября; условия ступенчатые, а не единый CPM. Прямые ссылки и расчёт есть в [разборе ставок стримеров](/zarabotok/skolko-platyat-za-narezki-strimerov).<!-- source: https://www.primeoracles.com/rewards 2026-10-12 -->
+На 14 ноября на Prime Oracles открыта карточка Domer со сроком до 30 ноября, а карточки Zeny на доске уже нет. Условия у Domer ступенчатые, а не единый CPM, и бюджет почти выбран: оставалось $49 из $2,124. Прямая ссылка и расчёт есть в [разборе ставок стримеров](/zarabotok/skolko-platyat-za-narezki-strimerov).<!-- source: https://www.primeoracles.com/rewards 2026-11-14 --><!-- source: https://www.primeoracles.com/rewards/51d294d0-5602-4eb8-973a-6c75317b0c15 2026-11-14 -->
 
 Команда Mellstroy 27 сентября заявила $2.8 млн выплат за месяц и ещё $1.63 млн в ожидании. Очередь на оплату отличается от уже полученной выплаты, а собственное сообщение команды не является независимым аудитом. Для следующей работы сохрани актуальное задание, срок подачи и требуемое доказательство просмотров; старый платёжный отчёт сам по себе не открывает новую кампанию.<!-- source: https://t.me/mellstroytiktok/375 2026-10-12 -->
 

@@ -1,6 +1,6 @@
 ---
 title: What streamer clips pay and how to start
-description: "Streamer clip rates checked 12 October: Domer, Zeny and Zloy examples, CPM versus view tiers, fees and DareBay payout calculations."
+description: "Streamer clip rates: Domer's view tiers checked 14 November, Zloy's October offer, CPM versus view tiers, fees and DareBay payout calculations."
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_cpm_min, ppv_cpm_median, ppv_cpm_max, ppv_min_views_threshold_live]
 seo: true
@@ -19,9 +19,9 @@ cta:
   lede: "The catalogue prints rate, threshold, any cap, site and deadline on every streamer brief. Filter for pay-per-view, take the one that suits the reach you already get, cut a single moment out of the broadcast, publish it and send the link."
 ---
 
-## Streamer offers checked in October
+## Streamer offers checked in October and November
 
-Prime Oracles has active [Domer](https://www.primeoracles.com/rewards/51d294d0-5602-4eb8-973a-6c75317b0c15) and [Zeny](https://www.primeoracles.com/rewards/6ce64ef4-f95c-4b76-8463-9b6b111ab346) cards, ending 31 October and 4 November respectively. Their tiers are $20/$45/$90 and $25/$44/$88 at 100,000/500,000/1,000,000 views. These are milestone tiers, not a linear CPM promise.<!-- source: https://www.primeoracles.com/rewards 2026-10-12 -->
+On 14 November 2026 Prime Oracles had a claimable [Domer](https://www.primeoracles.com/rewards/51d294d0-5602-4eb8-973a-6c75317b0c15) card ending 30 November, with $49 left of a $2,124 budget; the Zeny card listed here in October was no longer on the board. Domer's tiers are $20/$45/$90 at 100,000/500,000/1,000,000 views. These are milestone tiers, not a linear CPM promise.<!-- source: https://www.primeoracles.com/rewards/51d294d0-5602-4eb8-973a-6c75317b0c15 2026-11-14 --><!-- source: https://www.primeoracles.com/rewards 2026-11-14 -->
 
 At the 100,000 tier, Domer's $20 would leave $18 if withdrawn under Prime's published 10% fee, before any network costs. A hypothetical $1 linear CPM would instead give $100 gross at that reach: do not multiply a tier award as though it were a constant rate.<!-- source: https://www.primeoracles.com/terms-agreement 2026-09-24 -->
 

@@ -1,15 +1,18 @@
 ---
 title: "Скільки платять за нарізки за нішами: бенчмарк майданчиків 2026"
-description: "Ставка за нарізки: на DareBay ставку задає конкретне завдання; на чужих майданчиках від центів у музиці до кількох доларів у фінтеху. Усі чужі цифри з джерелами."
+description: "Ставка за нарізки: на DareBay ставку задає конкретне завдання; на чужих майданчиках від центів у музиці до кількох доларів у фінтеху. Чужі цифри з джерелами."
 provenance: { snapshot_date: "2026-08-23", source: "darebay-prod" }
 numbers_used: [ppv_cpm_band_low, ppv_cpm_band_high, ppv_min_views_threshold_live, ppv_max_per_work_typical]
 competitor_sources:
   - { platform: "ClipRadar", url: "https://clipradar.co/rates", date: "2026-09-04" }
   - { platform: "Whop Content Rewards", url: "https://contentrewards.com/discover", date: "2026-09-18" }
+  - { platform: "Whop Content Rewards", url: "https://contentrewards.com/discover", date: "2026-11-14" }
   - { platform: "Clipping.net", url: "https://clipping.net/clip", date: "2026-09-04" }
-  - { platform: "Vyro", url: "https://vyro.com/campaigns", date: "2026-09-04" }
-  - { platform: "Vyro", url: "https://vyro.com/help/earnings-and-payments/how-many-views-do-i-need-before-i-can-start-earning", date: "2026-09-04" }
-  - { platform: "Vyro", url: "https://vyro.com/help/earnings-and-payments/whats-the-most-i-can-earn-per-clip", date: "2026-10-12" }
+  - { platform: "Vyro", url: "https://vyro.com/campaigns", date: "2026-11-14" }
+  - { platform: "Vyro", url: "https://vyro.com/help/earnings-and-payments/how-many-views-do-i-need-before-i-can-start-earning", date: "2026-11-14" }
+  - { platform: "Vyro", url: "https://vyro.com/help/earnings-and-payments/whats-the-most-i-can-earn-per-clip", date: "2026-11-14" }
+  - { platform: "Vyro", url: "https://vyro.com/creator-terms", date: "2026-11-14" }
+  - { platform: "Prime Oracles", url: "https://www.primeoracles.com/rewards", date: "2026-11-14" }
   - { platform: "Vues", url: "https://vues.app", date: "2026-09-04" }
   - { platform: "Vues", url: "https://vues.app/blog/best-clipping-platforms-that-pay-crypto", date: "2026-09-18" }
   - { platform: "Vues", url: "https://vues.app/blog/how-cpm-payouts-work", date: "2026-09-18" }
@@ -23,25 +26,24 @@ hero:
   takeaways:
     - "<b>Ніша вирішує більше, ніж майданчик.</b> За дошкою ClipRadar музика в середньому йде по $0.35 за 1000, а технології по $6.60 <!-- source: https://clipradar.co/rates 2026-09-04 -->: майже у двадцять разів більше за той самий монтаж, тож нішу варто обирати свідомо."
     - "<b>Типова рекламована ставка ринку $2.00 за 1000</b><!-- source: https://clipradar.co/rates 2026-09-04 -->; картка DareBay визначає ставку конкретного завдання, не середню ціну ніші<!-- source: https://darebay.com/en/earnings/how-much-clipping-pays 2026-09-24 -->."
-    - "<b>Висока ставка не дорівнює високій виплаті.</b> Поріг 5000 переглядів на пост у Vyro <!-- source: https://vyro.com/help/earnings-and-payments/how-many-views-do-i-need-before-i-can-start-earning 2026-09-04 --> і стелі $400–$600 на відео в кампаніях Whop <!-- source: https://contentrewards.com/discover 2026-09-04 --> ріжуть виплату сильніше, ніж різниця ставок, тому читай умови, а не заголовок."
+    - "<b>Висока ставка не дорівнює високій виплаті.</b> Поріг 5000 переглядів на пост у більшості кампаній Vyro <!-- source: https://vyro.com/help/earnings-and-payments/how-many-views-do-i-need-before-i-can-start-earning 2026-11-14 --> і стелі $400–$600 на відео в кампаніях Whop <!-- source: https://contentrewards.com/discover 2026-09-04 --> ріжуть виплату сильніше, ніж різниця ставок, тому читай умови, а не заголовок."
     - "<b>Рахуй виплату, а не ставку.</b> Та сама робота на 100 000 переглядів при $1 без порогу дає $100, а при $3 з порогом і стелею $50 лише $50: нижче формула і розбір, за якими це видно наперед."
 cta:
   title: "Ставку видно до монтажу: бери завдання"
   lede: "На DareBay ставка і поріг надруковані на кожному завданні до подачі, як і стеля, якщо завдання її ставить, тож виплату ти рахуєш ще до монтажу. Списку країн немає, не допускаються лише люди із санкційних списків."
 ---
 
-## Жовтневий зріз: формат змінює ставку в одному продукті
+## Листопадовий зріз: формат змінює ставку на одній дошці
 
-На активній дошці Prime Oracles 12 жовтня різні завдання мають різні ціни. Це картки пропозицій, не середня ставка всієї ніші.
+На дошці Prime Oracles 14 листопада 2026 року можна було взяти 30 карток, і 28 із них платять за 1000 переглядів: ціна залежить від формату завдання. Це картки пропозицій, не середня ставка всієї ніші.
 
-| Завдання | CPM | Стеля |
+| Формат завдання | CPM | Карток |
 |---|---:|---:|
-| [Банер VIBE](https://www.primeoracles.com/rewards/b9030018-a67e-4f5a-bcc9-cf538c47663c) | $0.10 | $20 |
-| [Шоу Діми](https://www.primeoracles.com/rewards/ab95250c-fc25-4cda-afd1-ec1bdd688c89) | $0.20 | $100 |
-| [Готове відео Inspoy](https://www.primeoracles.com/rewards/8e9b5b5c-87d0-4693-9669-25263d96a55a) | $0.70 | $200 |
-| [Власна зйомка Inspoy](https://www.primeoracles.com/rewards/99a9c27b-b66f-4374-9d6a-9c043d1df5f8) | $2 | $300 |
+| Банер | $0.05–$0.70 | 11 |
+| Нарізка | $0.10–$2.50 | 10 |
+| UGC, власний контент автора | $1–$8 | 7 |
 
-За 20,000 зарахованих переглядів формати Inspoy дають $14 та $40 до решти умов. Різниця вимагає власної зйомки, не зміни широкої ніші. Пропозиція $8 CPM на цій дошці потребує довгого огляду платформи на YouTube, тому не є орієнтиром звичайної короткої нарізки.<!-- source: https://www.primeoracles.com/rewards 2026-10-12 -->
+За 20,000 зарахованих переглядів верхня ставка банерів, $0.70, дає $14, а нижня ставка UGC, $1, дає $20, до стелі, залишку бюджету та решти умов. Нижня межа UGC удесятеро вища, ніж у нарізок: дорожче коштує власний контент автора. Стелі на відео в усіх 30 картках від $20 до $300, а дві картки платять не за 1000, а за сходинками переглядів. Пропозиція $8 CPM на цій дошці потребує довгого огляду платформи на YouTube, тому не є орієнтиром звичайної короткої нарізки.<!-- source: https://www.primeoracles.com/rewards 2026-11-14 -->
 
 ## Таблиця ставок за нішами
 
@@ -66,9 +68,9 @@ cta:
 
 | Майданчик | Ставка за 1000 | Поріг | Стеля | Джерело |
 |---|---|---|---|---|
-| Whop Content Rewards | $0.05–$10 у 50 кампаніях на першій сторінці вітрини, найчастіше $1 <!-- source: https://contentrewards.com/discover 2026-09-18 -->; за ClipRadar у середньому $3.25, верх $25 <!-- source: https://clipradar.co/rates 2026-09-04 --> | загального немає, задає кампанія | у прикладах $400–$600 на відео <!-- source: https://contentrewards.com/discover 2026-09-04 --> | [contentrewards.com/discover](https://contentrewards.com/discover) |
+| Whop Content Rewards | $0.40–$6 на 47 картках із фіксованою ставкою серед перших 50 на вітрині 14.11.2026, найчастіше $1 <!-- source: https://contentrewards.com/discover 2026-11-14 -->; за ClipRadar у середньому $3.25, верх $25 <!-- source: https://clipradar.co/rates 2026-09-04 --> | загального немає, задає кампанія | у прикладах $400–$600 на відео <!-- source: https://contentrewards.com/discover 2026-09-04 --> | [contentrewards.com/discover](https://contentrewards.com/discover) |
 | Clipping.net | $0.40–$3.00 (картки $40 і $300 за 100 000) <!-- source: https://clipping.net/clip 2026-09-04 --> | 10 000–100 000 переглядів на кампанію, в окремих 500 000 <!-- source: https://clipping.net/clip 2026-09-04 --> | не публікує | [clipping.net/clip](https://clipping.net/clip) |
-| Vyro | $1.00–$2.00 (кампанії $1000–$2000 за 1 млн) <!-- source: https://vyro.com/campaigns 2026-09-04 --> | 5000 переглядів на пост <!-- source: https://vyro.com/help/earnings-and-payments/how-many-views-do-i-need-before-i-can-start-earning 2026-09-04 --> | до $1,000 на ролик, точний максимум задає кампанія <!-- source: https://vyro.com/help/earnings-and-payments/whats-the-most-i-can-earn-per-clip 2026-10-12 --> | [vyro.com/campaigns](https://vyro.com/campaigns) |
+| Vyro | $1.00–$2.50 (12 кампаній на публічній сторінці 14.11.2026 по $1000–$2500 за 1 млн) <!-- source: https://vyro.com/campaigns 2026-11-14 --> | у більшості кампаній 5000 переглядів на пост, точний мінімум в умовах кампанії <!-- source: https://vyro.com/help/earnings-and-payments/how-many-views-do-i-need-before-i-can-start-earning 2026-11-14 --> | за довідкою до $1,000 на ролик, точний максимум показує кампанія <!-- source: https://vyro.com/help/earnings-and-payments/whats-the-most-i-can-earn-per-clip 2026-11-14 -->; за умовами для авторів (Creator Terms) від 28.10.2026 стелі на ролик у виплат за перегляди немає <!-- source: https://vyro.com/creator-terms 2026-11-14 --> | [vyro.com/campaigns](https://vyro.com/campaigns) |
 | Vues | на кожній картці в застосунку; приклад на сайті $3.00 <!-- source: https://vues.app 2026-09-04 --> | на ролик немає за її власною порівняльною таблицею; кампанія може задати мінімальну виплату за пост <!-- source: https://vues.app/blog/best-clipping-platforms-that-pay-crypto 2026-09-18 --> | на пост і на профіль, задає кампанія, суми лише в застосунку <!-- source: https://vues.app/blog/how-cpm-payouts-work 2026-09-18 --> | [vues.app](https://vues.app) |
 | Klipni | у рублях, задає кампанія; у калькуляторі майданчика за замовчуванням 30 ₽ за 1000, пресети 20–60 ₽ <!-- source: https://klipni.com/calculator 2026-09-21 --> | загального немає, задає кампанія <!-- source: https://klipni.com/legal/terms 2026-09-21 --> | стелю на ролик задає кампанія <!-- source: https://klipni.com/calculator 2026-09-21 --> | [klipni.com](https://klipni.com) |
 | DareBay | ставка за 1000 зарахованих переглядів за карткою завдання | задає завдання (за замовчуванням 1000 переглядів) | за карткою завдання, якщо застосовується | [скільки можна заробити на нарізках](/ua/zarobitok/skilky-mozhna-zarobyty-na-narizkakh) |
@@ -101,7 +103,7 @@ cta:
 
 ## Як будували бенчмарк
 
-Чужі цифри зняті 2026-09-04, рядки Whop Content Rewards і Vues перечитані 2026-09-18, а рядок Klipni 2026-09-21, з публічних сторінок майданчиків і переписані як є, без усереднення між джерелами; цифри DareBay взяті з його власних публічних сторінок (смуга ставок оновлена 2026-09-20). Ставки за нішами і соцмережами взяті з дошки ClipRadar, яка перераховує 2098 кампаній із 18 майданчиків з кроком до п'яти хвилин; «типова ставка» там це зважений за переглядами квантиль 82%, а верх це третя за величиною жива ставка, звідси середнє вище за верх у спорту і крипти<!-- source: https://clipradar.co/rates 2026-09-04 -->. Ставки майданчиків узяті з їхніх вітрин і довідок.
+Чужі цифри зняті 2026-09-04, рядки Whop Content Rewards і Vues перечитані 2026-09-18, рядок Klipni 2026-09-21, а рядок Vyro, ставка Whop Content Rewards і дошка Prime Oracles 2026-11-14, з публічних сторінок майданчиків і переписані як є, без усереднення між джерелами; цифри DareBay взяті з його власних публічних сторінок (смуга ставок оновлена 2026-09-20). Ставки за нішами і соцмережами взяті з дошки ClipRadar, яка перераховує 2098 кампаній із 18 майданчиків з кроком до п'яти хвилин; «типова ставка» там це зважений за переглядами квантиль 82%, а верх це третя за величиною жива ставка, звідси середнє вище за верх у спорту і крипти<!-- source: https://clipradar.co/rates 2026-09-04 -->. Ставки майданчиків узяті з їхніх вітрин і довідок.
 
 Що не ввійшло: порівняння Paid2Clip відповідало помилкою 503; сторінка Whop Content Rewards на whop.com ставок не містить, тому цифри Whop узяті з вітрини contentrewards.com; загального порога в Klipni немає, його задає кампанія, стелі Clipping.net не опубліковані, а суми Vues видно лише в застосунку. Жодна чужа цифра не додумана: де джерела немає, стоїть «не публікує». Усі ставки рекламовані, а не зароблені: що дійде до тебе, вирішують поріг, стеля, модерація та залишок бюджету.
 
@@ -121,4 +123,4 @@ cta:
 
 ### Наскільки свіжі цифри в таблицях?
 
-Чужі зняті 2026-09-04, рядки Whop Content Rewards і Vues 2026-09-18, рядок Klipni 2026-09-21, а дошка ClipRadar перераховується з кроком до п'яти хвилин, тож її значення пливуть щодня; цифри DareBay взяті з його власних публічних сторінок (смуга ставок оновлена 2026-09-20). Перш ніж брати кампанію, відкрий її картку: виплата рахується за ставкою на ній, а не за бенчмарком.
+Чужі зняті 2026-09-04, рядки Whop Content Rewards і Vues 2026-09-18, рядок Klipni 2026-09-21, рядок Vyro, ставка Whop Content Rewards і дошка Prime Oracles 2026-11-14, а дошка ClipRadar перераховується з кроком до п'яти хвилин, тож її значення пливуть щодня; цифри DareBay взяті з його власних публічних сторінок (смуга ставок оновлена 2026-09-20). Перш ніж брати кампанію, відкрий її картку: виплата рахується за ставкою на ній, а не за бенчмарком.

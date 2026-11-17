@@ -80,7 +80,7 @@ DareBay's side: its tasks pay a rate set by each task per 1,000 eligible views, 
 Wusul fits better when:
 
 - **You are in Egypt and need pounds in an account.** Its clipper terms list "Instapay, PayPal, and USDT" <!-- source: https://www.wusulclips.com/en/clipper-terms 2026-09-19 -->, and its about page puts Instapay on the Egyptian side of that split <!-- source: https://www.wusulclips.com/en/about 2026-09-19 -->; no page says who sends that transfer, or from where. In Egypt, Algeria and Iraq, where the law closes crypto, check the local rules before cashing out a DareBay balance in USDT; [the country page](/en/earnings/clipping-platforms-that-pay-in-egypt-and-arab-countries) goes through them regulator by regulator.
-- **You want to work in Arabic.** Wusul runs a full right-to-left Arabic locale; DareBay's interface is in English, Russian, Ukrainian and Polish.
+- **You want to work in Arabic.** Wusul runs a full right-to-left Arabic locale; DareBay's interface is in English, Russian, Ukrainian, Polish and Spanish.
 - **Your wallet is not on TON.** Its payout block names USDT on Tron (TRC-20), USDT and USDC on Ethereum (ERC-20) <!-- source: https://www.wusulclips.com/en 2026-09-19 -->; a DareBay balance leaves in USDT on TON, or you receive the payout in Telegram Stars.
 - **You want no platform cut on the way out.** "Wusul takes its cut from the brand's campaign budget, not from your earnings" <!-- source: https://www.wusulclips.com/en/for-clippers 2026-09-19 -->, and it publishes no fee of its own on the way out, though its clipper terms leave you "any fees charged by your payout provider" <!-- source: https://www.wusulclips.com/en/clipper-terms 2026-09-19 -->; DareBay's 10% comes out inside the request.
 

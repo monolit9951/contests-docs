@@ -72,6 +72,9 @@ const SOURCE_COMMENT_OPENER = /<!--\s*source:/g
  * Extended 2026-10-29 with the Spanish-language boards the second wave of `/es/` pages cites from their own terms:
  * ClipBoom (Spain), Clipea and Lulosa (Latin music campaigns), Clipealo (Mexico, clipealo.co), Clipero (clipero.net,
  * a streamer-campaign app) and Clippers Flow (Latin America).
+ * Extended 2026-11-14 with the boards the November wave cites from their own pages: Clipster's new home clipster.com,
+ * MetaClip (Pakistan), MenaFly (Saudi Arabia), Kliply (Russia), Elev8or and Try Shoot (new rows of the English
+ * roundup), and Reellu, Kreatli and Clipur, which that roundup names under "Not in the table".
  *
  * Matched by host, so `docs.whop.com` and `www.vyro.com` need no entry of their own. A trailing
  * `.*` means "this brand under any TLD" — `klipni.*` and `vues.*` are one small platform each and
@@ -121,6 +124,7 @@ export const COMPETITOR_SOURCE_HOSTS: readonly string[] = [
   'vouched.ph',
   'clipfarm.ph',
   'clipster.gg',
+  'clipster.com',
   'ssemble.com',
   'findclout.com',
   'cut.pro',
@@ -136,6 +140,14 @@ export const COMPETITOR_SOURCE_HOSTS: readonly string[] = [
   'clipero.net',
   'clippersflow.com',
   'lulosa.com',
+  'metaclip.app',
+  'menafly.com',
+  'kliply.*',
+  'elev8or.io',
+  'tryshoot.com',
+  'reellu.com',
+  'kreatli.com',
+  'clipur.com',
 ]
 
 /** The host as a reader would say it — what `LPlatforms.vue` already prints for the same sources. */

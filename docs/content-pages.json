@@ -430,6 +430,14 @@
       ]
     },
     {
+      "id": "help-supported-countries",
+      "hub": "help",
+      "slugs": {
+        "ru": "darebay-strany-i-vyplaty",
+        "en": "darebay-supported-countries"
+      }
+    },
+    {
       "id": "help-no-submissions",
       "hub": "help",
       "slugs": {
@@ -1057,6 +1065,34 @@
       "hub": "earnings",
       "slugs": {
         "en": "wusul-review"
+      }
+    },
+    {
+      "id": "clipster-review",
+      "hub": "earnings",
+      "slugs": {
+        "en": "clipster-review"
+      }
+    },
+    {
+      "id": "indclipping-review",
+      "hub": "earnings",
+      "slugs": {
+        "en": "indclipping-review"
+      }
+    },
+    {
+      "id": "kliply-review",
+      "hub": "earnings",
+      "slugs": {
+        "ru": "kliply-obzor"
+      }
+    },
+    {
+      "id": "klipbait-review",
+      "hub": "earnings",
+      "slugs": {
+        "ru": "klipbait-obzor"
       }
     },
     {

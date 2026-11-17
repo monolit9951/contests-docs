@@ -14,7 +14,7 @@ competitor_sources:
   - { platform: "ClipGrow", url: "https://clipgrow.in/campaigns/clipgrow-903", date: "2026-09-18" }
   - { platform: "ClipGrow", url: "https://clipgrow.in/guides/how-much-do-clippers-earn-per-1000-views", date: "2026-09-18" }
   - { platform: "ClipGrow", url: "https://clipgrow.in/guides/how-to-become-a-clipper-in-india", date: "2026-09-18" }
-  - { platform: "Wondeed", url: "https://www.wondeed.com/clippers", date: "2026-09-18" }
+  - { platform: "INDclipping", url: "https://www.indclipping.com/", date: "2026-11-14" }
   - { platform: "ClipConnect India", url: "https://clipconnect.in/", date: "2026-09-18" }
 seo: true
 landing: true
@@ -30,13 +30,14 @@ hero:
     - "<b>Monthly UPI is the new payment cycle.</b> Legacy CPM campaigns still have their own Sunday payout rule and ₹500 floor."
     - "<b>Acceptance and revisions decide paid volume.</b> An unapproved clip or a missed day is not paid, and the campaign can specify deductions."
 compare:
-  ids: [clipgrow, wondeed, clipconnect-india, darebay]
+  ids: [clipgrow, indclipping, clipconnect-india, darebay]
   columns: [threshold, cap, escrow, verification, networks]
   highlight: darebay
   title: "ClipGrow next to two Indian boards and DareBay"
 method:
   - "The homepage, creator page and terms were checked on 2026-10-12. The terms are dated 9 October 2026 and explicitly distinguish new fixed-pay campaigns from earlier per-view campaigns. No editor account or payment was tested."
   - "Unchanged DareBay references retain their September source snapshot. Older ClipGrow campaign examples are historical; they do not establish today's hiring rate."
+  - "The INDclipping row was read on 2026-11-14, and ClipConnect India's home page was re-read the same day, after this page's ClipGrow check of 2026-10-12; every source below carries its own date."
 cta:
   title: "Clipping outside India, or on TikTok? DareBay has no country list"
   lede: "Each task sets its rate per 1,000 eligible views, plus its view threshold and any cap per clip, and shows them before you post. You send the link to your clip, with no account to connect and no follower count to meet. DareBay takes 0% from task payouts and 10% by default when you withdraw; withdrawals start at 10 USDT, and the money goes out in USDT on TON, or you receive the payout in Telegram Stars."
@@ -79,7 +80,7 @@ For new work, save the supplied assets and SOP with the campaign offer. Check pe
 
 ClipGrow's new model suits an editor who wants supplied footage and a fixed amount for approved work without running a social account. The trade-off is daily output, approval and revision work, followed by a monthly payment cycle.
 
-A pay-per-view task suits a creator who wants to publish on their own channel and earn according to eligible reach. On DareBay, a task sets its rate per 1,000 eligible views, its threshold and any per-clip cap. Task payouts carry 0% commission; the 10% fee applies at withdrawal, with requests from 10 USDT and payouts in USDT on TON or Telegram Stars. Those DareBay facts retain their 24 September source dates. <!-- source: https://darebay.com/en/earnings/how-much-clipping-pays 2026-09-24 --> <!-- source: https://darebay.com/en/help/what-commission 2026-09-24 -->
+A pay-per-view task suits a creator who wants to publish on their own channel and earn according to eligible reach. On DareBay, a task sets its rate per 1,000 eligible views, its threshold and any per-clip cap. Task payouts carry 0% commission; a 10% fee by default applies at withdrawal, with requests from 10 USDT and payouts in USDT on TON or Telegram Stars. Those DareBay facts retain their 24 September source dates. <!-- source: https://darebay.com/en/earnings/how-much-clipping-pays 2026-09-24 --> <!-- source: https://darebay.com/en/help/what-commission 2026-09-24 -->
 
 See [platforms that pay in India](/en/earnings/clipping-platforms-that-pay-in-india) to compare eligibility and payment rails, and [clipping as a job](/en/earnings/clipping-as-a-job) to compare fixed editing pay with view-based income.
 

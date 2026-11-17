@@ -7,9 +7,9 @@ seo: true
 landing: true
 sources: visible
 hero:
-  updated: "2026-10-12"
+  updated: "2026-11-14"
   kicker: "Platform review · 2026"
-  lede: "Vues is a clipping marketplace with a web app and an iPhone app. As checked on 12 October 2026, its homepage and iOS page offer Stripe payouts to a bank account or USDC wallet, depending on country. Its 5 October terms still make the brand responsible for payment and say Vues does not custody campaign funds. Here is what changed, what remains conditional and what to verify before posting."
+  lede: "Vues is a clipping marketplace with a web app and an iPhone app. As checked on 14 November 2026, its homepage and iOS page offer Stripe payouts to a bank account or USDC wallet, depending on country. Its 5 October terms still make the brand responsible for payment and say Vues does not custody campaign funds. Here is what changed, what remains conditional and what to verify before posting."
   secondary: "Comparison table"
   takeaways:
     - "<b>The brand is your debtor, not the platform.</b> Vues calls itself a neutral intermediary that holds no campaign money; each payout is authorized by the brand that ran the campaign."
@@ -22,8 +22,8 @@ compare:
   highlight: darebay
   title: "Who holds the money, what it costs and how views are checked"
 method:
-  - "The homepage, iOS page, terms, affiliate page, brands page, campaign directory and creator login were checked on 2026-10-12. The terms carry the edition of 5 October 2026. No account was opened and no payout was executed."
-  - "The directory still labels its totals July 2026. Blog, privacy and DareBay references retain their earlier source dates; they were not all rechecked during this update. Public marketing describes an available flow, not proof that a particular creator was paid."
+  - "The homepage, iOS page, terms, affiliate page, brands page, campaign directory and login page were re-read on 2026-11-14. The terms carry the edition of 5 October 2026. No account was opened and no payout was executed."
+  - "The directory labels its totals 'Stats as of October 2026', while the blog dates the same four totals July 2026. One blog post was re-read for that comparison; the other blog, privacy and DareBay references retain their earlier source dates and were not all rechecked during this update. Public marketing describes an available flow, not proof that a particular creator was paid."
   - "The comparison table dates each field separately. USDC and USDT are different assets; an iOS payout description does not establish every web payout network."
 cta:
   title: "Know who is paying before you post"
@@ -31,7 +31,7 @@ cta:
 ---
 ## What changed in October: bank or USDC, not a USDT-only app
 
-Vues' [homepage](https://vues.app/) and [iOS page](https://vues.app/ios) now describe payouts through Stripe to a bank account or a **USDC wallet**, with availability depending on country. This replaces the older app description of a USDT ERC-20 address. **USDC is not USDT**: do not reuse an old deposit address or choose a network on the strength of this review. The public pages do not identify the USDC network; verify the asset, network, recipient and fee in your own payout setup before confirming. <!-- source: https://vues.app/ios 2026-10-12 --> <!-- source: https://vues.app/ 2026-10-12 -->
+Vues' [homepage](https://vues.app/) and [iOS page](https://vues.app/ios) now describe payouts through Stripe to a bank account or a **USDC wallet**, with availability depending on country. This replaces the older app description of a USDT ERC-20 address. **USDC is not USDT**: do not reuse an old deposit address or choose a network on the strength of this review. The public pages do not identify the USDC network; verify the asset, network, recipient and fee in your own payout setup before confirming. <!-- source: https://vues.app/ios 2026-11-14 --> <!-- source: https://vues.app/ 2026-11-14 -->
 
 The native app requires iOS 18 or later and works on iPhone and iPad. Android users can use the full web app in a mobile browser; a native Android app is not advertised. The iOS page describes connecting accounts, applying to a brand and submitting a published clip through the share sheet. <!-- source: https://vues.app/ios 2026-10-12 -->
 
@@ -39,17 +39,17 @@ The native app requires iOS 18 or later and works on iPhone and iPad. Android us
 
 The [terms dated 5 October 2026](https://vues.app/terms) name **Vues Technologies LLC**. They still place the payment obligation on the brand, keep campaign funds under brand control and give no general payout guarantee. Vues can request evidence that a brand reserved funds, but a withdrawal request by itself is not a transfer. <!-- source: https://vues.app/terms 2026-10-12 -->
 
-This matters even though the homepage advertises fully funded campaigns and guaranteed payouts. The brands page now describes Stripe bank or USDC disbursements, while the terms retain examples such as USDT, PayPal and Zelle that depend on what the brand enables. A marketing payout option and legal responsibility for funding are separate questions. <!-- source: https://vues.app/ 2026-10-12 --> <!-- source: https://vues.app/brands 2026-10-12 --> <!-- source: https://vues.app/terms 2026-10-12 -->
+This matters even though the homepage advertises fully funded campaigns and guaranteed payouts. The homepage describes Stripe payouts to a bank account or a USDC wallet, the brands page says only that creators are paid "Out of your campaign budget, automatically", and the terms retain examples such as USDT, PayPal and Zelle that depend on what the brand enables. A marketing payout option and legal responsibility for funding are separate questions. <!-- source: https://vues.app/ 2026-11-14 --> <!-- source: https://vues.app/brands 2026-11-14 --> <!-- source: https://vues.app/terms 2026-11-14 -->
 
 Before joining, check the paying brand, funded budget still available, rate for your social network and payout method available to your country. A platform listing or a payment-provider logo does not confirm that those four checks passed.
 
 ## Rates and campaign statistics: what the public directory actually shows
 
-Exact CPMs and briefs remain inside the app. The homepage's **$3 per 1,000 views is a calculator example**, not a rate promised across campaigns. The public directory lists 18 organizations and says other campaigns run privately. <!-- source: https://vues.app/ 2026-10-12 --> <!-- source: https://vues.app/campaigns 2026-10-12 -->
+Exact CPMs and briefs remain inside the app. The homepage's **$3 per 1,000 views is a calculator example**, not a rate promised across campaigns. <!-- source: https://vues.app/ 2026-10-12 --> The public directory listed 24 organizations on 14 November 2026 and said other campaigns run privately. <!-- source: https://vues.app/campaigns 2026-11-14 -->
 
-The directory still labels its **$3M+ paid, 2,933 clippers and 60+ funded brands as July 2026 statistics**. Checking that page in October does not turn those figures into October totals. Roobet, Duel and Polymarket feature among its published organizations; the roster includes betting and prediction-market campaigns. Choose a brief that you can lawfully publish to your audience and that the social network permits. <!-- source: https://vues.app/campaigns 2026-10-12 -->
+On 14 November 2026 the directory showed **$3M+ paid, 25.1B+ views, 301,000+ approved clips, 2,900+ clippers and 60+ funded brands under the label "Stats as of October 2026"** <!-- source: https://vues.app/campaigns 2026-11-14 -->. Its blog prints the same $3M+, 25.1B+, 301,000+ and 60+ "as of July 2026" <!-- source: https://vues.app/blog/best-clipping-platforms-that-pay-crypto 2026-11-14 -->, so either those four totals did not move in three months or one of the two labels is stale; Vues does not say which. Roobet, Duel and Polymarket feature among its published organizations; the roster includes betting and prediction-market campaigns. Choose a brief that you can lawfully publish to your audience and that the social network permits. <!-- source: https://vues.app/campaigns 2026-11-14 -->
 
-The top-ten earnings are also lifetime figures dated July, not a typical monthly income or a beginner forecast. For a useful comparison, calculate your own eligible views and the campaign's constraints instead.
+The top-ten earnings on the same page are lifetime figures still dated July 2026, not a typical monthly income or a beginner forecast. For a useful comparison, calculate your own eligible views and the campaign's constraints instead.
 
 ## Calculate the campaign before you commit
 
@@ -63,7 +63,7 @@ Vues' earlier explanation allows caps per post or profile, and freezes payable e
 
 The current homepage advertises on-demand withdrawal after the minimum is reached. It does not publish the minimum as a number. The affiliate page illustrates a **10% withdrawal fee**, explicitly presents its arithmetic as illustrative and tells users that the exact fee appears at cash-out. A $100 withdrawal at that example fee leaves $90, before any separately shown provider charge. <!-- source: https://vues.app/ 2026-10-12 --> <!-- source: https://vues.app/affiliate 2026-10-12 -->
 
-The creator login still advertises Friday payments, which is narrower than the homepage's on-demand message. Do not turn either slogan into a guaranteed receipt time: the terms require brand funding and authorization and permit minimums, verification, provider screening and processing. <!-- source: https://vues.app/login/creator 2026-10-12 --> <!-- source: https://vues.app/terms 2026-10-12 -->
+The creator login page no longer advertises Friday payments. On 14 November 2026 it says only "Browse paid campaigns, submit your links, and watch the views turn into payouts." <!-- source: https://vues.app/login 2026-11-14 --> That leaves the homepage's on-demand message: "Your earnings sit in a balance that's yours to cash out whenever it clears the minimum. No waiting on a pay cycle." <!-- source: https://vues.app/ 2026-11-14 --> Do not turn that slogan into a guaranteed receipt time: the terms require brand funding and authorization and permit minimums, verification, provider screening and processing. <!-- source: https://vues.app/terms 2026-10-12 -->
 
 The earlier country guide publishes no fixed country list. A fresh Stripe-based setup makes it especially useful to check onboarding eligibility before editing clips. The absence of a public country ban is not confirmation that bank or USDC payout works where you live. <!-- source: https://vues.app/blog/clipping-from-any-country 2026-09-18 -->
 
@@ -101,6 +101,6 @@ The affiliate example uses 10%, but the exact fee is shown at cash-out. Read tha
 
 The web app works in a mobile browser. The only native app advertised on its current iOS page is for iPhone and iPad on iOS 18 or later.
 
-### Are its July payout statistics current October results?
+### How current are the payout statistics Vues publishes?
 
-No. The directory still explicitly dates those totals July 2026. They are Vues' own lifetime statistics, not independently audited receipts or a typical creator's earnings.
+On 14 November 2026 the directory labeled its totals "Stats as of October 2026", but its blog dates the same $3M+ paid, 25.1B+ views, 301,000+ clips and 60+ brands "as of July 2026", and the top-ten table still says July. They are Vues' own lifetime statistics, not independently audited receipts or a typical creator's earnings.
